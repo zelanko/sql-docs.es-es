@@ -1,5 +1,5 @@
 ---
-title: Aplicaciones de servicio de SharePoint de Backup y Restauración de Reporting ServicesReporting Services Microsoft Docs
+title: Copias de seguridad y restauración Reporting Services aplicaciones de servicio de SharePoint | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487554"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Copias de seguridad y restauración de aplicaciones de servicio de SharePoint para Reporting Services
@@ -22,9 +22,9 @@ ms.locfileid: "81487554"
   
 -   [Limitaciones y restricciones](#bkmk_Restrictions)  
   
--   [Aplicación Copia de seguridad del servicio](#bkmk_backup)  
+-   [Copia de seguridad de la aplicación de servicio](#bkmk_backup)  
   
--   [Restaurar la aplicación de servicio](#bkmk_restore)  
+-   [Restauración de la aplicación de servicio](#bkmk_restore)  
   
 ##  <a name="before-you-begin"></a><a name="bkmk_BeforeYouBegin"></a> Antes de comenzar  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487554"
   
 -   Compruebe que el archivo de registro de copia de seguridad de SharePoint se crea en la misma carpeta que el archivo de copia de seguridad. El archivo se denomina normalmente **spbackup.log**  
   
-##  <a name="backup-the-service-application"></a><a name="bkmk_backup"></a>Aplicación Copia de seguridad del servicio  
+##  <a name="backup-the-service-application"></a><a name="bkmk_backup"></a>Copia de seguridad de la aplicación de servicio  
  Realice los pasos siguientes en el orden indicado:  
   
 1.  Realice una copia de seguridad de las claves de cifrado.  
@@ -53,7 +53,7 @@ ms.locfileid: "81487554"
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>Copia de seguridad de las claves de cifrado mediante Administración central  
  Para obtener más información sobre cómo realizar copias de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], vea la sección "Claves de cifrado" de [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
-###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a>Copia de seguridad de la aplicación de servicio mediante Administración central de SharePoint  
+###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a>Copia de seguridad de la aplicación de servicio mediante administración central de SharePoint  
  Para realizar una copia de seguridad de la aplicación de servicio, siga estos pasos:  
   
 1.  En Administración central de SharePoint, haga clic en **Realizar una copia de seguridad** en el grupo **Realizar copias de seguridad y restauración**.  
@@ -75,9 +75,9 @@ ms.locfileid: "81487554"
 ### <a name="verify-execution-account-and-database-authentication"></a>Comprobación de la cuenta de ejecución y autenticación de la base de datos  
  **Cuenta de la ejecución:** para comprobar si la aplicación de servicio utiliza una cuenta de ejecución:  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones** de servicio en el grupo **Administración** de aplicaciones.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones** .  
   
-2.  Haga clic en el nombre de la aplicación de servicio y, a continuación, haga clic en **Administrar** en la cinta de opciones de SharePoint.  
+2.  Haga clic en el nombre de la aplicación de servicio y, a continuación, haga clic en **administrar** en la cinta de opciones de SharePoint.  
   
 3.  Haga clic en **Cuenta de ejecución**.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81487554"
   
  **Autenticación de la base de datos:** para comprobar si la aplicación de servicio utiliza la Autenticación de Windows para la autenticación de la base de datos:  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones** de servicio en el grupo **Administración** de aplicaciones.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones** .  
   
 2.  Haga clic el nombre de la aplicación de servicio y después en **Propiedades** en la cinta de opciones de SharePoint.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81487554"
   
 4.  Si se configura la autenticación de Windows, necesita conocer las credenciales para poder configurar la aplicación de servicio una vez restaurada. No realice el procedimiento de copia de seguridad y restauración hasta que sepa cuáles son las credenciales correctas.  
   
-##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>Restaurar la aplicación de servicio  
+##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>Restauración de la aplicación de servicio  
  Realice los pasos siguientes en el orden indicado:  
   
 1.  Restaure la aplicación de servicio de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -130,9 +130,9 @@ ms.locfileid: "81487554"
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurar la cuenta de ejecución y la autenticación de la base de datos  
  **Cuenta de ejecución:** si la aplicación de servicio utilizaba una cuenta de ejecución, realice el procedimiento siguiente para configurarla:  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones** de servicio en el grupo **Administración** de aplicaciones.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones** .  
   
-2.  Haga clic en el nombre de la aplicación de servicio y, a continuación, haga clic en **Administrar** en la cinta de opciones de SharePoint.  
+2.  Haga clic en el nombre de la aplicación de servicio y, a continuación, haga clic en **administrar** en la cinta de opciones de SharePoint.  
   
 3.  Haga clic en **Cuenta de ejecución**.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "81487554"
   
  **Autenticación de la base de datos:** si la aplicación de servicio utilizaba la autenticación de Windows para la autenticación de la base de datos, realice el procedimiento siguiente:  
   
-1.  En Administración central de SharePoint, haga clic en **Administrar aplicaciones** de servicio en el grupo **Administración** de aplicaciones.  
+1.  En administración central de SharePoint, haga clic en **Administrar aplicaciones de servicio** en el grupo **Administración de aplicaciones** .  
   
 2.  Haga clic el nombre de la aplicación de servicio y después en **Propiedades** en la cinta de opciones de SharePoint.  
   

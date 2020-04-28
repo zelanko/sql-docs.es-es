@@ -1,5 +1,5 @@
 ---
-title: Actualizar PowerPivot para SharePoint ? Microsoft Docs
+title: PowerPivot para SharePoint de actualización | Microsoft Docs
 ms.custom: ''
 ms.date: 03/25/2019
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388047"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Actualizar PowerPivot para SharePoint
@@ -26,13 +26,13 @@ ms.locfileid: "81388047"
   
 
   
-## <a name="background"></a>Información previa  
+## <a name="background"></a>Segundo plano  
   
 -   Si va a actualizar una granja multiservidor de SharePoint 2010 que tiene dos o más instancias de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , debe actualizar totalmente cada servidor **antes** de continuar con el servidor siguiente. Una actualización completa incluye ejecutar el programa de instalación de SQL Server para actualizar los archivos de programa de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , seguido de acciones de actualización de SharePoint que configuran los servicios actualizados. Se limitará la disponibilidad del servidor hasta que ejecute las acciones de actualización en la Herramienta de configuración de PowerPivot o el comando de Windows PowerShell adecuado.  
   
 -   Todas las instancias del Servicio de sistema de PowerPivot y Analysis Services de una granja de SharePoint 2010 tienen que ser de la misma versión. Para obtener información sobre cómo comprobar la versión, consulte la sección [Comprobar las versiones de los componentes y servicios de PowerPivot](#bkmk_verify_versions) en este tema.  
   
--   Las herramientas de configuración de PowerPivot son una de las características compartidas de SQL Server y todas las características compartidas se actualizan al mismo tiempo. Si durante un proceso de actualización selecciona otras instancias o características de SQL Server que necesitan la actualización de una característica compartida, la herramienta de configuración de PowerPivot también se actualizará. Puede tener problemas si se actualiza la herramienta de configuración de PowerPivot pero no la instancia de PowerPivot. Para obtener más información acerca de las características compartidas de SQL Server, vea [Actualizar a SQL Server 2014 mediante el Asistente para instalación &#40;&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   Las herramientas de configuración de PowerPivot son una de las características compartidas de SQL Server y todas las características compartidas se actualizan al mismo tiempo. Si durante un proceso de actualización selecciona otras instancias o características de SQL Server que necesitan la actualización de una característica compartida, la herramienta de configuración de PowerPivot también se actualizará. Puede tener problemas si se actualiza la herramienta de configuración de PowerPivot pero no la instancia de PowerPivot. Para obtener más información acerca de las características compartidas de SQL Server, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 -   El complemento PowerPivot para SharePoint (**spPowerPivot.msi**) se instala en paralelo con versiones anteriores. Por ejemplo, el complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] se instala en la carpeta `c:\Program Files\Microsoft SQL Server\120\Tools\PowerPivotTools`.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "81388047"
   
  **SQL Server:**  
   
--   Si la instalación existente [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot es , el Service Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2 (SP2) es necesario para una actualización a .  
+-   Si la instalación existente de PowerPivot [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]es, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] se necesita Service Pack 2 (SP2) para realizar una actualización [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]a.  
   
--   Si la instalación existente [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot es , el Service Pack [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]1 (SP1) es necesario para una actualización a .  
+-   Si la instalación existente de PowerPivot [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]es, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se necesita Service Pack 1 (SP1) para realizar una actualización [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]a.  
   
  **SharePoint 2010:**  
   
@@ -70,11 +70,11 @@ ms.locfileid: "81388047"
   
     3.  En la página **Seleccionar instancia** , seleccione el nombre de instancia **POWERPIVOT** y, a continuación, haga clic en **Siguiente**.  
   
-    4.  Para obtener más información, consulte [Actualizar a SQL Server 2014 mediante el Asistente para instalación &#40;el programa](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) de instalación&#41;  
+    4.  Para obtener más información, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;el programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
 2.  Reinicie el servidor.  
   
-3.  Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) en todos los servidores de la granja de SharePoint 2013 para instalar los proveedores de datos. La excepción está en los servidores donde se ejecutó el Asistente para la instalación de SQL Server, que también actualiza los proveedores de datos. Para obtener más información, vea [Instalar o desinstalar el complemento PowerPivot para SharePoint &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
+3.  Ejecute el complemento [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint (**spPowerPivot.msi**) en todos los servidores de la granja de SharePoint 2013 para instalar los proveedores de datos. La excepción está en los servidores donde se ejecutó el Asistente para la instalación de SQL Server, que también actualiza los proveedores de datos. Para obtener más información, vea [instalar o desinstalar el complemento de PowerPivot para SharePoint &#40;&#41;de SharePoint 2013 ](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
 4.  **Ejecute la herramienta de configuración de PowerPivot para SharePoint 2013** en uno de los servidores de aplicaciones de SharePoint para configurar la granja de servidores de SharePoint con los archivos de solución actualizados que el complemento instaló. No puede usar Administración central de SharePoint para este paso. Para obtener más información, vea lo siguiente:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "81388047"
   
          En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, a continuación, en **Herramienta de configuración de PowerPivot para SharePoint 2013**. Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
-    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de PowerPivot y las soluciones de aplicación web de PowerPivot. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "**Se han detectado versiones más recientes de los archivos de solución PowerPivot. Seleccione la opción**de actualización para actualizar su granja ." Haga clic en **Aceptar** para cerrar el mensaje de validación del sistema.  
+    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de PowerPivot y las soluciones de aplicación web de PowerPivot. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "se han**detectado versiones más recientes de los archivos de solución de PowerPivot. Seleccione la opción de actualización para actualizar la granja**". Haga clic en **Aceptar** para cerrar el mensaje de validación del sistema.  
   
     3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar**.  
   
@@ -103,17 +103,17 @@ ms.locfileid: "81388047"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la siguiente advertencia, que le recuerda que las acciones se procesan en modo por lotes: "**Todas las opciones de configuración marcadas como válidas en la herramienta se aplicarán a la granja de servidores de SharePoint. ¿Quieres continuar?**".  
+    7.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "**todas las opciones de configuración que se marcan como válidas en la herramienta se aplicarán a la granja de SharePoint. ¿Desea continuar?**".  
   
     8.  Haga clic en **Sí** para continuar.  
   
-    9. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este tiempo, las solicitudes de conexión para datos powerPivot **producirán un error** con errores similares a "**No se pueden actualizar los datos**" o " Se ha producido un error al intentar realizar la acción**solicitada. Inténtelo de nuevo."** Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
+    9. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este tiempo, las solicitudes de conexión para **los datos PowerPivot producirán** errores similares a "**no se pueden actualizar datos**" o "**error al intentar realizar la acción solicitada. Vuelva a intentarlo**". Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
      Para obtener más información, vea lo siguiente:  
   
     -   [Herramientas de configuración de PowerPivot](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
-    -   [Configurar o reparar PowerPivot para SharePoint 2013 &#40;herramienta de configuración de PowerPivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
+    -   [Configurar o reparar 2013 PowerPivot para SharePoint &#40;herramienta de configuración de PowerPivot&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013)  
   
     -   [Configuración de PowerPivot mediante Windows PowerShell](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "81388047"
   
  
   
-##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a>Actualizar una granja de servidores de SharePoint 2010 existente  
+##  <a name="upgrade-an-existing-sharepoint-2010-farm"></a><a name="bkmk_uprgade_sharepoint2010"></a>Actualizar una granja existente de SharePoint 2010  
  Para actualizar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implementado en SharePoint 2010, haga lo siguiente:  
   
  ![Actualización de PowerPivot para SharePoint 2010](../../../2014/sql-server/install/media/as-powepivot-upgrade-flow-sharepoint2010.png "Actualización de PowerPivot para SharePoint 2010")  
@@ -148,19 +148,19 @@ ms.locfileid: "81388047"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Ejecute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ** el programa de instalación en el primer servidor de aplicaciones de SharePoint que ejecute el servicio Windows de **SQL Server Analysis Services (PowerPivot)** para actualizar la instancia de POWERPIVOT. En la página Instalación del Asistente para la instalación de SQL Server, elija la opción de actualización. Para obtener más información, vea [Actualizar a SQL Server 2014 mediante el Asistente para instalación &#40;&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)de instalación .  
+5.  **Ejecute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el programa de instalación** en el primer servidor de aplicaciones de SharePoint que ejecuta el servicio de Windows **SQL Server Analysis Services (PowerPivot)** para actualizar la instancia de PowerPivot. En la página Instalación del Asistente para la instalación de SQL Server, elija la opción de actualización. Para obtener más información, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Reinicie el servidor** antes de ejecutar la herramienta de configuración. Este paso garantizará que las actualizaciones o requisitos previos instalados con el programa de instalación de SQL Server se configuren totalmente en el sistema.  
   
-7.  **Ejecute la herramienta** de configuración de PowerPivot en el primer servidor de aplicaciones de SharePoint que ejecuta el servicio SQL Server Analysis Services (PowerPivot) para actualizar las soluciones y los servicios web en SharePoint. No puede utilizar Administración Central para este paso.  
+7.  **Ejecute la herramienta de configuración de PowerPivot** en el primer servidor de aplicaciones de SharePoint que ejecute el servicio SQL Server Analysis Services (PowerPivot) para actualizar las soluciones y los servicios Web de SharePoint. No puede utilizar Administración Central para este paso.  
   
     1.  En el menú **Inicio** , elija **Todos los programas**, haga clic en [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], en **Herramientas de configuración**y, a continuación, en **Herramienta de configuración de PowerPivot**. Observe que esta herramienta solo se enumera cuando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] está instalado en el servidor local.  
   
-    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de PowerPivot y las soluciones de aplicación web de PowerPivot. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "Se han detectado versiones más recientes de los archivos de solución PowerPivot. Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
+    2.  Al iniciarse, la herramienta de configuración comprueba el estado de actualización de la solución de granja de PowerPivot y las soluciones de aplicación web de PowerPivot. Si se detectan versiones anteriores de estas soluciones, verá el mensaje "se han detectado versiones más recientes de los archivos de solución de PowerPivot. Seleccione la opción de actualización para actualizar la granja". Haga clic en **Aceptar** para cerrar el mensaje.  
   
     3.  Haga clic en **Actualizar características, servicios, aplicaciones y soluciones**y, a continuación, haga clic en **Aceptar** para continuar.  
   
-    4.  Aparece la siguiente advertencia: "Los libros de trabajo en el panel de administración de PowerPivot están a punto de actualizarse a la versión más reciente. Se perderán las personalizaciones realizadas en los libros existentes. ¿Quiere continuar?".  
+    4.  Aparece la advertencia siguiente: "los libros del panel de administración de PowerPivot están a punto de actualizarse a la versión más reciente. Se perderán las personalizaciones realizadas en los libros existentes. ¿Quiere continuar?".  
   
          Esta advertencia se refiere a los libros del Panel de administración de PowerPivot que informan sobre la actividad de actualización de datos. Si ha personalizado estos libros, los cambios realizados en ellos se perderán cuando los archivos existentes se reemplacen con versiones más recientes.  
   
@@ -181,17 +181,17 @@ ms.locfileid: "81388047"
         > [!IMPORTANT]  
         >  La primera acción, **Actualizar solución de granja**, siempre se debe procesar primero. Registra los cmdlets de PowerShell que se utilizan para configurar el servidor. Si obtiene un error en esta acción, no debe continuar. En su lugar, utilice la información proporcionada por el error para diagnosticar y resolver el problema antes de procesar acciones adicionales en la lista de tareas.  
   
-    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la siguiente advertencia, que le recuerda que las acciones se procesan en modo por lotes: "Todas las opciones de configuración que se marcan como válidas en la herramienta se aplicarán a la granja de servidores de SharePoint. ¿Quiere continuar?".  
+    8.  Haga clic en **Ejecutar** para realizar todas las acciones válidas para esta tarea. La opción**Ejecutar** solo está disponible si se supera la comprobación de validación. Al hacer clic en **Ejecutar**, aparece la advertencia siguiente recordándole que las acciones se procesan en modo por lotes: "todas las opciones de configuración que se marcan como válidas en la herramienta se aplicarán a la granja de SharePoint. ¿Quiere continuar?".  
   
     9. Haga clic en **Sí** para continuar.  
   
-    10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este tiempo, las solicitudes de conexión para datos powerPivot producirán un error con errores como "No se pueden actualizar datos" o "Se ha producido un error al intentar realizar la acción solicitada. Inténtelo de nuevo." Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
+    10. La actualización de soluciones y características de la granja puede tardar varios minutos en completarse. Durante este tiempo, las solicitudes de conexión para los datos PowerPivot producirán errores, como "no se pueden actualizar datos" o "se ha producido un error al intentar realizar la acción solicitada. Inténtelo de nuevo." Una vez finalizada la actualización, el servidor estará disponible y estos errores ya no se producirán.  
   
-8.  **Repita el proceso** para cada servicio de SQL Server Analysis Services (PowerPivot) de la granja de servidores: 1) Ejecutar la instalación de SQL Server 2) Ejecute la herramienta de configuración de PowerPivot.  
+8.  **Repita el proceso** para cada servicio de SQL Server Analysis Services (PowerPivot) de la granja: 1) ejecute SQL Server instalación 2) ejecute la herramienta de configuración de PowerPivot.  
   
 9. Para comprobar que la actualización se efectuó correctamente, ejecute los pasos posteriores a la actualización y compruebe la versión de los servidores de PowerPivot en la granja de servidores. Para obtener más información, vea [Post-upgrade verification tasks](#verify) en este tema y la siguiente sección:  
   
-10. **Solución de problemas de errores**  
+10. **Solucionar errores**  
   
      Puede ver la información de error en el panel Parámetros para cada acción.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "81388047"
   
     2.  Revise las implementaciones existentes para la siguiente información: el **Tipo** es Retracción o Implementación, el **Archivo** es powerpivotwebapp.wsp o powerpivotfarm.wsp.  
   
-    3.  Para las implementaciones o retracciones relacionadas con las soluciones de PowerPivot, copie el valor GUID de **JobId** y, a continuación, péguelo en el siguiente comando (utilice los comandos Marcar, Copiar y Pegar del menú Editar del shell para copiar el GUID):  
+    3.  En el caso de las implementaciones o las retracciones relacionadas con soluciones de PowerPivot, copie el valor GUID para **JobID** y péguelo en el siguiente comando (Use los comandos marcar, copiar y pegar del menú edición del shell para copiar el GUID):  
   
         ```cmd
         stsadm -o canceldeployment -id "<GUID>"  
@@ -213,7 +213,7 @@ ms.locfileid: "81388047"
   
     4.  Intente de nuevo la tarea en la herramienta de configuración haciendo clic en **Validar** seguido de **Ejecutar**.  
   
-     Para todos los demás errores, compruebe los registros ULS. Para obtener más información, vea Configurar y ver archivos de registro de [SharePoint y Registro de diagnóstico &#40;PowerPivot para SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
+     Para todos los demás errores, compruebe los registros ULS. Para obtener más información, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnósticos &#40;PowerPivot para SharePoint&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging).  
   
 
   
@@ -227,7 +227,7 @@ ms.locfileid: "81388047"
   
 
   
-##  <a name="verify-the-versions-of-powerpivot-components-and-services"></a><a name="bkmk_verify_versions"></a>Verifique las versiones de los componentes y servicios de PowerPivot  
+##  <a name="verify-the-versions-of-powerpivot-components-and-services"></a><a name="bkmk_verify_versions"></a>Comprobar las versiones de los componentes y servicios de PowerPivot  
  Todas las instancias del Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y Analysis Services tienen que ser de la misma versión. Para comprobar que todos los componentes del servidor tienen la misma versión después, compruebe lo siguiente en la información de la versión:  
   
 ### <a name="verify-the-version-of-powerpivot-solutions-and-the-powerpivot-system-service"></a>Comprobar la versión de las soluciones de PowerPivot y del Servicio de sistema de PowerPivot  
@@ -237,10 +237,10 @@ ms.locfileid: "81388047"
 Get-PowerPivotSystemService  
 ```  
   
- Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]es la versión 12.0. \<grandes> de construcción. \<construcción menor>  
+ Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]es la versión 12,0. \<> de compilación principal. \<> de compilación secundaria  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Comprobar la versión del servicio de Windows Analysis Services  
- Si solo actualizó alguno de los servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de una granja de SharePoint 2010, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en los servidores sin actualizar será anterior a la de la versión esperada en la granja. Necesitará actualizar todos los servidores a la misma versión para que puedan utilizarse. Use uno de los métodos siguientes para comprobar la versión del servicio Windows de SQL Server Analysis Services (PowerPivot) en cada equipo.  
+ Si solo actualizó alguno de los servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de una granja de SharePoint 2010, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en los servidores sin actualizar será anterior a la de la versión esperada en la granja. Necesitará actualizar todos los servidores a la misma versión para que puedan utilizarse. Use uno de los métodos siguientes para comprobar la versión del servicio de Windows SQL Server Analysis Services (PowerPivot) en cada equipo.  
   
  **Explorador de archivos de Windows**:  
   
@@ -250,7 +250,7 @@ Get-PowerPivotSystemService
   
 3.  Haga clic en **Detalles**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la versión del archivo debe ser 12.00. \<grandes> de construcción. \<> de construcción menor.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la versión del archivo debe ser 12,00. \<> de compilación principal. \<> de compilación secundaria.  
   
 5.  Compruebe que este número es idéntico a la versión de la solución y del servicio de sistema de PowerPivot.  
   
@@ -264,7 +264,7 @@ Get-PowerPivotSystemService
   
 3.  Busque un evento de nivel de información similar al siguiente  
   
-     Se ha iniciado el servicio  de. Microsoft SQL Server Analysis Services 64 Bit Evaluation (x64) RTM **12.0.2000.8**.  
+     Se ha iniciado el servicio  de. Microsoft SQL Server Analysis Services 64 de evaluación de bits (x64) RTM **12.0.2000.8**.  
   
  **Use PowerShell para comprobar la versión del archivo.**  
   
@@ -300,17 +300,17 @@ Get-PowerPivotSystemService
   
 2.  Ordene por nombre del ensamblado y busque **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Verifique que tenga la versión 12.0. \<número de construcción>.  
+3.  Compruebe que tiene la versión 12,0. \<número de compilación>.  
   
 
-##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Actualización de varios PowerPivot para servidores SharePoint en una granja de servidores de SharePoint  
+##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Actualización de varios servidores PowerPivot para SharePoint en una granja de servidores de SharePoint  
  En una topología multiservidor que incluya más de un servidor [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , todas las instancias y componentes del servidor deben ser de la misma versión. El servidor que ejecuta la versión más reciente del software establece el nivel para todos los servidores de la granja. Si simplemente actualiza algunos de los servidores, los que ejecuten versiones anteriores del software dejarán de estar disponibles hasta que también se actualicen.  
   
  Después de actualizar el primer servidor, los servidores adicionales que aún no se hayan actualizado **dejarán de estar disponibles**. La disponibilidad se restaura una vez que todos los servidores se ejecutan en el mismo nivel.  
   
  El programa de instalación de SQL Server actualiza los archivos de solución de PowerPivot en el equipo físico, pero para actualizar las soluciones que se usan en la granja debe usar la Herramienta de configuración de PowerPivot que de describe en una sección anterior de este tema.  
 
-##  <a name="applying-a-qfe-to-a-powerpivot-instance-in-the-farm"></a><a name="qfe"></a>Aplicar un QFE a una instancia de PowerPivot en la granja de servidores  
+##  <a name="applying-a-qfe-to-a-powerpivot-instance-in-the-farm"></a><a name="qfe"></a>Aplicar un QFE a una instancia de PowerPivot en la granja  
  Al aplicar una revisión a un servidor PowerPivot para SharePoint, se actualizan los archivos de programa existentes con una versión más reciente que incluye la corrección de un problema concreto. Al aplicar un QFE a una topología multi-servidor, no hay ningún servidor principal con el que deba comenzar. Puede empezar con cualquier servidor, siempre que aplique el mismo QFE a los demás servidores PowerPivot de la granja.  
   
  Al aplicar el QFE, también debe realizar un paso de configuración que actualiza la información de versión del servidor en la base de datos de configuración de la granja. La versión del servidor al que se aplicó la revisión pasa a ser la nueva versión que se espera para la granja. Hasta que el QFE se aplique y configure en todos los equipos, las instancias de PowerPivot para SharePoint que no tienen el QFE no podrán atender solicitudes de datos de PowerPivot.  
@@ -337,17 +337,17 @@ Get-PowerPivotSystemService
 ##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> Tareas de comprobación posteriores a la actualización  
  Una vez completada la actualización, use los siguientes pasos para comprobar si el servidor está operativo.  
   
-|Tarea|Vínculo|  
+|Tarea|Link|  
 |----------|----------|  
 |Compruebe que el servicio se está ejecutando en todos los equipos que ejecutan PowerPivot para SharePoint.|[Iniciar o detener un servidor de PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |Comprobar la activación de las características en el nivel de colección de sitios.|[Activar la integración de características de PowerPivot para colecciones de sitios en Administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  
 |Compruebe que los libros PowerPivot individuales están cargados correctamente abriendo un libro y haciendo clic en los filtros y segmentaciones para iniciar una consulta.|Compruebe si hay archivos almacenados en la memoria caché del disco duro. Si hay un archivo almacenado en memoria caché, se confirma que el archivo de datos se cargó en ese servidor físico. Busque los archivos almacenados en caché en la carpeta c:\Archivos de programa\Microsoft SQL Server\MSAS12.POWERPIVOT\OLAP\Backup.|  
-|Pruebe la actualización de datos en los libros seleccionados que estén configurados para la actualización de datos.|La manera más fácil de probar la actualización de datos consiste en modificar una programación de actualización de datos y activar la casilla **También actualizar lo más rápido posible** de modo que la actualización de datos se ejecute inmediatamente. Este paso determinará si la actualización de datos es correcta para el libro actual. Repita estos pasos en otros libros de uso frecuente para asegurarse de que la actualización de datos funciona. Para obtener más información acerca de la programación de la actualización de datos, vea Programar una actualización de datos [&#40;PowerPivot para SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
+|Pruebe la actualización de datos en los libros seleccionados que estén configurados para la actualización de datos.|La manera más fácil de probar la actualización de datos consiste en modificar una programación de actualización de datos y activar la casilla **También actualizar lo más rápido posible** de modo que la actualización de datos se ejecute inmediatamente. Este paso determinará si la actualización de datos es correcta para el libro actual. Repita estos pasos en otros libros de uso frecuente para asegurarse de que la actualización de datos funciona. Para obtener más información acerca de la programación de la actualización de datos, vea [programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](../../../2014/analysis-services/schedule-a-data-refresh-powerpivot-for-sharepoint.md).|  
 |A lo largo del tiempo, supervise los informes de actualización de datos en el Panel de administración de PowerPivot para confirmar que no se produjo ningún error en la actualización de datos.|[Panel de administración de PowerPivot y datos de uso](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)|  
   
- Para obtener más información acerca de cómo configurar las opciones y características de PowerPivot, vea Administración y configuración del [servidor PowerPivot en Administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
+ Para obtener más información sobre cómo configurar las características y la configuración de PowerPivot, consulte [Administración y configuración de servidores de PowerPivot en administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration).  
   
- Para obtener instrucciones paso a paso que le guiarán a través de todas las tareas de configuración posteriores a la instalación, vea [Configuración inicial &#40;PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
+ Para obtener instrucciones paso a paso que le guíen en todas las tareas de configuración posteriores a la instalación, vea [configuración inicial &#40;PowerPivot para SharePoint&#41;](../../../2014/sql-server/install/initial-configuration-powerpivot-for-sharepoint.md).  
 
 ## <a name="see-also"></a>Consulte también  
  [Características admitidas por las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   

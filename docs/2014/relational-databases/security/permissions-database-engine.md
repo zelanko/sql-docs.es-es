@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487164"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
@@ -32,7 +32,7 @@ ms.locfileid: "81487164"
   
 -   [Permisos relacionados con elementos protegibles específicos](#_securables)  
   
--   [Permisos de SQL Server](#_permissions)  
+-   [SQL Server permisos](#_permissions)  
   
 -   [Algoritmo de comprobación de permiso](#_algorithm)  
   
@@ -49,11 +49,11 @@ ms.locfileid: "81487164"
   
      Confiere la posibilidad de cambiar las propiedades, excepto la propiedad, de un elemento protegible determinado. Cuando se concede para un ámbito, ALTER también confiere la posibilidad de modificar, crear o quitar cualquier elemento protegible que esté contenido en ese ámbito. Por ejemplo, el permiso ALTER en un esquema incluye la posibilidad de crear, modificar y quitar objetos del esquema.  
   
--   ALTER \<ANY *Server Securable*>, donde *Server Securable* puede ser cualquier servidor protegible.  
+-   Modifique cualquier \<> *protegible del servidor* , donde el *servidor protegible* puede ser cualquier elemento protegible del servidor.  
   
      Confiere la posibilidad de crear, modificar o quitar instancias individuales del *Protegible del servidor*. Por ejemplo, ALTER ANY LOGIN confiere la posibilidad de crear, modificar o quitar cualquier inicio de sesión en la instancia.  
   
--   ALTER \<ANY *Database Securable*>, donde *Database Securable* puede ser aplicable en el nivel de base de datos.  
+-   Modifique cualquier \<> *protegible de base de datos* , donde la base de *datos protegible* puede ser cualquier elemento protegible en el nivel de base de datos.  
   
      Confiere la posibilidad de crear (CREATE), modificar (ALTER) o quitar (DROP) instancias individuales del *Protegible de la base de datos*. Por ejemplo, ALTER ANY SCHEMA confiere la posibilidad de crear, modificar o quitar cualquier esquema en la base de datos.  
   
@@ -61,23 +61,23 @@ ms.locfileid: "81487164"
   
      Permite al receptor del permiso tomar propiedad del elemento protegible para el que se concede este permiso.  
   
--   Inicio de \< *sesión* IMPERSONATE>  
+-   \<Suplantar inicio de *sesión*>  
   
      Permite al receptor suplantar el inicio de sesión.  
   
--   \< *Usuario* IMPERSONATE>  
+-   \<Suplantar *usuario*>  
   
      Permite al receptor suplantar al usuario.  
   
--   CREAR \< *servidor protegible*>  
+-   Crear \<elemento *protegible del servidor*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible del servidor*.  
   
--   CREAR \< *base de datos protegible*>  
+-   Crear \<elemento *protegible de base de datos*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible de la base de datos*.  
   
--   CREATE \< *Securable con esquema*>  
+-   Crear \<elemento *protegible contenido en el esquema*>  
   
      Confiere la posibilidad de crear el elemento protegible contenido en el esquema. No obstante, para crear el elemento protegible en un esquema concreto se requiere el permiso ALTER en el esquema.  
   
@@ -92,12 +92,12 @@ ms.locfileid: "81487164"
      El permiso de REFERENCES es necesario en un objeto para crear FUNCTION o VIEW con la cláusula `WITH SCHEMABINDING` que hace referencia a ese objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
- Para obtener un gráfico [!INCLUDE[ssDE](../../includes/ssde-md.md)] de tamaño póster [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)de todos los permisos en formato pdf, consulte .  
+ Para obtener un gráfico con el tamaño [!INCLUDE[ssDE](../../includes/ssde-md.md)] de un póster de todos los [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)permisos en formato PDF, vea.  
   
-##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Permisos aplicables a securables específicos  
+##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
-|Permiso|Se aplica a|  
+|Permiso|Aplicable a|  
 |----------------|----------------|  
 |SELECT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla, [!INCLUDE[tsql](../../includes/tsql-md.md)] y Common Language Runtime (CLR), y columnas<br /><br /> Vistas y columnas|  
 |VIEW CHANGE TRACKING|Tablas<br /><br /> Esquemas|  
@@ -116,7 +116,7 @@ ms.locfileid: "81487164"
 > [!CAUTION]  
 >  Los permisos predeterminados que se conceden a objetos del sistema en el momento de la instalación se evalúan detenidamente frente a posibles amenazas y no necesitan modificarse como parte de la protección de la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los cambios a los permisos de los objetos del sistema podrían limitar o interrumpir la funcionalidad y dejar potencialmente a su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un estado no admitido.  
   
-##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>Permisos de SQL Server y SQL Database  
+##  <a name="sql-server-and-sql-database-permissions"></a><a name="_permissions"></a>SQL Server y SQL Database permisos  
  La tabla siguiente contiene una lista completa de los permisos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los permisos de[!INCLUDE[ssSDS](../../includes/sssds-md.md)] solo están disponibles para elementos protegibles de base que se admiten. No se pueden conceder permisos de nivel de servidor en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sin embargo, en algunos casos los permisos de base de datos están disponibles en su lugar.  
   
 |Elemento protegible base|Permisos granulares del elemento protegible base|Código del tipo de permiso|Elemento protegible que contiene un elemento protegible base|Permiso para el elemento protegible contenedor que implica permiso granular para el elemento protegible base|  
@@ -157,7 +157,7 @@ ms.locfileid: "81487164"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a .|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +165,7 @@ ms.locfileid: "81487164"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a .|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +204,7 @@ ms.locfileid: "81487164"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Ejecute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: Solo [!INCLUDE[ssSDS](../../includes/sssds-md.md)]se aplica a . Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -342,7 +342,7 @@ ms.locfileid: "81487164"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Resumen del algoritmo de comprobación de permisos  
+##  <a name="summary-of-the-permission-check-algorithm"></a><a name="_algorithm"></a>Resumen del algoritmo de comprobación de permiso  
  Comprobar los permisos puede ser complejo. El algoritmo de comprobación de permiso incluye la superposición de la pertenencia a grupos y el encadenamiento de propiedad, tanto el permiso explícito como el implícito, y puede ser afectado por los permisos en las clases protegibles y que contienen la entidad protegible. El proceso general del algoritmo es reunir todos los permisos pertinentes. Si no se encuentra ningún bloqueo DENY, el algoritmo busca un permiso GRANT que proporcione el acceso suficiente. El algoritmo contiene tres elementos esenciales, el **contexto de seguridad**, el **espacio del permiso**y el **permiso necesario**.  
   
 > [!NOTE]  
@@ -433,7 +433,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Jerarquía de permisos &#40;motor de base de datos&#41;](permissions-hierarchy-database-engine.md)   
+ [Jerarquía de permisos &#40;Motor de base de datos&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 266109ccef7b6e88777b5a7e2d888d998ac8770d
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307500"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
@@ -33,7 +33,7 @@ ms.locfileid: "81307500"
   
 -   Se muestra el control de errores para los errores SQLNCLI11.  
   
- Para obtener más información acerca de los parámetros con valores de tabla, vea Parámetros con valores de [tabla &#40;SQL ServerSQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
+ Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
  La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea la base de datos que se usa en el ejemplo.  

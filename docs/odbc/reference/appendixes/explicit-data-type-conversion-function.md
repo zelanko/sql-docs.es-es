@@ -1,5 +1,5 @@
 ---
-title: Función explícita de conversión de tipos de datos ( Data Type Conversion) Microsoft Docs
+title: Función de conversión de tipo de datos explícita | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2de8a8cb6177e9210e8d48c0ce097d13c9a276fd
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306996"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Función de conversión de tipo de datos explícito
 La conversión explícita de tipos de datos se especifica en términos de definiciones de tipos de datos SQL.  
   
- La sintaxis ODBC para la función de conversión de tipos de datos explícita no restringe las conversiones. La validez de las conversiones específicas de un tipo de datos a otro tipo de datos se determinará por cada implementación específica del controlador. El controlador, ya que traduce la sintaxis ODBC en la sintaxis nativa, rechazará aquellas conversiones que, aunque legales en la sintaxis ODBC, no son compatibles con el origen de datos. La función ODBC **SQLGetInfo**, con las opciones de conversión (como SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH, etc.), proporciona una manera de consultar las conversiones admitidas por el origen de datos.  
+ La sintaxis de ODBC para la función de conversión de tipos de datos explícita no restringe las conversiones. La validez de las conversiones específicas de un tipo de datos a otro tipo de datos se determinará por cada implementación específica del controlador. El controlador, dado que traduce la sintaxis de ODBC en la sintaxis nativa, rechazan las conversiones que, aunque sean válidas en la sintaxis de ODBC, no son compatibles con el origen de datos. La función de ODBC **SQLGetInfo**, con las opciones de conversión (como SQL_CONVERT_BIGINT, SQL_CONVERT_BINARY, SQL_CONVERT_INTERVAL_YEAR_MONTH, etc.), proporciona una forma de consultar sobre las conversiones admitidas por el origen de datos.  
   
- El formato de la función **CONVERT** es:  
+ El formato de la función **Convert** es:  
   
- **CONVERT(** _value_exp_, _data_type_**)**  
+ **Convert (** _value_exp_, _data_type_**)**  
   
- La función devuelve el valor especificado por *value_exp* convierte al *data_type*especificado, donde *data_type* es una de las siguientes palabras clave:  
+ La función devuelve el valor especificado por *value_exp* convertido en el *data_type*especificado, donde *data_type* es una de las palabras clave siguientes:  
   
 |||  
 |-|-|  
@@ -54,7 +54,7 @@ La conversión explícita de tipos de datos se especifica en términos de defini
 |SQL_INTERVAL_DAY_TO_MINUTE||  
 |SQL_INTERVAL_DAY_TO_SECOND||  
   
- La sintaxis ODBC para la función de conversión de tipos de datos explícita no admite la especificación del formato de conversión. Si el origen de datos subyacente admite la especificación de formatos explícitos, un controlador debe especificar un valor predeterminado o implementar la especificación de formato.  
+ La sintaxis de ODBC para la función de conversión de tipos de datos explícitos no admite la especificación del formato de conversión. Si el origen de datos subyacente admite la especificación de formatos explícitos, un controlador debe especificar un valor predeterminado o implementar la especificación de formato.  
   
  El argumento *value_exp* puede ser un nombre de columna, el resultado de otra función escalar o un literal numérico o de cadena. Por ejemplo:  
   
@@ -62,11 +62,11 @@ La conversión explícita de tipos de datos se especifica en términos de defini
 { fn CONVERT( { fn CURDATE() }, SQL_CHAR ) }  
 ```  
   
- convierte la salida de la función escalar CURDATE en una cadena de caracteres.  
+ convierte el resultado de la función escalar CURDATE en una cadena de caracteres.  
   
- Dado que ODBC no exige un tipo de datos para los valores devueltos de funciones escalares (porque las funciones suelen ser específicas del origen de datos), las aplicaciones deben usar la función escalar CONVERT siempre que sea posible para forzar la conversión de tipos de datos.  
+ Dado que ODBC no impone un tipo de datos para los valores devueltos de las funciones escalares (dado que las funciones son a menudo específicas del origen de datos), las aplicaciones deben usar la función escalar CONVERT siempre que sea posible para forzar la conversión de tipos de datos.  
   
- Los dos ejemplos siguientes ilustran el uso de la función **CONVERT.** En estos ejemplos se supone la existencia de una tabla denominada EMPLOYEES, con una columna EMPNO de tipo SQL_SMALLINT y una columna EMPNAME de tipo SQL_CHAR.  
+ En los dos ejemplos siguientes se muestra el uso de la función **Convert** . En estos ejemplos se supone la existencia de una tabla denominada EMPLOYEes, con una columna EMPNO de tipo SQL_SMALLINT y una columna EMPNAME de tipo SQL_CHAR.  
   
  Si una aplicación especifica la siguiente instrucción SQL:  
   
@@ -80,7 +80,7 @@ SELECT EMPNO FROM EMPLOYEES WHERE {fn CONVERT(EMPNO,SQL_CHAR)} LIKE '1%'
     SELECT EMPNO FROM EMPLOYEES WHERE to_char(EMPNO) LIKE '1%'  
     ```  
   
--   Un controlador para SQL Server convierte la instrucción SQL en:  
+-   Un controlador para SQL Server traduce la instrucción SQL a:  
   
     ```  
     SELECT EMPNO FROM EMPLOYEES WHERE convert(char,EMPNO) LIKE '1%'  
@@ -99,7 +99,7 @@ SELECT {fn ABS(EMPNO)}, {fn CONVERT(EMPNAME,SQL_SMALLINT)}
     SELECT abs(EMPNO), to_number(EMPNAME) FROM EMPLOYEES WHERE EMPNO <> 0  
     ```  
   
--   Un controlador para SQL Server convierte la instrucción SQL en:  
+-   Un controlador para SQL Server traduce la instrucción SQL a:  
   
     ```  
     SELECT abs(EMPNO), convert(smallint, EMPNAME) FROM EMPLOYEES  

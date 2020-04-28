@@ -1,5 +1,5 @@
 ---
-title: Marcadores de parámetros de enlace ? Microsoft Docs
+title: Marcadores de parámetros de enlace | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: be99bc884a8baa66f3d632ee4731985f0cc85732
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306396"
 ---
 # <a name="binding-parameter-markers"></a>Marcadores de parámetros de enlace
-La aplicación enlaza parámetros llamando a **SQLBindParameter**. **SQLBindParameter** enlaza un parámetro a la vez. Con él, la aplicación especifica lo siguiente:  
+La aplicación enlaza los parámetros llamando a **SQLBindParameter**. **SQLBindParameter** enlaza un parámetro cada vez. Con él, la aplicación especifica lo siguiente:  
   
--   El número de parámetro. Los parámetros se numeran en orden de parámetros crecientes en la instrucción SQL, empezando por el número 1. Aunque es legal especificar un número de parámetro que sea mayor que el número de parámetros de la instrucción SQL, el valor del parámetro se omitirá cuando se ejecute la instrucción.  
+-   El número de parámetro. Los parámetros se numeran al aumentar el orden de los parámetros en la instrucción SQL, empezando por el número 1. Aunque es válido especificar un número de parámetro mayor que el número de parámetros de la instrucción SQL, se omitirá el valor del parámetro cuando se ejecute la instrucción.  
   
--   El tipo de parámetro (entrada, entrada/salida o salida). Excepto los parámetros en las llamadas a procedimientos, todos los parámetros son parámetros de entrada. Para obtener más información, consulte [Parámetros](../../../odbc/reference/develop-app/procedure-parameters.md)de procedimiento , más adelante en esta sección.  
+-   El tipo de parámetro (entrada, entrada/salida o salida). A excepción de los parámetros de las llamadas a procedimientos, todos los parámetros son parámetros de entrada. Para obtener más información, vea [parámetros de procedimientos](../../../odbc/reference/develop-app/procedure-parameters.md), más adelante en esta sección.  
   
--   El tipo de datos C, la dirección y la longitud de bytes de la variable enlazada al parámetro. El controlador debe ser capaz de convertir los datos del tipo de datos C al tipo de datos SQL o se devuelve un error. Para obtener una lista de las conversiones admitidas, vea [Convertir datos de C a tipos](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) de datos SQL en Apéndice D: tipos de datos.  
+-   El tipo de datos de C, la dirección y la longitud de bytes de la variable enlazada al parámetro. El controlador debe ser capaz de convertir los datos del tipo de datos C al tipo de datos SQL o se devuelve un error. Para obtener una lista de las conversiones admitidas, vea [convertir datos de C a tipos de datos SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) en el Apéndice D: tipos de datos.  
   
 -   El tipo de datos SQL, la precisión y la escala del propio parámetro.  
   
--   La dirección de un búfer de longitud/indicador. Proporciona la longitud de bytes de datos binarios o de caracteres, especifica que los datos son NULL o especifica que los datos se enviarán con **SQLPutData**. Para obtener más información, consulte Uso de valores de [longitud/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Dirección de un búfer de longitud/indicador. Proporciona la longitud de bytes de los datos binarios o de caracteres, especifica que los datos son NULL o especifica que los datos se enviarán con **SQLPutData**. Para obtener más información, vea [usar valores de longitud/indicador](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Por ejemplo, el código siguiente enlaza *SalesPerson* y *CustID* a los parámetros de las columnas SalesPerson y CustID. Dado que *SalesPerson* contiene datos de caracteres, que son de longitud variable, el código especifica la longitud de bytes de *SalesPerson* (11) y enlaza *SalesPersonLenOrInd* para que contenga la longitud de bytes de los datos en *SalesPerson*. Esta información no es necesaria para *CustID* porque contiene datos enteros, que son de longitud fija.  
+ Por ejemplo, el código siguiente enlaza *SalesPerson* y *CustID* a los parámetros de las columnas Salesperson y CustID. Dado que el *vendedor* contiene datos de caracteres, que son de longitud variable, el código especifica la longitud en bytes del *vendedor* (11) y enlaza *SalesPersonLenOrInd* para que contenga la longitud de bytes de los datos del *vendedor*. Esta información no es necesaria para *CustID* porque contiene datos enteros, que es de longitud fija.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -58,7 +58,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- Cuando **SQLBindParameter** se llama, el controlador almacena esta información en la estructura de la instrucción. Cuando se ejecuta la instrucción, utiliza la información para recuperar los datos del parámetro y enviarlos al origen de datos.  
+ Cuando se llama a **SQLBindParameter** , el controlador almacena esta información en la estructura de la instrucción. Cuando se ejecuta la instrucción, se usa la información para recuperar los datos del parámetro y enviarlos al origen de datos.  
   
 > [!NOTE]  
->  En ODBC 1.0, los parámetros se enlazaban con **SQLSetParam**. El Administrador de controladores asigna llamadas entre **SQLSetParam** y **SQLBindParameter**, dependiendo de las versiones de ODBC utilizadas por la aplicación y el controlador.
+>  En ODBC 1,0, los parámetros estaban enlazados con **SQLSetParam**. El administrador de controladores asigna llamadas entre **SQLSetParam** y **SQLBindParameter**, en función de las versiones de ODBC que usa la aplicación y el controlador.

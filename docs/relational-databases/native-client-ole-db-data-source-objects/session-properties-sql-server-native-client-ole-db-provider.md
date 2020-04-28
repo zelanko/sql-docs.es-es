@@ -1,5 +1,5 @@
 ---
-title: Propiedades de sesión OLE DB
+title: Propiedades de la sesión OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388597"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Propiedades de la sesión: proveedor de SQL Server Native Client OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client interpreta las propiedades de sesión OLE DB de la siguiente manera.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client interpreta OLE DB propiedades de sesión como se indica a continuación.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite todos los niveles de aislamiento de transacciones de confirmación automática con la excepción del nivel de caos DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite todos los niveles de aislamiento de transacción de confirmación automática con la excepción del nivel de caos DBPROPVAL_TI_CHAOS.|  
 |||
 
- En el conjunto de propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] específico del proveedor DBPROPSET_SQLSERVERSESSION, el proveedor OLE DB de Native Client define la siguiente propiedad de sesión adicional.  
+ En el conjunto de propiedades específico del proveedor DBPROPSET_SQLSERVERSESSION, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client define la siguiente propiedad de sesión adicional.  
   
 |Id. de propiedad|Descripción|  
 |-----------------|-----------------|  

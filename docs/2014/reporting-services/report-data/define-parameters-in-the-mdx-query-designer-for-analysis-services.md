@@ -1,5 +1,5 @@
 ---
-title: Definir parámetros en el Diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS) Microsoft Docs
+title: Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39f94bc7fd247a1608385f009fcb8d117b8c628f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388532"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definir parámetros en el diseñador de consultas MDX para Analysis Services (Generador de informes y SSRS)
@@ -82,6 +82,6 @@ ms.locfileid: "81388532"
      Para ver el conjunto de datos que proporciona los valores disponibles para el parámetro de informe, haga clic con el botón secundario en cualquier área en blanco del panel Datos de informe y, a continuación, haga clic en **Mostrar conjuntos de datos ocultos**. El panel Datos de informe muestra todos los conjuntos de datos del informe.
 
 ## <a name="see-also"></a>Consulte también
- Tipo de conexión de [Analysis Services para MDX &#40;interfaz](analysis-services-connection-type-for-mdx-ssrs.md) de usuario del Diseñador de [consultas MDX](analysis-services-mdx-query-designer-user-interface.md) de Analysis Services&#41;MDX
+ [Analysis Services tipo de conexión para mdx &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md) [Analysis Services interfaz de usuario del diseñador de consultas MDX](analysis-services-mdx-query-designer-user-interface.md)
 
 

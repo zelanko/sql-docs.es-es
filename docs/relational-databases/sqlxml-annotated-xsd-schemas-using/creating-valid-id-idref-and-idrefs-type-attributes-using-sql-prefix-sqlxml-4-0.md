@@ -1,6 +1,6 @@
 ---
-title: Atributos de ID válidos mediante sql:prefix (SQLXML)
-description: Aprenda a crear atributos de tipo ID, IDREF e IDREFS válidos mediante sql:prefix (SQLXML 4.0).
+title: 'Atributos de identificador válidos mediante SQL: prefix (SQLXML)'
+description: 'Aprenda a crear atributos válidos de tipo ID, IDREF e IDREFS mediante SQL: prefix (SQLXML 4,0).'
 ms.date: 03/06/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -25,10 +25,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388187"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
@@ -45,19 +45,19 @@ ms.locfileid: "81388187"
   
 -   El valor de un atributo ID, IDREF e IDREFS debe ser un token con nombre. (Por ejemplo, el valor entero 101 no puede ser un valor ID.)  
   
--   Los atributos de tipo ID, IDREF e IDREFS no se pueden asignar a columnas del tipo **text**, **ntext**o **image** o cualquier otro tipo de datos binarios (por ejemplo, **timestamp**).  
+-   Los atributos de tipo ID, IDREF e IDREFS no se pueden asignar a columnas de tipo **Text**, **ntext**o **Image** ni a ningún otro tipo de datos binarios (por ejemplo, **timestamp**).  
   
- Si un documento XML contiene varios identificadores, utilice la anotación **sql:prefix** para asegurarse de que los valores son únicos.  
+ Si un documento XML contiene varios identificadores, use la anotación **SQL: prefix** para asegurarse de que los valores son únicos.  
   
- Tenga en cuenta que la anotación **sql:prefix** no se puede utilizar con el atributo fijo XSD.  
+ Tenga en cuenta que no se puede usar la anotación **SQL: prefix** con el atributo Fixed xsd.  
   
 ## <a name="examples"></a>Ejemplos  
- Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requisitos para ejecutar ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema ** \<** siguiente, el elemento Customer>consta de la ** \<>** elemento secundario Order. El ** \<elemento Order>** también tiene un elemento secundario, el ** \<elemento de>OrderDetail.**  
+ En el esquema siguiente, el ** \<elemento Customer>** está formado por el ** \<elemento secundario Order>** . El ** \<elemento Order>** también tiene un elemento secundario, el ** \<elemento OrderDetail>** .  
   
- El atributo **OrderIDList** de ** \<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del ** \<** elemento Order>.  
+ El atributo **atributo OrderIDList** de ** \<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \<Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -111,7 +111,7 @@ ms.locfileid: "81388187"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo con el esquema  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como sqlPrefix.xml.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81388187"
   
 3.  Cree y use el script de prueba SQLXML 4.0 (Sqlxml4test.vbs) para ejecutar la plantilla.  
   
-     Para obtener más información, consulte Uso de [ADO para ejecutar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
  Éste es el resultado parcial:  
   

@@ -1,6 +1,6 @@
 ---
-title: Creación de una Asamblea (Asamblea) Microsoft Docs
-description: Use CREATE ASSEMBLY para registrar un ensamblado en SQL Server y especificar su configuración de seguridad. Registre un ensamblado para usar su funcionalidad.
+title: Crear un ensamblado | Microsoft Docs
+description: Utilice CREATE ASSEMBLy para registrar un ensamblado en SQL Server y especifique su configuración de seguridad. Registra un ensamblado para usar su funcionalidad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6ca6787abae22722a7bbb99d335e63d47051bb46
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486848"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados DLL administrados deben registrarse antes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de que se pueda usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
+  Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de dll administrados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deben registrarse en para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
   
 ## <a name="the-create-assembly-statement"></a>La instrucción CREATE ASSEMBLY  
  La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. Este es un ejemplo:  
@@ -131,11 +131,11 @@ WITH PERMISSION_SET = UNSAFE;
  Para obtener más información sobre los permisos de cada configuración, vea [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Administración de ensamblados de integración de CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
- [Alterar una Asamblea](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
- [Dejar caer una asamblea](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
- [Seguridad de acceso al código de integración de CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [Propiedad TRUSTWORTHY Database](../../../relational-databases/security/trustworthy-database-property.md)   
+ [Administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)   
+ [Modificar un ensamblado](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
+ [Quitar un ensamblado](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
+ [Seguridad de acceso del código de integración CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
+ [Propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md)   
  [Permitir llamadores de confianza parcial](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
   
   

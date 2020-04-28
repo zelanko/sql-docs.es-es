@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 653bd8aad3a10a3929b7ced76e28e4d570733ad3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307356"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "81307356"
 > [!NOTE]  
 >  El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es compatible con las operaciones de copia masiva basadas en memoria a través de la interfaz [IRowsetFastLoad](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md) .  
   
- Para obtener más [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información sobre el uso del proveedor OLE DB de Native Client para operaciones de copia masiva, vea [Realizar operaciones](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)de copia masiva .  
+ Para obtener más información sobre el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso del proveedor de OLE DB de Native Client para las operaciones de copia masiva, vea [realizar operaciones de copia masiva](../../relational-databases/native-client/features/performing-bulk-copy-operations.md).  
   
  Para obtener un ejemplo en que se muestra cómo utilizar la interfaz **IBCPSession**, consulte [IBCPSession::BCPDone &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpdone-ole-db.md).  
   

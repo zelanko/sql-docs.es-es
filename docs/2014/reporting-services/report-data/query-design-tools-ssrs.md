@@ -1,5 +1,5 @@
 ---
-title: Herramientas de diseño de consultas en el Diseñador de informes SQL Server Data Tools (SSRS) Microsoft Docs
+title: Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools (SSRS) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1179f4e5a6c8be90b5bc52b814ae49c96a3a39aa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388624"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Herramientas de diseño de consultas en las herramientas de datos de SQL Server del Diseñador de informes (SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "81388624"
  Todas las herramientas de diseño de consultas se ejecutan en el entorno de diseño de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] cuando se trabaja con una plantilla de proyecto del servidor de informes o del Asistente de proyectos de servidor de informes. Para obtener más información sobre cómo trabajar con diseñadores de consultas, vea [Reporting Services Query Designers](../reporting-services-query-designers.md).
 
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a>Diseñador de consultas basado en texto
- El diseñador de consultas basado en texto es la herramienta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de creación de consultas predeterminada para la mayoría de los orígenes de datos relacionales admitidos, incluidos, Oracle, Teradata, OLE DB, XML y ODBC. A diferencia del diseñador gráfico de consultas, esta herramienta de diseño de consultas no valida la sintaxis de las mismas durante su diseño. En la imagen siguiente se ilustra el diseñador de consultas basado en texto.
+ El diseñador de consultas basado en texto es la herramienta predeterminada de creación de consultas para la mayoría de los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]orígenes de datos relacionales admitidos, incluidos, Oracle, Teradata, OLE DB, XML y ODBC. A diferencia del diseñador gráfico de consultas, esta herramienta de diseño de consultas no valida la sintaxis de las mismas durante su diseño. En la imagen siguiente se ilustra el diseñador de consultas basado en texto.
 
  ![Diseñador de consultas genérico, para consultas de datos relacionales](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Diseñador de consultas genérico, para consultas de datos relacionales")
 
@@ -60,7 +60,7 @@ ms.locfileid: "81388624"
 
  Puede alternar el botón **Editar como texto** en la barra de herramientas para cambiar entre el diseñador gráfico de consultas y el diseñador de consultas basado en texto. Para más información, consulte [Graphical Query Designer User Interface](graphical-query-designer-user-interface.md).
 
-##  <a name="report-model-query-designer"></a><a name="Model"></a>Diseñador de consultas de modelos de informe
+##  <a name="report-model-query-designer"></a><a name="Model"></a>Diseñador de consultas de modelo de informe
  El diseñador de consultas de modelo de informe se usa para crear o modificar las consultas que se ejecutan en un modelo de informe SMDL que se ha publicado en un servidor de informes. Los informes que se ejecutan en modelos admiten la exploración de datos click-through. La consulta determina la ruta de exploración de datos en tiempo de ejecución. En la imagen siguiente se ilustra el diseñador de consultas del Modelo de informes.
 
  ![Interfaz de usuario del Diseñador de consultas de modelos semánticos](../media/rsqd-dsawmodel-smql.gif "Interfaz de usuario del Diseñador de consultas de modelos semánticos")
@@ -86,7 +86,7 @@ ms.locfileid: "81388624"
 
  ![Diseñador de consultas que usa MDX en modo de diseño](../media/rsqd-dssapbw-mdx-designmode.gif "Diseñador de consultas que usa MDX en modo de diseño")
 
-##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Diseñador de consultas hyperion Essbase
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Diseñador de consultas de Hyperion Essbase
  El diseñador de consultas de [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] se utiliza para recuperar los datos de las aplicaciones y bases de datos [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] . En la imagen siguiente se ilustra el diseñador de consultas [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] .
 
  ![Diseñador de consultas para el origen de datos de Hyperion Essbase](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Diseñador de consultas para el origen de datos de Hyperion Essbase")
@@ -94,6 +94,6 @@ ms.locfileid: "81388624"
  Para utilizar este diseñador de consultas, debe tener un origen de datos de [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] que contenga al menos una base de datos. Para más información, consulte [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).
 
 ## <a name="see-also"></a>Consulte también
- Herramientas de [Reporting ServicesReporting Services](../tools/reporting-services-tools.md) Agregar datos a un generador de informes &#40;de informes y [SSRS&#41;](report-datasets-ssrs.md) conexiones de [datos, orígenes](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) de datos y cadenas de conexión en tutoriales de Reporting [ServicesReporting Services reporting ServicesReporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) orígenes de datos [admitidos por Reporting ServicesReporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) crear un origen de datos incrustado o compartido &#40;[SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)
+ [Reporting Services herramientas](../tools/reporting-services-tools.md) [agregan datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md) [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) [tutoriales](../reporting-services-tutorials-ssrs.md) de Reporting Services &#40;los orígenes de datos&#41;de SSRS [admitidos por Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) [crear un origen de datos incrustado o compartido &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)
 
 

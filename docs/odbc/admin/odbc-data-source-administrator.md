@@ -1,5 +1,5 @@
 ---
-title: Administrador de orígenes de datos ODBC (ODBC Data Source Administrator) Microsoft Docs
+title: Administrador de orígenes de datos ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 09a78c9aa5c7fd2c982cd2fb60b2e6b42ec89aa0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307186"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de orígenes de datos ODBC
-El Administrador de orígenes de datos ODBC de Microsoft® administra los controladores de base de datos y los orígenes de datos. Esta aplicación se encuentra en el Panel de control de Windows en **Herramientas administrativas**. A partir de Windows 8, el icono se denomina **Orígenes**de datos ODBC y en sistemas operativos de 64 bits hay una versión de 32 bits y 64 bits.  
+El administrador de orígenes de datos ODBC de Microsoft® administra los controladores de base de datos y los orígenes de datos. Esta aplicación se encuentra en el panel de control de Windows, en **herramientas administrativas**. A partir de Windows 8, el icono se denomina **orígenes de datos ODBC**y en los sistemas operativos de 64 bits hay una versión de 32 bits y de 64 bits.  
   
- Para obtener información acerca de los procedimientos detallados del Administrador ODBC, abra el cuadro de diálogo Administrador de [orígenes](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) de datos ODBC y haga clic en **Ayuda**.  
+ Para obtener información acerca de los procedimientos de administrador de ODBC detallados, abra el cuadro de diálogo [Administrador de orígenes de datos ODBC](https://msdn.microsoft.com/eea94d94-f53b-4289-ae75-9ccccde15333) y haga clic en **ayuda**.  
   
- Puede usar comandos de PowerShell para administrar controladores y orígenes de datos. Para obtener más información acerca de estos comandos de PowerShell, vea Comandos de PowerShell de [componentes](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx)de acceso a datos de Windows .  
+ Puede usar comandos de PowerShell para administrar controladores y orígenes de datos. Para obtener más información sobre estos comandos de PowerShell, vea [comandos de PowerShell de componentes de Windows Data Access](https://msdn.microsoft.com/library/windows/desktop/jj134064.aspx).  
   
  Esta sección contiene los temas siguientes.  
   

@@ -1,6 +1,6 @@
 ---
-title: Duración de la transacción ? Microsoft Docs
-description: Obtenga información sobre la duración de las transacciones en la integración de SQL Server CLR. Las transacciones iniciadas en procedimientos almacenados de Transact-SQLTransact-SQL difieren de las iniciadas en código administrado.
+title: Duración de las transacciones | Microsoft Docs
+description: Obtenga información sobre la duración de las transacciones en SQL Server la integración CLR. Las transacciones iniciadas en procedimientos almacenados de Transact-SQL difieren de las que se inician en código administrado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1fed737c644ebb241a5761fffd2409c2556d28ea
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487531"
 ---
 # <a name="transaction-lifetimes"></a>Período de duración de las transacciones
@@ -30,7 +30,7 @@ ms.locfileid: "81487531"
   
 -   Un intento para confirmar una transacción no iniciada en el mismo procedimiento produce un error en tiempo de ejecución.  
   
--   Un intento de revertir una transacción no iniciada en el mismo procedimiento hace que la transacción deje de responder (impidiendo que se realice cualquier otra operación de efecto secundario). La transacción se interrumpe hasta que el código CLR se sale del ámbito. Tenga en cuenta que esto puede resultar útil cuando detecta un error dentro de su procedimiento y desea asegurarse de que toda la transacción finaliza.  
+-   Un intento de revertir una transacción no iniciada en el mismo procedimiento hace que la transacción deje de responder (lo que impide que se produzca cualquier otra operación con efectos secundarios). La transacción se interrumpe hasta que el código CLR se sale del ámbito. Tenga en cuenta que esto puede resultar útil cuando detecta un error dentro de su procedimiento y desea asegurarse de que toda la transacción finaliza.  
   
 ## <a name="see-also"></a>Consulte también  
  [Integración CLR y transacciones](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

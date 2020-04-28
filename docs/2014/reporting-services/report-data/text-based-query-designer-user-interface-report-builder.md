@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388325"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
@@ -56,7 +56,7 @@ ms.locfileid: "81388325"
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|
 
 #### <a name="example"></a>Ejemplo
- La siguiente consulta devuelve la lista [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]de apellidos `ContactType` de `Person` la tabla de base de datos **de 2008** para el esquema.
+ La siguiente consulta devuelve la lista de los apellidos de [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]la tabla `ContactType` de base de `Person` datos **2008** para el esquema.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Resultado|Muestra los resultados de la consulta. Para ejecutar la consulta, haga clic con el botón derecho en cualquier panel y haga clic en **Ejecutar**, o bien haga clic en el botón **Ejecutar** de la barra de herramientas.|
 
 #### <a name="example"></a>Ejemplo
- La siguiente consulta [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]llama al procedimiento `uspGetWhereUsedProductID`almacenado **de 2008.** Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.
+ La consulta siguiente llama al [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]procedimiento `uspGetWhereUsedProductID`almacenado **2008** . Debe especificar un valor para el parámetro de número de identificación de producto al ejecutar la consulta.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Si selecciona **Tipo de comando TableDirect**, el diseñador de consultas basado en texto presenta dos paneles: el panel Consulta y el panel Resultado. Si selecciona una tabla y hace clic en el botón **Ejecutar** , se devolverán todas las columnas de dicha tabla.
 
 #### <a name="example"></a>Ejemplo
- Para un tipo de origen de datos OLE DB, la siguiente [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]consulta de conjunto de datos devuelve un conjunto de resultados para todos los tipos de contacto de la base de datos **de 2008.**
+ En el caso de un tipo de origen de datos OLE DB, la siguiente consulta de conjunto de datos devuelve un [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]conjunto de resultados para todos los tipos de contacto de la base de datos **2008** .
 
  `Person.ContactType`
 
  Especificar el nombre de tabla Person.ContactType equivale a crear la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)]`SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>Consulte también
- Interfaz de usuario del Diseñador de [consultas relacionales &#40;Generador](relational-query-designer-user-interface-report-builder.md) de informes&#41;Diseñadores de [consultas &#40;Generador de informes&#41;](../query-designers-report-builder.md)
+ [Interfaz de usuario del diseñador de consultas relacionales &#40;generador de informes](relational-query-designer-user-interface-report-builder.md) [diseñadores de consultas&#41;&#40;generador de informes](../query-designers-report-builder.md)&#41;
 
 

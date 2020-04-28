@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87470f9dc2c0bedbb3dd6fd0e45de64e256775cd
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388037"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Requisitos del sistema para SQL Server Native Client
@@ -30,13 +30,13 @@ ms.locfileid: "81388037"
   
 -   Una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en su servidor.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiere Windows Installer 3.0. Windows Installer 3.0 ya está instalado en los sistemas operativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para el resto de plataformas necesita instalarlo explícitamente. Para obtener más información, consulte [Windows Installer 3.0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client requiere Windows Installer 3.0. Windows Installer 3.0 ya está instalado en los sistemas operativos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Para el resto de plataformas necesita instalarlo explícitamente. Para obtener más información, vea [Windows Installer 3,0 Redistributable](https://www.microsoft.com/download/details.aspx?id=16821).  
   
 > [!NOTE]  
 >  Asegúrese de que inicia sesión con privilegios de administrador antes de instalar este software.  
   
-## <a name="operating-system-requirements"></a>Requisitos de sistema operativo  
- Para obtener una lista [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los sistemas operativos que admiten Native Client, vea Directivas de [soporte para SQL ServerSQL Server Native Client](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
+## <a name="operating-system-requirements"></a>Requisitos del sistema operativo  
+ Para obtener una lista de sistemas operativos compatibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con Native Client, consulte [directivas de soporte técnico para SQL Server Native Client](../../relational-databases/native-client/applications/support-policies-for-sql-server-native-client.md).  
   
 ## <a name="sql-server-requirements"></a>Requisitos de SQL Server  
  Para utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para tener acceso a los datos en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe tener instalada una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "81388037"
 ## <a name="data-type-compatibility-for-client-versions"></a>Compatibilidad de tipo de datos para las versiones del cliente  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client asignan los nuevos tipos de datos a los tipos de datos anteriores que son compatibles con clientes de nivel inferior, como se muestra en la tabla siguiente.  
   
- Las aplicaciones OLE DB y ADO pueden usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la palabra clave de cadena de conexión **DataTypeCompatibility** con Native Client para operar con tipos de datos más antiguos. Cuando **DataTypeCompatibility=80**, los clientes de OLE DB se conectarán con la versión de flujo TDS de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], en lugar de la versión de TDS. Esto significa que el servidor realizará la conversión de nivel inferior y los tipos de datos posteriores para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], en lugar de a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. También significa que las características disponibles en la conexión se limitarán al conjunto de funciones de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Los intentos de utilizar nuevos tipos de datos o funciones se detectan lo más pronto posible en las llamadas API y se devuelven los errores a la aplicación que realiza la llamada, en lugar de intentar pasar las solicitudes no válidas al servidor.  
+ Las aplicaciones OLE DB y ADO pueden utilizar **DataTypeCompatibility** la palabra clave de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cadena de conexión DataTypeCompatibility con Native Client para trabajar con tipos de datos más antiguos. Cuando **DataTypeCompatibility=80**, los clientes de OLE DB se conectarán con la versión de flujo TDS de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], en lugar de la versión de TDS. Esto significa que el servidor realizará la conversión de nivel inferior y los tipos de datos posteriores para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], en lugar de a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. También significa que las características disponibles en la conexión se limitarán al conjunto de funciones de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Los intentos de utilizar nuevos tipos de datos o funciones se detectan lo más pronto posible en las llamadas API y se devuelven los errores a la aplicación que realiza la llamada, en lugar de intentar pasar las solicitudes no válidas al servidor.  
   
  No hay ningún control **DataTypeCompatibility** para ODBC.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "81388037"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Imagen|  
-|ntext|varchar|varchar|Texto|  
+|ntext|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
 |Xml|Xml|Xml|Ntext|  
-|UDT CLR (> 8Kb)|udt|varbinary|Imagen|  
+|UDT CLR (> 8 KB)|udt|varbinary|Imagen|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  
 |time|time|varchar|Varchar|  
   
 ## <a name="see-also"></a>Consulte también  
- [Programación de clientenativo de SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
   
   

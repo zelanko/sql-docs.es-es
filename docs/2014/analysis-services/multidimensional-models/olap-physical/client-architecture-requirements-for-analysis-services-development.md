@@ -1,5 +1,5 @@
 ---
-title: Requisitos de la arquitectura de clientes para el desarrollo de Analysis ServicesAnalysis Services Microsoft Docs
+title: Requisitos de la arquitectura de cliente para el desarrollo de Analysis Services | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a69b2a2c8225c19dfb18a4b41b6fd1adc6aab266
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388023"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Requisitos de la arquitectura de cliente para el desarrollo de Analysis Services
@@ -53,7 +53,7 @@ ms.locfileid: "81388023"
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>Analysis Services en el modo de SharePoint o tabular
  En [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], el servidor puede iniciarse en el modo del motor de análisis en memoria xVelocity (VertiPaq) para bases de datos tabulares y libros de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] publicados en un sitio de SharePoint.
 
- [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] son los únicos entornos del cliente que se admiten para crear y consultar las bases de datos en memoria que utilizan el modo SharePoint o tabular, respectivamente. La base de datos PowerPivot incrustada que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] se crea mediante Excel y las herramientas se encuentra en el libro de Excel y se guarda como parte del archivo .xlsx de Excel.
+ [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] son los únicos entornos del cliente que se admiten para crear y consultar las bases de datos en memoria que utilizan el modo SharePoint o tabular, respectivamente. La base de datos de PowerPivot incrustada que se crea con [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Excel y herramientas se encuentra en el libro de Excel y se guarda como parte del archivo Excel. xlsx.
 
  Sin embargo, un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] puede utilizar datos almacenados en un cubo tradicional si los datos del cubo se importan en el libro. También se pueden importar datos de otro libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] si se ha publicado en un sitio de SharePoint.
 
@@ -61,18 +61,18 @@ ms.locfileid: "81388023"
 >  Al utilizar un cubo como origen de datos para un libro de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)], los datos que se obtienen del cubo se definen como una consulta MDX; sin embargo, los datos se importan como una instantánea plana. No se puede trabajar interactivamente con los datos ni actualizar los datos del cubo.
 
 ### <a name="interfaces-for-powerpivot-client"></a>Interfaces para el cliente de PowerPivot
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interactúa con el motor de almacenamiento del motor de análisis en memoria xVelocity (VertiPaq) dentro del libro mediante las interfaces e idiomas establecidos para Analysis Services: AMO y ADOMD.NET, y MDX y XMLA. Dentro del complemento, las medidas se definen utilizando un lenguaje de fórmulas parecido Excel, Expresiones de análisis de datos (DAX). Las expresiones DAX se insertan en los mensajes XMLA que se envían al servidor en proceso.
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]interactúa con el motor de almacenamiento del motor analítico en memoria xVelocity (VertiPaq) dentro del libro utilizando las interfaces y los lenguajes establecidos para Analysis Services: AMO y ADOMD.NET, y MDX y XMLA. Dentro del complemento, las medidas se definen utilizando un lenguaje de fórmulas parecido Excel, Expresiones de análisis de datos (DAX). Las expresiones DAX se insertan en los mensajes XMLA que se envían al servidor en proceso.
 
 ### <a name="providers"></a>Proveedores
- Las [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] comunicaciones entre Excel usan el proveedor OLEDB MSOLAP (versión 11.0). Dentro del proveedor MSOLAP hay cuatro módulos diferentes, o transportes, que se pueden utilizar para enviar mensajes entre el cliente y el servidor.
+ Las comunicaciones [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] entre y Excel usan el proveedor de msolap OleDb (versión 11,0). Dentro del proveedor MSOLAP hay cuatro módulos diferentes, o transportes, que se pueden utilizar para enviar mensajes entre el cliente y el servidor.
 
- **TCP/IP** Se utiliza para conexiones cliente-servidor normales.
+ **TCP/IP** Se usa para las conexiones de cliente-servidor normales.
 
- **HTTP** Se utiliza para conexiones HTTP a través del servicio de bomba de datos SSAS o mediante una llamada al componente SharePoint PowerPivot Web Service (WS).
+ **Http** Se utiliza para las conexiones HTTP a través del servicio de bombeo de datos de SSAS o mediante una llamada al componente de servicio Web PowerPivot (WS) de SharePoint.
 
- **INPROC** Se utiliza para las conexiones al motor en proceso.
+ **INproc** Se utiliza para las conexiones con el motor en proceso.
 
- **CANAL** Reservado para las comunicaciones con el servicio de sistema PowerPivot en la granja de servidores de SharePoint.
+ **Canal** de Reservado para las comunicaciones con el Servicio de sistema de PowerPivot en la granja de servidores de SharePoint.
 
 ## <a name="see-also"></a>Consulte también
  [Componentes de servidor del motor OLAP](olap-engine-server-components.md)

@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388431"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
@@ -30,9 +30,9 @@ ms.locfileid: "81388431"
 >  El aumento del tiempo de espera de la conexión y la implementación de la lógica de reintento de conexión aumentarán la probabilidad de que una aplicación se conecte a un grupo de disponibilidad. Además, dado que una conexión puede producir un error debido a la conmutación por error de un grupo de disponibilidad, es aconsejable implementar la lógica de reintento de conexión y hacer que una conexión que no se ha podido establecer se reintente hasta que vuelva a conectarse.  
   
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
- Especifique siempre **MultiSubnetFailover=Yes** al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** permite una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia de clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de conmutación por error para topologías AlwaysOn de una y varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
+ Especifique siempre **MultiSubnetFailover=Yes** al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. **MultiSubnetFailover** permite una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia de clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de conmutación por error para topologías de Always on de una y varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
   
- La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a todas las direcciones IP. Cuando se especifica **MultiSubnetFailover=Yes** para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a grupos de disponibilidad de una y varias subredes e instancias de clúster de conmutación por error.  
+ La propiedad de conexión **MultiSubnetFailover** indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a todas las direcciones IP. Cuando se especifica **MultiSubnetFailover=Yes** para una conexión, el cliente reintenta la conexión TCP más deprisa que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad de Always On o una instancia de clúster de conmutación por error Always On, y es aplicable a las instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
  Para más información sobre las palabras clave de cadena de conexión, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -40,13 +40,13 @@ ms.locfileid: "81388431"
   
  Utilice las siguientes instrucciones para conectarse a un servidor en un grupo de disponibilidad o una instancia de clúster de conmutación por error:  
   
--   Utilice la propiedad de conexión **MultiSubnetFailover** al conectarse a una sola subred o a varias subredes; mejorará el rendimiento de ambos.  
+-   Use la propiedad de conexión **MultiSubnetFailover** cuando se conecte a una única subred o a varias subredes. mejorará el rendimiento de ambos.  
   
 -   Para conectarse a un grupo de disponibilidad, especifique el agente de escucha del grupo de disponibilidad como el servidor en la cadena de conexión.  
   
 -   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirá un error en la conexión.  
   
--   El comportamiento de una aplicación que utiliza la propiedad de conexión [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **MultiSubnetFailover** no se ve afectado en función del tipo de autenticación: autenticación, autenticación Kerberos o autenticación de Windows.  
+-   El comportamiento de una aplicación que usa la propiedad de conexión **MultiSubnetFailover** no se ve afectado en función del tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de autenticación: autenticación de, autenticación Kerberos o autenticación de Windows.  
   
 -   Puede aumentar el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "81388431"
   
 1.  Si la ubicación de réplica secundaria no está configurada para aceptar conexiones.  
   
-2.  Si una aplicación utiliza **ApplicationIntent-ReadWrite** (que se describe a continuación) y la ubicación de la réplica secundaria está configurada para el acceso de solo lectura.  
+2.  Si una aplicación utiliza **ApplicationIntent = ReadWrite** (se describe a continuación) y la ubicación de la réplica secundaria está configurada para acceso de solo lectura.  
   
  Una conexión producirá un error si una réplica principal está configurada para rechazar cargas de trabajo de solo lectura y la cadena de conexión contiene **ApplicationIntent=ReadOnly**.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "81388431"
  Cuando se establezcan conexiones implícitas, estas usarán la configuración de la intención de aplicaciones de la conexión primaria. De forma similar, cuando se creen varias sesiones con el mismo origen de datos estas heredarán la configuración de la intención de aplicaciones del origen de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client características](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 86e27f10e2cb56164b21c1488022df600bb87c59
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387748"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Cuándo debe utilizarse SQL Server Native Client
@@ -32,15 +32,15 @@ ms.locfileid: "81387748"
   
  Si está desarrollando una aplicación basada en COM y necesita obtener acceso a las nuevas características introducidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debería utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Si no necesita obtener acceso a las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede seguir utilizando Windows Data Access Components (WDAC).  
   
- En el caso de aplicaciones OLE DB y ODBC existentes, el problema principal es si necesita obtener acceso a las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si su aplicación es antigua y no necesita las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede seguir usando WDAC. Pero si necesita tener acceso a esas nuevas características, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el tipo de datos [xml](../../t-sql/xml/xml-transact-sql.md), debe usar Native Client.  
+ En el caso de aplicaciones OLE DB y ODBC existentes, el problema principal es si necesita obtener acceso a las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si su aplicación es antigua y no necesita las nuevas características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede seguir usando WDAC. Pero si necesita tener acceso a estas nuevas características, como el tipo de [datos XML](../../t-sql/xml/xml-transact-sql.md), debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  Tanto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client como MDAC admiten el aislamiento de transacción de lectura confirmada mediante el uso de versiones de fila, pero solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite el aislamiento de transacción de instantánea. (En términos de programación, el aislamiento de transacción de instantánea con versiones de fila es igual que la transacción de lectura confirmada).  
   
- Para obtener información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las diferencias entre Native Client y MDAC, vea [Actualización de una aplicación a SQL ServerSql Server Native Client desde MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
+ Para obtener información acerca de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diferencias entre Native Client y MDAC, vea [actualizar una aplicación a SQL Server Native Client desde MDAC](../../relational-databases/native-client/applications/updating-an-application-to-sql-server-native-client-from-mdac.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Programación de clientenativo de SQL Server](../../relational-databases/native-client/sql-server-native-client-programming.md)   
- [Temas de información de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
+ [Programación de SQL Server Native Client](../../relational-databases/native-client/sql-server-native-client-programming.md)   
+ [Temas de procedimientos de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)   
  [Temas de procedimientos de OLE DB](../../relational-databases/native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Interfaz de usuario del Diseñador de consultas de SAP NetWeaver BI (Generador de informes) Microsoft Docs
+title: Interfaz de usuario del diseñador de consultas de SAP NetWeaver BI (Generador de informes) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3dc9e21a9bea5c188b32ccc01b7d1fa6d15fa98
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388644"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas SAP NetWeaver BI (Generador de informes)

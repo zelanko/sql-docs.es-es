@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f26fb42531635fd6e5791fbad0cba94f980f23e
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388337"
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas SAP NetWeaver BI
@@ -104,6 +104,6 @@ ms.locfileid: "81388337"
 -   **Eliminar** (![Eliminar](../../analysis-services/media/rsqdicon-delete.gif "Eliminar"))
 
 ## <a name="see-also"></a>Consulte también
- Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de [informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) archivo de [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ [Crear un conjunto de archivos compartido o un conjunto de &#40;incrustado generador de informes y SSRS&#41;archivo de](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

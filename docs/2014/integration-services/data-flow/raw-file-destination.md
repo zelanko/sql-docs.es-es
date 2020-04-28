@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6a4610a5f0963cbe94c82c33a63f08490cec36d9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487017"
 ---
 # <a name="raw-file-destination"></a>destino de archivo sin formato
@@ -113,7 +113,7 @@ ms.locfileid: "81487017"
   
 1.  Establezca la propiedad WriteOption en **CreateOnce** o **CreateAlways**y ejecute una iteración del bucle. Se crea el archivo. Así se garantiza que los metadatos de los datos agregados y del archivo sean iguales.  
   
-2.  Restablezca la propiedad WriteOption en **Append** y `False`establezca la propiedad ValidateExternalMetadata en .  
+2.  Restablezca la propiedad WriteOption en **Append** y establezca la propiedad ValidateExternalMetadata en `False`.  
   
  Si usa la opción **TruncateAppend** en lugar de la opción **Append** , truncará las filas que se agregaron en toda iteración anterior y anexará filas nuevas. Con la opción **TruncateAppend** también es necesario que los datos tengan el mismo formato que el archivo.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "81487017"
  Entrada del blog, sobre los [archivos sin formato](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), en sqlservercentral.com  
   
 ## <a name="see-also"></a>Consulte también  
- [Fuente de archivos sin procesar](raw-file-source.md)   
- [Data Flow](data-flow.md)  
+ [Origen de archivo sin formato](raw-file-source.md)   
+ [Flujo de datos](data-flow.md)  
   
   

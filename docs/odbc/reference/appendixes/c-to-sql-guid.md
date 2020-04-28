@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: GUID ? Microsoft Docs'
+title: 'C a SQL: GUID | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b3b559499273e885e23da10d9093a0ce9ff92393
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306626"
 ---
 # <a name="c-to-sql-guid"></a>C a SQL: GUID
-El identificador del tipo de datos GUID ODBC C es:  
+El identificador para el tipo de datos de GUID de C ODBC es:  
   
  SQL_C_GUID  
   
- En la tabla siguiente se muestran los tipos de datos SQL ODBC a los que se pueden convertir los datos GUID C. Para obtener una explicación de las columnas y los términos de la tabla, vea [Convertir datos de C a tipos](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)de datos SQL .  
+ En la tabla siguiente se muestran los tipos de datos de ODBC SQL en los que se pueden convertir los datos de GUID C. Para obtener una explicación de las columnas y los términos de la tabla, vea [convertir datos de C a tipos de datos de SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificador de tipo SQL|Prueba|SQLSTATE|  
+|Identificador de tipo de SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|La longitud de los bytes de columna >36|N/D|  
+|SQL_CHAR|Longitud de bytes de columna >= 36|N/D|  
 |SQL_VARCHAR|Longitud de bytes de columna < 36|22001|  
-|SQL_LONGVARCHAR|El valor de datos no es un GUID válido|22018|  
-|SQL_WCHAR|La longitud de los caracteres de la columna >36|N/D|  
-|SQL_WVARCHAR|Longitud del carácter de columna < 36|22001|  
-|SQL_WLONGVARCHAR|El valor de datos no es un GUID válido|22018|  
-|SQL_GUID|Ninguno[a]|N/D|  
+|SQL_LONGVARCHAR|El valor de los datos no es un GUID válido|22018|  
+|SQL_WCHAR|Longitud de caracteres de columna >= 36|N/D|  
+|SQL_WVARCHAR|Longitud de caracteres de columna < 36|22001|  
+|SQL_WLONGVARCHAR|El valor de los datos no es un GUID válido|22018|  
+|SQL_GUID|Ninguno [a]|N/D|  
   
- [a] Todos los valores hexidecimales son válidos como GUID.  
+ [a] todos los valores hexadecimales son válidos como un GUID.  
   
- El controlador omite el valor de longitud/indicador al convertir datos del tipo de datos GUID C y supone que el tamaño del búfer de datos es el tamaño del tipo de datos GUID C. El valor de longitud/indicador se pasa en el argumento *StrLen_or_Ind* en **SQLPutData** y en el búfer especificado con el argumento *StrLen_or_IndPtr* en **SQLBindParameter**. El búfer de datos se especifica con el *argumento DataPtr* en **SQLPutData** y el argumento *ParameterValuePtr* en **SQLBindParameter**.
+ El controlador omite el valor de longitud/indicador al convertir los datos del tipo de datos GUID C y da por supuesto que el tamaño del búfer de datos es el tamaño del tipo de datos GUID C. El valor de longitud/indicador se pasa en el argumento *StrLen_or_Ind* de **SQLPutData** y en el búfer especificado con el argumento *StrLen_or_IndPtr* en **SQLBindParameter**. El búfer de datos se especifica con el argumento *DataPtr* en **SQLPutData** y el argumento *ParameterValuePtr* en **SQLBindParameter**.

@@ -1,5 +1,5 @@
 ---
-title: Palabras clave reservadas ? Microsoft Docs
+title: Palabras clave reservadas | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: ed8056d6c9645a211f1413a1b280426925dd538e
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307996"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
-Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática SQL mínima; sin embargo, para garantizar la compatibilidad con controladores que admiten la gramática SQL principal, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor**de definición** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
+Las siguientes palabras están reservadas para su uso en llamadas a funciones de ODBC. Estas palabras no restringen la gramática de SQL mínima; sin embargo, para garantizar la compatibilidad con los controladores que admiten la gramática básica de SQL, las aplicaciones deben evitar el uso de cualquiera de estas palabras clave. El valor de #**define** SQL_ODBC_KEYWORDS contiene una lista separada por comas de estas palabras clave.  
   
 |||  
 |-|-|  

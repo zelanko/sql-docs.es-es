@@ -1,5 +1,5 @@
 ---
-title: Configurar un contenedor de bucles For ( For Loop Container) Microsoft Docs
+title: Configurar un contenedor de bucles for | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 766a82c975b607687f79a696ce587422b93322bf
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487003"
 ---
 # <a name="configure-a-for-loop-container"></a>Configurar un contenedor de bucles For
@@ -43,8 +43,8 @@ ms.locfileid: "81487003"
 7.  Haga clic en **Aceptar** para cerrar el **Editor de bucles For**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Para contenedor de bucles](control-flow/for-loop-container.md)   
- [Integration ServicesIntegration Services &#40;expresiones de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
+ [Contenedor de bucles for](control-flow/for-loop-container.md)   
+ [Integration Services &#40;expresiones de&#41; SSIS](expressions/integration-services-ssis-expressions.md)   
  [Usar expresiones de propiedad en paquetes](expressions/use-property-expressions-in-packages.md)  
   
   

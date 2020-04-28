@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7134f0689701c663133e52dd9face50e99ef3102
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388425"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parámetros con valores de tabla (SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "81388425"
 
   Los parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)], y pueden mejorar con frecuencia el rendimiento. Los parámetros con valores de tabla pueden participar también en operaciones basadas en conjuntos, mientras que las matrices de parámetros no.  
   
- Para obtener información acerca de los parámetros con valores de tabla y ODBC, vea [Parámetros con ](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)valores de tabla &#40;ODBC&#41;.  
+ Para obtener información sobre los parámetros con valores de tabla y ODBC, vea [parámetros con valores de tabla &#40;odbc&#41;](../../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
  Para obtener información acerca de los parámetros con valores de tabla y OLE DB, consulte [Parámetros con valores de tabla &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   

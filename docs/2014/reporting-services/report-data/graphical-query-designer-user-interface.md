@@ -20,14 +20,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ce63eeebcee247f5bccb3c68bce24d325c44fe2d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388546"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de origen de datos específicos, vea Agregar datos a un informe &#40;Generador de [informes y SSRS&#41;](report-datasets-ssrs.md).
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de orígenes de datos específicos, vea [Agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md).
 
  .
 
@@ -144,6 +144,6 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`
 
 ## <a name="see-also"></a>Consulte también
- Herramientas de diseño de consultas en el Diseñador de informes [SQL Server Data Tools &#40;SSRS&#41;](query-design-tools-ssrs.md) Agregar datos a un generador de informes &#40;de informes y [SSRS&#41;](report-datasets-ssrs.md) tipo de conexión de SQL Server &#40;[SSRS&#41;](sql-server-connection-type-ssrs.md) tipo de conexión OLE DB &#40;[SSRS&#41;](ole-db-connection-type-ssrs.md) Agregar datos a un informe &#40;Generador de informes y [SSRS&#41;](report-datasets-ssrs.md) Tipo de conexión de Oracle &#40;[SSRS&#41;](oracle-connection-type-ssrs.md) [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Consultas de diseño](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) de archivos de configuración y vistas Temas de información &#40;visual&#41;
+ [Herramientas de diseño de consultas en Diseñador de informes SQL Server Data Tools &#40;ssrs&#41;](query-design-tools-ssrs.md) [Agregar datos a un informe &#40;Generador de informes y SSRS&#41;](report-datasets-ssrs.md) [SQL Server tipo de conexión &#40;SSRS&#41;](sql-server-connection-type-ssrs.md) [OLE DB tipo de conexión &#40;ssrs&#41;](ole-db-connection-type-ssrs.md) [agregar datos a un informe &#40;Generador de informes y SSRS&#41;tipo de](report-datasets-ssrs.md) [conexión de Oracle &#40;](oracle-connection-type-ssrs.md) informes de configuración de RSReportDesigner de archivos de [configuración](../report-server/rsreportdesigner-configuration-file.md) de SSRS&#41;[Visual Database Tools](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md) &#40;
 
 

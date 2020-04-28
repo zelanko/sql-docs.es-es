@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c7a12ec8f9e2bd49c9aecc1080fe0b5cff854ce
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81387969"
 ---
 # <a name="hyperion-essbase-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas de Hyperion Essbase
@@ -101,6 +101,6 @@ ms.locfileid: "81387969"
 -   **Ejecutar automáticamente** (![Ejecutar la consulta automáticamente](../../analysis-services/media/rsqdicon-autoexecute.gif "Ejecutar la consulta automáticamente"))
 
 ## <a name="see-also"></a>Consulte también
- Crear un conjunto de datos compartido o un conjunto de datos incrustado &#40;Generador de [informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) archivo de [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
+ [Crear un conjunto de archivos compartido o un conjunto de &#40;incrustado generador de informes y SSRS&#41;archivo de](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md)
 
 

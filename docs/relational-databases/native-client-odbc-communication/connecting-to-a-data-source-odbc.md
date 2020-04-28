@@ -1,5 +1,5 @@
 ---
-title: Conexión a un origen de datos (ODBC) Microsoft Docs
+title: Conectar con un origen de datos (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ae59e0bdb005d296341970f4582100b15a0dfdf7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307736"
 ---
 # <a name="connecting-to-a-data-source-odbc"></a>Conectar con un origen de datos (ODBC)
@@ -42,15 +42,15 @@ ms.locfileid: "81307736"
   
 -   **SQLBrowseConnect**  
   
- Para obtener más información acerca de cómo realizar conexiones a un origen de datos, incluidas las distintas opciones de cadena de conexión [disponibles,](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)vea Uso de palabras clave de cadena de conexión con SQL ServerSQL Server Native Client .  
+ Para obtener más información sobre cómo establecer conexiones a un origen de datos, incluidas las distintas opciones de cadena de conexión disponibles, vea [usar palabras clave de cadena de conexión con SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
 ## <a name="sqlconnect"></a>SQLConnect  
- **SQLConnect** es la función de conexión más sencilla. Acepta tres parámetros: nombre del origen de datos, identificador de usuario y contraseña. Utilice **SQLConnect** cuando estos tres parámetros contengan toda la información necesaria para conectarse a la base de datos. Para ello, cree una lista de orígenes de datos mediante **SQLDataSources**; solicitar al usuario un origen de datos, un ID de usuario y una contraseña; y luego llame a **SQLConnect**.  
+ **SQLConnect** es la función de conexión más sencilla. Acepta tres parámetros: nombre del origen de datos, identificador de usuario y contraseña. Use **SQLConnect** cuando estos tres parámetros contengan toda la información necesaria para conectarse a la base de datos. Para ello, cree una lista de orígenes de datos con **SQLDataSources**; solicitar al usuario un origen de datos, un identificador de usuario y una contraseña; y, a continuación, llame a **SQLConnect**.  
   
- **SQLConnect** supone que un nombre de origen de datos, un identificador de usuario y una contraseña son suficientes para conectarse a un origen de datos y que el origen de datos ODBC contiene toda la información que el controlador ODBC necesita para realizar la conexión. A diferencia de [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) y [SQLBrowseConnect,](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) **SQLConnect** no utiliza una cadena de conexión.  
+ **SQLConnect** supone que el nombre del origen de datos, el identificador de usuario y la contraseña son suficientes para conectarse a un origen de datos y que el origen de datos ODBC contiene toda la información necesaria para que el controlador ODBC realice la conexión. A diferencia de [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) y [SQLBrowseConnect](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md), **SQLConnect** no utiliza una cadena de conexión.  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
- **SQLDriverConnect** se utiliza cuando se requiere más información que el nombre del origen de datos, el identificador de usuario y la contraseña. Uno de los parámetros de **SQLDriverConnect** es una cadena de conexión que contiene información específica del controlador. Puede usar **SQLDriverConnect** en lugar de **SQLConnect** por las siguientes razones:  
+ **SQLDriverConnect** se usa cuando se necesita más información que el nombre del origen de datos, el identificador de usuario y la contraseña. Uno de los parámetros para **SQLDriverConnect** es una cadena de conexión que contiene información específica del controlador. Puede usar **SQLDriverConnect** en lugar de **SQLConnect** por las razones siguientes:  
   
 -   Para especificar la información específica del controlador durante la conexión.  
   
@@ -58,20 +58,20 @@ ms.locfileid: "81307736"
   
 -   Para conectarse sin utilizar un origen de datos ODBC.  
   
- La cadena de conexión **SQLDriverConnect** contiene una serie de pares palabra clave-valor que especifican toda la información de conexión admitida por un controlador ODBC. Cada controlador admite las palabras clave de ODBC estándar (DSN, FILEDSN, DRIVER, UID, PWD y SAVEFILE) además de las palabras clave específicas del controlador para toda la información de conexión admitida por el controlador. **SQLDriverConnect** se puede usar para conectarse sin un origen de datos. Por ejemplo, una aplicación que está diseñada para establecer una conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "sin DSN" a una instancia de puede llamar a **SQLDriverConnect** con una cadena de conexión que define el identificador de inicio de sesión, contraseña, biblioteca de red, nombre de servidor para conectarse y base de datos predeterminada para usar.  
+ La cadena de conexión **SQLDriverConnect** contiene una serie de pares palabra clave-valor que especifican toda la información de conexión admitida por un controlador ODBC. Cada controlador admite las palabras clave de ODBC estándar (DSN, FILEDSN, DRIVER, UID, PWD y SAVEFILE) además de las palabras clave específicas del controlador para toda la información de conexión admitida por el controlador. **SQLDriverConnect** se puede usar para conectarse sin un origen de datos. Por ejemplo, una aplicación diseñada para hacer una conexión "sin DSN" a una instancia de puede llamar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQLDriverConnect** con una cadena de conexión que define el identificador de inicio de sesión, la contraseña, la biblioteca de red, el nombre del servidor al que se va a conectar y la base de datos predeterminada que se va a usar.  
   
- Cuando se utiliza **SQLDriverConnect**, hay dos opciones para solicitar al usuario cualquier información de conexión necesaria:  
+ Al usar **SQLDriverConnect**, hay dos opciones para preguntar al usuario sobre la información de conexión necesaria:  
   
 -   Cuadro de diálogo de la aplicación  
   
-     Puede crear un cuadro de diálogo de aplicación que solicite información de conexión y, a continuación, llama a **SQLDriverConnect** con un identificador de ventana NULL y *DriverCompletion* establecido en SQL_DRIVER_NOPROMPT. Estos valores de parámetro evitan que el controlador ODBC abra su propio cuadro de diálogo. Se utiliza este método cuando es importante controlar la interfaz de usuario de la aplicación.  
+     Puede crear un cuadro de diálogo de aplicación que pida información de conexión y, a continuación, llame a **SQLDriverConnect** con un identificador de ventana nulo y *DriverCompletion* establecido en SQL_DRIVER_NOPROMPT. Estos valores de parámetro evitan que el controlador ODBC abra su propio cuadro de diálogo. Se utiliza este método cuando es importante controlar la interfaz de usuario de la aplicación.  
   
 -   Cuadro de diálogo del controlador  
   
      Puede codificar la aplicación para pasar un identificador de ventana válido a **SQLDriverConnect** y establecer el parámetro *DriverCompletion* en SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT o SQL_DRIVER_COMPLETE_REQUIRED. El controlador genera después un cuadro de diálogo para solicitar al usuario la información de conexión. Este método simplifica el código de aplicación.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**, como **SQLDriverConnect**, utiliza una cadena de conexión. Sin embargo, mediante **SQLBrowseConnect**, una aplicación puede construir una cadena de conexión completa iterativamente con el origen de datos en tiempo de ejecución. Esto permite a la aplicación hacer dos cosas:  
+ **SQLBrowseConnect**, como **SQLDriverConnect**, utiliza una cadena de conexión. Sin embargo, mediante **SQLBrowseConnect**, una aplicación puede crear una cadena de conexión completa de forma iterativa con el origen de datos en tiempo de ejecución. Esto permite a la aplicación hacer dos cosas:  
   
 -   Construir sus propios cuadros de diálogo para solicitar esta información, reteniendo así el control sobre la interfaz de usuario.  
   
@@ -79,9 +79,9 @@ ms.locfileid: "81307736"
   
      Por ejemplo, el usuario podría buscar primero en la red los servidores y, después de elegir un servidor, buscar en el servidor las bases de datos accesibles para el controlador.  
   
- Cuando **SQLBrowseConnect** completa una conexión correcta, devuelve una cadena de conexión que se puede usar en llamadas posteriores a **SQLDriverConnect**.  
+ Cuando **SQLBrowseConnect** completa una conexión correcta, devuelve una cadena de conexión que se puede usar en las llamadas subsiguientes a **SQLDriverConnect**.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client siempre devuelve SQL_SUCCESS_WITH_INFO en un **SQLConnect,** **SQLDriverConnect**o **SQLBrowseConnect**correctos. Cuando una aplicación ODBC llama a **SQLGetDiagRec** después de obtener SQL_SUCCESS_WITH_INFO, puede recibir los siguientes mensajes:  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client siempre devuelve SQL_SUCCESS_WITH_INFO con un **SQLConnect**, **SQLDriverConnect**o **SQLBrowseConnect**correctos. Cuando una aplicación ODBC llama a **SQLGetDiagRec** después de obtener SQL_SUCCESS_WITH_INFO, puede recibir los mensajes siguientes:  
   
  5701  
  Indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pone el contexto del usuario en la base de datos predeterminada definida en el origen de datos, o en la base de datos predeterminada definida para el identificador de inicio de sesión utilizado en la conexión si el origen de datos no tenía una base de datos predeterminada.  
@@ -100,7 +100,7 @@ szErrorMsg="[Microsoft][SQL Server Native Client][SQL Server]
        Changed language setting to 'us_english'."  
 ```  
   
- Puede omitir los mensajes 5701 y 5703; solo son informativos. No debe, sin embargo, omitir un código de retorno SQL_SUCCESS_WITH_INFO porque se pueden devolver mensajes distintos de 5701 ó 5703. Por ejemplo, si un controlador se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un servidor que ejecuta una instancia con procedimientos almacenados de catálogo obsoletos, uno de los errores devueltos a través de **SQLGetDiagRec** después de una SQL_SUCCESS_WITH_INFO es:  
+ Puede omitir los mensajes 5701 y 5703; solo son informativos. No debe, sin embargo, omitir un código de retorno SQL_SUCCESS_WITH_INFO porque se pueden devolver mensajes distintos de 5701 ó 5703. Por ejemplo, si un controlador se conecta a un servidor que ejecuta una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de con procedimientos almacenados de catálogo obsoletos, uno de los errores devueltos a través de **SQLGetDiagRec** después de un SQL_SUCCESS_WITH_INFO es:  
   
 ```  
 SqlState:   01000  
@@ -112,9 +112,9 @@ szErrorMsg: "[Microsoft][SQL Server Native Client]The ODBC
             Please contact your system administrator."  
 ```  
   
- La función de control [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de errores de una aplicación para conexiones debe llamar a **SQLGetDiagRec** hasta que devuelve SQL_NO_DATA. A continuación, debe actuar en cualquier mensaje que no sea el que no sea el que tiene un código *pfNative* de 5701 o 5703.  
+ La función de control de errores de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación para las conexiones debe llamar a **SQLGetDiagRec** hasta que devuelva SQL_NO_DATA. A continuación, debe actuar en cualquier mensaje distinto de los que tengan un código *pfNative* de 5701 o 5703.  
   
 ## <a name="see-also"></a>Consulte también  
- [Comunicación con SQL ServerSQL Server &#40;&#41;ODBC](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
+ [Comunicarse con SQL Server &#40;ODBC&#41;](../../relational-databases/native-client-odbc-communication/communicating-with-sql-server-odbc.md)  
   
   

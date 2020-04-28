@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a31c451b89ca226d207862c375943f6ffcfbb5e8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388704"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
@@ -115,6 +115,6 @@ ms.locfileid: "81388704"
 -   **Mostrar agregaciones** (![Botón Mostrar agregaciones](../../analysis-services/media/rsqdicon-showaggregations.gif "Botón Mostrar agregaciones"))
 
 ## <a name="see-also"></a>Consulte también
- [Definir parámetros en el Diseñador de consultas MDX para Analysis ServicesAnalysis Services &#40;Generador de informes y SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) Crear un conjunto de datos compartido o conjunto de datos incrustado &#40;Generador de informes y Tipo de conexión de [SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) Analysis Services para DMX &#40;[SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) Tipo de conexión de Los servicios de análisis de archivos de configuración [RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
+ [Defina los parámetros en el diseñador de consultas MDX para Analysis Services &#40;generador de informes y ssrs&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) [crear un conjunto de DataSet compartido o un conjunto de archivos incrustado &#40;Generador de informes y SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) [tipo de conexión Analysis Services para DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md) el [archivo de configuración RSReportDesigner](../report-server/rsreportdesigner-configuration-file.md) [Analysis Services tipo de conexión para MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)
 
 

@@ -17,10 +17,10 @@ ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982608"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>Sys. dm_exec_session_wait_stats (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "73982608"
 
   Devuelve información sobre todas las esperas encontradas por los subprocesos que se ejecutaron para cada sesión. Puede usar esta vista para diagnosticar problemas de rendimiento con la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sesión y también con lotes y consultas específicos.  Esta vista devuelve la misma información que se agrega para [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) , pero también proporciona el número de **session_id** .  
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (y versiones posteriores).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores)  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identificador de la sesión.|  
-|wait_type|**nvarchar (60)**|Nombre del tipo de espera. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|waiting_tasks_count|**BIGINT**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
-|wait_time_ms|**BIGINT**|Tiempo total de espera de este tipo en milisegundos. Este tiempo incluye el tiempo de signal_wait_time_ms.|  
-|max_wait_time_ms|**BIGINT**|Tiempo de espera máximo de este tipo de espera.|  
-|signal_wait_time_ms|**BIGINT**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
+|wait_type|**nvarchar(60)**|Nombre del tipo de espera. Para obtener más información, vea [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|waiting_tasks_count|**bigint**|Número de esperas de este tipo de espera. Este recuento se incrementa al inicio de cada espera.|  
+|wait_time_ms|**bigint**|Tiempo total de espera de este tipo en milisegundos. Este tiempo incluye el tiempo de signal_wait_time_ms.|  
+|max_wait_time_ms|**bigint**|Tiempo de espera máximo de este tipo de espera.|  
+|signal_wait_time_ms|**bigint**|Diferencia entre el momento en que se indicó el subproceso en espera y el momento en que empezó a ejecutarse.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta DMV restablece la información de una sesión cuando se abre la sesión, o cuando se restablece la sesión (si se agrupa la conexión),  

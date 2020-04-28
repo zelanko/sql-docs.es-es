@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 64b4d3e1eb464481b076af86dbc018be72e93a6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981964"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -74,7 +74,7 @@ ms.locfileid: "73981964"
 |is_sparse|**bit**|1 = La columna es una columna dispersa. Para obtener más información, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = La columna es un conjunto de columnas. Para obtener más información, vea [Usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).|  
 |generated_always_type|**tinyint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Identifica Cuándo se genera el valor de la columna (siempre será 0 para las columnas de las tablas del sistema):<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END<br /><br /> Para obtener más información, vea [tablas temporales &#40;bases de datos relacionales&#41;](../../relational-databases/tables/temporal-tables.md).|  
-|generated_always_type_desc|**nvarchar (60)**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Descripción textual del `generated_always_type`valor de (siempre NOT_APPLICABLE para las columnas de las tablas del sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
+|generated_always_type_desc|**nvarchar(60)**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Descripción textual del `generated_always_type`valor de (siempre NOT_APPLICABLE para las columnas de las tablas del sistema) <br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END|  
 |encryption_type|**int**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Tipo de cifrado:<br /><br /> 1 = cifrado determinista<br /><br /> 2 = cifrado aleatorio|  
 |encryption_type_desc|**nvarchar (64)**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Descripción del tipo de cifrado:<br /><br /> ALEATORIO<br /><br /> DETERMINISTIC|  
 |encryption_algorithm_name|**sysname**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Nombre del algoritmo de cifrado.<br /><br /> Solo se admite AEAD_AES_256_CBC_HMAC_SHA_512.|  

@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981776"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "73981776"
    
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|Identificador de configuración regional (LCID) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
-|**Name**|**sysname**|Es el valor del alias en [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID** o la representación de cadena del LCID numérico.|  
+|**lcid**|**int**|Identificador de configuración regional (LCID) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
+|**name**|**sysname**|Es el valor del alias en [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) que corresponde al valor de **LCID** o la representación de cadena del LCID numérico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valores devueltos para los idiomas predeterminados  
  En la tabla siguiente se muestran los valores para los idiomas cuyos separadores de palabras están registrados de forma predeterminada.  
@@ -55,7 +55,7 @@ ms.locfileid: "73981776"
 |Checo|1029|  
 |Danés|1030|  
 |Neerlandés|1043|  
-|Inglés|1033|  
+|Inglés|3082|  
 |Francés|1036|  
 |Alemán|1031|  
 |**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Griego|1032|  
@@ -105,10 +105,10 @@ ms.locfileid: "73981776"
   
 ## <a name="see-also"></a>Consulte también  
  [sp_fulltext_load_thesaurus_file &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Configurar y administrar archivos de sinónimos para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Configurar y administrar palabras irrelevantes y palabras irrelevantes para la búsqueda de texto completo](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Actualizar la búsqueda de texto completo](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

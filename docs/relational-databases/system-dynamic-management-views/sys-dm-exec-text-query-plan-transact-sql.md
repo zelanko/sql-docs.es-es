@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983140"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
@@ -81,7 +81,7 @@ Indica, en bytes, la posición final de la consulta que la fila describe en el t
   
 *statement_start_offset* es de **tipo int**.  
   
-El valor -1 indica el final del lote. El valor predeterminado es-1.  
+El valor -1 indica el final del lote. El valor predeterminado es -1.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   

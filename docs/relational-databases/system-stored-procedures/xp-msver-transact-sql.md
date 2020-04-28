@@ -18,10 +18,10 @@ ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843900"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
@@ -44,7 +44,7 @@ xp_msver [ optname ]
   
 |Opción/Nombre de columna|Descripción|  
 |-------------------------|-----------------|  
-|**ProductName**|Nombre del producto; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**NombreDeProducto**|Nombre del producto; por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ProductVersion**|Versión del producto.|  
 |**Lenguaje**|Versión del idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**Plataforma**|Nombre del sistema operativo, nombre del fabricante y nombre de la familia de circuitos integrados del equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -63,7 +63,7 @@ xp_msver [ optname ]
 |**ProcessorActiveMask**|Indica los procesadores instalados en el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows inicia y puede usar.|  
 |**ProcessorType**|Tipo de procesador. Similar a la **plataforma**.|  
 |**PhysicalMemory**|Cantidad de RAM en megabytes (MB) instalada en el equipo en que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Product ID**|Número de Id. del producto (PID). Se especifica durante la instalación. Este número se encuentra en un adhesivo en la caja del CD original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Identificador de producto**|Número de Id. del producto (PID). Se especifica durante la instalación. Este número se encuentra en un adhesivo en la caja del CD original de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  1 (correcto)  

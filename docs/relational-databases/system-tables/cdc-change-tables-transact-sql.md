@@ -18,10 +18,10 @@ ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962448"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
@@ -32,11 +32,11 @@ ms.locfileid: "73962448"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Id. de la tabla de cambios. Es único en una base de datos.|  
-|**Versión**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre devuelve 0.|  
+|**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], esta columna siempre devuelve 0.|  
 |**source_object_id**|**int**|Id. de la tabla de origen habilitada para la captura de datos modificados.|  
 |**capture_instance**|**sysname**|Nombre de la instancia de captura usada para nombrar los objetos de seguimiento específicos de la instancia. De forma predeterminada, el nombre se deriva del nombre del esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*.|  
-|**start_lsn**|**binario (10)**|Número de secuencia de registro (LSN) que representa el extremo inferior al consultar los datos de cambio en la tabla de cambios.<br /><br /> NULL = no se ha establecido el extremo bajo.|  
-|**end_lsn**|**binario (10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta columna siempre devuelve NULL.|  
+|**start_lsn**|**binary(10)**|Número de secuencia de registro (LSN) que representa el extremo inferior al consultar los datos de cambio en la tabla de cambios.<br /><br /> NULL = no se ha establecido el extremo bajo.|  
+|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta columna siempre devuelve NULL.|  
 |**supports_net_changes**|**bit**|La consulta de los cambios de red está habilitada para la tabla de cambios.|  
 |**has_drop_pending**|**bit**|El proceso de captura ha recibido la notificación de que se ha quitado la tabla de origen.|  
 |**role_name**|**sysname**|Nombre del rol de base de datos usada para obtener acceso a los datos de cambio.<br /><br /> NULL = no se utiliza un rol.|  
@@ -46,6 +46,6 @@ ms.locfileid: "73962448"
 |**partition_switch**|**bit**|Indica si el comando **Switch Partition** de **ALTER TABLE** se puede ejecutar en una tabla habilitada para la captura de datos modificados. = 0 true indica que el cambio de particiones está bloqueado. Las tablas sin particiones siempre devuelven 1.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
+ [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)  
   
   

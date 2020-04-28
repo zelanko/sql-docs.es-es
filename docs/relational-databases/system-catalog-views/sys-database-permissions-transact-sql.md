@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a87be6fe0a68172a99ade4704ae4111cabbe95f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982729"
 ---
 # <a name="sysdatabase_permissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
@@ -37,16 +37,16 @@ ms.locfileid: "73982729"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**las**|**tinyint**|Identifica la clase en que existe el permiso.<br /><br /> 0 = Base de datos<br />1 = objeto o columna<br />3 = Esquema<br />4 = entidad de seguridad de base de datos<br />5 = ensamblado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />6 = Tipo<br />10 = colección de esquemas XML: <br />                      **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />15 = tipo de mensaje: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />16 = contrato de servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />17 = servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />18 = enlace de servicio remoto: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />19 = ruta: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />23 = catálogo de texto completo: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />24 = clave simétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />25 = certificado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />26 = clave asimétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
-|**class_desc**|**nvarchar (60)**|Descripción de la clase en la que existe el permiso.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICADO<br /><br /> ASYMMETRIC_KEY|  
+|**class**|**tinyint**|Identifica la clase en que existe el permiso.<br /><br /> 0 = Base de datos<br />1 = objeto o columna<br />3 = Esquema<br />4 = entidad de seguridad de base de datos<br />5 = ensamblado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />6 = Tipo<br />10 = colección de esquemas XML: <br />                      **Válido para** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />15 = tipo de mensaje: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />16 = contrato de servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />17 = servicio: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />18 = enlace de servicio remoto: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />19 = ruta: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />23 = catálogo de texto completo: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />24 = clave simétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />25 = certificado: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.<br />26 = clave asimétrica: **se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
+|**class_desc**|**nvarchar(60)**|Descripción de la clase en la que existe el permiso.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICADO<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**int**|Id. del elemento en que existe el permiso, interpretado según la clase. Normalmente, el **major_id** es simplemente el tipo de identificador que se aplica a lo que la clase representa. <br /><br /> 0 = la propia base de datos <br /><br /> >0 = ID. de objeto para los objetos de usuario <br /><br /> \<0 = ID. de objeto para objetos del sistema |  
 |**minor_id**|**int**|Id. secundario del elemento en que existe el permiso, interpretado según la clase. A menudo, el **minor_id** es cero, porque no hay ninguna Subcategoría disponible para la clase de objeto. De lo contrario, es el ID. de columna de una tabla.|  
 |**grantee_principal_id**|**int**|Id. de la entidad de seguridad de base de datos a la que se conceden los permisos.|  
 |**grantor_principal_id**|**int**|Id. de la entidad de seguridad de base de datos de la persona que concede estos permisos.|  
-|**automáticamente**|**Char (4)**|Tipo de permiso de base de datos. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
+|**type**|**Char (4)**|Tipo de permiso de base de datos. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
 |**permission_name**|**nvarchar(128)**|Nombre del permiso.|  
-|**State**|**Char (1)**|Estado del permiso:<br /><br /> D = Denegar<br /><br /> R = Revocar<br /><br /> G = Conceder<br /><br /> W = Conceder con opción de conceder|  
-|**state_desc**|**nvarchar (60)**|Descripción del estado del permiso:<br /><br /> DENEGAR<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state**|**Char (1)**|Estado del permiso:<br /><br /> D = Denegar<br /><br /> R = Revocar<br /><br /> G = Conceder<br /><br /> W = Conceder con opción de conceder|  
+|**state_desc**|**nvarchar(60)**|Descripción del estado del permiso:<br /><br /> DENEGAR<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
 
 ## <a name="database-permissions"></a>Permisos para la base de datos   
 Son posibles los siguientes tipos de permisos.
@@ -121,7 +121,7 @@ Son posibles los siguientes tipos de permisos.
 |SPLN|SHOWPLAN|DATABASE|  
 |SUQN|SUBSCRIBE QUERY NOTIFICATIONS|DATABASE|  
 |TO|TAKE OWNERSHIP|ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, XML SCHEMA COLLECTION|  
-|ARRIBA|UPDATE|DATABASE, OBJECT, SCHEMA|  
+|UP|UPDATE|DATABASE, OBJECT, SCHEMA|  
 |VW|VIEW DEFINITION|APPLICATION ROLE, ASSEMBLY, ASYMMETRIC KEY, CERTIFICATE, CONTRACT, DATABASE, FULLTEXT CATALOG, MESSAGE TYPE, OBJECT, REMOTE SERVICE BINDING, ROLE, ROUTE, SCHEMA, SERVICE, SYMMETRIC KEY, TYPE, USER, XML SCHEMA COLLECTION|  
 |VWCK |VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|DATABASE |  
 |VWCM |VIEW ANY COLUMN MASTER KEY DEFINITION|DATABASE |  
@@ -168,7 +168,7 @@ JOIN sys.schemas AS s
   
 ## <a name="see-also"></a>Consulte también  
  [Proteger](../../relational-databases/security/securables.md)   
- [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
+ [Jerarquía de permisos &#40;Motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400930"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Componentes de almacenamiento de datos paralelos: Analytics Platform System
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![Software de almacenamiento de datos paralelos](media/parallel-data-warehouse-software.png "Software de almacenamiento de datos paralelos")  
   
-## <a name="sec1"></a>Software de dispositivo: procesamiento de consultas y almacenamiento de datos de usuario  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>Software de dispositivo: procesamiento de consultas y almacenamiento de datos de usuario  
   
 ### <a name="control-node"></a>nodo de control  
 Motor MPP  
-El motor MPP es el cerebro del sistema de procesamiento paralelo masivo (MPP). Hace lo siguiente:  
+El motor MPP es el cerebro del sistema de procesamiento paralelo masivo (MPP). Realiza las operaciones siguientes:  
   
 -   Crea planes de consulta paralelos y coordina la ejecución de consultas paralelas en los nodos de proceso.  
   
@@ -55,7 +55,7 @@ El motor MPP es el cerebro del sistema de procesamiento paralelo masivo (MPP). H
 -   Realiza un seguimiento del estado de hardware y software.  
   
 ### <a name="data-movement-service-dms"></a>Servicio de movimiento de datos (DMS)  
-El servicio de movimiento de datos (DMS) forma parte de la "salsa secreta" de PDW. Hace lo siguiente:  
+El servicio de movimiento de datos (DMS) forma parte de la "salsa secreta" de PDW. Realiza las operaciones siguientes:  
   
 -   Transfiere datos hacia y desde los nodos de PDW de SQL Server.  
   
@@ -118,7 +118,7 @@ Windows Server Update Services (WSUS) para aplicar o quitar actualizaciones de W
 ### <a name="windows-server"></a>Windows Server  
 Todos los hosts y las máquinas virtuales del dispositivo ejecutan el sistema operativo Windows Server.  
   
-### <a name="failover-clustering"></a>Clústeres de conmutación por error  
+### <a name="failover-clustering"></a>Clúster de conmutación por error  
 Los clústeres de conmutación por error de Windows proporcionan la capacidad de reiniciar procesos en un host pasivo en caso de que se produzca un error en un host.  
   
 ### <a name="storage-spaces"></a>Espacios de almacenamiento  
@@ -127,7 +127,7 @@ Los espacios de almacenamiento de Windows administran los datos de usuario como 
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server proporciona una solución de virtualización sencilla y confiable. Analytics Platform System usa virtualizaciones para equilibrar los recursos de CPU y proporcionar alta disponibilidad para los nodos PDW y los componentes de fabric del dispositivo.  
   
-## <a name="sec2"></a>Datos no relacionales
+## <a name="non-relational-data"></a><a name="sec2"></a>Datos no relacionales
 La tecnología de polybase integra PDW de SQL Server datos con datos de Hadoop externos. Los datos de Hadoop se pueden almacenar en cualquiera de estos orígenes de datos de Hadoop:  
   
 -   Hortonworks distribución de Hadoop  

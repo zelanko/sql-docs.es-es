@@ -19,10 +19,10 @@ ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783219"
 ---
 # <a name="bcp_bind"></a>bcp_bind
@@ -119,7 +119,7 @@ bcp_bind(hdbc, szName, 0,
 
 *eDataType* Es el tipo de datos C de la variable de programa. Los datos de la variable de programa se convierten al tipo de la columna de base de datos. Si este parámetro es 0, no se realiza ninguna conversión.  
 
-Los ** tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Los *eDataType* tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]incorporó la compatibilidad con los tokens de tipo de datos SQLXML y SQLUDT en el parámetro **_eDataType_** .  
 
@@ -165,7 +165,7 @@ En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de 
 |SQLUDT|unsigned char *|  
 |SQLUNIQUEID|SQLGUID|  
 |SQLVARIANT|*Cualquier tipo de datos excepto:*<br />-   text<br />-   ntext<br />-   image<br />-   varchar(max)<br />-   varbinary(max)<br />-   nvarchar(max)<br />-   xml<br />-   timestamp|  
-|SQLXML|*Tipos de datos de C admitidos:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
+|SQLXML|*Tipos de datos C admitidos:*<br />-   char*<br />-   wchar_t *<br />-   unsigned char *|  
 
 *idxServerCol* Es la posición ordinal de la columna en la tabla de base de datos en la que se copian los datos. La primera columna de una tabla es la columna 1. La posición ordinal de una columna se notifica mediante [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
@@ -177,7 +177,7 @@ En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de 
 
 Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
 
-Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al **** llamar a bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece la tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
+Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al **bcp_init** llamar a bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece la tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
 
 Realice una llamada de **bcp_bind** independiente para cada columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la tabla en la que desea copiar. Una vez realizadas las llamadas de **bcp_bind** necesarias, llame a **bcp_sendrow** para enviar una fila de datos de las variables de programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. No se permite volver a enlazar una columna.
 

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400620"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Encendido o apagado del dispositivo para el sistema de plataforma de análisis
@@ -25,7 +25,7 @@ Cuando estas instrucciones especifican la conexión a un nodo de PDW de SQL Serv
   
 Las conexiones a los nodos PDW de SQL Server pueden realizarse mediante las direcciones IP asignadas a los nodos o desde el equipo **HST01** mediante las aplicaciones de **Administrador de clústeres de conmutación por error** (**CluAdmin. msc**) o **Administrador de Hyper-V** (**virtmgmt. msc**) y haciendo clic con el botón derecho en el nombre del nodo.  
   
-## <a name="PowerOff"></a>Apagar el dispositivo  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Apagar el dispositivo  
   
 ### <a name="before-you-begin"></a>Antes de empezar  
 Antes de apagar el dispositivo, debe finalizar toda la actividad en el dispositivo. Para finalizar toda la actividad:  
@@ -61,7 +61,7 @@ Antes de apagar el dispositivo, debe finalizar toda la actividad en el dispositi
   
 9. Apague las unidades de distribución de energía (PDU).  
   
-## <a name="PowerOn"></a>Encender el dispositivo  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Encender el dispositivo  
   
 ### <a name="to-power-on-the-appliance"></a>Para encender el dispositivo  
   

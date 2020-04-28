@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 676335fb8ee4aac5906c61084c28cd94cf8ea815
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400895"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Aprovisionamiento de certificados PDW: Analytics Platform System
 La página de **aprovisionamiento de certificados PDW** de Analytics Platform System **Configuration Manager** importa o quita el certificado utilizado por la región de PDW. Con, un certificado para cifrar las conexiones puede ayudar a proteger la comunicación con el nodo de control a través de clientes de SQL Server, herramientas que usan los controladores de PDW de SQL Server, la [consola de administración](monitor-the-appliance-by-using-the-admin-console.md)y las cargas de Integration Services.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Antes de instalar el certificado, haga lo siguiente:  
   
 1.  Obtener un certificado seguro. Si necesita más información acerca de cómo obtener un certificado seguro, póngase en contacto con Soporte técnico de Microsoft.  

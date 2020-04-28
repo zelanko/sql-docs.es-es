@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400359"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Enviar comentarios de telemetría a Microsoft for Analytics Platform System
@@ -22,10 +22,10 @@ Analytics Platform System tiene una característica de telemetría opcional que 
 > [!NOTE]  
 > En esta versión, Microsoft no está supervisando activamente los datos de telemetría. Los datos se recopilan solo con fines de análisis.  
   
-## <a name="privacy"></a>Service  
+## <a name="privacy"></a><a name="privacy"></a>Privacidad  
 Para proporcionar la máxima protección de privacidad, APS se suministra sin habilitar la telemetría. Antes de habilitar esta característica, revise primero la [Microsoft Analytics Platform System declaración de privacidad](https://go.microsoft.com/fwlink/?LinkId=400902). Para participar, ejecute el script de PowerShell que se describe a continuación.  
   
-## <a name="enable"></a>Habilitar la telemetría  
+## <a name="enable-telemetry"></a><a name="enable"></a>Habilitar la telemetría  
 **Reenvío de DNS:** El envío de datos de telemetría a Microsoft requiere Analytics Platform System para conectarse a Internet a través de un reenviador de DNS. Para habilitar esta característica, debe habilitar el reenvío de DNS en todos los hosts y máquinas virtuales de carga de trabajo. Invoque `Enable-RemoteMonitoring` el comando con `SetupDnsForwarder` la opción de configurar correctamente el reenvío de DNS y habilitar la telemetría. Invoque `Enable-RemoteMonitoring` el comando sin `SetupDnsForwarder` la opción cuando el reenvío de DNS ya esté configurado y solo desee habilitar la supervisión de latidos.  
   
 > [!IMPORTANT]  
@@ -42,7 +42,7 @@ Para proporcionar la máxima protección de privacidad, APS se suministra sin ha
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo**:  
+    **Ejemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -75,7 +75,7 @@ Si ha escrito **N**, no se ejecutará ningún comando y la característica no es
   
 No hay ningún daño en ejecutar el `Enable-RemoteMonitoring` comando varias veces. Si el reenviador DNS ya está establecido, recibirá un mensaje de advertencia que indica que es el caso.  
   
-## <a name="disable"></a>Deshabilitar la telemetría  
+## <a name="disable-telemetry"></a><a name="disable"></a>Deshabilitar la telemetría  
 Al deshabilitar la telemetría, se detendrán todas las operaciones que comunican información sobre el estado del dispositivo al servicio de supervisión de APS en la nube.  
   
 > [!IMPORTANT]  
@@ -92,7 +92,7 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
     > [!NOTE]  
     > Para importar, debe usar dos puntos en el comando.  
   
-    **Ejemplo**:  
+    **Ejemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Al deshabilitar la telemetría, se detendrán todas las operaciones que comunica
   
 4.  Invoque `Disable-RemoteMonitoring` el comando sin parámetros. Este comando dejará de enviar comentarios. (Esto no afectará a la supervisión local). Sin embargo, el comando no deshabilitará el reenviador de DNS ni deshabilitar la conectividad a Internet. Esto debe realizarse manualmente después de deshabilitar correctamente los comentarios.  
   
-    **Ejemplo**:  
+    **Ejemplo:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

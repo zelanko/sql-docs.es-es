@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401070"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalación de los módulos de administración de SQL Server Operations Manager (SCOM) para Analytics Platform System
 Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para PDW de SQL Server. Los módulos de administración son necesarios para supervisar PDW de SQL Server de SCOM.  
   
-## <a name="BeforeBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de empezar  
 **Requisitos previos**  
   
 System Center Operations Manager debe estar instalado y en ejecución. PDW de SQL Server 2012 requiere System Center Operations Manager 2007 R2, System Center Operations Manager 2012 o System Center Operations Manager 2012 Service Pack 1.  
   
-## <a name="Step1"></a>Paso 1: descargar los módulos de administración  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Paso 1: descargar los módulos de administración  
 Para la carga de trabajo PDW de APS, descargue el [módulo de administración de System Center para el Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
 Para la administración del dispositivo, descargue el módulo de administración de la [base de SQL Server Appliance](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
@@ -33,7 +33,7 @@ Para versiones anteriores de PDW sin APS, descargue el[módulo de supervisión d
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Paso 2: instalación de los módulos de administración  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>Paso 2: instalación de los módulos de administración  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Instalar el módulo de administración de la base de SQL Server Appliance  
   

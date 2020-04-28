@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401053"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Inicio del Configuration Manager en Analytics Platform System
@@ -21,10 +21,10 @@ En este tema se proporcionan instrucciones para iniciar el **Configuration Manag
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 Solo el administrador de dominio de la aplicación puede ejecutar el**Configuration Manager** de sistema de la plataforma de análisis. Para ejecutar esta herramienta, necesita la contraseña del administrador de dominio del dispositivo. Para crear administradores de APS adicionales, consulte [crear un administrador de dominio aps &#40;aps&#41;](create-an-aps-domain-administrator-aps.md).  
   
-## <a name="Accessing"></a>Iniciar la herramienta de Configuration Manager  
+## <a name="launch-the-configuration-manager-tool"></a><a name="Accessing"></a>Iniciar la herramienta de Configuration Manager  
 Para ejecutar el Configuration Manager, use Escritorio remoto para conectarse al nodo de control PDW (**_PDW_region_-CTL01**) e inicie sesión como _appliance_domain_**\Administrador**. Al iniciar el programa de **Configuration Manager** , use la opción **Ejecutar como administrador** para asegurarse de que se utilizan las credenciales de administrador.  
   
 #### <a name="to-launch-from-a-browser-window"></a>Para iniciar desde una ventana del explorador  
@@ -39,7 +39,7 @@ Para ejecutar el Configuration Manager, use Escritorio remoto para conectarse al
   
 2.  En el símbolo del sistema, escriba el siguiente comando para cambiar los `cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`directorios:.  
   
-3.  En el símbolo del sistema, `dwconfig.exe`escriba.  
+3.  En el símbolo del sistema, escriba `dwconfig.exe`.  
   
 Una vez iniciado el **Configuration Manager** , verá todas las funciones disponibles en el panel izquierdo. En el resto de esta sección se describe cómo realizar cada una de las acciones disponibles en la herramienta.  
   

@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 143c37b6b55b96f8a0225c98db2212f07b2cd3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400544"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidad de procesamiento y almacenamiento en Analytics Platform System
 Los requisitos empresariales determinan el número de unidades de escala de datos y el tamaño de los discos de nodos de proceso que se necesitan en el dispositivo de análisis de plataforma (APS). Use estos cálculos de procesamiento y almacenamiento para guiar las decisiones de compra y planeamiento de la capacidad.  
   
   
-## <a name="section1"></a>Planeación de la capacidad de procesamiento  
+## <a name="planning-for-processing-capacity"></a><a name="section1"></a>Planeación de la capacidad de procesamiento  
 El rendimiento de las consultas para SQL Server almacenamiento de datos paralelos (PDW) depende en gran medida del número de núcleos de CPU que trabajan en los datos en paralelo. Dentro de los límites, el aumento del paralelismo mejora el rendimiento de las consultas de procesamiento paralelo masivo (MPP). Incluso si el tamaño de los datos es relativamente pequeño, la potencia del motor de consulta MPP se ha mejorado con un mayor paralelismo.  
   
 Por ejemplo, un dispositivo con 12 nodos de proceso tiene 192 núcleos de CPU que procesan los datos en paralelo. Ese es el paralelismo 192. Un dispositivo con 56 nodos de proceso tiene 896 núcleos que funcionan en paralelo. Esta magnitud de paralelismo no es factible sin la computación de MPP.  
@@ -72,23 +72,23 @@ La elevación es el porcentaje de aumento de capacidad incrementando el Uunits d
 |5|15|240|3.840|25 %|  
 |6|18|288|4.608|20%|  
 |7|21|336|5.376|17 %|  
-|8|24|384|6144|14|  
+|8|24|384|6144|14 %|  
 |9|27|432|6.912|13 %|  
 |12|36|576|9.216|33 %|  
 |15|45|720|11.520|25 %|  
-|18|54|864|13.824|20%|  
+|18|54|864|13 824|20%|  
   
-## <a name="section2"></a>Planeación de la capacidad de almacenamiento  
+## <a name="planning-for-storage-capacity"></a><a name="section2"></a>Planeación de la capacidad de almacenamiento  
 En esta tabla se calcula que se pueden cargar y almacenar hasta 6 petabytes de datos sin comprimir en una aplicación de sistema de análisis de plataforma totalmente compilada. 
   
 |Fabricante|Tamaño de la unidad|Almacenamiento físico de datos por nodo de proceso|Máximo de nodos de proceso por bastidor|Almacenamiento de datos máximo físico por bastidor|Almacenamiento de datos de usuario máximo estimado por bastidor|Bastidor máximo|Almacenamiento de datos de usuario máximo estimado por dispositivo|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2.240 TB|  
-|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  
+|HPE|2 TB|32 TB|8|256 TB|640 TB|7|4.480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8.960 TB|  
-|PROYECTOR|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
-|PROYECTOR|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
-|PROYECTOR|4 TB|64 TB|9|576 TB|1440 TB|6|8.640 TB|   
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
+|DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8.640 TB|   
   
 Explicación:  
   

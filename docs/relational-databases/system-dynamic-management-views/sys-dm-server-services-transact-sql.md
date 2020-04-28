@@ -19,10 +19,10 @@ ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a480ba134a4f3049f7501cb68a0331ac8fdd386b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095377"
 ---
 # <a name="sysdm_server_services-transact-sql"></a>sys.dm_server_services (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "74095377"
 |status|**int**|Indica el estado actual del servicio. A continuación se muestran los valores posibles y sus descripciones correspondientes.<br /><br /> 1: detenido<br />2: otros (Inicio pendiente)<br />3: otros (detención pendiente)<br />4: ejecución<br />5: otros (continuación pendiente)<br />6: otros (pausa pendiente)<br />7: en pausa<br /><br /> Acepta valores NULL.|  
 |status_desc|**nvarchar(256)**|Describe el estado actual del servicio. A continuación se muestran los valores posibles y sus descripciones correspondientes.<br /><br /> Detenido: el servicio se ha detenido.<br />Otro (operación de inicio pendiente): el servicio está en proceso de inicio.<br />Otro (operación de detención pendiente): el servicio está en proceso de detención.<br />En ejecución: el servicio se está ejecutando.<br />Otros (continuar con las operaciones pendientes): el servicio está en un estado pendiente.<br />Otro (pausa pendiente): el servicio está en proceso de pausa.<br />En pausa: el servicio está en pausa.<br /><br /> No puede ser null.|  
 |process_id|**int**|Identificador de proceso del servicio. No puede ser null.|  
-|last_startup_time|**DateTimeOffset (7)**|Fecha y hora en que el servicio se inició por última vez. Acepta valores NULL.|  
+|last_startup_time|**datetimeoffset(7)**|Fecha y hora en que el servicio se inició por última vez. Acepta valores NULL.|  
 |service_account|**nvarchar(256)**|Cuenta autorizada para controlar el servicio. Esta cuenta puede iniciar o detener el servicio, o puede modificar las propiedades del servicio. No puede ser null.|  
 |filename|**nvarchar(256)**|Ruta de acceso y nombre del archivo ejecutable del servicio. No puede ser null.|  
 |is_clustered|**nvarchar (1)**|Indica si el servicio está instalado como un recurso de un servidor en clúster. No puede ser null.|  

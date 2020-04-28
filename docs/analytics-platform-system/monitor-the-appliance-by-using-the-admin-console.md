@@ -10,19 +10,19 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 977e38016fbb58356d22ccfc5f783539e5f852d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400943"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el dispositivo con la consola de administración-Analytics Platform System
 La consola de administración es una PDW de SQL Server aplicación web que muestra la información sobre el estado, el estado y el rendimiento del dispositivo. Los usuarios se conectan a la consola de administración a través de Internet Explorer.  
   
-## <a name="About"></a>Acerca de la consola de administración  
+## <a name="about-the-admin-console"></a><a name="About"></a>Acerca de la consola de administración  
 ![Inicio de la consola del dispositivo](./media/monitor-the-appliance-by-using-the-admin-console/SQL_Server_PDW_AdminConsol_ApplHome.png "SQL_Server_PDW_AdminConsol_ApplHome")  
   
-**Producto**  
+**Dispositivo**  
 Inicio  
 Proporciona un resumen rápido del estado del dispositivo.  
   
@@ -67,7 +67,7 @@ Muestra gráficos del monitor de rendimiento de PDW.
 > [!NOTE]  
 > La consola de administración tiene una resolución de pantalla de 1024 x 768. La consola de administración se muestra mejor con una resolución de pantalla de 1280 X 1024 o superior.  
   
-## <a name="Connect"></a>Conectar con la consola de administración  
+## <a name="connect-to-the-admin-console"></a><a name="Connect"></a>Conectar con la consola de administración  
 Para conectarse a la consola de administración, requiere:  
   
 -   Al menos Internet Explorer versión 10.  
@@ -78,7 +78,7 @@ Para conectarse a la consola de administración, requiere:
   
 Para conectarse a la consola de administración, use Internet Explorer y https para ir a la dirección IP del clúster de nodo de control. Por ejemplo, si la dirección IP del clúster de nodo de control `10.192.63.102`es, `https://10.192.63.102` escriba en la barra de direcciones del explorador. La primera pantalla solicitará el **Inicio de sesión** y la **contraseña**. Proporcione un inicio de sesión de autenticación de SQL Server y una contraseña, o un inicio de sesión de autenticación de Windows y una contraseña de Windows. Si usa un inicio de sesión de autenticación de Windows, la consola de administración utilizará la suplantación.  
   
-## <a name="RelatedTasks"></a>Tareas de la consola de administración  
+## <a name="admin-console-tasks"></a><a name="RelatedTasks"></a>Tareas de la consola de administración  
 La consola de administración de proporciona la capacidad de supervisar lo siguiente:  
   
 |||  

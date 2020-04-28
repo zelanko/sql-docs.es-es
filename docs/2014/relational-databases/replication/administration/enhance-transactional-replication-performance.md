@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d04ba8b85c124b66e250d17ad204ef76a8de6dc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882355"
 ---
 # <a name="enhance-transactional-replication-performance"></a>Aumentar el rendimiento de la replicación transaccional
@@ -69,17 +69,16 @@ ms.locfileid: "73882355"
   
 ## <a name="distribution-agent-and-log-reader-agent-parameters"></a>Parámetros del Agente de distribución y del Agente de registro del LOG  
   
--   Para resolver los cuellos de botella accidentales que solo ocurren una vez, use el parámetro **-MaxCmdsInTran** para el Agente de registro del LOG.  
+-   Para resolver cuellos de botella accidentales de una vez, use el parámetro **-MaxCmdsInTran** para el agente de registro del log.  
   
-     El parámetro **-MaxCmdsInTran** especifica el número máximo de instrucciones agrupadas en una transacción cuando el Agente de registro del LOG escribe comandos en la base de datos de distribución. El uso de este parámetro permite al Agente de registro del LOG y al Agente de distribución dividir las transacciones grandes (compuestas por muchos comandos) del publicador en varias transacciones más pequeñas cuando se aplican comandos en el suscriptor. Especificando este parámetro se puede reducir la contención en el distribuidor y la latencia entre el publicador y el suscriptor. Puesto que la transacción original se aplica en unidades más pequeñas, el suscriptor puede obtener acceso a las filas de una transacción lógica del publicador de gran tamaño antes de que finalice la transacción original, lo que interrumpe la estricta atomicidad transaccional. El valor predeterminado es **0**, que conserva los límites de la transacción del publicador. Este parámetro no se aplica a los publicadores de Oracle.  
+     El parámetro **-MaxCmdsInTran** especifica el número máximo de instrucciones agrupadas en una transacción cuando el lector del registro escribe comandos en la base de datos de distribución. El uso de este parámetro permite al Agente de registro del LOG y al Agente de distribución dividir las transacciones grandes (compuestas por muchos comandos) del publicador en varias transacciones más pequeñas cuando se aplican comandos en el suscriptor. Especificando este parámetro se puede reducir la contención en el distribuidor y la latencia entre el publicador y el suscriptor. Puesto que la transacción original se aplica en unidades más pequeñas, el suscriptor puede obtener acceso a las filas de una transacción lógica del publicador de gran tamaño antes de que finalice la transacción original, lo que interrumpe la estricta atomicidad transaccional. El valor predeterminado es **0**, que conserva los límites de la transacción del publicador. Este parámetro no se aplica a los publicadores de Oracle.  
   
     > [!WARNING]  
-    >  
-  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
+    >  `MaxCmdsInTran` no se ha diseñado para estar siempre activado. Su función es evitar los casos en los que alguien ha realizado accidentalmente un gran número de operaciones DML en una sola transacción (lo que produce un retraso en la distribución de comandos hasta que toda la transacción está en la base de datos de distribución, se establecen los bloqueos, etc.). Si se encuentra habitualmente esta situación, debe revisar las aplicaciones y buscar formas de reducir el tamaño de las transacciones.  
   
 -   Use el parámetro **-SubscriptionStreams** para el agente de distribución.  
   
-     El parámetro **-SubscriptionStreams** puede mejorar considerablemente el rendimiento de la replicación. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
+     El parámetro-SubscriptionStreams puede mejorar considerablemente el rendimiento **de la** replicación agregada. Permite establecer varias conexiones con un suscriptor para aplicar lotes de cambios en paralelo, al tiempo que mantiene muchas de las características transaccionales presentes cuando se usa un solo subproceso. Si una de las conexiones no se puede ejecutar o confirmar, todas las conexiones anularán el lote actual y el agente utilizará un solo flujo para volver a intentar los lotes con errores. Antes de que finalice esta fase de reintento, pueden aparecer incoherencias transaccionales temporales en el suscriptor. Una vez que se han confirmado correctamente los lotes con errores, el suscriptor vuelve al estado de coherencia transaccional.  
   
      Se puede especificar un valor para este parámetro de agente mediante el ** \@subscriptionstreams** de [sp_addsubscription &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql).  
   

@@ -13,10 +13,10 @@ ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e8f5d441e7d129c7f39dc2d53c6b9ac4215aba9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729718"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Cambiar el nombre de marca de una versión (Master Data Services)
@@ -25,14 +25,14 @@ ms.locfileid: "73729718"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], se puede cambiar el nombre de una marca de versión.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de versiones** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
--   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Debe disponer del permiso para tener acceso al área funcional de Administración de versiones. Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-change-a-version-flag-name"></a>Para cambiar el nombre de marca de una versión  
   

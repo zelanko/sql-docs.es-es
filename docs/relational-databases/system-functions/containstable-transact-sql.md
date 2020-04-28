@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983207"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "73983207"
   
  CONTAINSTABLE es útil para los mismos tipos de coincidencias que el [predicado CONTAINS](../../t-sql/queries/contains-transact-sql.md) y utiliza las mismas condiciones de búsqueda que Contains.  
   
- A diferencia de CONTAINS, las consultas que usan CONTAINSTABLE devuelven un valor de clasificación por relevancia (RANK) y un valor de clave de texto completo (KEY) por cada fila.  Para más información sobre las formas de búsqueda de texto completo que se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
+ A diferencia de CONTAINS, las consultas que usan CONTAINSTABLE devuelven un valor de clasificación por relevancia (RANK) y un valor de clave de texto completo (KEY) por cada fila.  Para obtener información sobre las formas de búsqueda de texto completo que se admiten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -113,13 +113,13 @@ CONTAINSTABLE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *cuadro*  
+ *table*  
  Es el nombre de una tabla que se ha sometido a una indización de texto completo. la *tabla* puede ser un nombre de objeto de base de datos de una, dos, tres o cuatro partes. Al consultar una vista, puede incluirse solo una tabla base indizada de texto completo.  
   
  la *tabla* no puede especificar un nombre de servidor y no se puede usar en consultas en servidores vinculados.  
   
  *column_name*  
- Es el nombre de una o más columnas indizadas para la búsqueda de texto completo. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
+ Es el nombre de una o más columnas indizadas para la búsqueda de texto completo. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)** .  
   
  *lista_de_columnas*  
  Indica que se pueden especificar varias columnas, separadas por una coma. *column_list* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
@@ -134,7 +134,7 @@ CONTAINSTABLE
   
  Cuando se especifica como una cadena, *language_term* corresponde al valor de la columna **alias** de la vista de compatibilidad [Sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) .  La cadena debe estar delimitada con comillas sencillas, como en '*language_term*'. Cuando se especifica como un entero, *language_term* es el LCID real que identifica el idioma. Cuando se especifica como un valor hexadecimal, *language_term* es 0x seguido del valor hexadecimal del LCID. El valor hexadecimal no puede superar los ocho dígitos, incluidos los ceros a la izquierda.  
   
- Si el valor está en formato DBCS (juego de caracteres de doble byte), [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo convertirá a Unicode.  
+ Si el valor está en formato de juego de caracteres de doble byte (DBCS [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ), lo convertirá a Unicode.  
   
  Si el idioma especificado no es válido o no hay recursos instalados que se correspondan con dicho idioma, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un error. Para usar recursos de idioma neutro, especifique 0x0 como *language_term*.  
   
@@ -211,7 +211,7 @@ GO
   
 ||  
 |-|  
-|**Válido para **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.|  
+|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.|  
   
  En el ejemplo siguiente se usa NEAR para buscar “`bracket`” y “`reflector`” cercanos entre sí en la tabla `Production.Document`. Solo se devuelven las filas con un valor de rango de 50 o superior.  
   
@@ -282,10 +282,10 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Limitar los resultados de la búsqueda con rango](../../relational-databases/search/limit-search-results-with-rank.md)   
- [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
+ [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [Crear consultas de búsqueda de texto completo &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
- [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
- [Consulta con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
+ [CONTIENE &#40;&#41;de Transact-SQL](../../t-sql/queries/contains-transact-sql.md)   
+ [Consultar con búsqueda de texto completo](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

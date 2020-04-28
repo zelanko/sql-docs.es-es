@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 923d137b4b884300b2fb31cbacf2ee7dff1a6621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912804"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
-  En este tema se describe cómo ver y modificar la configuración de seguridad de la replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Por ejemplo, puede que desee cambiar la conexión del Agente de registro del LOG al publicador de la autenticación de SQL Server a la autenticación de Windows integrada, o puede que necesite cambiar las credenciales utilizadas para ejecutar un trabajo de agente cuando la contraseña de la cuenta de Windows ha cambiado. Para obtener información sobre los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](replication-agent-security-model.md).  
+  En este tema se describe cómo ver y modificar la configuración de seguridad de la replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Por ejemplo, puede que desee cambiar la conexión del Agente de registro del LOG al publicador de la autenticación de SQL Server a la autenticación de Windows integrada, o puede que necesite cambiar las credenciales utilizadas para ejecutar un trabajo de agente cuando la contraseña de la cuenta de Windows ha cambiado. Para obtener información acerca de los permisos que necesita cada agente, vea [Modelo de seguridad del agente de replicación](replication-agent-security-model.md).  
   
  **En este tema**  
   
@@ -42,33 +42,33 @@ ms.locfileid: "73912804"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
--   **Seguimiento: después de**[modificar la configuración de seguridad](#FollowUp) de la replicación    
+-   **Seguimiento:**  [después de modificar la configuración de seguridad de la replicación](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Los procedimientos almacenados que se usen dependerán del tipo de agente y del tipo de conexión al servidor.  
   
 -   Las propiedades y clases RMO que utilice dependerán dependen del tipo de agente y el tipo de conexión al servidor.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Por razones de seguridad, los valores reales de las contraseñas se enmascaran en los conjuntos de resultados devueltos por los procedimientos almacenados de replicación.  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Vea y modifique la configuración de seguridad en los siguientes cuadros de diálogo:  
   
 1.  El cuadro de diálogo **Actualizar contraseñas de replicación** , que está disponible en la carpeta **Replicación** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si cambia la contraseña de una cuenta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de Windows en un servidor de una topología de replicación, utilice este cuadro de diálogo después de actualizar la contraseña para cada agente que utilice la cuenta. Si agentes de varios servidores utilizan la misma cuenta, debe conectarse a cada servidor y cambiar la contraseña. La contraseña se actualiza en todos los lugares en los que la replicación utiliza la contraseña. La contraseña no se actualiza en otros lugares, como los servidores vinculados.  
   
-2.  La página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
+2.  La página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../publish/view-and-modify-publication-properties.md).  
   
-3.  El cuadro de diálogo **Propiedades de suscripción: \<Suscripción>**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
+3.  El cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** . Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md).  
   
-4.  Los cuadros de diálogo **Propiedades del distribuidor: \<Distribuidor>** y **Propiedades de la base de datos de distribución: \<Base de datos>**. Para obtener más información acerca de cómo obtener acceso a estos cuadros de diálogo, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
+4.  Los cuadros de diálogo **Propiedades del distribuidor: \<Distribuidor>** y **Propiedades de la base de datos de distribución: \<Base de datos>** . Para obtener más información acerca de cómo obtener acceso a estos cuadros de diálogo, vea [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
   
-5.  El cuadro de diálogo **Propiedades del publicador: \<Publicador>**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
+5.  El cuadro de diálogo **Propiedades del publicador: \<Publicador>** . Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, [View and Modify Distributor and Publisher Properties](../view-and-modify-distributor-and-publisher-properties.md).  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>Para cambiar la contraseña de una cuenta utilizada por uno o varios agentes  
   
@@ -87,7 +87,7 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>Para cambiar la configuración de seguridad del Agente de instantáneas  
   
-1.  En la página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Agente de instantáneas**.  
+1.  En la página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Agente de instantáneas**.  
   
 2.  En el cuadro de diálogo **Seguridad del Agente de instantáneas** , especifique la cuenta con la que debe ejecutarse el agente:  
   
@@ -102,17 +102,17 @@ ms.locfileid: "73912804"
     -   Escriba una nueva contraseña en los cuadros de texto **Contraseña** y **Confirmar contraseña** .  
   
     > [!NOTE]  
-    >  Si el publicador es un publicador de Oracle, el contexto de conexión se especifica en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**. Vea el procedimiento para cambiar el contexto más adelante en este tema.  
+    >  Si el publicador es un publicador de Oracle, el contexto de conexión se especifica en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** . Vea el procedimiento para cambiar el contexto más adelante en este tema.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>Para cambiar la configuración de seguridad del Agente de registro del LOG  
   
-1.  En la página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Agente de registro del LOG**.  
+1.  En la página **Seguridad del agente** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Agente de registro del LOG**.  
   
 2.  En el cuadro diálogo **Seguridad del Agente de registro del LOG** , especifique la cuenta con la que debe ejecutarse el agente:  
   
-    -   Escriba una nueva cuenta de Windows en el cuadro de texto **cuenta del agente**  
+    -   Indique una nueva cuenta de Windows en el cuadro de texto **Cuenta del agente** .  
   
     -   Escriba una nueva contraseña en los cuadros de texto **Contraseña** y **Confirmar contraseña** .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "73912804"
     -   Escriba una nueva contraseña en los cuadros de texto **Contraseña** y **Confirmar contraseña** .  
   
     > [!NOTE]  
-    >  Si el publicador es un publicador de Oracle, el contexto de conexión se especifica en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**. Cambie el contexto siguiendo el procedimiento que se indica a continuación.  
+    >  Si el publicador es un publicador de Oracle, el contexto de conexión se especifica en el cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** . Cambie el contexto siguiendo el procedimiento que se indica a continuación.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -132,9 +132,9 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Para cambiar el contexto en el que el Agente de instantáneas y el Agente de registro del LOG para una publicación de Oracle realizan las conexiones con el publicador  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**...**) situado junto a un publicador.  
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , haga clic en el botón de propiedades ( **...** ) situado junto a un publicador.  
   
-2.  En la sección **Conexión del agente al publicador** , especifique el inicio de sesión y la contraseña utilizados por el esquema de usuario administrativo de replicación que ha configurado. Para más información, vea [Configurar un publicador de Oracle](../non-sql/configure-an-oracle-publisher.md).  
+2.  En la sección **Conexión del agente al publicador** , especifique el inicio de sesión y la contraseña utilizados por el esquema de usuario administrativo de replicación que ha configurado. Para obtener más información, vea [Configurar un publicador de Oracle](../non-sql/configure-an-oracle-publisher.md).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -142,9 +142,9 @@ ms.locfileid: "73912804"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que se ejecuta la Agente de distribución y realiza conexiones al distribuidor, haga clic en la fila **cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, después, haga clic en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
@@ -154,11 +154,11 @@ ms.locfileid: "73912804"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que se ejecuta la Agente de distribución y realiza conexiones al suscriptor, haga clic en la fila **cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **conexión del distribuidor** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -166,9 +166,9 @@ ms.locfileid: "73912804"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que se ejecuta el Agente de mezcla y realiza conexiones al publicador y al distribuidor, haga clic en la fila **cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **conexión de suscriptor** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -176,17 +176,17 @@ ms.locfileid: "73912804"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que se ejecuta la Agente de mezcla y realiza conexiones al suscriptor, haga clic en la fila **cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al distribuidor, haga clic en la fila **conexión de publicador** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para cambiar la cuenta con la que se ejecuta el Agente de lectura de cola  
   
-1.  En la página **General** del cuadro de diálogo **propiedades \<del distribuidor:>** del distribuidor, haga clic en el botón de propiedades (**...**) situado junto a la base de datos de distribución.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , haga clic en el botón de propiedades ( **...** ) situado junto a la base de datos de distribución.  
   
-2.  En el cuadro de diálogo **Propiedades de base de datos de distribución: \<Base de datos>**, haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Cuenta de proceso del agente**.  
+2.  En el cuadro de diálogo **Propiedades de base de datos de distribución: \<Base de datos>** , haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Cuenta de proceso del agente**.  
   
 3.  En el cuadro diálogo **Seguridad del Agente de lectura de cola** , especifique la cuenta con la que el agente debe ejecutarse y realizar conexiones al distribuidor:  
   
@@ -201,7 +201,7 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-the-context-under-which-the-queue-reader-agent-makes-connections-to-the-publisher"></a>Para cambiar el contexto en el que el Agente de lectura de cola realiza conexiones al publicador  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, haga clic en el botón de propiedades (**...**) situado junto al publicador.  
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , haga clic en el botón de propiedades ( **...** ) situado junto al publicador.  
   
 2.  En la sección **Conexión del agente al publicador** , especifique el valor **Suplantar la cuenta de proceso del agente** o **autenticación de SQL Server** para la opción **Modo de conexión del agente** . Si especifica **Autenticación de SQL Server**, indique también valores para **Inicio de sesión** y **Contraseña**.  
   
@@ -216,13 +216,13 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para cambiar la configuración de seguridad para una suscripción de extracción de actualización inmediata  
   
-1.  En el cuadro de diálogo **propiedades de suscripción- \<>de suscripción** del suscriptor, haga clic en la fila conexión de **publicador** y, a continuación, haga clic en el botón de propiedades (**...**) de la fila.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades (**...**) de la fila.  
   
 2.  En el cuadro de diálogo **Escribir información de conexión** , seleccione una de las siguientes opciones:  
   
-    -   **Usar un inicio de sesión de un servidor vinculado o remoto**. Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] u otro método.  
+    -   **Utilizar inicio de sesión de un servidor vinculado o remoto**. Seleccione esta opción si ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador mediante [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] u otro método.  
   
-    -   **Use la autenticación de SQL Server con el inicio de sesión y la contraseña siguientes**. Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación creará un servidor vinculado. La cuenta que especifique debe existir ya en el publicador.  
+    -   **Utilizar autenticación de SQL Server con el inicio de sesión y la contraseña siguientes**. Seleccione esta opción si no ha definido un servidor remoto o un servidor vinculado entre el suscriptor y el publicador. La replicación creará un servidor vinculado. La cuenta que especifique debe existir ya en el publicador.  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -233,15 +233,15 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>Para cambiar la contraseña de la conexión administrativa del publicador al distribuidor  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>**, escriba una contraseña segura en los cuadros de texto **Contraseña** y **Confirmar contraseña**.  
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , escriba una contraseña segura en los cuadros de texto **Contraseña** y **Confirmar contraseña**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-3.  En la página **General** del cuadro de diálogo **Propiedades del publicador: \<Publicador>**, escriba una contraseña segura en los cuadros de texto **Contraseña** y **Confirmar contraseña**.  
+3.  En la página **General** del cuadro de diálogo **Propiedades del publicador: \<Publicador>** , escriba una contraseña segura en los cuadros de texto **Contraseña** y **Confirmar contraseña**.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 > [!IMPORTANT]  
 >  En todos los procedimientos siguientes, cuando sea posible, pida a los usuarios que especifiquen las credenciales de seguridad en tiempo de ejecución. Si almacena credenciales en un archivo de script, debe proteger el archivo para evitar el acceso no autorizado.  
@@ -271,7 +271,7 @@ ms.locfileid: "73912804"
     -   Al cambiar el modo de seguridad usado al conectarse al publicador de **1** a **0** o al cambiar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] un inicio de sesión utilizado para esta conexión, especifique ** \@publisher_login** y ** \@publisher_password**.  
   
     > [!IMPORTANT]  
-    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>Para cambiar la configuración de seguridad del Agente de registro del LOG  
   
@@ -289,7 +289,7 @@ ms.locfileid: "73912804"
     >  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
     > [!IMPORTANT]  
-    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>Para cambiar la configuración de seguridad del Agente de distribución para una suscripción de inserción  
   
@@ -309,7 +309,7 @@ ms.locfileid: "73912804"
     >  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
     > [!IMPORTANT]  
-    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todas las propiedades, incluidas **distrib_job_login** y **distrib_job_password**, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todas las propiedades, incluidas **distrib_job_login** y **distrib_job_password**, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>Para cambiar la configuración de seguridad del Agente de distribución para una suscripción de extracción  
   
@@ -350,7 +350,7 @@ ms.locfileid: "73912804"
     >  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
     > [!IMPORTANT]  
-    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todas las propiedades, incluidas **merge_job_login** y **merge_job_password**, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todas las propiedades, incluidas **merge_job_login** y **merge_job_password**, se envían al distribuidor como texto simple. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>Para cambiar la configuración de seguridad del Agente de mezcla para una suscripción de extracción  
   
@@ -380,7 +380,7 @@ ms.locfileid: "73912804"
 2.  En el publicador, [ejecute sp_changedynamicsnapshot_job](/sql/relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql), especifique la ** \@publicación**, el valor obtenido del paso 1 para ** \@dynamic_snapshot_jobname**y una nueva contraseña para ** \@job_password** o inicio de sesión y contraseña de la cuenta de Windows con la que se ejecuta el agente para ** \@job_login** y ** \@job_password**.  
   
     > [!IMPORTANT]  
-    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el Motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 #### <a name="to-change-security-settings-for-the-queue-reader-agent"></a>Para cambiar la configuración de seguridad del Agente de lectura de cola  
   
@@ -395,13 +395,13 @@ ms.locfileid: "73912804"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>Para cambiar el modo de seguridad que usa un suscriptor de actualización inmediata al conectarse al publicador  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique ** \@el publicador**, ** \@la publicación**, el nombre de la base de datos de publicación para ** \@publisher_db**y uno de los siguientes valores para ** \@security_mode**:  
+1.  En el suscriptor de la base de datos de suscripción, ejecute [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql). Especifique ** \@el publicador**, ** \@la publicación**, el nombre de la base de datos de publicación para ** \@publisher_db**y uno de los siguientes valores para ** \@security_mode**:  
   
-    -   **0** para usar la autenticación SQL Server al efectuar actualizaciones en el publicador. Esta opción requiere que especifique un inicio de sesión válido en el publicador para el ** \@inicio de sesión** y ** \@la contraseña**.  
+    -   **0** para usar la autenticación de SQL Server al realizar las actualizaciones en el publicador. Esta opción requiere que especifique un inicio de sesión válido en el publicador para el ** \@inicio de sesión** y ** \@la contraseña**.  
   
-    -   **1** para usar el contexto de seguridad del usuario que realiza cambios en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.  
+    -   **1** para usar el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.  
   
-    -   **2** para usar un inicio de sesión de servidor vinculado definido por el usuario existente creado con [sp_addlinkedserver &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
+    -   **2** para usar un inicio de sesión vinculado definido por el usuario ya existente y creado mediante [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).  
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>Para cambiar la contraseña de un distribuidor remoto  
   
@@ -412,7 +412,7 @@ ms.locfileid: "73912804"
   
 2.  En cada publicador que use este distribuidor remoto, ejecute [sp_changedistributor_password](/sql/relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql), especificando la contraseña del paso 1 ** \@** para la contraseña.  
   
-##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -425,14 +425,14 @@ ms.locfileid: "73912804"
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> . Especifique los parámetros siguientes:  
   
-    -   *security_mode* : <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> valor que especifica el tipo de autenticación para el que se cambian todas las instancias de la contraseña.  
+    -   *security_mode* - un valor <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> que especifica el tipo de autenticación para la que se cambian todas las instancias de la contraseña.  
   
-    -   *login* : el inicio de sesión para el que se cambian todas las instancias de la contraseña.  
+    -   *login* - el inicio de sesión para el que se cambian todas las instancias de la contraseña.  
   
-    -   *contraseña* : el nuevo valor de contraseña.  
+    -   *password* - el nuevo valor de contraseña.  
   
         > [!IMPORTANT]  
-        >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales, use los [servicios criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) proporcionados por la .NET Framework de Windows.  
+        >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.  
   
         > [!NOTE]  
         >  Solo un miembro del rol fijo de servidor `sysadmin` puede llamar a este método.  
@@ -549,24 +549,24 @@ ms.locfileid: "73912804"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> , pasando los parámetros siguientes:  
   
-    -   *Publicador* : el nombre del publicador.  
+    -   *Publisher* - el nombre del publicador.  
   
-    -   *PublisherDB* : el nombre de la base de datos de publicación.  
+    -   *PublisherDB* - el nombre de la base de datos de publicación.  
   
-    -   *Publicación* : el nombre de la publicación a la que se suscribe el suscriptor de actualización inmediata.  
+    -   *Publication* - el nombre de la publicación a la que se suscribe el suscriptor de actualización inmediata.  
   
-    -   *Distributor* : el nombre del distribuidor.  
+    -   *Distributor* - el nombre del distribuidor.  
   
-    -   *PublisherSecurity* : un <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> objeto que especifica el tipo de modo de seguridad utilizado por el suscriptor de actualización inmediata al conectarse al publicador y las credenciales de inicio de sesión para la conexión.  
+    -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> que especifica el tipo de modo de seguridad que emplea el suscriptor de actualización inmediata cuando se conecta al publicador y las credenciales de inicio de sesión para la conexión.  
   
-###  <a name="PShellExample"></a> Ejemplo (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Ejemplo (RMO)  
  Este ejemplo comprueba el valor de inicio de sesión proporcionado y cambia todas las contraseñas para el inicio de sesión de Windows proporcionado o el inicio de sesión de SQL Server almacenado por replicación en el servidor.  
   
  [!code-csharp[HowTo#rmo_ChangeServerPasswords](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changeserverpasswords)]  
   
  [!code-vb[HowTo#rmo_vb_ChangeServerPasswords](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changeserverpasswords)]  
   
-##  <a name="FollowUp"></a>Seguimiento: después de modificar la configuración de seguridad de la replicación  
+##  <a name="follow-up-after-you-modify-replication-security-settings"></a><a name="FollowUp"></a> Seguimiento: después de modificar la configuración de seguridad de la replicación  
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  
   
 ## <a name="see-also"></a>Consulte también  

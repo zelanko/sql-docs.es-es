@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882346"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
@@ -36,7 +36,7 @@ ms.locfileid: "73882346"
 |Cambiar la compresión de la instantánea|**sp_changepublication**|**compress_snapshot**|Nueva instantánea.|  
 |Cambiar una opción del protocolo de transferencia de archivos (FTP) de la instantánea|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Nueva instantánea.|  
 |Cambiar la ubicación del script anterior o posterior a la instantánea|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Nueva instantánea (también requerida si cambia el contenido del script ).<br /><br /> Se requiere la reinicialización para aplicar el nuevo script en el suscriptor.|  
-|Habilitar o deshabilitar la compatibilidad para[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suscriptores que no son de.|**sp_changepublication**|**is_enabled_for_het_sub**|Nueva instantánea.|  
+|Habilite o deshabilite la compatibilidad con los suscriptores que no sean de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|**sp_changepublication**|**is_enabled_for_het_sub**|Nueva instantánea.|  
 |Cambiar los informes de conflictos para las suscripciones de actualización en cola|**sp_changepublication**|**centralized_conflicts**|Se puede cambiar únicamente si no hay suscripciones activas.|  
 |Cambiar la directiva de resolución de conflictos para las suscripciones de actualización en cola|**sp_changepublication**|**conflict_policy**|Se puede cambiar únicamente si no hay suscripciones activas.|  
   
@@ -49,10 +49,10 @@ ms.locfileid: "73882346"
 |Agregar un filtro de fila|**sp_articlefilter**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un filtro de fila|**sp_articlefilter**|**\@ARTICLE**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar un filtro de fila|**sp_articlefilter**|**\@filter_clause**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
-|Cambiar un filtro de fila|**sp_changearticle**|**filtro**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
+|Cambiar un filtro de fila|**sp_changearticle**|**filter**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar las opciones del esquema|**sp_changearticle**|**schema_option**|Nueva instantánea.|  
 |Cambie el modo de controlar las tablas en el suscriptor antes de aplicar la instantánea.|**sp_changearticle**|**pre_creation_cmd**|Nueva instantánea.|  
-|Cambiar el estado del artículo|**sp_changearticle**|**estatus**|Nueva instantánea.|  
+|Cambiar el estado del artículo|**sp_changearticle**|**status**|Nueva instantánea.|  
 |Cambiar los comandos UPDATE, INSERT o DELETE|**sp_changearticle**|**ins_cmd**<br /><br /> **upd_cmd**<br /><br /> **del_cmd**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar el nombre de la tabla de destino|**sp_changearticle**|**dest_table**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Cambiar el propietario de la tabla de destino (esquema)|**sp_changearticle**|**destination_owner**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
@@ -109,6 +109,6 @@ ms.locfileid: "73882346"
  [sp_droparticle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql)   
  [sp_dropmergearticle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql)   
  [sp_dropmergefilter &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)   
- [sp_mergearticlecolumn &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
+ [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)  
   
   

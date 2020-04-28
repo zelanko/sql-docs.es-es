@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983114"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
@@ -39,18 +39,18 @@ ms.locfileid: "73983114"
 |**table_id**|**int**|Id. de la tabla para la que se está llenando el índice de texto completo.|  
 |**memory_address**|**varbinary(8**|Dirección de memoria de la estructura de datos interna utilizada para representar un rellenado activo.|  
 |**population_type**|**int**|Tipo de llenado. Uno de los siguientes:<br /><br /> 1 = Llenado completo<br /><br /> 2 = Llenado basado en la marca de tiempo incremental<br /><br /> 3 = Actualización manual de los cambios de los que se ha realizado seguimiento<br /><br /> 4 = Actualización de fondo de los cambios de los que se ha realizado seguimiento.|  
-|**population_type_description**|**nvarchar (120)**|Descripción del tipo de llenado.|  
+|**population_type_description**|**nvarchar(120)**|Descripción del tipo de llenado.|  
 |**is_clustered_index_scan**|**bit**|Indica si el llenado implica un recorrido en el índice clúster.|  
 |**range_count**|**int**|Número de subintervalos en los que este llenado se ha hecho en paralelo.|  
 |**completed_range_count**|**int**|Número de intervalos en los que se ha completado el proceso.|  
 |**outstanding_batch_count**|**int**|Número actual de lotes pendientes para este rellenado. Para obtener más información, vea [Sys. dm_fts_outstanding_batches &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**estatus**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Estado de este llenado. Nota: algunos de los estados son transitorios. Uno de los siguientes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Procesamiento normal<br /><br /> 7 = Procesamiento detenido<br /><br /> Por ejemplo, este estado se produce cuando hay una combinación automática en curso.<br /><br /> 11 = Rellenado anulado<br /><br /> 12 = Procesamiento de una extracción de similitud semántica|  
-|**status_description**|**nvarchar (120)**|Descripción del estado de llenado.|  
+|**status**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Estado de este llenado. Nota: algunos de los estados son transitorios. Uno de los siguientes:<br /><br /> 3 = Iniciando<br /><br /> 5 = Procesamiento normal<br /><br /> 7 = Procesamiento detenido<br /><br /> Por ejemplo, este estado se produce cuando hay una combinación automática en curso.<br /><br /> 11 = Rellenado anulado<br /><br /> 12 = Procesamiento de una extracción de similitud semántica|  
+|**status_description**|**nvarchar(120)**|Descripción del estado de llenado.|  
 |**completion_type**|**int**|Estado de finalización de este llenado.|  
-|**completion_type_description**|**nvarchar (120)**|Descripción del tipo de finalización.|  
+|**completion_type_description**|**nvarchar(120)**|Descripción del tipo de finalización.|  
 |**worker_count**|**int**|Este valor siempre es 0.|  
 |**queued_population_type**|**int**|Tipo de llenado, basado en los cambios de seguimiento, que seguirán el llenado actual, si los hay.|  
-|**queued_population_type_description**|**nvarchar (120)**|Descripción del rellenado que se va a seguir, si existe. Por ejemplo, cuando CHANGE TRACKING = AUTO y el rellenado completo inicial está en curso, esta columna indicaría "Rellenado automático".|  
+|**queued_population_type_description**|**nvarchar(120)**|Descripción del rellenado que se va a seguir, si existe. Por ejemplo, cuando CHANGE TRACKING = AUTO y el rellenado completo inicial está en curso, esta columna indicaría "Rellenado automático".|  
 |**start_time**|**datetime**|Hora en que se inició el rellenado.|  
 |**incremental_timestamp**|**timestamp**|Representa la marca de tiempo de inicio de un llenado completo. Para los otros de tipos de llenado este valor es el último punto de comprobación confirmado que representa el progreso de los llenados.|  
   
@@ -67,7 +67,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|Uno a uno|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|Uno a uno|  

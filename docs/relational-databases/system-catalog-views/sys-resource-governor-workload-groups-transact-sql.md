@@ -20,10 +20,10 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982970"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)

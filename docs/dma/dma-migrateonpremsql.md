@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056534"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Actualice SQL Server mediante el Data Migration Assistant
@@ -53,7 +53,7 @@ En este artículo se proporcionan instrucciones paso a paso para actualizar SQL 
 
    ![Especificar página de origen y de destino](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>Adición de bases de datos
+## <a name="add-databases"></a>Agregar bases de datos
 
 1. Elija las bases de datos específicas que desea migrar. para ello, solo tiene que seleccionar las bases de datos en el panel izquierdo de la página **Agregar bases de datos** .
 
@@ -95,7 +95,7 @@ El Data Migration Assistant realiza validaciones en las carpetas de copia de seg
 
    ![Seleccionar inicios de sesión e iniciar la migración](../dma/media/SelectLogins.png)
 
-## <a name="view-results"></a>Visualización de los resultados
+## <a name="view-results"></a>Vista de resultados
 
 Puede supervisar el progreso de la migración en la página **ver resultados** .
 

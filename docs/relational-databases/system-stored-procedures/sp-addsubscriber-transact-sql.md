@@ -16,10 +16,10 @@ ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73962407"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
@@ -71,7 +71,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |**2**|Base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Proveedor OLE DB|  
   
-`[ @login = ] 'login'`Es el identificador de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión para la autenticación. *login* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el identificador de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión para la autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -105,7 +105,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
@@ -124,7 +124,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**1** (valor predeterminado)|Primero|  
+|**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
 |**203**|Cuarto|  
@@ -203,10 +203,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_addsubscriber**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Crear una suscripción de extracción](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
- [sp_helpsubscriberinfo &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
+ [sp_helpsubscriberinfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  
   
   

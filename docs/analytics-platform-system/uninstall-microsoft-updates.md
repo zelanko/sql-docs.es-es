@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399465"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Desinstalación de actualizaciones de Microsoft en Analytics Platform System
@@ -21,14 +21,14 @@ En este artículo se describe cómo desinstalar una actualización de Microsoft 
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 Para realizar estos pasos, necesitará:  
   
 -   Un inicio de sesión de System Analytics Platform con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  
   
 -   Conocimiento de la cuenta de administrador de dominio de tejido para iniciar <em> <Fabric Domain> </em>sesión en el nodo **-HST01** .  
   
-## <a name="HowToUninstallMSFT"></a>Para desinstalar las actualizaciones de Microsoft  
+## <a name="to-uninstall-microsoft-updates"></a><a name="HowToUninstallMSFT"></a>Para desinstalar las actualizaciones de Microsoft  
   
 1.  Inicie sesión en el <em> <Fabric Domain> </em>nodo **-HST01** como administrador del dominio del tejido.  
   

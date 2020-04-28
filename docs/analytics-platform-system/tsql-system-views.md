@@ -1,5 +1,5 @@
 ---
-title: Vistas de sistema
+title: Vistas del sistema
 description: Vistas del sistema para el sistema de plataforma analítica (APS) SQL Server almacenamiento de datos paralelos (PDW).
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a7e6a0bda01de76787033607fbf35a0ca123ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399804"
 ---
 # <a name="system-views-for-analytics-platform-system-parallel-data-warehouse"></a>Vistas del sistema para el almacenamiento de datos paralelos de Analytics Platform System
@@ -61,8 +61,8 @@ Vistas del sistema para el sistema de plataforma analítica (APS) SQL Server alm
 Las DMV siguientes se aplican al almacenamiento de datos paralelos, pero se deben ejecutar conectándose a la base de datos **maestra** .
 
 * [sys.database_service_objectives](../relational-databases/system-catalog-views/sys-database-service-objectives-azure-sql-database.md)
-* [Sys. dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
-* [Sys. fn_helpcollations ()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
+* [sys.dm_operation_status](../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md)
+* [sys.fn_helpcollations()](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)
 
 ## <a name="sql-server-catalog-views"></a>Vistas de catálogo de SQL Server
 * [sys.all_columns](https://msdn.microsoft.com/library/ms177522.aspx)
@@ -105,7 +105,7 @@ Las DMV siguientes se aplican al almacenamiento de datos paralelos, pero se debe
 * [sys.partition_schemes](https://msdn.microsoft.com/library/ms189752.aspx)
 * [sys.partitions](https://msdn.microsoft.com/library/ms175012.aspx)
 * [sys.procedures](https://msdn.microsoft.com/library/ms188737.aspx)
-* [Sys. Schemas](https://msdn.microsoft.com/library/ms176011.aspx)
+* [sys.schemas](https://msdn.microsoft.com/library/ms176011.aspx)
 * [sys.securable_classes](https://msdn.microsoft.com/library/ms408301.aspx)
 * [sys.sql_expression_dependencies](https://msdn.microsoft.com/library/bb677315.aspx)
 * [sys.sql_modules](https://msdn.microsoft.com/library/ms175081.aspx)
@@ -215,14 +215,14 @@ Cada una de estas DMV tiene una columna específica denominada pdw_node_id. Este
 
 ## <a name="sql-server-information_schema-views"></a>Vistas INFORMATION_SCHEMA de SQL Server
 * [CHECK_CONSTRAINTS](../relational-databases/system-information-schema-views/check-constraints-transact-sql.md)
-* [COLUMNS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
-* [PARAMETERS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
-* [ROUTINES](../relational-databases/system-information-schema-views/routines-transact-sql.md)
-* [SCHEMATA](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
-* [TABLES](../relational-databases/system-information-schema-views/tables-transact-sql.md)
+* [COLUMNAS](../relational-databases/system-information-schema-views/columns-transact-sql.md)
+* [PARÁMETROS](../relational-databases/system-information-schema-views/parameters-transact-sql.md)
+* [RUTINAS](../relational-databases/system-information-schema-views/routines-transact-sql.md)
+* [ESQUEMAS](../relational-databases/system-information-schema-views/schemata-transact-sql.md)
+* [TABLAS](../relational-databases/system-information-schema-views/tables-transact-sql.md)
 * [VIEW_COLUMN_USAGE](../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)
 * [VIEW_TABLE_USAGE](../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)
-* [VIEWS](../relational-databases/system-information-schema-views/views-transact-sql.md)
+* [VISTAS](../relational-databases/system-information-schema-views/views-transact-sql.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 Para obtener más información de referencia, vea [elementos del lenguaje t-SQL](tsql-language-elements.md) e [instrucciones t-SQL](tsql-statements.md).

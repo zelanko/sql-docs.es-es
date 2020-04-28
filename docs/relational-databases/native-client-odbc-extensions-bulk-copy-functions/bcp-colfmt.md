@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 857022f04047178f9eaf2db2c59d2d99987afbaa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73783141"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -63,9 +63,9 @@ RETCODE bcp_colfmt (
   
  Para generar una salida de copia masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo, cuando *eUserDataType* es SQLDECIMAL o SQLNUMERIC:  
   
--   Si la columna de origen no es **decimal** o **numérica**, se utilizan la precisión y escala predeterminadas.  
+-   Si la columna de origen no es **decimal** o **numérica**, se utilizan la precisión y la escala predeterminadas.  
   
--   Si la columna de origen es **decimal** o **numérica**, se utilizan la precisión y escala de la columna de origen.  
+-   Si la columna de origen es **decimal** o **numérica**, se utilizan la precisión y la escala de la columna de origen.  
   
  *cbIndicator*  
  Es la longitud, en bytes, de un indicador de longitud o nulo en los datos de columna. Los valores de longitud de indicador válidos son 0 (cuando no se utiliza ningún indicador), 1, 2, 4 u 8.  
@@ -132,9 +132,9 @@ RETCODE bcp_colfmt (
   
  Se debe llamar a la función **bcp_columns** antes de realizar cualquier llamada a **bcp_colfmt**.  
   
- Debe llamar a **bcp_colfmt** una vez para cada columna del archivo de usuario.  
+ Debe llamar a **bcp_colfmt** una vez por cada columna del archivo de usuario.  
   
- Llamar más de una vez a **bcp_colfmt** para cualquier columna del archivo de usuario produce un error.  
+ La llamada a **bcp_colfmt** más de una vez para cualquier columna de archivo de usuario produce un error.  
   
  No tiene que copiar todos los datos de un archivo de usuario en la tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para omitir una columna, especifique el formato de los datos de la columna; para ello, establezca el parámetro *idxServerCol* en 0. Si desea omitir una columna, debe especificar su tipo.  
   

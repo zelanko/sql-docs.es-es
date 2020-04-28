@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: cc87b541b2b6ebf2f6a9068ba35ae0f62f8e9988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056612"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migre SQL Server o SQL Server locales en máquinas virtuales de Azure para Azure SQL Database con el Data Migration Assistant
@@ -37,7 +37,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
    ![Crear proyecto de migración](../dma/media/NewCreate1.png)
 
-## <a name="specify-the-source-server-and-database"></a>Especificar el servidor de origen y la base de datos
+## <a name="specify-the-source-server-and-database"></a>Especifique el servidor de origen y la base de datos
 
 1. En el origen, en **conectar con el servidor de origen**, en el cuadro de texto **nombre de servidor** , escriba el nombre de la instancia de SQL Server de origen.
 
@@ -59,7 +59,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
 5. Seleccione **Next** (Siguiente).
 
-## <a name="specify-the-target-server-and-database"></a>Especificar el servidor de destino y la base de datos
+## <a name="specify-the-target-server-and-database"></a>Especifique el servidor de destino y la base de datos
 
 1. En el destino, en el cuadro de texto **nombre del servidor** , en **conectar con el servidor de destino**, escriba el nombre de la instancia de Azure SQL Database. 
 
@@ -81,11 +81,11 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
 5. Seleccione **Next** (Siguiente).
 
-## <a name="select-schema-objects"></a>Seleccionar objetos de esquema
+## <a name="select-schema-objects"></a>Selección de los objetos de esquema
 
 1. Seleccione los objetos de esquema de la base de datos de origen que desea migrar a Azure SQL Database.
 
-    ![Seleccionar objetos de esquema](../dma/media/select-schema-objects.png)
+    ![Selección de los objetos de esquema](../dma/media/select-schema-objects.png)
 
        > [!NOTE]
        > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
@@ -98,7 +98,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
     ![Script generado](../dma/media/generated-script.png)
 
-## <a name="deploy-schema"></a>Implementar esquema
+## <a name="deploy-schema"></a>Implementación del esquema
 
 1. Seleccione **implementar esquema**.
 
@@ -114,7 +114,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
 5. Seleccione **Iniciar migración de datos**.
 
-En la pantalla final se muestra el estado general.
+La pantalla final muestra el estado general.
 
    ![Estado de migración](../dma/media/migration-status.png) 
 

@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782398"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,7 +43,7 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  Identificador de la conexión ODBC habilitado para la copia masiva.  
   
- *propiedad*  
+ *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
  *pField*  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  Si intenta llamar a bcp_setbulkmode con una secuencia de llamadas a función que incluye bcp_setcolfmt, bcp_control y bcp_readfmt, una de las llamadas de función devolverá un error de secuencia. Si opta por corregir el error, llame a bcp_init para restablecer toda la configuración y volver a empezar.  
   
- A continuación se muestran algunos ejemplos de llamadas de función que producen un error de secuencia de función:  
+ A continuación se presentan algunos ejemplos de llamadas a función que producen un error de secuencia de función:  
   
 ```  
 bcp_init("table", DB_IN);  

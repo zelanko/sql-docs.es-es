@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401145"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Componentes de hardware para Analytics Platform System
@@ -21,13 +21,13 @@ ms.locfileid: "74401145"
 Analytics Platform System (APS) usa componentes escalables para que pueda comprar la cantidad adecuada de procesamiento y almacenamiento según sus requisitos empresariales. Cuando se ordenan los APS, se necesita una combinación de estos componentes de hardware básicos. Los proveedores de hardware específicos podrían usar distintas convenciones de nomenclatura o tener componentes adicionales.  
  
   
-## <a name="rackandnetwork"></a>Bastidor y red 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>Bastidor y red 
  
 Todos los componentes de APS se almacenan en uno o varios bastidores que caben en el centro de datos. Cada bastidor incluye unidades de distribución de energía (PDU), dos conmutadores InfiniBand y dos conmutadores Ethernet.  
   
 ![Bastidor y red](media/rack-and-network.png "Bastidor y red de APS")  
   
-## <a name="datascaleunit"></a>Unidad de escalado de datos
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>Unidad de escalado de datos
  
 Una unidad de escalado de datos contiene los hosts de datos y el almacenamiento de conexión directa (DAS) para procesar y almacenar los datos de usuario. Para agregar capacidad, agregue unidades de escalado de datos según las configuraciones admitidas por el proveedor de hardware. A medida que aumenta el número de unidades de escalado de datos, debe agregar más componentes de red & bastidor, según sea necesario, para proporcionar más energía, red e infraestructura de bastidor.  
   
@@ -65,7 +65,7 @@ El número total de discos para los nodos de proceso:
   
 **En el caso de los tamaños de disco**, el almacenamiento con conexión directa puede tener una unidad de disco de 1, 2 o 3 terabytes. Todas las unidades de escalado de datos deben tener discos del mismo tamaño.  
   
-## <a name="basescaleunit"></a>Unidad de escala base 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>Unidad de escala base 
  
 La unidad de escala base contiene el número mínimo de hosts de potencia de cerebro, hosts de datos y almacenamiento conectado directo que se requiere para el dispositivo. Incluye los componentes siguientes. 
   

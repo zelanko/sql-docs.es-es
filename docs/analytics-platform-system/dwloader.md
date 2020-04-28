@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401174"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos de dwloader para almacenamiento de datos paralelos
@@ -209,7 +209,7 @@ Ejemplos:
 Si hay errores de carga, **dwloader** almacena la fila que no se pudo cargar y la descripción del error en un archivo denominado *load_failure_file_name*. Si este archivo ya existe, dwloader sobrescribirá el archivo existente. *load_failure_file_name* se crea cuando se produce el primer error. Si todas las filas se cargan correctamente, no se crea *load_failure_file_name* .  
   
 **-fh** *number_header_rows*  
-Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
+Número de líneas (filas) que se van a omitir al principio de *source_data_file_name*. El valor predeterminado es 0.  
   
 <variable_length_column_options>  
 Opciones de un *source_data_file_name* que tiene columnas de longitud variable delimitada por caracteres. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -554,13 +554,13 @@ El modo Append carga los datos en dos fases. La fase uno carga los datos del arc
   
 |Tipo de tabla|Transacciones múltiples<br />Modo (-m)|La tabla está vacía|Compatibilidad con simultaneidad|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Montón|Sí|Sí|Sí|Mínimo|  
-|Montón|Sí|No|Sí|Mínimo|  
-|Montón|No|Sí|No|Mínimo|  
-|Montón|No|No|No|Mínimo|  
-|Cl|Sí|Sí|No|Mínimo|  
+|Montón|Sí|Sí|Sí|mínimo|  
+|Montón|Sí|No|Sí|mínimo|  
+|Montón|No|Sí|No|mínimo|  
+|Montón|No|No|No|mínimo|  
+|Cl|Sí|Sí|No|mínimo|  
 |Cl|Sí|No|Sí|Completo|  
-|Cl|No|Sí|No|Mínimo|  
+|Cl|No|Sí|No|mínimo|  
 |Cl|No|No|Sí|Completo|  
   
 En la tabla anterior se muestra **dwloader** mediante la carga del modo Append en un montón o en una tabla de índice clúster (CI), con o sin la marca multitransaccional y la carga en una tabla vacía o en una tabla no vacía. El comportamiento de bloqueo y registro de cada combinación de carga se muestra en la tabla. Por ejemplo, la fase de carga (2ª) con el modo Append en un índice agrupado sin el modo de varias transacciones y en una tabla vacía hará que PDW cree un bloqueo exclusivo en la tabla y el registro sea mínimo. Esto significa que un cliente no podrá cargar (2ª) fase y consulta simultáneamente en una tabla vacía. Sin embargo, al cargar con la misma configuración en una tabla que no está vacía, PDW no emitirá un bloqueo exclusivo en la tabla y es posible la simultaneidad. Desafortunadamente, se produce el registro completo, lo que ralentiza el proceso.  

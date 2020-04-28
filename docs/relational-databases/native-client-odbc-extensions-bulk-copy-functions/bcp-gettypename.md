@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782657"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -40,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *muestras*  
+ *token*  
  Valor que indica un token de tipo BCP.  
   
  *campo*  
@@ -56,8 +56,8 @@ RETCODE bcp_gettypename (
   
 |Nombre de tipo de BCP|MaxType|Output|  
 |-------------------|-------------|------------|  
-|**SQLDECIMAL**|Es posible usar el|**Decimal**|  
-|**SQLNUMERIC**|Es posible usar el|**alfanumérico**|  
+|**SQLDECIMAL**|Es posible usar el|**decimal**|  
+|**SQLNUMERIC**|Es posible usar el|**numeric**|  
 |**SQLINT1**|Es posible usar el|**tinyint**|  
 |**SQLINT2**|Es posible usar el|**smallint**|  
 |**SQLINT4**|Es posible usar el|**int**|  
@@ -70,7 +70,7 @@ RETCODE bcp_gettypename (
 |**SQLCHARACTER**|No|**char**|  
 |**SQLBIGVARCHAR**|No|**varchar**|  
 |**SQLVARCHAR**|No|**varchar**|  
-|**SQLTEXT**|Es posible usar el|**negrita**|  
+|**SQLTEXT**|Es posible usar el|**text**|  
 |**SQLBIGBINARY**|No|**binary**|  
 |**SQLBINARY**|No|**Binario**|  
 |**SQLBIGVARBINARY**|No|**Varbinary**|  
@@ -82,18 +82,18 @@ RETCODE bcp_gettypename (
 |**SQLFLTN**|Es posible usar el|**float-null**|  
 |**SQLAOPSUM**|Es posible usar el|**Sume**|  
 |**SQLAOPAVG**|Es posible usar el|**Latencia**|  
-|**SQLAOPCNT**|Es posible usar el|**Contabiliza**|  
+|**SQLAOPCNT**|Es posible usar el|**Recuento**|  
 |**SQLAOPMIN**|Es posible usar el|**Minuto**|  
 |**SQLAOPMAX**|Es posible usar el|**Máx.**|  
 |**SQLDATETIM4**|Es posible usar el|**smalldatetime**|  
 |**SQLMONEY4**|Es posible usar el|**Smallmoney**|  
-|**SQLFLT4**|Es posible usar el|**Real**|  
+|**SQLFLT4**|Es posible usar el|**Impuestos**|  
 |**SQLUNIQUEID**|Es posible usar el|**uniqueidentifier**|  
 |**SQLNCHAR**|No|**Nchar**|  
 |**SQLNVARCHAR**|No|**Nvarchar**|  
 |**SQLNTEXT**|Es posible usar el|**Ntext**|  
 |**SQLVARIANT**|Es posible usar el|**sql_variant**|  
-|**SQLINT8**|Es posible usar el|**Bigint**|  
+|**SQLINT8**|Es posible usar el|**BIGINT**|  
 |**SQLCHARACTER**|Sí|**ntext**|  
 |**SQLBIGCHAR**|Sí|**ntext**|  
 |**SQLBIGVARCHAR**|Sí|**ntext**|  

@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74165911"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -58,7 +58,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Las reglas para especificar el valor de *stmt* son las mismas que para Sp_cursoropen, con la excepción de que el tipo de datos de la cadena *stmt* debe ser **ntext**.  
   
- *Opciones*  
+ *options*  
  Parámetro opcional que devuelve una descripción de las columnas del conjunto de resultados del cursor. *Options* requiere el siguiente valor de entrada **int** .  
   
 |Value|Descripción|  
@@ -104,7 +104,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual ** que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al solicitado.  
+ Al igual *scrollpt*que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollpt, puede asignar un valor diferente al solicitado.  
   
 ## <a name="remarks"></a>Observaciones  
  El parámetro de estado de RPC es uno de los siguientes:  

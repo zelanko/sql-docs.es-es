@@ -11,20 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7253264398316f2fb8bc0c1f1b4587c0e597beee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74054828"
 ---
 # <a name="handling-large-objects-using-clr"></a>Tratar objetos grandes con CLR
   El ejemplo `HandlingLOBUsingCLR` para SQL Server muestra la transferencia de objetos grandes (LOB) entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un sistema de archivos que está disponible en el servidor utilizando procedimientos almacenados de Common Language Runtime (CLR). Este ejemplo muestra cómo obtener acceso a los archivos en el código del servidor, y cómo invocar después consultas dinámicas y procedimientos almacenados desde procedimientos almacenados basados en CLR. También muestra cómo eliminar del Registro y cómo registrar métodos y ensamblados de CLR mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
   
 -   La base de datos de AdventureWorks que está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [para desarrolladores de](https://archive.codeplex.com/?p=SqlServerSamples).  
   
@@ -53,7 +52,7 @@ ms.locfileid: "74054828"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly**  para completar la instalación.  
+-   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   
@@ -454,7 +453,7 @@ End Class
   
 ```  
   
- Este es el script ([!INCLUDE[tsql](../../includes/tsql-md.md)]) de instalación de `Install.sql`, que implementa el ensamblado y crea los objetos de seguridad y los procedimientos almacenados que se requieren en este ejemplo.  
+ Este es el script (`Install.sql`) de instalación de [!INCLUDE[tsql](../../includes/tsql-md.md)], que implementa el ensamblado y crea los objetos de seguridad y los procedimientos almacenados que se requieren en este ejemplo.  
   
 ```  
 USE AdventureWorks  

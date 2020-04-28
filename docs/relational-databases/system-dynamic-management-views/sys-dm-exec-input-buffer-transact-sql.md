@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74097871"
 ---
 # <a name="sysdm_exec_input_buffer-transact-sql"></a>Sys. dm_exec_input_buffer (Transact-SQL)
@@ -54,7 +54,7 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|El tipo de evento en el búfer de entrada para el SPID dado.|
-|**los**|**smallint**|Los parámetros proporcionados para la instrucción.|
+|**parameters**|**smallint**|Los parámetros proporcionados para la instrucción.|
 |**event_info**|**nvarchar(max)**|Texto de la instrucción en el búfer de entrada para el SPID dado.|
 
 ## <a name="permissions"></a>Permisos
@@ -98,7 +98,7 @@ GO
 
 ## <a name="see-also"></a>Consulte también
 
-- [Funciones y vistas de administración dinámica relacionadas con la ejecución &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Funciones y vistas de administración dinámica relacionadas con ejecuciones &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

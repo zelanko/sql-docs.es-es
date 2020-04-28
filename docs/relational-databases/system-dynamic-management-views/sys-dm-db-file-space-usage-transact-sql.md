@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983045"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "73983045"
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Id. de la base de datos.|  
 |file_id|**smallint**|Identificador de archivo.<br /><br /> file_id asigna a file_id en [Sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) y a fileid en [Sys. Sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md).|  
-|filegroup_id|**smallint**|**Válido para **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Identificador de grupo de archivos|  
-|total_page_count|**BIGINT**|**Válido para **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Número total de páginas del archivo.|  
-|allocated_extent_page_count|**BIGINT**|**Válido para **: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Número total de páginas de las extensiones asignadas en el archivo.|  
-|unallocated_extent_page_count|**BIGINT**|Número total de páginas en las extensiones no asignadas en el archivo.<br /><br /> No se incluyen las páginas no utilizadas en extensiones asignadas.|  
-|version_store_reserved_page_count|**BIGINT**|Número total de páginas en las extensiones uniformes asignadas para el almacén de versiones. Las páginas de almacén de la versión nunca se asignan desde extensiones mixtas.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Para obtener más información, consulte [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
-|user_object_reserved_page_count|**BIGINT**|Número total de páginas asignadas desde extensiones uniformes para objetos de usuario en la base de datos. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Puede utilizar la total_pages columna de la vista de catálogo [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) para devolver el recuento de páginas reservadas de cada unidad de asignación en el objeto de usuario. No obstante, tenga en cuenta que la columna total_pages incluye las páginas IAM.|  
-|internal_object_reserved_page_count|**BIGINT**|Número total de páginas en extensiones uniformes asignadas para objetos internos en el archivo. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> No existe ninguna vista de catálogo ni objeto de administración dinámica que devuelva el recuento de páginas de cada objeto interno.|  
-|mixed_extent_page_count|**BIGINT**|Número total de páginas asignadas y no asignadas en extensiones mixtas asignadas en el archivo. Las extensiones mixtas contienen páginas asignadas a diferentes objetos. Este recuento no incluye todas las páginas IAM del archivo.|
-|modified_extent_page_count|**BIGINT**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores.<br /><br />Número total de páginas modificadas en extensiones asignadas del archivo desde la última copia de seguridad completa de la base de datos. El recuento de páginas modificado se puede usar para realizar un seguimiento de la cantidad de cambios diferenciales en la base de datos desde la última copia de seguridad completa, para decidir si se necesita una copia de seguridad diferencial.|
+|filegroup_id|**smallint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Identificador de grupo de archivos|  
+|total_page_count|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Número total de páginas del archivo.|  
+|allocated_extent_page_count|**bigint**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Número total de páginas de las extensiones asignadas en el archivo.|  
+|unallocated_extent_page_count|**bigint**|Número total de páginas en las extensiones no asignadas en el archivo.<br /><br /> No se incluyen las páginas no utilizadas en extensiones asignadas.|  
+|version_store_reserved_page_count|**bigint**|Número total de páginas en las extensiones uniformes asignadas para el almacén de versiones. Las páginas de almacén de la versión nunca se asignan desde extensiones mixtas.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Para obtener más información, consulte [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|user_object_reserved_page_count|**bigint**|Número total de páginas asignadas desde extensiones uniformes para objetos de usuario en la base de datos. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> Puede utilizar la total_pages columna de la vista de catálogo [Sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) para devolver el recuento de páginas reservadas de cada unidad de asignación en el objeto de usuario. No obstante, tenga en cuenta que la columna total_pages incluye las páginas IAM.|  
+|internal_object_reserved_page_count|**bigint**|Número total de páginas en extensiones uniformes asignadas para objetos internos en el archivo. En el recuento se incluyen las páginas no utilizadas de una extensión asignada.<br /><br /> No se incluyen las páginas IAM porque siempre se asignan desde extensiones mixtas. Se incluyen las páginas PFS si están asignadas desde una extensión uniforme.<br /><br /> No existe ninguna vista de catálogo ni objeto de administración dinámica que devuelva el recuento de páginas de cada objeto interno.|  
+|mixed_extent_page_count|**bigint**|Número total de páginas asignadas y no asignadas en extensiones mixtas asignadas en el archivo. Las extensiones mixtas contienen páginas asignadas a diferentes objetos. Este recuento no incluye todas las páginas IAM del archivo.|
+|modified_extent_page_count|**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y versiones posteriores<br /><br />Número total de páginas modificadas en extensiones asignadas del archivo desde la última copia de seguridad completa de la base de datos. El recuento de páginas modificado se puede usar para realizar un seguimiento de la cantidad de cambios diferenciales en la base de datos desde la última copia de seguridad completa, para decidir si se necesita una copia de seguridad diferencial.|
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
 |distribution_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador numérico único asociado a la distribución.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73983045"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Uno a uno|  
   
@@ -121,4 +121,4 @@ FROM sys.dm_db_file_space_usage;
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Vistas de administración dinámica relacionadas con bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [Sys. dm_db_task_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [Sys. dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+ [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

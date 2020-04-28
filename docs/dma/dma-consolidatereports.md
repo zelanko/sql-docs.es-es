@@ -15,20 +15,20 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056649"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
 Las siguientes instrucciones paso a paso le ayudarán a usar la Data Migration Assistant para realizar una evaluación de escalado correcta para actualizar SQL Server locales o SQL Server que se ejecutan en máquinas virtuales de Azure o para migrar a Azure SQL Database.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Designe un equipo de herramientas en la red desde el que se iniciará DMA. Asegúrese de que este equipo tiene conectividad con los destinos de SQL Server.
-- Descargar e instalar:
+- Descargue e instale:
   - [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 o posterior.
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 o versiones posteriores.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 o superior.
@@ -64,7 +64,7 @@ Para cargar los módulos, realice los pasos siguientes:
 
     PowerShell debe cargar ahora estos módulos automáticamente cuando se inicia una nueva sesión de PowerShell.
 
-## <a name="create-inventory"></a>Crear un inventario de servidores SQL Server
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Crear un inventario de servidores SQL Server
 
 Antes de ejecutar el script de PowerShell para evaluar los servidores SQL Server, debe crear un inventario de los servidores SQL Server que desea evaluar.
 
@@ -263,7 +263,7 @@ Esta sección es la parte principal del informe, que muestra la preparación de 
 
 - InstanceDatabase
 - ChangeCategory
-- Título
+- Title
 - ObjectType
 - ImpactedObjectName
 

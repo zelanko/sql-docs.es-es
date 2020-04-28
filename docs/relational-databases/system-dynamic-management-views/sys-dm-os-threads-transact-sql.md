@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982539"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
@@ -43,16 +43,16 @@ ms.locfileid: "73982539"
 |status|**int**|Marca del estado interno|  
 |instruction_address|**varbinary(8**|Dirección de la instrucción que se está ejecutando en ese momento.|  
 |creation_time|**datetime**|Hora a la que se creó este subproceso.|  
-|kernel_time|**BIGINT**|Tiempo del kernel consumido por este subproceso.|  
-|usermode_time|**BIGINT**|Tiempo de usuario consumido por este subproceso.|  
+|kernel_time|**bigint**|Tiempo del kernel consumido por este subproceso.|  
+|usermode_time|**bigint**|Tiempo de usuario consumido por este subproceso.|  
 |stack_base_address|**varbinary(8**|Dirección de memoria de la dirección de pila más alta de este subproceso.|  
 |stack_end_address|**varbinary(8**|Dirección de memoria de la dirección de pila más baja de este subproceso.|  
 |stack_bytes_committed|**int**|Número de bytes confirmados en la pila.|  
 |stack_bytes_used|**int**|Número de bytes que se usan de forma activa en el subproceso.|  
-|affinity|**BIGINT**|Máscara de CPU en la que se ejecuta este subproceso. Esto depende del valor configurado por la instrucción **ALTER Server Configuration Set Process Affinity** . Puede ser distinta del programador en caso de afinidad de software.|  
+|affinity|**bigint**|Máscara de CPU en la que se ejecuta este subproceso. Esto depende del valor configurado por la instrucción **ALTER Server Configuration Set Process Affinity** . Puede ser distinta del programador en caso de afinidad de software.|  
 |Priority|**int**|Valor de prioridad de este subproceso.|  
 |Configuración regional|**int**|LCID de la configuración regional en memoria caché del subproceso.|  
-|SWT|**varbinary(8**|Identificador del token de suplantación en caché del subproceso.|  
+|Token|**varbinary(8**|Identificador del token de suplantación en caché del subproceso.|  
 |is_impersonating|**int**|Indica si este subproceso usa suplantación de Win32.<br /><br /> 1 = El subproceso usa credenciales de seguridad diferentes de las predeterminadas del proceso. Indica que el subproceso suplanta una entidad distinta de la que creó el proceso.|  
 |is_waiting_on_loader_lock|**int**|Estado del sistema operativo que indica si el subproceso espera en el bloqueo de carga.|  
 |fiber_data|**varbinary(8**|Fibra actual de Win32 que se ejecuta en el subproceso. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
@@ -75,8 +75,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 Debido a cómo funciona el motor de SQL en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, `os_thread_id` no coincide con el resultado de herramientas como `ps``top` o procfs (/proc/`pid`).  Esto se debe a la capa de abstracción de plataforma (SQLPAL), una capa entre SQL Server componentes y el sistema operativo.
 
 ## <a name="examples"></a>Ejemplos  
- Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys. dm_os_threads puede proporcionar información sobre subprocesos no autorizados que consumen recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proceso.  
+ Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys. dm_os_threads puede proporcionar información sobre subprocesos no autorizados que consumen recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proceso.  
   
  La siguiente consulta se utiliza para buscar subprocesos de trabajo, junto con el tiempo consumido en la ejecución, que ejecutan subprocesos no iniciados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

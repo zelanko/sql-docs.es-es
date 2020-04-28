@@ -10,22 +10,22 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400336"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecimiento de la contraseña de administrador para iniciar sesión en los nodos de AD en Modo de restauración de servicios de directorio (DSRM)-Analytics Platform System
 Modo de restauración de servicios de directorio (DSRM) es un modo de arranque para reparar o recuperar Active Directory Domain Services (AD DS). Se usa para iniciar sesión en los nodos de AD del dispositivo después de que se haya producido un error en AD DS o cuando sea necesario restaurar AD DS. La contraseña de DSRM se inicializó durante la instalación del dispositivo en el sitio del proveedor de hardware y debe cambiarla el administrador del dispositivo. Analytics Platform System tiene dos AD DS (controladores de dominio). ** _appliance_domain_-AD01** y ** _appliance_domain_-AD02**. Para cada nodo AD de dispositivo, cambie la contraseña de DSRM siguiendo estos pasos.  
   
-## <a name="HowToDSRM"></a>Para restablecer la contraseña de administrador  
+## <a name="to-reset-the-administrator-password"></a><a name="HowToDSRM"></a>Para restablecer la contraseña de administrador  
   
 1.  Abra una ventana del símbolo del sistema en un nodo AD de dispositivo <strong> _appliance_domain_AD_xx_</strong>máquina virtual.  
   
 2.  En el símbolo del sistema, escriba `ntdsutil`.  
   
-3.  En el **** símbolo del sistema de `set dsrm password`Ntdsutil, escriba.  
+3.  En el **ntdsutil** símbolo del sistema de `set dsrm password`Ntdsutil, escriba.  
   
 4.  En el símbolo del sistema de **Restablecer contraseña de administrador:** , escriba `reset password on server null`.  
   

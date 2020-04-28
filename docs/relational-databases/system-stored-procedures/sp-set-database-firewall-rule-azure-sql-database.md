@@ -22,10 +22,10 @@ ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dfe41ee68412414df24bc7f0bd583bbb0109b3db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055089"
 ---
 # <a name="sp_set_database_firewall_rule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
@@ -53,7 +53,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  En la tabla siguiente se muestran los argumentos y las [!INCLUDE[ssSDS](../../includes/sssds-md.md)]opciones admitidos en.  
   
 > [!NOTE]  
->  Se permiten los intentos de conexión de Azure cuando este campo ** y el campo start_ip_address `0.0.0.0`es igual a.  
+>  Se permiten los intentos de conexión de Azure cuando este campo *start_ip_address* y el campo start_ip_address `0.0.0.0`es igual a.  
   
 ## <a name="remarks"></a>Observaciones  
  Los nombres de la configuración del firewall de nivel de base de datos para una base de datos deben ser únicos. Si el nombre de la configuración del firewall de nivel de base de datos proporcionado para el procedimiento almacenado ya existe en la tabla de configuración del firewall de nivel de base de datos, las direcciones IP inicial y final se actualizarán. De lo contrario, se creará una nueva configuración del firewall de nivel de base de datos.  

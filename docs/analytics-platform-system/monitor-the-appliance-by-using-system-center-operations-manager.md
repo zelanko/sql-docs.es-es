@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400969"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Supervisión con System Center Operations Manager-Analytics Platform System
@@ -21,7 +21,7 @@ Use System Center Operations Manager (SCOM) para supervisar el dispositivo de An
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
   
 1.  System Center Operations Manager 2007 R2, 2012 o 2012 SP1 debe estar instalado y en ejecución.  
   
@@ -46,7 +46,7 @@ Las alertas son donde puede encontrar las alertas actuales para administrar.
   
 ![Alertas](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
-### <a name="appliances"></a>Dota  
+### <a name="appliances"></a>Dispositivos  
 Los dispositivos son los lugares en los que encontrará los dispositivos PDW de SQL Server detectados y supervisados actualmente en su entorno. Si un dispositivo no aparece aquí y ha creado la conexión ODBC para él, puede haber algún problema con su cuenta de PDWWatcher. Si aparecen como "sin supervisión", puede haber algún problema con su cuenta de PDWMonitor. Sea paciente, ya que SCOM no realiza cambios en tiempo real, sino que comprueba periódicamente si hay nuevos dispositivos para supervisar y envía consultas periódicamente a los dispositivos para su supervisión.  
   
 ![Dota](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  

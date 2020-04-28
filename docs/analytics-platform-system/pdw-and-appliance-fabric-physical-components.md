@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400922"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Componentes físicos del dispositivo: Analytics Platform System
@@ -21,7 +21,7 @@ Nombres y descripciones de los componentes físicos de PDW y Appliance fabric.
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Diagramas de componentes  
+## <a name="component-diagrams"></a><a name="diagrams"></a>Diagrama de componentes  
 Esto muestra los nombres de los componentes físicos y dónde se encuentran en el primer bastidor de un dispositivo de seis nodos de proceso.  
   
 ![Nombres de componente de región PDW, HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ Esta es una vista consolidada de una región de PDW con seis nodos de proceso.
   
 ![Nombre de componente PDW](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>Componentes de PDW  
+## <a name="pdw-components"></a><a name="pdw"></a>Componentes de PDW  
 Las máquinas virtuales de PDW forman parte de la región de PDW.  
   
 *PDW_region*CTL01  
@@ -46,7 +46,7 @@ Una máquina virtual que ejecuta el nodo de control. Se ejecuta en HST01 y puede
 *PDW_region*-CMP01 a *PDW_Region*-CMP06  
 Una máquina virtual que ejecuta el nodo de proceso. En este diagrama de seis nodos de proceso, el hospeda HSA01 a través de HSA06 ejecutar máquinas virtuales de nodo de proceso CMP01 a CMP06, respectivamente.  
   
-## <a name="fabric"></a>Componentes del tejido del dispositivo  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>Componentes del tejido del dispositivo  
 Estos componentes forman parte del tejido del dispositivo.  
   
 ### <a name="virtual-machines"></a>Virtual Machines  

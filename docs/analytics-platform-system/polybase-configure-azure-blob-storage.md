@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400726"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Configuración de polybase para acceder a datos externos en Azure BLOB Storage
@@ -23,7 +23,7 @@ En el artículo se explica cómo usar polybase en una instancia de SQL Server pa
 > [!NOTE]
 > APS actualmente solo admite Azure BLOB Storage estándar de uso general (LRS) con redundancia local (LRS).
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
  - Almacenamiento de blobs de Azure en su suscripción.
  - Un contenedor creado en el almacenamiento de blobs de Azure.
@@ -66,7 +66,7 @@ Para consultar los datos en el almacenamiento de blobs de Azure, debe definir un
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Cree un origen de datos externo con [Crear origen de datos externo](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  
@@ -134,7 +134,7 @@ WHERE Insured_Customers.CustomerKey = CarSensor_Data.CustomerKey and CarSensor_D
 ORDER BY CarSensor_Data.Speed DESC  
 ```  
 
-### <a name="importing-data"></a>Importación de datos  
+### <a name="importing-data"></a>Importar datos  
 
 La siguiente consulta importa datos externos en APS. En este ejemplo se importan los datos de los controladores rápidos en APS para realizar análisis más profundos. Para mejorar el rendimiento, aprovecha la tecnología de almacén de columnas en APS.  
 

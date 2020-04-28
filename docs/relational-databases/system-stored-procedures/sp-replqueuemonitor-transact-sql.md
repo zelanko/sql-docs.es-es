@@ -16,10 +16,10 @@ ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d3c84d15087c3cb6bb63380bc6cf0c75e773b883
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74055215"
 ---
 # <a name="sp_replqueuemonitor-transact-sql"></a>sp_replqueuemonitor (Transact-SQL)
@@ -55,7 +55,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**0**|Todos los tipos de colas|  
 |**1**|Message Queue Server|  
-|**2**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]pone|  
+|**2**|Cola de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

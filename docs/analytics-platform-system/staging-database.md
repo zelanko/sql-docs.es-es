@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400282"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Usar una base de datos de ensayo en almacenamiento de datos paralelos (PDW)
 SQL Server almacenamiento de datos paralelos (PDW) utiliza una base de datos provisional para almacenar los datos temporalmente durante el proceso de carga. De forma predeterminada, PDW de SQL Server usa la base de datos de destino como base de datos de almacenamiento provisional, lo que puede provocar la fragmentación de la tabla. Para reducir la fragmentación de la tabla, puede crear una base de datos de almacenamiento provisional definida por el usuario. O bien, cuando la reversión de un error de carga no es un problema, puede usar el modo de carga fastappend para mejorar el rendimiento omitiendo la tabla temporal y cargando directamente en la tabla de destino.  
   
-## <a name="StagingDatabase"></a>Conceptos básicos de bases de datos de ensayo  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>Conceptos básicos de bases de datos de ensayo  
 Una *base* de datos de ensayo es una base de datos de PDW creada por el usuario que almacena los datos temporalmente mientras se cargan en el dispositivo. Cuando se especifica una base de datos de almacenamiento provisional para una carga, el dispositivo copia primero los datos en la base de datos de ensayo y, a continuación, copia los datos de las tablas temporales de la base de datos de ensayo en tablas permanentes en la base de datos de destino.  
   
 Cuando una base de datos de ensayo no se especifica para una carga, SQL ServerPDW crea las tablas temporales en la base de datos de destino y las usa para almacenar los datos cargados antes de insertar los datos cargados en las tablas de destino permanentes.  
@@ -38,7 +38,7 @@ La estructura de almacenamiento de cada tabla de base de datos depende de la tab
   
 -   En el caso de las cargas en un índice clúster de almacén, la tabla de ensayo es un índice clúster de almacén.  
   
-## <a name="Permissions"></a>Permisos  
+## <a name="permissions"></a><a name="Permissions"></a>Permisos  
 Requiere el permiso CREATE (para crear una tabla temporal) en la base de datos de ensayo. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Prácticas recomendadas para crear una base de datos de ensayo  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>Prácticas recomendadas para crear una base de datos de ensayo  
   
 1.  Solo debe haber una base de datos de ensayo por cada dispositivo. La base de datos provisional se puede compartir con todos los trabajos de carga de todas las bases de datos de destino.  
   
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   Normalmente, el tamaño del registro es similar al tamaño de la tabla replicada.  
   
-## <a name="Examples"></a>Ejemplos  
+## <a name="examples"></a><a name="Examples"></a>Example  
   
 ### <a name="a-create-a-staging-database"></a>A. Crear una base de datos de ensayo 
 En el ejemplo siguiente se crea una base de datos de ensayo, Stagedb, para su uso con todas las cargas en el dispositivo. Supongamos que calcula que cinco tablas replicadas de tamaño 5 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 25 GB para el tamaño replicado. Supongamos que calcula que seis tablas distribuidas de los tamaños 100, 200, 400, 500, 500 y 550 GB se cargarán simultáneamente. Esta simultaneidad da como resultado la asignación de al menos 2250 GB para el tamaño de la tabla distribuida.  

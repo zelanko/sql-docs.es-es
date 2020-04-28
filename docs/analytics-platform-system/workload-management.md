@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399445"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo en Analytics Platform System
@@ -28,7 +28,7 @@ Por ejemplo, con las técnicas de administración de cargas de trabajo en PDW de
   
 -   Solucionar problemas de una combinación hash de rendimiento lento para ver si necesita más memoria y, a continuación, asignarle más memoria.  
   
-## <a name="Basics"></a>Aspectos básicos de la administración de cargas de trabajo  
+## <a name="workload-management-basics"></a><a name="Basics"></a>Aspectos básicos de la administración de cargas de trabajo  
   
 ### <a name="key-terms"></a>Términos clave  
 Administración de cargas de trabajo  
@@ -55,13 +55,13 @@ Por ejemplo, para asignar una gran cantidad de recursos del sistema a una solici
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>Descripciones de clases de recursos  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>Descripciones de clases de recursos  
 En la tabla siguiente se describen las clases de recursos y sus asignaciones de recursos del sistema.  
   
 |Clase de recurso|Importancia de la solicitud|Uso máximo de memoria *|Espacios de simultaneidad (máximo = 32)|Descripción|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|Mediano|400 MB|1|De forma predeterminada, se permite a cada inicio de sesión una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recurso, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminada.|  
-|MediumRC|Mediano|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recursos Medium:<br /><br />Operaciones CTAS que tienen combinaciones hash de gran tamaño.<br /><br />Seleccione operaciones que necesiten más memoria para evitar el almacenamiento en caché en disco.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
+|default|Medio|400 MB|1|De forma predeterminada, se permite a cada inicio de sesión una pequeña cantidad de memoria y recursos de simultaneidad para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recurso, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminada.|  
+|MediumRC|Medio|1200 MB|3|Ejemplos de solicitudes que podrían necesitar la clase de recursos Medium:<br /><br />Operaciones CTAS que tienen combinaciones hash de gran tamaño.<br /><br />Seleccione operaciones que necesiten más memoria para evitar el almacenamiento en caché en disco.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
 |Largerc|Alto|2,8 GB|7|Ejemplos de solicitudes que podrían necesitar la clase de recursos grandes:<br /><br />Operaciones CTAS muy grandes que tienen combinaciones de hash enormes o que contienen agregaciones de gran tamaño, como las cláusulas ORDER BY o GROUP BY de gran tamaño.<br /><br />Seleccione operaciones que requieran grandes cantidades de memoria para operaciones como combinaciones hash o agregaciones como cláusulas ORDER BY o GROUP BY.<br /><br />Carga de datos en índices de almacén de columnas en clúster.<br /><br />Compilar, recompilar y reorganizar índices de almacén de columnas en clúster para tablas más pequeñas que tienen 10-15 columnas.|  
 |xlargerc|Alto|8,4 GB|22|La clase de recursos extra grande es para las solicitudes que podrían requerir un mayor consumo de recursos en tiempo de ejecución.|  
   
@@ -98,7 +98,7 @@ A medida que finalicen las solicitudes y estén disponibles los espacios de simu
   
 Dentro de cada clase de recurso, las solicitudes se ejecutan en el orden FIFO (primero en salir).  
   
-## <a name="GeneralRemarks"></a>Notas generales  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>Notas generales  
 Si un inicio de sesión es miembro de más de una clase de recurso, la clase con la mayoría de los recursos tiene prioridad.  
   
 Cuando se agrega o se quita un inicio de sesión en una clase de recurso, el cambio surte efecto inmediatamente en todas las solicitudes futuras; las solicitudes actuales que se están ejecutando o en espera no se ven afectadas. El inicio de sesión no necesita desconectarse y volver a conectarse para que se produzca el cambio.  
@@ -137,10 +137,10 @@ Instrucciones y operaciones SQL regidas por clases de recursos:
   
 -   SELECT, excluidas las consultas solo de DMV  
   
-## <a name="Limits"></a>Limitaciones y restricciones  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Limitaciones y restricciones  
 Las clases de recursos rigen las asignaciones de memoria y simultaneidad.  No controlan las operaciones de entrada/salida.  
   
-## <a name="Metadata"></a>Metadatos  
+## <a name="metadata"></a><a name="Metadata"></a>Metadatos  
 DMV que contienen información sobre las clases de recursos y los miembros de clase de recurso.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Vistas del sistema relacionadas que se exponen desde el SQL Server DMV en los no
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
 [Tareas de administración de cargas de trabajo](workload-management-tasks.md)  
   
 <!-- MISSING LINKS

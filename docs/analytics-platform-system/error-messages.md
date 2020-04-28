@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 2d89e80a89df53e85ef8d2bf53c369d9e4dc0d49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401162"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Mensajes de error en almacenamiento de datos paralelos
 
 Los mensajes de error de almacenamiento de datos paralelos (PDW) notifican los errores y problemas detectados por los componentes de PDW y también pueden incluir SQL Server errores que aparecen a través de PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Comprender esta sintaxis le permitirá identificar y corregir problemas en PDW de SQL Server.  
   
-## <a name="Basics"></a>Aspectos básicos de los mensajes de error  
+## <a name="error-message-basics"></a><a name="Basics"></a>Aspectos básicos de los mensajes de error  
 Los mensajes de error que se devuelven siguen la misma sintaxis.  
   
 `Error_Indicator [SQL_State_Code] [Driver_Details] [QueryID] Message_String`  

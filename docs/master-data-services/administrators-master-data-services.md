@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729794"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "73729794"
   
 |Tipo de administrador|Descripción|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Superusuario|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Puede ser un superusuario según los permisos de área funcional que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Tiene automáticamente todos los permisos para todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Superusuario|Los permisos asignados en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] no tienen ningún efecto sobre el acceso del administrador.<br /><br /> Puede ser un superusuario según los permisos de área funcional que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Tiene automáticamente todos los permisos para todos los modelos.<br /><br /> Tiene acceso a todas las áreas funcionales automáticamente.|  
 |Administrador de modelo|Puede ser un administrador de modelo según los permisos de administración que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en el modelo concreto.|  
 |Administrador de la entidad|Puede ser un administrador de entidad según los permisos de administrador que se le asignen explícitamente o los permisos heredados de un grupo.<br /><br /> Solo tiene acceso a áreas funcionales a las que se permita el acceso.<br /><br /> Tiene automáticamente todos los permisos para todos los objetos y miembros en la entidad concreta.<br /><br /> Puede aprobar los conjuntos de cambios pendientes si los cambios de entidad exigen aprobación.|  
   

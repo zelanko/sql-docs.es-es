@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401001"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Comportamiento de bloqueo en almacenamiento de datos paralelos
 Obtenga información sobre cómo el almacenamiento de datos paralelo utiliza el bloqueo para garantizar la integridad de las transacciones y mantener la coherencia de las bases de datos cuando varios usuarios tienen acceso a los datos al mismo tiempo.  
   
-## <a name="Basics"></a>Conceptos básicos de bloqueo  
-**Formas**  
+## <a name="locking-basics"></a><a name="Basics"></a>Conceptos básicos de bloqueo  
+**Modos**  
   
 PDW de SQL Server admite cuatro modos de bloqueo:  
   
 Exclusivo  
 El bloqueo exclusivo prohíbe escribir o leer el objeto bloqueado hasta que se complete la transacción que contiene el bloqueo exclusivo. No se permiten otros bloqueos de ningún modo mientras el bloqueo exclusivo está en vigor. Por ejemplo, DROP TABLE y CREATE DATABASE usan un bloqueo exclusivo.  
   
-Compartido  
+Shared  
 El bloqueo compartido prohíbe la iniciación de un bloqueo exclusivo en el objeto afectado, pero permite todos los demás modos de bloqueo. Por ejemplo, la instrucción SELECT inicia un bloqueo compartido y, por lo tanto, permite que varias consultas tengan acceso a los datos seleccionados simultáneamente, pero impide que se lean las actualizaciones de los registros hasta que se complete la instrucción SELECT.  
   
 ExclusiveUpdate  
@@ -40,7 +40,7 @@ El bloqueo SharedUpdate prohíbe los modos de bloqueo exclusivo y ExclusiveUpdat
   
 Los bloqueos se mantienen en las siguientes clases de objetos: base de datos, esquema, objeto (una tabla, vista o procedimiento), aplicación (usada internamente), EXTERNALDATASOURCE, EXTERNALFILEFORMAT y SCHEMARESOLUTION (se realiza un bloqueo de nivel de base de datos al crear, modificar o quitar objetos de esquema o usuarios de base de datos). Estas clases de objetos pueden aparecer en la object_type columna de [Sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md).  
   
-## <a name="Remarks"></a>Notas generales  
+## <a name="general-remarks"></a><a name="Remarks"></a>Notas generales  
 Los bloqueos se pueden aplicar a bases de datos, tablas o vistas.  
   
 PDW de SQL Server no implementa ningún nivel de aislamiento configurable. Admite el nivel de aislamiento READ_UNCOMMITTED tal y como se define en el estándar ANSI. Sin embargo, dado que las operaciones de lectura se ejecutan en READ_UNCOMMITTED, muy pocas operaciones de bloqueo se producen realmente o conducen a la contención en el sistema.  

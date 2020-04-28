@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056401"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -211,6 +211,6 @@ WHERE Q.levels = 2
 ## <a name="see-also"></a>Consulte también  
  [COINCIDENCIA (gráfico SQL)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;gráfico de SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+ [Insert (gráfico de SQL)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph processing with SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md) (Procesamiento de gráficos con SQL Server 2017)     
  

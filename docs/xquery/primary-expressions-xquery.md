@@ -20,10 +20,10 @@ ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74200514"
 ---
 # <a name="primary-expressions-xquery"></a>Expresiones principales (XQuery)
@@ -45,8 +45,7 @@ ms.locfileid: "74200514"
  Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del euro se puede representar mediante la referencia de carácter " \#&8364;".  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
   
 ### <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes ilustran la utilización de literales y las referencias de entidad y carácter.  

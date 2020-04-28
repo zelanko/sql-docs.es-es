@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 36dfed5d0c24082d01248d7e6e8e1e62e1725e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844420"
 ---
 # <a name="sysdm_xe_database_session_object_columns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
@@ -30,11 +30,11 @@ ms.locfileid: "73844420"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8**|La dirección de memoria de la sesión de eventos. Tiene una relación de varios a uno con sys. dm_xe_database_sessions. Address. No admite valores NULL.|  
-|column_name|**nvarchar (60)**|El nombre del valor de configuración. No admite valores NULL.|  
+|column_name|**nvarchar(60)**|El nombre del valor de configuración. No admite valores NULL.|  
 |column_id|**int**|IDENTIFICADOR de la columna. Es único en el objeto. No admite valores NULL.|  
-|column_value|**nvarchar (2048)**|El valor configurado de la columna. Acepta valores NULL.|  
-|object_type|**nvarchar (60)**|Tipo del objeto.  No acepta valores NULL. object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
-|object_name|**nvarchar (60)**|Nombre del objeto al que pertenece esta columna. No admite valores NULL.|  
+|column_value|**nvarchar(2048)**|El valor configurado de la columna. Acepta valores NULL.|  
+|object_type|**nvarchar(60)**|Tipo del objeto.  No acepta valores NULL. object_type es uno de los siguientes:<br /><br /> event<br /><br /> Destino|  
+|object_name|**nvarchar(60)**|Nombre del objeto al que pertenece esta columna. No admite valores NULL.|  
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -42,7 +42,7 @@ ms.locfileid: "73844420"
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|A|Relación|  
+|De|En|Relación|  
 |----------|--------|------------------|  
 |dm_xe_database_session_object_columns. object_name<br /><br /> dm_xe_database_session_object_columns. object_package_guid|sys.dm_xe_objects.package_guid<br /><br /> sys.dm_xe_objects.name|Varios a uno|  
 |dm_xe_database_session_object_columns. column_name<br /><br /> dm_xe_database_session_object_columns. column_id|sys.dm_xe_object_columns.name<br /><br /> sys.dm_xe_object_columns.column_id|Varios a uno|  

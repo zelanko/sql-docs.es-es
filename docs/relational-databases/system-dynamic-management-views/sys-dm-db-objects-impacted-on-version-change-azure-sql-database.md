@@ -21,10 +21,10 @@ ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843861"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
@@ -34,11 +34,11 @@ ms.locfileid: "73843861"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|clase|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = índices y montones|  
+|clase|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = Índices y montones|  
 |class_desc|**nvarchar (60)** NO NULL|Descripción de la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|valor **int** NO NULL|Identificador de objeto de la restricción, o identificador de objeto de la tabla que contiene el índice o el montón.|  
-|minor_id|valor **int** ACEPTA|**Null** para restricciones<br /><br /> Index_id para índices y montones|  
-|dependency|**nvarchar (60)** NO NULL|Descripción de la dependencia que está afectando a una restricción o a un índice. El mismo valor también se utiliza para las advertencias generadas durante la actualización.<br /><br /> Ejemplos:<br /><br /> **espacio** (para intrínseco)<br /><br /> **Geometry** (para UDT del sistema)<br /><br /> **Geography::P arse** (para el método UDT del sistema)|  
+|minor_id|valor **int** ACEPTA|**NULL** para restricciones<br /><br /> Index_id para índices y montones|  
+|dependency|**nvarchar (60)** NO NULL|Descripción de la dependencia que está afectando a una restricción o a un índice. El mismo valor también se utiliza para las advertencias generadas durante la actualización.<br /><br /> Ejemplos:<br /><br /> **space** (para valores intrínsecos)<br /><br /> **geometry** (para UDT de sistema)<br /><br /> **geography::Parse** (para el método UDT de sistema)|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW DATABASE STATE.  

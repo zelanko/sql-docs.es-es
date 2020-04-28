@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef6929aeb06c9472eb3ff210de016117a9636ded
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399766"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalación de las revisiones de Analytics Platform System 
@@ -21,7 +21,7 @@ En los pasos siguientes se describe cómo desinstalar una revisión del sistema 
   
 ## <a name="before-you-begin"></a>Antes de empezar  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 Para realizar estos pasos, necesitará:  
   
 -   Un inicio de sesión de System Analytics Platform con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  
@@ -30,7 +30,7 @@ Para realizar estos pasos, necesitará:
   
 -   El número de artículo de Knowledge base de la revisión que se va a desinstalar.  
   
-## <a name="HowToUninstallPDW"></a>Para desinstalar una revisión PDW de SQL Server  
+## <a name="to-uninstall-a-sql-server-pdw-hotfix"></a><a name="HowToUninstallPDW"></a>Para desinstalar una revisión PDW de SQL Server  
   
 1.  Inicie sesión en el <em><appliance_domain nodo></em> **-HST01** como administrador del dominio del tejido.  
   

@@ -18,10 +18,10 @@ ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982117"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "73982117"
 
 Captura datos de diagnóstico e información de estado acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para detectar errores potenciales. El procedimiento se ejecuta en modo repetido y envía los resultados periódicamente. Se puede invocar desde una conexión DAC o normal.  
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (y versiones posteriores).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)  
   
 ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,9 +61,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |**creation_time**|**datetime**|Indica la marca de tiempo de creación de la fila. Cada fila de un conjunto de filas único tiene la misma marca de tiempo.|  
 |**component_type**|**sysname**|Indica si la fila contiene información para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente de nivel de instancia o para un grupo de disponibilidad de Always On:<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
 |**component_name**|**sysname**|Indica el nombre del componente o el nombre del grupo de disponibilidad:<br /><br /> sistema<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<nombre del grupo de disponibilidad>*|  
-|**State**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|Indica el estado de mantenimiento del componente:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Describe la columna de estado. Las descripciones que corresponden a los valores de la columna de estado son:<br /><br /> 0: desconocido<br /><br /> 1: limpiar<br /><br /> 2: ADVERTENCIA<br /><br /> 3: error|  
-|**Data**|**VARCHAR (Max)**|Especifica los datos que son específicos del componente.|  
+|**datos**|**VARCHAR (Max)**|Especifica los datos que son específicos del componente.|  
   
  Estas son las descripciones de los cinco componentes:  
   

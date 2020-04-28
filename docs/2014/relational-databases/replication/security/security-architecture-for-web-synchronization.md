@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff0c6336bcbd3f9ad8c09f5a25f7317c0d2c4c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912808"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite un control exhaustivo sobre la configuración de la seguridad de la sincronización Web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite un control preciso sobre la configuración de la seguridad de la sincronización web. En este tema se proporciona una lista exhaustiva de todos los componentes que pueden incluirse en una configuración de la sincronización web e información acerca de las conexiones entre los componentes. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  En la siguiente ilustración se muestran todas las conexiones posibles, aunque es posible que no todas las conexiones sean necesarias en una determinada topología. Por ejemplo, una conexión a un servidor FTP solamente es necesaria si la instantánea se entrega mediante FTP.  
   
- ![Componentes y conexiones en la sincronización web](../media/websyncarchitecture.gif "Componentes y conexiones en la sincronización web")  
+ ![Componentes y conexiones de la sincronización web](../media/websyncarchitecture.gif "Componentes y conexiones de la sincronización web")  
   
  En las siguientes tablas se describen los componentes y las conexiones que se muestran en la ilustración.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73912808"
 |Tipo de cuenta|Dónde se especifica la cuenta|  
 |---------------------|------------------------------------|  
 |Usuario de Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los ** \@parámetros job_login** y ** \@job_password** de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO (Replication Management Objects): las propiedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager|  
+|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Administrador de configuración|  
 |Aplicación independiente|El Agente de mezcla se ejecuta en el contexto del usuario de Windows que ejecuta la aplicación.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Conexión al suscriptor  
@@ -136,7 +136,7 @@ ms.locfileid: "73912808"
 |Cualquier usuario de Windows que tenga los permisos necesarios.|Administrador de Internet Information Services (IIS)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar la sincronización Web](../configure-web-synchronization.md)   
+ [Configurar sincronización web](../configure-web-synchronization.md)   
  [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

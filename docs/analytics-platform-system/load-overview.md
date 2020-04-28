@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401045"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Cargar datos en almacenamiento de datos paralelos
@@ -25,7 +25,7 @@ Para cargar datos, necesita uno o más servidores de carga. Puede usar su propio
 ## <a name="load-with-dwloader"></a>Carga con dwloader  
 Usar el [cargador de línea de comandos dwloader](dwloader.md) es la forma más rápida de cargar datos en PDW.  
   
-![Cargando proceso](media/loading-process.png "Cargando proceso")  
+![Proceso de carga](media/loading-process.png "Cargando proceso")  
   
 dwloader carga los datos directamente en los nodos de proceso sin pasar los datos a través del nodo de control. Para cargar datos, dwloader primero se comunica con el nodo de control para obtener información de contacto para los nodos de proceso. dwloader configura un canal de comunicación con cada nodo de proceso y, a continuación, envía fragmentos de datos de 256 KB a los nodos de proceso de manera Round Robin.  
   

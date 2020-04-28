@@ -19,10 +19,10 @@ ms.author: sstein
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0712785a5af3e8cc3c606a597ba02e0075c88dd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843870"
 ---
 # <a name="syselastic_pool_resource_stats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
@@ -46,7 +46,7 @@ ms.locfileid: "73843870"
 |**max_worker_percent**|**decimal (5, 2)**|Cantidad máxima de trabajos simultáneos (solicitudes) en porcentaje basado en el límite del grupo.|  
 |**max_session_percent**|**decimal (5, 2)**|Cantidad máxima de sesiones simultáneas en porcentaje basado en el límite del grupo.|  
 |**elastic_pool_dtu_limit**|**int**|Configuración de cantidad máxima de DTU de grupos elásticos actual para este grupo elástico durante este intervalo.|  
-|**elastic_pool_storage_limit_mb**|**BIGINT**|Configuración de límite máximo de almacenamiento de grupos elásticos actual para este grupo elástico en megabytes durante este intervalo.|
+|**elastic_pool_storage_limit_mb**|**bigint**|Configuración de límite máximo de almacenamiento de grupos elásticos actual para este grupo elástico en megabytes durante este intervalo.|
 |**avg_allocated_storage_percent**|**decimal (5, 2)**|El porcentaje de espacio de datos asignado por todas las bases de datos del grupo elástico.  Esta es la proporción de espacio de datos asignado al tamaño máximo de los datos para el grupo elástico.  Para obtener más información, vea [Administración del espacio de archivo en SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management) .|  
   
 ## <a name="remarks"></a>Observaciones

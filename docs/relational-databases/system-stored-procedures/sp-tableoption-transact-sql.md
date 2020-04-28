@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982264"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -83,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   Hay suficiente espacio disponible en la fila de datos.  
   
- Cuando se almacenan cadenas BLOB en la fila de datos, leer y escribir las cadenas **Text**, **ntext**o **Image** puede ser tan rápido como leer o escribir cadenas binarias y de caracteres. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita obtener acceso a páginas independientes para leer o escribir la cadena BLOB.  
+ Cuando se almacenan cadenas BLOB en la fila de datos, leer y escribir las cadenas **Text**, **ntext**o **Image** puede ser tan rápido como leer o escribir cadenas binarias y de caracteres. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita obtener acceso a páginas independientes para leer o escribir la cadena BLOB.  
   
  Si una cadena de tipo **Text**, **ntext**o **Image** es mayor que el límite especificado o el espacio disponible en la fila, los punteros se almacenan en la fila en su lugar. Las condiciones para almacenar las cadenas BLOB en la fila siguen siendo válidas aunque debe haber espacio suficiente para almacenar los punteros en la fila de datos.  
   
- Los punteros y cadenas BLOB almacenados en la fila de una tabla se tratan de forma parecida a las cadenas de longitud variable. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo utiliza el número de bytes necesario para almacenar la cadena o el puntero.  
+ Los punteros y cadenas BLOB almacenados en la fila de una tabla se tratan de forma parecida a las cadenas de longitud variable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo utiliza el número de bytes necesario para almacenar la cadena o el puntero.  
   
  Las cadenas BLOB existentes no se convierten inmediatamente cuando text in row se habilita por primera vez. Las cadenas solo se convierten cuando se actualizan. Del mismo modo, cuando se aumenta el límite de la opción text in row, las cadenas **Text**, **ntext**o **Image** que ya están en la fila de datos no se convertirán para adherirse al nuevo límite hasta el momento en que se actualicen.  
   
@@ -111,7 +109,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-storing-xml-data-out-of-the-row"></a>A. Almacenar datos xml fuera de la fila  
- En el ejemplo siguiente se especifica **** que los datos XML `HumanResources.JobCandidate` de la tabla se almacenen fuera de la fila.  
+ En el ejemplo siguiente se especifica **xml** que los datos XML `HumanResources.JobCandidate` de la tabla se almacenen fuera de la fila.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -1,5 +1,5 @@
 ---
-title: Función SQLDrivers (SQLDrivers) Microsoft Docs
+title: Función SQLDrivers | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 2496e7cd5f2abe0831c72484bed374d7aa1513ce
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302766"
 ---
 # <a name="sqldrivers-function"></a>Función SQLDrivers
 **Conformidad**  
- Versión introducida: Cumplimiento de estándares ODBC 2.0: ODBC  
+ Versión introducida: ODBC 2,0 Standards Compliance: ODBC  
   
  **Resumen**  
- **SQLDrivers** enumera las descripciones del controlador y las palabras clave de atributo de controlador. Esta función solo la implementa el Administrador de controladores.  
+ **SQLDrivers** muestra las descripciones de controladores y las palabras clave de atributos de controlador. Esta función solo la implementa el administrador de controladores.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,77 +50,77 @@ SQLRETURN SQLDrivers(
   
 ## <a name="arguments"></a>Argumentos  
  *EnvironmentHandle*  
- [Entrada] Mango de entorno.  
+ Entradas Identificador de entorno.  
   
  *Dirección*  
- [Entrada] Determina si el Administrador de controladores recupera la siguiente descripción del controlador en la lista (SQL_FETCH_NEXT) o si la búsqueda comienza desde el principio de la lista (SQL_FETCH_FIRST).  
+ Entradas Determina si el administrador de controladores captura la siguiente descripción del controlador en la lista (SQL_FETCH_NEXT) o si la búsqueda se inicia desde el principio de la lista (SQL_FETCH_FIRST).  
   
  *DriverDescription*  
- [Salida] Puntero a un búfer en el que se va a devolver la descripción del controlador.  
+ Genere Puntero a un búfer en el que se va a devolver la descripción del controlador.  
   
- Si *DriverDescription* es NULL, *DescriptionLengthPtr* seguirá devolviendo el número total de caracteres (excluyendo el carácter de terminación nula para los datos de caracteres) disponibles para devolver en el búfer señalado por *DriverDescription*.  
+ Si *DriverDescription* es null, *DescriptionLengthPtr* seguirá devolviendo el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *DriverDescription*.  
   
  *BufferLength1*  
- [Entrada] Longitud del búfer **DriverDescription,* en caracteres.  
+ Entradas Longitud del búfer **DriverDescription* , en caracteres.  
   
- *DescripciónLengthPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número \*total de caracteres (excluyendo el carácter de terminación nula) disponibles para devolver en *DriverDescription*. Si el número de caracteres disponibles para devolver es mayor \*o igual que *BufferLength1*, la descripción del controlador en *DriverDescription* se trunca en *BufferLength1* menos la longitud de un carácter de terminación nula.  
+ *DescriptionLengthPtr*  
+ Genere Puntero a un búfer en el que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible \*para devolver en *DriverDescription*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength1*, la descripción del controlador en \* *DriverDescription* se trunca a *BufferLength1* menos la longitud de un carácter de terminación null.  
   
  *DriverAttributes*  
- [Salida] Puntero a un búfer en el que se va a devolver la lista de pares de valores de atributo de controlador (consulte "Comentarios").  
+ Genere Puntero a un búfer en el que se va a devolver la lista de pares de valores de atributo de controlador (vea "comments").  
   
- Si *DriverAttributes* es NULL, *AttributesLengthPtr* seguirá devolviendo el número total de bytes (excluyendo el carácter de terminación nula para los datos de caracteres) disponibles para devolver en el búfer señalado por *DriverAttributes*.  
+ Si *DriverAttributes* es null, *AttributesLengthPtr* devolverá el número total de bytes (sin incluir el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *DriverAttributes*.  
   
  *BufferLength2*  
- [Entrada] Longitud del \*búfer *DriverAttributes,* en caracteres. Si * \** el valor DriverDescription es una cadena Unicode (al llamar a **SQLDriversW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Longitud del búfer \*de *DriverAttributes* , en caracteres. Si el valor de * \*DriverDescription* es una cadena Unicode (al llamar a **SQLDriversW**), el argumento *BufferLength* debe ser un número par.  
   
  *AttributesLengthPtr*  
- [Salida] Puntero a un búfer en el que se va a devolver el número \*total de bytes (excluyendo el byte de terminación nula) disponiblepara devolver en *DriverAttributes*. Si el número de bytes disponibles para devolver es mayor o igual \*que *BufferLength2*, la lista de pares de valores de atributo en *DriverAttributes* se trunca en *BufferLength2* menos la longitud del carácter de terminación nula.  
+ Genere Puntero a un búfer en el que se va a devolver el número total de bytes (sin incluir el byte de terminación nula) \*disponible para devolver en *DriverAttributes*. Si el número de bytes disponibles para devolver es mayor o igual que *BufferLength2*, la lista de pares de valores de atributo \*de *DriverAttributes* se trunca en *BufferLength2* menos la longitud del carácter de terminación null.  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLDrivers** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_ENV y un *control* de *EnvironmentHandle*. En la tabla siguiente se enumeran los valores SQLSTATE normalmente devueltos por **SQLDrivers** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE se SQL_ERROR, a menos que se indique lo contrario.  
+ Cuando **SQLDrivers** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_ENV y un *identificador* de *EnvironmentHandle*. En la tabla siguiente se enumeran los valores SQLSTATE que devuelve normalmente **SQLDrivers** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
-|01000|Advertencia general|(DM) Mensaje informativo específico del Administrador de controladores. (La función devuelve SQL_SUCCESS_WITH_INFO.)|  
-|01004|Datos de cadena truncados a la derecha|(DM) El \*búfer *DriverDescription* no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se truncó. La longitud de la descripción \*completa del controlador se devuelve en *DescriptionLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO.)<br /><br /> (DM) el \*búfer *DriverAttributes* no era lo suficientemente grande como para devolver la lista completa de pares de valores de atributo. Por lo tanto, la lista se truncó. La longitud de la lista no truncada de pares de valores de atributo se devuelve en **AttributesLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Error general|Se ha producido un error para el que no se ha definido sqlSTATE específico y para el que no se ha definido sqlSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*messageText* búfer describe el error y su causa.|  
-|HY001|Error de asignación de memoria|(DM) El Administrador de controladores no pudo asignar la memoria necesaria para admitir la ejecución o finalización de la función.|  
-|HY010|Error de secuencia de funciones|(DM) **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** se llamó para el *StatementHandle* y devuelto SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos para todos los parámetros transmitidos.|  
-|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de poca memoria.|  
-|HY090|Cadena no válida o longitud de búfer|(DM) el valor especificado para el argumento *BufferLength1* era menor que 0.<br /><br /> (DM) el valor especificado para el argumento *BufferLength2* era menor que 0 o igual que 1.|  
-|HY103|Código de recuperación no válido|(DM) El valor especificado para el argumento *Direction* no era igual a SQL_FETCH_FIRST o SQL_FETCH_NEXT.|  
-|HY117|La conexión se suspende debido al estado de transacción desconocido. Solo se permiten funciones de desconexión y de solo lectura.|(DM) Para obtener más información sobre el estado suspendido, vea [SqlEndTran (función).](../../../odbc/reference/syntax/sqlendtran-function.md)|  
+|01000|ADVERTENCIA general|Mensaje de información específico del administrador de controladores (DM). (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01004|Datos de cadena, truncados a la derecha|(DM) el búfer \* *DriverDescription* no era lo suficientemente grande como para devolver la descripción completa del controlador. Por lo tanto, la descripción se truncó. La longitud de la descripción completa del controlador se devuelve \*en *DescriptionLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> (DM) el búfer \* *DriverAttributes* no era lo suficientemente grande como para devolver la lista completa de pares de valores de atributo. Por lo tanto, la lista se truncó. La longitud de la lista sin truncar de pares de valores de atributo se devuelve en **AttributesLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY001|Error de asignación de memoria|(DM) el administrador de controladores no pudo asignar memoria necesaria para admitir la ejecución o la finalización de la función.|  
+|HY010|Error de secuencia de función|Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.|  
+|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
+|HY090|Longitud de búfer o cadena no válida|(DM) el valor especificado para el argumento *BufferLength1* era menor que 0.<br /><br /> (DM) el valor especificado para el argumento *BufferLength2* era menor que 0 o igual a 1.|  
+|HY103|Código de recuperación no válido|(DM) el valor especificado para la *Dirección* del argumento no es igual a SQL_FETCH_FIRST o SQL_FETCH_NEXT.|  
+|HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLDrivers** devuelve la descripción del controlador en el \*búfer *DriverDescription.* Devuelve información adicional sobre el \*controlador en el búfer *DriverAttributes* como una lista de pares palabra clave-valor. Todas las palabras clave enumeradas en la información del sistema para los controladores se devolverán para todos los controladores, excepto **CreateDSN**, que se utiliza para solicitar la creación de orígenes de datos y, por lo tanto, es opcional. Cada par se termina con un byte nulo y la lista completa se termina con un byte nulo (es decir, dos bytes nulos marcan el final de la lista). Por ejemplo, un controlador basado en archivos que usa la sintaxis de C podría devolver la siguiente lista de atributos (en lo que se representa un carácter nulo):  
+ **SQLDrivers** devuelve la descripción del controlador en \*el búfer de *DriverDescription* . Devuelve información adicional sobre el controlador en el \*búfer de *DriverAttributes* como una lista de pares de palabra clave y valor. Todas las palabras clave enumeradas en la información del sistema para los controladores se devolverán para todos los controladores, excepto para **CreateDSN**, que se usa para solicitar la creación de orígenes de datos y, por tanto, es opcional. Cada par finaliza con un byte nulo y la lista completa finaliza con un byte nulo (es decir, dos bytes nulos marcan el final de la lista). Por ejemplo, un controlador basado en archivo que usa la sintaxis de C puede devolver la siguiente lista de atributos ("\ 0" representa un carácter nulo):  
   
 ```  
 FileUsage=1\0FileExtns=*.dbf\0\0  
 ```  
   
- Si \* *DriverAttributes* no es lo suficientemente grande como para contener toda la lista, la lista se trunca, **SQLDrivers** devuelve SQLSTATE 01004 (datos truncados) y la longitud de la lista (excluyendo el byte de terminación nula final) se devuelve en **AttributesLengthPtr*.  
+ Si \* *DriverAttributes* no es lo suficientemente grande como para contener la lista completa, se trunca la lista, **SQLDrivers** devuelve SQLSTATE 01004 (datos truncados) y la longitud de la lista (sin incluir el byte final de finalización de NULL) se devuelve en **AttributesLengthPtr*.  
   
- Las palabras clave de atributo de controlador se agregan desde la información del sistema cuando se instala el controlador. Para obtener más información, consulte [Instalación de componentes ODBC](../../../odbc/reference/install/installing-odbc-components.md).  
+ Las palabras clave del atributo driver se agregan desde la información del sistema cuando se instala el controlador. Para obtener más información, vea [instalar componentes ODBC](../../../odbc/reference/install/installing-odbc-components.md).  
   
- Una aplicación puede llamar a **SQLDrivers** varias veces para recuperar todas las descripciones de controladores. El Administrador de controladores recupera esta información de la información del sistema. Cuando no hay más descripciones de controladores, **SQLDrivers** devuelve SQL_NO_DATA. Si **SQLDrivers** se llama con SQL_FETCH_NEXT inmediatamente después de que devuelve SQL_NO_DATA, devuelve la primera descripción del controlador. Para obtener información sobre cómo una aplicación utiliza la información devuelta por **SQLDrivers**, vea Elegir un origen de [datos o controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Una aplicación puede llamar varias veces a **SQLDrivers** para recuperar todas las descripciones de los controladores. El administrador de controladores recupera esta información de la información del sistema. Cuando no hay más descripciones de controladores, **SQLDrivers** devuelve SQL_NO_DATA. Si se llama a **SQLDrivers** con SQL_FETCH_NEXT inmediatamente después de que se devuelva SQL_NO_DATA, se devuelve la primera descripción del controlador. Para obtener información sobre cómo una aplicación usa la información devuelta por **SQLDrivers**, vea [elegir un origen de datos o un controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
- Si SQL_FETCH_NEXT se pasa a **SQLDrivers** la primera vez que se llama, **SQLDrivers** devuelve el primer nombre de origen de datos.  
+ Si SQL_FETCH_NEXT se pasa a **SQLDrivers** la primera vez que se llama, **SQLDrivers** devuelve el primer nombre del origen de datos.  
   
- Dado que **SQLDrivers** se implementa en el Administrador de controladores, se admite para todos los controladores independientemente del cumplimiento de los estándares de un controlador determinado.  
+ Dado que **SQLDrivers** se implementa en el administrador de controladores, se admite para todos los controladores independientemente del cumplimiento de los estándares de un controlador concreto.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Descubrir y enumerar los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Detección y enumeración de los valores necesarios para conectarse a un origen de datos|[Función SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Conectar a un origen de datos|[Función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Devolución de nombres de orígenes de datos|[Función SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)|  
-|Conexión a un origen de datos mediante una cadena de conexión o un cuadro de diálogo|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Devolver nombres de orígenes de datos|[Función SQLDataSources](../../../odbc/reference/syntax/sqldatasources-function.md)|  
+|Conectar con un origen de datos mediante una cadena de conexión o un cuadro de diálogo|[Función SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Referencia de la API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Archivos de encabezado de ODBC](../../../odbc/reference/install/odbc-header-files.md)

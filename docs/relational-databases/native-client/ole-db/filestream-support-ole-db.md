@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad con FILESTREAM (OLE DB) Microsoft Docs
+title: Compatibilidad con FILESTREAM (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: da09fc65de4be75798730fd0cc9785204a0c6917
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303716"
 ---
 # <a name="filestream-support-ole-db"></a>Compatibilidad con FILESTREAM (OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  A [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] partir [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client 10.0, OLE DB admite la característica FILESTREAM mejorada. Para obtener más información acerca de esta característica, vea [Compatibilidad con FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md). Para ver ejemplos, consulte [FileStream y OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
+  A partir [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y Native Client 10,0, OLE DB admite la característica FileStream mejorada. Para obtener más información acerca de esta característica, vea [compatibilidad de FileStream](../../../relational-databases/native-client/features/filestream-support.md). Para ver ejemplos, consulte [FileStream y OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  
   
  Para enviar y recibir valores **varbinary(max)** mayores de 2 GB, una aplicación usa **DBTYPE_IUNKNOWN** en enlaces de resultados y parámetros. En el caso de los parámetros, el proveedor debe llamar a IUnknown::QueryInterface para ISequentialStream y para los resultados que devuelven ISequentialStream.  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSetEnvAttr Microsoft Docs
+title: SQLSetEnvAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6d0e93e73de0698e8bce1cb4073458cafe526c41
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81301897"
 ---
 # <a name="sqlsetenvattr"></a>SQLSetEnvAttr
@@ -29,7 +29,7 @@ ms.locfileid: "81301897"
  Uno de los atributos controlado por **SQLSetEnvAttr** es si se utilizará la agrupación de conexiones. Si se utiliza la agrupación de conexiones con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el parámetro *DriverCompletion* debe estar establecido en SQL_DRIVER_NOPROMPT al conectar con [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) o **SQLConnect**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Función SQLSetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=59369)   
+ [SQLSetEnvAttr función)](https://go.microsoft.com/fwlink/?LinkId=59369)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

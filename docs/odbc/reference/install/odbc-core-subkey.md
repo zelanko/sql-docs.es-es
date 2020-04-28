@@ -1,5 +1,5 @@
 ---
-title: Subclave de núcleo ODBC (ODBC Core Subkey) Microsoft Docs
+title: Subclave de ODBC Core | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 055b31fc-f96c-450b-a596-d4570079fbf2
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9e6bfcf3c1efa87076e6d3e27a438cde6f794157
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304065"
 ---
 # <a name="odbc-core-subkey"></a>Subclave de ODBC Core
@@ -28,7 +28,7 @@ El valor de la subclave ODBC Core proporciona el recuento de uso de los componen
 |----------|---------------|----------|  
 |UsageCount|REG_DWORD|*count*|  
   
- Por ejemplo, supongamos que los programas de instalación han instalado los componentes ODBC Core para tres aplicaciones diferentes y dos controladores diferentes. El valor bajo la subclave ODBC Core sería:  
+ Por ejemplo, supongamos que los programas de instalación de han instalado los componentes principales de ODBC para tres aplicaciones diferentes y dos controladores diferentes. El valor de la subclave de ODBC Core sería:  
   
 ```  
 UsageCount : REG_DWORD : 0x5  

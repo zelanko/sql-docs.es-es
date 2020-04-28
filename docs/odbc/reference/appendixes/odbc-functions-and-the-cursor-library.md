@@ -1,5 +1,5 @@
 ---
-title: Funciones ODBC y la Biblioteca de cursores ( Cursor Library) Microsoft Docs
+title: Funciones ODBC y biblioteca de cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d8293e9bc952fc1dffc5a8f796f5a066b91ae811
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304346"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>Funciones ODBC y biblioteca de cursores
 > [!IMPORTANT]  
->  Esta característica se eliminará en una versión futura de Windows. Evite usar esta característica en el nuevo trabajo de desarrollo y planee modificar las aplicaciones que actualmente utilizan esta característica. Microsoft recomienda usar la funcionalidad del cursor del controlador.  
+>  Esta característica se quitará en una versión futura de Windows. Evite usar esta característica en los nuevos trabajos de desarrollo y planee modificar las aplicaciones que actualmente la utilizan. Microsoft recomienda el uso de la funcionalidad de cursor del controlador.  
   
- Cuando la biblioteca de cursores ODBC está habilitada para una conexión, el Administrador de controladores llama a funciones en la biblioteca de cursores en lugar de en el controlador. La biblioteca de cursores ejecuta la función o la llama en el controlador especificado.  
+ Cuando la biblioteca de cursores ODBC está habilitada para una conexión, el administrador de controladores llama a las funciones de la biblioteca de cursores en lugar de hacerlo en el controlador. La biblioteca de cursores ejecuta la función o la llama en el controlador especificado.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "81304346"
   
 -   [SQLBindParameter (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlbindparameter-cursor-library.md)  
   
--   [SQLBulkOperations (Biblioteca de cursores)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
+-   [SQLBulkOperations (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlbulkoperations-and-the-cursor-library.md)  
   
--   [SQLCloseCursor (Biblioteca de cursores)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
+-   [SQLCloseCursor (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlclosecursor-odbc.md)  
   
 -   [SQLEndTran (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlendtran-cursor-library.md)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "81304346"
   
 -   [SQLSetDescField y SQLSetDescRec (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlsetdescfield-and-sqlsetdescrec-cursor-library.md)  
   
--   [SQLSetEnvAttr (Biblioteca de cursores)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
+-   [SQLSetEnvAttr (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlsetenvattr-and-the-cursor-library.md)  
   
 -   [SQLSetPos (biblioteca de cursores)](../../../odbc/reference/appendixes/sqlsetpos-cursor-library.md)  
   

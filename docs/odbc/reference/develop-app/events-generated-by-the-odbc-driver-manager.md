@@ -1,5 +1,5 @@
 ---
-title: Eventos generados por el Administrador de controladores ODBC Microsoft Docs
+title: Eventos generados por el administrador de controladores ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,31 +14,31 @@ ms.assetid: 8c6efbbd-2c7d-4342-aa7b-201f94b3e3e3
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a7ce17f9ef8e082f94609e0f8fc432b8963d73a6
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305756"
 ---
 # <a name="events-generated-by-the-odbc-driver-manager"></a>Eventos generados por el Administrador de controladores ODBC
 > [!IMPORTANT]  
->  La compatibilidad con Visual Studio Analyzer se quitó a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio.). Para un mecanismo de solución de problemas alternativo, utilice el seguimiento de BID.  
+>  Se quitó la compatibilidad con Visual Studio Analyzer a partir de Windows 8 (Visual Studio Analyzer solo se incluía en versiones anteriores de Visual Studio). Para un mecanismo de solución de problemas alternativo, use el seguimiento de PUJAs.  
   
- Los eventos generados por el Administrador de controladores ODBC se registran cuando se hace clic en el botón Iniciar analizador de Visual Studio. La propia herramienta ofrece eventos definidos por el sistema y la capacidad de crear eventos personalizados. Para obtener más información acerca de los eventos, vea la Guía de *referencia del analizador* de Visual Studio dentro del conjunto de documentación de Visual Studio.  
+ Los eventos generados por el administrador de controladores ODBC se registran al hacer clic en el botón iniciar Visual Studio Analyzer. La propia herramienta ofrece eventos definidos por el sistema y la capacidad de crear eventos personalizados. Para obtener más información sobre los eventos, consulte la *Guía de referencia de Visual Studio Analyzer* en el conjunto de documentación de Visual Studio.  
   
-|Evento de Visual Studio Analyzer|Descripción|  
+|Evento Visual Studio Analyzer|Descripción|  
 |----------------------------------|-----------------|  
-|**Call**|Generado en cada entrada de API ODBC.|  
-|**ReturnException**|Generado en cada devolución de API ODBC si el código de retorno es SQL_ERROR.|  
-|**ReturnNormal**|Generado en cada devolución de API ODBC si el código de retorno no es SQL_ERROR.|  
-|**Inicio de conexión**|Indica que se ha iniciado una conexión; generado cuando el Administrador de controladores ODBC llama a las API de conexión del controlador.|  
-|**Conexión completa**|Indica que se ha completado una conexión; generado cuando las API de conexión del controlador vuelven al Administrador de controladores ODBC.|  
-|**Desconectar Inicio**|Se genera cuando el Administrador de controladores ODBC llama a la función **SQLDisconnect** del controlador.|  
-|**Desconectar completa**|Se genera cuando la función **SQLDisconnect** del controlador vuelve al Administrador de controladores ODBC.|  
-|**QuerySend**|Se genera cuando el Administrador de controladores ODBC llama a las funciones **SQLPrepare**, **SQLExecute**, **SQLExecDirect** del controlador, así como a funciones de catálogo como **SQLTables** y **SQLColumns**.|  
-|**QueryResult**|Se genera cuando el controlador devuelve un conjunto de resultados al Administrador de controladores ODBC para las funciones que implican consultas.|  
-|**TransactionStart**|Se genera cuando una aplicación establece el valor de SQL_ATTR_AUTOCOMMIT en SQL_AUTOCOMMIT_OFF o después de que una aplicación llame correctamente a **SQLEndTran**.|  
+|**Call**|Se genera en cada entrada de la API de ODBC.|  
+|**ReturnException**|Se genera en cada devolución de la API de ODBC si el código de retorno es SQL_ERROR.|  
+|**ReturnNormal**|Se genera en cada devolución de la API de ODBC si el código de retorno no se SQL_ERROR.|  
+|**Inicio de la conexión**|Indica que se ha iniciado una conexión; se genera cuando el administrador de controladores ODBC llama a las API de conexión del controlador.|  
+|**Conexión completada**|Indica que se ha completado una conexión; se genera cuando las API de conexión del controlador vuelven al administrador de controladores ODBC.|  
+|**Desconectar Inicio**|Se genera cuando el administrador de controladores ODBC llama a la función **SQLDisconnect** del controlador.|  
+|**Desconexión completada**|Se genera cuando la función **SQLDisconnect** del controlador vuelve al administrador de controladores ODBC.|  
+|**QuerySend**|Se genera cuando el administrador de controladores ODBC llama a las funciones **SQLPrepare**, **SQLExecute**y **SQLExecDirect** del controlador, así como a funciones de catálogo como **SQLTables** y **SQLColumns**.|  
+|**QueryResult**|Se genera cuando el controlador devuelve un conjunto de resultados al administrador de controladores ODBC para las funciones que implican consultas.|  
+|**TransactionStart**|Se genera cuando una aplicación establece el valor de SQL_ATTR_AUTOCOMMIT en SQL_AUTOCOMMIT_OFF, o después de que una aplicación llame correctamente a **SQLEndTran**.|  
 |**TransactionCommit**|Se genera cuando una aplicación llama a **SQLEndTran** para confirmar una transacción local.|  
 |**TransactionRollback**|Se genera cuando una aplicación llama a **SQLEndTran** para revertir una transacción local.|  
 |**JoinDTC**|Se genera cuando una aplicación se une al Coordinador de transacciones distribuidas (DTC).|  
-|**LeaveDTC**|Se genera cuando una aplicación sale del Coordinador de transacciones distribuidas (DTC).|
+|**LeaveDTC**|Se genera cuando una aplicación deja el Coordinador de transacciones distribuidas (DTC).|

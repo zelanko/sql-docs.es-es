@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 501e73cd5db2fbf79cd84c0184161f0c6ec6a341
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304453"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Para [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutar instrucciones y procesar los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resultados mediante el proveedor OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Native Client, debe saber cómo el proveedor OLE DB de Native Client asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a tipos de datos OLE DB al enlazar parámetros o columnas en un conjunto de filas y cuando usa la interfaz **ITableDefinition** para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Para [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutar instrucciones y procesar los resultados mediante el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de Native Client, debe saber cómo el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna los tipos de datos a OLE DB tipos de datos al enlazar parámetros o columnas en un conjunto de filas, y cuando usa la interfaz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ITableDefinition** para crear una tabla en.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

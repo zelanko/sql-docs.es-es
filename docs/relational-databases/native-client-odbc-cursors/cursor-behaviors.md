@@ -1,5 +1,5 @@
 ---
-title: Comportamientos del cursor ? Microsoft Docs
+title: Comportamientos de los cursores | Microsoft Docs
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -22,10 +22,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2e3400e52cd0b7574c07a3cf813b4cbca317df2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305499"
 ---
 # <a name="cursor-behaviors"></a>Comportamientos de los cursores
@@ -42,15 +42,15 @@ ms.locfileid: "81305499"
 |SQL_NONSCROLLABLE y SQL_INSENSITIVE|Conjunto de resultados predeterminado (solo avance, solo lectura)|  
 |SQL_NONSCROLLABLE y SQL_UNSPECIFIED|Conjunto de resultados predeterminado (solo avance, solo lectura)|  
   
- La simultaneidad optimista basada en versiones requiere una columna de marca de **tiempo** en la tabla subyacente. Si se solicita un control de simultaneidad optimista basado en versiones en una tabla que no tiene una columna de marca de **tiempo,** el servidor utiliza la simultaneidad optimista basada en valores.  
+ La simultaneidad optimista basada en la versión requiere una columna **timestamp** en la tabla subyacente. Si se solicita el control de simultaneidad optimista basado en versiones en una tabla que no tiene una columna de **marca** de tiempo, el servidor usa la simultaneidad optimista basada en valores.  
   
 ## <a name="scrollability"></a>Desplazamiento  
- Cuando SQL_ATTR_CURSOR_SCROLLABLE se establece en SQL_SCROLLABLE, el cursor admite todos los valores diferentes para el parámetro *FetchOrientation* de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Cuando SQL_ATTR_CURSOR_SCROLLABLE se establece en SQL_NONSCROLLABLE, el cursor solo admite un valor *FetchOrientation* de SQL_FETCH_NEXT.  
+ Cuando SQL_ATTR_CURSOR_SCROLLABLE se establece en SQL_SCROLLABLE, el cursor admite todos los valores diferentes para el parámetro *FetchOrientation* de [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md). Cuando SQL_ATTR_CURSOR_SCROLLABLE se establece en SQL_NONSCROLLABLE, el cursor solo admite un valor de *FetchOrientation* de SQL_FETCH_NEXT.  
   
 ## <a name="sensitivity"></a>Sensibilidad  
  Si SQL_ATTR_CURSOR_SENSITIVITY está establecido en SQL_SENSITIVE, el cursor refleja modificaciones de datos realizadas por el usuario actual o confirmadas por otros usuarios. Si SQL_ATTR_CURSOR_SENSITIVITY está establecido en SQL_INSENSITIVE, el cursor no refleja las modificaciones de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Uso de cursores (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) [Propiedades del cursor](properties/cursor-properties.md) 
+ Usar [propiedades de cursor](properties/cursor-properties.md) de [cursores (ODBC)](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md) 
   
   

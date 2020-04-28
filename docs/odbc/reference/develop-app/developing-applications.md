@@ -1,5 +1,5 @@
 ---
-title: Desarrollo de Aplicaciones (En desarrollo de aplicaciones) Microsoft Docs
+title: Desarrollo de aplicaciones | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 995d6b9ada4576bb5792042a1f0b5b6a25cde452
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305866"
 ---
 # <a name="developing-applications"></a>Desarrollo de aplicaciones
-Esta sección contiene información sobre el desarrollo de aplicaciones que usan la interfaz ODBC y los controladores que la implementan.  
+Esta sección contiene información acerca del desarrollo de aplicaciones que usan la interfaz ODBC y los controladores que la implementan.  
   
  Esta sección contiene los temas siguientes.  
   
@@ -46,7 +46,7 @@ Esta sección contiene información sobre el desarrollo de aplicaciones que usan
   
 -   [Descriptores de](../../../odbc/reference/develop-app/descriptors.md)  
   
--   [Transactions](../../../odbc/reference/develop-app/transactions-odbc.md)  
+-   [Transacciones](../../../odbc/reference/develop-app/transactions-odbc.md)  
   
 -   [Diagnóstico](../../../odbc/reference/develop-app/diagnostics.md)  
   

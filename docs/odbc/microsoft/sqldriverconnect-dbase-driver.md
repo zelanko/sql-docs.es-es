@@ -1,5 +1,5 @@
 ---
-title: SQLDriverConnect (controlador dBASE) Microsoft Docs
+title: SQLDriverConnect (dBASE driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 39d3d062ef8371ce37f812216cbb642d103eff98
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302926"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (dBASE controlador)
 > [!NOTE]  
->  En este tema se proporciona información específica del controlador dBASE. Para obtener información general sobre esta función, consulte el tema adecuado en Referencia de [la API ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  En este tema se proporciona información específica del controlador de dBASE. Para obtener información general sobre esta función, vea el tema correspondiente en referencia de la [API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
  **SQLDriverConnect** le permite conectarse a un controlador sin crear un origen de datos (DSN).  
   
- Las siguientes palabras clave se admiten en la cadena de conexión para todos los controladores: **DSN**, **DBQ**y **FIL**.  
+ Las palabras clave siguientes se admiten en la cadena de conexión para todos los controladores: **DSN**, **DBQ**y **Fil**.  
   
- Cuando se utiliza el controlador Paradox, después de que un usuario haya abierto un archivo protegido con contraseña, otros usuarios no pueden abrir el mismo archivo.  
+ Cuando se usa el controlador de Paradox, una vez que un usuario ha abierto un archivo protegido por contraseña, no se permite que otros usuarios abran el mismo archivo.  
   
- En la tabla siguiente se muestran las palabras clave mínimas necesarias para conectarse a cada controlador y se proporciona un ejemplo de pares de palabra clave/valor utilizados con **SQLDriverConnect**. Para obtener una lista completa de los valores DRIVERID, vea [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
+ En la tabla siguiente se muestran las palabras clave mínimas necesarias para conectarse a cada controlador y se proporciona un ejemplo de pares de palabra clave y valor que se usan con **SQLDriverConnect**. Para obtener una lista completa de los valores de DRIVERID, consulte [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).  
   
 > [!NOTE]  
->  Si dbQ o DefaultDir no se especifica para el controlador dBASE, el controlador se conectará al directorio actual.  
+>  Si no se especifica DBQ o DefaultDir para dBASEdriver, el controlador se conectará al directorio actual.  
   
-|Controlador|Palabras clave requeridas|Ejemplos|  
+|Controlador|Palabras clave necesarias|Ejemplos|  
 |------------|-----------------------|--------------|  
-|Dbase|Conductor, DriverID|Controlador de Microsoft dBASE Driver (*.dbf); DBQ-c:-temp; Id. de conductor 277|
+|dBASE|Controlador, DriverID|Driver = {controlador dBASE de Microsoft (*. dbf)}; DBQ = c:\temp; DriverID = 277|

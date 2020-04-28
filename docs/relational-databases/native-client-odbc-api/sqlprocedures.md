@@ -1,5 +1,5 @@
 ---
-title: Procedimientos de SQL ? Microsoft Docs
+title: SQLProcedures | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 14ff76504c9a36657be60ba4855cf252474071d7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302376"
 ---
 # <a name="sqlprocedures"></a>SQLProcedures
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Todos los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven un valor. **SQLProcedures** notifica SQL_PT_FUNCTION para la PROCEDURE_TYPE de columna del conjunto de resultados.  
+  Todos los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven un valor. **SQLProcedures** informa SQL_PT_FUNCTION para la columna del conjunto de resultados PROCEDURE_TYPE.  
   
- **SQLProcedures** devuelve SQL_SUCCESS si existen o no valores para *CatalogName, SchemaName,* o *ProcName* parámetros. **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
+ **SQLProcedures** devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo, SchemaName* o *NombreProc* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
- **SQLProcedures** se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar **SQLProcedures** en un cursor actualizable (dinámico o conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
+ **SQLProcedures** se puede ejecutar en un cursor de servidor estático. Un intento de ejecutar **SQLProcedures** en un cursor actualizable (dinámico o de conjunto de claves) devolverá SQL_SUCCESS_WITH_INFO, lo que indica que se ha cambiado el tipo de cursor.  
   
- **SQLProcedures** devuelve información sobre los procedimientos cuyos nombres coinciden con *ProcName* y pueden ser ejecutados por el usuario actual, o para los que se ha concedido al usuario actual el permiso VIEW DEFINITION.  
+ **SQLProcedures** devuelve información sobre los procedimientos cuyos nombres coinciden con *NombreProc* y que el usuario actual puede ejecutar o para los que el usuario actual tiene el permiso View definition.  
   
 ## <a name="see-also"></a>Consulte también  
- [Función SQLProcedures](https://go.microsoft.com/fwlink/?LinkId=59364)   
+ [SQLProcedures función)](https://go.microsoft.com/fwlink/?LinkId=59364)   
  [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

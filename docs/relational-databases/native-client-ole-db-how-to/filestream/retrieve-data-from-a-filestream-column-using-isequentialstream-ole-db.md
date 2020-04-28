@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca29a19aeae6631606559b6aee00b83b7f138f8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302256"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Recuperar datos de una columna FILESTREAM utilizando ISequentialStream (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "81302256"
 
   En este ejemplo se muestra el uso de una interfaz ISequentialStream en una interfaz ICommandText para recuperar un único registro de una columna Filestream.  
   
- Para obtener más información sobre la característica filestream, vea [FileSTREAM Support &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
+ Para obtener más información sobre la característica FileStream, vea [compatibilidad de filestream &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md).  
   
 ## <a name="example"></a>Ejemplo  
  Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  

@@ -20,16 +20,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305350"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza el proveedor OLE DB de Native Client, los parámetros de un procedimiento almacenado se pueden pasar:  
+  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  
   
 -   Codificando de forma rígida el valor de datos.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305350"
 5.  Ejecute el comando mediante **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
- Al ejecutar un procedimiento [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]almacenado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en , el proveedor OLE DB de Native Client admite:  
+ Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite:  
   
 -   Secuencia de escape ODBC CALL.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "81305350"
   
  La sintaxis general para llamar a un procedimiento utilizando la secuencia de escape ODBC CALL es la siguiente:  
   
- • [**?**] procedure_name_de_**llamadas**[**[***[ parámetro*][**,**[*parámetro*]]... **)**]}  
+ {[**? =**]**Call**_procedure_name_[**(**[*parámetro*] [**,**[*parámetro*]]... **)**]}  
   
  Por ejemplo:  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305350"
  Si quiere ver una aplicación de ejemplo que muestre una secuencia de escape RPC, consulte [Ejecución de un procedimiento almacenado &#40;mediante sintaxis RPC&#41; y procesamiento de códigos de devolución y parámetros de salida &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
- Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client utiliza el mecanismo RPC de optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+ Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client utiliza el mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC de para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
  Este es un ejemplo de la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   

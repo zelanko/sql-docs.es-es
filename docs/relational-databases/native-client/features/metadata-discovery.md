@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5d822362e9f9f7e70e4421056383aae8ddef03dc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303366"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
@@ -41,7 +41,7 @@ ms.locfileid: "81303366"
   
  También percibirá una mejora del rendimiento si especifica el formato del metadatos utilizando [bcp_setbulkmode](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md).  
   
- [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) tiene una nueva *eOption* para controlar el comportamiento de bcp_readfmt: **BCPDELAYREADFMT**.  
+ [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) tiene un nuevo *eOption* para controlar el comportamiento de bcp_readfmt: **BCPDELAYREADFMT**.  
   
  Las funciones ODBC siguientes se han perfeccionado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] para proporcionar una detección de metadatos mejorada:  
   

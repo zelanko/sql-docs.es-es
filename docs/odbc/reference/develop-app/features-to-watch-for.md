@@ -1,5 +1,5 @@
 ---
-title: Características a las que hay que ver para Microsoft Docs
+title: Características que se deben inspeccionar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 10fa5df8a47837e92d4215f558d52711a0df3440
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305686"
 ---
 # <a name="features-to-watch-for"></a>Características para vigilar
-En esta sección se describen una serie de características que los desarrolladores de aplicaciones suelen dar por sentadas. De hecho, estas características varían ampliamente en soporte y forma de soporte entre los DBMS; no codificar para ellos es probable que cause problemas en aplicaciones interoperables.  
+En esta sección se describen varias características que los desarrolladores de aplicaciones suelen tomar para concedidos. De hecho, estas características varían considerablemente en cuanto a compatibilidad y modo de compatibilidad entre DBMS; Si no se produce código para ellos, es probable que se produzcan problemas en aplicaciones interoperables.  
   
- En esta sección no se enumeran todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, vea las descripciones de la función [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)y [SQLSetConnectAttr,](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) [Apéndice C: gramática SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que describen cada característica.  
+ En esta sección no se muestran todas las características que los desarrolladores de aplicaciones deben tener en cuenta. Para obtener esa información, consulte las descripciones de las funciones [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)y [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) , [Apéndice C: gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)y las secciones de este manual que describen cada característica.  
   
  Esta sección contiene los temas siguientes.  
   

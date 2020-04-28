@@ -1,5 +1,5 @@
 ---
-title: Nivel de aislamiento de la transacción del cursor (Cursor Transaction Isolation Level) Microsoft Docs
+title: Nivel de aislamiento de transacción de cursor | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,16 +18,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 49ad51f271e80017420db978f9cac2d867712d8c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302878"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Nivel de aislamiento de las transacciones de cursores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El comportamiento de bloqueo completo de cursores se basa en una interacción entre los atributos de simultaneidad y el nivel de aislamiento de transacciones establecido por el cliente. Los clientes ODBC establecen el nivel de aislamiento de transacción mediante los atributos SQL_ATTR_TXN_ISOLATION o SQL_COPT_SS_TXN_ISOLATION [de SQLSetConnectAttr.](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) El comportamiento del bloqueo de un entorno de cursor específico se determina mediante la combinación de los comportamientos de bloqueo de las opciones de simultaneidad y de nivel de aislamiento de transacción.  
+  El comportamiento de bloqueo completo de cursores se basa en una interacción entre los atributos de simultaneidad y el nivel de aislamiento de transacciones establecido por el cliente. Los clientes ODBC establecen el nivel de aislamiento de transacción mediante los atributos [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION o SQL_COPT_SS_TXN_ISOLATION. El comportamiento del bloqueo de un entorno de cursor específico se determina mediante la combinación de los comportamientos de bloqueo de las opciones de simultaneidad y de nivel de aislamiento de transacción.  
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite los siguientes niveles de aislamiento de transacción de cursor:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81302878"
   
 -   Instantánea (SQL_TXN_SS_SNAPSHOT)  
   
- Tenga en cuenta que la API ODBC especifica niveles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aislamiento de transacción adicionales, pero no son compatibles con el controlador ODBC de Native Client ni el controlador ODBC de Native Client.  
+ Tenga en cuenta que la API de ODBC especifica niveles de aislamiento de transacción adicionales, pero [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatible con ni con el controlador ODBC de Native Client.  
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades de cursor](../../../relational-databases/native-client-odbc-cursors/properties/cursor-properties.md)  

@@ -24,10 +24,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 06e4964dcab38087119343ab2fbc900f29d60d14
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303156"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
@@ -38,7 +38,7 @@ ms.locfileid: "81303156"
  Las transacciones que se inician bajo el aislamiento de instantánea leen una instantánea de la base de datos realizada al comenzar la transacción. Un resultado de esta acción es que los cursores estáticos, dinámicos y controlados por conjunto de claves, al abrirse dentro de un contexto de transacciones de instantánea, actúan de forma muy similar a los cursores estáticos que se abren desde transacciones serializables. Sin embargo, cuando los cursores se abren bajo el nivel de aislamiento de instantánea no se toman bloqueos, lo que puede reducir el bloqueo en el servidor.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client tiene mejoras que [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]aprovechan el aislamiento de instantánea introducido en . Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client tiene mejoras que aprovechan el aislamiento de instantánea introducido [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]en. Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
   
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  El conjunto de propiedades DBPROPSET_DATASOURCEINFO ha cambiado para indicar que se admite el nivel de aislamiento de instantánea mediante la adición del valor DBPROPVAL_TI_SNAPSHOT que se utiliza en la propiedad DBPROP_SUPPORTEDTXNISOLEVELS. Este nuevo valor indica que se admite el nivel del aislamiento de instantánea independientemente de que se haya habilitado o no el control de versiones en la base de datos. A continuación se incluye una lista de los valores de DBPROP_SUPPORTEDTXNISOLEVELS:  
@@ -60,18 +60,18 @@ ms.locfileid: "81303156"
  Para más información sobre cómo se admite el aislamiento de instantánea en transacciones, consulte [Compatibilidad con transacciones locales](../../../relational-databases/native-client-ole-db-transactions/supporting-local-transactions.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client proporciona compatibilidad para el aislamiento de instantáneas, aunque las mejoras realizadas en las funciones [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo.](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md)  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client proporciona compatibilidad para el aislamiento de instantáneas a través de las mejoras realizadas en las funciones [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) .  
   
 ### <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
- La función **SQLSetConnectAttr** ahora admite el uso del atributo SQL_COPT_SS_TXN_ISOLATION. Si SQL_COPT_SS_TXN_ISOLATION se establece en SQL_TXN_SS_SNAPSHOT, significa que la transacción tendrá lugar en el nivel de aislamiento de instantáneas.  
+ La función **SQLSetConnectAttr** admite ahora el uso del atributo SQL_COPT_SS_TXN_ISOLATION. Si SQL_COPT_SS_TXN_ISOLATION se establece en SQL_TXN_SS_SNAPSHOT, significa que la transacción tendrá lugar en el nivel de aislamiento de instantáneas.  
   
 ### <a name="sqlgetinfo"></a>SQLGetInfo  
- La función [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) ahora admite el valor SQL_TXN_SS_SNAPSHOT que se ha agregado al tipo de información SQL_TXN_ISOLATION_OPTION.  
+ La función [SQLGetInfo](../../../relational-databases/native-client-odbc-api/sqlgetinfo.md) admite ahora el valor SQL_TXN_SS_SNAPSHOT que se ha agregado al tipo de información SQL_TXN_ISOLATION_OPTION.  
   
- Para obtener información sobre cómo se admite el aislamiento de instantáneas en las transacciones, vea Nivel de aislamiento de [transacción](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md)de cursor .  
+ Para obtener información sobre cómo se admite el aislamiento de instantáneas en transacciones, vea [cursor TRANSACTION ISOLATION LEVEL](../../../relational-databases/native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [SQL Server Native Client características](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Pasos básicos de la aplicación ODBC ? Microsoft Docs
+title: Pasos básicos de la aplicación ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: a92d1f78-c669-47ad-88c4-0b1a93503dfc
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 29abb0ec5bbfa9b423290e3354d9455b639f8f59
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306056"
 ---
 # <a name="basic-odbc-application-steps"></a>Pasos de la aplicación de ODBC básica
-En esta sección se describe el flujo general de aplicaciones ODBC. Es poco probable que cualquier aplicación llame a todas estas funciones exactamente en este orden. Sin embargo, la mayoría de las aplicaciones utilizan alguna variación de estos pasos. Los pasos básicos de la aplicación se muestran en la siguiente ilustración.  
+En esta sección se describe el flujo general de las aplicaciones ODBC. Es improbable que cualquier aplicación llame a todas estas funciones exactamente en este orden. Sin embargo, la mayoría de las aplicaciones usan alguna variación de estos pasos. Los pasos básicos de la aplicación se muestran en la siguiente ilustración.  
   
  ![Pasos básicos para una aplicación ODBC](../../../odbc/reference/develop-app/media/pr10.gif "pr10")  
   

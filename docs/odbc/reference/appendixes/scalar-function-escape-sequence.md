@@ -1,5 +1,5 @@
 ---
-title: Secuencia de escape de la función escalar Microsoft Docs
+title: Secuencia de escape de función escalar | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8347b8e6f0fab6dffc5295fb3b8260a6a56ed123
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81305078"
 ---
 # <a name="scalar-function-escape-sequence"></a>Secuencia de Escape de la función escalar
-ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta secuencia de escape es la siguiente:  
+ODBC utiliza secuencias de escape para las funciones escalares. La sintaxis de esta secuencia de escape es la siguiente:  
   
 ```  
 {fn scalar-function}  
@@ -31,16 +31,16 @@ ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta 
 ## <a name="remarks"></a>Observaciones  
  En la notación BNF, la sintaxis es la siguiente:  
   
- *ODBC-scalar-function-escape* ::  
+ *ODBC-Scalar-function-escape* :: =  
   
- *ODBC-esc-initiator* fn *scalar-function ODBC-esc-terminator*  
+ *ODBC-ESC-Initiator* FN *función escalar ODBC-ESC-terminador*  
   
- *función escalar* ::- *nombre-función* (*argument-list*)  
+ *función escalar* :: = *nombre de función* (*lista de argumentos*)  
   
- (Las definiciones para el *nombre-función* no terminales y el *nombre-función* (*argument-list*) se derivan de la lista de funciones escalares [del Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Las definiciones para el *nombre de función* y el nombre de *función* (lista de*argumentos*) no terminales se derivan de la lista de funciones escalares en el [Apéndice E: funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)).  
   
- *ODBC-esc-iniciador* ::-  
+ *ODBC-ESC-Initiator* :: = {  
   
- *ODBC-esc-terminator* ::-  
+ *ODBC-ESC-Terminator* :: =}  
   
- Para determinar si el origen de datos admite procedimientos y el controlador admite la sintaxis de invocación de procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo**. Para obtener más información, consulte [Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Para determinar si el origen de datos admite procedimientos y el controlador admite la sintaxis de invocación de procedimiento ODBC, una aplicación puede llamar a **SQLGetInfo**. Para obtener más información, vea el [Apéndice E: funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

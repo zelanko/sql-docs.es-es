@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 976a23e84492ac9f062ea8d20bcc46545c391e5a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303924"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
@@ -65,7 +65,7 @@ HRESULT Abort(
  E_UNEXPECTED  
  Se llamó a**ISSAsynchStatus::Abort** en un objeto de origen de datos en el que no se llamó a **IDBInitialize::Initialize** , o no se ha completado.  
   
- Se llamó a **ISSAsynchStatus::Abort** en un objeto de origen de datos en el que se llamó a **IDBInitialize::Initialize** pero posteriormente se canceló antes de la inicialización o se ha retrasado el tiempo de espera. El objeto de origen de datos sigue sin inicializarse.  
+ Se llamó a **ISSAsynchStatus:: ABORT** en un objeto de origen de datos en el que se llamó a **IDBInitialize:: Initialize** pero posteriormente se canceló antes de la inicialización o se agotó el tiempo de espera. Todavía no se ha inicializado el objeto de origen de datos.  
   
  Se llamó a**ISSAsynchStatus::Abo at** en un conjunto de filas en el que previamente se llamó a **ITransaction::Commit** o a **ITransaction::Abo at** was previously called, and the rowset did not survive the commit o a abo at and is in a zombie state.  
   

@@ -1,5 +1,5 @@
 ---
-title: SQLGetConnectAttr ? Microsoft Docs
+title: SQLGetConnectAttr | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 590d47d65ab3893dbc9eefc3facd224671668378
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81302161"
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
@@ -48,7 +48,7 @@ ms.locfileid: "81302161"
   
 -   Información de diagnóstico de los registros de seguimiento de acceso a datos, si se ha habilitado.  
   
- Para obtener más información, consulte Acceso a la información de diagnóstico en el registro de [eventos extendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Para obtener más información, vea [acceso a la información de diagnóstico en el registro de eventos extendidos](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -75,20 +75,20 @@ ms.locfileid: "81302161"
 |Cualquier otro valor|Un puntero a los datos de usuario.|  
   
 ## <a name="sqlgetconnectattr-support-for-service-principal-names-spns"></a>Compatibilidad de SQLGetConnectAttr con los Nombres principales de servicio (SPN)  
- SQLGetConnectAttr se puede usar para consultar el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED y SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption también se puede utilizar para consultar estos valores.)  
+ SQLGetConnectAttr se puede usar para consultar el valor de los nuevos atributos de conexión SQL_COPT_SS_SERVER_SPN, SQL_COPT_SS_FAILOVER_PARTNER_SPN, SQL_COPT_SS_MUTUALLY_AUTHENTICATED y SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD. (SQLGetConnectOption también se puede usar para consultar estos valores).  
   
  SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD solo está disponible para las conexiones abiertas que usan la autenticación de Windows.  
   
  Si no se ha establecido SQL_COPT_SS_SERVER_SPN o SQL_COPT_SS_FAILOVER_PARTNER, se devuelve el valor predeterminado (una cadena vacía).  
   
- Para obtener más información acerca de los SPN, vea Nombres de entidad de seguridad de servicio [&#40;&#41; de SPN en Conexiones de cliente &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
+ Para obtener más información acerca de los SPN, consulte [nombres de entidad de seguridad de servicio &#40;spn&#41; en conexiones de cliente &#40;&#41;ODBC ](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Función SQLGetConnectAttr](https://go.microsoft.com/fwlink/?LinkId=59347)   
- [Detalles de implementación de la API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
- [SET QUOTED_IDENTIFIER &#40;&#41;Transact-SQLTransact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
- [SET ANSI_NULLS &#40;Transact-SQLTransact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
- [SET ANSI_PADDING &#40;transact-SQLTransact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
+ [SQLGetConnectAttr función)](https://go.microsoft.com/fwlink/?LinkId=59347)   
+ [Detalles de implementación de la API de ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)   
+ [ESTABLECER QUOTED_IDENTIFIER &#40;&#41;de Transact-SQL](../../t-sql/statements/set-quoted-identifier-transact-sql.md)   
+ [ESTABLECER ANSI_NULLS &#40;&#41;de Transact-SQL](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
+ [ESTABLECER ANSI_PADDING &#40;&#41;de Transact-SQL](../../t-sql/statements/set-ansi-padding-transact-sql.md)   
  [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md)  
   
   

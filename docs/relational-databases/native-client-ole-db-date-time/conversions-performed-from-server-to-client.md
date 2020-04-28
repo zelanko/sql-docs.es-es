@@ -14,10 +14,10 @@ ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9ed1216a0afd9091af7a0597592310eb457a4cbe
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304428"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
@@ -31,18 +31,18 @@ ms.locfileid: "81304428"
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1,7|Aceptar|-|-|1|1,3|1,7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5,6,7|-|9|Aceptar|6|3,6|5,6|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Tiempo|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime|5,7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime2|5,7|8|9,10|10|7|3|5,7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|Aceptar|5,7,11|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|N/D|N/D|N/D|N/D|N/D|N/D|  
+|Datetime|5, 7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
+|Datetime2|5, 7|8|9,10|10|7|3|5, 7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9,10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (date)|1,7|Aceptar|2|2|1|1,3|1,7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Sql_variant<br /><br /> (time)|5,6,7|2|6|Aceptar|6|3,6|5,6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Sql_variant<br /><br /> (datetime2)|5,7|8|9,10|10|Aceptar|3|5,7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Sql_variant<br /><br /> (datetimeoffset)|5,7,11|8,11|9,10,11|10,11|7,11|Aceptar|5,7,11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Sql_variant<br /><br /> (time)|5, 6, 7|2|6|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Sql_variant<br /><br /> (datetime2)|5, 7|8|9,10|10|Aceptar|3|5, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Sql_variant<br /><br /> (datetimeoffset)|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   

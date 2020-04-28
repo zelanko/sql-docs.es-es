@@ -1,5 +1,5 @@
 ---
-title: Ejecución de procedimientos almacenados ? Microsoft Docs
+title: Ejecutar procedimientos almacenados | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0b69a9177f98c8ee1096c18f368af12b11d6b325
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304557"
 ---
 # <a name="running-stored-procedures"></a>Ejecutar procedimientos almacenados
@@ -58,7 +58,7 @@ ms.locfileid: "81304557"
   
      Los procedimientos almacenados extendidos pueden utilizar las características de C y C++ disponibles en las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-     Para obtener un ejemplo de cómo llamar a un procedimiento almacenado, vea Procesar códigos de [retorno y parámetros ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)de salida &#40;&#41;ODBC .  
+     Para obtener un ejemplo de cómo llamar a un procedimiento almacenado, vea [procesar códigos de retorno y parámetros de salida &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   
@@ -69,7 +69,7 @@ ms.locfileid: "81304557"
 -   [Procesar resultados de procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL ServerSQL Server Native Client &#40;&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
- [Ejecución de procedimientos almacenados Temas de procedimientos &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+ [SQL Server Native Client &#40;ODBC&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Temas de procedimientos de ejecución de procedimientos almacenados &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

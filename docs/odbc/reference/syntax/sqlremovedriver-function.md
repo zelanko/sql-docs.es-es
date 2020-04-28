@@ -1,5 +1,5 @@
 ---
-title: Función SQLRemoveDriver ? Microsoft Docs
+title: Función SQLRemoveDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 205c5b46e5f6cea195094f7a50e81d7509927d1a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303936"
 ---
 # <a name="sqlremovedriver-function"></a>Función SQLRemoveDriver
 **Conformidad**  
- Versión introducida: ODBC 3.0  
+ Versión introducida: ODBC 3,0  
   
  **Resumen**  
- **SQLRemoveDriver** cambia o quita información sobre el controlador de la odbcinst.ini entrada en la información del sistema.  
+ **SQLRemoveDriver** cambia o quita información sobre el controlador de la entrada Odbcinst. ini en la información del sistema.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -45,39 +45,39 @@ BOOL SQLRemoveDriver(
   
 ## <a name="arguments"></a>Argumentos  
  *lpszDriver*  
- [Entrada] El nombre del controlador registrado en la clave Odbcinst.ini de la información del sistema.  
+ Entradas Nombre del controlador tal como está registrado en la clave Odbcinst. ini de la información del sistema.  
   
  *fRemoveDSN*  
- [Entrada] Los valores válidos son:  
+ Entradas Los valores válidos son:  
   
- TRUE: quite los DSN asociados al controlador especificado en *lpszDriver*. FALSE: no quite los DSN asociados con el controlador especificado en *lpszDriver*.  
+ TRUE: Quite los DSN asociados al controlador especificado en *lpszDriver*. FALSE: no se quitan los DSN asociados al controlador especificado en *lpszDriver*.  
   
  *lpdwUsageCount*  
- [Salida] El recuento de uso del controlador después de llamar a esta función.  
+ Genere Recuento de uso del controlador después de llamar a esta función.  
   
 ## <a name="returns"></a>Devuelve  
- La función devuelve TRUE si se realiza correctamente, FALSE si se produce un error. Si no existe ninguna entrada en la información del sistema cuando se llama a esta función, la función devuelve FALSE.  
+ La función devuelve TRUE si es correcto, FALSE si se produce un error. Si no existe ninguna entrada en la información del sistema cuando se llama a esta función, la función devuelve FALSE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLRemoveDriver** devuelve FALSE, se puede obtener un valor * \*pfErrorCode* asociado llamando a **SQLInstallerError**. En la tabla * \** siguiente se enumeran los valores pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
+ Cuando **SQLRemoveDriver** devuelve false, se puede obtener un valor de * \*pfErrorCode* asociado mediante una llamada a **SQLInstallerError**. En la tabla siguiente se * \** enumeran los valores de pfErrorCode que puede devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se ha producido un error para el que no se ha producido ningún error específico del instalador.|  
-|ODBC_ERROR_COMPONENT_NOT_FOUND|Componente no encontrado en el registro|El instalador no pudo quitar la información del controlador porque no existía en el registro o no se pudo encontrar en el registro.|  
-|ODBC_ERROR_INVALID_NAME|Nombre de controlador o traductor no válido|El argumento *lpszDriver* no era válido.|  
-|ODBC_ERROR_USAGE_UPDATE_FAILED|No se pudo incrementar o disminuir el recuento de uso de componentes|El instalador no pudo disminuir el recuento de uso del controlador.|  
-|ODBC_ERROR_REQUEST_FAILED|Error en la solicitud|El *fRemoveDSN* argumento era TRUE; sin embargo, uno o más DSN no se pudieron eliminar. Error en la llamada a **SQLConfigDriver** con la solicitud ODBC_REMOVE_DRIVER.|  
-|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a la falta de memoria.|  
+|ODBC_ERROR_GENERAL_ERR|Error general del instalador|Se produjo un error en el que no había ningún error específico del instalador.|  
+|ODBC_ERROR_COMPONENT_NOT_FOUND|No se encontró el componente en el registro|El instalador no pudo quitar la información del controlador porque no existía en el registro o no se encontró en el registro.|  
+|ODBC_ERROR_INVALID_NAME|Nombre de traductor o controlador no válido|El argumento *lpszDriver* no era válido.|  
+|ODBC_ERROR_USAGE_UPDATE_FAILED|No se pudo aumentar o reducir el recuento de uso de componentes|El instalador no pudo reducir el recuento de uso del controlador.|  
+|ODBC_ERROR_REQUEST_FAILED|Error en la solicitud|El argumento *fRemoveDSN* era true; sin embargo, no se pudieron quitar uno o más DSN. Error en la llamada a **SQLConfigDriver** con la solicitud de ODBC_REMOVE_DRIVER.|  
+|ODBC_ERROR_OUT_OF_MEM|No hay memoria suficiente|El instalador no pudo realizar la función debido a una falta de memoria.|  
   
 ## <a name="comments"></a>Comentarios  
- **SQLRemoveDriver** complementa la función [SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md) y actualiza el recuento de uso de componentes en la información del sistema. Esta función debe llamarse sólo desde una aplicación de instalación.  
+ **SQLRemoveDriver** complementa la función [SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md) y actualiza el recuento de uso de componentes en la información del sistema. Solo se debe llamar a esta función desde una aplicación de instalación.  
   
- **SQLRemoveDriver** reducirá el valor de recuento de uso del componente en 1. Si el recuento de uso de componentes va a 0, se producirá lo siguiente:  
+ **SQLRemoveDriver** disminuirá el valor de recuento de uso de componentes en 1. Si el recuento de uso de componentes va a 0, se producirá lo siguiente:  
   
-1.  Se llamará a la función **SQLConfigDriver** con la opción ODBC_REMOVE_DRIVER. Si la opción *fRemoveDSN* está establecida en TRUE, la función **ConfigDSN** llama a **SQLRemoveDSNFromIni** para quitar todos los orígenes de datos asociados con el controlador especificado en *lpszDriver.* Si la opción *fRemoveDSN* está establecida en FALSE, los orígenes de datos no se eliminarán.  
+1.  Se llamará a la función **SQLConfigDriver** con la opción ODBC_REMOVE_DRIVER. Si la opción *fRemoveDSN* está establecida en true, la función **ConfigDSN** llama a **SQLRemoveDSNFromIni** para quitar todos los orígenes de datos asociados con el controlador especificado en *lpszDriver.* Si la opción *fRemoveDSN* está establecida en false, los orígenes de datos no se eliminarán.  
   
-2.  Se eliminará la entrada del controlador en la información del sistema. La entrada del controlador se encuentra en la siguiente ubicación de información del sistema, bajo el nombre del controlador:  
+2.  Se quitará la entrada del controlador en la información del sistema. La entrada del controlador se encuentra en la siguiente ubicación de información del sistema, en el nombre del controlador:  
   
      `HKEY_LOCAL_MACHINE`  
   
@@ -87,14 +87,14 @@ BOOL SQLRemoveDriver(
   
      `Odbcinst.ini`  
   
- **SQLRemoveDriver** no quita realmente ningún archivo. El programa de llamada es responsable de eliminar archivos y mantener el recuento de uso de archivos. Sólo después de que el recuento de uso de componentes y el recuento de uso de archivos hayan alcanzado cero, se eliminará físicamente un archivo. Algunos archivos de un componente se pueden eliminar y otros no, dependiendo de si los archivos son utilizados por otras aplicaciones que han incrementado el recuento de uso de archivos.  
+ **SQLRemoveDriver** realmente no quita ningún archivo. El programa de llamada es responsable de la eliminación de archivos y del mantenimiento del recuento de uso de archivos. Solo después de que el recuento de uso de componentes y el recuento de uso de archivos hayan llegado a cero, se elimina un archivo físicamente. Algunos archivos de un componente se pueden eliminar y otros no se eliminan, dependiendo de si los archivos se usan en otras aplicaciones que han incrementado el recuento de uso de archivos.  
   
- **SQLRemoveDriver** también se llama como parte de un proceso de actualización. Si una aplicación detecta que tiene que realizar una actualización y ha instalado previamente el controlador, el controlador debe quitarse y, a continuación, volver a instalarlo. **SQLRemoveDriver** primero debe llamarse para disminuir el recuento de uso de componentes y, a continuación, **SQLInstallDriverEx** debe llamarse para incrementar el recuento de uso de componentes. El programa de instalación de la aplicación debe reemplazar los archivos antiguos con los nuevos archivos. El recuento de uso de archivos seguirá siendo el mismo, y otras aplicaciones que usan los archivos de la versión anterior ahora usarán la versión más reciente.  
+ También se llama a **SQLRemoveDriver** como parte de un proceso de actualización. Si una aplicación detecta que tiene que realizar una actualización y ha instalado previamente el controlador, el controlador se debe quitar y volver a instalar. Primero se debe llamar a **SQLRemoveDriver** para reducir el recuento de uso de componentes y, después, se debe llamar a **SQLInstallDriverEx** para incrementar el recuento de uso de componentes. El programa de instalación de la aplicación debe reemplazar los archivos antiguos por los nuevos archivos. El recuento de uso de archivos seguirá siendo el mismo y otras aplicaciones que usen los archivos de la versión anterior utilizarán ahora la versión más reciente.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para información acerca de|Vea|  
 |---------------------------|---------|  
-|Agregar, modificar o quitar un controlador|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md) (en el archivo DLL de instalación)|  
+|Agregar, modificar o quitar un controlador|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md) (en el archivo dll de instalación)|  
 |Agregar, modificar o quitar un controlador|[SQLConfigDriver](../../../odbc/reference/syntax/sqlconfigdriver-function.md)|  
 |Instalación de un controlador|[SQLInstallDriverEx](../../../odbc/reference/syntax/sqlinstalldriverex-function.md)|

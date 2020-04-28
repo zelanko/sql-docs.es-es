@@ -1,5 +1,5 @@
 ---
-title: Dll de traducción y controladores de base de datos de escritorio ? Microsoft Docs
+title: Archivos dll de traducción y controladores de base de datos de escritorio | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,11 +16,11 @@ ms.assetid: 09ebe734-39a0-4af0-a39b-1d5479f69635
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 20346e705cfe3a20d305b9d517ee05198c8b2879
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303056"
 ---
 # <a name="translation-dlls-and-desktop-database-drivers"></a>Archivos DLL de traducción y controladores de escritorio de la base de datos
-No compatible.
+No se admite.

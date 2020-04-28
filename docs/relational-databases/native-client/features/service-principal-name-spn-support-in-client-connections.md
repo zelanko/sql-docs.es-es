@@ -1,5 +1,5 @@
 ---
-title: Nombre del director de servicio en las conexiones
+title: Nombre de entidad de seguridad de servicio en conexiones
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dfbd03d5a964ea9e997e2d5900b4b762d4dad49c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81303816"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
@@ -35,7 +35,7 @@ ms.locfileid: "81303816"
 >  Un SPN especificado por una aplicación cliente solamente se utiliza cuando se establece una conexión con la seguridad integrada de Windows.  
   
 > [!TIP]  
->  **Kerberos Configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Manager for es una herramienta de diagnóstico que ayuda a solucionar problemas de conectividad relacionados con Kerberos con . [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
+>  Kerberos Configuration Manager para es una herramienta de diagnóstico que ayuda a solucionar problemas de conectividad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Kerberos relacionados [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** con. Para obtener más información, vea [Administrador de configuración de Microsoft Kerberos para SQL Server](https://www.microsoft.com/download/details.aspx?id=39046).  
   
  Para obtener más información acerca de Kerberos, vea los siguientes artículos:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "81303816"
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) ** \@parámetro provstr** de sp_addlinkedserver se puede utilizar para especificar los SPN del asociado de conmutación por error y el servidor. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, ** \@** el parámetro provstr de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) se puede usar para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   
@@ -93,11 +93,11 @@ ms.locfileid: "81303816"
   
 |Sintaxis|Descripción|  
 |------------|-----------------|  
-|MSSQLSvc/*fqdn*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP.<br /><br /> *fqdn* es un nombre de dominio completo.|  
-|MSSQLSvc/*fqdn*:*puerto*|SPN predeterminado generado por el proveedor cuando se usa TCP.<br /><br /> *puerto* es un número de puerto TCP.|  
-|MSSQLSvc/*fqdn*:*InstanceName*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP.<br /><br /> *InstanceName* es un nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN*|SPN predeterminado generado por el proveedor para una instancia predeterminada cuando se usa un protocolo distinto de TCP.<br /><br /> *fqdn* es un nombre de dominio completo.|  
+|MSSQLSvc/*fqdn*:*port*|SPN predeterminado generado por el proveedor cuando se usa TCP.<br /><br /> *puerto* en un número de puerto TCP.|  
+|MSSQLSvc/*FQDN*:*nombreDeInstancia*|SPN predeterminado generado por el proveedor para una instancia con nombre cuando se usa un protocolo distinto de TCP.<br /><br /> *InstanceName* es un nombre de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |HOST/*fqdn*<br /><br /> HOST/*MachineName*|SPN que se asigna a las cuentas de equipo integradas que Windows registra automáticamente.|  
-|*Username*@*Dominio de* nombre de usuario|Especificación directa de una cuenta de dominio.<br /><br /> *Username* es un nombre de cuenta de usuario de Windows.<br /><br /> *Domain* es un nombre de dominio de Windows o nombre de dominio completo.|  
+|*Username*@*Dominio* nombre de usuario|Especificación directa de una cuenta de dominio.<br /><br /> *Username* es un nombre de cuenta de usuario de Windows.<br /><br /> *Domain* es un nombre de dominio de Windows o nombre de dominio completo.|  
 |*MachineName*$@*Dominio* MachineName|Especificación directa de una cuenta de equipo.<br /><br /> (Si el servidor al que está conectándose se ejecuta en las cuentas LOCAL SYSTEM o NETWORK SERVICE, para obtener la autenticación Kerberos, **ServerSPN** puede tener el formato *MachineName*$@*Domain* .)|  
 |*KDCKey*/*MachineName*|SPN especificado por el usuario.<br /><br /> *KDCKey* es una cadena alfanumérica que se ajusta a las reglas de una clave KDC.|  
   

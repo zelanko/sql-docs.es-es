@@ -13,10 +13,10 @@ ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922524"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
@@ -28,7 +28,7 @@ Los siguientes son elementos clave del modelo de programación de RDS:
   
 -   ActiveX. DataControl  
   
--   Evento  
+-   evento  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -64,7 +64,7 @@ Los siguientes son elementos clave del modelo de programación de RDS:
   
  **Objeto RDS. **El objeto DataControl también tiene sus propios métodos para navegar, ordenar y filtrar las filas del objeto de conjunto de **registros** asociado. Estos métodos son similares, pero no son los mismos que los métodos del objeto de **conjunto de registros** de ADO.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. Se llama al evento [onreadystatechange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) siempre que el **objeto RDS. **Los cambios en la propiedad [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) de DataControl, lo que le notifica cuando una operación asincrónica ha finalizado correctamente, finalizado o se ha producido un error. Se llama al evento [OnError](../../../ado/reference/rds-api/onerror-event-rds.md) siempre que se produce un error, incluso si se produce un error durante una operación asincrónica.  
   
 > [!NOTE]

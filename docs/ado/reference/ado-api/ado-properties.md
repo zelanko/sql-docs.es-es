@@ -14,10 +14,10 @@ ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920893"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
@@ -41,7 +41,7 @@ ms.locfileid: "67920893"
 |[CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md)|Indica el tipo de un objeto de **comando** .|  
 |[Propiedad ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md)|Indica la información utilizada para establecer una conexión con un origen de datos.|  
 |[ConnectionTimeout](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)|Indica cuánto tiempo se debe esperar mientras se establece una conexión antes de terminar el intento y generar un error.|  
-|[Contabiliza](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
+|[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|Indica la ubicación del servicio de cursor.|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Indica el tipo de cursor utilizado en un objeto de **conjunto de registros** .|  
 |[DataMember](../../../ado/reference/ado-api/datamember-property.md)|Indica el nombre del miembro de datos que se recuperará del objeto al que hace referencia la propiedad **DataSource** .|  
@@ -50,7 +50,7 @@ ms.locfileid: "67920893"
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Indica la capacidad de los datos de un objeto de **campo** .|  
 |[Descripción](../../../ado/reference/ado-api/description-property.md)|Describe un objeto de **error** .|  
 |[Dialecto](../../../ado/reference/ado-api/dialect-property.md)|Indica la sintaxis y las reglas generales que utilizará el proveedor para analizar las propiedades **CommandText** o **CommandStream** .|  
-|[Direcciona](../../../ado/reference/ado-api/direction-property.md)|Indica si el **parámetro** representa un parámetro de entrada, un parámetro de salida o ambos, o si el parámetro es el valor devuelto de un procedimiento almacenado.|  
+|[Dirección](../../../ado/reference/ado-api/direction-property.md)|Indica si el **parámetro** representa un parámetro de entrada, un parámetro de salida o ambos, o si el parámetro es el valor devuelto de un procedimiento almacenado.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Indica el estado de edición del registro actual.|  
 |[OCASIONA](../../../ado/reference/ado-api/eos-property.md)|Indica si la posición actual está al final de la secuencia.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro para los datos de un **conjunto de registros**.|  
@@ -65,14 +65,14 @@ ms.locfileid: "67920893"
 |[Modo](../../../ado/reference/ado-api/mode-property-ado.md)|Indica los permisos disponibles para modificar los datos de un objeto de **conexión**, **registro**o **secuencia** .|  
 |[Nombre](../../../ado/reference/ado-api/name-property-ado.md)|Indica el nombre de un objeto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica el código de error específico del proveedor para un objeto de **error** determinado.|  
-|[Números](../../../ado/reference/ado-api/number-property-ado.md)|Indica el número que identifica de forma única un objeto de **error** .|  
+|[número](../../../ado/reference/ado-api/number-property-ado.md)|Indica el número que identifica de forma única un objeto de **error** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indica la escala de valores numéricos en un **parámetro** o un objeto de **campo** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Indica el valor de un **campo** que existía en el registro antes de que se realizaran cambios.|  
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indica el número de páginas de datos que contiene el objeto de **conjunto de registros** .|  
+|[NúmeroDePáginas](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indica el número de páginas de datos que contiene el objeto de **conjunto de registros** .|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Indica el número de registros que representan una página en el **conjunto de registros**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Establece el contenedor de un objeto de **fila** OLE DB en un objeto **ADORecordConstruction** , de modo que el elemento primario de la fila se convierta en un objeto **Record** de ADO.|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|Indica una cadena de dirección URL absoluta que apunta al **registro** primario del objeto de **registro** actual.|  
-|[Posición](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
+|[Localización](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
 |[Precisión](../../../ado/reference/ado-api/precision-property-ado.md)|Indica el grado de precisión de los valores numéricos de un objeto de **parámetro** o de los objetos de **campo** numérico.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Indica si se debe guardar una versión compilada de un comando antes de la ejecución.|  
 |[Proveedor](../../../ado/reference/ado-api/provider-property-ado.md)|Indica el nombre del proveedor de un objeto de **conexión** .|  
@@ -90,7 +90,7 @@ ms.locfileid: "67920893"
 |[Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica el estado del registro actual en relación con las actualizaciones por lotes u otras operaciones masivas.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, en un objeto de **conjunto de registros** jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.|  
 |[Propiedad de la secuencia](../../../ado/reference/ado-api/stream-property.md)|Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .|  
-|[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo**o objeto de **propiedad** .|  
+|[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo**o objeto de **propiedad** .|  
 |[Type (secuencia de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica el tipo de datos contenidos en la **secuencia** (binario o de texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica el valor actual de la base de datos para un objeto de **campo** .|  
 |[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro**o un objeto de **propiedad** .|  

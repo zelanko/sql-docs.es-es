@@ -13,13 +13,13 @@ ms.assetid: b1e927d6-7d50-4978-9eef-045043cdce7a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a48b9c54496100bfe502bd496b12f35ced9ea8ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922045"
 ---
-# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: los cambios se envían al servidor (Tutorial de RDS)
+# <a name="step-6-changes-are-sent-to-the-server-rds-tutorial"></a>Paso 6: Envío de los cambios al servidor (Tutorial de RDS)
 Si se edita el objeto de **conjunto de registros** , los cambios (es decir, las filas que se agregan, se modifican o se eliminan) pueden enviarse de vuelta al servidor.  
   
 > [!NOTE]

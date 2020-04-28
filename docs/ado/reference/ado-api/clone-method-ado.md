@@ -17,10 +17,10 @@ ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920015"
 ---
 # <a name="clone-method-ado"></a>Clone (método) (ADO)
@@ -67,7 +67,7 @@ rsNew.Filter = rsOriginal.Filter
   
  En la tabla siguiente se proporciona una lista completa de todos los eventos de **conjunto de registros** . Indica si son válidos y se desencadenan para los clones de conjunto de registros generados mediante el método **Clone** .  
   
-|Evento|¿Se desencadena en clones?|  
+|evento|¿Se desencadena en clones?|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|No|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|No|  

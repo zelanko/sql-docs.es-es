@@ -15,10 +15,10 @@ ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932445"
 ---
 # <a name="getstring-method-example-vc"></a>Ejemplo del método GetString (VC ++)
@@ -175,7 +175,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>Salida de muestra  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  

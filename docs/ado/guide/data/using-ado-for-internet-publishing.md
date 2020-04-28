@@ -16,16 +16,16 @@ ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923618"
 ---
 # <a name="using-ado-for-internet-publishing"></a>Utilizar ADO para publicación en Internet
 [El proveedor de OLE DB para la publicación en Internet](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) muestra un ejemplo específico del acceso a datos heterogéneos con ADO. Aunque los ejemplos de esta sección son específicos del uso del proveedor de publicación en Internet, los principios que se demuestran deben ser similares al usar ADO con otros proveedores para datos heterogéneos, como un proveedor para un almacén de correo electrónico.  
   
-## <a name="urls"></a>URLs  
+## <a name="urls"></a>Direcciones URL  
  Los localizadores de recursos uniformes (URL) se pueden usar como alternativa a las cadenas de conexión y el texto del comando para especificar los orígenes de datos y la ubicación de los archivos y directorios. Puede usar direcciones URL con los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md) y **Recordset** existentes y con los objetos **Record** y **Stream** .  
   
  Para obtener más información sobre cómo usar las direcciones URL, consulte [direcciones URL absolutas y relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  

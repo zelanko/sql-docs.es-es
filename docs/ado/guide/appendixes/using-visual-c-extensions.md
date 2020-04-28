@@ -16,10 +16,10 @@ ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926451"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
@@ -113,15 +113,15 @@ Update(CADORecordBinding *binding)
 |Parámetro|Descripción|
 |---------------|-----------------|
 |*Clase*|Clase en la que se definen las entradas de enlace y las variables de C/C++.|
-|*Ordinal*|Número ordinal, contando desde uno, del campo de **conjunto de registros** correspondiente a la variable de C/C++.|
+|*Números*|Número ordinal, contando desde uno, del campo de **conjunto de registros** correspondiente a la variable de C/C++.|
 |*DataType*|Tipo de datos ADO equivalente de la variable C/C++ (vea [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) para obtener una lista de tipos de datos válidos). Si es necesario, el valor del campo de **conjunto de registros** se convertirá en este tipo de datos.|
-|*Buffer*|Nombre de la variable de C/C++ en la que se almacenará el campo de **conjunto de registros** .|
+|*Búfer*|Nombre de la variable de C/C++ en la que se almacenará el campo de **conjunto de registros** .|
 |*Tamaño*|Tamaño máximo en bytes del *búfer*. Si el *búfer* va a contener una cadena de longitud variable, deje espacio para un cero final.|
 |*Estado*|Nombre de una variable que indica si el contenido del *búfer* es válido y si la conversión del campo en *DataType* era correcta.<br /><br /> Los dos valores más importantes para esta variable son **adFldOK**, lo que significa que la conversión se realizó correctamente; y **adFldNull**, lo que significa que el valor del campo sería una variante de tipo VT_NULL y no solo está vacía.<br /><br /> Los valores posibles para *status* se muestran en la tabla siguiente, "status Values".|
-|*Modificar*|Marca booleana; Si es TRUE, indica que ADO puede actualizar el campo de **conjunto de registros** correspondiente con el valor contenido en el *búfer*.<br /><br /> Establezca el parámetro booleano *Modify* en true para permitir que ADO actualice el campo enlazado y false si desea examinar el campo pero no cambiarlo.|
+|*Modify*|Marca booleana; Si es TRUE, indica que ADO puede actualizar el campo de **conjunto de registros** correspondiente con el valor contenido en el *búfer*.<br /><br /> Establezca el parámetro booleano *Modify* en true para permitir que ADO actualice el campo enlazado y false si desea examinar el campo pero no cambiarlo.|
 |*Precisión*|Número de dígitos que se pueden representar en una variable numérica.|
 |*Escala*|Número de posiciones decimales en una variable numérica.|
-|*Length*|Nombre de una variable de cuatro bytes que contendrá la longitud real de los datos en el *búfer*.|
+|*Longitud*|Nombre de una variable de cuatro bytes que contendrá la longitud real de los datos en el *búfer*.|
 
 ## <a name="status-values"></a>Valores de estado
  El valor de la variable de *Estado* indica si un campo se copió correctamente en una variable.

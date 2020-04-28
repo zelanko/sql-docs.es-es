@@ -13,10 +13,10 @@ ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925804"
 ---
 # <a name="comments-on-hellodata"></a>Comentarios en HelloData
@@ -27,7 +27,7 @@ La aplicación HelloData guía a través de las operaciones básicas de una apli
   
  Asigne un controlador de errores mediante una instrucción Visual Basic **OnError** . Para obtener más información sobre el control de errores en ADO, vea [control de errores](../../../ado/guide/data/error-handling.md). Se crea un nuevo objeto de **conexión** y la propiedad **CursorLocation** está establecida en **AdUseClient** porque el ejemplo de HelloData crea un *conjunto de registros desconectado*. Esto significa que, tan pronto como se hayan recuperado los datos del origen de datos, se interrumpirá la conexión física con el origen de datos, pero puede seguir trabajando con los datos almacenados en caché localmente en el objeto de **conjunto de registros** .  
   
- Una vez abierta la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo objeto `m_oRecordset1`de conjunto de **registros** ,. En la siguiente línea de código, abra el **conjunto de registros** a **** través de la conexión `sSQL` existente, pasando como el origen del **conjunto de registros**. Ayuda a ADO a tomar la decisión de que la cadena de SQL que ha pasado como origen del **conjunto de registros** es una definición textual de un comando pasando **adCmdText** en el argumento final al método Open de **conjunto de registros** . Esta línea también establece el **LockType** y **CursorType** asociados al **conjunto de registros**.  
+ Una vez abierta la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo objeto `m_oRecordset1`de conjunto de **registros** ,. En la siguiente línea de código, abra el **conjunto de registros** a **Connection**través de la conexión `sSQL` existente, pasando como el origen del **conjunto de registros**. Ayuda a ADO a tomar la decisión de que la cadena de SQL que ha pasado como origen del **conjunto de registros** es una definición textual de un comando pasando **adCmdText** en el argumento final al método Open de **conjunto de registros** . Esta línea también establece el **LockType** y **CursorType** asociados al **conjunto de registros**.  
   
  La siguiente línea de código establece el valor de la propiedad **MarshalOptions** en **adMarshalModifiedOnly**. **MarshalOptions** indica qué registros deben calcularse en el nivel intermedio (o servidor Web). Para obtener más información sobre el cálculo de referencias, vea la documentación de COM. Cuando se usa **adMarshalModifiedOnly** con un cursor del lado cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo los registros que se han modificado en el cliente se escriben de nuevo en el nivel intermedio. Establecer **MarshalOptions** en **adMarshalModifiedOnly** puede mejorar el rendimiento porque se calculan las referencias de menos filas.  
   

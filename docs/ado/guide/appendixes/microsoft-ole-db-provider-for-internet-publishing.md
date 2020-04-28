@@ -15,16 +15,16 @@ ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926750"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Información general de Microsoft OLE DB Provider for Internet Publishing
 El proveedor de Microsoft OLE DB para la publicación en Internet permite a ADO obtener acceso a los recursos servidos por Microsoft FrontPage o Microsoft Internet Information Server. Los recursos incluyen archivos de origen web como archivos HTML o carpetas Web de Windows 2000.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb
@@ -40,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- O bien
+ o bien
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

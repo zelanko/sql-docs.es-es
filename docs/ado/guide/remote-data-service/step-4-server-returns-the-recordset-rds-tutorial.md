@@ -13,13 +13,13 @@ ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3bd243b21b7003c524c3483f5b8d7bb92be1e18d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922067"
 ---
-# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Paso 4: el servidor devuelve el conjunto de registros (Tutorial de RDS)
+# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Paso 4: Devolución del conjunto de registros por parte del servidor (Tutorial de RDS)
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   

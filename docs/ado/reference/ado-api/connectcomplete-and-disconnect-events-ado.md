@@ -20,10 +20,10 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919578"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventos ConnectComplete y Disconnect (ADO)
@@ -41,7 +41,7 @@ Disconnect adStatus, pConnection
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de *adStatus* es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *Statu*  
+ *adStatus*  
  Valor de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) que siempre devuelve **adStatusOK**.  
   
  Cuando se llama a **ConnectComplete** , este parámetro se establece en **adStatusCancel** si un evento **WillConnect** ha solicitado la cancelación de la conexión pendiente.  

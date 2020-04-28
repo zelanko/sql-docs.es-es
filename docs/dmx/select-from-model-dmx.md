@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928327"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECCIONAR del &lt;modelo&gt; (DMX)
@@ -42,7 +42,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *lista de condiciones*  
  Opcional. Condiciones para restringir los valores que devuelve la lista de columnas.  
   
- *Expresiones*  
+ *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -67,6 +67,6 @@ FROM Forecasting
  [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

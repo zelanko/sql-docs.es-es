@@ -14,10 +14,10 @@ ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925347"
 ---
 # <a name="formal-shape-grammar"></a>Gramática formal de forma
@@ -55,8 +55,7 @@ Esta es la gramática formal para crear cualquier comando de forma:
 |\<> de lista de campos|\<> de nombre de campo [ \<, nombre de campo>]|  
 |\<> agregado-exp|SUM (\<Qualified-Field-Name>) &#124;<br /><br /> AVG (\<nombre de campo calificado>) &#124;<br /><br /> MIN (\<nombre de campo calificado>) &#124;<br /><br /> MAX (\<nombre de campo calificado>) &#124;<br /><br /> COUNT (\<alias calificado> &#124; \<nombre completo>) &#124;<br /><br /> STDEV (\<nombre de campo completo>) &#124;<br /><br /> ANY (\<Qualified-Field-Name>)|  
 |\<calculado-exp>|CALC (\<expresión>)|  
-|\<nombre de campo completo>|
-  \<alias>.[\<alias>...]\<field-name>|  
+|\<nombre de campo completo>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<nombre entre comillas>|  
 |\<> de nombre de campo|\<nombre entre comillas> [[AS \<] alias>]|  
 |\<nombre entre comillas>|"\<String>" &#124;<br /><br /> '\<String> ' &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<nombre>|  

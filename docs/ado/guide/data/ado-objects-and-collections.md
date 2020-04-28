@@ -13,10 +13,10 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926040"
 ---
 # <a name="ado-objects-and-collections"></a>Colecciones y los objetos ADO
@@ -25,7 +25,7 @@ ADO consta de los siguientes nueve objetos y cuatro colecciones.
 |Objeto o colección|Descripción|  
 |--------------------------|-----------------|  
 |Objeto de **conexión**|Representa una sesión única con un origen de datos. En el caso de un sistema de base de datos cliente/servidor, puede ser equivalente a una conexión de red real al servidor. Dependiendo de la funcionalidad admitida por el proveedor, es posible que algunas colecciones, métodos o propiedades de un objeto de **conexión** no estén disponibles.|  
-|Objeto **Command**|Se utiliza para definir un comando específico, como una consulta SQL, que se va a ejecutar en un origen de datos.|  
+|Objeto**Command**|Se utiliza para definir un comando específico, como una consulta SQL, que se va a ejecutar en un origen de datos.|  
 |Objeto de **conjunto de registros**|Representa el conjunto completo de registros de una tabla base o los resultados de un comando ejecutado. Todos los objetos de **conjunto de registros** se componen de registros (filas) y campos (columnas).|  
 |Objeto **Record**|Representa una sola fila de datos, ya sea de un **conjunto de registros** o del proveedor. Este registro podría representar un registro de base de datos o algún otro tipo de objeto, como un archivo o un directorio, dependiendo del proveedor.|  
 |**Stream** (objeto)|Representa una secuencia de datos binarios o de texto. Por ejemplo, un documento XML se puede cargar en una secuencia para la entrada de comando o devolverse desde ciertos proveedores como los resultados de una consulta. Un objeto de **secuencia** se puede utilizar para manipular los campos o registros que contienen estos flujos de datos.|  

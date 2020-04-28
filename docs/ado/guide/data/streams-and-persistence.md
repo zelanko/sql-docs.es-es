@@ -14,10 +14,10 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924026"
 ---
 # <a name="streams-and-persistence"></a>Secuencias y persistencia
@@ -29,7 +29,7 @@ El método [Save](../../../ado/reference/ado-api/save-method.md) del objeto de [
   
  A continuación se muestran algunos escenarios en los que se muestra cómo se pueden usar los objetos de **secuencia** y la persistencia.  
   
-## <a name="scenario-1"></a>Escenario 1.  
+## <a name="scenario-1"></a>Escenario 1  
  Este escenario simplemente guarda un **conjunto de registros** en un archivo y, a continuación, en una **secuencia**. A continuación, abre la secuencia persistente en otro **conjunto de registros**.  
   
 ```  
@@ -49,7 +49,7 @@ rs1.Save stm, adPersistXML
 rs2.Open stm  
 ```  
   
-## <a name="scenario-2"></a>Escenario 2.  
+## <a name="scenario-2"></a>Escenario 2  
  En este escenario se conserva un **conjunto de registros** en un **flujo** en formato XML. A continuación, lee el **flujo** en una cadena que se puede examinar, manipular o mostrar.  
   
 ```  
@@ -75,7 +75,7 @@ strRst = stm.ReadText(adReadAll)
 ...  
 ```  
   
-## <a name="scenario-3"></a>Escenario 3.  
+## <a name="scenario-3"></a>Escenario 3  
  En este código de ejemplo se muestra el código ASP que conserva un **conjunto de registros** como XML directamente en el objeto de **respuesta** :  
   
 ```  
@@ -99,7 +99,7 @@ Set rs = nothing
 ...  
 ```  
   
-## <a name="scenario-4"></a>Escenario 4.  
+## <a name="scenario-4"></a>Escenario 4  
  En este escenario, el código ASP escribe el contenido del **conjunto de registros** en formato ADTG en el cliente. El [servicio de cursores de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) puede usar estos datos para crear un **conjunto de registros**desconectado.  
   
  Una nueva propiedad en el [control](../../../ado/reference/rds-api/datacontrol-object-rds.md)de objetos de RDS, [URL](../../../ado/reference/rds-api/url-property-rds.md), apunta a la página. asp que genera el **conjunto de registros**. Esto significa que se puede obtener un objeto de **conjunto de registros** sin RDS mediante el objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) del servidor o el usuario que escribe un objeto comercial. Esto simplifica significativamente el modelo de programación de RDS.  

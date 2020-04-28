@@ -14,10 +14,10 @@ ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922809"
 ---
 # <a name="customization-file-connect-section"></a>Sección de conexión del archivo de personalización
@@ -55,7 +55,7 @@ connectionString
   
 |Parte|Descripción|  
 |----------|-----------------|  
-|**Conectar**|Cadena literal que indica que se trata de una entrada de cadena de conexión.|  
+|**Conexión**|Cadena literal que indica que se trata de una entrada de cadena de conexión.|  
 |**_connectionString_**|Cadena que reemplaza la cadena de conexión de cliente completa.|  
 |**Acceder**|Cadena literal que indica que se trata de una entrada de acceso.|  
 |**_accessRight_**|Uno de los siguientes derechos de acceso:<br /><br /> -   **NoAccess** : el usuario no puede tener acceso al origen de datos.<br />-   **ReadOnly** : el usuario puede leer el origen de datos.<br />-   **ReadWrite** : el usuario puede leer o escribir en el origen de datos.|  

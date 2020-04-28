@@ -16,10 +16,10 @@ ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc9de1481cc683bddafe2f92959977319600f6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928630"
 ---
 # <a name="streamwriteenum"></a>StreamWriteEnum
@@ -27,7 +27,7 @@ Especifica si un separador de línea se anexa a la cadena escrita en un objeto d
   
 |Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adWriteChar**|0|Default. Escribe la cadena de texto especificada (especificada por el parámetro de *datos* ) en el objeto de **secuencia** .|  
+|**adWriteChar**|0|Predeterminada. Escribe la cadena de texto especificada (especificada por el parámetro de *datos* ) en el objeto de **secuencia** .|  
 |**adWriteLine**|1|Escribe una cadena de texto y un carácter separador de líneas en un objeto de **secuencia** . Si no se define la propiedad [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) , se devuelve un error en tiempo de ejecución.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

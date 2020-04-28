@@ -14,10 +14,10 @@ ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ddef2feab633627c9549b73787faa1d104d69c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926819"
 ---
 # <a name="microsoft-data-shaping-service-for-ole-db-overview"></a>Introducción al servicio de forma de datos de Microsoft para OLE DB
@@ -61,4 +61,4 @@ cn.Properties("Data Provider") = "MSDASQL"
  Para obtener más información sobre el modelado de datos, vea forma de [datos](../../../ado/guide/data/data-shaping-overview.md).
 
 ## <a name="see-also"></a>Consulte también
- [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: Proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

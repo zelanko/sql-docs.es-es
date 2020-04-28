@@ -11,13 +11,13 @@ ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd44990c38a30f26e682fbb7f1f6aef642043215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924071"
 ---
-# <a name="step-1-set-up-the-visual-basic-project"></a>Paso 1: Configurar el proyecto de Visual Basic
+# <a name="step-1-set-up-the-visual-basic-project"></a>Paso 1: Configuración del proyecto de Visual Basic
 En este escenario, se supone que tiene Microsoft Visual Basic 6,0, ADO 2,5 o posterior y el proveedor de Microsoft OLE DB para la publicación en Internet instalado en el sistema. Primero creará un nuevo proyecto y, a continuación, agregará algunos controles al formulario predeterminado en el proyecto.  
   
 ### <a name="to-create-an-ado-project"></a>Para crear un proyecto de ADO:  
@@ -38,4 +38,4 @@ En este escenario, se supone que tiene Microsoft Visual Basic 6,0, ADO 2,5 o pos
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Paso 2: Inicializar el cuadro de lista principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
+ [Paso 2: Inicialización del cuadro de lista principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

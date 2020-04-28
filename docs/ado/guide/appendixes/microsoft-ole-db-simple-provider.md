@@ -15,16 +15,16 @@ ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926607"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Introducción al proveedor simple de Microsoft OLE DB
 El proveedor simple de Microsoft OLE DB (OSP) permite a ADO acceder a los datos para los que se ha escrito un proveedor mediante el [Kit de herramientas de proveedor simple OLE DB (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Los proveedores simples están diseñados para tener acceso a orígenes de datos que solo requieren una compatibilidad con OLE DB fundamental, como matrices en memoria o documentos XML.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse al OLE DB DLL de proveedor simple, establezca el argumento de *proveedor* en la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb

@@ -13,10 +13,10 @@ ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925334"
 ---
 # <a name="filtering-for-updated-records"></a>Filtrar registros actualizados
@@ -55,4 +55,4 @@ Antes de llamar a UpdateBatch, puede usar la propiedad de filtro de conjunto de 
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](../../../ado/guide/data/batch-mode.md)

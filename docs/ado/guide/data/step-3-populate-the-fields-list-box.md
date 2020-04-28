@@ -11,13 +11,13 @@ ms.assetid: 315c32dc-aeb1-4629-b30e-87b44e8f84d1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d7f351b90030e755dde8ad13905ef4533eff08e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924054"
 ---
-# <a name="step-3-populate-the-fields-list-box"></a>Paso 3: Rellenar el cuadro de lista de campos
+# <a name="step-3-populate-the-fields-list-box"></a>Paso 3: Relleno del cuadro de lista de campos
 Para rellenar el cuadro de lista campos, inserte el siguiente código en el controlador `lstMain`de eventos Click de:  
   
 ```  
@@ -59,4 +59,4 @@ End Sub
 ## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Paso 2: inicializar el cuadro de lista principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
- [Paso 4: Rellenar el cuadro de texto de detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+ [Paso 4: Relleno del cuadro de texto de detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md)

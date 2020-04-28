@@ -15,10 +15,10 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925953"
 ---
 # <a name="batch-mode"></a>Modo por lotes
@@ -28,7 +28,7 @@ El modo por lotes está en vigor cuando la propiedad **LockType** está establec
   
  Esta sección contiene los siguientes temas:  
   
--   [Enviar actualizaciones: método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Envío de actualizaciones: Método UpdateBatch](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
   
 -   [Filtrar registros actualizados](../../../ado/guide/data/filtering-for-updated-records.md)  
   
@@ -38,4 +38,4 @@ El modo por lotes está en vigor cuando la propiedad **LockType** está establec
   
 -   [Desconectar y volver a conectar el conjunto de registros](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Actualización unido a resultados: Tabla única](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Actualización de resultados unidos: Tabla única](../../../ado/guide/data/updating-joined-results-unique-table.md)

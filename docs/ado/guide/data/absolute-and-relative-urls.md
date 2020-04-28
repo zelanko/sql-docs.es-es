@@ -15,10 +15,10 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926362"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
@@ -38,10 +38,10 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
  *servidor*  
  Especifica el nombre del equipo donde se encuentra el *recurso* .  
   
- *camino*  
+ *path*  
  Especifica la secuencia de directorios que conduce al destino. Si se omite el *recurso* , el destino es el último directorio de la *ruta de acceso*.  
   
- *recurso*  
+ *resource*  
  Si se incluye, el *recurso* es el destino y suele ser el nombre de un archivo. Puede tratarse de un *archivo simple* que contiene un solo flujo binario de bytes o un *documento estructurado,* que contiene uno o varios almacenamientos y secuencias binarias de bytes.  
   
 ## <a name="url-scheme-registration"></a>Registro de esquema de URL  

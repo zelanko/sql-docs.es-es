@@ -16,10 +16,10 @@ ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931117"
 ---
 # <a name="schemaenum"></a>SchemaEnum
@@ -44,11 +44,11 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
 |**adSchemaColumnPrivileges**|13|Devuelve los privilegios de las columnas de las tablas definidas en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (COLUMN_PRIVILEGES conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|Devuelve las columnas de las tablas (incluidas las vistas) definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas COLUMNs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaColumnsDomainUsage**|11|Devuelve las columnas definidas en el catálogo que dependen de un dominio definido en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (COLUMN_DOMAIN_USAGE conjunto de filas)|DOMAIN_CATALOG DOMAIN_SCHEMA DOMAIN_NAME COLUMN_NAME|  
-|**adSchemaConstraintColumnUsage**|6|Devuelve las columnas utilizadas por las restricciones referenciales, restricciones únicas, restricciones check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_COLUMN_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaConstraintTableUsage**|7|Devuelve las tablas que se usan en las restricciones referenciales, restricciones únicas, restricciones check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_TABLE_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
+|**adSchemaConstraintColumnUsage**|6|Devuelve las columnas utilizadas por las restricciones referenciales, restricciones únicas, restricciones Check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_COLUMN_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaConstraintTableUsage**|7|Devuelve las tablas utilizadas por las restricciones referenciales, restricciones únicas, restricciones Check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (CONSTRAINT_TABLE_USAGE conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Devuelve información acerca de los cubos disponibles en un esquema (o el catálogo, si el proveedor no admite esquemas).<br /><br /> (Conjunto de filas CUBEs *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
 |**adSchemaDBInfoKeywords**|30|Devuelve una lista de palabras clave específicas del proveedor.<br /><br /> (IDBInfo:: GetKeywords)|\<Ninguno>|  
-|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<Ninguno>|  
+|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en los comandos de texto.<br /><br /> (IDBInfo:: GetLiteralInfo)|\<Ninguno>|  
 |**adSchemaDimensions**|33|Devuelve información sobre las dimensiones de un cubo determinado. Tiene una fila para cada dimensión.<br /><br /> (Conjunto de filas DIMENSIONs)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Devuelve las columnas de clave externa definidas en el catálogo por un usuario determinado.<br /><br /> (FOREIGN_KEYS conjunto de filas)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Devuelve información sobre las jerarquías disponibles en una dimensión.<br /><br /> (Conjunto de filas Hierarchies)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
@@ -66,13 +66,13 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
 |**adSchemaProviderTypes**|22|Devuelve los tipos de datos (base) admitidos por el proveedor de datos.<br /><br /> (PROVIDER_TYPES conjunto de filas)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Devuelve las restricciones referenciales definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (REFERENTIAL_CONSTRAINTS conjunto de filas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Devuelve los esquemas (objetos de base de datos) que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas de esquema)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Devuelve los niveles de conformidad, las opciones y los dialectos admitidos por los datos de procesamiento de la implementación de SQL definidos en el catálogo.<br /><br /> (SQL_LANGUAGES conjunto de filas)|\<Ninguno>|  
+|**adSchemaSQLLanguages**|18|Devuelve los niveles, opciones y dialectos de compatibilidad que admiten los datos de procesamiento de la implementación SQL definidos en el catálogo.<br /><br /> (SQL_LANGUAGES conjunto de filas)|\<Ninguno>|  
 |**adSchemaStatistics**|19|Devuelve las estadísticas definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas STATISTICs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Devuelve las restricciones de tabla definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (TABLE_CONSTRAINTS conjunto de filas)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
-|**adSchemaTablePrivileges**|14|Devuelve los privilegios de las tablas definidas en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (TABLE_PRIVILEGES conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
-|**adSchemaTables**|20|Devuelve las tablas (incluidas las vistas) definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas TABLEs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
+|**adSchemaTablePrivileges**|14|Devuelve los privilegios en tablas definidas en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (TABLE_PRIVILEGES conjunto de filas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
+|**adSchemaTables**|20|Recupera las tablas (incluidas las vistas) definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas TABLEs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME TABLE_TYPE|  
 |**adSchemaTranslations**|21|Devuelve las traducciones de caracteres definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas Translations)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
-|**adSchemaTrustees**|39|Reservado para su uso en el futuro:||  
+|**adSchemaTrustees**|39|Reservado para uso futuro.||  
 |**adSchemaUsagePrivileges**|15|Devuelve los privilegios de uso de los objetos definidos en el catálogo que están disponibles para un usuario determinado o que se le conceden.<br /><br /> (USAGE_PRIVILEGES conjunto de filas)|OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE RECEPTOR DE GRANTOR|  
 |**adSchemaViewColumnUsage**|24|Devuelve las columnas de las que dependen las tablas vistas, definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (VIEW_COLUMN_USAGE conjunto de filas)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Devuelve las vistas definidas en el catálogo a las que puede tener acceso un usuario determinado.<br /><br /> (Conjunto de filas VIEWs)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  

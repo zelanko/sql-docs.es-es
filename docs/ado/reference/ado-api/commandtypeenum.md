@@ -16,10 +16,10 @@ ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919684"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
@@ -33,9 +33,9 @@ Especifica cómo debe interpretarse un argumento de comando.
 |**adCmdText**|1|Evalúa [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como una definición textual de un comando o una llamada a un procedimiento almacenado.|  
 |**adCmdTable**|2|Evalúa **CommandText** como un nombre de tabla cuyas columnas son devueltas por una consulta SQL generada internamente.|  
 |**adCmdStoredProc**|4|Evalúa **CommandText** como un nombre de procedimiento almacenado.|  
-|**adCmdUnknown**|8|Default. Indica que no se conoce el tipo de comando en la propiedad **CommandText** .<br /><br /> Cuando no se conoce el tipo de comando, ADO realizará varios intentos de interpretar **CommandText**.<br /><br /> -   **CommandText** se interpreta como una definición textual de un comando o una llamada a un procedimiento almacenado. Este es el mismo comportamiento que **adCmdText**.<br />-   **CommandText** es el nombre de un procedimiento almacenado. Este comportamiento es el mismo que el de **adCmdStoredProc**.<br />-   **CommandText** se interpreta como el nombre de una tabla. Todas las columnas se devuelven mediante una consulta SQL generada internamente. Este comportamiento es el mismo que el de **adCmdTable**.|  
+|**adCmdUnknown**|8|Predeterminada. Indica que no se conoce el tipo de comando en la propiedad **CommandText** .<br /><br /> Cuando no se conoce el tipo de comando, ADO realizará varios intentos de interpretar **CommandText**.<br /><br /> -   **CommandText** se interpreta como una definición textual de un comando o una llamada a un procedimiento almacenado. Este es el mismo comportamiento que **adCmdText**.<br />-   **CommandText** es el nombre de un procedimiento almacenado. Este comportamiento es el mismo que el de **adCmdStoredProc**.<br />-   **CommandText** se interpreta como el nombre de una tabla. Todas las columnas se devuelven mediante una consulta SQL generada internamente. Este comportamiento es el mismo que el de **adCmdTable**.|  
 |**adCmdFile**|256|Evalúa **CommandText** como el nombre de archivo de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)almacenado de forma persistente. Se usa con el **conjunto de registros.** Solo [abrir o volver](../../../ado/reference/ado-api/open-method-ado-recordset.md) a [consultar](../../../ado/reference/ado-api/requery-method.md) .|  
-|**Commandtypeenum**|512|Evalúa **CommandText** como un nombre de tabla cuyas columnas se devuelven todos. Se usa con **Recordset. Open** o solo **Requery** . Para utilizar el método [Seek](../../../ado/reference/ado-api/seek-method.md) , el **conjunto de registros** debe abrirse con **adCmdTableDirect**.<br /><br /> Este valor no se puede combinar con el valor **adAsyncExecute**de [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .|  
+|**adCmdTableDirect**|512|Evalúa **CommandText** como un nombre de tabla cuyas columnas se devuelven todos. Se usa con **Recordset. Open** o solo **Requery** . Para utilizar el método [Seek](../../../ado/reference/ado-api/seek-method.md) , el **conjunto de registros** debe abrirse con **adCmdTableDirect**.<br /><br /> Este valor no se puede combinar con el valor **adAsyncExecute**de [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) .|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Paquete: **com. ms. wfc. Data**  

@@ -16,10 +16,10 @@ ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920693"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>Ejemplo de los métodos Append y CreateParameter (VC + +)
@@ -194,7 +194,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 25  
 ```  
   
-## <a name="sample-output"></a>Salida de muestra  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Authors with 25 percent royalty  

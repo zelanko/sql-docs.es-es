@@ -16,10 +16,10 @@ ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931243"
 ---
 # <a name="resyncenum"></a>ResyncEnum
@@ -27,7 +27,7 @@ Especifica si se sobrescriben los valores subyacentes mediante una llamada a [Re
   
 |Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adResyncAllValues**|2|Default. Sobrescribe los datos y las actualizaciones pendientes se cancelan.|  
+|**adResyncAllValues**|2|Predeterminada. Sobrescribe los datos y las actualizaciones pendientes se cancelan.|  
 |**adResyncUnderlyingValues**|1|No sobrescribe los datos y las actualizaciones pendientes no se cancelan.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

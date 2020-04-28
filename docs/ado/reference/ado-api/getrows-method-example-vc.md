@@ -15,10 +15,10 @@ ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932494"
 ---
 # <a name="getrows-method-example-vc"></a>Ejemplo del método GetRows (VC ++)
@@ -235,7 +235,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Salida de muestra  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 2 record(s) found.  

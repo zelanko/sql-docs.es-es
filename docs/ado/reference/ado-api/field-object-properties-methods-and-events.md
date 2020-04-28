@@ -13,10 +13,10 @@ ms.assetid: 1e0fc395-14f3-499a-9309-701e9905729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 556ac82e9f588183effe2abe2e4b15e279258a3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932764"
 ---
 # <a name="field-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Field
@@ -50,7 +50,7 @@ ms.locfileid: "67932764"
   
  [GetChunk (método)](../../../ado/reference/ado-api/getchunk-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

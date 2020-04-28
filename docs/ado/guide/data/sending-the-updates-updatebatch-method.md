@@ -11,13 +11,13 @@ ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924257"
 ---
-# <a name="sending-the-updates-updatebatch-method"></a>Enviar actualizaciones: método UpdateBatch
+# <a name="sending-the-updates-updatebatch-method"></a>Envío de actualizaciones: Método UpdateBatch
 El código siguiente abre un conjunto de registros en modo por lotes estableciendo la propiedad LockType en adLockBatchOptimistic y CursorLocation en adUseClient. Agrega dos nuevos registros y cambia el valor de un campo en un registro existente, guarda los valores originales y, a continuación, llama a UpdateBatch para devolver los cambios al origen de datos.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -55,4 +55,4 @@ El código siguiente abre un conjunto de registros en modo por lotes establecien
  Si está editando el registro actual o agregando un nuevo registro cuando se llama al método UpdateBatch, ADO llamará automáticamente al método Update para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](../../../ado/guide/data/batch-mode.md)

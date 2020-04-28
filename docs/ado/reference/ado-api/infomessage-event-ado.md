@@ -17,10 +17,10 @@ ms.assetid: 468c87dd-e3bc-4084-9941-94d10743d4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25eef06b7e25538cb874d99af98aee95495b95ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932330"
 ---
 # <a name="infomessage-event-ado"></a>Evento InfoMessage (ADO)
@@ -37,7 +37,7 @@ InfoMessage pError, adStatus, pConnection
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Este parámetro contiene los errores que se devuelven. Si se devuelven varios errores, enumere la colección de **errores** para encontrarlos.  
   
- *Statu*  
+ *adStatus*  
  Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Si se produce una advertencia, *adStatus* se establece en **AdStatusOK** y el *perror* contiene la advertencia.  
   
  Antes de que se devuelva este evento, establezca este parámetro en **adStatusUnwantedEvent** para evitar notificaciones posteriores.  

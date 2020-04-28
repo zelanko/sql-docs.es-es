@@ -15,10 +15,10 @@ ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9441e956c51accf2af55624b311f28a18d39ed20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920813"
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - índice de sintaxis WFC
@@ -34,7 +34,7 @@ La referencia del lenguaje ADO utiliza el lenguaje de programación de Microsoft
   
 -   [Objeto de conexión](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
   
--   [Error (objeto)](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Objeto Error](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
   
 -   [Field (objeto)](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
   

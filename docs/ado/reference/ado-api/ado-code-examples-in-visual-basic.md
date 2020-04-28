@@ -15,10 +15,10 @@ ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921195"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Ejemplos de código ADO en Visual Basic
@@ -158,4 +158,4 @@ Use los siguientes ejemplos de código para obtener información sobre cómo usa
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos de código ADO VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Ejemplos de código ADO en Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Apéndice D: ejemplos de ADO en el SDK de Windows](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Apéndice D: Ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

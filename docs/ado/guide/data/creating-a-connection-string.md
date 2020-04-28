@@ -14,10 +14,10 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c9d81ef7be98f3c65167de24b3ff59ac6f05df5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925765"
 ---
 # <a name="creating-a-connection-string"></a>Creación de una cadena de conexión
@@ -35,7 +35,7 @@ Una cadena de conexión consta de una lista de pares de argumentos y valores (es
 |--------------|-----------------|  
 |*Proveedor*|Especifica el nombre de un proveedor que se va a utilizar para la conexión.|  
 |*Nombre de archivo*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos persistente) que contiene información de conexión preestablecida.|  
-|*Dirección*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o un directorio.|  
+|*URL*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o un directorio.|  
 |*Proveedor remoto*|Especifica el nombre de un proveedor que se va a utilizar al abrir una conexión del lado cliente. (Solo el servicio de datos remoto).|  
 |*Servidor remoto*|Especifica el nombre de la ruta de acceso del servidor que se va a utilizar al abrir una conexión del lado cliente. (Solo el servicio de datos remoto).|  
   

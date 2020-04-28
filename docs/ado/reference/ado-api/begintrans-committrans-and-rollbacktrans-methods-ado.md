@@ -23,10 +23,10 @@ ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920522"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>Métodos BeginTrans, CommitTrans y RollbackTrans (ADO)
@@ -52,7 +52,7 @@ object.RollbackTrans
  Se puede llamar a **BeginTrans** como una función que devuelve una variable de **tipo Long** que indica el nivel de anidamiento de la transacción.  
   
 #### <a name="parameters"></a>Parámetros  
- *objeto*  
+ *object*  
  Objeto de **conexión** .  
   
 ## <a name="connection"></a>Conexión  
@@ -63,7 +63,7 @@ object.RollbackTrans
   
  Después de llamar al método **BeginTrans** , el proveedor ya no confirmará de forma instantánea los cambios que realice hasta que llame a **CommitTrans** o a **RollbackTrans** para finalizar la transacción.  
   
- Para los proveedores que admiten transacciones anidadas, al llamar al método **BeginTrans** dentro de una transacción abierta se inicia una nueva transacción anidada. El valor devuelto indica el nivel de anidamiento: un valor devuelto de "1" indica que ha abierto una transacción de nivel superior (es decir, que la transacción no está anidada dentro de otra transacción), "2" indica que ha abierto una transacción de segundo nivel ( la transacción está anidada dentro de una transacción de nivel superior), y así sucesivamente. La llamada a **CommitTrans** o a **RollbackTrans** solo afecta a la transacción abierta más recientemente; debe cerrar o revertir la transacción actual antes de poder resolver las transacciones de nivel superior.  
+ Para los proveedores que admiten transacciones anidadas, al llamar al método **BeginTrans** dentro de una transacción abierta se inicia una nueva transacción anidada. El valor devuelto indica el nivel de anidamiento: un valor devuelto de "1" indica que ha abierto una transacción de nivel superior (es decir, que la transacción no está anidada dentro de otra transacción), "2" indica que ha abierto una transacción de segundo nivel (una transacción anidada dentro de una transacción de nivel superior), etc. La llamada a **CommitTrans** o a **RollbackTrans** solo afecta a la transacción abierta más recientemente; debe cerrar o revertir la transacción actual antes de poder resolver las transacciones de nivel superior.  
   
  La llamada al método **CommitTrans** guarda los cambios realizados en una transacción abierta en la conexión y finaliza la transacción. La llamada al método **RollbackTrans** invierte los cambios realizados en una transacción abierta y finaliza la transacción. Si se llama a cualquier método cuando no hay ninguna transacción abierta, se genera un error.  
   

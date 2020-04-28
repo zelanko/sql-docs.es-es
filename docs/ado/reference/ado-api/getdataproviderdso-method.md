@@ -13,10 +13,10 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932488"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO (método)
@@ -38,5 +38,5 @@ HRESULT GetDataProviderDSO(
 ## <a name="remarks"></a>Observaciones  
  Este método no hace AddRef el puntero de interfaz. Si el llamador tiene previsto mantener el puntero, el autor de la llamada debe realizar las llamadas AddRef y Release necesarias.  
   
-## <a name="applies-to"></a>Se aplica a  
+## <a name="applies-to"></a>Aplicable a  
  [Interfaz IDSOShapeExtensions](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

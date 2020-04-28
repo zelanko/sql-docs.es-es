@@ -14,10 +14,10 @@ ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 453836f30e74dd604efe28d309ca69ea2ca26684
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928605"
 ---
 # <a name="adox-collections"></a>Colecciones de ADOX
@@ -30,7 +30,7 @@ ms.locfileid: "67928605"
 |[Claves](../../../ado/reference/adox-api/keys-collection-adox.md)|Contiene todos los objetos de **clave** de una tabla.|  
 |[Procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md)|Contiene todos los objetos de **procedimiento** de un catálogo.|  
 |[Tablas](../../../ado/reference/adox-api/tables-collection-adox.md)|Contiene todos los objetos de **tabla** de un catálogo.|  
-|[Pueden](../../../ado/reference/adox-api/users-collection-adox.md)|Contiene todos los objetos de **usuario** almacenados de un catálogo o grupo.|  
+|[Usuarios](../../../ado/reference/adox-api/users-collection-adox.md)|Contiene todos los objetos de **usuario** almacenados de un catálogo o grupo.|  
 |[Vistas](../../../ado/reference/adox-api/views-collection-adox.md)|Contiene todos los objetos de **vista** de un catálogo.|  
   
 ## <a name="see-also"></a>Consulte también  

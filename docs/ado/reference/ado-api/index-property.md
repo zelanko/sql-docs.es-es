@@ -16,10 +16,10 @@ ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932436"
 ---
 # <a name="index-property"></a>Propiedad Index
@@ -55,4 +55,4 @@ Indica el nombre del índice actualmente activo para un objeto de [conjunto de r
 ## <a name="see-also"></a>Consulte también  
  [Ejemplo de la propiedad index y el método Seek (VB)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Index (objeto) (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [El método de búsqueda](../../../ado/reference/ado-api/seek-method.md)
+ [Seek (método)](../../../ado/reference/ado-api/seek-method.md)

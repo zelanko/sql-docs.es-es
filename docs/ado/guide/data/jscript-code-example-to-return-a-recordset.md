@@ -15,10 +15,10 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924931"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>Ejemplo de código JScript para devolver un conjunto de registros
@@ -79,7 +79,7 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>¡ Pruébelo!  
+#### <a name="try-it"></a>¡Inténtelo!  
   
 1.  Guarde el código anterior en un archivo de texto. Guarde el archivo como RS. js.  
   

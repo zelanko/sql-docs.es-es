@@ -15,10 +15,10 @@ ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924182"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
@@ -65,7 +65,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 ```  
   
 ## <a name="remarks"></a>Observaciones  
- *conjunto de registros secundario*  
+ *child-recordset*  
  -   Un comando de proveedor entre llaves ("{}") que devuelve un objeto de conjunto de **registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
 -   Otro comando de forma se inserta entre paréntesis.  

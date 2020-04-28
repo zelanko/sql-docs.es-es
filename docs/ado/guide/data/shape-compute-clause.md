@@ -15,10 +15,10 @@ ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924142"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
@@ -49,7 +49,7 @@ SHAPE child-command [AS] child-alias
  *alias secundario*  
  Alias que se usa para hacer referencia al **conjunto de registros** devuelto por el *comando secundario.* El *alias secundario* se requiere en la lista de columnas de la cláusula COMPUTE y define la relación entre los objetos de **conjunto de registros** primario y secundario.  
   
- *lista de columnas anexadas*  
+ *appended-column-list*  
  Lista en la que cada elemento define una columna en el elemento primario generado. Cada elemento contiene una columna de capítulo, una nueva columna, una columna calculada o un valor resultante de una función de agregado en el **conjunto de registros**secundario.  
   
  *lista de campos de GRP*  
@@ -81,7 +81,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
 |WA|Seattle|700.000|  
 |O BIEN|Medford|200 000|  
 |O BIEN|Portland|400.000|  
-|CA|Los Ángeles|800.000|  
+|CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
 |WA|Tacoma|500.000|  
 |O BIEN|Corvallis|300 000|  
@@ -110,21 +110,21 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
 |1,2 millones|Referencia a child2|WA|  
 |1,1 millones|Referencia a child3|O BIEN|  
   
-## <a name="child1"></a>Child1  
+## <a name="child1"></a>Secundario1  
   
 |State|City|Población|  
 |-----------|----------|----------------|  
-|CA|Los Ángeles|800.000|  
+|CA|Los Angeles|800.000|  
 |CA|San Diego|600.000|  
   
-## <a name="child2"></a>Child2  
+## <a name="child2"></a>Secundario2  
   
 |State|City|Población|  
 |-----------|----------|----------------|  
 |WA|Seattle|700.000|  
 |WA|Tacoma|500.000|  
   
-## <a name="child3"></a>Child3  
+## <a name="child3"></a>Secundario3  
   
 |State|City|Población|  
 |-----------|----------|----------------|  

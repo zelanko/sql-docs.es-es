@@ -15,16 +15,16 @@ ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926649"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Introducción al proveedor de Microsoft OLE DB para Microsoft Jet
 El proveedor de OLE DB para Microsoft Jet permite a ADO obtener acceso a las bases de datos de Microsoft Jet.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en lo siguiente:
 
 ```vb
@@ -146,7 +146,7 @@ Microsoft.Jet.OLEDB.4.0
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |El tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -178,7 +178,7 @@ Microsoft.Jet.OLEDB.4.0
 |Término de tabla|DBPROP_TABLETERM|
 |DDL de transacción|DBPROP_SUPPORTEDTXNDDL|
 |Id. de usuario|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nombre de usuario|DBPROP_USERNAME|
 |Identificador de ventana|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propiedades dinámicas del conjunto de registros

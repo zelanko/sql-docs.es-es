@@ -14,10 +14,10 @@ ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922785"
 ---
 # <a name="customization-file-logs-section"></a>Sección de registros del archivo de personalización
@@ -41,7 +41,7 @@ FileName
 |Parte|Descripción|  
 |----------|-----------------|  
 |**ERR**|Cadena literal que indica que se trata de una entrada de archivo de registro.|  
-|*Extensión*|Ruta de acceso y nombre de archivo completos. El nombre de archivo típico es **c:\msdfmap.log**.|  
+|*FileName*|Ruta de acceso y nombre de archivo completos. El nombre de archivo típico es **c:\msdfmap.log**.|  
   
  El archivo de registro contendrá el nombre de usuario, HRESULT, fecha y hora de cada error.  
   

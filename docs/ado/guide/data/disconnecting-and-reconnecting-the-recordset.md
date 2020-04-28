@@ -13,10 +13,10 @@ ms.assetid: c5134af7-81d6-4de4-9fd1-cfe29973545e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9829ddfd7e625941c97bd3b2027c328a1fba93d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925511"
 ---
 # <a name="disconnecting-and-reconnecting-the-recordset"></a>Desconectar y volver a conectar el conjunto de registros
@@ -27,4 +27,4 @@ Una de las características más eficaces que se encuentran en ADO es la capacid
  Usaremos un conjunto de registros desconectado más adelante en esta sección cuando se analice la persistencia del conjunto de registros para abordar un escenario en el que es necesario que los datos de un conjunto de registros estén disponibles para una aplicación mientras el equipo cliente no está conectado a una red.  
   
 ## <a name="see-also"></a>Consulte también  
- [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](../../../ado/guide/data/batch-mode.md)

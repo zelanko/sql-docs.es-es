@@ -14,10 +14,10 @@ ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926634"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Introducción al proveedor de Microsoft OLE DB para ODBC
@@ -31,7 +31,7 @@ Para un programador de ADO o RDS, un mundo ideal sería aquél en el que cada or
 
  Este es el proveedor predeterminado para ADO y se admiten todas las propiedades y métodos ADO dependientes del proveedor.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento **Provider =** de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```
@@ -55,7 +55,7 @@ MSDASQL
 |**DSN**|Especifica el nombre del origen de datos.|
 |**UID**|Especifica el nombre de usuario.|
 |**PWD**|Especifica la contraseña del usuario.|
-|**Dirección**|Especifica la dirección URL de un archivo o directorio publicado en una carpeta Web.|
+|**URL**|Especifica la dirección URL de un archivo o directorio publicado en una carpeta Web.|
 
  Dado que este es el proveedor predeterminado para ADO, si se omite el parámetro **Provider =** de la cadena de conexión, ADO intentará establecer una conexión con este proveedor.
 
@@ -172,7 +172,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilidad de propiedades de **conjunto de registros** de ADO estándar:
 
-|Propiedad|ForwardOnly|Dinámico|Keyset|estática|
+|Propiedad|ForwardOnly|Dinámica|Keyset|estática|
 |--------------|-----------------|-------------|------------|------------|
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
@@ -187,7 +187,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
+|[NúmeroDePáginas](../../../ado/reference/ado-api/pagecount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
 |[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
@@ -198,14 +198,14 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Disponibilidad de métodos de **conjunto de registros** de ADO estándar:
 
-|Método|ForwardOnly|Dinámico|Keyset|estática|
+|Método|ForwardOnly|Dinámica|Keyset|estática|
 |------------|-----------------|-------------|------------|------------|
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Sí|
-|[Cercanos](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Sí|
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Move](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Sí|
@@ -217,8 +217,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
 |[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
-|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
+|[Admite](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
+|[Actualizar](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
 
  * No se admite para las bases de datos de Microsoft Access.
@@ -260,7 +260,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|
 |El tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|
-|Modo|DBPROP_INIT_MODE|
+|Mode|DBPROP_INIT_MODE|
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|
 |Varios resultados|DBPROP_MULTIPLERESULTS|
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|
@@ -294,7 +294,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Término de tabla|DBPROP_TABLETERM|
 |DDL de transacción|DBPROP_SUPPORTEDTXNDDL|
 |Id. de usuario|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nombre de usuario|DBPROP_USERNAME|
 |Identificador de ventana|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propiedades dinámicas del conjunto de registros

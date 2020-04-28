@@ -17,10 +17,10 @@ ms.assetid: d02b199e-1e52-4cc9-b118-750952ae7f63
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 74562de6d4bd606e4cb9217cdd119646f51e2e47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920989"
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO para el índice de sintaxis de Visual C++ para COM
@@ -38,7 +38,7 @@ Este índice es una referencia cruzada a la referencia del lenguaje ADO basada e
   
 -   [Objeto de conexión](../../../ado/reference/ado-api/connection-ado-for-visual-c-syntax.md)  
   
--   [Error (objeto)](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
+-   [Objeto Error](../../../ado/reference/ado-api/error-ado-for-visual-c-syntax.md)  
   
 -   [Field (objeto)](../../../ado/reference/ado-api/field-ado-for-visual-c-syntax.md)  
   

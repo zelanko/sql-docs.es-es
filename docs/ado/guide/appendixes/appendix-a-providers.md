@@ -17,10 +17,10 @@ ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926979"
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Apéndice A: proveedores de datos y servicios
@@ -43,10 +43,10 @@ En esta sección se tratan tres tipos de proveedores: proveedores de datos, prov
 |----------|-----------|
 |Bases de datos ODBC|[Proveedor Microsoft OLE DB para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md)|
 |Servicio de Index Server de Microsoft|[Proveedor Microsoft OLE DB para el Servicio de Microsoft Index Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md)|
-|Servicio de Active Directory|[Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
+|Active Directory Service|[Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md)|
 |Bases de datos de Microsoft Jet|[Proveedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md)|
 |Microsoft SQL Server|[Proveedor OLE DB de Microsoft para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)|
-|bases de datos Oracle|[Proveedor OLE DB de Microsoft para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
+|bases de datos Oracle|[proveedor Microsoft OLE DB para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md)|
 |Publicación en Internet|[Proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)|
 |Orígenes de datos simples|[Proveedor simple de Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-simple-provider.md)|
 
@@ -73,4 +73,4 @@ En esta sección se tratan tres tipos de proveedores: proveedores de datos, prov
  Para cada proveedor que se muestra aquí, si las aplicaciones permiten a los usuarios especificar instrucciones SQL como comandos de proveedor, siempre debe validar los datos proporcionados por el usuario y estar atento a posibles ataques de hacker mediante `DROP TABLE t1`instrucciones SQL potencialmente peligrosas, como, como parte de la entrada del usuario.
 
 ## <a name="see-also"></a>Consulte también
- [Objeto de conexión (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) proveedor de [microsoft OLE DB para Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB Provider para el servicio de microsoft Index Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) Provider para ODBC [proveedor OLE DB de Microsoft para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [proveedor de OLE DB de](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) Microsoft para SQL Server proveedor de Microsoft OLE DB para la colección de propiedades [de Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [ Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [Refresh (método) (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
+ [Objeto de conexión (ADO](../../../ado/reference/ado-api/command-object-ado.md) ) [objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) proveedor de [microsoft OLE DB para Microsoft Active Directory Service](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [Microsoft OLE DB Provider para el servicio de microsoft Index Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [Microsoft OLE DB provider para ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [proveedor OLE DB de Microsoft para Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [proveedor de OLE DB de Microsoft para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) proveedor de Microsoft OLE DB para la colección de propiedades [de Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [(](../../../ado/reference/ado-api/properties-collection-ado.md) [ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [método Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)

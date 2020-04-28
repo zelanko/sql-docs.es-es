@@ -15,10 +15,10 @@ ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926624"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Información general de Proveedor OLE DB de Microsoft para Oracle
@@ -27,7 +27,7 @@ ms.locfileid: "67926624"
 
  El Proveedor OLE DB de Microsoft para Oracle permite a ADO obtener acceso a las bases de datos de Oracle.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento de *proveedor* de la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb
@@ -67,7 +67,7 @@ MSDAORA
 |**Identificador de ventana**|Indica el identificador de ventana que se va a usar para solicitar información adicional.|
 |**Identificador de configuración regional**|Indica un número único de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a las fechas y horas, los elementos se ordenan alfabéticamente, las cadenas se comparan, etc.|
 |**Servicios OLE DB**|Indica una máscara de máscara que especifica OLE DB servicios que se van a habilitar o deshabilitar.|
-|**Prompt**|Indica si se debe preguntar al usuario mientras se establece una conexión.|
+|**Pregunta**|Indica si se debe preguntar al usuario mientras se establece una conexión.|
 |**Propiedades extendidas**|Cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad únicamente para la información de conexión específica del proveedor que no se puede describir a través del mecanismo de propiedad.|
 
 ## <a name="see-also"></a>Consulte también

@@ -16,10 +16,10 @@ ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928688"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
@@ -29,7 +29,7 @@ Especifica las opciones para abrir un objeto de [flujo](../../../ado/reference/a
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|Abre el objeto de **secuencia** en modo asincrónico.|  
 |**adOpenStreamFromRecord**|4|Identifica el contenido del parámetro de *origen* para que sea un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) ya abierto. El comportamiento predeterminado es tratar el *origen* como una dirección URL que apunta directamente a un nodo en una estructura de árbol. Se abre el flujo predeterminado asociado a ese nodo.|  
-|**adOpenStreamUnspecified**|-1|Default. Especifica la apertura del objeto de **secuencia** con opciones predeterminadas.|  
+|**adOpenStreamUnspecified**|-1|Predeterminada. Especifica la apertura del objeto de **secuencia** con opciones predeterminadas.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  
  Estas constantes no tienen equivalentes de ADO/WFC.  

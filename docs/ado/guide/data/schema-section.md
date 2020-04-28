@@ -13,10 +13,10 @@ ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924290"
 ---
 # <a name="schema-section"></a>Sección de esquema
@@ -106,7 +106,7 @@ La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO e
 </s:AttributeType>  
 ```  
   
- equivale a  
+ es equivalente a  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  

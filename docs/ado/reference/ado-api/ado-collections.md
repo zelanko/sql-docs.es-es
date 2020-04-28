@@ -14,10 +14,10 @@ ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921109"
 ---
 # <a name="ado-collections"></a>Colecciones de ADO
@@ -28,8 +28,8 @@ Las relaciones entre estas colecciones y los objetos de ADO se representan en el
 |||  
 |-|-|  
 |[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los objetos de **error** creados en respuesta a un error único relacionado con el proveedor.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
-|[Los](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los objetos de **parámetro** de un objeto **Command** .|  
+|[Campos](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
+|[Parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los objetos de **parámetro** de un objeto **Command** .|  
 |[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los objetos de **propiedad** para una instancia específica de un objeto.|  
   
 ## <a name="see-also"></a>Consulte también  

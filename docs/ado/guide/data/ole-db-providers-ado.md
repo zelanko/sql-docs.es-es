@@ -14,24 +14,24 @@ ms.assetid: 6e0488c3-934d-4976-99dc-65c580dc7a3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7e86375639d875f5cfec21705af47c005afd901e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924756"
 ---
 # <a name="ole-db-providers-ado"></a>Proveedores OLE DB (ADO)
 OLE DB define un conjunto de interfaces COM para proporcionar a las aplicaciones acceso uniforme a los datos almacenados en diversos orígenes de información. Este enfoque permite a un origen de datos compartir sus datos a través de las interfaces que admiten la cantidad de funcionalidad de DBMS adecuada para el origen de datos. Por diseño, la arquitectura de alto rendimiento de OLE DB se basa en el uso de un modelo de servicios flexible basado en componentes. En lugar de tener un número previsto de capas intermediarias entre la aplicación y los datos, OLE DB solo requiere tantos componentes como sean necesarios para realizar una tarea determinada.  
   
- Por ejemplo, supongamos que un usuario desea ejecutar una consulta. Considere los siguientes escenarios:  
+ Por ejemplo, supongamos que un usuario desea ejecutar una consulta. Considere los casos siguientes:  
   
 -   Los datos residen en una base de datos relacional para la que existe un controlador ODBC pero ningún proveedor de OLE DB nativo: la aplicación utiliza ADO para comunicarse con el proveedor de OLE DB para ODBC, que, a continuación, carga el controlador ODBC adecuado. El controlador pasa la instrucción SQL al DBMS, que recupera los datos.  
   
 -   Los datos residen en Microsoft SQL Server para los que hay un proveedor de OLE DB nativo: la aplicación utiliza ADO para comunicarse directamente con el proveedor de OLE DB de Microsoft SQL Server. No se requieren intermediarios.  
   
--   Los datos residen en Microsoft Exchange Server, para los que hay un proveedor de OLE DB pero que no expone un motor para procesar consultas SQL: la aplicación usa ADO para comunicarse con el proveedor de OLE DB para Microsoft Exchange y llama a en un procesador de consultas de OLE DB componente que controla la consulta.  
+-   Los datos residen en Microsoft Exchange Server, para los que hay un proveedor de OLE DB pero que no expone un motor para procesar consultas SQL: la aplicación utiliza ADO para comunicarse con el proveedor de OLE DB para Microsoft Exchange y llama a un componente de procesador de consultas de OLE DB para controlar las consultas.  
   
--   Los datos residen en el sistema de archivos NTFS de Microsoft en forma de documentos: se tiene acceso a los datos mediante un proveedor de OLE DB nativo a través del servicio de indización de Microsoft, que indexa el contenido y las propiedades de los documentos en el sistema de archivos para habilitar el contenido eficaz. realiza.  
+-   Los datos residen en el sistema de archivos NTFS de Microsoft en forma de documentos: se tiene acceso a los datos mediante un proveedor de OLE DB nativo en el servicio de indización de Microsoft, que indexa el contenido y las propiedades de los documentos en el sistema de archivos para permitir búsquedas de contenido eficientes.  
   
  En todos los ejemplos anteriores, la aplicación puede consultar los datos. Las necesidades del usuario se cumplen con un número mínimo de componentes. En cada caso, los componentes adicionales se usan solo si es necesario y solo se invocan los componentes necesarios. Esta carga de la demanda de componentes reutilizables y compartibles contribuye en gran medida al alto rendimiento cuando se usa OLE DB.  
   

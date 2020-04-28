@@ -14,10 +14,10 @@ ms.assetid: d7b06d72-f792-4328-93a2-5006b9e2c581
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71396a071a42d7dd40a6537a2834541aab2b6bad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921094"
 ---
 # <a name="ado-dynamic-properties"></a>Propiedades dinámicas de ADO
@@ -29,8 +29,8 @@ Se pueden agregar propiedades dinámicas a las colecciones de [propiedades](../.
   
 |||  
 |-|-|  
-|[Optimiz](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Especifica si se debe crear un índice en este campo.|  
-|[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica si el proveedor de OLE DB debe solicitar al usuario la información de inicialización.|  
+|[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) (Optimizar)|Especifica si se debe crear un índice en este campo.|  
+|[Pregunta](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Especifica si el proveedor de OLE DB debe solicitar al usuario la información de inicialización.|  
 |[Nombre de la reformación](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md)|Especifica un nombre para el objeto de **conjunto de registros** .|  
 |[Comando Resync](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md)|Especifica una cadena de comandos proporcionada por el usuario que el método **Resync** emite para actualizar los datos de la tabla denominada en la propiedad dinámica de **tabla única** .|  
 |[Tabla única, esquema único, catálogo único](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)|**Tabla única** Especifica el nombre de la tabla base en la que se permiten las actualizaciones, las inserciones y las eliminaciones.<br /><br /> **Esquema único** Especifica el esquema o el nombre del propietario de la tabla.<br /><br /> **Catálogo único** Especifica el catálogo o el nombre de la base de datos que contiene la tabla.|  

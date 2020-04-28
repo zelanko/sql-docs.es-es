@@ -13,10 +13,10 @@ ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a84ccbb97c26ea92f31212933aac79bde2784b72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927167"
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
@@ -40,7 +40,7 @@ Estos métodos comprueban ahora que los identificadores de archivo apuntan únic
  **Recordset. ActiveCommand**  _devuelve un error cuando se invoca desde una página HTML/ASP._
 Esto evita que el objeto de **comando** se use inutilizable.
 
- _El número de_**conjuntos de registros**_devueltos por un comando de forma anidada_****_tiene un límite superior._        
+ _El número de_**conjuntos de registros**_devueltos por un comando de forma anidada_**Shape**_tiene un límite superior._        
 Ahora, un comando de forma anidada devuelve un máximo de 512 **conjuntos de registros**. Esto significa que un comando de **forma** ya no puede anidarse a cualquier profundidad. En su lugar, la profundidad de nivel máximo es 512, si cada comando da como resultado un **conjunto de registros**único (secundario). Si, en cualquier nivel, un comando **Shape** devuelve varios **conjuntos de registros**, el nivel máximo de profundidad será inferior a 512.
 
 ## <a name="ado-27"></a>ADO 2,7
@@ -59,7 +59,7 @@ Ahora, un comando de forma anidada devuelve un máximo de 512 **conjuntos de reg
 
  *Campo statusvalues* Si el usuario encuentra un error DB_E_ERRORSOCCURRED al modificar un **campo** de un **conjunto de registros**, ADO rellenará ahora la propiedad **Field. status** con la información de estado adecuada para que el usuario tenga más información sobre lo que ha ido mal. Vea [propiedad Status (campo ADO)](../../ado/reference/ado-api/status-property-ado-field.md).
 
- La propiedad **NamedParameters**__ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad del objeto **Command** que indica que el proveedor debe usar parámetros con nombre.  
+ La propiedad **NamedParameters**_property_ [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) es una nueva propiedad del objeto **Command** que indica que el proveedor debe usar parámetros con nombre.  
 
  *Conjuntos de ResultSet en secuencias* ADO puede devolver conjuntos de resultados de un origen de datos en una **secuencia**, en lugar de un objeto de **conjunto de registros** . Con la versión más reciente del proveedor de Microsoft OLE DB para SQL Server, puede obtener resultados XML del proveedor ejecutando una consulta "for XML". Una **secuencia** que recibe el conjunto de resultados se puede abrir con un comando "for XML" como origen. Vea [recuperar conjuntos de ResultSet en secuencias](../../ado/guide/data/retrieving-resultsets-into-streams.md).
 
@@ -67,9 +67,9 @@ Ahora, un comando de forma anidada devuelve un máximo de 512 **conjuntos de reg
 
 ## <a name="ado-25"></a>ADO 2,5
 
- **** _Objeto_ de registro ADO 2,5 introduce el objeto de **registro** para representar y administrar una fila de un **conjunto de registros** o un proveedor de datos, o un objeto que encapsula los datos semiestructurados, como un archivo o un directorio.
+ **Record** _Objeto_ de registro ADO 2,5 introduce el objeto de **registro** para representar y administrar una fila de un **conjunto de registros** o un proveedor de datos, o un objeto que encapsula los datos semiestructurados, como un archivo o un directorio.
 
- **** _Objeto_ de secuencia ADO 2,5 también presenta el objeto de **secuencia** para representar una secuencia de datos binarios o de texto.
+ **Stream** _Objeto_ de secuencia ADO 2,5 también presenta el objeto de **secuencia** para representar una secuencia de datos binarios o de texto.
 
  *Enlace de URL* ADO 2,5 introduce el uso de una dirección URL, como alternativa a una cadena de conexión y un texto de comando, para asignar nombres a los objetos de almacén de datos. Se puede usar una dirección URL con los objetos **Connection** y **Recordset** existentes, así como con los nuevos objetos **Record** y **Stream** .
 

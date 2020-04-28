@@ -14,10 +14,10 @@ ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928502"
 ---
 # <a name="adox-objects"></a>Objetos ADOX
@@ -31,9 +31,9 @@ ms.locfileid: "67928502"
 |[Ajustar](../../../ado/reference/adox-api/index-object-adox.md)|Representa un índice de una tabla de base de datos.|  
 |[Clave](../../../ado/reference/adox-api/key-object-adox.md)|Representa un campo de clave principal, externa o única de una tabla de base de datos.|  
 |[Pasos](../../../ado/reference/adox-api/procedure-object-adox.md)|Representa un procedimiento almacenado.|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
-|[User](../../../ado/reference/adox-api/user-object-adox.md)|Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.|  
-|[Vista](../../../ado/reference/adox-api/view-object-adox.md)|Representa un conjunto filtrado de registros o una tabla virtual.|  
+|[Cuadro](../../../ado/reference/adox-api/table-object-adox.md)|Representa una tabla de base de datos, que incluye columnas, índices y claves.|  
+|[Usuario](../../../ado/reference/adox-api/user-object-adox.md)|Representa una cuenta de usuario que tiene permisos de acceso en una base de datos protegida.|  
+|[Ver](../../../ado/reference/adox-api/view-object-adox.md)|Representa un conjunto filtrado de registros o una tabla virtual.|  
   
  Las relaciones entre estos objetos se ilustran en el [modelo de objetos ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

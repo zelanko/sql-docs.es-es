@@ -13,13 +13,13 @@ ms.assetid: 5e74c2da-65ee-4de4-8b41-6eac45c3632e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ca35b952cdb228e70a2e747026214dc1cf020f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922096"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Paso 2: invocar un programa de servidor (Tutorial de RDS)
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Paso 2: Invocación de un programa de servidor (Tutorial de RDS)
 Al invocar un método en el *proxy*de cliente, el programa real del servidor ejecuta el método. En este paso, ejecutará una consulta en el servidor.  
   
 > [!IMPORTANT]

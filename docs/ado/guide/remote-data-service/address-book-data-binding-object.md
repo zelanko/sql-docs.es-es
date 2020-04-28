@@ -14,10 +14,10 @@ ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922973"
 ---
 # <a name="address-book-data-binding-object"></a>Objeto de enlace de datos de la libreta de direcciones
@@ -53,7 +53,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |***CLASSID***|Número único de 128 bits que identifica el tipo de objeto incrustado en el sistema. Este identificador se mantiene en el registro del sistema del equipo local. (Para los identificadores de clase de **RDS. Objeto DataControl** , vea [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).|  
-|***SESIÓN***|Define un identificador para todo el documento para el objeto incrustado que se utiliza para identificarlo en el código.|  
+|***Id***|Define un identificador para todo el documento para el objeto incrustado que se utiliza para identificarlo en el código.|  
   
 ## <a name="rdsdatacontrol-tag-parameters"></a>ActiveX. Parámetros de etiqueta DataControl  
  En la tabla siguiente se describen los parámetros específicos del **objeto RDS. Objeto DataControl** . (Para obtener una lista completa de **RDS. **Los parámetros del objeto DataControl y cuándo implementarlos, vea [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)).  
@@ -62,7 +62,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |---------------|-----------------|  
 |[SERVIDOR](../../../ado/reference/rds-api/server-property-rds.md)|Si usa HTTP, el valor es el nombre del equipo servidor precedido por `https://`.|  
 |[CONÉCTELO](../../../ado/reference/rds-api/connect-property-rds.md)|Proporciona la información de conexión necesaria para el **objeto RDS. DataControl** para conectarse a SQL Server.|  
-|[Server](../../../ado/reference/rds-api/sql-property.md)|Establece o devuelve la cadena de consulta utilizada para recuperar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
+|[SQL](../../../ado/reference/rds-api/sql-property.md)|Establece o devuelve la cadena de consulta utilizada para recuperar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).|  
   
 ## <a name="see-also"></a>Consulte también  
  [Botones de comando de la libreta de direcciones](../../../ado/guide/remote-data-service/address-book-command-buttons.md)

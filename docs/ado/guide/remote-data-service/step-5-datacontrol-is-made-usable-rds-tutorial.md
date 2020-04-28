@@ -13,13 +13,13 @@ ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922057"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: habilitar el uso del control de datos (Tutorial de RDS)
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Paso 5: Habilitación del uso del control de datos (Tutorial de RDS)
 El objeto de **conjunto de registros** devuelto está disponible para su uso. Puede examinarlo, desplazarse o editarlo como lo haría con cualquier otro **conjunto de registros**. Lo que puede hacer con el **conjunto de registros** depende de su entorno. Visual Basic y Visual C++ tienen controles visuales que pueden usar un **conjunto de registros** directa o indirectamente con la ayuda de un control de datos habilitado.  
   
 > [!IMPORTANT]

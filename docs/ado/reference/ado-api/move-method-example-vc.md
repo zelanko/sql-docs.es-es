@@ -15,10 +15,10 @@ ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67932099"
 ---
 # <a name="move-method-example-vc"></a>Ejemplo del método Move (VC ++)
@@ -241,7 +241,7 @@ void PrintComError(_com_error &e) {
 0  
 ```  
   
-## <a name="sample-output"></a>Salida de muestra  
+## <a name="sample-output"></a>Salida de ejemplo  
   
 ```  
 Record 1 of 23  

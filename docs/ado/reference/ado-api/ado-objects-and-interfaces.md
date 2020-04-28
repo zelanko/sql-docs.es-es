@@ -14,10 +14,10 @@ ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920907"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
@@ -40,7 +40,7 @@ Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](
 |[Propiedad](../../../ado/reference/ado-api/property-object-ado.md)|Representa una característica dinámica de un objeto ADO definido por el proveedor.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Representa una fila de un **conjunto de registros**o un directorio o archivo en un sistema de archivos. El objeto de **registro** es seguro para el scripting.|  
 |[DataRecordsets](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el objeto de **conjunto de registros** hace referencia a un único registro del conjunto como el registro actual.<br /><br /> El objeto de **conjunto de registros** es seguro para el scripting.|  
-|[Misiones](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
+|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El objeto de **secuencia** es seguro para el scripting.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

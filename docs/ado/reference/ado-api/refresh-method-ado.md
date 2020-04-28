@@ -18,10 +18,10 @@ ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931250"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
@@ -47,7 +47,7 @@ collection.Refresh
 > [!NOTE]
 >  Si usa el método **Refresh** para obtener información de parámetros del proveedor y devuelve uno o más objetos de [parámetro](../../../ado/reference/ado-api/parameter-object.md) de tipo de datos de longitud variable, ADO puede asignar memoria para los parámetros en función de su tamaño máximo potencial, lo que producirá un error durante la ejecución. Debe establecer explícitamente la propiedad [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) para estos parámetros antes de llamar al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) para evitar errores.  
   
-### <a name="fields"></a>Fields  
+### <a name="fields"></a>Campos  
  El uso del método **Refresh** en la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) no tiene ningún efecto visible. Para recuperar los cambios de la estructura de base de datos subyacente, debe utilizar el método [Requery](../../../ado/reference/ado-api/requery-method.md) o, si el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) no admite marcadores, el método [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
 ### <a name="properties"></a>Propiedades  

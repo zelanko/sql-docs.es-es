@@ -14,10 +14,10 @@ ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920925"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
@@ -31,9 +31,9 @@ ms.locfileid: "67920925"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela una actualización por lotes pendiente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un objeto de **conjunto de registros** , o la colección de **campos** de un objeto de **registro** , antes de llamar al método **Update** .|  
-|[Borrar](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los objetos de **error** de la colección de **errores** .|  
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un objeto de **conjunto de registros** duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.|  
-|[Cercanos](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
+|[Claridad](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los objetos de **error** de la colección de **errores** .|  
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un objeto de **conjunto de registros** duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.|  
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dos marcadores y devuelve una indicación de sus valores relativos.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un archivo o un directorio, y su contenido, en otra ubicación.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia el número especificado de caracteres o bytes (dependiendo del **tipo**) de la **secuencia** en otro objeto de **flujo** .|  
@@ -74,8 +74,8 @@ ms.locfileid: "67920925"
 |[Seteos](../../../ado/reference/ado-api/seteos-method.md)|Establece la posición que es el final de la secuencia.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Omite una línea completa cuando se lee una secuencia de texto.|  
 |[Necesidad](../../../ado/reference/ado-api/stat-method.md)|Obtiene información estadística sobre un flujo abierto.|  
-|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Determina si un objeto de **conjunto de registros** especificado admite un tipo determinado de funcionalidad.|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Guarda los cambios realizados en la fila actual de un objeto de **conjunto de registros** o la colección de **campos** de un objeto de **registro** .|  
+|[Admite](../../../ado/reference/ado-api/supports-method.md)|Determina si un objeto de **conjunto de registros** especificado admite un tipo determinado de funcionalidad.|  
+|[Actualizar](../../../ado/reference/ado-api/update-method.md)|Guarda los cambios realizados en la fila actual de un objeto de **conjunto de registros** o la colección de **campos** de un objeto de **registro** .|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Escribe todas las actualizaciones de Batch pendientes en el disco.|  
 |[Escritura](../../../ado/reference/ado-api/write-method.md)|Escribe datos binarios en un objeto de **secuencia** .|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|Escribe una cadena de texto especificada en un objeto de **secuencia** .|  

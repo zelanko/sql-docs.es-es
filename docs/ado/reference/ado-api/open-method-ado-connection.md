@@ -18,10 +18,10 @@ ms.assetid: 663defab-5545-4973-9036-24d5882c9737
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15115313613ea8f86dd2267c6be3c231cab92503
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931932"
 ---
 # <a name="open-method-ado-connection"></a>Open (método) (conexión de ADO)
@@ -38,7 +38,7 @@ connection.Open ConnectionString, UserID, Password, Options
  *ConnectionString*  
  Opcional. Valor de **cadena** que contiene información de conexión. Vea la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) para obtener más información sobre los valores válidos.  
   
- *Deberían*  
+ *UserID*  
  Opcional. Valor de **cadena** que contiene un nombre de usuario que se va a usar al establecer la conexión.  
   
  *Contraseña*  

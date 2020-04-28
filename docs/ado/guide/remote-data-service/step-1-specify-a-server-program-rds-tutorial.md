@@ -13,13 +13,13 @@ ms.assetid: d8bb35b1-c02a-4231-8d55-016e56e53b95
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6cecddfe127bba43852412b6d804254f35103def
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67922114"
 ---
-# <a name="step-1-specify-a-server-program-rds-tutorial"></a>Paso 1: especificar un programa de servidor (Tutorial de RDS)
+# <a name="step-1-specify-a-server-program-rds-tutorial"></a>Paso 1: Especificación de un programa de servidor (Tutorial de RDS)
 En el caso más general, use [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) Object, método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) para especificar el programa de servidor predeterminado, [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), o su propio programa de servidor personalizado (objeto comercial). Se crea una instancia de un programa de servidor en el servidor y se devuelve una referencia al programa de servidor, o *proxy*.  
   
  En este tutorial se usa el programa de servidor predeterminado:  

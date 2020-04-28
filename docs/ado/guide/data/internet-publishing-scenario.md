@@ -15,10 +15,10 @@ ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924969"
 ---
 # <a name="internet-publishing-scenario"></a>Escenario de publicación en Internet
@@ -26,13 +26,13 @@ En este ejemplo de código se muestra cómo usar ADO con el proveedor de Microso
   
  Los pasos siguientes son necesarios para crear este escenario:  
   
--   [Paso 1: Configurar el proyecto de Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
+-   [Paso 1: Configuración del proyecto de Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
--   [Paso 2: Inicializar el cuadro de lista principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
+-   [Paso 2: Inicialización del cuadro de lista principal](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   
--   [Paso 3: Rellenar el cuadro de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
+-   [Paso 3: Relleno del cuadro de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)  
   
--   [Paso 4: Rellenar el cuadro de texto de detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
+-   [Paso 4: Relleno del cuadro de texto de detalles](../../../ado/guide/data/step-4-populate-the-details-text-box.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Proveedor de Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   

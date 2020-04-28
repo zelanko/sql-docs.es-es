@@ -10,10 +10,10 @@ ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929369"
 ---
 # <a name="save-metadata--mysqltosql"></a>Guardar metadatos (MySQLToSQL)
@@ -33,7 +33,7 @@ SSMA carga los metadatos en el proyecto según sea necesario. Los metadatos se c
 **Seleccionar todo**  
 Selecciona todas las bases de datos de la lista.  
   
-**Borrar**  
+**Claridad**  
 Desactiva la casilla para todas las bases de datos con metadatos que faltan. No puede desactivar la casilla si se han cargado los metadatos.  
   
 **Guardar**  

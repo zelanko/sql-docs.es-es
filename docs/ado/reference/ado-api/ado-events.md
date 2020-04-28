@@ -14,10 +14,10 @@ ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35169313ae487514403f62c8e6d1ba2c262cb8a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921006"
 ---
 # <a name="ado-events"></a>Eventos de ADO
@@ -43,7 +43,7 @@ ms.locfileid: "67921006"
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|Se llama antes de que una operación pendiente cambie el **conjunto de registros**.|  
 |[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md)|Se llama antes de que se inicie una conexión.|  
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md)|Se llama justo antes de que un comando pendiente se ejecute en esta conexión y permite al usuario examinar y modificar los parámetros de ejecución pendientes.|  
-|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Se **** llama al evento WillMove *antes* de que una operación pendiente cambie la posición actual en el **conjunto de registros**.|  
+|[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|Se **WillMove** llama al evento WillMove *antes* de que una operación pendiente cambie la posición actual en el **conjunto de registros**.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de la API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

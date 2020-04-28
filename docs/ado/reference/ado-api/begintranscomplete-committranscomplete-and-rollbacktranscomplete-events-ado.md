@@ -23,10 +23,10 @@ ms.assetid: ec4e4b38-e9c6-4757-b2ef-4e468ae5f1d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 750e89e97eb916c7db23e71475b753a57a4d90e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920442"
 ---
 # <a name="begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado"></a>Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete (ADO)
@@ -54,7 +54,7 @@ RollbackTransComplete pError, adStatus, pConnection
  *pError*  
  Un objeto de [error](../../../ado/reference/ado-api/error-object.md) . Describe el error que se produjo si el valor de EventStatusEnum es **adStatusErrorsOccurred**; de lo contrario, no se establece.  
   
- *Statu*  
+ *adStatus*  
  Valor de estado de [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) . Cuando se llama a cualquiera de estos eventos, este parámetro se establece en **adStatusOK** si la operación que causó el evento se realizó correctamente, o en **adStatusErrorsOccurred** si se produjo un error en la operación.  
   
  Estos eventos pueden impedir las siguientes notificaciones si se establece este parámetro en **adStatusUnwantedEvent** antes de que el evento vuelva.  

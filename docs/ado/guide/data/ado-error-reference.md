@@ -15,16 +15,16 @@ ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926245"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 La constante **ErrorValueEnum** describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea el [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). En esta sección se examinan algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden generarlos, o soluciones para solucionar el problema. Se enumeran la constante **ErrorValueEnum** y el número decimal positivo corto.
 
-|Number|ErrorValueEnum (constante)|Descripción/causas posibles|
+|número|ErrorValueEnum (constante)|Descripción/causas posibles|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|El proveedor no pudo realizar la operación solicitada.|
 |**3001**|**adErrInvalidArgument**|Los argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre sí. Este error suele deberse a un error tipográfico en una instrucción SELECT de SQL. Por ejemplo, un nombre de campo o un nombre de tabla mal escrito puede generar este error. Este error también puede producirse cuando un campo o una tabla denominada en una instrucción SELECT no existe en el almacén de datos.|

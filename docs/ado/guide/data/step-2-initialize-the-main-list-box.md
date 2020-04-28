@@ -11,13 +11,13 @@ ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924084"
 ---
-# <a name="step-2-initialize-the-main-list-box"></a>Paso 2: Inicializar el cuadro de lista principal
+# <a name="step-2-initialize-the-main-list-box"></a>Paso 2: Inicialización del cuadro de lista principal
 Para declarar los objetos de registro global y de conjunto de registros, inserte el código siguiente en (general) (declaraciones) para Form1:  
   
 ```  
@@ -52,4 +52,4 @@ End Sub
 ## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   
  [Paso 1: configurar el proyecto de Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)   
- [Paso 3: Rellenar el cuadro de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+ [Paso 3: Relleno del cuadro de lista de campos](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

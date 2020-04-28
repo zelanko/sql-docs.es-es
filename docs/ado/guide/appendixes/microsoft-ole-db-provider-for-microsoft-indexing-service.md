@@ -15,10 +15,10 @@ ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926662"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Introducción al proveedor de Microsoft OLE DB para el servicio de indización de Microsoft
@@ -26,7 +26,7 @@ El proveedor de Microsoft OLE DB para el servicio de indización de Microsoft pr
 
  El proveedor es de subprocesamiento libre y está habilitado para Unicode.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento **Provider =** en la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb
@@ -82,7 +82,7 @@ MSIDXS
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|no disponible|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lectura/escritura|
-|[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|solo lectura|
+|[NúmeroDePáginas](../../../ado/reference/ado-api/pagecount-property-ado.md)|solo lectura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|solo lectura|
 |[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|
@@ -93,14 +93,14 @@ MSIDXS
 
  **Disponibilidad de métodos de conjunto de registros de ADO estándar:**
 
-|Método|Disponible?|
+|Método|¿Disponible?|
 |------------|----------------|
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
-|[Cercanos](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
+|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|
 |[Move](../../../ado/reference/ado-api/move-method-ado.md)|Sí|
@@ -109,8 +109,8 @@ MSIDXS
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|
 |[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|
-|[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|
+|[Admite](../../../ado/reference/ado-api/supports-method.md)|Sí|
+|[Actualizar](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 
  Para obtener detalles de implementación específicos e información funcional acerca del proveedor de Microsoft OLE DB para el servicio de indización de Microsoft, consulte la [Guía del programador de OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx)o visite la página servicios web del sitio web de Windows NT Server.

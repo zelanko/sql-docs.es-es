@@ -13,10 +13,10 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 81a73044c1ab413fb2b49286814f3e6b3951c6c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921969"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
@@ -44,10 +44,10 @@ identifier
 |Parte|Descripción|  
 |----------|-----------------|  
 |**connect**|Cadena literal que modifica una cadena de conexión.|  
-|**sql**|Cadena literal que modifica una cadena de comando.|  
+|**Server**|Cadena literal que modifica una cadena de comando.|  
 |**userList**|Cadena literal que modifica los derechos de acceso de un usuario específico.|  
-|**registros**|Cadena literal que especifica un archivo de registro que registra los errores operativos.|  
-|**predeterminada**|Cadena literal que se utiliza si no se especifica o se encuentra ningún identificador.|  
+|**logs**|Cadena literal que especifica un archivo de registro que registra los errores operativos.|  
+|**default**|Cadena literal que se utiliza si no se especifica o se encuentra ningún identificador.|  
 |*identificador*|Cadena que coincide con una cadena de la cadena de **conexión** o de **comando** .<br /><br /> : Use esta sección si el encabezado de sección contiene **Connect** y la cadena de identificador se encuentra en la cadena de conexión.<br />: Use esta sección si el encabezado de sección contiene **SQL** y la cadena de identificador se encuentra en la cadena de comandos.<br />: Use esta sección si el encabezado de sección contiene **userList** y la cadena de identificador coincide con un identificador de sección **Connect** .|  
   
  **DataFactory** llama al controlador y pasa los parámetros de cliente. El controlador busca cadenas completas en los parámetros de cliente que coincidan con los identificadores de los encabezados de sección adecuados. Si se encuentra una coincidencia, el contenido de esa sección se aplica al parámetro Client.  

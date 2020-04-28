@@ -13,10 +13,10 @@ ms.assetid: 64234ce5-dc46-4c8a-a316-61956b6b9abb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2b07f4563d54254310c08c8c132d0729b8ccdc6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923216"
 ---
 # <a name="provider-support-for-adox-ado"></a>Compatibilidad del proveedor con ADOX (ADO)
@@ -47,7 +47,7 @@ Ciertas características de ADOX no se admiten, en función del proveedor de dat
 |Recopilación de **usuarios**|No se admiten **usuarios** .|  
 |Colección de **grupos**|No se admiten **grupos** .|  
   
-## <a name="microsoft-ole-db-provider-for-oracle"></a>Proveedor OLE DB de Microsoft para Oracle  
+## <a name="microsoft-ole-db-provider-for-oracle"></a>proveedor Microsoft OLE DB para Oracle  
   
 |Objeto o colección|Restricción de uso|  
 |--------------------------|-----------------------|  

@@ -16,10 +16,10 @@ ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67929774"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>Vistas de catálogo de esquemas XML (sistema de tipo XML, Transact-SQL)

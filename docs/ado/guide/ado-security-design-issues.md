@@ -13,10 +13,10 @@ ms.assetid: 86b83a38-efdf-4831-a6d5-7e470d517d1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f638f6e48dccccd91849f02c65331d9212f9bbb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67927035"
 ---
 # <a name="ado-security-design-features"></a>Características de diseño de seguridad de ADO
@@ -93,7 +93,7 @@ This Website is using your identity to access a data source. If you trust this W
  El mensaje anterior permite al usuario tomar una decisión más informada y continuar en consecuencia.
 
 > [!NOTE]
->  En el caso de sitios que no son de confianza (es decir, sitios que no aparecen en la lista de zonas de sitios de confianza), si el proveedor tampoco es de confianza (como se explicó anteriormente en esta sección), es posible que el usuario vea dos advertencias de seguridad en una fila, una advertencia sobre el proveedor no seguro y una segunda advertencia sobre el intente usar su identidad. Si el usuario hace clic en aceptar en la primera ADVERTENCIA, se ejecuta la configuración de Internet Explorer y el código de comportamiento de respuesta descrito en la tabla anterior.
+>  En el caso de los sitios que no son de confianza (es decir, los sitios que no aparecen en la lista de zonas de sitios de confianza), si el proveedor tampoco es de confianza (como se explicó anteriormente en esta sección), el usuario podría ver dos advertencias de seguridad en una fila, una advertencia sobre el proveedor no seguro y una segunda advertencia sobre el intento de usar su identidad. Si el usuario hace clic en aceptar en la primera ADVERTENCIA, se ejecuta la configuración de Internet Explorer y el código de comportamiento de respuesta descrito en la tabla anterior.
 
 ## <a name="controlling-whether-password-text-is-returned-in-ado-connection-strings"></a>Controlar si el texto de la contraseña se devuelve en cadenas de conexión ADO
  Cuando se intenta obtener el valor de la propiedad [ConnectionString](../../ado/reference/ado-api/connectionstring-property-ado.md) en un objeto de **conexión** ADO, se producen los siguientes eventos:

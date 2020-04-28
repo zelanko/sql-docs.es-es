@@ -16,10 +16,10 @@ ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67920672"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
@@ -37,25 +37,25 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Collection*  
  Objeto de colección.  
   
- *ámbitos*  
+ *fields*  
  Colección de **campos** .  
   
- *objeto*  
+ *object*  
  Variable de objeto que representa el objeto que se va a anexar.  
   
  *Nombre*  
  Valor de **cadena** que contiene el nombre del nuevo objeto de **campo** y no debe tener el mismo nombre que ningún otro objeto de *los campos*.  
   
- *Tipo*  
+ *Type*  
  Un valor [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) , cuyo valor predeterminado es **adEmpty**, que especifica el tipo de datos del nuevo campo. ADO no admite los siguientes tipos de datos y no se deben usar al anexar nuevos campos a un objeto de [conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
  Opcional. Valor de **tipo Long** que representa el tamaño definido, en caracteres o bytes, del nuevo campo. El valor predeterminado de este parámetro se deriva del *tipo*. Los campos que tienen un *DefinedSize* mayor que 255 bytes se tratan como columnas de longitud variable. No se especifica el valor predeterminado de *DefinedSize* .  
   
- *Attrib*  
+ *Atributo*  
  Opcional. Un valor de [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) , cuyo valor predeterminado es **adFldDefault**, que especifica los atributos del nuevo campo. Si no se especifica este valor, el campo contendrá atributos derivados del *tipo*.  
   
- *Valorcampo*  
+ *FieldValue*  
  Opcional. **Variante** que representa el valor del nuevo campo. Si no se especifica, el campo se anexa con un valor null.  
   
 ## <a name="remarks"></a>Observaciones  

@@ -14,10 +14,10 @@ ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67925562"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Detectar y resolver conflictos
@@ -30,7 +30,7 @@ Si trabaja con el conjunto de registros en modo inmediato, hay mucha menos posib
   
  Cuando se llama a BatchUpdate, ADO y el proveedor generan instrucciones SQL para realizar actualizaciones en el origen de datos. Recuerde que determinados orígenes de datos tienen limitaciones en cuanto a los tipos de columnas que se pueden usar en una cláusula WHERE.  
   
- A continuación, llame al método Resync del conjunto de registros con el argumento AffectRecords establecido en adAffectGroup y el argumento ResyncValues establecido en adResyncUnderlyingValues. El método Resync actualiza los datos del objeto de conjunto de registros actual de la base de datos subyacente. Mediante el uso de adAffectGroup, se asegura de que solo los registros visibles con la configuración de filtro actual, es decir, solo los registros en conflicto, se vuelven a sincronizar con la base de datos. Esto podría suponer una diferencia significativa en el rendimiento si se trabaja con un conjunto de registros grande. Al establecer el argumento ResyncValues en adResyncUnderlyingValues al llamar a Resync, se asegura de que la propiedad UnderlyingValue contendrá el valor (conflictivo) de la base de datos, que la propiedad Value mantendrá el valor especificado por el usuario. que la propiedad OriginalValue contendrá el valor original para el campo (el valor que tenía antes de que se realizara la última llamada de UpdateBatch correcta). Después, puede usar estos valores para resolver el conflicto mediante programación o requerir al usuario que seleccione el valor que se utilizará.  
+ A continuación, llame al método Resync del conjunto de registros con el argumento AffectRecords establecido en adAffectGroup y el argumento ResyncValues establecido en adResyncUnderlyingValues. El método Resync actualiza los datos del objeto de conjunto de registros actual de la base de datos subyacente. Mediante el uso de adAffectGroup, se asegura de que solo los registros visibles con la configuración de filtro actual, es decir, solo los registros en conflicto, se vuelven a sincronizar con la base de datos. Esto podría suponer una diferencia significativa en el rendimiento si se trabaja con un conjunto de registros grande. Al establecer el argumento ResyncValues en adResyncUnderlyingValues al llamar a Resync, se asegura de que la propiedad UnderlyingValue contendrá el valor (conflictivo) de la base de datos, que la propiedad Value mantendrá el valor especificado por el usuario, y que la propiedad OriginalValue contendrá el valor original para el campo (el valor que tenía antes de que se realizara la última llamada a UpdateBatch correcta). Después, puede usar estos valores para resolver el conflicto mediante programación o requerir al usuario que seleccione el valor que se utilizará.  
   
  Esta técnica se muestra en el ejemplo de código siguiente. En el ejemplo se crea de forma artificial un conflicto mediante un conjunto de registros independiente para cambiar un valor en la tabla subyacente antes de que se llame a UpdateBatch.  
   
@@ -116,4 +116,4 @@ Si trabaja con el conjunto de registros en modo inmediato, hay mucha menos posib
  Para obtener información detallada sobre el control de errores, vea [control de errores](../../../ado/guide/data/error-handling.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Modo por lotes](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](../../../ado/guide/data/batch-mode.md)

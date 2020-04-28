@@ -16,10 +16,10 @@ ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67931143"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
@@ -27,7 +27,7 @@ Especifica si se debe crear o sobrescribir un archivo al guardar desde un objeto
   
 |Constante|Value|Descripción|  
 |--------------|-----------|-----------------|  
-|**adSaveCreateNotExist**|1|Default. Crea un nuevo archivo si el archivo especificado por el parámetro *filename* todavía no existe.|  
+|**adSaveCreateNotExist**|1|Predeterminada. Crea un nuevo archivo si el archivo especificado por el parámetro *filename* todavía no existe.|  
 |**adSaveCreateOverWrite**|2|Sobrescribe el archivo con los datos del objeto de **secuencia** abierto actualmente, si el archivo especificado por el parámetro *filename* ya existe. Si el archivo especificado por el parámetro *filename* no existe, se crea un archivo nuevo.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO/WFC  

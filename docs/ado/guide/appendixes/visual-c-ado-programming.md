@@ -16,10 +16,10 @@ ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926420"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
@@ -37,7 +37,7 @@ La referencia de la API de ADO describe la funcionalidad de la interfaz de progr
 ## <a name="using-the-import-compiler-directive"></a>Usar la Directiva de compilador #import  
  La Directiva del compilador de **#import** Visual C++ simplifica el trabajo con los métodos y las propiedades de ADO. La Directiva toma el nombre de un archivo que contiene una biblioteca de tipos, como ADO. dll (Msado15. dll), y genera archivos de encabezado que contienen declaraciones TypeDef, punteros inteligentes para interfaces y constantes enumeradas. Cada interfaz está encapsulada o ajustada en una clase.  
   
- Para cada operación dentro de una clase (es decir, una llamada de método o propiedad), hay una declaración para llamar a la operación directamente (es decir, la forma "sin formato" de la operación) y una declaración para llamar a la operación sin procesar y producir un error COM si la operación no puede ejecutar succ essfully. Si la operación es una propiedad, normalmente hay una directiva de compilador que crea una sintaxis alternativa para la operación que tiene una sintaxis como Visual Basic.  
+ Para cada operación dentro de una clase (es decir, una llamada de método o propiedad), hay una declaración para llamar a la operación directamente (es decir, la forma "sin formato" de la operación) y una declaración para llamar a la operación sin procesar y producir un error COM si la operación no se puede ejecutar correctamente. Si la operación es una propiedad, normalmente hay una directiva de compilador que crea una sintaxis alternativa para la operación que tiene una sintaxis como Visual Basic.  
   
  Las operaciones que recuperan el valor de una propiedad tienen nombres del formulario, **Get**_Property_. Las operaciones que establecen el valor de una propiedad tienen nombres con el formato, la_propiedad_ **Put**. Las operaciones que establecen el valor de una propiedad con un puntero a un objeto ADO tienen nombres con el formato, la_propiedad_ **PutRef**.  
   
@@ -222,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- O bien  
+ o bien  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -241,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- O bien  
+ o bien  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- O bien  
+ o bien  
   
 ```cpp
 _RecordsetPtr  rs;  

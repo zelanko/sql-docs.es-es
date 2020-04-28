@@ -18,10 +18,10 @@ ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f18884c7a1aabe138408cca7eb529f4f21120330
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67919917"
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Colecciones (ADO para la sintaxis Visual C++)
@@ -56,7 +56,7 @@ get_Item(VARIANT Index, _ADOParameter **ppvObject);
   
 -   [Propiedad Item (ADO)](../../../ado/reference/ado-api/item-property-ado.md)  
   
-## <a name="fields"></a>Fields  
+## <a name="fields"></a>Campos  
   
 ### <a name="methods"></a>Métodos  
   

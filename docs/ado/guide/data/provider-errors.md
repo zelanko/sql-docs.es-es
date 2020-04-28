@@ -17,10 +17,10 @@ ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67924547"
 ---
 # <a name="provider-errors"></a>Errores del proveedor
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>El objeto de error  
  Al examinar un objeto de **error** , puede determinar qué error se produjo y más importante, qué aplicación o qué objeto provocó el error. El objeto de **error** tiene las siguientes propiedades:  
   
-|Nombre de propiedad|Descripción|  
+|Nombre de la propiedad|Descripción|  
 |-------------------|-----------------|  
 |**Descripción**|Descripción de texto del error que se ha producido.|  
 |**HelpContext, HelpFile**|Hace referencia al tema de ayuda y al archivo de ayuda que contiene una descripción del error que se ha producido.|  
 |**NativeError**|El número de error específico del proveedor.|  
-|**Números**|Entero largo que representa el número (incluido en **ErrorValueEnum**) del error que se ha producido.|  
+|**número**|Entero largo que representa el número (incluido en **ErrorValueEnum**) del error que se ha producido.|  
 |**Origen**|Indica el nombre del objeto o la aplicación que ha generado un error.|  
 |**SQLState**|Un código de error de cinco caracteres que el proveedor devuelve durante el proceso de una instrucción SQL.|  
   

@@ -12,10 +12,10 @@ ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67921082"
 ---
 # <a name="ado-dynamic-property-index"></a>Índice de propiedades dinámicas de ADO
@@ -56,7 +56,7 @@ Los proveedores de datos, los proveedores de servicios y los componentes de serv
 |Tamaño máximo de fila|DBPROP_MAXROWSIZE|  
 |El tamaño máximo de fila incluye BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|  
 |Número máximo de tablas en SELECT|DBPROP_MAXTABLESINSELECT|  
-|Modo|DBPROP_INIT_MODE|  
+|Mode|DBPROP_INIT_MODE|  
 |Varios conjuntos de parámetros|DBPROP_MULTIPLEPARAMSETS|  
 |Varios resultados|DBPROP_MULTIPLERESULTS|  
 |Varios objetos de almacenamiento|DBPROP_MULTIPLESTORAGEOBJECTS|  
@@ -90,7 +90,7 @@ Los proveedores de datos, los proveedores de servicios y los componentes de serv
 |Término de tabla|DBPROP_TABLETERM|  
 |DDL de transacción|DBPROP_SUPPORTEDTXNDDL|  
 |Id. de usuario|DBPROP_AUTH_USERID|  
-|User Name|DBPROP_USERNAME|  
+|Nombre de usuario|DBPROP_USERNAME|  
 |Identificador de ventana|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Propiedades dinámicas del conjunto de registros  

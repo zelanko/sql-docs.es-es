@@ -15,10 +15,10 @@ ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67926613"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Introducción al proveedor de Microsoft OLE DB para SQL Server
@@ -27,7 +27,7 @@ El proveedor de OLE DB de Microsoft para SQL Server, SQLOLEDB, permite a ADO ten
 > [!IMPORTANT]
 > El proveedor de Microsoft OLE DB para SQL Server (SQLOLEDB) sigue en desuso y no se recomienda usarlo para nuevos trabajos de desarrollo. En su lugar, use el nuevo [Microsoft OLE DB Driver for SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL), que se actualizará con las características de servidor más recientes.
 
-## <a name="connection-string-parameters"></a>Parámetros de cadena de conexión
+## <a name="connection-string-parameters"></a>Parámetros de la cadena de conexión
  Para conectarse a este proveedor, establezca el argumento de *proveedor* en la propiedad [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) en:
 
 ```vb
@@ -66,12 +66,12 @@ User ID=MyUserID;Password=MyPassword;"
 |Trusted_Connection|Indica el modo de autenticación del usuario. Se puede establecer en **sí** o **no**. El valor predeterminado es **no**. Si esta propiedad se establece en **sí**, SQLOLEDB utiliza el modo de autenticación de Microsoft Windows NT para autorizar el acceso del usuario a la base de datos de SQL Server especificada por los valores de la propiedad **Location** y [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) . Si esta propiedad se establece en **no**, SQLOLEDB utiliza el modo mixto para autorizar el acceso del usuario a la base de datos de SQL Server. El inicio de sesión de SQL Server y la contraseña se especifican en las propiedades ID. de **usuario** y **contraseña** .|
 |Idioma actual|Indica un nombre de lenguaje de SQL Server. Identifica el lenguaje que se usa para la selección y el formato de mensajes del sistema. El idioma debe instalarse en el SQL Server; de lo contrario, se producirá un error al abrir la conexión.|
 |Dirección de red|Indica la dirección de red del SQL Server especificado por la propiedad **Location** .|
-|Network Library|Indica el nombre de la biblioteca de red (DLL) utilizada para comunicarse con el SQL Server. El nombre no debe incluir la ruta de acceso ni la extensión de nombre de archivo .dll. La configuración del cliente de SQL Server proporciona el valor predeterminado.|
+|Biblioteca de red|Indica el nombre de la biblioteca de red (DLL) utilizada para comunicarse con el SQL Server. El nombre no debe incluir la ruta de acceso ni la extensión de nombre de archivo .dll. La configuración del cliente de SQL Server proporciona el valor predeterminado.|
 |Usar el procedimiento para preparar|Determina si SQL Server crea procedimientos almacenados temporales cuando se preparan los comandos (mediante la propiedad **Prepared** ).|
 |Auto Translate|Indica si se convierten los caracteres OEM/ANSI. Esta propiedad se puede establecer en **true** o en **false**. El valor predeterminado es **True**. Si esta propiedad se establece en **true**, SQLOLEDB realiza la conversión de caracteres OEM/ANSI cuando las cadenas de caracteres de varios bytes se recuperan o se envían al SQL Server. Si esta propiedad se establece en **false**, SQLOLEDB no realiza la conversión de caracteres OEM/ANSI en los datos de cadenas de caracteres multibyte.|
 |Tamaño del paquete|Indica un tamaño de paquete de red en bytes. El valor de la propiedad tamaño de paquete debe estar entre 512 y 32767. El tamaño de paquete de red SQLOLEDB predeterminado es 4096.|
 |Nombre de la aplicación|Indica el nombre de la aplicación cliente.|
-|Id. de estación de trabajo|Cadena que identifica la estación de trabajo.|
+|Id. de estación de trabajo|cadena que identifica la estación de trabajo.|
 
 ## <a name="command-object-usage"></a>Uso de objetos de comando
  SQLOLEDB acepta una amalgama de ODBC, ANSI y Transact-SQL específico de SQL Server como sintaxis válida. Por ejemplo, la siguiente instrucción SQL utiliza una secuencia de escape de ODBC SQL para especificar la función de cadena LCASE:
@@ -200,7 +200,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Término de tabla|DBPROP_TABLETERM|
 |DDL de transacción|DBPROP_SUPPORTEDTXNDDL|
 |Id. de usuario|DBPROP_AUTH_USERID|
-|User Name|DBPROP_USERNAME|
+|Nombre de usuario|DBPROP_USERNAME|
 |Identificador de ventana|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propiedades dinámicas del conjunto de registros

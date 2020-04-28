@@ -13,16 +13,16 @@ ms.assetid: 7cc01544-e814-403b-bbfe-a2750bf921bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00c89272d121898b6ac5af75022344acf1dceb28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67923855"
 ---
 # <a name="types-of-cursors-ado"></a>Tipos de cursores (ADO)
 Como norma general, la aplicación debe utilizar el cursor más sencillo que proporciona el acceso a datos requerido. Cada característica de cursor adicional más allá de los aspectos básicos (solo avance, solo lectura, estático, desplazable, sin almacenamiento en búfer) tiene un precio en la memoria de cliente, carga de red o rendimiento. En muchos casos, las opciones de cursor predeterminadas generan un cursor más complejo de lo que realmente necesita la aplicación.  
   
- La elección del tipo de cursor depende del modo en que la aplicación utiliza el conjunto de resultados y también en varias consideraciones de diseño, incluido el tamaño del conjunto de resultados, el porcentaje de los datos que se pueden usar, la sensibilidad a los cambios de datos y el rendimiento de la aplicación. satisfacer.  
+ La elección del tipo de cursor depende del modo en que la aplicación utiliza el conjunto de resultados y también en varias consideraciones de diseño, incluido el tamaño del conjunto de resultados, el porcentaje de los datos que se pueden usar, la sensibilidad a los cambios de datos y los requisitos de rendimiento de la aplicación.  
   
  En su nivel más básico, la elección del cursor depende de si necesita cambiar o simplemente ver los datos:  
   

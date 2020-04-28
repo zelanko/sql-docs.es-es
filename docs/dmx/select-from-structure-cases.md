@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67928296"
 ---
 # <a name="select-from-ltstructuregtcases"></a>Seleccione de &lt;la&gt;estructura. VECES
@@ -46,13 +46,13 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
  Una expresión puede incluir identificadores de columna, funciones definidas por el usuario y funciones VBA.  
   
- *estructuras*  
+ *structure*  
  Nombre de la estructura.  
   
  *expresión de condición*  
  Condición para restringir los valores que devuelve la lista de columnas.  
   
- *Expresiones*  
+ *expression*  
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -92,6 +92,6 @@ WHERE IsTestCase();
  [SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
- [Referencia de instrucciones de extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

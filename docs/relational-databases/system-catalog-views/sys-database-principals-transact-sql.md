@@ -1,5 +1,5 @@
 ---
-title: sys.database_principals (Transact-SQL) Microsoft Docs
+title: Sys. database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: feed483cf3ee08c0652e55de51b1f73fc087ed39
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80873121"
 ---
 # <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals (Transact-SQL)
@@ -36,23 +36,23 @@ ms.locfileid: "80873121"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre de la entidad de seguridad, único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad, único en la base de datos.|  
-|**type**|**char(1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E - Usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X: Grupo externo del grupo o las aplicaciones de Azure Active Directory|  
+|**type**|**Char (1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo de Azure Active Directory grupo o aplicaciones|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de entidad de seguridad.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
-|**default_schema_name**|**sysname**|Nombre que se usará cuando el nombre SQL no especifique un esquema. Null para entidades de seguridad que no son del tipo S, U o A.|  
+|**default_schema_name**|**sysname**|Nombre que se utilizará cuando el nombre SQL no especifique un esquema. Null para entidades de seguridad que no son del tipo S, U o A.|  
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
 |**modify_date**|**datetime**|Hora en que se modificó por última vez la entidad de seguridad.|  
-|**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. Todos los roles fijos de base de datos son propiedad de **dbo** de forma predeterminada.|  
-|**Sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
+|**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. De forma predeterminada, todos los roles fijos de base de datos pertenecen a **DBO** .|  
+|**Junction**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|Se aplica [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a : y versiones **posteriores.**<br /><br /> Tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 0 : Sin autenticación<br />1 : Autenticación de instancias<br />2 : Autenticación de base de datos<br />3 : Autenticación de Windows<br />4 : Autenticación de Azure Active Directory|  
-|**authentication_type_desc**|**nvarchar(60)**|Se aplica [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a : y versiones **posteriores.**<br /><br /> Descripción del tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> NONE : Sin autenticación<br />INSTANCE : Autenticación de instancias<br />DATABASE : Autenticación de base de datos<br />WINDOWS : Autenticación de Windows<br />EXTERNAL: autenticación de Azure Active Directory|  
-|**default_language_name**|**sysname**|Se aplica [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a : y versiones **posteriores.**<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
-|**default_language_lcid**|**int**|Se aplica [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a : y versiones **posteriores.**<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
-|**allow_encrypted_value_modifications**|**bit**|**Se**aplica [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] a [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]: y versiones posteriores, .<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario copiar datos cifrados de forma masiva mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
+|**authentication_type**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: sin autenticación<br />1: autenticación de la instancia<br />2: autenticación de base de datos<br />3: autenticación de Windows<br />4: autenticación Azure Active Directory|  
+|**authentication_type_desc**|**nvarchar(60)**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Descripción del tipo de autenticación. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> NINGUNO: sin autenticación<br />INSTANCIA: autenticación de la instancia<br />BASE de datos: autenticación de base de datos<br />WINDOWS: autenticación de Windows<br />EXTERNAL: autenticación Azure Active Directory|  
+|**default_language_name**|**sysname**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
+|**default_language_lcid**|**int**|**Válido para** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores.<br /><br /> LCID predeterminado para esta entidad de seguridad.|  
+|**allow_encrypted_value_modifications**|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] y versiones [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]posteriores,.<br /><br /> Suprime las comprobaciones de metadatos criptográficos en el servidor en operaciones de copia masiva. Esto permite al usuario realizar una copia masiva de datos cifrados mediante Always Encrypted, entre tablas o bases de datos, sin descifrar los datos. El valor predeterminado es OFF. |      
   
 ## <a name="remarks"></a>Observaciones  
- Las propiedades *PasswordLastSetTime* están disponibles en todas las configuraciones compatibles de SQL ServerSQL Server, pero las demás propiedades solo están disponibles cuando SQL ServerSQL Server se ejecuta en Windows Server 2003 o posterior y están habilitadas CHECK_POLICY y CHECK_EXPIRATION. Consulte [Política de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.
-Los valores de la principal_id pueden reutilizarse en el caso de que se hayan eliminado los principales y, por lo tanto, no se garantiza que cada vez mayor.
+ Las propiedades de *PasswordLastSetTime* están disponibles en todas las configuraciones admitidas de SQL Server, pero las demás propiedades solo están disponibles cuando se ejecuta SQL Server en Windows Server 2003 o posterior y se habilitan tanto CHECK_POLICY como CHECK_EXPIRATION. Consulte [Directiva de contraseñas](../../relational-databases/security/password-policy.md) para obtener más información.
+Los valores de la principal_id se pueden volver a usar en caso de que se hayan quitado las entidades de seguridad y, por lo tanto, no se garantice que se incremente cada vez.
   
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario puede ver su propio nombre de usuario, los usuarios del sistema y los roles fijos de base de datos. Para ver otros usuarios, requiere ALTER ANY USER o un permiso en el usuario. Para ver los roles definidos por el usuario, se requiere ALTER ANY ROLE o la pertenencia al rol.  
@@ -91,11 +91,11 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Listado de todos los permisos de los principales de base de datos  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Mostrar todos los permisos de las entidades de seguridad de base de datos  
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de base de datos.  
   
 > [!IMPORTANT]  
->  Los permisos de los roles `sys.database_permissions`fijos de base de datos no aparecen en . Por tanto, es posible que las entidades de seguridad de base de datos tengan permisos adicionales que no aparezcan aquí.  
+>  Los permisos de los roles fijos de base de datos `sys.database_permissions`no aparecen en. Por tanto, es posible que las entidades de seguridad de base de datos tengan permisos adicionales que no aparezcan aquí.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -105,8 +105,8 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Listado de permisos en objetos de esquema dentro de una base de datos  
- La siguiente consulta `sys.database_principals` `sys.database_permissions` se `sys.objects` `sys.schemas` une y para enumerar los permisos concedidos o denegados a objetos de esquema específicos.  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: enumerar los permisos de los objetos de esquema en una base de datos  
+ La siguiente consulta se combina `sys.database_principals` y `sys.database_permissions` en `sys.objects` y `sys.schemas` para enumerar los permisos concedidos o denegados a objetos de esquema específicos.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -122,10 +122,10 @@ JOIN sys.schemas AS s
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [&#41;de Motor de base de datos &#40;principales](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.server_principals &#40;Transact-SQLTransact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
- [Las vistas del catálogo de seguridad &#40;&#41;de Transact-SQLTransact-SQL](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [Usuarios de bases de datos independientes - Hacer que su base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
+ [Entidades de seguridad &#40;motor de base de datos&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+ [Sys. server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [Vistas de catálogo de seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Usuarios de bases de datos independientes: creación de una base de datos portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md)   
  [Conexión a SQL Database mediante autenticación de Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)  
   
   

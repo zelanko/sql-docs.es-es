@@ -1,5 +1,5 @@
 ---
-title: Procedimientos ODBC ( Odbc) Microsoft Docs
+title: Procedimientos ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ ms.assetid: 92172f52-6bd2-4b17-9ef0-baf1a97f7510
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d16c5353d2a8bd58563753d92cccade2968d09cc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282225"
 ---
 # <a name="procedures-odbc"></a>Procedimientos de ODBC

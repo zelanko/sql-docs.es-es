@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8ed94b29d03fd2b95294bed28201b3bd3b63df45
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282013"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>Generar perfiles del rendimiento del controlador ODBC (ODBC)
@@ -23,15 +23,15 @@ ms.locfileid: "81282013"
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos opciones específicas del controlador para generar perfiles de rendimiento del controlador.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC puede registrar estadísticas de rendimiento en el archivo. El archivo de registro es un archivo delimitado por tabuladores que puede analizarse en cualquier hoja de cálculo que admita archivos delimitados por tabuladores, como Microsoft Excel.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC puede registrar las estadísticas de rendimiento en el archivo. El archivo de registro es un archivo delimitado por tabuladores que puede analizarse en cualquier hoja de cálculo que admita archivos delimitados por tabuladores, como Microsoft Excel.  
   
  El controlador también puede registrar consultas de ejecución prolongada (consultas que no reciben ninguna respuesta del servidor durante un intervalo de tiempo especificado). Los programadores y administradores de bases de datos pueden analizar después estas consultas.  
   
 ## <a name="in-this-section"></a>En esta sección  
   
--   [Datos de rendimiento del controlador de perfil &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
+-   [Datos de rendimiento del controlador de perfil &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data.md)  
   
--   [Registrar consultas de ejecución prolongada &#40;&#41;ODBC](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
+-   [Registrar consultas de ejecución prolongada &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-data-log-long-running-queries.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de ODBC](../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  

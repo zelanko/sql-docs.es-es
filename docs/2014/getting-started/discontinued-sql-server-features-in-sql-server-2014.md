@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112222"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Características de SQL Server no disponibles en SQL Server 2014
@@ -35,8 +35,7 @@ ms.locfileid: "79112222"
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Características de SQL Server no incluidas en SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Compatibilidad de la plataforma de 64 bits en Reporting Services  
- A partir de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], el componente de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya no admite servidores basados en Itanium que ejecuten Windows Server 2003 o Windows Server 2003 R2. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sigue admitiendo otros sistemas operativos de 64 bits, incluido Windows Server°2008 para sistemas basados en Itanium y Windows Server°2008°R2 para sistemas basados en Itanium. Para actualizar a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] desde una instalación de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en una edición del sistema basada en Itanium de Windows Server 2003 o Windows Server 2003 R2, primero debe actualizar el sistema operativo.  
+ A partir de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)], el componente de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ya no admite servidores basados en Itanium que ejecuten Windows Server 2003 o Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sigue admitiendo otros sistemas operativos de 64 bits, incluido Windows Server°2008 para sistemas basados en Itanium y Windows Server°2008°R2 para sistemas basados en Itanium. Para actualizar a [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] desde una instalación de [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en una edición del sistema basada en Itanium de Windows Server 2003 o Windows Server 2003 R2, primero debe actualizar el sistema operativo.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Características de SQL Server no incluidas en SQL Server 2008  
   
@@ -49,14 +48,14 @@ ms.locfileid: "79112222"
 ### <a name="surface-area-configuration-tool"></a>herramienta de configuración de área expuesta  
  La herramienta de configuración de área expuesta ya no se incluye en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. En la tabla siguiente se muestra lo que se puede utilizar para configurar valores, opciones y características de componentes en esta versión.  
   
-|Configuración de reemplazo y características de componentes|Configuración|  
+|Configuración de reemplazo y características de componentes|Cómo se configura|  
 |-------------------------------------------------|----------------------|  
 |Protocolos, conexiones y opciones de inicio|Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]dispone|Utilice la administración basada en directivas, la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]dispone|Utilice la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|Características del [!INCLUDE[ssDE](../includes/ssde-md.md)]|Utilice la administración basada en directivas, la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o sp_Configure.|  
+|Características del [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Utilice la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]: propiedad de seguridad EnableIntegrated|Utilice la configuración de propiedades de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]: "Eventos de programación y entrega de informes" y "Acceso HTTP y servicio web"|Modifique el archivo de configuración RSReportServer.config|  
-|Opciones de la línea de comandos|No existe compatibilidad en esta versión.|  
+|Opciones de línea de comandos|No existe compatibilidad en esta versión.|  
 |SOAP y extremos de [!INCLUDE[ssSB](../includes/sssb-md.md)]|Utilice [Create Endpoint](/sql/t-sql/statements/create-endpoint-transact-sql)y [ALTER Endpoint](/sql/t-sql/statements/alter-endpoint-transact-sql).|  
   
 ### <a name="discontinued-command-prompt-parameters-for-sql-server-setup"></a>Parámetros del símbolo del sistema no incluidos para el programa de instalación de SQL Server  

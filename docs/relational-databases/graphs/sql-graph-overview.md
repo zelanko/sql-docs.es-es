@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428156"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
@@ -47,7 +47,7 @@ Vamos a empezar a agregar extensiones de grafos a SQL Server para facilitar el a
 
 
 ### <a name="create-graph-objects"></a>Crear objetos de gráfico
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]las extensiones permitirán a los usuarios crear tablas de nodos o perimetrales. Tanto los nodos como los bordes pueden tener propiedades asociadas. Dado que los nodos y los bordes se almacenan como tablas, todas las operaciones que se admiten en las tablas relacionales se admiten en el nodo o la tabla perimetral. Aquí tiene un ejemplo:  
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]las extensiones permitirán a los usuarios crear tablas de nodos o perimetrales. Tanto los nodos como los bordes pueden tener propiedades asociadas. Dado que los nodos y los bordes se almacenan como tablas, todas las operaciones que se admiten en las tablas relacionales se admiten en el nodo o la tabla perimetral. Este es un ejemplo:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

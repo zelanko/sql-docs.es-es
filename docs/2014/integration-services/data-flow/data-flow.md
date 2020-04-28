@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79ae8b1ac6e5685838082f048ae7244d45e756b
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112209"
 ---
 # <a name="data-flow"></a>Data Flow
@@ -108,7 +108,7 @@ ms.locfileid: "79112209"
 ## <a name="transformations"></a>Transformaciones  
  Las capacidades de las transformaciones presentan amplias variaciones. Las transformaciones pueden realizar tareas tales como actualizar, resumir, limpiar, combinar y distribuir datos. Puede modificar valores en columnas, buscar valores en tablas, limpiar datos y agregar valores de columna.  
   
- Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error ocurrido, junto con los datos que han generado errores: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
+ Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error que proporcionan información sobre el error que se ha producido, junto con los datos en los que se ha producido un error; por ejemplo, los datos de cadena que no se han podido convertir a un tipo de datos enteros. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
   
  La entrada de una transformación se define como una o más columnas de entrada. Algunas transformaciones de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también pueden hacer referencia a columnas externas como entrada. Por ejemplo, la entrada de la transformación Comando de OLE DB incluye columnas externas. Una columna de salida es una columna que la transformación agrega al flujo de datos. Tanto las salidas normales como las salidas de error contienen columnas de salida. Estas columnas de salida a su vez funcionan como columnas de entrada para el siguiente componente en el flujo de datos, ya sea otra transformación o un destino.  
   

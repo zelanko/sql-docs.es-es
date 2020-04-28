@@ -1,5 +1,5 @@
 ---
-title: Secuencias de escape ODBC (ODBC Escape Sequences) Microsoft Docs
+title: Secuencias de escape ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: b32d12cc6be2814198160ce95cb8153227c19aa9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81287575"
 ---
 # <a name="odbc-escape-sequences"></a>Secuencias de escape ODBC
-Las siguientes secuencias de escape se utilizan en ODBC. La gramática de esta sección utiliza algunos elementos definidos en [Elementos utilizados en instrucciones SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
+Las secuencias de escape siguientes se utilizan en ODBC. La gramática de esta sección utiliza algunos elementos definidos en [los elementos que se usan en las instrucciones SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  
   
  Esta sección contiene los temas siguientes.  
   

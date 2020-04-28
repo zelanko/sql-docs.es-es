@@ -1,5 +1,5 @@
 ---
-title: Mensajes de error ? Microsoft Docs
+title: Mensajes de error | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7d632d1d22cd8439a3d787e22301ec06ec4e0d93
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81291795"
 ---
 # <a name="error-messages"></a>mensajes de error
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El texto de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mensajes devueltos por el controlador ODBC de Native Client se coloca en el parámetro *MessageText* de **SQLGetDiagRec**. El encabezado del mensaje indica el origen de un error:  
+  El texto de los mensajes devueltos por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client se coloca en el parámetro *MessageText* de **SQLGetDiagRec**. El encabezado del mensaje indica el origen de un error:  
   
  [Microsoft][ODBC Driver Manager]  
  El Administrador de controladores ODBC produce estos errores.  
@@ -35,13 +35,13 @@ ms.locfileid: "81291795"
  La biblioteca de cursores ODBC produce estos errores.  
   
  [Microsoft][SQL Server Native Client]  
- Estos errores se generan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el controlador ODBC de Native Client. Si no hay ningún otro nodo con el nombre de una biblioteca de red o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el error se produjo en el controlador.  
+ El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client genera estos errores. Si no hay ningún otro nodo con el nombre de una biblioteca de red o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el error se produjo en el controlador.  
   
- [Microsoft] [SQL Server Native Client] [*Net-Transportname*]  
- Estos errores se generan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la biblioteca de red, donde *Net-Transportname* es el nombre para mostrar de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transporte de red cliente (por ejemplo, canalizaciones con nombre, memoria compartida, sockets TCP/IP o VIA). El resto del mensaje de error contiene la función de biblioteca de red a la que se ha llamado y la función a la que se ha llamado en la API de red subyacente mediante la función TDS. El código de error *pfNative* devuelto con estos errores es el código de error de la pila de protocolos de red subyacente.  
+ Microsoft [SQL Server Native Client] [*Net-nombredetransportedered*]  
+ Estos errores se producen en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] biblioteca de red, donde *net-nombredetransportedered* es el nombre para mostrar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un transporte de red de cliente (por ejemplo, canalizaciones con nombre, memoria compartida, Sockets TCP/IP o Via). El resto del mensaje de error contiene la función de biblioteca de red a la que se ha llamado y la función a la que se ha llamado en la API de red subyacente mediante la función TDS. El código de error *pfNative* devuelto con estos errores es el código de error de la pila del Protocolo de red subyacente.  
   
- [Microsoft] [SQL Server Native Client] [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce estos errores. El resto del mensaje de error es el texto del mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El código *pfNative* devuelto con estos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]errores es el número de error de . Para obtener más información acerca de una lista de mensajes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de error (y sus números) que puede devolver [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea las columnas de descripción y error de la tabla del sistema **sysmessages** en la base de datos **maestra** en .  
+ Microsoft [SQL Server Native Client] [ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] produce estos errores. El resto del mensaje de error es el texto del mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El código *pfNative* devuelto con estos errores es el número de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]error de. Para obtener más información acerca de una lista de mensajes de error (y sus números) que puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]devolver, vea la descripción y las columnas de error de la tabla del sistema **sysmessages** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la base de datos **maestra** de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Controlar errores y mensajes](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

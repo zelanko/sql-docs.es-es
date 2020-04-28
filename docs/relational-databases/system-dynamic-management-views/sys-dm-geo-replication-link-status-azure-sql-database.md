@@ -19,10 +19,10 @@ ms.author: mathoma
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8bdf74e6ee774d9a0cc8e3d9128c659b75287511
-ms.sourcegitcommit: d1f6da6f0f5e9630261cf733c64958938a3eb859
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79198232"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
@@ -43,7 +43,7 @@ ms.locfileid: "79198232"
 |rol|**tinyint**|Rol de replicación geográfica, uno de los siguientes:<br /><br /> 0 = principal. El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.<br /><br /> 1 = secundaria.  El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de los siguientes:<br /><br /> 0 = no se permiten conexiones directas a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = se permiten todas las conexiones a la base de datos en el REPL secundario; ication para el acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Sin<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
 |last_commit|**datetimeoffset**|Hora de la última transacción confirmada en la base de datos. Si se recupera en la base de datos principal, indica la hora de la última confirmación en la base de datos principal. Si se recupera en la base de datos secundaria, indica la hora de la última confirmación en la base de datos secundaria. Si se recupera en la base de datos secundaria cuando la réplica principal del vínculo de replicación está inactiva, indica hasta qué punto se ha detectado el elemento secundario.|
   
 > [!NOTE]  

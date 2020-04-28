@@ -1,1 +1,1 @@
-**ESTE TEMA SE APLICA A:** ![sí](media/yes-icon.png "sí")SQL Server \(a partir de 2008\) ![no](media/no-icon.png "No")Azure SQL Database ![no](media/no-icon.png "no")Azure SQL Data Warehouse ![no](media/no-icon.png "no")Parallel Data Warehouse
+**Este tema se aplica a:** ![sí](media/yes-icon.png "sí")SQL Server \(a partir\) de 2008 ![no](media/no-icon.png "no")Azure SQL Database ![no](media/no-icon.png "no") ![Azure SQL Data Warehouse ningún](media/no-icon.png "no")almacenamiento de datos paralelos

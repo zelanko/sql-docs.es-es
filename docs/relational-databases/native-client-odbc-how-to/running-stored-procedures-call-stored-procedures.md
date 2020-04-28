@@ -1,5 +1,5 @@
 ---
-title: Llamar a procedimientos almacenados (ODBC) Microsoft Docs
+title: Llamar a procedimientos almacenados (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: baa8ad51341311014d841c0e31251b0780828389
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282021"
 ---
 # <a name="running-stored-procedures---call-stored-procedures"></a>Ejecutar procedimientos almacenados: llamar a procedimientos almacenados
@@ -27,7 +27,7 @@ ms.locfileid: "81282021"
   
   Cuando una instrucción SQL llama a un procedimiento almacenado mediante la cláusula de escape ODBC CALL, el controlador de Microsoft® SQL Server™ envía el procedimiento a SQL Server usando el mecanismo de llamada a un procedimiento almacenado remoto (RPC). Las solicitudes de RPC omiten gran parte del análisis de la instrucción y del procesamiento del parámetro en SQL Server, y es más rápido que usar la instrucción Transact-SQL EXECUTE.  
   
- Para obtener una aplicación de ejemplo que muestra esta característica, vea Procesar códigos de [retorno y parámetros ](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)de salida &#40;&#41;ODBC .  
+ Para obtener una aplicación de ejemplo que muestra esta característica, vea [procesar códigos de retorno y parámetros de salida &#40;ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>Para ejecutar un procedimiento como una RPC  
   
@@ -45,8 +45,8 @@ ms.locfileid: "81282021"
 >  Si una aplicación envía un procedimiento con la sintaxis de Transact-SQL EXECUTE (en contraposición al flujo de escape ODBC CALL), el controlador ODBC de SQL Server pasa la llamada al procedimiento a SQL Server como una instrucción SQL en lugar de como una RPC. Además, los parámetros de salida no se devuelven si se usa la instrucción Transact-SQL EXECUTE.  
   
 ## <a name="see-also"></a>Consulte también  
-  [Llamadas a procedimientos almacenados por lotes](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
- [Ejecución de procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
+  [Procesar por lotes las llamadas a procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Ejecutar procedimientos almacenados](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Llamar a un procedimiento almacenado](../../relational-databases/native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
  [Procedimientos](../../relational-databases/native-client-odbc-queries/executing-statements/procedures.md)  
   

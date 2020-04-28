@@ -1,5 +1,5 @@
 ---
-title: Consideraciones de programación ? Microsoft Docs
+title: Consideraciones de programación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 22f71822847d72751ba3c2e5bec2f8e7ce776bd0
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282185"
 ---
 # <a name="programming-considerations"></a>Consideraciones sobre la programación
-En esta sección se describen brevemente una serie de temas relacionados con la escritura de controladores y aplicaciones ODBC.  
+En esta sección se describe brevemente una serie de temas relacionados con la escritura de aplicaciones y controladores ODBC.  
   
  Esta sección contiene los temas siguientes.  
   

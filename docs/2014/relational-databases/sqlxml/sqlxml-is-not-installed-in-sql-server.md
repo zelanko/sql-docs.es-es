@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8902c5dae5dea31393f658b13cb5c8773291f975
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112234"
 ---
 # <a name="sqlxml-is-not-installed-in-sql-server"></a>SQLXML no se instala en SQL Server
@@ -23,8 +23,7 @@ ms.locfileid: "79112234"
  Si una aplicación se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y requiere SQLXML 4.0, y si el equipo no tiene instalado [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], deberá descargar e instalar SQLXML 4.0 SP1.  
   
 ## <a name="sqlxml-40-sp1-behavior-with-new-data-types-using-sqloledb-and-sql-server-native-client-ole-db-provider"></a>Comportamiento de SQLXML 4.0 SP1 con nuevos tipos de datos que usan el proveedor OLE DB de SQLOLEDB y SQL Server Native Client  
- 
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce los siguientes tipos de datos, que los desarrolladores de SQLXML pueden usar:  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce los siguientes tipos de datos, que los desarrolladores de SQLXML pueden usar:  
   
 -   `Date`  
   

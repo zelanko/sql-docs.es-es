@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be83b941e5b8000a0a802fbe9fe7254a364d69c9
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289383"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
@@ -62,17 +62,17 @@ ms.locfileid: "79289383"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   El ámbito de una función y un esquema de partición se limita a la base de datos en la que se han creado. En la base de datos, las funciones de partición residen en un espacio de nombres independiente de las demás funciones.  
   
 -   Si algunas filas de una función de partición tienen columnas de partición con valores NULL, estas filas se asignan a la partición situada más a la izquierda. Sin embargo, si se especifica NULL como valor de límite y se indica RIGHT, la partición situada más a la izquierda permanece vacía y los valores NULL se colocan en la segunda partición.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  La creación de una tabla con particiones requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla. Crear un índice con particiones requiere el permiso ALTER en la tabla o vista donde se crea el índice. Crear una tabla o índice con particiones requiere alguno de los permisos adicionales siguientes:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -81,7 +81,7 @@ ms.locfileid: "79289383"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se está creando la función de partición y el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Siga los pasos de este procedimiento para crear uno o más grupos de archivos, los archivos correspondientes y una tabla. Hará referencia a estos objetos en el siguiente procedimiento al crear la tabla con particiones.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Para crear nuevos grupos de archivos en una tabla con particiones  
@@ -258,7 +258,7 @@ ms.locfileid: "79289383"
   
  El Asistente para la creación de particiones crea la función y el esquema de partición y aplica las particiones a la tabla especificada. Para comprobar las particiones de tabla, en el Explorador de objetos, haga clic con el botón derecho en la tabla y seleccione **Propiedades**. Haga clic en la página **Almacenamiento** . La página muestra información como el nombre de la función y el esquema de partición y el número de particiones.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   

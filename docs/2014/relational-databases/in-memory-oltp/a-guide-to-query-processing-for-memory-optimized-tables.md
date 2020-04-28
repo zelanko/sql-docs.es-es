@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112244"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |Compilación inicial|En el momento de la creación.|En la primera ejecución.|  
 |Recompilación automática|En la primera ejecución del procedimiento después del reinicio de la base de datos o del servidor.|Al reiniciar el servidor. O bien, se expulsa de la memoria caché de planes, generalmente según los cambios de esquema o de estadísticas, o por presión en la memoria.|  
-|Recompilación manual|No compatible. La solución es quitar y volver a crear el procedimiento almacenado.|Mediante `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
+|Recompilación manual|No se admite. La solución es quitar y volver a crear el procedimiento almacenado.|Mediante `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilación y procesamiento de consultas  
  El siguiente diagrama muestra el proceso de compilación para los procedimientos almacenados compilados de forma nativa:  
@@ -300,10 +300,9 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   El examen de índice completo en IX_CustomerID se ha reemplazado por index seek. Esto provocó el examen de 5 filas en lugar de las 830 necesarias para el examen de índice completo.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Estadísticas y cardinalidad para las tablas con optimización para memoria  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna de las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna de las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
+ [Tablas con optimización para memoria](memory-optimized-tables.md)  
   
   

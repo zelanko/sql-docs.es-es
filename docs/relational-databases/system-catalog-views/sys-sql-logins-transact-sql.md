@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c3dba46f4d0e2ecdebda13fe3fe9412219c2a755
-ms.sourcegitcommit: f7af758b353b53ac3b596d79fd6e32ad7e1e61cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79448475"
 ---
 # <a name="syssql_logins-transact-sql"></a>sys.sql_logins (Transact-SQL)

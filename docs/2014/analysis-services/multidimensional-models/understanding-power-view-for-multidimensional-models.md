@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525466"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Descripción de Power View para modelos multidimensionales
@@ -24,7 +24,7 @@ ms.locfileid: "79525466"
   
  Power View es un cliente Web ligero que se inicia en el explorador desde un archivo de origen de datos de informe (.rsds) en una biblioteca de SharePoint. El origen de datos de informe actúa como un puente entre el cliente y el origen de datos back-end. El origen de datos back-end puede ser un libro PowerPivot en SharePoint, un modelo tabular de un servidor de Analysis Services en modo tabular o un modelo multidimensional en un servidor de Analysis Services que se ejecuta en modo multidimensional. Los informes de Power View pueden guardarse en una galería o una biblioteca de SharePoint y se comparten con otros miembros de la organización.  
   
- **Power View para la arquitectura de modelos multidimensionales**  
+ **Arquitectura de Power View para modelos multidimensionales**  
   
  ![Power View para la arquitectura de modelos multidimensionales](../media/daxmd-architecture.gif "Power View para la arquitectura de modelos multidimensionales")  
   
@@ -91,7 +91,7 @@ ms.locfileid: "79525466"
   
  **Medida como variante**  
   
- ![Jerarquía no agregable en Power View](../media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
+ ![Jerarquía no agregable de Power View](../media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
   
 ### <a name="implicit-measures"></a>Medidas implícitas  
  Los modelos tabulares proporcionan a los usuarios la posibilidad de crear medidas *implícitas* como recuento, suma o promedio en los campos. En los modelos multidimensionales, dado que los datos de los atributos de dimensión se almacenan de forma diferente, la consulta de medidas implícitas puede tardar mucho. Por ello, las medidas implícitas no están disponibles en Power View.  
@@ -99,14 +99,14 @@ ms.locfileid: "79525466"
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensiones, atributos y jerarquías  
  Las dimensiones de cubo se exponen como tablas en los metadatos tabulares. En la lista de campos de Power View, los atributos de dimensión se muestran como columnas dentro de carpetas para mostrar.  Estos atributos tienen establecida en false la propiedad AttributeHierarchyEnabled; por ejemplo, el atributo Birth Date de la dimensión Customer o la propiedad AttributeHierarchyVisible establecida en false no aparecerá en la lista de campos de Power View. Las jerarquías de varios niveles o las jerarquías de usuario, por ejemplo Customer Geography en la dimensión Customer, se exponen como jerarquías en la lista de campos de Power View. Los miembros desconocidos ocultos de un atributo de dimensión se exponen en consultas DAX en Power View.  
   
- **Dimensiones, atributos y jerarquías en SQL Server Data Tools (SSDT) y Power View lista de campos**  
+ **La dimensión, los atributos y las jerarquías de SQL Server Data Tools (SSDT) y la lista de campos de Power View**  
   
  ![Dimensiones en SSDT y en la lista de campos de Power View](../media/daxmd-ssdt-dimensions.gif "Dimensiones en SSDT y en la lista de campos de Power View")  
   
 ### <a name="dimension-attribute-type"></a>Tipo de atributo de dimensión  
  Los modelos multidimensionales permiten asociar atributos de dimensión con tipos de atributos de dimensión específicos. La imagen siguiente muestra la dimensión Geography, en la que los atributos de dimensión City, State-Province, Country y Postal Code tienen asociados tipos geography. Se exponen en los metadatos tabulares. Power View reconoce los metadatos que permiten que los usuarios creen visualizaciones de mapas. Esto se indica con el icono de mapa situado junto a las columnas City, Country, Postal Code y State-Province en la tabla Geography de la lista de campos de Power View.  
   
- **Tipos Geography de atributos de dimensión en SSDT y Power View lista de campos**  
+ **Tipos geography de atributos de dimensión en SSDT y en la lista de campos de Power View**  
   
  ![Tipos de geografía de atributos de dimensión](../media/daxmd-ssdt-attribute-geog-types.gif "Tipos de geografía de atributos de dimensión")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "79525466"
   
  La imagen siguiente muestra un informe de Power View para un cubo que contiene miembros calculados de inteligencia de tiempo en el atributo de dimensión "fiscal Date Calculations" de la dimensión Date.  
   
- **Power View informe con miembros calculados**  
+ **Informe de Power View con miembros calculados**  
   
  ![Miembros calculados en Power View](../media/daxmd-calcmembersinpowerview.gif "Miembros calculados en Power View")  
   
@@ -138,9 +138,9 @@ ms.locfileid: "79525466"
 ### <a name="non-aggregatable-attributeshierarchies"></a>Atributos y jerarquías no agregables  
  En un modelo multidimensional, los atributos de una dimensión pueden tener la propiedad IsAggregatable establecida en false. Esto significa que el autor del modelo que ha especificado aplicaciones cliente no debe agregar los datos a través de jerarquías (atributo o multinivel) cuando consulten los datos. En Power View, este atributo de dimensión se expone como una columna para los que los subtotales no están disponibles. En la imagen siguiente, puede ver un ejemplo de jerarquía no agregable: Accounts. El nivel superior de la jerarquía primario-secundario Accounts es no agregable mientras que otros niveles son agregables. En una visualización de matriz de la jerarquía Accounts (primeros dos niveles), ve los subtotales para el nivel de cuenta 02 pero no para el nivel superior, el nivel de cuenta 01.  
   
- **Jerarquía no agregable en Power View**  
+ **Jerarquía no agregable de Power View**  
   
- ![Jerarquía no agregable en Power View](../media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
+ ![Jerarquía no agregable de Power View](../media/daxmd-nonaggrattrib.gif "Jerarquía no agregable de Power View")  
   
 ## <a name="images"></a>Imágenes  
  Power View permite procesar las imágenes. En los modelos multidimensionales, una de las formas en que puede proporcionar las imágenes en Power View es exponer las columnas que contienen las direcciones URL de las imágenes. Con esta versión, Analysis Services permite etiquetar los atributos de dimensión como de tipo ImageURL. Este tipo de datos se proporciona entonces a Power View en los metadatos tabulares. Power View puede entonces descargarlos y mostrar las imágenes especificadas en las direcciones URL dentro de las visualizaciones.  
@@ -179,9 +179,9 @@ ms.locfileid: "79525466"
 ## <a name="unsupported-features"></a>Características no admitidas  
  **Power View en Excel 2013** : no admite la conexión a y la creación de informes para modelos multidimensionales. Power View para modelos multidimensionales permite la exploración basada en clientes de Power View únicamente.  
   
- No se admiten **acciones** en Power View informes o en consultas DAX con un modelo multidimensional.  
+ **Acciones** : no se admiten en informes de Power View ni en consultas DAX con un modelo multidimensional.  
   
- Los **conjuntos con nombre** en modelos multidimensionales, no se admiten en Power View o en consultas DAX con un modelo multidimensional.  
+ **Conjuntos con nombre** : en los modelos multidimensionales, no se admiten en consultas DAX ni Power View con un modelo multidimensional.  
   
 > [!NOTE]  
 >  Las acciones y los conjuntos con nombre no admitidos no impiden que los usuarios se conecten a modelos multidimensionales ni los exploren con Power View.  
@@ -193,7 +193,7 @@ ms.locfileid: "79525466"
   
  Los metadatos multidimensionales se representan como un espacio de nombres de modelo tabular en un documento CSDLBI o CSDL, cuando se envía una solicitud DISCOVER_CSDL_METADATA a la instancia de Analysis Services.  
   
- **Solicitud de DISCOVER_CSDL_METADATA de ejemplo**  
+ **Solicitud DISCOVER_CSDL_METADATA de ejemplo**  
   
 ```  
 <Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -232,5 +232,5 @@ ms.locfileid: "79525466"
   
  [Descripción de los objetos del modelo multidimensional en Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Explore el modelo multidimensional de Adventure Works con Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [Explorar el modelo multidimensional de Adventure Works con Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

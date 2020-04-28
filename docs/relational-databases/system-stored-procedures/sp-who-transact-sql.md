@@ -18,10 +18,10 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 7c949e62261e710854aefda9b83a7ca20c222b78
-ms.sourcegitcommit: 86268d297e049adf454b97858926d8237d97ebe2
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78866485"
 ---
 # <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
@@ -57,16 +57,15 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
-|**spid**|**smallint**|Identificador de sesión.|  
+|**identificador**|**smallint**|Id. de sesión.|  
 |**ecid**|**smallint**|Id. de contexto de ejecución de un subproceso determinado, asociado con un Id. de sesión específico.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, donde 0 siempre representa el subproceso principal o primario, y {1, 2, 3,... *n*} representan los subprocesos.|  
-|**status**|**NCHAR (30)**|Estado del proceso. Los valores posibles son:<br /><br /> **inactivo**. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> **running**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [Usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **revertir**. La sesión está realizando una reversión de una transacción.<br /><br /> **pending**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **runnable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspended**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
-|**loginame**|**NCHAR (128)**|Nombre de inicio de sesión asociado al proceso específico.|  
-|**host**|**NCHAR (128)**|Nombre del host o equipo de cada proceso.|  
+|**status**|**NCHAR (30)**|Estado del proceso. Los valores posibles son:<br /><br /> **inactivo**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está restableciendo la sesión.<br /><br /> en **ejecución**. La sesión está ejecutando uno o varios lotes. Si Conjuntos de resultados activos múltiples (MARS) está habilitado, una sesión puede ejecutar varios lotes. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **en segundo plano**. La sesión está ejecutando una tarea en segundo plano, como una detección de interbloqueos.<br /><br /> **revertir**. La sesión está realizando una reversión de una transacción.<br /><br /> **pendiente**. La sesión está esperando que un subproceso de trabajo esté disponible.<br /><br /> **ejecutable**. La tarea de la sesión está en la cola de ejecutables de un programador mientras espera obtener un cuanto de tiempo.<br /><br /> **spinloop**. La tarea de la sesión está esperando que se libere un bloqueo por bucle.<br /><br /> **suspendido**. La sesión está esperando a que finalice un evento, como una entrada o salida.|  
+|**loginame**|**nchar(128)**|Nombre de inicio de sesión asociado al proceso específico.|  
+|**hostname**|**nchar(128)**|Nombre del host o equipo de cada proceso.|  
 |**blk**|**Char (5)**|Id. de sesión del proceso de bloqueo, si existe. De lo contrario, esta columna tiene el valor cero.<br /><br /> Cuando una transacción huérfana distribuida bloquea una transacción asociada con un Id. de sesión determinado, esta columna devolverá '-2' para la transacción huérfana de bloqueo.|  
-|**nombrebd**|**NCHAR (128)**|Base de datos utilizada por el proceso.|  
-|**inició**|**NCHAR (16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso. En SQL Server 2019, el tipo de datos ha cambiado a **NCHAR (26)**.|  
-|**id_de_solicitud**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
+|**nombrebd**|**nchar(128)**|Base de datos utilizada por el proceso.|  
+|**inició**|**nchar(16)**|Comando de [!INCLUDE[ssDE](../../includes/ssde-md.md)] (instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)], proceso de [!INCLUDE[ssDE](../../includes/ssde-md.md)] interno, etc.) que se ejecuta para el proceso. En SQL Server 2019, el tipo de datos ha cambiado a **NCHAR (26)**.|  
+|**request_id**|**int**|Id. de las solicitudes que se ejecutan en una sesión específica.|  
   
  En el caso de procesamiento paralelo, se crean subprocesos secundarios para el identificador de sesión específico. El subproceso principal se indica como `spid = <xxx>` y `ecid =0`. Los demás subprocesos tienen el mismo `spid = <xxx>`, pero con **ECID** > 0.  
   
@@ -121,7 +120,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sp_lock &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [Sys. sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

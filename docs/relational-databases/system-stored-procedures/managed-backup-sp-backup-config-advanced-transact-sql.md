@@ -21,10 +21,10 @@ ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: 64e96ad1ce6c88c814e3789f0fa6e60185ec479c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77652954"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_advanced
     ,[@local_cache_path = ] 'NOT AVAILABLE'  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @database_name  
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica. Si es NULL o *, esta copia de seguridad administrada se aplica a todas las bases de datos del servidor.  
   
@@ -98,6 +98,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [managed_backup. sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

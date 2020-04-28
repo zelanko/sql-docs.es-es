@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525446"
 ---
 # <a name="csdlbi-concepts"></a>Conceptos de CSDLBI
@@ -58,8 +58,7 @@ ms.locfileid: "79525446"
   
 ```  
   
- 
-  `EntitySet` no contiene información acerca de las columnas o los datos de la tabla. La descripción detallada de las columnas y sus propiedades se proporcionan en el elemento EntityType.  
+ `EntitySet` no contiene información acerca de las columnas o los datos de la tabla. La descripción detallada de las columnas y sus propiedades se proporcionan en el elemento EntityType.  
   
  El elemento `EntitySet` para cada entidad (tabla) incluye una colección de propiedades que definen la columna de clave, el tipo de datos y la longitud de la columna, la nulabilidad, el comportamiento de ordenación, etc. Por ejemplo, el extracto de CSDL siguiente describe tres columnas de la tabla Customer. La primera columna es una columna oculta especial que usa el modelo internamente.  
   

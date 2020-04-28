@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 891ae8c4f21d0a38302a7213aab22b8a70e855ba
-ms.sourcegitcommit: 7008c7fe451a20d6610e40bb8f61dece86c0f17e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79027946"
 ---
 # <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
@@ -48,7 +48,7 @@ ms.locfileid: "79027946"
 |**kernel_nonpaged_pool_kb**|**bigint**|Cantidad total del bloque de kernel no paginado, en KB.|  
 |**system_high_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria alta del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria alta. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
 |**system_low_memory_signal_state**|**bit**|Estado de la notificación de recursos de memoria baja del sistema. Un valor de 1 indica que Windows ha establecido la señal de memoria baja. Para obtener más información, vea [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) en MSDN Library.|  
-|**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Consulte la siguiente tabla.|  
+|**system_memory_state_desc**|**nvarchar(256)**|Descripción del estado de la memoria. Vea la tabla siguiente.|  
 |**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 |Condición|Value|  

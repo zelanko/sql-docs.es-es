@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896799"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
@@ -82,7 +82,7 @@ Una vez completada la evaluación, use nuestro [Azure Database Migration Service
 
 ## <a name="data-migration-assistant-v40"></a>Data Migration Assistant v 4.0
 
-La versión v 4.0 de Data Migration Assistant presenta la característica de recomendaciones de SKU Azure SQL Database, que permite a los usuarios identificar la SKU de Azure SQL Database mínima recomendada en función de los contadores de rendimiento recopilados en los equipos que hospedan su bases. Esta característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar todas las bases de datos en Azure de forma masiva.
+La versión v 4.0 de Data Migration Assistant presenta la característica de recomendaciones de SKU Azure SQL Database, que permite a los usuarios identificar la SKU de Azure SQL Database mínima recomendada en función de los contadores de rendimiento recopilados de los equipos que hospedan las bases de datos. Esta característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar todas las bases de datos en Azure de forma masiva.
 
 > [!NOTE]
 > Actualmente, esta funcionalidad solo está disponible a través de la interfaz de la línea de comandos (CLI).

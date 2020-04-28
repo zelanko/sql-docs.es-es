@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||= azure-sqldw-latest
 ms.openlocfilehash: a463fea7a70b5e01c26a6ff5e93c1c8c1dab32ea
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288945"
 ---
 # <a name="sysdatabase_scoped_configurations-transact-sql"></a>Sys. database_scoped_configurations (Transact-SQL)
@@ -34,13 +34,13 @@ Contiene una fila por cada configuración.
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|
 |**configuration_id**|**int**|IDENTIFICADOR de la opción de configuración.|
-|**Name**|**nvarchar (60)**|Nombre de la opción de configuración. Para obtener información sobre las posibles configuraciones, vea [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
+|**name**|**nvarchar(60)**|Nombre de la opción de configuración. Para obtener información sobre las posibles configuraciones, vea [ALTER DATABASE scoped CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|
 |**value**|**SQLVARIANT**|Valor establecido para esta opción de configuración para la réplica principal.|
 |**value_for_secondary**|**SQLVARIANT**|Valor establecido para esta opción de configuración para las réplicas secundarias.|
 |**is_value_default**|**bit** |Especifica si el conjunto de valores es el valor predeterminado.|
 |**dw_compatibility_level**|**int**|Nivel de compatibilidad (versión preliminar) de la base de datos.  Valor predeterminado = 0 (automático)|
 
-## <a name="Permissions"></a> Permisos
+## <a name="permissions"></a><a name="Permissions"></a> Permisos
 
 Debe pertenecer al rol **public** .
 

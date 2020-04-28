@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289703"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Conceder permisos de T-SQL para almacenamiento de datos paralelos
@@ -146,7 +146,7 @@ Para conceder a un usuario el permiso para controlar todas las bases de datos en
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Conceder permisos para administrar inicios de sesión, usuarios y roles de base de datos
 En esta sección se describe cómo conceder permisos para administrar inicios de sesión, usuarios de base de datos y roles de base de datos.  
   
-### <a name="PermsAdminConsole"></a>Conceder permisos para administrar inicios de sesión  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>Conceder permisos para administrar inicios de sesión  
 **Agregar o administrar inicios de sesión**  
   
 Las siguientes instrucciones SQL crean un inicio de sesión denominado KimAbercrombie que puede crear nuevos inicios de sesión mediante la instrucción [Create login](../t-sql/statements/create-login-transact-sql.md) y modificar los inicios de sesión existentes mediante la instrucción [ALTER login](../t-sql/statements/alter-login-transact-sql.md) .  
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Conceder permisos para supervisar el dispositivo
 El dispositivo PDW de SQL Server se puede supervisar mediante la consola de administración de o las vistas del sistema de PDW de SQL Server. Los inicios de sesión requieren el permiso **View Server State** en el nivel de servidor para supervisar el dispositivo. Los inicios de sesión requieren el permiso **ALTER any Connection** para finalizar las conexiones mediante la consola de administración de o el comando **Kill** . Para obtener información sobre los permisos necesarios para usar la consola de administración, consulte [conceder permisos para usar la consola de administración &#40;PDW de SQL Server&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Conceder permiso para supervisar el dispositivo mediante las vistas del sistema  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Conceder permiso para supervisar el dispositivo mediante las vistas del sistema  
 Las siguientes instrucciones SQL crean un inicio de `monitor_login` sesión denominado y concede el permiso **View Server State** al `monitor_login` inicio de sesión.  
   
 ```sql  
@@ -247,6 +247,6 @@ Para crear inicios de sesión de administrador, consulte [roles fijos de servido
   
 ## <a name="see-also"></a>Consulte también
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[CREAR USUARIO](../t-sql/statements/create-user-transact-sql.md)  
+[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
 [Cargar](load-overview.md)  

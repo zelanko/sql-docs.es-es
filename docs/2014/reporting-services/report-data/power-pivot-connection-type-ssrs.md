@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 50ce060d270cf06a771136c581bf96fe1ec21eee
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112146"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>Tipo de conexión de PowerPivot (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "79112146"
   
  Utilice la información de este tema para crear un origen de datos. Para obtener instrucciones paso a paso, vea [Agregar y comprobar una conexión de datos o un origen de datos &#40;generador de informes y SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Prerequisites  
  El origen de datos PowerPivot se debe publicar en una galería de PowerPivot en un sitio de SharePoint.  
   
  Para admitir conexiones del Generador de informes con un libro PowerPivot, debe tener SQL Server 2008 R2 ADOMD.NET en su equipo en la estación de trabajo. Esta biblioteca cliente se instala con PowerPivot para Excel, pero si está usando un equipo que no tiene esta aplicación, debe descargar e instalar ADOMD.NET de la página [Microsoft SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  

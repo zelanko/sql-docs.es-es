@@ -20,10 +20,10 @@ ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: 4bba3c8e3360bcbe269819d61f8898d0ad52c6e3
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79090576"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "79090576"
 |**originating_server_id**|**int**|Id. del servidor maestro del que procede la programación de trabajo.|  
 |**name**|**sysname (nvarchar (128))**|Nombre de la programación de trabajo definido por el usuario. Este nombre debe ser único en un trabajo.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* del usuario o grupo que posee la programación del trabajo.|  
-|**enabled**|**int**|Estado de la programación de trabajo:<br /><br /> **0** = no habilitado.<br /><br /> **1** = habilitada.<br /><br /> Si la programación no está habilitada, no se ejecutarán trabajos en la programación.|  
+|**activó**|**int**|Estado de la programación de trabajo:<br /><br /> **0** = no habilitado.<br /><br /> **1** = habilitada.<br /><br /> Si la programación no está habilitada, no se ejecutarán trabajos en la programación.|  
 |**freq_type**|**int**|Frecuencia con la que un trabajo se ejecuta para esta programación.<br /><br /> **1** = solo una vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, con respecto a **freq_interval**<br /><br /> **64** = se ejecuta cuando se inicia el servicio Agente SQL Server<br /><br /> **128** = se ejecuta cuando el equipo está inactivo|  
 |**freq_interval**|**int**|Días en que se ejecuta el trabajo. Depende del valor de **freq_type**. El valor predeterminado es **0**, que indica que **freq_interval** no se usa. Vea la tabla siguiente para ver los valores posibles y sus efectos.|  
 |**freq_subday_type**|**int**|Unidades para el **freq_subday_interval**. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> <br /><br /> **1** : en el momento especificado<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289753"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
@@ -37,7 +37,7 @@ En la siguiente ilustración se muestra la jerarquía de claves para el cifrado 
   
 ![Muestra la jerarquía](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Utilizar el cifrado de datos transparente  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Utilizar el cifrado de datos transparente  
 Para usar TDE, siga estos pasos. Los tres primeros pasos solo se realizan una vez, al preparar PDW de SQL Server para admitir TDE.  
   
 1.  Cree una clave maestra en la base de datos maestra.  
@@ -121,8 +121,8 @@ En la tabla siguiente se proporcionan vínculos y explicaciones de los comandos 
 |Comando o función|Propósito|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Crea una clave que se utiliza para cifrar una base de datos.|  
-|[MODIFICAR LA CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
-|[QUITAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Quita la clave que se utilizó para cifrar una base de datos.|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Cambia la clave que se utiliza para cifrar una base de datos.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Quita la clave que se utilizó para cifrar una base de datos.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Explica la opción **ALTER DATABASE** que se utiliza para habilitar TDE.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Vistas de catálogo y vistas de administración dinámica  
@@ -264,7 +264,7 @@ Msg 110806;
 A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
 ```  
   
-## <a name="performance-impact"></a>Impacto en el rendimiento  
+## <a name="performance-impact"></a>Impacto sobre el rendimiento  
 El impacto en el rendimiento de TDE varía con el tipo de datos que tiene, la forma en que se almacena y el tipo de actividad de la carga de trabajo en el PDW de SQL Server. Cuando está protegido por TDE, la e/s de lectura y descifrado de datos o el cifrado y, después, la escritura de datos, es una actividad con un uso intensivo de la CPU y tendrá más impacto cuando se produzcan otras actividades intensivas de CPU al mismo tiempo. Dado que TDE cifra `tempdb`, TDE puede afectar al rendimiento de las bases de datos que no están cifradas. Para obtener una idea precisa del rendimiento, debe probar todo el sistema con los datos y la actividad de la consulta.  
   
 ## <a name="related-content"></a>Contenido relacionado  

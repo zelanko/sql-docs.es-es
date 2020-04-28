@@ -1,5 +1,5 @@
 ---
-title: Documentación para herramientas de SQL Server 2014 y componentes de complementos Microsoft Docs
+title: Documentación sobre herramientas de SQL Server 2014 y componentes de complementos | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402570"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentación para los componentes de las herramientas y los complementos de SQL Server 2014
@@ -25,7 +25,7 @@ ms.locfileid: "80402570"
 |||  
 |-|-|  
 |**Herramienta**|**Descripción**|  
-|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|El Administrador de configuración es una herramienta para administrar los servicios asociados a SQL Server, para configurar los protocolos de red utilizados por este y para administrar la configuración de conectividad de red de los equipos cliente de SQL Server.|  
+|[Administrador de configuración](../relational-databases/sql-server-configuration-manager.md)|El Administrador de configuración es una herramienta para administrar los servicios asociados a SQL Server, para configurar los protocolos de red utilizados por este y para administrar la configuración de conectividad de red de los equipos cliente de SQL Server.|  
 |[SQL Server 2014 Upgrade Advisor](../sql-server/install/sql-server-2014-upgrade-advisor.md)|El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] analiza la configuración de componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalados y, a continuación, genera un informe de problemas que debe resolver para asegurar una actualización correcta.|  
 |[Complementos de minería de datos de SQL Server para Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.|  
 |[Diseñador de captura de datos modificados para Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|El Diseñador de captura de datos modificados para Oracle se emplea para desarrollar y mantener instancias CDC de Oracle.|  
@@ -33,7 +33,7 @@ ms.locfileid: "80402570"
 |[Microsoft Connector 1.1 for SAP BW](https://go.microsoft.com/fwlink/?LinkId=299181)|Microsoft Connector 1.1 for SAP BW consta de un conjunto de tres componentes que le permiten tanto extraer datos de un sistema SAP NetWeaver BW versión 7 como cargarlos en él.|  
 |[Capturar datos para reproducción del Asistente para actualización](https://go.microsoft.com/fwlink/?LinkId=299182)|El flujo de trabajo Capturar datos para reproducción del Asistente para actualización automatiza el proceso de captura del seguimiento de la carga de trabajo para reproducirlo en otro momento.|  
 |[Microsoft® ODBC Driver 11 for SQL Server® en Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 para Windows es un controlador independiente que proporciona una interfaz de programación de aplicaciones (API) que implementa las interfaces ODBC estándar en Microsoft Windows.|  
-|[ PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot para SharePoint es un servidor de Analysis Services en modo de SharePoint.|  
+|[PowerPivot para SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot para SharePoint es un servidor de Analysis Services en modo de SharePoint.|  
   
-## <a name="see-also"></a>Vea también  
- [Documentación de SQL Server 2014](../2014-toc/index.yml)  
+## <a name="see-also"></a>Consulte también  
+ [SQL Server documentación de 2014](../2014-toc/index.yml)  

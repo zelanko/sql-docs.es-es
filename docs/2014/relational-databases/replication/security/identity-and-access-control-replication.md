@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289523"
 ---
 # <a name="identity-and-access-control-replication"></a>Identidad y Access Control (replicación)
@@ -44,8 +44,8 @@ ms.locfileid: "79289523"
   Cuando configure la replicación, especifique los inicios de sesión y las contraseñas para los agentes de replicación. Después de configurar la replicación, puede cambiar los inicios de sesión y las contraseñas. Para obtener más información, vea [ver y modificar la configuración de seguridad](view-and-modify-replication-security-settings.md)de la replicación. Si cambia la contraseña de una cuenta usada por un agente de replicación, ejecute [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql).  
   
 ## <a name="see-also"></a>Consulte también  
- [Modelo de seguridad del Agente de replicación](replication-agent-security-model.md)   
- [Replication Security Best Practices](replication-security-best-practices.md)   
+ [Modelo de seguridad del agente de replicación](replication-agent-security-model.md)   
+ [Procedimientos recomendados de seguridad de la replicación](replication-security-best-practices.md)   
  [Seguridad de Replicación de SQL Server](view-and-modify-replication-security-settings.md)   
  [Amenaza de replicación y mitigación de vulnerabilidades](threat-and-vulnerability-mitigation-replication.md)   
 

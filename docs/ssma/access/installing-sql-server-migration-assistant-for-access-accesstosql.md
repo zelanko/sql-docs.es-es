@@ -23,10 +23,10 @@ ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79111908"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
@@ -61,7 +61,7 @@ Después de descargar la versión más reciente, debe extraer los archivos de in
   
 1.  Haga doble clic en SSMA para Access *n*. msi, donde *n* es el número de compilación.  
   
-2.  En la página de bienvenida, haga clic en **siguiente**.  
+2.  En la página de bienvenida, haga clic en **Siguiente**.  
   
     Si no tiene instalados los requisitos previos, aparece un mensaje que indica que primero debe instalar los componentes necesarios. Asegúrese de que ha instalado todos los requisitos previos y, a continuación, vuelva a ejecutar el programa de instalación.  
   
@@ -88,7 +88,7 @@ Si desea actualizar a una versión posterior de SSMA para el acceso, primero deb
 Si abre un proyecto creado en una versión anterior de SSMA para Access, SSMA le pregunta si desea convertir el proyecto a la versión más reciente. Haga clic en **sí** para trabajar con el proyecto en la versión más reciente de SSMA.  
   
 ## <a name="see-also"></a>Consulte también  
-[Preparación de bases de datos de Access para migración](preparing-access-databases-for-migration-accesstosql.md)  
+[Preparar las bases de datos de Access para la migración](preparing-access-databases-for-migration-accesstosql.md)  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Vincular aplicaciones de Access a SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)  
   

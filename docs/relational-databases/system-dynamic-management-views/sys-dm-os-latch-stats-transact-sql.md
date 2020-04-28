@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289913"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -35,7 +35,7 @@ Devuelve información acerca de todas las esperas de bloqueos temporales organiz
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar (120)**|Nombre de la clase de bloqueo temporal.|  
+|latch_class|**nvarchar(120)**|Nombre de la clase de bloqueo temporal.|  
 |waiting_requests_count|**bigint**|Número de esperas en bloqueos temporales en esta clase Este recuento se incrementa al inicio de una espera de bloqueo temporal.|  
 |wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** Esta columna se actualiza cada cinco minutos durante una espera de bloqueo temporal y al final de una espera de bloqueo temporal.|  
 |max_wait_time_ms|**bigint**|Tiempo máximo que un objeto de memoria ha esperado en este bloqueo temporal. Si este valor es extraordinariamente alto, puede indicar un bloqueo interno.|  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  Estas estadísticas no permanecen si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Todos los datos se acumulan desde la última vez que se restablecieron las estadísticas o desde que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="latches"></a>Bloqueos temporales  
+## <a name="latches"></a><a name="latches"></a>Bloqueos temporales  
  Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en varios componentes. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
   
  Una espera de bloqueo temporal se produce cuando no se puede conceder una solicitud de bloqueo temporal inmediatamente, porque otro subproceso mantiene el bloqueo temporal en un modo de conflictos. A diferencia de los bloqueos, un bloqueo temporal se libera inmediatamente después de la operación, incluso en operaciones de escritura.  
@@ -74,8 +74,7 @@ GO
   
 |Clase de bloqueo temporal|Descripción|  
 |-----------------|-----------------|  
-|ALLOC_CREATE_RINGBUF|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utiliza internamente para inicializar la sincronización de la creación de un búfer de anillo de asignación.|  
+|ALLOC_CREATE_RINGBUF|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lo utiliza internamente para inicializar la sincronización de la creación de un búfer de anillo de asignación.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Se utiliza para inicializar la sincronización de cachés de espacio libre interno para montones.|  
 |ALLOC_CACHE_MANAGER|Se utiliza para sincronizar pruebas de coherencia internas.|  
 |ALLOC_FREESPACE_CACHE|Se utiliza para sincronizar el acceso a una caché de páginas con espacio disponible para montones y objetos binarios grandes (BLOB). La contención de bloqueos temporales de esta clase puede producirse cuando varias conexiones intentan insertar filas en un montón o BLOB simultáneamente. Puede reducir la contención si particiona el objeto. Cada partición tiene su propio bloqueo temporal. La creación de particiones distribuirá las inserciones en varios bloqueos temporales.|  

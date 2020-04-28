@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) Microsoft Docs
+title: Sys. dm_server_registry (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530824"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -33,8 +33,8 @@ ms.locfileid: "80530824"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Nombre de clave del Registro. Acepta valores NULL.|  
-|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en la columna **Nombre** del Editor del Registro. Acepta valores NULL.|  
-|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor que se muestra en la columna **Datos** del Editor del Registro para una entrada determinada. Acepta valores NULL.|  
+|value_name|**nvarchar(256)**|Nombre del valor de clave. Este es el elemento que se muestra en la columna **nombre** del editor del registro. Acepta valores NULL.|  
+|value_data|**sql_variant**|Valor de los datos de la clave. Este es el valor que se muestra en la columna de **datos** del editor del registro para una entrada determinada. Acepta valores NULL.|  
   
 ## <a name="security"></a>Seguridad  
   
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sys.dm_server_services &#40;Transact-SQLTransact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [Sys. dm_server_services &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

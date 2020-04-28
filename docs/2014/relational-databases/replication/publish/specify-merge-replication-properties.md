@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289533"
 ---
 # <a name="specify-merge-replication-properties"></a>Especificar propiedades de replicación de mezcla
@@ -33,7 +33,7 @@ En este tema se explica cómo especificar varias propiedades para la replicació
 -   Si se especifica que un artículo es de solo descarga después de haber inicializado las suscripciones, deben reinicializarse todas las suscripciones de cliente que reciben el artículo. No se tienen que reinicializar las suscripciones de servidor. Para obtener más información sobre los efectos de los cambios de propiedad, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ### <a name="using-sql-server-management-studio"></a>Uso de SQL Server Management Studio  
- Especifique que un artículo es de solo descarga en la página **Artículos** del Asistente para nueva publicación o en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**. Este cuadro de diálogo está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md).  
+ Especifique que un artículo es de solo descarga en la página **Artículos** del Asistente para nueva publicación o en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**. Este cuadro de diálogo está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-articles-page"></a>Para especificar que un artículo es de solo descarga en la página Artículos  
   
@@ -43,7 +43,7 @@ En este tema se explica cómo especificar varias propiedades para la replicació
   
 1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla y luego haga clic en **Propiedades del artículo**.    
 2.  Haga clic en **Establecer propiedades del artículo de Tabla resaltado** o **Establecer propiedades de todos los artículos de la tabla**.    
-3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , especifique uno de los siguientes valores para **Dirección de la sincronización**:    
+3.  En la sección **Objeto de destino** de la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, especifique uno de los siguientes valores para **Dirección de la sincronización**:    
     -   **Solo descargar en suscriptor y prohibir cambios del suscriptor**    
     -   **Solo descargar en suscriptor y permitir cambios del suscriptor**  
   
@@ -72,11 +72,11 @@ En este tema se explica cómo especificar varias propiedades para la replicació
         > [!NOTE]  
         >  Si la tabla de origen de un artículo ya está publicada en otra publicación, el comportamiento de solo descarga debe ser el mismo para ambos artículos.  
  
-## <a name="interactive-conflict-resolution">Resolución interactiva de conflictos</a>
+## <a name=""></a><a name="interactive-conflict-resolution">Resolución interactiva de conflictos</a>
 [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la replicación proporciona un solucionador interactivo, que permite resolver conflictos manualmente durante la sincronización a petición en el administrador [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de sincronización de Windows. Una vez habilitada la resolución interactiva, resuelva los conflictos interactivamente durante la sincronización, mediante el Solucionador interactivo. El Solucionador interactivo está disponible a través del Administrador de sincronización de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Para más información, vea [Sincronizar una suscripción mediante el Administrador de sincronización de Windows &#40;Administrador de sincronización de Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
-###  <a name="Recommendations"></a> Recomendaciones  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
   
 -   Si se realiza una sincronización fuera del Administrador de sincronización de Windows (como una sincronización programada o una sincronización a petición en SQL Server Management Studio o el Monitor de replicación), los conflictos se resuelven automáticamente sin la intervención del usuario, utilizando la resolución especificada para el artículo. Para obtener más información, consulte [Interactive Conflict Resolution](../merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
@@ -84,16 +84,16 @@ En este tema se explica cómo especificar varias propiedades para la replicació
   
 #### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Habilitación de la resolución interactiva de conflictos para un artículo  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).    
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).    
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.    
-3.  En la página **Propiedades del artículo - \<Artículo>** o **Propiedades del artículo - \<ArticleType>** , haga clic en la pestaña **Resolución**.    
+3.  En la página **Propiedades del artículo - \<Artículo>** o **Propiedades del artículo - \<ArticleType> **, haga clic en la pestaña **Resolución**.    
 4.  Seleccione **Permitir que el suscriptor resuelva los conflictos de modo interactivo durante la sincronización a petición**.    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
 6.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Para especificar que una suscripción debe utilizar la resolución interactiva de conflictos  
   
-1.  En el cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>** , especifique el valor **True** para la opción **Solucionar conflictos de manera interactiva**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
+1.  En el cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>**, especifique el valor **True** para la opción **Solucionar conflictos de manera interactiva**. Para obtener más información acerca de cómo obtener acceso a este cuadro de diálogo, vea [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) y [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Usar Transact-SQL  
@@ -122,19 +122,19 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
   
 
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si modifica el nivel de seguimiento después de que se hayan inicializado las suscripciones, se deben reinicializar dichas suscripciones. Para obtener más información sobre los efectos de los cambios de propiedad, vea [Change Publication and Article Properties](../publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).    
 -   Con el seguimiento por columna y por fila, la resolución de conflictos se realiza siempre en el nivel de fila: la fila ganadora sobrescribe la fila perdedora. La replicación de mezcla también le permite especificar que se realice un seguimiento de los conflictos y se resuelvan en el nivel de registro lógico, pero dichas opciones no están disponibles en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Para obtener información acerca de cómo establecer estas opciones con procedimientos almacenados de replicación, vea [Definir una relación de registros lógicos entre artículos de tabla de mezcla](../publish/define-a-logical-record-relationship-between-merge-table-articles.md).  
   
-###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Especifique seguimiento de nivel de columna o fila para los artículos de mezcla en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo**, disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md).  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Especifique seguimiento de nivel de columna o fila para los artículos de mezcla en la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo**, disponible en el Asistente para nueva publicación y el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="specify-row--or-column-level-tracking"></a>Especificación del seguimiento por fila o columna  
   
-1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione una tabla.    
+1.  En la página **Artículos** del Asistente para nueva publicación o en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione una tabla.    
 2.  Haga clic en **Propiedades del artículo**y, a continuación, haga clic en **Establecer propiedades del artículo de tabla resaltado** o en **Establecer propiedades de todos los artículos de la tabla**.   
-3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>** , seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por fila** o **Seguimiento por columna**.    
+3.  En la pestaña **Propiedades** del cuadro de diálogo **Propiedades del artículo: \<artículo>**, seleccione uno de los valores siguientes para la propiedad **Nivel de seguimiento**: **Seguimiento por fila** o **Seguimiento por columna**.    
 4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 ###  <a name="using-transact-sql"></a>Usar Transact-SQL  
@@ -211,9 +211,9 @@ Cuando se sincroniza una suscripción a una publicación de combinación, la rep
 
 ## <a name="see-also"></a>Consulte también  
  [Optimizar el rendimiento de la replicación de mezcla con seguimiento condicional de eliminaciones](../merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
- [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Detección y resolución de conflictos en registros lógicos](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
  [Definir una relación de registros lógicos entre los artículos de tabla de mezcla](define-a-logical-record-relationship-between-merge-table-articles.md)   
  [Detectar y resolver conflictos de replicación de mezcla](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../merge/optimize-merge-replication-performance-with-download-only-articles.md)   
- [Define an Article](define-an-article.md)   
+ [Definir un artículo](define-an-article.md)   
  [er y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  

@@ -1,5 +1,5 @@
 ---
-title: Reservas de direcciones URL para implementaciones de servidor de informes de varias instancias (Administrador de configuración de SSRS) Microsoft Docs
+title: Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (SSRS Configuration Manager) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c91db169984bbb2969a8339ed20e8e6bc5b804b6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380696"
 ---
 # <a name="url-reservations-for-multi-instance-report-server-deployments--ssrs-configuration-manager"></a>Reservas de direcciones URL para implementaciones del servidor de informes de varias instancias (Administrador de configuración de SSRS)
@@ -47,8 +47,8 @@ ms.locfileid: "80380696"
 ## <a name="uniqueness-requirements"></a>Requisitos de unicidad  
  Las tecnologías subyacentes utilizadas por [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] imponen los requisitos relativos a nombres únicos. HTTP.SYS requiere que todas las direcciones URL de su repositorio sean únicas. Puede cambiar el puerto, el nombre de host o el nombre de directorio virtual para crear una dirección URL única. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requiere que las identidades de aplicaciones sean únicas en el mismo proceso. Este requisito afecta a los nombres de directorio virtuales. Especifica que no se puede duplicar un nombre de directorio virtual en la misma instancia del servidor de informes.  
   
-## <a name="see-also"></a>Vea también  
- [Configurar las direcciones URL del servidor de informes &#40;administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+## <a name="see-also"></a>Consulte también  
+ [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

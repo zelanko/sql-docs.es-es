@@ -1,5 +1,5 @@
 ---
-title: Archivos de encabezado ODBC ( ODBC Header Files) Microsoft Docs
+title: Archivos de encabezado ODBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: 96f97ba3-7e73-4196-abfb-036c5f6d1903
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 0e3a4b550660b0f669b0b7dd790ab2fbb5fbdd33
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81288935"
 ---
 # <a name="odbc-header-files"></a>Archivos de encabezado de ODBC
 > [!NOTE]  
->  No es necesaria la redistribución de archivos de encabezado ODBC. Ninguno se considera "Core".  
+>  No es necesario redistribuir los archivos de encabezado ODBC. Ninguno se considera "principal".  
   
  **Archivos de encabezado**  
   
- Odbcinst.h  
+ Odbcinst. h  
   
- Sql.h  
+ SQL. h  
   
- Sqlext.h  
+ Sqlext. h  
   
- Sqltypes.h  
+ SqlTypes. h  
   
- Sqlucode.h  
+ Sqlucode. h  
   
- Msdasql.h  
+ MSDASQL. h  
   
- Msdadc.h  
+ Msdadc. h  
   
- Sqlspi.h (utilizado para el desarrollo de controladores, vea Referencia de la interfaz de proveedor de servicios [ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) para obtener más información) disponible a partir del SDK de Windows 8.
+ Sqlspi. h (se usa para el desarrollo de controladores, vea referencia de la [interfaz del proveedor de servicios ODBC (SPI)](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) para obtener más información) disponible a partir del SDK de Windows 8.

@@ -1,5 +1,5 @@
 ---
-title: Nombres de correlación ? Microsoft Docs
+title: Nombres de correlación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dfe0655ace4bbd622dfb80b833f49562732394e2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280965"
 ---
 # <a name="correlation-names"></a>Nombres de correlación
-Los nombres de correlación son totalmente compatibles, incluso dentro de la lista de tablas. Por ejemplo, en la siguiente cadena, E1 es el nombre de correlación para la tabla denominada Emp:  
+Los nombres de correlación son totalmente compatibles, incluido en la lista de tablas. Por ejemplo, en la siguiente cadena, E1 es el nombre de correlación de la tabla denominada EMP:  
   
 ```  
 SELECT * FROM Emp E1   

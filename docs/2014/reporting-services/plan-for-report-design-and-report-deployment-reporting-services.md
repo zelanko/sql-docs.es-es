@@ -1,5 +1,5 @@
 ---
-title: Planificar el diseño de informes y la implementación de informes (Reporting Services 2014) Microsoft Docs
+title: Planear el diseño y la implementación de informes (Reporting Services 2014) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380826"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planear el diseño y la implementación de informes (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para crear e implementar informes. Use este tema como ayuda para planear un entorno de creación de informes y un servidor de informes que operen juntos. En este tema se proporciona información general sobre la compatibilidad de definición de informe por componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definición de informe es un archivo XML que se escribe en lenguaje RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Cada definición de informe cumple una versión de esquema específica que aparece al comienzo del archivo.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona varios enfoques para la creación e implementación de informes. Use este tema como ayuda para planear un entorno de creación de informes y un servidor de informes que operen juntos. En este tema se proporciona información general sobre la compatibilidad de definición de informe por componentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Una definición de informe es un archivo XML que se escribe en lenguaje RDL (Report Definition Language) o RDLC (Report Definition Language for Clients). Cada definición de informe cumple una versión de esquema específica que aparece al comienzo del archivo.  
   
  Los archivos RDL se crean en el Diseñador de informes en los proyectos de [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] y en el Generador de informes 3.0. Los archivos RDLC se crean mediante los controles ReportViewer que se incluyen en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
@@ -28,7 +28,7 @@ ms.locfileid: "80380826"
   
 -   [Compatibilidad con el servidor de informes y el esquema RDL](#bkmk_report_server_rdl_schema_support)  
   
--   [Soporte de creación e implementación de informes](#bkmk_report_authoring_and_deployment)  
+-   [Compatibilidad con la creación e implementación de informes](#bkmk_report_authoring_and_deployment)  
   
 -   [Controles ReportViewer](#bkmk_reportviewer)  
   
@@ -98,7 +98,7 @@ ms.locfileid: "80380826"
   
 -   [Implementación y compatibilidad de versiones en las herramientas de datos de SQL Server &#40;SSRS&#41;](tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   Herramientas de datos de [Microsoft SQL Server - Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
+-   [Microsoft SQL Server Data Tools-Business Intelligence para Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 ##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Controles ReportViewer  
  Un control ReportViewer de [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] puede mostrar un informe .rdlc en el modo de vista previa local o, en modo remoto, el control puede mostrar un archivo .rdl hospedado en un servidor de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . En la tabla siguiente se muestra la lista de versiones RDL que admiten los controles ReportViewer para el procesamiento local (.rdlc). La compatibilidad con el lenguaje RDL de servidor se resume en la sección [Compatibilidad del servidor de informes y el esquema RDL](#bkmk_report_server_rdl_schema_support).  
@@ -108,7 +108,7 @@ ms.locfileid: "80380826"
 |[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Or<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Or<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Or<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
   
- Para obtener más información, vea lo siguiente:   
+ Para obtener más información, vea lo siguiente:  
   
 -   [Convertir archivos RDLC en archivos RDL](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -116,9 +116,9 @@ ms.locfileid: "80380826"
   
 -   [Agregar y configurar los controles ReportViewer](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Vea también  
- [Informes, elementos de informe y definiciones de informe&#40;Generador de informes y SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Herramientas de Reporting ServicesReporting Services](tools/reporting-services-tools.md)   
+## <a name="see-also"></a>Consulte también  
+ [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Herramientas de Reporting Services](tools/reporting-services-tools.md)   
  [Lenguaje RDL (Report Definition Language) &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)  
   
   

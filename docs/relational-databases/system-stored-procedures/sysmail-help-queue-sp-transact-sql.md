@@ -18,10 +18,10 @@ ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d506d7ea841e211d9ab6fb0715a6a9359cefa83d
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289953"
 ---
 # <a name="sysmail_help_queue_sp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
@@ -50,7 +50,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar (6)**|Tipo de cola. Los valores posibles son **mail** y **status**.|  
 |**length**|**int**|Número de elementos de correo de la cola especificada.|  
-|**State**|**nvarchar (64)**|Estado del monitor. Los valores posibles son **INactivos** (la cola está inactiva), se **notifican** (se ha notificado a la cola que se ha recibido) y **RECEIVES_OCCURRING** (la cola está recibiendo).|  
+|**state**|**nvarchar (64)**|Estado del monitor. Los valores posibles son **INactivos** (la cola está inactiva), se **notifican** (se ha notificado a la cola que se ha recibido) y **RECEIVES_OCCURRING** (la cola está recibiendo).|  
 |**last_empty_rowset_time**|**DATETIME**|Fecha y hora en que la cola estuvo vacía por última vez. En formato de hora militar y zona horaria GMT.|  
 |**last_activated_time**|**DATETIME**|Fecha y hora en que la cola se activó por última vez. En formato de hora militar y zona horaria GMT.|  
   

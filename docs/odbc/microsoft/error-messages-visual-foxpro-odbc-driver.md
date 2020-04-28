@@ -1,5 +1,5 @@
 ---
-title: Mensajes de error (controlador ODBC de Visual FoxPro) Microsoft Docs
+title: Mensajes de error (controlador ODBC de Visual FoxPro) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 58ea9734-4edf-44da-ba80-938aa7b340e4
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 31f894e58da93fe6091dba306f8b765d14bac2cb
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81286405"
 ---
 # <a name="error-messages-visual-foxpro-odbc-driver"></a>Mensajes de error (el controlador ODBC de Visual FoxPro)
@@ -27,30 +27,30 @@ Cuando se produce un error, el controlador de Visual FoxPro devuelve la siguient
   
 -   El número de error nativo y el texto del mensaje de error  
   
--   SQLSTATE (un código de error ODBC) y el texto del mensaje de error  
+-   SQLSTATE (código de error ODBC) y texto del mensaje de error  
   
- Puede acceder a esta información de error llamando a [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
+ Para obtener acceso a esta información de error, se llama a [SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md).  
   
 ## <a name="native-errors"></a>Errores nativos  
- Para los errores que se producen en el origen de datos, el controlador de Visual FoxPro devuelve el número de error nativo y el texto del mensaje de error. Para obtener una lista de números de error nativos, vea Mensajes de [error nativos del controlador ODBC](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md)de Visual FoxPro .  
+ En el caso de los errores que se producen en el origen de datos, el controlador de Visual FoxPro devuelve el número de error nativo y el texto del mensaje de error. Para obtener una lista de números de error nativos, consulte [los mensajes de error nativos del controlador ODBC de Visual FoxPro](../../odbc/microsoft/visual-foxpro-odbc-driver-native-error-messages.md).  
   
 ## <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (códigos de error ODBC)  
- Para los errores detectados y devueltos por el controlador de Visual FoxPro, el controlador asigna el número de error nativo devuelto al SQLSTATE adecuado. Si un número de error nativo no tiene un código de error ODBC al que asignarse, el controlador de Visual FoxPro devuelve SQLSTATE S1000 (error general).  
+ En el caso de los errores detectados y devueltos por el controlador de Visual FoxPro, el controlador asigna el número de error nativo devuelto al SQLSTATE adecuado. Si un número de error nativo no tiene un código de error ODBC al que asignar, el controlador de Visual FoxPro devuelve SQLSTATE S1000 (error general).  
   
- Para obtener una lista de los valores SQLSTATE generados por el controlador ODBC de Visual FoxPro para los errores de Visual FoxPro correspondientes, vea [Códigos](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md)de error ODBC .  
+ Para obtener una lista de los valores SQLSTATE generados por el controlador ODBC de Visual FoxPro para los errores de Visual FoxPro correspondientes, vea [códigos de error ODBC](../../odbc/microsoft/odbc-error-codes-visual-foxpro-odbc-driver.md).  
   
 ## <a name="syntax"></a>Sintaxis  
  Los mensajes de error tienen el siguiente formato:  
   
- **[** *proveedor* **][** *ODBC_component* **]** *error_message*  
+ **[** *proveedor* **] [** *ODBC_component* **]** *error_message*  
   
- Los prefijos entre corchetes ([ ]) identifican el origen del error tal como se define en la tabla siguiente.  
+ Los prefijos entre corchetes ([]) identifican el origen del error tal y como se define en la tabla siguiente.  
   
 |Origen de datos|Prefijo|Value|  
 |-----------------|------------|-----------|  
-|Administrador de controladores|[proveedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Administrador de controladores ODBC]<br />N/D|  
-|Controlador Visual FoxPro|proveedor]<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Controlador ODBC Visual FoxPro]<br />N/D|  
+|Administrador de controladores|proveedor<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Administrador de controladores ODBC]<br />N/D|  
+|Controlador de Visual FoxPro|proveedor<br />[ODBC_component]<br />[data_source]|[Microsoft]<br />[Controlador ODBC para Visual FoxPro]<br />N/D|  
   
- Por ejemplo, si el controlador ODBC de Visual FoxPro no pudo encontrar el archivo employee.dbf, podría devolver el siguiente mensaje de error:  
+ Por ejemplo, si el controlador ODBC de Visual FoxPro no encontró el archivo Employee. DBF, podría devolver el mensaje de error siguiente:  
   
- "[*Microsoft*][*ODBC Visual FoxPro Driver*]El archivo 'employee.dbf' no existe"
+ "[*Microsoft*] [*controlador ODBC para Visual FoxPro*] el archivo ' Employee. DBF ' no existe

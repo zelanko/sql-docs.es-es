@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 18575c95602f73baa959d35b176cf16220fc8e64
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112160"
 ---
 # <a name="integration-services-ssis-connections"></a>Conexiones de Integration Services (SSIS)
@@ -72,16 +72,16 @@ ms.locfileid: "79112160"
 |ADO.NET|Se conecta a un origen de datos mediante un proveedor .NET.|[Administrador de conexiones ADO.NET](ado-net-connection-manager.md)|  
 |CACHE|Lee los datos del flujo de datos o de un archivo caché (.caw) y puede guardar los datos en el archivo caché.|[Administrador de conexiones de caché](cache-connection-manager.md)|  
 |DQS|Conecta a un servidor de Data Quality Services y una base de datos de Data Quality Services en el servidor.|[Administrador de conexiones de limpieza de DQS](dqs-cleansing-connection-manager.md)|  
-|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones de Excel](excel-connection-manager.md)|  
+|EXCEL|Se conecta a un archivo de libro de Excel.|[Administrador de conexiones con Excel](excel-connection-manager.md)|  
 |FILE|Se conecta a un archivo o carpeta.|[administrador de conexiones de archivos](file-connection-manager.md)|  
 |FLATFILE|Se conecta a los datos en un solo archivo plano.|[Administrador de conexiones de archivos planos](flat-file-connection-manager.md)|  
 |FTP|Se conecta a un servidor FTP.|[FTP, administrador de conexiones](ftp-connection-manager.md)|  
 |HTTP|Se conecta a un servidor web.|[HTTP, administrador de conexiones](http-connection-manager.md)|  
 |MSMQ|Se conecta a una cola de mensajes.|[MSMQ, administrador de conexiones](msmq-connection-manager.md)|  
-|MSOLAP100|Se conecta a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto de.|[Administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
+|MSOLAP100|Se conecta a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] un proyecto de.|[administrador de conexiones de Analysis Services](analysis-services-connection-manager.md)|  
 |MULTIFILE|Se conecta a varios archivos y carpetas.|[administrador de conexiones de varios archivos](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Se conecta a varios archivos y carpetas de datos.|[administrador de conexiones de varios archivos planos](multiple-flat-files-connection-manager.md)|  
-|OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[OLE DB, administrador de conexiones](ole-db-connection-manager.md)|  
+|OLEDB|Se conecta a un origen de datos mediante un proveedor OLE DB.|[Administrador de conexiones OLE DB](ole-db-connection-manager.md)|  
 |ODBC|Se conecta a un origen de datos mediante ODBC.|[ODBC, administrador de conexiones](odbc-connection-manager.md)|  
 |SMOServer|Se conecta a un servidor de objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).|[SMO, administrador de conexiones](smo-connection-manager.md)|  
 |SMTP|Se conecta a un servidor de correo SMTP.|[Administrador de conexiones SMTP](smtp-connection-manager.md)|  
@@ -96,12 +96,9 @@ ms.locfileid: "79112160"
   
 |Tipo|Descripción|Tema|  
 |----------|-----------------|-----------|  
-|ORACLE|Se conecta a un \<servidor de> de información de versión de Oracle.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
-|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
-|TERADATA|Se conecta a un \<servidor de> de información de versión de Teradata.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Se conecta a un \<servidor de> de información de versión de Oracle.|El administrador de conexiones de Oracle es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|SAPBI|Se conecta a un sistema SAP NetWeaver BI versión 7.|El administrador de conexiones de SAP BI es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para SAP BI incluye también un origen y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=30440).|  
+|TERADATA|Se conecta a un \<servidor de> de información de versión de Teradata.|El administrador de conexiones de Teradata es el componente de administrador de conexiones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector para Teradata de Attunity incluye también un origen y un destino. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Administradores de conexión personalizados  
  Puede crear también administradores de conexión personalizados. Para obtener más información, vea [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
@@ -121,6 +118,6 @@ ms.locfileid: "79112160"
   
 -   Artículo técnico [Extraer y cargar datos de SharePoint de SQL Server Integration Services](https://go.microsoft.com/fwlink/?LinkId=247826), en msdn.microsoft.com.  
   
--   El artículo técnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696) (Aparece el mensaje de error "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" al usar el administrador de conexiones de Oracle en SSIS), en support.microsoft.com.  
+-   El artículo técnico [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](https://go.microsoft.com/fwlink/?LinkId=233696)(Aparece el mensaje de error "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" al usar el administrador de conexiones de Oracle en SSIS), en support.microsoft.com.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_database_encryption_keys (Transact-SQL) Microsoft Docs
+title: Sys. dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6e716c826fd366fda4505b7fcf9ec8e3b756ec25
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80531049"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
@@ -36,36 +36,36 @@ ms.locfileid: "80531049"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Identificador de la base de datos.|  
 |encryption_state|**int**|Indica si la base de datos está cifrada o no.<br /><br /> 0 = Ninguna clave de cifrado de la base de datos, sin cifrado<br /><br /> 1 = Sin cifrar<br /><br /> 2 = Cifrado en curso<br /><br /> 3 = Cifrado<br /><br /> 4 = Cambio de clave en curso<br /><br /> 5 = Descifrado en curso<br /><br /> 6 = Cambio de protección en curso (El certificado o clave asimétrica que cifra la clave de cifrado de la base de datos se está cambiando).|  
-|create_date|**datetime**|Muestra la fecha (en UTC) que se creó la clave de cifrado.|  
-|regenerate_date|**datetime**|Muestra la fecha (en UTC) que se ha regenerado la clave de cifrado.|  
-|modify_date|**datetime**|Muestra la fecha (en UTC) que se modificó la clave de cifrado.|  
-|set_date|**datetime**|Muestra la fecha (en UTC) que la clave de cifrado se aplicó a la base de datos.|  
-|opened_date|**datetime**|Muestra cuándo (en UTC) se abrió por última vez la clave de base de datos.|  
+|create_date|**datetime**|Muestra la fecha (en UTC) con la que se creó la clave de cifrado.|  
+|regenerate_date|**datetime**|Muestra la fecha (en UTC) en que se volvió a generar la clave de cifrado.|  
+|modify_date|**datetime**|Muestra la fecha (en UTC) con la que se modificó la clave de cifrado.|  
+|set_date|**datetime**|Muestra la fecha (en UTC) con la que se aplicó la clave de cifrado a la base de datos.|  
+|opened_date|**datetime**|Muestra Cuándo (en UTC) se abrió por última vez la clave de base de datos.|  
 |key_algorithm|**nvarchar(32)**|Muestra el algoritmo utilizado por la clave.|  
 |key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbinary(20)**|Muestra la huella digital del sistema de cifrado.|  
-|encryptor_type|**nvarchar(32)**|**Se**aplica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a : ( a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
+|encryptor_type|**nvarchar(32)**|**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
 |percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|
-|encryption_state_desc|**nvarchar(32)**|Se aplica [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a : y versiones **posteriores.**<br><br> Cadena que indica si la base de datos está cifrada o no.<br><br>Ninguno<br><br>Sin cifrar<br><br>Encriptados<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|Se aplica [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a : y versiones **posteriores.**<br><br>Indica el estado actual del análisis de cifrado. <br><br>0 - No se ha iniciado ninguna exploración, TDE no está habilitado<br><br>1 • El análisis está en curso.<br><br>2 • El análisis está en curso, pero se ha suspendido, el usuario puede reanudar.<br><br>3 • El análisis se ha anulado por alguna razón, se requiere la intervención manual. Póngase en contacto con el soporte técnico de Microsoft para obtener más ayuda.<br><br>4 - El análisis se ha completado correctamente, tDE está habilitado y el cifrado se ha completado.|
-|encryption_scan_state_desc|**nvarchar(32)**|Se aplica [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a : y versiones **posteriores.**<br><br>Cadena que indica el estado actual del análisis de cifrado.<br><br> Ninguno<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>íntegro|
-|encryption_scan_modify_date|**datetime**|Se aplica [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] a : y versiones **posteriores.**<br><br> Muestra la fecha (en UTC) que el estado de análisis de cifrado se modificó por última vez.|
+|encryption_state_desc|**nvarchar(32)**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Cadena que indica si la base de datos está cifrada o no está cifrada.<br><br>Ninguno<br><br>SIN cifrar<br><br>CIFRA<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Indica el estado actual del examen de cifrado. <br><br>0 = no se ha iniciado ningún examen, TDE no está habilitado<br><br>1 = el examen está en curso.<br><br>2 = el examen está en curso, pero se ha suspendido, el usuario se puede reanudar.<br><br>3 = el examen se ha anulado por alguna razón, se requiere la intervención manual. Póngase en contacto con Soporte técnico de Microsoft para obtener más ayuda.<br><br>4 = el examen se ha completado correctamente, TDE está habilitado y el cifrado se ha completado.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Cadena que indica el estado actual del examen de cifrado.<br><br> Ninguno<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>FINALIZA|
+|encryption_scan_modify_date|**datetime**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Muestra la fecha (en UTC) en que se modificó por última vez el estado de examen de cifrado.|
   
 ## <a name="permissions"></a>Permisos
 
-On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], `VIEW SERVER STATE` requiere permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, `VIEW DATABASE STATE` requiere el permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Estándar y Básico, requiere el administrador del **servidor** o una cuenta de administrador de **Azure Active Directory.**   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte también  
 
- [Las funciones y vistas de administración dinámica relacionadas con la seguridad &#40;Transact-SQLTransact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Cifrado de datos transparente &#40;&#41;TDE](../../relational-databases/security/encryption/transparent-data-encryption.md)   
+ [Funciones y vistas de administración dinámica relacionadas con la seguridad &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
  [Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
- [Claves de cifrado de base de datos y SQL Server&#40;Motor de base de datosDatabase Engine&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
+ [SQL Server y claves de cifrado de base de datos &#40;Motor de base de datos&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
  [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
- [ALTER DATABASE SET Options &#40;Transact-SQLTransact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
- [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQLTransact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
- [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQLTransact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
+ [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [CREAR la clave de CIFRAdo de base de datos &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
+ [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
  [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   

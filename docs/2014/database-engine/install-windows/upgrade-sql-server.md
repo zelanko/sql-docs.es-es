@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217140"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Actualizar a SQL Server 2014
@@ -54,7 +54,7 @@ ms.locfileid: "79217140"
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos de actualización](upgrade-database-engine.md)   
  [Analysis Services de actualización](upgrade-analysis-services.md)   
- [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
+ [Actualización y migración de Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
  [Integration Services de actualización](../../integration-services/install-windows/upgrade-integration-services.md)   
  [Actualización de bases de datos replicadas](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Master Data Services de actualización](upgrade-master-data-services.md)   

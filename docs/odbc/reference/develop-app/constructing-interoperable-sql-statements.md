@@ -1,5 +1,5 @@
 ---
-title: Construyendo instrucciones SQL interoperables Microsoft Docs
+title: Construir instrucciones SQL interoperables | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,18 +14,18 @@ ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1eccdef63b7d06a456a07f5f1a9ccad987d2de29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81282528"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Crear instrucciones SQL Interoperable
-Como se mencionó en las secciones anteriores, las aplicaciones interoperables deben usar la gramática SQL ODBC. Sin embargo, más allá de utilizar esta gramática, se enfrentan a una serie de problemas adicionales por aplicaciones interoperables. Por ejemplo, ¿qué hace una aplicación si desea utilizar una característica, como combinaciones externas, que no es compatible con todos los orígenes de datos?  
+Como se mencionó en las secciones anteriores, las aplicaciones interoperables deben usar la gramática de SQL de ODBC. Sin embargo, además de utilizar esta gramática, las aplicaciones interoperables pueden enfrentarse a una serie de problemas adicionales. Por ejemplo, ¿qué hace una aplicación si quiere usar una característica, como combinaciones externas, que no es compatible con todos los orígenes de datos?  
   
- En este punto, el escritor de aplicaciones debe tomar algunas decisiones sobre qué características de lenguaje son necesarias y cuáles son opcionales. En la mayoría de los casos, si un controlador determinado no admite una característica requerida por la aplicación, la aplicación simplemente se niega a ejecutarse con ese controlador. Sin embargo, si la característica es opcional, la aplicación puede evitar la característica. Por ejemplo, podría deshabilitar las partes de la interfaz que permiten al usuario utilizar la característica.  
+ En este momento, el escritor de la aplicación debe tomar algunas decisiones sobre qué características del lenguaje son necesarias y cuáles son opcionales. En la mayoría de los casos, si un controlador determinado no es compatible con una característica requerida por la aplicación, la aplicación simplemente se niega a ejecutar con ese controlador. Sin embargo, si la característica es opcional, la aplicación puede funcionar en torno a la característica. Por ejemplo, podría deshabilitar las partes de la interfaz que permiten al usuario utilizar la característica.  
   
- Para determinar qué características se admiten, las aplicaciones comienzan llamando a **SQLGetInfo** con la opción SQL_SQL_CONFORMANCE. El nivel de conformidad de SQL proporciona a la aplicación una vista amplia de qué SQL se admite. Para refinar esta vista, la aplicación llama a **SQLGetInfo** con cualquiera de varias otras opciones. Para obtener una lista completa de estas opciones, vea la descripción de la función [SQLGetInfo.](../../../odbc/reference/syntax/sqlgetinfo-function.md) Por último, **SQLGetTypeInfo** devuelve información sobre los tipos de datos admitidos por el origen de datos. En las secciones siguientes se enumeran una serie de posibles factores que las aplicaciones deben tener en cuenta al construir instrucciones SQL interoperables.  
+ Para determinar qué características se admiten, las aplicaciones se inician llamando a **SQLGetInfo** con la opción SQL_SQL_CONFORMANCE. El nivel de conformidad de SQL proporciona a la aplicación una vista amplia de la compatibilidad con SQL. Para depurar esta vista, la aplicación llama a **SQLGetInfo** con cualquiera de las otras opciones. Para obtener una lista completa de estas opciones, vea la descripción de la función [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) . Por último, **SQLGetTypeInfo** devuelve información acerca de los tipos de datos admitidos por el origen de datos. En las secciones siguientes se enumeran varios factores posibles que las aplicaciones deben ver al construir instrucciones SQL interoperables.  
   
  Esta sección contiene los temas siguientes.  
   

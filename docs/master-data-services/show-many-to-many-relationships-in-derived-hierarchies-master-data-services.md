@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289893"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Visualización de relaciones varios a varios en jerarquías derivadas (Master Data Services)
@@ -72,11 +72,10 @@ ms.locfileid: "79289893"
   
  Asimismo, se pueden ocultar los niveles de M2M, al igual que los demás niveles de una jerarquía derivada.  
    
-### <a name="M2MSample"></a>Relación de M2M en el modelo de ejemplo  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a> Relación de M2M en el modelo de ejemplo  
 Para obtener una demostración de una relación de M2M, vea la jerarquía derivada Region Climate del modelo de ejemplo Customer que se incluye con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
-Como se muestra en la siguiente imagen, el nombre del nivel que modela esta relación es ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (asignado mediante RegionClimate.Region)**. 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** muestra las regiones agrupadas por los tipos de climas con los que se asocian. Se trata de una relación de M2M porque hay regiones (miembros secundarios) que están asociadas a varias climas (elementos primarios). Por ejemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** está asociada a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** y ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
+Como se muestra en la siguiente imagen, el nombre del nivel que modela esta relación es ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (asignado mediante RegionClimate.Region)**. ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** muestra las regiones agrupadas por los tipos de climas con los que se asocian. Se trata de una relación de M2M porque hay regiones (miembros secundarios) que están asociadas a varias climas (elementos primarios). Por ejemplo, ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacifico}** está asociada a ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** y ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ Para obtener instrucciones sobre cómo implementar el modelo de ejemplo Customer
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>Seguridad de miembros  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a> Seguridad de miembros  
  No se puede usar una jerarquía que permita la duplicación de los miembros (permite a un miembro a tener más de un elemento primario) para asignar permisos de seguridad de miembros. Por ejemplo:  
   
 -   Un jerarquía derivada recursiva que no delimite recursiones nulas (cada miembro del nivel recursivo aparece bajo la raíz y su elemento primario recursivo).  

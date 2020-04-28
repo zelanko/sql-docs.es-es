@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289413"
 ---
 # <a name="the-transaction-log-sql-server"></a>El registro de transacciones (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "79289413"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Ventajas: operaciones admitidas por el registro de transacciones  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>Ventajas: operaciones admitidas por el registro de transacciones  
  El registro de transacciones permite las siguientes operaciones:  
   
 -   Recuperación de transacciones individuales.  
@@ -54,7 +54,7 @@ ms.locfileid: "79289413"
   
 -   Compatibilidad con soluciones de alta disponibilidad y recuperación ante desastres: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], creación de reflejo de la base de datos y trasvase de registros.  
   
-##  <a name="Truncation"></a>Truncamiento del registro de transacciones  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a> Truncamiento del registro de transacciones  
  El truncamiento del registro libera el espacio en el archivo de registro para que lo pueda reutilizar el registro de transacciones. El truncamiento del registro es esencial para evitar que se llene. El truncamiento del registro elimina los archivos de registro virtuales inactivos del registro de transacciones lógico de una base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , liberando espacio en el registro lógico para que lo reutilice el registro de transacciones físico. Si no se truncara nunca un registro de transacciones, acabaría ocupando todo el espacio de disco asignado a sus archivo de registro físicos.  
   
  Para evitar este problema, a menos que el truncamiento del registro se retrase por algún motivo, el truncamiento se produciría automáticamente después de los siguientes eventos:  
@@ -63,12 +63,12 @@ ms.locfileid: "79289413"
   
 -   En el modelo de recuperación completa o de recuperación optimizado para cargas masivas de registros, si se ha producido un punto de comprobación desde la copia de seguridad anterior, el truncamiento se produce después de una copia de seguridad de registros (a menos que sea una copia de seguridad de registros de solo copia).  
   
- Para obtener más información, vea [factores que pueden retrasar el truncamiento del registro](#FactorsThatDelayTruncation), más adelante en este tema.  
+ Para obtener más información, vea [Factores que pueden ralentizar el truncamiento del registro](#FactorsThatDelayTruncation), más adelante en este tema.  
   
 > [!NOTE]  
 >  El truncamiento del registro no reduce el tamaño del archivo de registro físico. Para reducir el tamaño físico de un archivo de registro físico, se debe reducir el archivo de registro. Para obtener información sobre cómo reducir el tamaño de un archivo de registro físico, vea [Manage the Size of the Transaction Log File](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a>Factores que pueden retrasar el truncamiento del registro  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>Factores que pueden retrasar el truncamiento del registro  
  Cuando las entradas de registro permanecen activas durante una transacción de larga duración, se retrasa el truncamiento del registro y es posible que se llene el registro de transacciones.  
   
 > [!IMPORTANT]  
@@ -95,7 +95,7 @@ ms.locfileid: "79289413"
 |14|OTHER_TRANSIENT|No se utiliza este valor actualmente.|  
 |16|XTP_CHECKPOINT|Cuando una base de datos tiene un grupo de archivos optimizados para memoria, el registro de transacciones no se puede truncar hasta que el punto de comprobación [!INCLUDE[hek_2](../../includes/hek-2-md.md)] automático se desencadena (lo que sucede cada 512 MB de crecimiento de los registros).<br /><br /> Nota: para truncar el registro de transacciones antes del tamaño de 512 MB, active el comando Checkpoint manualmente en la base de datos en cuestión.|  
   
-##  <a name="MinimallyLogged"></a>Operaciones que se pueden registrar mínimamente  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>Operaciones que se pueden registrar mínimamente  
  El*registro mínimo* implica registrar únicamente la cantidad de información necesaria para recuperar la transacción sin permitir la recuperación a un momento dado. En este tema se identifican las operaciones que se registran mínimamente en el modelo de recuperación optimizado para cargas masivas de registros (y en el modelo de recuperación simple, excepto cuando se está ejecutando una copia de seguridad).  
   
 > [!NOTE]  
@@ -106,7 +106,7 @@ ms.locfileid: "79289413"
   
  Las operaciones siguientes, que se registran completamente en el modelo de recuperación completa, se registran mínimamente en el modelo de recuperación simple y en el optimizado para cargas masivas de registros:  
   
--   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   Operaciones de importación en bloque ([bcp](../../tools/bcp-utility.md), [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql)e [INSERT... SELECT](/sql/t-sql/statements/insert-transact-sql)). Para obtener más información sobre cuándo se registra mínimamente una importación masiva en una tabla, vea [Prerequisites for Minimal Logging in Bulk Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
     > [!NOTE]  
     >  Cuando la replicación transaccional está habilitada, las operaciones BULK INSERT se registran por completo en el modelo de recuperación optimizado para cargas masivas de registros.  
@@ -135,16 +135,16 @@ ms.locfileid: "79289413"
     -   Regeneración del nuevo montón DROP INDEX (si procede).  
   
         > [!NOTE]  
-        >  La desasignación de páginas de índice durante una operación de [Drop index](/sql/t-sql/statements/drop-index-transact-sql) siempre se registra completamente.  
+        >   La desasignación de páginas de índice durante una operación [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) siempre se registra completamente.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  `Managing the transaction log`  
   
 -   [Administrar el tamaño del archivo de registro de transacciones](manage-the-size-of-the-transaction-log-file.md)  
   
 -   [Solucionar problemas de un registro de transacciones lleno &#40;Error 9002 de SQL Server&#41;](troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
- **Realizar copia de seguridad de un registro de transacciones (modelo de recuperación completa)**  
+ **Copia de seguridad del registro de transacciones (modelo de recuperación completa)**  
   
 -   [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)  
   
@@ -154,9 +154,9 @@ ms.locfileid: "79289413"
   
 ## <a name="see-also"></a>Consulte también  
  [Controlar la durabilidad de las transacciones](control-transaction-durability.md)   
- [Requisitos previos para el registro mínimo durante la importación masiva](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Puntos de comprobación de base de datos &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
+ [Requisitos previos para el registro mínimo durante la importación en bloque](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Puntos de control de base de datos &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Ver o cambiar las propiedades de una base de datos](../databases/view-or-change-the-properties-of-a-database.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   

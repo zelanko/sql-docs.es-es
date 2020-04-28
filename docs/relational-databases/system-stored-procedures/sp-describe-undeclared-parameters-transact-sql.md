@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180130"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -63,7 +63,7 @@ sp_describe_undeclared_parameters
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|Contiene la posición ordinal del parámetro en el conjunto de resultados. La posición del primer parámetro se especificará como 1.|  
-|**Name**|**sysname NOT NULL**|Contiene el nombre del parámetro.|  
+|**name**|**sysname NOT NULL**|Contiene el nombre del parámetro.|  
 |**suggested_system_type_id**|**int NOT NULL**|Contiene el **system_type_id** del tipo de datos del parámetro tal y como se especifica en sys. types.<br /><br /> En el caso de los tipos de CLR, aunque la columna **system_type_name** devuelva NULL, esta columna devolverá el valor 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos del parámetro. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo de datos definido por el usuario de CLR, NULL se devuelve en esta columna. Si no se puede deducir el tipo del parámetro, se devuelve NULL.|  
 |**suggested_max_length**|**smallint NOT NULL**|Vea sys. Columns. para **max_length** Descripción de la columna.|  
@@ -84,8 +84,8 @@ sp_describe_undeclared_parameters
 |**suggested_is_input**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en cualquier otro lugar que no sea el lado izquierdo de una asignación. De lo contrario, devuelve 0.|  
 |**suggested_is_output**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en el lado izquierdo de una asignación o se pasa a un parámetro de salida de un procedimiento almacenado. De lo contrario, devuelve 0.|  
 |**formal_parameter_name**|**sysname NULL**|Si el parámetro es un argumento para un procedimiento almacenado o una función definida por el usuario, devuelve el nombre del parámetro formal correspondiente. De lo contrario, devuelve NULL.|  
-|**suggested_tds_type_id**|**int NOT NULL**|Solo para uso interno.|  
-|**suggested_tds_length**|**int NOT NULL**|Solo para uso interno.|  
+|**suggested_tds_type_id**|**int NOT NULL**|Para uso interno.|  
+|**suggested_tds_length**|**int NOT NULL**|Para uso interno.|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_describe_undeclared_parameters** siempre devuelve el estado de retorno de cero.  
@@ -225,7 +225,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      En este caso, E (\@p) es Col_Int + \@p y TT (\@p) es de **tipo int**. se elige **int** para \@p porque no genera ninguna conversión implícita. Cualquier otra opción de tipo de datos genera al menos una conversión implícita.  
   
-2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo  
+2.  Si hay varios tipos de datos que coinciden en el número menor de conversiones, se utiliza el tipo de datos con mayor prioridad. Por ejemplo:  
   
     ```sql
     SELECT * FROM t WHERE Col_Int = Col_smallint + @p  

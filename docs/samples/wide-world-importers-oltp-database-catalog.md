@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112406"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
@@ -42,7 +42,7 @@ Estos esquemas se usan para las aplicaciones externas que no tienen permiso de a
 
 |Schema|Descripción|
 |-----------------------------|---------------------|
-|Sitio web|Todo el acceso a la base de datos desde el sitio web de la empresa se realiza a través de este esquema.|
+|Website|Todo el acceso a la base de datos desde el sitio web de la empresa se realiza a través de este esquema.|
 |Informes|Todo el acceso a la base de datos desde Reporting Services informes se realiza a través de este esquema.|
 |PowerBI|Todo el acceso a la base de datos desde los paneles de Power BI a través de la puerta de enlace empresarial se realiza a través de este esquema.|
 
@@ -69,7 +69,7 @@ Detalles de los parámetros y las personas (usuarios y contactos), junto con las
 |-----------------------------|---------------------|
 |SystemParameters|Contiene parámetros configurables en todo el sistema.|
 |Personas|Contiene los nombres de usuario, la información de contacto, para todos los usuarios que usan la aplicación y para las personas con las que se ocupan Wide World Importers en organizaciones de clientes. Esto incluye personal, clientes, proveedores y otros contactos. En el caso de las personas a las que se les ha concedido permiso para usar el sistema o el sitio web, la información incluye los detalles de inicio de sesión.|
-|Cities|Hay muchas direcciones almacenadas en el sistema para las personas, las direcciones de entrega de la organización del cliente, las direcciones de recogida en los proveedores, etc. Siempre que se almacena una dirección, hay una referencia a una ciudad en esta tabla. También hay una ubicación espacial para cada ciudad.|
+|Cities (Ciudades)|Hay muchas direcciones almacenadas en el sistema para las personas, las direcciones de entrega de la organización del cliente, las direcciones de recogida en los proveedores, etc. Siempre que se almacena una dirección, hay una referencia a una ciudad en esta tabla. También hay una ubicación espacial para cada ciudad.|
 |StateProvinces|Las ciudades forman parte de Estados o provincias. En esta tabla se detallan los detalles, incluidos los datos espaciales que describen los límites de cada Estado o provincia.|
 |Países|Los Estados o provincias forman parte de los países. En esta tabla se detallan los detalles, incluidos los datos espaciales que describen los límites de cada país.|
 |DeliveryMethods|Opciones para entregar elementos de existencias (por ejemplo, camión/furgoneta, publicación, recogida, Courier, etc.)|
@@ -100,7 +100,7 @@ Detalles de clientes, vendedores y de ventas de productos de acciones.
 |BuyingGroups|Las organizaciones de clientes pueden formar parte de los grupos que ejercen mayor potencia de compra|
 |CustomerTransactions|Todas las transacciones financieras relacionadas con el cliente (facturas, pagos)|
 |SpecialDeals|Precios especiales. Esto puede incluir precios fijos, descuento en dólares o porcentaje de descuento.|
-|Pedidos|Detalles de los pedidos de clientes|
+|Orders|Detalles de los pedidos de clientes|
 |OrderLines|Líneas de detalle de los pedidos de cliente|
 |Facturas|Detalles de las facturas de los clientes|
 |InvoiceLines|Líneas de detalle de las facturas de los clientes|
@@ -116,7 +116,7 @@ Detalles de los artículos de existencias, sus contenidas y las transacciones.
 |StockGroups|Grupos para clasificar los elementos de existencias (por ejemplo, Novelties, juguetes, Novelties comestibles, etc.)|
 |StockItemStockGroups|Qué elementos de existencias se encuentran en los grupos de existencias (varios a varios)|
 |Colores|Los elementos de existencias pueden (opcionalmente) tener colores|
-|Elemento packagetypes|Formas en que se pueden empaquetar los elementos de existencias (por ejemplo, caja, cartón, pallet, kg, etc.).|
+|PackageTypes|Formas en que se pueden empaquetar los elementos de existencias (por ejemplo, caja, cartón, pallet, kg, etc.).|
 |StockItemTransactions|Transacciones que cubren todos los movimientos de todos los elementos de existencias (recepción, venta, escritura)|
 |VehicleTemperatures|Temperaturas registradas periódicamente de refrigerantes de vehículos|
 |ColdRoomTemperatures|Temperaturas registradas periódicamente de refrigerantes de la habitación fría|

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288983"
 ---
 # <a name="start-sql-server-management-studio"></a>Iniciar SQL Server Management Studio
@@ -27,15 +27,12 @@ ms.locfileid: "78288983"
 1.  En el menú **Inicio** , seleccione **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]y, a continuación, haga clic en **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express está disponible como descarga gratuita en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), pero tiene una interfaz de usuario diferente a la que se describe en este tutorial.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no está instalado de forma predeterminada. Si [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible, ejecute el programa de instalación para instalarlo. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] no está disponible con [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express está disponible como descarga gratuita en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=14630), pero tiene una interfaz de usuario diferente a la que se describe en este tutorial.  
   
 2.  En el cuadro de diálogo **Conectar al servidor** , compruebe la configuración predeterminada y, después, haga clic en **Conectar**. Para conectarse, el cuadro **nombre del servidor** debe contener el nombre del equipo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el que está instalado. Si [!INCLUDE[ssDE](../../includes/ssde-md.md)] es una instancia con nombre, el cuadro **nombre del servidor** también debe contener el nombre de la instancia en el formato \< *computer_name*>\\<*instance_name*>.  
   
 ## <a name="management-studio-components"></a>Componentes de Management Studio  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presenta la información en ventanas dedicadas a tipos de información específicos. La información de la base de datos se muestra en las ventanas de documentos y en el Explorador de objetos.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] presenta la información en ventanas dedicadas a tipos de información específicos. La información de la base de datos se muestra en las ventanas de documentos y en el Explorador de objetos.  
   
 -   El Explorador de objetos es una vista de árbol de todos los objetos de base de datos que contiene un servidor. Puede incluir las bases de datos de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]e [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. El Explorador de objetos incluye información de todos los servidores a los que está conectado. Al abrir [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], se le solicita que se conecte al Explorador de objetos aplicando la última configuración utilizada. Para conectarse a un servidor, no es necesario que lo registre. Solo tiene que hacer doble clic en cualquier servidor del componente Servidores registrados.  
   

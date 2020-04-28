@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112433"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos WideWorldImportersDW
@@ -51,8 +51,8 @@ WideWorldImportersDW tiene las siguientes tablas de dimensiones. La descripción
 |Date|Nueva tabla con información sobre las fechas, incluido el año financiero (según el primer inicio del año financiero).|
 |Employee|`Application.People`.|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
-|Proveedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`.|
+|Supplier|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
+|PaymentMethod (MétodoPago)|`Application.PaymentMethods`.|
 |TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>Tablas de hechos
@@ -63,9 +63,9 @@ WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incl
 |-----------------------------|---------------------|---------------------|
 |Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal de ventas, productividad del selector/compresor y en el tiempo para seleccionar pedidos. Además, hay situaciones de baja existencias que conducen a los pedidos en espera.|
 |Sale|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Tiempos de entrega reales esperados de vs|
+|Compra|`Purchasing.PurchaseOrderLines`|Tiempos de entrega reales esperados de vs|
 |Transacción|`Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`|Medición de fechas de emisión frente a fechas de finalización e importes.|
-|Marcha|`Warehouse.StockTransactions`|Movimientos a lo largo del tiempo.|
+|Movimiento|`Warehouse.StockTransactions`|Movimientos a lo largo del tiempo.|
 |Mantenimiento de existencias|`Warehouse.StockItemHoldings`|Valores y niveles de existencias disponibles.|
 
 ## <a name="stored-procedures"></a>Procedimientos almacenados

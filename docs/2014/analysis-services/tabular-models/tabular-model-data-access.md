@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525476"
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
@@ -31,9 +31,7 @@ ms.locfileid: "79525476"
  Excel también es la aplicación recomendada para examinar modelos tabulares en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La herramienta incluye una opción **Analizar en Excel** que inicia una nueva instancia de Excel, crea un libro de Excel y abre una conexión de datos del libro con la base de datos del área de trabajo del modelo. Al examinar datos de modelo tabulares en Excel, tenga en cuenta que Excel emite consultas en el modelo utilizando el cliente de tablas dinámicas de Excel. En consecuencia, las operaciones en el libro de Excel dan lugar a que se envíen consultas MDX a la base de datos del área de trabajo, en lugar de consultas DAX. Si utiliza SQL Server profiler u otra herramienta de supervisión para supervisar consultas, puede suceder que vea MDX y no DAX en el seguimiento del analizador. Para más información sobre la característica Analizar en Excel, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación cliente de informes de Reporting Services que se ejecuta en un entorno de SharePoint 2010. Combina la exploración de datos, el diseño de la consulta, y el diseño de la presentación en una experiencia ad hoc integrada de informes. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] puede utilizar modelos tabulares como orígenes de datos, independientemente de si el modelo está hospedado en una instancia de Analysis Services que se ejecuta en modo tabular o se recupera de un almacén de datos relacional con el modo DirectQuery. Para conectarse a un modelo tabular en [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], debe crear un archivo de conexión que contenga la ubicación del servidor y el nombre de la base de datos. Puede crear un origen de datos compartido de Reporting Services o un archivo de conexión de modelo semántico de BI en SharePoint. Para obtener más información acerca de las conexiones de modelo semántico de BI, vea [POWERPIVOT BI Semantic Model Connection &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una aplicación cliente de informes de Reporting Services que se ejecuta en un entorno de SharePoint 2010. Combina la exploración de datos, el diseño de la consulta, y el diseño de la presentación en una experiencia ad hoc integrada de informes. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] puede utilizar modelos tabulares como orígenes de datos, independientemente de si el modelo está hospedado en una instancia de Analysis Services que se ejecuta en modo tabular o se recupera de un almacén de datos relacional con el modo DirectQuery. Para conectarse a un modelo tabular en [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], debe crear un archivo de conexión que contenga la ubicación del servidor y el nombre de la base de datos. Puede crear un origen de datos compartido de Reporting Services o un archivo de conexión de modelo semántico de BI en SharePoint. Para obtener más información acerca de las conexiones de modelo semántico de BI, vea [POWERPIVOT BI Semantic Model Connection &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  El cliente [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] determina la estructura del modelo especificado enviando una solicitud al origen de datos especificado, que devuelve un esquema que puede ser utilizado por el cliente para crear consultas en el modelo como origen de datos y para realizar operaciones basadas en los datos. Las operaciones posteriores de la interfaz de usuario de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] para filtrar los datos, realizar cálculos o agregaciones, y mostrar los datos asociados son controlados por el cliente y no se pueden controlar mediante programación.  
   
@@ -46,7 +44,7 @@ ms.locfileid: "79525476"
   
 -   [Conectar a Analysis Services](../instances/connect-to-analysis-services.md)  
   
--   [Supervisar una instancia de Analysis Services](../instances/monitor-an-analysis-services-instance.md)  
+-   [Monitor an Analysis Services Instance](../instances/monitor-an-analysis-services-instance.md)  
   
  Puede utilizar las ventanas de consulta MDX y XMLA en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para recuperar datos y metadatos de una base de datos de modelo tabular. Sin embargo, tenga en cuenta que existen las siguientes restricciones:  
   
@@ -85,11 +83,11 @@ ms.locfileid: "79525476"
   
 -   Ejemplo de modelo tabular AMO en Codeplex  
   
--   [Usar vistas de administración dinámica &#40;DMV&#41; supervisar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Usar vistas de administración dinámica &#40;DMV&#41; para supervisar Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  Puede usar el proveedor OLE DB 9.0 para Analysis Services en aplicaciones cliente sin administrar para admitir el acceso OLE DB a los modelos tabulares. Se requiere una versión actualizada del proveedor OLE DB de Analysis Services para habilitar el acceso al modelo tabular. Para más información sobre los proveedores utilizados con los modelos tabulares, vea [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
- También puede recuperar los datos directamente desde una instancia de Analysis Services en un formato basado en XML. Puede recuperar el esquema del modelo tabular utilizando el conjunto de filas DISCOVER_CSDL_METADATA o puede utilizar un comando EXECUTE o DISCOVER con las propiedades, objetos o elementos ASSL existentes. Para obtener más información, consulte los siguientes recursos:  
+ También puede recuperar los datos directamente desde una instancia de Analysis Services en un formato basado en XML. Puede recuperar el esquema del modelo tabular utilizando el conjunto de filas DISCOVER_CSDL_METADATA o puede utilizar un comando EXECUTE o DISCOVER con las propiedades, objetos o elementos ASSL existentes. Para obtener más información, vea los siguientes recursos:  
   
 -   [Anotaciones de CSDL para Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   

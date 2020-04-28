@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217147"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Acceso a datos de modelos multidimensionales (Analysis Services: datos multidimensionales)
@@ -38,7 +38,7 @@ ms.locfileid: "79217147"
   
  [Interfaces de programación](#bkmk_api)  
   
-##  <a name="bkmk_clientapps"></a>Aplicaciones cliente  
+##  <a name="client-applications"></a><a name="bkmk_clientapps"></a>Aplicaciones cliente  
  Aunque Analysis Services proporciona interfaces que permiten generar o integrar bases de datos multidimensionales mediante programación, un enfoque más habitual consiste en utilizar aplicaciones cliente existentes de Microsoft y otros fabricantes de software que tienen acceso de datos integrados a datos de Analysis Services.  
   
  Las aplicaciones de Microsoft siguientes admiten conexiones nativas a datos multidimensionales.  
@@ -60,7 +60,7 @@ ms.locfileid: "79217147"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Para los administradores de bases de datos, SQL Server Management Studio es un entorno integrado para administrar las instancias de SQL Server, por ejemplo instancias de Analysis Services y bases de datos multidimensionales. Para obtener más información, vea [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) y [Conectar a Analysis Services](../../instances/connect-to-analysis-services.md).  
   
-##  <a name="bkmk_querylang"></a>Lenguajes de consulta  
+##  <a name="query-languages"></a><a name="bkmk_querylang"></a>Lenguajes de consulta  
  MDX es un lenguaje de cálculo y consulta estándar del sector que se utiliza para recuperar datos de bases de datos OLAP. En Analysis Services, MDX es el lenguaje de consulta que se utiliza para recuperar datos, pero también admite la definición de datos y la manipulación de datos. Los editores MDX se integran en SQL Server Management Studio, Reporting Services y las herramientas de datos de SQL Server. Puede utilizar los editores MDX para crear consultas ad hoc o script reutilizable si la operación de datos es repetible.  
   
  Algunas herramientas y aplicaciones, como Excel, usan construcciones MDX internamente para consultar un origen de datos de Analysis Services. También se puede utilizar MDX mediante programación, incluyendo la instrucción MDX en un solicitud Execute de XMLA.  
@@ -69,13 +69,13 @@ ms.locfileid: "79217147"
   
  [Consultar datos multidimensionales con MDX](querying-multidimensional-data-with-mdx.md)  
   
- [Conceptos clave de &#40;MDX Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Conceptos clave de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
  [Aspectos básicos de las consultas MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
- [Aspectos básicos de scripting de MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Aspectos básicos de scripting MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
-##  <a name="bkmk_api"></a>Interfaces de programación  
+##  <a name="programmatic-interfaces"></a><a name="bkmk_api"></a>Interfaces de programación  
  Si está generando una aplicación personalizada que usa datos multidimensionales, el enfoque para tener acceso a los datos entrará muy probablemente en una de las siguientes categorías:  
   
 -   **XMLA**. Utilice XMLA cuando se requiera compatibilidad con gran variedad de sistemas operativos y protocolos. XMLA proporciona la máxima flexibilidad, pero suele ser a costa de la mejora de rendimiento y de la facilidad de programación.  

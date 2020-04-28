@@ -1,5 +1,5 @@
 ---
-title: Novedades de SSMA para DB2 (DB2ToSQL) Microsoft Docs
+title: Novedades de SSMA para DB2 (DB2ToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
@@ -10,240 +10,240 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
 ms.openlocfilehash: 53a159627750a5ec66b5aa0b3fd6510c647e26a5
-ms.sourcegitcommit: d818a307725983c921987749915fe1a381233d98
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80625521"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
 
-## <a name="ssma-v88"></a>SSMA v8.8
+## <a name="ssma-v88"></a>SSMA v 8.8
 
-La versión v8.8 de SSMA para DB2 incluye:
+La versión v 8.8 de SSMA para DB2 incluye:
 
-* Mejoras en la estabilidad de sincronización de objetos de SQL Server
-* Mejoras en el rendimiento de la interfaz gráfica de usuario durante la evaluación y la conversión
-* Se ha `ROWID` `varbinary(40)` actualizado la asignación desde para facilitar la migración de datos
-* Mejora de `SELECT ... FROM NEW/OLD TABLE` la conversión de declaraciones
-* Nueva conversión de `ALTER` declaraciones para procedimientos y funciones
-* Nueva conversión de asignaciones de desestructuración
+* Mejoras en la estabilidad de sincronización de objetos SQL Server
+* Mejoras en el rendimiento de GUI durante la evaluación y conversión
+* Asignación actualizada de `ROWID` a `varbinary(40)` para facilitar la migración de datos
+* Conversión mejorada de `SELECT ... FROM NEW/OLD TABLE` instrucciones
+* Nueva conversión de `ALTER` instrucciones para procedimientos y funciones
+* Nueva conversión de las asignaciones de desestructuración
 
-## <a name="ssma-v87"></a>SSMA v8.7
+## <a name="ssma-v87"></a>SSMA v 8.7
 
-La versión v8.7 de SSMA para DB2 incluye el nuevo analizador de sintaxis DB2, así como correcciones menores y mejoras de rendimiento en la interfaz gráfica de usuario.
-
-Además, SSMA para DB2 ahora proporciona:
-
-* Una corrección para la detección de claves externas al migrar desde DB2 en LUW.
-* Se ha `SELECT ... FOR UPDATE` mejorado la conversión de la declaración.
-* Se ha `COUNT` mejorado la conversión de la función en tablas MQ.
-* Conversión `SAVEPOINT` de declaraciones.
-* Conversión para emular el `NULL` comportamiento `ORDER BY` de DB2 para los valores de la cláusula.
-* Compatibilidad de análisis para la instrucción ASSOCIATE RESULT SET.
-
-> [!IMPORTANT]
-> Con SSMA v8.5 y versiones posteriores, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí.](https://dotnet.microsoft.com/download/dotnet-framework/net472)
-
-## <a name="ssma-v86"></a>SSMA v8.6
-
-Además de un conjunto de correcciones de destino diseñado para mejorar la facilidad de uso y el rendimiento, la versión v8.6 de SSMA para DB2 se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
-
-Para aprovechar esta configuración, en SSMA para**Project Settings** > DB2, vaya a **Conversión** > **general** > **Conversion**de configuración de proyecto de herramientas y, a continuación, en **Varios**, actualice el valor de la configuración **Omitir propiedades extendidas** a **Sí**.
-
-![Omitir configuración de propiedades extendidas](../db2/media/ssma-omit-extended-properties.png)
+La versión v 8.7 de SSMA para DB2 incluye un analizador de sintaxis DB2 nuevo, así como revisiones secundarias y mejoras de rendimiento en la interfaz gráfica de usuario.
 
 Además, SSMA para DB2 ahora proporciona:
 
-* Una corrección para la conversión de funciones que utilizan valores de argumento predeterminados.
-* Se ha mejorado `PARAMETER` el análisis de la cláusula para las funciones.
-* La capacidad de `LEAVE` convertir la instrucción.
+* Corrección para la detección de claves externas al migrar desde DB2 en LUW.
+* Conversión mejorada de `SELECT ... FOR UPDATE` la instrucción.
+* Conversión mejorada para `COUNT` la función en tablas MQ.
+* Conversión de `SAVEPOINT` instrucciones.
+* Conversión para emular el comportamiento de `NULL` DB2's para `ORDER BY` los valores de la cláusula.
+* Compatibilidad de análisis para la instrucción Associate RESULT SET.
 
 > [!IMPORTANT]
-> Con SSMA v8.5 y versiones posteriores, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí.](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+> Con SSMA v 8.5 y versiones posteriores, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
-## <a name="ssma-v85"></a>SSMA v8.5
+## <a name="ssma-v86"></a>SSMA v 8.6
 
-La versión v8.5 de SSMA para DB2 se ha mejorado con compatibilidad con la autenticación de Azure Active Directory y compatibilidad básica con características JSON en SQL Server, junto con un conjunto específico de correcciones diseñadas para mejorar la facilidad de uso y el rendimiento.
+Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para DB2 se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
+
+Para aprovechar este valor, en SSMA para DB2, vaya a **herramientas** > **configuración** > del proyecto**conversión****General** > y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+
+![Omitir la configuración de propiedades extendidas](../db2/media/ssma-omit-extended-properties.png)
+
+Además, SSMA para DB2 ahora proporciona:
+
+* Corrección para la conversión de funciones que utilizan valores de argumento predeterminados.
+* Se ha mejorado el `PARAMETER` análisis de la cláusula para las funciones.
+* La capacidad de convertir la `LEAVE` instrucción.
+
+> [!IMPORTANT]
+> Con SSMA v 8.5 y versiones posteriores, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
+
+## <a name="ssma-v85"></a>SSMA v 8.5
+
+La versión v 8.5 de SSMA para DB2 se ha mejorado con compatibilidad para la autenticación Azure Active Directory y la compatibilidad básica con características JSON en SQL Server, junto con un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento.
 
 Además, SSMA para DB2 se ha mejorado con:
 
-* Compatibilidad con la `GET DIAGNOSTICS` adición de conversión para la instrucción con `ROW_NUMBER`.
-* Corrección de un error relacionado con los espacios al principio del nombre del objeto que no se respeta.
+* Compatibilidad para agregar la conversión `GET DIAGNOSTICS` para la `ROW_NUMBER`instrucción con.
+* Corrección de un error relacionado con espacios al principio del nombre del objeto que no se respeta.
 
 > [!IMPORTANT]
-> Con SSMA v8.5, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí.](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+> Con SSMA v 8.5, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
 
-## <a name="ssma-v84"></a>SSMA v8.4
+## <a name="ssma-v84"></a>SSMA v 8.4
 
-La versión v8.4 de SSMA para DB2 se mejora con correcciones de destino que están diseñadas para solucionar problemas de accesibilidad y corregir un error relacionado con las columnas de índice máximo (para permitir 32 en lugar de 16) para SQL Server 2016 y versiones posteriores.
+La versión v 8.4 de SSMA para DB2 se ha mejorado con correcciones de destino diseñadas para solucionar problemas de accesibilidad y corregir un error relacionado con las columnas de índice máximo (para permitir 32 en lugar de 16) para SQL Server 2016 y versiones posteriores.
 
 > [!IMPORTANT]
-> Con las versiones 7.4 de SSMA a 8.4, .NET 4.5.2 es un requisito previo de instalación.
+> Con las versiones de SSMA 7,4 a 8,4, .NET 4.5.2 es un requisito previo de instalación.
 
-## <a name="ssma-v83"></a>SSMA v8.3
+## <a name="ssma-v83"></a>SSMA v 8.3
 
-La versión v8.3 de SSMA para DB2 se mejora con correcciones dirigidas diseñadas para mejorar la calidad y las métricas de conversión. Además, esta versión de SSMA para DB2 proporciona correcciones que:
+La publicación v 8.3 de SSMA para DB2 se ha mejorado con correcciones de destino diseñadas para mejorar la calidad y las métricas de conversión. Además, esta versión de SSMA para DB2 proporciona correcciones que:
 
-* Abordar problemas de accesibilidad.
-* Agregue compatibilidad `hierarchyid` básica para el tipo en SQL Server.
-* Reemplace el uso de la función `RTRIM` / `LTRIM`TRIM en consultas de detección de z/OS por .
-* Permitir al usuario especificar la colección de paquetes `NULLID`al conectarse en 'Modo estándar' (valor predeterminado es ).
+* Solucione los problemas de accesibilidad.
+* Agregue compatibilidad básica para `hierarchyid` el tipo en SQL Server.
+* Reemplace el uso de la función TRIM en consultas de detección `RTRIM` / `LTRIM`de z/OS con.
+* Permite al usuario especificar la colección de paquetes al conectarse en ' modo estándar ' (el `NULLID`valor predeterminado es).
 * Agregar conversión para `CREATE TABLE AS SELECT`.
-* Mejore las conversiones de tablas temporales globales.
-* Soluciona un problema con el orden de comprobación de unicidad de objetos para priorizar las tablas sobre las restricciones, si los nombres chocan.
-* Soluciona un problema con la `DATE` `TIMESTAMP` carga de los valores de columna predeterminados para y para z/OS.
-* Admite caracteres de salto `NEL`de línea Unicode (también conocidos como ).
-* Se solucionó un problema `RETURN TO` con la conversión de cursores con la cláusula missing.
-* Agregue compatibilidad con `GOTO`etiquetas y .
+* Mejorar las conversiones de las tablas temporales globales.
+* Solucione un problema con la comprobación de la unicidad de objetos para dar prioridad a las tablas a través de las restricciones, si los nombres entran en conflicto.
+* Solucione un problema con la carga de valores de `DATE` columna `TIMESTAMP` predeterminados para y para z/OS.
+* Admite el carácter de salto de línea Unicode ( `NEL`también conocido como).
+* Solucione un problema con la conversión de `RETURN TO` cursor con la cláusula Missing.
+* Agregar compatibilidad para etiquetas y `GOTO`.
 
-## <a name="ssma-v82"></a>SSMA v8.2
+## <a name="ssma-v82"></a>SSMA v 8.2
 
-La versión v8.2 de SSMA para DB2 se ha mejorado con para solucionar problemas con conexiones a Azure SQL Database desde la herramienta de consola SSMA y falta COUNT_BIG columna en la declaración de vistas durante la conversión. Además, esta versión incluye un conjunto específico de correcciones diseñadas para mejorar las métricas de calidad y conversión, así como correcciones para:
+La versión v 8.2 de SSMA para DB2 se ha mejorado con para solucionar problemas con conexiones a Azure SQL Database desde la herramienta de consola SSMA y que faltan COUNT_BIG columna en la declaración de vistas durante la conversión. Además, esta versión incluye un conjunto de correcciones de destino diseñado para mejorar la calidad y las métricas de conversión, así como las correcciones para:
 
-* Un problema con índices no agrupados deshabilitados después de la migración de datos.
+* Un problema con los índices no clúster deshabilitados después de la migración de datos.
 * Detección de .NET Framework durante la instalación silenciosa.
 * Un bloqueo intermitente que se produce cuando se descarga una nueva versión.
 
 > [!NOTE]
-> Un problema conocido con la actualización automática puede provocar el error de una actualización de SSMA v8.1 a v8.2. Si encuentra este error, descargue la nueva versión e instálela manualmente.
+> Un problema conocido con la actualización automática puede producir un error en una actualización de SSMA v 8.1 a v 8.2. Si se produce este error, descargue la nueva versión e instálela manualmente.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>SSMA v 8.1
 
-La versión v8.1 de SSMA para DB2 se ha mejorado para proporcionar correcciones dirigidas diseñadas para mejorar la calidad y las métricas de conversión.
+La versión v 8.1 de SSMA para DB2 se ha mejorado para proporcionar correcciones dirigidas diseñadas para mejorar la calidad y las métricas de conversión.
 
 > [!NOTE]
-> Un problema conocido con la actualización automática puede provocar el error de una actualización de SSMA v8.0 a v8.1. Si encuentra este error, descargue la nueva versión e instálela manualmente.
+> Un problema conocido con la actualización automática puede producir un error en una actualización de SSMA v 8.0 a v 8.1. Si se produce este error, descargue la nueva versión e instálela manualmente.
 
-## <a name="ssma-v80"></a>SSMA v8.0
+## <a name="ssma-v80"></a>SSMA v 8.0
 
-La versión v8.0 de SSMA para DB2 se ha mejorado para proporcionar correcciones específicas diseñadas para mejorar la calidad y las métricas de conversión. Esta versión también ofrece las siguientes características nuevas:
+La versión 8.0 de SSMA para DB2 se ha mejorado para proporcionar soluciones de destino diseñadas para mejorar la calidad y las métricas de conversión. Esta versión también ofrece las siguientes características nuevas:
 
-* Compatibilidad con **instancias administradas de Azure SQL Database** como destino. Ahora puede crear nuevos proyectos destinados a Instancia administrada de Azure SQL Database:
+* Compatibilidad con **instancia administrada de Azure SQL Database** como destino. Ahora puede crear nuevos proyectos que tengan como destino Instancia administrada de Azure SQL Database:
 
-  ![Proyecto SQL DB MI](../media/ssma-newproject-sqldbmi.png)
+  ![Proyecto de MI de base de SQL](../media/ssma-newproject-sqldbmi.png)
 
-* Asesor **fixdena**posterior a la conversión . Más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
+* **Asesor de corrección**posterior a la conversión. Obtenga más información [aquí](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
 * Selección preliminar de base de datos/esquema.
 
-  Al conectarse al origen, el usuario ahora puede seleccionar bases de datos/esquemas de interés. Seleccionar solo los esquemas que planea migrar ahorrará tiempo durante la conexión inicial y mejorará el rendimiento general de SSMA.
+  Al conectarse al origen, el usuario puede seleccionar las bases de datos o los esquemas de interés. Si selecciona solo los esquemas que va a migrar, se ahorrará tiempo durante la conexión inicial y se mejorará el rendimiento global de SSMA.
 
-  ![Objetos de filtro SSMA](../media/ssma-filter-objects.png)
+  ![SSMA (objetos de filtro)](../media/ssma-filter-objects.png)
 
-## <a name="ssma-v710"></a>SSMA v7.10
+## <a name="ssma-v710"></a>SSMA v 7.10
 
-La versión v7.10 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.10 de SSMA para DB2 contiene los siguientes cambios:
 
-* Correcciones dirigidas diseñadas para proporcionar protecciones adicionales de seguridad y privacidad para cumplir con los cambios en los requisitos globales.
-* Una solución `BEGIN-END` para la conversión de bloques.
+* Soluciones de destino diseñadas para proporcionar seguridad adicional y protección de la privacidad para satisfacer los cambios en los requisitos globales.
+* Corrección para la conversión de `BEGIN-END` bloques.
 
-## <a name="ssma-v79"></a>SSMA v7.9
+## <a name="ssma-v79"></a>SSMA v 7.9
 
-La versión v7.9 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.9 de SSMA para DB2 contiene los siguientes cambios:
 
-* Correcciones dirigidas que mejoran la calidad y las métricas de conversión.
-* Compatibilidad con la línea de comandos SSMA para modificar la asignación de tipos de datos y las preferencias del proyecto.
-* Compatibilidad con la migración de datos mediante SQL Server Integration Services (SSIS). Después de convertir el esquema, es posible crear un paquete SSIS mediante una opción de menú contextual con el botón derecho.
-* El cuadro de diálogo de conexión de Azure SQL Database en SSMA también se ha modificado para especificar el nombre completo del servidor. En versiones anteriores de SSMA, el prefijo de Azure SQL Database tenía que mencionarse explícitamente dentro de la configuración de proyectos.
+* Correcciones dirigidas que mejoran las métricas de calidad y conversión.
+* Compatibilidad en la línea de comandos de SSMA para modificar la asignación de tipos de datos y las preferencias del proyecto.
+* Compatibilidad para la migración de datos con SQL Server Integration Services (SSIS). Después de convertir el esquema, es posible crear un paquete SSIS mediante el uso de una opción del menú contextual.
+* También se ha modificado el cuadro de diálogo de conexión Azure SQL Database en SSMA para especificar el nombre completo del servidor. En versiones anteriores de SSMA, el prefijo Azure SQL Database tenía que mencionarse explícitamente dentro de la configuración de los proyectos.
 
-## <a name="ssma-v78"></a>SSMA v7.8
+## <a name="ssma-v78"></a>SSMA v 7.8
 
-La versión v7.8 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.8 de SSMA para DB2 contiene los siguientes cambios:
 
-* Cambiar asignación de tipos resaltada en *Configuración del proyecto*.
+* Cambiar la asignación de tipos resaltada en la *configuración del proyecto*.
 * La capacidad de los usuarios de deshabilitar la telemetría.
 
-## <a name="ssma-v77"></a>SSMA v7.7
+## <a name="ssma-v77"></a>SSMA v 7.7
 
-La versión v7.7 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.7 de SSMA para DB2 contiene los siguientes cambios:
 
-* Correcciones dirigidas que mejoran la calidad y las métricas de conversión.
-* En función de la demanda popular, la versión de 32 bits de SSMA para DB2 está de vuelta. En comparación con la implementación anterior (antes de v7.4), hay dos paquetes de instalación, pero no se pueden instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tenga. Siempre es preferible utilizar la versión de 64 bits, si es posible.
+* Correcciones dirigidas que mejoran las métricas de calidad y conversión.
+* En función de la demanda popular, la versión de 32 bits de SSMA para DB2 vuelve a ser. En comparación con la implementación anterior (antes de v 7.4), hay dos paquetes de instalador, pero no se pueden instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tenga. Siempre es preferible usar la versión de 64 bits, si es posible.
 
-## <a name="ssma-v76"></a>SSMA v7.6
+## <a name="ssma-v76"></a>SSMA v 7.6
 
-La versión v7.6 de SSMA para DB2 se ha mejorado con correcciones de destino que mejoran la calidad y las métricas de conversión y con compatibilidad con SQL Server 2017 (versión preliminar pública). La compatibilidad con SQL Server 2017 en Windows y Linux está en versión preliminar pública y no debe usarse para las migraciones de producción.
+La versión v 7.6 de SSMA para DB2 se ha mejorado con correcciones de destino que mejoran las métricas de calidad y conversión y admiten SQL Server 2017 (versión preliminar pública). La compatibilidad con SQL Server 2017 en Windows y Linux está en versión preliminar pública y no debe usarse para migraciones de producción.
 
-## <a name="ssma-v75"></a>SSMA v7.5
+## <a name="ssma-v75"></a>SSMA v 7.5
 
-La versión v7.5 de SSMA para DB2 se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para las personas con discapacidades.
+La versión v 7.5 de SSMA para DB2 se ha mejorado con varias mejoras para garantizar una mayor accesibilidad para las personas con discapacidades.
 
-## <a name="ssma-v74"></a>SSMA v7.4
+## <a name="ssma-v74"></a>SSMA v 7.4
 
-La versión v7.4 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.4 de SSMA para DB2 contiene los siguientes cambios:
 
-* La opción Tiempo de **espera** de consulta ahora está disponible durante la detección de objetos de esquema en el origen y el destino.
+* La opción **tiempo de espera de consulta** ahora está disponible durante la detección de objetos de esquema en el origen y el destino.
 
   ![opción de tiempo de espera de consulta](../media/query-timeout_red.png)
 
-* La métrica de calidad y conversión se ha mejorado con correcciones específicas, en función de los comentarios de los clientes.
+* La métrica de calidad y conversión se ha mejorado con las correcciones de destino, en función de los comentarios de los clientes.
 
   > [!IMPORTANT]
-  > .NET 4.5.2 es un requisito previo para instalar SSMA v7.4. Además, a partir de v7.4, se ha interrumpido la versión de 32 bits de SSMA.
+  > .NET 4.5.2 es un requisito previo para instalar SSMA v 7.4. Además, a partir de v 7.4, se ha interrumpido la versión de 32 bits de SSMA.
 
-## <a name="ssma-v73"></a>SSMA v7.3
+## <a name="ssma-v73"></a>SSMA v 7.3
 
-La versión v7.3 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.3 de SSMA para DB2 contiene los siguientes cambios:
 
-* Métrica de calidad y conversión mejorada con correcciones específicas basadas en los comentarios de los clientes.
-* Marco de extensibilidad SSMA expuesto a través de los siguientes elementos:
-  * Exportar funcionalidad a un proyecto de SQL Server Data Tools (SSDT)SQL Server Data Tools (SSDT).
-    * Ahora puede exportar scripts de esquema de SSMA a un proyecto SSDT. Puede usar los scripts de esquema para realizar cambios de esquema adicionales e implementar la base de datos.
+* Métrica de calidad y conversión mejorada con correcciones de destino basadas en los comentarios de los clientes.
+* El marco de extensibilidad de SSMA expuesto a través de los siguientes elementos:
+  * Exportar funcionalidad a un proyecto SQL Server Data Tools (SSDT).
+    * Ahora puede exportar scripts de esquema de SSMA a un proyecto de SSDT. Puede usar los scripts de esquema para realizar cambios de esquema adicionales e implementar la base de datos.
 
-      ![Guardar como comando de proyecto SSDT](../media/export-schema-scripts_red.png)
-  * Bibliotecas que SSMA puede consumir para realizar conversiones personalizadas.
-    * Ahora puede construir código que puede controlar las conversiones de sintaxis personalizadas y las conversiones que no se controlaban anteriormente por SSMA.
-      * Las instrucciones sobre cómo construir un convertidor personalizado están disponibles en esta entrada de blog, [Extending SQL Server Migration Assistant's conversion capabilities](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
-      * Descargue un proyecto de ejemplo para la conversión desde esta entrada de [blog.](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/)
+      ![Comando Guardar como proyecto de SSDT](../media/export-schema-scripts_red.png)
+  * Bibliotecas que puede usar SSMA para realizar conversiones personalizadas.
+    * Ahora puede construir código que pueda controlar las conversiones de sintaxis personalizadas y las conversiones que no se administraron previamente mediante SSMA.
+      * En esta entrada de blog se ofrecen instrucciones sobre cómo construir un convertidor personalizado, que [amplían las capacidades de conversión de SQL Server Migration Assistant](https://blogs.msdn.microsoft.com/datamigration/2017/02/21/2185/).
+      * Descargue un proyecto de ejemplo para la conversión de esta [entrada de blog](https://blogs.msdn.microsoft.com/datamigration/ssmafororacleconversionsample/).
 
-## <a name="ssma-v72"></a>SSMA v7.2
+## <a name="ssma-v72"></a>SSMA v 7.2
 
-La versión v7.2 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.2 de SSMA para DB2 contiene los siguientes cambios:
 
-* Métrica de calidad y conversión mejorada con correcciones específicas basadas en los comentarios de los clientes.
-* Mejoras de telemetría para proporcionar mejores puntos de datos para solucionar problemas de los clientes y mejorar las tasas de conversión de SSMA.
+* Métrica de calidad y conversión mejorada con correcciones de destino basadas en los comentarios de los clientes.
+* Mejoras en la telemetría para proporcionar mejores puntos de datos para solucionar problemas de los clientes y mejorar las tasas de conversión de SSMA.
 
-## <a name="ssma-v71"></a>SSMA v7.1
+## <a name="ssma-v71"></a>SSMA v 7.1
 
-La versión v7.1 de SSMA para DB2 contiene los siguientes cambios:
+La versión v 7.1 de SSMA para DB2 contiene los siguientes cambios:
 
-* SQL Server 2017 en Windows y Linux CTP1 es ahora una plataforma de destino compatible para la migración. Esta característica está en versión preliminar técnica y permite el movimiento de esquemas y datos para dirigirse a los servidores SQL.
-* Compatibilidad con actualizaciones automáticas para descargar la última versión de SSMA tan pronto como esté disponible.
-* Los archivos binarios instalables SSMA ahora se entregan a través de archivos de paquete de Windows Installer (.msi).
+* SQL Server 2017 en Windows y Linux CTP1 es ahora una plataforma de destino admitida para la migración. Esta característica se encuentra en Technical Preview y permite el movimiento de datos y esquemas a los servidores SQL Server de destino.
+* Compatibilidad con las actualizaciones automáticas para descargar la versión más reciente de SSMA en cuanto esté disponible.
+* Los binarios instalables de SSMA se entregan ahora a través de Windows Installer archivos de paquete (. msi).
 
 ## <a name="may-2016"></a>Mayo de 2016
 
 La versión de mayo de 2016 de SSMA para DB2 contiene los siguientes cambios:
 
-* Se ha agregado compatibilidad con SQL Server 2016.
-* Se ha añadido la conversión de db2 en memoria y tablas normales a características de SQL Server en memoria y hekaton.
-* Se ha añadido la conversión de controles de acceso de DB2 a objetos de directiva de SQL Server (seguridad de nivel de fila para DB2).
-* Se ha agregado la conversión de tablas con versiones del sistema DB2 a tablas temporales de SQL ServerSQL Server .
-* Analizador y resolución DB2 mejorados.
-* Se ha eliminado la comprobación del instalador de .NET 2.0.
-* Se ha \*eliminado el archivo .dll innecesario del instalador de Db2.
-* Corregido `save-project` `open-project` y comandos para la consola SSMA.
-* Se `securepassword` ha corregido el comando para la consola SSMA.
-* Se ha corregido el recuento de objetos para la carga inicial.
-* Se ha corregido un error en la configuración global.
+* Compatibilidad agregada para SQL Server 2016.
+* Se ha agregado la conversión de tablas en memoria y normales de DB2 para SQL Server características en memoria y hekaton.
+* Conversión agregada de controles de acceso de DB2 a objetos de directiva de SQL Server (Seguridad de nivel de fila para DB2).
+* Se ha agregado la conversión de tablas con versiones del sistema DB2 en SQL Server tablas temporales.
+* Analizador y resolución de DB2 mejorados.
+* Se quitó la comprobación del instalador para .NET 2,0.
+* Se quitó el archivo. dll innecesario \*del instalador de DB2.
+* Fixed `save-project` y `open-project` comandos para la consola de SSMA.
+* Comando `securepassword` fijo para la consola de SSMA.
+* Recuento fijo de objetos para la carga inicial.
+* Se corrigió el error en la configuración global.
   
 ## <a name="march-2016"></a>marzo de 2016
 
-La versión preliminar de marzo de 2016 de SSMA para DB2 agrega compatibilidad para la migración a SQL Server 2016.
+La versión de vista previa de marzo de 2016 de SSMA para DB2 agrega compatibilidad para la migración a SQL Server 2016.
 
 ## <a name="january-2016"></a>Enero de 2016
 
 La versión de mantenimiento de enero de 2016 de SSMA para DB2 contiene los siguientes cambios:
   
-* Añadido soporte para una serie de funciones estándar.
-* Corregidos errores del analizador DB2.
-* Se ha corregido la compatibilidad con DB2 v9 zOS (RFC 5690920).
-* Corregidos errores de identificador no resueltos de DB2 durante la conversión.
-* Se ha añadido el elemento de menú Ver registro a SSMA (RFC 5706203).
-* Se ha añadido telemetría.
+* Se ha agregado compatibilidad con varias funciones estándar.
+* Errores corregidos del analizador de DB2.
+* Se corrigió la compatibilidad con zOS de DB2 V9 (RFC 5690920).
+* Se corrigieron errores de identificador sin resolver de DB2 durante la conversión.
+* Se ha agregado el elemento de menú Ver registro a SSMA (RFC 5706203).
+* Telemetría agregada.
   
 ## <a name="november-2014"></a>Noviembre de 2014
 

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74ec775d958c6842f284dea5bc90e5d45955423b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289593"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Administración de contenido del servidor de informes (Modo nativo de SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "79289593"
 
  Las herramientas para administrar contenido del servidor de informes son [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] o el Administrador de informes. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] permite establecer valores predeterminados y habilitar características. El Administrador de informes se usa para conceder acceso de usuario a las operaciones y elementos del servidor de informes, ver y usar informes y otros tipos de contenido, y ver y usar todos los elementos compartidos y características de distribución de informes. Para obtener más información, vea [Herramientas de Reporting Services](../tools/reporting-services-tools.md).
 
-##  <a name="bkmk_ReportServerItems"></a>Elementos del servidor de informes
+##  <a name="report-server-items"></a><a name="bkmk_ReportServerItems"></a>Elementos del servidor de informes
  Los elementos del servidor de informes incluyen informes, orígenes de datos compartidos, conjuntos de datos compartidos, elementos de informe, recursos (elementos que se almacenan pero que no procesa el servidor de informes) y carpetas. Los elementos pueden depender de otros elementos; por ejemplo, un informe puede depender de los orígenes de datos compartidos a los que hace referencia. Si mueve un elemento dependiente, el servidor de informes actualiza automáticamente la información de referencia.
 
  Puede mover elementos del servidor de informes a diversas ubicaciones de carpeta en la jerarquía de carpetas del servidor de informes. Al mover un elemento, también se mueven todas las propiedades (incluida la configuración de seguridad) a la nueva ubicación. Cuando mueve una carpeta, se mueven todos los elementos de la carpeta.
@@ -60,13 +60,13 @@ ms.locfileid: "79289593"
 |![Icono de informe](../media/hlp-16doc.gif "Icono de informe")|Informe|
 |![Icono de informe vinculado](../media/hlp-16linked.gif "Icono de informe vinculado")|Informe vinculado|
 |![Icono de carpeta](../media/hlp-16folder.gif "Icono de carpeta")|Carpeta|
-|![icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|
+|![Icono de recurso genérico](../media/hlp-16file.gif "Icono de recurso genérico")|Recurso genérico|
 |![Icono de origen de datos compartido](../media/hlp-16datasource.png "Icono de origen de datos compartido")|Origen de datos compartido|
 ||Conjunto de datos compartidos|
 
  No todos los elementos se pueden mover. Por ejemplo, los elementos asociados a un informe, tales como las suscripciones o el historial del informe, no pueden moverse. Estos elementos se mueven con los informes asociados. Asimismo, tampoco pueden moverse elementos como las programaciones compartidas que existen fuera de la jerarquía de carpetas. No pueden moverse elementos para los que no se tienen los permisos adecuados. Este permiso se concede mediante la selección de las siguientes tareas durante la asignación de roles del elemento en cuestión: "Administrar informes", "Administrar modelos", "Administrar carpetas" y "Administrar orígenes de datos".
 
-##  <a name="bkmk_Folders"></a> Carpetas
+##  <a name="folders"></a><a name="bkmk_Folders"></a>Folder
  Para tener acceso a los elementos que se almacenan y administran en un servidor de informes se utiliza una jerarquía de carpetas.  De forma predeterminada, la estructura de carpetas consta de un nodo raíz denominado Inicio y de carpetas reservadas compatibles con la característica opcional Mis informes. Las carpetas adicionales las define el usuario. Las carpetas del servidor de informes son útiles si desea conceder el mismo nivel de acceso a varios elementos. Los permisos que establece en la carpeta pueden heredarlos los elementos de la carpeta y las carpetas adicionales que cuelgan de esa carpeta. Por ejemplo, puede crear un conjunto de carpetas bajo la carpeta Inicio, asignar permisos de equipo a cada carpeta y permitir que los miembros del equipo personalicen las carpetas incluidas bajo la carpeta de equipo según sea necesario.
 
  Si utiliza un explorador para conectarse directamente a un servidor de informes, el nodo raíz de la estructura de carpeta tendrá el nombre del directorio virtual del servidor de informes. Desde el nodo raíz, puede crear, modificar y eliminar carpetas según sus necesidades, para organizar el contenido del servidor de informes. Puede agregarse contenido a una carpeta, mover elementos entre carpetas, modificar los nombres o las ubicaciones de las carpetas y eliminar carpetas que hayan dejado de ser necesarias.
@@ -117,8 +117,8 @@ ms.locfileid: "79289593"
 
  La visibilidad de un elemento en una carpeta depende de las asignaciones de roles (es decir, el permiso para ver un elemento) y de las opciones de visualización establecidas para la carpeta. En el Administrador de informes, se puede configurar la página Contenido como vista de lista o como vista de detalles. En algunos casos, un informe o un elemento puede estar oculto en una vista de lista. Es aconsejable ver una carpeta con la vista de detalles antes de eliminar su contenido.
 
-##  <a name="bkmk_Resources"></a> Recursos
- Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Algunos ejemplos son una imagen de un archivo .jpg, un archivo de forma ESRI que contiene datos espaciales o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG, SHP o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero. Para obtener más información, vea [Imágenes &#40;Generador de informes y SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) y la sección "Agregar datos a un mapa" en [Mapas &#40;Generador de informes y SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).
+##  <a name="resources"></a><a name="bkmk_Resources"></a> Recursos
+ Un recurso es un elemento administrado que se almacena en un servidor de informes pero no se procesa allí. Normalmente, un recurso proporciona contenido externo a los usuarios de los informes. Algunos ejemplos son una imagen de un archivo .jpg, un archivo de forma ESRI que contiene datos espaciales o un archivo HTML que describe las reglas de negocios usadas en un informe. El archivo JPG, SHP o HTML está almacenado en el servidor de informes, pero el servidor de informes pasa el archivo directamente al explorador en lugar de procesarlo primero. Para obtener más información, vea [images &#40;generador de informes y ssrs&#41;](../report-design/images-report-builder-and-ssrs.md) y la sección "agregar datos a un mapa" en [Maps &#40;Generador de informes y SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).
 
 ### <a name="adding-and-viewing-a-resource"></a>Agregar y ver un recurso
  Para agregar un recurso a un servidor de informes, se carga o se publica un archivo:
@@ -146,7 +146,7 @@ ms.locfileid: "79289593"
 
  Para obtener más información, vea [Actualizar un recurso &#40;Administrador de informes&#41;](update-a-resource-report-manager.md).
 
-##  <a name="bkmk_MyReports"></a> Mis informes
+##  <a name="my-reports"></a><a name="bkmk_MyReports"></a>Mis informes
  La carpeta Mis informes es un área de trabajo personal para cada usuario que inicia una sesión en el servidor de informes con una cuenta de dominio válida. Esta carpeta especial ofrece un espacio de almacenamiento para los informes que están en curso y que no se han concebido para una distribución amplia, o para informes que se han modificado para adaptarlos a alguna necesidad especial. No es posible restringir el número o el tamaño de elementos que se almacenan en una carpeta Mis informes, ni tampoco configurar la carpeta para el uso compartido entre usuarios.
 
  Desde el punto de vista técnico, Mis informes asigna el nombre de una carpeta virtual que ve cada usuario (Mis informes) a una carpeta maestra Carpetas de usuarios y a una subcarpeta única basada en el nombre del usuario. Cuando un usuario tiene acceso a su carpeta Mis informes, lo que sucede realmente es que es redireccionado a la subcarpeta de Carpetas de usuarios que tiene asignada. Cada subcarpeta ofrece espacio de almacenamiento para los informes y elementos que el usuario agrega a su carpeta Mis informes.
@@ -163,20 +163,20 @@ ms.locfileid: "79289593"
 |---------------|------------------|-------------|
 |(espacio)|[ ]|*Nombre Apellido* se convierte en *Nombre[ ]Apellido*|
 |\ (barra diagonal inversa)|Se sustituye por un carácter de espacio simple.|*nombreDeDominio\nombreDeUsuario* se convierte en *nombreDeDominio nombreDeUsuario*|
-|@ (arroba)|[arroba]|*nombreDeUsuario*@hotmail.com se convierte en *nombreDeUsuario*[arroba]hotmail.com|
-|& (y comercial)|[y comercial]|*nombreDeUsuario*@*empresa*&*empresa.com* se convierte en *nombreDeUsuario*[arroba]*empresa*[y comercial]*empresa.com*|
-|$ (signo de moneda)|[signo de moneda]|*Usuario* $*Nombre* se convierte en *Usuario*[ ][dólar]*Nombre*|
+|@ (arroba)|[arroba]|*el nombre de usuario* @hotmail.com se convierte en *nombreDeUsuario*[arroba] hotmail. com|
+|& (y comercial)|[y comercial]|*username*@*company*Company&*Company.com* se convierte en *username*[at]*Company*[amp]*Company.com*|
+|$ (signo de moneda)|[signo de moneda]|*User* $*El nombre* de usuario se convierte en *usuario*[] [dólar]*nombre*|
 
  La característica Mis informes es opcional. Cuando se instala un servidor de informes, la característica Mis informes está deshabilitada de forma predeterminada. Para obtener más información sobre cómo habilitar esta característica, vea [Habilitar y deshabilitar Mis informes](enable-and-disable-my-reports.md). Para obtener más información, vea [Proteger Mis informes](../security/secure-my-reports.md).
 
 ## <a name="tasks"></a>Tareas
- [Carga de archivos a una carpeta](upload-files-to-a-folder.md)
+ [Cargar archivos a una carpeta](upload-files-to-a-folder.md)
 
  [Crear, eliminar o modificar una carpeta &#40;Administrador de informes&#41;](create-delete-or-modify-a-folder-report-manager.md)
 
- [Actualice un recurso &#40;Administrador de informes&#41;](update-a-resource-report-manager.md)
+ [Actualizar un recurso &#40;Administrador de informes&#41;](update-a-resource-report-manager.md)
 
- [Carga de archivos a una carpeta](upload-files-to-a-folder.md)
+ [Cargar archivos a una carpeta](upload-files-to-a-folder.md)
 
 ## <a name="see-also"></a>Consulte también
  [Reporting Services](../tools/reporting-services-tools.md) [roles y permisos de herramientas &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md) [informes Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)

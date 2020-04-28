@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289833"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capturar un seguimiento en Asistente para experimentación con bases de datos
@@ -138,7 +138,7 @@ Si ve un error al ejecutar una captura de seguimiento, confirme lo siguiente:
 
 A continuación se muestran algunos posibles errores que podrían aparecer y soluciones para resolverlos:
 
-|Posibles errores|Solución|  
+|Posibles errores|Soluciones|  
 |---|---|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (53)|El usuario que ejecuta la herramienta DEA debe tener acceso al equipo que ejecuta SQL Server. El usuario debe tener asignado el rol sysadmin.|  
 |No se puede iniciar el seguimiento en el SQL Server de destino, compruebe si tiene los permisos necesarios y si la cuenta de SQL Server tiene acceso de escritura a la ruta del archivo de seguimiento especificada código de error de SQL (19062)|Es posible que la ruta de acceso especificada no exista o que la carpeta no tenga permisos de escritura para la cuenta en la que se están ejecutando los servicios de SQL Server (por ejemplo, servicio de red). La ruta de acceso debe existir y debe tener los permisos necesarios para que se inicie el seguimiento.|  

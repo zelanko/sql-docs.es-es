@@ -11,17 +11,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289233"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
   En este tema se presentan los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento de blobs de Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen las diferencias, excepciones notables y algunos ejemplos de código.  
   
 ## <a name="requirements-components-and-concepts"></a>Requisitos, componentes y conceptos  
- **Esta sección:**  
+ **En esta sección:**  
   
 -   [Seguridad](#security)  
   
@@ -33,7 +33,7 @@ ms.locfileid: "79289233"
   
 -   [Limitaciones](#limitations)  
   
--   [Compatibilidad con instrucciones BACKUP y RESTORE](#Support)  
+-   [Compatibilidad con instrucciones backup/restore](#Support)  
   
 -   [Usar la tarea Copia de seguridad en SQL Server Management Studio](sql-server-backup-to-url.md#BackupTaskSSMS)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "79289233"
   
 -   [Restauración desde Azure Storage con SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a> Seguridad  
+###  <a name="security"></a><a name="security"></a> Seguridad  
  A continuación se muestran los requisitos y las consideraciones de seguridad al realizar copias de seguridad o restaurar desde los servicios de almacenamiento de blobs de Azure.  
   
 -   Al crear un contenedor para el servicio de almacenamiento de blobs de Azure, se recomienda establecer el acceso en **privado**. Al configurar el acceso privado se restringe el acceso a los usuarios o las cuentas capaces de proporcionar la información necesaria para autenticarse en la cuenta de Azure.  
@@ -51,14 +51,14 @@ ms.locfileid: "79289233"
   
 -   La cuenta de usuario que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **operador de db_backup** con permisos **Modificar cualquier credencial** .  
   
-###  <a name="intorkeyconcepts"></a> Introducción a los principales componentes y conceptos  
+###  <a name="introduction-to-key-components-and-concepts"></a><a name="intorkeyconcepts"></a>Introducción a los principales componentes y conceptos  
  En las dos secciones siguientes se presentan el servicio de almacenamiento de blobs de Azure y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes que se usan al realizar copias de seguridad o restaurar desde el servicio de almacenamiento de blobs de Azure. Es importante comprender los componentes y la interacción entre ellos para realizar una copia de seguridad o una restauración desde el servicio de almacenamiento de blobs de Azure.  
   
  La creación de una cuenta de Azure es el primer paso de este proceso. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]usa el **nombre** de la cuenta de almacenamiento de Azure y sus valores de **clave de acceso** para autenticar y escribir y leer blobs en el servicio de almacenamiento. La credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena esta información de autenticación y se emplea durante las operaciones de copia de seguridad o restauración. Para obtener un tutorial completo sobre cómo crear una cuenta de almacenamiento y realizar una restauración simple, vea el tutorial sobre cómo [usar el servicio de Azure Storage para la copia de seguridad y restauración de SQL Server](https://go.microsoft.com/fwlink/?LinkId=271615).  
   
  ![asignación de la cuenta de almacenamiento a credenciales de SQL](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "asignación de la cuenta de almacenamiento a credenciales de SQL")  
   
-###  <a name="Blob"></a>Servicio de Azure Blob Storage  
+###  <a name="azure-blob-storage-service"></a><a name="Blob"></a>Servicio de Azure Blob Storage  
  **Cuenta de almacenamiento**: La cuenta de almacenamiento es el punto de partida para todos los servicios de almacenamiento. Para acceder al servicio Azure Blob Storage, cree primero una cuenta de Azure Storage. El **nombre** de la cuenta de almacenamiento y sus propiedades de **clave de acceso** son necesarias para autenticarse en el servicio de Azure BLOB Storage y sus componentes.  
   
  **Contenedor:** Un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia de seguridad en Azure BLOB Service, debe haber creado al menos el contenedor raíz.  
@@ -71,7 +71,7 @@ ms.locfileid: "79289233"
   
  Para más información sobre los blobs en páginas, consulte la [descripción de los blobs en bloques y en páginas](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)  
   
-###  Componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de <a name="sqlserver"></a>  
+###  <a name="ssnoversion-components"></a>Componentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de <a name="sqlserver"></a>  
  **Dirección URL:** Una dirección URL especifica un identificador uniforme de recursos (URI) para un archivo de copia de seguridad único. La dirección URL se emplea para proporcionar la ubicación y el nombre del archivo de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En esta implementación, la única dirección URL válida es aquella que señala a un BLOB en páginas en una cuenta de almacenamiento de Azure. La dirección URL debe apuntar a un blob real, no solo a un contenedor. Si el blob no existe, se crea. Si se especifica un BLOB existente, se produce un error en la copia de seguridad, a menos que se especifique la opción "WITH FORMAT".  
   
 > [!WARNING]  
@@ -87,7 +87,7 @@ ms.locfileid: "79289233"
   
  Para obtener información sobre otros ejemplos donde se usan credenciales, consulte [creación de un proxy de Agente SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
-###  <a name="limitations"></a> Limitaciones  
+###  <a name="limitations"></a><a name="limitations"></a> Limitaciones  
   
 -   No se pueden realizar copias de seguridad en el almacenamiento premium.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "79289233"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene un límite máximo de 259 caracteres para un nombre de dispositivo de copia de seguridad. BACKUP TO URL consume 36 caracteres para los elementos necesarios que se usan para especificar la dirección URL: "https://.blob.core.windows.net//.bak", y deja 223 caracteres para la cuenta, el contenedor y los nombres de blob.  
   
-###  <a name="Support"></a> Compatibilidad con instrucciones BACKUP y RESTORE  
+###  <a name="support-for-backuprestore-statements"></a><a name="Support"></a> Compatibilidad con instrucciones BACKUP y RESTORE  
   
 |||||  
 |-|-|-|-|  
@@ -208,7 +208,7 @@ ms.locfileid: "79289233"
   
  Para obtener más información sobre los argumentos de restauración, vea [RESTORE &#40;argumentos, Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
-##  <a name="BackupTaskSSMS"></a>Uso de la tarea de copia de seguridad en SQL Server Management Studio  
+##  <a name="using-backup-task-in-sql-server-management-studio"></a><a name="BackupTaskSSMS"></a>Uso de la tarea de copia de seguridad en SQL Server Management Studio  
  La tarea de copia de seguridad de SQL Server Management Studio se ha mejorado para incluir la dirección URL como una de las opciones de destino y otros objetos de compatibilidad necesarios para realizar la copia de seguridad en Azure Storage, como la credencial SQL.  
   
  En los pasos siguientes se describen los cambios realizados en la tarea copia de seguridad de base de datos para permitir realizar copias de seguridad en Azure Storage:  
@@ -217,9 +217,9 @@ ms.locfileid: "79289233"
   
 2.  En la página general, se usa la opción **dirección URL** para crear una copia de seguridad en Azure Storage. Al seleccionar esta opción, se ven otras opciones habilitadas en esta página:  
   
-    1.  **Nombre de archivo:** Nombre del archivo de copia de seguridad.  
+    1.  **Nombre de archivo:** nombre del archivo de copia de seguridad.  
   
-    2.  **Credencial SQL:** Puede especificar una credencial de SQL Server existente, o puede crear una nueva haciendo clic en el cuadro **crear** junto a la credencial de SQL.  
+    2.  **Credencial SQL:** puede especificar una credencial existente de SQL Server o crear una nueva haciendo clic en **Crear** , junto al cuadro Credencial SQL.  
   
         > [!IMPORTANT]  
         >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. SQL Server admite actualmente la versión 2.0 del perfil de publicación. Para descargar la versión compatible del perfil de publicación, vea [Descargar perfil de publicación 2.0](https://go.microsoft.com/fwlink/?LinkId=396421).  
@@ -228,7 +228,7 @@ ms.locfileid: "79289233"
   
     3.  **Contenedor de Azure Storage:** Nombre del contenedor de almacenamiento de Azure en el que se almacenarán los archivos de copia de seguridad.  
   
-    4.  **Prefijo de dirección URL:** Esto se genera automáticamente con la información especificada en los campos descritos en los pasos anteriores. Si edita este valor manualmente, asegúrese de que coincide con el resto de la información que proporcionó antes. Por ejemplo, si modifica la dirección URL de almacenamiento, asegúrese de que la credencial SQL está establecida para autenticar en la misma cuenta de almacenamiento.  
+    4.  **Prefijo de dirección URL:** se genera automáticamente con la información especificada en los campos que se describen en los pasos anteriores. Si edita este valor manualmente, asegúrese de que coincide con el resto de la información que proporcionó antes. Por ejemplo, si modifica la dirección URL de almacenamiento, asegúrese de que la credencial SQL está establecida para autenticar en la misma cuenta de almacenamiento.  
   
  Al seleccionar Dirección URL como destino, ciertas opciones de la página **Opciones multimedia** están deshabilitadas.  Los temas siguientes tienen más información acerca del cuadro de diálogo Copia de seguridad de la base de datos:  
   
@@ -240,10 +240,10 @@ ms.locfileid: "79289233"
   
  [Crear credencial - autenticarse en Azure Storage](create-credential-authenticate-to-azure-storage.md)  
   
-##  <a name="MaintenanceWiz"></a> Copia de seguridad de SQL Server en una dirección URL mediante el Asistente para planes de mantenimiento  
+##  <a name="sql-server-backup-to-url-using-maintenance-plan-wizard"></a><a name="MaintenanceWiz"></a>SQL Server realizar copia de seguridad en URL mediante el Asistente para planes de mantenimiento  
  Al igual que la tarea de copia de seguridad descrita anteriormente, el Asistente para planes de mantenimiento de SQL Server Management Studio se ha mejorado para incluir la **dirección URL** como una de las opciones de destino y otros objetos de compatibilidad necesarios para realizar la copia de seguridad en Azure Storage, como la credencial SQL. Para obtener más información, consulte la sección **Definir las tareas de copia de seguridad** en [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
   
-##  <a name="RestoreSSMS"></a>Restauración desde Azure Storage mediante SQL Server Management Studio  
+##  <a name="restoring-from-azure-storage-using-sql-server-management-studio"></a><a name="RestoreSSMS"></a>Restauración desde Azure Storage mediante SQL Server Management Studio  
  Si restaura una base de datos, **Dirección URL** se incluye como dispositivo desde el que restaurar. En los pasos siguientes se describen los cambios en la tarea de restauración para permitir la restauración desde Azure Storage:  
   
 1.  Al seleccionar **Dispositivos** en la página **General** de la tarea Restaurar en SQL Server Management Studio, se le llevará al cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** que incluye **Dirección URL** como tipo de medio de copia de seguridad.  
@@ -258,24 +258,24 @@ ms.locfileid: "79289233"
   
      [Restaurar base de datos &#40;página Opciones&#41;](restore-database-options-page.md)  
   
-##  <a name="Examples"></a> Ejemplos de código  
+##  <a name="code-examples"></a><a name="Examples"></a> Ejemplos de código  
  Esta sección contiene los siguientes ejemplos.  
   
 -   [Crear una credencial](#credential)  
   
 -   [Realizar una copia de seguridad completa de la base de datos](#complete)  
   
--   [Realizar copias de seguridad de la base de datos y del registro](#databaselog)  
+-   [Realizar una copia de seguridad de la base de datos y el registro](#databaselog)  
   
 -   [Crear una copia de seguridad de archivos completa del grupo de archivos principal](#filebackup)  
   
 -   [Crear una copia de seguridad de archivos diferencial del grupo de archivos principal](#differential)  
   
--   [Restaurar una base de datos y migrar archivos](#restoredbwithmove)  
+-   [Restaurar una base de datos y mover archivos](#restoredbwithmove)  
   
 -   [Restaurar a un momento dado con STOPAT](#PITR)  
   
-###  <a name="credential"></a> Crear una credencial  
+###  <a name="create-a-credential"></a><a name="credential"></a> Crear una credencial  
  En el ejemplo siguiente se crea una credencial que almacena la información de autenticación de Azure Storage.  
 
    ```sql
@@ -312,7 +312,7 @@ ms.locfileid: "79289233"
    New-SqlCredential -Name $credentialName -Path $srvpath -Identity $storageAccount -Secret $secureString
    ```  
   
-###  <a name="complete"></a>Copia de seguridad de una base de datos completa  
+###  <a name="backing-up-a-complete-database"></a><a name="complete"></a>Copia de seguridad de una base de datos completa  
  En el ejemplo siguiente se realiza una copia de seguridad de la base de datos AdventureWorks2012 en el servicio Azure BLOB Storage.
   
    ```sql
@@ -362,7 +362,7 @@ ms.locfileid: "79289233"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On
    ```  
   
-###  <a name="databaselog"></a>Realizar copias de seguridad de la base de datos y del registro  
+###  <a name="backing-up-the-database-and-log"></a><a name="databaselog"></a>Realizar copias de seguridad de la base de datos y del registro  
  En el ejemplo siguiente se realiza la copia de seguridad de la base de datos de ejemplo AdventureWorks2012, que usa de forma predeterminada el modelo de recuperación simple. Para admitir copias de seguridad de registros, se ha modificado la base de datos AdventureWorks2012 para usar el modelo de recuperación completa. A continuación, en el ejemplo se crea una copia de seguridad de base de datos completa en BLOB de Azure y, después de un período de actividad de actualización, se realiza una copia de seguridad del registro. En este ejemplo se crea un nombre de archivo de copia de seguridad con una marca de fecha y hora.  
   
    ```sql
@@ -462,7 +462,7 @@ ms.locfileid: "79289233"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Log
    ```  
   
-###  <a name="filebackup"></a>Crear una copia de seguridad de archivos completa del grupo de archivos principal  
+###  <a name="creating-a-full-file-backup-of-the-primary-filegroup"></a><a name="filebackup"></a>Crear una copia de seguridad de archivos completa del grupo de archivos principal  
  En el ejemplo siguiente se crea una copia de seguridad de archivos completa del grupo de archivos principal.
   
    ```sql
@@ -520,7 +520,7 @@ ms.locfileid: "79289233"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary
    ```  
   
-###  <a name="differential"></a>Crear una copia de seguridad diferencial de archivos del grupo de archivos principal  
+###  <a name="creating-a-differential-file-backup-of-the-primary-filegroup"></a><a name="differential"></a>Crear una copia de seguridad diferencial de archivos del grupo de archivos principal  
  En el ejemplo siguiente se crea una copia de seguridad de archivos diferencial del grupo de archivos principal.  
   
    ```sql
@@ -580,7 +580,7 @@ ms.locfileid: "79289233"
    Backup-SqlDatabase -Database AdventureWorks2012 -backupFile $backupFile  -SqlCredential $credentialName -CompressionOption On -BackupAction Files -DatabaseFileGroup Primary -Incremental
    ```  
   
-###  <a name="restoredbwithmove"></a>Restaurar una base de datos y migrar archivos  
+###  <a name="restore-a-database-and-move-files"></a><a name="restoredbwithmove"></a>Restaurar una base de datos y migrar archivos  
  Para restaurar una copia de seguridad completa y mover la base de datos restaurada al directorio C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Data, realice los pasos siguientes.
   
    ```sql
@@ -683,7 +683,7 @@ ms.locfileid: "79289233"
    Restore-SqlDatabase -Database AdventureWorks2012 -SqlCredential $credentialName -BackupFile $backupdbFile -RelocateFile @($newDataFilePath,$newLogFilePath)
    ```  
   
-###  <a name="PITR"></a> Restaurar a un momento dado con STOPAT  
+###  <a name="restoring-to-a-point-in-time-using-stopat"></a><a name="PITR"></a> Restaurar a un momento dado con STOPAT  
  En el ejemplo siguiente se restaura una base de datos a su estado en un momento dado y se muestra una operación de restauración.  
   
    ```sql

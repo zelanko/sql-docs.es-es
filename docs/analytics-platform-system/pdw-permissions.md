@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289693"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Administración de permisos en almacenamiento de datos paralelos
 En este artículo se describen los requisitos y las opciones para administrar los permisos de base de datos para PDW de SQL Server.
 
-## <a name="BackupRestoreBasics"></a>Aspectos básicos de los permisos de Motor de base de datos
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>Aspectos básicos de los permisos de Motor de base de datos
 Motor de base de datos permisos en PDW de SQL Server se administran en el nivel de servidor a través de inicios de sesión y en el nivel de base de datos a través de usuarios de base de datos y roles de base de datos definidos por el usuario.
 
 **Inicios de sesión** Los inicios de sesión son cuentas de usuario individuales para iniciar sesión en el PDW de SQL Server. PDW de SQL Server admite inicios de sesión con la autenticación de Windows y la autenticación de SQL Server.  Los inicios de sesión de autenticación de Windows pueden ser usuarios o grupos de Windows de cualquier dominio en el que confíe PDW de SQL Server. SQL Server los inicios de sesión de autenticación se definen y autentican mediante PDW de SQL Server y se deben crear especificando una contraseña.
@@ -52,7 +52,7 @@ Los inicios de sesión son objetos de nivel de servidor y se pueden enumerar med
 
 Los usuarios y los roles de base de datos son objetos de nivel de base de datos y se pueden enumerar mediante la visualización de [Sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Solo se pueden conceder permisos de nivel de base de datos a las entidades de seguridad de base de datos.
 
-## <a name="BackupTypes"></a>Permisos predeterminados
+## <a name="default-permissions"></a><a name="BackupTypes"></a>Permisos predeterminados
 En la lista siguiente se describen los permisos predeterminados:
 
 -   Cuando se crea un inicio de sesión mediante la instrucción **Create login** , el inicio de sesión recibe el permiso **Connect SQL** , lo que permite que el inicio de sesión se conecte al PDW de SQL Server.
@@ -80,7 +80,7 @@ Todos los nuevos inicios de sesión de aplicación pertenecen automáticamente a
 
 -   El rol de servidor público no puede heredar permisos implícitos. Los permisos asignados al rol PUBLIC deben concederse explícitamente.
 
-## <a name="BackupProc"></a>Determinar los permisos
+## <a name="determining-permissions"></a><a name="BackupProc"></a>Determinar los permisos
 El hecho de que un inicio de sesión tenga permiso para realizar una acción específica dependerá de los permisos concedidos o denegados para iniciar sesión, el usuario y los roles de los que es miembro el usuario. Los permisos de nivel de servidor (como **crear inicio de sesión** y **ver estado del servidor**) están disponibles para las entidades de seguridad de nivel de servidor (inicios de sesión). Los permisos de nivel de base de datos (como **Select** from a TABLE o **Execute** on a procedure) están disponibles para las entidades de seguridad de nivel de base de datos (usuarios y roles de base de datos).
 
 ### <a name="implicit-and-explicit-permissions"></a>Permisos implícitos y explícitos
@@ -165,7 +165,7 @@ Para investigar los permisos de un usuario, compruebe lo siguiente.
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>Procedimientos recomendados de permisos de base de datos
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>Procedimientos recomendados de permisos de base de datos
 
 -   Conceda permisos en el nivel más granular que sea práctico. La concesión de permisos en los permisos de nivel de tabla o vista podría ser no administrable. Pero conceder permisos en el nivel de base de datos podría ser demasiado permisivo. Si la base de datos está diseñada con esquemas para definir los límites de trabajo, quizás el permiso de concesión al esquema sea un riesgo adecuado entre el nivel de tabla y el nivel de base de datos.
 
@@ -236,7 +236,7 @@ El sistema de los roles fijos de servidor y los roles fijos de base de datos es 
 
 ## <a name="related-topics"></a>Temas relacionados
 
-- [Conceder permisos](grant-permissions.md)
+- [Concesión de permisos](grant-permissions.md)
 
 <!-- MISSING LINKS
 ## See Also

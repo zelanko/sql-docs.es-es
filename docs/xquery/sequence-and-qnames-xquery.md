@@ -1,5 +1,5 @@
 ---
-title: Secuencia y QNames (XQuery) Microsoft Docs
+title: Sequence y QNames (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380786"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Secuencia y QName (XQuery)
@@ -101,7 +101,7 @@ SELECT @x.query('<x>11</x>, 22');
 ## <a name="qname"></a>QName  
  Cada identificador de una expresión XQuery es un elemento QName. Un elemento QName se compone de un prefijo de espacio de nombres y un nombre local. En esta implementación, los nombres de variables de las expresiones XQuery son elementos QName y no pueden tener prefijos.  
   
- Considere el siguiente ejemplo en el que se especifica una consulta en una variable **xml** sin tipo:  
+ Considere el siguiente ejemplo en el que se especifica una consulta en una variable **XML** sin tipo:  
   
 ```  
 DECLARE @x xml;  
@@ -111,7 +111,7 @@ SELECT @x.query('/Root/a');
   
  En la expresión (`/Root/a`), `Root` y `a` son elementos QName.  
   
- En el ejemplo siguiente, se especifica una consulta en una columna **xml** con tipo. La consulta recorre en \<iteración todos los elementos> paso en la primera ubicación del centro de trabajo.  
+ En el ejemplo siguiente, se especifica una consulta en una columna **XML** con tipo. La consulta recorre en iteración todos los \<elementos> del paso en la primera ubicación centro.  
   
 ```  
 SELECT Instructions.query('  
@@ -143,12 +143,12 @@ WHERE ProductModelID=7;
 |Xml|`http://www.w3.org/XML/1998/namespace`|  
 |(sin prefijo)|`https://schemas.microsoft.com/sqlserver/2004/SOAP`|  
   
- Cada base de datos que cree tiene la colección de esquemas XML **sys.** Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
+ Cada base de datos que se crea tiene la colección de esquemas XML **Sys** . Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
   
 > [!NOTE]  
->  Esta implementación no `local` admite el prefijo como http://www.w3.org/2004/07/xquery-local-functionsse describe en la especificación XQuery en .  
+>  Esta implementación no admite el `local` prefijo tal y como se describe en la http://www.w3.org/2004/07/xquery-local-functionsespecificación de XQuery en.  
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Consulte también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)  
   
   

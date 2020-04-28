@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 464e82ea23aa724d84af25c69a7168f95d09afe1
-ms.sourcegitcommit: 39d8d2d504d0ab70bac5ae3e981657e15dfb7bee
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/10/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78964368"
 ---
 # <a name="create-a-model-administrator-master-data-services"></a>Crear un administrador de modelo (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "78964368"
   
 -   Debe disponer de permiso para tener acceso al área funcional **Permisos de usuario y de grupo** .  
   
--   Debe ser administrador de modelo. Para obtener más información, vea [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Debe ser administrador de modelo. Para obtener más información, vea [administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-create-a-model-administrator"></a>Para crear un administrador de modelo  
   

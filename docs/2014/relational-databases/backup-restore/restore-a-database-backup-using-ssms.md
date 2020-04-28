@@ -20,23 +20,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 521fc35b8ada4b1eb6c62e75fed4e1d9f99d21c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154778"
 ---
 # <a name="restore-a-database-backup-sql-server-management-studio"></a>Restaurar una copia de seguridad de base de datos (SQL Server Management Studio)
   En este tema se explica cómo restaurar una copia de seguridad completa de la base de datos.  
   
 > [!IMPORTANT]  
->  En el modelo de recuperación optimizado para cargas masivas de registros o completo, para poder restaurar una base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)). Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, vea [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+>  En el modelo de recuperación optimizado para cargas masivas de registros o completo, para poder restaurar una base de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se debe realizar una copia de seguridad del registro de transacciones activo (conocido como final del registro). Para obtener más información, vea [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)). Para restaurar una base de datos cifrada, debe tener acceso al certificado o la clave asimétrica que se usó para cifrarla. La base de datos no se puede restaurar sin el certificado o la clave asimétrica. Como resultado, se debe conservar el certificado que se usa para cifrar la clave de cifrado de base de datos mientras se necesite la copia de seguridad. Para obtener más información, consulte [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
- Tenga en cuenta que si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero, si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la operación de importar puede requerir varias horas y la operación de volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+ Tenga en cuenta que si restaura una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de datos se actualiza automáticamente. Normalmente, la base de datos está disponible inmediatamente. Pero, si una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, según la configuración de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la operación de importar puede requerir varias horas y la operación de volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que cuando la opción de actualización se establece en **importar**, si un catálogo de texto completo no está disponible, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ### <a name="to-restore-a-full-database-backup"></a>Para restaurar una copia de seguridad completa de la base de datos  
   
-1.  Después de conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
+1.  Después de conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
   
 2.  Expanda **Bases de datos**. En función de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema**y, a continuación, seleccione una base de datos del sistema.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "70154778"
   
     -   **Dispositivo**  
   
-         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad**, seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad**, haga clic en **Agregar**.  
   
-         Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
+         Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad**, haga clic en **Aceptar** para volver a la página **General**.  
   
          En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "70154778"
   
     1.  Opciones `WITH` (no necesarias):  
   
-        -   **Sobrescribir la base de datos existente (WITH REPLACE)**  
+        -   **Sobrescribir la base de datos existente (WITH Replace)**  
   
-        -   **Conservar la configuración de replicación (WITH KEEP_REPLICATION)**  
+        -   **Conservar la configuración de replicación (con KEEP_REPLICATION)**  
   
-        -   **Restringir el acceso a la base de datos restaurada (WITH RESTRICTED_USER)**  
+        -   **Restringir el acceso a la base de datos restaurada (con RESTRICTED_USER)**  
   
     2.  Seleccione una opción en el cuadro **Estado de recuperación** . Este cuadro determina el estado de la base de datos después de la operación de restauración.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "70154778"
   
         -   **RESTORE WITH STANDBY** deja la base de datos en modo de solo lectura. Deshace las transacciones sin confirmar, pero guarda las acciones de deshacer en un archivo en espera para que los efectos de la recuperación puedan revertirse.  
   
-    3.  **Realice una copia del final del registro antes** de que se seleccione la restauración si es necesario para el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario. ¿Un nombre de archivo aquí? Si el primer conjunto de copia de seguridad de la página **General** se encuentra en Azure, también se realizará una copia de seguridad del registro del final en el mismo contenedor de almacenamiento.  
+    3.  **Realizar copia del final del registro de la cola antes de la restauración** se seleccionará si es necesario en el momento dado que ha seleccionado. No es necesario modificar este valor, pero puede optar por realizar la copia del final del registro incluso si no es necesario. ¿Un nombre de archivo aquí? Si el primer conjunto de copia de seguridad de la página **General** se encuentra en Azure, también se realizará una copia de seguridad del registro del final en el mismo contenedor de almacenamiento.  
   
     4.  Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
@@ -123,8 +123,8 @@ ms.locfileid: "70154778"
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
- [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
+ [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Cree una copia de seguridad completa de la base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)   
  [Restaurar una base de datos a una nueva ubicación &#40;SQL Server&#41;](restore-a-database-to-a-new-location-sql-server.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

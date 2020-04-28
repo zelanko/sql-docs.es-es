@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72306269"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -68,8 +68,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  El ** \@argumento delete_unused_schedule** proporciona compatibilidad con versiones anteriores de SQL Server quitando automáticamente las programaciones que no están adjuntas a ningún trabajo. Tenga en cuenta que este parámetro tiene como valor predeterminado el comportamiento compatible con versiones anteriores. Para conservar las programaciones que no están adjuntas a un trabajo, debe proporcionar el valor **0** como ** \@delete_unused_schedule** argumento.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
  Este procedimiento almacenado no puede eliminar planes de mantenimiento y tampoco puede eliminar trabajos que forman parte de planes de mantenimiento. En su lugar, utilice [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para eliminar planes de mantenimiento.  
   

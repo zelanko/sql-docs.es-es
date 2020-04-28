@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682136"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "71682136"
   Devuelve el tamaño actual del objeto solicitado y calcula el tamaño del objeto para el estado de compresión solicitado. La compresión se puede evaluar para tablas enteras o partes de tablas. Esto incluye montones, índices clúster, índices no clúster, índices de almacén de columnas, vistas indizadas y particiones de tablas e índices. Los objetos se pueden comprimir mediante la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Si la tabla, índice o partición ya están comprimidos, puede utilizar este procedimiento para calcular el tamaño de la tabla, del índice o de la partición en caso de que se volviera a comprimir.  
   
 > [!NOTE]
-> La compresión y el **sp_estimate_data_compression_savings** no están disponibles en todas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las ediciones de. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+> La compresión y el **sp_estimate_data_compression_savings** no están disponibles en todas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las ediciones de. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  Para calcular el tamaño del objeto, en caso de que se use el valor de compresión solicitado, el procedimiento almacenado prueba el objeto de origen y carga los datos en una tabla e índice equivalentes creados en tempdb. La tabla o índice creados en tempdb se comprimen al valor solicitado y se calcula el ahorro estimado de la compresión.  
   
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  Es el nombre del esquema de la base de datos que contiene la tabla o vista indizada. *schema_name* es de **tipo sysname**. Si *schema_name* es null, se usa el esquema predeterminado del usuario actual.  
   
  [ @object_name= ] '*object_name*'  
- Es el nombre de la tabla o vista indizada en la que está el índice. *object_name* es de **tipo sysname**.  
+ Es el nombre de la tabla o vista indizada en la que está el índice. *object_name* es **sysname**.  
   
  [ @index_id= ] *index_id*  
  Es el identificador del índice. *index_id* es de **tipo int**y puede tener uno de los valores siguientes: el número de identificación de un índice, NULL o 0 si *object_id* es un montón. Para obtener información de todos los índices de una tabla base o vista, especifique NULL. Si especifica NULL, también debe especificar NULL para *partition_number*.  
@@ -84,10 +84,10 @@ sp_estimate_data_compression_savings
 |schema_name|**sysname**|Esquema de la tabla o vista indizada.|  
 |index_id|**int**|Identificador de índice de un índice:<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = Índice no clúster|  
 |partition_number|**int**|Número de partición. Devuelve 1 para una tabla o índice sin particiones.|  
-|size_with_current_compression_setting (KB)|**BIGINT**|Tamaño actual de la tabla, índice o partición solicitados.|  
-|size_with_requested_compression_setting (KB)|**BIGINT**|Tamaño estimado de la tabla, índice o partición que utiliza el valor de compresión solicitado y, si es aplicable, factor de relleno existente, suponiendo que no hay fragmentación.|  
-|sample_size_with_current_compression_setting (KB)|**BIGINT**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
-|sample_size_with_requested_compression_setting (KB)|**BIGINT**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
+|size_with_current_compression_setting (KB)|**bigint**|Tamaño actual de la tabla, índice o partición solicitados.|  
+|size_with_requested_compression_setting (KB)|**bigint**|Tamaño estimado de la tabla, índice o partición que utiliza el valor de compresión solicitado y, si es aplicable, factor de relleno existente, suponiendo que no hay fragmentación.|  
+|sample_size_with_current_compression_setting (KB)|**bigint**|Tamaño del ejemplo con la opción de compresión actual. Esto incluye cualquier fragmentación.|  
+|sample_size_with_requested_compression_setting (KB)|**bigint**|Tamaño del ejemplo que se crea utilizando el valor de compresión solicitado y, si es aplicable, factor de relleno existente, sin fragmentación.|  
   
 ## <a name="remarks"></a>Observaciones  
  Use `sp_estimate_data_compression_savings` para calcular el ahorro que se puede producir al habilitar una tabla o partición para la compresión de archivo de fila, página, almacén de columnas o almacén de columnas. Por ejemplo, si el tamaño medio de una fila se puede reducir un 40 por ciento, potencialmente también se puede reducir el tamaño del objeto en un 40 por ciento. Es posible que no consiga ahorrar espacio, ya que depende del factor de relleno y del tamaño de la fila. Por ejemplo, si tiene una fila de 8.000 bytes de longitud y reduce su tamaño en un 40 por ciento, puede ajustar solo una fila en una página de datos. No se obtiene ningún ahorro.  

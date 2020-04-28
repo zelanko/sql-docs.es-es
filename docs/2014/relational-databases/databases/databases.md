@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154581"
 ---
 # <a name="databases"></a>Bases de datos
@@ -45,7 +45,7 @@ ms.locfileid: "70154581"
 |[Archivos de datos de SQL Server en Azure](sql-server-data-files-in-microsoft-azure.md)|[Aumentar el tamaño de una base de datos](increase-the-size-of-a-database.md)|  
 |[Archivos y grupos de archivos de base de datos](database-files-and-filegroups.md)|[Cambiar el nombre de una base de datos](rename-a-database.md)|  
 |[Estados de base de datos](database-states.md)|[Establecer una base de datos en modo de usuario único](set-a-database-to-single-user-mode.md)|  
-|[Estados de los archivos](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  
+|[Estados de archivo](file-states.md)|[Reducir una base de datos](shrink-a-database.md)|  
 |[Estimar el tamaño de una base de datos](estimate-the-size-of-a-database.md)|[Reducir un archivo](shrink-a-file.md)|  
 |[Copiar bases de datos en otros servidores](copy-databases-to-other-servers.md)|[Ver o cambiar las propiedades de una base de datos](view-or-change-the-properties-of-a-database.md)|  
 |[Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)|[Ver una lista de bases de datos en una instancia de SQL Server](view-a-list-of-databases-on-an-instance-of-sql-server.md)|  

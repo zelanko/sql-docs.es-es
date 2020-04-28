@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154610"
 ---
 # <a name="database-engine-tutorials"></a>Tutoriales del motor de base de datos
@@ -44,13 +44,13 @@ ms.locfileid: "70154610"
  [Tutorial: Administrar servidores mediante administración basada en directivas](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que aplican las normas de administración del sitio.  
   
- [Tutorial: evaluar las prácticas recomendadas usando administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutorial: Evaluación de los procedimientos recomendados mediante administración basada en directivas](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  En este tutorial se enseña a crear directivas que se pueden usar para analizar instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] y ver si hay problemas conocidos.  
   
- [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
  Este tutorial ilustra el modo de hacer una copia de seguridad y una restauración de SQL Server para el servicio Azure Blob Storage.  
   
- [Tutorial: archivos de datos de SQL Server en el servicio Azure Storage](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [Tutorial: Archivos de datos de SQL Server en el servicio Azure Storage](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
  Este tutorial le ayudará a saber cómo almacenar archivos de datos de SQL Server en el servicio Azure Blob Storage directamente.  
   
 ## <a name="see-also"></a>Consulte también  

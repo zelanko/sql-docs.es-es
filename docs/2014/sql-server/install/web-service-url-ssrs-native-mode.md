@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952363"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Dirección URL del servicio web (Modo nativo de SSRS)
@@ -41,13 +41,13 @@ ms.locfileid: "71952363"
  **Dirección IP**  
  Identifica el equipo del servidor de informes en una red TCP/IP. Los valores válidos son:  
   
--   **Todas asignadas** especifica que cualquiera de las direcciones IP asignadas al equipo se puede utilizar en una dirección URL que apunte a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+-   **Todas asignadas** especifica que cualquiera de las direcciones IP que están asignadas al equipo se puede utilizar en una dirección URL que señale a una aplicación de servidor de informes. Este valor también abarca nombres de host descriptivos (como nombres de equipo) que un servidor de nombres de dominio puede resolver en una dirección IP que se asigna al equipo. Éste es el valor predeterminado de una dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
--   **Todos sin asignar** especifica que el servidor de informes aceptará cualquier solicitud que no tenga una coincidencia exacta para la dirección IP o el nombre de host. No utilice este valor si otra aplicación web ya está utilizándolo. Si hace esto, interrumpirá el servicio para la otra aplicación.  
+-   **Todas sin asignar** especifica que el servidor de informes aceptará cualquier solicitud que no tenga una coincidencia exacta para la dirección IP o nombre de host. No utilice este valor si otra aplicación web ya está utilizándolo. Si hace esto, interrumpirá el servicio para la otra aplicación.  
   
--   **127.0.0.1** se usa para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
+-   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn. nnn. nnn. nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado>:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado>:*nnnn: nnnn: nnnn: nnnn*  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "71952363"
  **Puerto SSL**  
  Especifica el puerto para las conexiones SSL.  
   
- **URL**  
+ **URLs**  
  Muestra las direcciones URL definidas para la instancia actual del servidor de informes.  
   
  **Avanzadas**  

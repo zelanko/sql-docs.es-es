@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155002"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
@@ -42,9 +42,9 @@ ms.locfileid: "70155002"
 -   Revise los temas de los Libros en pantalla que abordan la representación en imágenes (EMF) con el objetivo de conocer cómo se representan las páginas para la vista previa de impresión y la salida.  
   
 ## <a name="rsprintclient-overview"></a>Información general de RSPrintClient  
- El control muestra un cuadro de diálogo de impresión personalizado compatible con características comunes a otros cuadros de diálogo de impresión, incluida la vista previa de impresión, selecciones de páginas para especificar páginas e intervalos de páginas, márgenes y orientación. El control se empaqueta como un archivo CAB. El texto del cuadro de diálogo **Imprimir** aparece traducido a todos los idiomas admitidos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. **RSPrintClient** El control ActiveX utiliza la extensión de representación en imágenes (EMF) para imprimir el informe. Se usa la siguiente información del dispositivo EMF: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight y PageWidth. No se admite ninguna otra configuración de información de dispositivo para la representación en imágenes.  
+ El control muestra un cuadro de diálogo de impresión personalizado compatible con características comunes a otros cuadros de diálogo de impresión, incluida la vista previa de impresión, selecciones de páginas para especificar páginas e intervalos de páginas, márgenes y orientación. El control se empaqueta como un archivo CAB. El texto del cuadro de diálogo **Imprimir** aparece traducido a todos los idiomas admitidos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El control ActiveX **RSPrintClient** usa la extensión de representación en imágenes (EMF) para imprimir el informe. Se usa la siguiente información del dispositivo EMF: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight y PageWidth. No se admite ninguna otra configuración de información de dispositivo para la representación en imágenes.  
   
-### <a name="language-support"></a>Compatibilidad con lenguajes  
+### <a name="language-support"></a>Compatibilidad con idiomas  
  El control de impresión proporciona texto de la interfaz de usuario en distintos idiomas y acepta valores de entrada calibrados para diversos sistemas de medida. El idioma y el sistema de medida usados vienen determinados por las propiedades **Culture** y **UICulture**. Ambas propiedades aceptan valores LCID. Si especifica un LCID para un idioma que es una variación de un idioma compatible, obtendrá el idioma que más se aproxime. Si especifica un LCID no compatible y para el que no existe ningún otro LCID que se aproxime, obtendrá Inglés (Estados Unidos).  
   
 ## <a name="using-rsclientprint-in-code"></a>Usar RSClientPrint en el código  
@@ -59,7 +59,7 @@ ms.locfileid: "70155002"
   
 -   **PageHeight** y **PageWidth** especifican el alto y el ancho de página predeterminados. Cuando se inicia el control de impresión, los valores de estas propiedades se utilizan para seleccionar el tamaño de papel más cercano disponible para la impresora actualmente seleccionada. Si el valor de **PageWidth** es mayor que el de **PageHeight**, la orientación se establece en Horizontal. De lo contrario, se establece en Vertical.  
   
--   **LeftMargin**, **RightMargin**, **TopMargin**y **BottomMargin** se establecen de forma predeterminada en 12,2 milímetros.  
+-   De manera predeterminada, **LeftMargin**, **RightMargin**, **TopMargin** y **BottomMargin** están establecidos en 12,2 milímetros.  
   
  Estas propiedades están almacenadas en la colección de propiedades **Item** en el servidor de informes. Los valores se sobrescriben cada vez que se actualiza una definición de informe.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "70155002"
   
 |Propiedad|Tipo|RW|Valor predeterminado|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|DOUBLE|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginRight|DOUBLE|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginTop|DOUBLE|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginBottom|DOUBLE|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|PageWidth|DOUBLE|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
-|PageHeight|DOUBLE|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
+|MarginLeft|Doble|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginRight|Doble|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginTop|Doble|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginBottom|Doble|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|PageWidth|Doble|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
+|PageHeight|Doble|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
 |Referencia cultural|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas si el idioma es el inglés (Estados Unidos). Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
 |UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. El texto del cuadro de diálogo Imprimir está traducido a los idiomas que se indican a continuación: alemán, chino simplificado, chino tradicional, coreano, español, francés, inglés, italiano y japonés. Los valores válidos son: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052 y 3082.|  
-|Autenticar|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
+|Authenticate|Booleano|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Cuándo establecer la propiedad Authenticate  
  Al imprimir desde una sesión del explorador, no es necesario establecer la propiedad `Authenticate`. En el contexto de una sesión activa, todas las solicitudes del control de impresión que se hacen al servidor de informes se controlan a través del propio explorador. El explorador establece las variables de sesión necesarias para la comunicación con el servidor de informes.  
@@ -142,7 +142,7 @@ ms.locfileid: "70155002"
  `</BODY>`  
   
 ## <a name="see-also"></a>Consulte también  
- [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Imprimir informes desde un explorador con el control de impresión &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Configuración de la información del dispositivo de imagen](../../image-device-information-settings.md)  
   

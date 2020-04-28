@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71163929"
 ---
 # <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions (Transact-SQL)
@@ -34,16 +34,16 @@ ms.locfileid: "71163929"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**las**|**tinyint**|Identifica la clase de elemento sobre el que existe el permiso.<br /><br /> 100 = Servidor<br /><br /> 101 = Entidad de seguridad de servidor<br /><br /> 105 = Extremo|  
-|**class_desc**|**nvarchar (60)**|Descripción de la clase en la que existe el permiso. Uno de los valores siguientes:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
+|**class**|**tinyint**|Identifica la clase de elemento sobre el que existe el permiso.<br /><br /> 100 = Servidor<br /><br /> 101 = Entidad de seguridad de servidor<br /><br /> 105 = Extremo|  
+|**class_desc**|**nvarchar(60)**|Descripción de la clase en la que existe el permiso. Uno de los siguientes valores:<br /><br /> **SERVIDOR**<br /><br /> **SERVER_PRINCIPAL**<br /><br /> **ENDPOINT**|  
 |**major_id**|**int**|Id. del elemento protegible sobre el que existe el permiso, interpretado según la clase. Para la mayoría, solo es el tipo de Id. que se aplica a lo que representa la clase. La interpretación de lo que no es estándar es la siguiente:<br /><br /> 100 = siempre 0|  
 |**minor_id**|**int**|Id. secundaria del elemento sobre el que existe el permiso, interpretado según la clase.|  
 |**grantee_principal_id**|**int**|Id. de la entidad de seguridad de servidor a la que se conceden los permisos.|  
 |**grantor_principal_id**|**int**|Id. de la entidad de seguridad de servidor del que concede esos permisos.|  
-|**automáticamente**|**Char (4)**|Tipo de permiso de servidor. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
+|**type**|**Char (4)**|Tipo de permiso de servidor. Para obtener una lista de los tipos de permisos, vea la tabla siguiente.|  
 |**permission_name**|**nvarchar(128)**|Nombre del permiso.|  
-|**State**|**Char (1)**|Estado del permiso:<br /><br /> D = Denegar<br /><br /> R = Revocar<br /><br /> G = Conceder<br /><br /> W = Conceder con la opción conceder|  
-|**state_desc**|**nvarchar (60)**|Descripción del estado del permiso:<br /><br /> DENEGAR<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
+|**state**|**Char (1)**|Estado del permiso:<br /><br /> D = Denegar<br /><br /> R = Revocar<br /><br /> G = Conceder<br /><br /> W = Conceder con la opción conceder|  
+|**state_desc**|**nvarchar(60)**|Descripción del estado del permiso:<br /><br /> DENEGAR<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
   
 |Tipo de permiso|Nombre de permiso|Se aplica a un elemento protegible|  
 |---------------------|---------------------|--------------------------|  

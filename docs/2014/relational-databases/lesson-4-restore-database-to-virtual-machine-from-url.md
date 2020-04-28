@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175575"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lección 5. (Opcional) Cifrar la base de datos mediante TDE
@@ -91,6 +91,6 @@ GO
   
  **Lección siguiente:**  
   
- [Lección 6: Migración de una base de datos de un equipo de origen local a un equipo de destino en Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lección 6: Migrar una base de datos desde un equipo de origen local a un equipo de destino en Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

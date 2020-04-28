@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304947"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -60,11 +60,11 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtro de combinación.<br /><br /> Esta opción es necesaria para admitir los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relación de registros lógicos.|  
 ||**3**|El filtro de combinación también es una relación de registros lógicos.|  
-|**filtername**||Nombre del filtro.|  
+|**FilterName**||Nombre del filtro.|  
 |**join_articlename**||Nombre del artículo de combinación.|  
 |**join_filterclause**||Cláusula de filtro.|  
-|**join_unique_key**|**reales**|La combinación se hace sobre una clave exclusiva.|  
-||**es**|La combinación no se hace sobre una clave exclusiva.|  
+|**join_unique_key**|**true**|La combinación se hace sobre una clave exclusiva.|  
+||**false**|La combinación no se hace sobre una clave exclusiva.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **0**.  
   
@@ -92,7 +92,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_changemergefilter**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Cambiar las propiedades de la publicación y de los artículos](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Cambiar las propiedades de la publicación y del artículo](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

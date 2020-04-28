@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199331"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumentos  
  *\@object_id*  
- @object_id De un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. @object_ides de tipo **int**.  
+ @object_id De un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador. @object_id es de tipo **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationes de tipo **bit**. Si está establecido en 1, cada consulta se analiza como si tuviera una opción FOR BROWSE en la consulta. Devuelve las columnas de clave adicionales e información de la tabla de origen.  
@@ -56,7 +56,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica si la columna es una columna adicional agregada con la finalidad de buscar información que realmente no aparece en el conjunto de resultados.|  
 |**column_ordinal**|**int**|Contiene la posición ordinal de la columna en el conjunto de resultados. La posición de la primera columna se especificará como 1.|  
-|**Name**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, es NULL.|  
+|**name**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. De lo contrario, es NULL.|  
 |**is_nullable**|**bit**|Contiene el valor 1 si la columna permite valores NULL, 0 si la columna no permite valores NULL y 1 si no se puede determinar que la columna permite  valores NULL.|  
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de la columna tal y como se especifica en sys. types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo definido por el usuario de CLR, NULL se devuelve en esta columna.|  
@@ -94,7 +94,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Contiene el mensaje de estado que devuelve la función. Si no se produjo ningún error, la columna contendrá NULL.|  
 |**error_message**|**nvarchar (4096)**|Contiene el mensaje que devuelve la función. Si no se produjo ningún error, la columna contendrá NULL.|  
 |**error_type**|**int**|Contiene un entero que representa el error que se va a devolver. Se asigna a error_type_desc. Vea la lista bajo las notas.|  
-|**error_type_desc**|**nvarchar (60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
+|**error_type_desc**|**nvarchar(60)**|Contiene una cadena corta en mayúsculas que representa el error que se va a devolver. Se asigna a error_type. Vea la lista bajo las notas.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta función utiliza el mismo algoritmo que **sp_describe_first_result_set**. Para obtener más información, vea [sp_describe_first_result_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  

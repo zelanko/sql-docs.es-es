@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5e6a5792c7e18013dba5cc4c0963dc6d045410f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782918"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "72782918"
   
      [Seguridad](#Security)  
   
--   **Para reanudar una base de datos secundaria, utilizando:**  
+-   **Para reanudar una base de datos secundaria, mediante:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,12 +48,12 @@ ms.locfileid: "72782918"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando RESUME realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la reanudación real de la base de datos se produce de forma asincrónica.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia de servidor que hospeda la base de datos que se va a reanudar.  
   
@@ -61,14 +61,14 @@ ms.locfileid: "72782918"
   
 -   La base de datos principal debe estar en línea y disponible.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para reanudar una base de datos secundaria**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea reanudar una base de datos y expanda el árbol.  
@@ -84,7 +84,7 @@ ms.locfileid: "72782918"
 > [!NOTE]  
 >  Para reanudar bases de datos adicionales en esta ubicación de réplica, repita los pasos 4 y 5 para cada base de datos.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para reanudar una base de datos secundaria suspendida localmente**  
   
 1.  Conéctese a la instancia de servidor que hospeda la réplica secundaria cuya base de datos desea reanudar.  
@@ -93,7 +93,7 @@ ms.locfileid: "72782918"
   
      ALTER DATABASE *database_name* Set HADR resume  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
 
 ### <a name="to-resume-a-secondary-database"></a>Para reanudar una base de datos secundaria
   
@@ -114,7 +114,7 @@ ms.locfileid: "72782918"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Suspender una base de datos de disponibilidad &#40;SQL Server&#41;](suspend-an-availability-database-sql-server.md)  
   

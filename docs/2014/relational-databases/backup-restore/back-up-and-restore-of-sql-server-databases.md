@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176026"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Realizar copias de seguridad y restaurar bases de datos de SQL Server
-  Este tema describe las ventajas de realizar copias de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los términos de copias de seguridad y restauración básicos, y presenta las estrategias de copias de seguridad y restauración para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], así como consideraciones de seguridad para las copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Este tema describe las ventajas de realizar copias de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los términos de copias de seguridad y restauración básicos, y presenta las estrategias de copias de seguridad y restauración para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como consideraciones de seguridad para las copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  El componente de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece una protección esencial para los datos críticos almacenados en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para minimizar el riesgo de una pérdida de datos catastrófica, debe realizar de forma periódica copias de seguridad de las bases de datos para conservar las modificaciones realizadas en los datos. Una estrategia bien diseñada de copia de seguridad y restauración le ayuda a proteger las bases de datos frente a la pérdida de datos provocada por diversos errores. Pruebe su estrategia con la restauración de un conjunto de copias de seguridad y, después, recupere la base de datos para prepararse para dar una respuesta eficaz en caso de desastre.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "70176026"
   
 
   
-##  <a name="Benefits"></a> Ventajas  
+##  <a name="benefits"></a><a name="Benefits"></a>Privilegios  
   
--   La copia de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la ejecución de procedimientos de restauración de prueba de las copias de seguridad y el almacenamiento de las copias en una ubicación segura y fuera del sitio contribuyen a protegerse ante una pérdida de datos catastrófica.  
+-   La copia de seguridad de las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la ejecución de procedimientos de restauración de prueba de las copias de seguridad y el almacenamiento de las copias en una ubicación segura y fuera del sitio contribuyen a protegerse ante una pérdida de datos catastrófica.  
   
     > [!IMPORTANT]  
     >  Esta es la única forma de proteger de forma confiable los datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -59,7 +59,7 @@ ms.locfileid: "70176026"
   
 
   
-##  <a name="TermsAndDefinitions"></a>Componentes y conceptos  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a> Componentes y conceptos  
  realizar copia de seguridad [verbo]  
  Copia los datos o las entradas de registro de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de su registro de transacciones en un dispositivo de copia de seguridad, como un disco, para crear una copia de seguridad de datos o de registros.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70176026"
   
 
   
-##  <a name="BnrStrategies"></a>Introducción a las estrategias de copia de seguridad y restauración  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>Introducción a las estrategias de copia de seguridad y restauración  
  Las operaciones de copia de seguridad y restauración deben personalizarse para un entorno concreto y funcionar con los recursos disponibles. Por tanto, un uso confiable del proceso de copia de seguridad y restauración para la recuperación de datos requiere una estrategia de copia de seguridad y restauración. Una estrategia bien diseñada maximiza la disponibilidad de los datos y minimiza la pérdida de los mismos, teniendo en cuenta los requisitos concretos de su empresa.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "70176026"
   
  Una estrategia de copia de seguridad y restauración contiene una parte de copia de seguridad y una parte de restauración. La parte de copia de seguridad de la estrategia define el tipo y la frecuencia de las copias de seguridad, la naturaleza y la velocidad del hardware necesario, cómo se prueban las copias de seguridad, y dónde y cómo se almacenan los medios de copia de seguridad (incluidas las consideraciones de seguridad). La parte de restauración de la estrategia define quién es responsable de llevar a cabo las operaciones de restauración y cómo se deben realizar para satisfacer sus objetivos de disponibilidad de la base de datos y minimizar la pérdida de datos. Se recomienda documentar los procedimientos de copia de seguridad y restauración, y mantener una copia de la documentación en su libro de documentación de procesos.  
   
- Diseñar una estrategia de copia de seguridad y restauración eficaz requiere mucho cuidado en el planeamiento, la implementación y las pruebas. Es necesario realizar pruebas. No tendrá una estrategia de copia de seguridad hasta que haya restaurado correctamente las copias de seguridad en todas las combinaciones incluidas en su estrategia de restauración. Debe tener en cuenta varios factores. Entre ellas, figuran:  
+ Diseñar una estrategia de copia de seguridad y restauración eficaz requiere mucho cuidado en el planeamiento, la implementación y las pruebas. Es necesario realizar pruebas. No tendrá una estrategia de copia de seguridad hasta que haya restaurado correctamente las copias de seguridad en todas las combinaciones incluidas en su estrategia de restauración. Debe tener en cuenta varios factores. Entre ellas se incluyen las siguientes:  
   
 -   Los objetivos de producción de la organización para las bases de datos, especialmente los requisitos de disponibilidad y protección de datos frente a pérdidas.  
   
@@ -150,8 +150,8 @@ ms.locfileid: "70176026"
   
      Para obtener más información, vea [Calcular el tamaño de una copia de seguridad completa de base de datos](#EstimateDbBuSize) más adelante en este tema.  
   
-####  <a name="EstimateDbBuSize"></a>Calcular el tamaño de una copia de seguridad completa de la base de datos  
- Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused**. Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>Calcular el tamaño de una copia de seguridad completa de la base de datos  
+ Antes de implementar una estrategia de copias de seguridad y restauración, es necesario calcular cuánto espacio en disco usará la copia de seguridad completa. La operación de copia de seguridad copia los datos de la base de datos a un archivo de copia de seguridad. La copia de seguridad contiene solo los datos reales de la base de datos y no el espacio no utilizado. Por tanto, la copia de seguridad es normalmente más pequeña que la propia base de datos. Para calcular el tamaño de la copia de seguridad completa de la base de datos, use el procedimiento almacenado del sistema **sp_spaceused** . Para obtener más información, vea [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Programar copias de seguridad  
  La realización de una operación de copia de seguridad tiene un efecto mínimo en las transacciones que se están ejecutando, por lo que se puede efectuar al mismo tiempo que otras operaciones periódicas. Puede realizar una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un efecto mínimo en las cargas de trabajo de producción.  
@@ -166,7 +166,7 @@ ms.locfileid: "70176026"
   
  Se recomienda mantener un manual de operaciones para cada base de datos. Este manual de operaciones debe documentar la ubicación de las copias de seguridad, los nombres de dispositivos de copia de seguridad (si los hay) y el tiempo necesario para restaurar las copias de seguridad de prueba.  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 ### <a name="scheduling-backup-jobs"></a>Programar trabajos de copia de seguridad  
   
@@ -174,7 +174,7 @@ ms.locfileid: "70176026"
   
 -   [Crear un trabajo](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [Programar un trabajo](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>Trabajar con dispositivos de copia de seguridad y medios de copia de seguridad  
   
@@ -182,7 +182,7 @@ ms.locfileid: "70176026"
   
 -   [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
--   [Especifique un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
+-   [Especificar un disco o una cinta como destino de copia de seguridad &#40;SQL Server&#41;](specify-a-disk-or-tape-as-a-backup-destination-sql-server.md)  
   
 -   [Eliminar un dispositivo de copia de seguridad &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
@@ -199,7 +199,7 @@ ms.locfileid: "70176026"
 ### <a name="creating-backups"></a>Crear copias de seguridad  
   
 > [!NOTE]  
->  En el caso de copias de seguridad parciales o de solo copia, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ de ](/sql/t-sql/statements/backup-transact-sql) con la opción PARTIAL o COPY_ONLY, respectivamente.  
+>  En el caso de copias de seguridad parciales o de solo copia, debe usar la instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con la opción PARTIAL o COPY_ONLY, respectivamente.  
   
  **Usar SQL Server Management Studio**  
   
@@ -277,8 +277,8 @@ ms.locfileid: "70176026"
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Copias de seguridad y restauración de bases de datos de Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [Copia de seguridad y restauración de índices y catálogos de texto completo](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Realizar una copia de seguridad y restaurar las bases de datos de Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
+ [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   

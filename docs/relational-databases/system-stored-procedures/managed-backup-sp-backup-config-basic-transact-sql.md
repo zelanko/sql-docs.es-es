@@ -21,10 +21,10 @@ ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3b3c547453c41dff6d32d1cafcd62746a2f194f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305264"
 ---
 # <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_backup_config_basic
     ,[@retention_days = ] 'retention_period_in_days'    ,[@credential_name = ] 'sql_credential_name'  
 ```  
   
-##  <a name="Arguments"></a> Argumentos  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @enable_backup  
  Habilite o deshabilite [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la base de datos especificada. Es @enable_backup de **bit**. Parámetro necesario al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la primera instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si va a cambiar una configuración [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] existente, este parámetro es opcional. En ese caso, los valores de configuración no especificados conservan sus valores existentes.  
   
@@ -110,6 +110,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [managed_backup. sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)   
- [managed_backup. sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
+ [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)  
   
   

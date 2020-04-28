@@ -18,10 +18,10 @@ ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 576fe599772454cb0cc8a01bf28c530f5cdfb13b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278170"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "72278170"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del artículo.|  
-|**automáticamente**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solo esquema proc.<br /><br /> **64** = solo esquema de vista o esquema de vista indizada.<br /><br /> **128** = solo esquema de función.<br /><br /> **160** = solo esquema de sinónimo.|  
+|**name**|**sysname**|Nombre del artículo.|  
+|**type**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solo esquema proc.<br /><br /> **64** = solo esquema de vista o esquema de vista indizada.<br /><br /> **128** = solo esquema de función.<br /><br /> **160** = solo esquema de sinónimo.|  
 |**objid**|**int**|Identificador del objeto de publicador.|  
 |**sync_objid**|**int**|Identificador de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72278170"
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
 |**deseado**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Indica si se ha implementado el seguimiento de columnas en el artículo.|  
-|**estatus**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
+|**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
 |**creation_script**|**nvarchar(255)**|Script de creación de este artículo.|  
 |**conflict_script**|**nvarchar(255)**|Script de conflicto de este artículo.|  
@@ -54,14 +54,14 @@ ms.locfileid: "72278170"
 |**schema_option**|**Binary(8**|Para obtener los valores admitidos de *schema_option*, vea [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
 |**destination_object**|**sysname**|Nombre de la tabla creada en el suscriptor.|  
 |**resolver_clsid**|**nvarchar(50)**|Identificador del solucionador de conflictos personalizado.|  
-|**subset_filterclause**|**nvarchar (1000)**|Cláusula de filtro de este artículo.|  
+|**subset_filterclause**|**nvarchar(1000)**|Cláusula de filtro de este artículo.|  
 |**missing_col_count**|**int**|Número de columnas que faltan.|  
-|**missing_cols**|**varbinary (128)**|Mapa de bits de columnas que faltan.|  
-|**columnas**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**missing_cols**|**varbinary(128)**|Mapa de bits de columnas que faltan.|  
+|**columnas**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resolver_info**|**nvarchar(255)**|Almacenamiento para la información adicional que necesitan los solucionadores de conflictos personalizados.|  
 |**view_sel_proc**|**nvarchar (290)**|Nombre de un procedimiento almacenado que utiliza el Agente de mezcla para llenar por primera vez un artículo en una publicación filtrada dinámicamente y para enumerar las filas que han cambiado en cualquier publicación filtrada.|  
 |**gen_cur**|**int**|Número de generación para los cambios locales de la tabla base de un artículo.|  
-|**excluded_cols**|**varbinary (128)**|Mapa de bits de las columnas excluidas del artículo cuando se envía al suscriptor.|  
+|**excluded_cols**|**varbinary(128)**|Mapa de bits de las columnas excluidas del artículo cuando se envía al suscriptor.|  
 |**excluded_col_count**|**int**|Número de columnas excluidas.|  
 |**vertical_partition**|**int**|Especifica si está habilitado el filtrado de columnas en un artículo de una tabla. **0** indica que no hay filtrado vertical y publica todas las columnas.|  
 |**identity_support**|**int**|Especifica si se habilita el control automático del intervalo de identidad. **1** significa que el control de intervalo de identidad está habilitado y **0** significa que no hay compatibilidad con el intervalo de identidad.|  
@@ -81,8 +81,8 @@ ms.locfileid: "72278170"
 |**before_upd_view_objid**|**int**|Id. de la vista de una tabla antes de las actualizaciones.|  
 |**delete_tracking**|**bit**|Indica si las eliminaciones se replican.<br /><br /> **0** = las eliminaciones no se replican.<br /><br /> **1** = las eliminaciones se replican, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Cuando el valor de *delete_tracking* es **0**, las filas eliminadas en el suscriptor deben quitarse manualmente en el publicador, y las filas eliminadas en el publicador deben quitarse manualmente en el suscriptor.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
 |**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
-|**pub_range**|**BIGINT**|Tamaño del intervalo de identidad del publicador.|  
-|**variedad**|**BIGINT**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
+|**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
+|**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**metadata_select_proc**|**sysname**|Nombre del procedimiento almacenado, y generado automáticamente, utilizado para obtener acceso a los metadatos en las tablas del sistema de replicación de mezcla.|  
 |**stream_blob_columns**|**bit**|Especifica si se utiliza una optimización del flujo de datos al replicar columnas de objetos grandes binarios. **1** significa que se intentará la optimización.|  

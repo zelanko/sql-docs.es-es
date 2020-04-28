@@ -13,21 +13,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155076"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
-  Use la página **General** del cuadro de diálogo **copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de base de datos.  
+  Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
   
  Para obtener más información sobre los conceptos básicos de copias de seguridad, vea [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[ de ](/sql/t-sql/statements/backup-transact-sql) correspondiente si hace clic en el botón **Script** y, después, selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondiente si hace clic en el botón **Script** y luego selecciona un destino para el script.  
   
- **Para usar SQL Server Management Studio para crear una copia de seguridad**  
+ **Para utilizar SQL Server Management Studio a fin de crear una copia de seguridad**  
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70155076"
   
  **Para crear una copia de seguridad parcial**  
   
--   Para crear una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) de con la opción PARTIAL.  
+-   En el caso de una copia de seguridad parcial, debe usar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) con la opción PARTIAL.  
   
 ## <a name="options"></a>Opciones  
   
@@ -48,7 +48,7 @@ ms.locfileid: "70155076"
  **Base de datos**  
  Seleccione la base de datos de la que desea hacer una copia de seguridad.  
   
- **modelo de recuperación**  
+ **Modelo de recuperación**  
  Vea el modelo de recuperación (SIMPLE, FULL o BULK_LOGGED) para la base de datos seleccionada.  
   
  **Tipo de copia de seguridad**  
@@ -64,10 +64,10 @@ ms.locfileid: "70155076"
  Seleccione esta opción para crear una copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
->  Cuando la opción **Diferencial** está seleccionada, no se puede crear una copia de seguridad de solo copia.  
+>  Cuando la opción **Diferencial** está seleccionada, no puede crear una copia de seguridad de solo copia.  
   
  **Componente de copia de seguridad**  
- Seleccione el componente de la base de datos del que desea hacer una copia de seguridad. Si se selecciona **Registro de transacciones** en la lista **Tipo de copia de seguridad**, esta opción no estará activada.  
+ Seleccione el componente de la base de datos del que desea hacer una copia de seguridad. Si se selecciona **Registro de transacciones** en la lista **Tipo de copia de seguridad** , esta opción no estará activada.  
   
  Seleccione uno de los siguientes botones:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "70155076"
   
 |||  
 |-|-|  
-|**Discos**|Hace la copia de seguridad en disco. Puede tratarse de un archivo de sistema o un dispositivo de copia de seguridad basado en disco creado para la base de datos. Los discos seleccionados actualmente aparecerán en la lista **Copia de seguridad en** . Puede seleccionar hasta 64 dispositivos de disco para la operación de copia de seguridad.|  
+|**Disco**|Hace la copia de seguridad en disco. Puede tratarse de un archivo de sistema o un dispositivo de copia de seguridad basado en disco creado para la base de datos. Los discos seleccionados actualmente aparecerán en la lista **Copia de seguridad en** . Puede seleccionar hasta 64 dispositivos de disco para la operación de copia de seguridad.|  
 |**Cinta**|Hace la copia de seguridad en cinta. Puede tratarse de una unidad de cinta local o un dispositivo de copia de seguridad basado en cinta creado para la base de datos. Las cintas seleccionadas actualmente aparecerán en la lista **Copia de seguridad en** . El número máximo es 64. Si no hay dispositivos de cinta conectados al servidor, esta opción no estará activada. Las cintas que seleccione aparecerán en la lista **Copia de seguridad en** .<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
-|**Dirección**|Realiza una copia de seguridad en Azure BLOB Storage.|  
+|**URL**|Realiza una copia de seguridad en Azure BLOB Storage.|  
   
  El siguiente conjunto de las opciones que aparecen depende del tipo de destino seleccionado. Si selecciona Disco o Cinta, se muestran las siguientes opciones.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "70155076"
  **Remove**  
  Quita uno o más dispositivos seleccionados actualmente de la lista **Copia de seguridad en** .  
   
- **Contenido**  
+ **Contents**  
  Muestra el contenido del medio del dispositivo seleccionado.  
   
  Si selecciona la dirección URL como el destino de la copia de seguridad, se muestran las siguientes opciones:  
@@ -116,14 +116,14 @@ ms.locfileid: "70155076"
  **Contenedor de Azure Storage**  
  Especifique el nombre del contenedor de Azure Storage.  
   
- **Prefijo de dirección URL:**  
+ **Prefijo URL:**  
  Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<la cuenta de almacenamiento>. BLOB.Core.Windows.net**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definir un dispositivo lógico de copia de seguridad para una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

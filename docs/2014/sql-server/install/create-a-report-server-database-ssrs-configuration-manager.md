@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952301"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes (Administrador de configuración de SSRS)
@@ -38,21 +38,20 @@ ms.locfileid: "71952301"
 >  La excepción son las vistas del registro de ejecución. Para obtener más información, vea [registro de ejecución del servidor de informes y la vista ExecutionLog3](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
 ## <a name="ways-to-create-the-report-server-database"></a>Métodos para crear la base de datos del servidor de informes  
- **Modo nativo:** Puede crear la base de datos del servidor de informes en modo nativo de las siguientes maneras:  
+ **Modo nativo:** puede crear la base de datos del servidor de informes de modo nativo de las formas siguientes:  
   
 -   Automáticamente: usar el Asistente para la instalación de SQL Server, si elige la opción de instalación de configuración predeterminada. En el Asistente para la instalación de SQL Server, es **Instalar y configurar** en la página Opciones de instalación del servidor de informes. Si elige la opción **Solo instalar** , debe usar el Administrador de configuración de Reporting Services para crear la base de datos.  
   
 -   Manualmente: use el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Debe crear la base de datos del servidor de informes manualmente si está usando un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] remoto para hospedarla. Para más información, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
- **Modo de SharePoint:** La página Opciones de instalación del servidor de informes solo tiene una opción para el modo de SharePoint de **instalación**. Esta opción instala todos los archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El paso siguiente consiste en crear al menos una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de una de las siguientes formas:  
+ **Modo de SharePoint:** la página Opciones de instalación del servidor de informes solo tiene una opción para el modo de SharePoint, **Solo instalar**. Esta opción instala todos los archivos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El paso siguiente consiste en crear al menos una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de una de las siguientes formas:  
   
--   Use Administración central de SharePoint para crear una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea la sección "Aplicación de servicio" de [Paso 3: Crear una aplicación de servicio de Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
+-   Use Administración central de SharePoint para crear una aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea la sección "aplicación de servicio" del [paso 3: crear una aplicación de servicio de Reporting Services](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).  
   
--   Use cmdlets de PowerShell de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para crear una aplicación de servicio y las bases de datos del servidor de informes. Para obtener más información, vea el ejemplo para crear aplicaciones de servicio en el tema [cmdlets de PowerShell para el modo Reporting Services SharePoint](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
+-   Use cmdlets de PowerShell de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para crear una aplicación de servicio y las bases de datos del servidor de informes. Para obtener más información, vea el ejemplo para crear aplicaciones de servicio en el tema [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).  
   
 ## <a name="database-server-version-requirements"></a>Requisitos de versión del servidor de base de datos  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para hospedar las bases de datos del servidor de informes. La instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede ser local o remota. A continuación, se indican las versiones admitidas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se pueden usar para hospedar las bases de datos del servidor de informes:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa para hospedar las bases de datos del servidor de informes. La instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede ser local o remota. A continuación, se indican las versiones admitidas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se pueden usar para hospedar las bases de datos del servidor de informes:  
   
 - SQL Server 2014
   
@@ -62,9 +61,9 @@ ms.locfileid: "71952301"
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
- Para crear la base de datos del servidor de informes en un equipo remoto es preciso que configure la conexión para usar una cuenta de usuario de dominio o una cuenta de servicio que tenga acceso a la red. Si decide utilizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota, considere detenidamente qué credenciales debe utilizar el servidor de informes para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+ Para crear la base de datos del servidor de informes en un equipo remoto es preciso que configure la conexión para usar una cuenta de usuario de dominio o una cuenta de servicio que tenga acceso a la red. Si decide utilizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remota, considere detenidamente qué credenciales debe utilizar el servidor de informes para conectarse a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 > [!IMPORTANT]  
 >  El servidor de informes y la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos del servidor de informes pueden estar en dominios diferentes. Para la implementación en Internet, la práctica más común es utilizar un servidor que esté detrás de un firewall. Si va a configurar un servidor de informes para el acceso a Internet, utilice las credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que esté detrás del firewall y utilice IPSEC para proteger la conexión.  

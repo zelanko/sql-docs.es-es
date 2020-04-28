@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 715a60d4a6f4a138a71e7de6095234a9e0d2a461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782211"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Programar tareas administrativas automáticas en el Agente SQL Server
@@ -35,7 +35,7 @@ ms.locfileid: "72782211"
  Los objetos del Agente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se encuentran en el espacio de nombres <xref:Microsoft.SqlServer.Management.Smo.Agent>.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 1.  Para los programas que utilizan el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe incluir la instrucción `Imports` para certificar el espacio de nombres del Agente. Inserte la instrucción después de las demás instrucciones `Imports`, antes de cualquier declaración de la aplicación, como:  
   

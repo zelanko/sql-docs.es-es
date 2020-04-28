@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f898dbe10a9a7e17c1908a5bf25e86f5a57c7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782848"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad (SQL Server)
@@ -27,14 +27,14 @@ ms.locfileid: "72782848"
   
 
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
-##  <a name="SSMSProcedure"></a>Usar el panel de AlwaysOn  
+##  <a name="using-the-alwayson-dashboard"></a><a name="SSMSProcedure"></a>Usar el panel de AlwaysOn  
  **Para abrir el panel de AlwaysOn**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda una de las réplicas de disponibilidad. Para ver información acerca de todas las réplicas de disponibilidad en un grupo de disponibilidad, use la instancia del servidor que hospeda la réplica principal.  
@@ -49,7 +49,7 @@ ms.locfileid: "72782848"
   
  Para más información sobre cómo usar el panel AlwaysOn, vea [Usar el panel AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad**  
   
 1.  Establezca el valor predeterminado (`cd`) en una instancia del servidor que hospeda una de las réplicas de disponibilidad. Para ver información acerca de todas las réplicas de disponibilidad en un grupo de disponibilidad, use la instancia del servidor que hospeda la réplica principal.  
@@ -109,9 +109,9 @@ ms.locfileid: "72782848"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [Obtener ayuda SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
  **SQL Server blogs del equipo de AlwaysOn: supervisión del estado de AlwaysOn con PowerShell:**  
   
 -   [Parte 1: información general básica de los cmdlets](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx)  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: ff0a4f38bf9ee7d9c27fbc07308084ed3272f95d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952103"
 ---
 # <a name="reporting-services-sharepoint-mode-authentication"></a>Autenticación del modo de SharePoint de Reporting Services
@@ -33,6 +33,6 @@ ms.locfileid: "71952103"
  Para obtener más información, vea [actualizar y migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628).  
   
 ## <a name="see-also"></a>Consulte también  
- [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
+ [Actualizar y migrar Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)  
   
   

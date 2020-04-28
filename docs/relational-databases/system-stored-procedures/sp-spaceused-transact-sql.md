@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252022"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
@@ -92,12 +92,12 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos actual.|  
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro.|  
-|**unallocated space**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos.|  
+|**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos.|  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**Data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|  
   
@@ -107,9 +107,9 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos actual.|  
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro.|  
-|**unallocated space**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos.|  
+|**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos.|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**Data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|  
   
@@ -117,10 +117,10 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**nvarchar(128)**|Nombre del objeto del que se solicitó la información de utilización de espacio.<br /><br /> El nombre del esquema del objeto no se devuelve. Si se requiere el nombre de esquema, use las vistas de administración dinámica [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [Sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) para obtener información de tamaño equivalente.|  
-|**rows**|**Char (20)**|Número de filas de la tabla. Si el objeto especificado es una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)], esta columna indica el número de mensajes de la misma.|  
+|**name**|**nvarchar(128)**|Nombre del objeto del que se solicitó la información de utilización de espacio.<br /><br /> El nombre del esquema del objeto no se devuelve. Si se requiere el nombre de esquema, use las vistas de administración dinámica [Sys. dm_db_partition_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md) o [Sys. dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) para obtener información de tamaño equivalente.|  
+|**las**|**Char (20)**|Número de filas de la tabla. Si el objeto especificado es una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)], esta columna indica el número de mensajes de la misma.|  
 |**sector**|**VARCHAR (18)**|Cantidad total de espacio reservado para *objName*.|  
-|**Data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos en *objName*.|  
+|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos en *objName*.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los índices en *objName*.|  
 |**sin usar**|**VARCHAR (18)**|Cantidad total de espacio reservado para *objName* pero que todavía no se ha usado.|  
  
@@ -130,14 +130,14 @@ Este es el modo predeterminado cuando no se especifica ningún parámetro. Se de
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos actual.|  
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de todos los archivos de punto de comprobación del grupo de archivos.|  
-|**unallocated space**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de los archivos de punto de comprobación con el estado creado en el grupo de archivos.|  
+|**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de los archivos de punto de comprobación con el estado creado en el grupo de archivos.|  
 
 Espacio usado por las tablas en la base de datos: (este conjunto de resultados no refleja las tablas optimizadas para memoria, ya que no hay ninguna contabilidad por tabla del uso de disco) 
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**Data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|
 
@@ -155,9 +155,9 @@ Si se omite *objName* , el valor de oneresultset es 1 y *include_total_xtp_stora
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos actual.|  
 |**database_size**|**VARCHAR (18)**|Tamaño de la base de datos actual en megabytes. **database_size** incluye archivos de datos y de registro. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de todos los archivos de punto de comprobación del grupo de archivos.|
-|**unallocated space**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de los archivos de punto de comprobación con el estado creado en el grupo de archivos.|  
+|**espacio sin asignar**|**VARCHAR (18)**|Espacio de la base de datos que no se ha reservado para objetos de base de datos. Si la base de datos tiene un grupo de archivos MEMORY_OPTIMIZED_DATA, esto incluye el tamaño total en disco de los archivos de punto de comprobación con el estado creado en el grupo de archivos.|  
 |**sector**|**VARCHAR (18)**|Espacio total asignado por los objetos de la base de datos.|  
-|**Data**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
+|**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|
 |**xtp_precreated**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con estado precreated, en KB. Esto cuenta en el espacio sin asignar en la base de datos en conjunto. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage= 1*.| 
@@ -165,7 +165,7 @@ Si se omite *objName* , el valor de oneresultset es 1 y *include_total_xtp_stora
 |**xtp_pending_truncation**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con WAITING_FOR_LOG_TRUNCATION de estado, en KB. Es el espacio en disco usado para los archivos de punto de comprobación que esperan la limpieza, cuando se produce el truncamiento del registro. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. Esta columna solo se incluye si `@include_total_xtp_storage=1`.|
 
 ## <a name="remarks"></a>Observaciones  
- **database_size** siempre es mayor que la suma del **** + **espacio** reservado sin asignar porque incluye el tamaño de los archivos de registro, pero **reservado** y **unallocated_space** considerar solo las páginas de datos.  
+ **database_size** siempre es mayor que la suma del **reserved** + **espacio** reservado sin asignar porque incluye el tamaño de los archivos de registro, pero **reservado** y **unallocated_space** considerar solo las páginas de datos.  
   
  Las páginas que se usan en los índices XML y los índices de texto completo se incluyen en **index_size** para ambos conjuntos de resultados. Cuando se especifica *objName* , las páginas de los índices XML y los índices de texto completo del objeto también se cuentan en el total de resultados **reservados** y **index_size** .  
   
@@ -250,9 +250,9 @@ GO
  [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Sys. allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
+ [Sys. Indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [Sys. index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
+ [Sys. Objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Sys. partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

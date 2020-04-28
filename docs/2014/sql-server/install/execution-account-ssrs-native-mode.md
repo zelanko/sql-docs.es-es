@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952544"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Cuenta de ejecución (Modo nativo de SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "71952544"
  **Especificar una cuenta de ejecución**  
  Seleccione para especificar una cuenta.  
   
- **Código**  
+ **Cuenta**  
  Especifique una cuenta de usuario de dominio de Windows. Use este formato: * \<>\\ de dominio<cuenta\>de usuario*.  
   
  **Contraseña**  
@@ -54,7 +54,7 @@ ms.locfileid: "71952544"
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services temas de la ayuda F1 &#40;el modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Almacenar datos cifrados del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   
   

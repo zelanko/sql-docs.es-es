@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952043"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>Temas de Ayuda F1 del Administrador de configuración de Reporting Services (Modo nativo de SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "71952043"
   
 -   [Cuenta de servicio](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)  
   
--   [Dirección URL del servicio Web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
+-   [Dirección URL del servicio web](../../../2014/sql-server/install/web-service-url-ssrs-native-mode.md)  
   
 -   [Configuración avanzada de varios sitios web](../../../2014/sql-server/install/advanced-multiple-web-site-configuration-ssrs-native-mode.md)  
   
@@ -54,7 +54,7 @@ ms.locfileid: "71952043"
   
 -   [Restaurar clave de cifrado](../../../2014/sql-server/install/restore-encryption-key-ssrs-native-mode.md)  
   
--   [Implementación escalada.](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
+-   [Implementación escalada](../../../2014/sql-server/install/scale-out-deployment-native-mode-report-server.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrador de configuración de Reporting Services &#40;del&#41;](reporting-services-configuration-manager-native-mode.md)  

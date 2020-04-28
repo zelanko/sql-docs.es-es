@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782762"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
@@ -63,15 +63,15 @@ ms.locfileid: "72782762"
  Por ejemplo, especifique el valor Server para la clase **ServerCollection** y el valor Database para la clase **DatabaseCollection** .  
   
  \@*PropertyName*  
- Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter \@. Por ejemplo, especifique el valor \@IsAnsiNull para **IsAnsiNull** de la propiedad de clase **Database**.  
+ Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter \@. Por ejemplo, especifique \@IsAnsiNull para la propiedad de clase de **base de datos** **IsAnsiNull**.  
   
- \@*BooleanPropertyName*=true()  
+ \@*BooleanPropertyName*= true ()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en TRUE.  
   
- \@*BooleanPropertyName*=false()  
+ \@*BooleanPropertyName*= false ()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en FALSE.  
   
- contains(\@*StringPropertyName*, '*PatternString*')  
+ Contains (\@*StringPropertyName*, '*PatternString*')  
  Enumera todos los objetos en los que la propiedad de cadena especificada contiene, al menos, una aparición del juego de caracteres especificado en “*PatternString*”.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -92,7 +92,7 @@ ms.locfileid: "72782762"
   
  Las fechas que se especifican en este formato se pueden evaluar en cualquier formato de fecha que se almacene en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null(\@*PropertyName*)  
+ is_null (\@*PropertyName*)  
  Enumera todos los objetos en los que la propiedad especificada tiene un valor de NULL.  
   
  not(\<*PropertyExpression*>)  
@@ -103,7 +103,7 @@ ms.locfileid: "72782762"
   
  Las expresiones de consulta deben empezar por una referencia absoluta al objeto Server. No se admiten expresiones relativas con una / inicial. La secuencia de objetos que se especifica en una expresión de consulta debe seguir la jerarquía de los objetos de la colección del modelo de objetos asociado. Por ejemplo, una expresión de consulta que hace referencia a objetos del espacio de nombres Microsoft.SqlServer.Management.Smo debe empezar por un nodo Server seguido de un nodo Database, etc.  
   
- Si no se especifica *\<FilterExpression>* en un objeto, se enumeran todos los objetos de ese nodo.  
+ Si no se especifica un * \<>FilterExpression* para un objeto, se enumeran todos los objetos de ese nodo.  
   
 ## <a name="uniform-resource-names-urn"></a>Nombres de recursos uniformes (URN)  
  Los URN son un subconjunto de expresiones de consulta. Cada URN forma una referencia completa a un solo objeto. Un URN típico utiliza la propiedad Name para identificar un objeto único de cada nodo. Por ejemplo, este URN hace referencia a una columna concreta:  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Cmdlet Invoke-PolicyEvaluation](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;motor de base de datos&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

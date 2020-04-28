@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381911"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72381911"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+ > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
  
 ## <a name="syntax"></a>Sintaxis  
   
@@ -77,7 +77,7 @@ sp_add_job [ @job_name = ] 'job_name'
 |-----------|-----------------|  
 |**0**|Nunca|  
 |**1**|En caso de éxito|  
-|**2** (valor predeterminado)|En caso de error|  
+|**2** (predeterminado)|En caso de error|  
 |**3**|Siempre|  
   
 `[ @notify_level_email = ] email_level`Valor que indica cuándo se debe enviar un mensaje de correo electrónico al finalizar este trabajo. *email_level*es de **tipo int**y su valor predeterminado es **0**, que indica que nunca. *email_level*usa los mismos valores que *eventlog_level*.  
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Si el trabajo se va a ejecutar en uno o varios servidores de destino en un entorno multiservidor, utilice **sp_apply_job_to_targets** para establecer los servidores de destino o los grupos de servidores de destino para el trabajo. Para quitar trabajos de los servidores de destino o de los grupos de servidores de destino, use **sp_remove_job_from_targets**.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar este procedimiento almacenado, los usuarios deben ser miembros del rol fijo de servidor **sysadmin** o tener uno de los siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] roles fijos de base de datos del agente, que residen en la base de datos **msdb** :  

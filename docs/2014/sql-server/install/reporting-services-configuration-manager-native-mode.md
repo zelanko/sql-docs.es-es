@@ -16,15 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7b5e46b90702bf39bf2902eed3e5a6c609757e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952492"
 ---
 # <a name="reporting-services-configuration-manager-native-mode"></a>Administrador de configuración de Reporting Services (modo nativo)
-  Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Si ha instalado un servidor de informes usando la opción de instalación de solo archivos, debe usar el Administrador de configuración para configurar el servidor antes de poder usarlo. Si ha instalado un servidor de informes con la opción de instalación de configuración predeterminada, puede usar el Administrador de configuración para comprobar o modificar la configuración especificada durante la instalación. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede usar para configurar una instancia local o remota del servidor de informes.  
+  Utilice el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo nativo. Si ha instalado un servidor de informes usando la opción de instalación de solo archivos, debe usar el Administrador de configuración para configurar el servidor antes de poder usarlo. Si ha instalado un servidor de informes con la opción de instalación de configuración predeterminada, puede usar el Administrador de configuración para comprobar o modificar la configuración especificada durante la instalación. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se puede usar para configurar una instancia local o remota del servidor de informes.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952492"
   
 -   [Para iniciar el Administrador de configuración de Reporting Services](#bkmk_start_configuration_manager)  
   
-##  <a name="bkmk_scenarios"></a>Escenarios para usar Administrador de configuración de Reporting Services  
+##  <a name="scenarios-to-use-reporting-services-configuration-manager"></a><a name="bkmk_scenarios"></a> Escenarios para usar el Administrador de configuración de Reporting Services  
  Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para realizar las tareas siguientes:  
   
 -   Configurar la cuenta del servicio del servidor de informes La cuenta se configura inicialmente durante la instalación, pero se puede modificar utilizando el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si se actualiza la contraseña o se desea utilizar otra cuenta.  
@@ -80,19 +79,17 @@ ms.locfileid: "71952492"
   
 -   Crear y configurar la base de datos del servidor de informes El servidor de informes es un servidor sin estado que requiere una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenamiento interno. Puede utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para crear y configurar una conexión con la base de datos del servidor de informes. También puede seleccionar una base de datos del servidor de informes existente que incluya el contenido que desea utilizar.  
   
--   Configurar una implementación escalada en modo nativo. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite una topología de implementación que permite que varias instancias del servidor de informes usen una sola base de datos compartida del servidor de informes. Para implementar una implementación escalada del servidor de informes, se utiliza el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conectar cada servidor de informes a la base de datos compartida.  
+-   Configurar una implementación escalada en modo nativo. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite una topología de implementación que permite que varias instancias del servidor de informes usen una sola base de datos compartida del servidor de informes. Para implementar una implementación escalada del servidor de informes, se utiliza el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para conectar cada servidor de informes a la base de datos compartida.  
   
 -   Realizar copias de seguridad, restaurar o reemplazar la clave simétrica que se utiliza para cifrar las cadenas de conexión almacenadas y las credenciales. Debe tener una copia de seguridad de la clave simétrica si cambia la cuenta de servicio, o mueve una base de datos del servidor de informes a otro equipo.  
   
 -   Configurar la cuenta de ejecución desatendida Esta cuenta se utiliza para las conexiones remotas durante las operaciones programado o cuando las credenciales del usuario no están disponibles.  
   
--   Configurar el correo electrónico del servidor de informes. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega por correo electrónico del servidor de informes que usa un protocolo simple de transferencia de correo (SMTP) para entregar informes o notificaciones de procesamiento de informes a un buzón electrónico. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar qué puerta de enlace o servidor SMTP de la red se debe usar para la entrega de correo electrónico.  
+-   Configurar el correo electrónico del servidor de informes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega por correo electrónico del servidor de informes que usa un protocolo simple de transferencia de correo (SMTP) para entregar informes o notificaciones de procesamiento de informes a un buzón electrónico. Puede usar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar qué puerta de enlace o servidor SMTP de la red se debe usar para la entrega de correo electrónico.  
   
  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no ayuda a administrar el contenido del servidor de informes, habilitar características adicionales ni conceder acceso al servidor. La implementación completa requiere que también se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilice para habilitar características adicionales o modificar los valores predeterminados, así como administrador de informes para conceder a los usuarios acceso al servidor.  
   
-##  <a name="bkmk_requirements"></a>Satisfacer  
+##  <a name="requirements"></a><a name="bkmk_requirements"></a> Requisitos  
  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] es específico de la versión. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se instala con esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede usar para configurar una versión anterior de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si ejecuta versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en paralelo en el mismo equipo, debe usar el Administrador de configuración de Reporting Services, que se incluye con cada versión para configurar cada instancia.  
   
  Para utilizar el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , debe disponer de lo siguiente:  
@@ -107,7 +104,7 @@ ms.locfileid: "71952492"
   
  La dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala automáticamente al instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
-##  <a name="bkmk_start_configuration_manager"></a>Para iniciar el Administrador de configuración de Reporting Services  
+##  <a name="to-start-the-reporting-services-configuration-manager"></a><a name="bkmk_start_configuration_manager"></a>Para iniciar el Administrador de configuración de Reporting Services  
   
 #### <a name="to-start-reporting-services-configuration"></a>Para iniciar la configuración de Reporting Services  
   
@@ -127,7 +124,7 @@ ms.locfileid: "71952492"
   
 4.  Si especifica un equipo remoto, haga clic en **Buscar** para establecer una conexión.  
   
-5.  En **Report Server Enstance**, seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que desee configurar. Solo las instancias del servidor de informes correspondientes a esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen en la lista. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+5.  En **Instancia del servidor de informes**, seleccione la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que quiera configurar. Solo las instancias del servidor de informes correspondientes a esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aparecen en la lista. No es posible configurar versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 6.  Haga clic en **Conectar**.  
   

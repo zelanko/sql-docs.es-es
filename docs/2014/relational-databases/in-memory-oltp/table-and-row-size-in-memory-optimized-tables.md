@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72688903"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
@@ -34,7 +34,7 @@ ms.locfileid: "72688903"
   
  La ilustración siguiente muestra una tabla con índices y filas, que a su vez tienen encabezados de fila y cuerpos:  
   
- ![Tabla con optimización para memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabla con optimización para memoria.")  
+ ![Tabla optimizada para memoria.](../../database-engine/media/hekaton-guide-1.gif "Tabla optimizada para memoria.")  
 La tabla con optimización para memoria, que consta de índices y filas.  
   
  El tamaño en memoria de una tabla, en bytes, se calcula de la forma siguiente:  
@@ -82,7 +82,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
 |Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
   
-##  <a name="bkmk_RowStructure"></a>Estructura de filas  
+##  <a name="row-structure"></a><a name="bkmk_RowStructure"></a>Estructura de filas  
  Las filas de una tabla optimizada para memoria tienen los siguientes componentes:  
   
 -   El encabezado de fila contiene la marca de tiempo necesaria para implementar las versiones de fila. El encabezado de fila también contiene el puntero de índice para implementar el encadenamiento de filas en cubos de hash (descritos arriba).  
@@ -91,7 +91,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  La ilustración siguiente muestra la estructura de la fila de una tabla que tenga dos índices:  
   
- ![Estructura de fila para una tabla que tiene dos índices.](../../database-engine/media/hekaton-tables-4.gif "Estructura de fila para una tabla que tiene dos índices.")  
+ ![Estructura de fila de una tabla que tiene dos índices.](../../database-engine/media/hekaton-tables-4.gif "Estructura de fila de una tabla que tiene dos índices.")  
   
  Las marcas de tiempo de inicio y fin indican el periodo en el que una determinada versión de fila es válida. Las transacciones que se inician en este intervalo pueden ver esta versión de fila. Para obtener más detalles, consulte [Transacciones en tablas con optimización para memoria](memory-optimized-tables.md).  
   
@@ -126,11 +126,11 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
 |Nombre|City|  
 |----------|----------|  
-|John|París|  
+|John|Paris|  
 |Julia|Praga|  
 |Susan|Bogotá|  
   
-##  <a name="bkmk_ExampleComputation"></a>Ejemplo: cálculo del tamaño de las tablas y las filas  
+##  <a name="example-table-and-row-size-computation"></a><a name="bkmk_ExampleComputation"></a> Ejemplo: Cálculo del tamaño de fila y tabla  
  Para los índices hash, el número de cubos real se redondea a la potencia más cercana de 2. Por ejemplo, si el bucket_count especificado es 100000, el número real de cubos para el índice es 131072.  
   
  Considere una tabla Orders con la definición siguiente:  
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
+ [Tablas con optimización para memoria](memory-optimized-tables.md)  
   
   

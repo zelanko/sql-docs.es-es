@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72289352"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
@@ -48,23 +48,23 @@ ms.locfileid: "72289352"
 |is_in_polling_io_completion_routine|**bit**|1 = El trabajador está ejecutando actualmente una rutina de finalización de E/S de una E/S pendiente. Para obtener más información, vea [Sys. dm_io_pending_io_requests &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Número de cambios de contexto del programador realizados por este trabajador.|  
 |pending_io_count|**int**|Número de E/S físicas realizadas por este trabajador.|  
-|pending_io_byte_count|**BIGINT**|Número total de bytes de todas las E/S físicas pendientes de este trabajador.|  
+|pending_io_byte_count|**bigint**|Número total de bytes de todas las E/S físicas pendientes de este trabajador.|  
 |pending_io_byte_average|**int**|Número promedio de bytes de las E/S físicas de este trabajador.|  
-|wait_started_ms_ticks|**BIGINT**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en estado suspendido. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado esperando.|  
-|wait_resumed_ms_ticks|**BIGINT**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en el estado RUNNABLE. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado en la cola de ejecutables.|  
-|task_bound_ms_ticks|**BIGINT**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando una tarea se enlaza a este trabajador.|  
-|worker_created_ms_ticks|**BIGINT**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando se crea un trabajador.|  
+|wait_started_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en estado suspendido. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado esperando.|  
+|wait_resumed_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando este trabajador entró en el estado RUNNABLE. Si se resta este valor de ms_ticks en [Sys. dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) se devuelve el número de milisegundos que el trabajador ha estado en la cola de ejecutables.|  
+|task_bound_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando una tarea se enlaza a este trabajador.|  
+|worker_created_ms_ticks|**bigint**|Punto en el tiempo, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), cuando se crea un trabajador.|  
 |exception_num|**int**|Número de error de la última excepción que encontró este trabajador.|  
 |exception_severity|**int**|Gravedad de la última excepción que encontró este trabajador.|  
 |exception_address|**varbinary(8**|Dirección del código que produjo la excepción|  
-|affinity|**BIGINT**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso en [Sys. dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
-|state|**nvarchar (60)**|Estado del trabajador. Puede ser uno de los siguientes valores:<br /><br /> INIT = El trabajador se está inicializando actualmente.<br /><br /> RUNNING = El trabajador está trabajando de forma preferente o no preferente.<br /><br /> RUNNABLE = El trabajador está preparado para ejecutarse en el programador.<br /><br /> SUSPENDED = El trabajador está suspendido actualmente, esperando por un evento para enviarle una señal.|  
-|start_quantum|**BIGINT**|Tiempo en milisegundos al inicio de la ejecución actual de este trabajador.|  
-|end_quantum|**BIGINT**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
-|last_wait_type|**nvarchar (60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
+|affinity|**bigint**|La afinidad de subprocesos del trabajador. Coincide con la afinidad del subproceso en [Sys. dm_os_threads &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
+|state|**nvarchar(60)**|Estado del trabajador. Puede ser uno de los siguientes valores:<br /><br /> INIT = El trabajador se está inicializando actualmente.<br /><br /> RUNNING = El trabajador está trabajando de forma preferente o no preferente.<br /><br /> RUNNABLE = El trabajador está preparado para ejecutarse en el programador.<br /><br /> SUSPENDED = El trabajador está suspendido actualmente, esperando por un evento para enviarle una señal.|  
+|start_quantum|**bigint**|Tiempo en milisegundos al inicio de la ejecución actual de este trabajador.|  
+|end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
+|last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor devuelto de la última espera. Puede ser uno de los siguientes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**BIGINT**|Exclusivamente para uso interno.|  
-|max_quantum|**BIGINT**|Exclusivamente para uso interno.|  
+|quantum_used|**bigint**|Exclusivamente para uso interno.|  
+|max_quantum|**bigint**|Exclusivamente para uso interno.|  
 |boost_count|**int**|Exclusivamente para uso interno.|  
 |tasks_processed_count|**int**|Número de tareas procesadas por este trabajador.|  
 |fiber_address|**varbinary(8**|Dirección de memoria de la fibra con la que está asociado este trabajador.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para agrupación ligera.|  
@@ -79,8 +79,7 @@ ms.locfileid: "72289352"
 ## <a name="remarks"></a>Observaciones  
  Si el estado de trabajador es RUNNING y se está ejecutando de forma no preferente, la dirección del trabajador coincide con active_worker_address en sys.dm_os_schedulers.  
   
- Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
+ Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
   
 ## <a name="permissions"></a>Permisos
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
@@ -138,5 +137,5 @@ SELECT
   
 ## <a name="see-also"></a>Consulte también  
 [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
+[Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#DOP)       
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    

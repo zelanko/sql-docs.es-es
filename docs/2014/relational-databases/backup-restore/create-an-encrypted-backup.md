@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2f16425978b1e6ddc560aabd445b6cfe6737b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154755"
 ---
 # <a name="create-an-encrypted-backup"></a>Crear una copia de seguridad cifrada
@@ -29,7 +29,7 @@ ms.locfileid: "70154755"
   
  Siga estos pasos para crear una copia de seguridad cifrada de una base de datos en un disco local. En este ejemplo se utiliza una base de datos de usuario denominada MyTestDB.  
   
-1.  **Cree una clave maestra de base de datos de la base de datos maestra:** Elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos. Conecte con el motor de base de datos, inicie una nueva ventana de consulta, copie y pegue el siguiente ejemplo y haga clic en **Ejecutar**.  
+1.  **Cree una clave maestra de base de datos de la base de datos maestra:** elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos. Conecte con el motor de base de datos, inicie una nueva ventana de consulta, copie y pegue el siguiente ejemplo y haga clic en **Ejecutar**.  
   
     ```  
     -- Creates a database master key.   
@@ -41,7 +41,7 @@ ms.locfileid: "70154755"
   
     ```  
   
-2.  **Crear un certificado de copia de seguridad:** Cree un certificado de copia de seguridad en la base de datos maestra. Copie y pegue el ejemplo siguiente en la ventana de consulta y haga clic en **Ejecutar** .  
+2.  **Cree un certificado de copia de seguridad:** cree un certificado de copia de seguridad en la base de datos maestra. Copie y pegue el ejemplo siguiente en la ventana de consulta y haga clic en **Ejecutar** .  
   
     ```  
     Use Master  
@@ -52,7 +52,7 @@ ms.locfileid: "70154755"
   
     ```  
   
-3.  **Copia de seguridad de la base de datos:** Especifique el algoritmo de cifrado y el certificado que se usarán. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+3.  **Haga una copia de seguridad de la base de datos:** especifique el algoritmo de cifrado y el certificado que se usará. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  
@@ -76,11 +76,11 @@ ms.locfileid: "70154755"
   
  **Requisitos previos**  
   
--   Una cuenta de almacenamiento de Windows y un contenedor. Para más información, consulte [Lección 1: crear objetos de Azure Storage](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
+-   Una cuenta de almacenamiento de Windows y un contenedor. Para obtener más información, vea: [Lección 1: crear objetos de Azure Storage](../../tutorials/lesson-1-create-windows-azure-storage-objects.md).  
   
 -   Una clave maestra para la base de datos maestra y un certificado o una clave asimétrica en la instancia de SQL Server. Para conocer los requisitos de cifrado y los permisos, vea [Backup Encryption](backup-encryption.md).  
   
-1.  **Cree SQL Server credencial:** Para crear una credencial de SQL Server, conéctese al Motor de base de datos, abra una nueva ventana de consulta, copie y pegue el siguiente ejemplo y haga clic en **Ejecutar**.  
+1.  **Cree la credencial de SQL Server:** para crear una credencial de SQL Server, conecte con el motor de base de datos, abra una nueva ventana de consulta, copie y pegue el ejemplo siguiente y haga clic en **Ejecutar**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -88,7 +88,7 @@ ms.locfileid: "70154755"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Cree una clave maestra de base de datos:** Elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos. Conecte con el motor de base de datos, inicie una nueva ventana de consulta, copie y pegue el siguiente ejemplo y haga clic en **Ejecutar**.  
+2.  **Cree una clave maestra de base de datos:** elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos. Conecte con el motor de base de datos, inicie una nueva ventana de consulta, copie y pegue el siguiente ejemplo y haga clic en **Ejecutar**.  
   
     ```  
     -- Creates a database master key.  
@@ -111,7 +111,7 @@ ms.locfileid: "70154755"
   
     ```  
   
-4.  **Copia de seguridad de la base de datos:** Especifique el algoritmo de cifrado y el certificado que se usarán. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
+4.  **Haga una copia de seguridad de la base de datos:** especifique el algoritmo de cifrado y el certificado que se usará. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

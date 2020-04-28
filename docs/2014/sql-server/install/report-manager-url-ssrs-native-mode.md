@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: dd4ff661a10eca71781aee9d1886e80936f6246d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952410"
 ---
 # <a name="report-manager-url-ssrs-native-mode"></a>Dirección URL del Administrador de informes (Modo nativo de SSRS)
@@ -35,14 +35,14 @@ ms.locfileid: "71952410"
  **Directorio virtual**  
  Especifica el nombre del directorio virtual del Administrador de informes. Solo puede tener un nombre de directorio virtual para cada instancia del Administrador de informes del mismo equipo.  
   
- **URL**  
+ **URLs**  
  Muestra la dirección URL definida para la instancia actual del Administrador de informes.  
   
  **Avanzadas**  
  Agregue una dirección URL adicional para la instancia actual del Administrador de informes.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurar una dirección URL &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Direcciones URL en archivos de configuración &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)   
  [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   

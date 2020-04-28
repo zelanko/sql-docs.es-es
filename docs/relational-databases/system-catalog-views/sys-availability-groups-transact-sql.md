@@ -21,10 +21,10 @@ ms.assetid: da7fa55f-c008-45d9-bcfc-3513b02d9e71
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: ca82c64d2d0269564567de175b9d6f778f76d4d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874256"
 ---
 # <a name="sysavailability_groups-transact-sql"></a>sys.availability_groups (Transact-SQL)
@@ -35,14 +35,14 @@ ms.locfileid: "70874256"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Identificador único (GUID) del grupo de disponibilidad.|  
-|**Name**|**sysname**|Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).|  
-|**resource_id**|**nvarchar (40)**|Id. del recurso del clúster WSFC.|  
-|**resource_group_id**|**nvarchar (40)**|Id. del grupo de recursos del clúster WSFC del grupo de disponibilidad.|  
+|**name**|**sysname**|Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).|  
+|**resource_id**|**nvarchar(40)**|Id. del recurso del clúster WSFC.|  
+|**resource_group_id**|**nvarchar(40)**|Id. del grupo de recursos del clúster WSFC del grupo de disponibilidad.|  
 |**failure_condition_level**|**int**|Nivel de condición de error definido por el usuario en el que se debe desencadenar una conmutación automática por error, uno de los valores enteros que se muestran en la tabla inmediatamente debajo de esta tabla.<br /><br /> Los niveles de condición de error (1-5) abarcan desde el nivel menos restrictivo (1) al más restrictivo (5). Un nivel de condición dado abarca todos los niveles menos restrictivos. Así pues, el nivel de condición más estricto (el nivel 5) incluye los cuatro niveles de condición menos restrictivos (1-4), el nivel 4 incluye los niveles 1-3, y así sucesivamente.<br /><br /> Para cambiar este valor, use la opción FAILURE_CONDITION_LEVEL de la instrucción [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**health_check_timeout**|**int**|Tiempo de espera (en milisegundos) para que el procedimiento almacenado del sistema [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) devuelva información de estado del servidor, antes de que se asuma que la instancia del servidor es lenta o no responde. El valor predeterminado es 30000 milisegundos (30 segundos).<br /><br /> Para cambiar este valor, use la opción HEALTH_CHECK_TIMEOUT de la instrucción [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**automated_backup_preference**|**tinyint**|Ubicación preferida para realizar copias de seguridad en las bases de datos de disponibilidad en este grupo de disponibilidad. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> <br /><br /> 0: principal. Las copias de seguridad deben realizarse siempre en la réplica principal.<br /><br /> 1: solo secundaria. Es preferible realizar copias de seguridad en una réplica secundaria.<br /><br /> 2: preferir secundario. Es preferible realizar copias de seguridad en una réplica secundaria, pero se pueden realizar en la réplica principal si no hay ninguna réplica secundaria disponible a tal efecto. Este es el comportamiento predeterminado.<br /><br /> 3: cualquier réplica. No se establecen preferencias sobre si las copias de seguridad se deben realizar en la réplica principal o en una secundaria.<br /><br /> <br /><br /> Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
-|**automated_backup_preference_desc**|**nvarchar (60)**|Descripción de **automated_backup_preference**, uno de los siguientes:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Ninguno|  
-|**Versión**|**smallint**|La versión de los metadatos del grupo de disponibilidad almacenados en el clúster de conmutación por error de Windows. Este número de versión se incrementa cuando se agregan nuevas características.|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|Descripción de **automated_backup_preference**, uno de los siguientes:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Ninguno|  
+|**version**|**smallint**|La versión de los metadatos del grupo de disponibilidad almacenados en el clúster de conmutación por error de Windows. Este número de versión se incrementa cuando se agregan nuevas características.|  
 |**basic_features**|**bit**|Especifica si se trata de un grupo de disponibilidad básico. Para obtener más información, vea [Grupos de disponibilidad básica &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Especifica si se ha habilitado la compatibilidad con DTC para este grupo de disponibilidad. La opción **DTC_SUPPORT** de **Crear grupo de disponibilidad** controla esta configuración.|  
 |**db_failover**|**bit**|Especifica si el grupo de disponibilidad admite la conmutación por error para las condiciones de mantenimiento de la base de datos. La opción **DB_FAILOVER** de **Crear grupo de disponibilidad** controla esta configuración.|  
@@ -66,7 +66,7 @@ ms.locfileid: "70874256"
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. availability_replicas &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Always On grupos de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   

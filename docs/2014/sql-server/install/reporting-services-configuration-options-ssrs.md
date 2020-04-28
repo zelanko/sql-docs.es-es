@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952125"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opciones de configuración de Reporting Services (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "71952125"
 > [!NOTE]  
 >  Un archivo de base de datos del servidor de informes existente puede provocar un error en la instalación si elige una de las opciones de instalación predeterminadas. Cuando elige la opción de instalación predeterminada, el programa de instalación intenta crear una base de datos de servidor de informes empleando el nombre predeterminado. Si ya existe una base de datos con ese nombre, se producirá un error en la instalación y tendrá que revertirla. Para evitar este problema, puede cambiar el nombre de la base de datos existente antes de ejecutar la instalación o elegir la opción **Solo instalar** para poder especificar la configuración personalizada de la base de datos una vez terminada la instalación.  
   
-#### <a name="install-and-configure"></a>Instalación y configuración  
+#### <a name="install-and-configure"></a>Instalar y configurar  
  Instala una instancia del servidor de informes en modo nativo con los valores predeterminados para las bases de datos, la cuenta de servicio y las reservas de direcciones URL del servidor de informes. Si elige esta opción, la instancia del servidor de informes estará lista para ser utilizada una vez finalizada la instalación. El programa de instalación crea la base de datos del servidor de informes utilizando una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] local y configura un servidor de informes para que utilice valores predeterminados.  
   
  Esta opción solo está disponible si los valores predeterminados utilizados en una instalación del servidor de informes son válidos para el sistema. Esta opción es recomendable para programadores que deseen instalar todos los componentes localmente y para usuarios que estén evaluando el software.  

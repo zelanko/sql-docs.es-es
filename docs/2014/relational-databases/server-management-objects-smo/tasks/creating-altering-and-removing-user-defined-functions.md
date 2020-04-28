@@ -13,24 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782350"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Crear, modificar y eliminar las funciones definidas por el usuario
   El <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objeto proporciona funcionalidad que permite a los usuarios administrar mediante programación las funciones definidas [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]por el usuario en. Las funciones definidas por el usuario admiten los parámetros de entrada y salida y también admiten las referencias directas a las columnas de la tabla.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere registrar los ensamblados en una base de datos antes de que se puedan utilizar en los procedimientos almacenados, funciones definidas por el usuario, desencadenadores y los tipos de datos definidos por el usuario. SMO admite esta característica con el objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiere registrar los ensamblados en una base de datos antes de que se puedan utilizar en los procedimientos almacenados, funciones definidas por el usuario, desencadenadores y los tipos de datos definidos por el usuario. SMO admite esta característica con el objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
  El objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> hace referencia al ensamblado .NET con las propiedades <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> y <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>.  
   
  Cuando el objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> hace referencia a un ensamblado .NET, debe registrar el ensamblado creando un objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> y agregándolo al objeto <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>, que pertenece al objeto <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Ejemplo  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Crear una función escalar definida por el usuario en Visual Basic  
  En este ejemplo de código se muestra cómo crear y quitar una función escalar definida por el usuario que tiene un parámetro de objeto <xref:System.DateTime> de entrada y un tipo de valor devuelto entero de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. La función definida por el usuario se crea en la base de datos de [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . En el ejemplo se crea una función definida por el usuario, ISOweek, que toma un argumento de fecha y calcula el número de semana ISO. Para que esta función realice los cálculos correctamente, la opción DATEFIRST de base de datos debe establecerse en 1 antes de que se llame a la función.  

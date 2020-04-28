@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e4c756463c43ede8c6dae0cda0a184f0ec7f9956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154932"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Tarea 9: configurar un servicio de datos de referencia
+# <a name="task-9-configuring-a-reference-data-service"></a>Tarea 9: Configuración de un servicio de datos de referencia
   En esta tarea, se configura DQS para usar un servicio de datos de referencia en Azure Marketplace. En la tarea siguiente, configurará el dominio de **validación de direcciones** para utilizar este servicio. En tiempo de ejecución, durante la actividad de limpieza, DQS pasa los valores de los dominios del dominio de **validación de direcciones** al servicio para su limpieza. Vea [configurar DQS para usar datos de referencia](https://msdn.microsoft.com/library/hh213070.aspx) para obtener más detalles.  
   
 1.  En la Página principal del **cliente DQS**, en el panel **Administración** , haga clic en **configuración**.  
@@ -37,6 +37,6 @@ ms.locfileid: "70154932"
 7.  Haga clic en **cerrar** en la parte inferior de la página para cambiar a la Página principal del cliente DQS.  
   
 ## <a name="next-task"></a>Tarea siguiente  
- [Tarea 10: configurar un dominio compuesto para que use un servicio de datos de referencia](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
+ [Tarea 10: Configuración de un dominio compuesto para usar un servicio de datos de referencia](../../2014/tutorials/task-10-configuring-composite-domain-to-use-reference-data-service.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251950"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -45,7 +45,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  La solicitud del nombreruta para una columna de cualquier otro tipo de datos o de un columnthat **varbinary (Max)** no tiene el atributo de almacenamiento FileStream producirá un error en tiempo de compilación de la consulta.  
   
  *\@desea*  
- [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la opción puede ser uno de los valores siguientes. * \@* El valor predeterminado es 0.  
+ [Expresión](../../t-sql/language-elements/expressions-transact-sql.md) de tipo entero que define cómo se debe dar formato al componente de servidor de la ruta de acceso. la opción puede ser uno de los valores siguientes. * \@* El valor predeterminado es 0.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -148,7 +148,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Objeto binario grande &#40;BLOB&#41; datos &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;&#41;de Transact-SQL](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Obtener acceso a los datos FILESTREAM con OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

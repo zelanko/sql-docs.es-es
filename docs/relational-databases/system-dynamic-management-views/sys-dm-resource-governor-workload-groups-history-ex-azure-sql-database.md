@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70873772"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
@@ -34,7 +34,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 |-----------------|---------------|-----------------|  
 |**pool_id**| int |Id. del grupo de recursos de servidor. No admite valores NULL.|
 |**group_id**| int |Id. del grupo de cargas de trabajo No admite valores NULL.|
-|**Name**| nvarchar(256) |Nombre del grupo de cargas de trabajo No admite valores NULL.|
+|**name**| nvarchar(256) |Nombre del grupo de cargas de trabajo No admite valores NULL.|
 |**snapshot_time**| datetime |Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada.|
 |**duration_ms**| int |Duración entre la instantánea actual y la anterior.|
 |**active_worker_count**| int |Total de trabajos en la instantánea actual.|
@@ -68,8 +68,8 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 |**max_request_cpu_msec**| bigint |Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.|
 |**max_concurrent_request**| int |Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|
 |**max_io**| int |Límite máximo de e/s para el grupo.|
-|**max_global_io**| int |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.
-|**max_queued_io**| int |Solamente se identifica con fines informativos. No compatible. La compatibilidad con versiones posteriores no está garantizada.|
+|**max_global_io**| int |Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.
+|**max_queued_io**| int |Solamente se identifica con fines informativos. No se admite. La compatibilidad con versiones posteriores no está garantizada.|
 |**max_log_rate_kb**| bigint |Velocidad de registro máxima (kilobytes por segundo) en el nivel de grupo de recursos.|
 |**max_session**| int |Límite de sesión para el grupo.|
 |**max_worker**| int |Límite de trabajo para el grupo.|
@@ -103,5 +103,5 @@ ORDER BY snapshot_time DESC;
 ## <a name="see-also"></a>Consulte también
 
 - [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Límites de recursos de núcleo virtual de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Límites de recursos de núcleo virtual de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

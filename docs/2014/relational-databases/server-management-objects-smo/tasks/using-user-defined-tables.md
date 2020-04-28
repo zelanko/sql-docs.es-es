@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72781822"
 ---
 # <a name="using-user-defined-tables"></a>Utilizar tablas definidas por el usuario
@@ -26,8 +26,7 @@ ms.locfileid: "72781822"
   
  Al definir una nueva tabla definida por el usuario utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, tendrá que proporcionar las columnas y una clave principal basadas en una de las columnas.  
   
- No se pueden modificar los tipos de tabla definidos por el usuario una vez creados. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> no admite el método Alter. Los tipos de tabla definidos por el usuario pueden tener las restricciones CHECK, pero algunas operaciones de comprobación producirán una excepción porque el tipo no se puede modificar.  
+ No se pueden modificar los tipos de tabla definidos por el usuario una vez creados. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> no admite el método Alter. Los tipos de tabla definidos por el usuario pueden tener las restricciones CHECK, pero algunas operaciones de comprobación producirán una excepción porque el tipo no se puede modificar.  
   
  La clase <xref:Microsoft.SqlServer.Management.Smo.DataType> se utiliza para especificar el tipo de datos que está asociado a columnas y parámetros. Utilice este tipo para especificar el tipo de tabla definido por el usuario como un parámetro para las funciones definidas por el usuario y los procedimientos almacenados.  
   

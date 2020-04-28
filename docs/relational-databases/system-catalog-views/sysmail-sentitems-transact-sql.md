@@ -18,10 +18,10 @@ ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c935a83c3c3fdd9fa577a3232e46caed7865c1c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745368"
 ---
 # <a name="sysmail_sentitems-transact-sql"></a>sysmail_sentitems (Transact-SQL)
@@ -35,17 +35,17 @@ ms.locfileid: "70745368"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
-|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
 |**Asunto**|**nvarchar (510)**|Línea de asunto del mensaje.|  
-|**principal**|**ntext**|el cuerpo del mensaje.|  
+|**body**|**ntext**|el cuerpo del mensaje.|  
 |**body_format**|**VARCHAR (20)**|El formato del cuerpo del mensaje. Los valores posibles son **Text** y **html**.|  
 |**importance**|**VARCHAR (6)**|Parámetro de **importancia** del mensaje.|  
 |**distinga**|**VARCHAR (12)**|Parámetro de **sensibilidad** del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por signos de punto y coma de nombres de archivo adjuntos al mensaje de correo electrónico.|  
 |**attachment_encoding**|**VARCHAR (20)**|Tipo de datos adjuntos.|  
-|**misma**|**ntext**|Consulta ejecutada por el programa de correo.|  
+|**consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
 |**query_result_header**|**bit**|Si el valor es 1, los resultados de la consulta contenían encabezados de columna. Si el valor es 0, los resultados de la consulta no contenían encabezados de columna.|  

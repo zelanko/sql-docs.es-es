@@ -18,10 +18,10 @@ ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304789"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (vista del sistema de Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72304789"
 |**artid**|**int**|Id. único de un artículo suscrito.|  
 |**srvid**|**smallint**|Id. de servidor del suscriptor.|  
 |**dest_db**|**sysname**|El nombre de la base de datos de suscripciones.|  
-|**estatus**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
+|**status**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
 |**sync_type**|**tinyint**|El tipo de sincronización inicial:<br /><br /> **1** = automático.<br /><br /> **2** = ninguno.|  
 |**login_name**|**sysname**|El nombre de inicio de sesión utilizado al conectarse al publicador para agregar la suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = inserciones: el agente de distribución se ejecuta en el distribuidor.<br /><br /> **1** = extracción: el agente de distribución se ejecuta en el suscriptor.|  

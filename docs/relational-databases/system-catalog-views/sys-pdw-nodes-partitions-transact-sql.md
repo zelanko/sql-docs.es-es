@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305229"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>Sys. pdw_nodes_partitions (Transact-SQL)
@@ -26,20 +26,20 @@ ms.locfileid: "72305229"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|partition_id|**BIGINT**|identificador de la partición. Es único en una base de datos.|  
+|partition_id|**bigint**|identificador de la partición. Es único en una base de datos.|  
 |object_id|**int**|identificador del objeto al que pertenece esta partición. Todas las tablas o vistas se componen al menos de una partición.|  
 |index_id|**int**|identificador del índice dentro del objeto al que pertenece esta partición.|  
 |partition_number|**int**|Número de partición basado en uno en el índice o el montón propietario. Para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], el valor de esta columna es 1.|  
-|hobt_id|**BIGINT**|IDENTIFICADOR de la montículo o árbol B de datos (HoBT) que contiene las filas de esta partición.|  
+|hobt_id|**bigint**|IDENTIFICADOR de la montículo o árbol B de datos (HoBT) que contiene las filas de esta partición.|  
 |rows|**bigint**|Número aproximado de filas de esta partición. |  
 |data_compression|**int**|Indica el estado de compresión para cada partición:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|Indica el estado de compresión para cada partición. Los valores posibles son NONE, ROW y PAGE.|  
+|data_compression_desc|**nvarchar(60)**|Indica el estado de compresión para cada partición. Los valores posibles son NONE, ROW y PAGE.|  
 |pdw_node_id|**int**|Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `CONTROL SERVER`.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Ejemplo A: mostrar filas en cada partición de cada distribución 
 
@@ -49,7 +49,7 @@ Para mostrar el número de filas de cada partición dentro de cada distribución
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Ejemplo B: usa las vistas del sistema para ver las filas de cada una de las distribuciones de una tabla
 
-**Se aplica a:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Se aplica a:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Esta consulta devuelve el número de filas de cada partición de cada distribución de la tabla `myTable`.  
  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Data Warehouse y vistas de catálogo de almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

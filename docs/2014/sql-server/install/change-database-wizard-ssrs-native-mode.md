@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952663"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Cambiar el asistente para la base de datos (Modo nativo de SSRS)
@@ -40,8 +40,7 @@ ms.locfileid: "71952663"
   
  Para conectarse a la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , debe usar credenciales que tengan permiso para iniciar sesión en el servidor y para actualizar la información de las bases de datos. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa sus credenciales actuales de Windows, pero si no tiene permisos de inicio de sesión o de base de datos, debe especificar un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No puede especificar credenciales de Windows diferentes. Si desea conectarse como otro usuario de Windows, inicie sesión como ese usuario y, a continuación, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
- La conexión a una sesión remota requiere que primero habilite en dicha sesión las conexiones remotas. Algunas versiones y ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones remotas de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y confirme que los protocolos TCP/IP y Canalizaciones con nombre están habilitados. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que usa la instancia con nombre en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ La conexión a una sesión remota requiere que primero habilite en dicha sesión las conexiones remotas. Algunas versiones y ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no habilitan las conexiones remotas de forma predeterminada. Para confirmar si se permiten las conexiones remotas, use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y confirme que los protocolos TCP/IP y Canalizaciones con nombre están habilitados. Si la instancia remota es también una instancia con nombre, compruebe que el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser está habilitado y ejecutándose en el servidor de destino. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser proporciona el número de puerto que usa la instancia con nombre en el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  **Base de datos**  
  Especifica el nombre de la base de datos del servidor de informes que almacena los datos del servidor. Puede especificar una base de datos existente o crear una nueva.  
@@ -53,8 +52,7 @@ ms.locfileid: "71952663"
  **Lenguaje**  
  Solo se establece este valor al crearse una base de datos nueva del servidor de informes.  
   
- Con este valor, debe especificar el idioma en que se crean las definiciones y las descripciones de rol. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un modelo de autorización basada en roles que incluye un conjunto de roles predefinidos. Estos roles se crean en el idioma que especifique. Los nombres y descripciones de rol nunca aparecen en otros idiomas, ni siquiera si se conecta al servidor de informes con un explorador que tenga una referencia cultural o configuración de idioma que el servidor admita. El idioma que especifica también determina el que se usa para crear el nombre de la carpeta Mis informes y de las carpetas Usuarios que forman parte de la característica Mis informes.  
+ Con este valor, debe especificar el idioma en que se crean las definiciones y las descripciones de rol. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un modelo de autorización basada en roles que incluye un conjunto de roles predefinidos. Estos roles se crean en el idioma que especifique. Los nombres y descripciones de rol nunca aparecen en otros idiomas, ni siquiera si se conecta al servidor de informes con un explorador que tenga una referencia cultural o configuración de idioma que el servidor admita. El idioma que especifica también determina el que se usa para crear el nombre de la carpeta Mis informes y de las carpetas Usuarios que forman parte de la característica Mis informes.  
   
  **Modo de servidor**  
  Una base de datos del servidor de informes admite el modo nativo o el modo integrado de SharePoint. Los modos se excluyen mutuamente.  

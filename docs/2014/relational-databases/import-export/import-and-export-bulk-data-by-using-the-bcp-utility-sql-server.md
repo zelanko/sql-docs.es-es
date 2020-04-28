@@ -15,10 +15,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/14/2017
 ms.openlocfilehash: 7075bf87ed64686750bc4a267af431268987ff35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71708210"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importar y exportar datos de forma masiva con la utilidad bcp (SQL Server)
@@ -56,7 +56,7 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
   
 -   [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
--   [Mantener los valores de identidad al importar datos de forma masiva &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Mantener valores de identidad al importar datos en bloque &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
 -   [Mantener valores NULL o usar valores predeterminados durante la importación en bloque &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
@@ -76,7 +76,7 @@ Este tema constituye una introducción al uso de la [utilidad bcp](../../tools/b
 
 [Insert &#40;instrucción SELECT de Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql) 
  [&#40;la utilidad BCP de Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql) 
- [](../../tools/bcp-utility.md)   
+ [bcp Utility](../../tools/bcp-utility.md)   
 [Preparar para la importación masiva de datos &#40;SQL Server&#41;](prepare-to-bulk-import-data-sql-server.md) 
  [Bulk Insert &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) 
  [importación y exportación masivas de datos &#40;](bulk-import-and-export-of-data-sql-server.md) 

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72717260"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
   
  [ @LockMode= ] '*Lock_Mode*'  
- Es el modo de bloqueo que se va a obtener para un recurso determinado. *Lock_Mode* es **nvarchar (32)** y no tiene ningún valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner= ] '*lock_owner*'  
- Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar (32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
+ Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
   
  [ @LockTimeout= ] '*valor*'  
  Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por@LOCK_TIMEOUT@. Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Value|Resultado|  
+|Valor|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  
@@ -111,7 +111,7 @@ GO
   
  Un interbloqueo con un bloqueo de aplicación no revierte la transacción que solicitó el bloqueo de aplicación. Cualquier reversión que pueda solicitarse como resultado del valor devuelto debe realizarse manualmente. Por tanto, se recomienda incluir la comprobación de errores en el código de forma que si se devuelven determinados valores (por ejemplo, -3), se inicie una acción ROLLBACK TRANSACTION u otra alternativa.  
   
- Aquí tiene un ejemplo:  
+ Este es un ejemplo:  
   
 ```  
 USE AdventureWorks2012;  
@@ -132,8 +132,7 @@ END;
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el Id. de la base de datos activa para calificar el recurso. Por lo tanto, si se ejecuta sp_getapplock, incluso con los mismos valores de parámetros en bases de datos diferentes, el resultado es bloqueos separados en recursos separados.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa el Id. de la base de datos activa para calificar el recurso. Por lo tanto, si se ejecuta sp_getapplock, incluso con los mismos valores de parámetros en bases de datos diferentes, el resultado es bloqueos separados en recursos separados.  
   
  Utilice la vista de administración dinámica sys.dm_tran_locks o el procedimiento almacenado sp_lock system o utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para supervisar los bloqueos.  
   
@@ -167,6 +166,6 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [APPLOCK_MODE &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;&#41;de Transact-SQL](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_releaseapplock &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
+ [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)  
   
   

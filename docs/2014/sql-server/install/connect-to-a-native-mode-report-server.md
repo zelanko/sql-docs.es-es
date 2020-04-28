@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 5bf32c8427679b342bee89d6541b051beed2e8ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952287"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Conectarse a un servidor de informes en modo nativo
@@ -27,7 +27,7 @@ ms.locfileid: "71952287"
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
 > [!NOTE]  
->  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se usa para configurar y administrar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede usar scripts de Administración central de SharePoint y de PowerShell para configurar un servidor de informes en modo de SharePoint. Para más información, consulte [Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+>  El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no se usa para configurar y administrar el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Puede usar scripts de Administración central de SharePoint y de PowerShell para configurar un servidor de informes en modo de SharePoint. Para obtener más información, vea [instalar el modo de SharePoint de Reporting Services para sharepoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)  
   
 > [!TIP]  
 >  El[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool. exe) se instala con un nivel de privilegios "highestAvailable". Este comportamiento es así por diseño. El Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] precisa la comunicación con las API WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una parte de la comunicación WMI de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un nivel superior o administrativo de privilegios.  
@@ -48,7 +48,7 @@ ms.locfileid: "71952287"
  **Instancia del servidor de informes**  
  Seleccione la instancia a la que conectarse si se instalan varias instancias del servidor de informes. Solo las instancias válidas están disponibles para la selección. Si ejecuta versiones anteriores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en paralelo con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esas instancias no aparecerán en la lista.  
   
- **Conectar**  
+ **Conexión**  
  Conéctese al servidor y cree las instancias que especifique.  
   
 ## <a name="see-also"></a>Consulte también  

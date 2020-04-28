@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782742"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
@@ -43,7 +43,7 @@ ms.locfileid: "72782742"
 |Separar base de datos|La base de datos asociada se separa. La instancia del motor de base de datos no puede hacer referencia a la base de datos, pero los archivos de registro y de datos están intactos.|  
 |Eliminar base de datos|Se quita la base de datos asociada. Se eliminan los archivos de registro y datos.|  
   
-###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No hay ningún mecanismo automático para restaurar los metadatos o la base de datos de una DAC si esta se elimina. La forma de volver a generar manualmente la instancia de la DAC depende de la opción de eliminación.  
   
 |Opción|Volver a generar la instancia de DAC|  
@@ -55,10 +55,10 @@ ms.locfileid: "72782742"
 > [!WARNING]  
 >  Recompilar una instancia de la DAC mediante el registro de una DAC desde una base de datos restaurada o adjuntada no volverá a crear algunas partes de la DAC original, como la directiva de selección de servidor.  
   
-###  <a name="Permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Solo los miembros de los roles fijos de servidor **sysadmin** o **serveradmin** , o el propietario de la base de datos, pueden eliminar una DAC. La cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada denominada **sa** también puede iniciar el asistente.  
   
-##  <a name="UsingDeleteDACWizard"></a> Usar el asistente Eliminar aplicación de capa de datos  
+##  <a name="using-the-delete-data-tier-application-wizard"></a><a name="UsingDeleteDACWizard"></a> Usar el asistente Eliminar aplicación de capa de datos  
  **Para eliminar una DAC mediante un asistente**  
   
 1.  En **Explorador de objetos**, expanda el nodo de la instancia que contiene la DAC que se va a eliminar.  
@@ -79,7 +79,7 @@ ms.locfileid: "72782742"
   
     4.  [Eliminar aplicación de capa de datos](#Delete_datatier_application)  
   
-##  <a name="Introduction"></a> Página Introducción  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para eliminar una aplicación de capa de datos.  
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
@@ -88,46 +88,46 @@ ms.locfileid: "72782742"
   
  **Cancelar** : termina el asistente sin eliminar una aplicación de capa de datos o base de datos.  
   
-##  <a name="Choose_method"></a>Página elegir método  
+##  <a name="choose-method-page"></a><a name="Choose_method"></a>Página elegir método  
  Use esta página para especificar la opción a fin de controlar la base de datos asociada a la DAC que se va a eliminar.  
   
  **Eliminar registro** : quita los metadatos que definen la aplicación de capa de datos, pero deja intacta la base de datos asociada.  
   
- **Desasociar base** de datos: quita los metadatos que definen la aplicación de capa de datos y separa la base de datos asociada.  
+ **Separar base de datos** : quita los metadatos que definen la aplicación de capa de datos y separa la base de datos asociada.  
   
  Esa instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]no puede hacer referencia ya a la base de datos, pero los archivos de registro y de datos permanecen intactos.  
   
- **Eliminar base** de datos: quita los metadatos que definen la DAC y quita la base de datos asociada.  
+ **Eliminar base de datos** : quita los metadatos que definen la DAC y quita la base de datos asociada.  
   
  Los archivos de registro y de datos de la base de datos se eliminan de forma permanente.  
   
  Anterior: vuelve a la página **Introducción** . ** \< **  
   
- **Siguiente >** : avanza a la página **Resumen** .  
+ **Siguiente >**: avanza a la página **Resumen**.  
   
  **Cancelar** : termina el asistente sin eliminar la DAC o la base de datos.  
   
-##  <a name="Summary"></a> Página Resumen  
+##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Use esta página para revisar las acciones que el asistente realizará al eliminar la instancia de la DAC.  
   
- **Revise el Resumen de selección** y revise la DAC, la base de datos y el método de eliminación mostrados en el cuadro. Si la información es correcta, seleccione **Siguiente** o **Finalizar** para eliminar la DAC. Si la información de la base de datos y la DAC no es correcta, seleccione **Cancelar** y seleccione la DAC correcta. Si el método de eliminación no es correcto, seleccione **Anterior** para volver a la página **Elegir método** y seleccione un método diferente.  
+ **Revisar opciones seleccionadas** : revise la DAC, la base de datos y el método de eliminación mostrados en el cuadro. Si la información es correcta, seleccione **Siguiente** o **Finalizar** para eliminar la DAC. Si la información de la base de datos y la DAC no es correcta, seleccione **Cancelar** y seleccione la DAC correcta. Si el método de eliminación no es correcto, seleccione **Anterior** para volver a la página **Elegir método** y seleccione un método diferente.  
   
  Anterior: vuelve a la página **elegir método** para elegir otro método de eliminación. ** \< **  
   
- A **continuación >** : elimina la instancia de DAC mediante el método elegido en la página anterior y continúa en la página **eliminar aplicación de capa de datos** .  
+ **Siguiente >**: elimina la instancia de DAC mediante el método elegido en la página anterior y avanza a la página **Eliminar aplicación de capa de datos**.  
   
- **Cancelar** : termina el asistente sin eliminar la instancia de DAC.  
+ **Cancelar** : finaliza el asistente sin eliminar la instancia de DAC.  
   
-##  <a name="Delete_datatier_application"></a>Página eliminar aplicación de capa de datos  
+##  <a name="delete-data-tier-application-page"></a><a name="Delete_datatier_application"></a>Página eliminar aplicación de capa de datos  
  Esta página notifica si la operación de eliminación se realizó correctamente o no.  
   
- **Eliminar la DAC** : notifica si cada acción realizada para eliminar la instancia de DAC se ha realizado correctamente o no. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
+ **Eliminando la DAC** : notifica si cada acción realizada para eliminar la instancia de DAC se ha llevado a cabo correctamente o no. Revise la información para determinar si cada acción se realizó o no correctamente. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Seleccione el vínculo para ver un informe del error para esa acción.  
   
- **Guardar Informe** : Seleccione este botón para guardar el informe de eliminación en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta SQL Server Management Studio\DAC Packages de la carpeta Documentos de su cuenta de Windows.  
+ **Guardar informe** : seleccione este botón para guardar el informe de eliminación en un archivo HTML. El archivo notifica el estado de cada acción, incluidos todos los errores generados por cualquiera de las acciones. La carpeta predeterminada es una carpeta SQL Server Management Studio\DAC Packages de la carpeta Documentos de su cuenta de Windows.  
   
- **Finalizar** : finaliza el asistente.  
+ **Finalizar** : termina el asistente.  
   
-##  <a name="DeleteDACPowerShell"></a>Eliminar una DAC mediante PowerShell  
+##  <a name="delete-a-dac-using-powershell"></a><a name="DeleteDACPowerShell"></a>Eliminar una DAC mediante PowerShell  
  **Para eliminar una DAC mediante un script de PowerShell**  
   
 1.  Cree un objeto SMO Server y establézcalo en la instancia que contiene la DAC que se va a eliminar.  
@@ -223,5 +223,5 @@ $dacName  = "MyApplication"
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](deploy-a-data-tier-application.md)   
  [Registrar una base de datos como una DAC](register-a-database-as-a-dac.md)   
- [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

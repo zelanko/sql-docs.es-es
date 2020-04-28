@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810494"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "70810494"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+  > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -70,7 +70,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |Value|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**4**|Diariamente|  
+|**4**|Diario|  
 |**203**|Semanal|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente, con respecto a *frequency_interval.*|  
@@ -170,6 +170,6 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_update_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

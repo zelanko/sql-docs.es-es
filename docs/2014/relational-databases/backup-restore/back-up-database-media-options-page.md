@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154837"
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
@@ -56,13 +56,13 @@ ms.locfileid: "70154837"
  **Sobrescribir todos los conjuntos de copia de seguridad existentes**  
  Reemplaza las copias de seguridad anteriores del conjunto de medios existente por la copia de seguridad actual.  
   
- **Comprobar el nombre del conjunto de medios y el conjunto de copia de seguridad**  
+ **Comprobar nombre de conjunto de medios y fecha de expiración de conjunto de copia**  
  Opcionalmente, si se realiza una copia de seguridad en un conjunto de medios existente, solicite que la operación de copia de seguridad compruebe el nombre y la fecha de expiración de los conjuntos de copia de seguridad.  
   
  **Nombre del conjunto de medios**  
  Si la opción **Comprobar nombre de conjunto de medios y fecha de expiración de conjunto de copia de seguridad** está seleccionada, de forma opcional, especifique el nombre del conjunto de medios establecido para usarse para la operación de copia de seguridad.  
   
- **Hacer una copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**  
+ **Hacer copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**  
  Se utiliza un conjunto de medios nuevo y se borran los conjuntos de copia de seguridad anteriores.  
   
  Si hace clic en esta opción, se activan las opciones siguientes:  
@@ -94,7 +94,7 @@ ms.locfileid: "70154837"
  **Truncar el registro de transacciones**  
  Realice una copia de seguridad del registro de transacciones y trúnquelo para liberar espacio de registro. La base de datos permanece en línea. Ésta es la opción predeterminada.  
   
- **Realizar una copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
+ **Realizar copia de seguridad del final del registro y dejar la base de datos en estado de restauración**  
  Realice una copia de seguridad del final del registro y deje la base de datos en estado de restauración. Esta opción crea una *copia del final del registro*, que realiza una copia de seguridad de los registros de los que todavía no se ha realizado ninguna (registro activo), generalmente, para la preparación de la restauración de una base de datos. La base de datos no estará disponible para los usuarios hasta que haya finalizado su restauración.  
   
  Seleccionar esta opción es equivalente a especificar WITH NO_TRUNCATE, NORECOVERY en una instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql) ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Para obtener más información, vea [Copias del final del registro &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
@@ -105,7 +105,7 @@ ms.locfileid: "70154837"
 > [!NOTE]  
 >  Para obtener más información sobre cómo usar dispositivos de cinta, vea [Dispositivos de cinta &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Descargar la cinta después de la copia de seguridad**  
+ **Descargar la cinta después de realizar la copia de seguridad**  
  Una vez finalizada la copia de seguridad, descargue la cinta.  
   
  **Rebobinar la cinta antes de descargar**  
@@ -113,7 +113,7 @@ ms.locfileid: "70154837"
   
 ## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

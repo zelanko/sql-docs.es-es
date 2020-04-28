@@ -16,10 +16,10 @@ ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a15162774d3814e574735d8e1d5fd5e6b769327f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72278125"
 ---
 # <a name="sp_dropdistpublisher-transact-sql"></a>sp_dropdistpublisher (Transact-SQL)
@@ -68,7 +68,7 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_dropdistpublisher**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Disable Publishing and Distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)  (Deshabilitar la publicación y la distribución)  
+ [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   

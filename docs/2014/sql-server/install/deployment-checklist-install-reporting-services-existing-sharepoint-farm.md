@@ -11,19 +11,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: e7a66be0d4e002643ffe1c72ce8c44aa50f61c0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952625"
 ---
 # <a name="deployment-checklist-install-reporting-services-into-an-existing-sharepoint-farm"></a>Lista de comprobación de la implementación: instalar Reporting Services en una granja de servidores de SharePoint existente
   Los servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint se pueden instalar en una granja de servidores de SharePoint nueva o en una existente. En este tema se describen los posibles escenarios y prácticas recomendadas para instalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la granja de servidores de SharePoint existente.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Antes de ejecutar el programa de instalación, revise la información siguiente:  
   
-|Paso|Vínculo|  
+|Paso|Link|  
 |----------|----------|  
 |Crear o identificar las cuentas utilizadas en una implementación de un servidor de informes. Debe tener una cuenta de servicio para el servicio del servidor de informes, así como credenciales para la conexión con la base de datos del servidor de informes||  
 |Decidir qué instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospedará la base de datos del servidor de informes. Puede utilizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]local o remota Debería elegir una instancia que se encuentre en un equipo con la capacidad de almacenamiento necesaria para sus informes.||  
@@ -35,19 +35,14 @@ ms.locfileid: "71952625"
   
 |Iniciar la configuración|Flujo de trabajo|Terminar la configuración|Comentarios|  
 |----------------------------|--------------|--------------------------|--------------|  
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]en modo local|Instalación|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en modo conectado o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Actualización en contexto|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
-|
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en modo conectado o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Migración|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] en modo local|Instalación|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en modo conectado o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Actualización en contexto|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
+|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en modo conectado o [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]|Migración|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]en modo conectado.||  
   
 ## <a name="installation-and-in-place-upgrade-checklist"></a>Lista de comprobación de la actualización en contexto e instalación  
  En la siguiente tabla se resumen los pasos, herramientas e información que debería revisar y utilizar para la instalación:  
   
-|Paso|Vínculo|  
+|Paso|Link|  
 |----------|----------|  
 |**Instalación y configuración inicial**||  
 |Instale el complemento de SharePoint en todos los equipos front-end web (WFE).|[Agregar un front-end web adicional de Reporting Services a una granja de servidores](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
@@ -62,10 +57,9 @@ ms.locfileid: "71952625"
 ## <a name="migration-checklist"></a>Lista de comprobación de la migración  
  La siguiente es una lista de los pasos básicos para realizar la migración de una instalación existente a una nueva instalación.  
   
-|Paso|Vínculo|  
+|Paso|Link|  
 |----------|----------|  
-|Instalar y configurar el nuevo servidor. Incluye lo siguiente:<br /><br /> Herramienta de preparación de productos de SharePoint<br /><br /> Producto SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint<br /><br /> Complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
+|Instalar y configurar el nuevo servidor. Incluye lo siguiente:<br /><br /> Herramienta de preparación de productos de SharePoint<br /><br /> Producto SharePoint 2010<br /><br /> SharePoint 2010 SP1<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en modo de SharePoint<br /><br /> Complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint 2010|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Crear por lo menos una aplicación de servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Realizar la copia de seguridad de las bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
 |Realizar la copia de seguridad de las claves de cifrado de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]||  
@@ -74,7 +68,7 @@ ms.locfileid: "71952625"
 |Quitar la integración de direcciones URL en el servidor anterior.|Desde Administración central de SharePoint, en la Página **Configuración de aplicación general** , haga clic en **Integración de Reporting Services**.|  
 |Desinstalar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la anterior instalación, si lo desea.||  
   
-## <a name="next-steps"></a>Pasos siguientes  
+## <a name="next-steps"></a>Pasos a seguir  
   
 ## <a name="see-also"></a>Consulte también  
  [Reporting Services la instalación en modo de SharePoint &#40;SharePoint 2010 y SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   

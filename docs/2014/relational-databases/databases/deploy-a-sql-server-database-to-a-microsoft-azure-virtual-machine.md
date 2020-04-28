@@ -43,10 +43,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175740"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
@@ -54,7 +54,7 @@ ms.locfileid: "70175740"
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
-##  <a name="before_you_begin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="before_you_begin"></a> Antes de comenzar  
  Para completar este asistente, debe poder proporcionar la siguiente información y tener esta configuración:  
   
 -   Los detalles de cuenta de Microsoft asociados con la suscripción de Azure.  
@@ -92,7 +92,7 @@ ms.locfileid: "70175740"
   
 -   Habilitar JavaScript: Internet Explorer > Opciones de Internet > Seguridad > Nivel personalizado > Scripting > Active scripting: **Habilitar**.  
   
-###  <a name="limitations"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="limitations"></a> Limitaciones y restricciones  
  La limitación de tamaño de la base de datos para esta operación es 1 TB.  
   
  Esta característica de implementación está disponible en SQL Server Management Studio para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -119,14 +119,14 @@ ms.locfileid: "70175740"
   
  Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
-###  <a name="filestream"></a>Consideraciones para implementar una base de datos habilitada para FILESTREAM en una máquina virtual de Azure  
+###  <a name="considerations-for-deploying-a-filestream-enabled-database-to-an-azure-vm"></a><a name="filestream"></a> Consideraciones para implementar una base de datos habilitada para FILESTREAM en una máquina virtual de Windows Azure  
  Tenga en cuenta las directrices y limitaciones siguientes al implementar las bases de datos que tienen BLOBS almacenados en objetos FILESTREAM:  
   
 -   La característica de implementación no puede implementar una base de datos habilitada para FILESTREAM en una nueva máquina virtual. Si FILESTREAM no está habilitado en la máquina virtual antes de ejecutar el asistente, la operación de restauración de la base de datos producirá un error y la operación del asistente no se podrá completar correctamente. Para implementar correctamente una base de datos que utiliza FILESTREAM, habilite FILESTREAM en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la máquina virtual host antes de iniciar el asistente. Para obtener más información, vea [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   Si la base de datos utiliza OLTP en memoria, puede implementar la base de datos en una máquina virtual de Windows Azure sin ninguna modificación en la base de datos. Para obtener más información, vea [OLTP en memoria (optimización en memoria)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
-###  <a name="geography"></a>Consideraciones sobre la distribución geográfica de activos  
+###  <a name="considerations-for-geographic-distribution-of-assets"></a><a name="geography"></a>Consideraciones sobre la distribución geográfica de activos  
  Observe que los activos siguientes se deben encontrar en la misma región geográfica:  
   
 -   Servicio en la nube  
@@ -137,14 +137,14 @@ ms.locfileid: "70175740"
   
  Si los activos enumerados anteriormente no se ubican conjuntamente, el asistente no se podrá completar correctamente.  
   
-###  <a name="configuration_settings"></a>Opciones de configuración del asistente  
+###  <a name="wizard-configuration-settings"></a><a name="configuration_settings"></a> Valores de configuración del asistente  
  Utilice los detalles siguientes de configuración para modificar la configuración de una implementación de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual de Windows Azure.  
   
--   **Ruta de acceso predeterminada del archivo de configuración** :%LOCALAPPDATA%\SQL SERVER\DEPLOY to a SQL en wa VM\DeploymentSettings.XML  
+-   **Ruta de acceso predeterminada del archivo de configuración** : %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **Estructura de los archivos de configuración**  
   
-    -   \<> DeploymentSettings  
+    -   \<DeploymentSettings>  
   
         -   <OtherSettings  
   
@@ -164,15 +164,14 @@ ms.locfileid: "70175740"
   
             -   Publisher="" />  
   
-    -   
-  \</DeploymentSettings>  
+    -   \</DeploymentSettings>  
   
  **Valores del archivo de configuración**  
   
-###  <a name="permissions"></a> Permisos  
+###  <a name="permissions"></a><a name="permissions"></a> Permisos  
  La base de datos que se implementa debe estar en un estado normal, la base de datos debe ser accesible para la cuenta de usuario que ejecuta el asistente y la cuenta de usuario debe tener permisos para realizar una operación de copia de seguridad.  
   
-##  <a name="launch_wizard"></a>Uso del Asistente para implementar una base de datos en máquina virtual de Azure  
+##  <a name="using-the-deploy-database-to-azure-vm-wizard"></a><a name="launch_wizard"></a>Uso del Asistente para implementar una base de datos en máquina virtual de Azure  
  **Para iniciar el asistente, realice los pasos siguientes:**  
   
 1.  Use SQL Server Management Studio para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos que desea implementar.  
@@ -183,20 +182,20 @@ ms.locfileid: "70175740"
   
 
   
-##  <a name="Introduction"></a> Página Introducción  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  En esta página se describe el asistente **para implementar una base de datos SQL Server en una máquina virtual de Azure** .  
   
  **Opciones**  
   
 -   **No volver a mostrar esta página.** - Active esta casilla para que la página Introducción deje de mostrarse en el futuro.  
   
--   **Siguiente** : continúa en la página **configuración de origen** .  
+-   **Siguiente** : continúa en la página **Configuración de origen** .  
   
--   **Cancelar**: cancela la operación y cierra el asistente.  
+-   **Cancelar** : cancela la operación y cierra el asistente.  
   
 -   **Ayuda** : inicia el tema de ayuda de MSDN para el asistente.  
   
-##  <a name="Source_settings"></a>Configuración de origen  
+##  <a name="source-settings"></a><a name="Source_settings"></a>Configuración de origen  
  Use esta página para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que desea implementar en la máquina virtual de Azure. También especificará una ubicación temporal para que los archivos se guarden desde el equipo local antes de que se transfieran a Azure. Esta puede ser una ubicación de red compartida.  
   
  **Opciones**  
@@ -207,7 +206,7 @@ ms.locfileid: "70175740"
   
 -   En el campo **otras opciones** , especifique una carpeta compartida que sea accesible para el servicio de VM de Azure.  
   
-##  <a name="Azure_sign-in"></a>Inicio de sesión en Azure  
+##  <a name="azure-sign-in"></a><a name="Azure_sign-in"></a>Inicio de sesión en Azure  
  Use esta página para conectarse a Azure y proporcionar el certificado de administración o los detalles del perfil de publicación.  
   
  **Opciones**  
@@ -220,7 +219,7 @@ ms.locfileid: "70175740"
   
 -   **Suscripción** : seleccione, escriba o pegue el identificador de suscripción de Azure que coincida con el certificado de administración del almacén de certificados local o un perfil de publicación.  
   
-##  <a name="Deployment_settings"></a>Página configuración de implementación  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a>Página configuración de implementación  
  Use esta página para especificar el servidor de destino y proporcionar detalles sobre la nueva base de datos.  
   
  **Opciones**  
@@ -241,12 +240,12 @@ ms.locfileid: "70175740"
   
 -   **Base de datos** : especifique o confirme el nombre de una nueva base de datos. Si el nombre de la base de datos ya existe en la instancia de SQL Server de destino, se recomienda especificar un nombre de base de datos modificado.  
   
-##  <a name="Summary"></a> Página Resumen  
+##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar la configuración especificada para la operación. Para completar la operación de implementación con los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de implementación y salir del asistente, haga clic en **Cancelar**.  
   
  Puede haber pasos manuales necesarios para implementar los detalles de la base de datos en la SQL Server base de datos en la máquina virtual de Azure. Estos pasos se describen en detalle.  
   
-##  <a name="Results"></a> Página Resultados  
+##  <a name="results-page"></a><a name="Results"></a>Página resultados  
  En esta página se notifica la corrección o el error de la operación de implementación, mostrando los resultados de cada acción. Cualquier acción que encuentre un error tendrá una indicación en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
   
  Haga clic en **Finalizar** para cerrar el asistente.  

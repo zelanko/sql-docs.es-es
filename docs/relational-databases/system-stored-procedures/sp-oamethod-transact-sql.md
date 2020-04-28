@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252197"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -47,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Es el nombre de método del objeto OLE al que se llamará.  
   
- __**salida** ReturnValue    
+ _returnvalue_**salida** ReturnValue    
  Es el valor devuelto del método del objeto OLE. Si se especifica, debe ser una variable local del tipo de datos adecuado.  
   
  Si el método devuelve un valor único, especifique una variable local para *ReturnValue*, que devuelve el valor devuelto por el método en la variable local, o no especifique *ReturnValue*, que devuelve el valor devuelto por el método al cliente como un conjunto de resultados de una sola fila y una sola columna.  

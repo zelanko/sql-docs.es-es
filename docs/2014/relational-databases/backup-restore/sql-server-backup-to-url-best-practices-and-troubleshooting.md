@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175966"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
@@ -24,7 +24,7 @@ ms.locfileid: "70175966"
   
 -   [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Administrar copias de seguridad  
  La lista siguiente incluye recomendaciones generales para administrar copias de seguridad:  
@@ -69,7 +69,7 @@ ms.locfileid: "70175966"
   
 -   Compruebe los valores de clave y nombre de la cuenta de almacenamiento. La información almacenada en la credencial debe coincidir con los valores de propiedad de la cuenta de Azure Storage que se usa en las operaciones de copia de seguridad y restauración.  
   
- **Errores de copia de seguridad/errores:**  
+ **Errores de copia de seguridad:**  
   
 -   Las copias de seguridad en paralelo en el mismo blob produce errores en una de las copias de seguridad y hacen que aparezca un **Error de inicialización** .  
   
@@ -102,11 +102,11 @@ ms.locfileid: "70175966"
   
      Si se vuelve a intentar una instrucción de copia de seguridad, la operación de copia de seguridad puede producir un error similar al siguiente:  
   
-     **Backup to URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: el servidor remoto devolvió un error: (412) actualmente hay una concesión en el BLOB y no se especificó ningún identificador de concesión en la solicitud**.  
+     **BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: Error en el servidor remoto: (412) Actualmente hay una concesión en el blob y no se especificó ningún identificador de concesión en la solicitud**.  
   
      Si se intenta una instrucción de restauración en un archivo de blob de copia de seguridad que tiene una concesión activa, la operación de restauración produce un error similar al siguiente:  
   
-     **Mensaje de excepción: el servidor remoto devolvió un error: (409) conflicto..**  
+     **Mensaje de la excepción: Error en el servidor remoto: (409) Conflicto.**  
   
      Cuando se produce ese error, es necesario eliminar los archivos de blob. Para obtener más información sobre este escenario y cómo corregir este problema, vea [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md).  
   

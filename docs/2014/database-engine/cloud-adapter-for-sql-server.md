@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176021"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "70176021"
   
 -   **Parámetros del archivo de configuración** -  
   
-    -   \<> de configuración  
+    -   \<configuration>  
   
         -   \<> appSettings  
   

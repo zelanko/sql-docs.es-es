@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 44664805dc9b728ecbd48acbf38c4565601c631a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71326145"
 ---
 # <a name="sysdm_exec_compute_nodes-transact-sql"></a>Sys. dm_exec_compute_nodes (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "71326145"
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Identificador numérico único asociado al nodo. Clave para esta vista.|Único en todo el clúster de escalado horizontal, independientemente del tipo.|  
-|type|**nvarchar (32)**|Tipo del nodo.|' COMPUTE ', ' HEAD '|  
-|name|**nvarchar (32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
-|address|**nvarchar (32)**|Dirección IP de este nodo.|Intervalo de direcciones IP|  
+|type|**nvarchar(32)**|Tipo del nodo.|' COMPUTE ', ' HEAD '|  
+|name|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
+|address|**nvarchar(32)**|Dirección IP de este nodo.|Intervalo de direcciones IP|  
   
 ## <a name="see-also"></a>Consulte también  
  [Solución de problemas de polybase con vistas de administración dinámica](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782730"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabajar con rutas acceso de SQL Server PowerShell
@@ -22,9 +22,9 @@ ms.locfileid: "72782730"
   
 1.  [Antes de comenzar](#BeforeYouBegin)  
   
-2.  **Para trabajar en un nodo de ruta de acceso:**  [enumerar métodos y propiedades](#ListPropMeth), [usar métodos y propiedades](#UsePropMeth)  
+2.  **Para trabajar en un nodo de ruta de acceso:**  [Enumerar métodos y propiedades](#ListPropMeth), [Usar métodos y propiedades](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
  Después de haber navegado a un nodo de una ruta de acceso del proveedor de [!INCLUDE[ssDE](../includes/ssde-md.md)] , puede realizar dos tipos de acciones:  
   
 -   Puede ejecutar los cmdlets de Windows PowerShell que operan en los nodos, como **Rename-Item**.  
@@ -33,7 +33,7 @@ ms.locfileid: "72782730"
   
  El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se utiliza para administrar los objetos en una instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. No se utiliza para trabajar con los datos de las bases de datos. Si ha navegado a una tabla o vista, no puede utilizar el proveedor para seleccionar, insertar, actualizar o eliminar datos. Use el cmdlet **Invoke-Sqlcmd** para consultar o cambiar los datos de las tablas y vistas del entorno de Windows PowerShell. Para obtener más información, vea [cmdlet Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Enumerar métodos y propiedades
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a> Enumerar métodos y propiedades
   
  Para ver los métodos y propiedades disponibles de determinados objetos o clases de objetos, use el cmdlet **Get-Member** .  
   
@@ -62,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>Usar métodos y propiedades de SMO  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>Usar métodos y propiedades de SMO  
   
  Para realizar el trabajo en objetos de una ruta de acceso del proveedor de [!INCLUDE[ssDE](../includes/ssde-md.md)] , puede usar los métodos y las propiedades de SMO.  
   
@@ -94,9 +94,9 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
- [Navegar por las rutas de acceso de SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
- [Convertir URN en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [Proveedor de SQL Server PowerShell](sql-server-powershell-provider.md)   
+ [Navegar SQL Server PowerShell trazados](navigate-sql-server-powershell-paths.md)   
+ [Convertir urn en rutas de acceso del proveedor de SQL Server](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

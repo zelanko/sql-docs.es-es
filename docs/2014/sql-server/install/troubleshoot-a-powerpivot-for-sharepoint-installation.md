@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f70af740fb3fe8310a5306368c1bf48c6f357419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952006"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>Solucionar problemas de una instalación de PowerPivot para SharePoint
@@ -35,7 +35,7 @@ ms.locfileid: "71952006"
   
 2.  En la sección **Administración de la colección de sitios** , haga clic en **Características de la colección de sitios**.  
   
-3.  Haga clic en características de la **colección de sitios**.  
+3.  Haga clic en **Características de la colección de sitios**.  
   
 4.  Compruebe que la **integración de las características de PowerPivot para las colecciones de sitios** está **activa**.  
   

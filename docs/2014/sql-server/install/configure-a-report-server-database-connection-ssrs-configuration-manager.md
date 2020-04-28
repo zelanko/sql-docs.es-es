@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952632"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
@@ -62,8 +62,7 @@ ms.locfileid: "71952632"
  Las credenciales que proporcione deben disponer de acceso a la base de datos del servidor de informes. Si utiliza la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , este paso se realiza automáticamente. Para obtener información acerca de los permisos que necesita para tener acceso a la base de datos, vea la sección "Permisos para la base de datos" en este tema.  
   
 ### <a name="storing-database-connection-information"></a>Almacenar información de conexión a la base de datos  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena y cifra la información de conexión en los siguientes valores del archivo RSreportserver.config. Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad rsconfig para crear valores cifrados para esta configuración.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] almacena y cifra la información de conexión en los siguientes valores del archivo RSreportserver.config. Debe utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o la utilidad rsconfig para crear valores cifrados para esta configuración.  
   
  No todos los valores se establecen para todos los tipos de conexión. Si configura la conexión con los valores predeterminados (es decir, con las cuentas de servicio para realizar la conexión) `LogonUser` , <> `LogonDomain` , <> y `LogonCred` <> estarán vacíos, como se indica a continuación:  
   
@@ -107,9 +106,9 @@ ms.locfileid: "71952632"
 ### <a name="database-permissions"></a>Permisos para la base de datos  
  A las cuentas utilizadas para conectarse a la base de datos del servidor de informes se les conceden los siguientes roles:  
   
--   roles **Public** y **RSExecRole** para la base de datos **ReportServer** .  
+-   Roles**public** y **RSExecRole** para la base de datos **ReportServer** .  
   
--   Rol **RSExecRole** para las bases de datos **Master**, **msdb**y **ReportServerTempDB** .  
+-   Rol**RSExecRole** para las bases de datos **master**, **msdb**y **ReportServerTempDB** .  
   
  Cuando utiliza la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con el fin de crear o modificar la conexión, estos permisos se conceden automáticamente. Si usa la utilidad rsconfig y especifica una cuenta diferente para la conexión, debe actualizar el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para esa nueva cuenta. Puede crear archivos de scripts con la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que actualicen el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el servidor de informes.  
   
@@ -117,13 +116,13 @@ ms.locfileid: "71952632"
  Utilice la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para saber qué base de datos del servidor de informes utiliza una instancia concreta del servidor de informes. Para buscar el nombre, conéctese a la instancia del servidor de informes y abra la página Instalación de base de datos.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>Usar una base de datos de servidor de informes diferente o mover una base de datos de servidor de informes  
- Puede configurar una instancia del servidor de informes para que utilice una base de datos de servidor de informes diferente cambiando la información de conexión. Una situación común para intercambiar bases de datos es cuando se implementa un servidor de informes de producción. Cambiar de una base de datos del servidor de informes de prueba a una base de datos del servidor de informes de producción es normalmente el modo en que se implementan los servidores de producción También puede trasladar una base de datos del servidor de informes a otro equipo. Para obtener más información, vea [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) en los Libros en línea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Puede configurar una instancia del servidor de informes para que utilice una base de datos de servidor de informes diferente cambiando la información de conexión. Una situación común para intercambiar bases de datos es cuando se implementa un servidor de informes de producción. Cambiar de una base de datos de servidor de informes de prueba a otra de producción es como se suelen implementar los servidores de producción. También puede mover una base de datos del servidor de informes a otro equipo. Para obtener más información, vea [Actualizar y migrar Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) en los Libros en línea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Configurar varios servidores de informes para que utilicen la misma base de datos del servidor de informes  
  Puede configurar varios servidores de informes para que utilicen la misma base de datos de servidor de informes. Esta configuración de implementación se denomina implementación escalada. Dicha configuración es necesaria si se desea ejecutar varios servidores de informes en un clúster de servidores. Sin embargo, también se puede utilizar esta configuración si desea segmentar las aplicaciones de servicio o probar la instalación y configuración de una instancia nueva del servidor de informes con el fin de compararla con un servidor de informes existente. Para obtener más información, vea [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Crear una base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Administrar un servidor de informes en modo nativo Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

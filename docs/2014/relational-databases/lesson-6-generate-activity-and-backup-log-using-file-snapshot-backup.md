@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 25ae3cee8e08292297449914bfb6e40dfc1b4b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175454"
 ---
-# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lección 7: Traslado de archivos de datos a Azure Storage
+# <a name="lesson-7-move-your-data-files-to-azure-storage"></a>Lección 7: Mover los archivos de datos a Azure Storage
   En esta lección, obtendrá información sobre cómo migrar los archivos de datos a Azure Storage (pero no a la instancia de SQL Server). Para seguir esta lección, no es necesario completar las lecciones 4, 5 y 6.  
   
  Para trasladar los archivos de datos a Azure Storage, puede usar `ALTER DATABASE` la instrucción, ya que ayuda a cambiar la ubicación de los archivos de datos.  

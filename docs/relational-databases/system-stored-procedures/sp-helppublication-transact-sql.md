@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689051"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -88,10 +88,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |conflict_retention|**int**|Especifica el período de retención de conflictos, en días.|  
 |conflict_policy|**int**|Especifica la directiva de resolución de conflictos seguida cuando se utiliza la opción de suscriptor de actualización en cola. Puede ser uno de estos valores:<br /><br /> **1** = el publicador gana el conflicto.<br /><br /> **2** = el suscriptor gana el conflicto.<br /><br /> **3** = la suscripción se ha reinicializado.|  
 |queue_type||Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **MSMQ** = usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **SQL** = se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa para almacenar transacciones.<br /><br /> Nota: se ha interrumpido la compatibilidad con Message Queue Server.|  
-|backward_comp_level||Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level||Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un valor de **1** indica que se ha publicado y un valor de **0** indica que no se ha publicado.|  
 |allow_initialize_from_backup|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación a partir de una copia de seguridad en lugar de una instantánea inicial. **1** significa que las suscripciones se pueden inicializar a partir de una copia de seguridad y **0** significa que no pueden hacerlo. Para obtener más información, vea [inicializar una suscripción transaccional sin una instantánea](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) de un suscriptor transaccional sin una instantánea.|  
-|replicate_ddl|**int**|Indica si la publicación admite replicación de esquema. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. Para obtener más información, vea [Make Schema Changes on Publication Databases](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md) (Realizar cambios de esquema en bases de datos de publicaciones).|  
+|replicate_ddl|**int**|Indica si la publicación admite replicación de esquema. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
 |enabled_for_p2p|**int**|Indica si la publicación se puede utilizar en una topología de replicación punto a punto. **1** indica que la publicación admite la replicación punto a punto. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |enabled_for_het_sub|**int**|Especifica si la publicación admite suscriptores que no son [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un valor de **1** significa que se admiten suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un valor de **0** significa que solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se admiten los suscriptores. Para más información, consulte [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).|  

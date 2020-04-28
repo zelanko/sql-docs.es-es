@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d3a5fab0a0502d2e6faba2f66b64ae65b995b48f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952185"
 ---
 # <a name="deployment-checklist-scale-out-by-adding-powerpivot-servers-to-a-sharepoint-2010-farm"></a>Lista de comprobación de implementación: escalado horizontal agregando servidores de PowerPivot a una granja de servidores de SharePoint 2010
@@ -22,7 +22,7 @@ ms.locfileid: "71952185"
   
  Después de instalar una nueva instancia, tendrá más capacidad para consultar datos PowerPivot o procesar los trabajos de actualización de datos PowerPivot. Si lo desea, tendrá la opción de configurar cada servidor para administrar un tipo de solicitud: consulta o actualización de datos.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  SharePoint Server 2010 se instala y configura.  
   
  Se aplica SharePoint Server 2010 SP1 y se actualiza la granja.  
@@ -41,7 +41,7 @@ ms.locfileid: "71952185"
 ## <a name="steps"></a>Pasos  
  Utilice esta lista de comprobación para agregar servidores de PowerPivot adicionales a una granja de SharePoint. En estas instrucciones se supone que ya tiene un servidor de PowerPivot para SharePoint en la granja y que va a agregar un segundo servidor para administrar la carga de procesamiento adicional. Salvo por las diferencias de los requisitos de instalación, la configuración posterior a la instalación y la comprobación, los pasos para implementar una solución escalada son idénticos a los de agregar un único servidor de PowerPivot a una granja existente.  
   
-|Paso|Vínculo|  
+|Paso|Link|  
 |----------|----------|  
 |Determinar la cuenta de servicio de la instancia de Analysis Services que ya está en la granja|Cada instancia adicional que instale se debe ejecutar en la misma cuenta que la primera instancia. Puede determinar cuál es la cuenta de servicio de varias maneras:<br /><br /> En administración central, en la sección seguridad, haga clic en **configurar cuentas de servicio**. Seleccione **servicio de Windows: SQL Server Analysis Services**. Después de seleccionar el servicio, el nombre de la cuenta de servicio se mostrará en la página.<br /><br /> En un servidor que ya tenga una instalación del servicio PowerPivot, abra la aplicación de consola **servicios** en herramientas administrativas. Haga doble clic en **SQL Server Analysis Services**. Haga clic en la pestaña **iniciar sesión** para ver la cuenta de servicio.<br />** \* Importante \* \* ** Use administración central únicamente para cambiar las cuentas de servicio. Si utiliza otra herramienta o método, los permisos no se actualizarán correctamente en la granja.|  
 |Ejecutar el programa de instalación para instalar una segunda instancia de PowerPivot para SharePoint|[Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> Elija un servidor de aplicaciones que se una a la granja, pero que no tenga una instancia de PowerPivot existente en el servidor.<br /><br /> Durante la instalación, cuando se le pida confirmación para especificar una cuenta de servicio, escriba la cuenta del paso anterior. Todas las instancias del servicio de Analysis Services se deben ejecutar en la misma cuenta de dominio. Este requisito habilita el uso de la característica de cuentas administradas en SharePoint que le permite actualizar la contraseña en un lugar para todas las instancias de servicio del mismo tipo.|  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952457"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Estado del servidor de informes (Modo nativo de SSRS)
@@ -49,7 +49,7 @@ ms.locfileid: "71952457"
   
  Si instala una segunda instancia de un componente que ya instaló, como el [!INCLUDE[ssDE](../../includes/ssde-md.md)], y asigna el nombre Contoso a la instancia, el **Id. de instancia** es MSSQL12.Contoso.  
   
- **Versión**  
+ **Edición**  
  Muestra información de la edición. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server](https://go.microsoft.com/fwlink/?linkid=232473).  
   
  **Versión del producto**  
@@ -64,7 +64,7 @@ ms.locfileid: "71952457"
  **Estado del servidor**  
  Muestra si el servicio Servidor de informes está ejecutándose.  
   
- **Iniciar**  
+ **Start**  
  Inicia el servicio Servidor de informes. Es necesario reiniciar el servicio tras algunos cambios de configuración (por ejemplo, al reconfigurar el servidor de informes después de un cambio de nombre de equipo). Si reconfigura las reservas de direcciones URL, el servicio se reiniciará automáticamente. Es necesario reiniciar para que los cambios se reconozcan.  
   
  **Detención**  

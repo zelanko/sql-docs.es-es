@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85cd7335290a619a7dd7b5e2cfcb729879bdaf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782953"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
@@ -42,19 +42,19 @@ ms.locfileid: "72782953"
   
 -   **Seguimiento:**  [después de quitar una base de datos secundaria de un grupo de disponibilidad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Requisitos previos y restricciones  
   
 -   Esta tarea solo se admite en las réplicas secundarias. Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria de la que se va a quitar la base de datos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria de la que desea quitar una o varias bases de datos secundarias y expanda el árbol.  
@@ -73,7 +73,7 @@ ms.locfileid: "72782953"
   
 6.  En el cuadro de diálogo **Quitar base de datos del grupo de disponibilidad** , para quitar todas las bases de datos enumeradas, haga clic en **Aceptar**. Si no desea quitar todas las bases de datos enumeradas, haga clic en **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica secundaria.  
@@ -91,7 +91,7 @@ ms.locfileid: "72782953"
     GO  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
 1.  Cambie el directorio (`cd`) a la instancia del servidor que hospeda la réplica secundaria.  
@@ -111,7 +111,7 @@ ms.locfileid: "72782953"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar una base de datos secundaria de un grupo de disponibilidad  
+##  <a name="follow-up-after-removing-a-secondary-database-from-an-availability-group"></a><a name="FollowUp"></a> Seguimiento: después de quitar una base de datos secundaria de un grupo de disponibilidad  
  Cuando se quita una base de datos secundaria, deja de estar unida al grupo de disponibilidad y este descartará toda la información acerca de la base de datos secundaria quitada. La base de datos secundaria quitada se pone en estado RESTORING.  
   
 > [!TIP]  

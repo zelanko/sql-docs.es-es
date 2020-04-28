@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952395"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Cuenta de servicio (Modo nativo de SSRS)
@@ -55,11 +55,11 @@ ms.locfileid: "71952395"
 |Cuenta|Explicación|  
 |-------------|-----------------|  
 |Cuentas de usuario de dominio|Si tiene una cuenta de usuario de dominio de Windows que tenga los permisos mínimos requeridos para las operaciones del servidor de informes, debería utilizarla.<br /><br /> Se recomienda emplear una cuenta de usuario de dominio porque aísla el servicio Servidor de informes de otras aplicaciones. Al ejecutar varias aplicaciones en una cuenta compartida, como Servicio de red, se aumenta el riesgo de que un usuario malintencionado tome el control del servidor de informes gracias a que una infracción de seguridad de una aplicación se pueda extender con facilidad a todas las aplicaciones que se ejecutan en la misma cuenta.<br /><br /> Se requiere una cuenta de usuario de dominio si va a configurar el servidor de informes para la delegación limitada, o para el modo integrado de SharePoint con productos de SharePoint 2010 que requieren cuentas de usuario de dominio en lugar de cuentas de equipo integradas.<br /><br /> Tenga en cuenta que si usa una cuenta de usuario de dominio, tendrá que cambiar la contraseña periódicamente si la organización exige una directiva de expiración de las contraseñas. También es posible que tenga que registrar el servicio con la cuenta de usuario. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).<br /><br /> Evite utilizar una cuenta de usuario de Windows local. Las cuentas locales no suelen contar con los permisos suficientes para tener acceso a los recursos de otros equipos. Para obtener más información sobre el modo en que el uso de una cuenta local limita la funcionalidad del servidor de informes, vea [Consideraciones para usar cuentas locales](#localaccounts) en este tema.|  
-|**Servicio de red**|**Servicio de red** es una cuenta integrada con privilegios mínimos que tiene permisos de inicio de sesión de red. Esta cuenta se recomienda si no tiene una cuenta de usuario de dominio disponible o si desea evitar cualquier interrupción del servicio que podría producirse como resultado de las directivas de expiración de las contraseñas.<br /><br /> Si selecciona **Servicio de red**, intente reducir el número de servicios adicionales que se ejecutan en la misma cuenta. Una infracción de seguridad de cualquier aplicación pondrá en peligro la seguridad de todas las demás aplicaciones que se ejecuten en la misma cuenta.|  
-|**Servicio local**|El **servicio local** es una cuenta integrada que es como una cuenta de usuario de Windows local autenticada. Los servicios que se ejecutan como cuenta **Servicio local** tienen acceso a los recursos de red como una sesión nula sin credenciales. Esta cuenta no es adecuada para los escenarios de implementación con intranets en los que el servidor de informes deba conectarse a una base de datos del servidor de informes remota o a un controlador de dominio de la red para autenticar a un usuario antes de abrir un informe o procesar una suscripción.|  
-|**Sistema local**|**Sistema local** es una cuenta con muchos privilegios que no es necesaria para ejecutar un servidor de informes. No utilice esta cuenta para instalaciones de servidor de informes. En su lugar, elija una cuenta de dominio o **Servicio de red** .|  
+|**Servicio de red**|**Servicio de red** es una cuenta integrada con privilegios mínimos que tiene permisos de inicio de sesión en red. Esta cuenta se recomienda si no tiene una cuenta de usuario de dominio disponible o si desea evitar cualquier interrupción del servicio que podría producirse como resultado de las directivas de expiración de las contraseñas.<br /><br /> Si selecciona **Servicio de red**, intente reducir el número de servicios adicionales que se ejecutan en la misma cuenta. Una infracción de seguridad de cualquier aplicación pondrá en peligro la seguridad de todas las demás aplicaciones que se ejecuten en la misma cuenta.|  
+|**Servicio local**|**Servicio local** es una cuenta integrada similar a una cuenta de usuario de Windows local autenticada. Los servicios que se ejecutan como cuenta **Servicio local** tienen acceso a los recursos de red como una sesión nula sin credenciales. Esta cuenta no es adecuada para los escenarios de implementación con intranets en los que el servidor de informes deba conectarse a una base de datos del servidor de informes remota o a un controlador de dominio de la red para autenticar a un usuario antes de abrir un informe o procesar una suscripción.|  
+|**Local System (Sistema local)**|**Sistema local** es una cuenta con muchos privilegios que no es necesaria para ejecutar un servidor de informes. No utilice esta cuenta para instalaciones de servidor de informes. En su lugar, elija una cuenta de dominio o **Servicio de red** .|  
   
-##  <a name="localaccounts"></a>Consideraciones sobre el uso de cuentas locales  
+##  <a name="considerations-for-using-local-accounts"></a><a name="localaccounts"></a>Consideraciones sobre el uso de cuentas locales  
  La consideración principal para utilizar cuentas locales es si el servidor de informes requiere acceso a controladores de dominio, servidores de correo y servidores de bases de datos remotos. Si configura el servidor de informes para ejecutarse en una cuenta de usuario de Windows local, Servicio local o Sistema local, introduce consideraciones que deben tenerse en cuenta para establecer otra configuración, y en la creación y entrega de las suscripciones:  
   
 -   Si el servicio se ejecuta con una cuenta local, se limitarán las opciones posteriormente si configura una conexión a la base de datos de un servidor de informes remoto. Concretamente, si utiliza la base de datos de un servidor de informes remoto, tendrá que configurar la conexión para utilizar una cuenta de usuario de dominio o un usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que tenga permiso para iniciar sesión en la instancia remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -72,7 +72,7 @@ ms.locfileid: "71952395"
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
+ [Configurar una cuenta de servicio &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Administrador de configuración de Reporting Services temas de la ayuda F1 &#40;el modo nativo de SSRS&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

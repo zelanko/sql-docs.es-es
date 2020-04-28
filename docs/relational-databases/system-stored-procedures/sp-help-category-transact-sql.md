@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304805"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
-|**Name**|**sysname**|Nombre de la categoría|  
+|**name**|**sysname**|Nombre de la categoría|  
   
  Cuando ** \@el sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores**o **ninguno**|  
-|**Name**|**sysname**|Nombre de la categoría|  
+|**name**|**sysname**|Nombre de la categoría|  
   
 ## <a name="remarks"></a>Observaciones  
  **sp_help_category** se debe ejecutar desde la base de datos **msdb** .  

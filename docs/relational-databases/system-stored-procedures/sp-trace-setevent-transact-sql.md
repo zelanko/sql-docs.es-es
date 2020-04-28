@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305301"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -75,13 +75,13 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event (7.0 Insert)|Se produce antes de ejecutarse una instrucción SELECT, INSERT o UPDATE.|  
 |29-31|Reserved|Utilice el evento 28 en su lugar.|  
 |32|Reserved|Reserved|  
-|33|Exception|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|33|Excepción|Indica que se ha producido una excepción en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |34|SP:CacheMiss|Indica que no se ha encontrado un procedimiento almacenado en la caché de procedimientos.|  
 |35|SP:CacheInsert|Indica que se ha insertado un elemento en la caché de procedimientos.|  
 |36|SP:CacheRemove|Indica que se ha eliminado un elemento de la caché de procedimientos.|  
 |37|SP:Recompile|Indica que se ha vuelto a compilar un procedimiento almacenado.|  
 |38|SP:CacheHit|Indica que se ha encontrado un procedimiento almacenado en la caché de procedimientos.|  
-|39|En desuso|En desuso|  
+|39|Obsoleto|Obsoleto|  
 |40|SQL:StmtStarting|Se produce cuando se ha iniciado la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |41|SQL:StmtCompleted|Se produce cuando se ha completado la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |42|SP:Starting|Indica el inicio de un procedimiento almacenado.|  
@@ -113,8 +113,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |73|Unprepare SQL|ODBC, OLE DB o DB-Library ha cancelado la preparación de (eliminado) una o varias instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] preparadas.|  
 |74|CursorExecute|Se ejecuta un cursor anteriormente preparado en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.|  
 |75|CursorRecompile|Un cursor abierto en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC o DB-Library se ha vuelto a compilar directamente o debido a un cambio de esquema.<br /><br /> Se desencadena para cursores ANSI y no ANSI.|  
-|76|CursorImplicitConversion|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] convierte un cursor de una instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un tipo a otro.<br /><br /> Se desencadena para cursores ANSI y no ANSI.|  
+|76|CursorImplicitConversion|[!INCLUDE[tsql](../../includes/tsql-md.md)] convierte un cursor de una instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un tipo a otro.<br /><br /> Se desencadena para cursores ANSI y no ANSI.|  
 |77|CursorUnprepare|Se cancela la preparación de un cursor (se elimina) preparado en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.|  
 |78|CursorClose|Se cierra un cursor anteriormente abierto en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante ODBC, OLE DB o DB-Library.|  
 |79|Missing Column Statistics|No están disponibles las estadísticas de columna que podrían haber resultado útiles para el optimizador.|  
@@ -250,11 +249,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |5|**LineNumber**|Contiene el número de la línea que incluye el error. En eventos que implican instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] , como **SP:StmtStarting**, **LineNumber** contiene el número de línea de la instrucción en el procedimiento almacenado o lote.|  
 |6|**NTUserName**|Nombre del usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |7|**NTDomainName**|Dominio de Windows al que pertenece el usuario.|  
-|8|**Host**|Nombre del equipo cliente que ha originado la solicitud.|  
+|8|**HostName**|Nombre del equipo cliente que ha originado la solicitud.|  
 |9|**ClientProcessID**|Id. asignado por el equipo cliente al proceso en el que se ejecuta la aplicación cliente.|  
 |10|**ApplicationName**|Nombre de la aplicación cliente que ha creado la conexión a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta columna se rellena con los valores que pasa la aplicación, en lugar de con el nombre que se muestra para el programa.|  
 |11|**LoginName**|Nombre de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
-|12|**IDENTIFICADOR**|Identificador de proceso del servidor que asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al proceso relacionado con el cliente.|  
+|12|**SPID**|Identificador de proceso del servidor que asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al proceso relacionado con el cliente.|  
 |13|**Duration**|Cantidad de tiempo transcurrido (en microsegundos) que tarda el evento. Esta columna de datos no se llena con el evento Hash Warning.|  
 |14|**StartTime**|Hora a la que se inició el evento, si está disponible.|  
 |15|**EndTime**|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como **SQL:BatchStarting** o **SP:Starting**. Tampoco se rellena mediante el evento de **ADVERTENCIA hash** .|  
@@ -262,10 +261,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |17|**Escrituras**|Número de escrituras físicas de disco que realiza el servidor en nombre del evento.|  
 |18|**CPU**|Cantidad de tiempo de CPU (en milisegundos) que utiliza el evento.|  
 |19|**Permisos**|Representa el mapa de bits de permisos; utilizado por Auditoría de seguridad.|  
-|20|**severity**|Nivel de gravedad de una excepción.|  
+|20|**Gravedad**|Nivel de gravedad de una excepción.|  
 |21|**EventSubClass**|Tipo de la subclase de eventos. Esta columna de datos no se llena para todas las clases de evento.|  
 |22|**ObjectID**|Identificador del objeto asignado por el sistema.|  
-|23|**Success**|Utilización de permisos correcta; se utiliza para la auditoría.<br /><br /> **1** = correcto**0** = error|  
+|23|**Correcto**|Utilización de permisos correcta; se utiliza para la auditoría.<br /><br /> **1** = correcto**0** = error|  
 |24|**IndexID**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|  
 |25|**IntegerData**|Valor entero que depende de la clase de eventos capturada en el seguimiento.|  
 |26|**ServerName**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea *ServerName* o *nombredeservidor\nombredeinstancia*, de la que se realiza un seguimiento.|  
@@ -275,37 +274,37 @@ sp_trace_setevent [ @traceid = ] trace_id
 |30|**State**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se rellena con el evento **Lock: released** .|  
-|33|**Asa**|Identificador del objeto al que se hace referencia en el evento.|  
+|33|**Handle**|Identificador del objeto al que se hace referencia en el evento.|  
 |34|**ObjectName**|Nombre del objeto al que se obtiene acceso.|  
 |35|**DatabaseName**|Nombre de la base de datos especificada en la instrucción USE *Database* .|  
-|36|**Extensión**|Nombre lógico del nombre de archivo modificado.|  
-|37|**Nombrepropietario**|Nombre del propietario del objeto al que se hace referencia.|  
+|36|**FileName**|Nombre lógico del nombre de archivo modificado.|  
+|37|**OwnerName**|Nombre del propietario del objeto al que se hace referencia.|  
 |38|**RoleName**|Nombre de la base de datos o del rol de todo el servidor que es el destino de una instrucción.|  
 |39|**TargetUserName**|Nombre de usuario del destino de alguna acción.|  
 |40|**DBUserName**|Nombre de usuario de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|  
 |41|**LoginSid**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión.|  
 |42|**TargetLoginName**|Nombre de inicio de sesión del destino de alguna acción.|  
 |43|**TargetLoginSid**|SID del inicio de sesión que es el destino de alguna acción.|  
-|44|**Permisos**|Estado de los permisos de nivel de columna; utilizado por Auditoría de seguridad.|  
-|45|**Nombreservidorvinculado**|Nombre del servidor vinculado.|  
+|44|**ColumnPermissions**|Estado de los permisos de nivel de columna; utilizado por Auditoría de seguridad.|  
+|45|**LinkedServerName**|Nombre del servidor vinculado.|  
 |46|**ProviderName**|Nombre del proveedor OLE DB.|  
 |47|**MethodName**|Nombre del método OLE DB.|  
-|48|**Recuento**|Número de filas del lote.|  
+|48|**RowCounts**|Número de filas del lote.|  
 |49|**RequestID**|Identificador de la solicitud que contiene la instrucción.|  
 |50|**XactSequence**|Token que describe la transacción actual.|  
 |51|**EventSequence**|Número de secuencia de este evento.|  
 |52|**BigintData1**|valor **BIGINT** , que depende de la clase de evento capturada en el seguimiento.|  
 |53|**BigintData2**|valor **BIGINT** , que depende de la clase de evento capturada en el seguimiento.|  
-|54|**VOLUMEN**|Valor GUID que depende de la clase de evento capturado en el seguimiento.|  
+|54|**GUID**|Valor GUID que depende de la clase de evento capturado en el seguimiento.|  
 |55|**IntegerData2**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
 |56|**ObjectID2**|Id. de la entidad u objeto relacionado si está disponible.|  
-|57|**Tipo**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
+|57|**Type**|Valor entero, que depende de la clase de evento capturada en el seguimiento.|  
 |58|**OwnerID**|Tipo de objeto propietario de un bloqueo. Solo para eventos de bloqueo.|  
 |59|**ParentName**|Nombre del esquema en el que se encuentra el objeto.|  
 |60|**IsSystem**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario.<br /><br /> **1** = sistema<br /><br /> **0** = usuario.|  
-|61|**Posición**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
+|61|**Offset**|Desplazamiento inicial de la instrucción en el procedimiento almacenado o lote.|  
 |62|**SourceDatabaseID**|Id. de la base de datos en la que se encuentra el origen del objeto.|  
-|63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
+|63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor se puede pasar a **Sys. dm_exec_sql_text ()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
  **[ @on=]** *en*  
@@ -319,7 +318,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 |@on|@columnid|Resultado|  
 |---------|---------------|------------|  
-|ON (**1**)|NULL|El evento está activado.<br /><br /> Se borran todas las columnas.|  
+|EN (**1**)|NULL|El evento está activado.<br /><br /> Se borran todas las columnas.|  
 ||NOT NULL|La columna está activada para el evento especificado.|  
 |OFF (**0**)|NULL|El evento está desactivado.<br /><br /> Se borran todas las columnas.|  
 ||NOT NULL|La columna está desactivada para el evento especificado.|  
@@ -359,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Referencia de las clase de eventos de SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [Referencia de la clase de eventos SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  
   
   

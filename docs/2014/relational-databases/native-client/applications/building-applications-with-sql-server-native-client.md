@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175414"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Generar aplicaciones con SQL Server Native Client
@@ -44,10 +44,10 @@ ms.locfileid: "70175414"
  [Actualización de una aplicación desde SQL Server 2005 Native Client](updating-an-application-from-sql-server-2005-native-client.md)  
  Se describen los problemas que deben tenerse en cuenta a la hora de realizar la actualización de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Native Client a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
- [Usar ADO con SQL Server Native Client](using-ado-with-sql-server-native-client.md)  
+ [Utilizar ADO con SQL Server Native Client](using-ado-with-sql-server-native-client.md)  
  Se describe el modo en que ADO usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para obtener acceso a la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usarla.  
   
- [Directivas de soporte con SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
+ [Directivas de soporte para SQL Server Native Client](support-policies-for-sql-server-native-client.md)  
  Se describe cómo se pueden usar varios componentes de acceso a datos con versiones diferentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
  [Conexión a una Azure SQL Database con SQL Server Native Client](connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md)  

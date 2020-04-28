@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874471"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Posibles errores durante sesiones entre las réplicas de disponibilidad (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874471"
   
 -   Los cables están desconectados  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows tiene un firewall que bloquea un puerto específico.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows tiene un firewall que bloquea un puerto específico.  
   
 -   Se ha producido un error en la aplicación que está supervisando un puerto  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874471"
 -   Se reinicia un servidor basado en Windows.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] no protege frente a problemas específicos de los clientes que intentan obtener acceso a los servidores. Por ejemplo, considere un caso en que un adaptador de red pública controla las conexiones de cliente a la réplica principal, como una tarjeta de interfaz de red privada controla el tráfico entre las instancias de servidor que están hospedando las réplicas de un grupo de disponibilidad. En este caso, el error del adaptador de red pública evitaría que los clientes tuvieran acceso a las bases de datos.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] no protege frente a problemas específicos de los clientes que intentan obtener acceso a los servidores. Por ejemplo, considere un caso en que un adaptador de red pública controla las conexiones de cliente a la réplica principal, como una tarjeta de interfaz de red privada controla el tráfico entre las instancias de servidor que están hospedando las réplicas de un grupo de disponibilidad. En este caso, el error del adaptador de red pública evitaría que los clientes tuvieran acceso a las bases de datos.  
   
 ## <a name="failures-due-to-soft-errors"></a>Problemas debidos a errores de software  
  Las condiciones que pueden provocar el agotamiento del tiempo de espera de la sesión incluyen (sin limitarse a) lo siguiente:  
@@ -98,7 +96,7 @@ ms.locfileid: "70874471"
   
 -   [Cambiar el tiempo de espera de la sesión en una réplica de disponibilidad &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **Para ver el valor de tiempo de espera actual**  
+ **Para visualizar el valor del tiempo de espera actual**  
   
 -   Consulte **session_timeout** en [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   

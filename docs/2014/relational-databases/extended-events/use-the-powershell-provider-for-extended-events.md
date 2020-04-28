@@ -15,20 +15,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782906"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar el proveedor de PowerShell para eventos extendidos
   Puede administrar los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. La subcarpeta XEvent está disponible en la unidad SQLSERVER. Para acceder a la carpeta, puede usar cualquiera de los métodos siguientes:  
   
--   En el símbolo del sistema, escriba `sqlps` y luego presione ENTRAR. Escriba `cd xevent` y, a continuación, presione ENTRAR. Desde allí, puede usar el **CD** y `dir` los comandos (o los cmdlets **set-Location** y **Get-childitem** ) para desplazarse hasta el nombre del servidor y el nombre de la instancia.  
+-   En el símbolo del sistema, escriba `sqlps` y luego presione ENTRAR. Escriba `cd xevent` y presione ENTRAR. Desde allí, puede usar el **CD** y `dir` los comandos (o los cmdlets **set-Location** y **Get-childitem** ) para desplazarse hasta el nombre del servidor y el nombre de la instancia.  
   
 -   En el Explorador de objetos, expanda el nombre de la instancia, expanda **Administración**, haga clic con el botón derecho en **Eventos extendidos**y haga clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en la siguiente ruta de acceso:  
   
-     PS SQLSERVER:\XEvent\\*nombreDeServidor*\\*nombreDeInstancia*>  
+     PS SQLServer: \ XEvent\\*ServerName*\\*nombreDeInstancia*>  
   
     > [!NOTE]  
     >  Puede iniciar PowerShell en cualquier nodo situado debajo de **Eventos extendidos**. Por ejemplo, puede hacer clic con el botón derecho en **Sesiones**y, después, hacer clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en un nivel más profundo de la carpeta Sessions.  
@@ -111,5 +111,5 @@ $session.Create()
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
- [Usar la sesión system_health](use-the-ssms-xe-profiler.md)   
+ [Usar la sesión de system_health](use-the-ssms-xe-profiler.md)   
  [Herramientas de eventos extendidos](extended-events-tools.md)  

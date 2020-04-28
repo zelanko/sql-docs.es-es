@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b927483f5e57272460f1c2f0f1c4b1bca56a3abe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782936"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Quitar una réplica secundaria de un grupo de disponibilidad (SQL Server)
@@ -43,24 +43,24 @@ ms.locfileid: "72782936"
   
 -   **Seguimiento:**  [después de quitar una réplica secundaria](#PostBestPractices)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Esta tarea solo se admite en la réplica principal.  
   
 -   Solo se puede quitar una réplica secundaria de un grupo de disponibilidad.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una réplica secundaria**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  
@@ -79,7 +79,7 @@ ms.locfileid: "72782936"
   
 6.  En el cuadro de diálogo **Quitar réplicas secundarias del grupo de disponibilidad** , para quitar todas las réplicas secundarias enumeradas, haga clic en **Aceptar**. Si no desea quitar todas las réplicas enumeradas, haga clic en **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para quitar una réplica secundaria**  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica principal.  
@@ -96,7 +96,7 @@ ms.locfileid: "72782936"
     ALTER AVAILABILITY GROUP MyAG REMOVE REPLICA ON 'COMPUTER02\HADR_INSTANCE';  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para quitar una réplica secundaria**  
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica principal.  
@@ -116,7 +116,7 @@ ms.locfileid: "72782936"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="PostBestPractices"></a>Seguimiento: después de quitar una réplica secundaria  
+##  <a name="follow-up-after-removing-a-secondary-replica"></a><a name="PostBestPractices"></a> Seguimiento: después de quitar una réplica secundaria  
  Si especifica una réplica que no está actualmente disponible, cuando la réplica se ponga en línea, detectará que se ha quitado.  
   
  Quitar una réplica produce la detención de la recepción de datos Después de que una réplica secundaria confirma que se ha quitado del almacén global, la réplica quita la configuración del grupo disponibilidad de las bases de datos, que permanecen en la instancia del servidor local en estado RECOVERING.  

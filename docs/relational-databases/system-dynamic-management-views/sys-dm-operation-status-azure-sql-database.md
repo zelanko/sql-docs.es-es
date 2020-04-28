@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911204"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
@@ -36,17 +36,17 @@ ms.locfileid: "70911204"
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|Identificador de la operación. NOT NULL.|  
 |resource_type|**int**|Indica el tipo de recurso en el que se realiza la operación. NOT NULL. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)], y el valor entero correspondiente es 0.|  
-|resource_type_desc|**nvarchar (2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
+|resource_type_desc|**nvarchar(2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nombre del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el que se realiza la operación. No NULL.|  
 |minor_resource_id|**sql_variant**|Solo para uso interno. NOT NULL.|  
-|operation|**nvarchar (60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], como Create o ALTER.|  
+|operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], como Create o ALTER.|  
 |state|**tinyint**|El estado de la operación.<br /><br /> 0 = Pendiente<br />1 = en curso<br />2= Completado<br />3 = error<br />4 = Cancelado|  
-|state_desc|**nvarchar (120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  
+|state_desc|**nvarchar(120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  
 |percent_complete|**int**|Porcentaje de la operación que se ha completado. Los valores no son continuos y los valores válidos se enumeran a continuación. NOT NULL.<br/><br/>0 = operación no iniciada<br/>50 = operación en curso<br/>100 = operación completada|  
 |error_code|**int**|Código que indica el error que se produjo durante una operación con errores. Si el valor es 0, indica que la operación se completó correctamente.|  
-|error_desc|**nvarchar (2048)**|Descripción del error que se produjo durante una operación con errores.|  
+|error_desc|**nvarchar(2048)**|Descripción del error que se produjo durante una operación con errores.|  
 |error_severity|**int**|Nivel de gravedad del error que se produjo durante una operación con errores. Para obtener más información acerca de los errores de gravedad, consulte [motor de base de datos errores de gravedad](https://go.microsoft.com/fwlink/?LinkId=251052).|  
-|error_state|**int**|Reservado para su uso en el futuro: La compatibilidad con versiones posteriores no está garantizada.|  
+|error_state|**int**|Reservado para uso futuro. La compatibilidad con versiones posteriores no está garantizada.|  
 |start_time|**datetime**|Marca de tiempo del inicio de la operación.|  
 |last_modify_time|**datetime**|Marca de tiempo en la que se modificó el registro por última vez para una operación de ejecución prolongada. En el caso de operaciones completadas correctamente, este campo muestra la marca de tiempo en la que se completó la operación.|  
   
@@ -54,7 +54,7 @@ ms.locfileid: "70911204"
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
 ## <a name="remarks"></a>Observaciones  
- Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la **** base de datos maestra [!INCLUDE[ssSDS](../../includes/sssds-md.md)] del servidor para realizar un seguimiento del estado de las siguientes operaciones [!INCLUDE[ssSDS](../../includes/sssds-md.md)]realizadas en un:  
+ Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la **master** base de datos maestra [!INCLUDE[ssSDS](../../includes/sssds-md.md)] del servidor para realizar un seguimiento del estado de las siguientes operaciones [!INCLUDE[ssSDS](../../includes/sssds-md.md)]realizadas en un:  
   
 -   Crear base de datos  
   

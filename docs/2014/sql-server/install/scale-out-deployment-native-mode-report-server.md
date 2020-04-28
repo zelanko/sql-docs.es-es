@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952424"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Implementación escalada horizontalmente (servidor de informes en modo nativo)
-  Use la página **Implementación escalada** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver el estado de inicialización de una implementación escalada o para unir un servidor de informes a una implementación escalada. 
-  *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
+  Use la página **Implementación escalada** del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para ver el estado de inicialización de una implementación escalada o para unir un servidor de informes a una implementación escalada. *Implementación escalada* se refiere a dos o más instancias de un servidor de informes que comparten una sola base de datos de servidor de informes.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "71952424"
   
      En un servidor de informes que ya forme parte de una implementación escalada, puede utilizar esta página para agregar o quitar nodos.  
   
- **Inicia**  
+ **Initialize**  
  Haga clic en **Inicializar** para agregar un servidor de informes a la implementación escalada. Este paso permite configurar un servidor de informes para usar una clave simétrica en una base de datos de servidor de informes compartida. Utilice la opción **Inicializar** para agregar una instancia del servidor de informes a una implementación de ampliación horizontal.  
   
  Una instancia del servidor de informes está disponible solo si se ha configurado previamente una conexión con la base de datos compartida del servidor de informes. Además, debe realizar la inicialización desde un servidor de informes ya inicializado para utilizar la base de datos del servidor de informes.  
@@ -77,8 +76,8 @@ ms.locfileid: "71952424"
  Si ya no necesita los datos cifrados o si no tiene una copia de seguridad de la clave, debe eliminar los datos cifrados. Para obtener más información, vea [claves de cifrado &#40;el modo nativo de SSRS&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Inicializar un servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Configurar y administrar claves de cifrado &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

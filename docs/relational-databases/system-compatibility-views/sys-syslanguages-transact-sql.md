@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874870"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -44,14 +44,14 @@ ms.locfileid: "70874870"
 |meses|**nvarchar (372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
 |shortmonths|**nvarchar (132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
 |days|**nvarchar (217)**|Lista separada por comas con los nombres de los días, de lunes a domingo, en la que cada nombre puede contener hasta 30 caracteres.|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]IDENTIFICADOR de configuración regional de Windows para el idioma.|  
+|lcid|**int**|Id. de configuración regional de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
 |msglangid|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] contiene los siguientes idiomas instalados.  
   
-|Nombre en español|LCID de Windows|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ID. de grupo de mensajes|  
+|Nombre en español|LCID de Windows|Id. de grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
-|Inglés|1033|1033|  
+|Inglés|3082|3082|  
 |Alemán|1031|1031|  
 |Francés|1036|1036|  
 |Japonés|1041|1041|  
@@ -74,7 +74,7 @@ ms.locfileid: "70874870"
 |Búlgaro|1026|1026|  
 |Ruso|1049|1049|  
 |Turco|1055|1055|  
-|British English|2057|1033|  
+|British English|2057|3082|  
 |Estonio|1061|1061|  
 |Letón|1062|1062|  
 |Lituano|1063|1063|  

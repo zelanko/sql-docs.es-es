@@ -13,10 +13,10 @@ ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70737656"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Record
@@ -46,13 +46,13 @@ ms.locfileid: "70737656"
   
  [DeleteRecord (método)](../../../ado/reference/ado-api/deleterecord-method-ado.md)  
   
- [GetChildren (Método)](../../../ado/reference/ado-api/getchildren-method-ado.md)  
+ [Método GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)  
   
  [MoveRecord (método)](../../../ado/reference/ado-api/moverecord-method-ado.md)  
   
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

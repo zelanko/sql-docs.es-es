@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260380"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -40,8 +40,8 @@ ms.locfileid: "72260380"
 |**waiting_task_address**|**varbinary(8**|Dirección de la tarea a la espera.|  
 |**session_id**|**smallint**|Id. de la sesión asociada a la tarea.|  
 |**exec_context_id**|**int**|Id. del contexto de ejecución asociado a la tarea.|  
-|**wait_duration_ms**|**BIGINT**|Tiempo de espera total para este tipo de espera, en milisegundos. Esta hora es inclusiva de **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Nombre del tipo de espera.|  
+|**wait_duration_ms**|**bigint**|Tiempo de espera total para este tipo de espera, en milisegundos. Esta hora es inclusiva de **signal_wait_time**.|  
+|**wait_type**|**nvarchar(60)**|Nombre del tipo de espera.|  
 |**resource_address**|**varbinary(8**|Dirección del recurso por el que la tarea está esperando.|  
 |**blocking_task_address**|**varbinary(8**|Tarea que alberga actualmente este recurso.|  
 |**blocking_session_id**|**smallint**|Id. de la sesión que bloquea la solicitud. Si esta columna es NULL, la solicitud no está bloqueada o la información de la sesión de bloqueo no está disponible (o no puede ser identificada).<br /><br /> -2 = El recurso de bloqueo es propiedad de una transacción distribuida huérfana.<br /><br /> -3 = El recurso de bloqueo es propiedad de una transacción de recuperación diferida.<br /><br /> -4 = No se pudo determinar el Id. de sesión del propietario del bloqueo temporal a causa de transiciones internas de estado del bloqueo temporal.|  

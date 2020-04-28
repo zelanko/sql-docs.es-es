@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72586737"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
@@ -29,7 +29,7 @@ Este artículo se centra en la característica de recomendaciones de SKU de Azur
 
 - Base de datos única
 - Grupos elásticos
-- Instancia administrada
+- instancia administrada
 
 La característica de recomendaciones de SKU le permite identificar el mínimo recomendado Azure SQL Database la SKU de una sola base de datos o instancia administrada en función de los contadores de rendimiento recopilados de los equipos que hospedan las bases de datos. La característica proporciona recomendaciones relacionadas con el plan de tarifa, el nivel de proceso y el tamaño máximo de los datos, así como el costo estimado al mes. También ofrece la posibilidad de aprovisionar masivamente bases de datos únicas e instancias administradas en Azure para todas las bases de datos recomendadas.
 
@@ -38,7 +38,7 @@ La característica de recomendaciones de SKU le permite identificar el mínimo r
 
 Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de SKU de Azure SQL Database y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
 - Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información acerca de cómo findoug qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ Además, seleccione uno de los argumentos siguientes:
     - **/AzureAuthenticationTenantId**: el inquilino de autenticación.
     - **/AzureAuthenticationClientId**: el identificador de cliente de la aplicación de AAD que se usa para la autenticación.
     - Una de las siguientes opciones de autenticación:
-      - Interactive
+      - Interactive (Interactivo)
         - **AzureAuthenticationInteractiveAuthentication**: establézcalo en true para una ventana emergente de autenticación.
       - Basado en certificados
         - **AzureAuthenticationCertificateStoreLocation**: se establece en la ubicación del almacén de certificados (por ejemplo, "CurrentUser").

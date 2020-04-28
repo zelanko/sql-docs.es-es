@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176110"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lección 1: Creación de objetos de Azure Storage
+# <a name="lesson-1-create-azure-storage-objects"></a>Lección 1: Crear objetos de Azure Storage
   Para poder crear copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el almacenamiento en la nube, debe crear primero una cuenta de almacenamiento y después un contenedor de blobs. La lección 1 le guía por los pasos necesarios para iniciar sesión en Azure Portal de administración, crear una cuenta de almacenamiento y un contenedor de blobs.  
   
 ## <a name="create-a-storage-account"></a>Creación de una cuenta de almacenamiento  
@@ -29,8 +29,7 @@ ms.locfileid: "70176110"
   
 2.  Siga las instrucciones paso a paso detalladas [aquí](https://go.microsoft.com/fwlink/?LinkId=271926)para crear una cuenta de almacenamiento.  
   
-3.  Vaya a la cuenta de almacenamiento que creó en el paso anterior. En el centro inferior de la página web, haga clic en **administrar claves**. Se mostrará la información de cuenta. Copie el nombre de la cuenta de almacenamiento y las claves de acceso. Esta información es necesaria para crear credenciales almacenadas de SQL. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa esta información para obtener acceso a la cuenta de almacenamiento y crear copias de seguridad.  
+3.  Vaya a la cuenta de almacenamiento que creó en el paso anterior. En el centro inferior de la página web, haga clic en **administrar claves**. Se mostrará la información de cuenta. Copie el nombre de la cuenta de almacenamiento y las claves de acceso. Esta información es necesaria para crear credenciales almacenadas de SQL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa esta información para obtener acceso a la cuenta de almacenamiento y crear copias de seguridad.  
   
      ![Captura de pantalla de claves de cuenta de Azure Storage](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Captura de pantalla de claves de cuenta de Azure Storage")  
   
@@ -38,7 +37,7 @@ ms.locfileid: "70176110"
     >  También puede crear una cuenta de almacenamiento mediante programación con las API de REST. Para obtener más información, vea [Crear cuenta de almacenamiento](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Crear un contenedor de blobs  
- Un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben residir en un contenedor. Una cuenta puede contener un número ilimitado de contenedores, pero debe tener al menos un contenedor. un contenedor puede almacenar un número ilimitado de blobs.  
+ Los contenedores proporcionan una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta puede contener un número ilimitado de contenedores, pero debe tener al menos un contenedor. Un contenedor puede almacenar un número ilimitado de blobs.  
   
  Para crear un contenedor, siga estos pasos:  
   

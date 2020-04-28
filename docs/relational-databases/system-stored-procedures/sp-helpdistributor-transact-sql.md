@@ -16,10 +16,10 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745383"
 ---
 # <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
@@ -82,7 +82,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**base de datos de distribución**|**sysname**|Nombre de la base de datos de distribución.|  
 |**Active**|**nvarchar(255)**|Nombre del directorio de trabajo.|  
-|**Código**|**nvarchar(255)**|Nombre de la cuenta de usuario de Windows.|  
+|**organización**|**nvarchar(255)**|Nombre de la cuenta de usuario de Windows.|  
 |**min distrib retention**|**int**|Período mínimo de retención de la distribución.|  
 |**max distrib retention **|**int**|Período máximo de retención de la distribución.|  
 |**history retention**|**int**|Período de retención del historial.|  
@@ -115,7 +115,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
  La siguiente columna de conjuntos de resultados se devuelve a los usuarios de la lista de acceso a la publicación para una publicación en el distribuidor:  
   
--   Directorio  
+-   directory  
   
  Las siguientes columnas de conjuntos de resultados se devuelven a todos los usuarios.  
   

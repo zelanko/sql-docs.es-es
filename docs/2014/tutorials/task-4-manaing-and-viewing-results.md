@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72313644"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: administrar y ver los resultados
@@ -87,6 +87,6 @@ ms.locfileid: "72313644"
 25. Haga clic en **siguiente** para cambiar a la página **exportar** .  
   
 ## <a name="next-step"></a>siguiente paso  
- [Tarea 5: exportar los resultados de la limpieza a un archivo de Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

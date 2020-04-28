@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06b9dac5f9074b335afff7c6b71980618a3020ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782868"
 ---
 # <a name="remove-a-primary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos principal de un grupo de disponibilidad (SQL Server)
@@ -43,18 +43,18 @@ ms.locfileid: "72782868"
   
 -   **Seguimiento:**  [después de quitar una base de datos de disponibilidad de un grupo de disponibilidad](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
+###  <a name="prerequisites-and-restrictions"></a><a name="Prerequisites"></a>Requisitos previos y restricciones  
   
 -   Esta tarea solo se admite en las réplicas principales. Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una base de datos de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal de la base de datos o bases de datos que se van a quitar y expanda el árbol.  
@@ -73,7 +73,7 @@ ms.locfileid: "72782868"
   
 6.  En el cuadro de diálogo **Quitar bases de datos del grupo de disponibilidad** , para quitar todas las bases de datos enumeradas, haga clic en **Aceptar**. Si no desea quitar todos ellas, haga clic en **Cancelar**.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para quitar una base de datos de disponibilidad**  
   
 1.  Conéctese a la instancia del servidor que hospeda la réplica principal.  
@@ -90,7 +90,7 @@ ms.locfileid: "72782868"
     ALTER AVAILABILITY GROUP MyAG REMOVE DATABASE Db6;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> Usar PowerShell  
+##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para quitar una base de datos de disponibilidad**  
   
 1.  Cambie el directorio (`cd`) a la instancia de servidor que hospeda la réplica principal.  
@@ -110,7 +110,7 @@ ms.locfileid: "72782868"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar una base de datos de disponibilidad de un grupo de disponibilidad  
+##  <a name="follow-up-after-removing-an-availability-database-from-an-availability-group"></a><a name="FollowUp"></a> Seguimiento: después de quitar una base de datos de disponibilidad de un grupo de disponibilidad  
  La acción de quitar una base de datos de disponibilidad de su grupo de disponibilidad finaliza la sincronización de datos entre la base de datos principal anterior y las bases de datos secundarias correspondientes. La base de datos principal anterior permanece en línea. Cada base de datos secundaria correspondiente se pone en estado RESTORING.  
   
  En este momento hay formas alternativas de tratar una base de datos secundaria quitada:  

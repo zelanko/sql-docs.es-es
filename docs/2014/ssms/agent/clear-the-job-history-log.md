@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d6d4943bf3884933cd60e1c0ef51a54771ee00af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782766"
 ---
 # <a name="clear-the-job-history-log"></a>Clear the Job History Log
@@ -32,7 +32,7 @@ ms.locfileid: "72782766"
   
      [Seguridad](#Security)  
   
--   **Para borrar el registro de historial de trabajos, utilizando:**  
+-   **Para borrar el registro del historial de trabajos, utilizando:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -40,16 +40,16 @@ ms.locfileid: "72782766"
   
      [objetos de administración de SQL Server](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
  Para obtener información detallada, vea [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Uso de SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-clear-the-job-history-log"></a>Para borrar el registro del historial de trabajos  
   
-1.  En el **Explorador de objetos** , conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, después, expándala.  
+1.  En el **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
 2.  Expanda el **Agente SQL Server**y, a continuación, haga clic en **Trabajos**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72782766"
   
 5.  Haga clic en **Eliminar**.  
   
-##  <a name="TSQL"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Usar Transact-SQL  
   
 #### <a name="to-clear-the-job-history-log"></a>Para borrar el registro del historial de trabajos  
   
@@ -83,8 +83,8 @@ ms.locfileid: "72782766"
     GO  
     ```  
   
-##  <a name="SMO"></a>Usar Objetos de administración de SQL Server  
- **Para borrar el registro de historial de trabajos**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Usar Objetos de administración de SQL Server  
+ **Para borrar el registro del historial de trabajos**  
   
  Use el método `PurgeJobHistory` de la clase `JobServer` mediante el lenguaje de programación que desee, como Visual Basic, Visual C# o PowerShell. Para más información, consulte [Objetos de administración de SQL Server (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
   

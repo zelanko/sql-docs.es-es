@@ -18,10 +18,10 @@ ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251940"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "72251940"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del artículo.|  
-|**automáticamente**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista o vista indizada (solo esquema).<br /><br /> **128** = función definida por el usuario (solo esquema).<br /><br /> **160** = sinónimo (solo esquema).|  
+|**name**|**sysname**|Nombre del artículo.|  
+|**type**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista o vista indizada (solo esquema).<br /><br /> **128** = función definida por el usuario (solo esquema).<br /><br /> **160** = sinónimo (solo esquema).|  
 |**objid**|**int**|Identificador de objeto.|  
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
@@ -42,7 +42,7 @@ ms.locfileid: "72251940"
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
 |**deseado**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Hace referencia a si se ha implementado el seguimiento de columnas para el artículo.|  
-|**estatus**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
+|**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
 |**creation_script**|**nvarchar(255)**|Script de creación de este artículo.|  
 |**conflict_script**|**nvarchar(255)**|Script de conflicto de este artículo.|  
@@ -57,13 +57,13 @@ ms.locfileid: "72251940"
 |**destination_object**|**sysname**|Nombre de la tabla creada en el suscriptor.|  
 |**destination_owner**|**sysname**|Nombre del propietario del objeto de destino.|  
 |**resolver_clsid**|**nvarchar(50)**|Identificador del solucionador de conflictos personalizado.|  
-|**subset_filterclause**|**nvarchar (1000)**|Cláusula de filtro de este artículo.|  
+|**subset_filterclause**|**nvarchar(1000)**|Cláusula de filtro de este artículo.|  
 |**missing_col_count**|**int**|Número de columnas que faltan.|  
-|**missing_cols**|**varbinary (128)**|Mapa de bits de columnas que faltan.|  
-|**excluded_cols**|**varbinary (128)**|Mapa de bits de las columnas excluidas del artículo cuando se envía al suscriptor.|  
+|**missing_cols**|**varbinary(128)**|Mapa de bits de columnas que faltan.|  
+|**excluded_cols**|**varbinary(128)**|Mapa de bits de las columnas excluidas del artículo cuando se envía al suscriptor.|  
 |**excluded_col_count**|**int**|Número de columnas excluidas.|  
-|**columnas**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|Mapa de bits de las columnas que han sido eliminadas de la tabla de origen.|  
+|**columnas**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|Mapa de bits de las columnas que han sido eliminadas de la tabla de origen.|  
 |**resolver_info**|**nvarchar(255)**|Almacenamiento para la información adicional requerida por los solucionadores de conflictos personalizados.|  
 |**view_sel_proc**|**nvarchar (290)**|Nombre de un procedimiento almacenado que utiliza el Agente de mezcla para llenar por primera vez un artículo en una publicación filtrada dinámicamente y para enumerar las filas que han cambiado en cualquier publicación filtrada.|  
 |**gen_cur**|**int**|Número de generación para los cambios locales de la tabla base de un artículo.|  
@@ -85,8 +85,8 @@ ms.locfileid: "72251940"
 |**before_upd_view_objid**|**int**|Se agregará.|  
 |**delete_tracking**|**bit**|Indica si se replican las eliminaciones.<br /><br /> **0** = las eliminaciones no se replican<br /><br /> **1** = las eliminaciones se replican, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Cuando el valor de *delete_tracking* es **0**, las filas eliminadas en el suscriptor deben quitarse manualmente en el publicador, y las filas eliminadas en el publicador deben quitarse manualmente en el suscriptor.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
 |**compensate_for_errors**|**bit**|Indica si se realizan acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
-|**pub_range**|**BIGINT**|Tamaño del intervalo de identidad del publicador.|  
-|**variedad**|**BIGINT**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
+|**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
+|**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**stream_blob_columns**|**bit**|Indica si se usará una optimización del flujo de datos al replicar columnas binarias de objetos de gran tamaño. **1** significa que se ha intentado la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación usará una columna de tipo rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación ha agregado la columna ROWGUIDCOL.|  
@@ -96,6 +96,6 @@ ms.locfileid: "72251940"
  [Vistas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)   
  [sp_changemergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)   
- [sp_helpmergearticle &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
+ [sp_helpmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)  
   
   

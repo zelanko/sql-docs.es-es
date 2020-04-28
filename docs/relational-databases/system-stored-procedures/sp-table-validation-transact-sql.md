@@ -16,10 +16,10 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72173553"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -67,7 +67,7 @@ sp_table_validation [ @table = ] 'table'
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en **sysindexes** es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que **sysindexes** se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
-|**2** (valor predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
+|**2** (predeterminado)|Realiza un recuento rápido condicional intentando primero el método rápido. Si el método rápido muestra diferencias, se utiliza el método completo. Si *expected_rowcount* es NULL y se usa el procedimiento almacenado para obtener el valor, siempre se usa un recuento completo (*).|  
   
 `[ @shutdown_agent = ] shutdown_agent`Si el Agente de distribución se está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72783050"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
@@ -34,7 +34,7 @@ ms.locfileid: "72783050"
  Al igual que el objeto <xref:Microsoft.SqlServer.Management.Smo.Backup>, el objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> no necesita crearse utilizando un método `Create` porque no representa ningún objeto en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El objeto <xref:Microsoft.SqlServer.Management.Smo.Restore> es un conjunto de propiedades y métodos que se utilizan para restaurar una base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, vea [crear un proyecto de Visual Basic SMO en Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) o [crear un proyecto de Visual C&#35; SMO en Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="backing-up-databases-and-transaction-logs-in-visual-basic"></a>Realizar copias de seguridad de bases de datos y registros de transacciones en Visual Basic  
  En este ejemplo de código se muestra cómo realizar una copia de seguridad de una base de datos existente en un archivo y cómo restaurarla.  
@@ -445,8 +445,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Ejecutar comprobaciones de integridad de base de datos en Visual Basic  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
   
 > [!NOTE]  
 >  El objeto <xref:System.Collections.Specialized.StringCollection> requiere una referencia al espacio de nombres mediante el uso de la instrucción `imports System.Collections.Specialized`.  
@@ -476,8 +475,7 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Ejecutar comprobaciones de integridad de base de datos en Visual C#  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
   
 > [!NOTE]  
 >  El objeto <xref:System.Collections.Specialized.StringCollection> requiere una referencia al espacio de nombres mediante el uso de la instrucción `imports System.Collections.Specialized`.  
@@ -509,8 +507,7 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Ejecutar comprobaciones de integridad de base de datos en PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona una comprobación de integridad de los datos. En este ejemplo de código se ejecuta una comprobación de coherencia en la base de datos especificada. En este ejemplo, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> se utiliza, pero se pueden utilizar <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> o <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> de igual forma.  
   
 > [!NOTE]  
 >  El objeto <xref:System.Collections.Specialized.StringCollection> requiere una referencia al espacio de nombres mediante el uso de la instrucción `imports System.Collections.Specialized`.  

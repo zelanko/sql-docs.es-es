@@ -23,16 +23,15 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952333"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)
 
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye una extensión de entrega por correo electrónico para distribuir informes mediante el correo electrónico. Según cómo defina la suscripción del correo electrónico, una entrega podría estar compuesta de una notificación, un vínculo, datos adjuntos o un informe incrustado. La extensión de entrega por correo electrónico funciona con la tecnología de servidor de correo existente. El servidor de correo debe ser un servidor SMTP o un reenviador. El servidor de informes se conecta a un servidor SMTP a través de bibliotecas de Collaboration Data Objects (CDO), cdosys.dll, que el sistema operativo proporciona.  
   
  La extensión de entrega por correo electrónico del servidor de informes no está configurada de manera predeterminada. Debe utilizar el Administrador de configuración de Reporting Services para configurar dicha extensión mínimamente. Para establecer propiedades avanzadas, debe editar el archivo `RSReportServer.config` . Si no puede configurar el servidor de informes para que utilice esta extensión, puede entregar los informes en una carpeta compartida. Para obtener más información, vea [File Share Delivery in Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "71952333"
   
  
   
-##  <a name="bkmk_configuration_requirements"></a>Requisitos de configuración  
+##  <a name="configuration-requirements"></a><a name="bkmk_configuration_requirements"></a>Requisitos de configuración  
   
 -   La entrega por correo electrónico del servidor de informes se implementa en Collaboration Data Objects (CDO) y requiere un servidor del Protocolo simple de transferencia de correo (SMTP) local o remoto, o bien un reenviador SMTP. SMTP no se admite en todos los sistemas operativos Windows. Si usa la edición basada en Itanium de Windows Server 2008, no se admite SMTP. Para obtener más información sobre las opciones de configuración que se proporcionan a través de CDO, vea [el tema sobre la coclase Configuration](https://go.microsoft.com/fwlink/?LinkId=98237) en MSDN.  
   
@@ -56,12 +55,12 @@ ms.locfileid: "71952333"
   
  
   
-##  <a name="bkmk_configure_for_local_or_remote_SMTP"></a>Configurar un servidor de informes para el servicio SMTP local o remoto  
+##  <a name="configuring-a-report-server-for-local-or-remote-smtp-service"></a><a name="bkmk_configure_for_local_or_remote_SMTP"></a>Configurar un servidor de informes para el servicio SMTP local o remoto  
  Puede utilizar un servicio SMTP local o un servidor o reenviador SMTP remoto para admitir la entrega por correo electrónico. Si tiene acceso a un servidor SMTP remoto existente, debería plantearse utilizarlo. Si no hay ningún servidor SMTP disponible o si después encuentra errores de entrega de informes que pueden atribuirse a errores en la conexión del equipo, debería pasar a utilizar un servicio SMTP local. Más adelante en este tema se proporcionan detalles sobre cómo configurar un servidor de informes para un servicio local o remoto.  
   
   
   
-##  <a name="bkmk_setting_email_delivery"></a>Establecer opciones de configuración para la entrega por correo electrónico  
+##  <a name="setting-configuration-options-for-e-mail-delivery"></a><a name="bkmk_setting_email_delivery"></a>Establecer opciones de configuración para la entrega por correo electrónico  
  Para poder utilizar la entrega por correo electrónico del servidor de informes, debe establecer valores de configuración que proporcionen información sobre qué servidor SMTP se debe utilizar.  
   
  Para configurar un servidor de informes para la entrega por correo electrónico, siga este procedimiento:  
@@ -75,7 +74,7 @@ ms.locfileid: "71952333"
   
 
   
-##  <a name="bkmk_example_config_file"></a>Ejemplo de configuración de correo electrónico del servidor de informes  
+##  <a name="example-report-server-e-mail-configuration"></a><a name="bkmk_example_config_file"></a>Ejemplo de configuración de correo electrónico del servidor de informes  
  El ejemplo siguiente muestra las opciones de configuración del archivo RSreportserver.config para un servidor SMTP remoto. Para leer en los Libros en pantalla deformación acerca de las descripciones de las opciones y los valores válidos, vea [RSReportServer Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onlen los Libros en pantalla dee or the CDO product documentation.  
   
 ```  
@@ -108,7 +107,7 @@ ms.locfileid: "71952333"
   
 
   
-##  <a name="bkmk_setting_TO_field"></a>Opciones de configuración para establecer el campo para: en un mensaje  
+##  <a name="configuration-options-for-setting-the-to-field-in-a-message"></a><a name="bkmk_setting_TO_field"></a>Opciones de configuración para establecer el campo para: en un mensaje  
  Las suscripciones definidas por el usuario que se crean según los permisos concedidos por la tarea **administrar suscripciones individuales** contienen un nombre de usuario preconfigurado que se basa en la cuenta de usuario de dominio. Cuando el usuario crea la suscripción, el nombre del destinatario del campo **Para:** se rellena automáticamente a partir de la cuenta de usuario de dominio de la persona que está creando la suscripción.  
   
  Si está utilizando un servidor SMTP o reenviador que emplee cuentas de correo electrónico distintas a la cuenta de usuario de dominio, la entrega del informe generará un error cuando el servidor SMTP intente entregar el informe al usuario.  
@@ -125,28 +124,26 @@ ms.locfileid: "71952333"
   
   
   
-##  <a name="bkmk_options_remote_SMTP"></a>Opciones de configuración para el servicio SMTP remoto  
+##  <a name="configuration-options-for-remote-smtp-service"></a><a name="bkmk_options_remote_SMTP"></a>Opciones de configuración para el servicio SMTP remoto  
  La conexión entre el servidor de informes y un servidor o reenviador SMTP viene determinada por las opciones de configuración siguientes:  
   
--   
-  `SendUsing` especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.  
+-   `SendUsing` especifica un método para enviar mensajes. Se puede elegir entre un servicio SMTP de red o un directorio de recogida del servicio SMTP local. Para utilizar un servicio SMTP remoto, este valor debe establecerse en **2** en el archivo RSReportServer.config.  
   
--   
-  `SMTPServer` especifica el servidor o reenviador SMTP remoto. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
+-   `SMTPServer` especifica el servidor o reenviador SMTP remoto. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
   
--   `From`establece el valor que aparece en la línea **de:** de un mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
+-   `From` establece el valor que se muestra en la línea **De:** del mensaje de correo electrónico. Se trata de un valor necesario si utiliza un servidor o reenviador SMTP remoto.  
   
  Entre los demás valores que se utilizan para un servicio SMTP remoto se incluyen los siguientes (tenga en cuenta que no es necesario especificarlos a menos que desee reemplazar los valores predeterminados).  
   
--   **SMTPServerPort** está configurado para el puerto 25.  
+-   **SMTPServerPort** se configura para el puerto 25.  
   
--   **Smtpauthenticate** especifica cómo el servidor de informes se conecta al servidor SMTP remoto. El valor predeterminado es 0 (o sin autenticación). En tal caso, la conexión se realiza a través de un acceso anónimo. En función de su configuración de dominio, es posible que el servidor de informes y el servidor SMTP tengan que ser miembros del mismo dominio.  
+-   **SMTPAuthenticate** especifica cómo se conecta el servidor de informes al servidor SMTP remoto. El valor predeterminado es 0 (o sin autenticación). En tal caso, la conexión se realiza a través de un acceso anónimo. En función de su configuración de dominio, es posible que el servidor de informes y el servidor SMTP tengan que ser miembros del mismo dominio.  
   
      Para enviar correo electrónico a listas de distribución restringidas (por ejemplo, listas de distribución que acepten mensajes entrantes solo de cuentas autenticadas), establezca **SMTPAuthenticate** en **2**.  
   
 
   
-##  <a name="bkmk_options_local_SMTP"></a>Opciones de configuración para el servicio SMTP local  
+##  <a name="configuration-options-for-local-smtp-service"></a><a name="bkmk_options_local_SMTP"></a>Opciones de configuración para el servicio SMTP local  
  Configurar un servicio SMTP local resulta útil si se está probando o solucionando problemas de la entrega por correo electrónico del servidor de informes. El servicio SMTP local no está habilitado de forma predeterminada. Para obtener instrucciones sobre cómo habilitarlo, vea [configurar un servidor de informes para la entrega de correo electrónico (SSRS Configuration Manager)](../../../2014/sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) y [configuración de correo electrónico: Configuration Manager &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
  La conexión entre el servidor de informes y un servidor o reenviador SMTP local viene determinada por las opciones de configuración siguientes:  
@@ -158,11 +155,11 @@ ms.locfileid: "71952333"
     > [!NOTE]  
     >  Asegúrese de que no establece `SMTPServer` si usa un servidor SMTP local.  
   
--   `From`establece el valor que aparece en la línea **de:** de un mensaje de correo electrónico. Este valor es necesario.  
+-   `From` establece el valor que se muestra en la línea **De:** del mensaje de correo electrónico. Este valor es necesario.  
   
  
   
-##  <a name="bkmk_use_configuration_manager"></a>Para configurar el correo electrónico del servidor de informes mediante el Administrador de configuración de Reporting Services  
+##  <a name="to-configure-report-server-e-mail-using-the-reporting-services-configuration-manager"></a><a name="bkmk_use_configuration_manager"></a>Para configurar el correo electrónico del servidor de informes mediante el Administrador de configuración de Reporting Services  
   
 1.  Compruebe que el servicio Servidor de informes de Windows disponga de permisos `Send As` para el servidor SMTP.  
   
@@ -176,7 +173,7 @@ ms.locfileid: "71952333"
   
 
   
-##  <a name="bkmk_confiugre_remote_SMTP"></a>Para configurar un servicio SMTP remoto para el servidor de informes  
+##  <a name="to-configure-a-remote-smtp-service-for-the-report-server"></a><a name="bkmk_confiugre_remote_SMTP"></a>Para configurar un servicio SMTP remoto para el servidor de informes  
   
 1.  Compruebe que el servicio Servidor de informes de Windows disponga de permisos `Send As` para el servidor SMTP.  
   
@@ -198,7 +195,7 @@ ms.locfileid: "71952333"
   
 
   
-##  <a name="bkmk_confiugre_local_SMTP"></a>Para configurar un servicio SMTP local para el servidor de informes  
+##  <a name="to-configure-a-local-smtp-service-for-the-report-server"></a><a name="bkmk_confiugre_local_SMTP"></a>Para configurar un servicio SMTP local para el servidor de informes  
   
 1.  En el Panel de control, haga clic en **Agregar o quitar programas**.  
   
@@ -210,7 +207,7 @@ ms.locfileid: "71952333"
   
 5.  Active la casilla **Servicio SMTP** y haga clic en **Aceptar**.  
   
-6.  En el Asistente para componentes de Windows, haga clic en **Siguiente**. Haga clic en **Finalizar**  
+6.  En el Asistente para componentes de Windows, haga clic en **Siguiente**. Haga clic en **Finalizar**.  
   
 7.  Compruebe que el servicio esté ejecutándose en la consola **Servicios** .  
   

@@ -11,14 +11,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be20c79c4c44d65b4d6b1177d06cea5ef66c164b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75242058"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriales de SQL Server 2014
-  
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduce muchas tecnologías y características nuevas.  
   
  Está previsto que se proporcionen más tutoriales en el futuro. Mientras tanto, puede seguir aprendiendo con los tutoriales de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] . En algunos casos, puede que encuentre ligeras diferencias entre la interfaz de usuario de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] y, puede que haya sutiles diferencias en los requisitos previos de los tutoriales. Si un tutorial utiliza una de las bases de datos de [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] , debe descargar y usar la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
@@ -43,7 +42,7 @@ ms.locfileid: "75242058"
   
 |Technology|Descripción|  
 |----------------|-----------------|  
-|[Analysis Services tutoriales &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
+|[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  
 |[Tutoriales de Integration Services](../integration-services/integration-services-tutorials.md)|Aprenda a crear e implementar soluciones [!INCLUDE[ssIS](../includes/ssis-md.md)] .|  
 |[Tutoriales del motor de base de datos](../relational-databases/database-engine-tutorials.md)|Aprenda a conectarse a una instancia del motor de base de datos, así como a escribir y ejecutar instrucciones Transact-SQL.|  

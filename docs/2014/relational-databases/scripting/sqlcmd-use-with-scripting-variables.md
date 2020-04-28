@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6893d00a1fa7fb0986be2eb6241c596160085e2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243167"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd con variables de script
@@ -44,9 +44,9 @@ ms.locfileid: "75243167"
   
 3.  Shell de comandos (**SET X=Y**) establecido en el símbolo del sistema antes de iniciar **sqlcmd**  
   
-4.  **sqlcmd-v** X = Y  
+4.  **sqlcmd-v** X=Y  
   
-5.  **: Setvar** X Y  
+5.  **:Setvar** X Y  
   
 > [!NOTE]  
 >  Para ver las variables de entorno, en el **Panel de control**, abra **Sistema**y haga clic en la pestaña **Opciones avanzadas** .  
@@ -64,8 +64,7 @@ ms.locfileid: "75243167"
   
  `FROM Person.Person x`  
   
- 
-  `WHERE c.`BusinessEntityID `< 5;`  
+ `WHERE c.`BusinessEntityID `< 5;`  
   
  Después, puede especificar el nombre de la columna que desea que se devuelva mediante la opción `-v` :  
   
@@ -111,9 +110,9 @@ ms.locfileid: "75243167"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|L/E|"8" (segundos)|  
-|SQLCMDSTATTIMEOUT|-t|L/E|"0" = esperar indefinidamente|  
-|SQLCMDHEADERS|-h|L/E|"0"|  
-|SQLCMDCOLSEP|-s|L/E|" "|  
+|SQLCMDSTATTIMEOUT|-T|L/E|"0" = esperar indefinidamente|  
+|SQLCMDHEADERS|-H|L/E|"0"|  
+|SQLCMDCOLSEP|-S|L/E|" "|  
 |SQLCMDCOLWIDTH|-w|L/E|"0"|  
 |SQLCMDPACKETSIZE|-a|R|"4096"|  
 |SQLCMDERRORLEVEL|-M|L/E|"0"|  
@@ -344,6 +343,6 @@ ms.locfileid: "75243167"
 ## <a name="see-also"></a>Consulte también  
  [Usar la utilidad SQLCMD](sqlcmd-use-the-utility.md)   
  [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
- [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

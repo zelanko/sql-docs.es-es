@@ -10,22 +10,19 @@ ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: ba4c9b9693fa595f9b5f01f81689a3577f7d9fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251683"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-
-  [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) es un producto de calidad de datos controlado por conocimiento. Con DQS, podrá generar una base de conocimiento y usarla para llevar a cabo diversas tareas fundamentales de calidad de datos, lo que incluye correcciones, enriquecimiento, estandarización y eliminación de datos duplicados. Con DQS, podrá realizar limpiezas de datos mediante servicios de datos de referencia basados en la nube que proporcionan proveedores de datos de referencia. Asimismo, DQS proporciona la generación de perfiles que se integra en las tareas de calidad de datos, de forma que podrá analizar la integridad de los datos.  
+[!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) es un producto de calidad de datos controlado por conocimiento. Con DQS, podrá generar una base de conocimiento y usarla para llevar a cabo diversas tareas fundamentales de calidad de datos, lo que incluye correcciones, enriquecimiento, estandarización y eliminación de datos duplicados. Con DQS, podrá realizar limpiezas de datos mediante servicios de datos de referencia basados en la nube que proporcionan proveedores de datos de referencia. Asimismo, DQS proporciona la generación de perfiles que se integra en las tareas de calidad de datos, de forma que podrá analizar la integridad de los datos.  
   
- DQS consta de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], que se instalan ambos como parte de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] es una característica de la instancia de SQL Server que consta de tres catálogos de SQL Server con funcionalidad de calidad de datos y almacenamiento. 
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] es una característica de SQL Server que pueden usar los usuarios empresariales, los trabajadores de la información y los profesionales de TI para realizar análisis de calidad de datos asistidos por PC y administrar la calidad de datos de forma interactiva. También puede realizar procesos de calidad de datos mediante la funcionalidad de calidad de datos de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] y Master Data Services (MDS), que se basan ambos en DQS.  
+ DQS consta de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], que se instalan ambos como parte de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] es una característica de la instancia de SQL Server que consta de tres catálogos de SQL Server con funcionalidad de calidad de datos y almacenamiento. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] es una característica de SQL Server que pueden usar los usuarios empresariales, los trabajadores de la información y los profesionales de TI para realizar análisis de calidad de datos asistidos por PC y administrar la calidad de datos de forma interactiva. También puede realizar procesos de calidad de datos mediante la funcionalidad de calidad de datos de [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] y Master Data Services (MDS), que se basan ambos en DQS.  
   
  Para obtener información acerca de cómo instalar DQS, vea [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md). Si desea actualizar su versión existente de DQS a [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vea [Upgrade Data Quality Services](../database-engine/install-windows/upgrade-data-quality-services.md).  
   
@@ -52,6 +49,6 @@ ms.locfileid: "75251683"
  [Introducción a Data Quality Services](../data-quality-services/introduction-to-data-quality-services.md)   
  [Conceptos de Data Quality Services](../data-quality-services/data-quality-services-concepts.md)   
  [Recursos de DQS](https://technet.microsoft.com/sqlserver/hh780961)   
- [SQL Server centro de recursos](https://go.microsoft.com/fwlink/?linkID=219676)  
+ [Centro de recursos de SQL Server](https://go.microsoft.com/fwlink/?linkID=219676)  
   
   

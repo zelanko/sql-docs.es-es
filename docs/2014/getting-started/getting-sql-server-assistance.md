@@ -42,10 +42,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfa159a88cfc159e65fe3ec39b334a3f6e8c5c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683601"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtener ayuda sobre SQL Server
@@ -59,7 +59,7 @@ ms.locfileid: "74683601"
   
  Si no encuentra la información que está buscando en estas fuentes, puede publicar preguntas en los grupos de noticias y foros de la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o abrir un caso de soporte con [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Libros en pantalla  
+## <a name="ssnoversion-books-online"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Libros en pantalla  
  Los documentos de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cubren los conceptos y los procedimientos necesarios para utilizar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los Libros en pantalla también incluyen material de referencia de los lenguajes e interfaces de programación para almacenar, recuperar, realizar informes y modificar datos con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Puede obtener acceso a los Libros en pantalla de varias formas:  
@@ -71,14 +71,13 @@ ms.locfileid: "74683601"
  Tanto la copia de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de MSDN Library como los archivos de los Libros en pantalla disponibles a través del Administrador de bibliotecas de Ayuda se actualizan cuando [!INCLUDE[msCoName](../includes/msconame-md.md)] publica una actualización de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 ## <a name="information-on-msdn-and-technet"></a>Información sobre MSDN y TechNet  
- 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) proporciona servicios en línea y sin conexión que ayudan a los desarrolladores a escribir aplicaciones mediante los productos y las tecnologías de [!INCLUDE[msCoName](../includes/msconame-md.md)]. El programa TechNet de [!INCLUDE[msCoName](../includes/msconame-md.md)] ofrece recursos técnicos completos que ayudan a los profesionales de TI a evaluar, implementar y prestar soporte para las soluciones de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network (MSDN) proporciona servicios en línea y sin conexión que ayudan a los desarrolladores a escribir aplicaciones mediante los productos y las tecnologías de [!INCLUDE[msCoName](../includes/msconame-md.md)]. El programa TechNet de [!INCLUDE[msCoName](../includes/msconame-md.md)] ofrece recursos técnicos completos que ayudan a los profesionales de TI a evaluar, implementar y prestar soporte para las soluciones de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
  Varios de los sitios de MSDN y TechNet proporcionan a un tipo de destinatario específico vínculos a la información de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] más relevante para su trabajo, como la información incluida en las copias de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de MSDN o TechNet. Estos sitios también contienen información que amplía la que está disponible en los Libros en pantalla de SQL Server.  
   
  En la tabla siguiente se describen estos recursos y sus destinatarios.  
   
-|Resource|Destinatarios|  
+|Resource|Público|  
 |--------------|--------------|  
 |[Centro para desarrolladores de SQL Server](https://msdn.microsoft.com/sqlserver/)|Programadores que generan bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sistemas de informes y soluciones de Business Intelligence, y que habilitan sus aplicaciones y sitios web para que utilicen estos sistemas.|  
 |[Centro para desarrolladores de XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creadores de sitios web y programadores de aplicaciones cuyos sitios y aplicaciones utilicen XML para la manipulación y el almacenamiento de datos.|  
@@ -90,9 +89,9 @@ ms.locfileid: "74683601"
 |Resource|Descripción|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Proporciona información previa a las ventas acerca de la evaluación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el almacenamiento de datos y como herramienta de Business Intelligence.|  
-|[Microsoft Knowledge base](https://go.microsoft.com/fwlink/?LinkId=42461)|Proporciona un repositorio de artículos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)], en el que se pueden realizar búsquedas.|    
+|[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Proporciona un repositorio de artículos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)], en el que se pueden realizar búsquedas.|    
   
- Los productos [!INCLUDE[msCoName](../includes/msconame-md.md)] tienen un ciclo de vida de soporte técnico que define cuánto tiempo está disponible el soporte técnico para cada versión. El soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] mantiene una página que define el ciclo de vida de soporte de [!INCLUDE[msCoName](../includes/msconame-md.md)]. La página contiene vínculos a otras paginas que especifican la disponibilidad de soporte técnico de los productos [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obtener más información, vea [soporte técnico de Microsoft Lifecycle](https://go.microsoft.com/fwlink/?LinkId=98306).  
+ Los productos [!INCLUDE[msCoName](../includes/msconame-md.md)] tienen un ciclo de vida de soporte técnico que define cuánto tiempo está disponible el soporte técnico para cada versión. El soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] mantiene una página que define el ciclo de vida de soporte de [!INCLUDE[msCoName](../includes/msconame-md.md)]. La página contiene vínculos a otras paginas que especifican la disponibilidad de soporte técnico de los productos [!INCLUDE[msCoName](../includes/msconame-md.md)]. Para obtener más información, vea [Ciclo de vida de soporte técnico de Microsoft](https://go.microsoft.com/fwlink/?LinkId=98306).  
   
 ## <a name="see-also"></a>Consulte también  
  [Usar la documentación del producto para SQL Server](../2014-toc/index.yml)  

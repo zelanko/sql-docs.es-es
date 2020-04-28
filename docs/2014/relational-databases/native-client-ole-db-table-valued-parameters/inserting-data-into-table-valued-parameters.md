@@ -1,5 +1,5 @@
 ---
-title: Insertar datos en parámetros con valores de tabla | Microsoft Docs
+title: Inserción de datos en parámetros con valores de tabla | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c195d2bba2bacfe5ee05ed423dcc2bea1b7581e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75231792"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertar datos en parámetros con valores de tabla
@@ -30,9 +30,9 @@ ms.locfileid: "75231792"
   
  Se espera que el consumidor proporcione todos los datos de parámetro con valores de tabla al proveedor antes de ejecutar un comando. Para proporcionar los datos, el consumidor rellena un objeto de conjunto de filas de parámetros con valores de tabla por cada parámetro con valores de tabla. El objeto de conjunto de filas de parámetro con valores de tabla expone las operaciones Insert, Set y Delete del conjunto de filas, que el consumidor usará para manipular los datos de parámetros con valores de tabla. El proveedor capturará los datos de este objeto de conjunto de filas de parámetros con valores de tabla en tiempo de ejecución.  
   
- Cuando se proporciona al consumidor un objeto de conjunto de filas de parámetros con valores de tabla, el consumidor puede procesarlo como un objeto de conjunto de filas. El consumidor puede obtener la información de tipo de cada columna (tipo, longitud máxima, precisión y escala) mediante el método de interfaz IColumnsInfo:: GetColumnInfo o IColumnsRowset:: GetColumnsRowset. A continuación, el consumidor crea un descriptor de acceso para especificar los enlaces de los datos. El paso siguiente consiste en insertar filas de datos en el conjunto de filas de parámetros con valores de tabla. Esto puede hacerse mediante IRowsetChange:: InsertRow. IRowsetChange:: SetData o IRowsetChange::D eleteRows también se pueden usar en el objeto de conjunto de filas del parámetro con valores de tabla si tiene que manipular los datos. Los objetos de conjunto de filas de parámetros con valores de tabla son objetos en los que se cuentan las referencias, similares a los objetos de flujo.  
+ Cuando se proporciona al consumidor un objeto de conjunto de filas de parámetros con valores de tabla, el consumidor puede procesarlo como un objeto de conjunto de filas. El consumidor puede obtener la información de tipo de cada columna (tipo, longitud máxima, precisión y escala) mediante el método de interfaz IColumnsInfo::GetColumnInfo o IColumnsRowset::GetColumnsRowset. A continuación, el consumidor crea un descriptor de acceso para especificar los enlaces de los datos. El paso siguiente consiste en insertar filas de datos en el conjunto de filas de parámetros con valores de tabla. Esto puede hacerse mediante IRowsetChange::InsertRow. IRowsetChange::SetData o IRowsetChange::DeleteRows también se pueden usar en el objeto de conjunto de filas de parámetros con valores de tabla si tiene que manipular los datos. Los objetos de conjunto de filas de parámetros con valores de tabla son objetos en los que se cuentan las referencias, similares a los objetos de flujo.  
   
- Si se usa IColumnsRowset:: GetColumnsRowset, habrá llamadas posteriores a los métodos IRowset:: GetNextRows, IRowset:: GetData y IRowset:: ReleaseRows en el objeto de conjunto de filas de la columna resultante.  
+ Si se usa IColumnsRowset::GetColumnsRowset, habrá llamadas posteriores a los métodos IRowset::GetNextRows, IRowset::GetData y IRowset::ReleaseRows en el objeto de conjunto de filas de la columna resultante.  
   
  Después de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el proveedor de OLE DB de Native Client empiece a ejecutar el comando, los valores de parámetro con valores de tabla se capturarán de este objeto de conjunto de filas de parámetros con valores de tabla y se enviarán al servidor.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "75231792"
   
  En el modelo de extracción, el consumidor proporciona datos a petición al proveedor. Use este enfoque si la aplicación tiene muchas inserciones de datos y los datos de conjunto de filas de parámetros con valores de tabla en memoria podrían dar lugar a un acceso excesivo a la memoria. Si se usan varios proveedores OLE DB, el modelo de extracción del consumidor permite que el consumidor proporcione cualquier objeto de conjunto de filas como valor de parámetro con valores de tabla.  
   
- Para usar el modelo de extracción, los consumidores deben proporcionar su propia implementación de un objeto de conjunto de filas. Al usar el modelo de extracción con conjuntos de filas de parámetros con valores de tabla (CLSID_ROWSET_TVP), el consumidor debe agregar el objeto de conjunto de filas de parámetros con valores de tabla que el proveedor expone a través de ITableDefinitionWithConstraints:: Método CreateTableWithConstraints o el método IOpenRowset:: OpenRowset. Solo se espera que el objeto de consumidor invalide la implementación de la interfaz IRowset. Debe invalidar las funciones siguientes:  
+ Para usar el modelo de extracción, los consumidores deben proporcionar su propia implementación de un objeto de conjunto de filas. Al usar el modelo de extracción con conjuntos de filas de parámetros con valores de tabla (CLSID_ROWSET_TVP), el consumidor debe agregar el objeto de conjunto de filas de parámetros con valores de tabla que el proveedor expone mediante el método ITableDefinitionWithConstraints::CreateTableWithConstraints o el método IOpenRowset::OpenRowset. Solo se espera que el objeto de consumidor invalide la implementación de la interfaz IRowset. Debe invalidar las funciones siguientes:  
   
 -   IRowset::GetNextRows  
   

@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244507"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
-  La criptografía de clave pública (PKI) es una forma de confidencialidad de mensaje en la que un usuario crea una clave *pública* y una clave *privada* . La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  
+   La criptografía de clave pública (PKI) es un método para mantener la confidencialidad de los mensajes en el que el usuario crea una clave *pública* y una clave *privada*. La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  
   
  Tanto los certificados como las claves asimétricas son métodos para utilizar el cifrado asimétrico. Los certificados se suelen emplear como contenedores para las claves asimétricas porque pueden contener más información, como las fechas de expiración y los emisores. No hay ninguna diferencia entre los dos mecanismos en cuanto al algoritmo criptográfico y tampoco hay diferencia en cuanto al nivel de cifrado si no varía la longitud de la clave. Generalmente, se utiliza un certificado para cifrar otros tipos de claves de cifrado en una base de datos o para firmar módulos de código.  
   
@@ -67,8 +67,8 @@ ms.locfileid: "75244507"
 |||  
 |-|-|  
 |Herramienta|Propósito|  
-|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crea certificados.|  
-|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crea nombres seguros para claves simétricas.|  
+|[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crea certificados.|  
+|[NS](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crea nombres seguros para claves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Elegir un algoritmo de cifrado](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "75244507"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Consulte también  
- [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [Sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Cifrado de datos transparente &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

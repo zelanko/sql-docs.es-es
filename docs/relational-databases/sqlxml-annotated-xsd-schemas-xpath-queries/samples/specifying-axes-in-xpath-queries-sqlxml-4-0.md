@@ -20,10 +20,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8b582b9f31245c13ec2c20e91736f794f19efd53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252601"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
@@ -164,7 +164,7 @@ ms.locfileid: "75252601"
  Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, de cada nodo que coincida con ** \<el cliente>** la consulta navega a su ** \<orden>** elementos. Y para cada ** \<orden **de coincidencia de nodo>, la consulta agrega los nodos ** \<OrderDetail>** al resultado. Solo se devuelve ** \<OrderDetail>** en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
- La consulta siguiente recupera todos los **** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el eje **secundario** en el predicado para buscar el elemento primario del ** \<pedido>** elemento.  
+ La consulta siguiente recupera todos los **CustomerID** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el eje **secundario** en el predicado para buscar el elemento primario del ** \<pedido>** elemento.  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -248,7 +248,7 @@ ms.locfileid: "75252601"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar el eje de atributo  
- La consulta XPath siguiente selecciona todos **** los ** \<** elementos secundarios del cliente>del nodo de contexto con el valor 1 para el atributo CustomerID:  
+ La consulta XPath siguiente selecciona todos **CustomerID** los ** \<** elementos secundarios del cliente>del nodo de contexto con el valor 1 para el atributo CustomerID:  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 711d9d5bf7a3268b400eae4b1b117b4034133f5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228071"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introducción a la nube híbrida de SQL Server 2014
@@ -39,7 +39,7 @@ ms.locfileid: "75228071"
  
 ### <a name="hybrid-cloud-scenarios-for-sql-server-and-microsoft-azure"></a>Escenarios de nube híbrida para SQL Server y Microsoft Azure 
  
-#### <a name="backup"></a>Copia de seguridad y restauración de bases de datos a y desde Azure Storage 
+#### <a name="backup-and-restore-databases-tofrom-azure-storage"></a><a name="backup"></a>Copia de seguridad y restauración de bases de datos a y desde Azure Storage 
  Una de las tareas más fundamentales de los administradores consiste en hacer copia de seguridad y restaurar bases de datos. Con SQL Server y Azure, puede realizar copias de seguridad de las bases de datos en la nube de forma segura. 
  
  Entre las ventajas principales de usar las capacidades de copia de seguridad y restauración de SQL Server con Azure Storage como destino de copia de seguridad se incluyen: 
@@ -64,7 +64,7 @@ ms.locfileid: "75228071"
  
 -  La [herramienta copia de seguridad de SQL Server en Azure](https://www.microsoft.com/download/details.aspx?id=40740) permite que la copia de seguridad Azure BLOB Storage y cifra y comprime SQL Server copias de seguridad almacenadas localmente o en la nube. Esta herramienta hace posible tener una única estrategia de copia de seguridad en la nube en varias versiones de SQL Server, como SQL Server 2005, 2008, 2008 R2 y 2014. 
  
-#### <a name="replica"></a>Mantenimiento de réplicas de base de datos en Azure Virtual Machines 
+#### <a name="maintain-database-replicas-on-azure-virtual-machines"></a><a name="replica"></a>Mantenimiento de réplicas de base de datos en Azure Virtual Machines 
  Tener una solución de recuperación ante desastres estable para las bases de datos es esencial para el éxito de su empresa. La mayoría de los clientes necesitan configurar un sitio de recuperación ante desastres y adquirir hardware adicional para las réplicas de las bases de datos. Con SQL Server y Azure, puede mantener una o varias réplicas de las bases de datos en la nube. 
  
  Entre las ventajas principales de mantener réplicas secundarias en Azure se incluyen: 
@@ -81,7 +81,7 @@ ms.locfileid: "75228071"
  
 -  Grupos de disponibilidad AlwaysOn, creación de reflejo de la base de datos y trasvase de registros son las tecnologías más comunes que puede usar para satisfacer las necesidades de alta disponibilidad y recuperación ante desastres de su aplicación. Para obtener más información, consulte [alta disponibilidad y recuperación ante desastres para SQL Server en Azure virtual machines](https://msdn.microsoft.com/library/azure/jj870962.aspx). 
  
-#### <a name="store"></a>Almacenar archivos de datos de SQL Server en Azure Storage 
+#### <a name="store-sql-server-data-files-in-azure-storage"></a><a name="store"></a>Almacenar archivos de datos de SQL Server en Azure Storage 
  El almacenamiento de archivos de datos de SQL Server local en Azure Storage proporciona un almacenamiento fuera de la ubicación flexible, confiable e ilimitado para las bases de datos. A partir de SQL Server 2014, puede usar [SQL Server archivos de datos en Miceosoft Azure](https://docs.microsoft.com/sql/relational-databases/databases/sql-server-data-files-in-microsoft-azure) para almacenar archivos de base de datos de SQL Server en Azure Storage. Con esta característica, puede trasladar los archivos de datos y de registro de la base de datos local a Azure Storage, manteniendo el nodo de proceso de SQL Server ejecutándose en el entorno local. Esta característica permite tener una capacidad de almacenamiento ilimitada en Azure Storage. 
  
  Entre las ventajas principales de almacenar archivos de datos de SQL Server Azure Storage se incluyen: 
@@ -92,7 +92,7 @@ ms.locfileid: "75228071"
  
 -  Facilite la recuperación ante desastres separando la instancia de proceso (una instancia de SQL Server) y los datos (archivos de datos de SQL Server). Esto le permite adjuntar fácilmente la base de datos a otra instancia de SQL Server en un entorno local o en una máquina virtual de Azure en caso de desastre. 
  
-#### <a name="migrate"></a>Migre las bases de datos de SQL Server existentes a Azure Virtual Machines 
+#### <a name="migrate-existing-sql-server-databases-to-azure-virtual-machines"></a><a name="migrate"></a>Migre las bases de datos de SQL Server existentes a Azure Virtual Machines 
  La informática en nube aporta algunas ventajas importantes a las empresas, como la disponibilidad de recursos virtualizados ilimitados según un modelo de pago por uso; puede aprovechar los centros de datos en la nube que están disponibles de forma pública en lugar de crear y administrar sus propios centros de datos, por lo que puede reducir los costos de TI y de hardware. 
  
  Con [SQL Server en azure virtual machines](https://msdn.microsoft.com/library/azure/jj823132.aspx), puede trasladar las aplicaciones locales existentes a Azure con cambios mínimos en el código. Los administradores y los desarrolladores pueden seguir usando las mismas herramientas de desarrollo y administración que tienen disponibles de forma local. 

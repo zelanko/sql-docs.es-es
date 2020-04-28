@@ -22,10 +22,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4feb8e282390b4808b69493a299cbad990f1e91b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243566"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
@@ -236,11 +236,9 @@ ms.locfileid: "75243566"
   
  En este ejemplo se da por supuesto que las tablas siguientes se encuentran en la base de datos **tempdb** :  
   
--   
-  `Cust (CustomerID, CompanyName)`, donde `CustomerID` es la clave principal  
+-   `Cust (CustomerID, CompanyName)`, donde `CustomerID` es la clave principal  
   
--   
-  `Ord (OrderID, CustomerID)`, donde `CustomerID` es una clave externa que hace referencia a la clave principal `CustomerID` de la tabla `Cust`.  
+-   `Ord (OrderID, CustomerID)`, donde `CustomerID` es una clave externa que hace referencia a la clave principal `CustomerID` de la tabla `Cust`.  
   
  El diagrama de actualización usa el esquema XSD siguiente para insertar registros en las tablas Cust y Ord:  
   

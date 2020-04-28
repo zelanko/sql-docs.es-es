@@ -13,23 +13,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243079"
 ---
 # <a name="command-window"></a>Ventana de comandos
-  Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **ventana** . Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
+  Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la ventana [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
   
 ## <a name="task-list"></a>Lista de tareas  
- **Para tener acceso a la ventana de comandos**  
+ **Para tener acceso a la Ventana de comandos**  
   
 -   En el menú **Depurar** , haga clic en **Iniciar depuración**.  
   
  **Para imprimir el valor de una variable**  
   
--   En el tipo de **CommandWindow**, escriba **Debug \<. Print VariableName>** y, a continuación, presione Entrar.  
+-   En la **ventana Comandos**, escriba **Debug.Print \<nombreDeVariable>** y pulse ENTRAR.  
   
  **Para mostrar información sobre el subproceso actual**  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75243079"
   
  **Para agregar una variable a la ventana Inspección rápida**  
   
--   En el tipo de **CommandWindow**, escriba **Debug \<. inspección de la VariableName>** y, a continuación, presione Entrar.  
+-   En la **ventana Comandos**, escriba **Debug.QuickWatch \<nombreDeVariable** y pulse ENTRAR.  
   
 ## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66c7e777c2970677616bbd81ac4a9d7f633742a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243156"
 ---
 # <a name="step-through-transact-sql-code"></a>Avanzar paso a paso por el código Transact-SQL
@@ -51,9 +51,9 @@ ms.locfileid: "75243156"
   
 |Acción|Procedimiento|  
 |------------|---------------|  
-|Ejecutar todas las instrucciones desde la instrucción actual hasta el siguiente punto de interrupción|En el menú **depurar** , haga clic en **continuar**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **continuar** .|  
+|Ejecutar todas las instrucciones desde la instrucción actual hasta el siguiente punto de interrupción|En el menú **Depurar**, haga clic en **Continuar**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **continuar** .|  
 |Ir a la siguiente instrucción o módulo|En el menú **depurar** , haga clic en **paso a paso por instrucciones**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso por instrucciones** .<br /><br /> Presione F11.|  
-|Paso a paso por la siguiente instrucción o módulo|En el menú **depurar** , haga clic en **paso a paso por procedimientos**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso por procedimientos** .<br /><br /> Presione F10.|  
+|Paso a paso por la siguiente instrucción o módulo|En el menú **Depurar**, haga clic en **Paso a paso por procedimientos**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso por procedimientos** .<br /><br /> Presione F10.|  
 |Salir de un módulo|En el menú **depurar** , haga clic en **paso a paso para salir**.<br /><br /> En la barra de herramientas **depurar** , haga clic en el botón **paso a paso para salir** .<br /><br /> Presione MAYÚS+F11.|  
 |Ejecutar un proceso hasta la ubicación del cursor actual|Haga clic con el botón derecho en la ventana del Editor de consultas y, después, haga clic en **Ejecutar hasta el cursor**.<br /><br /> Presione CTRL+F10.|  
   

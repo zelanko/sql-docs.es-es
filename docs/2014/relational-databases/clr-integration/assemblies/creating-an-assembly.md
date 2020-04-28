@@ -18,17 +18,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232301"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
   Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de archivos DLL administrados deben registrarse en [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
   
 ## <a name="the-create-assembly-statement"></a>La instrucción CREATE ASSEMBLY  
- La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. Aquí tiene un ejemplo:  
+ La instrucción CREATE ASSEMBLY se usa para crear un ensamblado en una base de datos. Este es un ejemplo:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -37,8 +37,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  La cláusula FROM especifica el nombre de ruta de acceso del ensamblado que va a crearse. Esta ruta de acceso puede ser una ruta de acceso UNC (Convención de nomenclatura universal) o una ruta de acceso al archivo físico local en el equipo.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
  Es posible crear ensamblados que hagan referencia a otros ensamblados. Cuando se crea un ensamblado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en, también crea los ensamblados a los que hace referencia el ensamblado de nivel raíz, si los ensamblados a los que se hace referencia aún no se han creado en la base de datos.  
   
@@ -53,8 +52,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificar la seguridad al crear ensamblados  
  Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: `SAFE`, `EXTERNAL_ACCESS` o `UNSAFE`. Cuando se ejecuta la instrucción `CREATE ASSEMBLY`, se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
- 
-  `SAFE` es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
+ `SAFE` es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
   
 ```  
 CREATE ASSEMBLY SQLCLRTest  
@@ -72,8 +70,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
  Cuando el código de un ensamblado se ejecuta con el conjunto de permisos `SAFE`, solo puede realizar tareas de cálculo y acceso a datos en el servidor a través del proveedor administrado en proceso.  
   
 ### <a name="creating-external_access-and-unsafe-assemblies"></a>Crear ensamblados EXTERNAL_ACCESS y UNSAFE  
- 
-  `EXTERNAL_ACCESS` se usa en escenarios en los que el código necesita tener acceso a recursos fuera del servidor, como archivos, la red, el Registro y variables de entorno. Cuando el servidor obtiene acceso a un recurso externo, suplanta el contexto de seguridad del usuario que llama al código administrado.  
+ `EXTERNAL_ACCESS` se usa en escenarios en los que el código necesita tener acceso a recursos fuera del servidor, como archivos, la red, el Registro y variables de entorno. Cuando el servidor obtiene acceso a un recurso externo, suplanta el contexto de seguridad del usuario que llama al código administrado.  
   
  El permiso de código `UNSAFE` se usa en escenarios en los que no puede comprobarse la seguridad de un ensamblado o el ensamblado requiere acceso adicional a recursos restringidos, como la API Win32 de [!INCLUDE[msCoName](../../../includes/msconame-md.md)].  
   

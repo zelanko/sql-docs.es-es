@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243000"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
@@ -51,7 +51,7 @@ ms.locfileid: "75243000"
 |[UPDATE](/sql/t-sql/queries/update-transact-sql)|Toda la sintaxis.|  
 |[DELETE](/sql/t-sql/statements/delete-transact-sql)|Toda la sintaxis.|  
 |[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Toda la sintaxis.|  
-|[SET @local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
+|[CONJUNTO@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Toda la sintaxis.|  
 |[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ejecución de procedimientos almacenados definidos por el usuario, procedimientos almacenados del sistema, funciones definidas por el usuario y funciones del sistema.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Toda la sintaxis.|  
 |[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Toda la sintaxis.|  

@@ -21,10 +21,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255840"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
@@ -34,11 +34,11 @@ ms.locfileid: "75255840"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Name**|**sysname**|Nombre del certificado. Es único en la base de datos.|  
+|**name**|**sysname**|Nombre del certificado. Es único en la base de datos.|  
 |**certificate_id**|**int**|Id. del certificado. Es único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad de la base de datos que posee este certificado.|  
-|**pvt_key_encryption_type**|**Char (2)**|Indica cómo se ha cifrado la clave privada.<br /><br /> NA = No hay clave privada para el certificado<br /><br /> MK = La clave privada se ha cifrado mediante la clave maestra<br /><br /> PW = La clave privada se ha cifrado mediante una contraseña definida por el usuario<br /><br /> SK = La clave privada se ha cifrado mediante la clave maestra del servicio|  
-|**pvt_key_encryption_type_desc**|**nvarchar (60)**|Descripción de cómo se ha cifrado la clave privada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
+|**pvt_key_encryption_type**|**char(2)**|Indica cómo se ha cifrado la clave privada.<br /><br /> NA = No hay clave privada para el certificado<br /><br /> MK = La clave privada se ha cifrado mediante la clave maestra<br /><br /> PW = La clave privada se ha cifrado mediante una contraseña definida por el usuario<br /><br /> SK = La clave privada se ha cifrado mediante la clave maestra del servicio|  
+|**pvt_key_encryption_type_desc**|**nvarchar(60)**|Descripción de cómo se ha cifrado la clave privada.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
 |**is_active_for_begin_dialog**|**bit**|Si el valor es 1, este certificado se utiliza para iniciar diálogos de servicio cifrados.|  
 |**issuer_name**|**nvarchar (442)**|Nombre del emisor del certificado.|  
 |**cert_serial_number**|**nvarchar (64)**|Número de serie del certificado.|  
@@ -47,7 +47,7 @@ ms.locfileid: "75255840"
 |**Asunto**|**nvarchar(4000)**|Asunto del certificado.|  
 |**expiry_date**|**datetime**|Fecha en que expira el certificado.|  
 |**start_date**|**datetime**|Fecha en que se valida el certificado.|  
-|**thumbprint**|**varbinary (32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
+|**huella**|**varbinary(32)**|Hash SHA-1 del certificado. El hash SHA-1 es único globalmente.|  
 |**attested_by**|**nvarchar(260)**|Solo para uso del sistema.|  
 |**pvt_key_last_backup_date**|**datetime**|Fecha y hora en que se exportó por última vez la clave privada del certificado.|  
   

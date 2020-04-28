@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243320"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
-  Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **de** .  
+  Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
   
 #### <a name="to-find-using-regular-expressions"></a>Para buscar mediante expresiones regulares  
   
@@ -50,8 +50,7 @@ ms.locfileid: "75243320"
 |Un carácter cualquiera del conjunto|[]|Devuelve cualquier carácter situado dentro de []. Para especificar un intervalo de caracteres, escriba los caracteres inicial y final separados por un guión (-), como en [a-z].|  
 |Un carácter cualquiera no perteneciente al conjunto|[^...]|Devuelve cualquier carácter que no se encuentre en el juego de caracteres que sigue a ^.|  
 |Or|&#124;|Devuelve la expresión situada antes o la situada después del símbolo OR (&#124;). Se utiliza fundamentalmente dentro de un grupo. Por ejemplo, (sponge&#124;mud) bath devuelve "sponge bath" y "mud bath".|  
-|Escape|
-  \|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
+|Escape|\|Devuelve el carácter que sigue a la barra diagonal inversa (\\) como un literal. Esto permite buscar los caracteres utilizados en la notación de expresiones regulares, como { y ^. Por ejemplo, \\^ busca el carácter ^.|  
 |Expresión de etiqueta|{}|Devuelve texto etiquetado con la expresión entre comillas.|  
 |Identificador de C/C++|:i|Devuelve la expresión ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Cadena entre comillas|:q|Devuelve la expresión (("[^"]*")&#124;('[^']\*')).|  
@@ -67,9 +66,8 @@ ms.locfileid: "75243320"
 |Repetir n veces|^n|Devuelve n repeticiones de la expresión anterior. Por ejemplo, [0-9]^4 devuelve cualquier secuencia de cuatro dígitos.|  
 |Agrupación|()|Agrupa una subexpresión.|  
 |N-ésimo texto etiquetado|\n|En una expresión **Buscar y reemplazar** , indica el texto devuelto por la expresión con etiqueta enésima, donde n es un número de 1 a 9.<br /><br /> En una expresión de **Reemplazar** , \0 inserta todo el texto coincidente.|  
-|Campo justificado a la derecha|\\(w, n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
-|Campo justificado a la izquierda|
-  \\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|Campo justificado a la derecha|\\(w,n)|En una expresión de **Reemplazar** , justifica a la derecha la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
+|Campo justificado a la izquierda|\\(-w,n)|En una expresión de **Reemplazar** , justifica a la izquierda la expresión etiquetada n-ésima de un campo con un ancho de al menos *w* caracteres.|  
 |Evitar coincidencia|~(X)|Evita una coincidencia cuando aparece X en este punto de la expresión. Por ejemplo, real~(ity) devuelve "real" de "realty" y "really", pero no "real" de "reality".|  
 |Carácter alfanumérico|:a|Devuelve la expresión ([a-zA-Z0-9]).|  
 |Carácter alfabético|:c|Devuelve la expresión ([a-zA-Z]).|  
@@ -122,7 +120,7 @@ ms.locfileid: "75243320"
   
 |Expression|Sintaxis|Descripción|  
 |----------------|------------|-----------------|  
-|Alfa|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
+|Alpha|:Al|Devuelve cualquier carácter. Por ejemplo, :Alhe devuelve palabras como "The", "then" y "reached".|  
 |Numeric|:Nu|Devuelve cualquier número o dígito.|  
 |Signos de puntuación|:Pu|Devuelve cualquier signo de puntuación, como ?, @, ', etc.|  
 |Espacio en blanco|:Wh|Devuelve cualquier tipo de espacio en blanco, incluidos los espacios de publicación y los ideográficos.|  

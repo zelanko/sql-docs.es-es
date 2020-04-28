@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244944"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "75244944"
  **Conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor.  
   
- **Desconexión**  
+ **Conecto**  
  Desconecta el Editor de consultas actual del servidor.  
   
  **Cambiar conexión**  
@@ -68,16 +68,16 @@ ms.locfileid: "75244944"
  **Bases de datos disponibles**  
  Cambia la conexión a una base de datos distinta del mismo servidor.  
   
- **Ejecutar**  
+ **Ejecut**  
  Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas.  
   
- **Depuración**  
+ **Depurar**  
  Habilita el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador admite acciones de depuración como establecer puntos de interrupción, inspeccionar variables y recorrer el código.  
   
  **Cancelar ejecución de la consulta**  
  Envía una solicitud de cancelación al servidor. Algunas consultas no pueden cancelarse inmediatamente, sino que deben esperar a una condición de cancelación adecuada. Cuando se cancelan las transacciones, podrían producirse retrasos mientras se revierten.  
   
- **Analizar**  
+ **Analiza**  
  Comprueba la sintaxis del código seleccionado. Si no se ha seleccionado ningún código, comprueba la sintaxis de todo el código en la ventana del Editor de consultas.  
   
  **Mostrar plan de ejecución estimado**  
@@ -102,7 +102,7 @@ ms.locfileid: "75244944"
  Devuelve los resultados de la consulta como una o varias cuadrículas en la ventana **Resultados** .  
   
  **Resultados a archivo**  
- Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y después haga clic en **Guardar con codificación**.  
+ Cuando se ejecuta la consulta, se abre el cuadro de diálogo **Guardar resultados** . En **Guardar en**, seleccione la carpeta en la que desea guardar el archivo. En **Nombre de archivo**, escriba el nombre del archivo y, a continuación, haga clic en **Guardar** para guardar los resultados de la consulta como un archivo **Informe** que tenga la extensión .rpt. Para obtener acceso a las opciones avanzadas, haga clic en la flecha abajo del botón **Guardar** y, a continuación, haga clic en **Guardar con codificación**.  
   
  **Selección con comentarios**  
  Convierte la línea actual en comentario agregando al principio de la línea un operador de comentario (--).  
@@ -130,19 +130,19 @@ ms.locfileid: "75244944"
  **Interrumpir todos**  
  Establece el depurador para interrumpir todos los procesos a los que está asociado cuando se produce una interrupción.  
   
- **Detener la depuración**  
+ **Detener depuración**  
  Saca la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] seleccionada del modo de depuración y restaura el modo de ejecución estándar.  
   
  **Mostrar la instrucción siguiente**  
  Mueve el cursor a la siguiente instrucción que se va a ejecutar.  
   
- **Depurar paso a paso por instrucciones**  
+ **Paso a paso por instrucciones**  
  Se ejecuta la siguiente instrucción. Si la siguiente instrucción invoca un procedimiento almacenado, función o desencadenador de Transact-SQL, el depurador muestra una nueva ventana del **Editor de consultas** que contiene el código del módulo. La ventana está en el modo de depuración y la ejecución se detiene en la primera instrucción del módulo. Después puede desplazarse por el módulo, por ejemplo, estableciendo puntos de interrupción o recorriendo el código.  
   
- **Depurar paso a paso por procedimientos**  
+ **Paso a paso por procedimientos**  
  Se ejecuta la siguiente instrucción. Si la instrucción invoca un procedimiento almacenado, una función o un desencadenador Transact-SQL, el módulo se ejecuta hasta que termine y los resultados se devuelven al código de llamada. Si está seguro de que no hay errores en el módulo, puede omitirlo. La ejecución se detiene en la instrucción que sigue a la llamada al módulo.  
   
- **Depurar paso a paso para salir**  
+ **Paso a paso para salir**  
  Vuelve al nivel de la siguiente llamada superior (función, procedimiento almacenado o desencadenador). La ejecución se detiene en la instrucción que sigue a la llamada al procedimiento almacenado, a la función o al desencadenador.  
   
  **Windows**  

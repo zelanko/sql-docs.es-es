@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd62413ec8542aba9f3973d0e8483cb9c5c9128a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401374"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicación de las revisiones de Analytics Platform System
@@ -27,14 +27,14 @@ En este artículo se describe cómo aplicar revisiones al software de sistema de
 > [!WARNING]  
 > No aplique una revisión de Analytics Platform System mientras el dispositivo esté en uso. La aplicación de una revisión puede hacer que los nodos del dispositivo se reinicien. La revisión debe aplicarse durante una ventana de mantenimiento cuando no se usa el dispositivo.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 Para realizar estos pasos, necesitará:  
   
 -   Un inicio de sesión de System Analytics Platform con permisos para tener acceso a la consola de administración para supervisar el estado del dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
 -   Conocimiento de la cuenta de administrador de dominio de tejido para conectarse al _<domain_name nodo>_ **-HST01** .  
   
-## <a name="HowToInstallPDW"></a>Para aplicar una revisión del sistema de análisis de plataforma  
+## <a name="to-apply-a-analytics-platform-system-hotfix"></a><a name="HowToInstallPDW"></a>Para aplicar una revisión del sistema de análisis de plataforma  
 A diferencia de las actualizaciones de Microsoft, las revisiones del software de sistema de la plataforma de análisis no se controlan a través de WSUS. Tienen un flujo de trabajo diferente y se instalan mediante la ejecución de un paquete de revisiones.  
   
 1.  **Compruebe los indicadores de estado del dispositivo.**  

@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c60edd0423dbba712d6185a1bfe417b2067378bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232225"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importar un archivo de bacpac para crear una nueva base de datos de usuario
@@ -85,7 +85,7 @@ ms.locfileid: "75232225"
   
     -   [Página Resultados](#Results)  
   
-###  <a name="Introduction"></a> Página Introducción  
+###  <a name="introduction-page"></a><a name="Introduction"></a> Página Introducción  
  Esta página describe los pasos para el Asistente Importar aplicación de capa de datos.  
   
  **Opciones**  
@@ -96,7 +96,7 @@ ms.locfileid: "75232225"
   
 -   **Cancelar**: cancela la operación y cierra el asistente.  
   
-###  <a name="Import_settings"></a> Página Importar configuración  
+###  <a name="import-settings-page"></a><a name="Import_settings"></a> Página Importar configuración  
  Use esta página para especificar la ubicación del archivo .bacpac para importar.  
   
 -   **Importar desde el disco local**: haga clic en **Examinar...** para navegar por el equipo local, o bien especifique la ruta de acceso en el espacio proporcionado. El nombre de ruta de acceso debe incluir un nombre de archivo y la extensión .bacpac.  
@@ -107,7 +107,7 @@ ms.locfileid: "75232225"
   
      Para continuar, especifique el archivo .bacpac para importar y, a continuación, haga clic en **Abrir**.  
   
-###  <a name="Database_settings"></a> Página Configuración de base de datos  
+###  <a name="database-settings-page"></a><a name="Database_settings"></a> Página Configuración de base de datos  
  Use esta página para especificar los detalles de la base de datos que se creará.  
   
  **Para una instancia local de SQL Server:**  
@@ -122,9 +122,9 @@ ms.locfileid: "75232225"
   
  **Para una base de datos SQL:**  
   
--   **Nombre de la nueva base de datos**: proporcione un nombre para la base de datos importada.  
+-   **Nombre de la nueva base de datos** : proporcione un nombre para la base de datos importada.  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [base de datos SQL](https://www.windowsazure.com/home/tour/database/) .  
+-   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ** : especifique [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Business o [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Web. Para obtener más información acerca de las [!INCLUDE[ssSDS](../../includes/sssds-md.md)], vea este sitio web de [SQL Database](https://www.windowsazure.com/home/tour/database/).  
   
 -   **Tamaño máximo de la base de datos (GB)** : Use el menú desplegable para especificar el tamaño máximo de la base de datos.  
   
@@ -135,20 +135,20 @@ ms.locfileid: "75232225"
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Summary"></a> Página Resumen  
+###  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar los valores de origen y de destino especificados de la operación. Para completar la operación de importación mediante los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de importación y salir del asistente, haga clic en **Cancelar**.  
   
-###  <a name="Progress"></a> Página Progreso  
+###  <a name="progress-page"></a><a name="Progress"></a>Página progreso  
  En esta página se muestra una barra de progreso que indica el estado de la operación. Para ver el estado detallado, haga clic en la opción **Ver detalles** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
-###  <a name="Results"></a> Página Resultados  
+###  <a name="results-page"></a><a name="Results"></a>Página resultados  
  Esta página notifica el éxito o error de importación y crea las operaciones de la base de datos, mostrando el éxito o error de cada acción. Cualquier acción que encontrara un error tendrá un vínculo en la columna **Resultado** . Haga clic en el vínculo para ver un informe del error para esa acción.  
   
  Haga clic en **Cerrar** para cerrar el asistente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](data-tier-applications.md)   
- [Exportar una aplicación de la capa de datos](export-a-data-tier-application.md)  
+ [Exportar una aplicación de capa de datos](export-a-data-tier-application.md)  
   

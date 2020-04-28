@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229429"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Descripción de orden de paso y orden de resolución (MDX)
@@ -92,7 +92,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|  
-|**Diferencia de año**|($20,160.56)|$2,878.06|  
+|**Year Difference**|($20,160.56)|$2,878.06|  
   
 ### <a name="query-2-percentage-of-income-after-expenses"></a>Consulta 2: porcentaje de ingresos después de gastos  
  En la segunda consulta, calcule el porcentaje de ingresos después de gastos para cada año con la siguiente consulta MDX:  
@@ -149,14 +149,13 @@ ON ROWS
 FROM [Adventure Works]  
 ```  
   
- En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin` . Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
+ En este ejemplo combinado de consulta MDX, `Profit Margin` posee el orden de resolución superior, por lo que tendrá prioridad si interactúan las dos expresiones. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dicha celda mediante la fórmula `Profit Margin` . Los resultados de este cálculo anidado pueden verse en la siguiente tabla.  
   
 ||Internet Sales Amount|Costo total del producto por Internet|Margen de beneficio|  
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60 %|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
-|**Diferencia de año**|($20,160.56)|$2,878.06|114.28 %|  
+|**Year Difference**|($20,160.56)|$2,878.06|114.28 %|  
   
  El resultado de la celda compartida se basa en la fórmula para `Profit Margin`. Es decir, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calcula el resultado en la celda compartida con los datos de `Year Difference` y ofrece la siguiente fórmula (se ha redondeado el resultado para obtener mayor claridad):  
   
@@ -196,7 +195,7 @@ FROM [Adventure Works]
 |-|---------------------------|---------------------------------|-------------------|  
 |**CY 2007**|$9,791,060.30|$5,718,327.17|41.60 %|  
 |**CY 2008**|$9,770,899.74|$5,721,205.24|41.45 %|  
-|**Diferencia de año**|($20,160.56)|$2,878.06|(0.15 %|  
+|**Year Difference**|($20,160.56)|$2,878.06|(0.15 %|  
   
  Puesto que la consulta utiliza la fórmula `Year Difference` con los datos de `Profit Margin` , la fórmula de la celda compartida es similar al siguiente cálculo:  
   

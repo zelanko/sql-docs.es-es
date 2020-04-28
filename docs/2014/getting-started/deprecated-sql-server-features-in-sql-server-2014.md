@@ -11,16 +11,16 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44fbab98aa017be66cd4dc369a713f44e8d248d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228216"
 ---
 # <a name="deprecated-sql-server-features-in-sql-server-2014"></a>Características de SQL Server desusadas en SQL Server 2014
   En este tema se describen las características desusadas que siguen estando disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Está previsto quitar estas características en una futura versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Las características en desuso no se deben usar en nuevas aplicaciones.  
   
-## <a name="features-not-supported-in-the-next-version-of-includessnoversionincludesssnoversion-mdmd"></a>Características no admitidas en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
+## <a name="features-not-supported-in-the-next-version-of-ssnoversion"></a>Características no admitidas en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  Las características del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] siguientes no se admitirán en la siguiente versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No utilice estas características en nuevos trabajos de desarrollo y modifique lo antes posible las aplicaciones que las utilizan actualmente. La columna Nombre de característica aparece en eventos de seguimiento como ObjectName, en contadores de rendimiento y sys.dm_os_performance_counters como nombre_instancia. La columna Id. de característica aparece en eventos de seguimiento como ObjectId.  
   
 |Category|Característica desusada|Sustituta|Nombre de característica|Id. de la característica|  

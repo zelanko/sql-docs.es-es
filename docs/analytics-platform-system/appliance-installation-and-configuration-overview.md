@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 9f96d953dbd427bfb6cf94470c0ee80ade3aed48
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401444"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Instalación y configuración del dispositivo de Analytics Platform System
@@ -27,7 +27,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
 -   Review [Connecting to SQL Server PDW (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808) to understand how and when appliance administrators will connect to each appliance node.  
 -->
 
-## <a name="InstallHardware"></a>1. instalar el hardware  
+## <a name="1-install-the-hardware"></a><a name="InstallHardware"></a>1. instalar el hardware  
 El nuevo dispositivo se entregará en los palets en el Dock del centro de datos.  
   
 > [!IMPORTANT]  
@@ -41,14 +41,14 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
 |Confirmar documentación|Confirme que ha recibido todos los documentos e información necesarios de su proveedor de hardware independiente (IHV). Consulte [la información que se obtiene de la&#41;del sistema IHV &#40;Analytics Platform System ](information-to-obtain-from-your-ihv.md).|  
 |Instalar hardware|Compruebe que el centro de datos puede alojar el dispositivo. Mueva los componentes del dispositivo al centro de datos. Bastidor de conmutadores de red, PDU y cableado. Consulte [instalación de Hardware &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
-## <a name="PowerOnAppliance"></a>2. encender el dispositivo  
+## <a name="2-power-on-the-appliance"></a><a name="PowerOnAppliance"></a>2. encender el dispositivo  
   
 |||  
 |-|-|  
 |**Task**|**Descripción**|  
 |Encender el dispositivo|Encienda cada nodo del componente del dispositivo en el orden requerido, en espera según sea necesario para confirmar que no se producen errores.|  
   
-## <a name="ConfigureAppliance"></a>3. configurar el dispositivo  
+## <a name="3-configure-the-appliance"></a><a name="ConfigureAppliance"></a>3. configurar el dispositivo  
   
 |||  
 |-|-|  
@@ -59,7 +59,7 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
 > [!WARNING]  
 > Los cambios de configuración solo deben realizarse mediante el**Configuration Manager**de PDW de SQL Server. No se admiten los cambios que no se exponen mediante **Configuration Manager** . Por ejemplo, el dispositivo PDW de SQL Server solo es compatible con la configuración del idioma Inglés de EE. UU.  
   
-## <a name="SoftwareServicing"></a>4. configurar el servicio de software  
+## <a name="4-set-up-software-servicing"></a><a name="SoftwareServicing"></a>4. configurar el servicio de software  
   
 |||  
 |-|-|  
@@ -67,7 +67,7 @@ Si el IHV no está realizando la instalación de hardware, siga estos pasos para
 |Aplicar actualizaciones de PDW de SQL Server|Opta Es posible que tenga que aplicar una o varias actualizaciones de PDW de SQL Server para actualizar el software de PDW de SQL Server a la versión más reciente. Consulte [Apply Analytics Platform System revisations &#40;Analytics Platform system&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configuración de Windows Server Update Services|Configure el dispositivo para recibir actualizaciones de Windows Server Update Services para el software auxiliar. Consulte [Descargar y aplicar actualizaciones de Microsoft &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
-## <a name="NextSteps"></a>Pasos siguientes  
+## <a name="next-steps"></a><a name="NextSteps"></a>Pasos siguientes  
 Una vez completados todos los pasos anteriores, el dispositivo está listo para su uso. Usted u otro personal de su ubicación puede continuar con las siguientes tareas.  
   
 |||  

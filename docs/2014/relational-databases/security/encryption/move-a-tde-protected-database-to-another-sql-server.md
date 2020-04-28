@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957174"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
@@ -37,15 +37,15 @@ ms.locfileid: "74957174"
   
      [Transact-SQL](#TsqlCreate)  
   
--   **Para quitar una base de datos, use:**  
+-   **Para mover una base de datos, utilizando:**  
   
      [SQL Server Management Studio](#SSMSMove)  
   
      [Transact-SQL](#TsqlMove)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Cuando se mueve una base de datos protegida por TDE, también debe mover el certificado o la clave asimétrica que se usan para abrir DEK. El certificado o la clave asimétrica se deben instalar en `master` la base de datos del servidor de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que pueda tener acceso a los archivos de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md).  
   
@@ -53,9 +53,9 @@ ms.locfileid: "74957174"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]almacena los archivos creados aquí en **c:\Archivos de programa\Microsoft SQL Server\MSSQL12. MSSQLSERVER\MSSQL\DATA** de forma predeterminada. Los nombres de los archivos y las ubicaciones pueden ser distintos.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   Requiere `CONTROL DATABASE` el permiso en `master` la base de datos para crear la clave maestra de la base de datos.  
   
@@ -63,9 +63,9 @@ ms.locfileid: "74957174"
   
 -   Requiere el permiso `CONTROL DATABASE` para la base de datos cifrada y el permiso `VIEW DEFINITION` para el certificado o la clave asimétrica usados para cifrar la clave de cifrado de la base de datos.  
   
-##  <a name="SSMSProcedure"></a>Para crear una base de datos protegida por el cifrado de datos transparente  
+##  <a name="to-create-a-database-protected-by-transparent-data-encryption"></a><a name="SSMSProcedure"></a>Para crear una base de datos protegida por el cifrado de datos transparente  
   
-###  <a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
   
 1.  Cree una clave maestra de base de datos y `master` un certificado en la base de datos. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
@@ -84,8 +84,7 @@ ms.locfileid: "74957174"
      En el cuadro de diálogo **Administrar cifrado de base de datos** están disponibles las siguientes opciones.  
   
      **Algoritmo de cifrado**  
-     Muestra o establece el algoritmo que se debe utilizar para el cifrado de la base de datos. 
-  `AES128` es el algoritmo predeterminado. Este campo no puede estar vacío. Para obtener más información sobre algoritmos de cifrado, vea [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
+     Muestra o establece el algoritmo que se debe utilizar para el cifrado de la base de datos. `AES128` es el algoritmo predeterminado. Este campo no puede estar vacío. Para obtener más información sobre algoritmos de cifrado, vea [Choose an Encryption Algorithm](choose-an-encryption-algorithm.md).  
   
      **Usar certificado de servidor**  
      Establece que el cifrado se proteja mediante un certificado. Seleccione uno de la lista. Si no tiene el permiso `VIEW DEFINITION` para los certificados de servidor, esta lista estará vacía. Si se selecciona un método de cifrado de certificado, este valor no puede estar vacío. Para obtener más información acerca de los certificados, vea [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).  
@@ -93,12 +92,12 @@ ms.locfileid: "74957174"
      **Usar clave asimétrica de servidor**  
      Establece que el cifrado se proteja mediante una clave asimétrica. Solo se muestran las claves asimétricas disponibles. Solo una clave asimétrica protegida por un módulo EKM puede cifrar una base de datos mediante TDE.  
   
-     **Establecer cifrado de base de datos en**  
+     **Activar cifrado de base de datos**  
      Modifica la base de datos para habilitar (activada) o deshabilitar (sin activar) TDE.  
   
-8.  Cuando termine, haga clic en **Aceptar**.  
+8.  Cuando haya terminado, haga clic en **Aceptar**.  
   
-###  <a name="TsqlCreate"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlCreate"></a> Usar Transact-SQL  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -144,7 +143,7 @@ ms.locfileid: "74957174"
     GO  
     ```  
   
- Para más información, consulte:  
+ Para obtener más información, consulte:  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -158,15 +157,15 @@ ms.locfileid: "74957174"
   
 -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
-##  <a name="TsqlProcedure"></a>Para quitar una base de datos  
+##  <a name="to-move-a-database"></a><a name="TsqlProcedure"></a>Para quitar una base de datos  
   
-###  <a name="SSMSMove"></a> Uso de SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSMove"></a> Uso de SQL Server Management Studio  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos que cifró anteriormente, seleccione **Tareas** y **Separar...**.  
   
      En el cuadro de diálogo **Separar base de datos** están disponibles las siguientes opciones.  
   
-     **Bases de datos que se van a desasociar**  
+     **Bases de datos que se van a separar**  
      Enumera las bases de datos que se van a separar.  
   
      **Nombre de la base de datos**  
@@ -217,9 +216,8 @@ ms.locfileid: "74957174"
      **Bases de datos que se van a adjuntar**  
      Muestra información sobre las bases de datos seleccionadas.  
   
-     
      \<no column header>  
-  Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado** , que encontrará más adelante.  
+     Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado** , que encontrará más adelante.  
   
      **Ubicación del archivo MDF**  
      Muestra la ruta de acceso y el nombre del archivo MDF seleccionado.  
@@ -270,9 +268,9 @@ ms.locfileid: "74957174"
      Muestra la ruta de acceso del archivo de base de datos seleccionado. La ruta de acceso puede modificarse manualmente.  
   
      **Mensaje**  
-     Muestra un mensaje en blanco o un hipervínculo que indica "**Archivo no encontrado**".  
+     Muestra un mensaje en blanco o un hipervínculo "**archivo no encontrado**".  
   
-###  <a name="TsqlMove"></a> Usar Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Usar Transact-SQL  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
@@ -313,7 +311,7 @@ ms.locfileid: "74957174"
     GO  
     ```  
   
- Para más información, consulte:  
+ Para obtener más información, consulte:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

@@ -27,10 +27,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 17eeefbe125722c666f9f56394028da8c66a66b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232278"
 ---
 # <a name="mapping-clr-parameter-data"></a>Asignar datos de parámetros CLR
@@ -38,7 +38,7 @@ ms.locfileid: "75232278"
   
 ||||  
 |-|-|-|  
-|**SQL Server tipo de datos**|Tipo (en System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo de datos CLR (.NET Framework)**|  
+|**Tipos de datos de SQL Server**|Tipo (en System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo de datos CLR (.NET Framework)**|  
 |`bigint`|`SqlInt64`|**Int64,\<Int64 que acepta valores NULL>**|  
 |`binary`|`SqlBytes, SqlBinary`|`Byte[]`|  
 |`bit`|`SqlBoolean`|**Booleano,\<booleano que acepta valores NULL>**|  
@@ -59,11 +59,9 @@ ms.locfileid: "75232278"
 |`nchar`|`SqlChars, SqlString`|`String, Char[]`|  
 |`ntext`|None|None|  
 |`numeric`|`SqlDecimal`|**Decimal,>\<decimal que aceptan valores NULL**|  
-|`nvarchar`|`SqlChars, SqlString`<br /><br /> 
-  `SQLChars` es más adecuado para la transferencia de datos y el acceso a los mismos, mientras que `SQLString` es mejor para realizar operaciones de cadena.|`String, Char[]`|  
+|`nvarchar`|`SqlChars, SqlString`<br /><br /> `SQLChars` es más adecuado para la transferencia de datos y el acceso a los mismos, mientras que `SQLString` es mejor para realizar operaciones de cadena.|`String, Char[]`|  
 |`nvarchar(1), nchar(1)`|`SqlChars, SqlString`|**Char, String, Char [],\<carácter que admite valores NULL>**|  
-|`real`|
-  `SqlSingle` (el intervalo de `SqlSingle`, sin embargo, es mayor que `real`)|**>único que admite\<valores NULL**|  
+|`real`|`SqlSingle` (el intervalo de `SqlSingle`, sin embargo, es mayor que `real`)|**>único que admite\<valores NULL**|  
 |`rowversion`|None|`Byte[]`|  
 |`smallint`|`SqlInt16`|**Int16,\<Int16 que admite valores NULL>**|  
 |`smallmoney`|`SqlMoney`|**Decimal,>\<decimal que aceptan valores NULL**|  
@@ -111,7 +109,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
   
 |||  
 |-|-|  
-|**Tipo de datos CLR (SQL Server)**|**SQL Server tipo de datos**|  
+|**Tipo de datos CLR (SQL Server)**|**Tipos de datos de SQL Server**|  
 |`Decimal`|SMALLMONEY|  
 |`SqlMoney`|SMALLMONEY|  
 |`Decimal`|money|  

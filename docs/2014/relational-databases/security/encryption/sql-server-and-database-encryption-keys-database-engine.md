@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957129"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
@@ -72,9 +72,9 @@ ms.locfileid: "74957129"
   
  [Restaurar la clave maestra de servicio](restore-the-service-master-key.md)  
   
- [Crear la clave maestra de una base de datos](create-a-database-master-key.md)  
+ [Crear una clave maestra de base de datos](create-a-database-master-key.md)  
   
- [Hacer copias de seguridad de una clave maestra de una base de datos](back-up-a-database-master-key.md)  
+ [Hacer una copia de seguridad de una clave maestra de base de datos](back-up-a-database-master-key.md)  
   
  [Restaurar una clave maestra de base de datos](restore-a-database-master-key.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "74957129"
  [Restaurar una clave maestra de base de datos](restore-a-database-master-key.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
- [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
- [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
+ [Copia de seguridad y restauración de claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
+ [Eliminar y volver a crear claves de cifrado &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
+ [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;SSRS Configuration Manager&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md)  
   
   

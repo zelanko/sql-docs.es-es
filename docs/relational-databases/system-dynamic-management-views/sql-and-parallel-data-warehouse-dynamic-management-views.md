@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bbf63d4553630cce6d1d890f2d353442c14d6afd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401622"
 ---
 # <a name="sql-and-parallel-data-warehouse-dynamic-management-views"></a>Vistas de administración dinámica de almacenamiento de datos SQL y paralelo
@@ -25,7 +25,7 @@ En este tema se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] enumeran las vista
   
  Todas [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] DMV comienzan con **Sys. dm_pdw**.  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de administración dinámica  
+## <a name="sssdw-and-sspdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] vistas de administración dinámica  
  Las siguientes vistas de administración dinámica se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] aplican [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]a y:  
   
  [Sys. dm_pdw_dms_cores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-cores-transact-sql.md)  
@@ -64,7 +64,7 @@ En este tema se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] enumeran las vista
   
  [Sys. dm_pdw_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)
 
-## <a name="includesssdwincludessssdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Vistas de administración dinámica 
+## <a name="sssdw-dynamic-management-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Vistas de administración dinámica 
  Las siguientes vistas de administración dinámica solo [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] se aplican a:
  
 [Sys. dm_pdw_nodes_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-exec-query-plan-transact-sql.md)  
@@ -79,7 +79,7 @@ En este tema se [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] enumeran las vista
 
  [Sys. dm_workload_management_workload_groups_stats &#40;&#41;de Transact-SQL](../../relational-databases/system-dynamic-management-views/sys-dm-workload-management-workload-group-stats-transact-sql.md) (versión preliminar)
 
-## <a name="includesspdwincludessspdw-mdmd-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Vistas de administración dinámica  
+## <a name="sspdw-dynamic-management-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Vistas de administración dinámica  
  Las siguientes vistas de administración dinámica solo [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] se aplican a:  
   
  [Sys. dm_pdw_component_health_active_alerts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-component-health-active-alerts-transact-sql.md)  

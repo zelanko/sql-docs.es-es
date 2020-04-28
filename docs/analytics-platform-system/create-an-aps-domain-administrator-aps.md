@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1a0d50e485f0e8f48de11b2e5a3c27c9f9be047e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401230"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Creación de un administrador de dominio APS
@@ -26,7 +26,7 @@ Para tener permisos suficientes para configurar todos los nodos APS, el usuario 
   
 1.  Inicie sesión en el nodo Active **Directory _(\_dominio de aplicación_-AD01** o ** _\_equipo dominio_-AD02**) mediante una cuenta de administrador de dominio de dispositivo existente.  
   
-2.  En el menú Inicio , haga clic en **Ejecutar**. En el cuadro **abrir** , escriba **DSA. msc**. Haga clic en **OK**.  
+2.  En el menú Inicio, haga clic en **Ejecutar**. En el cuadro **abrir** , escriba **DSA. msc**. Haga clic en **OK**.  
   
 3.  En el programa **usuarios y equipos de Active Directory** , haga clic con el botón secundario en **usuarios**, seleccione **nuevo**y, a continuación, haga clic en **usuario**.  
   

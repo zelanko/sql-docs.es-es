@@ -18,10 +18,10 @@ ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 4215cda5bfc82f0c6d195f336a1099309ab18154
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75255643"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
@@ -30,26 +30,26 @@ ms.locfileid: "75255643"
 
   En este tema se describe cómo configurar los niveles de gravedad de las distintas actividades y módulos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mediante [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Los niveles de gravedad definen la intensidad de los eventos que tienen lugar en DQS. Los eventos de DQS tienen los niveles de gravedad siguientes, en orden decreciente:  
   
--   **Fatal**: errores críticos en tiempo de ejecución que pueden producir resultados graves o inesperados.  
+-   **Fatal**: errores críticos en tiempo de ejecución que pueden producir resultados graves e inesperados.  
   
 -   **Error**: otros errores en tiempo de ejecución.  
   
--   **WARN**: ADVERTENCIA sobre eventos que pueden producir un error.  
+-   **Warn**: advertencia sobre eventos que pueden provocar un error.  
   
--   **Info**: información sobre eventos generales que no son un error o una advertencia. Por ejemplo, se ha iniciado un proceso de DQS.  
+-   **Info**: información sobre eventos en general; no se trata ni de un error ni de una advertencia. Por ejemplo, se ha iniciado un proceso de DQS.  
   
 -   **Debug**: información detallada sobre el evento.  
   
  Cuando se configuran niveles de gravedad para las actividades y módulos de DQS, lo que se hace en realidad es filtrar la información que quedará registrada en el archivo de registro de DQS para la actividad o el módulo de DQS correspondiente. Por ejemplo, si establece el nivel de gravedad de una actividad de DQS en **Warn**, solo se registrarán los mensajes de advertencia y los de los niveles de gravedad superiores (Error y Fatal) que estén asociados a la actividad de DQS.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para configurar niveles de gravedad, debe disponer del rol dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="ConfigureActivity"></a>Configurar niveles de gravedad en el nivel de actividad  
+##  <a name="configure-severity-levels-at-activity-level"></a><a name="ConfigureActivity"></a>Configurar niveles de gravedad en el nivel de actividad  
  Puede configurar los niveles de gravedad del registro para las siguientes actividades de DQS: administración de dominios, detección de conocimiento, directiva de coincidencia, limpieza de datos, coincidencia de datos y servicios de datos de referencia. Para ello:  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "75255643"
   
 5.  Haga clic en **Cerrar**.  
   
-##  <a name="ConfigureModule"></a>Configurar niveles de gravedad en el nivel de módulo (avanzado)  
+##  <a name="configure-severity-levels-at-module-level-advanced"></a><a name="ConfigureModule"></a>Configurar niveles de gravedad en el nivel de módulo (avanzado)  
  La sección **Avanzadas** de la pestaña **Configuración del registro** permite configurar los niveles de gravedad del registro en el nivel de módulo. Los módulos son ensamblados del sistema de DQS que implementan funcionalidades en una característica de DQS. Por ejemplo, la actividad de administración de dominios contiene funcionalidades tales como la definición de reglas de dominio, la definición de condiciones de regla, la definición de reglas entre dominios para dominios compuestos, etc.  
   
  En ocasiones, el nivel de granularidad en el nivel de actividad no es suficiente. Es posible que desee investigar un problema que aparece en un determinado módulo de una actividad. Resulta de ayuda disponer de una opción que permita configurar los niveles de gravedad del registro en el nivel de módulo para poder aislar el problema y seguir su evolución con mayor precisión.  

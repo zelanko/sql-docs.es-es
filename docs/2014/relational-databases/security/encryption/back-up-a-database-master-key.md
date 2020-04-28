@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 5435b9056d98a5b2dc0835bfcd0e60865c1686b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957269"
 ---
 # <a name="back-up-a-database-master-key"></a>Hacer copias de seguridad de una clave maestra de una base de datos
@@ -30,22 +30,22 @@ ms.locfileid: "74957269"
   
      [Seguridad](#Security)  
   
--   [Para realizar una copia de seguridad de una clave maestra de base de datos mediante Transact-SQL](#Procedure)  
+-   [Para realizar una copia de seguridad de la clave maestra de una base de datos mediante Transact-SQL](#Procedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Es necesario abrir la clave maestra y, por tanto, descifrarla antes de realizar una copia de seguridad de la misma. Si está cifrada con la clave maestra de servicio, no es necesario abrir explícitamente la clave maestra. Pero si la clave maestra solo está cifrada con una contraseña, debe abrirse explícitamente.  
   
 -   Se recomienda realizar una copia de seguridad de la clave maestra inmediatamente después de crearla y guardarla en un lugar seguro y alejado de las instalaciones.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
-##  <a name="Procedure"></a>Usar SQL Server Management Studio con Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="Procedure"></a>Usar SQL Server Management Studio con Transact-SQL  
   
 #### <a name="to-back-up-the-database-master-key"></a>Para hacer una copia de seguridad de la clave maestra de una base de datos  
   

@@ -10,24 +10,24 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fe5d8790b5adb8477c994d265f458cdb1ceda61a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401178"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Reglas de conversión de tipos de datos para dwloader-almacenamiento de datos paralelos
 En este tema se describen los formatos de datos de entrada y las conversiones de tipos de datos implícitos que admite el [cargador de línea de comandos de dwloader](dwloader.md) cuando carga datos en PDW. Las conversiones de datos implícitas se producen cuando los datos de entrada no coinciden con el tipo de datos de la PDW de SQL Server tabla de destino. Use esta información al diseñar el proceso de carga para asegurarse de que los datos se cargarán correctamente en PDW de SQL Server.  
    
   
-## <a name="InsertBinaryTypes"></a>Insertar literales en tipos binarios  
+## <a name="inserting-literals-into-binary-types"></a><a name="InsertBinaryTypes"></a>Insertar literales en tipos binarios  
 En la tabla siguiente se definen los tipos literales aceptados, el formato y las reglas de conversión para cargar un valor literal en una PDW de SQL Server columna de tipo **Binary** (*n*) o **varbinary**(*n*).  
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión al tipo de datos binary o varbinary|  
 |-------------------|-----------------------|-----------------------------------------------|  
 |Literal binario|sean *hexidecimal_string*<br /><br />Ejemplo: 12Ef o 0x12Ef|El prefijo 0x es opcional.<br /><br />La longitud del origen de datos no puede superar el número de bytes especificado para el tipo de datos.<br /><br />Si la longitud del origen de datos es menor que el tamaño del tipo de datos **binarios** , los datos se rellenan a la derecha con ceros para alcanzar el tamaño del tipo de datos.|  
   
-## <a name="InsertDateTimeTypes"></a>Insertar literales en tipos de fecha y hora  
+## <a name="inserting-literals-into-date-and-time-types"></a><a name="InsertDateTimeTypes"></a>Insertar literales en tipos de fecha y hora  
 Los literales de fecha y hora se representan mediante literales de cadena en formatos específicos, entre comillas simples. En las tablas siguientes se definen los tipos de literales, el formato y las reglas de conversión permitidos para cargar un literal de fecha u hora en una columna de tipo **DateTime**, **smalldatetime**, **Date**, **Time**, **DateTimeOffset**o **datetime2**. Las tablas definen el formato predeterminado para el tipo de datos especificado. Otros formatos que se pueden especificar se definen en la sección [formatos de fecha y hora](#DateFormats). Los literales de fecha y hora no pueden incluir espacios iniciales ni finales. los valores **Date**, **smalldatetime**y NULL no se pueden cargar en el modo de ancho fijo.  
   
 ### <a name="datetime-data-type"></a>Tipo de datos datetime  
@@ -83,7 +83,7 @@ En la tabla siguiente se definen el formato y las reglas predeterminadas para ca
 |Literal de cadena en formato de **fecha**|' AAAA-MM-DD '<br /><br />Ejemplo: ' 2007-05-08 '|Los valores de hora (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08 ' se inserta como ' 2007-05-08 12:00:00.0000000 '.|  
 |Literal de cadena en formato **datetime2**|' AAAA-MM-DD HH: mm: SS: FFFFFFF '<br /><br />Ejemplo: ' 2007-05-08 12:35:29.1234567 '|Si el origen de datos contiene componentes de datos y de hora que son menores o iguales que el valor especificado en **datetime2**(*n*), se insertan los datos; en caso contrario, se genera un error.|  
   
-### <a name="DateFormats"></a>Formatos de fecha y hora  
+### <a name="datetime-formats"></a><a name="DateFormats"></a>Formatos de fecha y hora  
 Dwloader admite los siguientes formatos de datos para los datos de entrada que se cargan en PDW de SQL Server. Después de la tabla, se muestran más detalles.  
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
@@ -115,7 +115,7 @@ Detalles:
   
 -   Las letras 'zzz' designan el desfase de zona horaria de la zona horaria actual del sistema en el formato {+|-}HH:ss].  
   
-## <a name="InsertNumerictypes"></a>Insertar literales en tipos numéricos  
+## <a name="inserting-literals-into-numeric-types"></a><a name="InsertNumerictypes"></a>Insertar literales en tipos numéricos  
 En las tablas siguientes se definen el formato y las reglas de conversión predeterminados para cargar un valor literal en una columna de PDW de SQL Server que utiliza un tipo numérico.  
   
 ### <a name="bit-data-type"></a>bit (tipo de datos)  
@@ -162,7 +162,7 @@ Los valores literales de moneda se representan como una cadena de números con u
 |Literal decimal|123344,34455|Si el número de dígitos después del separador decimal es superior a 4, el valor se redondea al valor más próximo. Por ejemplo, el valor 123344,34455 se inserta como 123344,3446.|  
 |Literal de moneda|$123456,7890|El símbolo de moneda no se inserta con el valor.<br /><br />Si el número de dígitos después del separador decimal es superior a 4, el valor se redondea al valor más próximo.|  
   
-## <a name="InsertStringTypes"></a>Insertar literales en tipos de cadena  
+## <a name="inserting-literals-into-string-types"></a><a name="InsertStringTypes"></a>Insertar literales en tipos de cadena  
 En las tablas siguientes se definen el formato y las reglas de conversión predeterminados para cargar un valor literal en una columna de PDW de SQL Server que utiliza un tipo de cadena.  
   
 ### <a name="char-varchar-nchar-and-nvarchar-data-types"></a>Tipos de datos char, VARCHAR, nchar y nvarchar  

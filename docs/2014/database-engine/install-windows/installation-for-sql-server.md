@@ -17,14 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 96afef098b711c65e1bcb46d5f687c95061f2c94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75228412"
 ---
 # <a name="installation-for-sql-server-2014"></a>Instalación de SQL Server 2014
- ## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Descargar SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## <a name="download-sql-server-2014-express"></a>[Descargar SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Gracias a [Scott Hanselman](http://www.hanselman.com/) por recopilar todos los vínculos de paquete del instalador en un solo lugar.**
   
   El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para instalar todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
@@ -45,10 +45,9 @@ ms.locfileid: "75228412"
   
 -   Componentes de conectividad  
   
- Puede instalar cada componente individualmente o seleccionar una combinación de los componentes enumerados anteriormente. Para elegir la mejor opción entre las ediciones y los componentes disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponible en las ediciones de 32 bits y de 64 bits.
+ Puede instalar cada componente individualmente o seleccionar una combinación de los componentes enumerados anteriormente. Para elegir la mejor opción entre las ediciones y los componentes disponibles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en, consulte [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] está disponible en las ediciones de 32 bits y de 64 bits.
  
- **Pruebe lo siguiente:**  
+ **Pruébelo:**  
   
 -   ¿Tiene una cuenta de Azure?  Después, vaya **[aquí](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** para poner en marcha una máquina Virtual con SQL Server 2014 Service Pack 1 (SP1) ya instalado. Para obtener más información sobre SQL Server 2014 (SP1), consulte la información sobre la [versión de SQL Server 2014 Service Pack 1](https://support.microsoft.com/kb/3058865).  
   
@@ -77,8 +76,7 @@ ms.locfileid: "75228412"
  Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar y configurar el clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  [Instalar las características de SQL Server 2014 BI](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características que son parte de la plataforma Microsoft BI incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características que son parte de la plataforma Microsoft BI incluyen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y varias aplicaciones cliente que se usan para crear datos analíticos o para trabajar con ellos. Esta sección de la documentación del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explica cómo instalar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="related-sections"></a>Secciones relacionadas  
  [Temas de procedimientos de instalación](../../sql-server/install/installation-how-to-topics.md)  

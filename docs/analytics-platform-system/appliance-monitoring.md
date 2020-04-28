@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401424"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Supervisión del dispositivo para el sistema de plataforma de análisis
 En esta guía de supervisión de dispositivos se describen las herramientas y las tareas para supervisar el dispositivo de sistema de plataforma de análisis.  
   
-## <a name="Basics"></a>Aspectos básicos y herramientas de supervisión  
+## <a name="monitoring-basics-and-tools"></a><a name="Basics"></a>Aspectos básicos y herramientas de supervisión  
 Los valores y la información que se pueden supervisar en el PDW de SQL Server dispositivo son extensos. Por ejemplo, las siguientes tareas de supervisión son típicas.  
   
 -   Compruebe si hay alguna alerta emitida por PDW de SQL Server.  
@@ -38,7 +38,7 @@ Los valores y la información que se pueden supervisar en el PDW de SQL Server d
 Hay varias herramientas disponibles para supervisar el dispositivo.  
   
 Consola de administración  
-PDW de SQL Server tiene una consola de administración. Se trata de una herramienta basada en Web que muestra información acerca de las consultas, las cargas, las copias de seguridad y restauración, los bloqueos, las sesiones, las alertas y el estado del dispositivo. La consola de administración se ejecuta en el dispositivo. los usuarios se conectan a la consola de administración a través de Internet Explorer. Para más información, consulte:  
+PDW de SQL Server tiene una consola de administración. Se trata de una herramienta basada en Web que muestra información acerca de las consultas, las cargas, las copias de seguridad y restauración, los bloqueos, las sesiones, las alertas y el estado del dispositivo. La consola de administración se ejecuta en el dispositivo. los usuarios se conectan a la consola de administración a través de Internet Explorer. Para obtener más información, consulte:  
   
 -   [Supervise el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -61,7 +61,7 @@ Si la solución de supervisión no admite consultas directas\-de Transact SQL o 
   
 -   [Ejemplo de supervisión de Power Shell para PDW de SQL Server](https://go.microsoft.com/fwlink/?LinkId=248020)  
    
-## <a name="Tasks"></a>Tareas de supervisión relacionadas  
+## <a name="related-monitoring-tasks"></a><a name="Tasks"></a>Tareas de supervisión relacionadas  
   
 |Tarea de supervisión|Descripción|  
 |-------------------|---------------|  

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ef49bb86c8e16600f2ff1bf2d1c7a92ecc5af964
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401486"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de carga para almacenamiento de datos paralelos
 En este artículo se describe cómo adquirir y configurar un servidor de carga como un sistema de Windows que no es de aplicación para enviar cargas de datos al almacenamiento de datos paralelos (PDW).  
   
-## <a name="Basics"></a>Conceptos básicos  
+## <a name="basics"></a><a name="Basics"></a>Aspectos básicos  
 El servidor de carga:  
   
 -   No tiene que ser un único servidor. Puede cargar simultáneamente con varios servidores de carga.  
@@ -32,18 +32,18 @@ El servidor de carga:
   
 -   Está en su propio dominio del cliente, no en el dominio del dispositivo. No hay ninguna relación de confianza entre el dominio del cliente y el dominio de la aplicación.  
   
-## <a name="Step1"></a>Paso 1: determinar los requisitos de capacidad  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Paso 1: determinar los requisitos de capacidad  
 El sistema de carga se puede diseñar como uno o más servidores de carga que realizan cargas simultáneas. No es necesario que cada servidor de carga esté dedicado únicamente a la carga, siempre y cuando se controlen los requisitos de rendimiento y almacenamiento de la carga de trabajo.  
   
 Los requisitos del sistema para un servidor de carga dependen casi por completo de su propia carga de trabajo. Use la [hoja de cálculo de planeamiento](loading-server-capacity-planning-worksheet.md) de la capacidad del servidor de carga para ayudar a determinar los requisitos de capacidad.  
   
-## <a name="Step2"></a>Paso 2: adquirir el Server  
+## <a name="step-2-acquire-the-sserver"></a><a name="Step2"></a>Paso 2: adquirir el Server  
 Ahora que comprende mejor sus requisitos de capacidad, puede planear los servidores y los componentes de red que necesitará comprar o aprovisionar. Incorpore la siguiente lista de requisitos en el plan de compra y, a continuación, compre el servidor o aprovisione un servidor existente.  
   
-### <a name="R"></a>Requisitos de software  
+### <a name="software-requirements"></a><a name="R"></a>Requisitos de software  
 Sistemas operativos admitidos:  
   
--   Windows Server 2012 o Windows Server 2012 R2. Estos sistemas operativos requieren el adaptador de red FDR.  
+-   Windows Server 2012 o Windows Server 2012 R2. Estos sistemas operativos requieren el adaptador de red FDR.  
   
 -   Windows Server 2008 R2. Este sistema operativo requiere el adaptador de red DDR.  
   
@@ -60,7 +60,7 @@ Para prepararse para una conexión de Windows Server 2012 o Windows Server 2012 
   
 3.  Compre dos cables FDR InfiniBand para una tarjeta de puerto doble o un cable de 1 FDR InfiniBand para una tarjeta de puerto único. Los cables FDR InfiniBand conectarán el servidor de carga a la red InfiniBand de la aplicación. La longitud del cable depende de la distancia entre el servidor de carga y los conmutadores de la aplicación InfiniBand, de acuerdo con su entorno.  
   
-## <a name="Step3"></a>Paso 3: conectar el servidor a las redes InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Paso 3: conectar el servidor a las redes InfiniBand  
 Siga estos pasos para conectar el servidor de carga a la red InfiniBand. Si el servidor no está usando la red InfiniBand, omita este paso.  
   
 1.  Bastidor el servidor lo suficientemente cerca del dispositivo para que pueda conectarlo a la red InfiniBand de la aplicación.  
@@ -75,7 +75,7 @@ Siga estos pasos para conectar el servidor de carga a la red InfiniBand. Si el s
   
 5.  Configure las opciones de InfiniBand y DNS para los adaptadores de red. Para obtener instrucciones de configuración, consulte Configuración de [adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Paso 4: instalar las herramientas de carga  
+## <a name="step-4-install-the-loading-tools"></a><a name="Step4"></a>Paso 4: instalar las herramientas de carga  
 Las herramientas de cliente están disponibles para su descarga desde el centro de descarga de Microsoft. 
 
 Para instalar dwloader, ejecute la instalación de dwloader desde las herramientas de cliente.
@@ -85,8 +85,8 @@ Si tiene previsto usar Integration Services para cargar, deberá instalar Integr
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Paso 5: iniciar la carga  
-Ahora está listo para empezar a cargar datos. Para más información, consulte:  
+## <a name="step-5-start-loading"></a><a name="Step5"></a>Paso 5: iniciar la carga  
+Ahora está listo para empezar a cargar datos. Para obtener más información, consulte:  
   
 1.  [Herramienta de carga de línea de comandos de dwloader](dwloader.md)  
   
@@ -95,7 +95,7 @@ Ahora está listo para empezar a cargar datos. Para más información, consulte:
 ## <a name="performance"></a>Rendimiento  
 Para obtener el mejor rendimiento de carga en Windows Server 2012 y versiones posteriores, active la inicialización instantánea de archivos para que cuando se sobrescriban los datos, el sistema operativo no sobrescriba los datos existentes con ceros. Si se trata de un riesgo para la seguridad porque todavía existen datos anteriores en los discos, asegúrese de desactivar la inicialización instantánea de archivos.  
   
-## <a name="Security"></a>Avisos de seguridad  
+## <a name="security-notices"></a><a name="Security"></a>Avisos de seguridad  
 Puesto que los datos que se van a cargar no se almacenan en el dispositivo, el equipo de ti es responsable de administrar todos los aspectos de la seguridad de los datos que se van a cargar. Por ejemplo, esto incluye la administración de la seguridad de los datos que se van a cargar, la seguridad del servidor que se usa para almacenar cargas y la seguridad de la infraestructura de red que conecta el servidor de carga al PDW de SQL Server dispositivo.  
   
 > [!IMPORTANT]  
@@ -112,5 +112,5 @@ Para reducir los riesgos de seguridad con los datos, se recomienda lo siguiente:
 -   Desactive la inicialización instantánea de archivos en Windows Server 2012 y versiones posteriores. Se trata de un equilibrio entre el rendimiento y la seguridad, como se indica en la sección rendimiento. Debe decidir qué es lo mejor según sus requisitos de seguridad.  
   
 ## <a name="see-also"></a>Consulte también  
-[Información general sobre copias de seguridad y restauración](backup-and-restore-overview.md)  
+[información general sobre la copia de seguridad y la restauración](backup-and-restore-overview.md)  
   

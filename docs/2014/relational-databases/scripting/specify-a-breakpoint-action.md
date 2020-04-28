@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 08df1a4c00bf3b019cf45f168aeeaaf27fdb751c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243243"
 ---
 # <a name="specify-a-breakpoint-action"></a>Especificar una acción del punto de interrupción
   Las acciones **Cuando se llama** de punto de interrupción especifican una tarea personalizada que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] realiza en un punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  
   
-##  <a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
+##  <a name="action-considerations"></a><a name="BKMK_ActionConsiderations"></a> Consideraciones sobre las acciones  
  La acción predeterminada para un punto de interrupción es que se detenga la ejecución cuando se hayan satisfecho el número de llamadas y la condición de punto de interrupción. El uso principal de una acción **Cuando se llama** en el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] consiste, sin embargo, en imprimir información en la **ventana de salida** del depurador, donde se especificará un mensaje de impresión.  
   
  Los mensajes de impresión se especifican en la opción **Imprimir un mensaje** como una cadena de texto que incluye expresiones con información de la instancia de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está depurando. Estas expresiones pueden ser:  

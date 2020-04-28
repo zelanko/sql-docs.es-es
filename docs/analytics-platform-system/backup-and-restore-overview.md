@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 75399480879623a39da542c68f036389c645f6ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401348"
 ---
 # <a name="backup-and-restore"></a>Copia de seguridad y restauración
 
 Describe cómo funciona la copia de seguridad y restauración de datos para el almacenamiento de datos paralelos (PDW). Las operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. Las copias de seguridad y restauración también se pueden usar para copiar una base de datos de un dispositivo a otro.  
     
-## <a name="BackupRestoreBasics"></a>Conceptos básicos de copias de seguridad y restauración
+## <a name="backup-and-restore-basics"></a><a name="BackupRestoreBasics"></a>Conceptos básicos de copias de seguridad y restauración
 
 Una *copia de seguridad de base de datos* de PDW es una copia de una base de datos de la aplicación, que se almacena en un formato para que se pueda usar para restaurar la base de datos original en un dispositivo.  
   
@@ -36,7 +36,7 @@ Las copias de seguridad de base de datos se almacenan en uno o varios servidores
   
 Las copias de seguridad se almacenan en el servidor de copia de seguridad como un conjunto de archivos en el sistema de archivos de Windows. Una copia de seguridad de base de datos de PDW solo se puede restaurar en PDW. Sin embargo, puede archivar las copias de seguridad de base de datos del servidor de copia de seguridad en otra ubicación mediante procesos de copia de seguridad de archivos estándar de Windows. Para obtener más información sobre los servidores de copia de seguridad, vea [adquirir y configurar un servidor de copia de seguridad](acquire-and-configure-backup-server.md).  
   
-## <a name="BackupTypes"></a>Tipos de copia de seguridad Database
+## <a name="database-backup-types"></a><a name="BackupTypes"></a>Tipos de copia de seguridad Database
 
 Hay dos tipos de datos que requieren una copia de seguridad: las bases de datos de usuario y las bases de datos del sistema (por ejemplo, la base de datos maestra). PDW no realiza una copia de seguridad del registro de transacciones.  
   
@@ -50,7 +50,7 @@ Una copia de seguridad diferencial solo se admite para las bases de datos de usu
   
 Para hacer una copia de seguridad de toda la aplicación, debe realizar una copia de seguridad de todas las bases de datos de usuario y una copia de seguridad de la base de datos maestra.  
   
-## <a name="BackupProc"></a>Proceso copia de seguridad de base de datos
+## <a name="database-backup-process"></a><a name="BackupProc"></a>Proceso copia de seguridad de base de datos
 
 En el diagrama siguiente se muestra el flujo de datos durante una copia de seguridad de base de datos.  
   
@@ -84,7 +84,7 @@ El proceso de copia de seguridad funciona de la siguiente manera:
   
     -   No se puede cambiar el nombre de la copia de seguridad antes de realizar una restauración. El nombre del directorio de copia de seguridad debe coincidir con el nombre original de la copia de seguridad. El nombre original de la copia de seguridad se encuentra en el archivo backup. XML dentro del directorio de copia de seguridad. Para restaurar una base de datos a un nombre diferente, puede especificar el nuevo nombre en el comando restore. Por ejemplo: `RESTORE DATABASE MyDB1 FROM DISK = ꞌ\\10.192.10.10\backups\MyDB2ꞌ`.  
   
-## <a name="RestoreModes"></a>Modos de restauración de bases de datos
+## <a name="database-restore-modes"></a><a name="RestoreModes"></a>Modos de restauración de bases de datos
 
 Una restauración completa de la base de datos vuelve a crear la base de datos de PDW mediante los datos de la copia de seguridad de base de datos. La restauración de la base de datos se realiza restaurando primero una copia de seguridad completa y, a continuación, opcionalmente restaurando una copia de seguridad diferencial. La restauración de la base de datos incluye los usuarios y los roles de base de datos.  
   
@@ -92,7 +92,7 @@ Una restauración de encabezado solo devuelve la información de encabezado de u
   
 Una restauración de dispositivo es una restauración de todo el dispositivo. Esto incluye la restauración de todas las bases de datos de usuario y la base de datos maestra.  
   
-## <a name="RestoreProc"></a>Proceso de restauración
+## <a name="restore-process"></a><a name="RestoreProc"></a>Proceso de restauración
 
 En el diagrama siguiente se muestra el flujo de datos durante una restauración de la base de datos.  
   

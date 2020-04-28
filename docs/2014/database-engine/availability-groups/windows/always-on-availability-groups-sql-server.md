@@ -17,21 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75229010"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
-  La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que conmutan por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
+  La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
   
  Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Las conmutaciones por error no se deben a problemas de bases de datos como que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones.  
   
   
-##  <a name="Benefits"></a> Ventajas  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
+##  <a name="benefits"></a><a name="Benefits"></a>Privilegios  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
   
 -   Admite hasta nueve réplicas de disponibilidad. Una *réplica de disponibilidad* es una instancia de un grupo de disponibilidad hospedado en una instancia específica de SQL Server y que mantiene una copia local de cada base de datos de disponibilidad perteneciente al grupo de disponibilidad. Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
@@ -66,32 +65,25 @@ ms.locfileid: "75229010"
   
 -   Proporciona un conjunto integrado de herramientas para simplificar la implementación y administración de los grupos de disponibilidad, como:  
   
-    -   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)] para crear y administrar grupos de disponibilidad. Para obtener más información, vea [información general sobre las instrucciones Transact-SQL para Always on grupo de disponibilidad; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
+    -   [!INCLUDE[tsql](../../../includes/tsql-md.md)] para crear y administrar grupos de disponibilidad. Para obtener más información, vea [información general sobre las instrucciones Transact-SQL para Always on grupo de disponibilidad; SQL Server;](transact-sql-statements-for-always-on-availability-groups.md).  
   
-    -   
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son las siguientes:  
+    -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] son las siguientes:  
   
-        -   
-  [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] crea y configura un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [usar el cuadro de diálogo nuevo grupo de disponibilidad; SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] crea y configura un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [usar el cuadro de diálogo nuevo grupo de disponibilidad; SQL Server Management Studio;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md).  
   
-        -   
-  [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] agrega una o más bases de datos principales a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server)](availability-group-add-database-to-group-wizard.md).  
+        -   [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] agrega una o más bases de datos principales a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [Usar el Asistente para agregar una base de datos al grupo de disponibilidad (SQL Server)](availability-group-add-database-to-group-wizard.md).  
   
-        -   
-  [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] agrega una o varias réplicas secundarias a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [usar el Asistente para agregar una réplica al grupo de disponibilidad. SQL Server Management Studio;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] agrega una o varias réplicas secundarias a un grupo de disponibilidad. En algunos entornos, este asistente puede también preparar automáticamente las bases de datos secundarias e iniciar la sincronización de datos de cada una de ellas. Para obtener más información, vea [usar el Asistente para agregar una réplica al grupo de disponibilidad. SQL Server Management Studio;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md).  
   
-        -   
-  [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] inicia una conmutación manual por error en un grupo de disponibilidad. Dependiendo de la configuración y el estado de la réplica secundaria que se especifique como destino de la conmutación por error, el asistente puede realizar una conmutación por error manual planeada o forzada. Para obtener más información, vea [usar el Asistente para grupo de disponibilidad de conmutación por error; SQL Server Management Studio;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
+        -   [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] inicia una conmutación manual por error en un grupo de disponibilidad. Dependiendo de la configuración y el estado de la réplica secundaria que se especifique como destino de la conmutación por error, el asistente puede realizar una conmutación por error manual planeada o forzada. Para obtener más información, vea [usar el Asistente para grupo de disponibilidad de conmutación por error; SQL Server Management Studio;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md).  
   
-    -   
-  [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] supervisa los grupos de disponibilidad AlwaysOn, las réplicas de disponibilidad y las bases de datos de disponibilidad y evalúa los resultados de las directivas de AlwaysOn. Para obtener más información, vea [usar el panel de AlwaysOn; SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md).  
+    -   [!INCLUDE[ssAoDash](../../../includes/ssaodash-md.md)] supervisa los grupos de disponibilidad AlwaysOn, las réplicas de disponibilidad y las bases de datos de disponibilidad y evalúa los resultados de las directivas de AlwaysOn. Para obtener más información, vea [usar el panel de AlwaysOn; SQL Server Management Studio;](use-the-always-on-dashboard-sql-server-management-studio.md).  
   
     -   El panel Detalles del Explorador de objetos muestra información básica acerca de los grupos de disponibilidad existentes. Para obtener más información, consulte [uso del explorador de objetos detalles para supervisar el grupo de disponibilidad. SQL Server Management Studio;](use-object-explorer-details-to-monitor-availability-groups.md).  
   
     -   Cmdlets de PowerShell. Para obtener más información, vea [información general de los cmdlets de PowerShell para grupos de disponibilidad de Always on. SQL Serve;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md).  
   
-##  <a name="TermsAndDefinitions"></a>Términos y definiciones  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Términos y definiciones  
  grupo de disponibilidad  
  Contenedor para un conjunto de bases de datos, las *bases de datos de disponibilidad*, que conmutan por error juntas.  
   
@@ -119,9 +111,8 @@ ms.locfileid: "75229010"
 > [!NOTE]  
 >  Para obtener más información, vea [información general de grupos de disponibilidad AlwaysOn; SQL Serve;](overview-of-always-on-availability-groups-sql-server.md).  
   
-##  <a name="Interoperability"></a>Interoperabilidad y coexistencia con otras características de Motor de base de datos  
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se puede utilizar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="Interoperability"></a>Interoperabilidad y coexistencia con otras características de Motor de base de datos  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se puede utilizar con las siguientes características o componentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   [Acerca de la captura de datos modificados; SQL Server;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
@@ -129,7 +120,7 @@ ms.locfileid: "75229010"
   
 -   [Bases de datos independientes](../../../relational-databases/databases/contained-databases.md)  
   
--   [Cifrado de base de datos](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
+-   [Clave de cifrado de la base de datos](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [Instantáneas de base de datos](database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
@@ -152,11 +143,11 @@ ms.locfileid: "75229010"
 > [!WARNING]  
 >  Para obtener información sobre las restricciones y limitaciones del uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]otras características con, vea [Always on grupos de disponibilidad: interoperabilidad; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Tareas relacionadas  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 -   [Introducción con Always On grupos de disponibilidad; SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a> Contenido relacionado  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
 -   **Blogs:**  
   
@@ -164,7 +155,7 @@ ms.locfileid: "75229010"
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos:**  
+-   **Vídeos**  
   
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957214"
 ---
 # <a name="encrypt-a-column-of-data"></a>Cifrar una columna de datos
@@ -29,13 +29,13 @@ ms.locfileid: "74957214"
   
      [Seguridad](#Security)  
   
--   [Para cifrar una columna de datos mediante Transact-SQL](#TsqlProcedure)  
+-   [Para cifrar una columna de datos, usando Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los siguientes permisos son necesarios para realizar los pasos siguientes:  
   
 -   Permiso CONTROL en la base de datos.  
@@ -46,7 +46,7 @@ ms.locfileid: "74957214"
   
 -   Algún permiso en la clave y no debe haberse denegado el permiso VIEW DEFINITION.  
   
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>Para cifrar una columna de datos usando un cifrado simétrico simple  
   

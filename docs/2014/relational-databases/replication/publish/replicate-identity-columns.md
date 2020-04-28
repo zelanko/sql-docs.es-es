@@ -18,14 +18,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74479246"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
-  Cuando asigna una propiedad Identity a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números secuenciales para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
+  Al asignar una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
   
  Por ejemplo, podría asignarse el rango 1-100 al Publicador, el rango 101-200 al Suscriptor A y el rango 201-300 al Suscriptor B. Si se inserta una fila en el Publicador y el valor de identidad es, por ejemplo, 65, ese valor se replica en cada Suscriptor. Cuando la replicación inserta datos en cada suscriptor, no incrementa el valor de la columna de identidad en la tabla del suscriptor; en su lugar, se inserta el valor literal 65. Son solo las inserciones del usuario y no las del agente de replicación las que hacen que se incremente el valor de la columna de identidad.  
   
@@ -124,9 +124,9 @@ ms.locfileid: "74479246"
   
 ## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
- [IDENT_CURRENT &#40;Transact-SQL&#41;](/sql/t-sql/functions/ident-current-transact-sql)   
+ [DBCC CHECKIDENT &#40;&#41;de Transact-SQL](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql)   
+ [IDENT_CURRENT &#40;&#41;de Transact-SQL](/sql/t-sql/functions/ident-current-transact-sql)   
  [IDENTITY &#40;propiedad&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)   
- [sp_adjustpublisheridentityrange &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
+ [sp_adjustpublisheridentityrange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adjustpublisheridentityrange-transact-sql)  
   
   

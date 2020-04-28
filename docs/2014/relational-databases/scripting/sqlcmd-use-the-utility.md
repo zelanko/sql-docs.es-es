@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243181"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar la utilidad sqlcmd
@@ -31,7 +31,7 @@ ms.locfileid: "75243181"
   
 -   Los usuarios envían un trabajo `sqlcmd` especificando la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] individual o dirigiendo la utilidad hacia un archivo de texto que contiene las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se van a ejecutar. El resultado se dirige normalmente hacia un archivo de texto, aunque también se puede mostrar en el símbolo del sistema.  
   
--   [Modo SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] el editor de consultas.  
+-   [Modo SQLCMD](edit-sqlcmd-scripts-with-query-editor.md) en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 -   Objetos de administración de SQL Server (SMO)  
   
@@ -111,14 +111,12 @@ ms.locfileid: "75243181"
   
  En el símbolo de sistema `sqlcmd`, puede escribir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] y comandos de `sqlcmd`, como `GO` y `EXIT`. Cada instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se coloca en un búfer llamado caché de instrucciones. Estas instrucciones se enviarán a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando escriba el comando `GO` y pulse ENTRAR. Para salir `sqlcmd`, escriba `EXIT` o `QUIT` al principio de una nueva línea.  
   
- Para borrar la memoria caché de instrucciones, escriba `:RESET`. Escribir `^C` hace `sqlcmd` que salga. 
-  `^C` se puede usar también para detener la ejecución de la memoria caché de instrucciones después de emitir un comando `GO`.  
+ Para borrar la memoria caché de instrucciones, escriba `:RESET`. Escribir `^C` hace `sqlcmd` que salga. `^C` se puede usar también para detener la ejecución de la memoria caché de instrucciones después de emitir un comando `GO`.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones que se escriben en una sesión interactiva pueden editarse escribiendo el comando **: Ed** y el `sqlcmd` símbolo del sistema. Se abrirá el editor y, después de editar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] y cerrar el editor, la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] revisada aparecerá en la ventana de comandos. Escriba `GO` para ejecutar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] revisada.  
   
 ## <a name="quoted-strings"></a>Cadenas entre comillas  
- Los caracteres que están entre comillas se usan sin ningún procesamiento previo adicional, con la excepción de que las comillas se pueden insertar en una cadena especificando dos comillas consecutivas. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata esta secuencia de caracteres como una comilla. Sin embargo, la traducción se lleva a cabo en el servidor. Las variables de scripting no se expandirán si aparecen en una cadena.  
+ Los caracteres que están entre comillas se usan sin ningún procesamiento previo adicional, con la excepción de que las comillas se pueden insertar en una cadena especificando dos comillas consecutivas. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata esta secuencia de caracteres como una comilla. Sin embargo, la traducción se lleva a cabo en el servidor. Las variables de scripting no se expandirán si aparecen en una cadena.  
   
  Por ejemplo:  
   
@@ -133,8 +131,7 @@ ms.locfileid: "75243181"
  `Length: 5" 7'`  
   
 ## <a name="strings-that-span-multiple-lines"></a>Cadenas que abarcan varias líneas  
- 
-  `sqlcmd` admite scripts con cadenas que abarcan varias líneas. Por ejemplo, la siguiente instrucción `SELECT` abarca varias líneas, pero es una única cadena que se ejecuta cuando se presiona la tecla ENTRAR después de escribir `GO`.  
+ `sqlcmd` admite scripts con cadenas que abarcan varias líneas. Por ejemplo, la siguiente instrucción `SELECT` abarca varias líneas, pero es una única cadena que se ejecuta cuando se presiona la tecla ENTRAR después de escribir `GO`.  
   
  `SELECT First line`  
   
@@ -173,8 +170,7 @@ ms.locfileid: "75243181"
   
  `1> _`  
   
- Presionar ENTRAR después de escribir `USE AdventureWorks2012` indica a `sqlcmd` que inicie una línea nueva. Al presionar ENTRAR, después de escribir `GO,` , se indicó que `sqlcmd` enviara la instrucción `USE AdventureWorks2012` a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  `sqlcmd` devuelve un mensaje para indicar que la instrucción `USE` se completó correctamente y muestra un nuevo símbolo del sistema `1>` como señal de que el usuario puede escribir una instrucción o un comando nuevos.  
+ Presionar ENTRAR después de escribir `USE AdventureWorks2012` indica a `sqlcmd` que inicie una línea nueva. Al presionar ENTRAR, después de escribir `GO,` , se indicó que `sqlcmd` enviara la instrucción `USE AdventureWorks2012` a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. `sqlcmd` devuelve un mensaje para indicar que la instrucción `USE` se completó correctamente y muestra un nuevo símbolo del sistema `1>` como señal de que el usuario puede escribir una instrucción o un comando nuevos.  
   
  En el ejemplo siguiente se muestra qué contiene la ventana del símbolo del sistema si escribe una instrucción `SELECT` , `GO` para ejecutar `SELECT`y `EXIT` para finalizar `sqlcmd`:  
   
@@ -211,8 +207,7 @@ ms.locfileid: "75243181"
  Las líneas posteriores a la línea `3> GO` son la salida de una instrucción `SELECT` . Para generar una salida, `sqlcmd` restablece el símbolo de sistema `sqlcmd` y muestra `1>`. Después de escribir `EXIT` en la línea `1>`, la ventana del símbolo del sistema muestra la misma línea que se mostró cuando se la abrió por primera vez. Esto indica que `sqlcmd` ha finalizado la sesión. Ahora ya puede cerrar la ventana del símbolo del sistema escribiendo otro comando `EXIT` .  
   
 ## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>Ejecutar archivos de script Transact-SQL mediante sqlcmd  
- Puede usar `sqlcmd` para ejecutar los archivos de script de base de datos. Los archivos de script son archivos de texto que contienen [!INCLUDE[tsql](../../includes/tsql-md.md)] una combinación `sqlcmd` de instrucciones, comandos y variables de scripting. Para obtener más información sobre cómo incluir variables en scripts, vea [Usar sqlcmd con variables de script](sqlcmd-use-with-scripting-variables.md). 
-  `sqlcmd` funciona con las instrucciones, los comandos y las variables de scripting en un archivo de script de una forma parecida a como opera con instrucciones y comandos indicados de forma interactiva. La diferencia principal es que `sqlcmd` lee el archivo de entrada sin pausas, en lugar de esperar a que un usuario indique las instrucciones, los comandos y las variables de scripting.  
+ Puede usar `sqlcmd` para ejecutar los archivos de script de base de datos. Los archivos de script son archivos de texto que contienen [!INCLUDE[tsql](../../includes/tsql-md.md)] una combinación `sqlcmd` de instrucciones, comandos y variables de scripting. Para obtener más información sobre cómo incluir variables en scripts, vea [Usar sqlcmd con variables de script](sqlcmd-use-with-scripting-variables.md). `sqlcmd` funciona con las instrucciones, los comandos y las variables de scripting en un archivo de script de una forma parecida a como opera con instrucciones y comandos indicados de forma interactiva. La diferencia principal es que `sqlcmd` lee el archivo de entrada sin pausas, en lugar de esperar a que un usuario indique las instrucciones, los comandos y las variables de scripting.  
   
  Hay distintas maneras de crear archivos de script de base de datos:  
   
@@ -395,8 +390,7 @@ ms.locfileid: "75243181"
  `Syed Abbas, Catherine Abel, Kim Abercrombie,`  
   
 ### <a name="f-using-sqlcmd-in-a-windows-script-file"></a>F. Usar sqlcmd en un archivo de script de Windows  
- Un `sqlcmd`comando como se `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` puede ejecutar en un archivo. bat junto con VBScript. En este caso, no se deben usar opciones interactivas. 
-  `sqlcmd` se debe instalar en el equipo que ejecuta el archivo .bat.  
+ Un `sqlcmd`comando como se `sqlcmd -i C:\InputFile.txt -o C:\OutputFile.txt,` puede ejecutar en un archivo. bat junto con VBScript. En este caso, no se deben usar opciones interactivas. `sqlcmd` se debe instalar en el equipo que ejecuta el archivo .bat.  
   
  Primero, cree los siguientes cuatro archivos:  
   

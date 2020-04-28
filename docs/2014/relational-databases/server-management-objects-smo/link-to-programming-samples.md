@@ -15,10 +15,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79b262bc97cf674c98361d72b0ceedcaef90bb91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75244519"
 ---
 # <a name="link-to-programming-samples"></a>Vínculo a ejemplos de programación
@@ -26,7 +26,7 @@ ms.locfileid: "75244519"
   
  Para obtener más información sobre cómo instalar ejemplos, vea [AdventureWorks para SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330).  
   
-|Título|Descripción|  
+|Title|Descripción|  
 |-----------|-----------------|  
 |BackRest|Muestra cómo realizar una copia de seguridad de una base de datos y cómo restaurarla.|  
 |ChangeTableOwner|Muestra cómo cambiar la propiedad de todas las tablas que no son dbo a dbo.|  

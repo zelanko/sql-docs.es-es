@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: d749b9a7d9689426bffafe20ee7ab46ce199ffbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75254610"
 ---
 # <a name="sysdm_exec_compute_pools-transact-sql"></a>Sys. dm_exec_compute_pools (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "75254610"
 |-----------------|---------------|-----------------|  
 |name|`sysname`|Nombre del grupo de proceso. No admite valores NULL. Devuelve `default` para el grupo de proceso predeterminado. |
 |compute_pool_id|`int`|Identificador único para el grupo. Clave para esta vista.|  
-|location|`sysname`|Punto de conexión al controlador en un clúster de Big Data de SQL. No admite valores NULL. |
+|ubicación|`sysname`|Punto de conexión al controlador en un clúster de Big Data de SQL. No admite valores NULL. |
 
 ## <a name="permissions"></a>Permisos
 

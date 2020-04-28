@@ -22,14 +22,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 60d5af2752a426faca3069541deeae3a6aa4f495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245189"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL
-  Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
 ## <a name="configuring-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL  
  El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] incluye los componentes tanto del lado servidor como del lado cliente. Los componentes del depurador del lado servidor se instalan con cada instancia del motor de base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 (SP2) o versiones posteriores. Los componentes del depurador del lado cliente se incluyen:  
@@ -150,8 +150,7 @@ ms.locfileid: "75245189"
 ## <a name="requirements-for-starting-the-debugger"></a>Requisitos para iniciar el depurador  
  Todos los intentos de iniciar el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] deben cumplir también los requisitos siguientes:  
   
-* 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se debe ejecutar bajo una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.  
+* [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se debe ejecutar bajo una cuenta de Windows que sea miembro del rol fijo de servidor sysadmin.  
   
 * La ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se debe conectar mediante el uso de un inicio de sesión de autenticación de Windows o de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que sea miembro del rol fijo de servidor sysadmin.  
   
@@ -163,7 +162,7 @@ ms.locfileid: "75245189"
  [Depurador de Transact-SQL](transact-sql-debugger.md)   
  [Ejecutar el depurador de Transact-SQL](run-the-transact-sql-debugger.md)   
  [Recorrer el código de Transact-SQL](step-through-transact-sql-code.md)   
- [Ver información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
+ [Información del depurador de Transact-SQL](transact-sql-debugger-information.md)   
  [Editor de consultas del motor de base de datos &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)  
   
   

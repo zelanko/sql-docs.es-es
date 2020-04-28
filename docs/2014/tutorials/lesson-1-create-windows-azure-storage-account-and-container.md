@@ -11,16 +11,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253502"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lección 1: Creación de la cuenta y el contenedor de Azure Storage
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lección 1: Crear la cuenta y el contenedor de Azure Storage
   Antes de empezar a almacenar SQL Server archivos de datos en Azure Storage, debe crear primero una cuenta de Azure Storage y un contenedor de blobs y una firma de acceso compartido. La lección 1 le guía por los pasos necesarios para iniciar sesión en Azure Portal de administración, crear una cuenta de almacenamiento, un contenedor de blobs y una firma de acceso compartido.  
   
- De forma predeterminada, solamente el dueño de la cuenta de almacenamiento puede obtener acceso a blobs, tablas y colas en esa cuenta. Para tener acceso a estos recursos mediante esta nueva mejora de SQL Server sin compartir la clave de acceso de la cuenta de almacenamiento, es necesario hacer lo siguiente:  
+ De forma predeterminada, solo el propietario de la cuenta de almacenamiento puede obtener acceso a los blobs, las tablas y las colas dentro de esa cuenta. Para tener acceso a estos recursos mediante esta nueva mejora de SQL Server sin compartir la clave de acceso de la cuenta de almacenamiento, es necesario hacer lo siguiente:  
   
 -   Establecer como privados los permisos del contenedor.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "75253502"
   
 -   Utilice una directiva de acceso almacenada para administrar las firmas de acceso compartido de un contenedor o sus blobs. La directiva de acceso almacenado le ofrece una medida adicional de control sobre sus firmas de acceso compartido y también proporciona medios directos para revocarlas.  
   
- Para obtener más información, consulte [Administración del acceso a los recursos de Azure Storage](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
+ Para obtener más información, vea [administrar el acceso a recursos de Azure Storage](https://msdn.microsoft.com/library/windowsazure/ee393343.aspx).  
   
 ## <a name="create-storage-account"></a>Crear cuenta de almacenamiento  
  Para crear una cuenta de almacenamiento en Azure Portal de administración, siga estos pasos:  
@@ -41,8 +41,8 @@ ms.locfileid: "75253502"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
-## <a name="create-a-blob-container"></a>Creación de contenedor de blobs  
- En Azure, un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben residir en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. un contenedor puede almacenar un número ilimitado de blobs. Para obtener la información más actualizada sobre los límites de tamaño de almacenamiento, vea [Cómo usar el servicio de Azure BLOB Storage en .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
+## <a name="create-a-blob-container"></a>Crear un contenedor de blobs  
+ En Azure, un contenedor proporciona una agrupación de un conjunto de blobs. Todos los blobs deben estar en un contenedor. Una cuenta de almacenamiento puede contener un número ilimitado de contenedores, pero debe tener al menos uno. Un contenedor puede almacenar un número ilimitado de blobs. Para obtener la información más actualizada sobre los límites de tamaño de almacenamiento, vea [Cómo usar el servicio de Azure BLOB Storage en .net](https://www.windowsazure.com/develop/net/how-to-guides/blob-storage/).  
   
  Para crear un contenedor en Azure, siga estos pasos:  
   

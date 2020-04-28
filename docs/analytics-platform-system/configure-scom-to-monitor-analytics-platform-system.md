@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 67029d235a1bc65b5ee0ab6f01f51dea42ebcc8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401298"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>Configuración de System Center Operations Manager (SCOM) para supervisar el sistema de análisis de plataforma
 Siga estos pasos para configurar los módulos de administración de System Center Operations Manager (SCOM) para Analytics Platform System. Los módulos de administración son necesarios para supervisar Analytics Platform System desde SCOM.  
   
-## <a name="BeforeBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de empezar  
 **Requisitos previos**  
   
 System Center Operations Manager 2007 R2 debe estar instalado y en ejecución.  
   
 Los módulos de administración deben estar instalados y configurados. Vea [instalar los módulos de administración de scom &#40;Analytics Platform system&#41;](install-the-scom-management-packs.md) e [importar el módulo de administración de scom para PDW &#40;analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  
   
-## <a name="ConfigureRunAsProfile"></a>Configurar el perfil de ejecución en System Center  
+## <a name="configure-run-as-profile-in-system-center"></a><a name="ConfigureRunAsProfile"></a>Configurar el perfil de ejecución en System Center  
 Para configurar System Center, debe realizar los siguientes pasos:  
   
 -   Cree una cuenta de ejecución para el usuario de dominio del **monitor APS** y asígnela a la **cuenta de Microsoft APS Watcher.**  
@@ -61,7 +61,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
 2.  Establezca el perfil de **cuenta del observador de Microsoft APS** para usar la cuenta de ejecución del **monitor APS** .  
   
-    1.  Vaya a **Administración** -> **Ejecutar como perfiles de configuración** -> ****.  
+    1.  Vaya a **Administración** -> **Ejecutar como perfiles de configuración** -> **Profiles**.  
   
         ![AdministrationRunAsConfigurationProfiles](./media/configure-scom-to-monitor-analytics-platform-system/AdministrationRunAsConfigurationProfiles.png "AdministrationRunAsConfigurationProfiles")  
   
@@ -71,7 +71,7 @@ Aquí encontrará instrucciones detalladas sobre cómo realizar las tareas:
   
     3.  Se abrirá el cuadro de diálogo **Asistente para crear perfiles de ejecución** . Para omitir la página de **Introducción** , haga clic en **siguiente**.  
   
-    4.  En la página **propiedades generales** , haga clic en **siguiente**.  
+    4.  En la página **Propiedades generales**, haga clic en **Siguiente**.  
   
     5.  En la página **cuentas de ejecución** , haga clic en el botón **Agregar...** y seleccione la cuenta de ejecución del **monitor APS** creada anteriormente.  
   

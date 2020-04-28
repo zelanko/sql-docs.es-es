@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232289"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
@@ -76,8 +76,7 @@ select * from table t cross apply function(t.column);
   
 -   Se genera a partir de datos externos. Por ejemplo, una función con valores de tabla que lee el registro de eventos y lo expone como una tabla.  
   
- **Nota:** Una función con valores de tabla solo puede realizar el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] los datos a `InitMethod` través de una consulta en el `FillRow` método y no en el método. 
-  `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Nota:** Una función con valores de tabla solo puede realizar el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] los datos a `InitMethod` través de una consulta en el `FillRow` método y no en el método. `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>A. Función con valores de tabla de ejemplo  
  La siguiente función con valores de tabla devuelve información del registro de eventos del sistema. La función toma un único argumento de cadena que contiene el nombre del registro de eventos que va a leerse.  

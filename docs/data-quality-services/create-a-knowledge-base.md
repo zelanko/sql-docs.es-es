@@ -13,10 +13,10 @@ ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 20421ab3584eac51feb09ba717f293449825574c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247333"
 ---
 # <a name="create-a-knowledge-base"></a>Crear una base de conocimiento
@@ -25,17 +25,17 @@ ms.locfileid: "75247333"
 
   En este tema se describe cómo crear una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) y cómo prepararla para la administración de dominios, la detección de conocimiento o la adición de una directiva de coincidencia.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  Para crear una base de conocimiento, debe tener instalado [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Para crear una base de conocimiento, debe disponer del rol dqs_kb_editor o dqs_administrator en la base de datos DQS_MAIN.  
   
-##  <a name="Createaknowledgebase"></a>Crear una base de conocimiento  
+##  <a name="create-a-knowledge-base"></a><a name="Createaknowledgebase"></a>Crear una base de conocimiento  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Ejecute la aplicación Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
@@ -61,7 +61,7 @@ ms.locfileid: "75247333"
   
 6.  Haga clic en **Crear**.  
   
-##  <a name="FollowUp"></a>Seguimiento: después de crear una base de conocimiento  
+##  <a name="follow-up-after-creating-a-knowledge-base"></a><a name="FollowUp"></a>Seguimiento: después de crear una base de conocimiento  
  Una vez creada la base de conocimiento, aparecerá un asistente que podrá utilizar para realizar la detección de conocimiento, un asistente para crear una directiva de coincidencia o varias páginas que le permitirán realizar la administración de dominios. Para más información sobre la detección de conocimiento, la administración de dominios o la directiva de coincidencia, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  
   
   

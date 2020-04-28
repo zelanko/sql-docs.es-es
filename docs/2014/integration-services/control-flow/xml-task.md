@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e89f4835b95b1fe497df32ad9f773be84ccb161b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232727"
 ---
 # <a name="xml-task"></a>Tarea XML
@@ -108,7 +108,7 @@ ms.locfileid: "75232727"
  `<?xml version="1.0" encoding="UTF-8"?>`  
   
 ## <a name="custom-logging-messages-available-on-the-xml-task"></a>Mensajes de registro personalizados disponibles en la tarea XML  
- La siguiente tabla contiene las entradas del registro personalizadas para la tarea XML. Para más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
+ La siguiente tabla contiene las entradas del registro personalizadas para la tarea XML. Para obtener más información, vea [Registro de Integration Services &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) y [Mensajes personalizados para registro](../custom-messages-for-logging.md).  
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
@@ -119,7 +119,7 @@ ms.locfileid: "75232727"
   
  Para obtener más información acerca de las propiedades que puede establecer en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , haga clic en uno de los temas siguientes:  
   
--   [Editor de la tarea XML &#40;página general&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor de la tarea XML &#40;página General&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Validar XML con la tarea XML](xml-task.md)  
   

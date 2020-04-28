@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c5dd66b72ff280431d29ae292af8fa1402095dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684082"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
@@ -22,21 +22,21 @@ ms.locfileid: "74684082"
   
   
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
  Debe ser administrador de servicios o de una granja para designar una dirección URL como una ubicación de confianza.  
   
  Debe conocer la dirección URL del sitio de SharePoint que contiene la Galería de PowerPivot u otra biblioteca que almacene los libros. Para obtener la dirección, abra el sitio que contiene la biblioteca, haga clic con el botón secundario en **Galería de PowerPivot**, seleccione **propiedades**y, a continuación, copie la primera parte de la dirección (URL) que contiene el nombre del servidor y la ruta de acceso del sitio.  
   
-##  <a name="overview"></a>Visión  
+##  <a name="overview"></a>Información general del <a name="overview"></a>  
  Una instalación inicial de Servicios de Excel especifica 'http://' como su ubicación de confianza, lo que significa que los libros de cualquier sitio de la granja se pueden abrir en el servidor. Si requiere un control más estrecho sobre las ubicaciones que se consideren de confianza, puede crear nuevas ubicaciones de confianza que se asignen a sitios concretos de una granja y, a continuación, variar la configuración y los permisos de cada una.  
   
  Crear una nueva ubicación de confianza para los sitios que hospedan los libros PowerPivot es especialmente útil si desea conservar los valores predeterminados para el resto de la granja, mientras aplica valores diferentes que funcionan mejor para el acceso a datos PowerPivot. Por ejemplo, una ubicación de confianza que esté optimizada para los libros PowerPivot podría tener un tamaño de libro máximo de 50 MB, mientras que el resto de la granja utiliza el valor predeterminado de 10 MB.  
   
  Se recomienda crear una ubicación de confianza si está utilizando las bibliotecas de Galerías de PowerPivot para ofrecer una vista previa de los libros publicados y encuentra advertencias en la actualización de datos en lugar de la imagen de la vista previa que esperaba. La Galería de PowerPivot representa imágenes en miniatura de los informes y los libros utilizando los datos y la información de la presentación dentro del documento. Si la opción Avisar al actualizar está habilitada para una ubicación de confianza, la Galería de PowerPivot podría no tener los permisos necesarios para realizar la actualización, con lo que aparecería un error en lugar de la imagen en miniatura. Si se agrega un sitio que contiene la Galería de PowerPivot como una nueva ubicación de confianza, es posible que se elimine este problema.  
   
-##  <a name="create"></a>Crear una ubicación de confianza para el acceso a datos PowerPivot  
+##  <a name="create-a-trusted-location-for-powerpivot-data-access"></a><a name="create"></a>Crear una ubicación de confianza para el acceso a datos PowerPivot  
   
-1.  En administración central, en administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
+1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
 2.  Haga clic en la aplicación de servicio de Servicios de Excel.  
   

@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251729"
 ---
 # <a name="data-quality-client-home-screen"></a>Página de inicio del cliente de calidad de datos
@@ -46,7 +46,7 @@ ms.locfileid: "75251729"
  **Nuevo proyecto de calidad de datos**  
  Inicie el proyecto de creación de un nuevo proyecto. Este comando abre una página en la que puede identificar el proyecto, asociarlo a una base de conocimiento, mostrar detalles de la base de conocimiento, seleccionar la actividad deseada para el proyecto y, posteriormente, crear el proyecto.  
   
- **Abrir proyecto de calidad de datos**  
+ **Abrir un proyecto de calidad de datos**  
  Abra un proyecto de forma que pueda realizar la limpieza de datos o la búsqueda de coincidencia de datos. Si hace clic en el botón de **Abrir proyecto de calidad de datos** , aparecerá la página **Abrir proyecto de calidad de datos** que muestra una lista de los proyectos existentes con sus propiedades, estado actual, base de conocimiento y detalles de los dominios y reglas de la directiva de búsqueda de coincidencias. Seleccione un proyecto y ábralo desde **Abrir proyecto de calidad de datos**.  
   
  **Proyecto de calidad de datos reciente**  

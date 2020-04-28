@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caeda52d612f4df6672f686e06834de6fef0cc67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75243277"
 ---
 # <a name="search-text-with-wildcards"></a>Buscar texto con caracteres comodín
-  Las expresiones siguientes pueden reemplazar a caracteres o dígitos en el campo **Buscar** del cuadro [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de diálogo **Buscar y reemplazar** .  
+  Las expresiones siguientes pueden reemplazar a caracteres o dígitos en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
   
 #### <a name="to-search-using-wildcards"></a>Para buscar mediante caracteres comodín  
   

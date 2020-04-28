@@ -17,10 +17,10 @@ ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75253510"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
@@ -58,9 +58,9 @@ El proyecto de Azure Migrate se usa para almacenar los metadatos de detección, 
 
     Puede crear un proyecto de Azure Migrate en cualquiera de estas zonas geográficas.
 
-    | **Geográfico**  | **Región de ubicación de almacenamiento** |
+    | **Geografía**  | **Región de ubicación del almacenamiento** |
     | ------------- | ------------- |
-    | Asia | Sudeste Asiático o Asia Oriental |
+    | Asia | Sudeste de Asia o Este de Asia |
     | Europa | Sur de Europa u Oeste de Europa |
     | Reino Unido | Sur de Reino Unido u Oeste de Reino Unido |
     | Estados Unidos | Centro de EE. UU. u Oeste de EE. UU. 2 |
@@ -118,7 +118,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
 2. Seleccione **Next** (Siguiente).
 
-### <a name="add-databases-to-assess"></a>Agregar bases de datos para evaluar
+### <a name="add-databases-to-assess"></a>Adición de bases de datos para evaluar
 
 1. Seleccione **Agregar orígenes** para abrir el menú desplegable conexión.
 2. Escriba el nombre de la instancia de SQL Server, elija el tipo de autenticación, establezca las propiedades de conexión correctas y, a continuación, seleccione **conectar**.
@@ -135,7 +135,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
 
    ![Azure Migrate-Data Migration Assistant-pantalla de resultados de la revisión](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
-6. Inicie sesión en el Portal de Azure.
+6. Inicie sesión en Azure Portal.
 
    ![Azure Migrate-Data Migration Assistant-pantalla de resultados de la revisión](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 

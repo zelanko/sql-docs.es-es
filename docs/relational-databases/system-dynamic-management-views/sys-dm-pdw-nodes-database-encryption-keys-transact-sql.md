@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c319259d8997db2ff39d90b408056d03eb008782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401638"
 ---
 # <a name="sysdm_pdw_nodes_database_encryption_keys-transact-sql"></a>Sys. dm_pdw_nodes_database_encryption_keys (Transact-SQL)
@@ -36,13 +36,13 @@ ms.locfileid: "74401638"
 |key_algorithm|**VARCHAR (?)**|Muestra el algoritmo utilizado por la clave.|  
 |key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbin**|Muestra la huella digital del sistema de cifrado.|  
-|percent_complete|**impuestos**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
+|percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|  
 |node_id|**int**|Identificador numérico único asociado al nodo.|  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  En el ejemplo siguiente se `sys.dm_pdw_nodes_database_encryption_keys` combinan las tablas del sistema para indicar el estado de cifrado de cada nodo de las bases de datos protegidas por TDE.  
   
 ```  
@@ -63,7 +63,7 @@ ORDER BY D.database_id, PD.pdw_node_ID;
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)   
  [CREAR la clave de CIFRAdo de base de datos &#40;Transact-SQL&#41;](../../t-sql/statements/create-database-encryption-key-transact-sql.md)   
  [ALTER DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-encryption-key-transact-sql.md)   
- [QUITAR la clave de CIFRAdo de base de datos &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
+ [DROP DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-encryption-key-transact-sql.md)  
   
   
 

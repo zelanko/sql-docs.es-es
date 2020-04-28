@@ -13,10 +13,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 3b05177fb6cf11d6224d760f2d301212d58307d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74957166"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar una clave maestra de base de datos
@@ -30,11 +30,11 @@ ms.locfileid: "74957166"
   
      [Seguridad](#Security)  
   
--   [Para restaurar la clave maestra de base de datos mediante Transact-SQL](#SSMSProcedure)  
+-   [Para restaurar la clave maestra de una base de datos utilizando Transact-SQL](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Al restaurar la clave maestra, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descifra todas las claves cifradas con la clave maestra actualmente activa y cifra estas claves con la clave maestra restaurada. Esta operación requiere un uso intensivo de recursos, por lo que debe programarse durante un período de baja demanda. Si la clave maestra de base de datos no se encuentra abierta, no puede abrirse o alguna de las claves cifradas con ella no pueden descifrarse, la operación de restauración no se puede realizar.  
   
@@ -44,12 +44,12 @@ ms.locfileid: "74957166"
   
 -   Si no hay una clave maestra en la base de datos actual, RESTORE MASTER KEY creará una clave maestra. La nueva clave maestra no se cifrará automáticamente con la clave maestra de servicio.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Necesita el permiso CONTROL en la base de datos.  
   
-##  <a name="SSMSProcedure"></a>Usar SQL Server Management Studio con Transact-SQL  
+##  <a name="using-sql-server-management-studio-with-transact-sql"></a><a name="SSMSProcedure"></a>Usar SQL Server Management Studio con Transact-SQL  
   
 #### <a name="to-restore-the-database-master-key"></a>Para restaurar la clave maestra de una base de datos  
   

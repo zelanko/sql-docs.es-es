@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef00476e7c469a98532e58302c560c805669421d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74683587"
 ---
 # <a name="powerpivot-for-sharepoint-ssas"></a>PowerPivot para SharePoint (SSAS)
@@ -53,12 +53,12 @@ ms.locfileid: "74683587"
   
  Una instancia de servidor de Analysis Services en modo integrado de SharePoint completa la implementación. Carga, consulta, y descarga los datos. También procesa los datos si el libro se configura para la actualización de datos PowerPivot.  Cada instancia está unida estrechamente al Servicio de sistema de PowerPivot local que forma parte de la misma instalación.  
   
-##  <a name="bkmk_RelatedContent"></a> En esta sección  
+##  <a name="in-this-section"></a><a name="bkmk_RelatedContent"></a>En esta sección  
  [Administración y configuración del servidor PowerPivot en Administración central](power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
  [Configuración de PowerPivot mediante Windows PowerShell](power-pivot-configuration-using-windows-powershell.md)  
   
- [PowerPivot Configuration Tools](power-pivot-configuration-tools.md)  
+ [Herramientas de configuración de PowerPivot](power-pivot-configuration-tools.md)  
   
  [Autenticación y autorización de PowerPivot](power-pivot-authentication-and-authorization.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "74683587"
 ## <a name="additional-topics"></a>Otros temas  
  [Actualizar PowerPivot para SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)  
   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [Instalación de PowerPivot para SharePoint 2013](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
  [Referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)  
   

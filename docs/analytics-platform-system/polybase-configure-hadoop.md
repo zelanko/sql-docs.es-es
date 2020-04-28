@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ms.openlocfilehash: dc796ff58c5320e60011dc46dd45468177a98ed8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75245392"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Configurar PolyBase para obtener acceso a datos externos en Hadoop
 
 En el artículo se explica cómo usar polybase en un dispositivo APS para consultar datos externos en Hadoop.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 PolyBase es compatible con dos proveedores de Hadoop: Hortonworks Data Platform (HDP) y Cloudera Distributed Hadoop (CDH). Hadoop sigue el patrón “Principal.Secundaria.Versión” para sus revisiones nuevas y se admiten todas las versiones dentro de una revisión principal y secundaria compatible. Se admiten los siguientes proveedores de Hadoop:
  - Hortonworks HDP 1.3 en Linux y Windows Server  
@@ -49,7 +49,7 @@ En primer lugar, configure APS para usar su proveedor de Hadoop específico.
 
 2. Reinicie la región APS mediante la página estado del servicio en el [Configuration Manager del dispositivo](launch-the-configuration-manager.md).
   
-## <a id="pushdown"></a>Habilitar el cálculo de aplicación  
+## <a name="enable-pushdown-computation"></a><a id="pushdown"></a> Habilitar el cálculo de la aplicación  
 
 Para mejorar el rendimiento de las consultas, habilite el cálculo de la aplicación para el clúster de Hadoop:  
   
@@ -227,7 +227,7 @@ Para consultar los datos en el origen de datos de Hadoop, debe definir una tabla
    WITH IDENTITY = '<hadoop_user_name>', Secret = '<hadoop_password>';  
    ```
 
-3. Cree un origen de datos externo con [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
+3. Cree un origen de datos externo con [Crear origen de datos externo](../t-sql/statements/create-external-data-source-transact-sql.md).
 
    ```sql
    -- LOCATION (Required) : Hadoop Name Node IP address and port.  

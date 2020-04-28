@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401493"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Adquisición y configuración de un servidor de copia de seguridad para almacenamiento de datos paralelos
 En este artículo se describe cómo configurar un sistema de Windows que no es de aplicación como un servidor de copia de seguridad para su uso con las características de copia de seguridad y restauración de Analytics Platform System (APS) y almacenamiento de datos paralelos (PDW).  
   
   
-## <a name="Basics"></a>Aspectos básicos del servidor de copia de seguridad  
+## <a name="backup-server-basics"></a><a name="Basics"></a>Aspectos básicos del servidor de copia de seguridad  
 El servidor de copia de seguridad:  
   
 -   Lo proporciona y administra su propio equipo de ti.  
@@ -35,12 +35,12 @@ El servidor de copia de seguridad:
   
 -   Hospeda un recurso compartido de archivos de copia de seguridad, que es un recurso compartido de archivos de Windows que usa el protocolo de red de nivel de aplicación de bloque de mensajes del servidor (SMB). Los permisos de recurso compartido de archivos de copia de seguridad proporcionan a un usuario de dominio de Windows (normalmente, un usuario de copia de seguridad dedicado) la capacidad de realizar operaciones de copia de seguridad y restauración en el recurso compartido. Las credenciales de nombre de usuario y contraseña del usuario de dominio de Windows se almacenan en PDW para que PDW pueda realizar operaciones de copia de seguridad y restauración en el recurso compartido de archivos de copia de seguridad.  
   
-## <a name="Step1"></a>Paso 1: determinar los requisitos de capacidad  
+## <a name="step-1-determine-capacity-requirements"></a><a name="Step1"></a>Paso 1: determinar los requisitos de capacidad  
 Los requisitos del sistema para el servidor de copia de seguridad dependen casi por completo de su propia carga de trabajo. Antes de adquirir o aprovisionar un servidor de copia de seguridad, debe averiguar los requisitos de capacidad. No es necesario que el servidor de copia de seguridad esté dedicado únicamente a las copias de seguridad, siempre y cuando se controlen los requisitos de rendimiento y almacenamiento de la carga de trabajo. También puede tener varios servidores de copia de seguridad para hacer una copia de seguridad y restaurar cada base de datos en uno de varios servidores.  
   
 Use la [hoja de cálculo de planeamiento](backup-capacity-planning-worksheet.md) de la capacidad del servidor de copia de seguridad para determinar los requisitos de capacidad.  
   
-## <a name="Step2"></a>Paso 2: adquisición del servidor de copia de seguridad  
+## <a name="step-2-acquire-the-backup-server"></a><a name="Step2"></a>Paso 2: adquisición del servidor de copia de seguridad  
 Ahora que comprende mejor sus requisitos de capacidad, puede planear los servidores y los componentes de red que necesitará comprar o aprovisionar. Incorpore la siguiente lista de requisitos en el plan de compra y, a continuación, compre el servidor o aprovisione un servidor existente.  
   
 ### <a name="software-requirements"></a>Requisitos de software  
@@ -61,7 +61,7 @@ Aunque no es necesario, InfiniBand es el tipo de conexión recomendado para los 
   
 3.  Compre dos cables FDR InfiniBand para una tarjeta de puerto doble o un cable de 1 FDR InfiniBand para una tarjeta de puerto único. Los cables FDR InfiniBand conectarán el servidor de carga a la red InfiniBand de la aplicación. La longitud del cable depende de la distancia entre el servidor de carga y los conmutadores de la aplicación InfiniBand, de acuerdo con su entorno.  
   
-## <a name="Step3"></a>Paso 3: conectar el servidor a las redes InfiniBand  
+## <a name="step-3-connect-the-server-to-the-infiniband-networks"></a><a name="Step3"></a>Paso 3: conectar el servidor a las redes InfiniBand  
 Siga estos pasos para conectar el servidor de carga a la red InfiniBand. Si el servidor no está usando la red InfiniBand, omita este paso.  
   
 1.  Bastidor el servidor lo suficientemente cerca del dispositivo para que pueda conectarlo a la red InfiniBand de la aplicación.  
@@ -76,7 +76,7 @@ Siga estos pasos para conectar el servidor de carga a la red InfiniBand. Si el s
   
 5.  Configure las opciones de InfiniBand y DNS para los adaptadores de red. Para obtener instrucciones de configuración, consulte Configuración de [adaptadores de red InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Paso 4: configurar el recurso compartido de archivos de copia de seguridad  
+## <a name="step-4-configure-the-backup-file-share"></a><a name="Step4"></a>Paso 4: configurar el recurso compartido de archivos de copia de seguridad  
 PDW tendrá acceso al servidor de copia de seguridad a través de un recurso compartido de archivos UNC. Para configurar el recurso compartido de archivos:  
   
 1.  Cree una carpeta en el servidor de copia de seguridad para almacenar las copias de seguridad.  
@@ -101,7 +101,7 @@ PDW tendrá acceso al servidor de copia de seguridad a través de un recurso com
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Paso 5: Inicio de la copia de seguridad de los datos  
+## <a name="step-5-start-backing-up-your-data"></a><a name="Step5"></a>Paso 5: Inicio de la copia de seguridad de los datos  
 Ahora está listo para empezar a realizar copias de seguridad de los datos en el servidor de copia de seguridad.  
   
 Para realizar una copia de seguridad de los datos, utilice un cliente de consultas para conectarse a PDW de SQL Server y, a continuación, enviar los comandos BACKUP DATABASE o RESTOre DATABASE. Utilice la cláusula DISK = para especificar el servidor de copia de seguridad y la ubicación de copia de seguridad.  
@@ -118,13 +118,13 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Para más información, consulte: 
+Para obtener más información, consulte: 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   
 -   [RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
-## <a name="Security"></a>Avisos de seguridad  
+## <a name="security-notices"></a><a name="Security"></a>Avisos de seguridad  
 El servidor de copia de seguridad no está unido al dominio privado del dispositivo. Está en su propia red y no hay ninguna relación de confianza entre su dominio y el dominio de la aplicación privada.  
   
 Puesto que las copias de seguridad de PDW no se almacenan en el dispositivo, el equipo de ti es responsable de administrar todos los aspectos de la seguridad de copia de seguridad. Por ejemplo, esto incluye la administración de la seguridad de los datos de copia de seguridad, la seguridad del servidor usada para almacenar copias de seguridad y la seguridad de la infraestructura de red que conecta el servidor de copia de seguridad al dispositivo APS.  
@@ -150,5 +150,5 @@ Las operaciones en el servidor de carga pueden usar una ruta de acceso UNC para 
 - En el servidor de carga, establezca la siguiente opción de directiva de grupo en configuración de Seguridad\directivas Locales\opciones de seguridad: cliente de red de Microsoft: firmar digitalmente las comunicaciones (siempre): habilitado.  
   
 ## <a name="see-also"></a>Consulte también  
-[Copias de seguridad y restauración](backup-and-restore-overview.md)  
+[Copia de seguridad y restauración](backup-and-restore-overview.md)  
   

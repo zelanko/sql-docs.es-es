@@ -32,10 +32,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7427de92691a2d5c0a92aac55ac16f47dd2ef6b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75232242"
 ---
 # <a name="coding-user-defined-types"></a>Codificar tipos definidos por el usuario
@@ -65,13 +65,10 @@ using Microsoft.SqlServer.Server;
 ## <a name="specifying-attributes"></a>Especificar atributos  
  Los atributos determinan el modo de usar la serialización para construir la representación de almacenamiento de los UDT y para transmitirlos por valor al cliente.  
   
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` es obligatorio. El atributo `Serializable` es opcional. También puede especificar `Microsoft.SqlServer.Server.SqlFacetAttribute` para proporcionar información acerca del tipo de valor devuelto de un UDT. Para obtener más información, vea [Atributos personalizados para las rutinas CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
+ Se necesita `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`. El atributo `Serializable` es opcional. También puede especificar `Microsoft.SqlServer.Server.SqlFacetAttribute` para proporcionar información acerca del tipo de valor devuelto de un UDT. Para obtener más información, vea [Atributos personalizados para las rutinas CLR](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md).  
   
 ### <a name="point-udt-attributes"></a>Atributos del UDT Point  
- 
-  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` establece el formato de almacenamiento del UDT `Point` en `Native`. 
-  `IsByteOrdered` se establece en `true`, lo que garantiza que los resultados de las operaciones de comparación en SQL Server sean los mismos que si se hubiesen realizado las mismas operaciones en código administrado. El UDT implementa la interfaz `System.Data.SqlTypes.INullable` para que se tenga en cuenta el valor NULL de los UDT.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` establece el formato de almacenamiento del UDT `Point` en `Native`. `IsByteOrdered` se establece en `true`, lo que garantiza que los resultados de las operaciones de comparación en SQL Server sean los mismos que si se hubiesen realizado las mismas operaciones en código administrado. El UDT implementa la interfaz `System.Data.SqlTypes.INullable` para que se tenga en cuenta el valor NULL de los UDT.  
   
  En el siguiente fragmento de código se muestran los atributos del UDT `Point`.  
   
@@ -566,8 +563,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Indica si se llama al método cuando se especifican argumentos de entrada de referencia NULL. El valor predeterminado es `true`.  
   
 ### <a name="example"></a>Ejemplo  
- La propiedad `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` permite marcar un método que admite un cambio en el estado de una instancia de un UDT. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite que el usuario establezca dos propiedades UDT en la cláusula SET de una instrucción UPDATE. Sin embargo, puede tener un método marcado como mutador que cambie los dos miembros.  
+ La propiedad `Microsoft.SqlServer.Server.SqlMethodAttribute.IsMutator` permite marcar un método que admite un cambio en el estado de una instancia de un UDT. [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite que el usuario establezca dos propiedades UDT en la cláusula SET de una instrucción UPDATE. Sin embargo, puede tener un método marcado como mutador que cambie los dos miembros.  
   
 > [!NOTE]  
 >  No se permite el uso de métodos mutadores en las consultas. Solo puede llamarse a estos métodos en instrucciones de asignación o en instrucciones de modificación de datos. Si un método marcado como mutador no devuelve `void` (o no es un `Sub` en Visual Basic), se produce un error en CREATE TYPE.  
@@ -604,7 +600,7 @@ public void Rotate(double anglex, double angley, double anglez)
  Al implementar un UDT con un formato definido por el usuario, debe implementar los métodos `Read` y `Write` que implementan la interfaz Microsoft.SqlServer.Server.IBinarySerialize para controlar cómo serializar y deserializar los datos UDT. También debe especificar la propiedad `MaxByteSize` de `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`.  
   
 ### <a name="the-currency-udt"></a>El UDT Currency  
- A partir de `Currency`, el UDT [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se incluye con los ejemplos CLR que pueden instalarse con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+ A partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el UDT `Currency` se incluye con los ejemplos CLR que pueden instalarse con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  El UDT `Currency` permite administrar cantidades de dinero en el sistema monetario de una referencia cultural determinada. Debe definir dos campos: un campo `string` para `CultureInfo`, que especifica quién emitió la moneda (por ejemplo, es-es) y un campo `decimal` para `CurrencyValue`, la cantidad de dinero.  
   

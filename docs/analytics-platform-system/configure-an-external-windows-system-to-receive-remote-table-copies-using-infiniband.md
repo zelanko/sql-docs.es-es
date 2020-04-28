@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 837d41cc929d90b2494682645127f985b5768546
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401313"
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband---parallel-data-warehouse"></a>Configuración de un sistema externo de Windows para recibir copias de la tabla remota mediante el almacenamiento de datos de InfiniBand-Parallel
@@ -33,7 +33,7 @@ Antes de configurar el sistema externo de Windows, debe:
   
 3.  Compre cables InfiniBand y un adaptador de red InfiniBand del fabricante del hardware del dispositivo. Se recomienda adquirir un adaptador de red con dos puertos para la tolerancia a errores al recibir los datos exportados. Se recomienda un adaptador de red de dos puertos, pero no es un requisito.  
   
-## <a name="HowToWindows"></a>Configurar un sistema externo de Windows para recibir copias de la tabla remota  
+## <a name="configure-an-external-windows-system-to-receive-remote-table-copies"></a><a name="HowToWindows"></a>Configurar un sistema externo de Windows para recibir copias de la tabla remota  
 Para configurar el sistema externo de Windows, siga estos pasos:  
   
 1.  Instale el adaptador de red InfiniBand en el sistema Windows.  

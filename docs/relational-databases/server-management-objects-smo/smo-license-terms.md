@@ -10,16 +10,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2299b7c281183998ec36bd14b82af1fb2dde7c95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75238650"
 ---
 # <a name="sql-server-shared-management-objects-smo-license-terms"></a>Términos de licencia de los objetos de administración compartida (SMO) de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DE SOFTWARE DE MICROSOFT
+## <a name="microsoft-software-license-terms"></a>TÉRMINOS DE LICENCIA DEL SOFTWARE DE MICROSOFT
 **OBJETOS DE ADMINISTRACIÓN COMPARTIDA DE MICROSOFT SQL SERVER 2017**
 
 ---
@@ -31,7 +31,7 @@ Los presentes términos de licencia constituyen un contrato entre Microsoft Corp
 
 de Microsoft para este software, a menos que haya otros términos que acompañen a dichos elementos. En tal caso, se aplicarán esos otros términos.
 
-**AL USAR EL SOFTWARE, ACEPTA ESTOS TÉRMINOS. SI NO LOS ACEPTA, NO USE EL SOFTWARE.**
+**AL HACER USO DEL SOFTWARE, ESTARÁ ACEPTANDO ESTOS TÉRMINOS. SI NO LOS ACEPTA, NO USE EL SOFTWARE.**
 
 ---
 **Si cumple con estos términos de licencia, tendrá los derechos siguientes.**
@@ -40,7 +40,7 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 &nbsp;&nbsp;Puede instalar y usar cualquier número de copias del software en sus dispositivos para diseñar, desarrollar y probar sus programas.
 
-**2. REQUISITOS DE LICENCIA Y/O DERECHOS DE USO ADICIONALES.**
+**2.    REQUISITOS DE LICENCIA Y/O DERECHOS DE USUARIO ADICIONALES**
 
 &nbsp;&nbsp;**Código. distribuible.**
 
@@ -73,23 +73,23 @@ de Microsoft para este software, a menos que haya otros términos que acompañen
 
 **4. AVISOS DE TERCEROS.** El software puede incluir componentes de terceros que tengan avisos legales independientes o que se rijan por otros contratos, que pueden estar descritos en el archivo ThirdPartyNotices que acompaña al software.  Aunque estos componentes se rijan por otros contratos, también se aplican las limitaciones, la declinación de responsabilidades y las exclusiones de daños siguientes.
 
-**5. COPIA DE SEGURIDAD.** Puede realizar una única copia de seguridad del software. Solo podrá utilizarla para volver a instalar el software.
+**5.    COPIA DE SEGURIDAD.** Puede realizar una única copia de seguridad del software. Solo podrá utilizarla para volver a instalar el software.
 
-**6. DOCUMENTACIÓN.** Toda persona que tenga acceso válido a su equipo o a la red interna puede copiar y utilizar la documentación a efectos internos de consulta.
+**6.    DOCUMENTACIÓN.** Toda persona que tenga acceso válido a su equipo o a la red interna puede copiar y utilizar la documentación a efectos internos de consulta.
 
-**7. RESTRICCIONES DE EXPORTACIÓN.** El software está sujeto a las leyes y a los reglamentos en materia de exportación de Estados Unidos. Debe cumplir con todas las leyes y disposiciones en materia de exportación internacionales y nacionales que sean de aplicación para el software. Estas leyes incluyen restricciones de los destinos, usuarios finales y uso final. Para obtener más información, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)vea.
+**7.    RESTRICCIONES EN MATERIA DE EXPORTACIÓN.** El software está sujeto a las leyes y a los reglamentos en materia de exportación de Estados Unidos. Debe cumplir con todas las leyes y disposiciones en materia de exportación internacionales y nacionales que sean de aplicación para el software. Estas leyes incluyen restricciones de los destinos, usuarios finales y uso final. Para obtener más información, [https://www.microsoft.com/exporting](https://www.microsoft.com/exporting)vea.
 
-**8. SERVICIOS DE SOPORTE TÉCNICO.** Dado que este software es "tal cual", no podemos proporcionar servicios de soporte técnico para él.
+**8.    SERVICIOS DE SOPORTE TÉCNICO.** Because this software is "as is," we may not provide support services for it.
 
 **9. contrato completo**. Este contrato, así como los términos de suplementos, actualizaciones, servicios basados en Internet y servicios de soporte técnico que use, constituyen el contrato completo del software y los servicios de soporte técnico.
 
-**10. LEGISLACIÓN APLICABLE.**
+**10.   LEGISLACIÓN APLICABLE.**
 
 &nbsp;&nbsp;**a. Estados Unidos.** Si adquirió el software en los Estados Unidos, es la ley estatal de Washington la que rige la interpretación de este contrato y se aplica a las reclamaciones por incumplimiento del mismo, independientemente del conflicto de principios legales. Para el resto de reclamaciones, será aplicable la legislación de su estado de residencia, incluidas las reclamaciones en virtud de las leyes estatales en materia de protección al consumidor, competencia desleal y responsabilidad extracontractual.
 
 &nbsp;&nbsp;**b. fuera del Estados Unidos.** Si adquirió el software en otro país, se aplicarán las leyes del país en el que usted vive.
 
-**11. EFECTO LEGAL.** En este contrato se describen determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.
+**11.   EFECTO LEGAL.** En este contrato se describen determinados derechos legales. Usted puede tener otros derechos conforme a las leyes de su estado o país. También puede tener derechos respecto a la parte de la que adquirió el software. Este contrato no cambia sus derechos bajo las leyes de su país o estado si dichas leyes no permiten que así lo haga.
 
 **12. RENUNCIA DE GARANTÍA. EL SOFTWARE SE CONCEDE BAJO LICENCIA "TAL CUAL". USTED ASUME EL RIESGO DE USARLA. MICROSOFT NO PROPORCIONA GARANTÍAS NI CONDICIONES EXPRESAS. PUEDE TENER DERECHOS DE CONSUMIDOR ADICIONALES O GARANTÍAS ESTATUTARIAS EN VIRTUD DE LA LEGISLACIÓN LOCAL QUE ESTE CONTRATO NO PUEDE CAMBIAR. EN LA MEDIDA EN QUE LO PERMITA LA LEGISLACIÓN LOCAL, MICROSOFT EXCLUYE LAS GARANTÍAS IMPLÍCITAS DE COMERCIABILIDAD, IDONEIDAD PARA UN PROPÓSITO PARTICULAR Y AUSENCIA DE INFRACCIÓN.**
 

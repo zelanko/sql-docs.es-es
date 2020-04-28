@@ -18,10 +18,10 @@ ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ca4364709462eee9df62baa8193dec9f8ea36241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74866052"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "74866052"
 |**subscriber_db**|**sysname**|El nombre de la base de datos de suscripciones.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = extracción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónimo.|  
 |**sync_type**|**tinyint**|Tipo de sincronización:<br /><br /> **1** = automático.<br /><br /> **2** = sin sincronización.|  
-|**estatus**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
+|**status**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  
 |**subscription_seqno**|**varbinary(16)**|Número de secuencia de la transacción de instantáneas.|  
 |**snapshot_seqno_flag**|**bit**|Indica el origen del número de secuencia de la transacción de instantáneas, donde el valor **1** significa que **subscription_seqno** es el número de secuencia de la instantánea.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  

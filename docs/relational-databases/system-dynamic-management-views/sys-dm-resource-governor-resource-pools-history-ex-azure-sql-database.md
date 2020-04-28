@@ -21,10 +21,10 @@ author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: ae34c89fd570921bec26d8a11537c58b6bba2302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247309"
 ---
 # <a name="sysdm_resource_governor_resource_pools_history_ex-transact-sql"></a>Sys. dm_resource_governor_resource_pools_history_ex (Transact-SQL)
@@ -36,7 +36,7 @@ Devuelve una instantánea en un intervalo de 20 segundos para los últimos 32 mi
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|int|Identificador del grupo de recursos. No admite valores NULL.
-|**Name**|sysname|Nombre del grupo de recursos. No admite valores NULL.|
+|**name**|sysname|Nombre del grupo de recursos. No admite valores NULL.|
 |**snapshot_time**|datetime2|Fecha y hora de la instantánea de estadísticas del grupo de recursos tomada|
 |**duration_ms**|int|Duración entre la instantánea actual y la anterior|
 |**statistics_start_time**|datetime2|La hora en que se restablecieron las estadísticas para este grupo. No admite valores NULL.|
@@ -135,5 +135,5 @@ select snapshot_time, name, cap_vcores_used_percent,
 ## <a name="see-also"></a>Consulte también
 
 - [Gobierno de velocidad de registro de traducción](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [Límites de recursos de DTU de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Límites de recursos de núcleo virtual de grupo elástico](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Límites de recursos de DTU de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Límites de recursos de núcleo virtual de grupos elásticos](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

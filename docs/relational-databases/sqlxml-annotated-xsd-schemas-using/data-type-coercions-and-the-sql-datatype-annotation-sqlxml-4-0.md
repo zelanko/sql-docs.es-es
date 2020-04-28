@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257474"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversiones de tipos de datos y la anotación sql: DataType (SQLXML 4,0)
@@ -42,12 +42,12 @@ ms.locfileid: "75257474"
   
 |Tipo de datos XSD|Conversión de SQL Server|  
 |-------------------|---------------------------|  
-|Boolean|CONVERT(bit, COLUMN)|  
+|Booleano|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Tiempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Todos los demás|Ninguna conversión adicional|  
   
 > [!NOTE]  
@@ -58,32 +58,32 @@ ms.locfileid: "75257474"
   
 |Tipos de datos de SQL Server|Tipo de datos XSD|  
 |--------------------------|-------------------|  
-|**BIGINT**|**tal**|  
+|**bigint**|**long**|  
 |**binary**|**base64Binary**|  
 |**bit**|**boolean**|  
-|**char**|**String@**|  
+|**char**|**string**|  
 |**datetime**|**dateTime**|  
-|**Decimal**|**Decimal**|  
+|**decimal**|**decimal**|  
 |**float**|**double**|  
-|**impresión**|**base64Binary**|  
+|**image**|**base64Binary**|  
 |**int**|**int**|  
-|**money**|**Decimal**|  
-|**nchar**|**String@**|  
-|**ntext**|**String@**|  
-|**nvarchar**|**String@**|  
-|**alfanumérico**|**Decimal**|  
-|**impuestos**|**float**|  
+|**money**|**decimal**|  
+|**nchar**|**string**|  
+|**ntext**|**string**|  
+|**nvarchar**|**string**|  
+|**numeric**|**decimal**|  
+|**real**|**float**|  
 |**smalldatetime**|**dateTime**|  
 |**smallint**|**short**|  
-|**SMALLMONEY**|**Decimal**|  
-|**sql_variant**|**String@**|  
-|**sysname**|**String@**|  
-|**negrita**|**String@**|  
+|**smallmoney**|**decimal**|  
+|**sql_variant**|**string**|  
+|**sysname**|**string**|  
+|**text**|**string**|  
 |**timestamp**|**dateTime**|  
 |**tinyint**|**unsignedByte**|  
 |**varbinary**|**base64Binary**|  
-|**varchar**|**String@**|  
-|**uniqueidentifier**|**String@**|  
+|**varchar**|**string**|  
+|**uniqueidentifier**|**string**|  
   
 ## <a name="sqldatatype-annotation"></a>Anotación sql:datatype  
  La anotación **SQL: DataType** se utiliza para especificar el tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos; esta anotación debe especificarse cuando:  

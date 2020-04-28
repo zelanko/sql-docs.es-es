@@ -10,10 +10,10 @@ ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251707"
 ---
 # <a name="data-quality-projects-dqs"></a>Proyectos de calidad de datos (DQS)
@@ -30,7 +30,7 @@ ms.locfileid: "75251707"
   
 -   Proporciona un asistente que le guiará durante las actividades de limpieza y búsqueda de coincidencias, y le permitirá exportar los datos al lugar de su elección: una base de datos de SQL Server o un archivo .csv. El administrador de datos puede utilizar el proyecto de calidad de datos para ejecutar y controlar los pasos de las actividades de limpieza (tanto la asistida por PC como la interactiva) y búsqueda de coincidencias.  
   
-##  <a name="Cleansing"></a>Proyecto de calidad de datos: actividad de limpieza  
+##  <a name="data-quality-project-cleansing-activity"></a><a name="Cleansing"></a>Proyecto de calidad de datos: actividad de limpieza  
  Un proyecto de calidad de datos de limpieza permite limpiar los datos de origen basándose en una base de conocimiento. La actividad de limpieza de datos de DQS es un proceso de dos pasos:  
   
 1.  Un proceso de limpieza de datos *asistido por PC* que analiza los datos de origen comparándolos con el conocimiento de la base de conocimiento y propone cambios. DQS organiza los datos procesados por categorías (sugerido, nuevo, no válido, corregido y correcto) y los muestra al usuario para su procesamiento posterior.  
@@ -39,7 +39,7 @@ ms.locfileid: "75251707"
   
  Para obtener información detallada acerca de la actividad de limpieza en un proyecto de calidad de datos, vea [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a>Proyecto de calidad de datos: actividad de coincidencia  
+##  <a name="data-quality-project-matching-activity"></a><a name="Matching"></a>Proyecto de calidad de datos: actividad de coincidencia  
  Un proyecto de calidad de datos de búsqueda de coincidencias permite realizar la actividad de búsqueda de coincidencias basándose en la directiva de coincidencia de una base de conocimiento para evitar la duplicación de datos; para ello, se identifican las coincidencias exactas o aproximadas, lo que permite quitar los datos duplicados. Se recomienda limpiar los datos antes de ejecutar en ellos la actividad de búsqueda de coincidencias. Para ello:  
   
 1.  Cree un proyecto de calidad de los datos, seleccione la actividad **Limpieza** , complete la actividad de limpieza de datos con los datos de origen y, a continuación expórtelos a una tabla de una base de datos de SQL Server.  
@@ -50,7 +50,7 @@ ms.locfileid: "75251707"
   
  Para obtener información detallada acerca de la actividad de búsqueda de coincidencias en un proyecto de calidad de datos, vea [Data Matching](../data-quality-services/data-matching.md).  
   
-##  <a name="ProfilingNotification"></a>Generación de perfiles de datos y notificaciones  
+##  <a name="data-profiling-and-notifications"></a><a name="ProfilingNotification"></a>Generación de perfiles de datos y notificaciones  
  Mientras ejecuta las actividades de búsqueda de coincidencias y limpieza en un proyecto de calidad de datos, puede ver estadísticas e información en tiempo real de los datos que DQS está procesando. El proceso de generación de perfiles de datos le ayuda a evaluar la eficacia de los procesos de limpieza y búsqueda de coincidencias, y le permite determinar en qué medida le han ayudado estos procesos a mejorar la calidad de los datos. El proceso de generación de perfiles de DQS proporciona dos dimensiones de calidad de datos: *integridad* (la medida en que los datos están presentes) y *precisión* (la medida en que los datos se pueden utilizar para su uso previsto). Además, en función de la información de los perfiles de datos, el usuario verá notificaciones sobre las medidas que puede tomar para mejorar las operaciones de limpieza de datos y búsqueda de coincidencias de datos. Para obtener información detallada acerca de las notificaciones y la generación de perfiles de datos, vea [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d58ac84e394d7b8dfe342430991f2ddefa678be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74684456"
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Asistencia al usuario en SQL Server Management Studio
-  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o en una ventana externa asociada independiente.  
+  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], la asistencia al usuario está disponible mediante el menú Ayuda y los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. El menú Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] ofrece diferentes rutas a la información sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También proporciona acceso a la comunidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y a los recursos de MSDN Online no disponibles anteriormente desde el entorno de la Ayuda. Además, el entorno de la Ayuda ahora se puede configurar de modo que se inicie dentro del entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o en una ventana externa asociada independiente.  
   
 ## <a name="the-help-interface"></a>La interfaz de la Ayuda  
  El **Contenido** y el **Índice** ofrecen una funcionalidad y una interfaz con las que los usuarios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ya están familiarizados. Las demás opciones son:  
@@ -40,14 +40,14 @@ ms.locfileid: "74684456"
   
      Muestra automáticamente los vínculos a la información relevante mientras los usuarios trabajan en el entorno de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
--   **Favoritos de la ayuda**  
+-   **Favoritos de la Ayuda**  
   
      Almacena marcadores de temas del usuario para facilitar el acceso en otras ocasiones.  
   
  Ayuda sobre la Ayuda (Ayuda de[!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer) vincula a los usuarios con la documentación sobre el Visor de ayuda; sin embargo, los temas se encuentran en una colección independiente de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información acerca del Visor de ayuda, seleccione **Ayuda sobre la Ayuda** en el menú Ayuda de los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener información sobre cómo agregar la colección de temas de ayuda sobre la ayuda a la colección de libros en pantalla, vea [Agregar o quitar la documentación del producto para SQL Server](../2014-toc/index.yml).  
   
 ## <a name="msdn-online-and-sql-server-communities"></a>MSDN Online y comunidades de SQL Server  
- La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede:  
+ La Ayuda de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] también ofrece a los usuarios formas de ponerse en contacto con MSDN Online y con comunidades centradas en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en la Web para obtener información. Puede realizar lo siguiente:  
   
 -   Obtener acceso a las comunidades de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde la página Cómo.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "74684456"
   
 1.  En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], en el menú **Ayuda** , haga clic en **Cómo**.  
   
-2.  Se abrirá la página [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Cómo** . En la barra lateral de vínculos de comunidad, haga clic en el nombre del sitio de la comunidad al que desea obtener acceso.  
+2.  Se abrirá la página [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **Cómo**. En la barra lateral de vínculos de comunidad, haga clic en el nombre del sitio de la comunidad al que desea obtener acceso.  
   
     > [!NOTE]  
     >  El equipo que ejecute [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] debe disponer de una conexión directa a Internet.  

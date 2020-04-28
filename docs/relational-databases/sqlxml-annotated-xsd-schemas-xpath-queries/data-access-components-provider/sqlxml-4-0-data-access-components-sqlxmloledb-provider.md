@@ -19,15 +19,14 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 16e7aead128623f41076034a0fd313fb384038c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75257279"
 ---
 # <a name="sqlxml-40-data-access-components---sqlxmloledb-provider"></a>Componentes de acceso a datos de SQLXML 4.0: proveedor SQLXMLOLEDB
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 incluye tres proveedores de datos que pueden insertar y recuperar datos XML de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
   
 -   proveedor SQLXMLOLEDB  

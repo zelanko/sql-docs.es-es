@@ -17,15 +17,15 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9a5edd3555c2d57cf9d615b7158d034571987cb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75251515"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Acceso a la funcionalidad de SQLXML en el entorno .NET
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Este ejemplo muestra:  
+  En este ejemplo se muestra lo siguiente:  
   
 -   Cómo usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] las clases administradas de SQLXML (Microsoft. Data. SqlXml) para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tener acceso [!INCLUDE[msCoName](../../../includes/msconame-md.md)] a Microsoft en el entorno de .NET Framework.  
   

@@ -18,10 +18,10 @@ ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74412845"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "74412845"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -86,21 +86,21 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**QueueReader**'|Trabajo del Agente de lectura de cola de replicación|  
 |'**ANALYSISQUERY**'|Consulta de Analysis Services (MDX, DMX)|  
 |'**ANALYSISCOMMAND**'|Comando de Analysis Services (XMLA)|  
-|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]ejecución de paquetes|  
+|'**DTS**'|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ejecución de paquetes|  
 |'**PowerShell**'|Script de PowerShell|  
-|'**Tsql**' (predeterminado)|[!INCLUDE[tsql](../../includes/tsql-md.md)]privacidad|  
+|'**Tsql**' (predeterminado)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]|  
   
 `[ @command = ] 'command'`Comandos que va a ejecutar el servicio **SQLServerAgent** a través *del subsistema*. el *comando* es de tipo **nvarchar (Max)** y su valor predeterminado es NULL. El Agente SQL Server proporciona sustitución de tokens, que ofrece la misma flexibilidad que ofrecen las variables al escribir programas de software.  
   
 > [!IMPORTANT]  
 >  Todos los tokens que se usan en pasos de trabajo deben adjuntar ahora una macro de escape; de lo contrario, esos pasos de trabajo producirán un error. Además, ahora debe escribir los nombres de los tokens entre paréntesis y colocar un signo de dólar (`$`) al principio de la sintaxis del token. Por ejemplo:  
 >   
->  `$(ESCAPE_`*nombre de macro*`(DATE))`  
+>  `$(ESCAPE_` *nombreDeMacro* `(DATE))`  
   
  Para obtener más información sobre estos tokens y la actualización de los pasos de trabajo para usar la nueva sintaxis de token, consulte [usar tokens en pasos de trabajo](../../ssms/agent/use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**y **WMI(**_propiedad_**)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
+>  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**. y **WMI (**_propiedad_**)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
 >   
 >  Si necesita usar estos tokens, asegúrese primero de que solo los miembros de los grupos de seguridad de Windows de confianza, como el grupo Administradores, tienen permisos de escritura en el registro de eventos del equipo donde reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, para habilitar estos tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, elija **Propiedades**y, en la página **Sistema de alerta** , active la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .  
   
@@ -112,7 +112,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 |Value|Descripción (acción)|  
 |-----------|----------------------------|  
-|**1** (valor predeterminado)|Salir con éxito|  
+|**1** (predeterminado)|Salir con éxito|  
 |**2**|Salir con error|  
 |**3**|Ir al paso siguiente|  
 |**4**|Vaya al paso *on_success_step_id*|  
@@ -124,7 +124,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |Value|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir con éxito|  
-|**2** (valor predeterminado)|Salir con error|  
+|**2** (predeterminado)|Salir con error|  
 |**3**|Ir al paso siguiente|  
 |**4**|Vaya al paso *on_fail_step_id*|  
   

@@ -10,10 +10,10 @@ ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 94b2529323e5a075b6fd423fd8c69ece7a0535c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258851"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
@@ -22,9 +22,9 @@ ms.locfileid: "75258851"
 
   En este tema se describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.  
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe saber o recordar la contraseña de la clave maestra de base de datos que proporcionó durante la instalación del servidor DQS.  
   
@@ -32,15 +32,15 @@ ms.locfileid: "75258851"
   
 -   Asegúrese de que ningún usuario haya iniciado sesión en el servidor DQS.  
   
-###  <a name="Security"></a> Seguridad  
+###  <a name="security"></a><a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permisos  
+####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
 -   La cuenta de usuario de Windows debe ser miembro del rol fijo de servidor sysadmin en la instancia de SQL Server para realizar las operaciones de copia de seguridad y restauración.  
   
 -   Debe disponer del rol dqs_administrator en la base de datos DQS_MAIN para terminar las actividades o detener los procesos en ejecución en DQS.  
   
-##  <a name="BackupRestore"></a>Copia de seguridad y restauración de bases de datos de DQS  
+##  <a name="backup-and-restore-dqs-databases"></a><a name="BackupRestore"></a>Copia de seguridad y restauración de bases de datos de DQS  
   
 1.  Inicie Microsoft SQL Server Management Studio y conéctese a la instancia adecuada de SQL Server.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "75258851"
   
     ```  
   
-12. Presione F5 para ejecutar las instrucciones. Compruebe el panel de **resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
+12. Presione F5 para ejecutar las instrucciones. Vea el panel **Resultados** para comprobar que las instrucciones se han ejecutado correctamente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  

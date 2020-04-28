@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 583d7617c0620d5d1ec24d60fbf10435a547616d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401294"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configuración de adaptadores de red InfiniBand para el sistema de plataforma de análisis
 Describe cómo configurar los adaptadores de red InfiniBand en un servidor cliente que no es de dispositivo para conectarse al nodo de control en el almacenamiento de datos paralelo (PDW). Siga estas instrucciones para la conectividad básica y para lograr alta disponibilidad, de modo que la carga, la copia de seguridad y otros procesos se conecten automáticamente a la red InfiniBand activa.  
   
-## <a name="Basics"></a>Descripción  
+## <a name="description"></a><a name="Basics"></a>Descripción  
 Estas instrucciones muestran cómo encontrar y, a continuación, establecer las direcciones IP de InfiniBand y las máscaras de subred correctas en el servidor conectado a InfiniBand. También se explica cómo configurar el servidor para que use el DNS del dispositivo APS para que la conexión se resuelva en la red InfiniBand activa.  
   
 Para lograr una alta disponibilidad, APS tiene dos redes InfiniBand, una activa y otra pasiva. Cada red InfiniBand tiene una dirección IP diferente para el nodo de control. Si la red de InfiniBand activa deja de funcionar, la red InfiniBand pasiva se convierte en la red activa. Cuando esto sucede, un script o un proceso se conecta automáticamente a la red InfiniBand activa sin cambiar los parámetros del script.  
@@ -32,7 +32,7 @@ En concreto, en este artículo:
   
     1.  Si tiene dos adaptadores de red InfiniBand, configure un adaptador con una dirección IP disponible en la primera red InfiniBand denominada TeamIB1 y el otro adaptador con una dirección IP disponible en la segunda red InfiniBand denominada TeamIB2. Use la dirección IP appliance_domain-AD01 TeamIB1 como el servidor DNS preferido y la dirección IP appliance_domain-AD02 TeamIB1 como servidor DNS alternativo para el adaptador de red de TeamIB1. Use la dirección IP appliance_domain-AD01 TeamIB2 como el servidor DNS preferido y la dirección IP appliance_domain-AD02 TeamIB2 como servidor DNS alternativo para el adaptador de red de TeamIB2.  
   
-    2.  Si solo tiene un adaptador de red InfiniBand, configure el adaptador con una dirección IP disponible desde una de las redes InfiniBand. A continuación, configure los servidores DNS preferidos y alternativos en este adaptador mediante appliance_domain-AD01 TeamIB1 y appliance_domain-AD02 TeamIB1 o con appliance_domain-AD01 TeamIB2 y appliance_domain-AD02 TeamIB2 lo que esté en el mismo. red como el adaptador configurado como los servidores DNS preferidos y alternativos respectivamente.  
+    2.  Si solo tiene un adaptador de red InfiniBand, configure el adaptador con una dirección IP disponible desde una de las redes InfiniBand. A continuación, configure los servidores DNS preferidos y alternativos en este adaptador mediante appliance_domain-AD01 TeamIB1 y appliance_domain-AD02 TeamIB1 o usando appliance_domain-AD01 TeamIB2 y appliance_domain-AD02 TeamIB2, lo que esté en la misma red que el adaptador configurado como los servidores DNS preferidos y alternativos respectivamente.  
   
 3.  Configure el adaptador de red de InfiniBand para usar servidores DNS de APS para resolver la conexión a la red InfiniBand activa.  
   
@@ -46,14 +46,14 @@ Por ejemplo, si el nombre de la región de PDW es MyPDW y el nombre del disposit
   
 -   `dwloader -S MYPDW-SQLCTL01`  
   
-## <a name="BeforeBegin"></a>Antes de empezar  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Antes de empezar  
   
 ### <a name="requirements"></a>Requisitos  
 Necesita una cuenta de dominio de aplicación APS para iniciar sesión en el nodo AD01. Por ejemplo, F12345 * \Administrator.  
   
 Necesita una cuenta de Windows en el servidor cliente que tenga permiso para configurar los adaptadores de red.  
   
-### <a name="prerequisites"></a>Prerequisites  
+### <a name="prerequisites"></a>Prerrequisitos  
 En estas instrucciones se da por supuesto que el servidor cliente ya está en bastidor y está conectado a la red InfiniBand. Para obtener instrucciones sobre el montaje en bastidor y el cableado, consulte [adquirir y configurar un servidor de carga](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Notas generales  
@@ -61,7 +61,7 @@ Mediante el uso de SQLCTL01, el DNS del sistema de plataforma de análisis conec
   
 Para satisfacer sus propios requisitos empresariales, también puede unir el servidor cliente a su propio grupo de trabajo o dominio de Windows que no sea de dispositivo.  
   
-## <a name="Sec1"></a>Paso 1: obtener la configuración de red de la aplicación InfiniBand  
+## <a name="step-1-obtain-the-appliance-infiniband-network-settings"></a><a name="Sec1"></a>Paso 1: obtener la configuración de red de la aplicación InfiniBand  
 *Para obtener la configuración de red de la aplicación InfiniBand*  
   
 1.  Inicie sesión en el nodo AD01 del dispositivo con la cuenta appliance_domain \Administrador.  
@@ -96,7 +96,7 @@ Para satisfacer sus propios requisitos empresariales, también puede unir el ser
   
     Para buscar una dirección IP no utilizada, abra una ventana de comandos e intente hacer ping en las direcciones IP dentro del intervalo de direcciones del dispositivo. En este ejemplo, la dirección IP de la red TeamIB2 es 172.16.18.30. Busque una dirección IP que empiece por 172.16.18 que no se use. Por ejemplo, desde la línea de comandos, escriba "ping 172.16.18.254". Si la solicitud de ping no se realiza correctamente, la dirección IP está disponible.  
   
-## <a name="Sec2"></a>Paso 2: configurar la configuración del adaptador de red InfiniBand en el servidor cliente  
+## <a name="step-2-configure-the-infiniband-network-adapter-settings-on-your-client-server"></a><a name="Sec2"></a>Paso 2: configurar la configuración del adaptador de red InfiniBand en el servidor cliente  
 
 ### <a name="notes"></a>Notas  
   
@@ -151,7 +151,7 @@ Para satisfacer sus propios requisitos empresariales, también puede unir el ser
     4.  Establezca el servidor DNS alternativo en la dirección IP de TeamIB2 que anotó anteriormente en el nodo appliance_domain *-AD02.  
   
         > [!NOTE]  
-        > Si solo tiene un adaptador de red, configure los servidores DNS preferidos y alternativos mediante el dispositivo AD01 TeamIB1 y el dispositivo AD02 TeamIB1 como los servidores DNS preferidos y alternativos, respectivamente, o use el dispositivo AD01 TeamIB2 y dispositivo AD02 TeamIB2 como los servidores DNS preferidos y alternativos, dependiendo de si la máquina virtual de AD ha conmutado por error.  
+        > Si solo tiene un adaptador de red, configure los servidores DNS preferidos y alternativos mediante el dispositivo AD01 TeamIB1 y el dispositivo AD02 TeamIB1 como los servidores DNS preferidos y alternativos, o use el dispositivo AD01 TeamIB2 y el dispositivo AD02 TeamIB2 como los servidores DNS preferidos y alternativos, en función de si la máquina virtual de AD ha conmutado por error.  
   
         ![Propiedades del adaptador de red InfiniBand 1](media/network-ib1-properties.png "Propiedades del adaptador de red InfiniBand 1")  
   

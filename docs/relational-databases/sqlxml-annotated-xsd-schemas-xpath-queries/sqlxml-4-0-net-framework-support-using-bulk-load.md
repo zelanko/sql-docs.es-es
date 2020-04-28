@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75252448"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Compatibilidad de SQLXML 4.0 con .NET Framework: utilizar la carga masiva
@@ -111,7 +111,7 @@ ms.locfileid: "75252448"
   
 4.  Inicie Visual Studio.  
   
-5.  Cree una aplicación de consola en C#  
+5.  Cree una aplicación de consola de C#.  
   
 6.  En el menú **proyecto** , seleccione **Agregar referencia**.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "75252448"
      Esto crea la DLL del contenedor administrado (SQLXMLBULKLOADLib.dll) que puede utilizar en el proyecto de .NET Framework. En .NET Framework, puede agregar la referencia del proyecto a la DLL recién creada.  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar la carga masiva de datos XML &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Carga masiva de datos XML &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

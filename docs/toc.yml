@@ -7029,7 +7029,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) >
-      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
+      href: 'https://docs.microsoft.com/analysis-services/analysis-services-overview'
     - name: SQL Server Reporting Services (SSRS) >
       href: reporting-services/index.md
     - name: Master Data Services
@@ -7785,6 +7785,55 @@
               href: azure-data-studio/tutorial-build-custom-insight-sql-server.md
             - name: Copia de seguridad y restauración
               href: azure-data-studio/tutorial-backup-restore-sql-server.md
+        - name: Conceptos
+          items:
+            - name: Extensiones
+              href: azure-data-studio/extensions.md
+              items:
+                - name: Extensión de PostgreSQL
+                  href: azure-data-studio/postgres-extension.md
+                - name: Extensión de virtualización de datos
+                  href: azure-data-studio/data-virtualization-extension.md
+                - name: Agente SQL Server
+                  href: azure-data-studio/sql-server-agent-extension.md
+                - name: Extensión Servidores de administración central de SQL Server
+                  href: azure-data-studio/sql-server-cms-extension.md
+                - name: Extensión dacpac de SQL Server
+                  href: azure-data-studio/sql-server-dacpac-extension.md
+                - name: Importación de SQL Server
+                  href: azure-data-studio/sql-server-import-extension.md
+                - name: SQL Server Profiler
+                  href: azure-data-studio/sql-server-profiler-extension.md
+                - name: Extensión Schema Compare
+                  href: azure-data-studio/schema-compare-extension.md
+                - name: Extensión de PowerShell
+                  href: azure-data-studio/powershell-extension.md
+                - name: Extensión de Instancia administrada
+                  href: azure-data-studio/azure-sql-managed-instance-extension.md
+                - name: Extensión de SandDance
+                  href: azure-data-studio/sanddance-extension.md
+            - name: Creación de extensiones
+              items:
+                - name: Introducción a la extensibilidad
+                  href: azure-data-studio/extensibility.md
+                - name: Creación de extensiones
+                  href: azure-data-studio/extension-authoring.md
+                - name: Creación de una extensión
+                  href: azure-data-studio/tutorial-create-extension.md
+                - name: API de extensibilidad
+                  href: azure-data-studio/extensibility-apis.md
+            - name: Cuaderno
+              items:
+                - name: Introducción a Notebooks
+                  href: azure-data-studio/notebooks-guidance.md
+                - name: Uso del kernel de SQL
+                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
+                - name: Uso del kernel de Python
+                  href: azure-data-studio/notebooks-tutorial-python-kernel.md
+                - name: Kqlmagic
+                  href: azure-data-studio/notebooks-kql-magic.md
+                - name: Administración de un cuaderno
+                  href: azure-data-studio/notebooks-manage-sql-server.md
         - name: Guías paso a paso
           items:
             - name: Paneles y widgets de datos
@@ -7801,55 +7850,14 @@
               href: azure-data-studio/server-groups.md
             - name: Control de código fuente
               href: azure-data-studio/source-control.md
+            - name: Recopilación de datos de uso
+              href: azure-data-studio/usage-data-collection.md
             - name: Configuración de área de trabajo y usuario
               href: azure-data-studio/settings.md
             - name: Autenticación de Windows (Kerberos)
               href: azure-data-studio/enable-kerberos.md
-            - name: Cuaderno
-              items:
-                - name: Introducción a Notebooks
-                  href: azure-data-studio/notebooks-guidance.md
-                - name: Procedimiento para usar el kernel SQL
-                  href: azure-data-studio/notebooks-tutorial-sql-kernel.md
-                - name: Procedimiento para administrar un cuaderno
-                  href: azure-data-studio/notebooks-manage-sql-server.md
             - name: Recopilación de datos de uso
               href: azure-data-studio/usage-data-collection.md
-        - name: Extensiones
-          href: azure-data-studio/extensions.md
-          items:
-            - name: Extensión de PostgreSQL
-              href: azure-data-studio/postgres-extension.md
-            - name: Extensión de virtualización de datos
-              href: azure-data-studio/data-virtualization-extension.md
-            - name: Agente SQL Server
-              href: azure-data-studio/sql-server-agent-extension.md
-            - name: Extensión Servidores de administración central de SQL Server
-              href: azure-data-studio/sql-server-cms-extension.md
-            - name: Extensión dacpac de SQL Server
-              href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: Importación de SQL Server
-              href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler
-              href: azure-data-studio/sql-server-profiler-extension.md
-            - name: Extensión Schema Compare
-              href: azure-data-studio/schema-compare-extension.md
-            - name: Extensión de PowerShell
-              href: azure-data-studio/powershell-extension.md
-            - name: Extensión de Instancia administrada
-              href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: Extensión de SandDance
-              href: azure-data-studio/sanddance-extension.md
-        - name: Creación de extensiones
-          items:
-            - name: Introducción a la extensibilidad
-              href: azure-data-studio/extensibility.md
-            - name: Creación de extensiones
-              href: azure-data-studio/extension-authoring.md
-            - name: Creación de una extensión
-              href: azure-data-studio/tutorial-create-extension.md
-            - name: API de extensibilidad
-              href: azure-data-studio/extensibility-apis.md
         - name: Recursos
           items:
             - name: Preguntas más frecuentes

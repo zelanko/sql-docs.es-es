@@ -1,5 +1,6 @@
 ---
-title: Aplicación de ejemplo (controlador SQLSRV) | Microsoft Docs
+title: Aplicación de ejemplo (controlador SQLSRV)
+description: El ejemplo AdventureWorks Product Reviews es una aplicación web que usa el controlador SQLSRV para demostrar cómo interactuar con una base de datos de SQL Server desde PHP.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0225395-3a2e-4561-a2f2-8050ad11c8e2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 82f12dd1a5a50f05f6e831f269ed017e55e46e97
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: ae39afd504cd412ffe3f1182bcd2b3e5598c9376
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916658"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728343"
 ---
 # <a name="example-application-sqlsrv-driver"></a>Aplicación de ejemplo (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: Solución de problemas de implementación del modo de Active Directory
+title: Solución de problemas del ámbito de grupo de dominio de Active Directory
 titleSuffix: SQL Server Big Data Cluster
 description: Solucione problemas de implementación de un clúster de macrodatos de SQL Server en un dominio de Active Directory.
 author: rl-msft
@@ -9,38 +9,94 @@ ms.date: 03/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d887eadd021641241516a1478c6ac13e0d0bdec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 69762b5474f72256975af06e6c79d664de283809
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79191216"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153251"
 ---
-# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-mode-deployment"></a>Solución de problemas de implementación del modo de Active Directory de un clúster de macrodatos de SQL Server
+# <a name="troubleshoot-sql-server-big-data-cluster-active-directory-integration"></a>Solución de problemas de integración de Active Directory de un clúster de macrodatos de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 En este artículo se explica cómo solucionar problemas de implementación de un clúster de macrodatos de SQL Server en el modo de Active Directory.
 
-## <a name="check-deployment-progress"></a>Comprobación del progreso de la implementación
+## <a name="symptom"></a>Síntoma
 
-La implementación puede tardar varios minutos. Si el clúster no está listo después de 15 minutos, compruebe los registros del controlador para obtener más detalles.
+Ha empezado a implementar BDC con el modo de AD, pero la implementación está bloqueada y no avanza.
 
-Mientras se implementa el clúster, compruebe los pods.
+En el ejemplo siguiente se muestran los resultados de la implementación en un shell de Bash.
 
-```console
+```
+The privacy statement can be viewed at:
+https://go.microsoft.com/fwlink/?LinkId=853010
+ 
+The license terms for SQL Server Big Data Cluster can be viewed at:
+Enterprise: https://go.microsoft.com/fwlink/?linkid=2104292
+Standard: https://go.microsoft.com/fwlink/?linkid=2104294
+Developer: https://go.microsoft.com/fwlink/?linkid=2104079
+ 
+Cluster deployment documentation can be viewed at:
+https://aka.ms/bdc-deploy
+ 
+NOTE: Cluster creation can take a significant amount of time depending on
+configuration, network speed, and the number of nodes in the cluster.
+ 
+Starting cluster deployment.
+Cluster controller endpoint is available at bdc-control.contoso.com:30080, 193.168.5.14:30080.
+Waiting for control plane to be ready after 5 minutes.
+Waiting for control plane to be ready after 10 minutes.
+Waiting for control plane to be ready after 15 minutes.
+Waiting for control plane to be ready after 20 minutes.
+Waiting for control plane to be ready after 25 minutes.
+```
+
+Compruebe los pods implementados actualmente.
+
+```bash
 kubectl get pods -n mssql-cluster
 ```
 
-Compruebe que la lista de pods que se devuelve incluye lo siguiente:
+La siguiente lista muestra solo los pods pertenecientes al controlador que se han implementado. No se crean pods de bloques de almacenamiento, datos o procesos.
 
-- `compute-`$
-- `data-`
-- `storage-`
+```
+NAME              READY   STATUS    RESTARTS   AGE
+appproxy-6q4rm    2/2     Running   0          32m
+compute-0-0       3/3     Running   0          32m
+control-n8jqh     3/3     Running   0          35m
+controldb-0       2/2     Running   0          35m
+controlwd-fgpj8   1/1     Running   0          34m
+data-0-0          3/3     Running   0          32m
+data-0-1          3/3     Running   0          32m
+dns-fjp7n         2/2     Running   0          34m
+gateway-0         2/2     Running   0          32m
+logsdb-0          1/1     Running   0          34m
+logsui-d26c5      1/1     Running   0          34m
+master-0          3/4     Running   0          32m
+master-1          3/4     Running   0          32m
+master-2          3/4     Running   0          32m
+metricsdb-0       1/1     Running   0          34m
+metricsdc-c2kbh   1/1     Running   0          34m
+metricsdc-lmqzx   1/1     Running   0          34m
+metricsdc-r6499   1/1     Running   0          34m
+metricsdc-tj99w   1/1     Running   0          34m
+metricsui-dg8rz   1/1     Running   0          34m
+mgmtproxy-dvzpc   2/2     Running   0          34m
+nmnode-0-0        2/2     Running   0          32m
+nmnode-0-1        2/2     Running   0          32m
+operator-27gt9    1/1     Running   0          32m
+sparkhead-0       4/4     Running   0          31m
+sparkhead-1       4/4     Running   0          31m
+storage-0-0       4/4     Running   0          31m
+storage-0-1       4/4     Running   0          31m
+storage-0-2       4/4     Running   0          31m
+zookeeper-0       2/2     Running   0          32m
+zookeeper-1       2/2     Running   0          32m
+zookeeper-2       2/2     Running   0          32m
+```
 
-Si no se crean los pods de proceso, datos y almacenamiento, compruebe los registros para identificar el motivo.
-
-## <a name="check-logs"></a>Compruebe los registros
+### <a name="check-logs"></a>Compruebe los registros
 
 Para identificar por qué se ha salido de la implementación sin crear los pods de proceso, de datos o de almacenamiento, compruebe los registros siguientes: 
 
@@ -65,9 +121,11 @@ Para identificar por qué se ha salido de la implementación sin crear los pods 
   WARNING | Retrying.
   ```
 
-  En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos con ámbito de dominio global o universal. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](deploy-active-directory.md) se explican los requisitos de ámbito de los grupo de AD.
+## <a name="cause"></a>Causa
 
-## <a name="check-the-scope-of-domain-groups"></a>Compruebe el ámbito de los grupos de dominio.
+En el ejemplo anterior, se produce un error en la implementación al crear un inicio de sesión para el usuario del dominio porque el ámbito del grupo de dominio es el dominio local. Use grupos con ámbito de dominio global o universal. En [Implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en modo de Active Directory](deploy-active-directory.md) se explican los requisitos de ámbito de los grupo de AD.
+
+## <a name="resolution"></a>Solución
 
 Compruebe el ámbito del grupo de dominio (<`domain-group`>). Use [get-adgroup](/powershell/module/addsadministration/get-adgroup/).
 
@@ -117,56 +175,7 @@ catch {
 $ClusterUsersGroupScope_Result
 ```
 
-## <a name="check-security-support-container"></a>Comprobación del contenedor de compatibilidad de seguridad 
+## <a name="resolution"></a>Solución
 
-Revise los registros de contenedor de compatibilidad de seguridad.
+Para resolver el problema, cree los grupos de AD con el ámbito universal o global y vuelva a ejecutar la implementación.
 
-El comando siguiente recopila los registros de compatibilidad de seguridad en un clúster en el espacio de nombres `mssql-cluster`.
-
-```console
-azdata bdc debug copy-logs -n mssql-cluster -c security-support
-```
-
-Extraiga los registros y busque `\mssql-cluster\control-<identifier>\controller\control-rts5t-controller-stdout.log`.
-
-Busque las entradas siguientes en el registro:
-
-```
-ERROR    | Failed to create AD user account 'cntrl-controller'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=cntrl-controller,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'ldap-user'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=ldap-user,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform. 
-ERROR | Failed to create AD user account 'nginx-mgmtproxy'. Error code: 53. Message: Failed to create user object: Failed to add object 'CN=nginx-mgmtproxy,OU=bdc, DC=CONTOSO, DC=com' to '  <domain>.<top-level-domain>  ': Server is unwilling to perform.
-```
-
-Estas entradas se pueden producir cuando en el servidor DNS del controlador de dominio falta la entrada de DNS inverso (registro PTR).
-
-## <a name="verify-reverse-lookup-ptr-record"></a>Comprobación de la búsqueda inversa (registro PTR)
-    
-Ejecute el script de PowerShell siguiente para confirmar si tiene configurada una entrada de DNS inverso (registro PTR).
-
-```powershell
-#Domain Controller FQDN 'DCserver01.contoso.local'
-$Domain_controller_FQDN = 'DCserver01.contoso.local'
-
-#Performing Domain Controller DNS record, reverse PTR Checks...
-$DcControllerDnsPtr_Result = New-Object System.Collections.ArrayList
-try {
-    $Domain_controller_DNS_Record = Resolve-DnsName $Domain_controller_FQDN -Type A -Server $Domain_DNS_IP_address -ErrorAction Stop
-    foreach ($ip in $Domain_controller_DNS_Record.IPAddress) {
-        #resolving hostname by IP address to make sure we have reverse PTR record 
-        if ((Resolve-DnsName $ip).NameHost -eq $Domain_controller_FQDN) {
-            [void]$DcControllerDnsPtr_Result.add("OK - $Domain_controller_FQDN has an A record with an IP $ip, Reverse PTR record is in place") 
-        }
-        else {
-            [void]$DcControllerDnsPtr_Result.add("Missing - $Domain_controller_FQDN has an A record with an IP $ip, But no reverse PTR record was found for the host")
-        }
-    }
-}
-catch {
-    [void]$DcControllerDnsPtr_Result.add("Error - " + $_.exception.message)
-}
-
-#show the results 
-$DcControllerDnsPtr_Result
-```
-
-[Comprobación de la entrada de DNS inverso (registro PTR) para el controlador de dominio](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).

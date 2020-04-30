@@ -1,7 +1,7 @@
 ---
 title: INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 327992369ca07d77eb349cb83fb74c4ecd4e622e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982223"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82107994"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ Agrega una o varias filas a una tabla o una vista en [!INCLUDE[ssNoVersion](../.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [ ,...n ] ]  
@@ -90,7 +90,7 @@ INSERT
         [ OPTION ( <query_hint> [ ,...n ] ) ]  
 ```  
   
-```  
+```syntaxsql
 -- External tool only syntax  
 
 INSERT   
@@ -119,7 +119,7 @@ INSERT
     [ ( precision [ , scale ] | max ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
 
 INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | table_name }
@@ -303,37 +303,43 @@ Para obtener información específica sobre cómo insertar datos en tablas de SQ
   
 ### <a name="best-practices-for-bulk-importing-data"></a>Prácticas recomendadas para la importación masiva de datos  
   
-#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging"></a>Usar INSERT INTO…SELECT para realizar una importación masiva de datos con registro mínimo  
- Puede usar `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` para transferir eficazmente un gran número de filas de una tabla, como una tabla de ensayo, a otra tabla con registro mínimo. El registro mínimo puede mejorar el rendimiento de la instrucción y reducir la posibilidad de que la operación rellene el espacio del registro de transacciones disponible durante la transacción.  
+#### <a name="using-insert-intoselect-to-bulk-import-data-with-minimal-logging-and-parallelism"></a>Usar INSERT INTO…SELECT para realizar una importación masiva de datos con registros y paralelismos mínimos 
+Puede usar `INSERT INTO <target_table> SELECT <columns> FROM <source_table>` para transferir eficazmente un gran número de filas de una tabla, como una tabla de ensayo, a otra tabla con registro mínimo. El registro mínimo puede mejorar el rendimiento de la instrucción y reducir la posibilidad de que la operación rellene el espacio del registro de transacciones disponible durante la transacción.  
   
- El registro mínimo para esta instrucción tiene los requisitos siguientes:  
-  
+El registro mínimo para esta instrucción tiene los requisitos siguientes:  
 -   El modelo de recuperación de la base de datos está establecido en registro simple o masivo.  
-  
 -   La tabla de destino es un montón vacío o no vacío.  
-  
 -   La tabla de destino no se usa en la replicación.  
-  
--   La sugerencia TABLOCK se especifica para la tabla de destino.  
+-   La sugerencia `TABLOCK` se especifica para la tabla de destino.  
   
 Las filas que se insertan en un montón como el resultado de una acción de inserción en una instrucción MERGE también se pueden registrar con un nivel mínimo.  
   
- A diferencia de la instrucción BULK INSERT, que contiene un bloqueo Bulk Update menos restrictivo, INSERT INTO…SELECT con la sugerencia TABLOCK retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante operaciones de inserción en paralelo.  
+A diferencia de la instrucción `BULK INSERT`, que contiene un bloqueo de actualización masiva (BU) menos restrictivo, `INSERT INTO … SELECT` con la sugerencia `TABLOCK` retiene un bloqueo exclusivo (X) en la tabla. Esto significa que no se pueden insertar filas mediante varias operaciones de inserción que se ejecutan simultáneamente. 
+
+Sin embargo, a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y del nivel de compatibilidad de la base de datos 130, una única instrucción `INSERT INTO … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados. Las inserciones paralelas son posibles cuando se usa la sugerencia `TABLOCK`.  
+
+El paralelismo de la instrucción anterior tiene los siguientes requisitos, que son similares a los requisitos para el registro mínimo:  
+-   La tabla de destino es un montón vacío o no vacío.  
+-   La tabla de destino tiene un índice de almacén de columnas agrupado (CCI), pero no índices no agrupados.  
+-   La tabla de destino no tiene una columna de identidad con IDENTITY_INSERT establecido en OFF.  
+-   La sugerencia `TABLOCK` se especifica para la tabla de destino.
+
+En los escenarios en los que se cumplen los requisitos de registro mínimo y de inserción en paralelo, ambas mejoras funcionarán juntas para garantizar el máximo rendimiento de las operaciones de carga de datos.
+
+> [!NOTE]
+> Las inserciones en las tablas temporales locales (identificadas por el prefijo #) y las tablas temporales globales (identificadas por prefijos ##) también se habilitan para el paralelismo mediante la sugerencia TABLOCK.
   
-#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Usar OPENROWSET y BULK para datos de importación masiva  
+#### <a name="using-openrowset-and-bulk-to-bulk-import-data"></a>Usar OPENROWSET y BULK para datos de importación en bloque  
  La función OPENROWSET puede aceptar las siguientes sugerencias de tabla, que proporcionan optimizaciones de carga masiva con la instrucción INSERT:  
   
--   La sugerencia TABLOCK puede reducir al mínimo el número de registros para la operación de inserción. El modelo de recuperación de la base de datos debe establecerse en registro simple o masivo, y la tabla de destino no se puede utilizar en la replicación. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   La sugerencia `TABLOCK` puede reducir al mínimo el número de registros para la operación de inserción. El modelo de recuperación de la base de datos debe establecerse en registro simple o masivo, y la tabla de destino no se puede utilizar en la replicación. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
+-   La sugerencia `TABLOCK` puede habilitar operaciones de inserción paralelas. La tabla de destino es un montón o un índice de almacén de columnas agrupado (CCI) sin índices no agrupados, y la tabla de destino no puede tener una columna de identidad especificada.  
+-   La sugerencia `IGNORE_CONSTRAINTS` puede deshabilitar temporalmente la comprobación de restricciones FOREIGN KEY y CHECK.  
+-   La sugerencia `IGNORE_TRIGGERS` puede deshabilitar temporalmente la ejecución de desencadenadores.  
+-   La sugerencia `KEEPDEFAULTS` permite la inserción del valor predeterminado de la columna de una tabla, si existe, en lugar de NULL, cuando falta el valor del registro de datos de esa columna.  
+-   La sugerencia `KEEPIDENTITY` permite que se usen los valores de identidad en el archivo de datos importado para la columna de identidad en la tabla de destino.  
   
--   La sugerencia IGNORE_CONSTRAINTS puede deshabilitar temporalmente la comprobación de restricciones FOREIGN KEY y CHECK.  
-  
--   La sugerencia IGNORE_TRIGGERS puede deshabilitar temporalmente la ejecución de desencadenadores.  
-  
--   La sugerencia KEEPDEFAULTS permite la inserción del valor predeterminado de la columna de una tabla, si existe, en lugar de NULL, cuando falta el valor del registro de datos de esa columna.  
-  
--   La sugerencia KEEPIDENTITY permite que se usen los valores de identidad en el archivo de datos importado para la columna de identidad en la tabla de destino.  
-  
-Estas optimizaciones son similares a las que están disponibles con el comando BULK INSERT. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+Estas optimizaciones son similares a las que están disponibles con el comando `BULK INSERT`. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 ## <a name="data-types"></a>Tipo de datos  
  Al insertar filas, considere el comportamiento de los tipos de datos siguientes:  
@@ -385,7 +391,7 @@ Estas optimizaciones son similares a las que están disponibles con el comando B
  Cuando una instrucción INSERT detecta un error aritmético (desbordamiento, división entre cero o error de dominio) al evaluar una expresión, [!INCLUDE[ssDE](../../includes/ssde-md.md)] trata dichos errores como si SET ARITHABORT estuviera establecido en ON. El lote se detiene y se devuelve un mensaje de error. Al evaluar una expresión con SET ARITHABORT y SET ANSI_WARNINGS en OFF, si una instrucción INSERT, DELETE o UPDATE encuentra un error aritmético, desbordamiento, división entre cero o error de dominio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inserta o actualiza un valor NULL. Si la columna de destino no acepta valores NULL, no se puede efectuar la acción de inserción o actualización y el usuario recibe un error.  
   
 ## <a name="interoperability"></a>Interoperabilidad  
- Cuando se define un desencadenador INSTEAD OF en las acciones INSERT en una tabla o vista, se ejecuta el desencadenador en lugar de la instrucción INSERT. Para más información sobre los desencadenadores INSTEAD OF, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ Cuando se define un desencadenador `INSTEAD OF` en las acciones INSERT en una tabla o vista, se ejecuta el desencadenador en lugar de la instrucción INSERT. Para obtener más información sobre los desencadenadores `INSTEAD OF`, vea [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Cuando se insertan valores en tablas remotas y no se especifican todos los valores de todas las columnas, debe identificar las columnas en las que se deben insertar los valores especificados.  
@@ -407,9 +413,9 @@ En Almacenamiento de datos paralelos, la cláusula ORDER BY no es válida en VIE
 ### <a name="permissions"></a>Permisos  
  El permiso INSERT es obligatorio en la tabla de destino.  
   
- Los permisos INSERT corresponden de forma predeterminada a los miembros del rol fijo de servidor **sysadmin**, de los roles fijos de base de datos **db_owner** y **db_datawriter** y al propietario de la tabla. Los miembros de los roles **sysadmin**, **db_owner** y **db_securityadmin** y el propietario de la tabla pueden transferir permisos a otros usuarios.  
+ Los permisos para INSERT se adjudican de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`, a los roles fijos de base de datos `db_owner` y `db_datawriter`, y al propietario de la tabla. Los miembros de los roles `sysadmin`, `db_owner` y `db_securityadmin` y el propietario de la tabla pueden transferir permisos a otros usuarios.  
   
- Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor **sysadmin** o **bulkadmin**.  
+ Para ejecutar INSERT con la opción BULK de la función OPENROWSET, debe ser miembro de los roles fijos de servidor `sysadmin` o `bulkadmin`.  
   
 ##  <a name="examples"></a><a name="InsertExamples"></a> Ejemplos  
   
@@ -517,7 +523,6 @@ INSERT INTO T1 DEFAULT VALUES;
 GO  
 SELECT column_1, column_2  
 FROM dbo.T1;  
-  
 ```  
   
 #### <a name="g-inserting-data-into-user-defined-type-columns"></a>G. Insertar datos en columnas de tipo definido por el usuario  

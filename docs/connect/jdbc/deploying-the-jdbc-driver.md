@@ -1,5 +1,6 @@
 ---
 title: Implementación del controlador JDBC
+description: Obtenga información sobre cómo puede redistribuir e implementar Microsoft JDBC Driver para SQL Server con su aplicación y qué archivos son necesarios.
 ms.custom: ''
 ms.date: 03/13/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3ad3508d-d9b1-47fb-a63b-21cdc3ed44e0
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 36eb8896a18a6dd87e9b75818f6e4aae2c336905
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 7c99a7e4f491f2c00dc860ed85c453415f993593
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922440"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728359"
 ---
 # <a name="deploying-the-jdbc-driver"></a>Implementación del controlador JDBC
 
@@ -56,4 +57,4 @@ Las versiones 4.x del controlador JDBC son antiguas y están obsoletas. La compa
 
 ## <a name="see-also"></a>Consulte también
 
-[Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Introducción al controlador JDBC](overview-of-the-jdbc-driver.md)  

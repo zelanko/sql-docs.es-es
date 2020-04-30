@@ -1,7 +1,7 @@
 ---
 title: Notas de la versión de ODBC Driver for SQL Server en Linux y macOS
 ms.custom: ''
-ms.date: 03/10/2020
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: v-jizho2
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: b2adbb0fca6c717a5864570cad40c65d7c332f90
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36d390bc13924bbedb1d423790127a3d24f9b63e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79090504"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153273"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver for SQL Server en Linux y macOS
 
@@ -35,6 +35,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## <a name="17522-april-2020-alpine-linux-only"></a>17.5.2.2, abril de 2020 (solo Alpine Linux)
+
+| Característica agregada | Detalles |
+| :------------ | :------ |
+| Error corregido. | Vea [Correcciones de errores](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## <a name="1752-march-2020"></a>17.5.2, marzo de 2020
 
@@ -140,9 +147,9 @@ Compatibilidad con Instancia administrada de Azure SQL.
 
 La versión 13.1 del controlador ODBC para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agrega compatibilidad con Always Encrypted y Azure Active Directory cuando se usa junto con Microsoft SQL Server 2016.
 
-**Nuevas distribuciones compatibles**: OS X 10.11 y macOS 10.12 se admiten en la primera versión del controlador ODBC en macOS. También ya se admite Ubuntu 16.10, junto con Red Hat 6, 7 y SUSE 12. Cada plataforma tiene un paquete de plataforma correspondiente (RPM o DEB) para facilitar la instalación y configuración. Para obtener más información, vea las instrucciones de instalación del controlador ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) y [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
+**Nuevas distribuciones compatibles**: OS X 10.11 y macOS 10.12 se admiten en la primera versión del controlador ODBC en macOS. También ya se admite Ubuntu 16.10, junto con Red Hat 6, 7 y SUSE 12. Cada plataforma tiene un paquete de plataforma correspondiente (RPM o DEB) para facilitar la instalación y configuración. Para obtener más información, vea las instrucciones de instalación del controlador ODBC para [Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) y [macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md).
 
-**Cambios de compatibilidad con el Administrador de controladores unixODBC 2.3.1**: el controlador ODBC ya no depende del empaquetado personalizado para el administrador de controladores unixODBC (excepto en RedHat 6) y en su lugar se basa en el administrador de paquetes de distribución para resolver la dependencia de UnixODBC desde los repositorios de distribución.
+**Cambios de compatibilidad con el Administrador de controladores unixODBC 2.3.1**: el controlador ODBC ya no depende del empaquetado personalizado para el administrador de controladores unixODBC (excepto en RedHat 6) y en su lugar se basa en el administrador de paquetes de distribución para resolver la dependencia de UnixODBC desde los repositorios de distribución.
 
 **Compatibilidad con la API de BCP**: el controlador ODBC de Linux y macOS ahora admite el uso de la [funciones de la API de BCP (**bcp_init**, etc.)](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)
 
@@ -154,11 +161,11 @@ Con Microsoft ODBC Driver 13.0 para SQL Server, ahora también se admiten SQ
 
 Junto con Red Hat y SUSE, ahora también se ofrece compatibilidad con Ubuntu. Cada plataforma tiene un paquete de plataforma correspondiente (RPM o DEB) para facilitar la instalación y configuración.  Vea [Instalación del controlador](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md) para obtener instrucciones de instalación.
 
-**Compatibilidad con el Administrador de controladores unixODBC 2.3.1**: además de un administrador de controladores más reciente, también hay un paquete para la instalación de esta dependencia que facilita la instalación y la configuración.  
+**Compatibilidad con el Administrador de controladores unixODBC 2.3.1** además de un administrador de controladores más reciente, también hay un paquete para la instalación de esta dependencia que facilita la instalación y la configuración.  
 
 **Resolución de IP de red transparente**: la resolución de IP de red transparente es una revisión de la característica existente de conmutación por error de múltiples subredes que afecta a la secuencia de conexión del controlador en el caso donde la primera IP resuelta del nombre de host no responde y hay varias direcciones IP asociadas con el nombre de host.
 
-**Compatibilidad con TLS 1.2**: Microsoft ODBC Driver 13.0 para SQL Server en Linux ahora es compatible con TLS 1.2, cuando se usan comunicaciones seguras con SQL Server.
+**Compatibilidad con TLS 1.2**: Microsoft ODBC Driver 13.0 for SQL Server en Linux ahora es compatible con TLS 1.2, cuando se usan comunicaciones seguras con SQL Server.
 
 ## <a name="11-for-ssnoversion-on-linux"></a>11, para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Linux
 
@@ -166,6 +173,6 @@ El controlador ODBC en SUSE Linux (Preview) es compatible con SUSE Linux Enterpr
 
 El controlador ODBC en Linux es compatible con [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. Para obtener más información, vea [Compatibilidad del controlador ODBC con alta disponibilidad y recuperación ante desastres](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-El controlador ODBC en Linux es compatible con conexiones a Base de datos SQL de Microsoft Azure. Para más información, consulte [Conexión a Azure SQL Database con ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+El controlador ODBC en Linux es compatible con conexiones a Base de datos SQL de Microsoft Azure. Para más información, vea: [Cómo: Conectarse a Azure SQL Database mediante ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
 
 La opción `-l` (tiempo de expiración del inicio de sesión) se ha agregad para `bcp`. Para obtener más información, vea [Conexión con **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

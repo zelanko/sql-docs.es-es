@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versión preliminar)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo.
-ms.date: 12/13/2019
+ms.date: 04/24/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,18 +18,28 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: f28fced64212c9b7e76989d29fa837d4983cebe2
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631978"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153236"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-En este artículo se explica cómo usar la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo. La instrucción COPY proporciona la máxima flexibilidad para la ingesta de datos de alto rendimiento en SQL Data Warehouse.
+En este artículo se explica cómo usar la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo. La instrucción COPY proporciona la máxima flexibilidad para la ingesta de datos de alto rendimiento en SQL Data Warehouse. Use COPY para las siguientes funcionalidades:
+
+- Utilizar la carga de usuarios con menos privilegios sin necesidad de estrictos permisos de CONTROL en el almacenamiento de datos
+- Ejecutar una instrucción T-SQL única sin tener que crear objetos de base de datos adicionales
+- Analizar y cargar correctamente los archivos CSV donde los **delimitadores** (cadena, campo y fila) **se** **escapan dentro de las columnas delimitadas por cadenas**
+- Especificar un modelo de permisos más preciso sin exponer las claves de la cuenta de almacenamiento mediante firmas de acceso compartido (SAS)
+- Usar una cuenta de almacenamiento diferente para la ubicación de ERRORFILE (REJECTED_ROW_LOCATION)
+- Personalizar los valores predeterminados de cada columna de destino y especificar los campos de datos de origen que se van a cargar en columnas de destino concretas
+- Especificar un terminador de fila personalizado para los archivos .csv
+- Aprovechar los formatos de fecha de SQL Server para los archivos .csv
+- Especificar caracteres comodín y varios archivos en la ruta de acceso de la ubicación de almacenamiento
 
 > [!NOTE]  
 > Actualmente, la instrucción COPY está en versión preliminar pública.
@@ -208,21 +218,20 @@ El comando COPY detecta automáticamente el tipo de compresión en base a la ext
 - .deflate - **DefaultCodec** (solo Parquet y ORC)
 
  *FIELDQUOTE = 'field_quote'*</br>
-*FIELDQUOTE* se aplica a CSV y especifica un solo carácter que se usará como carácter de comilla (delimitador de cadena) en el archivo CSV. Si no se especifica, se usará el carácter de comillas (") como carácter de comillas, según define la norma RFC 4180. Los caracteres ASCII extendidos no se admiten con UTF-8 para FIELDQUOTE.
+*FIELDQUOTE* se aplica a CSV y especifica un solo carácter que se usará como carácter de comilla (delimitador de cadena) en el archivo CSV. Si no se especifica, se usará el carácter de comillas (") como carácter de comillas, según define la norma RFC 4180. Los caracteres ASCII y multibyte extendidos no se admiten con UTF-8 para FIELDQUOTE.
 
 > [!NOTE]  
 > Los caracteres FIELDQUOTE se escapan en columnas de cadena en las que existe la presencia de un doble FIELDQUOTE (delimitador). 
 
 *FIELDTERMINATOR = 'field_terminator'*</br>
-*FIELDTERMINATOR* solo se aplica a CSV. Especifica el terminador de campo que se usará en el archivo CSV. El terminador de campo se puede especificar mediante notación hexadecimal. El terminador de campo puede ser de varios caracteres. El terminador de campo predeterminado es una coma (,).
-Para obtener más información, vea [Especificar terminadores de campo y de fila (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md?view=sql-server-2017).
+*FIELDTERMINATOR* solo se aplica a CSV. Especifica el terminador de campo que se usará en el archivo CSV. El terminador de campo se puede especificar mediante notación hexadecimal. El terminador de campo puede ser de varios caracteres. El terminador de campo predeterminado es una coma (,). Los caracteres ASCII y multibyte extendidos no se admiten con UTF-8 para FIELDTERMINATOR.
 
 ROW TERMINATOR = 'row_terminator'</br>
 *ROW TERMINATOR* solo se aplica a CSV. Especifica el terminador de fila que se usará en el archivo CSV. El terminador de fila se puede especificar mediante notación hexadecimal. El terminador de fila puede ser de varios caracteres. De forma predeterminada, el terminador de fila es \r\n. 
 
 El comando COPY antepone el carácter \r al especificar \n (nueva línea), lo cual genera \r\n. Para especificar solo el carácter \n, use la notación hexadecimal (0x0A). Al especificar los terminadores de fila de varios caracteres en formato hexadecimal, no especifique 0x entre cada carácter.
 
-Revise la siguiente [documentación](https://docs.microsoft.com/sql/relational-databases/import-export/specify-field-and-row-terminators-sql-server?view=sql-server-2017#using-row-terminators) para obtener instrucciones adicionales sobre cómo especificar terminadores de fila.
+Los caracteres ASCII y multibyte extendidos no se admiten con UTF-8 para ROW TERMINATOR.
 
 *FIRSTROW = First_row_int*</br>
 *FIRSTROW* se aplica a CSV y especifica el número de fila que se lee primero en todos los archivos para el comando COPY. Los valores se inician a partir de 1, que es el valor predeterminado. Si el valor se establece en dos, se omite la primera fila de cada archivo (fila de encabezado) al cargar los datos. Las filas se omiten en función de la existencia de terminadores de fila.
@@ -361,10 +370,10 @@ WITH (
 ## <a name="faq"></a>Preguntas más frecuentes
 
 ### <a name="what-is-the-performance-of-the-copy-command-compared-to-polybase"></a>¿Cuál es el rendimiento del comando COPY en comparación con PolyBase?
-El comando COPY tendrá un mejor rendimiento en el momento en el que la característica esté disponible con carácter general. Para obtener el mejor rendimiento de carga durante la versión preliminar pública, considere la posibilidad de dividir la entrada en varios archivos al cargar CSV. Actualmente, el rendimiento de COPY es equivalente al de PolyBase al usar INSERT SELECT. 
+El comando COPY tendrá un mejor rendimiento en función de la carga de trabajo. Para obtener el mejor rendimiento de carga durante la versión preliminar pública, considere la posibilidad de dividir la entrada en varios archivos al cargar CSV. Comparta los resultados de rendimiento con nuestro equipo durante la versión preliminar. sqldwcopypreview@service.microsoft.com
 
 ### <a name="what-is-the-file-splitting-guidance-for-the-copy-command-loading-csv-files"></a>¿Cuál es el procedimiento para dividir archivos a la hora de cargar archivos CSV con el comando COPY?
-Las instrucciones sobre el número de archivos se describen en la tabla siguiente. Una vez alcanzado el número recomendado de archivos, obtendrá un mejor rendimiento cuanto mayor tamaño tengan estos. 
+Las instrucciones sobre el número de archivos se describen en la tabla siguiente. Una vez alcanzado el número recomendado de archivos, obtendrá un mejor rendimiento cuanto mayor tamaño tengan estos. Para obtener una experiencia sencilla de división de archivos, consulte la siguiente [documentación](https://techcommunity.microsoft.com/t5/azure-synapse-analytics/how-to-maximize-copy-load-throughput-with-file-splits/ba-p/1314474). 
 
 | **DWU** | **Número de archivos** |
 | :-----: | :--------: |

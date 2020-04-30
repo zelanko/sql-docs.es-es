@@ -1,5 +1,6 @@
 ---
-title: sqlsrv_query | Microsoft Docs
+title: sqlsrv_query
+description: La función sqlsrv_query proporciona un método para ejecutar una consulta con una cantidad mínima de código y se puede usar para ejecutar consultas con parámetros.
 ms.custom: ''
 ms.date: 04/11/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: ab8c3912c33280738c8bebc012686490d7c55926
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 6f211fffa4d3fd9cbafec9180894c5760f876c98
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928558"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728411"
 ---
 # <a name="sqlsrv_query"></a>sqlsrv_query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +40,9 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
 #### <a name="parameters"></a>Parámetros  
 *$conn*: el recurso de conexión asociado a la instrucción preparada.  
   
-*$tsql*: expresión Transact-SQL que corresponde a la instrucción preparada.  
+*$tsql*: la expresión Transact-SQL que corresponde a la instrucción preparada.  
   
-*$params* [OPCIONAL]: **matriz** de valores que corresponden a parámetros de una consulta con parámetros. Cada elemento de la matriz puede ser uno de los siguientes:
+*$params* [OPCIONAL]: **matriz** de valores que se corresponden con parámetros de una consulta con parámetros. Cada elemento de la matriz puede ser uno de los siguientes:
   
 -   Un valor literal  
   
@@ -62,7 +63,7 @@ sqlsrv_query(resource $conn, string $tsql [, array $params [, array $options]])
     |*$phpType*[OPCIONAL]|Constante **SQLSRV_PHPTYPE_\*** que especifica el tipo de datos PHP del valor devuelto.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
     |*$sqlType*[OPCIONAL]|Constante **SQLSRV_SQLTYPE_\*** que especifica el tipo de datos de SQL Server del valor de entrada.<br /><br />Para obtener más información sobre las constantes de PHP, vea [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
   
-*$options* [OPCIONAL]: matriz asociativa que establece propiedades de consulta. Es la misma lista de claves que también admite [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
+*$options* [OPCIONAL]: una matriz asociativa que establece propiedades de consultas. Es la misma lista de claves que también admite [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md#properties).
   
 ## <a name="return-value"></a>Valor devuelto  
 Un recurso de instrucción. Si no se puede crear o ejecutar la instrucción, se devuelve **false**.  
@@ -70,7 +71,7 @@ Un recurso de instrucción. Si no se puede crear o ejecutar la instrucción, se 
 ## <a name="remarks"></a>Observaciones  
 La función **sqlsrv_query** resulta apropiada para consultas únicas y debe establecerse como la opción predeterminada para ejecutar consultas, a menos que se apliquen circunstancias especiales. Esta función proporciona un método simplificado para ejecutar una consulta con una cantidad mínima de código. La función **sqlsrv_query** realiza los procesos de preparación y ejecución de la instrucción, y se puede usar para ejecutar consultas con parámetros.  
   
-Para obtener más información, consulte [Cómo recuperar parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
+Para más información, vea: [Cómo: Recuperación de los parámetros de salida con el controlador SQLSRV](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
 En el siguiente ejemplo, se inserta una fila única en la tabla *Sales.SalesOrderDetail* de la base de datos de AdventureWorks. En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
@@ -243,11 +244,11 @@ Second field:  test_data
 ## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
-[Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)  
+[Cómo: Realización de consultas con parámetros](../../connect/php/how-to-perform-parameterized-queries.md)  
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  
 
-[Envío de datos como una secuencia](../../connect/php/how-to-send-data-as-a-stream.md)  
+[Cómo: Envío de datos en forma de secuencia](../../connect/php/how-to-send-data-as-a-stream.md)  
 
 [Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)  
 

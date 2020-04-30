@@ -1,5 +1,6 @@
 ---
 title: Adjuntar una base de datos | Microsoft Docs
+description: Obtenga información sobre cómo adjuntar una base de datos en SQL Server mediante SQL Server Management Studio o Transact-SQL. Use esta característica para copiar, mover o actualizar una base de datos.
 ms.custom: ''
 ms.date: 10/24/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b58af59da33a2a03627d06a2e461da76d359e28b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a0b99addafecb3567ed6e5bc351681e3318f67a
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76911035"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138183"
 ---
 # <a name="attach-a-database"></a>Adjuntar una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

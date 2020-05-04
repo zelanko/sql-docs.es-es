@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (versión preliminar)
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use la instrucción COPY en Azure SQL Data Warehouse para la carga desde cuentas de almacenamiento externo.
-ms.date: 04/24/2020
+ms.date: 04/30/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse
 ms.reviewer: jrasnick
@@ -18,12 +18,12 @@ dev_langs:
 author: kevinvngo
 ms.author: kevin
 monikerRange: =sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: de9d629622c8f568383083c69dedf1224c85a8dc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd9d2b00d1ba7aa1c56b967deb872d3d9bc0190
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82153236"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619658"
 ---
 # <a name="copy-transact-sql-preview"></a>COPY (Transact-SQL) (versión preliminar)
 
@@ -140,24 +140,32 @@ Solo se pueden especificar varias ubicaciones de archivos desde el mismo contene
 
 Al autenticarse mediante AAD o en una cuenta de almacenamiento pública, no es necesario especificar CREDENTIAL. 
 
-- Autenticación con firmas de acceso compartido (SAS) *IDENTITY: Una constante con un valor de "firma de acceso compartido"* 
-  *SECRET: la* [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview) *ofrece acceso delegado a recursos en la cuenta de almacenamiento.*
-  Permisos mínimos necesarios: READ y LIST
-
+- Autenticación con firmas de acceso compartido (SAS)
+  
+  - *IDENTITY: Una constante con un valor de "firma de acceso compartido"*
+  - *SECRET: la* [*firma de acceso compartido*](/azure/storage/common/storage-sas-overview) *ofrece acceso delegado a recursos en la cuenta de almacenamiento.*
+  -  Permisos mínimos necesarios: READ y LIST
+  
 - Autenticación con [*entidades de servicio*](/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store#create-a-credential)
 
-  *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>* 
-  *SECRET: Clave de entidad de servicio de aplicación de AAD*Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob, colaborador de datos de Storage Blob, propietario de datos de Storage Blob o lector de datos de Storage Blob
+  - *IDENTITY: <ClientID>@<OAuth_2.0_Token_EndPoint>*
+  - *SECRET: Clave principal de servicio de aplicación de AAD*
+  -  Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob, colaborador de datos de Storage Blob, propietario de datos de Storage Blob o lector de datos de Storage Blob
 
-  > [!NOTE]  
-  > Usar el punto de conexión de token de OAuth 2.0 **V1**
-
-- Autenticación con la clave de la cuenta de almacenamiento *IDENTITY: Una constante con un valor de "clave de cuenta de almacenamiento"* 
-  *SECRET: Clave de cuenta de almacenamiento*
+- Autenticación con la clave de la cuenta de almacenamiento
   
-- Autenticación con [identidad administrada](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (puntos de conexión de servicio de red virtual)*IDENTITY: Una constante con un valor de "identidad administrada"* Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob, propietario de datos de Storage Blob o lector de datos de Storage Blob para el servidor SQL Database registrado de AAD 
+  - *IDENTITY: Una constante con un valor de "clave de cuenta de almacenamiento"*
+  - *SECRET: Clave de cuenta de almacenamiento*
   
-- No es necesario autenticarse con una *credencial (CREDENTIAL) de usuario de AAD* Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob, propietario de datos de Storage Blob o lector de datos de Storage Blob para el usuario de AAD
+- Autenticación con [identidad administrada](/azure/sql-data-warehouse/load-data-from-azure-blob-storage-using-polybase#authenticate-using-managed-identities-to-load-optional) (puntos de conexión de servicio de red virtual)
+  
+  - *IDENTITY: Constante con el valor de "identidad administrada"*
+  - Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob o propietario de datos de Storage Blob para el servidor SQL Database registrado de AAD
+  
+- Autenticación con un usuario de AAD
+  
+  - *No se necesita CREDENTIAL*
+  - Roles de RBAC mínimos necesarios: Colaborador de datos de Storage Blob o propietario de datos de Storage Blob para el usuario de AAD
 
 *ERRORFILE = Ubicación del directorio*</br>
 *ERRORFILE* solo se aplica a CSV. Especifica el directorio de la instrucción COPY donde se deben escribir las filas rechazadas y el archivo de error correspondiente. Se puede especificar la ruta de acceso completa de la cuenta de almacenamiento o se puede especificar la ruta de acceso relativa al contenedor. Si la ruta de acceso especificada no existe, se creará una en su nombre. Se crea un directorio secundario con el nombre “_rejectedrows”. El carácter “_ ” garantiza que se escape el directorio para otro procesamiento de datos, a menos que se mencione explícitamente en el parámetro de ubicación. 

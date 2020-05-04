@@ -9,16 +9,18 @@ ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
-ms.openlocfilehash: 21a64ad49b0a40959b5327b209d088fe31738b7d
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 480b5df927adddd38b8f9f2ea13fa25c3f653606
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "80664389"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178626"
 ---
 # <a name="notebooks-with-sql-server-in-azure-data-studio"></a>Cuadernos con SQL Server en Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Jupyter Notebook es una aplicación web de código abierto que le permite crear y compartir documentos que contengan código de producción, ecuaciones, visualizaciones y texto narrativo. En el uso, se incluye la transformación y limpieza de datos, simulación numérica, modelado estadístico, visualización de datos y aprendizaje automático.
 
 En este artículo se explica cómo iniciar la experiencia de Notebooks en la última versión de [**Azure Data Studio**](../azure-data-studio/download.md) y cómo empezar a crear cuadernos propios. También se muestra cómo escribir cuadernos con distintos kernels.
 

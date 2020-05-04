@@ -145,7 +145,7 @@
             - name: Consulta de datos de HDFS
               items:
                 - name: Virtualización de datos en CSV
-                  href: relational-databases/polybase/data-virtualization-csv.md
+                  href: big-data-cluster/data-virtualization-csv.md
                 - name: Consulta de datos de HDFS
                   href: big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Niveles de HDFS
@@ -2180,7 +2180,7 @@
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
                 - name: Codificar
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-            - name: Register
+            - name: 'Register '
               href: relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
             - name: Trabajar con
               href: relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
@@ -6759,7 +6759,7 @@
               href: relational-databases/partitions/modify-a-partition-function.md
             - name: Modificar un esquema
               href: relational-databases/partitions/modify-a-partition-scheme.md
-            - name: Ayuda F1 del Asistente para la administración de particiones
+            - name: Asistente para administrar particiones
               href: relational-databases/partitions/manage-partition-wizard-f1-help.md
         - name: Guías de plan
           href: relational-databases/performance/plan-guides.md
@@ -16240,7 +16240,7 @@
                   href: t-sql/statements/alter-assembly-transact-sql.md
                 - name: ASYMMETRIC KEY
                   href: t-sql/statements/alter-asymmetric-key-transact-sql.md
-                - name: AUTHORIZATION
+                - name: 'AUTHORIZATION '
                   href: t-sql/statements/alter-authorization-transact-sql.md
                 - name: AVAILABILITY GROUP
                   href: t-sql/statements/alter-availability-group-transact-sql.md
@@ -16312,7 +16312,7 @@
                   href: t-sql/statements/alter-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/alter-procedure-transact-sql.md
-                - name: QUEUE
+                - name: 'QUEUE '
                   href: t-sql/statements/alter-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/alter-remote-service-binding-transact-sql.md
@@ -16482,7 +16482,7 @@
                   href: t-sql/statements/create-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/create-procedure-transact-sql.md
-                - name: QUEUE
+                - name: 'QUEUE '
                   href: t-sql/statements/create-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/create-remote-service-binding-transact-sql.md
@@ -16638,7 +16638,7 @@
                   href: t-sql/statements/drop-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/drop-procedure-transact-sql.md
-                - name: QUEUE
+                - name: 'QUEUE '
                   href: t-sql/statements/drop-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/drop-remote-service-binding-transact-sql.md

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.metadata: seo-lt-2019
-ms.openlocfilehash: f4bd7eec24be747fe6c0933d31467410bfecf2a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3b45ec31788814df7c472dbb81e3b47e0e42abeb
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75227513"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588100"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
 
@@ -64,7 +64,7 @@ El siguiente paso es configurar una credencial. Escriba un nombre para la creden
 
 En la siguiente página, seleccione las tablas para las que quiere crear vistas externas. Al seleccionar bases de datos principales, también se incluyen las tablas secundarias. Después de seleccionar las tablas, aparece una tabla de asignación a la derecha. En ella puede realizar cambios en los tipos. También puede cambiar el nombre de la propia tabla externa seleccionada.
 
-![Credenciales del origen de datos externo](media/data-virtualization/data-table-mapping.png)
+![Credenciales del origen de datos externo](media/data-virtualization/data-table-map.png)
 
 > [!NOTE]
 >Para cambiar la vista de asignación, haga doble clic en otra tabla seleccionada.

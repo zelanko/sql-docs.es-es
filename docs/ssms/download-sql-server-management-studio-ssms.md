@@ -24,12 +24,12 @@ ms.author: dinethi
 ms.reviewer: sstein, maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 5eb94f5755ee0f707ed753140633f923fad4d61b
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 294a1ee5cf728498f9564f93ac1f61815ed574f1
+ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873151"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82138273"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Descarga de SQL Server Management Studio (SSMS)
 
@@ -55,7 +55,7 @@ SSMS 18.5 es la versión de disponibilidad general más reciente de SSMS. Si ti
 
 Si tiene comentarios o sugerencias, o quiere informar de alguna incidencia, la mejor manera de contactar con el equipo de SSMS es a través de [UserVoice](https://aka.ms/sqlfeedback).
 
-La instalación de SSMS 18.x no actualiza ni reemplaza las versiones 17.x de SSMS ni las anteriores. SSMS 18.x se instala en paralelo con las versiones anteriores, de modo que ambas están disponibles para su uso. Sin embargo, si tiene instalada una ***versión preliminar*** de SSMS 18.x, debe **desinstalarla** antes de instalar SSMS 18.5. Para ver si tiene la *versión preliminar*, vaya a la ventana Ayuda > Acerca de.
+La instalación de SSMS 18.x no actualiza ni reemplaza las versiones 17.x de SSMS ni las anteriores. SSMS 18.x se instala en paralelo con las versiones anteriores, de modo que ambas están disponibles para su uso. Sin embargo, si tiene instalada una *versión preliminar* de SSMS 18.x, debe desinstalarla antes de instalar SSMS 18.5. Para ver si tiene la versión preliminar, vaya a la ventana **Ayuda > Acerca de**.
 
 Si un equipo contiene instalaciones en paralelo de SSMS, compruebe si inicia la versión correcta para sus necesidades específicas. La versión más reciente tiene la etiqueta **Microsoft SQL Server Management Studio 18**
 

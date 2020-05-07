@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0248af282581019ebedc28656852ec5c78fd00b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 49d8ec52ae12f40f6adaaf360e2e7a1659bef97d
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75257508"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087517"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -142,9 +142,9 @@ Para las conexiones de canalización con nombre y de memoria compartida, se usa 
   
 Las cuentas de servicio se pueden usar como un SPN. Se especifican mediante el atributo de conexión para la autenticación Kerberos y pueden tener los formatos siguientes:  
   
--   **username@domain** o **dominio\nombreDeUsuario** para una cuenta de usuario de dominio.  
+-   **NombreDeUsuario\@dominio** o **dominio\nombreDeUsuario** para una cuenta de usuario de dominio.  
   
--   **equipo$@domain** o **host\FQDN** de una cuenta de dominio de equipo, como Sistema local o NETWORK SERVICES.  
+-   **equipo$\@dominio** o **host\FQDN** para una cuenta de dominio de equipo, como Sistema local o SERVICIOS DE RED.  
   
 Para determinar el método de autenticación de una conexión, ejecute la consulta siguiente.  
   

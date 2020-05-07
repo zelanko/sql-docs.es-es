@@ -1,5 +1,6 @@
 ---
-title: Conexión mediante la autenticación de SQL Server | Microsoft Docs
+title: 'Procedimientos: Conexión mediante la autenticación de SQL Server'
+description: Obtenga información sobre consideraciones importantes al usar la autenticación de SQL Server para conectarse a la base de datos.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 8d298830-3186-47e7-aef6-586b457901c1
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 10028beb86526f553a959376804d855513f0336c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 55f87063904a0201b9aa1a98cdb296d27c821083
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916451"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728330"
 ---
-# <a name="how-to-connect-using-sql-server-authentication"></a>Cómo conectarse mediante la autenticación de SQL Server
+# <a name="how-to-connect-using-sql-server-authentication"></a>Procedimientos: Conexión mediante la autenticación de SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] son compatibles con la autenticación de SQL Server para conectarse a dicho sistema.  
   
-La autenticación de SQL Server solo debe usarse cuando no sea posible utilizar la autenticación de Windows. Para obtener información sobre cómo conectarse con la autenticación de Windows, consulte [How to: Connect Using Windows Authentication](../../connect/php/how-to-connect-using-windows-authentication.md).  
+La autenticación de SQL Server solo debe usarse cuando no sea posible utilizar la autenticación de Windows. Para obtener información sobre cómo conectarse con la autenticación de Windows, vea [Procedimientos: Conexión con la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
 Se deben tener en cuenta los siguientes puntos al usar la autenticación de SQL Server para conectarse a ese sistema:  
   
@@ -130,7 +131,7 @@ En este ejemplo se usa el controlador PDO_SQLSRV para demostrar cómo conectarse
 ```  
   
 ## <a name="see-also"></a>Consulte también  
-[Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Cómo: Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)
 
 [Guía de programación para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
@@ -138,9 +139,9 @@ En este ejemplo se usa el controlador PDO_SQLSRV para demostrar cómo conectarse
 
 [SUSER_SNAME (Transact-SQL)](../../t-sql/functions/suser-sname-transact-sql.md)
 
-[Creación de un inicio de sesión de SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
+[Cómo: Creación de un inicio de sesión de SQL Server](../../relational-databases/security/authentication-access/create-a-login.md)
 
-[Creación de un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
+[Cómo: Creación de un usuario de base de datos](../../relational-databases/security/authentication-access/create-a-database-user.md)
 
 [Administrar usuarios, roles e inicios de sesión](../../relational-databases/server-management-objects-smo/tasks/managing-users-roles-and-logins.md)
 

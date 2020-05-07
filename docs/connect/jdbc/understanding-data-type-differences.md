@@ -1,5 +1,6 @@
 ---
-title: Descripción de las diferencias entre los tipos de datos | Microsoft Docs
+title: Descripción de las diferencias entre los tipos de datos
+description: Obtenga información sobre las diferencias entre los tipos de datos del lenguaje de programación Java y los tipos de datos de SQL Server y cómo JDBC Driver para SQL Server ayuda con las conversiones.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 623a665e0292e67d9f38b3fbc7203427a0cad544
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 16eea906570c9ec19e83246df5073f6ac72e2403
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921214"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728364"
 ---
 # <a name="understanding-data-type-differences"></a>Descripción de las diferencias entre los tipos de datos
 

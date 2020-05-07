@@ -12,12 +12,12 @@ ms.manager: jroth
 ms.reviewer: dnethi
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
-ms.openlocfilehash: 7abe0347e01ffa922b95b86c71bd3afef7d140ae
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: 4379b5aea85bdc3eeeca96d6be690a3fb3c89bcb
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873112"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82086824"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -87,11 +87,11 @@ SSMS 18.5 es la versión de disponibilidad general (GA) más reciente de SSMS. 
 | Always On | Se ha corregido un problema por el que se mostraba un error al intentar mostrar el panel al conectarse a un punto de conexión de clúster de macrodatos. |
 | Auditoría | Se ha corregido un problema por el que la ventana de combinación de registros de auditoría se bloquea cuando hay una carpeta con un nombre vacío en la carpeta raíz de la cuenta de almacenamiento. |
 | Auditoría | Se ha corregido un problema por el que la ventana de combinación de registros de auditoría no muestra todos los servidores cuando hay demasiados elementos en la raíz del contenedor. |
-| Aclaración de datos | Se ha corregido un problema por el que el Asistente para la *clasificación de datos* no se abrirá para las bases de datos con un gran número de tablas. |
-| Aclaración de datos | Ahora se aplican diferentes GUID para cada estructura label/infoType y GUID en el proceso de validación. |
-| Aclaración de datos | Se ha quitado el proceso de clasificación en SqlServer2019. |
-| Aclaración de datos | Se van a corregir las pruebas de validación anteriores (agregar rangos, quitar la propiedad no válida *InformationTypes*) y se van a agregar otras nuevas para los dos primeros puntos. |
-| Aclaración de datos | El botón situado justo encima de la tabla de columnas clasificadas ahora minimiza el panel de recomendaciones, tal como se indica. |
+| Clasificación de datos | Se ha corregido un problema por el que el Asistente para la *clasificación de datos* no se abrirá para las bases de datos con un gran número de tablas. |
+| Clasificación de datos | Ahora se aplican diferentes GUID para cada estructura label/infoType y GUID en el proceso de validación. |
+| Clasificación de datos | Se ha quitado el proceso de clasificación en SqlServer2019. |
+| Clasificación de datos | Se van a corregir las pruebas de validación anteriores (agregar rangos, quitar la propiedad no válida *InformationTypes*) y se van a agregar otras nuevas para los dos primeros puntos. |
+| Clasificación de datos | El botón situado justo encima de la tabla de columnas clasificadas ahora minimiza el panel de recomendaciones, tal como se indica. |
 | SSMS general | Se va a actualizar la versión de los controladores MSODBC y MSOLEDB. |
 | SSMS general | Se ha corregido el hecho de que al menos dos orígenes comunes se bloquean en SSMS. |
 | SSMS general | Se ha solucionado un caso más en el que el *cuadro de diálogo de restauración* se bloquea al seleccionar el botón Examinar. |
@@ -593,7 +593,7 @@ Puede hacer referencia a [UserVoice](https://feedback.azure.com/forums/908035-sq
 |Explorador de objetos|Se ha corregido una incidencia por la que SSMS generaba una excepción "No se puede convertir el objeto del tipo DBNull a otros tipos" al intentar expandir el nodo "Administración" del Explorador de objetos (configuración errónea de DataCollector).|
 |Explorador de objetos|Se ha corregido un problema por el que el Explorador de objetos no incluía comillas de escape antes de invocar a "Editar las primeras...", lo que provocaba confusión en el diseñador.|
 |Explorador de objetos|Se ha corregido un problema donde el asistente "Importar la aplicación de capa de datos" no se iniciaba desde el árbol de Azure Storage.|
-|Explorador de objetos|Se ha corregido un problema en "Configuración de Correo electrónico de base de datos" que provocaba que no se conservara el estado de la casilla SSL. Para obtener detalles, vea [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
+|Explorador de objetos|Se ha corregido un problema en "Configuración de Correo electrónico de base de datos" que provocaba que no se conservara el estado de la casilla TLS/SSL. Para obtener detalles, vea [https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895541). |
 |Explorador de objetos|Se ha corregido una incidencia por la que la opción de SSMS para cerrar las conexiones existentes se atenuaba al intentar restaurar la base de datos con is_auto_update_stats_async_on.|
 |Explorador de objetos|Se ha corregido una incidencia en la que al hacer clic con el botón derecho en los nodos del Explorador de objetos (por ejemplo "Tablas") y querer realizar una acción como filtrar tablas mediante Filtro > Configuración de filtro, el formulario de configuración de filtro puede aparecer en la otra pantalla y no en la que SSMS está activo actualmente. Para obtener detalles, vea [https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106](https://feedback.azure.com/forums/908035-sql-server/suggestions/34284106). |
 |Explorador de objetos|Se ha corregido un problema pendiente desde hace mucho tiempo por el que la tecla SUPR no funcionaba en el Explorador de objetos al intentar cambiar el nombre de un objeto. Para obtener detalles, vea [https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510](https://feedback.azure.com/forums/908035-sql-server/suggestions/33073510), [https://feedback.azure.com/forums/908035/suggestions/32910247](https://feedback.azure.com/forums/908035/suggestions/32910247) y otros elementos duplicados.|

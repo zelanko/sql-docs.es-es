@@ -1,7 +1,7 @@
 ---
 title: Guía de arquitectura de procesamiento de consultas | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2020
+ms.date: 02/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 57cd755c29262d64d7e5215c0ef053a28c5f3507
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 67f0b04b6ac0ce0fc9d8e20ac8b8088061a6ab0a
+ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79510206"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82108006"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -894,13 +894,13 @@ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el modelo de preparac
 * La aplicación puede controlar cuándo se crea el plan de ejecución y cuándo se vuelve a utilizar.
 * El modelo de preparación y ejecución se puede transportar a otras bases de datos, incluidas las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-### <a name="parameter-sniffing"></a><a name="ParamSniffing"></a> Examen de parámetros
-Con la expresión "examen de parámetros" se hace referencia a un proceso mediante el cual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "examina" los valores de parámetros actuales durante la compilación o la recompilación y los pasa al Optimizador de consultas para que se puedan usar para generar planes de ejecución de consultas potencialmente más eficaces.
+### <a name="parameter-sensitivity"></a><a name="ParamSniffing"></a> Sensibilidad de los parámetros
+Con la expresión sensibilidad de los parámetros, también conocida como "examen de parámetros", se hace referencia a un proceso mediante el cual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] "examina" los valores de parámetros actuales durante la compilación o la recompilación y los pasa al optimizador de consultas para que se puedan usar para generar planes de ejecución de consultas potencialmente más eficaces.
 
 Los valores de parámetros se examinan durante la compilación o la recompilación de los siguientes tipos de lotes:
 
 -  Procedimientos almacenados
--  Consultas enviadas mediante sp_executesql 
+-  Consultas enviadas mediante `sp_executesql` 
 -  Consultas preparadas
 
 Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](/azure/sql-database/sql-database-monitor-tune-overview) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
@@ -929,11 +929,35 @@ Entre las construcciones que impiden el paralelismo se incluyen las siguientes:
 -   **Consultas recursivas**        
     Para obtener más información sobre la recursión, vea [Instrucciones para definir y usar expresiones de tabla comunes recursivas](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) y [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (La recursión en T-SQL).
 
--   **Funciones con valores de tabla (TVF)**         
-    Para obtener más información sobre las TVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+-   **Funciones con valores de tabla de múltiples instrucciones (MSTVF)**         
+    Para obtener más información sobre las MSTVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
     
 -   **Palabra clave TOP**        
     Para obtener más información, vea [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).
+
+Un plan de ejecución de consulta puede contener el atributo **NonParallelPlanReason** en el elemento **QueryPlan**, que describe por qué no se usó el paralelismo.  Los valores de este atributo incluyen:
+
+|Valor NonParallelPlanReason|Descripción|
+|----|----|
+|MaxDOPSetToOne|El grado máximo de paralelismo está establecido en 1.|
+|EstimatedDOPIsOne|El grado estimado de paralelismo es 1.|
+|NoParallelWithRemoteQuery|El paralelismo no se admite para las consultas remotas.|
+|NoParallelDynamicCursor|Los planes paralelos no se admiten para los cursores dinámicos.|
+|NoParallelFastForwardCursor|Los planes paralelos no se admiten para los cursores de avance rápido.|
+|NoParallelCursorFetchByBookmark|Los planes paralelos no se admiten para los cursores que capturan por marcador.|
+|NoParallelCreateIndexInNonEnterpriseEdition|La creación de índices en paralelo no se admiten para Enterprise Edition.|
+|NoParallelPlansInDesktopOrExpressEdition|Los planes paralelos no se admiten para Desktop y Express Edition.|
+|NonParallelizableIntrinsicFunction|La consulta hace referencia a una función intrínseca que no se puede paralelizar.|
+|CLRUserDefinedFunctionRequiresDataAccess|El paralelismo no se admite para una UDF de CLR que requiere acceso a datos.|
+|TSQLUserDefinedFunctionsNotParallelizable|La consulta hace referencia a una función definida por el usuario de T-SQL que no se podía paralelizar.|
+|TableVariableTransactionsDoNotSupportParallelNestedTransaction|Las transacciones de variables de tabla no admiten las transacciones anidadas paralelas.|
+|DMLQueryReturnsOutputToClient|La consulta DML devuelve el resultado al cliente y no se puede paralelizar.|
+|MixedSerialAndParallelOnlineIndexBuildNotSupported|La combinación de planes de serie y paralelos no se admite para una sola compilación de índice en línea.|
+|CouldNotGenerateValidParallelPlan|Error al comprobar el plan paralelo; se realizará una conmutación por recuperación a la opción de serie.|
+|NoParallelForMemoryOptimizedTables|El paralelismo no se admite para las tablas OLTP en memoria a las que se hace referencia.|
+|NoParallelForDmlOnMemoryOptimizedTable|El paralelismo no se admite para DML en una tabla OLTP en memoria.|
+|NoParallelForNativelyCompiledModule|El paralelismo no se admite para los módulos compilados de forma nativa a los que se hace referencia.|
+|NoRangesResumableCreate|Error al generar intervalos para una operación de creación reanudable.|
 
 Tras la inserción de operadores de intercambio, el resultado es un plan de ejecución de consultas en paralelo. Un plan de ejecución de consultas en paralelo puede usar más de un subproceso de trabajo. Un plan de ejecución en serie, usado por una consulta no paralela (en serie), solo usa un subproceso de trabajo para su ejecución. El número real de subprocesos de trabajo que usa una consulta en paralelo se determina en la inicialización de la ejecución del plan de consulta y viene determinado por la complejidad del plan y el grado de paralelismo. 
 
@@ -963,7 +987,13 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
  
 En tiempo de ejecución, el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina si la carga de trabajo actual del sistema y la información de configuración descrita previamente permiten la ejecución en paralelo. Si se garantiza la ejecución en paralelo, el [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] determina el número óptimo de subprocesos de trabajo y propaga la ejecución del plan en paralelo a dichos subprocesos. Cuando una operación de consulta o índice empieza a ejecutarse en varios subprocesos de trabajo para la ejecución en paralelo, se usa el mismo número de subprocesos hasta que la operación se completa. El [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] vuelve a examinar el número óptimo de decisiones de subprocesos de trabajo cada vez que se recupera un plan de ejecución de la caché de planes. Por ejemplo, la ejecución de una consulta puede conllevar el uso de un plan en serie, una ejecución posterior de la misma consulta puede conllevar que un plan en paralelo use tres subprocesos de trabajo y una tercera ejecución puede conllevar que un plan en paralelo use cuatro subprocesos de trabajo.
 
-En un plan de ejecución de consultas en paralelo, los operadores insert, update y delete se ejecutan en serie. Sin embargo, la cláusula WHERE de una instrucción UPDATE o DELETE, o la parte SELECT de una instrucción INSERT pueden ejecutarse en paralelo. Los cambios reales de los datos se aplican en serie a la base de datos.
+Los operadores de actualización y eliminación de un plan de ejecución de consultas en paralelo se ejecutan en serie, pero la cláusula WHERE de una instrucción UPDATE o DELETE se puede ejecutar en paralelo. Los cambios reales de los datos se aplican en serie a la base de datos.
+
+Hasta [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el operador Insert también se ejecuta en serie. Sin embargo, la parte SELECT de una instrucción INSERT se puede ejecutar en paralelo. Los cambios reales de los datos se aplican en serie a la base de datos. 
+
+A partir de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y del nivel de compatibilidad de la base de datos 110, la instrucción `SELECT … INTO` se puede ejecutar en paralelo. Otras formas de operadores Insert funcionan de la misma manera que se describe para [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].
+
+A partir de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] y del nivel de compatibilidad de la base de datos 130, la instrucción `INSERT … SELECT` se puede ejecutar en paralelo al realizar la inserción en montones o en índices de almacén de columnas (CCI) agrupados y mediante la sugerencia TABLOCK. Las inserciones en las tablas temporales locales (identificadas por el prefijo #) y las tablas temporales globales (identificadas por prefijos ##) también se habilitan para el paralelismo mediante la sugerencia TABLOCK. Para más información, vea [INSERT (Transact-SQL)](../t-sql/statements/insert-transact-sql.md#best-practices).
 
 Los cursores estáticos y los dinámicos pueden llenarse mediante planes de ejecución en paralelo. Sin embargo, el comportamiento de los cursores dinámicos solo puede proporcionarse mediante la ejecución en serie. El optimizador de consultas siempre genera un plan de ejecución en serie para una consulta que es parte de un cursor dinámico.
 

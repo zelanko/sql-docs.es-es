@@ -1,5 +1,6 @@
 ---
 title: Eliminación de archivos de blob de copia de seguridad con concesiones activas | Microsoft Docs
+description: Si se produce un error en una copia de seguridad o una restauración de SQL Server, un blob de Azure Storage puede quedar huérfano. Obtenga más información sobre cómo eliminar un blob huérfano.
 ms.custom: ''
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cdc58884e65fb243bbb75f257e19ccef3faa2b9f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 716daad4f639fffa3970d80b97502731c32514cd
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908935"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179212"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 
@@ -33,14 +34,14 @@ Si se produce un error de restauración, las restauraciones posteriores no se bl
 
 En los pasos siguientes se describe cómo realizar la limpieza después de una actividad de copia de seguridad o restauración con errores. Puede realizar todos los pasos mediante scripts de PowerShell. En la sección siguiente, se incluye un ejemplo de script de PowerShell:  
   
-1. **Identificar blobs con concesiones**: si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
+1. **Identificar blobs con concesiones:** si tiene un script o un proceso que ejecuta los procesos de copia de seguridad, es posible que pueda capturar el error dentro del script o del proceso, y usarlo para limpiar los blobs.  También puede usar las propiedades LeaseStats y LeastState para identificar blobs con concesiones. Una vez identificados los blobs, revise la lista y compruebe la validez del archivo de copia de seguridad antes de eliminar el blob.  
   
-1. **Interrumpir la concesión**: una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
+1. **Interrumpir la concesión:** una solicitud autorizada puede interrumpir la concesión sin proporcionar un identificador de concesión. Vea [aquí](https://go.microsoft.com/fwlink/?LinkID=275664) para obtener más información.  
   
     > [!TIP]  
     > SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
-1. **Eliminar el blob**: para eliminar un blob con una concesión activa, debe interrumpir primero la concesión.  
+1. **Eliminar el blob:** para eliminar un blob con una concesión activa, primero debe interrumpir la concesión.  
 
 ###  <a name="powershell-script-example"></a><a name="Code_Example"></a> Ejemplo de script de PowerShell  
   

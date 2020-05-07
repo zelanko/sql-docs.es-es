@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 91b69853-1381-4306-8343-afdb73105738
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 8fde97db271ccd0307d0af75ea0c7d4aacad9703
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 75b459554382b3bc7f73d6b3554a5ba10bf5294a
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634803"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598741"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ Los permisos READTEXT se conceden de manera predeterminada a los usuarios con pe
 En el siguiente ejemplo se lee desde el segundo carácter hasta el 26 de la columna `pr_info` de la tabla `pub_info`.  
   
 > [!NOTE]  
->  Para ejecutar este ejemplo, es necesario instalar la base de datos de ejemplo **pubs**.  
+>  Para ejecutar este ejemplo, debe instalar la base de datos de ejemplo [**pubs**](https://github.com/microsoft/sql-server-samples/tree/master/samples/databases).  
   
 ```  
 USE pubs;  

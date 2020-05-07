@@ -1,5 +1,6 @@
 ---
 title: Seleccionar destino de la copia de seguridad | Microsoft Docs
+description: Para la restauración de SQL Server, utilice el cuadro de diálogo Seleccionar destino de la copia de seguridad para seleccionar un disco o un dispositivo lógico de copia de seguridad como destino de la copia de seguridad.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bc7ed2ad628e404cd13da1760e74ee8d0a5850d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3aea62a27635e5d923edd26936480d5d9ff9a37a
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041450"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180693"
 ---
 # <a name="select-backup-destination"></a>Seleccionar destino de la copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

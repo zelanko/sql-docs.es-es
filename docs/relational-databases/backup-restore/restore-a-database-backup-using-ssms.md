@@ -1,5 +1,6 @@
 ---
 title: Restaurar una copia de seguridad de base de datos con SSMS | Microsoft Docs
+description: En este artículo se explica cómo restaurar una copia de seguridad completa de base de datos de SQL Server con SQL Server Management Studio.
 ms.custom: ''
 ms.date: 11/16/2016
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2a76b91e9f5fd1cab9512cd42f05ce949ccf4d68
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70278766"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180862"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +71,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
         -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**  
         
             **Tipo de medio de copia de seguridad**  
-         Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el equipo; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
+         Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
 
             **Add (Agregar)**  
             En función del tipo de medio que seleccione en la lista desplegable **Tipo de medio de copia de seguridad** , al hacer clic en **Agregar** , se abrirá uno de los siguientes cuadros de diálogo. (Si la lista del cuadro de lista **Medio de copia de seguridad** está llena, el botón **Agregar** no está disponible).
@@ -93,7 +94,7 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
              Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .    
     
-         En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.    
+         En el cuadro de lista **Origen: Dispositivo: Base de datos**, seleccione el nombre de la base de datos que se debe restaurar.    
     
          > [!NOTE]
          > Esta lista solo está disponible cuando se selecciona la opción **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.    
@@ -146,7 +147,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)** .
 
     > [!NOTE]
-    > Si no activa esta opción, podría recibir el siguiente mensaje de error: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente '`Sales`'. (Microsoft.SqlServer.SmoExtended)"
+    > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente "`Sales`". (Microsoft.SqlServer.SmoExtended)"
 
 8.  En la sección **Copia del final del registro** , desactive **Realizar copia del final del registro de la cola antes de la restauración**.
 
@@ -158,7 +159,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 9.  En la sección **Conexiones de servidor** , active **Cerrar las conexiones existentes con la base de datos de destino**.
 
     > [!NOTE]
-    > Si no activa esta opción, podría recibir el siguiente mensaje de error: "System.Data.SqlClient.SqlError: No se pudo obtener acceso exclusivo porque la base de datos está en uso. (Microsoft.SqlServer.SmoExtended)"
+    > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: No se pudo obtener acceso exclusivo porque la base de datos está en uso. (Microsoft.SqlServer.SmoExtended)"
     
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 

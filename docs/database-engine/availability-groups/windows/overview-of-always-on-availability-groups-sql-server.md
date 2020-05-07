@@ -2,7 +2,7 @@
 title: ¿Qué es un grupo de disponibilidad AlwaysOn?
 description: Una introducción de los conceptos centrales para configurar y administrar grupos de disponibilidad Always On.
 ms.custom: seo-lt-2019
-ms.date: 05/17/2016
+ms.date: 04/29/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3a6a21cf82a7b94d5526e4492d69bc5f1578b716
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d59d727adfdea88223932f2ba3f01a1d969a7e65
+ms.sourcegitcommit: 69f93dd1afc0df76c3b4d9203adae0ad7dbd7bb2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77478459"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82598761"
 ---
-# <a name="overview-of-always-on-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
+# <a name="what-is-an-always-on-availability-group"></a>¿Qué es un grupo de disponibilidad AlwaysOn?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  En este tema se presentan los conceptos centrales de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para configurar y administrar uno o varios grupos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obtener un resumen de las ventajas proporcionadas por los grupos de disponibilidad e información general de la terminología de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
@@ -55,7 +55,7 @@ ms.locfileid: "77478459"
   
  ![Grupo de disponibilidad con cinco réplicas](../../../database-engine/availability-groups/windows/media/aoag-agintrofigure.gif "Grupo de disponibilidad con cinco réplicas")  
   
-##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases  
+## <a name="availability-databases"></a><a name="AvDbs"></a> Bases de datos de disponibilidad  
  Para agregar una base de datos a un grupo de disponibilidad, la base de datos debe ser una base de datos de lectura/escritura en línea que exista en la instancia del servidor que hospeda la réplica principal. Al agregar una base de datos, se une al grupo de disponibilidad como base de datos principal, mientras permanece disponible para los clientes. No existe una base de datos secundaria correspondiente hasta que las copias de seguridad de la nueva base de datos principal se restauran a la instancia del servidor que hospeda la réplica secundaria (utilizando RESTORE WITH NORECOVERY). La nueva base de datos secundaria está en estado RESTORING hasta que se une al grupo de disponibilidad. Para obtener más información, vea [Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
  La unión coloca la base de datos secundaria en estado ONLINE e inicia la sincronización de datos con la base de datos principal correspondiente. La*sincronización de datos* es el proceso mediante el cual los cambios en una base de datos principal se reproducidos en una base de datos secundaria. La sincronización de datos implica que la base de datos principal envía entradas del registro de transacciones a la base de datos secundaria.  
@@ -63,7 +63,7 @@ ms.locfileid: "77478459"
 > [!IMPORTANT]  
 >  Una base de datos de disponibilidad a veces se denomina *réplica de base de datos* en los nombres de Objetos de administración de SQL Server (SMO), [!INCLUDE[tsql](../../../includes/tsql-md.md)]y PowerShell. Por ejemplo, el término "réplica de base de datos" se usa en los nombres de las vistas de administración dinámicas de AlwaysOn que devuelven información sobre las bases de datos de disponibilidad:  **sys.dm_hadr_database_replica_states** y **sys.dm_hadr_database_replica_cluster_states**. Sin embargo, en Libros en pantalla de SQL Server, el término "réplica" suele hacer referencia a las réplicas de disponibilidad. Por ejemplo, “replicación primaria” y “replicación secundaria” siempre hacen referencia a la disponibilidad de las réplicas.  
   
-##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Réplicas de disponibilidad  
+## <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Réplicas de disponibilidad  
  Cada grupo de disponibilidad define un conjunto de dos o más asociados de conmutación por error conocidos como réplicas de disponibilidad. Las*réplicas de disponibilidad* son componentes del grupo de disponibilidad. Cada réplica de disponibilidad hospeda una copia de las bases de datos de disponibilidad en el grupo de disponibilidad. Para un grupo de disponibilidad determinado, las réplicas de disponibilidad deben hospedarse en instancias independientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que residan en nodos diferentes de un clúster de WSFC. Cada una de estas instancias del servidor debe estar habilitada para AlwaysOn.  
   
  Una instancia determinada solo puede hospedar una única réplica de disponibilidad por grupo de disponibilidad. Sin embargo, cada instancia puede utilizarse para varios grupos de disponibilidad. Una instancia determinada puede ser una instancia independiente o una instancia de clúster de conmutación por error (FCI) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si necesita redundancia de nivel de servidor, utilice instancias de clúster de conmutación por error.  
@@ -73,12 +73,13 @@ ms.locfileid: "77478459"
 > [!NOTE]  
 >  Cuando el rol de una réplica de disponibilidad es indeterminado, como durante una conmutación por error, sus bases de datos están temporalmente en estado NOT SYNCHRONIZING. Su rol se establece en RESOLVING hasta que el rol de la réplica de disponibilidad se resuelve. Si una réplica de disponibilidad se resuelve en el rol principal, sus bases de datos se convierten en las bases de datos principales. Si una réplica de disponibilidad se resuelve en el rol secundario, sus bases de datos se convierten en bases de datos secundarias.  
   
-##  <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modos de disponibilidad  
- El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad: *modo de confirmación asincrónica* y *modo de confirmación sincrónica*.  
+## <a name="availability-modes"></a><a name="AvailabilityModes"></a> Modos de disponibilidad
+
+El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad: *modo de confirmación asincrónica* y *modo de confirmación sincrónica*.  
   
 -   **Asynchronous-commit mode**  
   
-     Una réplica de disponibilidad que usa este modo de disponibilidad se conoce como *réplica de confirmación asincrónica*. En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.  
+     Una réplica de disponibilidad que usa este modo de disponibilidad se conoce como *réplica de confirmación asincrónica*. En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la confirmación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.  
   
 -   **Synchronous-commit mode**  
   
@@ -86,7 +87,7 @@ ms.locfileid: "77478459"
   
  Para obtener más información, vea [Modos de disponibilidad &#40;grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
-##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a> Tipos de conmutación por error  
+## <a name="types-of-failover"></a><a name="FormsOfFailover"></a> Tipos de conmutación por error  
  En el contexto de una sesión entre la réplica principal y una réplica secundaria, los roles principal y secundario son potencialmente intercambiables en un proceso denominado *conmutación por error*. Durante una conmutación por error, la réplica secundaria de destino realiza la transición al rol principal, pasando a ser la nueva réplica principal. La nueva réplica principal pone sus bases de datos en línea como bases de datos principales y las aplicaciones cliente pueden conectarse a ellas. Cuando la réplica principal anterior está disponible, realiza la transición al rol secundario, pasando a ser una réplica secundaria. Las bases de datos principales anteriores se convierten en bases de datos secundaria y se reanuda la sincronización de datos.  
   
  Existen tres formas de conmutación por error: automática, manual y forzada (con posible pérdida de datos). La forma o formas de conmutación por error admitidas por una réplica secundaria dependen de su modo de disponibilidad y, para el modo de confirmación sincrónica, del modo de conmutación por error de la réplica principal y la réplica secundaria de destino, del siguiente modo.  
@@ -111,7 +112,7 @@ ms.locfileid: "77478459"
   
  Para obtener más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-##  <a name="client-connections"></a><a name="ClientConnections"></a> Conexiones de cliente  
+## <a name="client-connections"></a><a name="ClientConnections"></a> Conexiones de cliente  
  Puede proporcionar conectividad de cliente a la réplica principal de un grupo de disponibilidad determinado mediante la creación de un agente de escucha del grupo de disponibilidad. Un *agente de escucha del grupo de disponibilidad* proporciona un conjunto de recursos que se adjunta a un grupo de disponibilidad determinado para dirigir las conexiones de cliente a la réplica de disponibilidad adecuada.  
   
  Un agente de escucha del grupo de disponibilidad está asociada a un nombre DNS único que actúa como un nombre de red virtual (VNN), una o más direcciones IP virtuales (VIP) y un número de puerto TCP. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
@@ -119,7 +120,7 @@ ms.locfileid: "77478459"
 > [!TIP]  
 >  Si un grupo de disponibilidad posee solo dos réplicas de disponibilidad y no está configurado para permitir el acceso de lectura a la réplica secundaria, los clientes pueden conectarse a la réplica principal usando una [cadena de conexión de creación de reflejo de la base de datos](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md). Este enfoque puede ser útil temporalmente después de migrar una base de datos de creación de reflejo de la base de datos a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Antes de agregar réplicas secundarias adicionales, deberá crear un agente de escucha del grupo de disponibilidad y actualizar sus aplicaciones para que se utilice el nombre de red del agente de escucha.  
   
-##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Réplicas secundarias activas  
+## <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Réplicas secundarias activas  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite réplicas secundarias activas. Entre las funciones secundarias activas se incluye la compatibilidad con:  
   
 -   **Realizar operaciones de copia de seguridad en las réplicas secundarias**  
@@ -132,7 +133,7 @@ ms.locfileid: "77478459"
   
      Si un grupo de disponibilidad posee actualmente un agente de escucha de grupo de disponibilidad y una o varias réplicas secundarias legibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede enrutar las solicitudes de conexión de intento de lectura a una de ellas (*enrutamiento de solo lectura*). Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md).  
   
-##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Tiempo de espera de la sesión  
+## <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Tiempo de espera de la sesión  
  El tiempo de espera de la sesión es una propiedad de la réplica de disponibilidad que determina cuánto tiempo puede permanecer inactiva la conexión con otra réplica de disponibilidad antes de que se cierre la conexión. Las réplicas principales y secundarias hacen ping entre sí para indicar que siguen estando activas. Si se recibe un ping de otra réplica durante el tiempo de espera, significa que la conexión todavía está abierta y que las instancias del servidor se están comunicando. Al recibir un ping, una réplica de disponibilidad restablece el contador de tiempo de espera de la sesión de esa conexión.  
   
  El tiempo de espera de la sesión impide que una réplica espere indefinidamente a recibir un ping de la otra réplica. Si no se recibe ningún ping de otra réplica durante el tiempo de espera de la sesión, el tiempo de espera de la réplica se agota. La conexión se cierra y la réplica con el tiempo de espera agotado entra en el estado DISCONNECTED. Aunque una replicación desconectada esté configurada en modo de confirmación sincrónica, las transacciones no esperarán a que la réplica vuelva a conectarse y sincronizarse.  
@@ -142,16 +143,16 @@ ms.locfileid: "77478459"
 > [!NOTE]  
 >  En el rol de resolución, el tiempo de espera de la sesión no se aplica, porque no se hace ping.  
   
-##  <a name="automatic-page-repair"></a><a name="APR"></a> Reparación de página automática  
+## <a name="automatic-page-repair"></a><a name="APR"></a> Reparación de página automática  
  Cada réplica de disponibilidad intenta la recuperación automática de las páginas dañadas en una base de datos local resolviendo ciertos tipos de errores que impiden la lectura de una página de datos. Si una réplica secundaria no puede leer una página, la réplica solicita una nueva copia de la página de la réplica principal. Si la réplica principal no puede leer una página, la réplica propaga una solicitud de una nueva copia a todas las réplicas secundarias y obtiene la página de la primera que responda. Si la solicitud se realiza correctamente, la copia sustituirá a la página que no se puede leer, de forma que se resuelve el error en la mayoría de los casos.  
   
  Para más información, vea [Reparación de página automática &#40;grupos de disponibilidad: creación de reflejo de la base de datos&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).  
   
-##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a> Related tasks  
   
 -   [Introducción a los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
+## <a name="related-content"></a><a name="RelatedContent"></a> Related content  
   
 -   **Blogs:**  
   

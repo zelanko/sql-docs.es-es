@@ -9,33 +9,34 @@ ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 11bc21819760bebabd12018030c352bd98f79adb
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: 0f6600b6578abe0a9b72dff8fee2d815b0771c0c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531098"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178136"
 ---
-# <a name="get-started-with-big-data-clusters-2019"></a>Introducción a los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# <a name="get-started-with-big-data-clusters-2019-deployment"></a>Introducción a la implementación de [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se ofrece información general sobre cómo implementar [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
+En este artículo se ofrece información general sobre cómo implementar [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. En este artículo se presentan los conceptos y se ofrece un marco para comprender los escenarios de implementación. Los pasos de implementación específicos varían en función de las opciones de plataforma para el cliente y el servidor. Para obtener una introducción sobre [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], vea [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).
 
-Para otros escenarios de implementación, consulte:
+Para otros escenarios de implementación de SQL Server, vea:
 
 - [Windows](../database-engine/install-windows/install-sql-server.md)
 - [Linux](../linux/sql-server-linux-setup.md)
 - [Contenedores de Docker](../linux/sql-server-linux-configure-docker.md)
 
-El artículo le da una idea sobre los conceptos y proporciona un marco para comprender los demás artículos de implementación de esta sección. Los pasos de implementación específicos varían en función de las opciones de plataforma para el cliente y el servidor.
-
-> [!TIP]
-> Para lograr rápidamente un entorno con Kubernetes y un clúster de macrodatos implementados que le ayude a aumentar sus capacidades, use uno de los scripts de ejemplo de la [sección de scripts](#scripts). Después de la implementación, para administrar el clúster, use las [herramientas de cliente](#tools) de la sección siguiente.
+## <a name="quick-introduction"></a>Introducción rápida 
 
 Vea este vídeo de 9 minutos para obtener información general sobre cómo implementar clústeres de macrodatos:
 
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Big-Data-Clusters-deployment-overview/player?WT.mc_id=dataexposed-c9-niner]
+
+
+> [!TIP]
+> Para lograr rápidamente un entorno con Kubernetes y un clúster de macrodatos implementados que le ayude a aumentar sus capacidades, use uno de los scripts de ejemplo de la [sección de scripts](#scripts). Después de la implementación, para administrar el clúster, use las [herramientas de cliente](#tools) de la sección siguiente.
 
 
 ## <a name="client-tools"></a><a id="tools"></a> Herramientas de cliente

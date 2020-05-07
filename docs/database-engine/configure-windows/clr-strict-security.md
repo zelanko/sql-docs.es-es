@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4c77d87f1ffe0083662f9f4fcfe643de3359ea59
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 84c049f451572cb1119e695182a6c896f013e04b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68012975"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087345"
 ---
 # <a name="clr-strict-security"></a>CLR strict security   
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Controla la interpretación del permiso `SAFE`, `EXTERNAL ACCESS`, `UNSAFE` en [
 |Value |Descripción | 
 |----- |----- | 
 |0 |Deshabilitada: se proporciona para la compatibilidad con versiones anteriores. El valor `Disabled` no es recomendable. | 
-|1 |Habilitada: hace que el [!INCLUDE[ssde-md](../../includes/ssde-md.md)] pase por alto la información de `PERMISSION_SET` relativa a los ensamblados y los interprete siempre como `UNSAFE`.  `Enabled` es el valor predeterminado en [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
+|1 |Habilitada: hace que el [!INCLUDE[ssde-md](../../includes/ssde-md.md)] pase por alto la información de `PERMISSION_SET` relativa a los ensamblados y los interprete siempre como `UNSAFE`.  `Enabled` es el valor predeterminado, a partir de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]. | 
 
 > [!WARNING]
 >  CLR usa la seguridad de acceso del código (CAS) de .NET Framework, que ya no se admite como un límite de seguridad. Un ensamblado CLR creado con la opción `PERMISSION_SET = SAFE` puede tener acceso a los recursos externos del sistema, llamar a código no administrado y adquirir privilegios sysadmin. A partir de [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)], se incluye una opción de `sp_configure` denominada `clr strict security` para mejorar la seguridad de los ensamblados CLR. La opción `clr strict security` está habilitada de forma predeterminada y trata los ensamblados `SAFE` y `EXTERNAL_ACCESS` como si estuvieran marcados con `UNSAFE`. La opción `clr strict security` se puede deshabilitar para permitir la compatibilidad con versiones anteriores, pero no se recomienda hacerlo. Microsoft recomienda que todos los ensamblados estén firmados con un certificado o clave asimétrica con el correspondiente inicio de sesión que tenga concedido el permiso `UNSAFE ASSEMBLY` en la base de datos maestra. Los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también pueden agregar ensamblados a una lista de los ensamblados en los que el motor de base de datos debe confiar. Para más información, vea [sys.sp_add_trusted_assembly](../../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md).

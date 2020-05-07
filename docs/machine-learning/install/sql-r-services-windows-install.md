@@ -1,26 +1,28 @@
 ---
-title: Instalar SQL Server 2016 R Services (en bases de datos)
+title: Instalación de SQL Server 2016 R Services
+titleSuffix: ''
 description: Agregue compatibilidad con el lenguaje de programación de R a un motor de base de datos en SQL Server 2016 R Services en Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 11/06/2019
+ms.date: 04/29/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bef992e06f8f02e5ba7c553c2511eac353fe498a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 92b7a8190bdd221333d49c2113256faab7c9edaf
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118208"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588201"
 ---
 # <a name="install-sql-server-2016-r-services"></a>Instalación de SQL Server 2016 R Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se explica cómo instalar y configurar **SQL Server 2016 R Services**. Si tiene SQL Server 2016, instale esta característica para habilitar la ejecución de código de R en SQL Server.
 
-En SQL Server 2017, la integración de R se ofrece en [Machine Learning Services](../r/r-server-standalone.md), lo que refleja la adición de Python. Si quiere integración de R y tiene el soporte de instalación SQL Server 2017, vea [Instalación de SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) para agregar la característica. 
+> [!NOTE]
+> En SQL Server 2017, la integración de R se ofrece en [Machine Learning Services](../sql-server-machine-learning-services.md), lo que refleja la adición de Python. Si quiere integración de R y tiene SQL Server 2017 o versiones posteriores, vea [Instalación de SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) para agregar la característica. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -30,7 +32,7 @@ En SQL Server 2017, la integración de R se ofrece en [Machine Learning Service
 
 + De cara a la continuidad empresarial, se admiten [Grupos de disponibilidad AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) para R Services. Debe instalar R Services y configurar los paquetes en cada nodo.
 
-+ No instale R Services en un clúster de conmutación por error. El mecanismo de seguridad que se usa para aislar los procesos de R no es compatible con un entorno de clúster de conmutación por error de Windows Server.
++ No instale R Services en una instancia de clúster de conmutación por error (FCI) de SQL Server Always On. El mecanismo de seguridad que se usa para aislar los procesos de R no es compatible con un entorno de instancia de clúster de conmutación por error (FCI) de SQL Server Always On.
 
 + No instale R Services en un controlador de dominio. Se producirá un error en la parte de la instalación de R Services.
 

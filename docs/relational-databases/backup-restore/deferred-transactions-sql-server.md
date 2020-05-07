@@ -1,5 +1,6 @@
 ---
 title: Transacciones diferidas (SQL Server) | Microsoft Docs
+description: Una transacción diferida de SQL Server Enterprise se produce si los datos necesarios para la reversión están sin conexión. Aprenda a sacarlas del estado diferido.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 3cd81ad5125b6822dd59205bad32cb39194712d9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 90dc61256f973ce8a16d50b547c0fca41b242465
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075983"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179274"
 ---
 # <a name="deferred-transactions-sql-server"></a>Transacciones diferidas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ ms.locfileid: "68075983"
   
          Para obtener información acerca del modo de emergencia, vea [Database States](../../relational-databases/databases/database-states.md).  
   
-    -   Después, repare la base de datos mediante la opción DBCC REPAIR_ALLOW_DATA_LOSS de una de las siguientes instrucciones DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
+    -   Después, repare la base de datos mediante la opción DBCC REPAIR_ALLOW_DATA_LOSS de una de las siguientes instrucciones DBCC: [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) o [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md).  
   
          Cuando encuentre la página dañada, DBCC la desasignará y reparará cualquier error relacionado. Este enfoque permite volver a poner en línea la base de datos en un estado físicamente coherente. Sin embargo, también podrían perderse otros datos, por lo que este enfoque debe ser el último recurso.  
   

@@ -1,5 +1,6 @@
 ---
 title: Configuración para la migración de la copia de seguridad administrada
+description: En este tema se tratan las consideraciones de migración correspondientes a la copia de seguridad administrada de SQL Server para Microsoft Azure al actualizar de SQL Server 2014 a SQL Server 2016.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 79cbc0a2fcd020cc1e4b59de6d4fc0a2c3320059
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 47e44701e2e573ab58ba603b8acabb21635697a6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258673"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180974"
 ---
 # <a name="migrate-managed-backup-settings"></a>Configuración para la migración de la copia de seguridad administrada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Restaurar base de datos (página Opciones) | Microsoft Docs
+description: Al restaurar una base de datos en SQL Server, utilice la página Opciones del cuadro de diálogo Restaurar base de datos para modificar el comportamiento y el resultado de la operación de restauración.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2c806be6b0fa54431243c3062ac12d1d1229c037
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041572"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180756"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

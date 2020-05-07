@@ -1,5 +1,6 @@
 ---
 title: 'Copia de seguridad administrada: configuración de opciones avanzadas'
+description: En este tutorial se describe cómo establecer las opciones avanzadas de la copia de seguridad administrada de SQL Server para Microsoft Azure, en caso de que las opciones predeterminadas no se ajusten a sus necesidades.
 titleSuffix: to Microsoft Azure
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
@@ -11,12 +12,12 @@ ms.topic: conceptual
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4bd21bac561a34e6dab779f1db0656dcc8e3175e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c3bc0a8e805b8a416cba9e7bf7786cfc9840e046
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242571"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220485"
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Configuración de las opciones avanzadas de copia de seguridad administrada de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75242571"
 ## <a name="configure-encryption"></a>Configurar el cifrado  
  En los pasos siguientes se describe cómo especificar la configuración de cifrado mediante el procedimiento almacenado [managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md).  
 
-1.  **Determine el algoritmo de cifrado:** determine primero el nombre del algoritmo de cifrado que se usará. Seleccione uno de los algoritmos siguientes:  
+1.  **Determine el algoritmo de cifrado:** Determine primero el nombre del algoritmo de cifrado que se utiliza. Seleccione uno de los algoritmos siguientes:  
   
     -   AES_128  
   
@@ -44,7 +45,7 @@ ms.locfileid: "75242571"
   
     -   NO_ENCRYPTION  
   
-2.  **Cree una clave maestra de base de datos:** elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos.  
+2.  **Cree la clave maestra de una base de datos:** Elija una contraseña para cifrar la copia de la clave maestra que se almacenará en la base de datos.  
   
     ```  
     -- Creates a database master key.  
@@ -55,7 +56,7 @@ ms.locfileid: "75242571"
     GO  
     ```  
   
-3.  **Cree un certificado de copia de seguridad o una clave asimétrica:** con el cifrado puede usar tanto un certificado como una clave asimétrica. En el ejemplo siguiente se crea un certificado de copia de seguridad que se utilizará para el cifrado.  
+3.  **Cree un certificado de copia de seguridad o clave asimétrica:** con el cifrado puede usar tanto un certificado como una clave asimétrica. En el ejemplo siguiente se crea un certificado de copia de seguridad que se utilizará para el cifrado.  
   
     ```sql  
     USE Master;  
@@ -84,17 +85,17 @@ ms.locfileid: "75242571"
 ## <a name="configure-a-custom-backup-schedule"></a>Configurar una programación de copia de seguridad personalizada  
  En los pasos siguientes se describe cómo establecer una programación personalizada con el procedimiento almacenado [managed_backup.sp_backup_config_schedule & #40; Transact-SQL & #41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md).  
   
-1.  **Determine la frecuencia de las copias de seguridad completas:** determine con qué frecuencia se realizarán copias de seguridad completas de la base de datos. Puede elegir entre copias de seguridad completas diarias y semanales.  
+1.  **Determine la frecuencia de las copias de seguridad completas:** determine qué frecuencia se realizarán copias de seguridad completas de la base de datos. Puede elegir entre copias de seguridad completas diarias y semanales.  
   
-2.  **Determine la frecuencia de las copias de seguridad de registros:** determine con qué frecuencia se realizarán las copias de seguridad de registros. Este valor está en minutos u horas.  
+2.  **Determine la frecuencia de las copias de seguridad de registros:** determine con qué frecuencia se realizará una copia de seguridad de registros. Este valor está en minutos u horas.  
   
-3.  **Determine el día de la semana para las copias de seguridad semanales:** si la copia de seguridad es semanal, elija el día de la semana en que se realizará la copia de seguridad completa.  
+3.  **Determine el día de la semana para las copias de seguridad semanales:** si la copia de seguridad es semanal, elija el día de la semana para hacer la copia de seguridad completa.  
   
-4.  **Determine la hora de inicio de la copia de seguridad:** mediante la notación de 24 horas, elija una hora para iniciar la copia de seguridad.  
+4.  **Determine la hora de inicio de la copia de seguridad:** mediante la notación de 24 horas, elija una hora para iniciar la copia de seguridad.  
   
-5.  **Determine la duración permitida para la copia de seguridad:** aquí se especifica la cantidad de tiempo que puede tardar una copia de seguridad en completarse.  
+5.  **Determine el tiempo para permitir la copia de seguridad:** especifique el tiempo en que una copia de seguridad tiene que completarse.  
   
-6.  **Configure la programación de copia de seguridad personalizada:** el siguiente procedimiento almacenado define una programación personalizada para la base de datos `MyDB` . Las copias de seguridad completas se realizan cada `Monday` a las `17:30`. Las copias de seguridad de registros se realizan cada `5` minutos. Las copias de seguridad tienen dos horas para completarse.  
+6.  **Configure la programación de copia de seguridad personalizada:** el siguiente procedimiento almacenado define una programación personalizada para la base de datos `MyDB`. Las copias de seguridad completas se realizan cada `Monday` a las `17:30`. Las copias de seguridad de registros se realizan cada `5` minutos. Las copias de seguridad tienen dos horas para completarse.  
   
     ```  
     USE msdb;  

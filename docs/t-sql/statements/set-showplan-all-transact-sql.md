@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: c1daa0270987a558b98e6a42e4f9498c56bfd6ef
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634303"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220381"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,9 +50,9 @@ SET SHOWPLAN_ALL { ON | OFF }
 ## <a name="remarks"></a>Observaciones  
  La opción SET SHOWPLAN_ALL se establece en tiempo de ejecución, no en tiempo de análisis.  
   
- Cuando SET SHOWPLAN_ALL está establecida en ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información acerca de la ejecución de cada instrucción sin ejecutarla y no se ejecutan las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando esta opción está establecida en ON, se devuelve información sobre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes hasta que se vuelve a establecer en OFF. Por ejemplo, si se ejecuta una instrucción CREATE TABLE cuando SET SHOWPLAN_ALL es ON y después se ejecuta una instrucción SELECT en la que se especifica la tabla creada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error en el que se indica que la tabla no existe. Por ello, las referencias posteriores que se hagan a la tabla generarán un error. Cuando SET SHOWPLAN_ALL está establecida en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta las instrucciones sin generar ningún informe.  
+ Cuando la opción `SET SHOWPLAN_ALL` está activada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve información sobre la ejecución de cada instrucción sin ejecutarla y no se ejecutan las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando esta opción está establecida en ON, se devuelve información sobre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] siguientes hasta que se vuelve a establecer en OFF. Por ejemplo, si se ejecuta una instrucción CREATE TABLE cuando la opción `SET SHOWPLAN_ALL` está activada y, después, se ejecuta una instrucción SELECT en la que se especifica la tabla creada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error en el que se indica que la tabla no existe. Por ello, las referencias posteriores que se hagan a la tabla generarán un error. Cuando SET SHOWPLAN_ALL está establecida en OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta las instrucciones sin generar ningún informe.  
   
- Solo deben utilizar SET SHOWPLAN_ALL las aplicaciones escritas para controlar su salida. Puede usar SET SHOWPLAN_TEXT para obtener una salida legible para las aplicaciones Microsoft Win32 del símbolo del sistema, como la utilidad **osql**.  
+ Solo deben utilizar `SET SHOWPLAN_ALL` las aplicaciones escritas para controlar su salida. Puede usar SET SHOWPLAN_TEXT para obtener una salida legible para las aplicaciones Microsoft Win32 del símbolo del sistema, como la utilidad **osql**.  
   
  No es posible especificar SET SHOWPLAN_TEXT y SET SHOWPLAN_ALL en un procedimiento almacenado; deben ser las únicas instrucciones en un lote.  
   
@@ -74,8 +74,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**AvgRowSize**|Tamaño medio estimado (en bytes) de la fila que pasa a través de este operador.|  
 |**TotalSubtreeCost**|Coste* estimado (acumulado) de esta operación y todas sus operaciones secundarias.|  
 |**OutputList**|Contiene una lista separada por comas de las columnas proyectadas por la operación actual.|  
-|**Advertencias**|Contiene una lista separada por comas con los mensajes de advertencia relacionados con la operación actual. Los mensajes de advertencia pueden incluir la cadena "NO STATS:()" con una lista de columnas. Este mensaje de advertencia significa que el optimizador de consultas intentó tomar una decisión basada en las estadísticas de la columna, pero no había estadísticas disponibles. En consecuencia, el optimizador de consultas ha tenido que elegir al azar, lo que puede haber provocado la selección de un plan de consulta poco eficiente. Para más información sobre la creación o la actualización de estadísticas de columna (que ayudan al optimizador de consultas a elegir un plan de consulta más eficiente), vea [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Opcionalmente, esta columna puede incluir la cadena "MISSING JOIN PREDICATE", que significa que tiene lugar una combinación (de tablas) sin que haya un predicado de combinación. La pérdida accidental de un predicado de combinación puede provocar que la consulta tarde mucho más de lo esperado y que devuelva un conjunto de resultados de gran tamaño. Si aparece esta advertencia, compruebe que la ausencia de predicado de combinación es intencionada.|  
-|**Tipo**|Tipo de nodo. En el nodo primario de cada consulta, éste es el tipo de instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (por ejemplo, SELECT, INSERT, EXECUTE, etcétera). En los subnodos que representan planes de ejecución, el tipo es PLAN_ROW.|  
+|**:::no-loc text="Warnings":::**|Contiene una lista separada por comas con los mensajes de advertencia relacionados con la operación actual. Los mensajes de advertencia pueden incluir la cadena "NO STATS:()" con una lista de columnas. Este mensaje de advertencia significa que el optimizador de consultas intentó tomar una decisión basada en las estadísticas de la columna, pero no había estadísticas disponibles. En consecuencia, el optimizador de consultas ha tenido que elegir al azar, lo que puede haber provocado la selección de un plan de consulta poco eficiente. Para más información sobre la creación o la actualización de estadísticas de columna (que ayudan al optimizador de consultas a elegir un plan de consulta más eficiente), vea [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Opcionalmente, esta columna puede incluir la cadena "MISSING JOIN PREDICATE", que significa que tiene lugar una combinación (de tablas) sin que haya un predicado de combinación. La pérdida accidental de un predicado de combinación puede provocar que la consulta tarde mucho más de lo esperado y que devuelva un conjunto de resultados de gran tamaño. Si aparece esta advertencia, compruebe que la ausencia de predicado de combinación es intencionada.|  
+|**:::no-loc text="Type":::**|Tipo de nodo. En el nodo primario de cada consulta, éste es el tipo de instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] (por ejemplo, SELECT, INSERT, EXECUTE, etcétera). En los subnodos que representan planes de ejecución, el tipo es PLAN_ROW.|  
 |**Parallel**|**0** = El operador no se ejecuta en paralelo.<br /><br /> **1** = El operador se ejecuta en paralelo.|  
 |**EstimateExecutions**|Número estimado de veces que se va a ejecutar este operador durante la ejecución de la consulta actual.|  
 |||

@@ -13,12 +13,12 @@ ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 99e5f88f730953929115a5b18c00e5d1bb67562e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8b330e97aa006b223120d13433bf2c317205b96c
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68126825"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82153123"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,12 +65,13 @@ ms.locfileid: "68126825"
 |[SIGNBYASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/signbyasymkey-transact-sql.md)|Muestra las opciones para firmar objetos.|  
   
 ## <a name="tools"></a>Herramientas  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona herramientas y utilidades para generar certificados y archivos de clave de nombre seguro. Estas herramientas proporcionan una mayor flexibilidad en el proceso de generación de claves que la sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede utilizar estas herramientas para crear claves RSA con longitudes de clave más complejas y, a continuación, importarlas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la tabla siguiente se explica dónde se encuentran estas herramientas.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona herramientas y utilidades para generar certificados y archivos de clave de nombre seguro. Estas herramientas proporcionan una mayor flexibilidad en el proceso de generación de claves que la sintaxis de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede utilizar estas herramientas para crear claves RSA con longitudes de clave más complejas y, a continuación, importarlas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En la tabla siguiente se muestra dónde se encuentran estas herramientas.  
   
 |||  
 |-|-|  
 |Herramienta|Propósito|  
-|[makecert](/windows/desktop/SecCrypto/makecert)|Crea certificados.|  
+|[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Crea certificados autofirmados.|  
+|[makecert](/windows/desktop/SecCrypto/makecert)|Crea certificados. En desuso en favor de **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Crea nombres seguros para claves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  

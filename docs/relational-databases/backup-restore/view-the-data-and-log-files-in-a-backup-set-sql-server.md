@@ -1,5 +1,6 @@
 ---
 title: Visualización de archivos de datos y de registro del conjunto de copia de seguridad
+description: Aprenda a ver los datos y archivos de registro en una base de datos en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 758a57b7060c2f9669c6f3564eef507e129ab7c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 349e594b35891cda097690891a46cb7a651868d7
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255620"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179581"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Consulta de los archivos de datos y de registro en un conjunto de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

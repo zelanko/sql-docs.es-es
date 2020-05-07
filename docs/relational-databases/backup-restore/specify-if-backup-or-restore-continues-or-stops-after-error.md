@@ -1,5 +1,6 @@
 ---
 title: Establecimiento de una copia de seguridad o restauración después de un error
+description: Aprenda a especificar si una operación de copia de seguridad o restauración continúa después de que detecte un error en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 61e3395939b7faf059a5376674d4f85e3d5c6677
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0eb3b8554a0d24442d110032834006a0d8e0f7af
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75251161"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180584"
 ---
 # <a name="specify-backup-or-restore-to-continue-or-stop-after-error"></a>Especificación de que una copia de seguridad o restauración continúe o se detenga después del error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Recuperación a un número de secuencia de registro (SQL Server) | Microsoft Docs
+description: En SQL Server, puede usar el número de secuencia de registro (LSN) para realizar una recuperación a un momento determinado. Esta característica está destinada a los proveedores de herramientas.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 46ab24ff86eb7a68e48f58e67f03a859d0c43aa7
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: a7b5233b44610ce5d2ad15d5a7aceda207f077dc
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916043"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180901"
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Recuperar a un número de secuencia de registro (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

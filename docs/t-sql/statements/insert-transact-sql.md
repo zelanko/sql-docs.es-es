@@ -32,12 +32,12 @@ ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3a5b98bf8e99d55217fadfd2c1811cb484c3ee3b
-ms.sourcegitcommit: 1f9fc7402b00b9f35e02d5f1e67cad2f5e66e73a
+ms.openlocfilehash: 0ad386f4137b43746eed82665715e2fef5957a79
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82107994"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181106"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -199,7 +199,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 Cláusula OUTPUT  
  Devuelve las filas insertadas como parte de la operación de inserción. Los resultados se pueden devolver a la aplicación de procesamiento o insertarse en una tabla o variable de tabla para su nuevo procesamiento.  
   
- La [cláusula OUTPUT](../../t-sql/queries/output-clause-transact-sql.md) no se admite en las instrucciones DML que hacen referencia a vistas locales con particiones, vistas distribuidas con particiones, tablas remotas o instrucciones INSERT que contengan una *execute_statement*. La cláusula OUTPUT INTO no se admite en instrucciones INSERT que contengan una cláusula \<dml_table_source>. 
+ La cláusula OUTPUT no se admite en las instrucciones DML que hacen referencia a vistas locales con particiones, vistas distribuidas con particiones, tablas remotas o instrucciones INSERT que contengan una función *execute_statement*. La cláusula OUTPUT INTO no se admite en instrucciones INSERT que contengan una cláusula \<dml_table_source>. Para más información sobre los argumentos y el comportamiento de esta cláusula, vea [Cláusula OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).
   
  VALUES  
  Presenta la lista o listas de valores de datos que se van a insertar. Debe haber un valor de datos por cada columna en *column_list*, si se especifica, o en la tabla. La lista de valores debe ir entre paréntesis.  

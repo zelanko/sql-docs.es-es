@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0216266d-d866-4ea2-bbeb-955965f4d7c2
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: f9203423267f68137e11203be60ffa4d0e0c3e41
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 379b9e74388b9cedad55e3263c823c3d9d276286
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71296897"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588171"
 ---
 # <a name="integration-services-ssis-in-a-cluster"></a>Integration Services (SSIS) en un clúster
 
@@ -128,7 +128,7 @@ Para los clientes que decidan que las ventajas de configurar el servicio [!INCLU
   
 4.  Cambie el valor del elemento **StorePath** a la ruta de acceso completa de la carpeta **Packages** creada en el disco compartido en un paso anterior.  
   
-5.  Actualice el valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** en el Registro a la ruta de acceso completa y el nombre de archivo del archivo de configuración del servicio en el disco compartido.  
+5.  En cada nodo, actualice el valor de **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** en el Registro a la ruta de acceso completa y el nombre de archivo del archivo de configuración del servicio en el disco compartido.  
   
 ### <a name="to-bring-the-integration-services-service-online"></a>Poner en línea el servicio Integration Services  
   

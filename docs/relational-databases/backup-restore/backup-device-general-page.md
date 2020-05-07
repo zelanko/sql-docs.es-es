@@ -1,5 +1,6 @@
 ---
 title: Dispositivo de copia de seguridad (página General) | Microsoft Docs
+description: En SQL Server, utilice la página General para especificar o ver las propiedades generales de un dispositivo lógico de copia de seguridad, incluida la especificación del nombre del dispositivo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 9dea8e2d54b83d34923b4f0c336838f60ab36cf2
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940823"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220531"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

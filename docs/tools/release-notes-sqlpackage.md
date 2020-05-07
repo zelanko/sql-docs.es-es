@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: f0c3fe15a46333fad43b72ba3c8040153b9b51a2
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b034a0c0d449bd85afbfd46fa407e34921b8cf2
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80386194"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262129"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>Notas de la versión de SqlPackage.exe
 
@@ -34,6 +34,45 @@ Or, if there is no relationship, remove 'DacFx' from the metadata 'title:'.
 I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
+## <a name="185-sqlpackage"></a>sqlpackage 18.5
+
+|Plataforma|Descargar|Fecha de la versión|Versión|Build
+|:---|:---|:---|:---|:---|
+|Windows|[Instalador MSI](https://go.microsoft.com/fwlink/?linkid=2128142)|28 de abril de 2020|18.5|15.0.4769.1|
+|macOS .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128145)|28 de abril de 2020| 18.5|15.0.4769.1|
+|Linux .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128144)|28 de abril de 2020| 18.5|15.0.4769.1|
+|Windows .NET Core |[archivo zip](https://go.microsoft.com/fwlink/?linkid=2128143)|28 de abril de 2020| 18.5|15.0.4769.1|
+
+### <a name="features"></a>Características
+| Característica | Detalles |
+| :------ | :------ |
+| Implementación | La clasificación de confidencialidad de datos ahora es compatible con SQL Server 2008 y versiones posteriores, Azure SQL Database y Azure SQL Data Warehouse |
+| Implementación | Adición de compatibilidad de Azure SQL Data Warehouse con restricciones de tabla |
+| Implementación | Adición de compatibilidad de Azure SQL Data Warehouse con el índice de almacén de columnas agrupado ordenado |
+| Implementación | Adición de compatibilidad con el origen de datos externo (para Oracle, Teradata, MongoDB/CosmosDB, ODBC, clúster de macrodatos) y la tabla externa para el clúster de macrodatos de SQL Server 2019 |
+| Implementación | Adición de la instancia de SQL Database Edge como edición compatible |
+| Implementación | Compatibilidad con nombres de servidor de Instancia administrada del formulario "\<servidor>.\<dnszone>.database.windows.net" |
+| Implementación | Adición de compatibilidad con el comando de copia en Azure SQL Data Warehouse |
+| Implementación | Adición de la opción de implementación "IgnoreTablePartitionOptions" durante la publicación para evitar que se vuelva a crear la tabla cuando se produzcan cambios en la función de partición en la tabla para Azure SQL Data Warehouse |
+| .NET Core | Adición de compatibilidad con Microsoft.Data.SqlClient en la versión de .NET Core de sqlpackage |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>Correcciones
+| Fix | Detalles |
+| :-- | :------ |
+| Implementación | Corrección la publicación del dacpac de una base de datos que contiene un usuario externo que generaba un error "Referencia a objeto no establecida como instancia de un objeto" |
+| Implementación | Corrección del análisis de la ruta de acceso JSON como expresión |
+| Implementación | Corrección de la generación de instrucciones GRANT para los permisos AlterAnyDatabaseScopedConfiguration y AlterAnySensitivityClassification |
+| Implementación | Corrección del permiso de script externo que no se reconoce |
+| Implementación | Corrección de la propiedad insertada: la adición implícita de la propiedad no debe mostrarse en la diferencia, pero la mención explícita debe mostrarse a través del script |
+| Implementación | Resolución de un problema que causaba que, al cambiar una tabla a la que se hacía referencia con una vista materializada (MV), se generasen instrucciones Alter View no admitidas en estas vistas en Azure SQL Data Warehouse |
+| Implementación | Corrección de errores de publicación al agregar una columna a una tabla con datos en Azure SQL Data Warehouse |
+| Implementación | Corrección del script de actualización que debería trasladar los datos a una nueva tabla al cambiar el tipo de columna de distribución (escenario de pérdida de datos) en Azure SQL Data Warehouse |
+| ScriptDom | Corrección del error ScriptDom donde no se podían reconocer las restricciones insertadas definidas después de un índice insertado |
+| ScriptDom | Corrección del paréntesis de cierre que faltaba en ScriptDom SYSTEM_TIME en una instrucción por lotes |
+| Always Encrypted | Corrección de la tabla #tmpErrors que no se puede quitar si sqlpackage se vuelve a conectar y la tabla temporal ya no existe porque desaparece cuando la conexión termina |
+| &nbsp; | &nbsp; |
+
 ## <a name="1841-sqlpackage"></a>18.4.1 sqlpackage
 
 |Plataforma|Descargar|Fecha de la versión|Versión|Build

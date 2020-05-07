@@ -1,5 +1,6 @@
 ---
 title: Eliminación de copia de seguridad (SQL Server) | Microsoft Docs
+description: En este artículo se muestra cómo eliminar un dispositivo de copia de seguridad en SQL Server mediante SQL Server Management Studio o Transact-SQL.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be32e40cdba72ebd544758b395cb125deb05297b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8e76faf07201a74e8183b46a9b298627de705b94
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075916"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179266"
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Eliminar un dispositivo de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

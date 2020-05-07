@@ -1,5 +1,6 @@
 ---
 title: Compresión de copia de seguridad (SQL Server) | Microsoft Docs
+description: Conozca la compresión de copias de seguridad de SQL Server, incluidas las restricciones, las ventajas y desventajas con respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.
 ms.custom: ''
 ms.date: 08/08/2016
 ms.prod: sql
@@ -17,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cc94b300f007a09aef2c16f11015b39765f5e37a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 735a2a03b869e3171f6e974013c6822ef1c9335c
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67940834"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220557"
 ---
 # <a name="backup-compression-sql-server"></a>Compresión de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  La compresión de copia de seguridad es compatible las ediciones Enterprise, Standard y Developer de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
+  En este tema se describe la compresión de copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , incluidas las restricciones, las ventajas y desventajas de la compresión de las copias de seguridad respecto al rendimiento, la configuración de la compresión de copias de seguridad y la razón de compresión.  Solo se admite la compresión de copia de seguridad en las ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]: Enterprise, Standard y Developer.  Cada edición de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y posteriores pueden restaurar una copia de seguridad cifrada. 
  
   
 ##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  

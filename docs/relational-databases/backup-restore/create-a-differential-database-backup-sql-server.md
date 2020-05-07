@@ -1,5 +1,6 @@
 ---
 title: Copia de seguridad diferencial
+description: En este artículo se muestra cómo crear una copia de seguridad diferencial de la base de datos en SQL Server con SQL Server Management Studio o Transact-SQL.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6bf48a304517eee91ff16c02dab72abb4790e6b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e76d404a63e424740dcc2fc829d38f9c2961a1de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75254075"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82179306"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Crear una copia de seguridad diferencial de una base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,36 +10,39 @@ helpviewer_keywords:
 author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
-ms.date: 08/17/2017
-ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.date: 05/01/2020
+ms.openlocfilehash: ca9ffd01b7553cb343a83565615a786467371891
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487264"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719530"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-  En este tema se proporciona información general sobre las opciones de actualización y migración de SQL Server Reporting Services. Hay dos enfoques generales para actualizar una implementación de SQL Server Reporting Services:  
+  En este tema se proporciona información general sobre las opciones de actualización y migración de SQL Server Reporting Services. Hay dos enfoques generales para actualizar una implementación de SQL Server Reporting Services:  
  
--   **Actualización:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para obtener más información, vea la sección "Escenario de migración del modo nativo al modo de SharePoint" más adelante en este documento.  
+- **Actualizar *a* Reporting Services 2016 y versiones anteriores *desde* Reporting Services 2016 y versiones anteriores:** se actualizan los componentes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los servidores y las instancias donde están instalados actualmente. Habitualmente se denomina actualización "en contexto". No se admite la actualización en contexto de un modo de servidor de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a otro. Por ejemplo, no puede actualizar un servidor de informes en modo nativo a un servidor de informes en modo de SharePoint. Puede migrar los elementos de informe de un modo a otro. Para más información, vea la sección [Escenarios de actualización y migración en modo de SharePoint](#bkmk_sharePoint_scenarios) más adelante en este documento.  
+
+- **Actualizar *a* Reporting Services 2017 y versiones posteriores *desde* Reporting Services 2016 y versiones anteriores** no es el mismo escenario de actualización que en las versiones anteriores. Al actualizar *a* Reporting Services 2016 y versiones anteriores, se podía seguir un proceso de actualización local con el soporte de instalación de SQL Server. Al actualizar *a* Reporting Services 2017 y versiones posteriores *desde* Reporting Services 2016 y versiones anteriores, no se pueden seguir los mismos pasos porque la nueva instalación de Reporting Services es un producto independiente. Ya no forma parte del soporte de instalación de SQL Server. 
+
+    Para actualizar desde Reporting Services 2016 y versiones anteriores a Reporting Services 2017 y versiones posteriores, siga el artículo [Migración de una instalación de Reporting Services (modo nativo)](migrate-a-reporting-services-installation-native-mode.md) con Reporting Services 2017 o versiones posteriores como instancia de destino. 
+
+- **Actualizar *desde* Reporting Services 2017 a versiones futuras** es de nuevo un escenario de actualización local, ya que los GUID de instalación del producto son los mismos. Ejecute el archivo de instalación SQLServerReportingServices.exe para iniciar la actualización local en el servidor donde Reporting Services está instalado actualmente.
   
--   **Migración**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
-    
-> **[!INCLUDE[applies](../../includes/applies-md.md)]** Modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; Modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
+- **Migración**: se instala y configura un nuevo entorno de SharePoint, se copian los elementos de informe y los recursos al nuevo entorno, y se configura el nuevo entorno para usar contenido existente. Una forma de nivel inferior de migración es copiar bases de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , los archivos de configuración y, si se usa el modo de SharePoint, las bases de datos de contenido de SharePoint.  
+
 
 > [!NOTE]
-> La integración de Reporting Services con SharePoint ya no está disponible a partir de SQL Server 2016.
+> La integración de Reporting Services con SharePoint no está disponible a partir de SQL Server 2016.
    
 ##  <a name="known-upgrade-issues-and-best-practices"></a><a name="bkmk_known_issues"></a> Problemas conocidos y prácticas recomendadas de actualización  
  Para obtener una lista detallada de las ediciones y las versiones admitidas que puede actualizar, vea [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
 > [!TIP]  
->  Para ver la información más reciente sobre los problemas con SQL Server, vea lo siguiente:  
->   
->  -   [Notas de la versión de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
+>  Para conocer la información más reciente sobre problemas con SQL Server, vea [Notas de la versión de SQL Server 2016](https://go.microsoft.com/fwlink/?LinkID=398124).  
   
   
 ##  <a name="side-by-side-installations"></a><a name="bkmk_side_by_side"></a> Instalaciones en paralelo  

@@ -1,5 +1,6 @@
 ---
 title: Copias de seguridad de registros de transacciones (SQL Server) | Microsoft Docs
+description: Independientemente de las copias de seguridad de la base de datos, se puede realizar una copia de seguridad del registro de transacciones de SQL Server con frecuencia. La secuencia de copias de seguridad del registro de transacciones es una cadena de registros.
 ms.custom: ''
 ms.date: 01/05/2018
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 491016d02dfdb890914633333e19a3138c01779d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b4cbba5a13a41d9f24901d348566c4c09234060f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68041353"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180470"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

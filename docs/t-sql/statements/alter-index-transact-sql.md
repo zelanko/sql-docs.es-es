@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad10e1d576d1751de10e433420fe3df6106c7ee4
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 82fb30a374ea9ac4cdabf0ab5f7b4d8eefb8f4c4
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138293"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588241"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -257,10 +257,13 @@ PARTITION
  REORGANICE un índice de **almacén de filas**  
  Para los índices de almacén de filas, REORGANIZE especifica que se reorganizará el nivel hoja del índice. La operación REORGANIZE:  
   
--   Siempre se realiza en línea. Esto significa que los bloqueos de tabla a largo plazo no se mantienen y que las consultas o actualizaciones en la tabla subyacente pueden continuar durante la transacción ALTER INDEX REORGANIZE.  
--   No se permite para un índice deshabilitado.  
--   No se permite cuando ALLOW_PAGE_LOCKS está establecido en OFF.  
--   No se revierte cuando se realiza como parte de una transacción y la transacción se revierte.  
+-   Siempre se realiza en línea. Esto significa que los bloqueos de tabla a largo plazo no se mantienen y que las consultas o actualizaciones en la tabla subyacente pueden continuar durante la transacción ALTER INDEX REORGANIZE.
+-   No se permite para un índice deshabilitado.
+-   No se permite cuando ALLOW_PAGE_LOCKS está desactivado.
+-   No se revierte cuando se realiza como parte de una transacción y la transacción se revierte.
+
+> [!NOTE]
+> Cuando ALTER INDEX REORGANIZE usa transacciones explícitas (por ejemplo, ALTER INDEX dentro de una instrucción BEGIN TRAN... COMMIT/ROLLBACK) en lugar del modo de transacción implícita predeterminado, el comportamiento de REORGANIZE es más restrictivo, lo que puede provocar un bloqueo. Para más información sobre las transacciones implícitas, vea [SET IMPLICIT_TRANSACTIONS (Transact-SQL)](../../t-sql/statements/set-implicit-transactions-transact-sql.md).
 
 Para obtener más información, vea [Reorganizar y volver a generar índices](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md). 
 

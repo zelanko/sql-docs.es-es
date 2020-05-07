@@ -1,5 +1,6 @@
 ---
 title: Seleccionar dispositivo de copia de seguridad | Microsoft Docs
+description: En el caso de una restauración de SQL Server, use el cuadro de diálogo Seleccionar dispositivo de copia de seguridad para seleccionar un dispositivo de copia de seguridad lógico para la operación de restauración.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ f1_keywords:
 ms.assetid: 7887c9fd-15ce-4cc8-b069-845c1d09088c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c4eb20f4492e3550ffdbfca5a649684e28685c1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 15b444c21be67be97f66e7855cfeb4c37eadbd22
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68216186"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180696"
 ---
 # <a name="select-backup-device"></a>Seleccionar dispositivo de copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10798009fe69426b0aaa4b035bba0a19eaf36426
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: ff70ad2a8aa50c0e4121a6a597b8e150d0f35a54
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81634135"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82181103"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -249,7 +249,7 @@ INDEX ( index_val [ ,...n ] )
 Especifica el nombre o identificador de uno o más índices de la tabla de destino para realizar una combinación implícita con la tabla de origen. Para obtener más información, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
 \<output_clause>  
-Devuelve una fila para cada fila de *target_table* que se actualiza, inserta o elimina, sin seguir ningún orden concreto. **$action** se puede especificar en la cláusula de salida. **$action** es una columna de tipo **nvarchar(10)** que devuelve uno de estos tres valores para cada fila: "INSERT", "UPDATE" o "DELETE", según la acción realizada en esa fila. Para más información sobre la sintaxis y los argumentos de esta cláusula, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+Devuelve una fila para cada fila de *target_table* que se actualiza, inserta o elimina, sin seguir ningún orden concreto. **$action** se puede especificar en la cláusula de salida. **$action** es una columna de tipo **nvarchar(10)** que devuelve uno de estos tres valores para cada fila: "INSERT", "UPDATE" o "DELETE", según la acción realizada en esa fila. Para más información sobre los argumentos y el comportamiento de esta cláusula, vea [Cláusula OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
 OPTION ( \<query_hint> [ ,...n ] )  
 Especifica que se utilizan las sugerencias del optimizador para personalizar el modo en que el motor de base de datos procesa la instrucción. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  

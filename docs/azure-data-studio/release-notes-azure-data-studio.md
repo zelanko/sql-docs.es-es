@@ -8,17 +8,46 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan, sstein
 ms.custom: seodec18
-ms.date: 03/18/2020
-ms.openlocfilehash: 5a6bd8792cd42d34796b36fb18a4d8c551d684f5
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.date: 04/30/2020
+ms.openlocfilehash: d7c54fbbb959085206cb993d4b9e9087ac8c3a50
+ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82087335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82619678"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión de Azure Data Studio
 
 **[Descargue e instale la versión más reciente](download.md)** .
+
+## <a name="april-2020-hotfix"></a>Abril de 2020 (revisión)
+
+30 de abril de 2020&nbsp; / &nbsp;versión: 1.17.1
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Corrección del error n.º 10197: no se puede conectar mediante MFA | [N.º 10197](https://github.com/microsoft/azuredatastudio/issues/10197)  |
+| &nbsp; | &nbsp; |
+
+## <a name="april-2020"></a>Abril de 2020
+
+27 de abril de 2020&nbsp; / &nbsp;versión: 1.17.0
+
+&nbsp;
+
+| Change | Detalles |
+| :----- | :------ |
+| Mejoras en la página principal | Se ha actualizado la interfaz de usuario en la página principal para facilitar la vista de las acciones comunes y el resaltado de las extensiones. |
+| Nuevas características de los cuadernos | &bull; &nbsp; Se ha agregado la barra de herramientas de Markdown en la edición de celdas de texto para ayudar a escribir con Markdown. <br/> &bull; &nbsp; Se ha renovado el viewlet de Jupyter Books para convertirlo en un viewlet de Notebooks donde Jupyter Books y Notebooks pueden administrarse juntos. <br/>&bull; &nbsp; Se ha agregado compatibilidad con gráficos persistentes al guardar un cuaderno. <br/> &bull; &nbsp; Se ha agregado compatibilidad con KQL magic en los cuadernos de Python.|
+| Mejoras en los paneles | Se han actualizado los paneles de Azure Data Studio con los patrones de diseño más recientes, incluida una barra de herramientas de acciones. Esto también se aplica a muchas extensiones. |
+| Se ha agregado integración de Cloud Shell en la vista de Azure. | |
+| Compatibilidad con Always Encrypted y Always Encrypted con enclaves seguros. | |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
+| Problemas y errores resueltos | Para obtener una la lista completa de las correcciones, vea [Correcciones y problemas en GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+is%3Aclosed+milestone%3A%22April+2020+Release%22). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2020"></a>Marzo de 2020
 
@@ -50,7 +79,7 @@ Versión del 19 de febrero de 2020 &nbsp; / &nbsp;: 1.15.1
 
 ## <a name="february-2020"></a>Febrero de 2020
 
-Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0 
+Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 
 &nbsp;
 
@@ -228,7 +257,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | Change | Detalles |
 | :----- | :------ |
 | Publicación de la extensión Servidores de administración central (CMS) de SQL Server | La extensión Servidores de administración central almacena una lista de instancias de SQL Server que se organizan en uno o varios grupos de este tipo de servidores. Los usuarios pueden conectarse a sus propios servidores CMS existentes y administrarlos, por ejemplo, para agregar y quitar servidores. [Aquí](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) puede obtener más información. |
-| Publicación de las extensiones de la herramienta de administración de bases de datos para Windows | Esta extensión inicia dos de las experiencias más usadas en SQL Server Management Studio desde Azure Data Studio. Los usuarios pueden hacer clic con el botón derecho en una gran variedad de objetos diferentes (como bases de datos, tablas, columnas, vistas, etc.) y seleccionar Propiedades para ver el cuadro de diálogo de propiedades de SSMS correspondiente ese objeto. Además, los usuarios pueden hacer clic con el botón derecho en una base de datos y seleccionar Generar scripts para iniciar el ya conocido asistente de generación de scripts de SSMS. 
+| Publicación de las extensiones de la herramienta de administración de bases de datos para Windows | Esta extensión inicia dos de las experiencias más usadas en SQL Server Management Studio desde Azure Data Studio. Los usuarios pueden hacer clic con el botón derecho en gran cantidad de objetos diferentes (como bases de datos, tablas, columnas, vistas, etc.) y seleccionar Propiedades para ver el cuadro de diálogo Propiedades de SSMS correspondiente a ese objeto. Además, los usuarios pueden hacer clic con el botón derecho en una base de datos y seleccionar Generar scripts para iniciar el ya conocido Asistente para generar scripts de SSMS. 
 | Mejoras en la Comparación de esquemas | &bull; &nbsp; Adición de opciones de exclusión e inclusión <br/>&bull; &nbsp; Generar script abre el script tras generarlo <br/>&bull; &nbsp; Eliminación de las barras de desplazamiento dobles  <br/>&bull; &nbsp; Mejoras de formato y diseño <br/>&bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed) puede ver los cambios completos.|
 | Sección Mensajes movida a su propia pestaña | Cuando los usuarios ejecutaban consultas SQL, los resultados y los mensajes se encontraban en paneles apilados. Ahora se encuentran en pestañas independientes en un panel como en SSMS. |
 | Mejoras en SQL Notebook | &bull; &nbsp; Ahora los usuarios pueden optar por usar sus propias instalaciones de Python 3 o Anaconda en los cuadernos. <br/>&bull; &nbsp; Varias correcciones de estabilidad y ajuste <br/> &bull; &nbsp; [Aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22) puede ver la lista completa de las mejoras.|
@@ -274,7 +303,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | :----- | :------ |
 | Nombre de la pestaña **Servidores** cambiado a **Conexiones** | |
 | Migración de Azure Resource Explorer como viewlet de Azure a Conexiones | Los usuarios ahora pueden ver sus instancias de Azure SQL a través de un viewlet de Azure en la vista Conexiones, y expandir para ver los objetos de cada servidor o base de datos.|
-| Mejoras en SQL Notebook | &bull; &nbsp; Botón agregado a la barra de herramientas para borrar la salida de todas las celdas <br/>&bull; &nbsp; Botón agregado a la barra de herramientas para ejecutar todas las celdas <br/>&bull; &nbsp; Nombre fijo de la conexión en lugar del nombre del servidor (si se establece) en la lista desplegable Anexar a <br/>&bull; &nbsp; Corrección de imágenes en Markdown que no se representaban al usar rutas de acceso de imagen relativas <br/>&bull; &nbsp; Funcionalidad mejorada en las cuadrículas de cuadernos con la adición de un cambio de tamaño de columna automático mediante doble clic, y mejora de la compatibilidad con la rueda del mouse <br/>&bull; &nbsp; Mejoras en el control de errores y la resistencia de instalación de Python al instalar Python a través de cuadernos <br/>&bull; &nbsp; Mejoras en la funcionalidad "Seleccionar todo" al seleccionar celdas de cuaderno <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos para evitar cerrar un cuaderno y afectar a la conexión del explorador de objetos <br/>&bull; &nbsp; Experiencia de cuadernos mejorada para mostrar un mensaje al usuario cuando el cuaderno está desconectado y necesita una conexión para ejecutar las celdas<br/>&bull; &nbsp; Compatibilidad mejorada con cuadernos no guardados para rehidratar en ADS cuando se inicia de nuevo ADS |
+| Mejoras en SQL Notebook | &bull; &nbsp; Botón agregado a la barra de herramientas para borrar la salida de todas las celdas <br/>&bull; &nbsp; Botón agregado a la barra de herramientas para ejecutar todas las celdas <br/>&bull; &nbsp; Nombre fijo de la conexión en lugar del nombre del servidor (si se establece) en la lista desplegable Anexar a <br/>&bull; &nbsp; Corrección de imágenes en Markdown que no se representaban al usar rutas de acceso de imagen relativas <br/>&bull; &nbsp; Se ha mejorado la funcionalidad de las cuadrículas de cuadernos con la adición de un cambio de tamaño de columna automático mediante doble clic y se ha mejorado la compatibilidad de la rueda del mouse. <br/>&bull; &nbsp; Mejoras en el control de errores y la resistencia de instalación de Python al instalar Python a través de cuadernos <br/>&bull; &nbsp; Mejoras en la funcionalidad "Seleccionar todo" al seleccionar celdas de cuaderno <br/>&bull; &nbsp; Mejoras en las conexiones de cuadernos para evitar cerrar un cuaderno y afectar a la conexión del explorador de objetos <br/>&bull; &nbsp; Experiencia de cuadernos mejorada para mostrar un mensaje al usuario cuando el cuaderno está desconectado y necesita una conexión para ejecutar las celdas<br/>&bull; &nbsp; Compatibilidad mejorada con cuadernos no guardados para rehidratar en ADS cuando se inicia de nuevo ADS |
 | Problemas y errores resueltos | Consulte [Errores y problemas en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -302,7 +331,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 | Extensión de PowerShell agregada  | Ofrece la experiencia de la [extensión de PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) de VS Code.  |
 | Extensión dacpac de SQL Server agregada  | Quita el asistente para aplicación de capa de datos de la extensión de importación de SQL Server y la agrega a una nueva extensión.  |
 | Extensión de Community QueryPlan.show agregada | Integra compatibilidad para visualizar planes de consulta.  |
-| Extensión de SQL Server 2019, versión preliminar, agregada | &bull; &nbsp; La compatibilidad con Jupyter Notebook (en concreto, con los kernels de Python3 y Spark) se ha pasado a la herramienta básica de Azure Data Studio. <br/>&bull; &nbsp; Corrección de errores en el asistente para datos externos  |
+| Extensión de SQL Server 2019, versión preliminar, agregada | &bull; &nbsp; La compatibilidad con Jupyter Notebook (en concreto, con los kernels de Python 3 y Spark) se ha pasado a la herramienta básica de Azure Data Studio. <br/>&bull; &nbsp; Corrección de errores en el asistente para datos externos  |
 | Problemas y errores resueltos | Consulte [Errores y problemas en GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -391,7 +420,7 @@ Versión del 13 de febrero de 2020 &nbsp; / &nbsp;: 1.15.0
 - Corrección del [problema #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Corrección del nombre del documento de Editar datos cuando el nombre de la tabla contiene caracteres especiales.
 - Corrección del [problema #2929](https://github.com/Microsoft/azuredatastudio/issues/2929): El registro de cambios de extensión integrado indica que se comprueben los cambios en las notas de la versión de VSCode.
 - Corrección del [problema #2719](https://github.com/Microsoft/azuredatastudio/issues/2719): Iconos dobles o triples de tema de contraste alto.
-- Corrección del [problema #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Adición de una interfaz de línea de comandos para conectarse a un SQL Server.
+- Corrección del [problema #3047](https://github.com/Microsoft/azuredatastudio/pull/3047): Se ha agregado una interfaz de línea de comandos para conectarse a un servidor SQL Server.
 - Corrección del [problema #3031](https://github.com/Microsoft/azuredatastudio/pull/3031): Adición de compatibilidad con el tema del plan de consulta.
 
 ## <a name="october-2018"></a>Octubre de 2018
@@ -457,7 +486,7 @@ Para obtener información detallada, vea [Registro de cambios](https://github.co
 
 30 de agosto de 2018 &nbsp; / &nbsp; versión: 0.32.8 &nbsp; / &nbsp; Versión preliminar pública
 
-La *versión preliminar pública de agosto* se centra en las correcciones de errores, la estabilización del producto y el llenado de huecos en escenarios existentes.
+La *versión preliminar pública de agosto* se centra en las correcciones de errores, la estabilización del producto y el relleno de vacíos en escenarios existentes.
 
 _0.32.8 contiene correcciones para un par de regresiones encontradas en 0.32.7 ([#1971](https://github.com/Microsoft/azuredatastudio/issues/1971), [#2372](https://github.com/Microsoft/azuredatastudio/issues/2372))_
 
@@ -540,7 +569,7 @@ La *versión preliminar pública* de julio se centra en los siguientes elementos
 - Corrección del [problema 1749](https://github.com/Microsoft/azuredatastudio/issues/1749): ERROR - Se interpretan los datos HTML en una columna.
 - Corrección del [problema 1789](https://github.com/Microsoft/azuredatastudio/issues/1789): Extensibilidad - Si agrega un proveedor de conexión, la desinstalación nunca lo quitará de la lista.
 - Corrección del [problema 1791](https://github.com/Microsoft/azuredatastudio/issues/1791): Extensiones de Sqlops - queryeditor.connect() se conecta a la base de datos de destino, pero la interfaz de usuario no muestra que el editor está conectado.
-- Corrección del [problema 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): El gráfico con las 10 bases de datos principales por tamaño no funciona en instancias con distinción de mayúsculas y minúsculas.
+- Corrección del [problema 1799](https://github.com/Microsoft/azuredatastudio/issues/1799): El gráfico con las 10 bases de datos principales por tamaño no funciona en instancias con distinción de mayúsculas y minúsculas.
 - Corrección del [problema 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): error tipográfico de sqlops.d.ts que causa la definición de tipo "any" implícita.
 - Corrección del [problema 1817](https://github.com/Microsoft/azuredatastudio/issues/1817): Error de ortografía.
 - Corrección del [problema 1830](https://github.com/Microsoft/azuredatastudio/issues/1830): Establecer iconPath en ButtonComponent después de llamar a component() no cambia el icono.
@@ -659,7 +688,7 @@ Un aspecto destacado de la versión preliminar pública de abril es la actualiza
 | [Resultados de búsqueda en horizontal (versión preliminar)](https://code.visualstudio.com/updates/v1_21#_horizontal-search). | Ahora puede ver los resultados de la búsqueda en un panel horizontal. |
 | &nbsp; | &nbsp; |
 
-Para obtener más información, consulte las [notas de la versión de Visual Studio Code de febrero](https://code.visualstudio.com/updates/v1_21) y las [notas de la versión de Visual Studio Code de enero](https://code.visualstudio.com/updates/v1_20).
+Para obtener más información, consulte las [notas de la versión de Visual Studio Code de febrero](https://code.visualstudio.com/updates/v1_21) y las [notas de la versión de Visual Studio Code de enero](https://code.visualstudio.com/updates/v1_20).
 
 Para más información, vea [Registro de cambios](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
 
@@ -692,7 +721,7 @@ La *versión preliminar pública de febrero* incluye algunas sugerencias de cara
 | El campo **Base de datos** del cuadro de diálogo de conexión es ahora una lista desplegable rellenada dinámicamente que contiene una lista de bases de datos que se han rellenado desde el servidor especificado. | &nbsp; |
 | Introducción de la API de extensibilidad de conexiones. | &nbsp; |
 | Integración del editor de VS Code 1.19. | &nbsp; |
-| Actualización del componente JustinPealing/html-query-plan para obtener varias mejoras del visor del plan de consulta. | &nbsp; |
+| Se ha actualizado el componente JustinPealing/html-query-plan para obtener varias mejoras del visor del plan de consulta. | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### <a name="fixed-issues-february-2018"></a>Problemas corregidos, febrero de 2018

@@ -3,17 +3,17 @@ title: Configuración de repositorios de Linux para SQL Server 2017 y 2019
 description: Vea y configure repositorios de origen para SQL Server 2019 y SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y la actualización.
 author: VanMSFT
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 04/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 7253fb18ea783a1fb7aeec77aa73b9a899ec6ae9
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.openlocfilehash: cea6b49e46b5dc1d386f42808f64743e2c7eed8c
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81301706"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262052"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configuración de repositorios para instalar y actualizar SQL Server en Linux
 
@@ -181,7 +181,7 @@ Configure el nuevo repositorio que se va a usar para las instalaciones y las act
 >
 > A partir de SQL Server 2017 CU20, se admite RHEL 8.
 >
-> Si usa RHEL 7 o RHEL 8, asegúrese de que las rutas de acceso coinciden con `/rhel/7` o `/rhel/8`.
+> Si usa RHEL 7 o RHEL 8, asegúrese de que las rutas de acceso coinciden con `/rhel/7` o `/rhel/8`. Nuestros paquetes son independientes de las versiones secundarias de RHEL. Esto significa que, si usa RHEL 7.6, tendrá que usar la ruta de acceso `/rhel/7` para configurar el repositorio.
 
 | Repositorio | Versión | Get-Help |
 |---|---|---|

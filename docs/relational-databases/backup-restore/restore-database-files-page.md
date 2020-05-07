@@ -1,5 +1,6 @@
 ---
 title: Restaurar base de datos (página Archivos) | Microsoft Docs
+description: Al restaurar una base de datos en SQL Server, use la página Archivos del cuadro de diálogo Restaurar base de datos para administrar los archivos concretos que se van a restaurar en la base de datos.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ f1_keywords:
 ms.assetid: 714c36ea-a9f9-43a4-99f9-a6f73d1baf8e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5c99e51dd90f17313d146fce2b6b02802a579eb6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 56ce641b774dabf5e35b5804eba150342fae9034
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67944829"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180773"
 ---
 # <a name="restore-database-files-page"></a>Restaurar base de datos (página Archivos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: Administración de un cuaderno de SQL Server
-description: Aprenda a administrar cuadernos en Azure Data Studio. Esto incluye abrir cuadernos, guardarlos y cambiar la conexión del clúster de macrodatos.
+title: Procedimiento para administrar un cuaderno
+description: Aprenda a administrar cuadernos en Azure Data Studio. Esto incluye abrir cuadernos, guardarlos y cambiar la conexión de SQL o el kernel de Python.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: achatter, alayu, mikeray
@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.custom: ''
-ms.date: 03/30/2020
-ms.openlocfilehash: 9b071a9d1b9e770e1443e5df539208baa4399a30
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.date: 04/27/2020
+ms.openlocfilehash: 435290bd45e79c835ba134bb732f1672dc31c2cf
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80531598"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82178706"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Cómo administrar cuadernos en Azure Data Studio
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En este artículo se muestra cómo abrir y guardar archivos de cuaderno en Azure Data Studio con SQL Server. También se muestra cómo cambiar la conexión a SQL Server.
+En este artículo se muestra cómo abrir y guardar archivos de cuaderno en Azure Data Studio. También se muestra cómo cambiar la conexión a la instancia SQL Server o al kernel de Python.
 
 ## <a name="open-a-notebook"></a>Apertura de un cuaderno
 
@@ -57,9 +57,9 @@ Actualmente hay una manera de guardar un cuaderno. Seleccione **Guardar** en la 
 > - **Archivo: Guardar**, **Archivo: Guardar como...** y **Archivo: Guardar todo** del menú Archivo.
 > - Comandos **Archivo: Guardar** especificados en la paleta de comandos.
 
-## <a name="change-the-connection"></a>Cambio de conexión
+## <a name="change-the-sql-connection"></a>Cambio de la conexión SQL
 
-Para cambiar la conexión de un cuaderno:
+Para cambiar la conexión SQL de un cuaderno:
 
 1. Seleccione el menú **Adjuntar a** en la barra de herramientas del cuaderno y elija **Cambiar conexión**.
 
@@ -69,6 +69,31 @@ Para cambiar la conexión de un cuaderno:
 
    ![Selección de un servidor desde el menú Asociar a](./media/notebooks-manage-sql-server/select-attach-to-2.png)
 
+## <a name="change-the-python-kernel"></a>Cambio del kernel de Python
+
+La primera vez que abra Azure Data Studio, se mostrará la página **Configurar Python para Notebooks**. Puede seleccionar una de las dos opciones siguientes:
+
+- **Nueva instalación de Python**, para instalar una nueva copia de Python para Azure Data Studio;
+- **Usar la instalación de Python existente**, para especificar la ruta de acceso a una instalación existente de Python para que Azure Data Studio la use.
+
+Para ver la ubicación y la versión del kernel de Python activo, cree una celda de código y ejecute los siguientes comandos de Python:
+
+```python
+import os
+import sys
+print(sys.version_info)
+print(os.path.dirname(sys.executable))
+```
+
+Para cambiar a otra instalación de Python:
+
+1. En el menú **Archivo**, seleccione **Preferencias** y, después, **Configuración**.
+1. Desplácese hasta **Configuración de Notebook** en **Extensiones**.
+1. En **Usar la instalación de Python existente**, desactive la opción "Ruta de acceso local a una instalación de Python preexistente utilizada por Notebooks".
+1. Reinicie Azure Data Studio.
+
+Cuando se muestre la página **Configurar Python para Notebooks**, podrá crear una instalación de Python o especificar una ruta de acceso a una instalación existente.
+
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para obtener más información sobre los cuadernos en Azure Data Studio, vea [Uso de los cuadernos en SQL Server 2019](notebooks-guidance.md).
+Para obtener más información sobre los cuadernos de SQL en Azure Data Studio, vea [Uso de los cuadernos en SQL Server 2019](notebooks-guidance.md).

@@ -1,5 +1,6 @@
 ---
 title: Recuperación de bases de datos relacionadas con transacciones marcadas
+description: SQL Server admite marcas con nombre en el registro de transacciones para permitir la recuperación hasta una marca específica. Las marcas se pueden asociar a un trabajo específico.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 002b5e92c94abece7ea935cb06985a51b78e98c4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: dd28690296697c256dcdde832517d9713e611184
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75238889"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82180880"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

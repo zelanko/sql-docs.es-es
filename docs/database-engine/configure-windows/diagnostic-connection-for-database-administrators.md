@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a961dc8923d07b9a3036c38d9e0ae05a6b6a6010
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6123b5259f6927c41281fb99264432062fc252bd
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73983039"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588163"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Conexión de diagnóstico para administradores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,46 +42,54 @@ ms.locfileid: "73983039"
   
  Solo los miembros del rol sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden conectarse utilizando la DAC.  
   
- La DAC está disponible y se admite a través de la utilidad del símbolo del sistema **sqlcmd** a través de un modificador de administrador especial ( **-A**). Para obtener más información sobre cómo usar **sqlcmd**, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También se puede conectar agregando el prefijo **admin:** al nombre de la instancia con el formato **sqlcmd -S admin:<*nombre_de_instancia*>** . También puede iniciar una DAC desde un Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conectándose a **admin:\<*nombre_de_instancia*>** .  
-  
+ La DAC está disponible y permitida a través de la utilidad del símbolo del sistema `sqlcmd` con un modificador de administrador especial (`-A`). Para obtener más información sobre el uso de `sqlcmd`, vea [Usar sqlcmd con variables de script](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). También se puede conectar agregando el prefijo `admin:` al nombre de la instancia en formato `sqlcmd -S admin:<*instance_name*>`. También puede iniciar una DAC desde un Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conectándose a `admin:\<*instance_name*>`.
+
+> [!Note]  
+> Para establecer una DAC desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+> - Desconecte todas las conexiones a la instancia de SQL Server relacionada, incluido el Explorador de objetos y todas las ventanas de consulta abiertas.
+> - En el menú, seleccione **Archivo** > **Nuevo** > **Consulta de motor de base de datos**.
+> - En el cuadro de diálogo de conexión, escriba `admin:<server_name>` en el campo Nombre del servidor si usa la instancia predeterminada o `admin:<server_name>\<instance_name>` si usa una instancia con nombre.
+
 ## <a name="restrictions"></a>Restricciones  
  Dado que la DAC existe únicamente para el diagnóstico de problemas de servidor en raras circunstancias, hay algunas restricciones en la conexión:  
   
--   Para asegurarse de que haya recursos disponibles para la conexión, solo se permite una DAC por cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ya hay una conexión DAC activa, cualquier solicitud nueva de conexión a través de la DAC se denegará con el error 17810.  
+- Para asegurarse de que haya recursos disponibles para la conexión, solo se permite una DAC por cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ya hay una conexión DAC activa, cualquier solicitud nueva de conexión a través de la DAC se denegará con el error 17810.  
   
--   Para ahorrar recursos, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] no escucha en el puerto DAC a menos que se inicie con la marca de seguimiento 7806.  
+- Para ahorrar recursos, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] no escucha en el puerto DAC a menos que se inicie con la marca de seguimiento 7806.  
   
--   Inicialmente la DAC intenta conectarse a la base de datos predeterminada asociada al inicio de sesión. Una vez conectada correctamente, el usuario podrá conectarse a la base de datos maestra. Si la base de datos predeterminada está sin conexión o no disponible por la razón que sea, la conexión devolverá el error 4060. Con todo, se realizará correctamente si invalida la base de datos predeterminada para conectarse a la base de datos maestra utilizando el comando siguiente:  
+- Inicialmente la DAC intenta conectarse a la base de datos predeterminada asociada al inicio de sesión. Una vez conectada correctamente, el usuario podrá conectarse a la base de datos maestra. Si la base de datos predeterminada está sin conexión o no disponible por la razón que sea, la conexión devolverá el error 4060. Con todo, se realizará correctamente si invalida la base de datos predeterminada para conectarse a la base de datos maestra utilizando el comando siguiente:  
+
+   ```powershell
+   sqlcmd -A -d master 
+   ```
+
+   Se recomienda conectarse a la base de datos maestra con la DAC porque su disponibilidad está garantizada si se ha iniciado la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-     **sqlcmd -A -d master**  
+- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prohíbe la ejecución de comandos o consultas paralelas con la DAC. Por ejemplo, se genera el error 3637 si se ejecuta una de las instrucciones siguientes con la DAC:  
   
-     Se recomienda conectarse a la base de datos maestra con la DAC porque su disponibilidad está garantizada si se ha iniciado la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
+  - `RESTORE...`
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prohíbe la ejecución de comandos o consultas paralelas con la DAC. Por ejemplo, se genera el error 3637 si se ejecuta una de las instrucciones siguientes con la DAC:  
+  - `BACKUP...`
+
+- Con la DAC solo está garantizada la disponibilidad de recursos limitados. No use la DAC para ejecutar consultas que consuman muchos recursos (por ejemplo, una combinación compleja en una tabla grande) o consultas que se puedan bloquear. Así se evita que la DAC agrave cualquier problema de servidor ya existente. Para evitar posibles escenarios de bloqueo, si debe ejecutar consultas que se pueden bloquear, ejecútelas con niveles de aislamiento basado en instantáneas siempre que sea posible; de lo contrario, establezca el nivel de aislamiento de transacción en READ UNCOMMITTED y establezca un valor pequeño, como 2000 milisegundos, para LOCK_TIMEOUT, o ambos. Esto evitará que la sesión de la DAC se bloquee. Sin embargo, dependiendo del estado en el que esté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede ser que la sesión de la DAC se bloquee en un bloqueo temporal. Es posible que pueda finalizar la sesión de la DAC mediante CTRL+C, pero esto no está garantizado. En tal caso, la única alternativa puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   RESTORE  
-  
-    -   BACKUP  
-  
--   Con la DAC solo está garantizada la disponibilidad de recursos limitados. No use la DAC para ejecutar consultas que consuman muchos recursos (por ejemplo, una combinación compleja en una tabla grande) o consultas que se puedan bloquear. Así se evita que la DAC agrave cualquier problema de servidor ya existente. Para evitar posibles escenarios de bloqueo, si debe ejecutar consultas que se pueden bloquear, ejecútelas con niveles de aislamiento basado en instantáneas siempre que sea posible; de lo contrario, establezca el nivel de aislamiento de transacción en READ UNCOMMITTED y establezca un valor pequeño, como 2000 milisegundos, para LOCK_TIMEOUT, o ambos. Esto evitará que la sesión de la DAC se bloquee. Sin embargo, dependiendo del estado en el que esté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede ser que la sesión de la DAC se bloquee en un bloqueo temporal. Es posible que pueda finalizar la sesión de la DAC mediante CTRL+C, pero esto no está garantizado. En tal caso, la única alternativa puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
--   Para asegurarse de la conectividad y la solución de problemas con la DAC, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva recursos limitados para procesar los comandos ejecutados en la DAC. Estos recursos solo suelen ser suficientes para funciones sencillas de diagnóstico y solución de problemas, como las que se mencionan más adelante.  
+- Para asegurarse de la conectividad y la solución de problemas con la DAC, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reserva recursos limitados para procesar los comandos ejecutados en la DAC. Estos recursos solo suelen ser suficientes para funciones sencillas de diagnóstico y solución de problemas, como las que se mencionan más adelante.  
   
  Aunque teóricamente es posible ejecutar cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que no se tenga que ejecutar en paralelo en la DAC, se recomienda encarecidamente limitar el uso a los siguientes comandos de diagnóstico y solución de problemas:  
   
--   Consultas en vistas de administración dinámica para diagnósticos básicos, como [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) para el estado de bloqueo, [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) para comprobar el estado de las cachés, y [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) y [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) para solicitudes y sesiones activas. Evite las vistas de administración dinámica que consumen muchos recursos (por ejemplo, [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) examina el almacén de versiones completo y puede causar numerosas E/S) o que usan combinaciones complejas. Para obtener información acerca de las implicaciones para el rendimiento, vea la documentación específica para la [vista de administración dinámica](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+- Consultas en vistas de administración dinámica para diagnósticos básicos, como [sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md) para el estado de bloqueo, [sys.dm_os_memory_cache_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-counters-transact-sql.md) para comprobar el estado de las cachés, y [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) y [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) para solicitudes y sesiones activas. Evite las vistas de administración dinámica que consumen muchos recursos (por ejemplo, [sys.dm_tran_version_store](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md) examina el almacén de versiones completo y puede causar numerosas E/S) o que usan combinaciones complejas. Para obtener información acerca de las implicaciones para el rendimiento, vea la documentación específica para la [vista de administración dinámica](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
--   Consultas en vistas de catálogo.  
+- Consultas en vistas de catálogo.  
   
--   Comandos DBCC básicos como [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) y [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). No ejecute comandos que consumen muchos recursos, como [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) o [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
+- Comandos DBCC básicos como [DBCC FREEPROCCACHE](../..//t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md), [DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md), [DBCC DROPCLEANBUFFERS](../../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md) y [DBCC SQLPERF](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). No ejecute comandos que consumen muchos recursos, como [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md) o [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
--   Comando KILL[!INCLUDE[tsql](../../includes/tsql-md.md)]*spid>\< de* . Dependiendo del estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que el comando KILL no siempre se ejecute correctamente; en tal caso, la única opción puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éstas son algunas directrices generales:  
+- Comando KILL *\<spid>* de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dependiendo del estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que el comando KILL no siempre se ejecute correctamente; en tal caso, la única opción puede ser reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Éstas son algunas directrices generales:  
   
-    -   Compruebe que realmente se ha eliminado el SPID con la consulta `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Si no devuelve ninguna fila, significa que la sesión se ha eliminado.  
+    - Compruebe que realmente se ha eliminado el SPID con la consulta `SELECT * FROM sys.dm_exec_sessions WHERE session_id = <spid>`. Si no devuelve ninguna fila, significa que la sesión se ha eliminado.  
   
-    -   Si la sesión todavía existe, compruebe si hay tareas asignadas a esta sesión ejecutando la consulta `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`. Si ve la tarea, lo más probable es que se esté eliminando la sesión ahora. Tenga en cuenta que es posible que esto tarde bastante tiempo y que no salga correctamente.  
+    - Si la sesión todavía existe, compruebe si hay tareas asignadas a esta sesión ejecutando la consulta `SELECT * FROM sys.dm_os_tasks WHERE session_id = <spid>`. Si ve la tarea, lo más probable es que se esté eliminando la sesión ahora. Tenga en cuenta que es posible que esto tarde bastante tiempo y que no salga correctamente.  
   
-    -   Si no hay ninguna tarea en sys.dm_os_tasks asociada a esta sesión, pero la sesión permanece en sys.dm_exec_sessions tras ejecutar el comando KILL, significa que no tiene ningún trabajo disponible. Seleccione una de las tareas que se están ejecutando (una tarea que aparece en la vista sys.dm_os_tasks con `sessions_id <> NULL`), y elimine la sesión que tiene asociada para liberar el trabajo. Tenga en cuenta que es posible que no sea suficiente eliminar una sola sesión: posiblemente tendrá que eliminar varias.  
+    - Si no hay ninguna tarea en sys.dm_os_tasks asociada a esta sesión, pero la sesión permanece en sys.dm_exec_sessions tras ejecutar el comando KILL, significa que no tiene ningún trabajo disponible. Seleccione una de las tareas que se están ejecutando (una tarea que aparece en la vista sys.dm_os_tasks con `sessions_id <> NULL`), y elimine la sesión que tiene asociada para liberar el trabajo. Tenga en cuenta que es posible que no sea suficiente eliminar una sola sesión: posiblemente tendrá que eliminar varias.  
   
 ## <a name="dac-port"></a>Puerto de la DAC  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha la DAC en el puerto TCP 1434 si está disponible o en un puerto asignado dinámicamente en el inicio de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El [registro de errores](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md) contiene el número de puerto en el que escucha la DAC. De forma predeterminada, la escucha de la DAC solo acepta la conexión en el puerto local. Para ver un ejemplo de código en el que se activan conexiones de administración remota, vea [remote admin connections (opción de configuración del servidor)](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md).  

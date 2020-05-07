@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 15aa957b25323337f3b76b4f54f89a7121567a24
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 12d392c73d1e68bee57bb0a534bd65d39e48946d
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982187"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262149"
 ---
 # <a name="use-sql-server-objects"></a>Usar objetos de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +44,12 @@ ms.locfileid: "73982187"
   
  Algunos objetos tienen varias instancias si existen varios recursos de un determinado tipo en el equipo. Por ejemplo, el tipo de objeto **Procesador** tendrá varias instancias si un sistema contiene varios procesadores. El tipo de objeto **Bases de datos** tiene una instancia para cada base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Algunos tipos de objetos (por ejemplo, el objeto **Administrador de memoria** ) tienen solo una instancia. Si un tipo de objeto tiene varias instancias, puede agregar contadores para realizar un seguimiento de las estadísticas relativas a cada instancia o, en muchos casos, de todas las instancias a la vez. Los contadores de la instancia predeterminada aparecen con el formato **SQLServer:** _\<nombre de objeto>_ . Los contadores de las instancias con nombre aparecen con el formato **MSSQL$** _\<nombre de instancia>_ **:** _\<nombre de contador>_ o **SQLAgent$** _\<nombre de instancia>_ **:** _\<nombre de contador>_ .  
   
+Los valores del contador de rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se generan mediante el motor del contador de rendimiento de Windows (WPC). Algunos valores del contador no se calculan directamente mediante [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona valores base al motor de WPC, que realizará los cálculos necesarios (en forma de porcentajes). La vista de administración dinámica [sys.dm_os_performance_counters (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) proporciona todos los contadores con el valor original generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La columna `cntr_type` indica el tipo de contador. El modo en el que el motor de WPC procesa los valores del contador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] depende de este tipo. Para más información sobre los tipos de contadores de rendimiento, vea la [documentación de WMI](https://docs.microsoft.com/windows/win32/wmisdk/wmi-performance-counter-types).
+  
  Al agregar o quitar contadores en el gráfico y guardar la configuración del gráfico, puede especificar los objetos y contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se supervisan al iniciar el Monitor de sistema.  
   
  Puede configurar el Monitor de sistema para que muestre las estadísticas de cualquier contador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Además, puede establecer un valor de umbral para cualquier contador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y generar posteriormente una alerta cuando un contador supere dicho umbral. Para obtener más información sobre cómo establecer una alerta, vea [Crear una alerta de base de datos de SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md).  
-  
-> [!TIP]  
->  También puede obtener los valores de contador de rendimiento si consulta la vista de administración dinámica [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) .  
+    
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se muestran solo si se instala una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si detiene y reinicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se interrumpirá la presentación de estadísticas y, después, se reanudará automáticamente. Tenga en cuenta también que verá los contadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el complemento del Monitor de sistema incluso si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando. En una instancia en clúster, los contadores de rendimiento solo funcionan en el nodo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -118,13 +118,13 @@ ms.locfileid: "73982187"
 |[SQLServer:Memory Broker Clerks](../../relational-databases/performance-monitor/sql-server-memory-broker-clerks-object.md)|Estadísticas relacionadas con los distribuidores de agente de memoria.|
 |[SQLServer:Memory Manager](../../relational-databases/performance-monitor/sql-server-memory-manager-object.md)|Proporciona información acerca de la utilización de memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como, por ejemplo, el número total de estructuras de bloqueo asignadas actualmente.|  
 |[SQLServer:Caché del plan](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)|Proporciona información acerca de la caché de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se utiliza para almacenar objetos como procedimientos almacenados, desencadenadores y planes de consultas.|  
-|[SQLServer:Query Store](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Proporciona información sobre el Almacén de consultas.|  
-|[SQLServer:Estadísticas de grupo de recursos de servidor](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
+|[SQLServer: Almacén de consultas](../../relational-databases/performance-monitor/sql-server-query-store-object.md)|Proporciona información sobre el Almacén de consultas.|  
+|[SQLServer: Estadísticas de grupo de recursos](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)|Proporciona información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.|  
 |[SQLServer:SQL Errors](../../relational-databases/performance-monitor/sql-server-sql-errors-object.md)|Proporciona información acerca de los errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLServer:SQL Statistics](../../relational-databases/performance-monitor/sql-server-sql-statistics-object.md)|Proporciona información acerca de aspectos de consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como el número de lotes de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[SQLServer:Transactions](../../relational-databases/performance-monitor/sql-server-transactions-object.md)|Proporciona información acerca de las transacciones activas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], como el número global de transacciones y el número de transacciones de instantáneas.|  
 |[SQLServer:User Settable](../../relational-databases/performance-monitor/sql-server-user-settable-object.md)|Realiza una supervisión personalizada. Cada contador puede ser un procedimiento almacenado personalizado o cualquier instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelva un valor para supervisar.|  
-|[SQLServer:Wait Statistics](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
+|[SQLServer: Estadísticas de espera](../../relational-databases/performance-monitor/sql-server-wait-statistics-object.md)|Proporciona información acerca de las esperas.|  
 |[SQLServer: Estadísticas de grupo de cargas de trabajo](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)|Proporciona información sobre las estadísticas de grupo de cargas de trabajo del regulador de recursos.|  
   
 ##  <a name="sql-server-replication-performance-objects"></a><a name="SQLServerReplicationPOs"></a> Objetos de rendimiento de replicación de SQL Server  

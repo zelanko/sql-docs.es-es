@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: faf62599a54c4c1a58b33066e69cf3b2e8698b70
-ms.sourcegitcommit: e922721431d230c45bbfb5dc01e142abbd098344
+ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82138155"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220720"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Solución de la fragmentación de índices mediante la reorganización o recompilación de índices
 
@@ -57,6 +57,9 @@ Qué es la fragmentación de índices y por qué le debería interesar:
 
 El primer paso para decidir qué método de desfragmentación de índice se va a usar consiste en analizar el índice a fin de determinar la magnitud de la fragmentación. La fragmentación se detecta de manera diferente para los índices de almacén de filas y los de almacén de columnas.
 
+> [!NOTE]
+> Es especialmente importante revisar la fragmentación de índices o montones después de eliminar grandes cantidades de datos. En el caso de los montones, si hay actualizaciones frecuentes, también puede ser necesario revisar la fragmentación para evitar la proliferación de registros de reenvío. Para más información sobre los montones, vea [Montones (tablas sin índices agrupados)](../../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures). 
+
 ### <a name="detecting-fragmentation-of-rowstore-indexes"></a>Detección de la fragmentación de índices de almacén de filas
 
 Con [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), puede detectar la fragmentación de un índice específico, de todos los índices de una tabla o vista indexada, de todos los índices de una base de datos o de todos los índices de todas las bases de datos. Para los índices con particiones, **sys.dm_db_index_physical_stats** también proporciona información de la fragmentación para cada partición.
@@ -73,18 +76,22 @@ Después de determinar la magnitud de la fragmentación, use la tabla siguiente 
 
 |Valor de**avg_fragmentation_in_percent**|Instrucción correctiva|
 |-----------------------------------------------|--------------------------|
-|> 5% y < = 30%|ALTER INDEX REORGANIZE|
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+|> 5 % y < = 30 % <sup>1</sup>|ALTER INDEX REORGANIZE|
+|> 30 % <sup>1</sup>|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>2</sup>|
 
-<sup>1</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea. Para obtener más información, vea [INDEX](#rebuild-an-index) y [Realización de operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md).
+<sup>1</sup> Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno.      
 
-Estos valores proporcionan directrices generales para la determinación del punto en el que debe cambiar entre `ALTER INDEX REORGANIZE` y `ALTER INDEX REBUILD`. No obstante, los valores reales pueden variar de un caso a otro. Es importante que experimente la determinación del mejor umbral para su entorno. Por ejemplo, si se usa un índice determinado principalmente para operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Las ventajas de rendimiento son menos evidentes para los índices que se usan principalmente para las operaciones de búsqueda. Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice agrupado) es especialmente útil para las operaciones de examen de índices no agrupados, pero tiene poco efecto en las operaciones de búsqueda.
+> [!TIP] 
+> Por ejemplo, si se usa un índice determinado principalmente para operaciones de examen, la eliminación de la fragmentación puede mejorar el rendimiento de estas operaciones. Es posible que la ventaja de rendimiento no sea perceptible en los índices que se usan principalmente con operaciones de búsqueda.    
+Del mismo modo, la eliminación de la fragmentación en un montón (una tabla sin índice agrupado) es especialmente útil para las operaciones de examen de índices no agrupados, pero tiene poco efecto en las operaciones de búsqueda.
 
-Los índices con fragmentación o menos del 5 % no se deben desfragmentar, ya que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de CPU implicado en la reorganización o recompilación del índice. Además, cuando se vuelven a generar o se reorganizan índices pequeños de almacén de filas, por lo general la fragmentación no se reduce realmente. Las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice. Vea también [Consideraciones específicas para volver a generar índices de almacén de filas](#considerations-specific-to-rebuilding-rowstore-indexes).
+<sup>2</sup> La regeneración de un índice se puede ejecutar en línea o sin conexión. La reorganización de un índice siempre se ejecuta en línea. Para lograr una disponibilidad similar a la opción de reorganización, debe volver a generar los índices en línea. Para obtener más información, vea [INDEX](#rebuild-an-index) y [Realización de operaciones de índice en línea](../../relational-databases/indexes/perform-index-operations-online.md).
+
+Los índices con fragmentación o menos del 5 % no se deben desfragmentar, ya que el beneficio de quitar una cantidad de fragmentación tan pequeña es casi siempre ampliamente superado por el costo de CPU implicado en la reorganización o recompilación del índice. Además, cuando se vuelven a generar o se reorganizan índices pequeños de almacén de filas, por lo general la fragmentación no se reduce realmente. Hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], inclusive, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] asigna espacio mediante extensiones mixtas. Por consiguiente, las páginas de índices pequeños a veces se almacenan en extensiones mixtas. Las extensiones mixtas pueden estar compartidas por hasta ocho objetos, de modo que es posible que no se pueda reducir la fragmentación en un índice pequeño después de reorganizar o volver a generar dicho índice. Vea también [Consideraciones específicas para volver a generar índices de almacén de filas](#considerations-specific-to-rebuilding-rowstore-indexes). Para más información sobre las extensiones, vea la [Guía de arquitectura de páginas y extensiones](../../relational-databases/pages-and-extents-architecture-guide.md#extents).
 
 ### <a name="detecting-fragmentation-of-columnstore-indexes"></a>Detección de la fragmentación en índices de almacén de columnas
 
-Con [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), puede determinar el porcentaje de filas eliminadas en un índice, que es una buena medida de la fragmentación en un grupo de filas de un índice de almacén de columnas. Use esta información para calcular la fragmentación en un índice específico, todos los índices de una tabla, todos los índices de una base de datos o todos los índices de todas las bases de datos.
+Mediante [sys.dm_db_column_store_row_group_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md), puede determinar el porcentaje de filas eliminadas en un índice, que es una medida razonable para la fragmentación en un grupo de filas de un índice de almacén de columnas. Use esta información para calcular la fragmentación en un índice específico, todos los índices de una tabla, todos los índices de una base de datos o todos los índices de todas las bases de datos.
 
 El conjunto de resultados devuelto por **sys.dm_db_column_store_row_group_physical_stats** incluye las columnas siguientes:
 

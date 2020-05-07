@@ -3,18 +3,18 @@ title: Instalación en Windows
 description: Obtenga información sobre cómo instalar SQL Server Machine Learning Services en Windows. Puede usar Machine Learning Services para ejecutar scripts de Python y R en la base de datos.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/20/2020
+ms.date: 02/29/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 721b6cefdee0a50c79bd2b8a0e3ac4f26202abd5
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: a96eb5b8d50102c09ed6343c0f067db5a5bdb6e2
+ms.sourcegitcommit: db1b6153f0bc2d221ba1ce15543ecc83e1045453
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81118418"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82588239"
 ---
 # <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Instalación de SQL Server Machine Learning Services (Python y R) en Windows
 
@@ -28,7 +28,7 @@ Obtenga información sobre cómo instalar SQL Server Machine Learning Services 
 
 + Para la continuidad empresarial, se admiten [Grupos de disponibilidad AlwaysOn](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) para Machine Learning Services. Instale Machine Learning Services y configure los paquetes en cada nodo.
 
-+ *No se admite* la instalación de Machine Learning Services en un clúster de conmutación por error en SQL Server 2017, Es compatible con SQL Server 2019.
++ *No se admite* la instalación de Machine Learning Services en una [instancia de clúster de conmutación por error (FCI) de Always On](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) en SQL Server 2017. Es compatible con SQL Server 2019 y versiones posteriores.
  
 + No instale Machine Learning Services en un controlador de dominio. Se producirá un error en la parte de la instalación de Machine Learning Services.
 

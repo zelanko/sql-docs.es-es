@@ -38,12 +38,12 @@ ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4c6c89602f55eb72c01d32a2541bcf4c775b9a9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: da4f6e997d3f99e9c64c7623a616fe5d45c283db
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78176695"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82169373"
 ---
 # <a name="update-transact-sql"></a>UPDATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -203,7 +203,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@** _variable_ = *column* = *expression* establece la variable en el mismo valor que la columna. Esto difiere de SET **@** _variable_ = _column_, _column_ = _expression_, que establece la variable en el valor previo a la actualización de la columna.  
   
  \<OUTPUT_Clause>  
- Devuelve datos actualizados o expresiones basadas en ellos como parte de la operación UPDATE. La cláusula OUTPUT no se admite en instrucciones DML dirigidas a tablas o vistas remotas. Para más información, vea [Cláusula OUTPUT &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Devuelve datos actualizados o expresiones basadas en ellos como parte de la operación UPDATE. La cláusula OUTPUT no se admite en instrucciones DML dirigidas a tablas o vistas remotas. Para más información sobre los argumentos y el comportamiento de esta cláusula, vea [Cláusula OUTPUT (Transact-SQL)](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Especifica que se utiliza un origen de tabla, vista o tabla derivada para proporcionar los criterios de la operación de actualización. Para obtener más información, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  

@@ -1,7 +1,7 @@
 ---
 title: Sugerencias de tabla (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/31/2017
+ms.date: 04/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -36,12 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 225a92fc082a2778a7146923a9d138d0ce86aa7b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73981763"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087527"
 ---
 # <a name="hints-transact-sql---table"></a>Sugerencias (Tabla de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "73981763"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```syntaxsql
 WITH  ( <table_hint> [ [, ]...n ] )  
   
 <table_hint> ::=   
@@ -127,7 +127,7 @@ Con algunas excepciones, las sugerencias de tabla se admiten en la cláusula FRO
 > [!IMPORTANT]  
 > Omitir la palabra clave WITH es una característica obsoleta: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-Las siguientes sugerencias de tabla se permiten con y sin la palabra clave WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT y NOEXPAND. Cuando estas sugerencias de tabla se especifican sin la palabra clave WITH, deben especificarse solas. Por ejemplo:  
+Las siguientes sugerencias de tabla están permitidas con y sin la palabra clave `WITH`: `NOLOCK`, `READUNCOMMITTED`, `UPDLOCK`, `REPEATABLEREAD`, `SERIALIZABLE`, `READCOMMITTED`, `TABLOCK`, `TABLOCKX`, `PAGLOCK`, `ROWLOCK`, `NOWAIT`, `READPAST`, `XLOCK`, `SNAPSHOT` y `NOEXPAND`. Cuando estas sugerencias de tabla se especifican sin la palabra clave WITH, deben especificarse solas. Por ejemplo:  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -261,7 +261,7 @@ Equivalente a READUNCOMMITTED. Para obtener más información, vea READUNCOMMITT
 > Para las instrucciones UPDATE o DELETE: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 NOWAIT  
-Indica a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que devuelva un mensaje cuando encuentre un bloqueo en la tabla. NOWAIT equivale a especificar SET LOCK_TIMEOUT 0 para una tabla específica. La sugerencia NOWAIT no funciona cuando también se incluye la sugerencia TABLOCK. Para terminar una consulta sin esperas cuando se usa la sugerencia TABLOCK, preceda el nombre de la consulta con `SETLOCK_TIMEOUT 0;` en su lugar.  
+Indica a [!INCLUDE[ssDE](../../includes/ssde-md.md)] que devuelva un mensaje cuando encuentre un bloqueo en la tabla. NOWAIT equivale a especificar `SET LOCK_TIMEOUT 0` para una tabla específica. La sugerencia NOWAIT no funciona cuando también se incluye la sugerencia TABLOCK. Para terminar una consulta sin esperas cuando se usa la sugerencia TABLOCK, preceda el nombre de la consulta con `SETLOCK_TIMEOUT 0;` en su lugar.  
   
 PAGLOCK  
 Aplica bloqueos de página en los casos en que se suelen aplicar bloqueos individuales en filas o claves, o bien en los casos en los que se suele aplicar un único bloqueo de tabla. De manera predeterminada, utiliza el modo de bloqueo apropiado para la operación. Cuando se especifica en transacciones que funcionan con el nivel de aislamiento SNAPSHOT, no se utilizan bloqueos de página a menos que se combine PAGLOCK con otras sugerencias de tabla que requieran bloqueos, como UPDLOCK y HOLDLOCK.  
@@ -339,7 +339,7 @@ Esta opción permite optimizar el tiempo de ejecución de la consulta ajustando 
 TABLOCK  
 Especifica que el bloqueo adquirido se aplique en el nivel de tabla. El tipo de bloqueo que se ha adquirido depende de la instrucción que se esté ejecutando. Por ejemplo, una instrucción SELECT puede adquirir un bloqueo compartido. Al especificar TABLOCK, el bloqueo compartido se aplica a toda la tabla, no en el nivel de fila o de página. Si también se especifica HOLDLOCK, el bloqueo de tabla se mantiene hasta el final de la transacción.  
   
-Al importar los datos a un montón mediante la instrucción INSERT INTO \<target_table> SELECT \<columns> FROM \<source_table>, puede habilitar el registro y el bloqueo optimizados para la instrucción al especificar la sugerencia TABLOCK para la tabla de destino. Además, el modelo de recuperación de la base de datos debe establecerse en registro simple o masivo. Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
+Al importar los datos a un montón mediante la instrucción `INSERT INTO <target_table> SELECT <columns> FROM <source_table>`, puede habilitar el registro mínimo y el bloqueo optimizado para la instrucción al especificar la sugerencia TABLOCK para la tabla de destino. Además, el modelo de recuperación de la base de datos debe establecerse en registro simple o masivo. La sugerencia TABLOCK también permite inserciones paralelas en montones o en índices de almacén de columnas agrupados. Para obtener más información, vea [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md).  
   
 Cuando se usa con el proveedor de conjuntos de filas BULK [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) para importar los datos a una tabla, TABLOCK permite que varios clientes carguen datos de forma simultánea en la tabla de destino con el bloqueo y el registro optimizados. Para más información, vea [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   

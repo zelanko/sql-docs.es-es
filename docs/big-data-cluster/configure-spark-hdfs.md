@@ -5,16 +5,16 @@ description: Los clústeres de macrodatos de SQL Server permiten soluciones de 
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 02/21/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 630f81c921d99634cfb4b8824dc0d46c3680c85f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 8d4325bcdbfe26d68b32fe4767a710b26f52f712
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77283480"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220150"
 ---
 # <a name="configure-apache-spark-and-apache-hadoop-in-big-data-clusters"></a>Configuración de Apache Spark y Apache Hadoop en clústeres de macrodatos
 
@@ -41,6 +41,10 @@ Puede encontrar todas las configuraciones posibles de cada uno en el sitio de do
 - Hive: https://cwiki.apache.org/confluence/display/Hive/Configuration+Properties#ConfigurationProperties-MetaStore
 - Livy: https://github.com/cloudera/livy/blob/master/conf/livy.conf.template
 - Puerta de enlace de Apache Knox: https://knox.apache.org/books/knox-0-14-0/user-guide.html#Gateway+Details
+
+Además de estas configuraciones, también se ofrece la posibilidad de configurar si los trabajos de Spark se pueden ejecutar en el grupo de almacenamiento o no. 
+
+Este valor booleano, `includeSpark`, se encuentra en el archivo de configuración `bdc.json`, en `spec.resources.storage-0.spec.settings.spark`.
 
 ## <a name="unsupported-configurations"></a>Configuraciones no admitidas
 

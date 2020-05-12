@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 2681d021099e8b10150efd255e27cf436c665a90
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 1c8728bdea0ce2dd5650a1f3ea8adf224b58424b
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73926029"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922194"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "73926029"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Fecha y hora en la que se desencadena la acción auditable.|**datetime2**|Sí|  
 |**sequence_no**|Realiza un seguimiento de la secuencia de registros de un único registro de auditoría que era demasiado grande para caber en el búfer de escritura destinado a las auditorías.|**int**|Sí|  
-|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como un predicado, debe convertirse de una cadena de caracteres a un valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|**varchar(4)**|Sí|  
+|**action_id**|Identificador de la acción.<br /><br /> Sugerencia: Para usar **action_id** como un predicado, debe convertirse de una cadena de caracteres a un valor numérico. Para obtener más información, vea [Filtrar SQL Server Audit por el predicado action_id / class_type](https://docs.microsoft.com/archive/blogs/sqlsecurity/filter-sql-server-audit-on-action_id-class_type-predicate).|**varchar(4)**|Sí|  
 |**succeeded**|Indica si la comprobación del permiso de la acción que desencadena el evento de auditoría se ha realizado correctamente o no. |**bit**<br /> - 1 = correcto, <br />0 = error|Sí|  
 |**permission_bitmask**|Cuando es aplicable, muestra los permisos concedidos, denegados, o revocados.|**bigint**|No|  
 |**is_column_permission**|Marca que especifica un permiso de nivel de columna|**bit** <br />- 1 = True, <br />0 = False|No|  

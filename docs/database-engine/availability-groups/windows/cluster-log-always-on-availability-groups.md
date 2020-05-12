@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 01a9e3c1-2a5f-4b98-a424-0ffc15d312cf
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 045444c2141027854e54480483f09ab8eb9a04b6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5e13715681f5b86647662a37b982878b3ad77468
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244384"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925296"
 ---
 # <a name="generate-and-analyze-the-clusterlog-for-an-always-on-availability-group"></a>Generación y análisis de CLUSTER.LOG para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "75244384"
 ## <a name="generate-cluster-log"></a>Generar el registro del clúster  
  Puede generar los registros del clúster de dos maneras:  
   
-1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
+1.  Ejecute el comando `cluster /log /g` en el símbolo del sistema. Este comando genera los registros del clúster en el directorio \windows\cluster\reports en cada nodo de WSFC. La ventaja de este método es que puede especificar el nivel de detalle en los registros generados mediante la opción `/level`. La desventaja es que no se puede especificar el directorio de destino para los registros de clúster generados. Para obtener más información, consulte [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283) (Cómo crear el archivo cluster.log en clústeres de conmutación por error de Windows Server 2008).  
   
 2.  Use el cmdlet [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) de PowerShell. La ventaja de este método es que le permite generar el registro de clúster desde todos los nodos a un directorio de destino en el nodo en que se ejecuta el cmdlet. La desventaja es que no le permite especificar el nivel de detalle en los registros generados.  
   

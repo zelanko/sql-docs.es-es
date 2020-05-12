@@ -2,18 +2,18 @@
 title: Historial de controladores para Microsoft SQL Server | Microsoft Docs
 description: En esta página se describen las tecnologías de conexión de datos históricos de Microsoft para conectarse a SQL Server.
 ms.custom: ''
-ms.date: 05/04/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3724e9c616a17e490946888d2acc8c886a57545a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: f5db99b78cc5c5d251baee6028d1c9bc4e7448bf
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81529072"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885772"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Historial de controladores para Microsoft SQL Server
 
@@ -35,7 +35,7 @@ Tras SQL Server 2012, el controlador ODBC principal de SQL Server se ha desar
 
 ## <a name="ole-db"></a>OLE DB
 
-Hay tres generaciones distintas de proveedores de OLE DB de Microsoft para SQL Server. El primer "proveedor OLE DB de Microsoft para SQL Server" (SQLOLEDB) todavía se suministra como parte de los [Componentes de Windows Data Access](#microsoft-or-windows-data-access-components). Este proveedor no se actualizará con las nuevas características y no se recomienda usar este controlador para nuevos desarrollos. A partir de SQL Server 2005, [SQL Server Native Client (SNAC)](#sql-server-native-client) incluye una interfaz del proveedor OLE DB (SQLNCLI), que es el proveedor OLE DB que se incluye con SQL Server 2005 hasta SQL Server 2017. Se [anunció en desuso en 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), y no se recomienda usar este controlador para nuevos desarrollos. En 2017, la tecnología de acceso a datos OLE DB dejó de estar [en desuso y se anunció una nueva versión planeada](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) para 2018. El nuevo proveedor OLE DB se conoce como "Microsoft OLE DB Driver for SQL Server" (MSOLEDBSQL) y actualmente se mantiene y recibe soporte.
+Hay tres generaciones distintas de proveedores de OLE DB de Microsoft para SQL Server. El primer "proveedor OLE DB de Microsoft para SQL Server" (SQLOLEDB) todavía se suministra como parte de los [Componentes de Windows Data Access](#microsoft-or-windows-data-access-components). Este proveedor no se actualizará con las nuevas características y no se recomienda usar este controlador para nuevos desarrollos. A partir de SQL Server 2005, [SQL Server Native Client (SNAC)](#sql-server-native-client) incluye una interfaz del proveedor OLE DB (SQLNCLI), que es el proveedor OLE DB que se incluye con SQL Server 2005 hasta SQL Server 2017. Se [anunció en desuso en 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access), y no se recomienda usar este controlador para nuevos desarrollos. En 2017, la tecnología de acceso a datos OLE DB dejó de estar [en desuso y se anunció una nueva versión planeada](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) para 2018. El nuevo proveedor OLE DB se conoce como "Microsoft OLE DB Driver for SQL Server" (MSOLEDBSQL) y actualmente se mantiene y recibe soporte.
 
 ## <a name="adonet"></a>ADO.NET
 

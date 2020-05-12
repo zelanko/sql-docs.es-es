@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: da6999c7-e5e3-4a59-a284-1da635995af1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 8a6bd6207df7d0e93c1b6d360643a9d549e90af9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 37ef5ccd059b956f11b2202e55b2aa4b67832b27
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71295041"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922343"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Novedades de Integration Services en SQL Server 2016
 
@@ -187,9 +187,9 @@ La característica Implementación incremental de paquetes le permite implementa
 ####  <a name="support-for-always-encrypted-in-the-ssis-catalog"></a><a name="encrypted"></a> Compatibilidad con Always Encrypted en el catálogo de SSIS  
  SSIS ya es compatible con la característica Always Encrypted en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea las entradas de blog siguientes.  
   
--   [SSIS con Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS con Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Transformación de búsqueda con Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Transformación de búsqueda con Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### <a name="better-debugging"></a>Depuración más fácil
 
@@ -215,7 +215,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
 -   En el Componente de script o en un componente de flujo de datos personalizado, llame al nuevo método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> de la interfaz IDTSComponentMetadata100.  
   
- Para más info sobre esta mejora, vea el siguiente blog publicado por el desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)(Mejoras de la columna de error para el flujo de datos de SSIS).  
+ Para más info sobre esta mejora, vea el siguiente blog publicado por el desarrollador de SSIS Bo Fan: [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)(Mejoras de la columna de error para el flujo de datos de SSIS).  
   
 > [!NOTE]  
 >  (Esta compatibilidad se amplió en versiones posteriores. Para obtener más información, vea [Compatibilidad ampliada con nombres de columna de error](#getidstring) y [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  
@@ -225,7 +225,7 @@ La característica Implementación incremental de paquetes le permite implementa
   
  El método GetIdentificationStringByLineageID ha cambiado a <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. Para obtener más información, vea [Nombres de columna para errores del flujo de datos](#ErrorColumn).  
   
- Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3)]](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ Para obtener más información sobre este cambio y la mejora de la columna de error, vea la siguiente entrada de blog actualizada. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3) [Mejoras de la columna de error para el flujo de datos SSIS (actualizada para CTP3.3)]](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (En RC0, este método se ha movido a la nueva interfaz <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> . Para obtener más información, vea [Nueva interfaz IDTSComponentMetaData130 de la API](#CMD130)).  

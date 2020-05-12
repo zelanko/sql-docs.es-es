@@ -2,7 +2,7 @@
 title: Uso de XA con Microsoft ODBC Driver
 description: Microsoft ODBC Driver for SQL Server ofrece compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y macOS.
 ms.custom: ''
-ms.date: 02/04/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ba11ff1bee512b0e3ea7b2b641ac6dc64f60adc9
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 3b5b8444058f0078b56ab5e4500b86a4c35a1897
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81635550"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886332"
 ---
 # <a name="using-xa-transactions"></a>Uso de las transacciones XA
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "81635550"
 
 ## <a name="overview"></a>Información general
 
-A partir de la versión 17.3, Microsoft ODBC Driver for SQL Server ofrece compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y macOS. La implementación XA en el lado del controlador permite que la aplicación cliente envíe operaciones en serie (como iniciar, confirmar, revertir una rama de transacción, etc.) al administrador de transacciones (TM). Luego, el TM se comunicará con Resource Manager (RM) de acuerdo con estas operaciones. Para más información sobre la especificación de XA y la implementación de Microsoft para DTC (MS DTC), consulte el artículo sobre el [funcionamiento de DTC de SQL Server (transacciones XA y MSDTC)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/).
+A partir de la versión 17.3, Microsoft ODBC Driver for SQL Server ofrece compatibilidad con las transacciones XA con el Coordinador de transacciones distribuidas (DTC) en Windows, Linux y macOS. La implementación XA en el lado del controlador permite que la aplicación cliente envíe operaciones en serie (como iniciar, confirmar, revertir una rama de transacción, etc.) al administrador de transacciones (TM). Luego, el TM se comunicará con Resource Manager (RM) de acuerdo con estas operaciones. Para más información sobre la especificación de XA y la implementación de Microsoft para DTC (MS DTC), consulte el artículo sobre el [funcionamiento de DTC de SQL Server (transacciones XA y MSDTC)](/archive/blogs/bobsql/how-it-works-sql-server-dtc-msdtc-and-xa-transactions).
 
 
 

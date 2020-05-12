@@ -4,8 +4,6 @@ description: Puede enviar trabajos de U-SQL al servicio Azure Data Lake Analytic
 ms.custom: ''
 ms.date: 06/27/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,12 +11,13 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPADLSTASK.F1
 author: yanancai
 ms.author: yanacai
-ms.openlocfilehash: ab9a357e8215310b21fa2e401067f49176aeefd4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: 1f4eaadafa422611c3d24cbefee7a7d982dd88d8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67947354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763666"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarea de Azure Data Lake Analytics
 
@@ -53,6 +52,7 @@ La configuración de U-SQL tiene dos valores: **SourceType** y opciones dinámic
 |**DirectInput**|Especifica el script de U-SQL a través del editor insertado. Si selecciona este valor, se mostrará la opción dinámica **USQLStatement**.|  
 |**FileConnection**|Especifica un archivo .usql local que contiene el script de U-SQL. Si selecciona esta opción, se mostrará la opción dinámica **FileConnection**.|  
 |**Variable**|Especifica una variable SSIS que contiene el script de U-SQL. Si selecciona este valor, se mostrará la opción dinámica **SourceVariable**.|
+| &nbsp; | &nbsp; |
 
 **SourceType Dynamic Options** (Opciones dinámicas de SourceType) especifica el contenido del script de la consulta U-SQL. 
 
@@ -61,6 +61,7 @@ La configuración de U-SQL tiene dos valores: **SourceType** y opciones dinámic
 |**SourceType = DirectInput**|Escriba la consulta U-SQL que se enviará directamente en el cuadro de opción o seleccione el botón Examinar (...) para escribir la consulta U-SQL en el cuadro de diálogo **Enter U-SQL Query** (Escribir consulta U-SQL).|  
 |**SourceType = FileConnection**|Seleccione un administrador de conexiones de archivos existente o seleccione <**Nueva conexión...** > para crear una nueva conexión de archivos. Para información relacionada, consulte [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Editor del administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
 |**SourceType = Variable**|Seleccione una variable existente o seleccione \<**Nueva variable…** > para crear una. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+| &nbsp; | &nbsp; |
 
 
 ### <a name="job-configuration"></a>Configuración del trabajo
@@ -78,6 +79,7 @@ La configuración del trabajo especifica las propiedades del envío del trabajo 
   |-----------|-----------------|
   |True|El resultado de la tarea se basa en el resultado de la ejecución del trabajo de U-SQL. El trabajo se realiza correctamente > La tarea se realiza correctamente. El trabajo no se realiza > La tarea no se realiza. La tarea se realiza correctamente o no se realiza > La tarea se completa.|
   |False|El resultado de la tarea se basa en el resultado de la preparación y el envío del trabajo de U-SQL. El envío del trabajo se realiza correctamente y pasa la fase de preparación > La tarea se realiza correctamente. El envío del trabajo no se realiza o el trabajo no pasa la fase de preparación > La tarea no se realiza. La tarea se realiza correctamente o no se realiza > La tarea se completa.|
+  | &nbsp; | &nbsp; |
 
 - **TimeOut**: especifica un tiempo de espera en segundos para la ejecución del trabajo. Si se agota el tiempo de espera del trabajo, este se cancela y se marca como no realizado correctamente. Esta propiedad no está disponible si **Synchronous** está establecido en false.
 
@@ -125,6 +127,7 @@ Tenga en cuenta que las rutas de acceso de entrada y salida están definidas en 
 |-------------|--------------|
 |Usuario: Variable1|\@in|
 |Usuario: Variable2|\@out| 
+| &nbsp; | &nbsp; |
 
 ## <a name="expression-page-configuration"></a>Configuración de la página de expresión
 

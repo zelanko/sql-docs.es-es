@@ -1,8 +1,8 @@
 ---
-title: Controlador Microsoft OLE DB para SQL Server | Microsoft Docs
+title: Controlador Microsoft OLE DB para SQL Server
 description: Microsoft OLE DB Driver for SQL Server proporciona conectividad a SQL Server y Azure SQL Database a través de API de OLE DB estándar.
 ms.custom: ''
-ms.date: 02/12/2019
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - native data access [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 52877846ab573b146c148dab681cd45aec0a083c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 7f66fc300dce4e3b9fac9a2476c4703fd5be5c88
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81488530"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886368"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Controlador Microsoft OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,15 +51,15 @@ El controlador OLE DB para SQL Server es una interfaz de programación de aplica
 Hay tres generaciones distintas de proveedores de OLE DB de Microsoft para SQL Server.
 
 ### <a name="1-microsoft-ole-db-provider-for-sql-server-sqloledb"></a>1. Proveedor Microsoft OLE DB para SQL Server (SQLOLEDB)
-El [proveedor OLE DB de Microsoft para SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) todavía se suministra como parte de los [Componentes de Windows Data Access](https://msdn.microsoft.com/library/ms692897.aspx). Ya no se mantiene y no se recomienda usar este controlador para nuevos desarrollos.
+El [proveedor OLE DB de Microsoft para SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) todavía se suministra como parte de los [Componentes de Windows Data Access](/previous-versions/windows/desktop/ms692897(v=vs.85)). Ya no se mantiene y no se recomienda usar este controlador para nuevos desarrollos.
 
 ### <a name="2-sql-server-native-client-snac"></a>2. SQL Server Native Client (SNAC)
 A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) incluye una interfaz del proveedor OLE DB (SQLNCLI), y es el proveedor OLE DB que se incluye con [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mediante [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-Se [anunció en desuso en 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), y no se recomienda usar este controlador para nuevos desarrollos. Para más información sobre el ciclo de vida de SNAC y las descargas disponibles, vea [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/) (Explicación del ciclo de vida de SNAC).
+Se [anunció en desuso en 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access), y no se recomienda usar este controlador para nuevos desarrollos. Para más información sobre el ciclo de vida de SNAC y las descargas disponibles, vea [SNAC lifecycle explained](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained) (Explicación del ciclo de vida de SNAC).
 
 ### <a name="3-microsoft-ole-db-driver-for-sql-server-msoledbsql"></a>3. Controlador Microsoft OLE DB para SQL Server (MSOLEDBSQL)
-OLE DB [dejó de estar en desuso](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) y se lanzó en 2018.
+OLE DB [dejó de estar en desuso](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) y se lanzó en 2018.
 
 El nuevo proveedor OLE DB se conoce como el controlador OLE DB de Microsoft para SQL Server (MSOLEDBSQL). El nuevo proveedor se actualizará con las características más recientes del servidor en el futuro.
 

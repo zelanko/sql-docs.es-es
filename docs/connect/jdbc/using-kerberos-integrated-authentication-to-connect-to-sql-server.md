@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: cf1372f11b278e555b7f8110e4517fd5fc616683
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4494931e0ee189e785ed057471e5560f4737ecc0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924008"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922311"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Empleo de autenticación integrada de Kerberos para conectar con SQL Server
 
@@ -73,7 +73,7 @@ Para obtener más información sobre los nombres de entidad de seguridad de serv
 
 - [Cómo utilizar la autenticación Kerberos en SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Usar Kerberos con SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Usar Kerberos con SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Antes de la versión 6.2 del controlador JDBC, para usar correctamente Kerberos entre dominios, debe establecer **serverSpn** explícitamente.

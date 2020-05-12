@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bf17a0731b34c382186ec9b4e9bed9bd240df628
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 61d9071b5afa65e65bd05320409ffd0839a07201
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632671"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922233"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -244,7 +244,7 @@ Especifica un archivo de disco o un dispositivo de cinta, o bien un servicio Mic
 > [!NOTE]
 > El dispositivo de disco NUL descartará toda la información que se le envíe y solo se debe usar para realizar pruebas. No se debe usar en entornos de producción.
 > [!IMPORTANT]
-> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos al realizar copias de seguridad en direcciones URL, debe usar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
+> A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y hasta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cuando se hagan copias de seguridad en URL, solo se podrán hacer en un único dispositivo. Para hacer una copia de seguridad en varios dispositivos al realizar copias de seguridad en direcciones URL, debe usar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
 
 **URL se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 y versiones posteriores)
 
@@ -992,7 +992,7 @@ TO URL
 Especifica la dirección URL que se usará para la operación de copia de seguridad. El formato de las direcciones URL solo se usa para crear copias de seguridad en el servicio de almacenamiento Microsoft Azure.
 
 > [!IMPORTANT]
-> Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, debe usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
+> Para hacer una copia de seguridad en varios dispositivos cuando se hagan copias de seguridad en URL, debe usar tokens de firma de acceso compartido (SAS). Para ver ejemplos sobre cómo crear una Firma de acceso compartido, vea [Copia de seguridad en URL de SQL Server](../../relational-databases/backup-restore/sql-server-backup-to-url.md) y [Simplifying creation of SQL Credentials with Shared Access Signature (SAS) tokens on Azure Storage with Powershell](https://docs.microsoft.com/archive/blogs/sqlcat/simplifying-creation-of-sql-credentials-with-shared-access-signature-sas-tokens-on-azure-storage-with-powershell) (Simplificación de la creación de credenciales de SQL con tokens de firmas de acceso compartido [SAS] en Almacenamiento de Azure con PowerShell).
 
 *n* Es un marcador de posición que indica que se pueden especificar hasta 64 dispositivos de copia de seguridad en una lista separada por comas.
 

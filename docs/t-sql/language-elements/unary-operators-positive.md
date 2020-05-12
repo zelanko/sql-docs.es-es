@@ -3,7 +3,7 @@ title: + (Signo unario más) (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,15 +20,16 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b0e559051424f4578942c1ba2c15e10467f6a27
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: b9fdb56b503c98581a045f2da064984fa6b3349b
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632265"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925294"
 ---
 # <a name="unary-operators---positive"></a>Operadores unarios: positivo
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Devuelve el valor de una expresión numérica (un operador unario). Los operadores unarios realizan una operación sobre una única expresión de cualquiera de los tipos de datos de la categoría del tipo de datos numérico.   
   

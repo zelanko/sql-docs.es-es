@@ -3,7 +3,7 @@
 - name: Sugerencias de navegación por la documentación
   href: sql-server/sql-docs-navigation-guide.md
 - name: Versiones anteriores 2005-2014
-  href: toc/previous-versions-sql-server.md
+  href: sql-server/previous-versions-sql-server.md
 - name: Información general
   items:
     - name: What's New
@@ -2186,7 +2186,7 @@
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md
                 - name: Codificar
                   href: relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md
-            - name: 'Register '
+            - name: Register
               href: relational-databases/clr-integration-database-objects-user-defined-types/registering-user-defined-types-in-sql-server.md
             - name: Trabajar con
               href: relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-in-sql-server.md
@@ -16243,7 +16243,7 @@
                   href: t-sql/statements/alter-assembly-transact-sql.md
                 - name: ASYMMETRIC KEY
                   href: t-sql/statements/alter-asymmetric-key-transact-sql.md
-                - name: 'AUTHORIZATION '
+                - name: AUTHORIZATION
                   href: t-sql/statements/alter-authorization-transact-sql.md
                 - name: AVAILABILITY GROUP
                   href: t-sql/statements/alter-availability-group-transact-sql.md
@@ -16315,7 +16315,7 @@
                   href: t-sql/statements/alter-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/alter-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: t-sql/statements/alter-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/alter-remote-service-binding-transact-sql.md
@@ -16485,7 +16485,7 @@
                   href: t-sql/statements/create-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/create-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: t-sql/statements/create-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/create-remote-service-binding-transact-sql.md
@@ -16641,7 +16641,7 @@
                   href: t-sql/statements/drop-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: t-sql/statements/drop-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: t-sql/statements/drop-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: t-sql/statements/drop-remote-service-binding-transact-sql.md

@@ -1,5 +1,6 @@
 ---
 title: Aplicar copias de seguridad de registros de transacción (SQL Server) | Microsoft Docs
+description: En este artículo se describe cómo aplicar copias de seguridad del registro de transacciones como parte de la restauración de una base de datos SQL Server en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros.
 ms.custom: ''
 ms.date: 10/23/2019
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f70156f5f725b10af712d0d5e898367715e46394
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72916199"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834549"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Aplicar copias de seguridad de registros de transacción (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +33,11 @@ ms.locfileid: "72916199"
 ##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a> Requisitos para restaurar las copias de seguridad del registro de transacciones  
  Para aplicar una copia de seguridad del registro de transacciones, deben cumplirse los requisitos siguientes:  
   
--   **Suficientes copias de seguridad de registros para una secuencia de restauración:** debe tener suficientes copias de seguridad de entradas de registro para poder completar una secuencia de restauración. Las copias de seguridad de registros necesarias, incluida la [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) si es necesaria, deben estar disponibles antes de iniciar la secuencia de restauración.  
+-   **Suficientes copias de seguridad de registros para una secuencia de restauración:** Debe tener suficientes copias de seguridad de entradas de registro para poder completar una secuencia de restauración. Las copias de seguridad de registros necesarias, incluida la [copia del final del registro](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) si es necesaria, deben estar disponibles antes de iniciar la secuencia de restauración.  
   
--   **Orden de restauración correcto**  : primero debe restaurarse la copia de seguridad diferencial de la base de datos o la copia de seguridad completa inmediatamente anterior de la base de datos. A continuación, todos los registros de transacciones creados después de esa copia de seguridad completa o diferencial de la base de datos deben restaurarse en orden cronológico. Si se pierde o se daña una copia de seguridad del registro de transacciones en esta cadena de registros, solo puede restaurar los registros de transacciones anteriores al registro de transacciones que falta.  
+-   **Orden de restauración correcto:**  Primero debe restaurarse la copia de seguridad diferencial de la base de datos o la copia de seguridad completa inmediatamente anterior de la base de datos. A continuación, todos los registros de transacciones creados después de esa copia de seguridad completa o diferencial de la base de datos deben restaurarse en orden cronológico. Si se pierde o se daña una copia de seguridad del registro de transacciones en esta cadena de registros, solo puede restaurar los registros de transacciones anteriores al registro de transacciones que falta.  
   
--   **La base de datos no se ha recuperado todavía:**  no se puede recuperar la base de datos hasta que se haya aplicado el registro de transacciones final. Si recupera la base de datos después de restaurar una de las copias de seguridad intermedias del registro de transacciones, anterior al final de la cadena de registros, no podrá restaurar la base de datos más allá de ese punto sin reiniciar toda la secuencia de restauración, empezando por la copia de seguridad completa de la base de datos.  
+-   **La base de datos no se ha recuperado todavía:**  No se puede recuperar la base de datos hasta que se haya aplicado el registro de transacciones final. Si recupera la base de datos después de restaurar una de las copias de seguridad intermedias del registro de transacciones, anterior al final de la cadena de registros, no podrá restaurar la base de datos más allá de ese punto sin reiniciar toda la secuencia de restauración, empezando por la copia de seguridad completa de la base de datos.  
   
     > [!TIP]
     > Es aconsejable restaurar todas las copias de seguridad de registros (`RESTORE LOG *database_name* WITH NORECOVERY`). A continuación, después de restaurar la última copia de seguridad de registros, recupere la base de datos en una operación aparte (`RESTORE DATABASE *database_name* WITH RECOVERY`).  
@@ -65,7 +66,7 @@ ms.locfileid: "72916199"
   
  Para restaurar la base de datos a su estado a las 21:45 (el punto de error), se puede utilizar cualquiera de los siguientes procedimientos:  
 
- **Alternativa 1: restaurar la base de datos mediante la copia de seguridad completa de la base de datos más reciente**  
+ **Alternativa 1: restaurar la base de datos mediante la copia de seguridad de la base de datos completa más reciente**  
   
 1.  Cree una copia del final del registro de transacciones activo actualmente como si fuera el del momento del error.  
   

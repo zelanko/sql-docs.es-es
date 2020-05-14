@@ -1,8 +1,8 @@
 ---
-title: Información en interfaces de error | Microsoft Docs
-description: Información en interfaces de error
+title: Información en interfaces de error
+description: Microsoft OLE DB Driver for SQL Server notifica alguna información de error y estado en las interfaces de error definidas por OLE DB IErrorInfo, IErrorRecords e ISQLErrorInfo.
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 92e396b88ec7fe0869d2657b602ad3463d7b95da
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67994934"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922388"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

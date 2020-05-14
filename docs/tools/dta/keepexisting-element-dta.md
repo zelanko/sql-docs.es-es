@@ -1,5 +1,6 @@
 ---
 title: KeepExisting (DTA, elemento)
+description: En la utilidad DTA, el elemento KeepExisting especifica las estructuras de diseño físico que el Asistente para la optimización de motor de base de datos conserva cuando genera recomendaciones.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 50741d36bfd0dd3b9f566954d1ef53b86be14609
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d76ae0a45b08ff826deaac7750688d521746c077
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307644"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831509"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting (DTA, elemento)
 

@@ -1,5 +1,6 @@
 ---
 title: Trabajar con directorios y rutas de acceso de FileTables | Microsoft Docs
+description: La característica FileTables usa una estructura de directorio para almacenar archivos. Sepa cómo trabajar con sus directorios, rutas de acceso, restricciones y semántica.
 ms.custom: ''
 ms.date: 08/26/2016
 ms.prod: sql
@@ -12,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2f31288df7d03bf527f1ee0a0bcd3b8ed84bba19
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: bce7416918ec17d0fbea13a1df01f8dec2cb9729
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908700"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999565"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Trabajar con directorios y rutas de acceso de FileTables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
-##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Trabajar con directorios y rutas de acceso de FileTables  
+##  <a name="how-to-work-with-directories-and-paths-in-filetables"></a><a name="HowToDirectories"></a> Procedimientos para: Trabajar con directorios y rutas de acceso de FileTables  
  Puede usar las tres funciones que se indican a continuación para trabajar con directorios de FileTable en [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
 |Para obtener este resultado|Use esta función|  
@@ -32,7 +33,7 @@ ms.locfileid: "72908700"
 |Obtener una ruta de acceso UNC absoluta o relativa de un archivo o directorio de una FileTable.|[GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)|  
 |Obtener el valor del identificador del localizador de ruta de acceso del archivo o directorio especificado en una FileTable proporcionando la ruta de acceso.|[GetPathLocator &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
-##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Usar rutas de acceso relativas para el código portable  
+##  <a name="how-to-use-relative-paths-for-portable-code"></a><a name="BestPracticeRelativePaths"></a> Procedimientos para: usar rutas de acceso relativas para el código portable  
  Para mantener independientes del equipo y de la base de datos actuales el código y las aplicaciones, evite escribir código basado en rutas de acceso absolutas de archivos. En su lugar, obtenga la ruta de acceso completa de un archivo en tiempo de ejecución usando conjuntamente las funciones [FileTableRootPath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) y [GetFileNamespacePath &#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md), como se muestra en el siguiente ejemplo. De forma predeterminada, la función **GetFileNamespacePath** devuelve la ruta de acceso relativa del archivo en la ruta de acceso raíz de la base de datos.  
   
 ```sql  

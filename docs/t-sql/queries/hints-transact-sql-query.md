@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 3a2f1aa7394f50d4814141ea383f8832511d0335
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 260de27d8a092ceabbf066d1546f471b90aa2c33
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81636177"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746390"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -301,7 +301,7 @@ Se admiten los siguientes nombres de sugerencia:
    
    Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  "DISABLE_PARAMETER_SNIFFING"      
-   Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a la opción [ de ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Configuración de ámbito de base de datos`PARAMETER_SNIFFING = OFF`.
+   Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a la opción `PARAMETER_SNIFFING = OFF` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
   Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).      
   **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
@@ -314,19 +314,19 @@ Se admiten los siguientes nombres de sugerencia:
 *  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"      
    Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  "ENABLE_QUERY_OPTIMIZER_HOTFIXES"     
-   Permite revisiones del optimizador de consultas (cambios publicados en las actualizaciones acumulativas y Service Packs de SQL Server). Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o a la opción [ de ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Configuración de ámbito de base de datos`QUERY_OPTIMIZER_HOTFIXES = ON`.
+   Permite revisiones del optimizador de consultas (cambios publicados en las actualizaciones acumulativas y Service Packs de SQL Server). Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o a la opción `QUERY_OPTIMIZER_HOTFIXES = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"      
-   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción [ de ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Configuración de ámbito de base de datos`LEGACY_CARDINALITY_ESTIMATION = ON` o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a la opción [ de ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)Configuración de ámbito de base de datos`LEGACY_CARDINALITY_ESTIMATION = ON`.
+   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Fuerza el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_.      
+ Fuerza el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos admitido (por ejemplo, 100, 130, etc.). Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_.      
    **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
    > La sugerencia QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n no invalida la configuración de la estimación de cardinalidad heredada o predeterminada, si se fuerza a través de la configuración con ámbito de base de datos, marca de seguimiento u otra sugerencia de consulta como QUERYTRACEON.   
    > Esta sugerencia solo afecta al comportamiento del optimizador de consultas. No afecta a otras características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden depender del [nivel de compatibilidad de base de datos](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md), como la disponibilidad de determinadas características de base de datos.  
-   > Para obtener más información sobre esta sugerencia, vea [Developer's Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (Elección del desarrollador: modelo de ejecución de consultas de sugerencias).
+   > Para más información sobre esta sugerencia, vea [Developer's Choice: Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model) (Elección del desarrollador: modelo de ejecución de consultas de sugerencias).
     
 *  'QUERY_PLAN_PROFILE'      
  Habilita la generación de perfiles ligera para la consulta. Cuando finaliza una consulta que contiene esta nueva sugerencia, se activa un nuevo evento extendido: query_plan_profile. Este evento extendido expone las estadísticas de ejecución y el plan de ejecución real XML similar al evento extendido query_post_execution_showplan, pero solo para las consultas que contiene la nueva sugerencia.    
@@ -563,7 +563,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Especificar sugerencias de tabla que afectan a la semántica  
-El ejemplo siguiente contiene dos sugerencias de tabla en la consulta: NOLOCK, que afecta a la semántica, e INDEX, que no la afecta. Para conservar la semántica de la consulta, la sugerencia NOLOCK se especifica en la cláusula OPTIONS de la guía de plan. Junto con la sugerencia NOLOCK, especifique las sugerencias INDEX y FORCESEEK y reemplace la sugerencia INDEX que no afecta a la semántica en la consulta durante la compilación y optimización de la instrucción. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+El ejemplo siguiente presenta dos sugerencias de tabla en la consulta: NOLOCK, que afecta a la semántica, e INDEX, que no la afecta. Para conservar la semántica de la consulta, la sugerencia NOLOCK se especifica en la cláusula OPTIONS de la guía de plan. Junto con la sugerencia NOLOCK, especifique las sugerencias INDEX y FORCESEEK y reemplace la sugerencia INDEX que no afecta a la semántica en la consulta durante la compilación y optimización de la instrucción. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

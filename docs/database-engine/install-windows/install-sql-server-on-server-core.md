@@ -10,12 +10,12 @@ ms.assetid: 1dd294cc-5b69-4d0c-9005-3e307b75678b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 19437198d7f65d640ea4501e97e149670a0a95fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 95b6a5bfd44aafe8b76bf04d42a71808718172ab
+ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75325467"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82872792"
 ---
 # <a name="install-sql-server-on-server-core"></a>Instalar SQL Server en Server Core
 
@@ -27,7 +27,7 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
   
  Para obtener una lista de los sistemas operativos admitidos actualmente, vea [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
 
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
   
 |Requisito|Cómo instalar|  
 |-----------------|--------------------|  
@@ -128,7 +128,7 @@ La opción de instalación Server Core proporciona un entorno mínimo para ejecu
   
     - Instalación de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. 
     
-    En el siguiente ejemplo se muestra cómo instalar una nueva instancia independiente que incluye el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
+    En el siguiente ejemplo se muestra cómo instalar una nueva instancia independiente que incluye el [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
         ```  
         ; SQL Server Configuration File  
@@ -287,13 +287,9 @@ Para habilitar las conexiones remotas, use SQLCMD.exe localmente y ejecute las i
 ### <a name="enable-tcpip-on-the-instance-of-ssnoversion"></a>Habilitar TCP/IP en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  El protocolo TCP/IP puede habilitarse a través de Windows PowerShell para una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en Server Core. Siga estos pasos:  
   
-1.  En el servidor, inicie el Administrador de tareas.  
+1.  En PowerShell: Import-Module SQLPS.  
   
-2.  En la pestaña **Aplicaciones** , haga clic en **Nueva tarea**.  
-  
-3.  En el cuadro de diálogo **Crear nueva tarea** , escriba **sqlps.exe** en el campo **Abrir** y, a continuación, haga clic en **Aceptar**. De este modo se abre la ventana **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**.  
-  
-4.  En la ventana **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, ejecute el siguiente script para habilitar el protocolo TCP/IP:  
+2.  En la ventana **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell**, ejecute el siguiente script para habilitar el protocolo TCP/IP:  
   
 ```powershell  
 $smo = 'Microsoft.SqlServer.Management.Smo.'  

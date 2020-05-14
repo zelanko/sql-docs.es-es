@@ -1,5 +1,6 @@
 ---
 title: Almacén remoto de blobs (RBS) (SQL Server) | Microsoft Docs
+description: El almacén remoto de blobs (RBS) de SQL Server almacena objetos binarios grandes en un almacenamiento de mercancía en lugar de en el servidor de base de datos principal. Obtenga información sobre este componente complementario.
 ms.custom: ''
 ms.date: 11/03/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc6bb3164b54f0799073e8b959f68b0dd625c47e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 383b5739e75d0d7e3ff42d2994e2a70c96842861
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75258184"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999902"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ ms.locfileid: "75258184"
   
 ### <a name="rotating-the-symmetric-key"></a>Rotación de la clave simétrica  
  Si usa RBS, conviene rotar la clave simétrica del almacén de credenciales cada cierto tiempo. Se trata de un procedimiento de seguridad recomendado muy habitual para cumplir las directivas de seguridad de una organización.  Una manera de rotar la clave simétrica del almacén de credenciales de RBS consiste en usar [este script](#Key_rotation) en la base de datos de RBS.  Este script también sirve para migrar a propiedades de intensidad de cifrado más seguras, como la longitud de clave o algoritmo. Haga una copia de seguridad de la base de datos antes de realizar la rotación.  Cuando el script finalice, es necesario realizar algunos pasos de comprobación.  
-Si las directivas de seguridad requieren propiedades de clave (por ejemplo, longitud de clave o algoritmo) diferentes de las provistas, el script se puede usar como plantilla. Modifique las propiedades de clave en dos sitios: (1) en la creación de la clave temporal y (2) en la creación de la clave permanente.  
+Si las directivas de seguridad requieren propiedades de clave (por ejemplo, longitud de clave o algoritmo) diferentes de las provistas, el script se puede usar como plantilla. Modifique las propiedades de clave en dos sitios: 1) en la creación de la clave temporal y 2) en la creación de la clave permanente.  
   
 ##  <a name="rbs-resources"></a><a name="rbsresources"></a> Recursos de RBS  
   

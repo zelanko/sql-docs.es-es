@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: f63d1c3c416859cab9ace87ad62e87b45c08a567
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487455"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784494"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 
@@ -51,7 +51,7 @@ Tenga en cuenta lo siguiente al trabajar con tablas temporales:
 
   - **Always On:** totalmente compatible
   - **Captura de datos modificados y seguimiento de cambios:** solo se admite en la tabla actual
-  - **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). Cuando se inicia el agente de distribución, este abre una transacción que se mantiene abierta hasta que se detiene el agente de distribución. Debido a este comportamiento, SysStartTime y SysEndTime se rellenan en la hora de inicio de la primera transacción en la que se inicia el agente de distribución. Por lo tanto, puede ser preferible ejecutar el agente de distribución según una programación en lugar de hacerlo de forma continuada. No se admite el uso de varios suscriptores, puesto que puede provocar que los datos temporales sean incoherentes porque cada uno de ellos dependería del reloj del sistema local.
+  - **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF"). Cuando se inicia el agente de distribución, este abre una transacción que se mantiene abierta hasta que se detiene el agente de distribución. Debido a este comportamiento, SysStartTime y SysEndTime se rellenan en la hora de inicio de la primera transacción en la que se inicia el agente de distribución. Así pues, si rellenar SysStartTime y SysEndTime con una hora cercana a la hora actual del sistema es importante en su aplicación u organización, puede que lo mejor sea ejecutar el agente de distribución según una programación en lugar de seguir el comportamiento predeterminado, esto es, ejecutarlo constantemente. No se admite el uso de varios suscriptores, puesto que puede provocar que los datos temporales sean incoherentes porque cada uno de ellos dependería del reloj del sistema local.
   - **Replicación de mezcla:** no es compatible con las tablas temporales
 
 - Las consultas normales solo afectan a los datos de la tabla actual. Para consultar los datos en la tabla de historial, debe usar consultas temporales. Este asunto se explica más adelante en este documento, en la sección titulada "Consulta de datos temporales".

@@ -1,7 +1,8 @@
 ---
-title: Compatibilidad con LocalDB | Microsoft Docs
+title: Compatibilidad del controlador PHP con LocalDB
+description: Obtenga información sobre cómo los controladores de Microsoft de PHP para SQL Server admiten conexiones con las instancias de base de datos LocalDB.
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 05/06/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: connectivity
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7d31758d437ad8b175fca86bd5e25b0aff2c9989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d618706cd05796079904c971cdf7b0c32485c1d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909211"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886292"
 ---
 # <a name="support-for-localdb"></a>Compatibilidad con LocalDB
 
@@ -59,7 +60,7 @@ En resumen, LocalDB permite:
         . 'AttachDBFileName=c:\\myData.MDF', NULL, NULL);  
     ```
 
-Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando realiza la ejecución en IIS, debe hacerlo en la cuenta correcta para obtener los mismos resultados que cuando realiza la ejecución en la línea de comandos; consulte [Uso de LocalDB con Full IIS, parte 2: propiedad de instancias](https://blogs.msdn.com/b/sqlexpress/archive/2011/12/09/using-localdb-with-full-iis-part-2-instance-ownership.aspx) para más información).
+Si fuera necesario, puede crear una instancia de LocalDB con sqllocaldb.exe. También puede utilizar sqlcmd.exe para agregar y modificar las bases de datos de una instancia de LocalDB. Por ejemplo, `sqlcmd -S (localdb)\v11.0`. (Cuando realiza la ejecución en IIS, debe hacerlo en la cuenta correcta para obtener los mismos resultados que cuando realiza la ejecución en la línea de comandos; consulte [Uso de LocalDB con Full IIS, parte 2: propiedad de instancias](/archive/blogs/sqlexpress/using-localdb-with-full-iis-part-2-instance-ownership) para más información).
 
 Las siguientes son cadenas de conexión de ejemplo que utilizan el controlador SQLSRV que se conecta a una base de datos en una instancia con nombre de LocalDB llamada myInstance:
 

@@ -1,5 +1,6 @@
 ---
 title: Comparar opciones para almacenar objetos Blob (SQL Server) | Microsoft Docs
+description: SQL Server puede almacenar datos de objetos binarios grandes (BLOB) que las aplicaciones Windows usan. Compare las opciones de esta base de datos relacional para almacenar datos no estructurados.
 ms.custom: ''
 ms.date: 03/04/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 68efb09a2b6d2a3ace441107ed9160fede154c8a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 049e001d5193f1d96862755e8045bb84d002050d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68085441"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000118"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
 

@@ -1,6 +1,6 @@
 ---
 title: 'Evitar conflictos: operaciones de base de datos de FILESTREAM | Microsoft Docs'
-description: Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
+description: Las aplicaciones que leen o escriben datos BLOB de FILESTREAM pueden encontrar errores de conflicto con instrucciones de Transact-SQL. Sepa cómo evitar estos tipos de conflictos.
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7b347a140c07436553945555e52d212e4751fcc4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3641401fbb2314bf4712cc524777a490ced01541
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75255578"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000245"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Evitar conflictos con operaciones de base de datos en aplicaciones FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

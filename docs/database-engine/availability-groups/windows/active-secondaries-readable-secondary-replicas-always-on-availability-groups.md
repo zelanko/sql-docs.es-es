@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a6226a080a7d831694e5d5978460c2e6d6016ead
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 7433fa5404db80a04f5800faad35dcadffee432e
+ms.sourcegitcommit: f6200d3d9cdf2627b243384835dc37d2bd40480e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74822404"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82784659"
 ---
 # <a name="offload-read-only-workload-to-secondary-replica-of-an-always-on-availability-group"></a>Descarga de cargas de trabajo de solo lectura a la réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.locfileid: "74822404"
   
 -   Se puede producir un error en la operación DBCC SHRINKFILE en los archivos que contienen tablas basadas en disco en la réplica principal si el archivo contiene registros fantasma que siguen siendo necesarios en una réplica secundaria.  
   
--   A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las réplicas secundarias legibles pueden mantenerse en línea incluso si la réplica principal está sin conexión debido a una acción de usuario o un error. Sin embargo, el enrutamiento de solo lectura no funciona en esta situación porque el agente de escucha del grupo de disponibilidad está desconectado también. Los clientes deben conectarse directamente a las réplicas secundarias de solo lectura para las cargas de trabajo de solo lectura.  
+-   A partir de [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], las réplicas secundarias legibles pueden permanecer en línea incluso cuando la réplica principal esté sin conexión debido a una acción del usuario o a un error (por ejemplo, que una sincronización se suspenda debido a un error o a un comando del usuario) o que una réplica esté resolviendo su estado porque el WSFC está sin conexión. Sin embargo, el enrutamiento de solo lectura no funciona en esta situación porque el agente de escucha del grupo de disponibilidad está desconectado también. Los clientes deben conectarse directamente a las réplicas secundarias de solo lectura para las cargas de trabajo de solo lectura.  
   
 > [!NOTE]  
 >  Si consulta la vista de administración dinámica [sys.dm_db_index_physical_stats](../../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) en una instancia del servidor que está hospedando una réplica secundaria legible, puede producirse un problema de bloqueo de REDO. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
@@ -130,7 +130,7 @@ ms.locfileid: "74822404"
  Esto significa que hay latencia, normalmente solo se trata de unos segundos, entre las réplicas principales y secundarias. No obstante, en casos excepcionales, por ejemplo, si los problemas de red reducen el rendimiento, la latencia puede ser importante. La latencia aumenta cuando se producen cuellos de botella de E/S y cuando se suspende el movimiento de los datos. Para supervisar el movimiento de datos suspendido, puede usar el [panel AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) o la vista de administración dinámica [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) .  
   
 ####  <a name="data-latency-on-databases-with-memory-optimized-tables"></a><a name="bkmk_LatencyWithInMemOLTP"></a> Latencia de datos en bases de datos con tablas optimizadas para memoria  
- En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existen consideraciones especiales en torno a la latencia de datos en las secundarias activas (vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx)). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
+ En [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] existían consideraciones especiales en torno a la latencia de datos en las secundarias activas: vea [[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] Secundarias activas: réplicas secundarias legibles](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx). A partir de [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] , no existe ninguna consideración especial en torno a la latencia de datos para tablas optimizadas para memoria. La latencia de datos esperada para tablas optimizadas para memoria es comparable a la latencia para tablas basadas en disco.  
   
 ###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  
@@ -236,7 +236,7 @@ GO
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

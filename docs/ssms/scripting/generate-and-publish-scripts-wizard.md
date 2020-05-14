@@ -43,14 +43,14 @@ ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e19f5ae872c8d37eb639372db54466da7221cc15
-ms.sourcegitcommit: 7ed12a64f7f76d47f5519bf1015d19481dd4b33a
+ms.openlocfilehash: b172457f50ca3d76c830f6ab2c789d28a3490ec8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80873141"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825671"
 ---
-# <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts 
+# <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
@@ -156,6 +156,8 @@ Use esta página para especificar cómo desea que este asistente genere los scri
 - **Relleno ANSI** : incluye **ANSI PADDING ON** en el script. El valor predeterminado es **True**.
 
 - **Anexar a archivo** : si es **True**, este script se agrega al final de un script existente, especificado en la página **Establecer opciones de scripting** . Si es **False**, el nuevo script sobrescribe un script anterior. El valor predeterminado es **False**.
+
+- **Comprobar la existencia de objetos**: si es **true**, agrega la comprobación de existencia antes de generar la instrucción CREATE de los objetos SQL (por ejemplo, tablas, vistas, funciones o procedimientos almacenados). La instrucción CREATE se encapsula en una instrucción IF. Si sabe que el destino está limpio, el script será mucho más limpio. Si NO espera que existan objetos en el destino, obtendrá un error. El valor predeterminado es **False**.
 
 - **Continuar scripting en caso de error**: si es **false**, el script se detendrá si se produce un error. Si es **true**, el scripting continuará. El valor predeterminado es **False**.
 

@@ -1,7 +1,8 @@
 ---
-title: Agrupación de conexiones dependientes del controlador en ODBC Driver for SQL Server | Microsoft Docs
+title: Agrupación de conexiones dependientes del controlador ODBC
+description: Obtenga información sobre las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for SQL Server en Windows.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/06/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,17 +11,17 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f93f7f5a000016af3c20af08d9eb318851da8c48
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1e9da7b59f6acccbc95e3d3a797a0a1d507baee4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928305"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922083"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](https://msdn.microsoft.com/library/hh405031(VS.85).aspx). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows:  
+  ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es compatible con la [agrupación de conexiones dependientes del controlador](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md). En este tema se describen las mejoras realizadas en la característica de agrupación de conexiones dependientes del controlador de Microsoft ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en Windows:  
   
 -   Con independencia de las propiedades de conexión, las conexiones que usan `SQLDriverConnect` forman parte de un grupo independiente de las conexiones que usan `SQLConnect`.
 - Al usar la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y la agrupación de conexiones dependientes del controlador, el controlador no emplea el contexto de seguridad del usuario de Windows para el subproceso actual con el fin de separar las conexiones del grupo. Es decir, si las conexiones contienen parámetros equivalentes en escenarios de suplantación de Windows con autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usan las mismas credenciales de autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse al back-end, varios usuarios de Windows podrían utilizar el mismo grupo de conexiones. Al usar la autenticación de Windows y la agrupación de conexiones dependientes del controlador, el controlador utiliza el contexto de seguridad del usuario de Windows en el subproceso actual con el fin de separar las conexiones del grupo. Es decir, en escenarios de suplantación de Windows, varios usuarios de Windows no compartirán las conexiones aunque utilicen los mismos parámetros.

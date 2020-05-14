@@ -1,5 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2016 | Microsoft Docs
+description: En estas notas de la versión se describen los problemas conocidos con los que familiarizarse antes de instalar cualquier versión de Microsoft SQL Server 2016 o solucionar problemas en ella.
 ms.date: 04/25/2018
 ms.prod: sql
 ms.reviewer: ''
@@ -10,22 +11,22 @@ helpviewer_keywords:
 - build notes
 - release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 monikerRange: = sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7db6dbdbe45102c2a1bc2533d156e55060869b58
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e85741c2d1f5b3435a0e790a81bc29697ee269ee
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286339"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001128"
 ---
 # <a name="sql-server-2016-release-notes"></a>Notas de la versión de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
   En este artículo se describen las limitaciones y los problemas de las versiones de SQL Server 2016, incluidos los Service Packs. Para obtener más información sobre las novedades, vea el artículo de [novedades de SQL Server 2016](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2016).
 
 - [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)  Descargar SQL Server 2016 desde el **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**
-- [![Azure Virtual Machine pequeña](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016)** para poner en marcha una máquina virtual con SQL Server 2016 SP1 ya instalado.
+- [![Azure Virtual Machine pequeña](../includes/media/azure-vm.png)](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2016sp1-ws2016) ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** para poner en marcha una máquina virtual con SQL Server 2016 SP1 ya instalado.
 - [![Descargar SSMS](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) Para obtener la versión más reciente de SQL Server Management Studio, vea **[Descarga de SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)** .
 
 ## <a name="sql-server-2016-service-pack-2-sp2"></a><a name="bkmk_2016sp2"></a>SQL Server 2016 Service Pack 2 (SP2)

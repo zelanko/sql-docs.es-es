@@ -1,5 +1,6 @@
 ---
 title: Column (DTA, elemento de Index)
+description: En la utilidad DTA, el elemento Column de Index establece las columnas de una configuración especificada por el usuario en las que se va a crear el índice.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/09/2017
-ms.openlocfilehash: 008cba36af33c465c3a126dc3e101b8ebca28e36
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 02900685d93eef62553d830494d25ec83ca83ce1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831632"
 ---
 # <a name="column-element-for-index-dta"></a>Column (DTA, elemento de Index)
 
@@ -42,7 +43,7 @@ Establece las columnas de una configuración especificada por el usuario en las 
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
- **Type**: opcional. Especifica el tipo de columna de índice. Utilice un tipo de datos **string** para especificar este atributo mediante uno de los siguientes valores permitidos:  
+ **Tipo**: Opcional. Especifica el tipo de columna de índice. Utilice un tipo de datos **string** para especificar este atributo mediante uno de los siguientes valores permitidos:  
   
 -   **KeyColumn**  
   
@@ -64,7 +65,7 @@ Establece las columnas de una configuración especificada por el usuario en las 
   
      Para obtener más información sobre las columnas incluidas, vea [Crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
- **SortOrder**: opcional. Especifica el orden de la columna. Utilice un tipo de datos **string** para especificar un orden **"Ascending"** (ascendente) o **"Descending"** (descendente), como se muestra a continuación:  
+ **SortOrder**: Opcional. Especifica el orden de la columna. Utilice un tipo de datos **string** para especificar un orden **"Ascending"** (ascendente) o **"Descending"** (descendente), como se muestra a continuación:  
   
 ```  
 <Column SortOrder="Ascending">  

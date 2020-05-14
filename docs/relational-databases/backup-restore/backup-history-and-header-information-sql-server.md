@@ -1,5 +1,6 @@
 ---
 title: Encabezado e historial de copias de seguridad | Microsoft Docs
+description: La base de datos msdb almacena el historial de operaciones de copia de seguridad y restauración de SQL Server de una instancia de servidor. Obtenga información sobre las instrucciones Transact-SQL que tienen acceso al historial de copias de seguridad.
 ms.custom: seo-lt-2019
 ms.date: 12/17/2019
 ms.prod: sql
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: f2b04fb3c35f810e37e1646446f7ebdfb8915ee1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c9500198b88d9a01317ee82ac652a231d1753309
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75242586"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824120"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

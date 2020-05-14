@@ -1,5 +1,6 @@
 ---
 title: Restauraciones de base de datos completas (modelo de recuperación completa) | Microsoft Docs
+description: Obtenga información sobre una restauración de base de datos de SQL Server completa, donde todos los datos se recuperan a un momento dado coherente.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: d7e56c5ceb23d2c42a973c7f8d56edbce5046a86
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cdcc38c973f1e1c79fda3fb366472b569cf392dc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72908971"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824116"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +83,7 @@ Para obtener más información sobre la compatibilidad con las copias de segurid
   
 4.  RESTORE DATABASE *database* WITH RECOVERY;  
   
-###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Ejemplo: recuperar hasta el momento del error (Transact-SQL)  
+###  <a name="example-recovering-to-the-point-of-failure-transact-sql"></a><a name="ExampleToPoFTsql"></a> Ejemplo: recuperación hasta el momento del error (Transact-SQL)  
  En el siguiente ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] se muestran las opciones fundamentales en una secuencia de restauración que restaura la base de datos hasta el momento del error. En el ejemplo se crea una copia del final del registro de la base de datos. A continuación, en el ejemplo se restaura una copia de seguridad completa de la base de datos y una copia de seguridad de registros; a continuación; se restaura la copia del final del registro. En el ejemplo, se recupera la base de datos en un último paso independiente.  
   
 > [!NOTE]  

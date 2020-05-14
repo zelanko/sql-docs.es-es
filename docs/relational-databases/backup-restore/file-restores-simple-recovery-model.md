@@ -1,5 +1,6 @@
 ---
 title: Restauraciones de archivos (modelo de recuperación simple) | Microsoft Docs
+description: En SQL Server, una restauración de archivos se aplica a uno o varios archivos dañados sin necesidad de restaurar la base de datos completa.
 ms.custom: ''
 ms.date: 03/24/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 4f6d06667e4cb3b2c89d920424fb9801b0e1de2d
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ba10028f3dc1a954bdfa59f98c1c5e456081febe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68138741"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834547"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauraciones de archivos (modelo de recuperación simple)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "68138741"
      Para información sobre la compatibilidad con la restauración en línea de la página y de archivo, vea [Características y tareas del motor de base de datos](https://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34). Para obtener más información sobre la restauración con conexión, vea [Restauración con conexión &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md).  
   
     > [!TIP]  
-    >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos de que empiece a restaurar la secuencia realizando la acción siguiente [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) : ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
+    >  Si quiere que la base de datos esté sin conexión durante una restauración de archivos, deje sin conexión la base de datos antes de iniciar la secuencia de restauración mediante la ejecución de la instrucción [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) siguiente: ALTER DATABASE *nombre_base_de_datos* SET OFFLINE.  
   
  **En este tema:**  
   
@@ -64,7 +65,7 @@ ms.locfileid: "68138741"
 2.  Restaure la copia de seguridad diferencial de archivos más reciente para cada archivo restaurado y recupere la base de datos.  
   
 ### <a name="transact-sql-steps-for-file-restore-sequence-simple-recovery-model"></a>Secuencia de restauración de Transact-SQL para la restauración de archivos (modelo de recuperación simple)  
- Esta sección muestra las opciones fundamentales de [!INCLUDE[tsql](../../includes/tsql-md.md)]RESTORE[ de ](../../t-sql/statements/restore-statements-transact-sql.md) de una secuencia de restauración de archivos simple. La sintaxis y los detalles no pertinentes para este propósito se omiten.  
+ Esta sección muestra las opciones fundamentales de [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) de [!INCLUDE[tsql](../../includes/tsql-md.md)] de una secuencia de restauración de archivos simple. La sintaxis y los detalles no pertinentes para este propósito se omiten.  
   
  La secuencia de restauración solo contiene dos instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La primera instrucción restaura un archivo secundario, el archivo `A`, que se restaura usando WITH NORECOVERY. La segunda operación restaura otros dos archivos, `B` y `C` , que se restauran usando WITH RECOVERY desde un dispositivo de copia de seguridad diferente:  
   
@@ -84,7 +85,7 @@ ms.locfileid: "68138741"
   
 -   [Ejemplo: restauración con conexión de un archivo de solo lectura &#40;modelo de recuperación simple&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Ejemplo: restauración sin conexión del grupo de archivo principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Ejemplo: restauración sin conexión del grupo de archivos principal y de otro grupo de archivos &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para restaurar archivos y grupos de archivos**  

@@ -1,5 +1,6 @@
 ---
 title: Conexión a una suscripción de Microsoft Azure | Microsoft Docs
+description: Registre un contenedor de blobs de Azure con su instancia de SQL Server, lo que crea una firma de acceso compartido, una directiva de acceso almacenada y una credencial de SQL Server.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 765763ae01183d0907e5371cf1420205cd5737b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 974086bc61e2f40819c77693a6033aac512893ac
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68076132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829765"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

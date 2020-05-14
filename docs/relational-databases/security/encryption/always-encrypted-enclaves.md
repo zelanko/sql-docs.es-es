@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6e750070f51dc6cba1b035e9426d9814e4fd1b67
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5625c3429a9bae89ae940fb552a3e6d1e58678c9
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75558055"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999440"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
@@ -156,7 +156,7 @@ Always Encrypted con enclaves seguros aborda algunas de las limitaciones de Alw
 - Coincidencia de patrones (LIKE) y operadores de comparación en columnas cifradas que usan cifrado aleatorio.
     > [!NOTE]
     > Las operaciones anteriores se admiten para las columnas de cadena de caracteres que se usan intercalaciones con un criterio de ordenación binary2 (intercalaciones BIN2). Las columnas de cadena de caracteres que usan intercalaciones BIN2 se pueden cifrar mediante cifrado aleatorio y claves de cifrado de columna habilitadas para enclave. Sin embargo, la única funcionalidad nueva habilitada para dichas columnas es el cifrado en contexto.
-- Creación de índices no agrupados en columnas que usan cifrado aleatorio.
+- Creación de estadísticas e índices no agrupados en columnas que usan cifrado aleatorio.
 
 El resto de limitaciones de Always Encrypted enumeradas en [Detalles de las características](always-encrypted-database-engine.md#feature-details) también se aplican a Always Encrypted con enclaves seguros.
 

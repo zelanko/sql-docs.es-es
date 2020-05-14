@@ -1,6 +1,7 @@
 ---
 title: Instalar Distributed Replay
 titleSuffix: SQL Server Distributed Replay
+description: 'En este artículo se describen las formas en que se puede instalar Distributed Replay: con el Asistente para instalación, en una ventana del símbolo del sistema o por medio de un archivo de configuración.'
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -10,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 4679b1f2ca6de3a358528a7ef24af8f118aa5f45
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 08e69ce63d3bd3524614f014a2c193cad1634389
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992182"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "82999395"
 ---
 # <a name="install-distributed-replay"></a>Instalar Distributed Replay
 
@@ -98,7 +99,7 @@ Puede instalar Distributed Replay en una de estas tres maneras:
   
     -   Para instalar el servicio de cliente, seleccione **Distributed Replay Client**.  
   
-     **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios de cliente de Distributed Replay. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   
@@ -210,18 +211,17 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
   
  A continuación figura un ejemplo sobre cómo especificar el archivo de configuración en el símbolo del sistema:  
   
-```  
+```
 Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / ConfigurationFile=ConfigurationFile.INI\  
-```  
-  
-> [!NOTE]  
->  Debe especificar ambas contraseñas en la línea de comandos porque no puede configurarlas en el archivo de configuración.  
-  
-## <a name="see-also"></a>Consulte también  
- [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  
-  
-  
+```
+
+> [!NOTE]
+> Debe especificar ambas contraseñas en la línea de comandos porque no puede configurarlas en el archivo de configuración.  
+
+## <a name="see-also"></a>Consulte también
+
+- [Características admitidas por las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)
+- [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)
+- [Requisitos de Distributed Replay](../../tools/distributed-replay/distributed-replay-requirements.md)
+- [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)
+- [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)

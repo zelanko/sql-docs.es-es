@@ -9,12 +9,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 619fddade48e56c28995b193776e6d13f31918ac
-ms.sourcegitcommit: 48e259549f65f0433031ed6087dbd5d9c0a51398
+ms.openlocfilehash: 0b57ac8ea8462a5c79feb1a91c4f9d205927b953
+ms.sourcegitcommit: c53bab7513f574b81739e5930f374c893fc33ca2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80809716"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82987209"
 ---
 # <a name="sql-server-integration-services-ssis-devops-tools-preview"></a>Herramientas de DevOps para SQL Server Integration Services (versión preliminar)
 
@@ -344,6 +344,14 @@ El esquema JSON de configuración tiene tres niveles:
 |sensitive|Si el valor de la variable de entorno es confidencial.|Las entradas válidas son: <br> *true* <br> *false*|
 
 ## <a name="release-notes"></a>Notas de la versión
+
+### <a name="version-100"></a>Versión 1.0.0
+
+Fecha de lanzamiento: 8 de mayo de 2020
+
+- Versión de disponibilidad general (GA).
+- Se ha agregado una restricción de versión mínima de .NET Framework en el agente. La versión mínima requerida de .NET Framework es 4.6.2 actualmente.
+- Se ha mejorado la descripción de las tareas de compilación de SSIS y de implementación de SSIS.
 
 ### <a name="version-020-preview"></a>Versión 0.2.0 Versión preliminar
 

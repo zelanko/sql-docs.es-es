@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: bbc94f7586c05746a70c2f9fd9172230771837a6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 41c77ad93bf129fa84f5d039b64a63593a335aee
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67912053"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849843"
 ---
 # <a name="resource-governor"></a>regulador de recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  El regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que puede usarse para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor permite especificar la cantidad máxima de CPU, E/S física y memoria que pueden usar las solicitudes de aplicación entrantes.  
+  Resource Governor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una característica que se puede usar para administrar la carga de trabajo y el consumo de recursos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Resource Governor permite especificar la cantidad máxima de CPU, E/S física y memoria que las solicitudes de aplicación entrantes pueden usar.  
   
 ## <a name="benefits-of-resource-governor"></a>Ventajas del regulador de recursos  
  El regulador de recursos que permite administrar las cargas de trabajo y los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la especificación de los límites del consumo de recursos por solicitudes entrantes. En el contexto del Regulador de recursos, la carga de trabajo es un conjunto de consultas o solicitudes de dimensiones similares que pueden (y deberían) tratarse como una entidad única. No se trata de un requisito, pero cuanto más uniforme es el modelo del uso de recursos de una carga de trabajo, mayores son las ventajas que pueden obtenerse del Regulador de recursos. Los límites sobre los recursos pueden reconfigurarse en tiempo real con un impacto mínimo sobre las cargas de trabajo que se están ejecutando.  
@@ -34,20 +34,20 @@ ms.locfileid: "67912053"
   
 -   Proporcionar un rendimiento predecible y cumplir los contratos de nivel de servicio para los distintos inquilinos de carga de trabajo en un entorno multiusuario y con varias cargas de trabajo.  
   
--   Aislar y limitar las consultas descontroladas o regular los recursos de E/S para operaciones como DBCC CHECKDB que pueden saturar el subsistema de E/S y afectar negativamente a las otras cargas de trabajo.  
+-   Aislar y limitar las consultas descontroladas o regular los recursos de E/S en operaciones como DBCC CHECKDB que pueden saturar el subsistema de E/S y afectar negativamente a otras cargas de trabajo.  
   
 -   Agregar un seguimiento detallado de recursos para los reembolsos por uso de recursos y proporcionar una facturación predecible a los clientes de los recursos de servidor.  
   
 ## <a name="resource-governor-constraints"></a>Restricciones del Regulador de recursos  
  Esta versión del Regulador de recursos tiene las restricciones siguientes:  
   
--   La administración de recursos se limita a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L Regulador de recursos no se puede utilizar para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   La administración de recursos se limita a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Resource Governor no se puede usar en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ni [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
--   No hay ninguna supervisión o administración de las cargas de trabajo entre las instancias de SQL Server.  
+-   No hay ninguna supervisión o administración de las cargas de trabajo entre instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   El Regulador de recursos puede administrar las cargas de trabajo de OLTP pero estos tipos de consultas, que son normalmente muy cortas en duración, no siempre ocupan la CPU el tiempo suficiente como para aplicar los controles de ancho de banda. Este hecho puede sesgar las estadísticas obtenidas para el porcentaje de uso de la CPU.  
   
--   La capacidad de regular la E/S física solo se aplica a las operaciones de usuario y no a las tareas del sistema. Las tareas del sistema incluyen operaciones de escritura en el registro de transacciones y operaciones diferidas de E/S de escritura. El regulador de recursos se aplica principalmente a las operaciones de lectura de usuario porque la mayoría de las operaciones de escritura suelen ser realizadas por tareas del sistema.  
+-   La capacidad de regular la E/S física solo se aplica a las operaciones de usuario y no a las tareas del sistema. Las tareas del sistema incluyen operaciones de escritura en el registro de transacciones y operaciones diferidas de E/S de escritura. Resource Governor se aplica principalmente a las operaciones de lectura de usuario, porque la mayoría de las operaciones de escritura suelen ser realizadas por tareas del sistema.  
   
 -   No puede establecer umbrales de E/S en el grupo de recursos de servidor interno.  
   

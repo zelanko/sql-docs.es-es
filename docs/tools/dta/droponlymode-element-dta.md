@@ -1,5 +1,6 @@
 ---
 title: DropOnlyMode (DTA, elemento)
+description: En la utilidad DTA, el elemento DropOnlyMode especifica que el Asistente para la optimización de motor de base de datos solo debe quitar índices, vistas indizadas o particiones ya existentes durante la sesión de optimización.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a0cd0d9511e3a2791231f1cfa39aa4c8e5999eec
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b8335b68b684f5ca9688542a30919c05397b6c65
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75305589"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831563"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode (DTA, elemento)
 
@@ -43,7 +44,7 @@ Especifica que el Asistente para la optimización de motor de base de datos solo
   
  **Valor predeterminado**  
   
- **Repetición**: opcional. Se puede utilizar una sola vez por cada elemento **TuningOptions** . No se puede utilizar si se especifican los siguientes elementos en el elemento **TuningOptions** :  
+ **Repetición**: Opcional. Se puede utilizar una sola vez por cada elemento **TuningOptions** . No se puede utilizar si se especifican los siguientes elementos en el elemento **TuningOptions** :  
   
 -   [FeatureSet &#40;DTA, elemento&#41;](../../tools/dta/featureset-element-dta.md)  
   
@@ -52,7 +53,7 @@ Especifica que el Asistente para la optimización de motor de base de datos solo
 -   [KeepExisting &#40;DTA, elemento&#41;](../../tools/dta/keepexisting-element-dta.md) se establece en **ALL**  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
- **Elemento primario**: [TuningOptions &#40;DTA, elemento&#41;](../../tools/dta/tuningoptions-element-dta.md)  
+ **Elemento principal**: [TuningOptions &#40;DTA, elemento&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **Elementos secundarios**  
   

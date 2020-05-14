@@ -18,12 +18,12 @@ ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a0385b96c861ae65cae70b332d0117eff97501
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 320dfc27d5582fd46d4ea7d8189e2a6ce4922144
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81631847"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925209"
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |Si se pasa *msg_id* a RAISERROR, el identificador se debe definir en sys.messages.|El parámetro *error_number* no tiene que definirse en sys.messages.|  
 |El parámetro *msg_str* puede contener estilos de formato de **printf**.|El parámetro *message* no acepta el formato de estilo de **printf**.|  
-|El parámetro *severity* especifica la gravedad de la excepción.|No hay ningún parámetro *severity*. La gravedad de la excepción siempre está establecida en 16.|  
+|El parámetro *severity* especifica la gravedad de la excepción.|No hay ningún parámetro *severity*. Cuando THROW se usa para iniciar la excepción, la gravedad siempre se establece en 16, pero cuando se usa para volver a producir una excepción existente, la gravedad se establecerá en el nivel de gravedad de la excepción en cuestión.|  
   
 ## <a name="examples"></a>Ejemplos  
   

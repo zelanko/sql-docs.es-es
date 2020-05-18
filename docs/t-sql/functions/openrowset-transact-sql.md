@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 9851df7630dd74a02a55c686a207576cbe99ba96
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c6943d24ec3c1803490cea29c1a415dbb5d3bdc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82804444"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151191"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 
@@ -211,10 +211,10 @@ De forma predeterminada, el valor de ROWS_PER_BATCH es desconocido. Especificar 
 
 Si las filas del archivo de datos no están ordenadas según el orden especificado, o si se ha especificado la sugerencia UNIQUE y hay claves duplicadas, se devuelve un error.
 
-Se requieren alias de columna cuando se utiliza ORDER. La lista de alias de columna debe hacer referencia a la tabla derivada a la que la cláusula BULK está obteniendo acceso. Los nombres de columna que se especifican en la cláusula ORDER hacen referencia a esta lista de alias de columna. No se pueden especificar columnas con tipos de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml**) ni con tipos de objeto grande (**text**, **ntext** e **image**).
+Se requieren alias de columna cuando se utiliza ORDER. La lista de alias de columna debe hacer referencia a la tabla derivada a la que la cláusula BULK está obteniendo acceso. Los nombres de columna que se especifican en la cláusula ORDER hacen referencia a esta lista de alias de columna. No se pueden especificar columnas con tipos de valor grande (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml**) ni con tipos de objeto grande (**text**, **ntext** e **image**).
 
 ##### <a name="single_blob"></a>SINGLE_BLOB
-Devuelve el contenido de *data_file* como un conjunto de filas de una sola columna y una sola fila de tipo **varbinary(max)**.
+Devuelve el contenido de *data_file* como un conjunto de filas de una sola columna y una sola fila de tipo **varbinary(max)** .
 
 > [!IMPORTANT]
 > Recomendamos que importe los datos XML solo mediante la opción SINGLE_BLOB, en vez de SINGLE_CLOB y SINGLE_NCLOB, ya que solo SINGLE_BLOB admite todas las conversiones de codificación de Windows.
@@ -280,7 +280,7 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
 
 Al tener acceso remoto a orígenes de datos OLE DB, la identidad de inicio de sesión de las conexiones de confianza no se delegan automáticamente del servidor en el que el cliente se conecta al servidor que se consulta. Debe configurarse la delegación de autenticación.
 
-Los nombres de catálogo y esquema son necesarios si el proveedor OLE DB admite varios catálogos y esquemas en el origen de datos especificado. Los valores de _catálogo_ y _esquema_ pueden omitirse si el proveedor OLE DB no los admite. Si el proveedor solamente admite nombres de esquema, se debe especificar un nombre de dos partes con el formato _schema_**.**_object_. Si el proveedor solamente admite nombres de catálogo, se debe especificar un nombre de tres partes con el formato _catalog_**.**_schema_**.**_object_. Es necesario especificar nombres de tres partes para las consultas de paso a través que usen el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para más información, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
+Los nombres de catálogo y esquema son necesarios si el proveedor OLE DB admite varios catálogos y esquemas en el origen de datos especificado. Los valores de _catálogo_ y _esquema_ pueden omitirse si el proveedor OLE DB no los admite. Si el proveedor solamente admite nombres de esquema, se debe especificar un nombre de dos partes con el formato _schema_ **.** _object_. Si el proveedor solamente admite nombres de catálogo, se debe especificar un nombre de tres partes con el formato _catalog_ **.** _schema_ **.** _object_. Es necesario especificar nombres de tres partes para las consultas de paso a través que usen el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para más información, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 `OPENROWSET` no acepta variables para sus argumentos.
 
@@ -311,7 +311,7 @@ Las siguientes mejoras de [!INCLUDE[tsql](../../includes/tsql-md.md)] admiten la
 
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importar de forma masiva datos SQLCHAR, SQLNCHAR o SQLBINARY
 
-OPENROWSET(BULK...) presupone que, si no se especifica, la longitud máxima de los datos SQLCHAR, SQLNCHAR o SQLBINARY no supera los 8000 bytes. Si los datos importados están en un campo de datos LOB que incluye cualquier objeto **varchar(max)**, **nvarchar(max)** o **varbinary(max)** que supera los 8000 bytes, debe usar un archivo de formato XML que defina la longitud máxima para el campo de datos. Para especificar la longitud máxima, edite el archivo de formato y declare el atributo MAX_LENGTH.
+OPENROWSET(BULK...) presupone que, si no se especifica, la longitud máxima de los datos SQLCHAR, SQLNCHAR o SQLBINARY no supera los 8000 bytes. Si los datos importados están en un campo de datos LOB que incluye cualquier objeto **varchar(max)** , **nvarchar(max)** o **varbinary(max)** que supera los 8000 bytes, debe usar un archivo de formato XML que defina la longitud máxima para el campo de datos. Para especificar la longitud máxima, edite el archivo de formato y declare el atributo MAX_LENGTH.
 
 > [!NOTE]
 > Un archivo de formato generado automáticamente no especifica la longitud o la longitud máxima de un campo LOB. Sin embargo, es posible editar un archivo de formato y especificar la longitud o la longitud máxima manualmente.
@@ -527,8 +527,33 @@ SELECT * FROM OPENROWSET(
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
+> Azure SQL Database solo admite la lectura desde Azure Blob Storage.
 
+Otra manera de acceder a la cuenta de almacenamiento es a través de la [identidad administrada](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview). Para ello, siga los [pasos del 1 al 3](https://docs.microsoft.com/azure/sql-database/sql-database-vnet-service-endpoint-rule-overview?toc=/azure/sql-data-warehouse/toc.json&bc=/azure/sql-data-warehouse/breadcrumb/toc.json#steps) a fin de configurar SQL Database para acceder al almacenamiento a través de la identidad administrada, y después puede implementar el ejemplo de código como se indica a continuación.
+```sql
+--> Optional - a MASTER KEY is not required if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'YourStrongPassword1';
+GO
+
+--> Change to using Managed Identity instead of SAS key 
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Identity';
+GO
+
+CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
+WITH ( TYPE = BLOB_STORAGE,
+          LOCATION = 'https://****************.blob.core.windows.net/curriculum'
+          , CREDENTIAL= msi_cred --> CREDENTIAL is not required if a blob is configured for public (anonymous) access!
+);
+
+INSERT INTO achievements with (TABLOCK) (id, description)
+SELECT * FROM OPENROWSET(
+   BULK  'csv/achievements.csv',
+   DATA_SOURCE = 'MyAzureBlobStorage',
+   FORMAT ='CSV',
+   FORMATFILE='csv/achievements-c.xml',
+   FORMATFILE_DATA_SOURCE = 'MyAzureBlobStorage'
+    ) AS DataFile;
+```
 ### <a name="additional-examples"></a>Otros ejemplos
 
 Para obtener más ejemplos del uso de `INSERT...SELECT * FROM OPENROWSET(BULK...)`, vea los siguientes temas:

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.custom: ''
 ms.date: 05/23/2019
-ms.openlocfilehash: bdefcbbfe6d5987de4ac69ab60d1e80b004a5db6
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d6d7982384d8e83db35e35feb2e106ddae727fac
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68025457"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152055"
 ---
 # <a name="server-properties---database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
 
@@ -59,7 +59,7 @@ En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versio
 - Si la casilla **Comprimir copia de seguridad** se activa, las nuevas copias de seguridad se comprimirán de forma predeterminada.
   
     > [!IMPORTANT]
-    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.
+    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.
   
 Si es miembro del rol fijo de servidor **sysadmin** o **serveradmin** , puede cambiar el valor haciendo clic en el cuadro **Comprimir copia de seguridad** .  
   

@@ -9,12 +9,12 @@ ms.date: 01/07/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c751992e666151752783e9813efa2f696fcdcb6e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 610f837c5354a72c665da067fcc8fea582ac6de3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77903782"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152006"
 ---
 # <a name="what-are-big-data-clusters-2019"></a>¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
@@ -117,7 +117,7 @@ El grupo de datos se usa para el almacenamiento en caché y la persistencia de d
 El grupo de almacenamiento consiste en módulos de almacenamiento que se componen de SQL Server en Linux, Spark y HDFS. Todos los nodos de almacenamiento de un clúster de macrodatos de SQL Server son miembros de un clúster de HDFS.
 
 > [!TIP]
-> Para obtener una visión detallada de la arquitectura y la instalación del clúster de macrodatos, consulte [Workshop: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Para obtener una visión detallada de la arquitectura y la instalación del clúster de macrodatos, consulte [Workshop: Arquitectura de los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] de Microsoft](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## <a name="next-steps"></a>Pasos siguientes
 

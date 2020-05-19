@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADOX], Visual Basic example
 ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 162e6739a61b52922998a61c019225ef0f8d5216
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965376"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748599"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Ejemplo de método Refresh de procedimientos (VB)
 En el código siguiente se muestra cómo actualizar la colección [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md). Esto es necesario antes de que se pueda tener acceso a los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) del **Catálogo** .  

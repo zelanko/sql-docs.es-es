@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence format
 ms.assetid: 6e146738-ac4d-47bb-b6cd-d87b2260aead
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e2d1c30546a8466ba9950f31cffdfb9447bd89ed
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb3abca1aabccd45bc76c4ec0ee5742531c47e28
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923386"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748321"
 ---
 # <a name="xml-persistence-format"></a>Formato de persistencia de XML
 ADO utiliza la codificación UTF-8 para la secuencia XML que persiste.  
   
  El formato XML de ADO se divide en dos secciones, una sección de esquema seguida de la sección de datos. A continuación se encuentra un archivo XML de ejemplo para la tabla Shippers de la base de datos Northwind. A continuación del ejemplo se explican varias partes del XML.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   
@@ -68,7 +68,7 @@ xmlns:z="#RowsetSchema">
   
  Las definiciones de esquema se ajustan a la [especificación de datos XML del consorcio W3C](http://www.w3.org/TR/1998/NOTE-XML-data/) y se pueden validar completamente (aunque no se producirá la validación en Internet Explorer 5). XML-Data es actualmente el único formato de esquema admitido para la persistencia del conjunto de registros.  
   
- La sección de datos tiene tres filas que contienen información acerca de los distribuidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía \<, pero las etiquetas RS: Data> deben estar presentes. Sin datos, puede escribir la abreviatura de la etiqueta como simplemente \<RS: data/>. Cualquier etiqueta con el prefijo "RS" indica que se encuentra en el espacio de nombres definido por urn: schemas-microsoft-com: RowSet.  
+ La sección de datos tiene tres filas que contienen información acerca de los distribuidores. Para un conjunto de filas vacío, la sección de datos puede estar vacía, pero las \< etiquetas RS: data> deben estar presentes. Sin datos, puede escribir la abreviatura de la etiqueta como simplemente \< RS: Data/>. Cualquier etiqueta con el prefijo "RS" indica que se encuentra en el espacio de nombres definido por urn: schemas-microsoft-com: RowSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Almacenar registros en formato XML](../../../ado/guide/data/persisting-records-in-xml-format.md)

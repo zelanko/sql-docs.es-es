@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO MD, programming
 ms.assetid: c826b9b5-0d78-43a2-8174-5844db62a93c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ee0aa11dcc9b73f6c0a174714852f76f383fb45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2e9909eb46bf3d6e36a6f61373be2911bcb9328e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748032"
 ---
 # <a name="programming-with-ado-md"></a>Programación con ADO MD
 Para usar ADO MD con la herramienta de desarrollo, debe establecer una referencia a la biblioteca de tipos ADO MD. La descripción de la biblioteca de ADO MD es biblioteca de Microsoft Objetos de datos ActiveX (multidimensional). El nombre de archivo de la biblioteca de ADO MD es msadomd. dll y el ID. de programa (ProgID) es "ADOMD". Para obtener más información acerca de cómo establecer referencias a bibliotecas, consulte la documentación de la herramienta de desarrollo.  

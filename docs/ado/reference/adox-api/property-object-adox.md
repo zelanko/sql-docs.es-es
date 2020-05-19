@@ -11,19 +11,19 @@ apitype: COM
 helpviewer_keywords:
 - Property object [ADOX]
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7f866b20bb8157239a6deb7fd37a1ec044e27479
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965392"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748565"
 ---
 # <a name="property-object-adox"></a>Objeto Property (ADOX)
 Representa una característica de un objeto ADOX.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los objetos ADOX tienen dos tipos de propiedades: integrado y dinámico.  
   
  Las propiedades integradas son aquellas que están inmediatamente disponibles para cualquier objeto nuevo, mediante la sintaxis de la propiedad objeto. No aparecen como objetos de propiedad en la [colección de propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)de un objeto, por lo que, aunque se pueden cambiar sus valores, no se pueden modificar sus características.  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XML persistence [ADO], persistence scenario
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4a1110db8505a2a721c3503e51276cfb895fb965
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748303"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
 En este escenario, creará una aplicación de Active Server páginas (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  

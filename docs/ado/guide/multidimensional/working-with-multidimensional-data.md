@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional data [ADO]
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: dcd4839fc984dacddc79f54b350a98cdbe53355b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923132"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747996"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
 Un conjunto de *celdas* es el resultado de una consulta en datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y, normalmente, solo dos o tres. Un *eje* es una colección de miembros de una o más dimensiones, que se utiliza para buscar o filtrar valores específicos de un cubo.  

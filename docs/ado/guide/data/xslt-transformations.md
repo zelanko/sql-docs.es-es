@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XSLT transformations in ADO
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8556576656d4b6eb6ba5e38216a78074cd1f9fc4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923340"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748209"
 ---
 # <a name="xslt-transformations"></a>Transformaciones XSLT
 XSLT se puede aplicar al XML generado para transformarlo en otro formato. Entender el formato XML en ADO ayuda a desarrollar plantillas XSLT que pueden transformarlas en un formato más fácil de utilizar.  
   
  Por ejemplo, sabe que cada fila del conjunto de registros se guarda como el elemento z:Row dentro del elemento RS: Data. Del mismo modo, cada campo del conjunto de registros se guarda como un par atributo-valor para este elemento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El siguiente script XSLT se puede aplicar al XML que se muestra en la sección anterior para transformarlo en una tabla HTML que se mostrará en el explorador:  
   
 ```  

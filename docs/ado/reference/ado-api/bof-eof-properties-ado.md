@@ -15,14 +15,14 @@ helpviewer_keywords:
 - EOF property [ADO]
 - BOF property [ADO]
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9496a4e2115cb686764981e8a5fae3ecfe59401e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920385"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748734"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
 -   **BOF** Indica que la posición del registro actual es anterior al primer registro de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -32,7 +32,7 @@ ms.locfileid: "67920385"
 ## <a name="return-value"></a>Valor devuelto  
  Las propiedades **BOF** y **EOF** devuelven valores **booleanos** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use las propiedades **BOF** y **EOF** para determinar si un objeto de **conjunto de registros** contiene registros o si ha ido más allá de los límites de un objeto de conjunto de **registros** al desplazarse de un registro a otro.  
   
  La propiedad **BOF** devuelve **true** (-1) si la posición del registro actual es anterior al primer registro y **false** (0) si la posición del registro actual está en el primer registro o después del mismo.  
@@ -49,8 +49,8 @@ ms.locfileid: "67920385"
   
 ||MoveFirst<br /><br /> MoveLast|MovePrevious<br /><br /> Desplazamiento < 0|Movimiento 0|MoveNext<br /><br /> Desplazamiento > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**true**, **EOF**=**false**|Permitida|Error|Error|Permitida|  
-|**BOF**=**false**, **EOF**=**true**|Permitida|Permitida|Error|Error|  
+|**BOF** = **True**, **EOF** = **false**|Permitida|Error|Error|Permitida|  
+|**BOF** = **False**, **EOF** = **true**|Permitida|Permitida|Error|Error|  
 |Ambos **verdaderos**|Error|Error|Error|Error|  
 |Ambos **falsos**|Permitida|Permitida|Permitida|Permitida|  
   

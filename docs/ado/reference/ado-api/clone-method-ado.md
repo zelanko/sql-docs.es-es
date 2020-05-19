@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Clone method [ADO]
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c936eb8016be0851fa6d3ecff1f624eab6c895f3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920015"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748676"
 ---
 # <a name="clone-method-ado"></a>Clone (método) (ADO)
 Crea un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.  
@@ -46,7 +46,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  *LockType*  
  Opcional. Valor de [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) que especifica el tipo de bloqueo del conjunto de **registros**original o un **conjunto de registros**de solo lectura. Los valores válidos son **adLockUnspecified** o **adLockReadOnly**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice el método **Clone** para crear varios objetos **Recordset** duplicados, especialmente si desea mantener más de un registro actual en un conjunto determinado de registros. Usar el método **Clone** es más eficaz que crear y abrir un nuevo objeto de **conjunto de registros** que use la misma definición que el original.  
   
  La propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) del conjunto de **registros**original, si existe, no se aplicará al clon. Establezca la propiedad **Filter** del nuevo **conjunto de registros** para filtrar los resultados. La manera más sencilla de copiar cualquier valor de **filtro** existente es asignarlo directamente, como se indica a continuación.  
@@ -67,17 +67,17 @@ rsNew.Filter = rsOriginal.Filter
   
  En la tabla siguiente se proporciona una lista completa de todos los eventos de **conjunto de registros** . Indica si son válidos y se desencadenan para los clones de conjunto de registros generados mediante el método **Clone** .  
   
-|evento|¿Se desencadena en clones?|  
+|Evento|¿Se desencadena en clones?|  
 |-----------|--------------------------|  
 |[EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|No|  
 |[FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|No|  
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md)|No|  
-|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sí|  
+|[FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
 |[MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
-|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sí|  
+|[RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
 |[RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
-|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Sí|  
-|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Sí|  
+|[WillChangeField](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|Yes|  
+|[WillChangeRecord](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|Yes|  
 |[WillChangeRecordset](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|No|  
 |[WillMove](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|No|  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - multidimensional schemas and data
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a4a2f6dbd2c5d075bb888e61bb01e1094c8ef5c0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923187"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748087"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
 ## <a name="understanding-multidimensional-schemas"></a>Descripción de los esquemas multidimensionales  
@@ -68,7 +68,7 @@ Hamburg, Munich, Stuttgart}
   
 -   Cities`= {Ottawa, Toronto, Vancouver, Calgary, Seattle, Boise, Los Angeles, Houston, Shreveport, Miami, Boston, New York, London, Dover, Glasgow, Edinburgh, Cardiff, Pembroke, Belfast, Derry, Berlin, Hamburg, Munich, Stuttgart}`  
   
-### <a name="members"></a>Members  
+### <a name="members"></a>Miembros  
  Los miembros del nivel hoja de una jerarquía no tienen elementos secundarios y los miembros del nivel raíz no tienen ningún elemento primario. Todos los demás miembros tienen al menos un elemento primario y al menos un elemento secundario. Por ejemplo, un recorrido parcial del árbol de jerarquía de la dimensión Geography produce las siguientes relaciones de elementos primarios y secundarios:  
   
 -   `{All} (parent of) {Europe, North America}`  

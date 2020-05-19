@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Recordset object [ADO]
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a3025140929d7a7cf281f72c035bf79e0a5883b3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07f970dd557d381280f5a9dbdd52eb015de0df75
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748340"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El objeto de **conjunto de registros** tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados, buscar un registro específico en función de los criterios proporcionados e incluso optimizar esas operaciones de búsqueda mediante índices. El uso de estas características depende del proveedor y, en algunos casos, como el de la propiedad de [Índice](../../../ado/reference/ado-api/index-property.md) , la estructura del propio origen de datos.  
@@ -33,7 +33,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
  Si establece la propiedad **Sort** en una cadena vacía, se restablecerán las filas a su orden original y se eliminarán los índices temporales. Los índices existentes no se eliminarán.  
   
- Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena "`lastName DESC, firstName ASC`", que ordenará el **conjunto de registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
+ Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el **conjunto de registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
   
  Ningún campo al que se haga referencia en una cadena de criterios de ordenación puede denominarse "ASC" o "DESC", ya que esos nombres entran en conflicto con las palabras clave **ASC** y **DESC**. Asigne un alias a un campo que tenga un nombre en conflicto mediante la palabra clave **as** en la consulta que devuelve el **conjunto de registros**.  
   
@@ -53,13 +53,13 @@ El objeto de **conjunto de registros** tiene características integradas que per
   
  Solo se puede especificar un nombre de una sola columna para el criterio. En otras palabras, este método no admite búsquedas en varias columnas.  
   
- El operador de comparación para el criterio puede ser**>**"" (mayor que),**\<**"" (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
+ El operador de comparación para el criterio puede ser " **>** " (mayor que), " **\<** " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
   
  El valor del criterio puede ser una cadena, un número de punto flotante o una fecha. Los valores de cadena se delimitan con comillas simples o "#" (signo de número) (por ejemplo, "State = ' WA '" o "State = #WA #"). Los valores de fecha se delimitan con marcas "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #").  
   
- Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o subcadena. Por ejemplo, "State like\*'" coincide con Maine y Massachusetts. También puede usar asteriscos iniciales y finales para buscar una subcadena incluida dentro de los valores. Por ejemplo, "State like '\*as\*'" coincide con Alaska, Arkansas y Massachusetts.  
+ Si el operador de comparación es "like", el valor de cadena puede contener un asterisco (*) para buscar una o más apariciones de cualquier carácter o subcadena. Por ejemplo, "State like \* '" coincide con Maine y Massachusetts. También puede usar asteriscos iniciales y finales para buscar una subcadena incluida dentro de los valores. Por ejemplo, "State like ' \* as \* '" coincide con Alaska, Arkansas y Massachusetts.  
   
- Los asteriscos solo se pueden usar al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como carácter comodín inicial (' * str ') o carácter comodín incrustado (\*r '). Esto producirá un error.  
+ Los asteriscos solo se pueden usar al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como carácter comodín inicial (' * str ') o carácter comodín incrustado ( \* r '). Esto producirá un error.  
   
 ### <a name="seek-and-index"></a>Búsqueda e índice  
  Use el método de **búsqueda** junto con la propiedad de **Índice** si el proveedor subyacente admite índices en el objeto de **conjunto de registros** . Use el método [Supports](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** para determinar si el proveedor subyacente admite **Seek**y el método **Supports (adIndex)** para determinar si el proveedor admite índices. (Por ejemplo, el [proveedor de OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** e **index**).  
@@ -83,16 +83,16 @@ El objeto de **conjunto de registros** tiene características integradas que per
  Para quitar un filtro de un **conjunto de registros**, use la constante **adFilterNone** . Establecer la propiedad **Filter** en una cadena de longitud cero ("") tiene el mismo efecto que el uso de la constante **adFilterNone** .  
   
 ### <a name="filtering-with-a-criteria-string"></a>Filtrar con una cadena de criterios  
- La cadena de criterios consta de cláusulas con el formato de *operador de valor* de tipo `"LastName = 'Smith'"`(por ejemplo,). Puede crear cláusulas compuestas mediante la concatenación de cláusulas individuales con **y** ( `"LastName = 'Smith' AND FirstName = 'John'"`por ejemplo,) y **o** ( `"LastName = 'Smith' OR LastName = 'Jones'"`por ejemplo,). Utilice las siguientes directrices para las cadenas de criterios:  
+ La cadena de criterios consta de cláusulas con el formato de *operador de valor* de tipo (por ejemplo, `"LastName = 'Smith'"` ). Puede crear cláusulas compuestas mediante la concatenación de cláusulas individuales con **y** (por ejemplo, `"LastName = 'Smith' AND FirstName = 'John'"` ) y **o** (por ejemplo, `"LastName = 'Smith' OR LastName = 'Jones'"` ). Utilice las siguientes directrices para las cadenas de criterios:  
   
 -   *FieldName* debe ser un nombre de campo válido del **conjunto de registros**. Si el nombre del campo contiene espacios, debe escribir el nombre entre corchetes.  
   
--   *El operador* debe ser uno de los siguientes **\<**: **>**, ** \< **, **>=**, **<>**, **=**, o **like**.  
+-   El *operador* debe ser uno de los siguientes: **\<** , **>** , **\<=** , **>=** , **<>** , **=** o **like**.  
   
--   *Value* es el valor con el que se comparan los valores de campo ( `'Smith'`por `#8/24/95#`ejemplo `12.345`,, `$50.00`, o). Use comillas simples (') con las cadenas y los signos`#`de almohadilla () con las fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el *operador* es **like**, *Value* puede usar caracteres comodín. Solo el asterisco (\*) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. El *valor* no puede ser null.  
+-   *Value* es el valor con el que se comparan los valores de campo (por ejemplo,, `'Smith'` `#8/24/95#` , `12.345` o `$50.00` ). Use comillas simples (') con las cadenas y los signos de almohadilla ( `#` ) con las fechas. En el caso de los números, puede usar separadores decimales, signos de dólar y notación científica. Si el *operador* es **like**, *Value* puede usar caracteres comodín. Solo el asterisco ( \* ) y el signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. El *valor* no puede ser null.  
   
     > [!NOTE]
-    >  Para incluir comillas simples (') en el *valor*de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por *O'Malley*, la cadena de criterios `"col1 = 'O''Malley'"`debe ser. Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por *' 1 '*, la cadena de criterios `"col1 = #'1'#"`debe ser.  
+    >  Para incluir comillas simples (') en el *valor*de filtro, utilice dos comillas simples para representar una. Por ejemplo, para filtrar por *O'Malley*, la cadena de criterios debe ser `"col1 = 'O''Malley'"` . Para incluir comillas simples al principio y al final del valor de filtro, incluya la cadena entre signos de almohadilla (#). Por ejemplo, para filtrar por *' 1 '*, la cadena de criterios debe ser `"col1 = #'1'#"` .  
   
  No hay ninguna prioridad entre **and** y **or**. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no puede agrupar las cláusulas Unidas por **o** y, a continuación, unir el grupo a otra cláusula con y, como se indica a continuación.  
   
@@ -106,7 +106,7 @@ El objeto de **conjunto de registros** tiene características integradas que per
 (LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')  
 ```  
   
- En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón (por ejemplo, `LastName Like '*mit*'`) o solo al final del patrón (por ejemplo, `LastName Like 'Smit*'`).  
+ En una cláusula **like** , puede usar un carácter comodín al principio y al final del patrón (por ejemplo, `LastName Like '*mit*'` ) o solo al final del patrón (por ejemplo, `LastName Like 'Smit*'` ).  
   
 ### <a name="filtering-with-a-constant"></a>Filtrar con una constante  
  Las constantes siguientes están disponibles para filtrar **conjuntos de registros**.  

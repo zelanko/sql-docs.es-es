@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 48b1c90b59b220841aa45f618fdfda5ff2db82da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b1c27eb728c3cd368b4d2acc10609785c06514a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920349"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748617"
 ---
 # <a name="bookmark-property-ado"></a>Bookmark (propiedad) (ADO)
 Indica un marcador que identifica de forma única el registro actual en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o establece el registro actual de un objeto de **conjunto de registros** en el registro identificado por un marcador válido.  
@@ -28,7 +28,7 @@ Indica un marcador que identifica de forma única el registro actual en un objet
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve una expresión **Variant** que se evalúa como un marcador válido.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **Bookmark** para guardar la posición del registro actual y volver a ese registro en cualquier momento. Los marcadores solo están disponibles en los objetos de **conjunto de registros** que admiten la funcionalidad de marcador.  
   
  Al abrir un objeto de **conjunto de registros** , cada uno de sus registros tiene un marcador único. Para guardar el marcador del registro actual, asigne el valor de la propiedad **Bookmark** a una variable. Para volver rápidamente a ese registro en cualquier momento después de desplazarse a otro registro, establezca la propiedad **Bookmark** del objeto de **conjunto de registros** en el valor de esa variable.  

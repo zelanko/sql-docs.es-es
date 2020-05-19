@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - RelatedColumn property [ADOX]
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7bc5440969f662bdbebf885448a1c583a2d10843
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 666e18344a409ce66132108ef7de3afab82c2086
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748551"
 ---
 # <a name="relatedcolumn-property-adox"></a>RelatedColumn (propiedad, ADOX)
 Indica el nombre del objeto de [columna relacionado (Adox)](../../../ado/reference/adox-api/column-object-adox.md) en la tabla relacionada (solo columnas de clave).  
@@ -32,7 +32,7 @@ Indica el nombre del objeto de [columna relacionado (Adox)](../../../ado/referen
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece y devuelve un valor de **cadena** que es el nombre de la columna relacionada en la tabla relacionada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor predeterminado es una cadena vacía ("").  
   
  Esta propiedad es de solo lectura para los objetos de [columna](../../../ado/reference/adox-api/column-object-adox.md) ya anexados a una colección.  

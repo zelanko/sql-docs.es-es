@@ -15,26 +15,26 @@ helpviewer_keywords:
 - data source objects [OLE DB]
 - CLSID
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ede861a696ba7782f7cdce962578dc077f799b33
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130596"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707436"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de origen de datos (OLE DB)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client usa el término origen de datos para el conjunto de interfaces OLE DB utilizadas para establecer un vínculo a un almacén de datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]como. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor de Native Client.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client usa el término origen de datos para el conjunto de interfaces OLE DB utilizadas para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor de Native Client.  
   
- Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID del proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de Native Client es el GUID de C/C++ CLSID_SQLNCLI10 (el símbolo SQLNCLI_CLSID se resolverá en el ProgID correcto del archivo SQLNCLI. h al que haga referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
+ Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client es el GUID de C/C++ CLSID_SQLNCLI10 (el símbolo SQLNCLI_CLSID se resolverá en el ProgID correcto del archivo SQLNCLI. h al que haga referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client es un servidor en proceso. Las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de objetos de proveedor de OLE DB de Native Client se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client es un servidor en proceso. Las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de proveedor de OLE DB de Native Client se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor de OLE DB de Native Client expone las interfaces de inicialización OLE DB que permiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al consumidor conectarse a las bases de datos existentes.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor de OLE DB de Native Client expone las interfaces de inicialización OLE DB que permiten al consumidor conectarse a las bases de datos existentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Cada conexión realizada a través [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del proveedor de OLE DB de Native Client establece estas opciones automáticamente:  
+ Cada conexión realizada a través del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client establece estas opciones automáticamente:  
   
 -   SET ANSI_WARNINGS ON  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63130596"
   
 -   SET CONCAT_OF_NULL_YIELDS_NULL ON  
   
- En este ejemplo se usa la macro de identificador de clase [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para crear un objeto de origen de datos del proveedor de OLE DB de cliente nativo y obtener una referencia a su interfaz **IDBInitialize** .  
+ En este ejemplo se usa la macro de identificador de clase para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor de OLE DB de cliente nativo y obtener una referencia a su interfaz **IDBInitialize** .  
   
 ```  
 IDBInitialize*   pIDBInitialize;  
@@ -71,7 +71,7 @@ else
   
  Al crear correctamente una instancia de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de origen de datos del proveedor de OLE DB de Native Client, la aplicación de consumidor puede continuar inicializando el origen de datos y creando sesiones. Las sesiones OLE DB presentan las interfaces que permiten manipulación y acceso a datos.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client realiza su primera conexión a una instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada de como parte de una inicialización de origen de datos correcta. Se mantiene la conexión siempre que se mantenga una referencia en cualquier interfaz de inicialización de origen de datos, o hasta que se llame al método **IDBInitialize::Uninitialize**.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client realiza su primera conexión a una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de una inicialización de origen de datos correcta. Se mantiene la conexión siempre que se mantenga una referencia en cualquier interfaz de inicialización de origen de datos, o hasta que se llame al método **IDBInitialize::Uninitialize**.  
   
 ## <a name="in-this-section"></a>En esta sección  
   

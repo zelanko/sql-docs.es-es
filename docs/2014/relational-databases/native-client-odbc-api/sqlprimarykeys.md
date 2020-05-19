@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLPrimaryKeys function
 ms.assetid: bc61cd5b-d2f4-4f87-abc7-743cf9ea772d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a12392f9e70fec2fae3b7790b43f12779b8868b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf00ecd74b64b3910ba19365920baf914f86939c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046699"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705887"
 ---
 # <a name="sqlprimarykeys"></a>SQLPrimaryKeys
   Una tabla puede tener una o varias columnas que pueden actuar como identificadores de fila únicos y las tablas creadas sin una restricción PRIMAry KEY devuelven un conjunto de resultados vacío a SQLPrimaryKeys. La función ODBC [SQLSpecialColumns](sqlspecialcolumns.md) informa de los candidatos de identificador de fila para las tablas sin claves principales.  

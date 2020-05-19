@@ -12,15 +12,15 @@ helpviewer_keywords:
 - XMLDATA option
 - FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93170d78512ba3c79e1dfa4b8e5e9aae83a4862
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9641c727f52f9e108a368457a668aaf68e38f812
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205073"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716296"
 ---
 # <a name="generate-an-inline-xdr-schema"></a>Generar un esquema XDR insertado
   La directiva **XMLDATA** de FOR XML devuelve un esquema XDR insertado junto con el resultado de la consulta. Sin embargo, el esquema XDR no admite todos los nuevos tipos de datos y otras mejoras incluidas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores. En su lugar, se puede solicitar un esquema XSD insertado mediante la [directiva XMLSCHEMA](generate-an-inline-xsd-schema.md).  

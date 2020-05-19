@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2fe1a42540b21fd11dbfb9747a77991073d35c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba89efce86c3996298cc00276cd206811146a988
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637573"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717015"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Denegar permisos en una colección de esquemas XML
   Es posible denegar permisos para crear una colección de esquemas XML nueva o utilizar una existente.  

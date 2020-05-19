@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLPERF data structure
 - statistical information [ODBC]
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143594"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707073"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede generar perfiles de dos tipos de datos de rendimiento:  
@@ -68,7 +68,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Red  
   
--   Tiempo  
+-   Time  
   
  En la siguiente tabla, las descripciones de los campos de la estructura de datos SQLPERF se aplican también a las estadísticas registradas en el archivo de registro de rendimiento.  
   

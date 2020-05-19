@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157831"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706472"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
   Las tablas con optimización para memoria son tablas creadas por medio de [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
@@ -54,11 +54,11 @@ ms.locfileid: "63157831"
   
 |Característica|Acceso con un procedimiento almacenado compilado de forma nativa|Acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado|Acceso CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
-|Tablas optimizadas para memoria|Sí|Sí|No <sup>1</sup>|  
-|[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Sí|Sí|No|  
-|[procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn133184.aspx)|No puede utilizar la instrucción EXECUTE para ejecutar un procedimiento almacenado desde un procedimiento almacenado compilado de forma nativa.|Sí|No <sup>1</sup>|  
+|Tablas optimizadas para memoria|Yes|Sí|No <sup>1</sup>|  
+|[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Yes|Sí|No|  
+|[procedimientos almacenados compilados de forma nativa](https://msdn.microsoft.com/library/dn133184.aspx)|No puede utilizar la instrucción EXECUTE para ejecutar un procedimiento almacenado desde un procedimiento almacenado compilado de forma nativa.|Yes|No <sup>1</sup>|  
   
- <sup>1</sup> no puede tener acceso a una tabla optimizada para memoria o a un procedimiento almacenado compilado de forma nativa desde la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conexión de contexto (la conexión de al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [conexiones regulares frente a contextos](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
+ <sup>1</sup> no puede tener acceso a una tabla optimizada para memoria o a un procedimiento almacenado compilado de forma nativa desde la conexión de contexto (la conexión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al ejecutar un módulo CLR). Sin embargo, puede crear y abrir otra conexión en la que pueda tener acceso a las tablas optimizadas para memoria y a los procedimientos almacenados compilados de forma nativa. Para obtener más información, vea [conexiones regulares frente a contextos](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
 ## <a name="performance-and-scalability"></a>Escalabilidad y rendimiento  
  Los siguientes factores afectarán a las mejoras del rendimiento que se pueden lograr con OLTP en memoria:  

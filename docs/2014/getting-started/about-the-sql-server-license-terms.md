@@ -10,22 +10,22 @@ helpviewer_keywords:
 - licenses [SQL Server]
 - end user license agreement [SQL Server]
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 14fc681ea05e47d733c164588db817d903f8fd0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088632"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707047"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Acerca de los términos de licencia de SQL Server
-  Los términos de licencia de software de [!INCLUDE[msCoName](../includes/msconame-md.md)] se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:% programfiles\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]% \120\License términos \ o% ProgramFiles (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]términos\\de \120\License.  
+  Los términos de licencia de software de [!INCLUDE[msCoName](../includes/msconame-md.md)] se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:% programfiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\License términos \ o% ProgramFiles (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Términos de \120\License \\ .  
   
  En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma.  
   
- El nombre de archivo de los términos de licencia indica la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], así como la edición de idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. El nombre de archivo de los términos de licencia tiene el\<formato siguiente\<: SQLServer2014_License_Edition_ tipo>_ LCID>. rtf. Por ejemplo:  
+ El nombre de archivo de los términos de licencia indica la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], así como la edición de idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. El nombre de archivo de los términos de licencia tiene el formato siguiente: SQLServer2014_License_Edition_ \< tipo>_ \< LCID>. rtf. Por ejemplo:  
   
 -   SQLServer2014_License_DEV_1033.rtf para la edición [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer en inglés.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66088632"
 |Ruso|RUS|1049|  
   
 ## <a name="ssnoversion-licensing-options"></a>Opciones de licencia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
- Para obtener más información [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acerca de las opciones de precios y licencias, consultehttps://www.microsoft.com/sqlserver/sql-server-2014.aspx) el [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) (sitio web).  
+ Para obtener más información acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las opciones de precios y licencias, consulte el [Microsoft SQL Server](https://www.microsoft.com/sqlserver/sql-server-2014.aspx) ( https://www.microsoft.com/sqlserver/sql-server-2014.aspx) sitio web).  
   
 ## <a name="see-also"></a>Consulte también  
  [Consideraciones sobre licencias para SQL Server](../../2014/sql-server/install/licensing-considerations-for-sql-server.md)   

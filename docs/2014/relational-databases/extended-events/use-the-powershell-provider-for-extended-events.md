@@ -11,38 +11,38 @@ helpviewer_keywords:
 - extended events [SQL Server], PowerShell
 - PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 69de90bb43e35b559def569bfe1f60433d7c14de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782906"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706598"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Usar el proveedor de PowerShell para eventos extendidos
   Puede administrar los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. La subcarpeta XEvent está disponible en la unidad SQLSERVER. Para acceder a la carpeta, puede usar cualquiera de los métodos siguientes:  
   
--   En el símbolo del sistema, escriba `sqlps` y luego presione ENTRAR. Escriba `cd xevent` y presione ENTRAR. Desde allí, puede usar el **CD** y `dir` los comandos (o los cmdlets **set-Location** y **Get-childitem** ) para desplazarse hasta el nombre del servidor y el nombre de la instancia.  
+-   En el símbolo del sistema, escriba `sqlps` y luego presione ENTRAR. Escriba `cd xevent` y presione ENTRAR. Desde allí, puede usar el **CD** y los `dir` comandos (o los cmdlets **set-Location** y **Get-childitem** ) para desplazarse hasta el nombre del servidor y el nombre de la instancia.  
   
 -   En el Explorador de objetos, expanda el nombre de la instancia, expanda **Administración**, haga clic con el botón derecho en **Eventos extendidos**y haga clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en la siguiente ruta de acceso:  
   
-     PS SQLServer: \ XEvent\\*ServerName*\\*nombreDeInstancia*>  
+     PS SQLServer: \ XEvent \\ *ServerName* \\ *nombreDeInstancia*>  
   
     > [!NOTE]  
     >  Puede iniciar PowerShell en cualquier nodo situado debajo de **Eventos extendidos**. Por ejemplo, puede hacer clic con el botón derecho en **Sesiones**y, después, hacer clic en **Iniciar PowerShell**. De esta forma, se inicia PowerShell en un nivel más profundo de la carpeta Sessions.  
   
- Puede examinar el árbol de carpetas XEvent para ver las sesiones de eventos extendidos, así como sus eventos, destinos y predicados asociados. Por ejemplo, desde la ruta de acceso PS SQLServer\\: \ XEvent*ServerName*\\*nombreDeInstancia*>, si `cd sessions`escribe, presiona entrar, `dir`escribe y presiona entrar, puede ver la lista de sesiones almacenadas en esa instancia. Asimismo, puede ver si la sesión se está ejecutando (y si este es el caso, durante cuánto tiempo), así como si la sesión está configurada para iniciarse cuando se inicie la instancia.  
+ Puede examinar el árbol de carpetas XEvent para ver las sesiones de eventos extendidos, así como sus eventos, destinos y predicados asociados. Por ejemplo, desde la ruta de acceso PS SQLServer: \ XEvent \\ *ServerName* \\ *nombreDeInstancia*>, si escribe `cd sessions` , presiona entrar, escribe `dir` y presiona entrar, puede ver la lista de sesiones almacenadas en esa instancia. Asimismo, puede ver si la sesión se está ejecutando (y si este es el caso, durante cuánto tiempo), así como si la sesión está configurada para iniciarse cuando se inicie la instancia.  
   
- Para ver los eventos, sus predicados y los destinos asociados con una sesión, puede cambiar los directorios al nombre de la sesión y, a continuación, ver la carpeta de eventos o de destino. Por ejemplo, para ver los eventos y sus predicados asociados a la sesión de mantenimiento del sistema predeterminada, en la ruta de acceso de PS\\SQLServer: \ XEvent*ServerName*\\*nombreDeInstancia*\Sessions `cd system_health\events,`>, escriba Presione `dir`entrar, escriba y, a continuación, presione Entrar.  
+ Para ver los eventos, sus predicados y los destinos asociados con una sesión, puede cambiar los directorios al nombre de la sesión y, a continuación, ver la carpeta de eventos o de destino. Por ejemplo, para ver los eventos y sus predicados asociados a la sesión de mantenimiento del sistema predeterminada, en la ruta de acceso de PS SQLServer: \ XEvent \\ *ServerName* \\ *nombreDeInstancia*\Sessions>, escriba `cd system_health\events,` Presione entrar, escriba `dir` y, a continuación, presione Entrar.  
   
  El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell es una herramienta eficaz que puede usar para crear, modificar y administrar sesiones de eventos extendidos. En la siguiente sección se proporcionan algunos ejemplos básicos del uso de los scripts de PowerShell con eventos extendidos.  
   
 ## <a name="examples"></a>Ejemplos  
  En los siguientes ejemplos, observe lo siguiente:  
   
--   Los scripts se deben ejecutar desde el símbolo del\\ sistema PS SQLSERVER:> ( `sqlps` disponible escribiendo en un símbolo del sistema).  
+-   Los scripts se deben ejecutar desde el símbolo del sistema PS SQLSERVER: \\> (disponible escribiendo `sqlps` en un símbolo del sistema).  
   
 -   Los scripts usan la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDescField function
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b635716617c84185efdef0e2e23d2f3b65bbac91
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657789"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706044"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente expone campos de descriptor específicos del controlador para el descriptor de fila de implementación (IRD). En IRD, se hace referencia a los campos de descriptor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](sqlcolattribute.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "62657789"
   
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, SQLGetDescField puede `SQL_C_SS_TIME2` devolver ( `time` para los tipos `SQL_C_SS_TIMESTAMPOFFSET` ) o `datetimeoffset`(para) en `SQL_C_BINARY`lugar de, si la aplicación usa ODBC 3,8.  
+ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , SQLGetDescField puede devolver `SQL_C_SS_TIME2` (para los `time` tipos) o `SQL_C_SS_TIMESTAMPOFFSET` (para `datetimeoffset` ) en lugar de `SQL_C_BINARY` , si la aplicación usa ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField admite UDT CLR grandes  
  `SQLGetDescField` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  

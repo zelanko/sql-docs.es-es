@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b00b44ebe66a372b2037e62dc589afa35003495e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637623"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717194"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparar XML con tipo y XML sin tipo
-  Se pueden crear variables, parámetros y columnas del tipo de datos `xml`. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo `xml`. En este caso, se `xml` llama a la instancia de tipo de datos *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
+  Se pueden crear variables, parámetros y columnas del tipo de datos `xml`. Opcionalmente, se puede asociar una colección de esquemas XML a una variable, a un parámetro o a una columna de tipo `xml`. En este caso, `xml` se llama a la instancia de tipo de datos *con tipo*. En los demás casos, se dice que la instancia XML es una instancia *sin tipo*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML correcto y tipo de datos XML  
  El tipo de datos `xml` implementa el tipo de datos `xml` del estándar ISO. Por lo tanto, puede almacenar documentos XML versión 1.0 correctos, así como los denominados fragmentos de contenido XML con nodos de texto y un número arbitrario de elementos de nivel superior en una columna XML sin tipo. El sistema comprueba que todos los datos tienen un formato correcto, no requiere que la columna esté enlazada a esquemas XML y rechaza los datos que no tienen un formato correcto en sentido amplio. Esto también se cumple para parámetros y variables XML sin tipo.  
@@ -52,7 +52,7 @@ ms.locfileid: "62637623"
   
 -   Tiene esquemas pero no desea que el servidor valide los datos. Esto a veces ocurre cuando una aplicación realiza la validación del lado cliente antes de almacenar los datos en el servidor, almacena temporalmente datos XML que no son válidos según el esquema, o usa componentes del esquema que no son compatibles con el servidor.  
   
- Utilice el tipo `xml` de datos con tipo en las siguientes situaciones:  
+ Utilice `xml` el tipo de datos con tipo en las siguientes situaciones:  
   
 -   Tiene esquemas para los datos XML y desea que el servidor valide estos datos según los esquemas XML.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62637623"
  Columnas, parámetros y variables XML con tipo pueden almacenar documentos o contenido XML. No obstante, hay que especificar con una marca si se va a almacenar un documento o contenido en el momento de la declaración. Además, hay que proporcionar la colección de esquemas XML. Especifique DOCUMENT si cada instancia XML tiene exactamente un elemento de nivel superior. En caso contrario, use CONTENT. El compilador de consultas usa la marca DOCUMENT en comprobaciones de tipo durante la compilación de consultas para inferir elementos singleton de nivel superior.  
   
 ## <a name="creating-typed-xml"></a>Crear XML con tipo  
- Para poder crear `xml` variables, parámetros o columnas con tipo, primero debe registrar la colección de ESQUEMAs XML mediante [Create XML Schema Collection &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Después, se puede asociar la colección de esquemas XML a variables, parámetros o columnas del tipo de datos `xml`.  
+ Para poder crear `xml` variables, parámetros o columnas con tipo, primero debe registrar la colección de esquemas XML mediante [Create XML schema Collection &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Después, se puede asociar la colección de esquemas XML a variables, parámetros o columnas del tipo de datos `xml`.  
   
  En los ejemplos siguientes se usa una convención de nomenclatura de dos partes para especificar el nombre de la recopilación de esquemas XML. La primera parte corresponde al nombre de esquema y la segunda al nombre de la colección de esquemas XML.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Ejemplo: Asociar una colección de esquemas con una variable de tipo XML  
- En el ejemplo siguiente se`xml` crea una variable de tipo y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
+ En el ejemplo siguiente se crea una `xml` variable de tipo y se le asocia una colección de esquemas. La colección de esquemas especificada en el ejemplo ya se ha importado a la base de datos **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

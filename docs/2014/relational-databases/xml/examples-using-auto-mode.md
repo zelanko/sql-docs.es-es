@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 93a26764a7111a01b07d23c61bfbfb5c4a728e72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287809"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716696"
 ---
 # <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
   Los siguientes ejemplos ilustran el uso del modo AUTO. Muchas de estas consultas se especifican utilizando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: 9d0c524b-22b0-475a-9ff5-5a69a6393b46
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b61d8b7436ab8766ad4009de46370d3914001ae
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140620"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708485"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
   Con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede establecer datos de BLOB pasando un puntero a un objeto de almacenamiento del consumidor.  

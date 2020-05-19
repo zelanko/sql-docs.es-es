@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server]
 - xe
 ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8498937fa1f259b194ea57fc5f5d286adf0db12
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990702"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706656"
 ---
 # <a name="extended-events"></a>Eventos extendidos
   Los eventos extendidos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen una arquitectura muy escalable y configurable que permite a los usuarios recopilar la información justa y necesaria para solucionar o identificar un problema de rendimiento.  
@@ -93,7 +93,7 @@ ms.locfileid: "62990702"
 |Describe cómo ver los eventos y las acciones de los eventos extendidos que son equivalentes a cada evento de Seguimiento de SQL y sus columnas asociadas.|[Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Describe cómo determinar los parámetros que puede establecer al usar el argumento ADD TARGET en CREATE EVENT SESSION o ALTER EVENT SESSION.|[Obtener los parámetros configurables del argumento ADD TARGET](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Describe cómo convertir un script de Seguimiento de SQL existente en una sesión de eventos extendidos.|[Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que mantienen bloqueos](determine-which-queries-are-holding-locks.md)|  
+|Describe cómo determinar las consultas que mantienen el bloqueo, el plan de la consulta y la pila de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el momento en que se realizó el bloqueo.|[Determinar las consultas que retienen bloqueos](determine-which-queries-are-holding-locks.md)|  
 |Describe cómo identificar el origen de los bloqueas que afectan al rendimiento de la base de datos.|[Buscar los objetos que han obtenido más bloqueos](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Describe cómo usar los eventos extendidos con el seguimiento de eventos para Windows a fin de supervisar la actividad del sistema.|[Supervisar la actividad del sistema mediante eventos extendidos](monitor-system-activity-using-extended-events.md)|  
   

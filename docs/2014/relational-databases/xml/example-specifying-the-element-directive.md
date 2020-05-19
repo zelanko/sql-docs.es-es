@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbf710587d67bf56d2c5f56d7d89a436608c572f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287159"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716721"
 ---
 # <a name="example-specifying-the-element-directive"></a>Ejemplo: Especificar la directiva ELEMENT
   Se recupera información de los empleados y se genera XML centrado en elementos como se muestra a continuación:  

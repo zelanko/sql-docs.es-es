@@ -12,18 +12,18 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, BLOBs
 - large data, OLE objects
 ms.assetid: a31c5632-96aa-483f-a307-004c5149fbc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bd6af4f85fb8a39f2206bf6c3b9f3099a4af0b2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195226"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82708560"
 ---
 # <a name="getting-large-data"></a>Obtener datos grandes
-  En general, los consumidores deben aislar el código que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un objeto de almacenamiento de proveedor OLE DB Native Client desde otro código que controle los datos a los que no se hace referencia a través de un puntero de interfaz **ISequentialStream** .  
+  En general, los consumidores deben aislar el código que crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de almacenamiento de proveedor OLE DB Native Client desde otro código que controle los datos a los que no se hace referencia a través de un puntero de interfaz **ISequentialStream** .  
   
  En este tema se hace referencia a la funcionalidad disponible con las funciones siguientes:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63195226"
   
  Si la propiedad DBPROP_ACCESSORDER (en el grupo de propiedades de conjunto de filas) está establecida en cualquiera de los valores DBPROPVAL_AO_SEQUENTIAL o DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS, el consumidor solo debe capturar una fila de datos en una llamada al método **GetNextRows** porque los datos de BLOB no se almacenan en búfer. Si el valor de DBPROP_ACCESSORDER está establecido en DBPROPVAL_AO_RANDOM, el consumidor puede capturar varias filas de datos en **GetNextRows**.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no recupera datos grandes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde hasta que el consumidor lo solicite. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no recupera datos grandes desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta que el consumidor lo solicite. El consumidor debe enlazar todos los datos cortos en un descriptor de acceso y, a continuación, utilizar uno o más descriptores de acceso temporales para recuperar los valores de datos grandes según se precise.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se recupera un valor de datos grandes de una única columna:  

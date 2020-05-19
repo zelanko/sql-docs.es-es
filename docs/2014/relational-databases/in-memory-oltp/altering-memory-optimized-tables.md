@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d1ae35d9dae03292edf31cd2b06acf97dc0db0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783242"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706556"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
   No se admite la realización de operaciones ALTER en las tablas optimizadas para memoria. Esto incluye operaciones tales como cambiar el bucket_count, agregar o quitar un índice y agregar o quitar una columna. En este tema se proporcionan instrucciones sobre cómo actualizar las tablas optimizadas para memoria.  
@@ -69,7 +69,7 @@ ms.locfileid: "72783242"
     select * into dbo.T_copy from dbo.T  
     ```  
   
-     Si hay suficiente memoria disponible, `T_copy` puede ser una tabla optimizada para memoria, lo que hace que la copia de datos sea más rápida. <sup>2</sup>  
+     Si hay suficiente memoria disponible, `T_copy` puede ser una tabla optimizada para memoria, lo que hace que la copia de datos sea más rápida.<sup> 2</sup>  
   
 5.  Quite los objetos enlazados al esquema que hacen referencia a la tabla original.  
   
@@ -83,9 +83,9 @@ ms.locfileid: "72783242"
   
 10. Inicie la carga de trabajo en `T`.  
   
- <sup>1</sup> tenga en `T_copy` cuenta que se conserva en el disco en este ejemplo. Si hay una copia de seguridad de `T` disponible, `T_copy` puede ser una tabla temporal o no perdurable.  
+ <sup>1</sup> tenga en cuenta que `T_copy` se conserva en el disco en este ejemplo. Si hay una copia de seguridad de `T` disponible, `T_copy` puede ser una tabla temporal o no perdurable.  
   
- <sup>2</sup> debe haber suficiente memoria para `T_copy`. La memoria no se libera inmediatamente en `DROP TABLE`. Si `T_copy` está con optimización para memoria, debe haber suficiente memoria para dos copias adicionales de `T`. Si `T_copy` está basada en disco, basta con que haya memoria suficiente para una copia adicional de `T`, debido a que el recolector de elementos no utilizados necesita ponerse al día después de anular la versión anterior de `T`.  
+ <sup>2</sup> debe haber suficiente memoria para `T_copy` . La memoria no se libera inmediatamente en `DROP TABLE`. Si `T_copy` está con optimización para memoria, debe haber suficiente memoria para dos copias adicionales de `T`. Si `T_copy` está basada en disco, basta con que haya memoria suficiente para una copia adicional de `T`, debido a que el recolector de elementos no utilizados necesita ponerse al día después de anular la versión anterior de `T`.  
   
 ## <a name="changing-schema-powershell"></a>Cambiar el esquema (PowerShell)  
  Los scripts de PowerShell siguientes elaboran y generan cambios en el esquema aplicando el script a la tabla y los permisos asociados.  
@@ -223,7 +223,7 @@ Write-Host ""
   
  El script de PowerShell siguiente ejecuta los cambios del esquema incluidos en el script del ejemplo anterior. Este script toma como argumento una tabla, y ejecuta los scripts de cambio de esquema que se generaron para dicha tabla y los procedimientos almacenados asociados.  
   
- Uso: execute_schema_change. PS1 *SERVER_NAME * * db_name`schema_name`TABLE_NAME*  
+ Uso: execute_schema_change. PS1 *SERVER_NAME * * db_name `schema_name` TABLE_NAME*  
   
 ```powershell
 # stop execution once an error occurs  
@@ -294,4 +294,4 @@ Write-Host ""
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  

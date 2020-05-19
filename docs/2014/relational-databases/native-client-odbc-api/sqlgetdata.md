@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetData function
 ms.assetid: 204848be-8787-45b4-816f-a60ac9d56fcf
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 048ee2d27445bf64839c5331627a12e012cd4123
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92cd4d2357d8908ac8944883772fd2639ee30b11
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193307"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706053"
 ---
 # <a name="sqlgetdata"></a>SQLGetData
   **SQLGetData** se usa para recuperar datos del conjunto de resultados sin enlazar valores de columna. Se puede llamar sucesivamente a**SQLGetData** en la misma columna para recuperar cantidades grandes de datos de una columna con un tipo de datos **text**, **ntext**o **image** .  

@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - stored procedures [ODBC], calling
 ms.assetid: 31176be8-d40e-4f93-8d44-a46e804a3e2d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7db8c722eb7afcb9db47478a1f42dd7830935ad7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688664"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82712529"
 ---
 # <a name="call-stored-procedures-odbc"></a>Llamar a procedimientos almacenados (ODBC)
   Cuando una instrucción SQL llama a un procedimiento almacenado mediante la cláusula de escape ODBC CALL, el controlador Microsoft SQL Server envía el procedimiento a SQL Server mediante el mecanismo de llamada a procedimiento almacenado remoto (RPC). Las solicitudes de RPC omiten gran parte del análisis de la instrucción y del procesamiento del parámetro en SQL Server, y es más rápido que usar la instrucción Transact-SQL EXECUTE.  

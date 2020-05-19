@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADOX]
 - ADOX, properties
 ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6aed31fef1f685effc3216d6055de0faf0e22698
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910609"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764106"
 ---
 # <a name="adox-properties"></a>Propiedades ADOX
 
@@ -26,7 +26,7 @@ ms.locfileid: "67910609"
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indica el objeto de **conexión** ADO al que pertenece el catálogo.|  
 |[Atributos](../../../ado/reference/adox-api/attributes-property-adox.md)|Describe las características de las columnas.|  
-|[Clúster](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
+|[Agrupado](../../../ado/reference/adox-api/clustered-property-adox.md)|Indica si el índice está agrupado.|  
 |[Comando](../../../ado/reference/adox-api/command-property-adox.md)|Especifica un objeto **Command** de ADO que se puede utilizar para crear o ejecutar el procedimiento.|  
 |[Recuento](../../../ado/reference/ado-api/count-property-ado.md)|Indica el número de objetos de una colección.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Indica la fecha de creación del objeto.|  
@@ -46,7 +46,7 @@ ms.locfileid: "67910609"
 |[Tipo (columna)](../../../ado/reference/adox-api/type-property-column-adox.md)|Indica el tipo de datos de una columna.|  
 |[Tipo (clave)](../../../ado/reference/adox-api/type-property-key-adox.md)|Indica el tipo de datos de la clave.|  
 |[Type (tabla)](../../../ado/reference/adox-api/type-property-table-adox.md)|Indica el tipo de una tabla.|  
-|[Espeficarse](../../../ado/reference/adox-api/unique-property-adox.md)|Indica si las claves de índice deben ser únicas.|  
+|[Único](../../../ado/reference/adox-api/unique-property-adox.md)|Indica si las claves de índice deben ser únicas.|  
 |[UpdateRule](../../../ado/reference/adox-api/updaterule-property-adox.md)|Indica la acción que se realiza cuando se actualiza una clave principal.|  
   
 ## <a name="see-also"></a>Consulte también  

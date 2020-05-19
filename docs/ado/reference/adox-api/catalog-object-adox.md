@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Catalog object [ADOX]
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f13533ce9d14a650e409507e646eb536bad14e4d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967056"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763946"
 ---
 # <a name="catalog-object-adox"></a>Objeto Catalog (ADOX)
 Contiene colecciones ([tablas](../../../ado/reference/adox-api/tables-collection-adox.md), [vistas](../../../ado/reference/adox-api/views-collection-adox.md), [usuarios](../../../ado/reference/adox-api/users-collection-adox.md), [grupos](../../../ado/reference/adox-api/groups-collection-adox.md)y [procedimientos](../../../ado/reference/adox-api/procedures-collection-adox.md)) que describen el catálogo de esquemas de un origen de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede modificar el objeto de **Catálogo** agregando o quitando objetos, o modificando los objetos existentes. Es posible que algunos proveedores no admitan todos los objetos de **Catálogo** o que solo admitan ver la información de esquema.  
   
  Con las propiedades y los métodos de un objeto de **Catálogo** , puede:  

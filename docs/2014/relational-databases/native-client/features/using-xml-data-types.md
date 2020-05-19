@@ -27,15 +27,15 @@ helpviewer_keywords:
 - XML [SQL Server], SQL Server Native Client
 - COLUMNS rowset
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86230cd0de145f7f1ccb9f9b2709a5fd29ae78fa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136661"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707160"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido un tipo de datos **xml** que permite almacenar fragmentos y documentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, el tipo de datos **xml** puede usarse como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en funciones CAST y CONVERT.  
@@ -61,11 +61,11 @@ ms.locfileid: "63136661"
 -   Un elemento **ISequentialStream**  
   
 > [!NOTE]  
->  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no incluye un lector Sax, pero **se puede pasar** fácilmente a objetos Sax y Dom en MSXML.  
+>  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no incluye un lector Sax, pero **ISequentialStream** se puede pasar fácilmente a objetos Sax y Dom en MSXML.  
   
  **ISequentialStream** debe usarse para la recuperación de documentos XML de gran tamaño. Las mismas técnicas que se usan para otros tipos de valores grandes también se aplican a XML. Para más información, consulte [Usar tipos de valor grande](using-large-value-types.md).  
   
- Una aplicación también puede recuperar, insertar o actualizar datos almacenados en columnas de tipo XML de un conjunto de filas mediante las interfaces habituales, como **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. De forma similar al caso de recuperación, un programa de aplicación puede pasar una cadena de **ISequentialStream** texto o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ISequentialStream al proveedor de OLE DB de Native Client.  
+ Una aplicación también puede recuperar, insertar o actualizar datos almacenados en columnas de tipo XML de un conjunto de filas mediante las interfaces habituales, como **IRow::GetColumns**, **IRowChange::SetColumns** e **ICommand::Execute**. De forma similar al caso de recuperación, un programa de aplicación puede pasar una cadena de texto o una **ISequentialStream** al [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  
   
 > [!NOTE]  
 >  Para enviar datos XML en formato de cadena mediante la interfaz **ISequentialStream**, tiene que obtener **ISequentialStream** especificando DBTYPE_IUNKNOWN y establecer su argumento *pObject* en NULL en el enlace.  
@@ -87,7 +87,7 @@ ms.locfileid: "63136661"
 |DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|Correcto<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/A|N/D <sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
   
  <sup>1</sup> Si se especifica un tipo de servidor distinto de DBTYPE_XML con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
@@ -117,7 +117,7 @@ ms.locfileid: "63136661"
 > [!NOTE]  
 >  Los valores XML NULL no devuelven ningún dato.  
   
- El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con enlaces WSTR y BSTR, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no requiere ni agrega una marca Bom, ya que la codificación está implícita en el enlace. Cuando se trabaja con enlaces BYTES, XML o IUNKNOWN, se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido SQL Server) deducen la codificación inspeccionando los primeros bytes del valor. Los datos XML recibidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client mediante enlaces bytes, XML o IUNKNOWN siempre están codificados en UTF-16 con una marca Bom y sin una declaración de codificación incrustada.  
+ El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con enlaces WSTR y BSTR, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no requiere ni agrega una marca Bom, ya que la codificación está implícita en el enlace. Cuando se trabaja con enlaces BYTES, XML o IUNKNOWN, se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido SQL Server) deducen la codificación inspeccionando los primeros bytes del valor. Los datos XML recibidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mediante enlaces bytes, XML o IUNKNOWN siempre están codificados en UTF-16 con una marca Bom y sin una declaración de codificación incrustada.  
   
  Las conversiones de datos que proporcionan los servicios principales de OLE DB (**IDataConvert**) no pueden aplicarse en DBTYPE_XML.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "63136661"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client agrega nuevos valores o cambios a muchos de los conjuntos de propiedades de OLE DB básicos.  
   
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
- Para admitir el tipo de datos **XML** a través de OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
+ Para admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
 |Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
@@ -188,13 +188,13 @@ ms.locfileid: "63136661"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client agrega nuevos valores o cambios a muchas de las interfaces de OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>La interfaz ISSCommandWithParameters  
- Con el fin de admitir el tipo de datos **XML** a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] través de OLE DB, Native Client implementa diversos cambios, incluida la adición de la interfaz [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) y [SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) que se usan para administrar tipos de datos específicos del servidor.  
+ Con el fin de admitir el tipo de datos **XML** a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa diversos cambios, incluida la adición de la interfaz [ISSCommandWithParameters](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md) . Esta nueva interfaz hereda de la interfaz OLE DB básica **ICommandWithParameters**. Además de los tres métodos heredados de **ICommandWithParameters**; **GetParameterInfo**, **MapParameterNames**y **SetParameterInfo**; **ISSCommandWithParameters** proporciona los métodos [GetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) y [SetParameterProperties](../../native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) que se usan para administrar tipos de datos específicos del servidor.  
   
 > [!NOTE]  
 >  La interfaz **ISSCommandWithParameters** también usa la nueva estructura SSPARAMPROPS.  
   
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client agrega las siguientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]columnas específicas del conjunto de filas devuelto por el método **IColumnRowset:: GetColumnsRowset** . Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client agrega las siguientes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columnas específicas del conjunto de filas devuelto por el método **IColumnRowset:: GetColumnsRowset** . Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
@@ -265,10 +265,10 @@ ms.locfileid: "63136661"
   
 -   SQL_C_CHAR: los datos se convierten a UTF-16 en el cliente y se envían al servidor de la misma forma que SQL_C_WCHAR (incluida la adición de una marca BOM). Si el XML no está codificado en la página de códigos del cliente, pueden producirse daños en los datos.  
   
- El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con un enlace de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL_C_BINARY, Native Client no requiere ni agrega una marca Bom, ya que la codificación está implícita en el enlace. Se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deducen la codificación inspeccionando los primeros bytes del valor. Los datos XML recibidos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de Native Client mediante enlaces de SQL_C_BINARY siempre se codifican en UTF-16 con una marca Bom y sin una declaración de codificación incrustada.  
+ El estándar XML exige que el XML con codificación UTF-16 comience con una marca de orden de bytes (BOM), el código de carácter UTF-16 0xFEFF. Cuando se trabaja con un enlace de SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no requiere ni agrega una marca Bom, ya que la codificación está implícita en el enlace. Se intenta proporcionar simplicidad a la hora de actuar con otros sistemas de almacenamiento y procesadores XML. En este caso, debe haber una marca BOM en el XML con codificación UTF-16 y la aplicación no necesita ocuparse de la codificación real, ya que la mayoría de los procesadores XML (incluido [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) deducen la codificación inspeccionando los primeros bytes del valor. Los datos XML recibidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mediante enlaces de SQL_C_BINARY siempre se codifican en UTF-16 con una marca Bom y sin una declaración de codificación incrustada.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)   
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

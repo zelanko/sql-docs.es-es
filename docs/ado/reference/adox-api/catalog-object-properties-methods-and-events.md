@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Catalog object [ADOX], members
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: aedafb6e8753838c9911c0ff961b0c9181fd181c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967049"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763936"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Catalog
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -40,7 +40,7 @@ ms.locfileid: "67967049"
   
  [SetObjectOwner (método)](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

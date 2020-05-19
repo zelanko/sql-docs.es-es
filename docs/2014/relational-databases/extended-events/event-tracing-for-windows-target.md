@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ETW target
 - targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34c367d6ea7663a262c7ccead1e85702af9cf499
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62519309"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706836"
 ---
 # <a name="event-tracing-for-windows-target"></a>seguimiento de eventos para Windows de destino
   Antes de utilizar el Seguimiento de eventos para Windows (ETW) como destino, se recomienda tener conocimientos prácticos de ETW. El Seguimiento de eventos para Windows (ETW) se utiliza junto a Extended Events o como un consumidor de eventos de Extended Events. Los vínculos externos siguientes proporcionan un punto de inicio para obtener información general sobre ETW:  
@@ -54,7 +54,7 @@ ms.locfileid: "62519309"
 |default_etw_session_logfile_path|Cualquier cadena de 256 caracteres, como máximo. Este valor es opcional.|La ruta de acceso del archivo de registro para la sesión de Extended Events. De forma predeterminada, es %TEMP%\XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Un entero sin signo. Este valor es opcional.|El tamaño del archivo de registro, en megabytes (MB), para la sesión de Extended Events. El valor predeterminado es 20 MB.|  
 |default_etw_session_buffer_size_kb|Un entero sin signo. Este valor es opcional.|El tamaño de búfer en memoria, en kilobytes (kB), para la sesión de Extended Events. El valor predeterminado es 128 kB.|  
-|retries|Un entero sin signo.|El número de veces que se debe reintentar publicar el evento al subsistema de ETW antes de quitar el evento. El valor predeterminado es 0.|  
+|retries|Un entero sin signo.|El número de veces que se debe reintentar publicar el evento al subsistema de ETW antes de quitar el evento. El valor predeterminado es 0.|  
   
  La configuración de estos valores es opcional. El destino ETW utiliza los valores predeterminados para estos valores.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519309"
     > [!IMPORTANT]  
     >  No se puede cambiar la ruta de acceso del archivo después de que la primera sesión se haya iniciado.  
   
--   Los archivos Managed Object Format (MOF) se encuentran en * \<la ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](https://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
+-   Los archivos Managed Object Format (MOF) se encuentran en * \< la ruta de instalación>* \Microsoft SQL Server\Shared. Para obtener más información, vea [Formato de objetos administrados](https://go.microsoft.com/fwlink/?LinkId=92851) en MSDN.  
   
 ## <a name="adding-the-target-to-a-session"></a>Agregar el destino a una sesión  
  Para agregar el destino ETW a una sesión de eventos extendidos, debe incluir la siguiente instrucción al crear o modificar una sesión de eventos:  

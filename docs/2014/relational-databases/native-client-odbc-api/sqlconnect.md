@@ -9,21 +9,21 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLConnect function
 ms.assetid: 6da74e3a-4388-4907-81cb-987389bae467
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d5292d3141d6ae520a333827796ca8fc6005be15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea6c92a75d09164fdb8cd8dd6398ca20fd722027
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067678"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706306"
 ---
 # <a name="sqlconnect"></a>SQLConnect
   Cuando se abre una conexión, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client establece SQL_COPT_SS_MUTUALLY_AUTHENTICATED y SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD en el método de autenticación que se utiliza para abrir la conexión. Para obtener más información acerca de los SPN, consulte [nombres de entidad de seguridad de servicio &#40;spn&#41; en conexiones de cliente &#40;&#41;ODBC ](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md).  
   
 ## <a name="sqlconnect-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQLConnect para la alta disponibilidad con recuperación de desastres  
- Para obtener más información sobre el uso de **SQLConnect** para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] conectarse a un clúster, consulte [SQL Server Native Client compatibilidad con la alta disponibilidad y la recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener más información sobre el uso de **SQLConnect** para conectarse a un [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] clúster, consulte [SQL Server Native Client compatibilidad con la alta disponibilidad y la recuperación ante desastres](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLConnect función)](https://go.microsoft.com/fwlink/?LinkId=101541)   

@@ -13,18 +13,18 @@ topic_type:
 helpviewer_keywords:
 - GetErrorInfo method
 ms.assetid: 83265c9c-eaf9-41f0-9f73-b0ae0972f0d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9131c65236a0efffa19aab2bd10b1fd8e309653b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe870479a96ff0d40ddaae6903eadd29edfb64b8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127783"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707349"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-  Devuelve un puntero a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructura SSERRORINFO del proveedor de OLE DB de Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client que contiene los detalles del error.  
+  Devuelve un puntero a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructura SSERRORINFO del proveedor de OLE DB de Native Client que contiene los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles del error.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,7 +52,7 @@ OLECHAR**ppErrorStrings);
  E_OUTOFMEMORY  
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no pudo asignar memoria suficiente para completar la solicitud.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client asigna memoria para las cadenas SSERRORINFO y OLECHAR devueltas a través de los punteros pasados por el consumidor. El consumidor debe desasignar esta memoria mediante el método **IMalloc::Free** cuando ya no requiera tener acceso a los datos de error.  
   
  La estructura SSERRORINFO se define como sigue:  
@@ -71,7 +71,7 @@ typedef struct tagSSErrorInfo
 SSERRORINFO;  
 ```  
   
-|Member|Descripción|  
+|Miembro|Descripción|  
 |------------|-----------------|  
 |*pwszMessage*|El mensaje de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El mensaje se devuelve a través del método **IErrorInfo::GetDescription**.|  
 |*pwszServer*|El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la que se ha producido el error.|  

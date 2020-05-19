@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQLNCLI, about SQL Server Native Client
 - data access [SQL Server Native Client], features
 ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a516578a0d72028ec8543d136f571ea62d7520b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225561"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707240"
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
   Además de exponer las características de Windows (Microsoft en versiones anteriores) Data Access Components (WDAC), [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa también muchas otras características para exponer la funcionalidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -69,7 +69,7 @@ ms.locfileid: "63225561"
  Explica la compatibilidad con los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
  [Compatibilidad con FILESTREAM](filestream-support.md)  
- Describe la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad de Native Client con la característica mejorada FileStream.  
+ Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la compatibilidad de Native Client con la característica mejorada FileStream.  
   
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  

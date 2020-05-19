@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 11ae959f-2fb6-4b85-ac5d-1476a82136d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a6e1583dad869860bdd2f555a354850c7f7a1198
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1d21a69105dbc419ad7c596a7ae0cc6ae4ceb57
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691957"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707035"
 ---
 # <a name="sparse-columns-support-odbc"></a>Compatibilidad con columnas dispersas (ODBC)
   En este tema se describe la compatibilidad ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con columnas dispersas. Para ver un ejemplo que muestra la compatibilidad de ODBC con columnas dispersas, consulte [llamar a SQLColumns en una tabla con columnas dispersas](../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md). Para obtener más información sobre las columnas dispersas, consulte [compatibilidad con columnas dispersas en SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md).  

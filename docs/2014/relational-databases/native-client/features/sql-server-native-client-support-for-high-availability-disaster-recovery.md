@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4bd73d32a58e156a3ae8577d41bbdd4725f85656
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7243e28bf17b6c38f7274e221a1b6b5e5cf830f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206641"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707231"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
   En este tema se explica la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Para más información sobre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creación y configuración de grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Clústeres de conmutación por error y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md) y [Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "68206641"
 ## <a name="connecting-with-multisubnetfailover"></a>Conectarse a MultiSubnetFailover  
  Especifique siempre `MultiSubnetFailover=Yes` al conectarse a un agente de escucha de grupo de disponibilidad de SQL Server 2012 o a una instancia de clúster de conmutación por error de SQL Server 2012. `MultiSubnetFailover` habilita una conmutación por error más rápida para todos los grupos de disponibilidad y la instancia del clúster de conmutación por error en SQL Server 2012 y reducirá significativamente el tiempo de la conmutación por error en las topologías únicas y AlwaysOn de varias subredes. En un clúster de conmutación por error de varias subredes, el cliente intentará conexiones en paralelo. Durante una conmutación por error de subred, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client seguirá reintentando la conexión TCP.  
   
- La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a las direcciones IP de todos los grupos de disponibilidad. Cuando `MultiSubnetFailover=Yes` se especifica para una conexión, el cliente reintenta la conexión TCP con más rapidez que los intervalos de REtransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
+ La propiedad de conexión `MultiSubnetFailover` indica que la aplicación se implementa en un grupo de disponibilidad o una instancia de clúster de conmutación por error, y que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client intentará conectarse a la base de datos en la instancia principal de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intentando conectarse a las direcciones IP de todos los grupos de disponibilidad. Cuando `MultiSubnetFailover=Yes` se especifica para una conexión, el cliente reintenta la conexión TCP con más rapidez que los intervalos de retransmisión TCP predeterminados del sistema operativo. Esto permite una reconexión más rápida después de la conmutación por error de un grupo de disponibilidad AlwaysOn o una instancia de clúster de conmutación por error AlwaysOn, y es aplicable a instancias de clúster de conmutación por error y grupos de disponibilidad de una y varias subredes.  
   
  Para más información sobre las palabras clave de cadena de conexión, vea [Usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "68206641"
  Cuando se establezcan conexiones implícitas, estas usarán la configuración de la intención de aplicaciones de la conexión primaria. De forma similar, cuando se creen varias sesiones con el mismo origen de datos estas heredarán la configuración de la intención de aplicaciones del origen de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)   
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

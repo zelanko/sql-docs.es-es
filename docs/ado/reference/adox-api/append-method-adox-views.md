@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 540ff52141139f4748cb2cd4c8979f5f8b55b230
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967154"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764006"
 ---
 # <a name="append-method-adox-views"></a>Append (método) (vistas ADOX)
 Crea un nuevo objeto de [vista](../../../ado/reference/adox-api/view-object-adox.md) y lo anexa a la colección de [vistas](../../../ado/reference/adox-api/views-collection-adox.md) .  
@@ -40,7 +40,7 @@ Views.Append Name, Command
  *Comando*  
  Objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO que representa la vista que se va a crear.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Crea una nueva vista en el origen de datos con el nombre y los atributos especificados en el objeto de **comando** .  
   
  Si el texto del comando que especifica el usuario representa un procedimiento en lugar de una vista, el comportamiento depende del proveedor. Se producirá un error en **Append** si el proveedor no admite comandos persistentes.  

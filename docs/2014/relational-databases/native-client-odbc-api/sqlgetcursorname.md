@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetCursorName function
 ms.assetid: 3a427a23-28ef-49aa-b9ec-6cab0914bdf3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 603a2b5be4ca75495f094aa838d0373a9689a523
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e9161170665d421b235a3a121ab8bb761e32daf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657784"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706066"
 ---
 # <a name="sqlgetcursorname"></a>SQLGetCursorName
   Si la aplicación no especifica un nombre de cursor, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client genera uno para la aplicación en la generación del cursor. La aplicación puede utilizar **SQLGetCursorName** para recuperar el nombre del cursor definido por controlador para las instrucciones UPDATE y DELETE posicionadas. La aplicación no necesita llamar a **SQLSetCursorName** para sacar provecho de las instrucciones de manipulación de datos posicionadas.  

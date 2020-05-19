@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], variables
 - xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3fe1414131991a35b316a50da730f42e8b02d462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637998"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717101"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
   El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Como con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto de función o en [CAST y Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 9b1d0d9d-1f6e-4399-8f61-e23f9a486a7a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07788d27d71dc320ef72bc68ba90e8022705380b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707304"
 ---
 # <a name="date-and-time-improvements"></a>Mejoras en la fecha y la hora
   En este tema se describe la compatibilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con los nuevos tipos de datos de fecha y hora que se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  

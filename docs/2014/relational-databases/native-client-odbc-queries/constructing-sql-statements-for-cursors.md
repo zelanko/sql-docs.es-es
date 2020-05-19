@@ -14,20 +14,20 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statements [ODBC], cursors
 ms.assetid: 134003fd-9c93-4f5c-a988-045990933b80
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3dc86f27ab9e111c5d93c91de65c51da9008ba33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 115f1072dae34075929622b8b3b57a16a43728a2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207082"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82711074"
 ---
 # <a name="constructing-sql-statements-for-cursors"></a>Crear instrucciones SQL para cursores
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client utiliza cursores de servidor para implementar la funcionalidad de cursor definida en la especificación ODBC. Una aplicación ODBC controla el comportamiento del cursor mediante el uso de [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md) para establecer distintos atributos de instrucción. Éstos son los atributos y sus valores predeterminados.  
   
-|Atributo|Default|  
+|Atributo|Valor predeterminado|  
 |---------------|-------------|  
 |SQL_ATTR_CONCURRENCY|SQL_CONCUR_READ_ONLY|  
 |SQL_ATTR_CURSOR_TYPE|SQL_CURSOR_FORWARD_ONLY|  
@@ -35,7 +35,7 @@ ms.locfileid: "68207082"
 |SQL_ATTR_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
 |SQL_ATTR_ROW_ARRAY_SIZE|1|  
   
- Cuando estas opciones se establecen en sus valores predeterminados en el momento en que se ejecuta una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucción SQL, el controlador ODBC de Native Client no utiliza un cursor de servidor para implementar el conjunto de resultados. en su lugar, utiliza un conjunto de resultados predeterminado. Si alguna de estas opciones se cambia con respecto a sus valores predeterminados en el momento en que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta una instrucción SQL, el controlador ODBC de Native Client intenta usar un cursor de servidor para implementar el conjunto de resultados.  
+ Cuando estas opciones se establecen en sus valores predeterminados en el momento en que se ejecuta una instrucción SQL, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no utiliza un cursor de servidor para implementar el conjunto de resultados; en su lugar, utiliza un conjunto de resultados predeterminado. Si alguna de estas opciones se cambia con respecto a sus valores predeterminados en el momento en que se ejecuta una instrucción SQL, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client intenta usar un cursor de servidor para implementar el conjunto de resultados.  
   
  Los conjuntos de resultados predeterminados admiten todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)]. No hay ninguna restricción con respecto a los tipos de instrucciones SQL que pueden ejecutarse cuando se utiliza un conjunto de resultados predeterminado.  
   

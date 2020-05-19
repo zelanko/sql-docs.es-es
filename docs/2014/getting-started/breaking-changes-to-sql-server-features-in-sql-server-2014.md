@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 73ab6859-9605-419e-bd78-798f68cc66f8
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d871fb9ce1c163ba3a099f70050447537a03909e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c91b31ec0ee63e242c72834c4b4405989f0154cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774087"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706987"
 ---
 # <a name="breaking-changes-to-sql-server-features-in-sql-server-2014"></a>Cambios recientes en las características de SQL Server en SQL Server 2014
   En este tema se describen los principales cambios realizados en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos cambios al realizar la actualización y podrían interrumpir las aplicaciones, los scripts o las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  

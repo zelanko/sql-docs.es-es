@@ -13,15 +13,15 @@ helpviewer_keywords:
 - transactions [ODBC]
 - ODBC, transactions
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa5c6b607fa7523380950ecd89f9cae20ffc6f21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2baaa43fdf638dcd1f6794eaa9f5cf76df424c06
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228951"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707086"
 ---
 # <a name="performing-distributed-transactions"></a>Realizar transacciones distribuidas
   Microsoft DTC (Coordinador de transacciones distribuidas) permite que las aplicaciones puedan extender las transacciones en dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También permite que las aplicaciones participen en transacciones administradas por administradores de transacciones que obedecen al estándar Open Group DTP XA.  

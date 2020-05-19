@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLDescribeCol function
 ms.assetid: ffbf34c6-8268-434f-829a-82009a6cda59
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 95d367efc0bf3fb3e3a74bd0ba9d48b9d8f25be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dda7c4c0e2ae187f96883a32cac2528eceb90c74
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067772"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706298"
 ---
 # <a name="sqldescribecol"></a>SQLDescribeCol
-  En el caso de las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones ejecutadas, el controlador ODBC de Native Client no necesita consultar el servidor para describir las columnas de un conjunto de resultados. En este caso, `SQLDescribeCol` no produce un viaje de ida y vuelta al servidor. Al [SQLColAttribute](sqlnumresultcols.md)igual que SQLColAttribute `SQLDescribeCol` , al llamar a en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta.  
+  En el caso de las instrucciones ejecutadas, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no necesita consultar el servidor para describir las columnas de un conjunto de resultados. En este caso, `SQLDescribeCol` no produce un viaje de ida y vuelta al servidor. Al igual que [SQLColAttribute](sqlnumresultcols.md), al llamar a `SQLDescribeCol` en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta.  
   
  Cuando una instrucción o lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve varios conjuntos de filas de resultados, es posible que una columna, a la que se hace referencia mediante un ordinal, se cree en una tabla independiente o haga referencia a una columna completamente diferente del conjunto de resultados. `SQLDescribeCol`se debe llamar a para cada conjunto. Cuando el conjunto de resultados cambie, la aplicación debe volver a enlazar los valores de datos antes de capturar los resultados de la fila. Para obtener más información sobre cómo administrar la devolución de varios conjuntos de resultados, vea [SQLMoreResults](sqlmoreresults.md).  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63067772"
   
  En el caso de los tipos de datos de valores grandes, el valor devuelto en *DataTypePtr* es SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Un valor de SQL_SS_LENGTH_UNLIMITED en *ColumnSizePtr* indica que el tamaño es "ilimitado".  
   
- Las mejoras en el motor de base [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de datos a partir de permiten a SQLDescribeCol obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLDescribeCol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en versiones anteriores de. Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Las mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permiten a SQLDescribeCol obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLDescribeCol en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
   
 ## <a name="sqldescribecol-support-for-enhanced-date-and-time-features"></a>SQLDescribeCol admite las características mejoradas de fecha y hora  
  Los valores devueltos para los tipos de fecha y hora son los siguientes:  
@@ -39,7 +39,7 @@ ms.locfileid: "63067772"
 |-|-------------------|---------------------|------------------------|  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
-|date|SQL_TYPE_DATE|10|0|  
+|fecha|SQL_TYPE_DATE|10|0|  
 |time|SQL_SS_TIME2|8, 10..16|0..7|  
 |datetime2|SQL_TYPE_TIMESTAMP|19, 21..27|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|26, 28..34|0..7|  

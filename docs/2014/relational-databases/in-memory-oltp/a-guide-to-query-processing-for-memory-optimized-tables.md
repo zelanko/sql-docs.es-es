@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112244"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706581"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
@@ -222,7 +222,7 @@ Ejecución de los procedimientos almacenados compilados de forma nativa.
   
  La invocación de un procedimiento almacenado compilado de forma nativa se describe como sigue:  
   
-1.  El usuario emite una `EXEC`instrucción *usp_myproc* .  
+1.  El usuario emite una `EXEC` instrucción *usp_myproc* .  
   
 2.  El analizador extrae los parámetros del nombre y del procedimiento almacenado.  
   
@@ -255,7 +255,7 @@ GO
 ### <a name="query-operators-in-natively-compiled-stored-procedures"></a>Operadores de consulta en procedimientos almacenados compilados de forma nativa  
  En la tabla siguiente se resumen los operadores de consulta admitidos dentro de procedimientos almacenados compilados de forma nativa:  
   
-|Operator|Consulta de ejemplo|  
+|Operador|Consulta de ejemplo|  
 |--------------|------------------|  
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
@@ -303,6 +303,6 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mantiene las estadísticas de nivel de columna de las tablas optimizadas para memoria. Además, mantiene el recuento de filas real de la tabla. Sin embargo, a diferencia de las tablas basadas en disco, las estadísticas de las tablas optimizadas para memoria no se actualizan automáticamente. Por tanto, las estadísticas se deben actualizar manualmente cuando se produzcan cambios significativos en las tablas. Para obtener más información, vea [Estadísticas para las tablas con optimización para memoria](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - extended events [SQL Server], SQL Trace equivalents
 - extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0dd90613851184ad7fcff16ecf0a89875433dbfd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 866586f5da9682d66f884565254adf4185d63760
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512387"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706583"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Ver los eventos extendidos equivalentes a las clases de evento de Seguimiento de SQL Server
   Si desea utilizar los eventos extendidos para recopilar datos de evento que son equivalentes a clases de eventos de Seguimiento de SQL y columnas, es útil saber cómo los eventos de Seguimiento de SQL se asignan a eventos y acciones de eventos extendidos.  

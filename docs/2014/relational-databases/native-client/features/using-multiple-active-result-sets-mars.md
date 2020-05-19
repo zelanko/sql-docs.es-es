@@ -15,15 +15,15 @@ helpviewer_keywords:
 - MARS [SQL Server]
 - SQL Server Native Client ODBC driver, MARS
 ms.assetid: ecfd9c6b-7d29-41d8-af2e-89d7fb9a1d83
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5cbf5efeb5b5381636b57d50b86a5affa4a2595
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 598442c972f1af0f6c3b498bdd80284efb34be1e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206634"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707180"
 ---
 # <a name="using-multiple-active-result-sets-mars"></a>Utilizar conjuntos de resultados activos múltiples (MARS)
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido la compatibilidad con los conjuntos de resultados activos múltiples (MARS) para las aplicaciones que acceden a [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las aplicaciones de base de datos no podían mantener varias instrucciones activas en una conexión. La aplicación, cuando utilizaba conjuntos de resultados predeterminados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], tenía que procesar o cancelar todos los conjuntos de resultados de un lote para poder ejecutar cualquier otro lote en esa conexión. En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se introdujo un nuevo atributo de conexión que permite a las aplicaciones tener más de una solicitud pendiente por conexión y, en particular, tener más de un conjunto de resultados predeterminado activo por conexión.  
@@ -77,12 +77,12 @@ ms.locfileid: "68206634"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite Mars a través de la adición de la propiedad de inicialización de origen de datos SSPROP_INIT_MARSCONNECTION, que se implementa en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT. Además, se ha agregado una nueva palabra clave de cadena de conexión, `MarsConn`. Acepta valores `true` o `false`; `false` es el valor predeterminado.  
   
- El valor predeterminado de la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS es VARIANT_TRUE. Esto significa que el proveedor generará varias conexiones para admitir varios comandos y objetos de conjunto de filas simultáneos. Cuando MARS está habilitado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Native Client puede admitir varios objetos de comando y conjunto de filas en una única conexión, por lo que MULTIPLE_CONNECTIONS se establece en VARIANT_FALSE de forma predeterminada.  
+ El valor predeterminado de la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS es VARIANT_TRUE. Esto significa que el proveedor generará varias conexiones para admitir varios comandos y objetos de conjunto de filas simultáneos. Cuando MARS está habilitado, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede admitir varios objetos de comando y conjunto de filas en una única conexión, por lo que MULTIPLE_CONNECTIONS se establece en VARIANT_FALSE de forma predeterminada.  
   
  Para más información sobre las mejoras realizadas en el conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, consulte [Propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ### <a name="sql-server-native-client-ole-db-provider-example"></a>Ejemplo del proveedor OLE DB de SQL Server Native Client  
- En este ejemplo, se crea un objeto de origen de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante el proveedor de OLE DB nativo y Mars se habilita mediante la propiedad DBPROPSET_SQLSERVERDBINIT establecida antes de que se cree el objeto de sesión.  
+ En este ejemplo, se crea un objeto de origen de datos mediante el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB nativo y Mars se habilita mediante la propiedad DBPROPSET_SQLSERVERDBINIT establecida antes de que se cree el objeto de sesión.  
   
 ```  
 #include <sqlncli.h>  
@@ -196,7 +196,7 @@ SQLFetch(hstmt2);
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)   
  [Utilizar conjuntos de resultados predeterminados de SQL Server](../../native-client-odbc-cursors/implementation/using-sql-server-default-result-sets.md)  
   
   

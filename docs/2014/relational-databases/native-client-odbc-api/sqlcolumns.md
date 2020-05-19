@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5815e4f3a0cdd0defb16c613f3d6e9444fdfaac7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067734"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706336"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
@@ -31,7 +31,7 @@ ms.locfileid: "63067734"
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite notificar información de tablas en servidores vinculados aceptando un nombre de dos partes para el parámetro *CatalogName* : *Linked_Server_Name.Catalog_Name*.  
   
- Para ODBC 2. las aplicaciones *x* que no usan caracteres comodín en `SQLColumns` *TableName*, devuelven información sobre las tablas cuyos nombres coinciden con *TableName* y son propiedad del usuario actual. Si el usuario actual no posee ninguna tabla cuyo nombre coincida *TableName* con el parámetro `SQLColumns` TableName, devuelve información acerca de las tablas que pertenecen a otros usuarios, donde el nombre de tabla coincide con el parámetro *TableName* . Para ODBC 2. las aplicaciones *x* que usan caracteres `SQLColumns` comodín, devuelve todas las tablas cuyos nombres coinciden con *TableName*. Para ODBC 3. *x* las aplicaciones `SQLColumns` x devuelven todas las tablas cuyos nombres coinciden con *TableName* independientemente del propietario o de si se usan caracteres comodín.  
+ Para ODBC 2. las aplicaciones *x* que no usan caracteres comodín en *TableName*, `SQLColumns` devuelven información sobre las tablas cuyos nombres coinciden con *TableName* y son propiedad del usuario actual. Si el usuario actual no posee ninguna tabla cuyo nombre coincida con el parámetro *TableName* , `SQLColumns` devuelve información acerca de las tablas que pertenecen a otros usuarios, donde el nombre de tabla coincide con el parámetro *TableName* . Para ODBC 2. las aplicaciones *x* que usan caracteres comodín, `SQLColumns` devuelve todas las tablas cuyos nombres coinciden con *TableName*. Para ODBC 3. las aplicaciones *x* `SQLColumns` devuelven todas las tablas cuyos nombres coinciden con *TableName* independientemente del propietario o de si se usan caracteres comodín.  
   
  La tabla siguiente muestra las columnas devueltas por el conjunto de resultados:  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63067734"
 |SS_UDT_SCHEMA_NAME|Nombre del esquema que contiene el UDT.|  
 |SS_UDT_ASSEMBLY_TYPE_NAME|Nombre completo de ensamblado del UDT.|  
   
- En los UDT, la columna de TYPE_NAME existente se usa para indicar el nombre del UDT; por lo tanto, no se debe agregar ninguna columna adicional al conjunto de `SQLColumns` resultados o [SQLProcedureColumns](sqlprocedurecolumns.md). El DATA_TYPE de una columna o parámetro de UDT es SQL_SS_UDT.  
+ En los UDT, la columna de TYPE_NAME existente se usa para indicar el nombre del UDT; por lo tanto, no se debe agregar ninguna columna adicional al conjunto de resultados `SQLColumns` o [SQLProcedureColumns](sqlprocedurecolumns.md). El DATA_TYPE de una columna o parámetro de UDT es SQL_SS_UDT.  
   
  Para el UDT de los parámetros, puede utilizar los nuevos descriptores específicos del controlador definidos anteriormente para obtener o establecer las propiedades de metadatos adicionales de un UDT, en caso de que el servidor devuelva o requiera esta información.  
   
- Cuando un cliente se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
+ Cuando un cliente se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>Parámetros de SQLColumns y con valores de tabla  
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](sqlsetstmtattr.md). Se han agregado las columnas siguientes para los parámetros con valores de tabla:  
@@ -75,14 +75,14 @@ ms.locfileid: "63067734"
  `SQLColumns` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
- Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Se han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Si la columna es la columna `column_set`, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
   
- De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]versiones anteriores a y después de todas las columnas asignadas por el propio ODBC.  
+ De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y después de todas las columnas asignadas por el propio ODBC.  
   
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](sqlsetstmtattr.md).  
   

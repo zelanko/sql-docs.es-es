@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC applications, asynchronous operations
 - SQL Server Native Client ODBC driver, asynchronous mode
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3a4ec4e5d7575fdf5d915c8209999e1285fa79aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144326"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707119"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modo asincrónico y SQLCancel
   Algunas funciones ODBC pueden operar de forma sincrónica o asincrónica. La aplicación puede habilitar las operaciones asincrónicas para un identificador de instrucción o un identificador de conexión. Si la opción está establecida para un identificador de conexión, afectará a todos los identificadores de instrucción del identificador de conexión. La aplicación utiliza las instrucciones siguientes para habilitar o deshabilitar las operaciones asincrónicas:  

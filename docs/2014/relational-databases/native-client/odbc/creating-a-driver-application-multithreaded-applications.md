@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, multithreaded applications
 - multithreaded applications [SQL Server Native Client]
 ms.assetid: d352c91a-6e08-4e50-9f3e-a37892d9c2cc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e388d90b67fbd2e253edb6458a74de6204afb4b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 551a810d12d698124e1e9d0f78fcb0b37a113d6d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229040"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707115"
 ---
 # <a name="multithreaded-applications"></a>Aplicaciones multiproceso
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client es un controlador multiproceso. Escribir una aplicación multiproceso es una alternativa al uso de llamadas asincrónicas para procesar varias llamadas ODBC. Un subproceso puede realizar una llamada ODBC sincrónica y otros subprocesos pueden procesar mientras el primero subproceso está bloqueado en espera a la respuesta a su llamada. Este modelo es más eficaz que la realización de llamadas asincrónicas porque elimina la sobrecarga como el tráfico de red y la realización de llamadas de función ODBC que comprueban SQL_STILL_EXECUTING.  

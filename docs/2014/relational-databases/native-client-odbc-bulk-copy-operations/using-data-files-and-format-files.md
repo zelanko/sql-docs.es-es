@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51efa12bcb308c64c8c63a425cdc615dab237e04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206834"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705802"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilizar archivos de datos y archivos de formato
   El programa de copia masiva más simple hace lo siguiente:  
@@ -49,7 +49,7 @@ ms.locfileid: "68206834"
   
  Cuando se realiza una copia masiva desde un archivo de datos descrito por un archivo de formato, se lee el archivo de formato mediante una llamada a [bcp_readfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) después de **bcp_init** pero antes de **bcp_exec**.  
   
- La función **bcp_control** controla varias opciones cuando se realiza una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia masiva desde un archivo de datos. **bcp_control** establece opciones, como el número máximo de errores antes de la finalización, la fila del archivo en el que se va a iniciar la copia masiva, la fila en la que se va a detener y el tamaño del lote.  
+ La función **bcp_control** controla varias opciones cuando se realiza una copia masiva [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un archivo de datos. **bcp_control** establece opciones, como el número máximo de errores antes de la finalización, la fila del archivo en el que se va a iniciar la copia masiva, la fila en la que se va a detener y el tamaño del lote.  
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar operaciones de copia masiva &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  

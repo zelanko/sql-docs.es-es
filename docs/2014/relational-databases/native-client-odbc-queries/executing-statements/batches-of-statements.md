@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQLMoreResults function
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206773"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82710746"
 ---
 # <a name="batches-of-statements"></a>Lotes de instrucciones
   Un lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones contiene dos o más instrucciones, separadas por un punto y coma (;), integradas en una sola cadena que se pasa a la función **SQLExecDirect** o [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  

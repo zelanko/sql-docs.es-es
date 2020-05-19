@@ -20,15 +20,15 @@ helpviewer_keywords:
 - concurrency [SQL Server Native Client]
 - SQLSetConnectAttr function
 ms.assetid: 39e87eb1-677e-45dd-bc61-83a4025a7756
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcf2003873de6f6ca15fed4d0818337ce4920906
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7662639dabd687160db6efe108ea36b9814f1721
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63205858"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707136"
 ---
 # <a name="working-with-snapshot-isolation"></a>Trabajar con aislamiento de instantánea
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] introdujo un nuevo nivel de aislamiento de "instantánea" pensado para mejorar la simultaneidad en las aplicaciones de procesamiento de transacciones en línea (OLTP). En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la simultaneidad se basada únicamente en el bloqueo, lo que podía provocar problemas de bloqueo e interbloqueo en algunas aplicaciones. El aislamiento de instantánea depende de las mejoras de las versiones de fila y está pensado para mejorar el rendimiento evitando situaciones de bloqueo de lectura-escritura.  
@@ -36,7 +36,7 @@ ms.locfileid: "63205858"
  Las transacciones que se inician bajo el aislamiento de instantánea leen una instantánea de la base de datos realizada al comenzar la transacción. Un resultado de esta acción es que los cursores estáticos, dinámicos y controlados por conjunto de claves, al abrirse dentro de un contexto de transacciones de instantánea, actúan de forma muy similar a los cursores estáticos que se abren desde transacciones serializables. Sin embargo, cuando los cursores se abren bajo el nivel de aislamiento de instantánea no se toman bloqueos, lo que puede reducir el bloqueo en el servidor.  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client tiene mejoras que aprovechan el aislamiento de instantánea introducido [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]en. Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client tiene mejoras que aprovechan el aislamiento de instantánea introducido en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] . Estas mejoras incluyen cambios en los conjuntos de propiedades DBPROPSET_SESSION y DBPROPSET_DATASOURCEINFO.  
   
 ### <a name="dbpropset_datasourceinfo"></a>DBPROPSET_DATASOURCEINFO  
  El conjunto de propiedades DBPROPSET_DATASOURCEINFO ha cambiado para indicar que se admite el nivel de aislamiento de instantánea mediante la adición del valor DBPROPVAL_TI_SNAPSHOT que se utiliza en la propiedad DBPROP_SUPPORTEDTXNISOLEVELS. Este nuevo valor indica que se admite el nivel del aislamiento de instantánea independientemente de que se haya habilitado o no el control de versiones en la base de datos. A continuación se incluye una lista de los valores de DBPROP_SUPPORTEDTXNISOLEVELS:  
@@ -69,7 +69,7 @@ ms.locfileid: "63205858"
  Para obtener información sobre cómo se admite el aislamiento de instantáneas en transacciones, vea [cursor TRANSACTION ISOLATION LEVEL](../../native-client-odbc-cursors/properties/cursor-transaction-isolation-level.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)  
   
   

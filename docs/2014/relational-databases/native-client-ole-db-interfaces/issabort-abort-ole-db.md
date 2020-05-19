@@ -13,15 +13,15 @@ topic_type:
 helpviewer_keywords:
 - Abort method
 ms.assetid: a5bca169-694b-4895-84ac-e8fba491e479
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ad1310112b3cd6ac536a55a82757ae99433372d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e36bb4cff26213467f30dd58b4d172be7d8a38d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62511519"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707333"
 ---
 # <a name="issabortabort-ole-db"></a>ISSAbort::Abort (OLE DB)
   Cancela el conjunto de filas actual y los comandos en lotes asociados al comando actual.  
@@ -33,7 +33,7 @@ ms.locfileid: "62511519"
 HRESULT Abort(void);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el comando que se anula se encuentra en un procedimiento almacenado, terminará la ejecución del procedimiento almacenado (y cualquier procedimiento que haya llamado a este procedimiento) así como del lote de comandos que contiene la llamada al procedimiento almacenado. Si el servidor está en proceso de transferir un conjunto de resultados al cliente, se detendrá. Si el cliente no desea consumir un conjunto de resultados, la llamada a **ISSAbort::Abort** antes de liberar el conjunto de filas acelerará la liberación del conjunto de filas, pero si hay una transacción abierta y XACT_ABORT está establecido en ON, la transacción se revertirá al llamar a **ISSAbort::Abort** .  
   
  Después de que **ISSAbort::Abort** devuelva S_OK, la interfaz **IMultipleResults** asociada inicia un estado inutilizable y devuelve DB_E_CANCELED a todas las llamadas a método (excepto en los métodos que define la interfaz **IUNKNOWN** ) hasta que se libera. Si se ha obtenido una interfaz **IRowset** de **IMultipleResults** antes de una llamada a **Anular**, también inicia un estado inutilizable y devuelve DB_E_CANCELED a todas las llamadas a método (excepto en los métodos que define la interfaz **IUNKNOWN** e **IRowset::ReleaseRows**) hasta que se libera después de una llamada correcta a **ISSAbort::Abort**.  

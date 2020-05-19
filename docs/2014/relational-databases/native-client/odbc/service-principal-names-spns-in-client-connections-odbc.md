@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 1d60cb30-4c46-49b2-89ab-701e77a330a2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f9639b6fa4bd99b8f4ac17803b5b20789d43efd
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144410"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707053"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Nombres de entidad de seguridad del servicio (SPN) en conexiones de cliente (ODBC)
   En este tema se describen las funciones y atributos ODBC que admiten nombres principales de servicio (SPN) en aplicaciones cliente. Para obtener más información acerca de los SPN en aplicaciones cliente, consulte nombre de entidad de seguridad de [servicio &#40;SPN&#41; compatibilidad en conexiones de cliente](../features/service-principal-name-spn-support-in-client-connections.md) y [obtener autenticación mutua de Kerberos](../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md).  
@@ -23,7 +23,7 @@ ms.locfileid: "63144410"
 ## <a name="connection-string-keywords"></a>Palabras clave de cadena de conexión  
  Las siguientes palabras clave de cadena de conexión permiten a las aplicaciones cliente especificar un SPN.  
   
-|Palabra clave|Value|  
+|Palabra clave|Valor|  
 |-------------|-----------|  
 |`ServerSPN`|SPN del servidor. El valor predeterminado es una cadena vacía, que hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use el valor predeterminado, SPN generado por controlador.|  
 |`FailoverPartnerSPN`|SPN del asociado de conmutación por error. El valor predeterminado es una cadena vacía, que hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use el valor predeterminado, SPN generado por controlador.|  

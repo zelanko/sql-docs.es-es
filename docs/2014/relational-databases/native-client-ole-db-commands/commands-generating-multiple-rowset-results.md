@@ -14,18 +14,18 @@ helpviewer_keywords:
 - commands [OLE DB]
 - multiple-rowset results
 ms.assetid: 4567668d-35fd-4162-b61f-f7536862cdcb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04a7db670171f6f890f55a89e2da987ef2309f0e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ce1e2c701db485d8251bc9c017a9b192576a7c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657685"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707834"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client puede devolver varios conjuntos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de filas a partir de instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client puede devolver varios conjuntos de filas a partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones. Las instrucciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelven resultados de varios conjuntos de filas si se dan las condiciones siguientes:  
   
 -   Las instrucciones SQL por lotes se envían como un comando único.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, database mirroring
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f45aebe59892704e49a2a6d1cd45e5af4ae471
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225330"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707203"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
     
@@ -60,12 +60,12 @@ ms.locfileid: "63225330"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite la creación de reflejo de la base de datos a través de atributos de cadena de conexión y conexión. Se ha agregado la propiedad SSPROP_INIT_FAILOVERPARTNER al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, y la palabra clave `FailoverPartner` es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para obtener más información, vea [usar palabras clave de cadena de conexión con SQL Server Native Client](../applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La caché de conmutación por error se mantiene siempre que se cargue el proveedor, que es hasta que se llama a **CoUninitialize** o siempre que la aplicación tenga una referencia a algún objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrado por el proveedor de OLE DB de Native Client, como un objeto de origen de datos.  
+ La caché de conmutación por error se mantiene siempre que se cargue el proveedor, que es hasta que se llama a **CoUninitialize** o siempre que la aplicación tenga una referencia a algún objeto administrado por el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, como un objeto de origen de datos.  
   
- Para más información [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sobre la compatibilidad del proveedor de OLE DB de Native Client con la creación de reflejo de la base de datos, consulte [propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para más información sobre la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad del proveedor de OLE DB de Native Client con la creación de reflejo de la base de datos, consulte [propiedades de inicialización y autorización](../../native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
- El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la creación de reflejo de la base de datos a través de los atributos de cadena de conexión y conexión. En concreto, se ha agregado el atributo SQL_COPT_SS_FAILOVER_PARTNER para su uso con las funciones [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . y se `Failover_Partner` ha agregado la palabra clave como un nuevo atributo de cadena de conexión.  
+ El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la creación de reflejo de la base de datos a través de los atributos de cadena de conexión y conexión. En concreto, se ha agregado el atributo SQL_COPT_SS_FAILOVER_PARTNER para su uso con las funciones [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../native-client-odbc-api/sqlgetconnectattr.md) . y se ha `Failover_Partner` agregado la palabra clave como un nuevo atributo de cadena de conexión.  
   
  La memoria caché de conmutación por error se mantiene mientras la aplicación tiene asignado por lo menos un identificador de entorno. En cambio, se pierde cuando se cancela la asignación del último identificador de entorno.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63225330"
 >  El Administrador de controladores ODBC se ha mejorado para admitir la especificación del nombre del servidor de conmutación por error.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](sql-server-native-client-features.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

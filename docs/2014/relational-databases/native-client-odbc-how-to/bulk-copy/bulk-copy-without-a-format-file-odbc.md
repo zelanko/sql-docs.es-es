@@ -12,15 +12,15 @@ helpviewer_keywords:
 - bulk copy [ODBC], data files
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2d5ff1d19e6ead1cb24ebe666a7bab2187ddaa13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d30da37208c30bc74c6efa7dcdb790469c481fb0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63126185"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82714709"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Realizar una copia masiva sin un archivo de formato (ODBC)
   Este ejemplo muestra cómo utilizar las funciones de copia masiva para crear un archivo de datos de modo nativo, sin archivo de formato. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  

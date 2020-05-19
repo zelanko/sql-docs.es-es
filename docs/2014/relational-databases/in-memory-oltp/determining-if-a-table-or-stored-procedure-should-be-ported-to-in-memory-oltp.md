@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Analyze, Migrate, Report
 - AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63072394"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706536"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
-  El recopilador de rendimiento [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] de las transacciones de le ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
+  El recopilador de rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] le ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
   
  En este tema se explicará cómo:  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63072394"
     > [!IMPORTANT]  
     >  El rendimiento de un sistema de base de datos depende de diversos de factores, no todos los cuales puede observar y medir el recopilador de rendimiento de las transacciones. Por consiguiente, el informe de análisis del rendimiento de las transacciones no garantiza que las mejoras reales en el rendimiento coincidirán con las predicciones, en el caso de que las haya.  
   
- El recopilador de rendimiento de las transacciones y la capacidad de generar un informe de análisis de rendimiento de las transacciones se instalan cuando se selecciona **herramientas de administración-básica** o **herramientas de administración-avanzadas** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ El recopilador de rendimiento de las transacciones y la capacidad de generar un informe de análisis de rendimiento de las transacciones se instalan cuando se selecciona **herramientas de administración-básica** o **herramientas de administración-avanzadas** al instalar [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  El flujo de trabajo recomendado se muestra en el diagrama de flujo siguiente. Los nodos amarillos representan procedimientos opcionales:  
   
  ![Flujo de trabajo de AMR](../../database-engine/media/amr-1.gif "Flujo de trabajo de AMR")  
@@ -63,7 +63,7 @@ ms.locfileid: "63072394"
   
  El recopilador de rendimiento de las transacciones captura los datos cada 15 minutos. Para obtener resultados útiles, ejecute el recopilador de rendimiento de las transacciones al menos durante una hora. Para obtener los mejores resultados, ejecute el recopilador de rendimiento de las transacciones durante el tiempo necesario para capturar los datos para los escenarios principales. Genere un informe de análisis del rendimiento de las transacciones solo después de que termine de recopilar los datos.  
   
- Configure el recopilador de rendimiento de las transacciones para ejecutarlo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en producción y recopilar los datos en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el entorno de desarrollo (pruebas) para asegurar una sobrecarga mínima. Para obtener información sobre cómo guardar datos en una base de datos de almacén de administración [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de datos en una instancia remota, vea [configurar la recopilación de datos en una instancia de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Configure el recopilador de rendimiento de las transacciones para ejecutarlo en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en producción y recopilar los datos en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el entorno de desarrollo (pruebas) para asegurar una sobrecarga mínima. Para obtener información sobre cómo guardar datos en una base de datos de almacén de administración de datos en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia remota, vea [configurar la recopilación de datos en una instancia de SQL Server remota](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Impactos de rendimiento  
  El recopilador del rendimiento de las transacciones consta de dos conjuntos de recopilación de datos:  
@@ -102,7 +102,7 @@ ms.locfileid: "63072394"
 ### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Configurar la recopilación de datos en una instancia local de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  La recopilación de datos requiere que el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté iniciado. Solo es necesario configurar un recopilador de datos en un servidor.  
   
- Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  
+ Un recopilador de datos se puede configurar en un SQL Server 2012 o una versión posterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Para configurar la recopilación de datos para cargar una base de datos del almacén de administración de datos en la misma instancia,  
   
@@ -118,10 +118,10 @@ ms.locfileid: "63072394"
   
 6.  Compruebe las selecciones. Haga clic en **atrás** para modificar la configuración. Haga clic **Finalizar** cuando haya terminado.  
   
-###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar la recopilación de datos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] una instancia remota  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Configurar la recopilación de datos en una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia remota  
  La recopilación de datos requiere que se inicie el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la instancia que recopilará los datos.  
   
- Un recopilador de datos se puede configurar en un SQL Server 2012 o una [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versión posterior de.  
+ Un recopilador de datos se puede configurar en un SQL Server 2012 o una versión posterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  Necesita un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] establecido con la credencial correcta para que un recopilador de datos cargue los datos en una base de datos del almacén de administración de datos en una instancia distinta de aquella en la que se van a generar perfiles de las transacciones. Para habilitar un proxy del Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], primero debe establecer una credencial con un inicio de sesión habilitado para dominio. El inicio de sesión habilitado para el dominio debe ser miembro del grupo `mdw_admin` para la base de datos del almacén de administración de datos. Consulte [Cómo: crear una credencial (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) para obtener información sobre cómo crear una credencial.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - SQL Server Books Online, accessibility features
 - customer service [SQL Server]
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683596"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82707021"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accesibilidad para personas con discapacidades
   [!INCLUDE[msCoName](../includes/msconame-md.md)] se compromete a que sus productos y servicios sean más fáciles de usar para todos. En este tema se proporciona información acerca de las siguientes características, productos y servicios que hacen que los productos de la familia de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server sean más fáciles de usar para las personas con discapacidades.  
@@ -97,8 +97,8 @@ ms.locfileid: "74683596"
 ## <a name="customer-service-for-people-who-are-deaf-or-hard-of-hearing"></a>Servicio de atención al cliente para personas sordas o con impedimentos auditivos  
  Si es usted sordo o tiene impedimentos auditivos, dispone de acceso completo a los servicios de soporte técnico para usuarios de [!INCLUDE[msCoName](../includes/msconame-md.md)] mediante un servicio de teléfono de texto (TTY/TDD).  
   
-### <a name="customer-service"></a>Servicio de atención al cliente  
- Puede ponerse en contacto [!INCLUDE[msCoName](../includes/msconame-md.md)] con el centro de información de ventas en un teléfono de texto mediante el marcado (800) 892-5234 entre 6:30 A.M. y las 5:30 p. m., hora del Pacífico, de lunes a viernes, excepto festivos.  
+### <a name="customer-service"></a>Customer Service  
+ Puede ponerse en contacto con el [!INCLUDE[msCoName](../includes/msconame-md.md)] centro de información de ventas en un teléfono de texto mediante el marcado (800) 892-5234 entre 6:30 A.M. y las 5:30 p. m., hora del Pacífico, de lunes a viernes, excepto festivos.  
   
 ### <a name="technical-help"></a>Ayuda técnica  
  Para obtener ayuda técnica en Estados Unidos, puede ponerse en contacto con los servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] en el teléfono de texto (800) 892-5234 entre las 6:00 a. m. y a las 06:00:00 p. m. hora del Pacífico, de lunes a viernes, excepto festivos. En Canadá, llame al (905) 568-9641 entre las 8:00 a. m. y a las 8:00 p. m. hora de la costa este, de lunes a viernes, excepto festivos. Los servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] están sujetos a los precios, términos y condiciones vigentes en el momento de usar el servicio.  

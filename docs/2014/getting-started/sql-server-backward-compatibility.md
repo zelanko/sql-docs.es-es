@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ac47cb74-5578-417d-bcef-f970d9527705
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58449d2d7d685eaceb3b3015121cb4f59271a46d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088506"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706865"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilidad con versiones anteriores de SQL Server
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

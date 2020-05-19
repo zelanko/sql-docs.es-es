@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLDrivers function
 ms.assetid: 775bbbef-3d34-4b1c-b494-73ddad83206f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 87b7f550bf63c9cf14f16c829932398470848e6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54342914f605225455a6ddca620131c6e64bb79d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706258"
 ---
 # <a name="sqldrivers"></a>SQLDrivers
   El Administrador de controladores ODBC devuelve todas las cadenas de especificación de atributos de **SQLDrivers** . Para obtener más información sobre la definición de valores y cadenas de atributos, vea en línea el [Centro para programadores de acceso a datos y almacenamiento](https://go.microsoft.com/fwlink/?LinkId=4173)o la [Referencia del programador de ODBC](https://go.microsoft.com/fwlink/?LinkId=45250) .  

@@ -15,21 +15,21 @@ helpviewer_keywords:
 - escape sequences [SQL Server]
 - CALL statement
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7e6b6c48860495603ca73842e5617986d5829966
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207028"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82709604"
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la secuencia de escape ODBC Call y [!INCLUDE[tsql](../../includes/tsql-md.md)]la instrucción [Execute](/sql/t-sql/language-elements/execute-transact-sql) para ejecutar procedimientos almacenados; la secuencia de escape ODBC CALL es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la secuencia de escape ODBC Call y la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción [Execute](/sql/t-sql/language-elements/execute-transact-sql) para ejecutar procedimientos almacenados; la secuencia de escape ODBC Call es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
 > [!NOTE]  
->  Al llamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de\@los parámetros deben empezar por el carácter ' '. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
+>  Al llamar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de los parámetros deben empezar por el \@ carácter ' '. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   

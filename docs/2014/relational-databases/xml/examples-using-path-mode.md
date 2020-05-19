@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea8c809190e8c0230dfe301f973fcab3017d69ad
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63287782"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716661"
 ---
 # <a name="examples-using-path-mode"></a>Ejemplos: Usar el modo PATH
   El ejemplo siguiente ilustra el uso del modo PATH en la creación de XML a partir de una consulta SELECT. Muchas de estas consultas se especifican usando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- El resultado parcial es el siguiente. Dado que la consulta especifica ManuInstr como nombre de columna, el XML devuelto `query()` por el método se ajusta en `ManuInstr` una <> etiqueta como se muestra a continuación:  
+ El resultado parcial es el siguiente. Dado que la consulta especifica ManuInstr como nombre de columna, el XML devuelto por el `query()` método se ajusta en una <`ManuInstr`> etiqueta como se muestra a continuación:  
   
  `<Root>`  
   

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADOX]
 ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c703843781558839a3f4f275a8427f69770a8690
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967282"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764076"
 ---
 # <a name="append-method-adox-procedures"></a>Append (método) (procedimientos ADOX)
 Agrega un nuevo objeto de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) a la colección [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) .  
@@ -40,7 +40,7 @@ Procedures.Append Name, Command
  *Comando*  
  Objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) ADO que representa el procedimiento que se va a crear y anexar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Crea un nuevo procedimiento en el origen de datos con el nombre y los atributos especificados en el objeto de **comando** .  
   
  Si el texto del comando que especifica el usuario representa una vista en lugar de un procedimiento, el comportamiento depende del proveedor que se está usando. Se producirá un error en **Append** si el proveedor no admite comandos persistentes.  

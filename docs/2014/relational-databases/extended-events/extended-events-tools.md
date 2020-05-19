@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], using
 - extended events [SQL Server], options for using
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e26bc62f0e6b81b7b4ac8e1361d0a1ac31513ef6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137051"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706771"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
   Puede utilizar las siguientes herramientas para crear y administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events:  

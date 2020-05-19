@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 14dddf81-b502-49dc-a6b6-d18b1ae32d2b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cb4a57afcc40c15341a64dfd841e97b551bc81
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158753"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706490"
 ---
 # <a name="memory-optimized-tables"></a>Tablas con optimización para memoria
   OLTP en memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a mejorar el rendimiento de las aplicaciones OLTP mediante un acceso a los datos eficiente y optimizado para memoria, compilación nativa de la lógica de negocios, y algoritmos sin bloqueos y bloqueos temporales. La característica OLTP en memoria incluye tablas optimizadas para memoria y tipos de tablas, así como la compilación nativa de procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)] para un acceso eficiente a estas tablas.  

@@ -13,22 +13,22 @@ helpviewer_keywords:
 - XML templates [SQLXML]
 - SQL queries [SQLXML]
 ms.assetid: ff2bc36f-e3fb-4d8f-8e3a-2680a39eda11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cdf149720e853725a7f2fc9d0c03b24ea2caf9f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da0ddd549ad82420c4071c21de4ea6fef7f025de
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013118"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703259"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas SQL (proveedor SQLXMLOLEDB)
   En este ejemplo se muestra el uso de la propiedad específica del proveedor SQLXMLOLEDB Clientsidexml,. En esta aplicación de ejemplo ADO del lado cliente, se ejecuta en el servidor una plantilla XML que consta de una consulta SQL.  
   
  Dado que la propiedad Clientsidexml, está establecida en true, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
   
- La plantilla XML proporciona un único elemento raíz de nivel superior (\<> raíz) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad raíz de XML.  
+ La plantilla XML proporciona un único elemento raíz de nivel superior ( \<> raíz) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad raíz de XML.  
   
  Para ejecutar plantillas XML, se debe especificar el dialecto {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

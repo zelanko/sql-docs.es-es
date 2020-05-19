@@ -11,15 +11,15 @@ helpviewer_keywords:
 - adExecuteStream flag
 - SQLXMLOLEDB Provider, about SQLXMLOLEDB Provider
 ms.assetid: 2e3f3817-4209-4bf4-9f46-248c95bc6f1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9826143c68b8c1bd3edc6472156d140a6141968b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 34f98fabf4bc5fe5fe5a5f465d43576370ecae5b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014387"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703222"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
   El proveedor SQLXMLOLEDB es un proveedor OLE DB que expone la funcionalidad de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML a través de objetos de datos ActiveX (ADO). Sin embargo, el proveedor solamente puede ejecutar comandos en el modo "escribir en un flujo de salida" de ADO. El proveedor SQLXMLOLEDB no es un proveedor de conjunto de filas. Al ejecutar un comando, debe especificar la marca adExecuteStream, que indica a ADO que use el flujo de salida que ha especificado.  
@@ -37,13 +37,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Propiedades específicas del proveedor SQLXMLOLEDB  
  El proveedor SQLXMLOLEDB expone la siguiente propiedad de conexión específica del proveedor.  
   
-|Conexión<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
+|Conexión<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
 |-----------------------------|----------------------------|-----------------|  
 |Proveedor de datos||Proporciona el PROGID del proveedor OLE DB a través del que SQLXMLOLEDB ejecuta los comandos. A partir de SQLXML 4.0 y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este proveedor se incluye con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; por lo tanto, este valor de propiedad se restringe a "SQLNCLI11". Para obtener más información, consulte [Programación de SQL Server Native Client](../../native-client/sql-server-native-client-programming.md).|  
   
  El proveedor SQLXMLOLEDB expone las siguientes propiedades de comando específicas del proveedor.  
   
-|Comando<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
+|Comando<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
 |--------------------------|----------------------------|-----------------|  
 |Ruta de base|""|Especifica la ruta de acceso del archivo base. La ruta de acceso del archivo base se usa para especificar la ubicación del lenguaje de hojas de estilo XML (XSL) o de los archivos de esquema de asignación. La ruta de acceso del archivo base también se utiliza para resolver las rutas de acceso relativas de XSL o archivos de esquema de asignación que se han especificado en las propiedades de esquema XSL o de asignación.<br /><br /> Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath &#40;proveedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).|  
 |Clientsidexml,|False|Establezca esta propiedad en True si desea que el proceso de conversión del conjunto de filas a XML se produzca en el cliente en lugar de en el servidor. Esto resulta de gran utilidad si desea mover la carga de rendimiento al nivel intermedio.<br /><br /> Para ver un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas sql &#40;proveedor de SQLXMLOLEDB&#41;](executing-sql-queries-sqlxmloledb-provider.md) o [Ejecutar plantillas que contienen consultas SQL &#40;&#41;proveedor de SQLXMLOLEDB ](executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

@@ -28,18 +28,18 @@ helpviewer_keywords:
 - Execute method
 - XML Bulk Load [SQLXML], object model
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1bf68b7f2c8fd1a2cc8d753ddd6348e8161b55c8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9189617e7d572cd46805e34eaa258e81362827d7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013292"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703339"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modelo de objetos de carga masiva XML de SQL Server (SQLXML 4.0)
-  El modelo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de objetos de carga masiva de XML de Microsoft consta del objeto SQLXMLBulkLoad. Este objeto admite los métodos y propiedades siguientes.  
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] modelo de objetos de carga masiva de XML de Microsoft consta del objeto SQLXMLBulkLoad. Este objeto admite los métodos y propiedades siguientes.  
   
 ## <a name="methods"></a>Métodos  
  Execute  
@@ -132,7 +132,7 @@ ms.locfileid: "66013292"
  El valor predeterminado es FALSE.  
   
  SGUseID  
- Especifica si el atributo del esquema de asignación que se identifica como tipo `id` se puede utilizar para crear una restricción PRIMARY KEY cuando se crea la tabla. Use esta propiedad cuando la propiedad SchemaGen esté establecida en TRUE. Si SGUseID es TRUE, la utilidad SchemaGen usa un atributo para el `dt:type="id"` que se especifica como columna de clave principal y agrega la restricción PRIMARY KEY adecuada al crear la tabla.  
+ Especifica si el atributo del esquema de asignación que se identifica como tipo `id` se puede utilizar para crear una restricción PRIMARY KEY cuando se crea la tabla. Use esta propiedad cuando la propiedad SchemaGen esté establecida en TRUE. Si SGUseID es TRUE, la utilidad SchemaGen usa un atributo para `dt:type="id"` el que se especifica como columna de clave principal y agrega la restricción PRIMARY KEY adecuada al crear la tabla.  
   
  El valor predeterminado es FALSE.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66013292"
  Especifica si la carga masiva se debe hacer como una transacción, en cuyo caso se garantiza la reversión si se produce un error en la carga masiva. Ésta es una propiedad Boolean. Si la propiedad está establecida en TRUE, la carga masiva se produce en un contexto transaccional. La propiedad TempFilePath solo es útil cuando la transacción se establece en TRUE.  
   
 > [!NOTE]  
->  Si va a cargar datos binarios (como los tipos de datos XML bin. hex, bin. base64 en los tipos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos binarios, de imagen), la propiedad de la transacción debe estar establecida en false.  
+>  Si va a cargar datos binarios (como los tipos de datos XML bin. hex, bin. base64 en los tipos de datos binarios, de imagen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), la propiedad de la transacción debe estar establecida en false.  
   
  El valor predeterminado es FALSE.  
   

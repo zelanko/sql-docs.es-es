@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - queries [ODBC]
 ms.assetid: 3594c908-192e-41ea-9db0-7045da8812b5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 543c11c1e2048abbdeda8aaf6053d151f1a9e14e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200389"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701413"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Temas de procedimientos de ejecución de consultas (ODBC)
   La ejecución de una instrucción SQL en una aplicación ODBC requiere la asignación de un identificador de instrucciones, el establecimiento de atributos de instrucción y la preparación y ejecución de la instrucción SQL.  

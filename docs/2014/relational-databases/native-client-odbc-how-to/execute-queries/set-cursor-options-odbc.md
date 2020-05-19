@@ -9,20 +9,20 @@ ms.topic: reference
 helpviewer_keywords:
 - cursors [ODBC], options
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200347"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700915"
 ---
 # <a name="set-cursor-options-odbc"></a>Establecer las opciones del cursor (ODBC)
   Para establecer las opciones de cursor, llame a [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) para establecer o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) para obtener las opciones de la instrucción que controlan el comportamiento del cursor.  
   
-|*Atributo*|Especifica|  
+|*Attribute*|Especifica|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Tipo de cursor de solo avance, estático, dinámico o controlado por conjunto de claves|  
 |SQL_ATTR_CONCURRENCY|Opción de control de simultaneidad de solo lectura, bloqueo, marcas de tiempo de uso optimista o valores de uso optimista|  

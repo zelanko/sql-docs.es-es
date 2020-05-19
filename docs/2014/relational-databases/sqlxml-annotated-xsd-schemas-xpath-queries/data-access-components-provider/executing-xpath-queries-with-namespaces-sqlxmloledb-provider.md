@@ -14,22 +14,22 @@ helpviewer_keywords:
 - XPath queries [SQLXML], SQLXMLOLEDB Provider
 - namespaces [SQLXML], XPath queries
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f72c5841989eb12f89eda34fbfb310e125612d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa708c4b439e3a556ea7dac345cc04f32c59e2d6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013078"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703232"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxmloledb-provider"></a>Ejecutar consultas XPath con espacios de nombres (proveedor SQLXMLOLEDB)
   Las consultas XPath pueden incluir espacios de nombres. Si los elementos de esquema son espacios de nombres calificados (es decir, si incluyen un espacio de nombres de destino), las consultas XPath que se realicen en el esquema deben especificar este espacio de nombres.  
   
  Dado que no se admite el uso del carácter comodín (*) en SQLXML 4.0, la consulta XPath debe especificarse utilizando un prefijo de espacio de nombres. Para resolver este prefijo, use la propiedad namespaces para especificar el enlace del espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín (\*) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos donde el nombre local es `Contact` y el URI del espacio de nombres es `urn:myschema:Contacts`.  
+ En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín ( \* ) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos donde el nombre local es `Contact` y el URI del espacio de nombres es `urn:myschema:Contacts`.  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

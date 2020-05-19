@@ -11,20 +11,20 @@ helpviewer_keywords:
 - value method [XML in SQL Server]
 - nodes method [XML in SQL Server]
 ms.assetid: c73dbe55-d685-42eb-b0ee-9f3c5b9d97f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 527e646f956e60b2c8495a738a85595baac383f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193234"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702329"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Utilizar los métodos de valor() y nodos() con OPENXML
   Puede usar varios métodos **Value ()** en `xml` el tipo de datos de una cláusula **Select** para generar un conjunto de filas de valores extraídos. El método **nodes()** da como resultado una referencia interna para cada nodo seleccionado, que se puede usar para hacer más consultas. La combinación de los métodos **nodes()** y **value()** puede ser más eficaz para generar el conjunto de filas cuando tiene varias columnas y, tal vez, cuando las expresiones de ruta de acceso empleadas en su generación son complejas.  
   
- El método **Nodes ()** produce instancias de un tipo `xml` de datos Especial, cada una de las cuales tiene su contexto establecido en un nodo seleccionado diferente. Este tipo de instancia XML admite los métodos **query()** , **value()** , **nodes()** y **exist()** y se puede usar en agregaciones **count(\*)** . Otros usos generarían un error.  
+ El método **Nodes ()** produce instancias de un `xml` tipo de datos Especial, cada una de las cuales tiene su contexto establecido en un nodo seleccionado diferente. Este tipo de instancia XML admite los métodos **query()** , **value()** , **nodes()** y **exist()** y se puede usar en agregaciones **count(\*)** . Otros usos generarían un error.  
   
 ## <a name="example-using-nodes"></a>Ejemplo: utilizar nodes()  
  Suponga que desea extraer el nombre y los apellidos de los autores cuyo nombre no sea "David". Además, desea extraer esta información como un conjunto de filas que contiene dos columnas: FirstName y LastName. Con los métodos **nodes()** y **value()** puede lograrlo, como se indica aquí:  

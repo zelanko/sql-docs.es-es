@@ -22,15 +22,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], ADO.NET
 - XML [SQL Server], SQL Server Native Client
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63232428"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702319"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar datos XML en las aplicaciones
   En este tema se describen las opciones que están disponibles para trabajar con tipos de datos `xml` en una aplicación. El tema incluye información acerca de lo siguiente:  
@@ -145,7 +145,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Controlar XML desde una columna de tipo xml utilizando ADO.NET  
- Para controlar XML desde una `xml` columna de tipo de datos mediante ADO.net y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] puede usar el comportamiento estándar de la `SqlCommand` clase. Por ejemplo, una columna de tipo de datos `xml` y sus valores se pueden recuperar de la misma manera que se recupera cualquier columna SQL utilizando una clase `SqlDataReader`. Sin embargo, si desea trabajar con el contenido de una columna de tipo de datos `xml` como XML, primero tendrá que asignar el contenido a un tipo `XmlReader`.  
+ Para controlar XML desde una `xml` columna de tipo de datos mediante ADO.net y puede [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] usar el comportamiento estándar de la `SqlCommand` clase. Por ejemplo, una columna de tipo de datos `xml` y sus valores se pueden recuperar de la misma manera que se recupera cualquier columna SQL utilizando una clase `SqlDataReader`. Sin embargo, si desea trabajar con el contenido de una columna de tipo de datos `xml` como XML, primero tendrá que asignar el contenido a un tipo `XmlReader`.  
   
  Para obtener más información y código de ejemplo, vea el artículo sobre valores de columnas XML en un lector de datos de la documentación del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)].  
   

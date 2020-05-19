@@ -18,15 +18,15 @@ helpviewer_keywords:
 - leaving node scope [SQLXML]
 - schema mapping [SQLXML]
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2b43765b03ba42cede8c6879e749f1701f306d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ea8755c5882e7678e835a2a8a8e727f66ac0f1b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013335"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703359"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Proceso de generación de registros (SQLXML 4.0)
   La carga masiva XML procesa los datos de entrada XML y prepara los registros para las tablas adecuadas de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La lógica de la carga masiva XML determina cuándo generar un nuevo registro, qué elemento secundario o valores de atributo copiar en los campos del registro y cuándo está completo y preparado el registro para enviarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para su inserción.  
@@ -76,7 +76,7 @@ ms.locfileid: "66013335"
 </xsd:schema>  
 ```  
   
- El esquema especifica un ** \<elemento Customer>** con los atributos **CustomerID** y **CompanyName** . La `sql:relation` anotación asigna el ** \<elemento Customer>** a la tabla customers.  
+ El esquema especifica un elemento ** \< Customer>** con los atributos **CustomerID** y **CompanyName** . La `sql:relation` anotación asigna el elemento ** \< Customer>** a la tabla customers.  
   
  Fíjese en este fragmento de un documento XML:  
   
@@ -88,11 +88,11 @@ ms.locfileid: "66013335"
   
  Cuando la carga masiva XML se proporciona con el esquema descrito en los párrafos anteriores y con datos XML como entrada, procesa los nodos (elementos y atributos) en los datos de origen, tal y como se indica a continuación:  
   
--   La etiqueta de apertura del primer ** \<elemento de>cliente** coloca ese elemento en el ámbito. Este nodo se asigna a la tabla Customers. Por lo tanto, la carga masiva XML genera un registro para la tabla Customers.  
+-   La etiqueta de apertura del primer elemento de ** \<>cliente** coloca ese elemento en el ámbito. Este nodo se asigna a la tabla Customers. Por lo tanto, la carga masiva XML genera un registro para la tabla Customers.  
   
--   En el esquema, todos los atributos del elemento ** \<Customer>** se asignan a las columnas de la tabla customers. A medida que estos atributos entran en el ámbito, la carga masiva XML copia sus valores en el registro del cliente ya generado por el ámbito primario.  
+-   En el esquema, todos los atributos del elemento ** \< Customer>** se asignan a las columnas de la tabla customers. A medida que estos atributos entran en el ámbito, la carga masiva XML copia sus valores en el registro del cliente ya generado por el ámbito primario.  
   
--   Cuando la carga masiva XML alcanza la etiqueta final del elemento ** \<Customer>** , el elemento queda fuera del ámbito. Esto hace que la carga masiva XML considere el registro completo y lo envíe a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Cuando la carga masiva XML alcanza la etiqueta final del elemento ** \< Customer>** , el elemento queda fuera del ámbito. Esto hace que la carga masiva XML considere el registro completo y lo envíe a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  La carga masiva XML sigue este proceso para cada elemento ** \<>del cliente** subsiguiente.  
   
@@ -146,19 +146,19 @@ ms.locfileid: "66013335"
   
  Los datos XML de ejemplo y los pasos para crear un ejemplo funcional se proporcionan a continuación.  
   
--   Cuando un ** \<cliente>** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro para la tabla Cust. A continuación, la carga masiva XML copia los valores de columna necesarios (CustomerID, CompanyName y City) del ** \<CustomerID>**, ** \<CompanyName>** y la ** \<ciudad>** elementos secundarios a medida que estos elementos entran en el ámbito.  
+-   Cuando un ** \< cliente>** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro para la tabla Cust. A continuación, la carga masiva XML copia los valores de columna necesarios (CustomerID, CompanyName y City) del ** \< CustomerID>**, ** \< CompanyName>** y la ** \< ciudad>** elementos secundarios a medida que estos elementos entran en el ámbito.  
   
--   Cuando un ** \<pedido>** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. La carga masiva XML copia el valor del atributo **OrderID** en este registro. El valor necesario para la columna CustomerID se obtiene del elemento secundario ** \<CustomerID>** del elemento ** \<Customer>** . La carga masiva XML usa la información que se especifica `<sql:relationship>` en para obtener el valor de clave externa CustomerID para este registro, a menos que se haya especificado el atributo **CustomerID** en el ** \<elemento Order>** . La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externa, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario usando la etiqueta `<sql:relationship>` especificada. Como este ** \<orden>** nodo de elemento sale del ámbito, la carga masiva XML envía el registro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a y, a continuación, procesa todos los nodos de elementos de ** \<>de pedidos** posteriores de la misma manera.  
+-   Cuando un ** \< pedido>** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. La carga masiva XML copia el valor del atributo **OrderID** en este registro. El valor necesario para la columna CustomerID se obtiene del elemento secundario ** \< CustomerID>** del elemento ** \< Customer>** . La carga masiva XML usa la información que se especifica en `<sql:relationship>` para obtener el valor de clave externa CustomerID para este registro, a menos que se haya especificado el atributo **CustomerID** en el elemento ** \< Order>** . La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externa, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario usando la etiqueta `<sql:relationship>` especificada. Como este ** \< orden>** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todos los nodos de elementos de ** \<>de pedidos** posteriores de la misma manera.  
   
--   Por último, el nodo del ** \<elemento Customer>** sale del ámbito. En ese momento, la carga masiva XML envía el registro del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La carga masiva XML sigue este proceso para todos los clientes subsiguientes del flujo de datos XML.  
+-   Por último, el nodo del elemento ** \< Customer>** sale del ámbito. En ese momento, la carga masiva XML envía el registro del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La carga masiva XML sigue este proceso para todos los clientes subsiguientes del flujo de datos XML.  
   
  A continuación se indican dos observaciones sobre el esquema de asignación:  
   
--   Cuando el esquema cumple la regla de "contención" (por ejemplo, todos los datos asociados al cliente y el pedido se define dentro del ámbito de los nodos de ** \<cliente>** y ** \<de pedido>** elemento), la carga masiva se realiza correctamente.  
+-   Cuando el esquema cumple la regla de "contención" (por ejemplo, todos los datos asociados al cliente y el pedido se define dentro del ámbito de los nodos de ** \< cliente>** y de ** \< pedido>** elemento), la carga masiva se realiza correctamente.  
   
--   Al describir el ** \<elemento Customer>** , sus elementos secundarios se especifican en el orden adecuado. En este caso, el ** \<elemento secundario CustomerID>** se especifica antes que el ** \<elemento secundario Order>** . Esto significa que en el archivo de datos XML de entrada, el valor del ** \<elemento CustomerID>** está disponible como valor de clave externa cuando el elemento ** \<Order>** entra en el ámbito. Primero se especifican los atributos de clave; ésta es la "regla de orden de clave".  
+-   Al describir el elemento ** \< Customer>** , sus elementos secundarios se especifican en el orden adecuado. En este caso, el elemento secundario ** \< CustomerID>** se especifica antes que el elemento secundario ** \< Order>** . Esto significa que en el archivo de datos XML de entrada, el valor del elemento ** \< CustomerID>** está disponible como valor de clave externa cuando el elemento ** \< Order>** entra en el ámbito. Primero se especifican los atributos de clave; ésta es la "regla de orden de clave".  
   
-     Si especifica el ** \<elemento secundario CustomerID>** después del ** \<elemento secundario Order>** , el valor no estará disponible cuando el elemento ** \<Order>** entre en el ámbito. Cuando se ** \<** lee la etiqueta de cierre de>/Order, se considera que el registro de la tabla CustOrder se ha completado y se ha insertado en la tabla CustOrder con un valor null para la columna CustomerID, que no es el resultado deseado.  
+     Si especifica el elemento secundario ** \< CustomerID>** después del elemento secundario ** \< Order>** , el valor no estará disponible cuando el elemento ** \< Order>** entre en el ámbito. Cuando se lee la etiqueta de cierre de ** \<>/Order** , se considera que el registro de la tabla CustOrder se ha completado y se ha insertado en la tabla CustOrder con un valor null para la columna CustomerID, que no es el resultado deseado.  
   
 #### <a name="to-create-a-working-sample"></a>Para crear un ejemplo funcional  
   
@@ -218,7 +218,7 @@ ms.locfileid: "66013335"
 ## <a name="exceptions-to-the-record-generation-rule"></a>Excepciones a la regla de generación de registros  
  La carga masiva XML no genera ningún registro para un nodo cuando entra en el ámbito si ese nodo es de tipo IDREF o IDREFS. Debe asegurarse de que se realice una descripción completa del registro en algún lugar del esquema. Las anotaciones `dt:type="nmtokens"` se omiten, al igual que el tipo IDREFS.  
   
- Por ejemplo, considere el siguiente esquema XSD que describe ** \<** los elementos de>de cliente y de ** \<pedido>** . El ** \<elemento Customer>** incluye un atributo **OrderList** del tipo IDREFS. La etiqueta `<sql:relationship>` especifica la relación de uno a varios entre el cliente y lista de pedidos.  
+ Por ejemplo, considere el siguiente esquema XSD que describe los elementos de ** \<>de cliente** y de ** \< pedido>** . El elemento ** \< Customer>** incluye un atributo **OrderList** del tipo IDREFS. La etiqueta `<sql:relationship>` especifica la relación de uno a varios entre el cliente y lista de pedidos.  
   
  Éste es el esquema:  
   
@@ -259,9 +259,9 @@ ms.locfileid: "66013335"
 </xsd:schema>  
 ```  
   
- Dado que la carga masiva omite los nodos de tipo IDREFS, no hay ninguna generación de registros cuando el nodo de atributo **OrderList** entra en el ámbito. Por lo tanto, si desea que los registros de pedidos se agreguen a la tabla Orders, debe describir estos pedidos en alguna parte del esquema. En este esquema, si se especifica el ** \<elemento Order>** , se garantiza que la carga masiva XML agrega los registros de pedido a la tabla Orders. El ** \<elemento Order>** describe todos los atributos necesarios para rellenar el registro de la tabla CustOrder.  
+ Dado que la carga masiva omite los nodos de tipo IDREFS, no hay ninguna generación de registros cuando el nodo de atributo **OrderList** entra en el ámbito. Por lo tanto, si desea que los registros de pedidos se agreguen a la tabla Orders, debe describir estos pedidos en alguna parte del esquema. En este esquema, si se especifica el elemento ** \< Order>** , se garantiza que la carga masiva XML agrega los registros de pedido a la tabla Orders. El elemento ** \< Order>** describe todos los atributos necesarios para rellenar el registro de la tabla CustOrder.  
   
- Debe asegurarse de que los valores **CustomerID** y **OrderID** del elemento ** \<Customer>** coinciden con los valores del elemento ** \<Order>** . Mantener la integridad referencial es responsabilidad suya.  
+ Debe asegurarse de que los valores **CustomerID** y **OrderID** del elemento ** \< Customer>** coinciden con los valores del elemento ** \< Order>** . Mantener la integridad referencial es responsabilidad suya.  
   
 #### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   

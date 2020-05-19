@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO collections [ADO]
 - collections [ADO]
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: faad4d819939362f7e3b9c22062768bee71a0cda
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921109"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749358"
 ---
 # <a name="ado-collections"></a>Colecciones de ADO
 Las relaciones entre estas colecciones y los objetos de ADO se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -27,8 +27,8 @@ Las relaciones entre estas colecciones y los objetos de ADO se representan en el
   
 |||  
 |-|-|  
-|[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los objetos de **error** creados en respuesta a un error único relacionado con el proveedor.|  
-|[Campos](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
+|[Errores](../../../ado/reference/ado-api/errors-collection-ado.md)|Contiene todos los objetos de **error** creados en respuesta a un error único relacionado con el proveedor.|  
+|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contiene todos los objetos de **campo** de un objeto de **conjunto de registros** .|  
 |[Parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contiene todos los objetos de **parámetro** de un objeto **Command** .|  
 |[Propiedades](../../../ado/reference/ado-api/properties-collection-ado.md)|Contiene todos los objetos de **propiedad** para una instancia específica de un objeto.|  
   

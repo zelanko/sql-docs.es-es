@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Close method [ADO]
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44fb6e03fba467b9b7123111d1845d18e4144739
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919930"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82748919"
 ---
 # <a name="close-method-ado"></a>Close (método) (ADO)
 Cierra un objeto abierto y los objetos dependientes.  
@@ -34,7 +34,7 @@ Cierra un objeto abierto y los objetos dependientes.
 object.Close  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use el método **Close** para cerrar una [conexión](../../../ado/reference/ado-api/connection-object-ado.md), un [registro](../../../ado/reference/ado-api/record-object-ado.md), un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)o un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) para liberar los recursos del sistema asociados. Al cerrar un objeto no se quita de la memoria; puede cambiar la configuración de sus propiedades y volver a abrirla más tarde. Para eliminar completamente un objeto de la memoria, cierre el objeto y, a continuación, establezca la variable de objeto en *Nothing* (en Visual Basic).  
   
 ## <a name="connection"></a>Conexión  

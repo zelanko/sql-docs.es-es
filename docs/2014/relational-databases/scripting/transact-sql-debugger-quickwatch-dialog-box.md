@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - QuickWatch Dialog [Transact-SQL]
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d41aab8066b4ce1ee4e45fa9c363e60479868a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b25d06e69b24cf31d3bc84d69ccdcbc8a034588
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243037"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718320"
 ---
 # <a name="quickwatch-dialog-box"></a>Cuadro de diálogo Inspección rápida
   Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  

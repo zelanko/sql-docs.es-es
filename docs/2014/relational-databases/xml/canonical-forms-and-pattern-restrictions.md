@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pattern restrictions
 - canonical forms
 ms.assetid: 088314ec-7d0b-4a05-8a33-f35da5bfe59c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eec8bda347b52835e84f4c9a505d9ad82cdf1a40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9653e076a8b1f6fec04945d8a19ea0fd3170eef8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211556"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717390"
 ---
 # <a name="canonical-forms-and-pattern-restrictions"></a>Formas canónicas y restricciones de patrón
   La faceta de patrón XSD permite la restricción del espacio léxico de tipos simples. Cuando se aplica una restricción de patrón en un tipo para el cual existen varias representaciones léxicas posibles, algunos valores pueden provocar un comportamiento inesperado en el momento de la validación.  

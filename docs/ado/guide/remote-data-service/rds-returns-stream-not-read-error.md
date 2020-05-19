@@ -1,5 +1,5 @@
 ---
-title: RDS devuelve &quot;un error de&quot; secuencia no leída | Microsoft Docs
+title: RDS devuelve un &quot; error de secuencia no leída &quot; | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - stream not read error in RDS [ADO]
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca194c911b590dfcc8baba87195c91a70640dd24
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922470"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747739"
 ---
-# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS devuelve &quot;un error de&quot; secuencia no leída
+# <a name="rds-returns-quotstream-not-readquot-error"></a>RDS devuelve un &quot; error de secuencia no leída &quot;
 "No se pudo leer el objeto de secuencia porque está vacío o la posición actual está al final de la secuencia. En el caso de secuencias no vacías, establezca la posición actual con la propiedad Position. Para determinar si un flujo está vacío, Compruebe la propiedad size ".  
   
  Si ve este mensaje de error, es posible que haya intentado usar una consulta jerárquica parametrizada sobre http. RDS no permite el uso de jerarquías parametrizadas remotas.  

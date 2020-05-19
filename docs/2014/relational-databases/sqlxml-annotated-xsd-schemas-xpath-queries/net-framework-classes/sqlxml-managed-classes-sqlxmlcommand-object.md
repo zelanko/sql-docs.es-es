@@ -27,15 +27,15 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010741"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717947"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objeto SqlXmlCommand (clases administradas SQLXML)
   Este es el constructor del objeto SqlXmlCommand:  
@@ -44,7 +44,7 @@ ms.locfileid: "66010741"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Donde `cnString` es la cadena de conexión ADO u OleDb que identifica el servidor, la base de datos y la información de inicio `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`de sesión (por ejemplo,).  
+ Donde `cnString` es la cadena de conexión ADO u OleDb que identifica el servidor, la base de datos y la información de inicio de sesión (por ejemplo,) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  En la cadena de conexión, `Provider` debe ser SQLOLEDB y `Data Provider` no debería incluirse en la cadena del proveedor.  
   
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Identifica el tipo de comando. Esta propiedad se usa para especificar el tipo de comando que se desea ejecutar. Los valores de la tabla siguiente determinan el tipo del comando. Para obtener un ejemplo funcional, vea [obtener acceso a la funcionalidad de SQLXML en el entorno de .net](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Ejecuta un comando SQL (por ejemplo, `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType. XPath|Ejecuta un comando XPath (por ejemplo, `Employees[@EmployeeID=1]`).|  

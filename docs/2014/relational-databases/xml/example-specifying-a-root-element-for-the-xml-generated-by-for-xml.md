@@ -10,15 +10,15 @@ helpviewer_keywords:
 - RAW mode, specifying root element example
 - RAW mode, with FOR XML example
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 97b1a4ecc9cfbe0f9f8b793cddc788baf81a2200
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b711477522f000af52129f6f3d981fa24c38790
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63288374"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716794"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Ejemplo: Especificar un elemento raíz para el XML generado por FOR XML
   Al especificar la opción `ROOT` en la consulta `FOR XML` , puede solicitar un solo elemento de nivel superior para el XML resultante, como se muestra en esta consulta. El argumento especificado para la directiva `ROOT` proporciona el nombre del elemento raíz.  

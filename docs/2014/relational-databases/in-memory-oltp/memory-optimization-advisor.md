@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.memoryoptimizationwizard.f1
 - swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4dcc5a7658ee3549d774989ae95a027a5787fc2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158000"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719074"
 ---
 # <a name="memory-optimization-advisor"></a>Asesor de optimización de memoria
   La herramienta de informes de rendimiento de las transacciones (vea [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) le informa sobre qué tablas de la base de datos se beneficiarían de una conversión para utilizar OLTP en memoria. Después de identificar la tabla que desea convertir para que utilice OLTP en memoria, puede usar el Asistente de optimización de memoria para que le ayude a migrar la tabla de base de datos basada en disco a OLTP en memoria.  

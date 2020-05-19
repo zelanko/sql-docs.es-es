@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DataControl object [ADO]
 ms.assetid: d85ea4fc-451c-436e-97b8-58f92b149dd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a571e93a070c3ce07fbaf40a86b762c749042ec1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7bc9482c6626de36d9e45b2a2968b504b0793746
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964402"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746116"
 ---
 # <a name="datacontrol-object-rds"></a>Objeto DataControl (RDS)
 Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de consulta de datos a uno o varios controles (por ejemplo, un cuadro de texto, un control de cuadrícula o un cuadro combinado) para mostrar los datos del **conjunto de registros** en una página web.  
@@ -40,7 +40,7 @@ Enlaza un [conjunto de registros](../../../ado/reference/ado-api/recordset-objec
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  IDENTIFICADOR de clase del **objeto RDS. **El objeto DataControl es BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]

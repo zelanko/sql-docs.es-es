@@ -13,15 +13,15 @@ helpviewer_keywords:
 - XPath queries [SQLXML], Boolean operators
 - operators [SQLXML]
 ms.assetid: 9928cff5-62ac-42aa-96bf-2e09a1df0bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 29404c4a3dc7b4b10106e7a3a8cb170ffe1e7a3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45db8a3111173257cad45bea2961b9bb4c72bffc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010629"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717784"
 ---
 # <a name="specifying-boolean-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores booleanos en consultas XPath (SQLXML 4.0)
   El ejemplo siguiente muestra cómo los operadores booleanos se especifican en consultas XPath. La consulta XPath de este ejemplo se especifica en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "66010629"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-the-or-boolean-operator"></a>A. Especificar el operador booleano OR  
- Esta consulta XPath devuelve **CustomerID** los ** \<** elementos secundarios del elemento Customer>del nodo de contexto con el valor de atributo CustomerID de 13 o 31:  
+ Esta consulta XPath devuelve los elementos secundarios del elemento ** \< Customer>** del nodo de contexto con el valor de atributo **CustomerID** de 13 o 31:  
   
 ```  
 /child::Customer[attribute::CustomerID="13" or attribute::CustomerID="31"]  
@@ -41,7 +41,7 @@ ms.locfileid: "66010629"
 /Customer[@CustomerID="13" or @CustomerID="31"]  
 ```  
   
- En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo (true si **CustomerID** es un ** \<atributo>** nodo, porque el ** \<atributo>** nodo es el nodo principal `attribute` del eje). El predicado filtra los elementos de ** \<>del cliente** y devuelve solo aquellos que satisfacen la condición especificada en el predicado.  
+ En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo (true si **CustomerID** es un ** \< atributo>** nodo, porque el ** \< atributo>** nodo es el nodo principal del `attribute` eje). El predicado filtra los elementos de ** \<>del cliente** y devuelve solo aquellos que satisfacen la condición especificada en el predicado.  
   
 ##### <a name="to-test-the-xpath-queries-against-the-mapping-schema"></a>Para probar las consultas XPath en el esquema de asignación  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - executing template files [SQLXML]
 - CommandText property
 ms.assetid: f1b1278d-252d-4a06-836e-4ef77f338ef9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1635358fc136c9faba3ce18b1d278ee1e407411
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65af4c1bce3e09f33771b2729c01c02b9512688b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012508"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718058"
 ---
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandText
   En este ejemplo se muestra cómo se pueden especificar los archivos de plantilla que están compuestos de consultas SQL o XPath mediante el uso de CommandTextproperty. En lugar de especificar la consulta SQL o XPath como el valor de CommandText, puede especificar un nombre de archivo como valor. En el ejemplo siguiente, la propiedad CommandType se especifica como SqlXmlCommandType. TemplateFile.  
@@ -91,7 +91,7 @@ class Test
   
 5.  En el símbolo del sistema, ejecute DocSample.exe.  
   
- Si pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); por ejemplo, p.Name = "@ContactID", donde p es un objeto SqlXmlParameter.  
+ Si pasa un parámetro a una plantilla, el nombre del parámetro debe comenzar con arroba (@); por ejemplo, p.Name = " @ContactID ", donde p es un objeto SqlXmlParameter.  
   
  Ésta es la plantilla actualizada que toma un parámetro.  
   

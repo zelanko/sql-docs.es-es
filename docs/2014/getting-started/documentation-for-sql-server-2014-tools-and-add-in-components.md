@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 91c34cb4-dc14-4a2b-86a1-9c950642fb23
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ddc24d5204a6b047540fdeff4a5ddff92acc00f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80402570"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706947"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Documentación para los componentes de las herramientas y los complementos de SQL Server 2014
     
@@ -25,7 +25,7 @@ ms.locfileid: "80402570"
 |||  
 |-|-|  
 |**Herramienta**|**Descripción**|  
-|[Administrador de configuración](../relational-databases/sql-server-configuration-manager.md)|El Administrador de configuración es una herramienta para administrar los servicios asociados a SQL Server, para configurar los protocolos de red utilizados por este y para administrar la configuración de conectividad de red de los equipos cliente de SQL Server.|  
+|[Configuration Manager](../relational-databases/sql-server-configuration-manager.md)|El Administrador de configuración es una herramienta para administrar los servicios asociados a SQL Server, para configurar los protocolos de red utilizados por este y para administrar la configuración de conectividad de red de los equipos cliente de SQL Server.|  
 |[SQL Server 2014 Upgrade Advisor](../sql-server/install/sql-server-2014-upgrade-advisor.md)|El Asesor de actualizaciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] analiza la configuración de componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalados y, a continuación, genera un informe de problemas que debe resolver para asegurar una actualización correcta.|  
 |[Complementos de minería de datos de SQL Server para Office 2013](https://go.microsoft.com/fwlink/?LinkId=299178)|Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.|  
 |[Diseñador de captura de datos modificados para Oracle](https://go.microsoft.com/fwlink/?LinkId=299179)|El Diseñador de captura de datos modificados para Oracle se emplea para desarrollar y mantener instancias CDC de Oracle.|  

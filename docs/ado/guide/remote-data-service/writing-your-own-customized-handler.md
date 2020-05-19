@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataFactory handler in RDS [ADO]
 - customized handler in RDS [ADO]
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 98e2ec3538de68bffa5b22acc94dda3d81e5c6f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cd7aec0e98afd09b30c4e4d67102d1333efdcdd6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921884"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747603"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escritura de un controlador personalizado
 Es posible que desee escribir su propio controlador si es un administrador del servidor IIS que desea la compatibilidad predeterminada de RDS, pero más control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -31,7 +31,7 @@ Es posible que desee escribir su propio controlador si es un administrador del s
 ## <a name="idatafactoryhandler-interface"></a>Interfaz IDataFactoryHandler  
  Esta interfaz tiene dos métodos, **GetRecordset** y **reconnect**. Ambos métodos requieren que la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) esté establecida en **adUseClient**.  
   
- Ambos métodos toman los argumentos que aparecen después de la primera coma en la palabra clave "**handler =**". Por ejemplo, `"Handler=progid,arg1,arg2;"` pasará una cadena de argumento de `"arg1,arg2"`y `"Handler=progid"` pasará un argumento null.  
+ Ambos métodos toman los argumentos que aparecen después de la primera coma en la palabra clave "**handler =**". Por ejemplo, pasará `"Handler=progid,arg1,arg2;"` una cadena de argumento de `"arg1,arg2"` y pasará `"Handler=progid"` un argumento null.  
   
 ## <a name="getrecordset-method"></a>GetRecordset (método)  
  Este método consulta el origen de datos y crea un nuevo objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) con los argumentos proporcionados. El **conjunto de registros** debe abrirse con **adLockBatchOptimistic** y no debe abrirse de forma asincrónica.  

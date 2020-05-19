@@ -11,15 +11,15 @@ helpviewer_keywords:
 - installation [SQL Server]
 - installing SQL Server, quick start installations
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8bd173abbb6ee355429d891a49f672bb0ac818d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b9007ce0c5f0c05638f88fcb1ac27658b9f91c7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74683613"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706887"
 ---
 # <a name="quick-start-installation-of-sql-server-2014"></a>Instalación del tutorial de SQL Server 2014
     
@@ -42,13 +42,13 @@ ms.locfileid: "74683613"
   
 -   Componentes de conectividad  
   
- Puede instalar cada componente individualmente o seleccionar una combinación de los componentes enumerados anteriormente. Para elegir la mejor opción entre las ediciones y los componentes disponibles [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]en, consulte [ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
+ Puede instalar cada componente individualmente o seleccionar una combinación de los componentes enumerados anteriormente. Para elegir la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , consulte [ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md).  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está disponible en las ediciones de 32 bits y de 64 bits. El programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite las opciones de instalación siguientes:  
   
 -   **Asistente para la instalación**  
   
-     Consulte [instalar SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) para obtener [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] información de procedimientos sobre la instalación de mediante el Asistente para la instalación de.  
+     Consulte [instalar SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) para obtener información de procedimientos sobre la instalación de mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el Asistente para la instalación de.  
   
 -   **Símbolo del sistema**  
   
@@ -60,19 +60,19 @@ ms.locfileid: "74683613"
   
 -   **SysPrep**  
   
-     Vea [instalar SQL Server 2014 con Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) para obtener información de procedimientos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] acerca de cómo instalar con Sysprep.  
+     Vea [instalar SQL Server 2014 con Sysprep](../database-engine/install-windows/install-sql-server-using-sysprep.md) para obtener información de procedimientos acerca de cómo instalar con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Sysprep.  
   
 -   **Instalación Server Core**  
   
-     Consulte [instalación de SQL Server 2014 en Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) para obtener información de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] procedimientos sobre la instalación de en Windows Server Core.  
+     Consulte [instalación de SQL Server 2014 en Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md) para obtener información de procedimientos sobre la instalación [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de en Windows Server Core.  
   
 -   **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]Instalación de características de  BI**  
   
-     Para obtener información sobre la instalación de las características que forman parte de la plataforma de BI de Microsoft, consulte Instalación de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]las [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]características [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [BI SQL Server 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) , que incluyen,,, y varias aplicaciones cliente usadas para crear o trabajar con datos analíticos.  
+     Para obtener información sobre la instalación de las características que forman parte de la plataforma de BI de Microsoft, consulte Instalación de las [características de BI SQL Server 2014](../sql-server/install/install-sql-server-business-intelligence-features.md) , que incluyen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ,, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] y varias aplicaciones cliente usadas para crear o trabajar con datos analíticos.  
   
 -   **Instalación de clústeres de conmutación por error**  
   
-     Consulte [SQL Server instalación de clúster de conmutación por error](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] obtener información [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de procedimientos sobre cómo instalar en un clúster de conmutación por error.  
+     Consulte [SQL Server instalación de clúster de conmutación por error](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md) para obtener información de procedimientos sobre cómo instalar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] clúster de conmutación por error.  
   
  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo para las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que no son Express, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Para obtener información sobre la compatibilidad de las bases de datos y el código muestra de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], vea [Información general sobre bases de datos y ejemplos](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -91,13 +91,13 @@ ms.locfileid: "74683613"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>Planeación [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instalación  
+###  <a name="planning-a-ssnoversion-installation"></a><a name="BKMK_BeforeYouInstall"></a>Planeación de una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalación  
  Antes de instalar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], debe revisar los requisitos de hardware y software, las consideraciones de red y de Internet, y las consideraciones de seguridad para instalar y ejecutar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [planear una instalación de SQL Server](../../2014/sql-server/install/planning-a-sql-server-installation.md) y también los temas siguientes:  
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
 |Revisar los requisitos de hardware y software, la compatibilidad del sistema operativo, consideraciones de red y de Internet, y los requisitos de espacio en disco duro.|[Requisitos previos de instalación](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)|  
-|Revise las consideraciones de seguridad para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una instalación de.|[Consideraciones sobre la seguridad](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
+|Revise las consideraciones de seguridad para una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalación de.|[Consideraciones sobre la seguridad](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md)|  
 |Revisar los detalles de las características admitidas por las diversas ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].|[Características y ediciones](features-supported-by-the-editions-of-sql-server-2014.md)|  
 |Determinar la mejor opción entre las ediciones y los componentes disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Ediciones y componentes de SQL Server 2014](../sql-server/editions-and-components-of-sql-server-2016.md)|  
 |Revisar la configuración de hardware, y aprender a preparar la instalación de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|[Antes de instalar los clústeres de conmutación por error](../sql-server/failover-clusters/install/before-installing-failover-clustering.md)|  
@@ -138,7 +138,7 @@ ms.locfileid: "74683613"
 |Descripción|Tema|  
 |-----------------|-----------|  
 |Use la información de este tema para determinar si necesita desbloquear puertos de un firewall para permitir el acceso a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a PowerPivot para SharePoint. Puede seguir los pasos proporcionados en este tema para configurar las opciones de los puertos y del firewall.|[Configurar Firewall de Windows para permitir el acceso a Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
-|En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
+|En este tema se proporciona información general de configuración del firewall y se resume información de interés para un administrador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|[Configurar el Firewall de Windows para permitir el acceso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un entorno de host múltiple.|[Configurar un equipo de host múltiple para el acceso a SQL Server](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
 ###  <a name="uninstalling-sscurrent"></a><a name="BKMK_Uninstalling"></a>Desinstalar[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  

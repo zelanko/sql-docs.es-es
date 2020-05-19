@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLBindParameter function
 ms.assetid: c302c87a-e7f4-4d2b-a0a7-de42210174ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cba973be9b4dc2ec0da286b2d01b636f0ca4e2b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4673a38b275e180a51eedddfdee2c8233616fbd3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067833"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706386"
 ---
 # <a name="sqlbindparameter"></a>SQLBindParameter
-  `SQLBindParameter`puede eliminar la carga de conversión de datos cuando se usa para proporcionar datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el controlador ODBC de Native Client, lo que da como resultado mejoras de rendimiento significativas para los componentes de cliente y servidor de las aplicaciones. Entre otras ventajas se incluyen la pérdida reducida de precisión al insertar o actualizar los tipos de datos numéricos aproximados.  
+  `SQLBindParameter`puede eliminar la carga de conversión de datos cuando se usa para proporcionar datos para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, lo que da como resultado mejoras de rendimiento significativas para los componentes de cliente y servidor de las aplicaciones. Entre otras ventajas se incluyen la pérdida reducida de precisión al insertar o actualizar los tipos de datos numéricos aproximados.  
   
 > [!NOTE]  
 >  Al insertar los datos de tipo `char` y `wchar` en una columna de imagen, se usa el tamaño de los datos pasados, a diferencia del tamaño de los datos después de la conversión a un formato binario.  
@@ -34,9 +34,9 @@ ms.locfileid: "63067833"
  [SQLRowCount](sqlrowcount.md) no es confiable con el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client si un elemento de matriz de parámetros enlazados produce un error en la ejecución de la instrucción. El atributo de instrucción ODBC SQL_ATTR_PARAMS_PROCESSED_PTR notifica el número de filas procesadas antes de que se produzca el error. A continuación, la aplicación puede atravesar su matriz de estado de parámetro para detectar el número de instrucciones ejecutado correctamente, si es necesario.  
   
 ## <a name="binding-parameters-for-sql-character-types"></a>Enlazar parámetros para tipos de caracteres SQL  
- Si el tipo de datos SQL que se pasa es un tipo de caracteres, *ColumnSize* es el tamaño en caracteres (no en bytes). Si la longitud de la cadena de datos en bytes es mayor que 8000, el valor de *columnas* debe `SQL_SS_LENGTH_UNLIMITED`establecerse en, lo que indica que no hay ningún límite en el tamaño del tipo SQL.  
+ Si el tipo de datos SQL que se pasa es un tipo de caracteres, *ColumnSize* es el tamaño en caracteres (no en bytes). Si la longitud de la cadena de datos en bytes es mayor que 8000, el valor de *columnas* debe establecerse en `SQL_SS_LENGTH_UNLIMITED` , lo que indica que no hay ningún límite en el tamaño del tipo SQL.  
   
- Por ejemplo, si el tipo de datos SQL `SQL_WVARCHAR`es, *columnas* no debe ser mayor que 4000. Si la longitud real de los datos es mayor que 4000, el valor de *columnas* debe `SQL_SS_LENGTH_UNLIMITED` establecerse `nvarchar(max)` en para que lo use el controlador.  
+ Por ejemplo, si el tipo de datos SQL es `SQL_WVARCHAR` , *columnas* no debe ser mayor que 4000. Si la longitud real de los datos es mayor que 4000, el valor de *columnas* debe establecerse en para `SQL_SS_LENGTH_UNLIMITED` que lo use el `nvarchar(max)` controlador.  
   
 ## <a name="sqlbindparameter-and-table-valued-parameters"></a>SQLBindParameter y parámetros con valores de tabla  
  Al igual que otros tipos de parámetros, los parámetros con valores de tabla están enlazados por SQLBindParameter.  
@@ -48,7 +48,7 @@ ms.locfileid: "63067833"
  Para obtener más información sobre los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlbindparameter-support-for-enhanced-date-and-time-features"></a>SQLBindParameter admite las características mejoradas de fecha y hora  
- Los valores de parámetro de los tipos de fecha y hora se convierten como se describe en [conversiones de C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Tenga en cuenta que los `time` parámetros `datetimeoffset` de tipo y deben tener `SQL_C_DEFAULT` ValueType `SQL_C_BINARY` especificado como o si se`SQL_SS_TIME2_STRUCT` usan `SQL_SS_TIMESTAMPOFFSET_STRUCT`sus estructuras correspondientes (y). *ValueType*  
+ Los valores de parámetro de los tipos de fecha y hora se convierten como se describe en [conversiones de C a SQL](../native-client-odbc-date-time/datetime-data-type-conversions-from-c-to-sql.md). Tenga en cuenta que los parámetros de tipo `time` y `datetimeoffset` deben tener *ValueType* especificado como `SQL_C_DEFAULT` o `SQL_C_BINARY` si se usan sus estructuras correspondientes ( `SQL_SS_TIME2_STRUCT` y `SQL_SS_TIMESTAMPOFFSET_STRUCT` ).  
   
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   

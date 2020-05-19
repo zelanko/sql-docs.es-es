@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718803"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   Este tema contiene una lista de características admitidas para los procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +66,7 @@ ms.locfileid: "63155716"
 ##  <a name="supported-operators"></a><a name="so"></a>Operadores admitidos  
  Se admiten los siguientes operadores.  
   
--   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo \<, >,, >= y <=) se admiten en los condicionales (si, while).  
+-   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo, >, \< , >= y <=) se admiten en los condicionales (si, while).  
   
 -   Operadores unarios (+, -).  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63155716"
   
 -   Predicado de filtro IS [NOT] NULL  
   
--   DESDE \<la tabla con optimización para memoria>  
+-   Desde la \< tabla con optimización para memoria>  
   
 -   Se admite [GROUP BY &#40;&#41;de Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , junto con las funciones de agregado AVG, COUNT, COUNT_BIG, min, Max y sum. MIN o MAX no se admiten para los tipos nvarchar, char, varchar, varchar, varbinary y binary. La [cláusula order by &#40;Transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) es compatible con [Group by &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) si una expresión de la lista order by aparece literalmente en la lista Group by. Por ejemplo, se admite GROUP BY a + b ORDER BY a + b pero no GROUP BY a, b ORDER BY a + b.  
   

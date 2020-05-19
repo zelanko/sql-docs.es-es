@@ -12,14 +12,14 @@ helpviewer_keywords:
 - registering custom business objects in RDS [ADO]
 - business objects in RDS [ADO]
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9f110447fbb0f00c037361b00945b228449caf4f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922365"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747722"
 ---
 # <a name="registering-a-custom-business-object"></a>Registro de un objeto de negocios personalizado
 Para iniciar correctamente un objeto comercial personalizado (. dll o. exe) a través del servidor Web, el identificador de programa (ProgID) del objeto comercial debe especificarse en el registro tal y como se explica en este procedimiento. Esta característica de RDS protege la seguridad del servidor Web mediante la ejecución de solo ejecutables autorizados.  

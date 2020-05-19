@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155152"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718836"
 ---
 # <a name="supported-data-types"></a>Tipos de datos admitidos
   Los siguientes tipos de datos se **admiten** en las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa:  
@@ -53,7 +53,7 @@ ms.locfileid: "63155152"
   
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
-|date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|fecha|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  

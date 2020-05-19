@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLColAttribute function
 ms.assetid: a5387d9e-a243-4cfe-b786-7fad5842b1d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 706d08eb3c140571460f4ebccb541ac24a71160a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb9ddbc59e8ff76c8c459022d73cca7e7de81d3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067681"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706347"
 ---
 # <a name="sqlcolattribute"></a>SQLColAttribute
-  Puede usar `SQLColAttribute` para recuperar un atributo de una columna de conjunto de resultados para instrucciones ODBC preparadas o ejecutadas. La `SQLColAttribute` llamada a en instrucciones preparadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]produce un viaje de ida y vuelta. El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client recibe los datos de la columna del conjunto de resultados como parte `SQLColAttribute` de la ejecución de la instrucción, por lo que la llamada a después de la finalización de **SQLExecute** o **SQLExecDirect** no implica un ida y vuelta del servidor.  
+  Puede usar `SQLColAttribute` para recuperar un atributo de una columna de conjunto de resultados para instrucciones ODBC preparadas o ejecutadas. La llamada a `SQLColAttribute` en instrucciones preparadas produce un viaje de ida y vuelta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client recibe los datos de la columna del conjunto de resultados como parte de la ejecución de la instrucción, por lo que la llamada a `SQLColAttribute` después de la finalización de **SQLExecute** o **SQLExecDirect** no implica un ida y vuelta del servidor.  
   
 > [!NOTE]  
 >  Los atributos de identificador de columna de ODBC no están disponibles en todos los conjuntos de resultados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -39,9 +39,9 @@ ms.locfileid: "63067681"
 |SQL_DESC_TABLE_NAME|Disponible en conjuntos de resultados recuperados de instrucciones que generan cursores de servidor o en instrucciones SELECT ejecutadas que contienen una cláusula FOR BROWSE.|  
 |SQL_DESC_UNNAMED|SQL_NAMED en todas las columnas de un conjunto de resultados, a menos que una columna sea el resultado de una expresión que no contiene ninguna asignación de etiqueta como parte de la expresión. Cuando SQL_DESC_UNNAMED devuelve SQL_UNNAMED, todos los atributos de identificador de columna de ODBC contienen cadenas de longitud cero en la columna.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El controlador ODBC de Native Client usa la instrucción SET FMTONLY para reducir la `SQLColAttribute` sobrecarga del servidor cuando se llama a para instrucciones preparadas pero no ejecutadas.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El controlador ODBC de Native Client usa la instrucción SET FMTONLY para reducir la sobrecarga del servidor cuando `SQLColAttribute` se llama a para instrucciones preparadas pero no ejecutadas.  
   
- En el caso de tipos `SQLColAttribute` de valores grandes, devolverá los valores siguientes:  
+ En el caso de tipos de valores grandes, `SQLColAttribute` devolverá los valores siguientes:  
   
 |Identificador de campo|Descripción del cambio|  
 |----------------------|---------------------------|  
@@ -102,7 +102,7 @@ ms.locfileid: "63067681"
  `SQLColAttribute` admite tipos CLR definidos por el usuario (UDT) grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolattribute-support-for-sparse-columns"></a>Compatibilidad de SQLColAttribute con columnas dispersas  
- SQLColAttribute consulta el nuevo campo de descriptor de fila de implementación (IRD), SQL_CA_SS_IS_COLUMN_SET, para determinar `column_set` si una columna es una columna.  
+ SQLColAttribute consulta el nuevo campo de descriptor de fila de implementación (IRD), SQL_CA_SS_IS_COLUMN_SET, para determinar si una columna es una `column_set` columna.  
   
  Para obtener más información, consulte [compatibilidad con columnas Dispersas &#40;ODBC&#41;](../native-client/odbc/sparse-columns-support-odbc.md).  
   

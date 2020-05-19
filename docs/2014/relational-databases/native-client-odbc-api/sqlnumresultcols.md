@@ -11,22 +11,22 @@ topic_type:
 helpviewer_keywords:
 - SQLNumResultCols function
 ms.assetid: f79d8b3c-521e-4e50-a564-21d73ae5767b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 88edec63a97ff6c463f07add895ff8399fc4268a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0eb6de956884eb66990459b8b4c6a6336c8ed8ac
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046760"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705943"
 ---
 # <a name="sqlnumresultcols"></a>SQLNumResultCols
-  Para las instrucciones ejecutadas, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no tiene acceso al servidor para notificar el número de columnas de un conjunto de resultados. En este caso, `SQLNumResultCols` no produce un viaje de ida y vuelta al servidor. Como [SQLDescribeCol](sqldescribecol.md) y [SQLColAttribute](sqlcolattribute.md), al `SQLNumResultCols` llamar a en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta al servidor.  
+  Para las instrucciones ejecutadas, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no tiene acceso al servidor para notificar el número de columnas de un conjunto de resultados. En este caso, `SQLNumResultCols` no produce un viaje de ida y vuelta al servidor. Como [SQLDescribeCol](sqldescribecol.md) y [SQLColAttribute](sqlcolattribute.md), al llamar a `SQLNumResultCols` en instrucciones preparadas pero no ejecutadas se genera un viaje de ida y vuelta al servidor.  
   
  Cuando una instrucción o un lote de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] devuelve varios conjuntos de filas de resultados, es posible que el número de columnas del conjunto de resultados cambie de un conjunto a otro. `SQLNumResultCols`se debe llamar a para cada conjunto. Cuando el número de columnas cambia, la aplicación debe volver a enlazar los valores de datos antes de capturar los resultados de la fila. Para obtener más información sobre cómo administrar la devolución de varios conjuntos de resultados, vea [SQLMoreResults](sqlmoreresults.md).  
   
- Las mejoras en el motor de base [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de datos a partir de permiten a SQLNumResultCols obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLNumResultCols [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en versiones anteriores de. Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
+ Las mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permiten a SQLNumResultCols obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLNumResultCols en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Detección de metadatos](../native-client/features/metadata-discovery.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [SQLNumResultCols función)](https://go.microsoft.com/fwlink/?LinkId=59359)   

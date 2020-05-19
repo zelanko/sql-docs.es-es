@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ADO, methods
 - methods [ADO]
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65145ce8f77c352fb24a2a206d99828298b6a60c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920925"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747256"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
@@ -31,9 +31,9 @@ ms.locfileid: "67920925"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Cancela la ejecución de una llamada de método pendiente y asincrónica.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Cancela una actualización por lotes pendiente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Cancela los cambios realizados en la fila actual o nueva de un objeto de **conjunto de registros** , o la colección de **campos** de un objeto de **registro** , antes de llamar al método **Update** .|  
-|[Claridad](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los objetos de **error** de la colección de **errores** .|  
+|[Borrar](../../../ado/reference/ado-api/clear-method-ado.md)|Quita todos los objetos de **error** de la colección de **errores** .|  
 |[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Crea un objeto de **conjunto de registros** duplicado a partir de un objeto de conjunto de **registros** existente. Opcionalmente, especifica que el clon es de solo lectura.|  
-|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Cierra un objeto abierto y los objetos dependientes.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compara dos marcadores y devuelve una indicación de sus valores relativos.|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|Copia un archivo o un directorio, y su contenido, en otra ubicación.|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|Copia el número especificado de caracteres o bytes (dependiendo del **tipo**) de la **secuencia** en otro objeto de **flujo** .|  
@@ -44,7 +44,7 @@ ms.locfileid: "67920925"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Elimina un archivo o un directorio y todos sus subdirectorios.|  
 |[Execute (comando de ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en la propiedad **CommandText** .|  
 |[Execute (conexión ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Ejecuta la consulta, la instrucción SQL, el procedimiento almacenado o el texto específico del proveedor especificados.|  
-|[Localización](../../../ado/reference/ado-api/find-method-ado.md)|Busca en un **conjunto de registros** la fila que cumple los criterios especificados.|  
+|[Buscar](../../../ado/reference/ado-api/find-method-ado.md)|Busca en un **conjunto de registros** la fila que cumple los criterios especificados.|  
 |[Consumir](../../../ado/reference/ado-api/flush-method-ado.md)|Fuerza el contenido de la **secuencia** que queda en el búfer de ADO al objeto subyacente al que está asociada la **secuencia** .|  
 |[get_OLEDBCommand (método)](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Devuelve el comando OLEDB subyacente, propagando primero cualquier información de parámetros establecida en el comando de ADO al comando OLEDB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Devuelve un **conjunto de registros** cuyas filas representan los archivos y subdirectorios del directorio representado por este **registro**.|  
@@ -53,7 +53,7 @@ ms.locfileid: "67920925"
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Recupera varios registros de un objeto de **conjunto de registros** en una matriz.|  
 |[GetString](../../../ado/reference/ado-api/getstring-method-ado.md)|Devuelve el **conjunto de registros** como una cadena.|  
 |[LoadFromFile (](../../../ado/reference/ado-api/loadfromfile-method-ado.md)|Carga el contenido de un archivo existente en una **secuencia**.|  
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Mueve la posición del registro actual en un objeto de **conjunto de registros** .|  
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Mueve la posición del registro actual en un objeto de **conjunto de registros** .|  
 |[MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Se desplaza al registro primero, último, siguiente o anterior de un objeto de **conjunto de registros** especificado y hace que registre el registro actual.|  
 |[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)|Mueve un archivo, o un directorio y su contenido, a otra ubicación.|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Borra el objeto de **conjunto de registros** actual y devuelve el siguiente **conjunto de registros** avanzando por una serie de comandos.|  

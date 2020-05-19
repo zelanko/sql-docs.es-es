@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c5048cd197643823bb6b0fc8e8247983666d8c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657814"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705982"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client extiende SQLGetStmtAttr para exponer los atributos de instrucción específicos del controlador.  
@@ -32,7 +32,7 @@ ms.locfileid: "62657814"
 ## <a name="sql_sopt_ss_nocount_status"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  El atributo SQL_SOPT_SS_NOCOUNT_STATUS indica el valor actual de la opción NOCOUNT, que controla si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] notifica los números de filas afectados por una instrucción cuando se llama a [SQLRowCount](sqlrowcount.md) . El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |SQL_NC_OFF|NOCOUNT es OFF. SQLRowCount devuelve el número de filas afectadas.|  
 |SQL_NC_ON|NOCOUNT es ON. SQLRowCount no devuelve el número de filas afectadas y el valor devuelto es 0.|  

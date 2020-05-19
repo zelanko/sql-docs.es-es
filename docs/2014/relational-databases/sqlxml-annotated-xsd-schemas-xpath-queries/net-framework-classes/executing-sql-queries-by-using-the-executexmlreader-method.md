@@ -13,15 +13,15 @@ helpviewer_keywords:
 - ExecuteXmlReader method
 - SQL queries [SQLXML]
 ms.assetid: f106a4c5-8d6e-40c0-bf1f-11e121afcb01
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dfbd321e56d1df3b985ed7b89dde3a4b29d36c27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16cd12463e6e4a1b886134635cb5d988e9437b04
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012527"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718085"
 ---
 # <a name="executing-sql-queries-by-using-the-executexmlreader-method"></a>Ejecutar consultas SQL mediante el método ExecuteXMLReader
   En lugar de usar el método ExecuteToStream, puede utilizar el método ExecuteXmlReader del objeto SqlXmlCommand para ejecutar comandos. Este método devuelve un objeto XmlReader que se puede usar para el procesamiento posterior del resultado (que en este ejemplo está imprimiendo los nombres de los elementos o atributos y los valores).  

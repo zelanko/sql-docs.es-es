@@ -15,15 +15,15 @@ helpviewer_keywords:
 - parent axis
 - axes [SQLXML]
 ms.assetid: d17b8278-da58-4576-95b4-7a92772566d8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 81d671c834cfeb1bf1191c0d5cd4ace72741ff10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8adf10727478344216da05ea982a466daa0eba63
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010716"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717829"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo se especifican los ejes en las consultas XPath.  
@@ -33,13 +33,13 @@ ms.locfileid: "66010716"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-retrieve-child-elements-of-the-context-node"></a>A. Recuperar elementos secundarios del nodo de contexto  
- La consulta XPath siguiente selecciona todos los ** \<elementos secundarios>contacto** del nodo de contexto:  
+ La consulta XPath siguiente selecciona todos los elementos secundarios ** \<>contacto** del nodo de contexto:  
   
 ```  
 /child::Contact  
 ```  
   
- En la consulta, `child` es el eje y `Contact` es la prueba de nodo (true `Contact` si es un ** \<elemento>** nodo, \<ya que el elemento> es el tipo de nodo `child` principal asociado al eje).  
+ En la consulta, `child` es el eje y `Contact` es la prueba de nodo (true si `Contact` es un ** \< elemento>** nodo, ya \< que el elemento> es el tipo de nodo principal asociado al `child` eje).  
   
  El eje `child` es el valor predeterminado. Por tanto, la consulta puede escribirse como:  
   
@@ -84,13 +84,13 @@ ms.locfileid: "66010716"
 ```  
   
 ### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Recuperar descendientes del nodo de contexto  
- La consulta XPath siguiente selecciona todos los ** \<** elementos secundarios de order>del elemento ** \<Customer>** elementos secundarios del nodo de contexto:  
+ La consulta XPath siguiente selecciona todos los elementos secundarios de ** \< Order>** del elemento ** \< Customer>** elementos secundarios del nodo de contexto:  
   
 ```  
 /child::Customer/child::Order  
 ```  
   
- En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son verdaderas si Customer y Order son ** \<elementos>** nodos, porque el ** \<elemento>** nodo es el nodo `child` principal del eje). Para cada nodo que ** \< **coincida con el>del cliente, los nodos que coinciden ** \<con los pedidos>** se agregan al resultado. Solo se devuelve el ** \<orden>** en el conjunto de resultados.  
+ En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son verdaderas si Customer y Order son ** \< elementos>** nodos, porque el ** \< elemento>** nodo es el nodo principal del `child` eje). Para cada nodo que coincida con el ** \<>del cliente **, los nodos que coinciden con los ** \< pedidos>** se agregan al resultado. Solo se devuelve el ** \< orden>** en el conjunto de resultados.  
   
  El eje `child` es el valor predeterminado. Por lo tanto, la consulta puede especificarse como:  
   
@@ -159,10 +159,10 @@ ms.locfileid: "66010716"
 </ROOT>  
 ```  
   
- Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, de cada nodo que coincida con ** \<el cliente>** la consulta navega a su ** \<orden>** elementos. Y para cada ** \<orden **de coincidencia de nodo>, la consulta agrega los nodos ** \<OrderDetail>** al resultado. Solo se devuelve ** \<OrderDetail>** en el conjunto de resultados.  
+ Si la consulta XPath se especifica como `Customer/Order/OrderDetail` , de cada nodo que coincida con el ** \< cliente>** la consulta navega a su ** \< orden>** elementos. Y para cada orden de coincidencia de nodo ** \<>**, la consulta agrega los nodos ** \< OrderDetail>** al resultado. Solo se devuelve ** \< OrderDetail>** en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
- La consulta siguiente recupera todos los **CustomerID** ** \<** ** \<elementos de order>** con un elemento de>de cliente primario con un valor de atributo CustomerID de 1. La consulta usa el `child` eje en el predicado para buscar el elemento primario del elemento ** \<Order>** .  
+ La consulta siguiente recupera todos los elementos de ** \< Order>** con un elemento de ** \<>de cliente** primario con un valor de atributo **CustomerID** de 1. La consulta usa el `child` eje en el predicado para buscar el elemento primario del elemento ** \< Order>** .  
   
 ```  
 /child::Customer/child::Order[../@CustomerID="1"]  
@@ -181,7 +181,7 @@ ms.locfileid: "66010716"
 ```  
   
 > [!NOTE]  
->  La consulta `/Order[../@CustomerID="1"]` XPath devolverá un error porque no hay ningún elemento primario de ** \<Order>**. Aunque puede haber elementos en el esquema de asignación que contengan ** \<>de orden **, el XPath no comenzó en ninguno de ellos. por consiguiente, ** \<el orden>** se considera el tipo de elemento de nivel superior en el documento.  
+>  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de ** \< Order>**. Aunque puede haber elementos en el esquema de asignación que contengan ** \<>de orden **, el XPath no comenzó en ninguno de ellos; por lo tanto, el ** \< orden>** se considera el tipo de elemento de nivel superior del documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   
@@ -246,13 +246,13 @@ ms.locfileid: "66010716"
 ```  
   
 ### <a name="d-specify-the-attribute-axis"></a>D. Especificar el eje de atributo  
- La consulta XPath siguiente selecciona todos **CustomerID** los ** \<** elementos secundarios del cliente>del nodo de contexto con el valor 1 para el atributo CustomerID:  
+ La consulta XPath siguiente selecciona todos los elementos secundarios del ** \< cliente>** del nodo de contexto con el valor 1 para el atributo **CustomerID** :  
   
 ```  
 /child::Customer[attribute::CustomerID="1"]  
 ```  
   
- `attribute::CustomerID`En el predicado `attribute` , es el eje `CustomerID` y es la prueba de nodo `CustomerID` (si es un atributo, la prueba de nodo es true, porque el ** \<atributo>** nodo es el `attribute` nodo principal del eje).  
+ En el predicado `attribute::CustomerID` , `attribute` es el eje y `CustomerID` es la prueba de nodo (si `CustomerID` es un atributo, la prueba de nodo es true, porque el ** \< atributo>** nodo es el nodo principal del `attribute` eje).  
   
  Se puede especificar un acceso directo al eje `attribute` (@) y, puesto que el eje `child` es el eje predeterminado, puede omitirse en la consulta:  
   

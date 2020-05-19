@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Locals Window [Transact-SQL]
 ms.assetid: 59bea640-7823-4b4d-832c-f384d83cca2f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44aedf7d53b2a9ad91b37f5023c13d8e20097da1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70beb09d12cab07290d38178cad296509a914983
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243051"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718371"
 ---
-# <a name="locals-window"></a>Ventana de locales
+# <a name="locals-window"></a>Ventana Locales
   La ventana **Variables locales** muestra información sobre las expresiones locales en el ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El ámbito está establecido en el marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para mostrar las expresiones locales.  
   
 ## <a name="task-list"></a>Lista de tareas  

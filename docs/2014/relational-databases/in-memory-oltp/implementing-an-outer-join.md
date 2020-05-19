@@ -7,22 +7,22 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68b7f660675c8eca1b090d4ced08e770f1a7d22d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63158172"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719104"
 ---
 # <a name="implementing-an-outer-join"></a>Implementar una combinación externa
   No se admite una combinación externa en los procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una combinación externa izquierda en un procedimiento almacenado compilado de forma nativa.  
   
  Los ejemplos usan una variable de tabla para simular un cursor en la parte izquierda de la combinación y una variable de tabla para crear un único conjunto de resultados, que solo es adecuado cuando se procesa un número limitado de filas, ya que ello implica crear una copia adicional de las filas de datos.  
   
- Se utiliza una@outervariable () de tipo t1_type para recorrer en iteración las filas de T1, utilizando un bucle while para simular un cursor. A continuación @result , se usa la variable de tipo t1t2_join_type para construir el conjunto de resultados.  
+ Se utiliza una variable ( @outer ) de tipo t1_type para recorrer en iteración las filas de T1, utilizando un bucle while para simular un cursor. @resultA continuación, se usa la variable de tipo t1t2_join_type para construir el conjunto de resultados.  
   
  Debe probar el rendimiento de esta solución alternativa para asegurarse de que funciona de la manera esperada en la aplicación.  
   

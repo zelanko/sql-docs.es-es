@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155302"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718852"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
   Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten el área expuesta completa de [!INCLUDE[tsql](../../includes/tsql-md.md)]; sin embargo, las tablas basadas en disco y los procedimientos almacenados interpretados de [!INCLUDE[tsql](../../includes/tsql-md.md)] sí la admiten. Cuando se intenta usar una de las características no admitidas, el servidor devuelve un error.  
@@ -71,7 +71,7 @@ ms.locfileid: "63155302"
 |Operación|CREATE FULLTEXT INDEX|Las tablas optimizadas para memoria no admiten índices de texto completo.|  
 |Operación|Cambios en los esquemas|Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten cambios en los esquemas, por ejemplo, `sp_rename`.<br /><br /> Si se intenta realizar cambios de esquema, como cambiar el nombre de una tabla, generará el error 12320. Las operaciones que requieren un cambio en la versión de esquema, como cambiar el nombre, no se admiten con las tablas optimizadas para memoria.<br /><br /> Para cambiar el esquema, quite y vuelva a crear la tabla o el procedimiento usando una definición actualizada.|  
 |Operación|CREATE TRIGGER|Las tablas optimizadas para memoria no admiten desencadenantes.|  
-|Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimine todas `DELETE FROM`las filas mediante la *tabla* o quite y vuelva a crear la tabla.|  
+|Operación|TRUNCATE TABLE|Las tablas optimizadas para memoria no admiten la operación TRUNCATE. Para quitar todas las filas de una tabla, elimine todas las filas mediante `DELETE FROM` la *tabla* o quite y vuelva a crear la tabla.|  
 |Operación|ALTER AUTHORIZATION|No es posible cambiar el propietario de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el procedimiento.|  
 |Operación|ALTER SCHEMA|No es posible cambiar el esquema de una tabla optimizada para memoria o de un procedimiento almacenado compilado de forma nativa existente. Para cambiar el propietario, quite y vuelva a crear la tabla o el esquema.|  
 |Operación|DBCC CHECKTABLE|DBCC CHECKTABLE no es compatible con las tablas optimizadas para memoria.|  
@@ -108,7 +108,7 @@ ms.locfileid: "63155302"
 |Tipo|Característica|Solución|  
 |----------|-------------|----------------|  
 |Característica|Variables de las tablas insertadas|Los tipos de tablas no pueden declararse insertadas con declaraciones de variable. Los tipos de tablas deben declararse de forma explícita mediante una instrucción `CREATE TYPE`.|  
-|Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> -Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursor. Con ODBC, evite la instrucción `EXECUTE` de [!INCLUDE[tsql](../../includes/tsql-md.md)]; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> -Cuando ejecute el procedimiento desde un lote [!INCLUDE[tsql](../../includes/tsql-md.md)] o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> -Al crear un procedimiento almacenado compilado de forma nativa, en lugar de usar un cursor, use la lógica basada en `WHILE` conjunto o un bucle.|  
+|Característica|Cursores|Los procedimientos almacenados compilados de forma nativa no admiten cursores.<br /><br /> -Cuando ejecute el procedimiento desde el cliente, utilice RPC en lugar de la API de cursor. Con ODBC, evite la instrucción `EXECUTE` de [!INCLUDE[tsql](../../includes/tsql-md.md)]; en su lugar, especifique el nombre del procedimiento directamente.<br /><br /> -Cuando ejecute el procedimiento desde un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote o desde otro procedimiento almacenado, evite usar un cursor con el procedimiento almacenado compilado de forma nativa.<br /><br /> -Al crear un procedimiento almacenado compilado de forma nativa, en lugar de usar un cursor, use la lógica basada en conjunto o un `WHILE` bucle.|  
 |Característica|Valores predeterminados de parámetros no constantes|Cuando se usan los valores predeterminados de los parámetros en procedimientos almacenados compilados de forma nativa, dichos valores deben ser constantes. Quite los caracteres comodín de las declaraciones de parámetro.|  
 |Característica|EXTERNAL|Los procedimientos almacenados CLR no se pueden compilar de forma nativa. Quite la cláusula AS EXTERNAL o la opción de NATIVE_COMPILATION de la instrucción CREATE PROCEDURE.|  
 |Característica|Procedimientos almacenados numerados|Los procedimientos almacenados compilados de forma nativa no se pueden numerar. Quite el `;` *número* de la `CREATE PROCEDURE` instrucción.|  
@@ -116,10 +116,10 @@ ms.locfileid: "63155302"
 |Característica|Expresiones de tabla común (CTE)|Los procedimientos almacenados compilados de forma nativa no admiten expresiones de tabla común (CTE). Vuelva a escribir la consulta.|  
 |Característica|subconsulta|Las subconsultas (consultas anidadas dentro de otra consulta) no se admiten. Vuelva a escribir la consulta.|  
 |Característica|COMPUTE|No se admite la cláusula `COMPUTE`. Quítela de la consulta.|  
-|Característica|SELECT INTO|La cláusula `INTO` no se puede usar con la instrucción `SELECT`. Vuelva a escribir la consulta `INSERT INTO`como *tabla*`SELECT`.|  
+|Característica|SELECT INTO|La cláusula `INTO` no se puede usar con la instrucción `SELECT`. Vuelva a escribir la consulta como `INSERT INTO` *tabla* `SELECT` .|  
 |Característica|OUTPUT|No se admite la cláusula `OUTPUT`. Quítela de la consulta.|  
 |Característica|Lista de columnas insertadas incompleta|En las instrucciones `INSERT`, deben especificarse valores para todas las columnas de la tabla.|  
-|Función|*Función*|Los procedimientos almacenados compilados de forma nativa no admiten la función integrada. Quite la función del procedimiento almacenado. Para obtener más información acerca de las funciones integradas admitidas, vea [procedimientos almacenados compilados](../in-memory-oltp/natively-compiled-stored-procedures.md)de forma nativa.|  
+|Función|*Function*|Los procedimientos almacenados compilados de forma nativa no admiten la función integrada. Quite la función del procedimiento almacenado. Para obtener más información acerca de las funciones integradas admitidas, vea [procedimientos almacenados compilados](../in-memory-oltp/natively-compiled-stored-procedures.md)de forma nativa.|  
 |Característica|CASE|Los procedimientos almacenados compilados de forma nativa no admiten la instrucción `CASE` en las consultas. Cree consultas diferentes para mayúsculas y minúsculas. Para obtener más información, vea [implementar una instrucción Case](implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md).|  
 |Característica|funciones definidas por el usuario|En los procedimientos almacenados compilados de forma nativa no se pueden usar funciones definidas por el usuario. Quite la referencia a la función de la definición de procedimiento.|  
 |Característica|agregados definidos por el usuario|En los procedimientos almacenados compilados de forma nativa no se pueden usar funciones de agregado definidas por el usuario. Quite la referencia a la función del procedimiento.|  
@@ -179,8 +179,8 @@ ms.locfileid: "63155302"
 |Opción|WITH TIES|Esta opción no se admite con cláusulas `TOP`. Quite `WITH TIES` de la consulta del procedimiento almacenado compilado de forma nativa.|  
 |Aggregate, función|*Función de agregado*|Esta la cláusula no se admite. Para obtener más información acerca de las funciones de agregado en los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Función de categoría|*Función de categoría*|Los procedimientos almacenados compilados de forma nativa no admiten funciones de categoría. Quítelas de la definición de procedimiento.|  
-|Función|*Función*|Esta función no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
-|.|*.*|Esta instrucción no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
+|Función|*Function*|Esta función no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
+|.|*Privacidad*|Esta instrucción no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
 |Característica|MIN y MAX utilizados con las cadenas de caracteres y binarias|En los procedimientos almacenados compilados de forma nativa no se pueden usar las funciones de agregado `MIN` y `MAX` con valores de cadenas de caracteres y binarias.|  
 |Característica|GROUP BY sin función de agregado|En los procedimientos almacenados compilados de forma nativa, cuando una consulta tiene una cláusula `GROUP BY`, la consulta también debe usar una función de agregado en la cláusula SELECT o HAVING. Agregue una función de agregado a la consulta.|  
 |Característica|GROUP BY ALL|En los procedimientos almacenados compilados de forma nativa, ALL no se puede utilizar con cláusulas GROUP BY. Quite ALL de la cláusula GROUP BY.|  
@@ -191,7 +191,7 @@ ms.locfileid: "63155302"
 |Característica|BEGIN TRANSACTION, COMMIT TRANSACTION y ROLLBACK TRANSACTION|Utilice bloques ATÓMICOS para controlar las transacciones y tratar los errores. Para obtener más información, consulte [Atomic Blocks](atomic-blocks-in-native-procedures.md).|  
 |Característica|Declaraciones de variable de tabla alineada.|Las variables de tabla deben hacer referencia explícitamente a los tipos definidos de tabla optimizada para memoria. Debe crear un tipo de tabla optimizada para memoria y usar ese tipo para la declaración de la variable, en lugar de especificar el tipo insertado.|  
 |Característica|sp_recompile|No se permite recompilar los procedimientos almacenados compilados de forma nativa. Quite y vuelva a crear el procedimiento.|  
-|Característica|EXECUTE AS CALLER|La cláusula `EXECUTE AS` es obligatoria. Pero `EXECUTE AS CALLER` no se admite. Use `EXECUTE AS OWNER`, `EXECUTE AS` *User*o `EXECUTE AS SELF`.|  
+|Característica|EXECUTE AS CALLER|La cláusula `EXECUTE AS` es obligatoria. Pero `EXECUTE AS CALLER` no se admite. Use `EXECUTE AS OWNER` , `EXECUTE AS` *User*o `EXECUTE AS SELF` .|  
 |Característica|Tablas basadas en disco|No se puede tener acceso a las tablas basadas en disco desde procedimientos almacenados compilados de forma nativa. Quite las referencias a las tablas basadas en disco desde los procedimientos almacenados compilados de forma nativa. O bien, migre las tablas basadas en disco a la memoria optimizada.|  
 |Característica|Vistas|No se puede tener acceso a las vistas desde procedimientos almacenados compilados de forma nativa. En lugar de a las vistas, haga referencia a las tablas base subyacentes.|  
 |Característica|Funciones con valores de tabla|En los procedimientos almacenados compilados de forma nativa no se puede hacer tener acceso a funciones con valores de tabla. Quite las referencias a las funciones con valores de tabla desde los procedimientos almacenados compilados de forma nativa.|  

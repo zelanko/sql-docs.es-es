@@ -19,15 +19,15 @@ helpviewer_keywords:
 - ODBC data types, text columns
 - image columns [ODBC]
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c722d5360ad01e7e95508c2219ceb674de381286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3635fee71c92196cbc9408db1487e95da2b489ea
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63195136"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718765"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>Modificaciones registradas frente a modificaciones no registradas
   Una aplicación puede solicitar que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no registre las modificaciones de **Text**, **ntext**e **Image** . Sin embargo, se debe tener cautela con esta opción. Solo se debe usar para aquellas situaciones en las que los datos **Text**, **ntext**o **Image** no son críticos y los propietarios de datos están dispuestos a deshacer la capacidad de recuperar datos para un mayor rendimiento.  

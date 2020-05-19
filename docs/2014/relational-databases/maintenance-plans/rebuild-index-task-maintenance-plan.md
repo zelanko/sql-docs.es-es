@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Rebuild Index Task dialog box
 ms.assetid: 33e2940b-139f-4563-b0cb-5683f08bd879
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 34bd5a607998c6e37f688ccbadcd4d612d3daea7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f38b504943dafd97c39ef66cd1ab903cafe18dd6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807040"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706426"
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Tarea Volver a generar índice (Plan de mantenimiento)
   Use el cuadro de diálogo **Tarea Volver a generar índice** para volver a crear los índices de las tablas de la base de datos con un nuevo factor de relleno. El factor de relleno determina la cantidad de espacio vacío de cada una de las páginas del índice, para adaptarse a una futura expansión. Al agregar datos a la tabla, el espacio disponible se llena, ya que no se conserva el factor de relleno. Al reorganizar las páginas de datos y de índices, puede restablecer el espacio disponible.  
@@ -59,7 +59,7 @@ ms.locfileid: "62807040"
  **Objeto**  
  Limite la cuadrícula **Selección** para mostrar tablas, vistas o ambas cosas.  
   
- **Selección**  
+ **Número de selección**  
  Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
  **Reorganizar páginas con la cantidad predeterminada de espacio disponible**  
@@ -69,7 +69,7 @@ ms.locfileid: "62807040"
  Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100.  
   
  **Ordenar resultados de tempdb**  
- Use la `SORT_IN_TEMPDB`opción, que determina dónde se almacenan temporalmente los resultados de ordenación intermedios generados durante la creación del índice. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB`.  
+ Use la `SORT_IN_TEMPDB` opción, que determina dónde se almacenan temporalmente los resultados de ordenación intermedios generados durante la creación del índice. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB`.  
   
  **Mantener el índice en línea al volver a indizar**  
  Utilice la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice.  

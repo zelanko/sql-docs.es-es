@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6d6f0d0335b07be83d7b34895c08e8ff01dcd67a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c50a286002d245bf05f24d74653a2697866f1dec
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242992"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718300"
 ---
 # <a name="watch-window"></a>Ventana de inspección
   La ventana **Inspección** muestra información sobre las expresiones que ha seleccionado. Puede haber hasta cuatro ventanas Inspección: **Inspección 1**, **Inspección 2, Inspección 3**e **Inspección 4**. Las expresiones se evalúan dentro del ámbito del marco de la pila de llamadas actual que está seleccionado en la ventana **Pila de llamadas** . Debe estar en modo de depuración para observar las variables y las expresiones.  

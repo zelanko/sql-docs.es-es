@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveCommand property [ADO]
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b89876366c80d20bde110da9e9d86414873e86bc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921675"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747479"
 ---
 # <a name="activecommand-property-ado"></a>Propiedad ActiveCommand (ADO)
 Indica el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) que creó el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) asociado.  
@@ -28,7 +28,7 @@ Indica el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un **valor de tipo Variant** que contiene un objeto **Command** . El valor predeterminado es una referencia de objeto null.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La propiedad **ActiveCommand** es de solo lectura.  
   
  Si un objeto de **comando** no se utilizó para crear el **conjunto de registros**actual, se devuelve una referencia de objeto **null** .  

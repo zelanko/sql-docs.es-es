@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c320db0f568b7182a48e5b1719f68d17ade11629
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688903"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718796"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  
@@ -70,14 +70,14 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
   
-|Sección|Size|Comentarios|  
+|Sección|Tamaño|Comentarios|  
 |-------------|----------|--------------|  
 |Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz de desplazamiento para las columnas de tipo profundo|Los valores posibles son:<br /><br /> 0, si no hay columnas de tipos profundos<br /><br /> 2 + 2 * [número de columnas de tipo profundo], en caso contrario|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Matriz NULL|[número de columnas que admiten valores NULL] / 8, redondeado a bytes completos.|La matriz tiene un bit por cada columna que admite valores NULL. Se redondea a bytes completos.|  
 |Relleno de matriz NULL|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño de la matriz NULL es un número de bytes impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  
-|Relleno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
+|Espaciado interno|Si no hay columnas de tipos profundos: 0<br /><br /> Si hay columnas de tipo profundo, se agregan los bytes de relleno 0-7, según la alineación mayor requerida por una columna superficial. Cada columna superficial requiere una alineación igual a su tamaño según se documentó anteriormente, salvo en que las columnas GUID necesitan la alineación de 1 byte (no 16) y las columnas numéricas necesitan siempre la alineación de 8 bytes (nunca 16). Se usa el requisito de alineación mayor entre todas las columnas superficiales y se agregan los bytes 0 a 7 de relleno de forma que el tamaño total (sin las columnas de tipo profundo) sea un múltiplo de la alineación requerida.|Los tipos profundos son (var)binary y (n)(var)char.|  
 |Columnas de tipo profundo de longitud fija|SUM([tamaño de columnas de tipo profundo de longitud fija])<br /><br /> El tamaño de cada columna es el siguiente:<br /><br /> i para char(i) y binary(i).<br /><br /> 2 * i para nchar(i)|Las columnas de tipo profundo de longitud fija son de tipo char(i), nchar(i) o binary(i).|  
 |Columnas de tipo profundo de longitud variable [tamaño calculado]|SUM([tamaño calculado de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño calculado de cada columna es el siguiente:<br /><br /> i para varchar(i) y varbinary(i)<br /><br /> 2 * i para nvarchar(i)|Esta fila solo se aplica al [tamaño del texto calculado de la fila].<br /><br /> Las columnas de tipo profundo de longitud variable son de tipo varchar(i), nvarchar(i) o varbinary(i). El tamaño calculado se determina mediante la longitud máxima (i) de la columna.|  
 |Columnas de tipo profundo de longitud variable [tamaño real]|SUM([tamaño real de columnas de tipo profundo de longitud variable])<br /><br /> El tamaño real de cada columna es el siguiente:<br /><br /> n, donde n es el número de caracteres almacenados en la columna, para varchar(i).<br /><br /> 2 * n, donde n es el número de caracteres almacenados en la columna, para nvarchar(i).<br /><br /> n, donde n es el número de bytes almacenados en la columna, para varbinary(i).|Esta fila solo se aplica al [tamaño del texto real de la fila].<br /><br /> El tamaño real se determina con los datos almacenados en las columnas de la fila.|  
@@ -117,16 +117,16 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  Para un tiempo mayor que 200, la tabla contiene las filas siguientes:  
   
-|Nombre|City|  
+|Name|City|  
 |----------|----------|  
-|John|Beijing|  
+|Juan|Beijing|  
 |Julia|Praga|  
   
  Sin embargo, cualquier transacción activa con el tiempo de inicio 100 verá la versión siguiente de la tabla:  
   
-|Nombre|City|  
+|Name|City|  
 |----------|----------|  
-|John|Paris|  
+|Juan|Paris|  
 |Julia|Praga|  
 |Susan|Bogotá|  
   
@@ -188,7 +188,7 @@ GO
   
 -   El relleno NULL de matriz = 1, como el tamaño de la matriz NULL es impar y hay una columna de tipo profundo.  
   
--   Relleno  
+-   Espaciado interno  
   
     -   8 es el requisito mayor de alineación.  
   
@@ -223,6 +223,6 @@ where object_id = object_id('dbo.Orders')
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Tablas con optimización para memoria](memory-optimized-tables.md)  
+ [Tablas optimizadas para la memoria](memory-optimized-tables.md)  
   
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - AbsolutePosition property [ADO]
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 56b21fe8cddf4d855ec1655a83cea306c0a3000c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921694"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747521"
 ---
 # <a name="absoluteposition-property-ado"></a>Propiedad AbsolutePosition (ADO)
 Indica la posición ordinal del registro actual de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -30,7 +30,7 @@ Indica la posición ordinal del registro actual de un objeto de [conjunto de reg
   
  Para el código de 64 bits, use un tipo de datos que proporcione para el almacenamiento de un valor de 64 bits. Por ejemplo, puede usar un valor Long u otro que tenga una longitud de 64 bits como DBORDINAL. No use valores **PositionEnum** , ya que están limitados a una longitud de 32 bits.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para establecer la propiedad **AbsolutePosition** , ADO requiere que el OLE DB proveedor que está usando implemente la interfaz [IRowsetLocate: IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) .  
   
  El acceso a la propiedad **AbsolutePosition** de un **conjunto de registros** que se abrió con un cursor de solo avance o dinámico genera el error **adErrFeatureNotAvailable**. Con otros tipos de cursor, se devolverá la posición correcta siempre que el proveedor de OLE DB admita la interfaz **IRowsetScroll: IRowsetLocate** . Si el proveedor no admite la interfaz **IRowsetScroll** , la propiedad se establece en **adPosUnknown**. Consulte la documentación del proveedor para determinar si admite **IRowsetScroll**.  

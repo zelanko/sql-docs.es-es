@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - columns [XML in SQL Server], null default value
 ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c98e5cf869b0a4b7e39b640cf4f486ae8f222127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aaa7cc6fb40c2f600e734cb3e2250a40e15d63e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637755"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717300"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Columnas que incluyen un valor NULL de forma predeterminada
   De forma predeterminada, un valor NULL en una columna se asigna a la ausencia del atributo, nodo u elemento. Este comportamiento predeterminado se puede sobrescribir solicitando XML centrado en elementos mediante la directiva ELEMENTS y especificando XSINIL a fin de solicitar la adición de elementos para valores NULL, tal y como se muestra en la consulta siguiente:  

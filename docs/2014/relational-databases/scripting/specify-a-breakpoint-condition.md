@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint conditions
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c27ed8abfd66cb896182cd5a795965163e5c8618
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58258ab6c364cbe7137e8a5157cb4f335e049c42
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243230"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718583"
 ---
 # <a name="specify-a-breakpoint-condition"></a>Especificar una condición de punto de interrupción
   Una condición de punto de interrupción es una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] evaluada por el depurador cuando se alcanza el punto de interrupción. Si se satisface la condición y se alcanza el número de llamadas especificado, el depurador interrumpe, o bien, realiza la acción definida para el punto de interrupción.  
@@ -37,7 +37,7 @@ ms.locfileid: "75243230"
   
 2.  En el cuadro de diálogo **Condición de punto de interrupción** , escriba una expresión booleana válida en el cuadro **Condición** .  
   
-3.  Elija **es true** si desea interrumpir cuando la expresión se evalúa como `true`o elija **ha cambiado** si desea interrumpir cuando el valor de la expresión ha cambiado.  
+3.  Elija **es true** si desea interrumpir cuando la expresión se evalúa como `true` o elija **ha cambiado** si desea interrumpir cuando el valor de la expresión ha cambiado.  
   
     > [!NOTE]  
     >  El depurador no evalúa la expresión booleana hasta la primera vez que se alcanza el punto de interrupción. Si elige **Ha cambiado**, el depurador no considerará la primera evaluación como cambio, por lo que el depurador no interrumpirá le ejecución en la primera evaluación.  

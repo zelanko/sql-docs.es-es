@@ -11,18 +11,18 @@ topic_type:
 helpviewer_keywords:
 - SQLGetDiagField function
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657708"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706022"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico `SQLGetDiagField`adicionales para. Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para `SQLGetDiagField` . Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   
 |Campo del registro de diagnóstico|Descripción|  
 |------------------------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "62657708"
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client notifica los siguientes códigos de función dinámica adicionales que identifican la última instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentada. El código de función dinámica se devuelve en el encabezado (registro 0) del conjunto de registros de diagnóstico y está por tanto disponible en cada ejecución (correcta o no).  
   
-|Código de función dinámica|Source|  
+|Código de función dinámica|Origen|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  

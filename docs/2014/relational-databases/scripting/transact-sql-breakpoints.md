@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 024f079d28c5ce144282bf09fff675fd308a8173
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 84ff925f2aa68ee81268eaca2faa3920f3ec407b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243140"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718535"
 ---
 # <a name="transact-sql-breakpoints"></a>Utilizar puntos de interrupción de Transact-SQL
   Los puntos de interrupción especifican que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] pausa la ejecución en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede ver el estado de los elementos de código en ese momento.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Command Window [Transact-SQL]
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 26306f8ad2adf01ebdcbf1b52169f1c2ec964920
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a7f8e72831e333323621279a0403e95e6a134860
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243079"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718414"
 ---
 # <a name="command-window"></a>Ventana de comandos
   Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la ventana [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
@@ -33,7 +33,7 @@ ms.locfileid: "75243079"
   
  **Para mostrar información sobre el subproceso actual**  
   
--   En el tipo **CommandWindow**, `Debug.ListThread`escriba y, a continuación, presione Entrar.  
+-   En el tipo **CommandWindow**, escriba `Debug.ListThread` y, a continuación, presione Entrar.  
   
  **Para agregar una variable a la ventana Inspección rápida**  
   

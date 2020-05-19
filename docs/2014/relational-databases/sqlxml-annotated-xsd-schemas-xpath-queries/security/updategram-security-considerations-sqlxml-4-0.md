@@ -11,15 +11,15 @@ helpviewer_keywords:
 - security [SQLXML], updategrams
 - updategrams [SQLXML], security
 ms.assetid: 00dc6cf4-a2e8-4cca-bdd6-d5122102a82d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12354329d51bbe13930fc6edefca1fcf84171e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9ed4aad31f5a4697a268d82e282a135ea85c37c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66015054"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717575"
 ---
 # <a name="updategram-security-considerations-sqlxml-40"></a>Consideraciones de seguridad sobre los diagramas de actualización (SQLXML 4.0)
   A continuación, se muestran una serie de instrucciones de seguridad para usar diagramas de actualización:  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f1ec180247a3df15af58f95e041a0c426a35cdb4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 262fd4ec636b147db0cb9de9e8b520f064e710af
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62637745"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717284"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>Columnas con un nombre especificado como carácter comodín
   Si el nombre de columna especificado es un carácter comodín (\*), su contenido se insertará como si no se hubiera especificado ningún nombre. Si esta columna no es del tipo `xml`, su contenido se insertará como un nodo de texto, tal y como se muestra en el ejemplo siguiente:  

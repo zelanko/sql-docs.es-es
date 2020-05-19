@@ -10,15 +10,15 @@ helpviewer_keywords:
 - extended events [SQL Server], packages
 - xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62638742"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719179"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
   Un paquete es un contenedor para objetos de eventos extendidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Hay tres tipos de paquetes de eventos extendidos, que son los siguientes:  
@@ -36,7 +36,7 @@ ms.locfileid: "62638742"
   
  Un paquete puede contener cualquiera de los objetos siguientes, o todos ellos, que se describen pormenorizadamente más adelante en este tema:  
   
--   Events  
+-   Eventos  
   
 -   Destinos  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638742"
   
  ![Relación de un módulo, varios paquetes y un objeto](../../database-engine/media/xepackagesobjects.gif "Relación de un módulo, varios paquetes y un objeto")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Eventos  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
   
  Los eventos se pueden utilizar únicamente para realizar el seguimiento o para activar acciones. Estas acciones pueden ser sincrónicas o asincrónicas.  
@@ -70,16 +70,16 @@ ms.locfileid: "62638742"
 #### <a name="event-categorization"></a>Clasificación de eventos  
  Extended Events utiliza un modelo de clasificación de eventos parecido al Seguimiento de eventos para Windows (ETW). Para la clasificación se utilizan dos propiedades de eventos, canal y palabra clave. La utilización de estas propiedades es compatible con la integración de Extended Events en ETW y sus herramientas.  
   
- **Channel**  
+ **Canal**  
   
  Un canal identifica a los destinatarios de un evento. Estos canales se describen en la siguiente tabla.  
   
 |Término|Definición|  
 |----------|----------------|  
 |Administración|Los eventos de administración se destinan principalmente a usuarios finales, administradores y soporte técnico. Los eventos que se encuentran en los canales de administración indican un problema con una solución bien determinada ante la que un administrador puede emprender una acción. Un ejemplo de un evento de administración es cuando una aplicación no conecta a una impresora. Estos eventos están bien documentados o tienen un mensaje asociado que indica al lector qué hacer para rectificar el problema.|  
-|Operativos|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
+|Operativo|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
 |Analíticos|Los eventos analíticos se publican en grandes cantidades. Describen el funcionamiento del programa y se utilizan normalmente en investigaciones sobre rendimiento.|  
-|Depurar|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: los eventos del canal de depuración devuelven datos internos de estado específicos de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
+|Depuración|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: los eventos del canal de depuración devuelven datos internos de estado específicos de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
   
  **Palabra clave**  
   

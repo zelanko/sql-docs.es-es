@@ -14,14 +14,14 @@ helpviewer_keywords:
 - AbsolutePage property [ADO], JScript example
 - PageSize property [ADO], JScript example
 ms.assetid: 2db6dd3f-5a9c-438c-ae62-d09242906c98
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09b6c0303f11be8534ec46fcf2f719175f463e4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f07855b0c99e92c18a2d54ff632fad24e1fb03ae
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921865"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82747620"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-jscript"></a>Ejemplo de las propiedades AbsolutePage, PageCount y PageSize (JScript)
 En este ejemplo se muestran las propiedades AbsolutePage, PageCount y PageSize. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **AbsolutePageJS. asp**.  

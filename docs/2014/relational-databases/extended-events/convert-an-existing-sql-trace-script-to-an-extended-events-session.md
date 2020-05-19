@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SQL Trace, convert script to extended events
 - extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a89574fffa57174dc141ee12686798b7d7bd5a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015777"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82719128"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
   Si tiene un script existente de Seguimiento de SQL que desea convertir a una sesión de eventos extendidos, puede usar los procedimientos de este tema para crear una sesión de eventos extendidos equivalente. Con la información de las tablas del sistema trace_xe_action_map y trace_xe_event_map, puede recopilar la información que necesita para realizar la conversión.  

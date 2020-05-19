@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cc5eb38cf23b82f61d48941fbf828ff494f3049
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704715"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82716824"
 ---
 # <a name="example-retrieving-product-model-information-as-xml"></a>Ejemplo: Recuperar información de modelos de productos como XML
   En la siguiente consulta se devuelve información de modelos de productos. `RAW` se especifica en la cláusula `FOR XML` .  

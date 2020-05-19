@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB, SQLXML
 - executing updategrams [SQLXML]
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a61c0386d6e5c5e836a60e5175272d4fdaaa6f15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014793"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717508"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0)
   En este tema se proporciona un ejemplo de trabajo de usingOLE DB para ejecutar un diagrama.  
@@ -58,7 +58,7 @@ ms.locfileid: "66014793"
 </Schema>  
 ```  
   
- La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el ** \<elemento person. contact>** se asigna a la tabla person. contact de la base de datos AdventureWorks.  
+ La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el elemento ** \< Person. contact>** se asigna a la tabla person. contact de la base de datos AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para establecer XML como un comando y recuperar el resultado como un documento XML  
   
@@ -513,7 +513,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- La plantilla incluye una consulta SQL. La consulta requiere un valor para su parámetro (@Title). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
+ La plantilla incluye una consulta SQL. La consulta requiere un valor para su parámetro ( @Title ). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
   
  Al pasar valores de parámetro a una plantilla, se deben especificar tanto el nombre de parámetro como el valor.  
   

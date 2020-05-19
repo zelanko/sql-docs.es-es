@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Append method [ADO]
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4d0d94cf40a397ca030a9ea975a02962d6ab9489
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920672"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82746908"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), se puede crear un nuevo objeto [Field](../../../ado/reference/ado-api/field-object.md) antes de que se anexe a la colección.  
@@ -46,7 +46,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *Nombre*  
  Valor de **cadena** que contiene el nombre del nuevo objeto de **campo** y no debe tener el mismo nombre que ningún otro objeto de *los campos*.  
   
- *Type*  
+ *Tipo*  
  Un valor [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) , cuyo valor predeterminado es **adEmpty**, que especifica el tipo de datos del nuevo campo. ADO no admite los siguientes tipos de datos y no se deben usar al anexar nuevos campos a un objeto de [conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
@@ -58,7 +58,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  Opcional. **Variante** que representa el valor del nuevo campo. Si no se especifica, el campo se anexa con un valor null.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="parameters-collection"></a>Colección Parameters  
  Debe establecer la propiedad [Type](../../../ado/reference/ado-api/type-property-ado.md) de un objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) antes de anexarlo a la colección [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) . Si selecciona un tipo de datos de longitud variable, también debe establecer la propiedad [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) en un valor mayor que cero.  

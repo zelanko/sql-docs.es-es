@@ -9,18 +9,18 @@ ms.topic: reference
 helpviewer_keywords:
 - SQLGetDescRec function
 ms.assetid: f3389ff2-f3be-4035-9fb5-c9ebc2f15025
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 41bd489752dc1b4084d9c012cad97413c6ff98b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3a2bbebc947d0c245e00c39fca2d4e69fbb5666
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62657718"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82706035"
 ---
 # <a name="sqlgetdescrec"></a>SQLGetDescRec
-  En este tema se describe la funcionalidad de SQLGetDescRec que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es específica de Native Client.  
+  En este tema se describe la funcionalidad de SQLGetDescRec que es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
 ## <a name="sqlgetdescrec-and-table-valued-parameters"></a>SQLGetDescRec y parámetros con valores de tabla  
  SQLGetDescRec se puede usar para obtener valores para los atributos de parámetros con valores de tabla y columnas de parámetros con valores de tabla. El parámetro *RecNumber* de SQLGetDescRec corresponde al parámetro *ParameterNumber* de SQLBindParameter.  
@@ -33,7 +33,7 @@ ms.locfileid: "62657718"
 |---------------|-----------------------------|----------------------------------------------------------|  
 |*Nombre*|El nombre del parámetro formal de una llamada de procedimiento almacenado; de lo contrario, una cadena de longitud 0.|El nombre de la columna de parámetros con valores de tabla.|  
 |*TypePtr*|SQL_DESC_TYPE. Para los parámetros con valores de tabla, es SQL_SS_TABLE.|SQL_DESC_TYPE|  
-|*SubTypePtr*|No definido|SQL_DESC_DATETIME_INTERVAL_CODE (para registros de tipo SQL_DATETIME o SQL_INTERVAL).|  
+|*SubTypePtr*|Sin definir|SQL_DESC_DATETIME_INTERVAL_CODE (para registros de tipo SQL_DATETIME o SQL_INTERVAL).|  
 |*LengthPtr*|0|SQL_DESC_OCTET_LENGTH|  
 |*PrecisionPtr*|0|SQL_DESC_PRECISION|  
 |*ScalePtr*|0|SQL_DESC_SCALE|  
@@ -48,7 +48,7 @@ ms.locfileid: "62657718"
 |-|---------------|------------------|-----------------|--------------------|----------------|  
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
-|date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
+|fecha|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  
 |time|SQL_SS_TIME2|0|10|0..7|0..7|  
 |datetime2|SQL_DATETIME|SQL_CODE_TIMESTAMP|16|0..7|0..7|  
 |datetimeoffset|SQL_SS_TIMESTAMPOFFSET|0|20|0..7|0..7|  

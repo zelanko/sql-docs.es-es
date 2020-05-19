@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Breakpoints Window [Transact-SQL]
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 33cfb7faaa7f332292df8e4a087925b2f1605250
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243105"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82718491"
 ---
 # <a name="breakpoints-window"></a>Ventana de puntos de interrupción
   La ventana **Puntos de interrupción** muestra todos los puntos de interrupción que se establecen en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] actual. Para administrar los puntos de interrupción, utilice la barra de herramientas de la ventana **Puntos de interrupción** . Los puntos de interrupción son las ubicaciones del código en las que la ejecución se pausa en modo de depuración para que se puedan ver los datos de depuración.  

@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a689c29297703e48a1f759643599dbc93843d9f0
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62638169"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82717226"
 ---
 # <a name="columns-with-a-name"></a>Columnas con nombre
   A continuación se exponen las condiciones específicas en las que se asignan al XML resultante las columnas con nombre de los conjuntos de filas, con distinción entre mayúsculas de minúsculas:  
@@ -33,7 +33,7 @@ ms.locfileid: "62638169"
 -   Una columna tiene un nombre distinto.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>El nombre de la columna empieza por \@  
- Si el nombre de columna comienza con un signo de\@arroba () y no contiene una barra diagonal (/), se crea un atributo `row` del <> elemento que tiene el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (\@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
+ Si el nombre de columna comienza con un signo de arroba ( \@ ) y no contiene una barra diagonal (/), se crea un atributo del <`row`> elemento que tiene el valor de columna correspondiente. Por ejemplo, la consulta siguiente devuelve un conjunto de filas con dos columnas (\@PmId y Name). En el XML resultante, se agrega un atributo **PmId** al elemento <`row`> correspondiente y se le asigna un valor de ProductModelID.  
   
 ```  
   
@@ -66,7 +66,7 @@ go
 ```  
   
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>El nombre de la columna no empieza por \@  
- Si el nombre de la columna no empieza con un signo de\@arroba (), no es una de las pruebas de nodo XPath y no contiene una barra diagonal (/), se crea un elemento XML que es un subelemento del elemento row `row` <> de forma predeterminada.  
+ Si el nombre de la columna no empieza con un signo de arroba ( \@ ), no es una de las pruebas de nodo XPath y no contiene una barra diagonal (/), se crea un elemento XML que es un subelemento del elemento row <`row`> de forma predeterminada.  
   
  La consulta siguiente especifica el nombre de la columna, el resultado. Por tanto, se agrega un elemento secundario <`result`> al elemento <`row`>.  
   
@@ -128,7 +128,7 @@ AND    E.EmployeeID=1
 FOR XML PATH  
 ```  
   
- Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que contiene los valores de ID. de\@empleado comienza por ' '. Por lo tanto, se agrega un atributo, **empid**, al elemento `row` <>. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el elemento secundario <`EmpName`> debajo del elemento <`row`>, y el elemento secundario <`EmpName`> tendrá los elementos secundarios <`First`>, <`Middle`> y <`Last`>.  
+ Los nombres de columna se utilizan como una ruta de acceso en la creación de XML en el modo PATH. El nombre de columna que contiene los valores de ID. de empleado comienza por ' \@ '. Por lo tanto, se agrega un atributo, **empid**, al `row` elemento <>. Todas las demás columnas incluyen una barra diagonal ('/') en el nombre de columna que indica la jerarquía. El XML resultante tendrá el elemento secundario <`EmpName`> debajo del elemento <`row`>, y el elemento secundario <`EmpName`> tendrá los elementos secundarios <`First`>, <`Middle`> y <`Last`>.  
   
 ```  
 <row EmpID="1">  

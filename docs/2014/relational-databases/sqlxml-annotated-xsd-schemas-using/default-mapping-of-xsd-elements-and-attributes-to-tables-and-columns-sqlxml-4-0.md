@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table/view mapping [SQLXML], default mapping
 - element/attribute mapping [SQLXML]
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 404ae57711a7d8376774c4e5340017f784b916e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef143c3a23458e017067ebf0a2ad489bed149f75
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013881"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703605"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
@@ -40,7 +40,7 @@ ms.locfileid: "66013881"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-default-mapping"></a>A. Especificar la asignación predeterminada  
- En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El ** \<elemento person. contact>** es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla person. contact de la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) del elemento ** \<person. contact>** son de tipo simple y se asignan de forma predeterminada a columnas con los mismos nombres en la tabla person. contact.  
+ En este ejemplo, no hay ninguna anotación especificada en el esquema XSD. El elemento ** \< Person. contact>** es de tipo complejo y, por lo tanto, se asigna de forma predeterminada a la tabla person. contact de la base de datos AdventureWorks. Todos los atributos (ContactID, FirstName, LastName) del elemento ** \< Person. contact>** son de tipo simple y se asignan de forma predeterminada a columnas con los mismos nombres en la tabla person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -91,7 +91,7 @@ ms.locfileid: "66013881"
 ```  
   
 ### <a name="b-mapping-an-xml-element-to-a-database-column"></a>B. Asignar un elemento XML a una columna de base de datos  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El ** \<elemento person. contact>** es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos ** \<FirstName>** y ** \<LastName>** y el atributo **EmployeeID** son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El elemento ** \< Person. contact>** es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. Los elementos ** \< FirstName>** y ** \< LastName>** y el atributo **EmployeeID** son de tipo simple y, por lo tanto, se asignan a las columnas con los mismos nombres. La única diferencia entre esto y el ejemplo anterior es que los elementos se usan para asignar los campos de FirstName y LastName.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -145,7 +145,7 @@ ms.locfileid: "66013881"
 ```  
   
 ### <a name="c-mapping-an-xml-element-to-an-xml-data-type-column"></a>C. Asignar un elemento XML a una columna de tipo de datos XML  
- En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El ** \<elemento Production. ProductModel>** es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El atributo **ProductModelID** es de tipo simple y, por lo tanto, se asigna a las columnas con los mismos nombres. La única diferencia entre este y los ejemplos anteriores es que las ** \<instrucciones>** elemento se asignan a una columna que utiliza `xml` el tipo de datos mediante `xsd:anyType` el tipo.  
+ En este ejemplo, la asignación predeterminada también tiene lugar debido a que no se usa ninguna anotación. El elemento ** \< Production. ProductModel>** es de tipo complejo y se asigna a la tabla con el mismo nombre en la base de datos. El atributo **ProductModelID** es de tipo simple y, por lo tanto, se asigna a las columnas con los mismos nombres. La única diferencia entre este y los ejemplos anteriores es que las ** \< instrucciones>** elemento se asignan a una columna que utiliza el `xml` tipo de datos mediante el `xsd:anyType` tipo.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   

@@ -13,18 +13,18 @@ helpviewer_keywords:
 - messages [ODBC], native error numbers
 - errors [ODBC], native error numbers
 ms.assetid: 77cbc826-f47f-4803-8e7a-223d6df069b1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7e7cd24a3eb1ccdeea1b6e6cbb97e2d0f222193f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9612fbd7dd50ffeec812532e25a63eecca26571
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223500"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705362"
 ---
 # <a name="native-error-numbers"></a>Números de errores nativos
-  En el caso de los errores que se producen en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]origen de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (devuelto por), el controlador ODBC de Native Client devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]el número de error nativo que devuelve. En el caso de los errores detectados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por el controlador, el controlador ODBC de Native Client devuelve un número de error nativo de 0. Para obtener más información acerca de una lista de números de error nativos, vea la columna error de la tabla del sistema **sysmessages** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la base de datos **maestra** de.  
+  En el caso de los errores que se producen en el origen de datos (devuelto por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ), el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve el número de error nativo que devuelve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de los errores detectados por el controlador, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client devuelve un número de error nativo de 0. Para obtener más información acerca de una lista de números de error nativos, vea la columna error de la tabla del sistema **sysmessages** en la base de datos **maestra** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para obtener información acerca de los códigos de error de estado, consulte [SQLSTATE &#40;códigos de error ODBC&#41;](sqlstate-odbc-error-codes.md). Para los errores devueltos por la Biblioteca de red, el número de error nativo es del software de red subyacente.  
   

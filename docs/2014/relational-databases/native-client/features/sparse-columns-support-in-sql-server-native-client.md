@@ -11,20 +11,20 @@ helpviewer_keywords:
 - sparse columns, SQL Server Native Client
 - sparse columns, OLE DB
 ms.assetid: aee5ed81-7e23-42e4-92d3-2da7844d9bc3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8d0377bab3abddebe6d2869744dd51def5b5008
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75231708"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704335"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Compatibilidad con columnas dispersas en SQL Server Native Client
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite las columnas dispersas. Para más información sobre columnas dispersas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consulte [Usar columnas dispersas](../../tables/use-sparse-columns.md) y [Usar conjuntos de columnas](../../tables/use-column-sets.md).  
   
- Para obtener más información sobre la compatibilidad con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] columnas dispersas en Native Client, vea [compatibilidad con columnas dispersas &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) y [columnas dispersas &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
+ Para obtener más información sobre la compatibilidad con columnas dispersas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [compatibilidad con columnas dispersas &#40;ODBC&#41;](../odbc/sparse-columns-support-odbc.md) y [columnas dispersas &#40;OLE DB&#41;](../ole-db/sparse-columns-support-ole-db.md).  
   
  Para obtener información sobre las aplicaciones de ejemplo que muestran esta característica, vea [Ejemplos de programación de datos de SQL Server](https://msftdpprodsamples.codeplex.com/).  
   
@@ -42,22 +42,22 @@ ms.locfileid: "75231708"
 |Determinar si una columna es dispersa.|Consulte la columna SS_IS_SPARSE del conjunto de resultados de SQLColumns (ODBC).<br /><br /> Consulte la columna SS_IS_SPARSE del conjunto de filas de esquema DBSCHEMA_COLUMNS (OLE DB).<br /><br /> Este escenario no es posible en una aplicación que utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en una versión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Sin embargo, este tipo de aplicación podría consultar las vistas del sistema.|  
 |Determinar si una columna es un `column_set`.|Consulte la columna SS_IS_COLUMN_SET del conjunto de resultados SQLColumns. O bien, consulte el atributo de columna SQL_CA_SS_IS_COLUMN_SET específico de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (ODBC).<br /><br /> Consulte la columna SS_IS_COLUMN_SET del conjunto de filas de esquema DBSCHEMA_COLUMNS. O bien, consulte *dwFlags* devuelto por IColumnsinfo::GetColumnInfo o DBCOLUMNFLAGS en el conjunto de filas devuelto por IColumnsRowset::GetColumnsRowset. Para las columnas `column_set`, se establecerá DBCOLUMNFLAGS_SS_ISCOLUMNSET (OLE DB).<br /><br /> Este escenario no es posible en una aplicación que utiliza [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en una versión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]. Sin embargo, este tipo de aplicación podría consultar las vistas del sistema.|  
 |Importar y exportar columnas dispersas en BCP de una tabla sin `column_set`.|Ningún cambio en el comportamiento desde las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.|  
-|Importar y exportar columnas dispersas en BCP de una tabla con `column_set`.|`column_set` Se importa y se exporta de la misma manera que XML; es decir, como `varbinary(max)` si se enlaza como un tipo binario, `nvarchar(max)` o como si se `char` enlaza como un tipo o **WCHAR** .<br /><br /> Las columnas que son miembro del `column_set` disperso no se exportan como columnas distintas; se exportan solo en el valor del `column_set`.|  
+|Importar y exportar columnas dispersas en BCP de una tabla con `column_set`.|`column_set`Se importa y se exporta de la misma manera que XML; es decir, como `varbinary(max)` si se enlaza como un tipo binario, o como `nvarchar(max)` si se enlaza como un `char` tipo o **WCHAR** .<br /><br /> Las columnas que son miembro del `column_set` disperso no se exportan como columnas distintas; se exportan solo en el valor del `column_set`.|  
 |Comportamiento de `queryout` para BCP.|Ningún cambio en el tratamiento de columnas nombradas explícitamente desde las versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.<br /><br /> Los escenarios que implican la importación y exportación entre tablas con esquemas diferentes pueden requerir un tratamiento especial.<br /><br /> Para obtener más información acerca de BCP, vea Compatibilidad de la copia masiva (BCP) con columnas dispersas, más adelante en este tema.|  
   
 ## <a name="down-level-client-behavior"></a>Comportamiento del cliente de nivel inferior  
- Los clientes de nivel inferior devolverán los metadatos solo para las columnas que no `column_set` son miembros del disperso para SQLColumns y DBSCHMA_COLUMNS. Los conjuntos de filas de esquema OLE DB adicionales [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] introducidos en Native Client no estarán disponibles, ni tampoco las modificaciones en SQLCOLUMNS de ODBC a través de SQL_SOPT_SS_NAME_SCOPE.  
+ Los clientes de nivel inferior devolverán los metadatos solo para las columnas que no son miembros del disperso `column_set` para SQLColumns y DBSCHMA_COLUMNS. Los conjuntos de filas de esquema OLE DB adicionales introducidos en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] Native Client no estarán disponibles, ni tampoco las modificaciones en SQLColumns de ODBC a través de SQL_SOPT_SS_NAME_SCOPE.  
   
  Los clientes de nivel inferior pueden obtener acceso a las columnas que son miembros del `column_set` disperso por nombre, y la columna de `column_set` será accesible como una columna XML para los clientes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ## <a name="bulk-copy-bcp-support-for-sparse-columns"></a>Compatibilidad de la copia masiva (BCP) con columnas dispersas  
  No hay ningún cambio en la API BCP en ODBC u OLE DB para las columnas dispersas o características de `column_set`.  
   
- Si una tabla tiene `column_set`, las columnas dispersas no se tratan como columnas distintas. Los valores de todas las columnas dispersas se incluyen en el `column_set`valor de, que se exporta de la misma manera que una columna XML; es decir, como `varbinary(max)` si se enlaza como un tipo binario, `nvarchar(max)` o como si se `char` enlaza como un tipo o **WCHAR** ). En la importación, el valor de `column_set` debe cumplir el esquema del `column_set`.  
+ Si una tabla tiene `column_set`, las columnas dispersas no se tratan como columnas distintas. Los valores de todas las columnas dispersas se incluyen en el valor de `column_set` , que se exporta de la misma manera que una columna XML; es decir, como `varbinary(max)` si se enlaza como un tipo binario, o como `nvarchar(max)` si se enlaza como un `char` tipo o **WCHAR** . En la importación, el valor de `column_set` debe cumplir el esquema del `column_set`.  
   
  Para las operaciones `queryout`, no hay ningún cambio en la manera en que se tratan las columnas a las que se hace referencia. Las columnas de `column_set` tienen el mismo comportamiento que las columnas XML y la dispersión no tiene ningún efecto en el tratamiento de las columnas dispersas indicadas.  
   
- Sin embargo, si se utiliza `queryout` para la exportación y hace referencia a las columnas dispersas que son miembros de la columna dispersa establecida por nombre, no puede realizar una importación directa en una tabla con estructura similar. Esto se debe a que BCP utiliza metadatos coherentes con una operación **SELECT \* ** para la importación y `column_set` no puede hacer coincidir las columnas de miembro con estos metadatos. Para importar individualmente las columnas miembro de `column_set`, debe definir una vista en la tabla que haga referencia a las columnas `column_set` deseadas y debe realizar la operación de importación mediante la vista.  
+ Sin embargo, si se utiliza `queryout` para la exportación y hace referencia a las columnas dispersas que son miembros de la columna dispersa establecida por nombre, no puede realizar una importación directa en una tabla con estructura similar. Esto se debe a que BCP utiliza metadatos coherentes con una operación **SELECT \* ** para la importación y no puede hacer coincidir `column_set` las columnas de miembro con estos metadatos. Para importar individualmente las columnas miembro de `column_set`, debe definir una vista en la tabla que haga referencia a las columnas `column_set` deseadas y debe realizar la operación de importación mediante la vista.  
   
 ## <a name="see-also"></a>Consulte también  
  [Programación de SQL Server Native Client](../sql-server-native-client-programming.md)  

@@ -15,34 +15,34 @@ helpviewer_keywords:
 - constant elements [SQLXML]
 - annotated XSD schemas, constant elements
 ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc100446eb6dff17125b0df7a60b8c2c82e46277
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37270dbed7a457a9e0adf5816ce02c502c8601f8
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013935"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703639"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Crear elementos constantes mediante sql:is-constant (SQLXML 4.0)
-  Para especificar un elemento de constante, es decir, un elemento en el esquema XSD que no se asigna a ninguna tabla o columna de base de datos, `sql:is-constant` puede usar la anotación. Esta anotación toma un valor booleano (0=false, 1=true). Los valores permitidos son 0, 1, true y false. La anotación `sql:is-constant` se puede especificar en un elemento que no tiene ningún atributo. Si se especifica en un elemento con el valor true (o 1), ese elemento no está asignado a la base de datos pero sigue apareciendo en el documento XML.  
+  Para especificar un elemento de constante, es decir, un elemento en el esquema XSD que no se asigna a ninguna tabla o columna de base de datos, puede usar la `sql:is-constant` anotación. Esta anotación toma un valor booleano (0=false, 1=true). Los valores permitidos son 0, 1, true y false. La anotación `sql:is-constant` se puede especificar en un elemento que no tiene ningún atributo. Si se especifica en un elemento con el valor true (o 1), ese elemento no está asignado a la base de datos pero sigue apareciendo en el documento XML.  
   
  La anotación `sql:is-constant` se puede utilizar para:  
   
 -   Agregar un elemento de nivel superior al documento XML. XML requiere un único elemento de nivel superior (root) para el documento.  
   
--   Crear elementos de contenedor, como los ** \<pedidos>** elemento que contiene todos los pedidos.  
+-   Crear elementos de contenedor, como los ** \< pedidos>** elemento que contiene todos los pedidos.  
   
- La `sql:is-constant` anotación se puede Agregar a un ** \<elemento>complexType** .  
+ La `sql:is-constant` anotación se puede Agregar a un elemento ** \<>complexType** .  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Especificar sql:is-constant para agregar un elemento contenedor  
- En este esquema XSD anotado, ** \<CustomerOrders>** se define como un elemento Constant especificando el `sql:is-constant` atributo con un valor de 1. Por lo tanto, ** \<el>CustomerOrders** no se asigna a ninguna tabla o columna de base de datos. Este elemento Constant está compuesto del ** \<orden>** elementos secundarios.  
+ En este esquema XSD anotado, ** \< CustomerOrders>** se define como un elemento Constant especificando el `sql:is-constant` atributo con un valor de 1. Por lo tanto, el ** \<>CustomerOrders** no se asigna a ninguna tabla o columna de base de datos. Este elemento Constant está compuesto del ** \< orden>** elementos secundarios.  
   
- Aunque ** \<CustomerOrders>** no se asigna a ninguna tabla o columna de base de datos, sigue apareciendo en el XML resultante como un elemento contenedor que contiene el ** \<orden>** elementos secundarios.  
+ Aunque ** \< CustomerOrders>** no se asigna a ninguna tabla o columna de base de datos, sigue apareciendo en el XML resultante como un elemento contenedor que contiene el ** \< orden>** elementos secundarios.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

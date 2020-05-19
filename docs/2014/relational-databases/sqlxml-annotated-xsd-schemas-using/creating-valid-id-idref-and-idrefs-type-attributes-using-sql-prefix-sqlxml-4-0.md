@@ -19,15 +19,15 @@ helpviewer_keywords:
 - annotated XSD schemas, IDREF type attribute
 - ID relationships [SQLXML]
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48ae7034ec0c133c1140e4c581794302ca8bad77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013922"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703620"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
   Es posible especificar que un atributo sea un atributo de tipo ID. Los atributos especificados como IDREF o IDREFS pueden usarse para hacer referencia a los atributos de tipo ID, lo que habilita los vínculos entre documentos.  
@@ -42,7 +42,7 @@ ms.locfileid: "66013922"
   
 -   El valor de un atributo ID, IDREF e IDREFS debe ser un token con nombre. (Por ejemplo, el valor entero 101 no puede ser un valor ID.)  
   
--   Los atributos de tipo ID, IDREF e IDREFS no se pueden asignar a columnas del `text`tipo, `ntext`, o `image` a cualquier otro tipo de datos binarios (por ejemplo `timestamp`,).  
+-   Los atributos de tipo ID, IDREF e IDREFS no se pueden asignar a columnas del tipo `text` , `ntext` , o a `image` cualquier otro tipo de datos binarios (por ejemplo, `timestamp` ).  
   
  Si un documento XML contiene varios atributos de tipo ID, use la anotación `sql:prefix` para asegurarse de que los valores sean únicos.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66013922"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema siguiente, el ** \<elemento Customer>** está formado por el ** \<elemento secundario Order>** . El ** \<elemento Order>** también tiene un elemento secundario, el ** \<elemento OrderDetail>** .  
+ En el esquema siguiente, el elemento ** \< Customer>** está formado por el elemento secundario ** \< Order>** . El elemento ** \< Order>** también tiene un elemento secundario, el elemento ** \< OrderDetail>** .  
   
- El atributo **atributo OrderIDList** de ** \<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \<Order>** .  
+ El atributo **atributo OrderIDList** de ** \< Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \< Order>** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

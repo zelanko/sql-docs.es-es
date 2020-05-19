@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 682a232a-bf89-4849-88a1-95b2fbac1467
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b7f9562f8594e29c33832c595b9296eaf4f2019b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c2bd460346f94d7b0779774ebd426ac138f6cb9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162437"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704353"
 ---
 # <a name="odbc-driver-behavior-change-when-handling-character-conversions"></a>Cambio de comportamiento del controlador ODBC al administrar las conversiones de caracteres
-  El [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] controlador ODBC de Native Client (SQLNCLI11. dll) ha cambiado su funcionamiento de las conversiones SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (Max\* )) y SQL_CHAR (CHAR/VARCHAR/NARCHAR (Max)). Las funciones ODBC, como SQLGetData, SQLBindCol y SQLBindParameter, devuelven (-4) SQL_NO_TOTAL como el parámetro indicador de longitud al utilizar el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Las versiones anteriores del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client devolvían un valor de longitud, que puede ser incorrecto.  
+  El [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] controlador ODBC de Native Client (SQLNCLI11. dll) ha cambiado su funcionamiento de las conversiones SQL_WCHAR * (NCHAR/NVARCHAR/nvarchar (Max)) y SQL_CHAR \* (CHAR/VARCHAR/NARCHAR (Max)). Las funciones ODBC, como SQLGetData, SQLBindCol y SQLBindParameter, devuelven (-4) SQL_NO_TOTAL como el parámetro indicador de longitud al utilizar el controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2012 Native Client. Las versiones anteriores del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client devolvían un valor de longitud, que puede ser incorrecto.  
   
 ## <a name="sqlgetdata-behavior"></a>Comportamiento de SQLGetData  
  Muchas funciones de Windows permiten especificar un tamaño de búfer de 0, siendo la longitud devuelta el tamaño de los datos devueltos. El patrón siguiente es frecuente para los programadores de Windows:  
@@ -55,7 +55,7 @@ SQLGetData(hstmt, SQL_WCHAR, ....., (SQLPOINTER*) 0x1, 0 , &iSize);   // Attempt
 |Versión del controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client|Resultado de indicador o de longitud|Descripción|  
 |-----------------------------------------------------------------|---------------------------------|-----------------|  
 |[!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] Native Client o anterior|6|El controlador suponía incorrectamente que la conversión de CHAR en WCHAR se podía conseguir como longitud * 2.|  
-|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|El controlador ya no supone que la conversión de CHAR a WCHAR o WCHAR a CHAR es una acción ( \*multiplicar) 2 o (dividir)/2.<br /><br /> Al llamar a **SQLGetData** ya no se devuelve la longitud de la conversión esperada. El controlador detecta la conversión a o desde CHAR y WCHAR y devuelve (-4) SQL_NO_TOTAL en lugar del comportamiento *2 o /2, que podría ser incorrecto.|  
+|[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] Native Client (versión 11.0.2100.60) o posterior|-4 (SQL_NO_TOTAL)|El controlador ya no supone que la conversión de CHAR a WCHAR o WCHAR a CHAR es una acción (multiplicar) \* 2 o (dividir)/2.<br /><br /> Al llamar a **SQLGetData** ya no se devuelve la longitud de la conversión esperada. El controlador detecta la conversión a o desde CHAR y WCHAR y devuelve (-4) SQL_NO_TOTAL en lugar del comportamiento *2 o /2, que podría ser incorrecto.|  
   
  Use **SQLGetData** para recuperar los fragmentos de los datos. (Se muestra el pseudocódigo:)  
   

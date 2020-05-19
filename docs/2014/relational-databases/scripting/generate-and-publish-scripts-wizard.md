@@ -39,15 +39,15 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b378eb5e4a68f07aee179e52552017578b0b33d4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75242107"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703933"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
   Puede usar el **Asistente Generar y publicar scripts** para crear scripts con el fin de transferir una base de datos entre instancias de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] o [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Puede generar scripts para una base de datos en una instancia del motor de base de datos en la red local o a partir de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Los scripts generados se pueden ejecutar en otra instancia del motor de base de datos o [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. También puede usar el asistente para publicar el contenido de una base de datos directamente en un servicio web creado usando Database Publishing Services. Es posible crear scripts para una base de datos completa o limitarlos a objetos específicos.  
@@ -188,9 +188,9 @@ ms.locfileid: "75242107"
   
 -   **Incluir permisos de objeto en el script** : incluye scripts para establecer permisos en los objetos de la base de datos. El valor predeterminado es **False**.  
   
--   **Incluir estadísticas** en el script: cuando se establece en **incluir estadísticas**, `CREATE STATISTICS` esta opción incluye la instrucción para volver a crear estadísticas en el objeto. La opción **Incluir estadísticas e histogramas en el script** también crea información de histogramas. El valor predeterminado es **No incluir estadísticas en el script**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+-   **Incluir estadísticas** en el script: cuando se establece en **incluir estadísticas**, esta opción incluye la `CREATE STATISTICS` instrucción para volver a crear estadísticas en el objeto. La opción **Incluir estadísticas e histogramas en el script** también crea información de histogramas. El valor predeterminado es **No incluir estadísticas en el script**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
--   **Script de uso de base** de `USE DATABASE` datos: agrega la instrucción al script. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya la instrucción `USE DATABASE`. Cuando se espera que el script se use en una base de datos diferente, seleccione **false** para `USE DATABASE` omitir la instrucción. El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
+-   **Script de uso de base de datos** : agrega la `USE DATABASE` instrucción al script. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya la instrucción `USE DATABASE`. Cuando se espera que el script se use en una base de datos diferente, seleccione **false** para omitir la `USE DATABASE` instrucción. El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 -   **Tipos de datos para generar por script**: selecciona lo que se debe generar por script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado **Solo esquema**.  
   
@@ -198,7 +198,7 @@ ms.locfileid: "75242107"
   
 -   **Generar script de seguimiento de cambios** : incluye en el script el seguimiento de cambios si se ha habilitado en la base de datos de origen o en las tablas de la base de datos de origen. El valor predeterminado es **False**. Para obtener más información, vea [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
--   **Incluir restricciones check** en el script: `CHECK` agrega restricciones al script. El valor predeterminado es **True**. Las restricciones `CHECK` requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+-   **Incluir restricciones check** en el script: agrega `CHECK` restricciones al script. El valor predeterminado es **True**. Las restricciones `CHECK` requieren datos que se escriban en una tabla para cumplir con una condición especificada. Para más información, consulte [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 -   **Incluir opciones de compresión de datos en el script** : incluye las opciones de compresión de datos en el script, si se han configurado en la base de datos de origen o en las tablas de la base de datos de origen. Para obtener más información, consulte [Data Compression](../data-compression/data-compression.md). El valor predeterminado es **False**.  
   
@@ -252,7 +252,7 @@ ms.locfileid: "75242107"
   
 7.  **Publicar permisos de nivel de objeto** : incluye los permisos en los objetos seleccionados en la base de datos. El valor predeterminado es **False**.  
   
-8.  **Publicar estadísticas** : cuando se establece para **publicar estadísticas**, incluye `CREATE STATISTICS` la instrucción para volver a crear estadísticas en el objeto. La opción **Publicar estadísticas e histogramas** también crea información de histogramas. El valor predeterminado es **No publicar estadísticas**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
+8.  **Publicar estadísticas** : cuando se establece para **publicar estadísticas**, incluye la `CREATE STATISTICS` instrucción para volver a crear estadísticas en el objeto. La opción **Publicar estadísticas e histogramas** también crea información de histogramas. El valor predeterminado es **No publicar estadísticas**. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
 9. **Publicar opciones vardecimal** : habilita el `vardecimal` formato de tabla en la tabla de base de datos de destino cuando se habilita en la tabla de base de datos de origen. El valor predeterminado es **True**.  
   

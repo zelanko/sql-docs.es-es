@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: aaa180c2-5e1a-4534-a125-507c647186ab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ddb50c8993de72230e97cdde729416258272bb1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ef11bf8d2620148f88392306aca4dbaace6f58
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63046384"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704357"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>Obtener acceso a información de diagnóstico en el registro de eventos extendidos
-  A partir [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el seguimiento de acceso a datos y de Native Client ([seguimiento de acceso a datos](https://go.microsoft.com/fwlink/?LinkId=125805)) se ha actualizado para facilitar la obtención de información de diagnóstico sobre los errores de conexión desde el búfer de anillo de conectividad y la información de rendimiento de la aplicación desde el registro de eventos extendidos.  
+  A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] , [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el seguimiento de acceso a datos y de Native Client ([seguimiento de acceso a datos](https://go.microsoft.com/fwlink/?LinkId=125805)) se ha actualizado para facilitar la obtención de información de diagnóstico sobre los errores de conexión desde el búfer de anillo de conectividad y la información de rendimiento de la aplicación desde el registro de eventos extendidos.  
   
  Para obtener información sobre la lectura del registro de eventos extendidos, vea [Ver datos de sesión de evento](../../../database-engine/view-event-session-data.md).  
   

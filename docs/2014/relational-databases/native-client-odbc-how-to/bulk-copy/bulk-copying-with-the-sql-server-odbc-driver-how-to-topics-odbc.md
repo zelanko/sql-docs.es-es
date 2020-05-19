@@ -10,20 +10,20 @@ helpviewer_keywords:
 - bulk copy [ODBC]
 - bulk copy [ODBC], about bulk copy
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc35614e156301efa5892d59a09156c189e0fac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 515f84836f55fe1aa97fbb03a22ee6cc2799710c
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72688880"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705241"
 ---
 # <a name="bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc"></a>Temas de procedimientos de copia masiva con el controlador ODBC de SQL Server (ODBC)
   Cuando se usa con Microsoft SQL Server 2005, el controlador ODBC de SQL Server admite las mismas funciones de copia masiva que admite la API DB-Library.  
   
- Para obtener información sobre un cambio importante en la copia masiva [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]a partir de, vea [realizar operaciones de copia masiva &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
+ Para obtener información sobre un cambio importante en la copia masiva a partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , vea [realizar operaciones de copia masiva &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
 ## <a name="in-this-section"></a>En esta sección  
   

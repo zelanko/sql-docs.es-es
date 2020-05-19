@@ -25,20 +25,20 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - named relationships [SQLXML]
 ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2997254fc20085b4e82195002a51adc6f5d0b87
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013669"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703491"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
   Los elementos de un documento XML pueden estar relacionados. Los elementos pueden estar anidados jerárquicamente y pueden especificarse relaciones ID, IDREF o IDREFS entre los elementos.  
   
- Por ejemplo, en un esquema XSD, un ** \<elemento Customer>** contiene ** \<** los elementos secundarios Order>. Cuando el esquema se asigna a la base de datos AdventureWorks, el ** \<elemento Customer>** se asigna a la tabla sales. Customer y el ** \<elemento Order>** se asigna a la tabla sales. SalesOrderHeader. Estas tablas subyacentes, Sales.Customer y Sales.SalesOrderHeader, están relacionadas puesto que los clientes realizan pedidos. La columna CustomerID de la tabla Sales.SalesOrderHeader es una clave externa que hace referencia a la clave principal CustomerID de la tabla Sales.Customer. Puede establecer estas relaciones entre los elementos de esquema de asignación mediante `sql:relationship` la anotación.  
+ Por ejemplo, en un esquema XSD, un elemento ** \< Customer>** contiene los elementos secundarios ** \< Order>** . Cuando el esquema se asigna a la base de datos AdventureWorks, el elemento ** \< Customer>** se asigna a la tabla sales. Customer y el elemento ** \< Order>** se asigna a la tabla sales. SalesOrderHeader. Estas tablas subyacentes, Sales.Customer y Sales.SalesOrderHeader, están relacionadas puesto que los clientes realizan pedidos. La columna CustomerID de la tabla Sales.SalesOrderHeader es una clave externa que hace referencia a la clave principal CustomerID de la tabla Sales.Customer. Puede establecer estas relaciones entre los elementos de esquema de asignación mediante la `sql:relationship` anotación.  
   
  En el esquema XDR anotado, la anotación `sql:relationship` se usa para anidar jerárquicamente los elementos de esquema en función de las relaciones de clave principal y clave externa entre las tablas subyacentes a las que se asignan los elementos. Para especificar la anotación `sql:relationship`, debe identificar lo siguiente:  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66013669"
   
  Esta información se usa para generar la jerarquía apropiada.  
   
- Para proporcionar los nombres de tabla y la información de combinación necesaria, se especifican los siguientes `sql:relationship` atributos en la anotación. Estos atributos solo son válidos con el ** \<elemento SQL: Relationship>** :  
+ Para proporcionar los nombres de tabla y la información de combinación necesaria, se especifican los siguientes atributos en la `sql:relationship` anotación. Estos atributos solo son válidos con el elemento ** \< SQL: Relationship>** :  
   
  **Nombre**  
  Especifica el nombre único de la relación.  
   
- **Aérea**  
- Especifica la relación primaria (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que usan la misma ** \<SQL: Relationship>** pero distintos elementos primarios, no se especifica el atributo primario en ** \<SQL: Relationship>**. Esta información se obtiene de la jerarquía del esquema.  
+ **Parent**  
+ Especifica la relación primaria (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que usan la misma ** \< SQL: Relationship>** pero distintos elementos primarios, no se especifica el atributo primario en ** \< SQL: Relationship>**. Esta información se obtiene de la jerarquía del esquema.  
   
  **parent-key**  
  Especifica la clave principal del elemento primario. Si la clave principal se compone de varias columnas, los valores se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave secundaria correspondiente.  
@@ -66,9 +66,9 @@ ms.locfileid: "66013669"
  Especifica la clave secundaria del elemento secundario que hace referencia a la clave principal del elemento primario. Si la clave secundaria está compuesta de varios atributos (columnas), los valores de la clave del elemento secundario se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave principal correspondiente.  
   
  **Inverse**  
- Diagramas usa este atributo especificado en ** \<SQL: Relationship>** . Para obtener más información, vea [especificar el atributo SQL: inverso en SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
+ Diagramas usa este atributo especificado en ** \< SQL: Relationship>** . Para obtener más información, vea [especificar el atributo SQL: inverso en SQL: Relationship](specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- La `sql:key-fields` anotación debe especificarse en un elemento que contenga un elemento secundario, que tenga una ** \<relación SQL:>** definida entre el elemento y el elemento secundario, y que no proporciona la clave principal de la tabla especificada en el elemento primario. Aunque el esquema no especifique ** \<SQL: Relationship>**, debe especificar `sql:key-fields` para generar la jerarquía adecuada. Para obtener más información, vea [identificar columnas de clave mediante SQL: Key-Fields](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ La `sql:key-fields` anotación debe especificarse en un elemento que contenga un elemento secundario, que tenga una ** \< relación SQL:>** definida entre el elemento y el elemento secundario, y que no proporciona la clave principal de la tabla especificada en el elemento primario. Aunque el esquema no especifique ** \< SQL: Relationship>**, debe especificar `sql:key-fields` para generar la jerarquía adecuada. Para obtener más información, vea [identificar columnas de clave mediante SQL: Key-Fields](identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Para generar el anidamiento correcto en el resultado, se recomienda `sql:key-fields` especificar en todos los esquemas.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "66013669"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. Especificar la anotación sql:relationship en un elemento  
- El siguiente esquema XSD anotado incluye ** \<los elementos Customer>** y ** \<Order>** . El ** \<elemento Order>** es un elemento secundario del elemento ** \<Customer>** .  
+ El siguiente esquema XSD anotado incluye los elementos ** \< Customer>** y ** \< Order>** . El elemento ** \< Order>** es un elemento secundario del elemento ** \< Customer>** .  
   
- En el esquema, la `sql:relationship` anotación se especifica en el ** \<orden>** elemento secundario. La propia relación se define en el ** \<elemento xsd: Appinfo>** .  
+ En el esquema, la `sql:relationship` anotación se especifica en el ** \< orden>** elemento secundario. La propia relación se define en el elemento ** \< xsd: Appinfo>** .  
   
- El elemento de ** \<>de relación** identifica CustomerID en la tabla sales. SalesOrderHeader como una clave externa que hace referencia a la clave principal CustomerID de la tabla sales. Customer. Por lo tanto, los pedidos que pertenecen a un cliente aparecen como un elemento secundario de dicho ** \<elemento>cliente** .  
+ El elemento de ** \<>de relación** identifica CustomerID en la tabla sales. SalesOrderHeader como una clave externa que hace referencia a la clave principal CustomerID de la tabla sales. Customer. Por lo tanto, los pedidos que pertenecen a un cliente aparecen como un elemento secundario de dicho elemento ** \<>cliente** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -196,11 +196,11 @@ ms.locfileid: "66013669"
 ...  
 ```  
   
- Para cada pedido de la tabla sales. SalesOrderHeader, el documento XML tiene un ** \<pedido>** elemento. Y cada ** \<pedido>** elemento tiene una lista de ** \<** elementos secundarios de>de producto, uno para cada producto solicitado en el orden.  
+ Para cada pedido de la tabla sales. SalesOrderHeader, el documento XML tiene un ** \< pedido>** elemento. Y cada ** \< pedido>** elemento tiene una lista de elementos secundarios de ** \<>de producto** , uno para cada producto solicitado en el orden.  
   
  Para especificar un esquema XSD que generará esta jerarquía, debe especificar dos relaciones: OrderOD y ODProduct. La relación OrderOD especifica la relación de elementos primarios y secundarios entre las tablas Sales.SalesOrderHeader y Sales.SalesOrderDetail. La relación ODProduct especifica la relación entre las tablas Sales.SalesOrderDetail y Production.Product.  
   
- En el esquema siguiente, la `msdata:relationship` anotación en el ** \<elemento>del producto** especifica dos valores: OrderOD y ODProduct. Es importante el orden en que se especifican estos valores.  
+ En el esquema siguiente, la `msdata:relationship` anotación en el elemento ** \<>del producto** especifica dos valores: OrderOD y ODProduct. Es importante el orden en que se especifican estos valores.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -238,7 +238,7 @@ ms.locfileid: "66013669"
 </xsd:schema>  
 ```  
   
- En lugar de especificar una relación con nombre, puede especificar una relación anónima. En este caso, todo el contenido de ** \<la anotación>**... /Annotation>, que describe las dos relaciones, aparece como un elemento secundario de ** \<Product>**. ** \< **  
+ En lugar de especificar una relación con nombre, puede especificar una relación anónima. En este caso, todo el contenido de la ** \< anotación>**... ** \< /Annotation>**, que describe las dos relaciones, aparece como un elemento secundario de ** \< Product>**.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -317,7 +317,7 @@ ms.locfileid: "66013669"
 ```  
   
 ### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Especificar la anotación relationship en un atributo  
- El esquema de este ejemplo incluye un \<elemento Customer> con un \<elemento secundario CustomerID> y un atributo atributo OrderIDList de tipo IDREFS. El \<elemento Customer> se asigna a la tabla sales. Customer de la base de datos AdventureWorks. De forma predeterminada, el ámbito de esta asignación se aplica a todos los elementos o atributos `sql:relation` secundarios, a menos que se especifique en el elemento o atributo secundario, en cuyo caso, la relación de clave principal y clave externa adecuada debe \<definirse mediante el elemento de> de relación. Además, el elemento o atributo secundario, que especifica una tabla distinta mediante la anotación `relation`, también debe especificar la anotación `relationship`.  
+ El esquema de este ejemplo incluye un \< elemento Customer> con un \< elemento secundario CustomerID> y un atributo atributo OrderIDList de tipo IDREFS. El \< elemento Customer> se asigna a la tabla sales. Customer de la base de datos AdventureWorks. De forma predeterminada, el ámbito de esta asignación se aplica a todos los elementos o atributos secundarios, a menos que `sql:relation` se especifique en el elemento o atributo secundario, en cuyo caso, la relación de clave principal y clave externa adecuada debe definirse mediante el \< elemento de> de relación. Además, el elemento o atributo secundario, que especifica una tabla distinta mediante la anotación `relation`, también debe especificar la anotación `relationship`.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -382,11 +382,11 @@ ms.locfileid: "66013669"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Especificar sql:relationship en varios elementos  
- En este ejemplo, el esquema XSD anotado contiene los ** \<elementos Customer>**, ** \<Order>** y ** \<OrderDetail>** .  
+ En este ejemplo, el esquema XSD anotado contiene los elementos ** \< Customer>**, ** \< Order>** y ** \< OrderDetail>** .  
   
- El ** \<elemento Order>** es un elemento secundario del elemento ** \<Customer>** . ** \<** **SQL: Relationship>se especifica en el orden \<**>elemento secundario; por lo tanto, los pedidos que pertenecen a un cliente aparecen como elementos secundarios del ** \<>del cliente **.  
+ El elemento ** \< Order>** es un elemento secundario del elemento ** \< Customer>** . ** \< SQL: Relationship>** se especifica en el ** \< orden>** elemento secundario; por lo tanto, los pedidos pertenecientes a un cliente aparecen como elementos secundarios de ** \<>cliente **.  
   
- El ** \<elemento Order>** incluye el ** \<elemento secundario OrderDetail>** . ** \<** ** \<SQL: Relationship>** se especifica en ** \<OrderDetail>** elemento secundario, por lo que los detalles del pedido que pertenecen a un pedido aparecen como elementos secundarios de ese orden>elemento.  
+ El elemento ** \< Order>** incluye el elemento secundario ** \< OrderDetail>** . ** \< SQL: Relationship>** se especifica en ** \< OrderDetail>** elemento secundario, por lo que los detalles del pedido que pertenecen a un pedido aparecen como elementos secundarios de ese ** \< orden>** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -490,7 +490,7 @@ Emp1(SalesPersonID, FirstName, LastName, ReportsTo)
 Emp2(SalesPersonID, FirstName, LastName, ReportsTo)  
 ```  
   
- La siguiente vista XML tiene los ** \<elementos Emp1>** y ** \<Emp2>** asignados a las tablas sales. Emp1 y sales. Emp2:  
+ La siguiente vista XML tiene los elementos ** \< Emp1>** y ** \< Emp2>** asignados a las tablas sales. Emp1 y sales. Emp2:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -524,7 +524,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- En el esquema, el elemento ** \<>Emp1** y `EmpType` ** \<el elemento Emp2>** son del tipo. El tipo `EmpType` describe un ** \<pedido>** elemento secundario y el ** \<>SQL: Relationship **correspondiente. En este caso, no hay ningún elemento primario único que se pueda identificar en ** \<SQL: Relationship>** mediante el atributo **primario** . En esta situación, no se especifica el atributo **primario** en ** \<SQL: Relationship>**; la información del atributo **primario** se obtiene de la jerarquía del esquema.  
+ En el esquema, el elemento ** \<>Emp1** y el elemento ** \< Emp2>** son del tipo `EmpType` . El tipo `EmpType` describe un ** \< pedido>** elemento secundario y el ** \<>SQL: Relationship **correspondiente. En este caso, no hay ningún elemento primario único que se pueda identificar en ** \< SQL: Relationship>** mediante el atributo **primario** . En esta situación, no se especifica el atributo **primario** en ** \< SQL: Relationship>**; la información del atributo **primario** se obtiene de la jerarquía del esquema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta XPath de ejemplo en el esquema  
   
@@ -560,7 +560,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
   
 3.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como relationship-noparent.xml.  
   
-4.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como relationship-noparentT.xml en el mismo directorio donde guardó relationship-noparent.xml. La consulta de la plantilla selecciona todos los \<elementos de> Emp1 (por lo tanto, el elemento primario es Emp1).  
+4.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como relationship-noparentT.xml en el mismo directorio donde guardó relationship-noparent.xml. La consulta de la plantilla selecciona todos los \< elementos de> Emp1 (por lo tanto, el elemento primario es Emp1).  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

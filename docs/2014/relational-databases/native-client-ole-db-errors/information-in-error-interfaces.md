@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ISQLErrorInfo interface
 - errors [OLE DB], error interfaces
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 60b6b0387aea5475d74c314a10e4fa437fadc005
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 460a0a2cf58d5980b1265db91d053e3088b55a99
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657665"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704985"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client notifica información de error y de estado en las interfaces de error definidas por el OLE DB **IErrorInfo**, **IErrorRecords**y **ISQLErrorInfo**.  
@@ -33,7 +33,7 @@ ms.locfileid: "62657665"
 |---------------------|-----------------|  
 |**GetDescription**|Cadena de mensaje de error descriptiva.|  
 |**GetGUID**|GUID de la interfaz que definió el error.|  
-|**GetHelpContext**|No compatible. Siempre devuelve cero.|  
+|**GetHelpContext**|No se admite. Siempre devuelve cero.|  
 |**GetHelpFile**|No compatible. Siempre devuelve NULL.|  
 |**GetSource**|Cadena "Microsoft SQL Server Native Client".|  
   
@@ -52,9 +52,9 @@ ms.locfileid: "62657665"
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*pbstrSQLState*|Devuelve un valor SQLSTATE para el error. Los valores SQLSTATE se definen en las especificaciones SQL 92, ODBC e ISO SQL y API. Ni [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ni el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client definen los valores SQLSTATE específicos de la implementación.|  
-|*plNativeError*|Devuelve el número de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedente de **master.dbo.sysmessages** cuando está disponible. Los errores nativos están disponibles después de un intento correcto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicializar un origen de datos del proveedor de OLE DB de Native Client. Antes del intento, el proveedor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de OLE DB de Native Client siempre devuelve cero.|  
+|*plNativeError*|Devuelve el número de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedente de **master.dbo.sysmessages** cuando está disponible. Los errores nativos están disponibles después de un intento correcto de inicializar un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] origen de datos del proveedor de OLE DB de Native Client. Antes del intento, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client siempre devuelve cero.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Errors](errors.md)  
+ [Errores](errors.md)  
   
   

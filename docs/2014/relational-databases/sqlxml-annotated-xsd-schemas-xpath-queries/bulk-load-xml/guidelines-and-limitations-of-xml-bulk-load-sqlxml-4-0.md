@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML Bulk Load [SQLXML], about XML Bulk Load
 - bulk load [SQLXML], about bulk load
 ms.assetid: c5885d14-c7c1-47b3-a389-455e99a7ece1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 593e51e34be3b607af121bfcba92497e019eba3f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013449"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703377"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Instrucciones y limitaciones de la carga masiva XML (SQLXML 4.0)
   Antes de usar la carga masiva XML, debe familiarizarse con las siguientes limitaciones e instrucciones:  
@@ -35,9 +35,9 @@ ms.locfileid: "66013449"
   
 -   Se omite cualquier información de prólogo XML.  
   
-     La carga masiva XML omite toda la información antes y después del \<elemento raíz> del documento XML. Por ejemplo, la carga masiva XML omite todas las declaraciones XML, definiciones DTD internas, referencias DTD externas, todos los comentarios, etc.  
+     La carga masiva XML omite toda la información antes y después del \< elemento raíz> del documento XML. Por ejemplo, la carga masiva XML omite todas las declaraciones XML, definiciones DTD internas, referencias DTD externas, todos los comentarios, etc.  
   
--   Si tiene un esquema de asignación que define una relación de clave principal y clave externa entre dos tablas (como Customer y CustOrder), la tabla con la clave principal debe describirse en primer lugar en el esquema. La tabla con la columna de clave externa debe aparecer posteriormente en el esquema. El motivo es que el orden en el que se identifican las tablas en el esquema es el que se usa para cargarlos en la base de datos. Por ejemplo, el esquema XDR siguiente generará un error si se utiliza en la carga masiva XML porque el ** \<elemento Order>** se describe antes que el ** \<elemento>Customer** . La columna CustomerID de CustOrder es una columna de clave externa que hace referencia a la columna de clave principal CustomerID de la tabla Cust.  
+-   Si tiene un esquema de asignación que define una relación de clave principal y clave externa entre dos tablas (como Customer y CustOrder), la tabla con la clave principal debe describirse en primer lugar en el esquema. La tabla con la columna de clave externa debe aparecer posteriormente en el esquema. El motivo es que el orden en el que se identifican las tablas en el esquema es el que se usa para cargarlos en la base de datos. Por ejemplo, el esquema XDR siguiente generará un error si se utiliza en la carga masiva XML porque el elemento ** \< Order>** se describe antes que el elemento ** \<>Customer** . La columna CustomerID de CustOrder es una columna de clave externa que hace referencia a la columna de clave principal CustomerID de la tabla Cust.  
   
     ```  
     <?xml version="1.0" ?>  
@@ -77,7 +77,7 @@ ms.locfileid: "66013449"
   
 -   Si el esquema no especifica las columnas de desbordamiento mediante la anotación `sql:overflow-field`, la carga masiva XML omite todos los datos presentes en el documento XML que no se describen en el esquema de asignación.  
   
-     La carga masiva XML aplica el esquema de asignación especificado cada vez que encuentra etiquetas conocidas en el flujo de datos XML. Omite los datos presentes en el documento XML que no se describen en el esquema. Por ejemplo, suponga que tiene un esquema de asignación que describe un ** \<elemento Customer>** . El archivo de datos XML tiene una ** \<AllCustomers>** etiqueta raíz (que no se describe en el esquema) que incluye todos los elementos de ** \<>del cliente** :  
+     La carga masiva XML aplica el esquema de asignación especificado cada vez que encuentra etiquetas conocidas en el flujo de datos XML. Omite los datos presentes en el documento XML que no se describen en el esquema. Por ejemplo, suponga que tiene un esquema de asignación que describe un elemento ** \< Customer>** . El archivo de datos XML tiene una ** \< AllCustomers>** etiqueta raíz (que no se describe en el esquema) que incluye todos los elementos de ** \<>del cliente** :  
   
     ```  
     <AllCustomers>  
@@ -87,9 +87,9 @@ ms.locfileid: "66013449"
     </AllCustomers>  
     ```  
   
-     En este caso, la carga masiva XML omite el ** \<elemento>AllCustomers** y comienza la asignación en el ** \<elemento Customer>** . La carga masiva XML omite los elementos que no se describen en el esquema pero que están presentes en el documento XML.  
+     En este caso, la carga masiva XML omite el elemento ** \<>AllCustomers** y comienza la asignación en el elemento ** \< Customer>** . La carga masiva XML omite los elementos que no se describen en el esquema pero que están presentes en el documento XML.  
   
-     Considere otro archivo de datos de origen XML ** \<** que contenga los elementos Order>. Estos elementos no se describen en el esquema de asignación:  
+     Considere otro archivo de datos de origen XML que contenga los elementos ** \< Order>** . Estos elementos no se describen en el esquema de asignación:  
   
     ```  
     <AllCustomers>  
@@ -105,11 +105,11 @@ ms.locfileid: "66013449"
     </AllCustomers>  
     ```  
   
-     La carga masiva XML omite este ** \<orden>** elementos. Pero si utiliza la `sql:overflow-field`anotación en el esquema para identificar una columna como una columna de desbordamiento, la carga masiva XML almacena todos los datos no consumidos en esta columna.  
+     La carga masiva XML omite este ** \< orden>** elementos. Pero si utiliza la `sql:overflow-field` anotación en el esquema para identificar una columna como una columna de desbordamiento, la carga masiva XML almacena todos los datos no consumidos en esta columna.  
   
 -   Las secciones CDATA y las referencias a entidades se traducen a sus cadenas equivalentes antes de almacenarse en la base de datos.  
   
-     En este ejemplo, una sección CDATA ajusta el valor del elemento ** \<City>** . La carga masiva XML extrae el valor de cadena ("NY") antes de insertar el ** \<elemento City>** en la base de datos.  
+     En este ejemplo, una sección CDATA ajusta el valor del elemento ** \< City>** . La carga masiva XML extrae el valor de cadena ("NY") antes de insertar el elemento ** \< City>** en la base de datos.  
   
     ```  
     <City><![CDATA[NY]]> </City>  
@@ -142,7 +142,7 @@ ms.locfileid: "66013449"
     </Schema>  
     ```  
   
-     En estos datos XML, falta el atributo **HireDate** en el segundo ** \<customers>** elemento. Cuando la carga masiva XML inserta el segundo ** \<cliente>** elemento en la base de datos, usa el valor predeterminado que se especifica en el esquema.  
+     En estos datos XML, falta el atributo **HireDate** en el segundo ** \< Customers>** elemento. Cuando la carga masiva XML inserta el segundo ** \< cliente>** elemento en la base de datos, usa el valor predeterminado que se especifica en el esquema.  
   
     ```  
     <ROOT>  

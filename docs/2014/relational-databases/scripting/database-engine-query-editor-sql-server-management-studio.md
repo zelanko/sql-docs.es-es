@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Query Editor [Database Engine], Features
 - SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9ec7e26daa91723e5633a9640b99003ebc844d31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c7737cf46d3e82eb6aef0e915d1e572ae0fca94
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244944"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703988"
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Editor de consultas del motor de base de datos (SQL Server Management Studio)
   Use el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para crear y ejecutar scripts que contengan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . El editor también permite ejecutar scripts que contengan comandos **sqlcmd** .  
@@ -56,7 +56,7 @@ ms.locfileid: "75244944"
  **Conexión**  
  Se abre el cuadro de diálogo **Conectar al servidor** . Utilice este cuadro de diálogo para establecer una conexión a un servidor.  
   
- **Conecto**  
+ **Desconectar**  
  Desconecta el Editor de consultas actual del servidor.  
   
  **Cambiar conexión**  
@@ -71,7 +71,7 @@ ms.locfileid: "75244944"
  **Ejecut**  
  Ejecuta el código seleccionado o, si no se ha seleccionado ningún código, ejecuta todo el código del Editor de consultas.  
   
- **Depurar**  
+ **Depuración**  
  Habilita el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este depurador admite acciones de depuración como establecer puntos de interrupción, inspeccionar variables y recorrer el código.  
   
  **Cancelar ejecución de la consulta**  
@@ -130,7 +130,7 @@ ms.locfileid: "75244944"
  **Interrumpir todos**  
  Establece el depurador para interrumpir todos los procesos a los que está asociado cuando se produce una interrupción.  
   
- **Detener depuración**  
+ **Detener la depuración**  
  Saca la ventana del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] seleccionada del modo de depuración y restaura el modo de ejecución estándar.  
   
  **Mostrar la instrucción siguiente**  

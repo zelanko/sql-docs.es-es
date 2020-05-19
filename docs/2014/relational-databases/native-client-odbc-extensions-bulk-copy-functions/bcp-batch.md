@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_batch function
 ms.assetid: 0bda489e-86bc-4a7e-80f6-96047e03f281
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c41e8d90adc8ff6eb2058feebe3f33c10edbfa92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a37bafc9bac2601e3914455f431c639bce385f48
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62631389"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705347"
 ---
 # <a name="bcp_batch"></a>bcp_batch
   Confirma todas las filas previamente copiadas de forma masiva desde variables de programa y enviadas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de [bcp_sendrow](bcp-sendrow.md).  
@@ -42,7 +42,7 @@ hdbc
  *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El número de filas guardado después de la última llamada a **bcp_batch**, o-1 en caso de error.  
   
 ## <a name="remarks"></a>Observaciones  

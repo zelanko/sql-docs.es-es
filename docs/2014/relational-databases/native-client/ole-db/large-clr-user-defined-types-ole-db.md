@@ -9,27 +9,27 @@ ms.topic: reference
 helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1aea946703b9ebe06c32fcc25044a3b68326625e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8fb6c943e237e791ff4febed0ab3273eb9324662
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199254"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82704261"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
   En este tema se describen los cambios realizados en OLE DB en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para admitir tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener más información sobre la compatibilidad con los UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de CLR grandes en Native Client, vea [tipos CLR grandes definidos por el usuario](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Para ver un ejemplo, consulte [Uso de UDT de CLR de gran tamaño &#40;OLE DB&#41](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obtener más información sobre la compatibilidad con los UDT de CLR grandes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [tipos CLR grandes definidos por el usuario](../../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md). Para ver un ejemplo, consulte [Uso de UDT de CLR de gran tamaño &#40;OLE DB&#41](../../native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de datos  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utiliza ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
+|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63199254"
   
 |Tipo de datos de OLE DB (*wType*)|*pwszTypeName*|Tipos de datos de SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
-|DBTYPE_UDT|Omitido|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
+|DBTYPE_UDT|Se ignora.|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
   
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  La información que se devuelve en la estructura DBPARAMINFO mediante **prgParamInfo** es la que se indica a continuación:  
@@ -118,13 +118,13 @@ ms.locfileid: "63199254"
 |Tipo de datos de enlace|UDT a servidor|No UDT a servidor|UDT desde servidor|No UDT desde servidor|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Compatible (5)|Error (1)|Compatible (5)|Error (4)|  
-|DBTYPE_BYTES|Compatible (5)|N/A|Compatible (5)|N/A|  
-|DBTYPE_WSTR|Compatible (2), (5)|N/A|Compatible (3), (5), (6)|N/A|  
-|DBTYPE_BSTR|Compatible (2), (5)|N/A|Compatible (3), (5)|N/A|  
-|DBTYPE_STR|Compatible (2), (5)|N/A|Compatible (3), (5)|N/A|  
-|DBTYPE_IUNKNOWN|Compatible (6)|N/A|Compatible (6)|N/A|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible (5)|N/A|Compatible (3), (5)|N/A|  
-|DBTYPE_VARIANT (VT_BSTR)|Compatible (2), (5)|N/A|N/D|N/D|  
+|DBTYPE_BYTES|Compatible (5)|N/D|Compatible (5)|N/D|  
+|DBTYPE_WSTR|Compatible (2), (5)|N/D|Compatible (3), (5), (6)|N/D|  
+|DBTYPE_BSTR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
+|DBTYPE_STR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
+|DBTYPE_IUNKNOWN|Compatible (6)|N/D|Compatible (6)|N/D|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible (5)|N/D|Compatible (3), (5)|N/D|  
+|DBTYPE_VARIANT (VT_BSTR)|Compatible (2), (5)|N/D|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Clave de los símbolos  
   

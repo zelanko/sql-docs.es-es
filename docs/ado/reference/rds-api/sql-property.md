@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - SQL property [RDS]
 ms.assetid: e0dabf23-a159-4fe5-a962-3df544a21f5c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f70eba6b5f53be7068708fdd8b139f0add10be90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eb860ed19386b73d90fc26dab8fa96f4b9672a73
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963348"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750729"
 ---
 # <a name="sql-property"></a>Propiedad SQL
 Indica la cadena de consulta utilizada para recuperar el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -44,7 +44,7 @@ Run time: DataControl.SQL = "QueryString"
  Variable de objeto que representa un objeto **RDS. Objeto DataControl** .  
   
 ## <a name="remarks"></a>Observaciones  
- En general, se trata de una instrucción SQL (con el dialecto del servidor de base de datos) `"Select * from NewTitles"`, como. Para asegurarse de que los registros coinciden y se actualizan con precisión, una consulta actualizable debe contener un campo que no sea un campo binario largo o un campo calculado.  
+ En general, se trata de una instrucción SQL (con el dialecto del servidor de base de datos), como `"Select * from NewTitles"` . Para asegurarse de que los registros coinciden y se actualizan con precisión, una consulta actualizable debe contener un campo que no sea un campo binario largo o un campo calculado.  
   
  La propiedad **SQL** es opcional si un objeto empresarial personalizado del lado servidor recupera los datos para el cliente.  
   

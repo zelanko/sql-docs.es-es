@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - URL property [ADO]
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 09785fde3531d50f33064415ddc769eb07f0fec2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963223"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750530"
 ---
 # <a name="url-property-rds"></a>Propiedad de dirección URL (RDS)
 Indica una cadena que contiene una dirección URL relativa o absoluta.  
@@ -37,13 +37,13 @@ Run time: DataControl.URL="Server"
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Server*  
+ *Servidor*  
  Valor de **cadena** que contiene una dirección URL válida.  
   
  *DataControl*  
  Variable de objeto que representa un objeto **DataControl** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Normalmente, la dirección URL identifica un archivo de página de Active Server (. asp) que puede generar y devolver un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Por lo tanto, el usuario puede obtener un **conjunto de registros** sin tener que invocar el objeto [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) del servidor o programar un objeto comercial personalizado.  
   
  Si se ha establecido la propiedad **URL** , [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) enviará los cambios a la ubicación especificada por la dirección URL.  

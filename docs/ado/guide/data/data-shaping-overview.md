@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], overview
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6258c44d267462cea097c5553c9814b10d3787f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925622"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750288"
 ---
 # <a name="data-shaping-overview"></a>Información general sobre la forma de datos
 La forma de *datos* significa generar relaciones jerárquicas entre dos o más entidades lógicas en una consulta. La jerarquía se puede ver en las relaciones de elementos primarios y secundarios entre un registro de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)y uno o más registros (también denominados capítulo) de otro **conjunto**de registros. En una relación de elementos primarios y secundarios, el **conjunto de registros** primario contiene el **conjunto de registros**secundario. Un ejemplo de una relación jerárquica de este tipo son los clientes y los pedidos. Para cada cliente de una base de datos, puede haber cero o más pedidos. La relación jerárquica puede ser recursiva, lo que significa que los registros terciarios se pueden anidar en un registro secundario. En principio, un registro jerárquico puede estar anidado a cualquier profundidad. En la práctica, ADO limita la recursividad a un máximo de 512 **conjuntos de registros**.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - logs section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3be02570fbff1efd9adb091c121d4eb1a8782817
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922785"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749955"
 ---
 # <a name="customization-file-logs-section"></a>Sección de registros del archivo de personalización
 La sección de **registros** contiene una entrada de archivo de registro, que especifica el nombre de un archivo que registra los errores durante la operación de la **factoría**de archivos.  
@@ -36,7 +36,7 @@ FileName
   
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 |Parte|Descripción|  
 |----------|-----------------|  

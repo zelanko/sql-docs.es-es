@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Synchronize method [ADO]
 ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 98254c2f26db08b7c5308248c596b7f70264f10c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963262"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750567"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize (método) (RDS)
 Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión para su uso en ADO 2,5 y versiones posteriores.  
@@ -63,7 +63,7 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  *pInformation*  
  Un puntero a un error de información devuelto por **Execute**. Si es NULL, no se devuelve información de error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. Después, MSDFMAP. dll interpretará el argumento como una dirección para usar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
   
 ## <a name="applies-to"></a>Se aplica a  

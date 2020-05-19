@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Reset method [ADO]
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9c2f40460a4690e32cb3f94963c8cbc1f7f06c15
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963495"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82750991"
 ---
 # <a name="reset-method-rds"></a>Reset (método) (RDS)
 Ejecuta la ordenación o el filtro en un conjunto de **registros** del lado cliente basándose en las propiedades de ordenación y filtro especificadas.  
@@ -40,7 +40,7 @@ DataControl.Reset(value)
  *value*  
  Opcional. Un valor **booleano** que es **true** (valor predeterminado) Si desea filtrar por el conjunto de filas "filtrado" actual. **False** indica que se filtra por el conjunto de filas original y se quitan las opciones de filtro anteriores.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basándose en un criterio de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método **RESET** ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
  Si hay cambios en los datos originales que no se han enviado, se producirá un error en el método de **restablecimiento** . En primer lugar, use el método [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) para guardar los cambios en un **conjunto de registros**de lectura/escritura y, a continuación, utilice el método **RESET** para ordenar o filtrar los registros.  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - virtual servers in RDS [ADO]
 ms.assetid: 2b4786c6-40c4-4ce1-9ad4-03df436e0aff
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5888cb9666488ced6f9e112d21c48d0265f5c25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fded1c66de5cd6c64d8663964de510e9d2f982f9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922835"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749997"
 ---
 # <a name="configuring-virtual-servers-on-iis"></a>Configuración de servidores virtuales en IIS
 Al crear servidores virtuales en Internet Information Services 4,0, se necesitan los dos pasos adicionales siguientes para configurar el servidor virtual para que funcione con RDS:  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SQL section in RDS [ADO]
 - customization file in RDS [ADO]
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6163a5b5fd0999e17e17961639e0a1fee3e8fa4c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 934b982004bf27e28a8daeed09061101886ce444
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82749876"
 ---
 # <a name="customization-file-sql-section"></a>Sección de SQL del archivo de personalización
 La sección **SQL** puede contener una nueva cadena de SQL que reemplaza la cadena de comando del cliente. Si no hay ninguna cadena de SQL en la sección, se omitirá la sección.  
@@ -28,7 +28,7 @@ La sección **SQL** puede contener una nueva cadena de SQL que reemplaza la cade
   
  La nueva cadena SQL se puede *parametrizar*. Es decir, los parámetros de la sección **SQL** cadena SQL (designada por el carácter '? ') se pueden reemplazar por los argumentos correspondientes en un *identificador* en la cadena de comandos del cliente (designada por una lista delimitada por comas entre paréntesis). El identificador y la lista de argumentos se comportan como una llamada de función.  
   
- Por ejemplo, supongamos que la cadena `"CustomerByID(4)"`de comandos del cliente es, `[SQL CustomerByID]`el encabezado de la sección SQL es y `"SELECT * FROM Customers WHERE CustomerID = ?".` la nueva cadena de `"SELECT * FROM Customers WHERE CustomerID = 4"` la sección SQL es el controlador que generará y usará esa cadena para consultar el origen de datos.  
+ Por ejemplo, supongamos que la cadena de comandos del cliente es `"CustomerByID(4)"` , el encabezado de la sección SQL es `[SQL CustomerByID]` y la nueva cadena de la sección SQL es `"SELECT * FROM Customers WHERE CustomerID = ?".` el controlador que generará `"SELECT * FROM Customers WHERE CustomerID = 4"` y usará esa cadena para consultar el origen de datos.  
   
  Si la nueva instrucción SQL es la cadena null (""), se omite la sección.  
   

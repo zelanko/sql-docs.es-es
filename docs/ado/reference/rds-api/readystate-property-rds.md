@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ReadyState property [ADO]
 ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c5e1eb89c0e4c7dcbef736d2968a4ffd97a37b93
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67963592"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751217"
 ---
 # <a name="readystate-property-rds"></a>Propiedad ReadyState (RDS)
 Indica el progreso de un objeto [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) a medida que recupera los datos en su objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -29,7 +29,7 @@ Indica el progreso de un objeto [DataControl](../../../ado/reference/rds-api/dat
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**adcReadyStateLoaded**|La consulta actual todavía se está ejecutando y no se ha capturado ninguna fila. El **conjunto de registros** del objeto **DataControl** no está disponible para su uso.|  
 |**adcReadyStateInteractive**|Un conjunto inicial de filas recuperadas por la consulta actual se ha almacenado en el **conjunto de registros** del objeto **DataControl** y están disponibles para su uso. Todavía se están capturando las filas restantes.|  

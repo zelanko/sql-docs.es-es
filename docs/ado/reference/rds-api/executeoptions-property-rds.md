@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - ExecuteOptions property [ADO], VBScript example
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278603db9930458400c4057a3551f485fffe3fcc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964183"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752545"
 ---
 # <a name="executeoptions-property-rds"></a>Propiedad ExecuteOptions (RDS)
 Indica si la ejecución asincrónica está habilitada.  
@@ -37,7 +37,7 @@ Indica si la ejecución asincrónica está habilitada.
 > [!NOTE]
 >  Cada archivo ejecutable que utiliza estas constantes debe proporcionar declaraciones para ellos. Puede cortar y pegar las declaraciones de constantes que desee del archivo Adcvbs. Inc, que se encuentra en la carpeta de instalación predeterminada de la biblioteca RDS.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si **ExecuteOptions** está establecida en **adcExecAsync**, se ejecuta de forma asincrónica la siguiente llamada de **actualización** en [RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Conjunto de registros**del objeto DataControl.  
   
  Si intenta llamar a [RESET](../../../ado/reference/rds-api/reset-method-rds.md), [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)o [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) mientras otra operación asincrónica podría cambiar el [objeto RDS. ](../../../ado/reference/rds-api/datacontrol-object-rds.md)Se está ejecutando el **conjunto de registros** del objeto DataControl; se produce un error.  

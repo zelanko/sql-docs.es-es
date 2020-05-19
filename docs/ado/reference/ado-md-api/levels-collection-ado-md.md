@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Levels collection [ADO MD]
 ms.assetid: fed8684a-b428-4ee4-8f8d-928abe4ad9ad
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 68b0f56de12ade676024933c3cfdbfd834f5cc46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 133fff62129390c8dd0b843c48c3db81b742ea3d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949570"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753317"
 ---
 # <a name="levels-collection-ado-md"></a>Colección de niveles (ADO MD)
 Contiene los objetos de [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) que componen una jerarquía.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **Levels** es una colección estándar de ADO. Mediante el uso de las propiedades y los métodos de una colección, puede hacer lo siguiente:  
   
 -   Obtiene el número de objetos de la colección con la propiedad [Count](../../../ado/reference/ado-api/count-property-ado.md) .  

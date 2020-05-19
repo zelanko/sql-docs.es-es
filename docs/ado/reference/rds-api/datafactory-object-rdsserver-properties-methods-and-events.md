@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - DataFactory object [ADO], members
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8609c7bac3d701ef6c6cf087f46e8b236842b71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 15cc2596022889fe855145cd538d82676620aa13
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964378"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752626"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto DataFactory (RDSServer)
 > [!IMPORTANT]
@@ -39,7 +39,7 @@ ms.locfileid: "67964378"
 |[Synchronize (método) (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión (para su uso con ADO 2,5 o posterior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizar el conjunto de registros dado con la base de datos especificada por la cadena de conexión (para su uso con ADO 2,1).|  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

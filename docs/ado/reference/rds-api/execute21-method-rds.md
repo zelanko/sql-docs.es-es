@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Execute21 method [RDS]
 ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7f006d0a833b8c370e6d80045a873c4ca2b16b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964205"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752637"
 ---
 # <a name="execute21-method-rds"></a>Método Execute21 (RDS)
 Ejecuta la solicitud y crea un conjunto de registros ADO para su uso en ADO 2,1.  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  La cadena identifica el controlador que se va a utilizar con esta ejecución. La cadena contiene dos partes. La primera parte contiene el nombre (ProgID) del controlador que se va a usar. La segunda parte de la cadena contiene los argumentos que se van a pasar al controlador. La forma en que se interpreta la cadena arguments es específica del controlador. Las dos partes se separan mediante la primera instancia de una coma de la cadena (aunque la cadena arguments puede contener comas adicionales). Los argumentos son opcionales.  
   
  *Cadenas*  
- Comando del lenguaje de comandos compatible con el proveedor de OLE DB identificado en la cadena de conexión. En el caso de los proveedores basados en SQL, [!INCLUDE[tsql](../../../includes/tsql-md.md)] puede que contenga una instrucción de comando, pero para los proveedores que no son de SQL (por [!INCLUDE[tsql](../../../includes/tsql-md.md)] ejemplo, MSDataShape), es posible que no sea una instrucción de consulta.  
+ Comando del lenguaje de comandos compatible con el proveedor de OLE DB identificado en la cadena de conexión. En el caso de los proveedores basados en SQL, puede que contenga una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de comando, pero para los proveedores que no son de SQL (por ejemplo, MSDataShape), es posible que no sea una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción de consulta.  
   
  Además, si se usa un controlador (y se recomienda encarecidamente que se use un controlador), el controlador puede modificar o reemplazar el valor especificado aquí. Por ejemplo, el controlador suele reemplazar *QueryString* por una cadena de consulta de su archivo. ini. De forma predeterminada, se utiliza el archivo MSDFMAP. ini.  
   
@@ -69,7 +69,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *pParameters*  
  Variante que contiene una matriz segura de definiciones de parámetros. Si se ha especificado la opción *GetInfo* en *lExecuteOptions*, este parámetro se utiliza para devolver las definiciones de parámetros obtenidas del proveedor de OLE DB. De lo contrario, este parámetro puede estar vacío.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El parámetro *HandlerString* puede ser null. Lo que sucede en este caso depende de cómo esté configurado el servidor RDS. Una cadena de controlador de "MSDFMAP. handler" indica que se debe usar el controlador proporcionado por Microsoft (MSDFMAP. dll). Una cadena de controlador de "MASDFMAP. handler, sample. ini" indica que se debe usar el controlador MSDFMAP. dll y que el argumento "sample. ini" se debe pasar al controlador. MSDFMAP. dll interpretará el argumento como una dirección para utilizar el archivo Sample. ini con el fin de comprobar las cadenas de conexión y de consulta.  
   
 > [!NOTE]

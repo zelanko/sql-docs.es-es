@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Users collection [ADOX]
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4befb68c861edee0f5c1423e86ee1fb21067c2a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964951"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753181"
 ---
 # <a name="users-collection-adox"></a>Colección de usuarios (ADOX)
 Contiene todos los objetos de [usuario](../../../ado/reference/adox-api/user-object-adox.md) almacenados de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) o [Grupo](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -30,11 +30,11 @@ Contiene todos los objetos de [usuario](../../../ado/reference/adox-api/user-obj
 ## <a name="remarks"></a>Observaciones  
  La colección de **usuarios** de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todos los usuarios del catálogo. La colección de **usuarios** de un [Grupo](../../../ado/reference/adox-api/group-object-adox.md) representa solo los usuarios que tienen una pertenencia al grupo específico.  
   
- El método [Append](../../../ado/reference/adox-api/append-method-adox-users.md) de una colección **users** es único para ADOX. Puede realizar lo siguiente:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-users.md) de una colección **users** es único para ADOX. Puede:  
   
 -   Agregue un nuevo usuario a la colección mediante el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Acceder a un usuario de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

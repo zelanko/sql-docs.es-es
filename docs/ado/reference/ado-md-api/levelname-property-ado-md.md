@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - LevelName property [ADO MD]
 ms.assetid: bf3b4466-9a0b-446e-9e04-fed944e3a493
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e50793691db8a67eb0008dc186945ec82935efec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 65905444e291a602e0ff0d1d76f4208bbe436a79
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949586"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753413"
 ---
 # <a name="levelname-property-ado-md"></a>LevelName (propiedad, ADO MD)
 Indica el nombre del nivel de un [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
@@ -29,7 +29,7 @@ Indica el nombre del nivel de un [miembro](../../../ado/reference/ado-md-api/mem
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve una **cadena** y es de solo lectura.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **LevelName** para recuperar el nombre del nivel al que pertenece un miembro. Esto corresponde a la propiedad [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) de un objeto [LEVEL](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Se aplica a  

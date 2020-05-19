@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - View object [ADOX]
 ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b468ccc3edc4cc5453b4f08371cd2b4b962f0c72
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964844"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753186"
 ---
 # <a name="view-object-adox"></a>Objeto View (ADOX)
 Representa un conjunto filtrado de registros o una tabla virtual. Cuando se usa junto con el objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de ADO, el objeto de **vista** se puede usar para agregar, eliminar o modificar vistas.  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Level object [ADO MD]
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e1ee7ad05f05d2eb77d7d705200c52ddf3f01146
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949602"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753847"
 ---
 # <a name="level-object-ado-md"></a>Objeto Level (ADO MD)
 Contiene un conjunto de miembros, cada uno de los cuales tiene el mismo rango dentro de una jerarquía.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Con las colecciones y las propiedades de un objeto de **nivel** , puede hacer lo siguiente:  
   
 -   Identifique el **nivel** con las propiedades [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  

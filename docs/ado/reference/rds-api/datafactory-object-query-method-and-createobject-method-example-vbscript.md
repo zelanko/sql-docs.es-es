@@ -14,20 +14,20 @@ helpviewer_keywords:
 - CreateObject method [ADO], VBScript example
 - Query method [ADO], VBScript example
 ms.assetid: b4e2844a-120a-4513-860b-f1b6e4b5dda4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 909406b39a8acdd5e598b56b300124abf7bb1170
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fa54e59af5187bf9b4daaa898bbaabfa614a4286
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964366"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752646"
 ---
 # <a name="datafactory-object-query-method-and-createobject-method-example-vbscript"></a>Objeto DataFactory, método de consulta y ejemplo del método CreateObject (VBScript)
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, los componentes de servidor RDS ya no se incluyen en el sistema operativo Windows (consulte la guía de compatibilidad de Windows 8 y [Windows server 2012](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Los componentes de cliente RDS se quitarán en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Las aplicaciones que utilizan RDS deben migrar al [servicio de datos de WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- En este ejemplo se crea un objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) con el método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . Para probar este ejemplo, corte y pegue este código entre las \<etiquetas body> \<y/Body> de un documento HTML normal y asígnele el nombre **DataFactoryVBS. asp**. El script ASP identificará el servidor.  
+ En este ejemplo se crea un objeto [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) con el método [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) de [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) . Para probar este ejemplo, corte y pegue este código entre las \< etiquetas Body> y \< /Body> de un documento HTML normal y asígnele el nombre **DataFactoryVBS. asp**. El script ASP identificará el servidor.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  

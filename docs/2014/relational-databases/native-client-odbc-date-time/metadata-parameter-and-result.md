@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - metadata [ODBC]
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b4e7650f6b36ddbfb8c06ebe6c9f776cfee5ea0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcac538ee01da719d43015408337f63a09f15d18
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032339"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705446"
 ---
 # <a name="parameter-and-result-metadata"></a>Metadatos de parámetros y resultados
   En este tema se describe la información que se devuelve en los campos descriptor de parámetros de implementación (IPD) y descriptor de filas de implementación (IRD) para los tipos de datos de fecha y hora.  
@@ -40,7 +40,7 @@ ms.locfileid: "63032339"
 |SQL_DESC_TYPE_NAME|`date`|`time`|`smalldatetime` en IRD, `datetime2` en IPD|`datetime` en IRD, `datetime2` en IPD|`datetime2`|datetimeoffset|  
 |SQL_CA_SS_VARIANT_TYPE|SQL_C_TYPE_DATE|SQL_C_TYPE_BINARY|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_TIMESTAMP|SQL_C_TYPE_BINARY|  
 |SQL_CA_SS_VARIANT_SQL_TYPE|SQL_TYPE_DATE|SQL_SS_TIME2|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_SS_TIMESTAMPOFFSET|  
-|SQL_CA_SS_SERVER_TYPE|N/A|N/A|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/A|  
+|SQL_CA_SS_SERVER_TYPE|N/D|N/D|SQL_SS_TYPE_SMALLDATETIME|SQL_SS_TYPE_DATETIME|SQL_SS_TYPE_DEFAULT|N/D|  
   
  A veces, hay discontinuidades en los intervalos de valores. Por ejemplo, en el intervalo 8,10..16 falta el valor 9. Esto se debe a la adición de un separador decimal cuando la precisión fraccionaria es mayor que cero.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63032339"
   
  Cuando SQL_CA_SS_SERVER_TYPE se establece mediante una llamada a SQLSetDescField, su valor debe ser SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME o SQL_SS_TYPE_DATETIME. En caso contrario, se devuelve SQL_ERROR y se registra un error de diagnóstico con SQLState HY092 y el mensaje "Identificador de opción o atributo o no válido".  
   
- El atributo SQL_CA_SS_SERVER_TYPE pueden utilizarlo las aplicaciones que dependen de la funcionalidad compatible con `datetime` y `smalldatetime`, pero no con `datetime2`. Por ejemplo, `datetime2` requiere el uso de las `dateadd` funciones y **datediif** , mientras `datetime` que `smalldatetime` y también permiten operadores aritméticos. La mayoría de las aplicaciones no necesitarán usar este atributo, y debe evitarse su uso.  
+ El atributo SQL_CA_SS_SERVER_TYPE pueden utilizarlo las aplicaciones que dependen de la funcionalidad compatible con `datetime` y `smalldatetime`, pero no con `datetime2`. Por ejemplo, `datetime2` requiere el uso de las `dateadd` funciones y **datediif** , mientras que `datetime` y `smalldatetime` también permiten operadores aritméticos. La mayoría de las aplicaciones no necesitarán usar este atributo, y debe evitarse su uso.  
   
 ## <a name="information-returned-in-ird-fields"></a>Información que se devuelve en los campos IRD  
  La siguiente información se devuelve en los campos IRD:  

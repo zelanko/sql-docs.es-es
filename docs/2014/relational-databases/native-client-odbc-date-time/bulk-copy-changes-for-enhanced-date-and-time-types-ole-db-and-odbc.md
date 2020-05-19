@@ -10,15 +10,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], changes for date/time improvements
 ms.assetid: c29e0f5e-9b3c-42b3-9856-755f4510832f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 855d0baf0b0b890b9343378f8060919979d5f206
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cf98fadc2f194390f87bca14afcac545ac51df1
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63207106"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705529"
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Cambios de copia masiva para tipos de fecha y hora mejorados (OLE DB y ODBC)
   En este tema se describen las mejoras de fecha y hora efectuadas para admitir la funcionalidad de copia masiva. La información de este tema es válida para OLE DB y ODBC en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
@@ -31,7 +31,7 @@ ms.locfileid: "63207106"
 |Datetime|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Fecha|SQLDATE|de|  
-|Tiempo|SQLTIME|te|  
+|Time|SQLTIME|te|  
 |Datetime2|SQLDATETIME2|d2|  
 |Datetimeoffset|SQLDATETIMEOFFSET|do|  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63207106"
 ## <a name="character-data-files"></a>Archivos de datos de caracteres  
  En los archivos de datos de caracteres, los valores de fecha y hora se representan como se describe en la sección "formatos de datos: cadenas y literales" del [tipo de datos compatibilidad con las mejoras de fecha y hora de ODBC](data-type-support-for-odbc-date-and-time-improvements.md) para ODBC, o de la [compatibilidad de tipos de datos para OLE DB mejoras de fecha y hora](../native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md) para OLE DB.  
   
- En archivos de datos nativos, los valores de fecha y hora de los cuatro nuevos tipos se representan como representaciones TDS con una escala de 7 (porque es el máximo admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los archivos de datos BCP no almacenan la escala de estas columnas). No hay ningún cambio en el almacenamiento de las representaciones `datetime` de `smalldatetime` flujo de datos tabulares (TDS) y el tipo existente.  
+ En archivos de datos nativos, los valores de fecha y hora de los cuatro nuevos tipos se representan como representaciones TDS con una escala de 7 (porque es el máximo admitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los archivos de datos BCP no almacenan la escala de estas columnas). No hay ningún cambio en el almacenamiento de las `datetime` representaciones de `smalldatetime` flujo de datos tabulares (TDS) y el tipo existente.  
   
  Los tamaños de almacenamiento para los distintos tipos de almacenamiento son los siguientes para OLE DB:  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63207106"
 |-----------------------|---------------------------|  
 |datetime|8|  
 |smalldatetime|4|  
-|date|3|  
+|fecha|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -90,12 +90,12 @@ ms.locfileid: "63207106"
 ## <a name="bcp-types-in-sqlnclih"></a>Tipos BCP en sqlncli.h  
  Los tipos siguientes se definen en sqlncli.h para usarse con las extensiones API de BCP en ODBC. Estos tipos se pasan con el parámetro *eUserDataType* de IBCPSession::BCPColFmt en OLE DB.  
   
-|tipo de almacenamiento en archivo|Tipo de datos del archivo host|Escriba SQLNCLI. h para su uso con IBCPSession:: BCPColFmt|Value|  
+|tipo de almacenamiento en archivo|Tipo de datos del archivo host|Escriba SQLNCLI. h para su uso con IBCPSession:: BCPColFmt|Valor|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
 |Datetime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Fecha|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
-|Tiempo|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
+|Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
 |Datetime2|SQLDATETIME2|BCP_TYPE_SQLDATETIME2|0x2a|  
 |Datetimeoffset|SQLDATETIMEOFFSET|BCP_TYPE_SQLDATETIMEOFFSET|0x2b|  
   
@@ -107,15 +107,15 @@ ms.locfileid: "63207106"
 |A --><br /><br /> De|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Fecha|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
-|Tiempo|N/A|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
+|Time|N/D|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
 |Datetime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
-|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/A|N/A|  
-|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/A|N/A|  
-|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/A|N/A|  
-|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/A|N/A|  
+|Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|N/D|N/D|  
+|Char/wchar (time)|-|9,10|9,7,10 (ODBC)9,7,10,12 (OLE DB)|9,7,10 (ODBC)9,7,10, 12 (OLE DB)|9,7,10|9,5,7,10|N/D|N/D|  
+|Char/wchar (datetime)|9,2|9,4,10|9,10 (ODBC)9,10,12 (OLE DB)|9,10 (ODBC)9,10,12 (OLE DB)|9,10|9,5,10|N/D|N/D|  
+|Char/wchar (datetimeoffset)|9,2,8|9,4,8,10|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10 (ODBC)9,8,10,12 (OLE DB)|9,8,10|9,10|N/D|N/D|  
   
 #### <a name="key-to-symbols"></a>Clave de los símbolos  
   
@@ -134,7 +134,7 @@ ms.locfileid: "63207106"
 |10|Si se produce un truncamiento con pérdida de datos en una conversión de cliente a servidor, se expone un error (OLE DB) o se genera un registro de diagnóstico ODBC con SQLSTATE 22008 y el mensaje "Desbordamiento del campo DateTime". Este error también se produce si el valor está fuera del intervalo que puede representarse mediante el intervalo UTC utilizado por el servidor. Si se produce un truncamiento de segundos o fracciones de segundo en una conversión de servidor a cliente, solo se emite una advertencia.|  
 |11|Si se produce un truncamiento con pérdida de datos, se genera un registro de diagnóstico.<br /><br /> En una conversión de servidor a cliente, es una advertencia (ODBC SQLSTATE S1000).<br /><br /> En una conversión de cliente a servidor, es un error (ODBC SQLSTATE 22001).|  
 |12|Los segundos se establecen en cero y las fracciones de segundo se descartan. No es posible ningún error de truncamiento.|  
-|N/A|Se mantiene el comportamiento de las versiones actuales y anteriores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|N/D|Se mantiene el comportamiento de las versiones actuales y anteriores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
   
 ## <a name="see-also"></a>Consulte también  
  [Mejoras de fecha y hora &#40;ODBC&#41;](date-and-time-improvements-odbc.md)   

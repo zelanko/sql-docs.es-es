@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - date/time [ODBC], enhanced behavior with earlier SQL Server versions
 ms.assetid: cd4e137f-dc5e-4df7-bc95-51fe18c587e0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d400faa496740182a1407f89e095ebaccf884b3a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140634"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82705475"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Comportamiento mejorado de tipos de fecha y hora con versiones anteriores de SQL Server (ODBC)
   En este tema se describe el comportamiento esperado cuando una aplicación cliente que usa las características de fecha y hora mejoradas se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], y cuando una aplicación cliente que usa Microsoft Data Access Components, Windows Data Access Components o una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía los comandos a un servidor que admite las características de fecha y hora mejoradas.  
@@ -29,7 +29,7 @@ ms.locfileid: "63140634"
   
  Los metadatos de la instrucción devueltos por SQLDescribeCol, SQLDescribeParam, SQGetDescField y SQLColAttribute devolverán metadatos coherentes con el tipo de nivel inferior en todos los aspectos, incluido el nombre del tipo. Un ejemplo de este tipo de nivel inferior es `nvarchar`.  
   
- Cuando una aplicación cliente de nivel inferior se ejecuta en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] un servidor (o posterior) en el que se han realizado cambios de esquema en los tipos de fecha y hora, el comportamiento esperado es el siguiente:  
+ Cuando una aplicación cliente de nivel inferior se ejecuta en un [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] servidor (o posterior) en el que se han realizado cambios de esquema en los tipos de fecha y hora, el comportamiento esperado es el siguiente:  
   
 |Tipo de SQL Server 2005|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Tipo de  (o posterior)|Tipo de cliente ODBC|Conversión del resultado (SQL a C)|Conversión de parámetros (C a SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  

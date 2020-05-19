@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - MarshalOptions property [ADO]
 ms.assetid: 390c8abf-133e-40da-8b99-8f748a983e4f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0212f3b4cb663bd56adaa1bdbc3ab6675c3ce888
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 182946d30141ecbbcc2cba706338609b431abb97
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932266"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754492"
 ---
 # <a name="marshaloptions-property-ado"></a>Propiedad MarshalOptions (ADO)
 Indica los registros del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) que se van a serializar en el servidor.  
@@ -28,7 +28,7 @@ Indica los registros del [conjunto de registros](../../../ado/reference/ado-api/
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md) . El valor predeterminado es **adMarshalAll**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando se usa un conjunto de [registros](../../../ado/reference/ado-api/recordset-object-ado.md)de cliente, los registros que se han modificado en el cliente se escriben de nuevo en el nivel intermedio o en el servidor Web mediante una técnica denominada serialización, el proceso de empaquetado y envío de parámetros de método de interfaz a través de los límites de subprocesos o procesos. El establecimiento de la propiedad **MarshalOptions** puede mejorar el rendimiento cuando se calculan las referencias de los datos remotos modificados para volver a actualizarlos en el nivel intermedio o en el servidor Web.  
   
 > [!NOTE]

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Hierarchy object [ADO MD]
 ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1232d228d597188364cb20a7f60dfaa11c8af21a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949694"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753964"
 ---
 # <a name="hierarchy-object-ado-md"></a>Objeto Hierarchy (ADO MD)
 Representa una manera en la que los miembros de una [dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) se pueden agregar o "acumular". Una dimensión se puede Agregar A una o más jerarquías.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Con las colecciones y las propiedades de un objeto **Hierarchy** , puede hacer lo siguiente:  
   
 -   Identifique la **jerarquía** con las propiedades [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) y [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) .  

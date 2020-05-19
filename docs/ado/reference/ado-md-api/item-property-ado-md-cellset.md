@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Item property [ADO MD]
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e35cf86a91be42a2a39a38642e34e747d7d13fe7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949625"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82753913"
 ---
 # <a name="item-property-ado-md-cellset"></a>Propiedad Item (conjunto de celdas de ADO MD)
 Recupera una celda de un [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) usando sus coordenadas.  
@@ -44,7 +44,7 @@ Cell = Cellset.Item ( Positions)
   
 -   La posición ordinal  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **Item** para devolver un objeto [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) dentro de un objeto [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) . Si la propiedad **Item** no encuentra la celda correspondiente al argumento *positions* , se produce un error.  
   
  La propiedad **Item** es la propiedad predeterminada para el objeto **Cellset** . Los siguientes formatos de sintaxis son intercambiables:  
@@ -54,7 +54,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El argumento *positions* especifica la celda que se va a devolver. Puede especificar la celda por posición ordinal o por la posición a lo largo de cada eje. Al especificar la celda por posición a lo largo de cada eje, puede especificar el valor numérico de la posición o los nombres de los miembros de cada posición.  
   
  La posición ordinal es un número que identifica de forma única una celda dentro del **Cellset**. Conceptualmente, las celdas se numeran en **un conjunto de celdas como** si el conjunto de **celdas** fuera una matriz de dimensión *p*, donde *p* es el número de ejes. Las celdas se ordenan por importancia de fila. A continuación se muestra la fórmula para calcular el número ordinal de una celda:  

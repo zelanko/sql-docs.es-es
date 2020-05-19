@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCount property [ADO]
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 26691e405defc7b9d73a9ae02a287d81efda8af2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931479"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754004"
 ---
 # <a name="recordcount-property-ado"></a>Propiedad RecordCount (ADO)
 
@@ -32,7 +32,7 @@ Indica el número de registros de un objeto de [conjunto de registros](../../../
 
 Devuelve un valor de **tipo Long** que indica el número de registros del **conjunto**de registros.
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Use la propiedad **RecordCount** para averiguar el número de registros que hay en un objeto de **conjunto de registros** . La propiedad devuelve-1 cuando ADO no puede determinar el número de registros o si el tipo de proveedor o cursor no admite **RecordCount**. La lectura de la propiedad **RecordCount** en un **conjunto de registros** cerrado produce un error.
 

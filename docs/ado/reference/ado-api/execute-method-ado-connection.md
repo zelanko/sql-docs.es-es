@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute method [ADO]
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c2b07bb18aab0cde13a82540226fa477c306f268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932890"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755094"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
 Ejecuta la consulta, la instrucción SQL, el procedimiento almacenado o el texto específico del proveedor especificados.  
@@ -39,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parámetros  
  *CommandText*  
- Valor de **cadena** que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o un texto específico del proveedor que se va a ejecutar. **Opcionalmente**, se pueden usar nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo, si se usa un nombre de tabla "Customers", ADO agregará automáticamente la sintaxis de Select de SQL estándar para formar y pasar "SELECT * FROM [!INCLUDE[tsql](../../../includes/tsql-md.md)] customers" como una instrucción al proveedor.  
+ Valor de **cadena** que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o un texto específico del proveedor que se va a ejecutar. **Opcionalmente**, se pueden usar nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo, si se usa un nombre de tabla "Customers", ADO agregará automáticamente la sintaxis de Select de SQL estándar para formar y pasar "SELECT * FROM Customers" como una [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
   
  *RecordsAffected*  
  Opcional. Variable **larga** a la que el proveedor devuelve el número de registros a los que afecta la operación.  
@@ -53,7 +53,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  No use los valores CommandTypeEnum de adCmdFile o adCmdTableDirect con Execute. Estos valores solo se pueden usar como opciones con el [método Open (conjunto de registros ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) y los métodos de [método Requery](../../../ado/reference/ado-api/requery-method.md) de un **conjunto de registros**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El uso del método **Execute** en un objeto de [objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) ejecuta la consulta que se pasa al método en el argumento CommandText en la conexión especificada. Si el argumento CommandText especifica una consulta que devuelve filas, los resultados generados por la ejecución se almacenan en un nuevo objeto de **conjunto de registros** . Si el comando no está pensado para devolver resultados (por ejemplo, una consulta de actualización de SQL), el proveedor no devuelve **nada** mientras se especifique la opción **adExecuteNoRecords** ; de lo contrario, Execute devuelve un **conjunto de registros**cerrado.  
   
  El objeto de **conjunto de registros** devuelto siempre es un cursor de solo lectura y de solo avance. Si necesita un objeto de **conjunto de registros** con más funcionalidad, cree primero un objeto de conjunto de **registros** con los valores de propiedad deseados y, a continuación, use el método [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) del objeto de **conjunto de registros** para ejecutar la consulta y devolver el tipo de cursor deseado.  

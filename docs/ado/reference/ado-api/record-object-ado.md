@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Record object [ADO]
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6a7c3b44498dee88be8dc3f37cd713038375753
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917358"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754047"
 ---
 # <a name="record-object-ado"></a>Objeto Record (ADO)
 Representa una fila de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) o del proveedor de datos, o un objeto devuelto por un proveedor de datos semiestructurados, como un archivo o un directorio.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un objeto de **registro** representa una fila de datos y tiene algunas similitudes conceptuales con un conjunto de **registros**de una fila. En función de las capacidades del proveedor, los objetos de **registro** pueden devolverse directamente desde el proveedor en lugar de un **conjunto de registros**de una fila, por ejemplo, cuando se ejecuta una consulta SQL que selecciona solo una fila. O bien, un objeto de **registro** se puede obtener directamente de un objeto de **conjunto de registros** . O bien, se puede devolver un **registro** directamente de un proveedor a datos semiestructurados, como el proveedor de OLE DB de Microsoft Exchange.  
   
  Puede ver los campos asociados con el objeto de **registro** por medio de la colección [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) del objeto **Record** . ADO permite columnas con valores de objeto, incluidos **conjuntos de registros**, **SAFEARRAY**y valores escalares en la colección **Fields** de objetos **Record** .  
@@ -59,7 +59,7 @@ Representa una fila de un [conjunto de registros](../../../ado/reference/ado-api
   
 -   Indica el estado actual del **registro** con la propiedad [State](../../../ado/reference/ado-api/state-property-ado.md) .  
   
--   Indicar el tipo de **registro** - *simple*, *colección*o *documento estructurado* : con la propiedad [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
+-   Indicar el tipo de **registro**  -  *simple*, *colección*o *documento estructurado* : con la propiedad [RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md).  
   
 -   Detiene la ejecución de una operación asincrónica con el método [Cancel](../../../ado/reference/ado-api/cancel-method-ado.md) .  
   

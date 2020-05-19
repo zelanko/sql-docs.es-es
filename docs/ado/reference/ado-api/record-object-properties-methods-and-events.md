@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Record object [ADO], members
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 156861996bc62e968c192fdd8687c7654e0d2b60
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70737656"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82754038"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Record
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -52,7 +52,7 @@ ms.locfileid: "70737656"
   
  [Open (método) (registro de ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

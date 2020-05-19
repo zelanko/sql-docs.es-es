@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - DeleteRecord method [ADO]
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 550638de710f709616e03cb79afd69f1e533ce9e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919082"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755315"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
 Elimina una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -37,10 +37,10 @@ Record.DeleteRecord Source, Async
  *Origen*  
  Opcional. Valor de **cadena** que contiene una dirección URL que identifica la entidad (por ejemplo, el archivo o el directorio) que se va a eliminar. Si se omite *source* o especifica una cadena vacía, se elimina la entidad representada por el [registro](../../../ado/reference/ado-api/record-object-ado.md) actual. Si el registro es un registro de colección ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, como un directorio), todos los elementos secundarios (por ejemplo, subdirectorios) también se eliminarán.  
   
- *Async*  
+ *Copystreamtostream*  
  Opcional. Valor **booleano** que, cuando es **true**, especifica que la operación de eliminación es asincrónica.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se puede producir un error en las operaciones en el objeto representado por este **registro** una vez que se completa este método. Después de llamar a **DeleteRecord**, el **registro** debe cerrarse porque el comportamiento del **registro** puede ser impredecible dependiendo de Cuándo el proveedor actualice el **registro** con el origen de datos.  
   
  Si este **registro** se obtuvo de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md), los resultados de esta operación no se reflejarán inmediatamente en el **conjunto de registros**. Actualice el **conjunto de registros** . para ello, cierre y vuelva a abrirlo, o bien ejecute el método de [reconsulta](../../../ado/reference/ado-api/requery-method.md) del **conjunto de registros** , el método [Update](../../../ado/reference/ado-api/update-method.md) o el método [Resync](../../../ado/reference/ado-api/resync-method.md) .  

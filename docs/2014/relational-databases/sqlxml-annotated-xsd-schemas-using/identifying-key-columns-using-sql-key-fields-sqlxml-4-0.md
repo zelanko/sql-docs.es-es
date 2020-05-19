@@ -18,15 +18,15 @@ helpviewer_keywords:
 - hierarchical relationships [SQLXML]
 - key-fields annotation
 ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bc3c063da7bb9133f8687a908c4bd7e0e13bae8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d592ea935453675d0467e9d2e4d9162d79117cc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013819"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703562"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identificar columnas de clave mediante sql:key-fields (SQLXML 4.0)
   Cuando se especifica una consulta XPath en un esquema XSD, la información de claves resulta necesaria en la mayoría de los casos para obtener un anidamiento correcto en el resultado. Especificar la anotación `sql:key-fields` es una forma de asegurarse de que se genera la jerarquía correcta.  
@@ -41,14 +41,14 @@ ms.locfileid: "66013819"
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Generar el anidamiento adecuado cuando \<SQL: Relationship> no proporciona información suficiente  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Generar el anidamiento adecuado cuando \< SQL: relationship> no proporciona información suficiente  
  En este ejemplo se muestra dónde debe especificarse `sql:key-fields`.  
   
- Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el ** \<orden>** y ** \<** los elementos de>de cliente en los que el ** \<elemento Order>** es el elemento primario y el ** \<elemento Customer>** es un elemento secundario.  
+ Fíjese en el siguiente esquema. El esquema especifica una jerarquía entre el ** \< orden>** y los elementos de ** \<>de cliente** en los que el elemento ** \< Order>** es el elemento primario y el elemento ** \< Customer>** es un elemento secundario.  
   
- La ** \<etiqueta SQL: Relationship>** se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en ** \<SQL: Relationship>** no es suficiente para identificar de forma única las filas de la tabla primaria (sales. SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
+ La etiqueta ** \< SQL: Relationship>** se usa para especificar la relación de elementos primarios y secundarios. Identifica CustomerID en la tabla Sales.SalesOrderHeader como la clave primaria que hace referencia a la clave secundaria CustomerID en la tabla Sales.Customer. La información proporcionada en ** \< SQL: Relationship>** no es suficiente para identificar de forma única las filas de la tabla primaria (sales. SalesOrderHeader). Por lo tanto, sin la anotación `sql:key-fields`, la jerarquía que se genera es inexacta.  
   
- Con `sql:key-fields` la ** \<>** especificada en el orden, la anotación identifica de forma única las filas de la tabla primaria (sales. SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
+ Con `sql:key-fields` la>especificada en el ** \< orden **, la anotación identifica de forma única las filas de la tabla primaria (sales. SalesOrderHeader) y sus elementos secundarios aparecen debajo de su elemento primario.  
   
  Éste es el esquema:  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66013819"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields1.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath de la plantilla devuelve todos los ** \<elementos de order>** con un CustomerID de menos de 3.  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields1T.xml en el mismo directorio donde guardó KeyFields1.xml. La consulta XPath de la plantilla devuelve todos los elementos de ** \< Order>** con un CustomerID de menos de 3.  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -125,7 +125,7 @@ ms.locfileid: "66013819"
 ```  
   
 ### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Especificar sql:key-fields para generar un anidamiento correcto del resultado  
- En el esquema siguiente, no se ha especificado ninguna jerarquía mediante ** \<SQL: Relationship>**. El esquema todavía requiere que se especifique la anotación `sql:key-fields` para identificar de forma única a empleados en la tabla HumanResources.Employee.  
+ En el esquema siguiente, no se ha especificado ninguna jerarquía mediante ** \< SQL: Relationship>**. El esquema todavía requiere que se especifique la anotación `sql:key-fields` para identificar de forma única a empleados en la tabla HumanResources.Employee.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -152,7 +152,7 @@ ms.locfileid: "66013819"
   
 1.  Copie el código de esquema anterior y péguelo en un archivo de texto. Guarde el archivo como KeyFields2.xml.  
   
-2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields2T.xml en el mismo directorio donde guardó KeyFields2.xml. La consulta XPath de la plantilla devuelve todos los elementos ** \<humanresources. Employee>** :  
+2.  Copie la plantilla siguiente y péguela en un archivo de texto. Guarde el archivo como KeyFields2T.xml en el mismo directorio donde guardó KeyFields2.xml. La consulta XPath de la plantilla devuelve todos los elementos ** \< humanresources. employee>** :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

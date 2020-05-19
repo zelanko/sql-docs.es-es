@@ -12,21 +12,21 @@ helpviewer_keywords:
 - queries [SQLXML], XPath
 - XML views [SQLXML]
 ms.assetid: 7814d099-81ec-4fb8-894a-729cdbb5015a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 962d79dbee61fa498a6338c864366ec40ea7c759
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3700c706aff2a84eaedb89022c1384ce19f9ea68
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014572"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702969"
 ---
 # <a name="using-xpath-queries-in-sqlxml-40"></a>Utilizar consultas XPath en SQLXML 4.0
   La compatibilidad de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con los esquemas XSD anotados le permite crear vistas XML de los datos relacionales almacenadas en la base de datos. Puede utilizar un subconjunto del lenguaje XPath para consultar las vistas XML creadas por un esquema XSD anotado.  
   
 > [!NOTE]  
->  Para entender las consultas XPath en SQLXML 4.0, debe estar familiarizado con las vistas XML y otros conceptos relacionados, como las plantillas y el esquema de asignación. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4,0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener más información sobre XPath, vea el estándar XPath definido por el World Wide Web Consortium (W3C) http://www.w3.org/TR/xpathen.  
+>  Para entender las consultas XPath en SQLXML 4.0, debe estar familiarizado con las vistas XML y otros conceptos relacionados, como las plantillas y el esquema de asignación. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4,0&#41;](../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener más información sobre XPath, vea el estándar XPath definido por el World Wide Web Consortium (W3C) en http://www.w3.org/TR/xpath .  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Introducción al uso de consultas XPath &#40;SQLXML 4,0&#41;](introduction-to-using-xpath-queries-sqlxml-4-0.md)  

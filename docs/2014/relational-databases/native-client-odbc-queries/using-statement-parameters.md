@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Native Client ODBC driver, statements
 - ODBC applications, statements
 ms.assetid: 2427d886-ec6c-49d7-b0b6-0d998b64cdb9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa2f1121be229c3679237542bc8cf3384ba425b4
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200247"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699866"
 ---
 # <a name="using-statement-parameters"></a>Usar parámetros de instrucciones
   Un parámetro es una variable en una instrucción SQL que puede habilitar una aplicación ODBC:  
@@ -32,7 +32,7 @@ ms.locfileid: "63200247"
   
 -   Mejorando la interacción del usuario para construir criterios de consulta.  
   
--   Administrar datos de tipo **Text**, **ntext**e **Image** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]tipos de datos de C específicos.  
+-   Administrar datos de tipo **Text**, **ntext**e **Image** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de C específicos.  
   
  Por ejemplo, una tabla **Parts** tiene columnas **denominadas**el nombre del campo, la **Descripción**y el **precio**. Para agregar una parte sin parámetros se requiere la construcción de una instrucción SQL como:  
   

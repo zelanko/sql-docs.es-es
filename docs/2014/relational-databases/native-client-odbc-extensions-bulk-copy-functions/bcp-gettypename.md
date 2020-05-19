@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689029"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701942"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Devuelve el nombre del tipo SQL para un token del tipo BCP especificado.  
@@ -49,7 +49,7 @@ fIsMaxType
  *campo*  
  Indica si el token solicitado es un tipo max.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  Una cadena que contiene el nombre del tipo SQL que corresponde al tipo BCP. Si se especifica un tipo BCP no válido, se devuelve una cadena vacía.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -57,7 +57,7 @@ fIsMaxType
   
  La tabla siguiente especifica los posibles tipos BCP, tanto si son o no tipos max, y la salida esperada.  
   
-|Nombre de tipo de BCP|MaxType|Output|  
+|Nombre de tipo de BCP|MaxType|Resultados|  
 |-------------------|-------------|------------|  
 |`SQLDECIMAL`|Es posible usar el|**decimal**|  
 |`SQLNUMERIC`|Es posible usar el|**numeric**|  
@@ -97,17 +97,17 @@ fIsMaxType
 |`SQLNTEXT`|Es posible usar el|**Ntext**|  
 |`SQLVARIANT`|Es posible usar el|**sql_variant**|  
 |`SQLINT8`|Es posible usar el|**BIGINT**|  
-|`SQLCHARACTER`|Sí|**ntext**|  
-|`SQLBIGCHAR`|Sí|**ntext**|  
-|`SQLBIGVARCHAR`|Sí|**ntext**|  
-|`SQLVARCHAR`|Sí|**ntext**|  
-|`SQLBINARY`|Sí|**varbinary(max)**|  
-|`SQLBIGBINARY`|Sí|**varbinary(max)**|  
-|`SQLBIGVARBINARY`|Sí|**varbinary(max)**|  
-|`SQLVARBINARY`|Sí|**varbinary(max)**|  
-|`SQLNCHAR`|Sí|**nvarchar(max)**|  
-|`SQLNVARCHAR`|Sí|**nvarchar(max)**|  
-|`SQLXML`|Sí|**Lenguaje**|  
+|`SQLCHARACTER`|Yes|**ntext**|  
+|`SQLBIGCHAR`|Yes|**ntext**|  
+|`SQLBIGVARCHAR`|Yes|**ntext**|  
+|`SQLVARCHAR`|Yes|**ntext**|  
+|`SQLBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGBINARY`|Yes|**varbinary(max)**|  
+|`SQLBIGVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLVARBINARY`|Yes|**varbinary(max)**|  
+|`SQLNCHAR`|Yes|**nvarchar(max)**|  
+|`SQLNVARCHAR`|Yes|**nvarchar(max)**|  
+|`SQLXML`|Yes|**Lenguaje**|  
 |`SQLUDT`|Es posible usar el|**Definido**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  

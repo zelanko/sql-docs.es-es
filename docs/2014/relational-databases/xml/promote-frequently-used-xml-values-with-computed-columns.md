@@ -10,15 +10,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9c86eef119ce121dfb5ff964e64f1970eda16db
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195573"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702554"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
   Si se efectúan consultas principalmente en una cantidad pequeña de valores de elementos y atributos, puede que sea conveniente promover estas cantidades a columnas relacionales. Esto es útil cuando se ejecutan consultas en una pequeña parte de los datos XML mientras se recupera toda la instancia XML. No es necesario crear un índice XML en la columna XML. En lugar de ello, se puede indizar la columna promocionada. Las consultas se deben escribir de modo que usen la columna promocionada. Es decir, que el optimizador de consultas no dirige de nuevo las consultas de la columna XML a la columna promocionada.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Defina los desencadenadores insert, update y delete mediante la función definida por el usuario para mantener tablas de propiedades.  
   
- Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El `xml` tipo de datos se expone como una clase administrada SqlXml en ADO.net y admite el método **CreateReader ()** que devuelve un XmlReader.  
+ Para ello, primero deberá crear la función de transmisión por secuencias de CLR. El `xml` tipo de datos se expone como una clase administrada SQLXML en ADO.net y admite el método **CreateReader ()** que devuelve un XmlReader.  
   
 > [!NOTE]  
 >  El código de ejemplo de esta sección usa XPathDocument y XPathNavigator. De este modo, se fuerza la carga de todos los documentos XML en la memoria. Si utiliza código similar en su aplicación para procesar varios documentos XML grandes, este código no es escalable. En lugar de ello, mantenga asignaciones de memoria de pequeño tamaño y use interfaces de transmisión por secuencias siempre que sea posible. Para obtener más información sobre el rendimiento, vea [Arquitectura de integración CLR](../../database-engine/dev-guide/architecture-of-clr-integration.md).  

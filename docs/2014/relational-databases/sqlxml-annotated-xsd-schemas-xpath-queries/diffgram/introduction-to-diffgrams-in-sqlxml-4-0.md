@@ -10,15 +10,15 @@ helpviewer_keywords:
 - annotations [SQLXML]
 - DiffGrams [SQLXML], about DiffGrams
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2de8eaa81c5a2e903be2f9bd608c6ccca703718d
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013016"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703140"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Introducción a los DiffGrams en SQLXML 4.0
   En este tema se ofrece una breve introducción a los DiffGrams.  
@@ -51,7 +51,7 @@ ms.locfileid: "66013016"
  El nombre de este elemento, **instanceof**, se utiliza con fines explicativos en esta documentación. Por ejemplo, si el DiffGram se generó a partir de un conjunto de elementos en el .NET Framework, el valor de la propiedad **Name** del conjunto de elementos se utilizaría como el nombre de este elemento. Este bloque contiene todos los datos relevantes tras el cambio, y es posible que incluya incluso los datos que no se han modificado. La lógica de procesamiento de DiffGram omite los elementos de este bloque para los que no se especifica el atributo **diffgr: hasChanges** .  
   
  **\<diffgr: Before>**  
- Este bloque opcional contiene las instancias de registro (elementos) originales que deben actualizarse o eliminarse. Todas las tablas de base de datos que se van a modificar (actualizar o eliminar) por DiffGram deben aparecer como elementos de nivel superior en el ** \<bloque Before>** .  
+ Este bloque opcional contiene las instancias de registro (elementos) originales que deben actualizarse o eliminarse. Todas las tablas de base de datos que se van a modificar (actualizar o eliminar) por DiffGram deben aparecer como elementos de nivel superior en el bloque ** \< before>** .  
   
  **\<diffgr: errores>**  
  La lógica de procesamiento de DiffGram omite este bloque opcional.  
@@ -60,22 +60,22 @@ ms.locfileid: "66013016"
  Estas anotaciones se definen en el espacio de nombres de DiffGram **"urn: schemas-microsoft-com: XML-DiffGram-01"**:  
   
  **id**  
- Este atributo se usa para emparejar los elementos de los ** \<bloques antes>** y ** \<>de instancia** .  
+ Este atributo se usa para emparejar los elementos de los bloques ** \< antes>** y ** \<>de instancia** .  
   
  **hasChanges**  
  En el caso de una operación de inserción o de actualización, el DiffGram debe especificar este atributo con el valor **insertado** o **modificado**. Si este atributo no está presente, la lógica de procesamiento omite el elemento correspondiente en el ** \<>de instancia** y no se realiza ninguna actualización. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).  
   
  **parentID**  
- Este atributo se usa para especificar las relaciones entre los elementos primarios y secundarios del DiffGram. Este atributo solo aparece en el \<bloque before>. SQLXML lo utiliza cuando aplica actualizaciones. La relación entre elementos primarios y secundarios se utiliza para determinar el orden en que deben procesarse los elementos del DiffGram.  
+ Este atributo se usa para especificar las relaciones entre los elementos primarios y secundarios del DiffGram. Este atributo solo aparece en el \< bloque before>. SQLXML lo utiliza cuando aplica actualizaciones. La relación entre elementos primarios y secundarios se utiliza para determinar el orden en que deben procesarse los elementos del DiffGram.  
   
 ## <a name="understanding-the-diffgram-processing-logic"></a>Descripción de la lógica de procesamiento de DiffGram  
  La lógica de procesamiento de DiffGram utiliza ciertas reglas para determinar si una operación es una operación de inserción, actualización o eliminación. Estas reglas se describen en la siguiente tabla.  
   
 |Operación|Descripción|  
 |---------------|-----------------|  
-|Insertar|Un DiffGram indica una operación de inserción cuando un elemento aparece en el bloque ** \<>de instancias** de la instancia, pero no en el correspondiente ** \<antes de>** bloque, y se especifica el atributo **diffgr: HasChanges** (**diffgr: HasChanges = Inserted**) en el elemento. En este caso, el DiffGram inserta en la base de datos la instancia de registro que se especifica en la ** \<instancia de>** bloque.<br /><br /> Si no se especifica el atributo **diffgr: hasChanges** , la lógica de procesamiento omite el elemento y no se realiza ninguna inserción. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
-|Actualizar|El DiffGram indica una operación de actualización cuando hay un elemento en el \<bloque Before> para el que hay un elemento correspondiente en el bloque ** \<>** de la instancia (es decir, ambos elementos tienen un atributo **diffgr: ID** con el mismo valor) y el atributo **diffgr: hasChanges** se especifica con el valor **modificado** en el elemento en el bloque ** \<>de instancias** de la instancia.<br /><br /> Si el atributo **diffgr: hasChanges** no se especifica en el elemento del bloque ** \<>de instancias** , la lógica de procesamiento devuelve un error. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr: parentId** se especifica en el ** \<bloque Before>** , la relación de elementos primarios y secundarios que se especifican mediante **parentId** se usa para determinar el orden en el que se actualizan los registros.|  
-|Eliminar|Un DiffGram indica una operación de eliminación cuando un elemento aparece en el ** \<bloque Before>** pero no en el bloque ** \<>de instancia** correspondiente. En este caso, el DiffGram elimina la instancia de registro especificada en el ** \<bloque Before>** de la base de datos. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr: parentId** se especifica en el ** \<bloque Before>** , la relación de elementos primarios y secundarios que se especifican mediante **parentId** se usa para determinar el orden en el que se eliminan los registros.|  
+|Insertar|Un DiffGram indica una operación de inserción cuando un elemento aparece en el bloque ** \<>de instancias** de la instancia, pero no en el correspondiente ** \< antes de>** bloque, y se especifica el atributo **diffgr: HasChanges** (**diffgr: HasChanges = Inserted**) en el elemento. En este caso, el DiffGram inserta en la base de datos la instancia de registro que se especifica en la ** \< instancia de>** bloque.<br /><br /> Si no se especifica el atributo **diffgr: hasChanges** , la lógica de procesamiento omite el elemento y no se realiza ninguna inserción. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
+|Actualizar|El DiffGram indica una operación de actualización cuando hay un elemento en el \< bloque before> para el que hay un elemento correspondiente en el bloque>de la ** \< instancia** (es decir, ambos elementos tienen un atributo **diffgr: ID** con el mismo valor) y el atributo **diffgr: hasChanges** se especifica con el valor **modificado** en el elemento en el bloque ** \<>de instancias** de la instancia.<br /><br /> Si el atributo **diffgr: hasChanges** no se especifica en el elemento del bloque ** \<>de instancias** , la lógica de procesamiento devuelve un error. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr: parentId** se especifica en el bloque ** \< Before>** , la relación de elementos primarios y secundarios que se especifican mediante **parentId** se usa para determinar el orden en el que se actualizan los registros.|  
+|Eliminar|Un DiffGram indica una operación de eliminación cuando un elemento aparece en el bloque ** \< before>** pero no en el bloque ** \<>de instancia** correspondiente. En este caso, el DiffGram elimina la instancia de registro especificada en el bloque ** \< before>** de la base de datos. Para obtener ejemplos de trabajo, vea los [ejemplos de DiffGram &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Si **diffgr: parentId** se especifica en el bloque ** \< Before>** , la relación de elementos primarios y secundarios que se especifican mediante **parentId** se usa para determinar el orden en el que se eliminan los registros.|  
   
 > [!NOTE]  
 >  No pueden pasarse parámetros a los DiffGrams.  

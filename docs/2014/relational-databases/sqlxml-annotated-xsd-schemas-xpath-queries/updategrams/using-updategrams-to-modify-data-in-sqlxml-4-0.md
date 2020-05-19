@@ -21,15 +21,15 @@ helpviewer_keywords:
 - deleting data
 - inserting data
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb266c198b7c828f1f8842cf4ffa3dc9c1de10e9
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014597"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702989"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Utilizar los diagramas de actualización para modificar datos en SQLXML 4.0
   Puede modificar (insertar, actualizar o eliminar) una base de datos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] desde un documento XML existente mediante una diagrama o la función OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  

@@ -11,15 +11,15 @@ topic_type:
 helpviewer_keywords:
 - SQLSetStmtAttr function
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 31493eb8c685fbb31fa21691794740eb2b61219c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63188689"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702139"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no admite el modelo de cursor mixto (controlado por conjunto de claves/dinámico). Cualquier intento de establecer el tamaño del conjunto de claves mediante SQL_ATTR_KEYSET_SIZE generará un error si el conjunto de valores no es igual a 0.  
@@ -50,7 +50,7 @@ ms.locfileid: "63188689"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_CO_OFF|Predeterminada. Deshabilita los cursores de solo avance rápido y de solo lectura y la captura automática, habilita **SQLGetData** en cursores de solo avance y de solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor `SQLSetStmtAttr`diferente mediante/SQL_ATTR_CURSOR_TYPE.|  
+|SQL_CO_OFF|Predeterminada. Deshabilita los cursores de solo avance rápido y de solo lectura y la captura automática, habilita **SQLGetData** en cursores de solo avance y de solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor diferente mediante `SQLSetStmtAttr` /SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Habilita los cursores de solo avance rápido y solo lectura, deshabilita **SQLGetData** en cursores de solo avance y de solo lectura.|  
 |SQL_CO_AF|Habilita la opción de captura automática en cualquier tipo de cursor. Cuando se establece esta opción para un identificador de instrucción, **SQLExecute** o **SQLExecDirect** generarán una **SQLFetchScroll** implícita (SQL_FIRST). El cursor se abre y se devuelve el primer lote de filas en un único viaje de ida y vuelta al servidor.|  
 |SQL_CO_FFO_AF|Habilita los cursores de solo avance rápido con la opción de captura automática. Es lo mismo que si se especifican SQL_CO_AF y SQL_CO_FFO.|  
@@ -131,10 +131,10 @@ ms.locfileid: "63188689"
   
 |Valor *ValuePtr*|Descripción|  
 |----------------------|-----------------|  
-|SQL_SS_NAME_SCOPE_TABLE|Predeterminada.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que `column_set`no sean miembros del disperso.|  
+|SQL_SS_NAME_SCOPE_TABLE|Predeterminada.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del disperso `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que la aplicación requiere metadatos para un tipo de tabla, en lugar de una tabla real (las funciones de catálogo deben devolver metadatos para los tipos de tabla). A continuación, la aplicación pasa el TYPE_NAME del parámetro con valores de tabla como parámetro *TableName* .|  
-|SQL_SS_NAME_SCOPE_EXTENDED|Cuando se usa la característica de columnas dispersas, SQLColumns devuelve todas `column_set` las columnas, independientemente de la pertenencia.|  
-|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Cuando se usa la característica de columnas dispersas, SQLColumns solo devuelve las columnas que `column_set`son miembros del disperso.|  
+|SQL_SS_NAME_SCOPE_EXTENDED|Cuando se usa la característica de columnas dispersas, SQLColumns devuelve todas las columnas, independientemente de la `column_set` pertenencia.|  
+|SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|Cuando se usa la característica de columnas dispersas, SQLColumns solo devuelve las columnas que son miembros del disperso `column_set` .|  
 |SQL_SS_NAME_SCOPE_DEFAULT|Igual que SQL_SS_NAME_SCOPE_TABLE.|  
   
  SS_TYPE_CATALOG_NAME y SS_TYPE_SCHEMA_NAME se utilizan con los parámetros *nombrecatálogo* y *SchemaName* , respectivamente, para identificar el catálogo y el esquema para el parámetro con valores de tabla. Cuando una aplicación ha terminado de recuperar los metadatos para los parámetros con valores de tabla, debe volver a establecer SQL_SOPT_SS_NAME_SCOPE en su valor predeterminado de SQL_SS_NAME_SCOPE_TABLE.  

@@ -3,22 +3,34 @@ title: Novedades de SSMA para Oracle (OracleToSQL) | Microsoft Docs
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/2/2020
+ms.date: 4/27/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 88b87aad931f28637accc95aa4d993037fcf0b0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07dd930a853926be98dba5f2ca91bd7080b9a808
+ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625597"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82220690"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 
 En este artículo se enumeran los cambios SQL Server Migration Assistant (SSMA) para Oracle en cada versión.
+
+## <a name="ssma-v89"></a>SSMA v 8.9
+
+La versión v 8.9 de SSMA para Oracle contiene los siguientes cambios:
+
+* Conversión de literales de cadena SQL dinámicos
+* Conversión para `LAG` `FIRST_VALUE` y `LAST_VALUE` funciones analíticas
+* Agregar compatibilidad para `ALTER TRIGGER` / `ALTER INDEX` DDL básico (habilitar o deshabilitar, etc.)
+* Conversión mejorada para las columnas que coinciden con los nombres de función integrados
+* Generar índices únicos filtrados para `NULL` columnas que permitan
+* Conversión de declaración de variable mejorada para Azure SQL Data Warehouse
+* Corrección para el problema con caracteres especiales en el nombre del proyecto
 
 ## <a name="ssma-v88"></a>SSMA v 8.8
 
@@ -26,8 +38,8 @@ La versión v 8.8 de SSMA para Oracle incluye:
 
 * Mejoras en la estabilidad de sincronización de objetos SQL Server
 * Mejoras en el rendimiento de GUI durante la evaluación y conversión
-* Conversión mejorada de cláusulas analíticas `OVER PARTITION`
-* Nueva conversión para `LEAD` la función de análisis
+* Conversión mejorada de `OVER PARTITION` cláusulas analíticas
+* Nueva conversión para la `LEAD` función de análisis
 * Nueva conversión para las cláusulas de factor de subconsulta
 * Nueva `REPLICATE` opción de distribución para Azure SQL Data Warehouse
 * Nuevo analizador de sintaxis de Oracle para mejorar aún más el rendimiento de la conversión
@@ -45,7 +57,7 @@ Además, SSMA para Oracle ahora permite filtrar objetos en función del estado d
 
 Además de un conjunto de correcciones diseñado para mejorar la facilidad de uso y el rendimiento, la versión v 8.6 de SSMA para Oracle se ha mejorado agregando una configuración que permite a los usuarios omitir las propiedades extendidas de SSMA en el código convertido.
 
-Para aprovechar este valor, en SSMA para Oracle, vaya a **herramientas** > **configuración** > del proyecto**conversión****General** > y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
+Para aprovechar este valor, en SSMA para Oracle, vaya a **herramientas**  >  **configuración del proyecto**  >  **General**  >  **conversión**general y, a continuación, en **varios**, actualice el valor de la opción **omitir propiedades extendidas** a **sí**.
 
 ![Omitir la configuración de propiedades extendidas](../oracle/media/ssma-omit-extended-properties.png)
 
@@ -60,9 +72,9 @@ La versión v 8.5 de SSMA para Oracle se ha mejorado con compatibilidad para la 
 
 Además, se ha mejorado SSMA para Oracle con compatibilidad para:
 
-* Limitar el número de objetos seleccionados para la detección a 990 (el `WHERE .. IN (..)` límite de la cláusula de Oracle es 1000 elementos).
-* Migración de datos `RAW` de `UNIQUEIDENTIFIER`a.
-* Analizando `PARALLEL_ENABLE` la cláusula.
+* Limitar el número de objetos seleccionados para la detección a 990 (el límite de la cláusula de Oracle `WHERE .. IN (..)` es 1000 elementos).
+* Migración de datos de `RAW` a `UNIQUEIDENTIFIER` .
+* Analizando la `PARALLEL_ENABLE` cláusula.
 
 Por último, la versión v 8.5 de SSMA para Oracle ahora proporciona:
 
@@ -76,7 +88,7 @@ Por último, la versión v 8.5 de SSMA para Oracle ahora proporciona:
 
 La versión v 8.4 de SSMA para Oracle se ha mejorado con correcciones de destino diseñadas para solucionar problemas de accesibilidad y corregir un error relacionado con las columnas de índice máximo (para permitir 32 en lugar de 16) para SQL Server 2016 y versiones posteriores.
 
-Además, esta versión de SSMA para Oracle agrega conversión para los `SYS_REFCURSOR` parámetros de procedimiento `OUT` almacenado.
+Además, esta versión de SSMA para Oracle agrega conversión para `SYS_REFCURSOR` los parámetros de procedimiento almacenado `OUT` .
 
 > [!IMPORTANT]
 > Con las versiones de SSMA de 7,4 a 8,4, .NET 4.5.2 es un requisito previo de instalación.
@@ -86,7 +98,7 @@ Además, esta versión de SSMA para Oracle agrega conversión para los `SYS_REFC
 El lanzamiento de la versión 8.3 de SSMA para Oracle se ha mejorado con correcciones de destino diseñadas para mejorar la calidad y las métricas de conversión. Además, esta versión de SSMA para Oracle proporciona correcciones que:
 
 * Solucione los problemas de accesibilidad.
-* Agregue compatibilidad básica para `hierarchyid` el tipo en SQL Server.
+* Agregue compatibilidad básica para el `hierarchyid` tipo en SQL Server.
 * Solucione un problema con un tipo de valor devuelto desconocido para una función llamada a través de sinónimo.
 * Actualice ODP.NET a v 19.3.
 
@@ -94,11 +106,11 @@ El lanzamiento de la versión 8.3 de SSMA para Oracle se ha mejorado con correcc
 
 La versión v 8.2 de SSMA para Oracle se ha mejorado para:
 
-* Agregue compatibilidad para `DBMS_OUTPUT.ENABLE` / `DISABLE`.
-* Quite `CAST AS FLOAT` para `BINARY_FLOAT` las `BINARY_DOUBLE` columnas y en la consulta de migración de datos predeterminada.
+* Agregue compatibilidad para `DBMS_OUTPUT.ENABLE` / `DISABLE` .
+* Quite `CAST AS FLOAT` para `BINARY_FLOAT` `BINARY_DOUBLE` las columnas y en la consulta de migración de datos predeterminada.
 * Corregir secuencias actualizar si el valor actual ha cambiado.
-* Corregir el error relacionado con la interpretación incorrecta de las pseudo`ROWNUM`columnas (, etc.) si existe una columna con el mismo nombre.
-* Corrección de un bloqueo que se `FOR` produce al convertir bucles con un identificador sin resolver ambiguo.
+* Corregir el error relacionado con la interpretación incorrecta de las pseudo columnas ( `ROWNUM` , etc.) si existe una columna con el mismo nombre.
+* Corrección de un bloqueo que se produce `FOR` al convertir bucles con un identificador sin resolver ambiguo.
 
 Además, esta versión incluye un conjunto de correcciones de destino diseñado para mejorar la calidad y las métricas de conversión, así como las correcciones para:
 
@@ -141,7 +153,7 @@ La versión v 8.0 de SSMA para Oracle se ha mejorado con las correcciones de des
 
 * La capacidad de usar el controlador .NET oficial administrado para conectarse a Oracle. El controlador OCI ya no es un requisito previo para usar SQL Server Migration Assistant para Oracle.
 
-* La capacidad de asignar `ROWID` y `UROWID` a `VARCHAR` de forma predeterminada. Cambiado de `uniqueidentifier` para dar cabida a la `ROWID` migración de datos para columnas explícitas.
+* La capacidad de asignar `ROWID` y `UROWID` a de `VARCHAR` forma predeterminada. Cambiado de `uniqueidentifier` para dar cabida a la migración de datos para columnas explícitas `ROWID` .
 
 ## <a name="ssma-v710"></a>SSMA v 7.10
 
@@ -165,7 +177,7 @@ La versión v 7.9 de SSMA para Oracle contiene los siguientes cambios:
 La versión v 7.8 de SSMA para Oracle contiene los siguientes cambios:
 
 * Compatibilidad con:
-  * Expresión de fila para `IN` la cláusula.
+  * Expresión de fila para la `IN` cláusula.
   * Conversiones de tipos implícitas.
   * `UID`conversión para Azure SQL Database.
 * Cambiar la asignación de tipos resaltada en la **configuración del proyecto**.
@@ -178,7 +190,7 @@ La versión v 7.7 de SSMA para Oracle contiene los siguientes cambios:
 * SSMA para Oracle se ha mejorado con correcciones dirigidas que mejoran las métricas de calidad y conversión.
 * En función de la demanda popular, la versión de 32 bits de SSMA para Oracle vuelve a ser. En comparación con la implementación anterior (antes de v 7.4), hay dos paquetes de instalador, pero no se pueden instalar en paralelo. Como resultado, debe elegir la versión más adecuada en función de los componentes de conectividad que tenga. Siempre es preferible usar la versión de 64 bits, si es posible.
 * La compatibilidad con SQL Server 2017 es ahora oficial con el paquete de extensiones de Oracle admitido en Linux también (nueva opción de instalación remota). Tenga en cuenta que la funcionalidad del paquete de extensiones está limitada cuando se instala en Linux, ya que no se admiten las características de migración de datos del lado servidor y el evaluador.
-* SSMA para Oracle permite migrar las vistas materializadas como tablas normales (se pueden configurar a través de los valores de configuración del **proyecto** -> **sincronizar** -> **detectar tablas de respaldo para vistas materializadas**).
+* SSMA para Oracle permite migrar las vistas materializadas como tablas normales (se pueden configurar a través de los valores de configuración del **proyecto**  ->  **sincronizar**  ->  **detectar tablas de respaldo para vistas materializadas**).
 
 ## <a name="ssma-v76"></a>SSMA v 7.6
 
@@ -270,7 +282,7 @@ La versión de mayo de 2016 de SSMA para Oracle contiene los siguientes cambios:
 * Se quitó la comprobación del instalador para .NET 2,0.
 * Dependencia del paquete de extensiones actualizada de .NET 3,5 a .NET 4,0.
 * Fixed `save-project` y `open-project` comandos para la consola de SSMA.
-* Comando `securepassword` fijo para la consola de SSMA.
+* `securepassword`Comando fijo para la consola de SSMA.
 * Recuento fijo de objetos para la carga inicial.
 * Se ha corregido la conversión de tipos de datos de caracteres para Oracle.
 * Se corrigió el error en la configuración global.
@@ -320,13 +332,13 @@ La versión de abril de 2014 de SSMA para Oracle contiene los siguientes cambios
 
 ## <a name="january-2012"></a>enero de 2012
 
-La versión 2012 de enero de SSMA para Oracle agrega compatibilidad `RowType` con `RecordType` los parámetros de entrada y `NULL`de forma predeterminada a.
+La versión 2012 de enero de SSMA para Oracle agrega compatibilidad `RowType` con `RecordType` los parámetros de entrada y de forma predeterminada a `NULL` .
 
 ## <a name="july-2011"></a>julio de 2011
 
 La versión 2011 de julio de SSMA para Oracle contiene los siguientes cambios:
 
-* Se agregó compatibilidad para la conversión de la [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] secuencia de Oracle al generador de secuencias.
+* Se agregó compatibilidad para la conversión de la secuencia de Oracle al [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] generador de secuencias.
 * Informes de errores mejorados durante la migración de datos.
 * Conversión mejorada de la instrucción mediante palabras reservadas.
 * Conversión implícita mejorada del valor de fecha en una función.
@@ -335,13 +347,13 @@ La versión 2011 de julio de SSMA para Oracle contiene los siguientes cambios:
 
 La versión de abril de 2011 de SSMA para Oracle contiene los siguientes cambios:
 
-* Producto "SSMA para Oracle" consolidado, que [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)]admite [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] , [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)]y.
-* Se ha agregado compatibilidad para conectar y migrar a [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)].
+* Producto "SSMA para Oracle" consolidado, que admite [!INCLUDE [ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE [ssSQL10](../../includes/sssql10-md.md)] y [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
+* Se ha agregado compatibilidad para conectar y migrar a [!INCLUDE [ssSQL11](../../includes/sssql11-md.md)] .
 * Motor de migración de datos del lado cliente mejorado, que admite la migración en paralelo de datos.
-* Rendimiento mejorado de la migración `Simple` de `Bulk` datos con y modelos de recuperación registrados.
+* Rendimiento mejorado de la migración de datos con `Simple` y `Bulk` modelos de recuperación registrados.
 * Compatibilidad agregada para la compatibilidad con versiones anteriores de los proyectos creados con versiones anteriores de SSMA (v 4.0 y v 4.2).
 * Se ha agregado la posibilidad de instalar SSMA para el producto Oracle v 5.0 en paralelo (SxS) con versiones anteriores de SSMA (v 4.0 y v 4.2).
-* Compatibilidad agregada para informes de tipos definidos por el usuario (incluye `VARRAY`subtipo,, `NESTED TABLE`, tabla de objetos y vista de objetos) y sus usos en bloques PL/SQL con mensajes de error especiales.
+* Compatibilidad agregada para informes de tipos definidos por el usuario (incluye subtipo, `VARRAY` , `NESTED TABLE` , tabla de objetos y vista de objetos) y sus usos en bloques PL/SQL con mensajes de error especiales.
 
 ## <a name="july-2010"></a>Julio de 2010
 
@@ -359,14 +371,14 @@ La versión 2008 de junio de SSMA para Oracle contiene los siguientes cambios:
 
 * Se han agregado mejoras en el informe de evaluación, incluida información adicional para los sinónimos, el origen sin formato para los objetos que se deben analizar, los paneles y el SQL Server la eliminación del logotipo y la persistencia del diseño.
 * Mejoras agregadas en la conversión de objetos:
-  * Paquetes `DBMS_LOB`, `DBMS_SQL` conversión agregada.
+  * Paquetes `DBMS_LOB` , `DBMS_SQL` conversión agregada.
   * Se ha revisado la conversión.
   * Modificación de la conversión de colecciones y registros; ahora, la conversión de registros en casos simples se libera a través de variables independientes para cada campo.
   * Mejoras en la implementación de registros y colecciones.
   * Funciones de agregación de ventanas agregadas.
   * `ROLLUP`/`CUBE`cláusula agregada.
-  * Mejora para `NEXTVAL` / `CURVAL`.
-  * Se han agregado la `SET` agrupación de columnas en la cláusula, los conjuntos de agrupación y el ID. de agrupación.
+  * Mejora para `NEXTVAL` / `CURVAL` .
+  * Se han agregado la agrupación de columnas en la `SET` cláusula, los conjuntos de agrupación y el ID. de agrupación.
   * `MERGE`instrucción agregada.
   * Compatibilidad con los nuevos tipos de fecha y hora y la conversión de registros y colecciones a medida que se agregan tipos de datos CLR.
 * Se han agregado nuevas características de evaluador. Ahora, las tablas se pueden probar como objetos mediante el evaluador, se puede modificar un orden de llamada de varios objetos que se pueden comprobar en el caso de prueba, el usuario puede probar procedimientos y funciones con registros y colecciones como parámetros y valores devueltos, y se ha agregado un analizador de dependencias para comprobar solo las tablas usadas.

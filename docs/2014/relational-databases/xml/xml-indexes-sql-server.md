@@ -30,15 +30,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62631366"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702285"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Es posible crear índices XML en columnas del tipo de datos `xml`. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
@@ -103,7 +103,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
  El procesador de consultas usa el índice XML principal para las consultas relacionadas con los [xml Data Type Methods](/sql/t-sql/xml/xml-data-type-methods) y devuelve valores escalares o los subárboles XML del propio índice principal. (Este índice almacena toda la información necesaria para volver a construir la instancia XML).  
   
- Por ejemplo, la siguiente consulta devuelve información de Resumen almacenada `CatalogDescription``xml` en la columna Type `ProductModel` de la tabla. La consulta devuelve información perteneciente a <`Summary`> solo para modelos de producto cuya descripción de catálogo también almacena información sobre <`Features`>.  
+ Por ejemplo, la siguiente consulta devuelve información de Resumen almacenada en la `CatalogDescription``xml` columna Type de la `ProductModel` tabla. La consulta devuelve información perteneciente a <`Summary`> solo para modelos de producto cuya descripción de catálogo también almacena información sobre <`Features`>.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS "PD")SELECT CatalogDescription.query('  /PD:ProductDescription/PD:Summary') as ResultFROM Production.ProductModelWHERE CatalogDescription.exist ('/PD:ProductDescription/PD:Features') = 1  
@@ -198,7 +198,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Salvo por las diferencias descritas más adelante en este tema, crear un índice XML`xml` en una columna de tipo es similar a crear un índice en`xml` una columna que no sea de tipo. Las siguientes instrucciones DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden usarse para crear y administrar índices XML:  
+ Salvo por las diferencias descritas más adelante en este tema, crear un índice XML en una `xml` columna de tipo es similar a crear un índice en una columna que no sea de `xml` tipo. Las siguientes instrucciones DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden usarse para crear y administrar índices XML:  
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   

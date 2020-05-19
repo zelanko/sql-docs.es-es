@@ -15,15 +15,15 @@ helpviewer_keywords:
 - sql:limit-value
 - filtering [SQLXML]
 ms.assetid: c0f7ae92-eeec-430e-a66a-f22c3ae64a5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dd38d26195d10c097ad090ed756a7f5d62508456
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013807"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703577"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones `sql:limit-field` y `sql:limit-value` se usan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  
@@ -170,7 +170,7 @@ ms.locfileid: "66013807"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Es el esquema de asignación en el que el atributo **OrderID** de los detalles del pedido se asigna a la columna OrderID de la relación Orders. Los valores que se devuelven para este atributo se limitan únicamente a los que tienen un valor de 2.0000000 e-001 (0,2) como se especifica para el `sql:limit-field` atributo `sql:limit-value` **Discount** mediante las anotaciones y.  
+ Es el esquema de asignación en el que el atributo **OrderID** de los detalles del pedido se asigna a la columna OrderID de la relación Orders. Los valores que se devuelven para este atributo se limitan únicamente a los que tienen un valor de 2.0000000 e-001 (0,2) como se especifica para el atributo **Discount** mediante las `sql:limit-field` `sql:limit-value` anotaciones y.  
   
  Éste es el esquema:  
   

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XSD schemas [SQLXML], hiding attributes and elements
 - attribute hiding [SQLXML]
 ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 6ce8daf2badb855cbf855031d93e38fb689eab54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85d057af7202a5076f299371fb2b0b2ec170087f
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013834"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703570"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Ocultar elementos y atributos mediante sql:hide
   Cuando se ejecuta una consulta XPath en un esquema XSD, el documento XML resultante tiene elementos y atributos que se especifican en el esquema. Es posible especificar que algunos elementos y atributos se oculten en el esquema utilizando la anotación `sql:hide`. Esto resulta muy útil cuando los criterios de selección de la consulta requieren determinados elementos o atributos en el esquema, pero no desea que se devuelvan en el documento XML que se genera.  
@@ -40,9 +40,9 @@ ms.locfileid: "66013834"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Especificar sql:hide en un atributo  
- El esquema XSD de este ejemplo consta de un ** \<elemento person. contact>** con los atributos **ContactID**, **FirstName**y **LastName** .  
+ El esquema XSD de este ejemplo consta de un elemento ** \< Person. contact>** con los atributos **ContactID**, **FirstName**y **LastName** .  
   
- El ** \<elemento person. contact>** es de tipo complejo y, por lo tanto, se asigna a la tabla del mismo nombre (asignación predeterminada). Todos los atributos del ** \<elemento person. contact>** son de tipo simple y se asignan a columnas con los mismos nombres en person. Contacttable en la base de datos AdventureWorks. En el esquema, la `sql:hide` anotación se especifica en el atributo **ContactID** . Cuando se especifica una consulta XPath en este esquema, el **ContactID** no se devuelve en el documento XML.  
+ El elemento ** \< Person. contact>** es de tipo complejo y, por lo tanto, se asigna a la tabla del mismo nombre (asignación predeterminada). Todos los atributos del elemento ** \< Person. contact>** son de tipo simple y se asignan a columnas con los mismos nombres en person. Contacttable en la base de datos AdventureWorks. En el esquema, la `sql:hide` anotación se especifica en el atributo **ContactID** . Cuando se especifica una consulta XPath en este esquema, el **ContactID** no se devuelve en el documento XML.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
@@ -89,7 +89,7 @@ ms.locfileid: "66013834"
 </ROOT>  
 ```  
   
- Cuando se especifica `sql:hide` en un elemento, el elemento y sus atributos o elementos secundarios no aparecen en el documento XML que se genera. Este es otro esquema XSD en el `sql:hide` que se especifica en el ** \<elemento>OD** :  
+ Cuando se especifica `sql:hide` en un elemento, el elemento y sus atributos o elementos secundarios no aparecen en el documento XML que se genera. Este es otro esquema XSD en `sql:hide` el que se especifica en el elemento ** \<>OD** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -144,7 +144,7 @@ ms.locfileid: "66013834"
 </xsd:schema>  
 ```  
   
- Cuando se especifica una consulta XPath ( `/Customers[@CID="1"]`por ejemplo) en este esquema, el documento XML que se genera no incluye el ** \<elemento OD>** y sus elementos secundarios, tal y como se muestra en este resultado parcial:  
+ Cuando se especifica una consulta XPath (por ejemplo `/Customers[@CID="1"]` ) en este esquema, el documento XML que se genera no incluye el elemento ** \< OD>** y sus elementos secundarios, tal y como se muestra en este resultado parcial:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

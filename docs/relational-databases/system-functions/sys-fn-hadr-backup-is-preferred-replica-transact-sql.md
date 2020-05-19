@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 287acb7986b3e518260f82278f8079391932ab6f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68120254"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262135"
 ---
 # <a name="sysfn_hadr_backup_is_preferred_replica--transact-sql"></a>Sys. fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +46,8 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  '*dbname*'  
  Es el nombre de la base de datos de la que se realiza una copia de seguridad. *dbname* es de tipo sysname.  
   
-## <a name="returns"></a>Devuelve  
- Devuelve 1 si la base de datos en la instancia actual está en la réplica preferida. De lo contrario, devuelve 0.  
+## <a name="returns"></a>Devoluciones  
+ Devuelve el tipo de datos **bool**: 1 si la base de datos de la instancia actual está en la réplica preferida; en caso contrario, es 0.  
   
 ## <a name="remarks"></a>Observaciones  
  Utilice esta función en un script de copia de seguridad para determinar si la base de datos actual está en la réplica preferida para las copias de seguridad. Puede ejecutar un script en cada réplica de disponibilidad. Cada uno de estos trabajos examina los mismos datos para determinar qué trabajo debe ejecutarse, por lo que solamente los trabajos programados pasan a la etapa de copia de seguridad. El código de ejemplo podría ser similar al siguiente.  

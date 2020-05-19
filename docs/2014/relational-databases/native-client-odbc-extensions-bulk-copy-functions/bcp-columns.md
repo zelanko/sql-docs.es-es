@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_columns function
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fcfbbdb1881662401e791ea197115120444cf855
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63225527"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701991"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) se puede utilizar en lugar de bcp_columns y [bcp_colfmt](bcp-colfmt.md).  
@@ -49,7 +49,7 @@ nColumns
  *nColumns*  
  Es el número total de columnas en el archivo de usuario. Incluso si está preparando la copia masiva de datos del archivo de usuario en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla y no pretende copiar todas las columnas del archivo de usuario, debe establecer *nColumns* en el número total de columnas de archivo de usuario.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Observaciones  
@@ -57,7 +57,7 @@ nColumns
   
  Solo debe llamar a esta función si piensa utilizar un formato de archivo de usuario que difiere del valor predeterminado. Para obtener más información sobre una descripción del formato de archivo de usuario predeterminado, vea **bcp_init**.  
   
- Después de `bcp_columns`llamar a, debe llamar a [bcp_colfmt](bcp-colfmt.md)por cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
+ Después de llamar a `bcp_columns` , debe llamar a [bcp_colfmt](bcp-colfmt.md)por cada columna del archivo de usuario para definir completamente un formato de archivo personalizado.  
   
 ## <a name="see-also"></a>Consulte también  
  [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  

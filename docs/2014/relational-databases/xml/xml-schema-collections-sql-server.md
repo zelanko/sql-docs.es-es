@@ -18,18 +18,18 @@ helpviewer_keywords:
 - XML schema collections [SQL Server]
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45f3dfbf7a4caa2744ef57a352b0434e7eb1bf37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193032"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702263"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
-  Tal y como se describe en el tema [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server proporciona almacenamiento nativo de datos XML `xml` a través del tipo de datos. Opcionalmente, puede asociar esquemas XSD a una variable o una columna `xml` de tipo a través de una colección de esquemas XML. Esta colección almacena los esquemas XML importados y luego se usa para lo siguiente:  
+  Tal y como se describe en el tema [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server proporciona almacenamiento nativo de datos XML a través del `xml` tipo de datos. Opcionalmente, puede asociar esquemas XSD a una variable o una columna de `xml` tipo a través de una colección de esquemas XML. Esta colección almacena los esquemas XML importados y luego se usa para lo siguiente:  
   
 -   Validar instancias XML  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63193032"
   
  El motor de procesamiento de consultas también usa el esquema para la comprobación de los tipos y para optimizar las consultas y la modificación de datos.  
   
- Además, SQL Server utiliza la colección de esquemas XML asociada, en el caso de `xml`con tipo, para validar la instancia XML. Si la instancia XML es compatible con el esquema, la base de datos permite que se almacene la instancia en el sistema con su información de tipos. De lo contrario, rechaza la instancia.  
+ Además, SQL Server utiliza la colección de esquemas XML asociada, en el caso de con tipo `xml` , para validar la instancia XML. Si la instancia XML es compatible con el esquema, la base de datos permite que se almacene la instancia en el sistema con su información de tipos. De lo contrario, rechaza la instancia.  
   
  Se puede usar la función intrínseca XML_SCHEMA_NAMESPACE para recuperar la colección de esquemas que está almacenada en la base de datos. Para obtener más información, vea [Ver una colección de esquemas XML almacenada](../xml/view-a-stored-xml-schema-collection.md).  
   
@@ -138,7 +138,7 @@ ms.locfileid: "63193032"
   
 -   Quitar la colección de esquemas XML  
   
--   Usar la colección de esquemas XML `xml` para escribir tipos de columnas, variables y parámetros, o para utilizarlos en restricciones de tabla o columna  
+-   Usar la colección de esquemas XML para escribir `xml` tipos de columnas, variables y parámetros, o para utilizarlos en restricciones de tabla o columna  
   
  El modelo de seguridad de SQL Server concede el permiso CONTROL para todos los objetos. El receptor de este permiso obtiene todos los demás permisos para el objeto. El propietario del objeto también dispone de todos los permisos para el objeto.  
   
@@ -188,7 +188,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Los esquemas XML individuales de la colección se pueden obtener `xml` como instancias de tipo de datos especificando el espacio de nombres de destino como tercer argumento para **XML_SCHEMA_NAMESPACE ()**. Esto se muestra en el ejemplo siguiente.  
+ Los esquemas XML individuales de la colección se pueden obtener como `xml` instancias de tipo de datos especificando el espacio de nombres de destino como tercer argumento para **XML_SCHEMA_NAMESPACE ()**. Esto se muestra en el ejemplo siguiente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado a partir de una colección de esquemas XML  
  La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino "<https://www.microsoft.com/books>" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  

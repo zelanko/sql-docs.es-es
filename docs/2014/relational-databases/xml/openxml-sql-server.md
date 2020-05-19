@@ -20,22 +20,22 @@ helpviewer_keywords:
 - XML [SQL Server], OPENXML statement
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cc2a5b9d56f5c4d07c4e998439bd3b38d3c06058
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174064"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702571"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] , proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.
 
  OPENXML puede utilizarse en instrucciones SELECT y SELECT INTO donde puedan aparecer como origen proveedores de conjuntos de filas, una vista u OPENROWSET. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).
 
- Para escribir consultas en un documento XML mediante OPENXML, primero debe llamar a `sp_xml_preparedocument`. que analiza el documento XML y devuelve un identificador para el documento analizado que está listo para su uso. El documento analizado es una representación en árbol del modelo de objetos de documento (DOM) de los distintos nodos del documento XML. Este identificador de documento se pasa a OPENXML. A continuación, OPENXML proporciona una vista de conjunto de filas del documento, basándose en los parámetros que ha recibido.
+ Para escribir consultas en un documento XML mediante OPENXML, primero debe llamar a `sp_xml_preparedocument` . que analiza el documento XML y devuelve un identificador para el documento analizado que está listo para su uso. El documento analizado es una representación en árbol del modelo de objetos de documento (DOM) de los distintos nodos del documento XML. Este identificador de documento se pasa a OPENXML. A continuación, OPENXML proporciona una vista de conjunto de filas del documento, basándose en los parámetros que ha recibido.
 
 > [!NOTE]
 >  `sp_xml_preparedocument`usa una versión actualizada de SQL del analizador de MSXML, Msxmlsql. dll. Esta versión del analizador de MSXML se diseñó para admitir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y seguir siendo compatible con versiones anteriores con MSXML versión 2.6.
@@ -110,7 +110,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   La asignación entre las columnas del conjunto de filas y los nodos XML
 
 ### <a name="xml-document-handle-idoc"></a>Identificador del documento XML (idoc)
- El `sp_xml_preparedocument` procedimiento almacenado devuelve el identificador del documento.
+ El procedimiento almacenado devuelve el identificador del documento `sp_xml_preparedocument` .
 
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>Expresión XPath que identifica los nodos que se van a procesar (rowpattern)
  La expresión XPath especificada como *rowpattern* identifica un conjunto de nodos del documento XML. Cada nodo identificado por *rowpattern* se corresponde con una única fila del conjunto de filas generado por OPENXML.

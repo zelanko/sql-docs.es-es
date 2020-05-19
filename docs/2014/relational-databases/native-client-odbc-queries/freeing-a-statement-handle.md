@@ -14,15 +14,15 @@ helpviewer_keywords:
 - ODBC applications, statements
 - statement handles [ODBC]
 ms.assetid: 96fdff84-0ca7-460a-a240-94ee826ea41c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d6fcb06aaabaa927ea9b330ba8e52c27ba8dcdb
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200048"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82699818"
 ---
 # <a name="freeing-a-statement-handle"></a>Liberar un identificador de instrucción
   Es más eficaz volver a utilizar los identificadores de instrucciones que quitarlos y asignar unos nuevos. Antes de ejecutar una nueva instrucción SQL en un identificador de instrucciones, las aplicaciones deberían comprobar que la configuración de instrucción actual es correcta. Éstos incluyen atributos de instrucción, enlaces de parámetros y enlaces de conjunto de resultados. Por lo general, los parámetros y conjuntos de resultados de la instrucción SQL anterior deben estar desenlazados mediante una llamada a [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) con las opciones SQL_RESET_PARAMS y SQL_UNBIND y, después, volver a enlazarse a la nueva instrucción SQL.  

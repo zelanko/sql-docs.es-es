@@ -14,18 +14,18 @@ helpviewer_keywords:
 - overflow data [SQLXML]
 - sql:overflow-field
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 18651b91ee2a47819360eae4c57c18ac3eae672b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66013781"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703529"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperar datos no utilizados mediante sql:overflow-field (SQLXML 4.0)
-  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando recupere datos de una base de datos utilizando esquemas anotados, puede especificar el atributo `sql:overflow-field` para identificar la columna en la tabla en la que se almacenan los datos de desbordamiento. El `sql:overflow-field` atributo se puede especificar en ** \<el elemento>**.  
+  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando recupere datos de una base de datos utilizando esquemas anotados, puede especificar el atributo `sql:overflow-field` para identificar la columna en la tabla en la que se almacenan los datos de desbordamiento. El `sql:overflow-field` atributo se puede especificar en el ** \< elemento>**.  
   
  Este dato se recupera después de las siguientes maneras:  
   
@@ -60,7 +60,7 @@ INSERT INTO Customers2 VALUES (
 GO  
 ```  
   
- Además, debe crear un directorio virtual para la base de datos Tempdb, y un nombre virtual de plantilla `template` de tipo denominado "template".  
+ Además, debe crear un directorio virtual para la base de datos Tempdb, y un nombre virtual de plantilla de `template` tipo denominado "template".  
   
  En el ejemplo siguiente, el esquema de asignación recupera los datos no consumidos que están almacenados en la columna AddressOverflow de la tabla Customers2:  
   

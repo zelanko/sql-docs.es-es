@@ -2,7 +2,7 @@
 title: Diseñar ensamblados | Microsoft Docs
 description: En este artículo se describen los factores que se deben tener en cuenta al diseñar un ensamblado para hospedar en SQL Server, incluidos el empaquetado, la administración y las restricciones de los ensamblados.
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/24/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: clr
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 65dbc1a4fdabbf234f4676d75011522a8f3481d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f2a5281d0e5fd7ac18f908ba4c28302b3bfdd5f
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488062"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262056"
 ---
 # <a name="assemblies---designing"></a>Ensamblados: diseño
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ System.Security.UnverifiableCodeAttribute
 ```  
   
 ### <a name="disallowed-net-framework-apis"></a>API de .NET Framework no permitidas  
- No [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se puede llamar a ninguna API anotada con uno de los **HostProtectionAttributes** no permitidos desde ensamblados seguros y external_access.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] No se puede llamar a ninguna API anotada con uno de los **HostProtectionAttributes** no permitidos desde ensamblados seguros y external_access.  
   
 ```  
 eSelfAffectingProcessMgmt  
@@ -102,19 +102,22 @@ eUI
  Cualquier ensamblado al que haga referencia el suyo personalizado se debe cargar en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante CREATE ASSEMBLY. Los siguientes ensamblados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ya están cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, por lo tanto, se les puede hacer referencia mediante ensamblados personalizados sin la necesidad de utilizar CREATE ASSEMBLY.  
   
 ```  
-custommarshallers.dll  
-Microsoft.visualbasic.dll  
-Microsoft.visualc.dll  
+CustomMarshalers.dll  
+Microsoft.VisualBasic.dll  
+Microsoft.VisualC.dll  
 mscorlib.dll  
-system.data.dll  
+System.dll  
+System.Configuration.dll  
+System.Core.dll  
+System.Data.dll  
+System.Data.OracleClient.dll  
 System.Data.SqlXml.dll  
-system.dll  
-system.security.dll  
-system.web.services.dll  
-system.xml.dll  
-System.Transactions  
-System.Data.OracleClient  
-System.Configuration  
+System.Deployment.dll  
+System.Security.dll  
+System.Transactions.dll  
+System.Web.Services.dll  
+system.Xml.dll  
+System.Xml.Linq.dll  
 ```  
   
 ## <a name="see-also"></a>Consulte también  

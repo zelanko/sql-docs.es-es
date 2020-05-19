@@ -12,15 +12,15 @@ helpviewer_keywords:
 - client-side XML formatting
 - client-side-xml attribute
 ms.assetid: 9630a21d-a93b-4d3b-8a25-c4b32399f993
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd8f6c01a27b0ab973c84ddb0fe10fefa7a608f2
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012319"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702894"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Aplicación de formato XML en el cliente (SQLXML 4.0)
   En este tema se proporciona información acerca de la aplicación de formato XML del lado cliente. La aplicación de formato en el cliente se refiere a dar formato al XML en nivel intermedio.  
@@ -28,7 +28,7 @@ ms.locfileid: "66012319"
 > [!NOTE]  
 >  En este tema se proporciona información adicional acerca de la forma de usar la cláusula FOR XML en el cliente y se da por sentado que está familiarizado con la cláusula FOR XML. Para obtener más información acerca de FOR XML, vea [generar XML mediante for XML](../../xml/for-xml-sql-server.md).  
   
- **Importante** Para usar la funcionalidad FOR XML del lado cliente con el `xml` nuevo tipo de datos, los clientes deben [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar siempre el proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El uso de FOR XML en el cliente con el proveedor SQLOLEDB hará que los tipos de datos `xml` se consideren como cadenas.  
+ **Importante** Para usar la funcionalidad FOR XML del lado cliente con el nuevo `xml` tipo de datos, los clientes deben usar siempre el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El uso de FOR XML en el cliente con el proveedor SQLOLEDB hará que los tipos de datos `xml` se consideren como cadenas.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Aplicar formato a documentos XML en el cliente  
  Cuando una aplicación cliente ejecuta la siguiente consulta:  
@@ -117,7 +117,7 @@ AS
      Puede especificar el formato del lado cliente estableciendo esta propiedad de las clases administradas SQLXML en True.  
   
 ## <a name="enhanced-xml-template-support"></a>Compatibilidad mejorada con plantillas XML  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, la plantilla XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de se ha mejorado con la adición del atributo **Client-Side-XML** . Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en la funcionalidad de la propiedad Clientsidexml, específica del proveedor de SQLXMLOLEDB.  
+ A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , la plantilla XML de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ha mejorado con la adición del atributo **Client-Side-XML** . Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en la funcionalidad de la propiedad Clientsidexml, específica del proveedor de SQLXMLOLEDB.  
   
 > [!NOTE]  
 >  Si ejecuta una plantilla XML en una aplicación ADO que usa el proveedor SQLXMLOLEDB y especifica el atributo **Client-Side-XML** en la plantilla y la propiedad Provider clientsidexml,, el valor especificado en la plantilla tiene prioridad.  

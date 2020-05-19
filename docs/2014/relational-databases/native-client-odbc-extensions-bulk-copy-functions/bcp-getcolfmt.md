@@ -15,15 +15,15 @@ topic_type:
 helpviewer_keywords:
 - bcp_getcolfmt function
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 793543cce582bd4e17cbf8d06f096056a2ecb89b
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62689087"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82701970"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
   Se utiliza para buscar el valor de propiedad del formato de columna.  
@@ -72,7 +72,7 @@ pcbLen
  *pcbLen*  
  Puntero a la longitud de los datos que se devuelven en el búfer de propiedad.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
 ## <a name="remarks"></a>Observaciones  

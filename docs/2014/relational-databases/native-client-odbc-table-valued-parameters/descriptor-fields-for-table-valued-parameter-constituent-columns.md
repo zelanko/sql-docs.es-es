@@ -9,15 +9,15 @@ ms.topic: reference
 helpviewer_keywords:
 - table-valued parameters (ODBC), descriptor fields for constituent columns
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a31491b56e5b5cd700e744be2b7a84f10f1e0121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63199938"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82698797"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Campos de descriptor para columnas de parámetros con valores de tabla
   Los campos de descriptor de parámetros con valores de tabla descritos en esta sección se manipulan mediante [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) y [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) con el identificador del descriptor de parámetros de implementación (IPD).  
@@ -41,7 +41,7 @@ ms.locfileid: "63199938"
   
  Estos atributos únicamente son válidos en columnas de parámetro con valores de tabla. Se pasan por alto para otros parámetros.  
   
- Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE está establecido para una columna de parámetro con valores de tabla, SQL_DESC_DATA_PTR para esa columna debe ser un puntero NULL. De lo contrario, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de parámetro predeterminado \<para el parámetro p \<>, columna c> \<", donde p> es el \<ordinal del parámetro y c> es el ordinal de la columna.  
+ Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE está establecido para una columna de parámetro con valores de tabla, SQL_DESC_DATA_PTR para esa columna debe ser un puntero NULL. De lo contrario, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de parámetro predeterminado para el parámetro \< p>, columna \< c>", donde \< p> es el ordinal del parámetro y \< c> es el ordinal de la columna.  
   
 ## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - XML data [SQL Server], retrieving
 - XML instance retrieval
 ms.assetid: 24a28760-1225-42b3-9c89-c9c0332d9c51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c6ac510751f20856151e6d89280cbac76c74420
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63241205"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702522"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Recuperar y consultar datos XML
   En este tema se describen las opciones de consulta que se tienen que especificar para consultar datos XML. También describe las partes de las instancias XML que no se conservan cuando se almacenan en bases de datos.  
@@ -40,7 +40,7 @@ FROM T1
   
  El resultado es `<doc/>`.  
   
- No se conserva la declaración XML, como `<?xml version='1.0'?>`, al almacenar los datos XML en una instancia de tipo de datos `xml`. es así por diseño. La declaración XML () y sus atributos (versión/codificación/independiente) se pierden cuando los datos se convierten al tipo `xml`. La declaración XML se trata como una directiva del analizador XML. Los datos XML se almacenan internamente como ucs-2. Se conservan todos los demás PI en la instancia XML.  
+ No se conserva la declaración XML, como `<?xml version='1.0'?>`, al almacenar los datos XML en una instancia de tipo de datos `xml`. es así por diseño. La declaración XML () y sus atributos (versión/codificación/independiente) se pierden cuando los datos se convierten al tipo `xml` . La declaración XML se trata como una directiva del analizador XML. Los datos XML se almacenan internamente como ucs-2. Se conservan todos los demás PI en la instancia XML.  
   
   
 ### <a name="order-of-attributes"></a>Orden de atributos  
@@ -87,7 +87,7 @@ GO
   
   
 ##  <a name="setting-required-query-options"></a><a name="query"></a> Establecer opciones de consulta necesarias  
- Al consultar las `xml` columnas de tipo o las `xml` variables mediante métodos de tipo de datos, se deben establecer las siguientes opciones como se muestra.  
+ Al consultar las `xml` columnas de tipo o las variables mediante `xml` métodos de tipo de datos, se deben establecer las siguientes opciones como se muestra.  
   
 |Opciones de SET|Valores requeridos|  
 |-----------------|---------------------|  
@@ -99,7 +99,7 @@ GO
 |NUMERIC_ROUNDABORT|Apagado|  
 |QUOTED_IDENTIFIER|ACTIVAR|  
   
- Si no se establecen las opciones como se muestra, las consultas y `xml` modificaciones de los métodos de tipo de datos generarán un error.  
+ Si no se establecen las opciones como se muestra, las consultas y modificaciones de `xml` los métodos de tipo de datos generarán un error.  
   
   
 ## <a name="see-also"></a>Consulte también  

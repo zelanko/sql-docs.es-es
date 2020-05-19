@@ -12,15 +12,15 @@ helpviewer_keywords:
 - diffgr:parentID
 - parentID annotation
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 975fd3a984418c20ae0e142b447aea6645284cbc
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012970"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82703188"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>Ejemplos de DiffGram (SQLXML 4.0)
   Los ejemplos de este tema incluyen de una serie de DiffGram que realizan operaciones de inserción, actualización y eliminación en la base de datos. Antes de usar los ejemplos, tenga en cuenta lo siguiente:  
@@ -99,7 +99,7 @@ ms.locfileid: "66012970"
 </ROOT>  
 ```  
   
- En el ** \<bloque Before>** , hay un ** \<elemento Order>** (**diffgr: ID = "Order1"**) y un ** \<elemento Customer>** (**diffgr: ID = "Customer1"**). Estos elementos representan registros existentes en la base de datos. El elemento de ** \<>de instancias** de la instancia no tiene los registros correspondientes (con el mismo **diffgr: ID**). Esto indica una operación de eliminación.  
+ En el bloque ** \< before>** , hay un elemento ** \< Order>** (**diffgr: ID = "Order1"**) y un elemento ** \< Customer>** (**diffgr: ID = "Customer1"**). Estos elementos representan registros existentes en la base de datos. El elemento de ** \<>de instancias** de la instancia no tiene los registros correspondientes (con el mismo **diffgr: ID**). Esto indica una operación de eliminación.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
@@ -166,7 +166,7 @@ ms.locfileid: "66012970"
 </ROOT>  
 ```  
   
- En este DiffGram, el bloque ** \<Before>** no se especifica (no se identificó ningún registro de base de datos existente). Hay dos instancias de registro (identificadas por los ** \<elementos Customer>** y ** \<Order>** en el ** \<bloque>de instancia** ) que se asignan a las tablas CUST y Ord, respectivamente. Ambos elementos especifican el atributo **diffgr: hasChanges** (**hasChanges = "Inserted"**). Esto indica una operación de inserción. En este DiffGram, si se especifica **hasChanges = "Modified"**, se indica que desea modificar un registro que no existe, lo que genera un error.  
+ En este DiffGram, el bloque ** \< before>** no se especifica (no se identificó ningún registro de base de datos existente). Hay dos instancias de registro (identificadas por los elementos ** \< Customer>** y ** \< Order>** en el bloque ** \<>de instancia** ) que se asignan a las tablas CUST y Ord, respectivamente. Ambos elementos especifican el atributo **diffgr: hasChanges** (**hasChanges = "Inserted"**). Esto indica una operación de inserción. En este DiffGram, si se especifica **hasChanges = "Modified"**, se indica que desea modificar un registro que no existe, lo que genera un error.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66012970"
 </ROOT>  
 ```  
   
- El ** \<bloque Before>** incluye un ** \<elemento>Customer** (**diffgr: ID = "Customer1"**). El ** \<bloque>de instancias de instancia** incluye el elemento de ** \<>de cliente** correspondiente con el mismo **identificador**. El ** \<elemento Customer>** de la ** \<>NewDataSet** también especifica **diffgr: hasChanges = "Modified"**. Esto indica una operación de actualización y el registro del cliente en la tabla **Cust** se actualiza en consecuencia. Tenga en cuenta que si no se especifica el atributo **diffgr: hasChanges** , la lógica de procesamiento de DiffGram omite este elemento y no se realiza ninguna actualización.  
+ El bloque ** \< before>** incluye un elemento ** \<>Customer** (**diffgr: ID = "Customer1"**). El bloque ** \<>de instancias de instancia** incluye el elemento de>de ** \< cliente** correspondiente con el mismo **identificador**. El elemento ** \< Customer>** de la ** \<>NewDataSet** también especifica **diffgr: hasChanges = "Modified"**. Esto indica una operación de actualización y el registro del cliente en la tabla **Cust** se actualiza en consecuencia. Tenga en cuenta que si no se especifica el atributo **diffgr: hasChanges** , la lógica de procesamiento de DiffGram omite este elemento y no se realiza ninguna actualización.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
@@ -339,15 +339,15 @@ ms.locfileid: "66012970"
   
  La lógica de DiffGram procesa este DiffGram del modo siguiente:  
   
--   De acuerdo con la lógica de procesamiento de DiffGram, todos los elementos de nivel superior del bloque ** \<Before>** se asignan a las tablas correspondientes, tal y como se describe en el esquema de asignación.  
+-   De acuerdo con la lógica de procesamiento de DiffGram, todos los elementos de nivel superior del bloque ** \< before>** se asignan a las tablas correspondientes, tal y como se describe en el esquema de asignación.  
   
--   El ** \<bloque Before>** tiene un ** \<elemento Order>** (**dffgr: ID = "Order1"**) y un ** \<elemento Customer>** (**diffgr: ID = "Customer1"**) para el que no hay ningún elemento correspondiente en el ** \<bloque>de instancia** (con el mismo identificador). Esto indica una operación de eliminación y los registros se eliminan de las tablas Cust y Ord.  
+-   El bloque ** \< before>** tiene un elemento ** \< Order>** (**dffgr: ID = "Order1"**) y un elemento ** \< Customer>** (**diffgr: ID = "Customer1"**) para el que no hay ningún elemento correspondiente en el bloque ** \<>de instancia** (con el mismo identificador). Esto indica una operación de eliminación y los registros se eliminan de las tablas Cust y Ord.  
   
--   El ** \<bloque Before>** tiene un ** \<elemento>Customer** (**diffgr: ID = "Customer2"**) para el que hay un elemento ** \<Customer>** correspondiente en el ** \<** bloque de>de instancias de instancia (con el mismo identificador). El elemento del bloque ** \<>de instancias de instancia** especifica **diffgr: hasChanges = "Modified"**. Se trata de una operación de actualización en la que para Customer ANATR, la información de CompanyName y ContactName se actualiza en la tabla Cust mediante los valores ** \<** que se especifican en el bloque de>de instancias de datos.  
+-   El bloque ** \< before>** tiene un elemento ** \<>Customer** (**diffgr: ID = "Customer2"**) para el que hay un elemento ** \< Customer>** correspondiente en el bloque de ** \<>de instancias de instancia** (con el mismo identificador). El elemento del bloque ** \<>de instancias de instancia** especifica **diffgr: hasChanges = "Modified"**. Se trata de una operación de actualización en la que para Customer ANATR, la información de CompanyName y ContactName se actualiza en la tabla Cust mediante los valores que se especifican en el bloque de ** \<>de instancias** de datos.  
   
--   El bloque ** \<>de instancias de instancia** tiene un ** \<elemento Customer>** (**diffgr: ID = "Customer3"**) y un ** \<elemento Order>** (**diffgr: ID = "Order3"**). Ninguno de estos elementos especifica el atributo **diffgr: hasChanges** . Por lo tanto, la lógica de procesamiento de DiffGram omite estos elementos.  
+-   El bloque ** \<>de instancias de instancia** tiene un elemento ** \< Customer>** (**diffgr: ID = "Customer3"**) y un elemento ** \< Order>** (**diffgr: ID = "Order3"**). Ninguno de estos elementos especifica el atributo **diffgr: hasChanges** . Por lo tanto, la lógica de procesamiento de DiffGram omite estos elementos.  
   
--   El bloque de ** \<>de instancias de instancia** tiene un \< ** \<elemento Customer>** (**diffgr: ID = "Customer4"**) y un ** \<elemento Order>** (**diffgr: ID = "Order4"**) para los que no hay elementos correspondientes en el bloque Before>. Estos elementos del bloque ** \<>de instancia** especifican **diffgr: hasChanges = "Inserted"**. Por lo tanto, se agrega un nuevo registro a la tabla Cust y a la tabla Ord.  
+-   El bloque de ** \<>de instancias de instancia** tiene un elemento ** \< Customer>** (**diffgr: ID = "Customer4"**) y un elemento ** \< Order>** (**diffgr: ID = "Order4"**) para los que no hay elementos correspondientes en el \< bloque Before>. Estos elementos del bloque ** \<>de instancia** especifican **diffgr: hasChanges = "Inserted"**. Por lo tanto, se agrega un nuevo registro a la tabla Cust y a la tabla Ord.  
   
 #### <a name="to-test-the-diffgram"></a>Para probar el DiffGram:  
   
@@ -390,7 +390,7 @@ ms.locfileid: "66012970"
      Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. Aplicar actualizaciones mediante un DiffGram con la anotación diffgr:parentID  
- En este ejemplo se muestra cómo se utiliza la anotación **parentId** que se especifica en el ** \<bloque Before>** del DiffGram para aplicar las actualizaciones.  
+ En este ejemplo se muestra cómo se utiliza la anotación **parentId** que se especifica en el bloque ** \< Before>** del DiffGram para aplicar las actualizaciones.  
   
 ```  
 <NewDataSet />  
@@ -411,6 +411,6 @@ ms.locfileid: "66012970"
 </diffgr:diffgram>  
 ```  
   
- Este DiffGram especifica una operación de eliminación porque solo hay un ** \<bloque Before>** . En el DiffGram, la anotación **parentId** se usa para especificar una relación de elementos primarios y secundarios entre los pedidos y los detalles del pedido. Cuando SQLXML elimina los registros, elimina los registros de la tabla secundaria que se identifica mediante esta relación y, a continuación, elimina los registros de la tabla primaria correspondiente.  
+ Este DiffGram especifica una operación de eliminación porque solo hay un bloque ** \< before>** . En el DiffGram, la anotación **parentId** se usa para especificar una relación de elementos primarios y secundarios entre los pedidos y los detalles del pedido. Cuando SQLXML elimina los registros, elimina los registros de la tabla secundaria que se identifica mediante esta relación y, a continuación, elimina los registros de la tabla primaria correspondiente.  
   
   

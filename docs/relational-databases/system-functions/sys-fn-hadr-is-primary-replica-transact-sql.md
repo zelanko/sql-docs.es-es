@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: befd4ba78a3d147acd8dd2adbd8fcb81500ec4b8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a030bbcd292ade6e52f71f523d60dfccbdf6c79
+ms.sourcegitcommit: bfb5e79586fd08d8e48e9df0e9c76d1f6c2004e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68811414"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82262117"
 ---
 # <a name="sysfn_hadr_is_primary_replica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  '*dbname*'  
  Es el nombre de la base de datos. *dbname* es de tipo sysname.  
   
-## <a name="returns"></a>Devuelve  
- Devuelve 1 si la base de datos en la instancia actual es la réplica principal. De lo contrario, devuelve 0.  
+## <a name="returns"></a>Devoluciones  
+ Devuelve el tipo de datos **bool**: 1 si la base de datos de la instancia actual es la réplica principal, de lo contrario, es 0.  
   
 ## <a name="remarks"></a>Observaciones  
  Utilice esta función para determinar fácilmente si la instancia local hospeda la réplica principal de la base de datos de disponibilidad especificada. El código de ejemplo podría ser similar al siguiente.  

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 50f98cab-8c80-43c5-bc9a-5d2f95f67f17
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 70477e5fc741949a42aa5eebfd7a1d0a2b3568b6
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68207023"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82696223"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Utilizar las características mejoradas de fecha y hora (OLE DB)
-  En este ejemplo, se muestra cómo usar las características de fecha y hora que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. En el ejemplo se usan los cuatro nuevos tipos de fecha`date`y hora ( `datetime2`, **Time**, y `datetimeoffset`) para ejecutar comandos con parámetros y recuperar los resultados del conjunto de filas.  
+  En este ejemplo, se muestra cómo usar las características de fecha y hora que se incluyeron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. En el ejemplo se usan los cuatro nuevos tipos de fecha y hora ( `date` , **Time**, `datetime2` y `datetimeoffset` ) para ejecutar comandos con parámetros y recuperar los resultados del conjunto de filas.  
   
  Este ejemplo requiere la base de datos de ejemplo AdventureWorks que se puede descargar de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   

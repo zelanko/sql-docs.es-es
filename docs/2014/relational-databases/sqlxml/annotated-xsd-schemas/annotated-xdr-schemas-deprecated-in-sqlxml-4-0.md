@@ -12,15 +12,15 @@ helpviewer_keywords:
 - annotated XDR schemas
 - schemas [SQLXML]
 ms.assetid: 874c6dca-8a0c-4a2e-891c-ba6e326154d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b19deb48073462ce26c86afdd586e2b9e5426ecb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ee928fe485b64024839a0afc792f734ad6c6abf
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014621"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702963"
 ---
 # <a name="annotated-xdr-schemas-deprecated-in-sqlxml-40"></a>Esquemas XDR anotados (desusados en SQLXML 4.0)
   Los esquemas XDR anotados están en desuso. No se llevará a cabo ningún trabajo de desarrollo de esta característica en el futuro. Evite utilizarla en nuevos trabajos de desarrollo. En su lugar, utilice esquemas XSD anotados. Puede convertir los esquemas XDR anotados existentes en esquemas XSD. Para obtener más información, vea [convertir esquemas XDR anotados en esquemas XSD equivalentes &#40;SQLXML 4,0&#41;](converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-4-0.md). Para obtener información acerca de los esquemas XDR desusados, consulte la [documentación de SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=202011).  

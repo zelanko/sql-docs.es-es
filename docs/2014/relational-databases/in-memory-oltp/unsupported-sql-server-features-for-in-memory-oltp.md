@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63157236"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702225"
 ---
 # <a name="supported-sql-server-features"></a>Características admitidas de SQL Server
   En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar o no con objetos optimizados para memoria.  
@@ -59,7 +59,7 @@ ms.locfileid: "63157236"
   
 -   Service Broker, con limitaciones. No puede tener acceso a una cola desde un procedimiento almacenado compilado de forma nativa. No puede tener acceso a una cola en una base de datos remota en una transacción que tiene acceso a tablas optimizadas para memoria.  
   
--   Clústeres de conmutación por error: como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parte de la oferta de AlwaysOn, las instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante redundancia en el nivel de instancia de servidor, una instancia de clúster de conmutación por error (FCI). Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
+-   Clústeres de conmutación por error: como parte de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oferta de AlwaysOn, las instancias de clúster de conmutación por error de AlwaysOn aprovechan la funcionalidad de clústeres de conmutación por error de Windows Server (WSFC) para proporcionar alta disponibilidad local mediante redundancia en el nivel de instancia de servidor, una instancia de clúster de conmutación por error (FCI). Para obtener más información, vea [Always On Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md) (Instancias de clúster de conmutación por error de Always On [SQL Server]).  
   
 -   Integración con AlwaysOn: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrece varias opciones para crear alta disponibilidad para un servidor o una base de datos, incluida AlwaysOn. Para más información, vea [Soluciones de alta disponibilidad &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md).  
   
@@ -108,7 +108,7 @@ ms.locfileid: "63157236"
 |Bases de datos|Permitida|Descripción|  
 |---------------|-------------|-----------------|  
 |Bases de datos de usuario, modelo y msdb|No|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
-|Base de datos de recursos y tempdb|Sí|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  
+|Base de datos de recursos y tempdb|Yes|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  
 |maestro|solo lectura|Las transacciones entre bases de datos que tocan OLTP en memoria y la base de datos maestra no pueden confirmarse si incluyen operaciones de escritura en la base de datos maestra. Se permiten las transacciones entre bases de datos que solo leen de la base de datos maestra y usan una base de datos de un solo usuario.|  
   
 ## <a name="see-also"></a>Consulte también  

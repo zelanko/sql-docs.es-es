@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SQLXML, xml data type support
 - xml data type [SQL Server], SQLXML
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f0288e88e10433a3c74487b1fd1418b14a58094b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012167"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702813"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Compatibilidad con tipos de datos xml en SQLXML 4.0
-  A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , admite datos con tipo XML mediante `xml` el tipo de datos. En este tema se proporciona información sobre la forma en que SQLXML 4.0 reconoce instancias del tipo de datos `xml` y la forma en que implementa la compatibilidad con estas instancias.  
+  A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos con tipo XML mediante el `xml` tipo de datos. En este tema se proporciona información sobre la forma en que SQLXML 4.0 reconoce instancias del tipo de datos `xml` y la forma en que implementa la compatibilidad con estas instancias.  
   
 ## <a name="working-with-xml-data-types"></a>Trabajar con tipos de datos xml  
  Para entender mejor la forma de trabajar con tablas SQL que implementan columnas de tipo de datos `xml`, se proporcionan los ejemplos siguientes:  
@@ -34,7 +34,7 @@ ms.locfileid: "66012167"
   
 ## <a name="guidelines-and-limitations"></a>Instrucciones y limitaciones  
   
--   xsd: los>no se pueden asignar a una columna que `xml` incluya un tipo de datos. ** \<** En SQLXML, se proporciona compatibilidad para este escenario a través de la anotación `sql:overflow-field`. Otra solución es asignar un campo de tipo de datos `xml` como un elemento de `xsd:anyType`. Esta solución alternativa se muestra en el ejemplo "Asignar un elemento XML a una columna de tipo de datos XML", al que se hacía referencia en la tabla anterior.  
+-   ** \< xsd: los>** no se pueden asignar a una columna que incluya un `xml` tipo de datos. En SQLXML, se proporciona compatibilidad para este escenario a través de la anotación `sql:overflow-field`. Otra solución es asignar un campo de tipo de datos `xml` como un elemento de `xsd:anyType`. Esta solución alternativa se muestra en el ejemplo "Asignar un elemento XML a una columna de tipo de datos XML", al que se hacía referencia en la tabla anterior.  
   
 -   No se admiten consultas XPath en el contenido de las columnas de tipo de datos `xml`.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66012167"
   
 -   SQLXML 4.0 se basa en la compatibilidad limitada con las DTD que se proporcionan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite una DTD interna en los datos de tipo `xml`, que puede utilizarse para proporcionar valores predeterminados y reemplazar las referencias a entidades por su contenido expandido. SQLXML pasa los datos XML "tal cual" al servidor (incluida la DTD interna). Puede convertir las DTD en documentos de esquema XML (XSD) mediante herramientas de otros fabricantes y cargar los datos con esquemas XML insertados en la base de datos.  
   
--   SQLXML 4,0 no conserva las instrucciones de procesamiento de declaraciones XML (por ejemplo,) en función del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]comportamiento de. En lugar de ello, la declaración XML se trata como una directiva del analizador XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus atributos (version, encoding y standalone) se pierden una vez que los datos se han convertido al tipo `xml`. Los datos XML se almacenan internamente como UCS-2. Las demás instrucciones de procesamiento de la instancia XML se conservan; se permiten en la columna `xml` y son compatibles con SQLXML.  
+-   SQLXML 4,0 no conserva las instrucciones de procesamiento de declaraciones XML (por ejemplo,) en función del comportamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En lugar de ello, la declaración XML se trata como una directiva del analizador XML de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus atributos (version, encoding y standalone) se pierden una vez que los datos se han convertido al tipo `xml`. Los datos XML se almacenan internamente como UCS-2. Las demás instrucciones de procesamiento de la instancia XML se conservan; se permiten en la columna `xml` y son compatibles con SQLXML.  
   
 ## <a name="see-also"></a>Consulte también  
  [Datos XML &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  

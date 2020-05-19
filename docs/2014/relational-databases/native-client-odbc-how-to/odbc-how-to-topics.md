@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: native-client
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: faf30bd2b6ebfc13a7699241bc4a83ab653f2e24
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63200376"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82700393"
 ---
 # <a name="odbc-how-to-topics"></a>Temas de procedimientos de ODBC
   Para poder usar el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es necesario que sea capaz de crear orígenes de datos ODBC y que se asegure de que el servidor tiene la versión correcta de los procedimientos almacenados de catálogo. Para codificar una aplicación ODBC que usa SQL Server, debe saber cómo asignar identificadores de ODBC, establecer atributos, conectarse a una instancia de SQL Server, ejecutar consultas y procesar resultados.  

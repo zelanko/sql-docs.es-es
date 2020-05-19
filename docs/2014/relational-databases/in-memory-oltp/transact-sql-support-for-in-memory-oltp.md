@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b1cc7c30-1747-4c21-88ac-e95a5e58baac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1db4c6895fb499458c198008319302a25b8cd34b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8042534c8b22863c5a00abf4969bdb9754cef892
+ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156214"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82702212"
 ---
 # <a name="transact-sql-support-for-in-memory-oltp"></a>Compatibilidad de Transact-SQL con OLTP en memoria
   Puede acceder a las tablas optimizadas para memoria con cualquier consulta de Transact-SQL o instrucción DML (SELECT, INSERT, UPDATE o DELETE), instrucción ad hoc o módulo SQL como, por ejemplo, procedimientos almacenados, funciones con valores de tabla, funciones escalares, desencadenadores y vistas. Para obtener más información, vea [obtener acceso a tablas optimizadas para memoria mediante Transact-SQL interpretado](accessing-memory-optimized-tables-using-interpreted-transact-sql.md).  
@@ -24,17 +24,17 @@ ms.locfileid: "63156214"
   
  Al crear y modificar objetos de base de datos (instrucciones DDL), se modificaron las siguientes instrucciones:  
   
--   [Opciones File y filegroup de Alter database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) ( `MEMORY_OPTIMIZED_DATA`vea)  
+-   [Opciones File y filegroup de Alter database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options) (vea `MEMORY_OPTIMIZED_DATA` )  
   
--   [CREATE DATABASE &#40;SQL Server&#41;de Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql) ( `MEMORY_OPTIMIZED_DATA`vea)  
+-   [CREATE DATABASE &#40;SQL Server&#41;de Transact-SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql) (vea `MEMORY_OPTIMIZED_DATA` )  
   
--   [Create procedure &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql) (vea `NATIVE_COMPILATION`, `SCHEMABINDING` `EXECUTE AS`, y `BEGIN ATOMIC`)  
+-   [Create procedure &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql) (vea `NATIVE_COMPILATION` , `SCHEMABINDING` , `EXECUTE AS` y `BEGIN ATOMIC` )  
   
--   [CREATE TABLE &#40;&#41;de Transact-SQL](/sql/t-sql/statements/create-table-transact-sql) ( `MEMORY_OPTIMIZED`vea `DURABILITY`, `BUCKET_COUNT` `INDEX`,, y `HASH`)  
+-   [CREATE TABLE &#40;&#41;de Transact-SQL](/sql/t-sql/statements/create-table-transact-sql) (vea,,, `MEMORY_OPTIMIZED` `DURABILITY` `BUCKET_COUNT` `INDEX` y `HASH` )  
   
--   [Create Type &#40;&#41;de Transact-SQL](/sql/t-sql/statements/create-type-transact-sql) ( `MEMORY_OPTIMIZED`vea `BUCKET_COUNT`, `INDEX`, y `HASH`)  
+-   [Create Type &#40;&#41;de Transact-SQL](/sql/t-sql/statements/create-type-transact-sql) (vea `MEMORY_OPTIMIZED` ,, `BUCKET_COUNT` `INDEX` y `HASH` )  
   
--   [Declare @local_variable &#40;&#41;de TRANSACT-SQL](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (vea) `NULL`  |  `NOT NULL`  
+-   [Declare @local_variable &#40;&#41;de TRANSACT-SQL](/sql/t-sql/language-elements/declare-local-variable-transact-sql) (vea `NULL`  |  `NOT NULL` )  
   
  Las tablas con optimización para memoria admiten las restricciones `PRIMARY KEY` y `NOT NULL`. Para obtener información sobre la implementación de restricciones no admitidas, vea [migración de restricciones check y Foreign Key](../../database-engine/migrating-check-and-foreign-key-constraints.md).  
   

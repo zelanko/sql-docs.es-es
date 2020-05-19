@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterValue property [ADO]
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 17d4585a237b2dcd32df1508aeb85b291d4d9296
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964052"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751997"
 ---
 # <a name="filtervalue-property-rds"></a>Propiedad FilterValue (RDS)
 Indica el valor con el que se van a filtrar los registros.  
@@ -38,9 +38,9 @@ DataControl.FilterValue = String
  Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *String*  
- Valor de **cadena** que representa un valor de datos con el que se van a filtrar `'Programmer'` los `125`registros (por ejemplo, o).  
+ Valor de **cadena** que representa un valor de datos con el que se van a filtrar los registros (por ejemplo, `'Programmer'` o `125` ).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), **FilterValue**, [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md)y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](../../../ado/reference/rds-api/reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
  Los valores NULL producen un error de falta de coincidencia de tipos.  

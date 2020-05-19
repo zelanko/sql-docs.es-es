@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Handler property [ADO]
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a7423879b8263d87575d913c4863143faf3573e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 22e054a6f1723f32d81a4f00ec941a10f8212506
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964004"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82751950"
 ---
 # <a name="handler-property-rds"></a>Propiedad de controlador (RDS)
 Indica el nombre de un programa de personalización de servidor (controlador) que extiende la funcionalidad de [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)y cualquier parámetro utilizado por el *controlador*.  
@@ -40,9 +40,9 @@ DataControl.Handler = String
  Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *String*  
- Valor de **cadena** que contiene el nombre del controlador y cualquier parámetro, separados por comas (por ejemplo, `"handlerName,parm1,parm2,...,parm` *N*`"`).  
+ Valor de **cadena** que contiene el nombre del controlador y cualquier parámetro, separados por comas (por ejemplo, `"handlerName,parm1,parm2,...,parm` *N* `"` ).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta propiedad admite la [Personalización](../../../ado/guide/remote-data-service/datafactory-customization.md), una funcionalidad que requiere el establecimiento de la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) en **adUseClient**.  
   
  El nombre del controlador y sus parámetros, si los hay, se separan mediante comas (","). Se producirá un comportamiento imprevisible si un punto y coma (";") aparece en cualquier parte de la *cadena*. Puede escribir su propio controlador, siempre que admita la interfaz **IDataFactoryHandler** .  

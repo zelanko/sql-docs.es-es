@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - FilterCriterion property [RDS]
 ms.assetid: 24eb03ba-ccfd-4353-b6af-03586b2da6fd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b14e042c7566b6b6f8559e9dc371028a509979
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 88e1bbdb45b48e42d69bd921384056089b3a2241
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964069"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82752036"
 ---
 # <a name="filtercriterion-property-rds"></a>Propiedad FilterCriterion (RDS)
 Indica el operador de evaluación que se va a usar en el valor de filtro.  
@@ -38,9 +38,9 @@ DataControl.FilterCriterion = String
  Variable de objeto que representa un objeto [RDS. Objeto DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) .  
   
  *String*  
- Valor de **cadena** que especifica el operador de evaluación de [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) en los registros. Puede ser cualquiera de los siguientes: <, \<=, >, >=, = o <>.  
+ Valor de **cadena** que especifica el operador de evaluación de [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md) en los registros. Puede ser cualquiera de los siguientes: <, \< =, >, >=, = o <>.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), **FilterCriterion**y [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) proporcionan funcionalidad de ordenación y filtrado en la memoria caché del lado cliente. La funcionalidad de ordenación ordena los registros por los valores de una columna. La funcionalidad de filtrado muestra un subconjunto de registros basados en criterios de búsqueda, mientras que el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) completo se mantiene en la memoria caché. El método [RESET](../../../ado/reference/rds-api/reset-method-rds.md) ejecutará los criterios y reemplazará el **conjunto de registros** actual por un **conjunto de registros**actualizable.  
   
  El operador "! =" no es válido para **FilterCriterion**; en su lugar, use "<>".  

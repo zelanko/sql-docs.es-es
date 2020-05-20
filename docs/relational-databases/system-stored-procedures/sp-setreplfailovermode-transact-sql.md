@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setreplfailovermode
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5b39a5fa53560abb825b303d37d111bcbd7d0886
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9baab3745fde8249e5143b025dd4094c6f4a9133
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173560"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824318"
 ---
 # <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode = ] 'failover_mode'`Es el modo de conmutación por error de la suscripción. *failover_mode* es **nvarchar (10)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**inmediato** o **sincronizar**|A medida que se vayan modificando los datos en el suscriptor, se realiza una copia masiva de las modificaciones en el publicador.|  
 |**en cola**|Las modificaciones de datos se almacenan en una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cola.|  
@@ -62,7 +62,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_setreplfailovermode** se utiliza en la replicación de instantáneas o en la replicación transaccional para la que se habilitan las suscripciones, ya sea para la actualización en cola con conmutación por error a actualización inmediata o para una actualización inmediata con conmutación por error a la actualización en cola.  
   
 ## <a name="permissions"></a>Permisos  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_change_subscription_properties
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e033e446fc771ad87542474edb1e90caf08faebd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 511276581464f366214bfd9bdd8543e3fb339ab8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81528793"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828459"
 ---
 # <a name="sp_change_subscription_properties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,16 +54,16 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Especifica el tipo de replicación de la publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Tipo de publicación|  
+|Valor|Tipo de publicación|  
 |-----------|----------------------|  
 |**0**|Transaccional|  
-|**1**|Instantánea|  
+|**1**|Depurador de|  
 |**2**|Merge|  
 |NULL (predeterminado)|La replicación determina el tipo de publicación. Puesto que el procedimiento almacenado debe examinar varias tablas, esta opción es más lenta que cuando se suministra el tipo de publicación exacto.|  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Especifica la ubicación de la carpeta alternativa de la instantánea. Si el valor es NULL, los archivos de instantáneas se toman de la ubicación predeterminada que se especifica en el publicador.|  
 |**distrib_job_login**||Inicio de sesión de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el agente.|  
@@ -102,7 +102,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_change_subscription_properties** se utiliza en todos los tipos de replicación.  
   
  **sp_change_subscription_properties** se utiliza para las suscripciones de extracción.  

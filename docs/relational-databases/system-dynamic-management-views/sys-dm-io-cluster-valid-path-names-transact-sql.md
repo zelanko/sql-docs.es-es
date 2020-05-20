@@ -20,14 +20,14 @@ helpviewer_keywords:
 - csv name
 - cluster shared volume names
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff2348efe62929bdfbe03b4c92b5d411f57c2b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba860f3d329341575c3f3f222b0fa7e1c86934e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900358"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827925"
 ---
 # <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67900358"
 |**cluster_owner_node**|**Nvarchar (64)**|Propietario actual de la unidad. Para los volúmenes compartidos en clúster (CSV), el propietario es el nodo que hospeda el servidor de metadatos. No admite valores NULL.|  
 |**is_cluster_shared_volume**|**Poco**|Devuelve 1 si la unidad en la que se encuentra esta ruta de acceso es un volumen compartido en clúster; de lo contrario, devuelve 0.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Una instancia de clúster de conmutación por error (FCI) de SQL Server debe usar almacenamiento compartido entre todos los nodos de FCI para el almacenamiento de archivos de datos y de registro. Los discos que se muestran en esta vista son los que se encuentran en el grupo de recursos de clúster asociado a la instancia y son los únicos discos que se pueden usar para el almacenamiento de archivos de datos o de registro.  
   
 > [!NOTE]  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_columns
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbc724b9178ec867768fde3dc3d9ff58add554e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070352"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826275"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ sp_columns [ @table_name = ] object
   
 `[ \@table_qualifier = ] qualifier`Es el nombre del calificador de objeto. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
-`[ \@column_name = ] column`Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
+`[ \@column_name = ] column`Es una sola columna y se utiliza cuando solo se desea una columna de información del catálogo. la *columna* es de tipo **nvarchar (384)** y su valor predeterminado es NULL. Si no se especifica *Column* , se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la *columna* representa el nombre de la columna tal y como aparece en la tabla **syscolumns** . Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
 `[ \@ODBCVer = ] ODBCVer`Es la versión de ODBC que se está utilizando. *ODBCVer* es de **tipo int**y su valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para conocer las diferencias de comportamiento entre las versiones 2 y 3, vea la especificación de **SQLColumns** de ODBC.  
   
@@ -74,7 +74,7 @@ sp_columns [ @table_name = ] object
 |**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
 |**LENGTH**|**int**|Tamaño de la transferencia de los datos. <sup>1</sup>|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
-|**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
+|**FIJO**|**smallint**|Base para tipos de datos numéricos.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
 |**COMENTARIOS**|**VARCHAR (254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
@@ -90,7 +90,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>Permisos  
  Requiere permisos SELECT y VIEW DEFINITION en el esquema.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_columns** sigue los requisitos de los identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
 ## <a name="examples"></a>Ejemplos  

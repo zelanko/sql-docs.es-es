@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.database_connection_stats
 - database_connection_stats
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 7eb05640fbc702d5c9b01081d462e2c9f0204457
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 719f7ea686f1a93842d837c002ef2bca4a8c7a78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844467"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828529"
 ---
 # <a name="sysdatabase_connection_stats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -41,8 +41,8 @@ ms.locfileid: "73844467"
 |**success_count**|**int**|Número de conexiones correctas.|  
 |**total_failure_count**|**int**|Número total de conexiones con error. Se trata de la suma de **connection_failure_count**, **terminated_connection_count**y **throttled_connection_count**, y no incluye los eventos de interbloqueo.|  
 |**connection_failure_count**|**int**|Número total de errores de inicio de sesión.|  
-|**terminated_connection_count**|**int**|**_Solo es aplicable [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] para v11._**<br /><br /> Número de conexiones terminadas.|  
-|**throttled_connection_count**|**int**|**_Solo es aplicable [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] para v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
+|**terminated_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número de conexiones terminadas.|  
+|**throttled_connection_count**|**int**|**_Solo es aplicable para [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Número máximo de conexiones aceleradas.|  
   
 ## <a name="remarks"></a>Observaciones  
   
@@ -81,7 +81,7 @@ start_time                    end_time
   
 - Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores de base de datos que podrían producirse, solo los especificados en tipos de evento en [sys. event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-- Si se produce un error del equipo en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] el centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
+- Si se produce un error del equipo en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
   
 - Si se ha bloqueado una dirección IP a través de DoSGuard, los eventos de intento de conexión de esa dirección IP no pueden recopilarse y no aparecerán en esta vista.  
   

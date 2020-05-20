@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpqreader_agent
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b1162939039470cdf8e7283950c342e1555c5c78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771420"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824477"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |**id**|**int**|IDENTIFICADOR del agente.|  
 |**name**|**nvarchar(100**|Nombre del agente.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
-|**job_login**|**nvarchar(512)**|Es la cuenta de Windows con la que se ejecuta el agente de distribución, que se devuelve con el formato *dominio*\\*nombreDeUsuario*.|  
-|**job_password**|**sysname**|Por motivos de seguridad, siempre se ** \* \* \* \* \* \* \* \* \* ** devuelve un valor de.|  
+|**job_login**|**nvarchar(512)**|Es la cuenta de Windows con la que se ejecuta el agente de distribución, que se devuelve con el formato *dominio* \\ *nombreDeUsuario*.|  
+|**job_password**|**sysname**|Por motivos de seguridad, **\*\*\*\*\*\*\*\*\*\*** siempre se devuelve un valor de.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpqreader_agent** se utiliza en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  

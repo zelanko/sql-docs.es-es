@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAMethod
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98a8b4ce231c907231646379a3730ab0c1c535db
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252197"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828269"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +68,13 @@ sp_OAMethod objecttoken , methodname
   
  Para obtener el valor devuelto de un parámetro de salida, el *parámetro* debe ser una variable local del tipo de datos adecuado y se debe especificar **Output** . Si se especifica un parámetro constante, o si no se especifica **Output** , se omite cualquier valor devuelto de un parámetro de salida.  
   
- Si se especifica, *parameterName* debe ser el nombre del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en **@** cuenta que _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] no es una variable local. Se quita el signo**@** de arroba () y *parameterName*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
+ Si se especifica, *parameterName* debe ser el nombre del [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en cuenta que **@** _parametername_is no es una [!INCLUDE[tsql](../../includes/tsql-md.md)] variable local. Se quita el signo de arroba ( **@** ) y *parameterName*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios parámetros.  
   
 > [!NOTE]
->  ParameterName puede ser un parámetro con nombre porque forma parte del método especificado y se pasa a través del objeto. * \@* Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
+>  * \@ parameterName* puede ser un parámetro con nombre porque forma parte del método especificado y se pasa a través del objeto. Los demás parámetros de este procedimiento almacenado se especifican por la posición, no por el nombre.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un valor distinto de cero (error) que es el valor entero del HRESULT devuelto por el objeto de OLE Automation.  
@@ -101,7 +101,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  También puede usar **sp_OAMethod** para obtener un valor de propiedad.  
   
 ## <a name="permissions"></a>Permisos  
@@ -110,7 +110,7 @@ sp_OAMethod objecttoken , methodname
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-calling-a-method"></a>A. Llamar a un método  
- En el ejemplo siguiente se `Connect` llama al método del objeto **SQLServer** creado previamente.  
+ En el ejemplo siguiente se llama al `Connect` método del objeto **SQLServer** creado previamente.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Obtener una propiedad  
- En el ejemplo siguiente se `HostName` obtiene la propiedad (del objeto **SQLServer** creado previamente) y se almacena en una variable local.  
+ En el ejemplo siguiente se obtiene la `HostName` propiedad (del objeto **SQLServer** creado previamente) y se almacena en una variable local.  
   
 ```  
 DECLARE @property varchar(255);  

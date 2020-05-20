@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistpublisher
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a0e6ab6c9c633181d72c6916f92606a9c71b177a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770950"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824578"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el publicador cuyas propiedades se devuelven. *Publisher* es de **%** **tipo sysname y su**valor predeterminado es.  
+`[ @publisher = ] 'publisher'`Es el publicador cuyas propiedades se devuelven. *Publisher* es de **tipo sysname y su**valor predeterminado es **%** .  
   
 `[ @check_user = ] check_user` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -48,13 +48,13 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Nombre del publicador.|  
 |**distribution_db**|**sysname**|Base de datos de distribución del publicador especificado.|  
-|**security_mode**|**int**|Modo de seguridad empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
+|**security_mode**|**int**|Modo de seguridad empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows|  
 |**Inicio**|**sysname**|Nombre de inicio de sesión empleado por los agentes de replicación para conectar al publicador para suscripciones de actualización en cola, o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**password**|**nvarchar (524)**|Contraseña devuelta (en forma de cifrado sencillo). La contraseña es NULL para los usuarios que no sean **sysadmin**.|  
 |**active**|**bit**|Indica si un publicador remoto utiliza el servidor local como distribuidor:<br /><br /> **0** = no<br /><br /> **1** = sí|  
 |**working_directory**|**nvarchar(255)**|Nombre del directorio de trabajo.|  
 |**trusted**|**bit**|Si se necesita la contraseña cuando un publicador se conecta con el distribuidor. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, siempre debe devolver **0**, lo que significa que se necesita la contraseña.|  
-|**thirdparty_flag**|**bit**|Indica si la publicación está habilitada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o por una aplicación de terceros:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle o el publicador de puerta de enlace de Oracle.<br /><br /> **1** = el publicador se ha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrado con mediante una aplicación de otro fabricante.|  
+|**thirdparty_flag**|**bit**|Indica si la publicación está habilitada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o por una aplicación de terceros:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Oracle o el publicador de puerta de enlace de Oracle.<br /><br /> **1** = el publicador se ha integrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una aplicación de otro fabricante.|  
 |**publisher_type**|**sysname**|Tipo de publicador; puede ser uno de los siguientes:<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
 |**publisher_data_source**|**nvarchar(4000)**|Nombre del origen de datos OLE DB en el publicador.|  
 |**storage_connection_string**|**nvarchar(4000)**|Clave de acceso de almacenamiento para el directorio de trabajo cuando el distribuidor o el publicador en Azure SQL Database.|  
@@ -62,7 +62,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpdistpublisher** se utiliza en todos los tipos de replicación.  
   
  **sp_helpdistpublisher** no mostrará el inicio de sesión o la contraseña del publicador en el conjunto de resultados para inicios de sesión que no sean de**sysadmin** .  

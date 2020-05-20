@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_threads dynamic management view
 ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8eeeaaf59934d6c3307641b6c93f110ab5738f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982539"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829319"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982539"
   Devuelve una lista de todos los subprocesos del sistema operativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están ejecutando en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_threads**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_threads**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -56,23 +56,23 @@ ms.locfileid: "73982539"
 |is_impersonating|**int**|Indica si este subproceso usa suplantación de Win32.<br /><br /> 1 = El subproceso usa credenciales de seguridad diferentes de las predeterminadas del proceso. Indica que el subproceso suplanta una entidad distinta de la que creó el proceso.|  
 |is_waiting_on_loader_lock|**int**|Estado del sistema operativo que indica si el subproceso espera en el bloqueo de carga.|  
 |fiber_data|**varbinary(8**|Fibra actual de Win32 que se ejecuta en el subproceso. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
-|thread_handle|**varbinary(8**|Exclusivamente para uso interno.|  
-|event_handle|**varbinary(8**|Exclusivamente para uso interno.|  
+|thread_handle|**varbinary(8**|Solo para uso interno.|  
+|event_handle|**varbinary(8**|Solo para uso interno.|  
 |scheduler_address|**varbinary(8**|Dirección de memoria del programador asociado con este subproceso. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |worker_address|**varbinary(8**|Dirección de memoria del trabajador enlazado a este subproceso. Para obtener más información, vea [Sys. dm_os_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8**|Dirección de contexto de fibra interna. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
 |self_address|**varbinary(8**|Puntero de comprobaciones de coherencia.|  
 |processor_group|**smallint**|**Válido para** : [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y versiones posteriores.<br /><br /> Identificador de grupo de procesadores.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="notes-on-linux-version"></a>Notas sobre la versión de Linux
 
-Debido a cómo funciona el motor de SQL en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, `os_thread_id` no coincide con el resultado de herramientas como `ps``top` o procfs (/proc/`pid`).  Esto se debe a la capa de abstracción de plataforma (SQLPAL), una capa entre SQL Server componentes y el sistema operativo.
+Debido a cómo funciona el motor de SQL en Linux, parte de esta información no coincide con los datos de diagnóstico de Linux. Por ejemplo, no `os_thread_id` coincide con el resultado de herramientas como `ps` `top` o procfs (/proc/ `pid` ).  Esto se debe a la capa de abstracción de plataforma (SQLPAL), una capa entre SQL Server componentes y el sistema operativo.
 
 ## <a name="examples"></a>Ejemplos  
  Tras el inicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia subprocesos y después asocia trabajos a dichos subprocesos. Sin embargo, los componentes externos, como un procedimiento almacenado extendido, pueden iniciar subprocesos bajo el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no controla estos subprocesos. Sys. dm_os_threads puede proporcionar información sobre subprocesos no autorizados que consumen recursos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proceso.  
@@ -80,7 +80,7 @@ Debido a cómo funciona el motor de SQL en Linux, parte de esta información no 
  La siguiente consulta se utiliza para buscar subprocesos de trabajo, junto con el tiempo consumido en la ejecución, que ejecutan subprocesos no iniciados por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  Por concisión, la siguiente consulta utiliza un asterisco (`*`) en la instrucción `SELECT`. Evite utilizar asteriscos (*), especialmente con vistas de catálogo, vistas de administración dinámica y funciones con valores de tabla del sistema. Las actualizaciones y versiones futuras [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de pueden agregar columnas y cambiar el orden de las columnas a estas vistas y funciones. Es posible que estos cambios provoquen errores en las aplicaciones que esperan un determinado orden y número de columnas.  
+>  Por concisión, la siguiente consulta utiliza un asterisco (`*`) en la instrucción `SELECT`. Evite utilizar asteriscos (*), especialmente con vistas de catálogo, vistas de administración dinámica y funciones con valores de tabla del sistema. Las actualizaciones y versiones futuras de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden agregar columnas y cambiar el orden de las columnas a estas vistas y funciones. Es posible que estos cambios provoquen errores en las aplicaciones que esperan un determinado orden y número de columnas.  
   
 ```  
 SELECT *  

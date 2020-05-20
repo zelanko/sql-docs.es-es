@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergesubscription
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769132"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820717"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Es el tipo de suscriptor. *subscriber_type*es **nvarchar (15)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**local** (valor predeterminado)|Suscriptor solo conocido para el publicador.|  
 |**global**|Suscriptor conocido para todos los servidores.|  
@@ -90,11 +90,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es un valor que indica cuándo se ejecutará el Agente de mezcla. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**10**|Mensual|  
 |**20**|Mensualmente, dependiendo del intervalo de frecuencia|  
 |**40**|Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -102,7 +102,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`El día o los días en los que se ejecuta el Agente de mezcla. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -111,19 +111,19 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**203**|Día|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la repetición de combinación programada del intervalo de frecuencia de cada mes. *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
@@ -131,12 +131,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Es la unidad de *frequency_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es la frecuencia con la que se producen *frequency_subday* entre cada combinación. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -153,7 +153,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @description = ] 'description'`Es una breve descripción de esta suscripción de mezcla. la *Descripción*es de tipo **nvarchar (255)** y su valor predeterminado es NULL. El monitor de replicación muestra este valor en la columna **nombre descriptivo** , que se puede utilizar para ordenar las suscripciones de una publicación supervisada.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @offloadagent = ] remote_agent_activation`Especifica que el agente puede activarse de forma remota. *remote_agent_activation* es de **bit** y su valor predeterminado es **0**.  
   
@@ -164,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'`Permite resolver conflictos de forma interactiva para todos los artículos que permiten la resolución interactiva. *use_interactive_resolver* es de tipo **nvarchar (5)** y su valor predeterminado es false.  
   
-`[ @merge_job_name = ] 'merge_job_name'`El * \@parámetro merge_job_name* está desusado y no se puede establecer. *merge_job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @merge_job_name = ] 'merge_job_name'`El parámetro * \@ merge_job_name* está desusado y no se puede establecer. *merge_job_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @hostname = ] 'hostname'`Invalida el valor devuelto por [host_name](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *Hostname* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -177,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  **sp_addmergesubscription** se utiliza en la replicación de mezcla.  
   
- Cuando un miembro del rol fijo de servidor **sysadmin** ejecuta **sp_addmergesubscription** para crear una suscripción de extracción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio del agente. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para ** \@job_login** y ** \@job_password**. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando un miembro del rol fijo de servidor **sysadmin** ejecuta **sp_addmergesubscription** para crear una suscripción de extracción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta en la cuenta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para ** \@ job_login** y ** \@ job_password**. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

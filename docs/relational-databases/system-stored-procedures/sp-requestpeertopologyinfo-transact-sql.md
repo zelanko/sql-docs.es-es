@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_requestpeertopologyinfo
 ms.assetid: 15cd28bd-5a72-41fb-ae1b-726baaa6fad5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d137706da49f666ce66abea52249796a0094c7e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 61439aeb9fd4a58d8b003473a4e55fa19ca06a36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129658"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824348"
 ---
 # <a name="sp_requestpeertopologyinfo-transact-sql"></a>sp_requestpeertopologyinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ sp_requestpeertopologyinfo [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication= ] '*publicación*'  
+ [ @publication =] '*publicación*'  
  Es el nombre de la publicación para la que se realiza una solicitud del estado de toda la topología. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @request_id= ] *request_id*  
+ [ @request_id =] *request_id*  
  Es el número de identificación que está asignado a la solicitud del estado de la topología. *request_id* es de **tipo int**y su valor predeterminado es NULL. [Sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md)puede usar este identificador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_requestpeertopologyinfo se utiliza en la replicación transaccional punto a punto. Ejecute sp_requestpeertopologyinfo antes de ejecutar [sp_gettopologyinfo](../../relational-databases/system-stored-procedures/sp-gettopologyinfo-transact-sql.md). El Asistente de configuración de la topología punto a punto utiliza estos procedimientos, pero también se pueden utilizar directamente si se requiere información de la topología en formato XML. Si prefiere resultados tabulares, consulte la tabla del sistema [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  

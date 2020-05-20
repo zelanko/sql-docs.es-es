@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.change_tracking_databases
 - change tracking [SQL Server], sys.change_tracking_databases
 ms.assetid: bb233baa-2991-4904-a0eb-3772b81121a4
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9d3f2f92e9be7b6d4f38edff7cb36aa67e055788
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d4ba41b2dc85bc9e5560ae9911bde7fb54abc3c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68136539"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823670"
 ---
 # <a name="change-tracking-catalog-views---syschange_tracking_databases"></a>Change Tracking vistas de catálogo: sys. change_tracking_databases
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

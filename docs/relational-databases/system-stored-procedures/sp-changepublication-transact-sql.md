@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e5b128a38fc32b16cca9d0a8e59f09aef88676c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d5c08e0a844348210ae011e395c04de5b4cdcdd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762423"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829591"
 ---
 # <a name="sp_changepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se pueden crear suscripciones anónimas para la publicación dada y *immediate_sync* también deben ser **verdaderas**. No se pueden cambiar para publicaciones punto a punto.|  
 ||**false**|No se pueden crear suscripciones anónimas para la publicación indicada. No se pueden cambiar para publicaciones punto a punto.|  
@@ -88,13 +88,13 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|Se crean archivos de sincronización solo si hay nuevas suscripciones. Los suscriptores no pueden recibir los archivos de sincronización después de suscribirse hasta que el Agente de instantáneas haya comenzado y terminado.|  
 |**independent_agent**|**true**|La publicación tiene su propio Agente de distribución dedicado.|  
 ||**false**|La publicación utiliza un Agente de distribución compartido, y cada par de bases de datos de publicaciones y suscripciones tiene un agente compartido.|  
-|**p2p_continue_onconflict**|**true**|El Agente de distribución continúa procesando los cambios cuando se detecta un conflicto.<br /> **PRECAUCIÓN:** Se recomienda usar el valor predeterminado de `FALSE`. Cuando esta opción se establece en `TRUE`, el agente de distribución intenta converger los datos en la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
+|**p2p_continue_onconflict**|**true**|El Agente de distribución continúa procesando los cambios cuando se detecta un conflicto.<br /> **PRECAUCIÓN:** Se recomienda usar el valor predeterminado de `FALSE` . Cuando esta opción se establece en `TRUE` , el agente de distribución intenta converger los datos en la topología aplicando la fila en conflicto del nodo que tiene el identificador de originador más alto. Este método no garantiza la convergencia. Debe asegurarse de que la topología sea coherente una vez detectado un conflicto. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
 ||**false**|El Agente de distribución detiene el procesamiento de los cambios cuando detecta un conflicto.|  
 |**post_snapshot_script**||Especifica la ubicación de un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que el Agente de distribución ejecutará una vez se hayan aplicado todos los demás datos y scripts de objetos replicados durante una sincronización inicial.|  
 |**pre_snapshot_script**||Especifica la ubicación de un archivo de script de [!INCLUDE[tsql](../../includes/tsql-md.md)] que el Agente de distribución ejecutará antes de que se hayan aplicado todos los demás datos y scripts de objetos replicados durante una sincronización inicial.|  
 |**publish_to_ActiveDirectory**|**true**|Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no se puede agregar información de publicación a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Quita la información de publicaciones de Active Directory.|  
-|**queue_type**|**Server**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas.<br /><br /> Nota: ya no se [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite el uso de Message Queue Server. Si se especifica un valor de **MSMQ** para el *valor* , se producirá un error.|  
+|**queue_type**|**Server**|Utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones. Esta propiedad se puede cambiar únicamente si no hay suscripciones activas.<br /><br /> Nota: ya no se admite el uso de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server. Si se especifica un valor de **MSMQ** para el *valor* , se producirá un error.|  
 |**repl_freq**|**continua**|Publica la salida de todas las transacciones basadas en el registro.|  
 ||**archivos**|Publica solamente los eventos de sincronización programados.|  
 |**replicate_ddl**|**1**|Las instrucciones de Lenguaje de definición de datos (DDL) que se ejecutan en el publicador se replican. Esta propiedad no se puede cambiar para publicaciones que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -111,8 +111,8 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**simultáneas**|Utiliza un programa de copia masiva en modo nativo de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 ||**concurrent_c**|Utiliza un programa de copia masiva en modo de carácter de todas las tablas, pero no bloquea las tablas durante el proceso de generación de instantáneas. No es válido para la replicación de instantáneas.|  
 |**TaskID**||Esta propiedad ha quedado desusada y ya no se admite.|  
-|**allow_drop**|**true**|Habilita `DROP TABLE` la compatibilidad con archivos DLL para los artículos que forman parte de la replicación transaccional. Versión mínima admitida [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] : Service Pack 2 o posterior [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y Service Pack 1 o posterior. Referencia adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
-||**false**|Deshabilita `DROP TABLE` la compatibilidad de dll con los artículos que forman parte de la replicación transaccional. Este es el valor **predeterminado** para esta propiedad.|
+|**allow_drop**|**true**|Habilita `DROP TABLE` la compatibilidad con archivos DLL para los artículos que forman parte de la replicación transaccional. Versión mínima admitida: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 o posterior y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 o posterior. Referencia adicional: [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
+||**false**|Deshabilita la `DROP TABLE` compatibilidad de dll con los artículos que forman parte de la replicación transaccional. Este es el valor **predeterminado** para esta propiedad.|
 |**Null** (valor predeterminado)||Devuelve la lista de valores admitidos para la *propiedad*.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es de **bit**y su valor predeterminado es **0**.  
@@ -120,20 +120,20 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida. Si existen suscripciones que requieran una nueva instantánea, este valor da permiso para que la instantánea existente se marque como obsoleta y se genere otra nueva.   
 Vea en la sección de Notas las propiedades que, si se cambian, requieren que se genere una instantánea nueva.  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[** @force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que la acción realizada por este procedimiento almacenado puede requerir que se reinicialicen las suscripciones existentes. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   - **0** especifica que los cambios en el artículo no harán que se reinicialice la suscripción. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de las suscripciones existentes, se producirá un error y no se realizarán cambios.  
   - **1** especifica que los cambios en el artículo hacen que se reinicialice la suscripción existente y concede permiso para que se produzca la reinicialización de la suscripción.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
   > [!NOTE]  
-  >  no se debe usar el *publicador* al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
+  >  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changepublication** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Después de cambiar cualquiera de las siguientes propiedades, debe generar una nueva instantánea y debe especificar el valor **1** para el parámetro *force_invalidate_snapshot* .  
@@ -150,7 +150,7 @@ Vea en la sección de Notas las propiedades que, si se cambian, requieren que se
 -   **snapshot_in_defaultfolder**  
 -   **sync_mode**  
   
-Para enumerar los objetos de publicación en el **publish_to_active_directory** Active Directory mediante el parámetro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publish_to_Active_Directory, el objeto ya debe estar creado en el Active Directory.  
+Para enumerar los objetos de publicación en el Active Directory mediante el parámetro **publish_to_Active_Directory** , el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto ya debe estar creado en el Active Directory.  
   
 ## <a name="impact-of-immediate-sync"></a>Impacto de la sincronización inmediata  
  Cuando la sincronización inmediata está activada, se realiza un seguimiento de todos los cambios en el registro inmediatamente después de que se genere la instantánea inicial, incluso aunque no haya ninguna suscripción. Los cambios registrados se usan cuando un cliente usa la copia de seguridad para agregar un nuevo nodo del mismo nivel. Una vez restaurada la copia de seguridad, el elemento del mismo nivel se sincroniza con los demás cambios que se producen después de realizar la copia de seguridad. Dado que se realiza el seguimiento de los comandos en la base de datos de distribución, la lógica de sincronización puede examinar el último LSN de copia de seguridad y usarlo como punto de partida, sabiendo que el comando está disponible si la copia de seguridad se realizó en el período de retención máximo. (El valor predeterminado para el período de retención mínimo es 0 horas y el período de retención máximo es de 24 horas).  

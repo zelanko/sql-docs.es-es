@@ -18,22 +18,22 @@ helpviewer_keywords:
 - sys.sp_query_store_force_plan
 - sp_query_store_force_plan
 ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 880cdae24004936b1d27321499ceac759b554ea3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71207723"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824393"
 ---
 # <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Permite forzar un plan determinado para una consulta determinada.  
   
- Cuando se fuerza un plan para una consulta determinada, cada vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que encuentra la consulta, intenta forzar el plan en el optimizador de consultas. Si se produce un error al forzar el plan, se desencadena un evento extendido y se indica al optimizador de consultas que se optimice de la manera normal.  
+ Cuando se fuerza un plan para una consulta determinada, cada vez que encuentra [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la consulta, intenta forzar el plan en el optimizador de consultas. Si se produce un error al forzar el plan, se desencadena un evento extendido y se indica al optimizador de consultas que se optimice de la manera normal.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,7 +51,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **ALTER** en la base de datos.

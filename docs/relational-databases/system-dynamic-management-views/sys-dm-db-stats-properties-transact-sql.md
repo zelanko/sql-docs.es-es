@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_stats_properties
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21007e66d8f193ce8e2a166e1615619be409cb9d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67910711"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828027"
 ---
 # <a name="sysdm_db_stats_properties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |rows_sampled|**bigint**|Número total de filas muestreadas para cálculos de estadísticas.|  
 |steps|**int**|Número de pasos del histograma. Para obtener más información, vea [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
 |unfiltered_rows|**bigint**|Número total de filas de la tabla antes de aplicar la expresión de filtro (para estadísticas filtradas). Si las estadísticas no están filtradas, unfiltered_rows es igual al valor devuelto en la columna rows.|  
-|modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas con optimización para memoria: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] el inicio [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] y en esta columna contiene el número total de modificaciones de la tabla desde la última vez que se actualizaron las estadísticas o se reinició la base de datos.|  
+|modification_counter|**bigint**|Número total de modificaciones para la columna de estadísticas iniciales (la columna en la que se ha generado el histograma) desde la última vez que se actualizaron las estadísticas.<br /><br /> Tablas con optimización para memoria: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] el inicio y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] esta columna contiene el número total de modificaciones de la tabla desde la última vez que se actualizaron las estadísticas o se reinició la base de datos.|  
 |persisted_sample_percent|**float**|Porcentaje de ejemplo persistente empleado en las actualizaciones de estadísticas en las que no se especifica explícitamente un porcentaje de muestreo. Si el valor es cero, significa que no hay establecido ningún porcentaje de ejemplo persistente para esta estadística.<br /><br /> **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
 ## <a name="remarks"></a>Comentarios para <a name="Remarks"></a>  
@@ -77,7 +77,7 @@ La fecha de actualización de estadísticas se almacena en el [objeto BLOB de es
 ## <a name="examples"></a>Ejemplos  
 
 ### <a name="a-simple-example"></a>A. Ejemplo sencillo
-En el ejemplo siguiente se devuelven `Person.Person` las estadísticas de la tabla en la base de datos AdventureWorks.
+En el ejemplo siguiente se devuelven las estadísticas de la `Person.Person` tabla en la base de datos AdventureWorks.
 
 ```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);

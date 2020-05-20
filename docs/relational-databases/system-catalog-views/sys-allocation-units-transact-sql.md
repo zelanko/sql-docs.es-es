@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.allocation_units catalog view
 ms.assetid: ec9de780-68fd-4551-b70b-2d3ab3709b3e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73ee5d7ac8bd512b69cc187f9860b9e7f2c38a78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c996a258ae9f0dacec09fc58b3f433e620b6d663
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001300"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822116"
 ---
 # <a name="sysallocation_units-transact-sql"></a>sys.allocation_units (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68001300"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |allocation_unit_id|**bigint**|Id. de la unidad de asignación. Es único en una base de datos.|  
-|type|**tinyint**|Tipo de unidad de asignación:<br /><br /> 0 = Quitado<br /><br /> 1 = Datos de fila (todos los tipos de datos, excepto datos LOB)<br /><br /> 2 = datos de objetos grandes (LOB) (**Text**, **ntext**, **Image**, **XML**, tipos de valores grandes y tipos definidos por el usuario CLR)<br /><br /> 3 = Datos de desbordamiento de fila|  
+|tipo|**tinyint**|Tipo de unidad de asignación:<br /><br /> 0 = Quitado<br /><br /> 1 = Datos de fila (todos los tipos de datos, excepto datos LOB)<br /><br /> 2 = datos de objetos grandes (LOB) (**Text**, **ntext**, **Image**, **XML**, tipos de valores grandes y tipos definidos por el usuario CLR)<br /><br /> 3 = Datos de desbordamiento de fila|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de unidad de asignación:<br /><br /> **REDUCIDO**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
 |container_id|**bigint**|Id. del contenedor de almacenamiento asociado con la unidad de asignación.<br /><br /> Si type = 1 ó 3, container_id = sys.partitions.hobt_id.<br /><br /> Si type = 2, entonces container_id = sys.partitions.partition_id.<br /><br /> 0 = Unidad de asignación marcada para eliminación diferida|  
 |data_space_id|**int**|Id. del grupo de archivos donde reside la unidad de asignación.|  

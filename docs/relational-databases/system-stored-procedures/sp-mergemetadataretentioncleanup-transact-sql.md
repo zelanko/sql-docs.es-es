@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergemetadataretentioncleanup
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 78ef8690e4f8dd374125d4c8e6e77a4a1964d329
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019976"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828322"
 ---
 # <a name="sp_mergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!IMPORTANT]  
 >  Si hay varias publicaciones en una base de datos y cualquiera de estas publicaciones utiliza un período de retención de publicación infinita, la ejecución de **sp_mergemetadataretentioncleanup** no limpia los metadatos de seguimiento de cambios de la replicación de mezcla para la base de datos. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones. Para determinar si una publicación tiene un período de retención infinito, ejecute [sp_helpmergepublication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) en el publicador y anote las publicaciones del conjunto de resultados con un valor de **0** para la **retención**.  

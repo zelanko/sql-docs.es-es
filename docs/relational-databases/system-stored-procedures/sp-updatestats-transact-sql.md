@@ -15,22 +15,22 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatestats
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e28564c44dc226054f0b08e8ba75fe36509cf064
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085790"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808956"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Se `UPDATE STATISTICS` ejecuta en todas las tablas internas y definidas por el usuario en la base de datos actual.  
+Se ejecuta en `UPDATE STATISTICS` todas las tablas internas y definidas por el usuario en la base de datos actual.  
   
-Para obtener más información `UPDATE STATISTICS`acerca de, consulte [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Para obtener más información sobre las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
+Para obtener más información acerca de `UPDATE STATISTICS` , consulte [Update statistics &#40;TRANSACT-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md). Para obtener más información sobre las estadísticas, vea [estadísticas](../../relational-databases/statistics/statistics.md).  
     
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,8 +46,8 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Argumentos  
 `[ @resample = ] 'resample'`Especifica que **sp_updatestats** utilizará la opción volver a muestrear de la instrucción [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Si no se especifica **' resample '** , **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **resample** es de tipo **VARCHAR (8)** y su valor predeterminado es no.  
   
-## <a name="remarks"></a>Observaciones  
- **sp_updatestats** ejecuta `UPDATE STATISTICS`, especificando la `ALL` palabra clave, en todas las tablas internas y definidas por el usuario en la base de datos. sp_updatestats muestra mensajes que indican su progreso. Cuando la actualización se ha completado, informa de que se han actualizado las estadísticas de todas las tablas.  
+## <a name="remarks"></a>Comentarios  
+ **sp_updatestats** ejecuta `UPDATE STATISTICS` , especificando la `ALL` palabra clave, en todas las tablas internas y definidas por el usuario en la base de datos. sp_updatestats muestra mensajes que indican su progreso. Cuando la actualización se ha completado, informa de que se han actualizado las estadísticas de todas las tablas.  
   
 sp_updatestats actualiza las estadísticas en índices no clúster deshabilitados y no actualiza las estadísticas en índices clúster deshabilitados.  
   

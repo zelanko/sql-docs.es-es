@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - sys.dm_hadr_cluster_members catalog view
 ms.assetid: feb20b3a-8835-41d3-9a1c-91d3117bc170
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b28b708aabfdf3ec4e569aab6d8a95e2330b370
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffa67137c4b7d99cd0aa394319e9415a72b73103
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900765"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829401"
 ---
 # <a name="sysdm_hadr_cluster_members-transact-sql"></a>sys.dm_hadr_cluster_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Si el nodo de WSFC que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tiene quórum de WSFC, devuelve una fila para cada uno de los miembros que constituyen el quórum y el estado de cada uno de ellos. Esto incluye todos los nodos del clúster (devueltos con CLUSTER_ENUM_NODE tipo por la función **Clusterenum** ) y el testigo de disco o de recurso compartido de archivos, si existe. La fila devuelta para un miembro determinado contiene información sobre el estado de ese miembro. Por ejemplo, para un clúster de cinco nodos con quórum de nodo mayoritario en el que un nodo está inactivo, cuando se consulta **Sys. dm_hadr_cluster_members** desde una instancia del servidor que [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] está habilitada para que se encuentra en un nodo con quórum, **Sys. dm_hadr_cluster_members** refleja el estado del nodo inactivo como "NODE_DOWN".  
+  Si el nodo de WSFC que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tiene quórum de WSFC, devuelve una fila para cada uno de los miembros que constituyen el quórum y el estado de cada uno de ellos. Esto incluye todos los nodos del clúster (devueltos con CLUSTER_ENUM_NODE tipo por la función **Clusterenum** ) y el testigo de disco o de recurso compartido de archivos, si existe. La fila devuelta para un miembro determinado contiene información sobre el estado de ese miembro. Por ejemplo, para un clúster de cinco nodos con quórum de nodo mayoritario en el que un nodo está inactivo, cuando se consulta **Sys. dm_hadr_cluster_members** desde una instancia del servidor que está habilitada para que se encuentra [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en un nodo con quórum, **Sys. dm_hadr_cluster_members** refleja el estado del nodo inactivo como "NODE_DOWN".  
   
  Si el nodo de WSFC no tiene el quórum, no se devuelve ninguna fila.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67900765"
 -   ¿Cuántos errores más puede tolerar el clúster de WSFC antes de perder el quórum en un caso de mayoría de nodo?  
 
  > [!TIP]
- > A partir [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]de, esta vista de administración dinámica admite Always on instancias de clúster de conmutación por error además de Always on grupos de disponibilidad.  
+ > A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , esta vista de administración dinámica admite Always on instancias de clúster de conmutación por error además de Always on grupos de disponibilidad.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

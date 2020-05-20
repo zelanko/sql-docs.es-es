@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_schedulers dynamic management view
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e2597289894f3a037e9ad8ada499b5f2d259ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: abf872e708b04e7c31b65bec3d90d357520b5c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72289394"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829347"
 ---
 # <a name="sysdm_os_schedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,14 +33,14 @@ ms.locfileid: "72289394"
   Devuelve una fila por programador en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde cada programador está asignado a un determinado procesador. Use esta vista para supervisar la condición de un programador o identificar tareas descontroladas. Para obtener más información sobre los programadores, vea la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md).  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_schedulers**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_schedulers**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8**|Dirección de memoria del programador. No admite valores NULL.|  
 |parent_node_id|**int**|Identificador del nodo al que pertenece el programador, también denominado nodo primario. Representa un nodo de acceso de memoria no uniforme (NUMA). No admite valores NULL.|  
 |scheduler_id|**int**|IDENTIFICADOR del programador. Todos los programadores que se utilizan para ejecutar las consultas normales tienen números de identificación inferiores a 1048576. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza internamente todos los programadores con identificadores mayores o iguales que 1048576, como el programador de conexión de administrador dedicada. No admite valores NULL.|  
-|cpu_id|**smallint**|Identificador de CPU asignado al programador.<br /><br /> No admite valores NULL.<br /><br /> **Nota:** 255 no indica ninguna afinidad como en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Vea [Sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obtener información adicional sobre la afinidad.|  
+|cpu_id|**smallint**|Identificador de CPU asignado al programador.<br /><br /> No admite valores NULL.<br /><br /> **Nota:** 255 no indica ninguna afinidad como en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Vea [Sys. dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) para obtener información adicional sobre la afinidad.|  
 |status|**nvarchar(60)**|Indica el estado del programador. Puede ser uno de los siguientes valores:<br /><br /> -OCULTO EN LÍNEA<br />-OCULTO SIN CONEXIÓN<br />-VISIBLE EN LÍNEA<br />-VISIBLE SIN CONEXIÓN<br />-VISIBLE EN LÍNEA (DAC)<br />-HOT_ADDED<br /><br /> No admite valores NULL.<br /><br /> Los programadores HIDDEN se utilizan para procesar solicitudes internas de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los programadores VISIBLE se utilizan para procesar solicitudes de usuario.<br /><br /> Los programadores OFFLINE se asignan a procesadores sin conexión en la máscara de afinidad y, por tanto, no se utilizan para procesar solicitudes. Los programadores ONLINE se asignan a procesadores con conexión en la máscara de afinidad y están disponibles para procesar subprocesos.<br /><br /> DAC indica que el programador se está ejecutando con una conexión de administrador dedicada.<br /><br /> HOT ADDED indica los programadores que se agregaron en respuesta a un evento de CPU instalada en cliente.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para utilizar solo algunos de los procesadores disponibles en el servidor, esta configuración puede significar que algunos programadores están asignados a procesadores que no están en la máscara de afinidad. Si así fuera, esta columna devuelve 0. Este valor indica que el programador no se utiliza para procesar consultas o lotes.<br /><br /> No admite valores NULL.|  
 |is_idle|**bit**|1 = El programador está inactivo. No se está ejecutando ningún trabajador. No admite valores NULL.|  
@@ -62,13 +62,13 @@ ms.locfileid: "72289394"
 |task_memory_object_address|**varbinary(8**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, vea [Sys. dm_os_memory_objects &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expone el cuanto del programador que utiliza SQLOS.|  
 | total_cpu_usage_ms |**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores <br><br> CPU total consumida por este programador tal y como lo indican los trabajadores no preferentes. No admite valores NULL.|
-|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indica que la limitación se basa en el [objetivo de nivel de servicio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective); siempre será 0 para las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]versiones que no sean de Azure de. Acepta valores NULL.|
+|total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Indica que la limitación se basa en el [objetivo de nivel de servicio](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective); siempre será 0 para las versiones que no sean de Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Acepta valores NULL.|
 |total_scheduler_delay_ms|**bigint**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores <br><br> El tiempo entre un trabajador que está desactivando y otro que está cambiando. Puede deberse a que los trabajadores preferentemente retrasan la programación del siguiente trabajo no preferente o debido a los subprocesos de programación del sistema operativo de otros procesos. No admite valores NULL.|
 |ideal_workers_limit|**int**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores <br><br> El número de trabajadores que idealmente deberían estar en el programador. Si los trabajadores actuales superan el límite debido a la carga de tareas desequilibrada, una vez que estén inactivas, se recortarán. No admite valores NULL.|
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  

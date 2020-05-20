@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_set_warehouse_database_name
 - data collector [SQL Server], stored procedures
 ms.assetid: a85aca1b-8135-4c81-9a05-da5aec76f1ed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 445d1c0e9d220e4dc9a2d8806bae8d7a7f8bfdc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 856f0a65acd7fddae37c980906a4aaedba9807c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010623"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828209"
 ---
 # <a name="sp_syscollector_set_warehouse_database_name-transact-sql"></a>sp_syscollector_set_warehouse_database_name (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +40,13 @@ sp_syscollector_set_warehouse_database_name [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @database_name = ] '*database_name*'  
+ [ @database_name =] '*database_name*'  
  Es el nombre del almacén de administración de datos. *database_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe deshabilitar el recopilador de datos antes de cambiar la configuración del recopilador de datos. Se produce un error en este procedimiento si se habilita el recopilador de datos.  
   
  Para ver el nombre de la base de datos actual, consulte la vista del sistema [syscollector_config_store](../../relational-databases/system-catalog-views/syscollector-config-store-transact-sql.md) .  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpullsubscription_agent
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ea558eafb665538b90cc4d9e41d16166dd9475c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028952"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820745"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -130,12 +130,12 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2** (predeterminado)|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -148,24 +148,24 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es **1**.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es **1**.  
   
@@ -181,7 +181,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`Ya no se admite la configuración de *encrypted_distributor_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica si la suscripción se puede sincronizar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] el administrador de sincronización. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica si la suscripción se puede sincronizar mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Solo para la compatibilidad con versiones anteriores.  
   
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addpullsubscription_agent** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="example"></a>Ejemplo  

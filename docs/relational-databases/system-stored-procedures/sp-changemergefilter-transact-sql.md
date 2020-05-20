@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergefilter
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 32ba968dc5e6ef78ff507b783e6212e4453586d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829600"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Filtro de combinación.<br /><br /> Esta opción es necesaria para admitir los suscriptores de [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relación de registros lógicos.|  
@@ -81,10 +81,10 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changemergefilter** se utiliza en la replicación de mezcla.  
   
- Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el ** \@force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el ** \@force_reinit_subscription** en **1**.  
+ Para cambiar el filtro de un artículo de mezcla es preciso recrear la instantánea, si ya existe. Esto se realiza estableciendo el ** \@ force_invalidate_snapshot** en **1**. Asimismo, si hay suscripciones para este artículo, es necesario reinicializarlas. Esto se hace estableciendo el ** \@ force_reinit_subscription** en **1**.  
   
  Para utilizar registros lógicos, la publicación y los artículos deben satisfacer una serie de requisitos. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   

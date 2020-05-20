@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helptext
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 39bc13882e3293bca022f52240f18de696f3b7c1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048287"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826680"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 |-----------------|---------------|-----------------|  
 |**Texto**|**nvarchar(255)**|Definición del objeto|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_helptext muestra la definición que se utiliza para crear un objeto en varias filas. Cada fila contiene 255 caracteres de la definición de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La definición reside en la columna **Definition** de la vista de catálogo [Sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  
@@ -62,7 +62,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-displaying-the-definition-of-a-trigger"></a>A. Mostrar la definición de un desencadenador  
- En el ejemplo siguiente se muestra la definición del `dEmployee` desencadenador [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]en la base de datos.  
+ En el ejemplo siguiente se muestra la definición del desencadenador `dEmployee` en la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos.  
   
 ```  
 USE AdventureWorks2012;  

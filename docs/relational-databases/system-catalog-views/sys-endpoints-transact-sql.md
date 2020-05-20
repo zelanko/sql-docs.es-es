@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.endpoints catalog view
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa68fc9a434a93e506099e715b435fe717e9834e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061414"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829734"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68061414"
 |**name**|**sysname**|Nombre del punto de conexión. Es único en el servidor. No admite valores NULL.|  
 |**endpoint_id**|**int**|Id. del extremo. Es único en el servidor. Un extremo con un identificador inferior a 65536 es un extremo del sistema. No admite valores NULL.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad del servidor que creó y es propietaria de este extremo. Acepta valores NULL.|  
-|**protocol**|**tinyint**|Protocolo del extremo.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canalizaciones con nombre<br /><br /> 4 = Memoria compartida<br /><br /> 5 = Adaptador de interfaz virtual (VIA)<br /><br /> No admite valores NULL.|  
+|**protocolo**|**tinyint**|Protocolo del extremo.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canalizaciones con nombre<br /><br /> 4 = Memoria compartida<br /><br /> 5 = Adaptador de interfaz virtual (VIA)<br /><br /> No admite valores NULL.|  
 |**protocol_desc**|**nvarchar(60)**|Descripción del protocolo del extremo. Acepta valores NULL. Uno de los siguientes valores:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **A través** de Nota: el protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|Tipo de carga del extremo.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> No admite valores NULL.|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de carga del extremo. Acepta valores NULL. Uno de los siguientes valores:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  

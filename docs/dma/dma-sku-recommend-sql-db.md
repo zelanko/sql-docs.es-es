@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 7fa2b8361f9a09dbab28689e31d77a3152ff83dd
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72586737"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885833"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificación de la SKU de Azure SQL Database/Instancia administrada adecuada para la base de datos local
 
@@ -38,10 +38,10 @@ La característica de recomendaciones de SKU le permite identificar el mínimo r
 
 Las siguientes son instrucciones para ayudarle a determinar las recomendaciones de SKU de Azure SQL Database y aprovisionar las bases de datos únicas correspondientes o las instancias administradas de Azure mediante DMA.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 - Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábrala y se le pedirá que actualice el DMA.
-- Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información acerca de cómo findoug qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
+- Asegúrese de que el equipo tiene la [versión 5,1](https://www.microsoft.com/download/details.aspx?id=54616) o posterior de PowerShell, que es necesaria para ejecutar todos los scripts. Para obtener información sobre cómo averiguar qué versión de PowerShell está instalada en el equipo, consulte el artículo [Descargar e instalar Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Asegúrese de que el equipo tiene instalado el módulo de Azure PowerShell. Para obtener más información, vea el artículo [instalar el módulo de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript. PS1**, que es necesario para recopilar los contadores de rendimiento, está instalado en la carpeta DMA.
 - Asegúrese de que el equipo en el que va a realizar este proceso tenga permisos de administrador en el equipo que hospeda las bases de datos de.
@@ -102,7 +102,7 @@ Además, seleccione uno de los argumentos siguientes:
     - **/AzureAuthenticationTenantId**: el inquilino de autenticación.
     - **/AzureAuthenticationClientId**: el identificador de cliente de la aplicación de AAD que se usa para la autenticación.
     - Una de las siguientes opciones de autenticación:
-      - Interactive (Interactivo)
+      - Interactive
         - **AzureAuthenticationInteractiveAuthentication**: establézcalo en true para una ventana emergente de autenticación.
       - Basado en certificados
         - **AzureAuthenticationCertificateStoreLocation**: se establece en la ubicación del almacén de certificados (por ejemplo, "CurrentUser").
@@ -235,6 +235,6 @@ Para introducir información de aprovisionamiento y realizar cambios en las reco
     > [!NOTE]
     > La creación de instancias administradas en una subred (especialmente por primera vez) puede tardar varias horas en completarse. Después de ejecutar el script de aprovisionamiento a través de PowerShell, puede comprobar el estado de la implementación en Azure portal.
 
-## <a name="next-step"></a>Paso siguiente
+## <a name="next-step"></a>Siguiente paso
 
 - Para obtener una lista completa de los comandos para ejecutar DMA desde la CLI, consulte el artículo [ejecución de Data Migration Assistant desde la línea de comandos](https://docs.microsoft.com/sql/dma/dma-commandline?view=sql-server-2017).

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - system catalogs [SQL Server], example queries
 - catalog views [SQL Server], frequently asked questions
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 30b325dcd012defe3755f769c74ec2fc5d57522e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834513"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -616,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="how-do-i-determine-if-a-column-is-used-in-a-computed-column-expression"></a><a name="_FAQ20"></a>Cómo determinar si una columna se usa en una expresión de columna calculada  
- Antes de ejecutar la consulta siguiente, reemplace `<database_name>`, `<schema_name.table_name>`y `<column_name`> por nombres válidos.  
+ Antes de ejecutar la consulta siguiente, reemplace `<database_name>` , `<schema_name.table_name>` y `<column_name`> por nombres válidos.  
   
 ```  
 USE <database_name>;  
@@ -870,7 +870,7 @@ GO
   
 ```  
   
- Or  
+ O bien  
   
 ```  
 USE <database_name>;  

@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, overview
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: 64c8416a15afd685559fe2d05c436c2e5fc1382d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: ad6bf673fb9bfe435d517dfd9e2dcf71774191a1
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632851"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885802"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Información general de Data Migration Assistant
 
@@ -32,7 +32,7 @@ El Data Migration Assistant (DMA) le ayuda a actualizar a una plataforma de dato
 
 Para instalar DMA, descargue la versión más reciente de la herramienta en el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=53595)y, a continuación, ejecute el archivo **DataMigrationAssistant. msi** .
 
-## <a name="capabilities"></a>Capacidades
+## <a name="capabilities"></a>Funcionalidades
 
 - Evalúe las instancias locales de SQL Server migrar a Azure SQL Database (s).El flujo de trabajo de evaluación le ayuda a detectar los siguientes problemas que pueden afectar a la migración de Azure SQL Database y proporciona instrucciones detalladas sobre cómo resolverlos.
 
@@ -42,7 +42,7 @@ Para instalar DMA, descargue la versión más reciente de la herramienta en el [
 
 - Detectar problemas que pueden afectar a una actualización a un SQL Server local.Estos se describen como problemas de compatibilidad y se organizan en las siguientes categorías:
 
-  - Últimos cambios
+  - Cambios importantes
   - Cambios de comportamiento
   - Características en desuso
 
@@ -67,7 +67,7 @@ Para instalar DMA, descargue la versión más reciente de la herramienta en el [
 
   - Problemas de información: detecta características parcialmente admitidas o desusadas que se usan en los paquetes de origen.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 Para ejecutar una evaluación, debe ser miembro del rol SQL Server **sysadmin** .
 

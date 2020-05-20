@@ -12,14 +12,14 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 00d27decc533d33056a7cc0cb19c2584fea564fb
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056534"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885873"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Actualice SQL Server mediante el Data Migration Assistant
 
@@ -49,7 +49,7 @@ En este artículo se proporcionan instrucciones paso a paso para actualizar SQL 
 
 5. Se recomienda cifrar la conexión seleccionando **cifrar conexión** en la sección **propiedades** de la conexión.
 
-6. Haga clic en **Next**.
+6. Haga clic en **Siguiente**.
 
    ![Especificar página de origen y de destino](../dma/media/SourceTarget.png)
 

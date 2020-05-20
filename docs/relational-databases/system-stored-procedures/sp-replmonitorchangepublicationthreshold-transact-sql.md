@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorchangepublicationthreshold
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: faad3284619bfd3e7beaf5324ac107aed3ac2ff2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75322242"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834323"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Si el tipo de publicación. *publication_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Publicación transaccional.|  
 |**1**|Publicación de instantáneas.|  
@@ -63,7 +63,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`Es el identificador de la métrica de umbral de publicación que se va a cambiar. *metric_id* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Nombre de la métrica|  
+|Valor|Nombre de la métrica|  
 |-----------|-----------------|  
 |**1**|**expiration** : supervisa la expiración inminente de suscripciones a publicaciones transaccionales.|  
 |**2**|**latency** : supervisa el rendimiento de suscripciones a publicaciones transaccionales.|  
@@ -71,7 +71,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 |**5**|**mergeslowrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
 |**6**|**mergefastrunduration** : supervisa la duración de las sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
 |**7**|**mergefastrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de red de área local (LAN) de gran ancho de banda.|  
-|**203**|**mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
+|**8**|**mergeslowrunspeed** : supervisa la velocidad de sincronización de sincronizaciones de mezcla en conexiones de bajo ancho de banda (acceso telefónico).|  
   
  Debe especificar *metric_id* o *thresholdmetricname*. Si se especifica *thresholdmetricname* , *METRIC_ID* debe ser null.  
   

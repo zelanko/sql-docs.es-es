@@ -11,15 +11,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, login migration
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
+author: rajeshsetlem
+ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 368372ab7324b11e9f7fdaa6af94d5ba2c0534ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f721800de13d11eefa1cabdd2f23fda838db9396
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056477"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82885792"
 ---
 # <a name="migrate-sql-server-logins-with-data-migration-assistant"></a>Migre SQL Server inicios de sesión con Data Migration Assistant
 
@@ -34,7 +34,7 @@ En este artículo se proporciona información general sobre la migración de ini
 
 - Actualmente, Data Migration Assistant no admite los inicios de sesión asociados a un certificado de seguridad independiente (inicios de sesión asignados a certificados), una clave asimétrica independiente (inicios de sesión asignados a la clave asimétrica) e inicios de sesión asignados a las credenciales.
 
-- Data Migration Assistant no mueve el inicio de sesión **SA** y los principios del servidor con nombres delimitados por marcas hash dobles (\#\#), que solo son para uso interno.
+- Data Migration Assistant no mueve el inicio de sesión **SA** y los principios del servidor con nombres delimitados por marcas hash dobles ( \# \# ), que solo son para uso interno.
 
 - De forma predeterminada, Data Migration Assistant selecciona todos los inicios de sesión calificados que se van a migrar. Opcionalmente, puede seleccionar inicios de sesión específicos para migrar. Cuando Data Migration Assistant migra todos los inicios de sesión calificados, la asignación de usuario de inicio de sesión permanece intacta en las bases de datos que se migran.
 

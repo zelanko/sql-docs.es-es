@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergesubscription
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002643"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834485"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,19 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **%** **tipo sysname y su**valor predeterminado es. La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL **%** o, se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname y su**valor predeterminado es **%** . La publicación debe existir y debe cumplir las normas de los identificadores. Si es NULL o **%** , se devuelve información acerca de todas las publicaciones y suscripciones de combinación en la base de datos actual.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **%** **tipo sysname y su**valor predeterminado es. Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** . Si es NULL o %, se devuelve información acerca de todas las suscripciones a la publicación dada.  
   
-`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db*es de **%** **tipo sysname y su**valor predeterminado es, que devuelve información acerca de todas las bases de datos de suscripciones.  
+`[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos de suscripciones.  
   
-`[ @publisher = ] 'publisher'`Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es de **%** **tipo sysname y su**valor predeterminado es, que devuelve información acerca de todos los publicadores.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador. El publicador debe ser un servidor válido. *Publisher*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db*es de **%** **tipo sysname y su**valor predeterminado es, que devuelve información acerca de todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'`Es el nombre de la base de datos del publicador. *publisher_db*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las bases de datos del publicador.  
   
 `[ @subscription_type = ] 'subscription_type'`Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |de **extracción** (valor predeterminado)|Suscripción de inserción.|  
 |**obtener**|Suscripción de extracción|  
@@ -69,7 +69,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Nombre de la suscripción.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
-|**publicador**|**sysname**|Nombre del publicador.|  
+|**publisher**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
@@ -87,7 +87,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**hostname**|**sysname**|Valor proporcionado cuando una suscripción se filtra por el valor de la función [host_name](../../t-sql/functions/host-name-transact-sql.md) .|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
-|**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara con una cadena "**\*\*\*\*\***".|  
+|**subscriber_password**|**sysname**|La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara con una cadena " **\*\*\*\*\*\*** ".|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

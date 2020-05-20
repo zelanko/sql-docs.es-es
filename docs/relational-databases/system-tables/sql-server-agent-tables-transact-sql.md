@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Agent, system tables
 - system tables [SQL Server], SQL Server Agent
 ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4cbc772ff5dcc14c196a8c9b920f67b03bd70598
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130586"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834230"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>Tablas de Agente SQL Server (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68130586"
  Almacena la información de cada trabajo programado que debe ejecutar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- Contiene información de programación para los trabajos que va [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a ejecutar el agente  
+ Contiene información de programación para los trabajos que va a ejecutar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  Almacena la asociación o relación de un trabajo determinado con uno o más servidores de destino.  

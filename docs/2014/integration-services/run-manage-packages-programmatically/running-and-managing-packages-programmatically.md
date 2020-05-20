@@ -10,12 +10,12 @@ ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ecbaa54a723fae6a3c5fd11363bf42f1f2a57da0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 077460ed71e42cdbecb6ac67b3e6bb1a3b49860c
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766832"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922061"
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Ejecutar y administrar paquetes mediante programación
   Si tiene que administrar y ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fuera del entorno de desarrollo, puede manipular los paquetes mediante programación. En este enfoque cuenta con varias opciones:  
@@ -35,7 +35,7 @@ ms.locfileid: "62766832"
 ## <a name="running-packages-on-the-integration-services-server"></a>Ejecutar paquetes en el Servidor de Integration Services  
  Cuando implemente paquetes en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede ejecutar paquetes utilizando el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>. El ensamblado de Microsoft.SqlServer.Management.IntegrationServices se compila con .NET Framework 3.5. Si está generando una aplicación.NET Framework 4.0, puede que tenga que agregar la referencia de ensamblado directamente al archivo de proyecto.  
   
- También puede utilizar el espacio de nombres para implementar y administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información general de espacio de nombres y los fragmentos de código, vea la entrada del blog sobre [el modelo de objetos administrados de catálogo SSIS](https://go.microsoft.com/fwlink/?LinkId=253122), en blogs.msdn.com.  
+ También puede utilizar el espacio de nombres para implementar y administrar proyectos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Para obtener información general de espacio de nombres y los fragmentos de código, vea la entrada del blog sobre [el modelo de objetos administrados de catálogo SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892), en blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Descripción de las diferencias entre la ejecución local y remota](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  

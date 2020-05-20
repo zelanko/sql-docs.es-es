@@ -10,12 +10,12 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c7a13345da45d7e6c31a53bc51371306da444a96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3498032da616658785d2ff33262ed57fa5736f1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228179"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921834"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Supervisar y solucionar los problemas de la mezcla para los pares de archivos delta y de datos
   OLTP en memoria usa una directiva de mezcla para mezclar los pares de archivos delta y de datos automáticamente. No puede deshabilitar la actividad de mezcla.  
@@ -47,7 +47,7 @@ exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890
   
  Imagine que los tres pares de archivos delta y de datos tenían cada uno 15.836 filas y 5.279 filas eliminadas. Después de la mezcla, el nuevo archivo de datos tiene 31.872 filas y 0 filas eliminadas. El tamaño del nuevo archivo de datos puede ser mucho mayor que el tamaño asignado inicialmente de 128 MB. Esto se debe a que la mezcla manual invalida la directiva de mezcla y aplica la mezcla de los archivos solicitados.  
   
- La [transición del estado del blog de los archivos de punto de comprobación de las bases de datos con tablas optimizadas para memoria describe la](https://blogs.technet.com/b/dataplatforminsider/archive/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables.aspx) transición de estado de los pares de archivos Delta y de datos desde el inicio hasta la recolección de elementos no utilizados.  
+ La [transición del estado del blog de los archivos de punto de comprobación de las bases de datos con tablas optimizadas para memoria describe la](https://cloudblogs.microsoft.com/sqlserver/2014/01/23/state-transition-of-checkpoint-files-in-databases-with-memory-optimized-tables/) transición de estado de los pares de archivos Delta y de datos desde el inicio hasta la recolección de elementos no utilizados.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y administrar el almacenamiento de objetos con optimización para memoria](../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

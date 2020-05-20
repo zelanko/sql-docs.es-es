@@ -16,12 +16,12 @@ ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 762bf6b25fec66f5281d32ca9c5d15aa6e64ce31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b72841d03023efacf4f8217aea8f6cdd383fbdd
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770441"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921549"
 ---
 # <a name="data-conversion-transformation"></a>Conversión de datos, transformación
   La transformación Conversión de datos convierte los datos de una columna de entrada a otro tipo de datos diferente y después los copia a una nueva columna de salida. Por ejemplo, un paquete puede extraer los datos de diferentes orígenes y después usar esta transformación para convertir las columnas al tipo de datos necesario para el almacén de datos de destino. Puede aplicar múltiples conversiones a una sola columna de entrada.  
@@ -48,7 +48,7 @@ ms.locfileid: "62770441"
  Puede establecer propiedades a través del Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] o mediante programación. Para más información sobre cómo usar la transformación Conversión de datos en el Diseñador SSIS, vea [Convertir datos en un tipo de datos diferente mediante la transformación Conversión de datos](data-conversion-transformation.md) y [Editor de transformación Conversión de datos](../../data-conversion-transformation-editor.md). Para más información sobre cómo establecer las propiedades de esta transformación mediante programación, vea [Propiedades comunes](../../common-properties.md) y [Propiedades personalizadas de transformación](transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), en blogs.msdn.com.  
+ Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Análisis rápido](../../fast-parse.md)   

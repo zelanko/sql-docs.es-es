@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_link_publication
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139895"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834409"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68139895"
 >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
 > 
 > [!IMPORTANT]
->  En determinadas condiciones, este procedimiento almacenado puede producir un error si el suscriptor [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ejecuta el Service Pack 1 o posterior y el publicador ejecuta una versión anterior. Si el procedimiento almacenado genera un error en este escenario, actualice el publicador al Service Pack 1 de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
+>  En determinadas condiciones, este procedimiento almacenado puede producir un error si el suscriptor ejecuta el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1 o posterior y el publicador ejecuta una versión anterior. Si el procedimiento almacenado genera un error en este escenario, actualice el publicador al Service Pack 1 de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -57,9 +57,9 @@ sp_link_publication [ @publisher = ] 'publisher'
   
 `[ @security_mode = ] security_mode`Es el modo de seguridad utilizado por el suscriptor para conectarse a un publicador remoto para la actualización inmediata. *security_mode* es de **tipo int**y puede tener uno de estos valores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación con el inicio de sesión especificado en este procedimiento almacenado como *Inicio de sesión* y *contraseña*.<br /><br /> Nota: en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta opción se usaba para especificar una llamada a procedimiento remoto (RPC) dinámica.|  
+|**0**|Usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación con el inicio de sesión especificado en este procedimiento almacenado como *Inicio de sesión* y *contraseña*.<br /><br /> Nota: en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta opción se usaba para especificar una llamada a procedimiento remoto (RPC) dinámica.|  
 |**1**|Utiliza el contexto de seguridad (autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o autenticación de Windows) del usuario que realiza el cambio en el suscriptor.<br /><br /> Nota: esta cuenta también debe existir en el publicador con privilegios suficientes. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.|  
 |**2**|Utiliza un inicio de sesión de servidor vinculado definido por el usuario existente creado mediante **sp_link_publication**.|  
   
@@ -79,7 +79,7 @@ sp_link_publication [ @publisher = ] 'publisher'
   
  En el caso de las suscripciones de inserción, la entrada se puede limpiar mediante [sp_subscription_cleanup &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). En el caso de las suscripciones de extracción, la entrada se puede limpiar [sp_droppullsubscription &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) o [sp_subscription_cleanup &#40;transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md). También puede llamar a **sp_link_publication** con una contraseña nula para borrar la entrada del MSsubscription_properties &#40;tabla del sistema de [Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) para cuestiones de seguridad.  
   
- El modo predeterminado que utiliza un suscriptor de actualización inmediata cuando se conecta al publicador no permite una conexión mediante la autenticación de Windows. Para conectar con un modo de autenticación de Windows, se deberá configurar un servidor vinculado como publicador, y el suscriptor de actualización inmediata debe utilizar esta conexión cuando actualice el suscriptor. Esto requiere que el **sp_link_publication** se ejecute con *security_mode* = **2**. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.  
+ El modo predeterminado que utiliza un suscriptor de actualización inmediata cuando se conecta al publicador no permite una conexión mediante la autenticación de Windows. Para conectar con un modo de autenticación de Windows, se deberá configurar un servidor vinculado como publicador, y el suscriptor de actualización inmediata debe utilizar esta conexión cuando actualice el suscriptor. Esto requiere que el **sp_link_publication** se ejecute con *security_mode*  =  **2**. Al usar la autenticación de Windows, se debe admitir la delegación de cuentas de seguridad.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent_failover](../../relational-databases/replication/codesnippet/tsql/sp-link-publication-tran_1.sql)]  

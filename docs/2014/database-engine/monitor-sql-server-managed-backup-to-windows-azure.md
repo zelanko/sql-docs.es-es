@@ -1,5 +1,6 @@
 ---
 title: Supervisión de SQL Server copia de seguridad administrada en Azure | Microsoft Docs
+description: En este artículo se describen las herramientas que puede usar para determinar el estado general de las copias de seguridad con SQL Server copia de seguridad administrada en Azure e identificar los errores.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,12 +11,12 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4ed32927e38f67c718031930023bd246048e2db5
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798040"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849614"
 ---
 # <a name="monitor-sql-server-managed-backup-to-azure"></a>Supervisión de copia de seguridad administrada de SQL Server en Azure
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene medidas integradas para identificar los problemas y los errores durante los procesos de copia de seguridad y remediarlos con la acción correctiva, si es posible.  Aunque hay ciertas situaciones en las que se requiere la intervención del usuario. Este tema describe las herramientas que puede utilizar para determinar el estado de mantenimiento total de las copias de seguridad e identificar los errores que deban solucionarse.  
@@ -108,13 +109,13 @@ GO
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>Estado de mantenimiento y recuentos de errores agregados  
- La función **smart_admin. fn_get_health_status** devuelve una tabla de recuentos de errores agregados para cada categoría que se puede usar para supervisar el [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]estado de mantenimiento de. Esta misma función también la utiliza el mecanismo de notificación por correo electrónico configurado en el sistema que se describe más adelante en este tema.   
+ La función **smart_admin. fn_get_health_status** devuelve una tabla de recuentos de errores agregados para cada categoría que se puede usar para supervisar el estado de mantenimiento de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Esta misma función también la utiliza el mecanismo de notificación por correo electrónico configurado en el sistema que se describe más adelante en este tema.   
 Estos recuentos agregados se pueden utilizar para supervisar el estado del sistema. Por ejemplo, si el number_ of_retention_loops columna es 0 en 30 minutos, es posible que la administración de la retención tarde mucho tiempo o incluso no funcione correctamente. Las columnas de errores que no son cero pueden indicar que hay problemas y los registros de Eventos extendidos se deben comprobar para detectarlos. También puede llamar a **smart_admin. sp_get_backup_diagnostics** procedimiento almacenado para buscar los detalles del error.  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>Usar la notificación del agente para evaluar el estado de la copia de seguridad y los estados  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] incluye un mecanismo de notificación que se fundamenta en las directivas de administración basada en directivas de SQL Server.  
   
- **Requisitos previos**  
+ **Requisitos previos:**  
   
 -   Para usar esta funcionalidad, se requiere el Correo electrónico de base de datos. Para obtener más información acerca de cómo habilitar el correo electrónico de base de datos para la instancia de SQL Server, vea [configurar correo electrónico de base de datos](../relational-databases/database-mail/configure-database-mail.md).  
   
@@ -203,7 +204,7 @@ $policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies
 $policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
   
- El script siguiente devuelve un informe detallado de los errores y advertencias de la instancia predeterminada (`\SQL\COMPUTER\DEFAULT`):  
+ El script siguiente devuelve un informe detallado de los errores y advertencias de la instancia predeterminada ( `\SQL\COMPUTER\DEFAULT` ):  
   
 ```powershell
 (Get-SqlSmartAdmin ).EnumHealthStatus()  

@@ -12,18 +12,18 @@ ms.assetid: 212f2042-456a-4c0a-8d76-480b18f02431
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7fb33e6ccb5afbdee1bf6c3673a24548d6fe9961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 952690e4f37be304d80a542e38d461ef92ce2c21
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102118"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886442"
 ---
 # <a name="configure-ssl-connections-on-a-native-mode-report-server"></a>Configurar conexiones SSL en un servidor de informes en modo nativo
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] El modo nativo usa el servicio HTTP SSL (Capa de sockets seguros) para establecer conexiones cifradas con un servidor de informes. Si tiene el archivo de certificado (.cer) instalado en un almacén de certificados local en el equipo del servidor de informes, puede enlazar el certificado a una reserva de direcciones URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para admitir las conexiones con el servidor de informes en un canal cifrado.  
   
 > [!TIP]  
->  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, la entrada del blog [How to enable SSL on a SharePoint 2010 web application (https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx)](https://blogs.msdn.com/b/sowmyancs/archive/2010/02/12/how-to-enable-ssl-on-a-sharepoint-web-application.aspx) (Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
+>  Si usa el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vea la documentación de SharePoint para obtener más información. Por ejemplo, la entrada del blog [How to enable SSL on a SharePoint 2010 web application (https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application)](https://docs.microsoft.com/archive/blogs/sowmyancs/how-to-enable-ssl-on-a-sharepoint-2010-web-application) (Cómo habilitar SSL en una aplicación web de SharePoint 2010).  
   
  Como Internet Information Services (IIS) también usa HTTP SSL, hay importantes problemas de interoperabilidad que es necesario tener en cuenta si IIS y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se ejecutan en el mismo equipo. Asegúrese de revisar la sección Problemas de interoperabilidad con IIS para obtener información sobre cómo resolver estos problemas.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66102118"
   
 1.  Haga clic en **Dirección URL del Administrador de informes**.  
   
-2.  Haga clic en **Avanzada**.  
+2.  Haga clic en **Avanzado**.  
   
 3.  En **Varias identidades SSL para el Administrador de informes**, haga clic en **Agregar**.  
   

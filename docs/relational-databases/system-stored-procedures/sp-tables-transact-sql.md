@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14c618ef31562f6e6af70a569e21fdd4105d663e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834244"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +71,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nombre del calificador de tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. Este campo puede ser NULL.|  
-|**TABLE_OWNER**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**TABLE_OWNER**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**VARCHAR (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  
@@ -117,7 +117,7 @@ EXEC sp_tables ;
 ```  
   
 ### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Devolver información sobre las tablas en un esquema especificado  
- En el ejemplo siguiente se devuelve información acerca de las tablas `AdventureWorksPDW201` de dimensiones de la base de datos.  
+ En el ejemplo siguiente se devuelve información acerca de las tablas de dimensiones de la `AdventureWorksPDW201` base de datos.  
   
 ```  
 -- Uses AdventureWorks  

@@ -18,12 +18,12 @@ ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62902453"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921600"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
   Cuando los datos entran en un flujo de datos en un paquete, el origen que extrae los datos convierte los datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A los datos numéricos se les asigna un tipo de dato numérico, a los datos de cadena se les asigna un tipo de datos de caracteres y se asignan fechas a un tipo de datos de fecha. A otros datos, tales como GUID y bloques de objetos binarios grandes (BLOB), también se les asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correspondientes. Si los datos son de un tipo que no se puede convertir en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se produce un error.  
@@ -62,7 +62,7 @@ ms.locfileid: "62902453"
 |DT_WSTR|Una cadena de caracteres Unicode terminada en NULL, con una longitud máxima de 4000 caracteres. (Si un valor de columna contiene otros terminadores NULL, la cadena se truncará cuando se encuentre el primer NULL.)|  
 |DT_IMAGE|Valor binario con un tamaño máximo de 2<sup>31</sup>-1 (2.147.483.647) bytes. .|  
 |DT_NTEXT|Cadena de caracteres Unicode con una longitud máxima de 2<sup>30</sup> -1 (1.073.741.823) caracteres.|  
-|DT_TEXT|Una [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]cadena de caracteres/MBCS con una longitud máxima de 2<sup>31</sup>-1 (2.147.483.647) caracteres.|  
+|DT_TEXT|Una [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)] cadena de caracteres/MBCS con una longitud máxima de 2<sup>31</sup>-1 (2.147.483.647) caracteres.|  
   
 ## <a name="conversion-of-data-types"></a>Conversión de tipos de datos  
  Si los datos en una columna no requieren el ancho total asignado por el tipo de datos de origen, puede ser recomendable cambiar el tipo de datos de la columna. Si se hace que cada fila de datos sea lo más estrecha posible, esto ayuda a optimizar el rendimiento cuando se transfieren datos porque, cuanto más estrecha sea una fila, más rápido los datos se desplazarán del origen al destino.  
@@ -253,7 +253,7 @@ ms.locfileid: "62902453"
  Para obtener información sobre la asignación de tipos de datos en el flujo de datos, vea [Trabajar con tipos de datos del flujo de datos](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
 ## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), en blogs.msdn.com.  
+ Entrada de blog, sobre la [comparación de rendimiento entre las técnicas de conversión de tipos de datos en SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Datos de flujos de datos](data-in-data-flows.md)  

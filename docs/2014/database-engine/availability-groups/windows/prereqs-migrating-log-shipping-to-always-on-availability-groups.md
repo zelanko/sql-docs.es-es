@@ -13,12 +13,12 @@ ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 865e8d720e9977f582ac5ae8a0e75d995fc82629
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a2dc38d5e916cf67c09162c86db9ab31728804f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789560"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922035"
 ---
 # <a name="prerequisites-for-migrating-from-log-shipping-to-alwayson-availability-groups-sql-server"></a>Requisitos previos para migrar desde grupos de trasvase de registros a grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se describen los requisitos previos para convertir una base de datos principal de trasvase de registros junto con una o varias de sus bases de datos secundarias en una base de datos principal AlwaysOn y una o varias bases de datos secundarias.  
@@ -39,7 +39,7 @@ ms.locfileid: "62789560"
 ##  <a name="availability-group-prerequisites"></a><a name="AGPrereqsRealAddress"></a>Requisitos previos de los grupos de disponibilidad  
  Para permitir los trabajos de copia de seguridad para ejecutarse en la réplica principal del grupo de disponibilidad, use las siguientes opciones de copia de seguridad de los grupos de disponibilidad AlwaysOn:  
   
-|Propiedad|Valor|  
+|Propiedad.|Parámetro|  
 |--------------|-------------|  
 |Preferencia de la copia de seguridad automatizada del grupo de disponibilidad|Solo en la réplica principal|  
 |Prioridad de copia de seguridad de la réplica principal.|>0|  
@@ -93,11 +93,11 @@ ms.locfileid: "62789560"
   
 -   **Blogs:**  
   
-     [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/01/09/converting-a-logshipping-configuration-to-availability-group.aspx)  
+     [Convertir una configuración de trasvase de registros en un grupo de disponibilidad](https://docs.microsoft.com/archive/blogs/sqlalwayson/converting-a-logshipping-configuration-to-availability-group)  
   
-     [Agregue una base de datos principal de trasvase de registros y una base de datos secundaria a un grupo de disponibilidad](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/01/use-log-shipping-to-prepare-secondary-databases-for-an-existing-availability-group.aspx)  
+     [Agregue una base de datos principal de trasvase de registros y una base de datos secundaria a un grupo de disponibilidad](https://docs.microsoft.com/archive/blogs/sqlalwayson/add-a-log-shipping-primary-database-and-secondary-databases-to-an-existing-availability-group)  
   
-     [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs del equipo de AlwaysOn de SQL Server: el blog oficial del equipo de AlwaysOn de SQL Server](https://docs.microsoft.com/archive/blogs/sqlalwayson/)  
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   

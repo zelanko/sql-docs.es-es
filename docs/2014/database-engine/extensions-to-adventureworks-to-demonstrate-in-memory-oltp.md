@@ -10,16 +10,16 @@ ms.assetid: 0186b7f2-cead-4203-8360-b6890f37cde8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4b317ffdb38c06cafe09ff786004b7ac144d0b18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8f1b28766eab6ecd5035dd8a58e88abaccc97c5
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228469"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82921732"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensiones de AdventureWorks para mostrar OLTP en memoria
     
-## <a name="overview"></a>Información general  
+## <a name="overview"></a>Introducción  
  Este ejemplo muestra la nueva característica [!INCLUDE[hek_2](../includes/hek-2-md.md)] , que forma parte de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Muestra las nuevas tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa, y se puede usar para mostrar las ventajas de rendimiento de [!INCLUDE[hek_2](../includes/hek-2-md.md)].  
   
 > [!NOTE]  
@@ -45,14 +45,14 @@ ms.locfileid: "75228469"
   
 -   [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]RTM: Evaluation, Developer o Enterprise Edition  
   
--   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener instrucciones generales sobre el [!INCLUDE[hek_2](../includes/hek-2-md.md)]hardware de, consulte la siguiente entrada de blog:[https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](https://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
+-   Para las pruebas de rendimiento, un servidor con unas especificaciones similares al entorno de producción. Para esta muestra concreta, debe haber al menos 16 GB de memoria disponible para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener instrucciones generales sobre el hardware de [!INCLUDE[hek_2](../includes/hek-2-md.md)] , consulte la siguiente entrada de blog:[https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/](https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/)  
   
 ##  <a name="installing-the-hek_2-sample-based-on-adventureworks"></a><a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a>Instalar el [!INCLUDE[hek_2](../includes/hek-2-md.md)] ejemplo basado en AdventureWorks  
  Siga estos pasos para instalar el ejemplo:  
   
 1.  Descargue el archivo de la copia de seguridad completa de la base de datos AdventureWorks2014:  
   
-    1.  Abra lo siguiente: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661).  
+    1.  Abra lo siguiente: [https://msftdbprodsamples.codeplex.com/downloads/get/880661](https://msftdbprodsamples.codeplex.com/downloads/get/880661) .  
   
     2.  Se le pedirá que guarde el archivo en una carpeta local.  
   
@@ -87,13 +87,13 @@ ms.locfileid: "75228469"
     ALTER AUTHORIZATION ON DATABASE::AdventureWorks2014 TO [<NewLogin>]  
     ```  
   
-5.  Descargue el script de ejemplo[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] ' [!INCLUDE[hek_2](../includes/hek-2-md.md)] RTM sample. SQL ' del [ejemplo de OLTP en memoria SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
+5.  Descargue el script de ejemplo ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' del [ejemplo de OLTP en memoria SQL Server 2014 RTM](https://go.microsoft.com/fwlink/?LinkID=396372) en una carpeta local.  
   
-6.  Actualice el valor de la variable ' checkpoint_files_location ' en el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' para que apunte a la ubicación de destino de [!INCLUDE[hek_2](../includes/hek-2-md.md)] los archivos de punto de comprobación. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
+6.  Actualice el valor de la variable ' checkpoint_files_location ' en el script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' para que apunte a la ubicación de destino de los [!INCLUDE[hek_2](../includes/hek-2-md.md)] archivos de punto de comprobación. Los archivos de punto de comprobación deben colocarse en una unidad que tenga un buen rendimiento de E/S secuencial.  
   
      Actualice el valor de la variable 'database_name' para que señale a la base de datos AdventureWorks2014.  
   
-    1.  Asegúrese de incluir la barra diagonal inversa '\' como parte del nombre de ruta de acceso  
+    1.  Asegúrese de incluir la barra diagonal inversa ' \' como parte del nombre de ruta de acceso  
   
     2.  Ejemplo:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75228469"
   
     2.  Con Management Studio:  
   
-        1.  Abra el script '[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' en una ventana de consulta.  
+        1.  Abra el script ' [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] RTM [!INCLUDE[hek_2](../includes/hek-2-md.md)] sample. SQL ' en una ventana de consulta.  
   
         2.  Conéctese al servidor de destino que contiene la base de datos AdventureWorks2014.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "75228469"
   
 -   *Restricciones DEFAULT*: igual que en SalesOrderHeader, la restricción DEFAULT que requiere la fecha y la hora del sistema no se migra; en su lugar, el procedimiento almacenado que inserta pedidos de venta se encarga de insertar la fecha y la hora actuales del sistema en la primera inserción.  
   
--   *Columnas calculadas* : la columna calculada LineTotal no se migró porque no se admiten columnas calculadas con tablas optimizadas para memoria [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]en. Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
+-   *Columnas calculadas* : la columna calculada LineTotal no se migró porque no se admiten columnas calculadas con tablas optimizadas para memoria en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Para obtener acceso a esta columna, use la vista Sales.vSalesOrderDetail_extended_inmem.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "75228469"
   
 -   *UDT de alias*: en la tabla original se usa el tipo de datos definido por el usuario dbo.Flag, que equivale al tipo de datos del sistema bit. La tabla migrada usa el tipo de datos bit en su lugar.  
   
--   *Intercalación BIN2* : las columnas Name y ProductNumber se incluyen en las claves de índice y, por tanto, deben [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]tener intercalaciones BIN2 en. Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
+-   *Intercalación BIN2* : las columnas Name y ProductNumber se incluyen en las claves de índice y, por tanto, deben tener intercalaciones BIN2 en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] . Aquí, la suposición es que la aplicación no emplea las características de intercalación, como no distinguir mayúsculas de minúsculas.  
   
 -   *Rowguid:* la columna rowguid se omite. Para obtener detalles, vea la descripción de la tabla SalesOrderHeader.  
   
@@ -462,7 +462,7 @@ END
  Se usará la herramienta ostress para ejecutar los scripts con varias conexiones simultáneas. Se usará el parámetro "-n" para controlar el número de conexiones y el parámetro "r" para controlar cuántas veces se ejecuta el script en cada conexión.  
   
 #### <a name="functional-validation-of-the-workload"></a>Validación funcional de la carga de trabajo  
- Para comprobar que todo funciona, comenzaremos con una prueba de ejemplo, con 10 conexiones simultáneas y 5 iteraciones, insertando un total de 10 * \* 5 20 = 1000 pedido de ventas.  
+ Para comprobar que todo funciona, comenzaremos con una prueba de ejemplo, con 10 conexiones simultáneas y 5 iteraciones, insertando un total de 10 * 5 \* 20 = 1000 pedido de ventas.  
   
  Con el comando siguiente suponemos que se usa la instancia predeterminada en el equipo local. Si va a usar una instancia con nombre o un servidor remoto, cambie el nombre del servidor en consecuencia con el parámetro -S.  
   
@@ -519,7 +519,7 @@ ostress.exe -n100 -r5000 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @
   
  En un servidor de prueba con un número total de 8 núcleos físicos (16 lógicos), se tardaron 41 minutos y 25 segundos. En un segundo servidor de prueba con 24 núcleos físicos (48 lógicos), se tardaron 52 minutos y 16 segundos.  
   
- La causa principal de la diferencia de rendimiento entre las tablas optimizadas para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../includes/hek-2-md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por lo tanto, las transacciones simultáneas no bloquean las inserciones de las [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] demás, lo que permite que se use totalmente la CPU.  
+ La causa principal de la diferencia de rendimiento entre las tablas optimizadas para memoria y las tablas basadas en disco en esta prueba es el hecho de que cuando se usan tablas basadas en disco, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no puede utilizar totalmente la CPU. El motivo es la contención de bloqueos temporales: las transacciones simultáneas intentan escribir en la misma página de datos; los bloqueos temporales se usan para asegurarse de que solo una transacción puede escribir en una página a la vez. El motor de [!INCLUDE[hek_2](../includes/hek-2-md.md)] no tiene bloqueos temporales y las filas de datos no se organizan en páginas. Por lo tanto, las transacciones simultáneas no bloquean las inserciones de las demás, lo [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que permite que se use totalmente la CPU.  
   
  Puede observar el uso de la CPU mientras se está ejecutando la carga de trabajo, por ejemplo con el Administrador de tareas. Con las tablas basadas en disco verá que el uso de la CPU está muy alejado del 100 %. En una configuración de prueba con 16 procesadores lógicos, el uso rondaría el 24 %.  
   

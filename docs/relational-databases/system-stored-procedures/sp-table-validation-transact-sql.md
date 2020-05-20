@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_table_validation
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c63e6e535aed72684e56d5f578e52e065f8190d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72173553"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834235"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @rowcount_only = ] type_of_check_requested`Especifica qué tipo de suma de comprobación o recuento de filas se va a realizar. *type_of_check_requested* es de **smallint**y su valor predeterminado es **1**.  
   
- Si es **0**, realice un recuento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de filas y una suma de comprobación compatible con 7,0.  
+ Si es **0**, realice un recuento de filas y una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suma de comprobación compatible con 7,0.  
   
  Si es **1**, realizar solo una comprobación del recuento de filas.  
   
@@ -63,7 +63,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`Es el método utilizado para calcular el recuento de filas. *full_or_fast* es de **tinyint**, su valor predeterminado es **2**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. El recuento de filas en **sysindexes** es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que **sysindexes** se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
@@ -71,7 +71,7 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent`Si el Agente de distribución se está ejecutando **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, se genera el error 20578 y se indica al agente de replicación que se cierre. Este parámetro se omite cuando el usuario ejecuta **sp_table_validation** directamente.  
   
-`[ @table_name = ] table_name`Es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de ** \@** **tipo sysname y su**valor predeterminado es Table.  
+`[ @table_name = ] table_name`Es el nombre de la tabla de la vista utilizada para los mensajes de salida. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es ** \@ TABLE**.  
   
 `[ @column_list = ] 'column_list'`Es la lista de columnas que se deben utilizar en la función de suma de comprobación. *column_list* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
   
@@ -87,7 +87,7 @@ sp_table_validation [ @table = ] 'table'
   
  Al realizar una suma de comprobación, la estructura de la tabla debe ser idéntica en los dos servidores; es decir, las tablas deben tener las mismas columnas y en el mismo orden, el mismo tipo de datos y la misma longitud, y las mismas condiciones NULL o NOT NULL. Por ejemplo, si el publicador ejecutó CREATE TABLE y, a continuación, ALTER TABLE para agregar columnas, pero el script aplicado en el suscriptor es simplemente CREATE TABLE, la estructura NO será la misma. Si no está seguro de que la estructura de las dos tablas es idéntica, mire [syscolumns](../../relational-databases/system-compatibility-views/sys-syscolumns-transact-sql.md) y confirme que el desplazamiento de cada tabla es el mismo.  
   
- Es probable que los valores de punto flotante generen diferencias de suma de comprobación si se utilizó **BCP** de modo de carácter, que es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caso si la publicación tiene suscriptores que no son de. Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
+ Es probable que los valores de punto flotante generen diferencias de suma de comprobación si se utilizó **BCP** de modo de carácter, que es el caso si la publicación tiene suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Dichas diferencias se deben a pequeñas e inevitables diferencias de precisión en la conversión desde y hacia el modo de carácter.  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **sp_table_validation**, debe tener permisos SELECT en la tabla que se va a validar.  

@@ -13,12 +13,12 @@ ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815760"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922013"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)
   El modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] evalúa un conjunto de directivas predefinidas de administración basada en directiva (PBM). Puede utilizarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -48,15 +48,15 @@ ms.locfileid: "62815760"
   
 |Nombre de la directiva|Problema|Categoría**<sup>*</sup>**|Faceta|  
 |-----------------|-----------|------------------------------|-----------|  
-|Estado de clúster de WSFC|El [servicio de clúster WSFC está sin conexión](wsfc-cluster-service-is-offline.md).|Crítico|Instancia de SQL Server|  
-|Estado en línea del grupo de disponibilidad|El [grupo de disponibilidad está sin conexión](availability-group-is-offline.md).|Crítico|grupo de disponibilidad|  
-|Preparación para la conmutación automática por error del grupo de disponibilidad|El [grupo de disponibilidad no está listo para la conmutación automática por error](availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidad|  
+|Estado de clúster de WSFC|El [servicio de clúster WSFC está sin conexión](wsfc-cluster-service-is-offline.md).|Crítica|Instancia de SQL Server|  
+|Estado en línea del grupo de disponibilidad|El [grupo de disponibilidad está sin conexión](availability-group-is-offline.md).|Crítica|grupo de disponibilidad|  
+|Preparación para la conmutación automática por error del grupo de disponibilidad|El [grupo de disponibilidad no está listo para la conmutación automática por error](availability-group-is-not-ready-for-automatic-failover.md).|Crítica|grupo de disponibilidad|  
 |Estado de sincronización de datos de las réplicas de disponibilidad|[Algunas réplicas de disponibilidad no sincronizan los datos](some-availability-replicas-are-not-synchronizing-data.md).|Advertencia|grupo de disponibilidad|  
 |Estado de sincronización de los datos de réplicas sincrónicas|[Algunas réplicas sincrónicas no están sincronizadas](some-synchronous-replicas-are-not-synchronized.md).|Advertencia|grupo de disponibilidad|  
 |Estado del rol de réplicas de disponibilidad|[Algunas réplicas de disponibilidad no tienen un rol correcto](some-availability-replicas-do-not-have-a-healthy-role.md).|Advertencia|grupo de disponibilidad|  
 |Estado de conexión de las réplicas de disponibilidad|[Algunas réplicas de disponibilidad están desconectadas](some-availability-replicas-are-disconnected.md).|Advertencia|grupo de disponibilidad|  
-|Estado del rol de réplica de disponibilidad|[La réplica de disponibilidad no tiene un rol en buen estado](availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidad|  
-|Estado de conexión de la réplica de disponibilidad|La [réplica de disponibilidad está desconectada](availability-replica-is-disconnected.md).|Crítico|réplica de disponibilidad|  
+|Estado del rol de réplica de disponibilidad|[La réplica de disponibilidad no tiene un rol en buen estado](availability-replica-does-not-have-a-healthy-role.md).|Crítica|réplica de disponibilidad|  
+|Estado de conexión de la réplica de disponibilidad|La [réplica de disponibilidad está desconectada](availability-replica-is-disconnected.md).|Crítica|réplica de disponibilidad|  
 |Estado de unión de réplica de disponibilidad|La [réplica de disponibilidad no está unida](availability-replica-is-not-joined.md).|Advertencia|réplica de disponibilidad|  
 |Estado de sincronización de datos de las réplicas de disponibilidad|El [Estado de sincronización de datos de alguna base de datos de disponibilidad no es correcto](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Advertencia|réplica de disponibilidad|  
 |Estado de suspensión de la base de datos de disponibilidad|La [base de datos de disponibilidad está suspendida](availability-database-is-suspended.md).|Advertencia|Base de datos de disponibilidad|  
@@ -86,7 +86,7 @@ ms.locfileid: "62815760"
   
  Una directiva definidas por el usuario puede utilizar cualquiera de las facetas PBM disponibles, incluidas las utilizadas por las directivas predefinidas AlwaysOn (vea [Directiva predefinidas y problemas](#AlwaysOnPBM), anteriormente en este tema). La faceta de servidor proporciona las siguientes propiedades para supervisar el estado de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]: (`IsHadrEnabled` y `HadrManagerStatus`). La faceta de servidor también proporciona a las propiedades las siguientes directivas para supervisar la configuración de clúster de WSFC: `ClusterQuorumType` y `ClusterQuorumState`.  
   
- Para obtener más información, vea [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (un blog del equipo de SQL Server AlwaysOn).  
+ Para obtener más información, vea [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model) (un blog del equipo de SQL Server AlwaysOn).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -104,9 +104,9 @@ ms.locfileid: "62815760"
   
 ##  <a name="related-content"></a><a name="RelatedContent"></a> Contenido relacionado  
   
--   [Modelo de estado AlwaysOn Parte 1: arquitectura del modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Modelo de estado AlwaysOn Parte 1: arquitectura del modelo de estado](https://docs.microsoft.com/archive/blogs/sqlalwayson/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview)  
   
--   [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
+-   [Modelo de estado AlwaysOn Parte 2: el modelo de estado](https://docs.microsoft.com/archive/blogs/sqlalwayson/the-alwayson-health-model-part-2-extending-the-health-model)  
   
 -   [Guía de soluciones AlwaysOn de Microsoft SQL Server para lograr alta disponibilidad y recuperación ante desastres](https://go.microsoft.com/fwlink/?LinkId=227600)  
   

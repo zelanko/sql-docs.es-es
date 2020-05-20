@@ -1,5 +1,6 @@
 ---
 title: Solución de problemas de SQL Server copia de seguridad administrada en Azure | Microsoft Docs
+description: En este artículo se describen las tareas y las herramientas que puede usar para solucionar los errores que pueden producirse durante la SQL Server copia de seguridad administrada en Microsoft Azure operaciones.
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,20 +11,20 @@ ms.assetid: a34d35b0-48eb-4ed1-9f19-ea14754650da
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: db55c753317f945a8156b671fa9cbcd72ce4c641
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929443"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849603"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Solución de problemas de la copia de seguridad administrada de SQL Server en Azure
   En este tema se describen las tareas y las herramientas que puede usar para solucionar los errores que pueden producirse durante las operaciones de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-## <a name="overview"></a>Información general  
+## <a name="overview"></a>Introducción  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tiene pasos para solucionar problemas y comprobaciones integrados de modo que, en muchos casos, el propio proceso de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ocupa de los errores internos.  
   
- Por ejemplo, una eliminación de un archivo de copia de seguridad que da lugar a una interrupción de la cadena de registro que afecta a [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] la capacidad de recuperación: identificará la interrupción en la cadena de registros y programará una copia de seguridad para que se realice inmediatamente. Sin embargo, se recomienda supervisar el estado y solucionar los errores que requieran intervención manual.  
+ Por ejemplo, una eliminación de un archivo de copia de seguridad que da lugar a una interrupción de la cadena de registro que afecta a la capacidad de recuperación: [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] identificará la interrupción en la cadena de registros y programará una copia de seguridad para que se realice inmediatamente. Sin embargo, se recomienda supervisar el estado y solucionar los errores que requieran intervención manual.  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] registra los eventos y los errores usando procedimientos almacenados del sistema, vistas del sistema y eventos extendidos. Las vistas del sistema y los procedimientos almacenados proporcionan información de configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], el estado de las copias de seguridad programadas y también los errores capturados por Eventos extendidos. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] usa Eventos extendidos para capturar los errores que se usan para solucionar problemas. Además de registrar los eventos, las Directivas de administración inteligente de SQL Server proporcionan un estado de mantenimiento que un trabajo de notificación por correo electrónico usa para la notificación de errores y problemas. Para obtener más información, consulte [supervisión SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
@@ -33,7 +34,7 @@ ms.locfileid: "76929443"
   
 1.  Habilite la notificación por correo electrónico para empezar a recibir mensajes de correo electrónico con los errores y advertencias.  
   
-     Como alternativa, también puede ejecutar periódicamente `smart_admin.fn_get_health_status` para comprobar los recuentos y los errores agregados. Por ejemplo, `number_of_invalid_credential_errors` es el número de veces que la copia de seguridad inteligente intentó una copia de seguridad pero obtuvo un error de credencial no válida. `Number_of_backup_loops` y `number_of_retention_loops` no son errores pero indican que el número de veces que el subproceso de copia de seguridad y el de retención examinaron la lista de bases de datos. Normalmente, cuando @begin_time no @end_time se proporcionan y, la función muestra la información de los últimos 30 minutos y, por lo general, deberíamos ver valores distintos de cero para estas dos columnas. Si son cero, implica que el sistema está sobrecargado o incluso que no responde. Para obtener más información, consulte la sección **solución de problemas del sistema** más adelante en este tema.  
+     Como alternativa, también puede ejecutar periódicamente `smart_admin.fn_get_health_status` para comprobar los recuentos y los errores agregados. Por ejemplo, `number_of_invalid_credential_errors` es el número de veces que la copia de seguridad inteligente intentó una copia de seguridad pero obtuvo un error de credencial no válida. `Number_of_backup_loops` y `number_of_retention_loops` no son errores pero indican que el número de veces que el subproceso de copia de seguridad y el de retención examinaron la lista de bases de datos. Normalmente, cuando @begin_time @end_time no se proporcionan y, la función muestra la información de los últimos 30 minutos y, por lo general, deberíamos ver valores distintos de cero para estas dos columnas. Si son cero, implica que el sistema está sobrecargado o incluso que no responde. Para obtener más información, consulte la sección **solución de problemas del sistema** más adelante en este tema.  
   
 2.  Revise los registros de Eventos extendidos para obtener más detalles sobre los errores y otros eventos asociados.  
   
@@ -42,19 +43,19 @@ ms.locfileid: "76929443"
 ### <a name="common-causes-of-errors"></a>Causas comunes de los errores  
  A continuación se muestra la lista de las causas comunes que provocan errores:  
   
-1.  **Cambios en la credencial de SQL:** Si cambia el nombre de la credencial usada [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] por, o si se elimina, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no podrá realizar copias de seguridad. El cambio se debe aplicar a la configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+1.  **Cambios en la credencial de SQL:** Si cambia el nombre de la credencial usada por [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] , o si se elimina, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] no podrá realizar copias de seguridad. El cambio se debe aplicar a la configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
-2.  **Cambios en los valores de clave de acceso de almacenamiento:** Si se cambian los valores de clave de almacenamiento de la cuenta de Azure, pero la credencial de SQL no se actualiza [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con los nuevos valores, se producirá un error al autenticarse en el almacenamiento y no se podrán realizar copias de seguridad de las bases de datos configuradas para usar esta cuenta.  
+2.  **Cambios en los valores de clave de acceso de almacenamiento:** Si se cambian los valores de clave de almacenamiento de la cuenta de Azure, pero la credencial de SQL no se actualiza con los nuevos valores, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se producirá un error al autenticarse en el almacenamiento y no se podrán realizar copias de seguridad de las bases de datos configuradas para usar esta cuenta.  
   
-3.  **Cambios en la cuenta de Azure Storage:** La eliminación o el cambio de nombre de la cuenta de almacenamiento sin los cambios correspondientes [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en la credencial SQL provocará un error y no se realizará ninguna copia de seguridad. Si elimina una cuenta de almacenamiento, asegúrese de que las bases de datos se configuran de nuevo con la información válida de la cuenta de almacenamiento. Si se cambia una cuenta de almacenamiento o se cambian los valores de clave, asegúrese de que estos cambios se reflejan en la credencial de SQL que usa [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
+3.  **Cambios en la cuenta de Azure Storage:** La eliminación o el cambio de nombre de la cuenta de almacenamiento sin los cambios correspondientes en la credencial SQL provocará [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] un error y no se realizará ninguna copia de seguridad. Si elimina una cuenta de almacenamiento, asegúrese de que las bases de datos se configuran de nuevo con la información válida de la cuenta de almacenamiento. Si se cambia una cuenta de almacenamiento o se cambian los valores de clave, asegúrese de que estos cambios se reflejan en la credencial de SQL que usa [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
   
 4.  **Cambios en las propiedades de la base de datos:** Los cambios en los modelos de recuperación o en el cambio de nombre pueden hacer que se produzca un error en las copias de seguridad.  
   
-5.  **Cambios en el modelo de recuperación:** Si el modelo de recuperación de la base de datos se cambia a simple desde completo u optimizado para cargas masivas de registro, se detendrán las copias de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]seguridad y se omitirán las bases de datos. Para obtener más información, consulte [SQL Server copia de seguridad administrada en Azure: interoperabilidad y coexistencia](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
+5.  **Cambios en el modelo de recuperación:** Si el modelo de recuperación de la base de datos se cambia a simple desde completo u optimizado para cargas masivas de registro, se detendrán las copias de seguridad y se omitirán las bases de datos [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Para obtener más información, consulte [SQL Server copia de seguridad administrada en Azure: interoperabilidad y coexistencia](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  
   
 ### <a name="most-common-error-messages-and-solutions"></a>Mensajes de error y soluciones más comunes  
   
-1.  **Errores al habilitar o configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:**  
+1.  **Errores al habilitar o configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] :**  
   
      Error: "no se pudo obtener acceso a la dirección URL de almacenamiento.... Proporcione una credencial SQL válida... ": puede ver este y otros errores similares relacionados con las credenciales de SQL.  En tales casos, revise el nombre de la credencial de SQL que proporcionó, así como la información almacenada en la credencial de SQL: el nombre de la cuenta de almacenamiento y la clave de acceso de almacenamiento, y asegúrese de que son actuales y válidos.  
   
@@ -101,7 +102,7 @@ ms.locfileid: "76929443"
 ### <a name="troubleshooting-system-issues"></a>Solucionar problemas del sistema  
  Los siguientes son algunos escenarios cuando hay un problema con el sistema (SQL Server, Agente SQL Server) y afecta a [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]:  
   
--   **Sqlservr. exe deja de responder o deja de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] funcionar cuando se ejecuta:** si SQL Server deja de funcionar, el Agente SQL se cierra [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] correctamente, también se detiene y los eventos se registran en el archivo. out del Agente SQL.  
+-   **Sqlservr. exe deja de responder o deja de funcionar cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ejecuta:** si SQL Server deja de funcionar, el Agente SQL se cierra correctamente, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] también se detiene y los eventos se registran en el archivo. out del Agente SQL.  
   
      Si SQL Server deja de responder, los eventos se registran en el canal de administración.  Un ejemplo del registro de eventos:  
   
@@ -109,7 +110,7 @@ ms.locfileid: "76929443"
      *el código de error, el mensaje y el seguimiento de seguimiento se mostrarán en el XEvent del canal de administración, junto con información adicional, como:*   
     *"Es probable que experimente problemas de conectividad con SQL Server. Omitiendo la base de datos en la iteración actual "*  
   
--   **El Agente SQL deja de responder o deja [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de funcionar cuando se ejecuta:**  
+-   **El Agente SQL deja de responder o deja de funcionar cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ejecuta:**  
   
      Si el Agente SQL deja de funcionar, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] también se detiene y los eventos se registran en el canal de administración. Esto es similar a los escenarios en los que SQL Server deja de responder.  
   

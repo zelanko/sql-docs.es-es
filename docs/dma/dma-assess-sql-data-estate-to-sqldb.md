@@ -12,16 +12,16 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, on-premises SQL Server
 ms.assetid: ''
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 manager: jroth
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6f9d3d97d939586683015f38ab17c00dd03ca122
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 30f840c9fe558382c5a0549f09657c917c69c3d4
+ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253510"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82886192"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Evaluar la preparación de una SQL Server la migración de datos a Azure SQL Database mediante el Data Migration Assistant
 
@@ -84,7 +84,7 @@ El proyecto de Azure Migrate se usa para almacenar los metadatos de detección, 
 
     ![Azure Migrate: revisar y agregar pestañas de herramientas](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-tools.png)
 
-    Después de crear el proyecto, puede seleccionar herramientas adicionales para la evaluación y la migración de servidores y cargas de trabajo, bases de datos y aplicaciones Web.
+    Después de crear el proyecto, puede seleccionar herramientas adicionales para la valoración y la migración de servidores, cargas de trabajo, bases de datos y aplicaciones web.
 
 ## <a name="assess-and-upload-assessment-results"></a>Evaluación y carga de los resultados de la evaluación
 
@@ -127,7 +127,7 @@ Después de crear correctamente un proyecto de migración, en **herramientas de 
    > [!NOTE]
    > Para quitar varias bases de datos, selecciónelas mientras mantiene presionadas las teclas Mayús o Ctrl y, a continuación, haga clic en quitar orígenes. También puede Agregar bases de datos de varias instancias de SQL Server mediante el botón Agregar orígenes.
 
-4. Seleccione **Next (siguiente** ) para iniciar la evaluación.
+4. Seleccione **Siguiente** para iniciar la evaluación.
 
    ![Azure Migrate-Data Migration Assistant: pantalla de orígenes seleccionados](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 

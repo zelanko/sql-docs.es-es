@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_replmonitorhelpmergesession
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e31f785d1b1fa205a9498889f814a0a0bc32e9a8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771238"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834349"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`Es el intervalo de tiempo, en horas, para el que se devuelve información histórica de la sesión del agente. *hours* es **int**, que puede ser uno de los siguientes intervalos.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |< **0,1**|Devuelve información sobre las ejecuciones pasadas del agente, hasta un máximo de 100.|  
 |**0** (valor predeterminado)|Devuelve información sobre todas las ejecuciones pasadas del agente.|  
@@ -54,7 +54,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @session_type = ] session_type`Filtra el conjunto de resultados según el resultado final de la sesión. *session_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Sesiones del agente con un reintento o un resultado correcto.|  
 |**0**|Sesiones del agente con un resultado erróneo.|  
@@ -73,7 +73,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**Estado**|**int**|Estado de la ejecución del agente:<br /><br /> **1** = Inicio<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintento<br /><br /> **6** = error|  
 |**StartTime**|**datetime**|Hora en que se inició la sesión de trabajo de agente.|  
 |**EndTime**|**datetime**|Hora en que finalizó la sesión de trabajo de agente.|  
-|**Duration**|**int**|Duración acumulada, en segundos, de esta sesión de trabajo.|  
+|**Duración**|**int**|Duración acumulada, en segundos, de esta sesión de trabajo.|  
 |**UploadedCommands**|**int**|Número de comandos cargados durante la sesión del agente.|  
 |**DownloadedCommands**|**int**|Número de comandos descargados durante la sesión del agente.|  
 |**ErrorMessages**|**int**|Número de mensajes de error generados durante la sesión del agente.|  

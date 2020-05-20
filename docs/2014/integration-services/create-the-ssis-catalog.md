@@ -10,12 +10,12 @@ ms.assetid: 6ed56d36-18d9-40c2-b51f-f2a4c71d1e73
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f8db507966f9b3323e415ca7f2abfe4a12601c1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7f6128f14db0e1ccc423b5433744de7d3dc5d4
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798018"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922049"
 ---
 # <a name="create-the-ssis-catalog"></a>Crear el catálogo de SSIS
   Después de diseñar y probar paquetes en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], puede implementar los proyectos que contienen los paquetes en un servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para poder implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el servidor debe contener el catálogo de `SSISDB`. El programa de instalación de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] no crea automáticamente el catálogo; es necesario crear manualmente el catálogo usando las instrucciones siguientes.  
@@ -67,7 +67,7 @@ ms.locfileid: "72798018"
     $catalog.Create()
     ```  
   
-     Para obtener más ejemplos de cómo usar Windows PowerShell y el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>, vea la entrada del blog [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS y PowerShell en SQL Server 2012), en blogs.msdn.com. Para obtener información general sobre el espacio de nombres y ejemplos de código, vea la entrada del blog sobre el [Modelo de objetos administrados del catálogo de SSIS](https://go.microsoft.com/fwlink/?LinkId=254267)en blogs.msdn.com.  
+     Para obtener más ejemplos de cómo usar Windows PowerShell y el espacio de nombres <xref:Microsoft.SqlServer.Management.IntegrationServices>, vea la entrada del blog [SSIS and PowerShell in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=242539) (SSIS y PowerShell en SQL Server 2012), en blogs.msdn.com. Para obtener información general sobre el espacio de nombres y ejemplos de código, vea la entrada del blog sobre el [Modelo de objetos administrados del catálogo de SSIS](https://techcommunity.microsoft.com/t5/sql-server-integration-services/a-glimpse-of-the-ssis-catalog-managed-object-model/ba-p/387892)en blogs.msdn.com.  
   
 ## <a name="see-also"></a>Consulte también  
  [Catálogo de SSIS](catalog/ssis-catalog.md)   

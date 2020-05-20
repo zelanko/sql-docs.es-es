@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergepublication
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 26480fa1adb8493a1c29e5b67a163e9cbff54920
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137649"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834491"
 ---
 # <a name="sp_helpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +43,21 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="arguments"></a>Argumentos  
  [ @publication **=** ] **'**_publicación_**'**  
- Nombre de la publicación. *Publication*es de **tipo sysname**y su **%** valor predeterminado es, que devuelve información acerca de todas las publicaciones de combinación en la base de datos actual.  
+ Nombre de la publicación. *Publication*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todas las publicaciones de combinación en la base de datos actual.  
   
  [ @found **=** ] **'***se encontró***** el resultado '  
  Marca que indica las filas devueltas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de NULL. **1** indica que se ha encontrado la publicación. **0** indica que no se encuentra la publicación.  
   
- salida @publication_id **=** de [] **'***publication_id***'**  
+ salida de [ @publication_id **=** ] **'***publication_id***'**  
  El número de identificación de la publicación. *publication_id* es de tipo **uniqueidentifier** y un parámetro output, con un valor predeterminado de NULL.  
   
- [ @reserved **=**] **'***reservado***'**  
+ [ @reserved **=** ] **'***reservado***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]*Reserved* es de tipo **nvarchar (20)** y su valor predeterminado es NULL.  
   
  [ @publisher **=** ] **'***publicador***'**  
  El nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [ @publisher_db **=** ] **'***publisher_db***'**  
  Nombre de la base de datos de publicación. *publisher_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -96,7 +96,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**int**|Especifica si se ha habilitado la capacidad de copiar las bases de datos de suscripciones que se suscriben a esta publicación. Un valor de **0** significa que no se permite la copia.|  
 |allow_synctoalternate|**int**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. Un valor de **0** significa que no se permite un asociado de sincronización.|  
 |validate_subscriber_info|**nvarchar (500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor. Ayuda a comprobar que se hayan creado particiones de la información de manera coherente con cada combinación.|  
-|backward_comp_level|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1 de 90<br /><br /> **90** =  90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> SP1 de **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Especifica si la información de publicación se publica en Active Directory. Un valor de **0** significa que la información de la publicación no está disponible en Active Directory.<br /><br /> Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no es posible agregar información de publicación a Active Directory.|  
 |max_concurrent_merge|**int**|Número de procesos de combinación simultáneos. Si es **0**, no hay ningún límite en el número de procesos de mezcla simultáneos que se ejecutan en un momento dado.|  
 |max_concurrent_dynamic_snapshots|**int**|Número máximo de sesiones de instantáneas de datos filtrados simultáneas que se pueden ejecutar con la publicación de combinación. Si es **0**, no hay ningún límite en el número máximo de sesiones de instantáneas de datos filtrados simultáneas que se pueden ejecutar simultáneamente en la publicación en un momento dado.|  

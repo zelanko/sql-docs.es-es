@@ -1,5 +1,6 @@
 ---
 title: Configurar copia de seguridad administrada (SQL Server Management Studio) | Microsoft Docs
+description: Utilice el cuadro de diálogo copia de seguridad administrada para configurar SQL Server configuración predeterminada de copia de seguridad administrada en Azure. Obtenga información sobre las opciones que debe tener en cuenta.
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql-server-2014
@@ -12,12 +13,12 @@ ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 021db5a2283eb6ec68ea80302e938f08e7ba1a5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
+ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154341"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82849443"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar la copia de seguridad administrada (SQL Server Management Studio)
   El cuadro de diálogo **Copia de seguridad administrada** permite configurar los valores predeterminados de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para la instancia. En este tema se describe cómo usar este cuadro de diálogo para configurar los valores predeterminados de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de la instancia y las opciones que debe tener en cuenta al hacerlo. Cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para la instancia, la configuración se aplica a cualquier base de datos nueva creada posteriormente.  
@@ -68,7 +69,7 @@ ms.locfileid: "70154341"
   
  Especifique la **dirección URL de almacenamiento** de la cuenta de almacenamiento de Azure, la credencial de SQL que almacena la información de autenticación para la cuenta de almacenamiento y el período de retención de los archivos de copia de seguridad.  
   
- El formato de la dirección URL de\<almacenamiento es: https://StorageAccount>. BLOB.Core.Windows.net/  
+ El formato de la dirección URL de almacenamiento es: https:// \< StorageAccount>. BLOB.Core.Windows.net/  
   
  Para establecer la configuración de cifrado en el nivel de instancia, active la opción **Cifrar copia de seguridad** y especifique el algoritmo y un certificado o clave asimétrica que se usará para el cifrado.  Esto se establece en el nivel de instancia y se usa para todas las bases de datos creadas después de la aplicación de esta configuración.  
   
@@ -78,7 +79,7 @@ ms.locfileid: "70154341"
 ### <a name="considerations"></a>Consideraciones  
  Si configura [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en el nivel de instancia, la configuración se aplica a cualquier base de datos creada posteriormente.  Sin embargo, la base de datos existente no heredará automáticamente esta configuración. Para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] en bases de datos existentes, debe configurar cada base de datos específicamente. Para obtener más información, vea [habilitar y configurar SQL Server copia de seguridad administrada en Azure para una base de datos](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md#DatabaseConfigure).  
   
- Si [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se ha pausado mediante el `smart_admin.sp_backup_master_switch`, verá un mensaje de advertencia que indica que la copia de seguridad administrada está deshabilitada y que las configuraciones actuales no surtirán efecto... al intentar completar la configuración. Use el `smart_admin.sp_backup_master_switch` almacenado y establezca el @new_statevalor = 1. Esto reanudará los servicios de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] y aplicará las opciones de configuración. Para obtener más información sobre el procedimiento almacenado, vea [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
+ Si se ha [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pausado mediante el `smart_admin.sp_backup_master_switch` , verá un mensaje de advertencia que indica que la copia de seguridad administrada está deshabilitada y que las configuraciones actuales no surtirán efecto... al intentar completar la configuración. Use el `smart_admin.sp_backup_master_switch` almacenado y establezca el valor @new_state = 1. Esto reanudará los servicios de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] y aplicará las opciones de configuración. Para obtener más información sobre el procedimiento almacenado, vea [smart_admin. sp_ backup_master_switch &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-backup-master-switch-transact-sql).  
   
 ## <a name="see-also"></a>Consulte también  
  [Copia de seguridad administrada de SQL Server en Azure: interoperabilidad y coexistencia](../../2014/database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md)  

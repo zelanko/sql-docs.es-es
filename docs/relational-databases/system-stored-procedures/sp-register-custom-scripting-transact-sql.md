@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_register_custom_scripting
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d57f3098a69e499392af502d2d3a6d94840bde21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68075751"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834366"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. Cuando se realiza un cambio en el esquema en una tabla replicada, estos procedimientos almacenados se vuelven a crear. **sp_register_custom_scripting** registra un procedimiento almacenado o [!INCLUDE[tsql](../../includes/tsql-md.md)] un archivo de script que se ejecuta cuando se produce un cambio de esquema para crear un script para la definición de un nuevo procedimiento almacenado personalizado definido por el usuario. Este nuevo procedimiento almacenado personalizado definido por el usuario debe reflejar el nuevo esquema de la tabla. **sp_register_custom_scripting** se ejecuta en el publicador de la base de datos de publicación y el archivo de script o el procedimiento almacenado registrado se ejecuta en el suscriptor cuando se produce un cambio de esquema.  
+  La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. Cuando se realiza un cambio en el esquema en una tabla replicada, estos procedimientos almacenados se vuelven a crear. **sp_register_custom_scripting** registra un procedimiento almacenado o un [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se ejecuta cuando se produce un cambio de esquema para crear un script para la definición de un nuevo procedimiento almacenado personalizado definido por el usuario. Este nuevo procedimiento almacenado personalizado definido por el usuario debe reflejar el nuevo esquema de la tabla. **sp_register_custom_scripting** se ejecuta en el publicador de la base de datos de publicación y el archivo de script o el procedimiento almacenado registrado se ejecuta en el suscriptor cuando se produce un cambio de esquema.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,19 +42,19 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumentos  
 `[ @type = ] 'type'`Es el tipo de procedimiento almacenado personalizado o el script que se está registrando. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**introducir**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción INSERT.|  
-|**Update**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
+|**update**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción UPDATE.|  
 |**delete**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
-`[ @value = ] 'value'`Nombre de un procedimiento almacenado o nombre y ruta de acceso completa al archivo [!INCLUDE[tsql](../../includes/tsql-md.md)] de script que se está registrando. el *valor* es **nvarchar (1024)** y no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'`Nombre de un procedimiento almacenado o nombre y ruta de acceso completa al [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se está registrando. el *valor* es **nvarchar (1024)** y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Si se especifica NULL para el parámetro de *valor*, se anulará el registro de un script registrado previamente, lo que equivale a ejecutar [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
- Cuando el valor de *tipo* es **custom_script**, se espera el nombre y la ruta [!INCLUDE[tsql](../../includes/tsql-md.md)] de acceso completa de un archivo de script. De lo contrario, el *valor* debe ser el nombre de un procedimiento almacenado registrado.  
+ Cuando el valor de *tipo* es **custom_script**, se espera el nombre y la ruta de acceso completa de un [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script. De lo contrario, el *valor* debe ser el nombre de un procedimiento almacenado registrado.  
   
 `[ @publication = ] 'publication'`Nombre de la publicación para la que se está registrando el procedimiento almacenado personalizado o el script. *Publication* es de **tipo sysname y su**valor predeterminado es **null**.  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_tables_ex
 ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5ebb27860d7b7da46680a61486c59de3929117ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096070"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834238"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`Es el tipo de la tabla que se va a devolver. *TABLE_TYPE* es de **tipo sysname, su**valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ALIAS**|Nombre de un alias.|  
 |**GLOBAL TEMPORARY**|Nombre de una tabla temporal disponible en todo el sistema.|  
@@ -62,10 +62,10 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**SYNONYM**|Nombre de un sinónimo.|  
 |**TABLA DEL SISTEMA**|Nombre de una tabla del sistema.|  
 |**VISTA DEL SISTEMA**|Nombre de una vista del sistema.|  
-|**TABLE**|Nombre de una tabla de usuario.|  
-|**VIEW**|Nombre de una vista.|  
+|**CUADRO**|Nombre de una tabla de usuario.|  
+|**Visores**|Nombre de una vista.|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Determina si los caracteres **_**, **%**, **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Determina si los caracteres **_**, **%** , **[** y **]** se interpretan como caracteres comodín. Los valores válidos son 0 (coincidencia de patrón desactivada) y 1 (coincidencia de patrón activada). *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -75,7 +75,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En otros productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
-|**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
+|**TABLE_SCHEM**|**sysname**|Nombre del propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta columna representa el nombre del usuario de la base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabla, tabla del sistema o vista.|  
 |**COMENTARIOS**|**VARCHAR (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no devuelve ningún valor para esta columna.|  

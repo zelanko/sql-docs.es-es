@@ -66,7 +66,7 @@ Puede instalar y ejecutar SQL Server Reporting Services (SSRS) e Internet Inform
   
 -   Una instancia del servidor de informes instalada en la configuración predeterminada, donde la reserva de direcciones URL también especifica el puerto 80 y la aplicación [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] también usa "Reports" como nombre del directorio virtual.  
   
- Dada esta configuración, \< recibe una solicitud enviada a https://[!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]nombreDeEquipo>:80/reports. La aplicación a la que se acceda a través del directorio virtual Reports en IIS ya no recibe solicitudes una vez instalada la instancia del servidor de informes.  
+ Dada esta configuración, [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] recibe una solicitud enviada a https://\<nombreDeEquipo>:80/reports. La aplicación a la que se acceda a través del directorio virtual Reports en IIS ya no recibe solicitudes una vez instalada la instancia del servidor de informes.  
   
  Si ejecuta implementaciones simultáneas de versiones anteriores y más recientes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], es probable que encuentre el problema de enrutamiento que acabamos de describir. Esto se debe a que todas las versiones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usan "ReportServer" y "Reports" como nombres de directorio virtual para las aplicaciones del servidor de informes y del [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , lo que aumenta la probabilidad de que tenga los directorios virtuales "reports" y "reportserver" en IIS.  
   

@@ -26,7 +26,7 @@ Para Windows y Linux (distribución de Ubuntu), se puede realizar la instalació
 
 ## <a name="prerequisites"></a><a id="prerequisites"></a> Requisitos previos
 
-`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `pip` se requiere `azdata`. Las instrucciones siguientes proporcionan ejemplos para Windows y Ubuntu. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
+`azdata` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clústeres arrancar y administrar el clúster de macrodatos mediante las API REST. La versión mínima de Python necesaria es v3.5. Para descargar e instalar la herramienta `azdata` se requiere `pip`. Las instrucciones siguientes proporcionan ejemplos para Windows y Ubuntu. Para instalar Python en otras plataformas, consulte la [documentación de Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 Además, instale y actualice la versión más reciente del paquete Python `requests`:
 
 ```bash

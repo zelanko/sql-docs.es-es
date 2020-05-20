@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_set_rpo_duration stored procedure
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3588f12006de3f7a9e79f6743ae8dffbe01f42c2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905010"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82807946"
 ---
 # <a name="syssp_rda_set_rpo_duration-transact-sql"></a>Sys. sp_rda_set_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ```    
     
 ## <a name="arguments"></a>Argumentos    
- [ @duration_hrs = ] *duration_hrs*    
+ [ @duration_hrs =] *duration_hrs*    
  Es el número de horas (valor entero no NULL) de los datos migrados que desea que SQL Server conservar en la base de datos habilitada para Stretch actual. El valor predeterminado y el valor mínimo son 8 horas.    
  
  > [!NOTE]
@@ -50,7 +50,7 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>Permisos    
  Requiere permisos de db_owner.    
     
-## <a name="remarks"></a>Observaciones    
+## <a name="remarks"></a>Comentarios    
  Para obtener el valor actual, ejecute [Sys. sp_rda_get_rpo_duration &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).    
     
 ## <a name="see-also"></a>Consulte también    

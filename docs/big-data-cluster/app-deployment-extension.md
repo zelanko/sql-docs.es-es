@@ -201,7 +201,7 @@ Para eliminar una aplicación, simplemente haga clic en el botón de papelera qu
 
 Averigüe cómo integrar aplicaciones implementadas en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en aplicaciones propias en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede ver los ejemplos adicionales de [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy) para probar la extensión.
 
-Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].
 
 
 Nuestro objetivo es que esta extensión le resulte útil y le agradecemos sus comentarios. Envíelos al [equipo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://aka.ms/sqlfeedback).

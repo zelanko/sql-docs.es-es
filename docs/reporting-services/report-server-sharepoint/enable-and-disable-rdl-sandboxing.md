@@ -128,7 +128,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
  Para agregar funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
- Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]Integer**de** .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>** :  
+ Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>**:  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  

@@ -92,7 +92,7 @@ Para completar esta visita guiada, necesitará:
   
 6.  En el cuadro de diálogo **Elegir nombre**, haga clic en **Aceptar** para admitir el nombre predeterminado **Diagram1**.  
   
-7.  Aparecerá el cuadro de diálogo **Guardar** con un mensaje que indica que `Table1` se guardará en la base de datos. Haga clic en **Sí**.  
+7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que ** se guardará en la base de datos. Haga clic en **Sí**.  
   
 ## <a name="modifying-table-structure"></a>Modificar la estructura de la tabla  
 Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el Diseñador de diagramas.  

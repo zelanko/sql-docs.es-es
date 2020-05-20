@@ -62,7 +62,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden asignar alertas a
   
 4.  Haga clic con el botón derecho en el operador al que desea asignar una alerta y seleccione **Propiedades**y, luego, la página **Notificaciones** .  
   
-5.  En el cuadro de diálogo _Propiedades de\__ nombre**operador**, en **Seleccionar una página**, seleccione **Notificaciones**.  
+5.  En el cuadro de diálogo **Propiedades de**_nombre\_operador_, en **Seleccionar una página**, seleccione **Notificaciones**.  
   
 6.  En **Ver las notificaciones enviadas a este usuario por**, seleccione **Alertas** para ver una lista de las alertas enviadas a este operador o seleccione **Trabajos** para ver una lista de los trabajos que envían notificaciones a este operador. Active una o varias de las siguientes casillas para definir el método de notificación de cada notificación según corresponda: **Correo electrónico**, **Buscapersonas**o **Net send**.  
   

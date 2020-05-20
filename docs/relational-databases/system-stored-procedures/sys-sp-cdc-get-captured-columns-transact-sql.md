@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sp_cdc_get_captured_columns
 - change data capture [SQL Server], querying metadata
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0bc087c6e55418a501459076a1f3f7862112a056
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083737"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808389"
 ---
 # <a name="syssp_cdc_get_captured_columns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la información de los metadatos de captura de datos de cambio para las columnas de origen de las que la instancia de captura especificada ha realizado un seguimiento. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Devuelve la información de los metadatos de captura de datos de cambio para las columnas de origen de las que la instancia de captura especificada ha realizado un seguimiento. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,7 +44,7 @@ sys.sp_cdc_get_captured_columns
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  Es el nombre de la instancia de captura asociada a una tabla de origen. *capture_instance* es de **tipo sysname** y no puede ser null.  
   
  Para informar sobre las instancias de captura de la tabla, ejecute el procedimiento almacenado [Sys. sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) .  
@@ -69,7 +69,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|Escala de la columna, si está basada en números; en caso contrario, es NULL.|  
 |datetime_precision|**smallint**|Precisión de la columna, si está basada en fecha y hora; en caso contrario, es NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use sys. sp_cdc_get_captured_columns para obtener información de columna sobre las columnas capturadas que se devuelven al consultar las funciones de consulta de instancia de captura [CDC. fn_cdc_get_all_changes_<capture_instance>](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) o [CDC. fn_cdc_get_net_changes_ ](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)<capture_instance>. Los nombres de columna, Id. y posición siguen siendo constantes para la duración de la instancia de captura. Solo el tipo de datos de columna cambia cuando el tipo de datos de la columna de origen subyacente en la tabla de la que se ha realizado un seguimiento cambia. Las columnas agregadas o quitadas de una tabla de origen no tienen ningún impacto en las columnas capturadas de instancias de captura existentes.  
   
  Use [Sys. sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) para obtener información sobre las instrucciones de lenguaje de definición de datos (DDL) aplicadas a una tabla de origen. Cualquier cambio de DDL que ha modificado la estructura de una columna de origen de la que se ha realizado un seguimiento se devuelve en el conjunto de resultados.  

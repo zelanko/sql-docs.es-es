@@ -19,19 +19,19 @@ helpviewer_keywords:
 - sys.sp_cdc_help_change_data_capture
 - sp_cdc_help_change_data_capture
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b5ceaaa02d07e34e1e93789d2c72f80a3459a472
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905170"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808056"
 ---
 # <a name="syssp_cdc_help_change_data_capture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve la configuración de captura de datos del cambio para cada tabla habilitada para la captura de datos del cambio en la base de datos actual. Se pueden devolver hasta dos filas para cada tabla de origen, una fila para cada instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+  Devuelve la configuración de captura de datos del cambio para cada tabla habilitada para la captura de datos del cambio en la base de datos actual. Se pueden devolver hasta dos filas para cada tabla de origen, una fila para cada instancia de captura. La captura de datos modificados no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,14 +45,14 @@ sys.sp_cdc_help_change_data_capture
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @source_schema = ] '*source_schema*'  
+ [ @source_schema =] '*source_schema*'  
  Es el nombre del esquema al que pertenece la tabla de origen. *source_schema* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_schema* , se debe especificar también *source_name* .  
   
  Si no es NULL, *source_schema* debe existir en la base de datos actual.  
   
  Si *source_schema* no es null, *source_name* también debe ser distinto de NULL.  
   
- [ @source_name = ] '*source_name*'  
+ [ @source_name =] '*source_name*'  
  Es el nombre de la tabla de origen. *source_name* es de **tipo sysname y su**valor predeterminado es NULL. Cuando se especifica *source_name* , se debe especificar también *source_schema* .  
   
  Si no es NULL, *source_name* debe existir en la base de datos actual.  
@@ -82,7 +82,7 @@ sys.sp_cdc_help_change_data_capture
 |index_column_list|**nvarchar(max)**|Lista de las columnas de índice utilizada para identificar de forma exclusiva las filas en la tabla de origen.|  
 |captured_column_list|**nvarchar(max)**|Lista de las columnas de origen capturadas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando *source_schema* y *source_name* valor predeterminado en null, o se establecen explícitamente en null, este procedimiento almacenado devuelve información de todas las instancias de captura de base de datos a las que el autor de la llamada tiene acceso Select. Cuando *source_schema* y *SOURCE_NAME* no son NULL, solo se devuelve información sobre la tabla habilitada con nombre específica.  
   
 ## <a name="permissions"></a>Permisos  

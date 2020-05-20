@@ -53,7 +53,7 @@ De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pued
   
 4.  Haga clic con el botón derecho en la alerta que tiene la información que desea ver y seleccione **Propiedades**.  
   
-    Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo _Propiedades de la alerta\__ nombre**alerta**, vea:  
+    Para más información sobre las opciones disponibles que se incluyen en el cuadro de diálogo **Propiedades de la alerta**_nombre\_alerta_, vea:  
   
     -   [Propiedades de alerta - Nueva alerta &#40;Página General&#41;](../../ssms/agent/alert-properties-new-alert-general-page.md)  
   

@@ -51,7 +51,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 5.  En el cuadro de diálogo **Propiedades del trabajo -** _nombre\_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo -** **nombre**paso_trabajo\_, haga clic en \_Editar_. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
+6.  Para abrir el cuadro de diálogo **Propiedades de paso de trabajo -**_nombre\_paso\_trabajo_, haga clic en **Editar**. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, consulte [Propiedades de paso de trabajo - nuevo paso de trabajo (página General)](../../ssms/agent/job-step-properties-new-job-step-general-page.md) y [Propiedades de paso de trabajo - nuevo paso de trabajo (página Opciones avanzadas)](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

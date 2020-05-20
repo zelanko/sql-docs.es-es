@@ -58,7 +58,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden editar operadores
   
 4.  Haga clic con el botón derecho en el operador que desea habilitar o deshabilitar y seleccione **Propiedades**; luego, haga clic en la pestaña **General** .  
   
-5.  En el cuadro de diálogo _Propiedades de\__ nombre**operador**, active o desactive la casilla **Habilitado**.  
+5.  En el cuadro de diálogo **Propiedades de**_nombre\_operador_, active o desactive la casilla **Habilitado**.  
   
 6.  Haga clic en **OK**.  
   

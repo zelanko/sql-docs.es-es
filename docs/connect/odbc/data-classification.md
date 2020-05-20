@@ -79,7 +79,7 @@ Tras una llamada correcta a SQLGetDescField, el búfer señalado por *ValuePtr* 
 
  `nn nn [n sensitivityprops]`
 
-En cada una de las columnas *(c)* , *`sensitivityprops`* de 4 bytes *n* están presentes:
+En cada una de las columnas *(c)*, *`sensitivityprops`* de 4 bytes *n* están presentes:
 
  `ss ss tt tt`
 

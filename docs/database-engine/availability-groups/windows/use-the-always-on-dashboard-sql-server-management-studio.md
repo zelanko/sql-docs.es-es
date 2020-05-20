@@ -55,7 +55,7 @@ ms.locfileid: "74822676"
 2.  Expanda el nodo **Alta disponibilidad de AlwaysOn** , haga clic con el botón derecho en el nodo **Grupos de disponibilidad** y, luego, haga clic en **Mostrar panel**.  
   
 ##  <a name="change-always-on-dashboard-options"></a>Cambio de las opciones del panel Always On  
- Puede usar el cuadro de diálogo [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Opciones**de** para configurar el comportamiento del panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la hora de habilitar y actualizar automáticamente una directiva de AlwaysOn autodefinida.  
+ Puede usar el cuadro de diálogo **Opciones** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para configurar el comportamiento del panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la hora de habilitar y actualizar automáticamente una directiva de AlwaysOn autodefinida.  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
   

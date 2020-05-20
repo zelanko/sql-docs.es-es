@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_cleanup_change_tables
 - sp_cdc_cleanup_change_tables
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 51c0af34fb3158cc5032ee9ef53abce22d8ecc3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ae48ceffec12ce840ab436cc80a46c036da329b6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72909328"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808330"
 ---
 # <a name="syssp_cdc_cleanup_change_table-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,19 +45,19 @@ sys.sp_cdc_cleanup_change_table
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance = ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  Es el nombre de la instancia de captura asociada a la tabla de cambios. *capture_instance* es de **tipo sysname**, no tiene ningún valor predeterminado y no puede ser null.  
   
  *capture_instance* debe asignar un nombre a una instancia de captura que exista en la base de datos actual.  
   
- [ @low_water_mark = ] *low_water_mark*  
+ [ @low_water_mark =] *low_water_mark*  
  Es un número de secuencia de registro (LSN) que se usará como la nueva marca de límite inferior para la *instancia de captura*. *low_water_mark* es **binario (10)** y no tiene ningún valor predeterminado.  
   
  Si el valor no es null, debe aparecer como el valor start_lsn de una entrada actual en la tabla [CDC. lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) . Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
   
  Si el valor se establece explícitamente en NULL, se usa la *marca de límite inferior* actual para la *instancia de captura* para definir el límite superior de la operación de limpieza.  
   
- [ @threshold= ] '*eliminar umbral*'  
+ [ @threshold =] '*eliminar umbral*'  
  Es el número máximo de entradas de eliminación que se pueden eliminar mediante el uso de una única instrucción en el proceso de limpieza. *delete_threshold* es de tipo **BIGINT**y su valor predeterminado es 5000.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -80,7 +80,7 @@ sys.sp_cdc_cleanup_change_table
   
 -   El agente de limpieza notifica errores de eliminación.  
   
-     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para reintentar la limpieza de una instancia de captura determinada, ejecute sys. sp_cdc_cleanup_change_table y especifique NULL para @low_water_mark el parámetro.  
+     Un administrador puede ejecutar explícitamente este procedimiento almacenado para reintentar una operación que no se ha ejecutado correctamente. Para reintentar la limpieza de una instancia de captura determinada, ejecute sys. sp_cdc_cleanup_change_table y especifique NULL para el @low_water_mark parámetro.  
   
 -   La directiva simple basada en retención utilizada por el trabajo del agente de limpieza no es correcta.  
   

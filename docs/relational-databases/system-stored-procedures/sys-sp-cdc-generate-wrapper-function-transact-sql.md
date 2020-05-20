@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.sp_cdc_generate_wrapper_function
 - sp_cdc_generate_wrapper_function
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68083752"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82808200"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +50,16 @@ sys.sp_cdc_generate_wrapper_function
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @capture_instance= ] '*capture_instance*'  
+ [ @capture_instance =] '*capture_instance*'  
  Es la instancia de captura para la que se van a generar los scripts. *capture_instance* es de **tipo sysname y su** valor predeterminado es NULL. Si se omite un valor o se establece explícitamente en NULL, los scripts de contenedor se generan para todas las instancias de captura  
   
- [ @closed_high_end_point= ] *high_end_pt_flag*  
+ [ @closed_high_end_point =] *high_end_pt_flag*  
  Es el bit de marca que indica si el procedimiento generado incluirá dentro del intervalo de extracción los cambios que tengan una fecha y hora de confirmación igual al extremo superior. *high_end_pt_flag* es de **bits** y tiene un valor predeterminado de 1, que indica que se debe incluir el extremo. El valor 0 indica que todas las fechas y horas de confirmación serán estrictamente menores que el extremo superior.  
   
- [ @column_list= ] '*column_list*'  
+ [ @column_list =] '*column_list*'  
  Es una lista de las columnas capturadas que se van a incluir en el conjunto de resultados devuelto por la función de contenedor. *column_list* es de tipo **nvarchar (Max)** y su valor predeterminado es NULL. Cuando se especifica NULL, se incluyen todas las columnas capturadas.  
   
- [ @update_flag_list= ] '*update_flag_list*'  
+ [ @update_flag_list =] '*update_flag_list*'  
  Es una lista de las columnas incluidas para las que se incluye una marca de actualización en el conjunto de resultados devuelto por la función de contenedor. *update_flag_list* es de tipo **nvarchar (Max)** y su valor predeterminado es NULL. Cuando se especifica NULL, no se incluyen marcas de actualización.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -72,7 +72,7 @@ sys.sp_cdc_generate_wrapper_function
 |**function_name**|**nvarchar (145)**|Nombre de la función generada.|  
 |**create_script**|**nvarchar(max)**|Es el script que crea la función de contenedor de la instancia de captura.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El script que crea la función para contener la consulta de todos los cambios para una instancia de captura siempre se genera. Si la instancia de captura admite consultas de cambios de red, el script para generar un contenedor para esta consulta también se genera.  
   
 ## <a name="examples"></a>Ejemplos  

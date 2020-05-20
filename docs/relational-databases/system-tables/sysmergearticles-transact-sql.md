@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergearticles system table
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d712f462ebe504df20ded93d6a9730ce31e4d0db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251940"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831951"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "72251940"
 |**denominación**|**nvarchar(255)**|Descripción breve del artículo.|  
 |**pre_creation_command**|**tinyint**|La acción predeterminada que debe llevarse a cabo cuando se crea el artículo en la base de datos de suscripciones:<br /><br /> **0 =** Ninguno: Si la tabla ya existe en el suscriptor, no se realiza ninguna acción.<br /><br /> **1** = quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = TRUNCATE: igual que **2**, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
-|**deseado**|**int**|Alias asignado para la identificación del artículo.|  
+|**nickname**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Hace referencia a si se ha implementado el seguimiento de columnas para el artículo.|  
 |**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
@@ -69,8 +69,8 @@ ms.locfileid: "72251940"
 |**gen_cur**|**int**|Número de generación para los cambios locales de la tabla base de un artículo.|  
 |**vertical_partition**|**int**|Especifica si está habilitado el filtrado de columnas en un artículo de una tabla. **0** indica que no hay filtrado vertical y publica todas las columnas.|  
 |**identity_support**|**int**|Especifica si se habilita el control automático del intervalo de identidad. **1** significa que el control de intervalo de identidad está habilitado y **0** significa que no hay compatibilidad con el intervalo de identidad.|  
-|**before_image_objid**|**int**|Identificador de objeto de la tabla de seguimiento. La tabla de seguimiento contiene ciertos valores de columna de clave cuando se crea una publicación con * \@keep_partition_changes* = **true**.|  
-|**before_view_objid**|**int**|Id. del objeto de una tabla de vistas. La vista está en una tabla que mantiene un seguimiento de si una fila pertenecía a un suscriptor concreto antes de que se eliminara o actualizara. Solo se aplica cuando se crea una publicación con * \@keep_partition_changes* = **true.**|  
+|**before_image_objid**|**int**|Identificador de objeto de la tabla de seguimiento. La tabla de seguimiento contiene ciertos valores de columna de clave cuando se crea una publicación con * \@ keep_partition_changes*  =  **true**.|  
+|**before_view_objid**|**int**|Id. del objeto de una tabla de vistas. La vista está en una tabla que mantiene un seguimiento de si una fila pertenecía a un suscriptor concreto antes de que se eliminara o actualizara. Solo se aplica cuando se crea una publicación con * \@ keep_partition_changes*  =  **true.**|  
 |**verify_resolver_signature**|**int**|Especifica si una firma digital se comprueba antes de utilizar un solucionador en la replicación de mezcla:<br /><br /> **0** = no se comprueba la firma.<br /><br /> **1** = se comprueba la firma para ver si proviene de una fuente de confianza.|  
 |**allow_interactive_resolver**|**bit**|Especifica si está habilitado el uso del Solucionador interactivo en un artículo. **1** especifica que se utiliza el solucionador interactivo en el artículo.|  
 |**fast_multicol_updateproc**|**bit**|Especifica si se ha habilitado el Agente de mezcla para aplicar cambios a varias columnas de la misma fila en una instrucción UPDATE.<br /><br /> **0** = emite una actualización independiente para cada columna modificada.<br /><br /> **1** = emite una instrucción UPDATE que hace que se produzcan actualizaciones en varias columnas en una instrucción.|  

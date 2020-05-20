@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_objects_disabled_on_compatibility_level_change catalog view
 ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 300b988ce74a22dad3384920bb93fd45191128e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809901"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832634"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Datos espaciales: sys. dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -113,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportamiento de los objetos deshabilitados  
  **Índices**  
   
- Si el índice clúster está deshabilitado, o si se fuerza un índice no clúster, se produce el siguiente error: "el procesador de consultas no puede producir un plan porque el índice '%. \*ls ' en la tabla o vista '%. \*ls ' está deshabilitado ". Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando a **ALTER index on... VOLVER a generar**.  
+ Si el índice clúster está deshabilitado, o si se fuerza un índice no clúster, se produce el siguiente error: "el procesador de consultas no puede producir un plan porque el índice '%. \* LS ' en la tabla o vista '%. \* LS ' está deshabilitado ". Para volver a habilitar estos objetos, vuelva a generar los índices después de la actualización llamando a **ALTER index on... VOLVER a generar**.  
   
  **Montones**  
   

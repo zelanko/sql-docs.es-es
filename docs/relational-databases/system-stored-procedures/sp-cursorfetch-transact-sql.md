@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursorfetch
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108510"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831816"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>Argumentos  
  *cursor*  
- Es un valor de *identificador* generado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por y devuelto por Sp_cursoropen. *cursor* es un parámetro necesario que requiere un valor de entrada **int** . Para obtener más información, vea la sección Comentarios más adelante en este tema.  
+ Es un valor de *identificador* generado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y devuelto por Sp_cursoropen. *cursor* es un parámetro necesario que requiere un valor de entrada **int** . Para obtener más información, vea la sección Comentarios más adelante en este tema.  
   
  *fetchtype*  
  Especifica qué búfer de cursor se va a capturar. *fetchtype* es un parámetro opcional que requiere uno de los siguientes valores de entrada enteros.  
@@ -133,7 +133,7 @@ sp_cursorfetch cursor
   
  El parámetro de estado de RPC se establece en uno de los valores mostrados en la siguiente tabla.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0|El procedimiento se ejecutó correctamente.|  
 |0x0001|Se produjo un error en el procedimiento.|  
@@ -142,7 +142,7 @@ sp_cursorfetch cursor
   
  Las filas se devuelven como un conjunto de resultados típico, es decir, formato de columna (0x2a), filas (0xd1), seguido de Done (0xfd). Los tokens de metadatos se envían en el mismo formato que el especificado para sp_cursoropen, es decir, 0x81, 0xa5 y 0xa4 para los usuarios de SQL Server 7.0, etc. Los indicadores del estado de la fila se envían como columnas ocultas, similar al modo BROWSE, al final de cada fila con el nombre de columna rowstat y el tipo de datos INT4. Esta columna rowstat tiene uno de los valores que se muestran en la tabla siguiente.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  

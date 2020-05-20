@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a906f17e655775308d72d04ed8917ca67b205b6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124142"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833240"
 ---
 # <a name="sp_fulltext_table-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'`Es la acción que se va a realizar. *Action* es de tipo **nvarchar (50)**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Crear**|Crea los metadatos de un índice de texto completo para la tabla a la que hace referencia *qualified_table_name* y especifica que los datos del índice de texto completo de esta tabla deben residir en *fulltext_catalog_name*. Esta acción también designa el uso de *unique_index_name* como columna de clave de texto completo. Este índice único ya debe estar presente y debe estar definido en una columna de la tabla.<br /><br /> No se puede realizar ninguna búsqueda de texto completo sobre esta tabla hasta que se rellene el catálogo de texto completo.|  
 |**Omisiones**|Quita los metadatos del índice de texto completo para *qualified_table_name*. Si el índice de texto completo está activo, se desactiva automáticamente antes de quitarlo. No es necesario quitar columnas antes de quitar el índice de texto completo.|  
@@ -79,7 +79,7 @@ sp_fulltext_table
  None  
   
 ## <a name="remarks"></a>Observaciones  
- Una vez desactivado un índice de texto completo para una tabla determinada, el índice de texto completo existente permanece en vigor hasta el siguiente rellenado completo; sin embargo, este índice no se utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] porque bloquea las consultas en las tablas desactivadas.  
+ Una vez desactivado un índice de texto completo para una tabla determinada, el índice de texto completo existente permanece en vigor hasta el siguiente rellenado completo; sin embargo, este índice no se utiliza porque [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloquea las consultas en las tablas desactivadas.  
   
  Si se vuelve a activar la tabla y no se vuelve a llenar el índice, el índice antiguo sigue disponible para las consultas que se realizan sobre las columnas restantes habilitadas para texto completo, pero no sobre las nuevas. Las consultas que especifican una búsqueda en todas las columnas de texto completo encuentran datos de columnas eliminadas.  
   

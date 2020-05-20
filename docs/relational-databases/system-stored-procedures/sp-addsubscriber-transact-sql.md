@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addsubscriber
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 278af2ca1bd6abdb84cdf2371628c6b95662e46e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bf49c44ca3de4325c8d5c6ecab22adc3ac0614cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962407"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833637"
 ---
 # <a name="sp_addsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @type = ] type`Es el tipo de suscriptor. el *tipo* es **tinyint**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**0** (valor predeterminado)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Suscriptor de|  
+|**0** (valor predeterminado)|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Suscriptor de|  
 |**1**|Servidor del origen de datos ODBC|  
 |**2**|Base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |**3**|Proveedor OLE DB|  
   
-`[ @login = ] 'login'`Es el identificador de inicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de sesión para la autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
+`[ @login = ] 'login'`Es el identificador de inicio de sesión para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @password = ] 'password'`Es la contraseña para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación. *password* es de tipo **nvarchar (524)** y su valor predeterminado es NULL.  
+`[ @password = ] 'password'`Es la contraseña para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *password* es de tipo **nvarchar (524)** y su valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
@@ -101,12 +101,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente de replicación. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64** (valor predeterminado)|Iniciar automáticamente|  
@@ -122,12 +122,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del agente de replicación. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
 > [!NOTE]  
@@ -140,12 +140,12 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. La propiedad se especifica ahora por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
@@ -184,10 +184,10 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @encrypted_password = ] encrypted_password`Este parámetro ha quedado desusado y solo se proporciona para la configuración de compatibilidad con versiones anteriores *encrypted_password* en cualquier valor, pero **0** producirá un error.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un publicador.  
+>  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getmergedeletetype
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 971226c9f53932bf8214304a7c166ad75a11853c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123976"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833230"
 ---
 # <a name="sp_getmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
   
 `[ @delete_type = ] delete_type OUTPUT`Es el código que indica el tipo de eliminación. *delete_type* es de **tipo int**y no tiene ningún valor predeterminado. *delete_type* también es un parámetro de salida y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Eliminación por parte del usuario|  
 |**5**|Eliminación parcial|  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - application locks
 - sp_getapplock
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fee963f1b026090a84e58a9b0844fe040f9e9793
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72717260"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833254"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Resource= ] '*resource_name*'  
+ [ @Resource =] '*resource_name*'  
  Cadena que indica un nombre que identifica al recurso de bloqueo. La aplicación debe asegurar que el nombre del recurso sea exclusivo. El nombre especificado se convierte internamente mediante un algoritmo hash en un valor que puede almacenarse en el administrador de bloqueos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *resource_name* es de tipo **nvarchar (255)** y no tiene ningún valor predeterminado. Si una cadena de recursos es mayor que **nvarchar (255)**, se truncará a **nvarchar (255)**.  
   
  *resource_name* se comparan en binario y, por tanto, distinguen mayúsculas de minúsculas, independientemente de la configuración de intercalación de la base de datos actual.  
@@ -54,16 +54,16 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 > [!NOTE]  
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
   
- [ @LockMode= ] '*Lock_Mode*'  
+ [ @LockMode =] '*Lock_Mode*'  
  Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
- [ @LockOwner= ] '*lock_owner*'  
+ [ @LockOwner =] '*lock_owner*'  
  Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
   
- [ @LockTimeout= ] '*valor*'  
- Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por@LOCK_TIMEOUT@. Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
+ [ @LockTimeout =] '*valor*'  
+ Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por @ @LOCK_TIMEOUT . Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
   
- [ @DbPrincipal= ] '*database_principal*'  
+ [ @DbPrincipal =] '*database_principal*'  
  Es el usuario, el rol o el rol de aplicación que tiene permisos para un objeto de una base de datos. El autor de la llamada de la función debe ser miembro de *database_principal*, DBO o el rol fijo de base de datos db_owner para llamar a la función correctamente. El valor predeterminado es public.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -111,7 +111,7 @@ GO
   
  Un interbloqueo con un bloqueo de aplicación no revierte la transacción que solicitó el bloqueo de aplicación. Cualquier reversión que pueda solicitarse como resultado del valor devuelto debe realizarse manualmente. Por tanto, se recomienda incluir la comprobación de errores en el código de forma que si se devuelven determinados valores (por ejemplo, -3), se inicie una acción ROLLBACK TRANSACTION u otra alternativa.  
   
- Este es un ejemplo:  
+ A continuación se muestra un ejemplo:  
   
 ```  
 USE AdventureWorks2012;  

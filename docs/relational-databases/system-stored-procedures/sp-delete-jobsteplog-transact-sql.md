@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_jobsteplog
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 66b353c7fc79b49cb9cd3fb9fe228075f3a0d473
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e56f2c544f168dbcedc0424f26818aad2e3c2c79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305097"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833359"
 ---
 # <a name="sp_delete_jobsteplog-transact-sql"></a>sp_delete_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +49,15 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 > **Nota:** Se debe especificar *job_id* o *job_name* , pero no se pueden especificar ambos.  
   
-`[ @step_id = ] step_id`El número de identificación del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. Si no se incluye, se eliminarán todos los registros de paso de ** \@** trabajo del trabajo a menos que se especifiquen older_than o ** \@larger_than** . *step_id* es de **tipo int**y su valor predeterminado es NULL.  
+`[ @step_id = ] step_id`El número de identificación del paso en el trabajo para el que se va a eliminar el registro de paso de trabajo. Si no se incluye, se eliminarán todos los registros de paso de trabajo del trabajo a menos que se especifiquen ** \@ older_than** o ** \@ larger_than** . *step_id* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @step_name = ] 'step_name'`Nombre del paso del trabajo para el que se va a eliminar el registro de paso de trabajo. *step_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > **Nota:** Se puede especificar *step_id* o *step_name* , pero no se pueden especificar ambos.  
   
-`[ @older_than = ] 'date'`Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *Date* es de **tipo DateTime**y su valor predeterminado es NULL. Se pueden especificar tanto ** \@older_than** como ** \@larger_than** .  
+`[ @older_than = ] 'date'`Fecha y hora del registro de paso de trabajo más antiguo que desea conservar. Todos los registros de paso de trabajo con fecha anterior a esta fecha y hora se quitarán. *Date* es de **tipo DateTime**y su valor predeterminado es NULL. Se pueden especificar tanto ** \@ older_than** como ** \@ larger_than** .  
   
-`[ @larger_than = ] 'size_in_bytes'`El tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar tanto ** \@larger_than** como ** \@older_than** .  
+`[ @larger_than = ] 'size_in_bytes'`El tamaño en bytes del registro de pasos de trabajo más grande que desea conservar. Todos los registros de paso de trabajo con un tamaño superior a este se quitan. Se pueden especificar tanto ** \@ larger_than** como ** \@ older_than** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -68,7 +68,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Observaciones  
  **sp_delete_jobsteplog** está en la base de datos **msdb** .  
   
- Si no se especifican argumentos excepto ** \@job_id** o ** \@job_name** , se eliminarán todos los registros de paso de trabajo para el trabajo especificado.  
+ Si no se especifican argumentos excepto ** \@ job_id** o ** \@ job_name** , se eliminarán todos los registros de paso de trabajo para el trabajo especificado.  
   
 ## <a name="permissions"></a>Permisos  
  De forma predeterminada, los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento almacenado. Al resto de usuarios se les debe conceder uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos **msdb** :  

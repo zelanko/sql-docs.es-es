@@ -16,19 +16,19 @@ helpviewer_keywords:
 - backup devices [SQL Server], defining
 - sp_addumpdevice
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cd8e54f8de50ffe1912dd58abc6484198fac46c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68117912"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833619"
 ---
 # <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
 Agrega un dispositivo de copia de seguridad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -49,7 +49,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ## <a name="arguments"></a>Argumentos  
 `[ @devtype = ] 'device_type'`Es el tipo de dispositivo de copia de seguridad. *device_type* es de tipo **VARCHAR (20)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**discos**|Archivo de disco duro que se utiliza como dispositivo de copia de seguridad.|  
 |**cinta**|Todos los dispositivos de cinta admitidos por [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> Nota: La compatibilidad con dispositivos de cinta de copia de seguridad se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
@@ -60,7 +60,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
  Cuando cree un dispositivo de copia de seguridad en una ubicación de red remota, asegúrese de que el nombre con el que se haya iniciado el [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenga permiso de escritura en el equipo remoto.  
   
- Si agrega un dispositivo de cinta, este parámetro debe ser el nombre físico asignado al dispositivo de cinta local por Windows; por ejemplo, ** \\ \\.\TAPE0** para el primer dispositivo de cinta del equipo. El dispositivo de cinta tiene que estar en el equipo servidor; no se puede utilizar de forma remota. Incluya entre comillas los nombres que contengan caracteres no alfanuméricos.  
+ Si agrega un dispositivo de cinta, este parámetro debe ser el nombre físico asignado al dispositivo de cinta local por Windows; por ejemplo, ** \\ \\ .\TAPE0** para el primer dispositivo de cinta del equipo. El dispositivo de cinta tiene que estar en el equipo servidor; no se puede utilizar de forma remota. Incluya entre comillas los nombres que contengan caracteres no alfanuméricos.  
   
 > [!NOTE]  
 >  Este procedimiento escribe en el catálogo el nombre físico especificado. El procedimiento no intenta tener acceso al dispositivo ni crearlo.  
@@ -142,10 +142,10 @@ GO
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definir un dispositivo lógico de copia de seguridad para una unidad de cinta &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
- [sp_dropdevice &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [Sys. backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

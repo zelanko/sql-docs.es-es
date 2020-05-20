@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - IHpublishers system table
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 92f0c507b15e5a582fbcc1a12b1bccd77d08f7de
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9035598991b846fa36edf17631b9d9bf9ec878e3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67990170"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832380"
 ---
 # <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "67990170"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identifica un publicador que no es de SQL Server.|  
-|**vendor**|**sysname**|Nombre del proveedor de la base de datos que no es de SQL Server.|  
+|**proveedor**|**sysname**|Nombre del proveedor de la base de datos que no es de SQL Server.|  
 |**publisher_guid**|**uniqueidentifier**|GUID que identifica al publicador que no es de SQL Server.|  
 |**flush_request_time**|**datetime**|Indica la fecha y hora en que se produjo el último cambio en los metadatos del artículo que requirió que el Agente de registro del LOG actualizara su caché de metadatos.|  
 |**version**|**sysname**|Cadena de texto que caracteriza a la versión del publicador que no es de SQL Server.|  

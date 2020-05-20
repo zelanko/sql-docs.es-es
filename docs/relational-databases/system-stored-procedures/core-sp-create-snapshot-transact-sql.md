@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078217"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831856"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,22 +47,22 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  El GUID de un tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collector_types en la base de datos msdb.  
   
- [ @machine_name= ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @named_instance= ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @log_id = ] *log_id*  
+ [ @log_id =] *log_id*  
  Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista dbo. syscollector_execution_log en la base de datos msdb.  
   
- [ @snapshot_id = ] *snapshot_id*  
+ [ @snapshot_id =] *snapshot_id*  
  Identificador único de una fila que se inserta en la vista Core. snapshots. *snapshot_id* es de **tipo int** y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

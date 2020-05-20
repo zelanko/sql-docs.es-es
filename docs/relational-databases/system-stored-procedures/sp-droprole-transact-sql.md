@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droprole
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: df28493f6229a28b0f10d53bebad8bf031e63822
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933818"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833333"
 ---
 # <a name="sp_droprole-transact-sql"></a>sp_droprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67933818"
   Quita un rol de base de datos de la base de datos actual.  
   
 > [!IMPORTANT]  
->  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], **sp_droprole** se ha reemplazado por la instrucción DROP Role. **sp_droprole** solo se incluye para la compatibilidad con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de y es posible que no se admita en una versión futura.  
+>  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , **sp_droprole** se ha reemplazado por la instrucción DROP Role. **sp_droprole** solo se incluye para la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es posible que no se admita en una versión futura.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

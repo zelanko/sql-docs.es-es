@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_attach_db
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 88b0dffa84674b2d7e55895830f28cf1b95cd3dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b800997c3f978b0bf06472f7e72dd24743956fa8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305272"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833497"
 ---
 # <a name="sp_attach_db-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_attach_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbnam_ '`Es el nombre de la base de datos que se va a adjuntar al servidor. El nombre debe ser único. *dbname* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @filename1 = ] 'filename_n'`Es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en ** \@nombreDeArchivo1** y se incrementan a ** \@filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
+`[ @filename1 = ] 'filename_n'`Es el nombre físico, incluida la ruta de acceso, de un archivo de base de datos. *filename_n* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. Se pueden especificar hasta 16 nombres de archivo. Los nombres de parámetro comienzan en ** \@ nombreDeArchivo1** y se incrementan a ** \@ filename16**. La lista de nombres de archivo debe incluir al menos el archivo principal. El archivo principal contiene las tablas del sistema que señalan a otros archivos de la base de datos. La lista también debe contener los archivos que se hayan movido después de separar la base de datos.  
   
 > [!NOTE]  
 >  Este argumento se asigna al parámetro FILENAME de la instrucción CREATE DATABASE. Para obtener más información, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -97,7 +97,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\Adventure
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [sp_detach_db &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)   
  [sp_helpfile &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpfile-transact-sql.md)   
  [sp_removedbreplication &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)   

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getdefaultdatatypemapping
 ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 32fe9edf5c3d8621046a27937d83f642b1689d1a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e85eb432123c30338b15528edcb7c301e2dc458b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123988"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833188"
 ---
 # <a name="sp_getdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve información sobre la asignación predeterminada para el tipo de datos especificado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre y un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de administración de bases de datos (DBMS) que no es de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
+  Devuelve información sobre la asignación predeterminada para el tipo de datos especificado entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un sistema de administración de bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DBMS) que no es de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -53,7 +53,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumentos  
 `[ @source_dbms = ] 'source_dbms'`Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
@@ -74,7 +74,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`Es el nombre del DBMS de destino. *destination_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El destino es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El destino es una base de datos de Oracle.|  
@@ -101,7 +101,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_getdefaultdatatypemapping** se utiliza en todos los tipos de replicación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre y un DBMS [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de.  
+ **sp_getdefaultdatatypemapping** se utiliza en todos los tipos de replicación entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un DBMS que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **sp_getdefaultdatatypemapping** devuelve el tipo de datos de destino predeterminado que es la coincidencia más cercana con el tipo de datos de origen especificado.  
   

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - event_log
 - sys.event_log
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a239624fcbc3913d636f7f57b496c006d06a64b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68061384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832009"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve las [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] conexiones de base de datos, los errores de conexión y los interbloqueos correctos. Puede utilizar esta información para realizar el seguimiento de la actividad de la base de datos o solucionar problemas relacionados con esta mediante [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+  Devuelve [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] las conexiones de base de datos, los errores de conexión y los interbloqueos correctos. Puede utilizar esta información para realizar el seguimiento de la actividad de la base de datos o solucionar problemas relacionados con esta mediante [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 > [!CAUTION]  
 > En el caso de las instalaciones que tienen un gran número de bases de datos o un gran número de inicios de sesión, la actividad en sys. event_log puede producir limitaciones en el rendimiento, un uso intensivo de la CPU y, posiblemente, errores de inicio de sesión. Las consultas de sys. event_log pueden contribuir al problema. Microsoft está trabajando para resolver este problema. Mientras tanto, para reducir el impacto de este problema, limite las consultas de sys. event_log. Los usuarios del complemento NewRelic SQL Server deben visitar [Microsoft Azure SQL Database ajuste del complemento & los ajustes de rendimiento](https://discuss.newrelic.com/t/microsoft-azure-sql-database-plugin-tuning-performance-tweaks/30729) de la información de configuración adicional.  
@@ -125,7 +125,7 @@ start_time                    end_time
  Esta vista puede no incluir toda la información de conexión y de error:  
   
 - Esta vista no incluye todos los [!INCLUDE[ssSDS](../../includes/sssds-md.md)] errores de base de datos que podrían producirse, solo los especificados en los [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) de este tema.  
-- Si se produce un error del equipo en [!INCLUDE[ssSDS](../../includes/sssds-md.md)] el centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
+- Si se produce un error del equipo en el [!INCLUDE[ssSDS](../../includes/sssds-md.md)] centro de datos, es posible que falte una pequeña cantidad de datos en la tabla de eventos.  
 - Si se ha bloqueado una dirección IP a través de DoSGuard, los eventos de intento de conexión de esa dirección IP no pueden recopilarse y no aparecerán en esta vista.  
   
 ## <a name="examples"></a>Ejemplos  

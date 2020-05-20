@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_pkeys
 ms.assetid: e614c75d-847b-4726-8f6f-cd18de688eda
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8ed0e041a6aa36027613059f16f3902bdb664aeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 999b630a90f6413a1442bd8719e7714071f3cf14
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056424"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832609"
 ---
 # <a name="sp_pkeys-transact-sql"></a>sp_pkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,15 @@ sp_pkeys [ @table_name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_name= ] '*nombre*'  
+ [ @table_name =] '*nombre*'  
  Es la tabla para la que se va a devolver información. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado. No se admite la coincidencia de patrón de caracteres comodín.  
   
- [ @table_owner= ] '*Owner*'  
+ [ @table_owner =] '*propietario*'  
  Especifica el propietario de la tabla especificada. *Owner* es de **tipo sysname y su**valor predeterminado es NULL. No se admite la coincidencia de patrón de caracteres comodín. Si no se especifica *Owner* , se aplican las reglas predeterminadas de visibilidad de tabla del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual posee una tabla en la que se especifica el nombre, se devuelven las columnas de esa tabla. Si no se especifica el *propietario* y el usuario actual no posee una tabla con el *nombre*especificado, este procedimiento busca una tabla con el *nombre* especificado que pertenezca al propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   
- [ @table_qualifier= ] '*calificador*'  
+ [ @table_qualifier =] '*calificador*'  
  Es el calificador de la tabla. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

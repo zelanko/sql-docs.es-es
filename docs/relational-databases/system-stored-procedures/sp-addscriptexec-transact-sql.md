@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addscriptexec
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6e3c380f5508897a25327be20e05b22984d3bd4e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022450"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833696"
 ---
 # <a name="sp_addscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ sp_addscriptexec [ @publication = ] publication
   
  **1** = el agente continúa el script y omite el error.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un publicador.  
+>  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -65,14 +65,14 @@ sp_addscriptexec [ @publication = ] publication
   
  Para utilizar **sp_addscriptexec**, la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio debe tener permisos de lectura y escritura en la ubicación de la instantánea y permisos de lectura en la ubicación donde se almacenan los scripts.  
   
- La [utilidad SQLCMD](../../tools/sqlcmd-utility.md) se usa para ejecutar el script en el suscriptor y el script se ejecuta en el contexto de seguridad utilizado por el Agente de distribución o agente de mezcla al conectarse a la base de datos de suscripciones. Cuando el agente se ejecuta en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se utiliza la [utilidad osql](../../tools/osql-utility.md) en lugar de [sqlcmd](../../tools/sqlcmd-utility.md).  
+ La [utilidad SQLCMD](../../tools/sqlcmd-utility.md) se usa para ejecutar el script en el suscriptor y el script se ejecuta en el contexto de seguridad utilizado por el Agente de distribución o agente de mezcla al conectarse a la base de datos de suscripciones. Cuando el agente se ejecuta en una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se utiliza la [utilidad osql](../../tools/osql-utility.md) en lugar de [sqlcmd](../../tools/sqlcmd-utility.md).  
   
  **sp_addscriptexec** es útil para aplicar scripts a los suscriptores y usa [sqlcmd](../../tools/sqlcmd-utility.md) para aplicar el contenido del script al suscriptor. No obstante, dado que las configuraciones del suscriptor pueden variar, los scripts probados antes de enviarlos al publicador también pueden generar errores en un suscriptor. *skiperror* ofrece la posibilidad de que el Agente de distribución o agente de mezcla omitan los errores y continúen. Use [sqlcmd](../../tools/sqlcmd-utility.md) para probar los scripts antes de ejecutar **sp_addscriptexec**.  
   
 > [!NOTE]  
 >  Los errores omitidos se registran en el historial del agente como referencia.  
   
- El uso de **sp_addscriptexec** para publicar un archivo de script para publicaciones que usan FTP para la entrega [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de instantáneas solo se admite para los suscriptores de.  
+ El uso de **sp_addscriptexec** para publicar un archivo de script para publicaciones que usan FTP para la entrega de instantáneas solo se admite para los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptores de.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_addscriptexec**.  

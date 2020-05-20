@@ -18,21 +18,21 @@ helpviewer_keywords:
 - sys.dm_hadr_cluster catalog view
 - Availability Groups [SQL Server], WSFC clusters
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b4e2b27e9c284676c576586c125309fa8116531d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67900662"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833799"
 ---
 # <a name="sysdm_hadr_cluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Si el nodo de clústeres de conmutación por error de Windows Server (WSFC) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una instancia [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] de habilitada para tiene quórum de WSFC, **Sys. dm_hadr_cluster** devuelve una fila que expone el nombre del clúster e información sobre el cuórum. Si el nodo de WSFC no tiene quórum, no se devuelve ninguna fila.  
+  Si el nodo de clústeres de conmutación por error de Windows Server (WSFC) que hospeda una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilitada para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] tiene quórum de WSFC, **Sys. dm_hadr_cluster** devuelve una fila que expone el nombre del clúster e información sobre el cuórum. Si el nodo de WSFC no tiene quórum, no se devuelve ninguna fila.  
  > [!TIP]
- > A partir [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]de, esta vista de administración dinámica admite Always on instancias de clúster de conmutación por error además de Always on grupos de disponibilidad.
+ > A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , esta vista de administración dinámica admite Always on instancias de clúster de conmutación por error además de Always on grupos de disponibilidad.
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

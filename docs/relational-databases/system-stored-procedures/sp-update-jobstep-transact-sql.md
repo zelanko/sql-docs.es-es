@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_jobstep
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa6a12a45a5c0609b4b717ccdf90af63ea53776b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084886"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833128"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action`Acción que se va a realizar si el paso se realiza correctamente. *success_action* es de **tinyint**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
@@ -90,7 +90,7 @@ sp_update_jobstep
   
 `[ @on_fail_action = ] fail_action`Acción que se va a realizar si se produce un error en el paso. *fail_action* es de **tinyint**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir correctamente.|  
 |**2**|Salir con error.|  
@@ -99,11 +99,11 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id`Número de identificación del paso de este trabajo que se va a ejecutar si se produce un error en el paso y *fail_action* es **4**. *fail_step_id* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] el *servidor* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]el *servidor* es de tipo **nvarchar (128)** y su valor predeterminado es NULL.  
   
-`[ @database_name = ] 'database'`Nombre de la base de datos en la que se [!INCLUDE[tsql](../../includes/tsql-md.md)] va a ejecutar un paso. *Database*es de **tipo sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
+`[ @database_name = ] 'database'`Nombre de la base de datos en la que se va a ejecutar un [!INCLUDE[tsql](../../includes/tsql-md.md)] paso. *Database*es de **tipo sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
-`[ @database_user_name = ] 'user'`Nombre de la cuenta de usuario que se va a usar al [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutar un paso. *User*es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @database_user_name = ] 'user'`Nombre de la cuenta de usuario que se va a usar al ejecutar un [!INCLUDE[tsql](../../includes/tsql-md.md)] paso. *User*es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @retry_attempts = ] retry_attempts`Número de reintentos que se deben usar si se produce un error en este paso. *retry_attempts*es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -119,17 +119,17 @@ sp_update_jobstep
   
 `[ @flags = ] flags`Opción que controla el comportamiento. *Flags* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida.|  
 |**2**|Anexar al archivo de salida|  
 |**4**|Escribir la salida del paso de trabajo Transact-SQL en el historial de pasos|  
-|**203**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
+|**8**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
 |**dieciséi**|Escribir el registro en la tabla (anexar al historial existente)|  
   
-`[ @proxy_id = ] proxy_id`El número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**y su valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio para el agente.  
+`[ @proxy_id = ] proxy_id`El número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**y su valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como la cuenta de servicio para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
-`[ @proxy_name = ] 'proxy_name'`Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname y su**valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio para el agente.  
+`[ @proxy_name = ] 'proxy_name'`Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname y su**valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como la cuenta de servicio para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -152,7 +152,7 @@ sp_update_jobstep
   
  Solo los miembros de **sysadmin** pueden actualizar un paso de trabajo que pertenece a otro usuario.  
   
- Si el paso de trabajo requiere acceso a un proxy, el creador del paso de trabajo debe tener acceso al proxy del paso de trabajo. Todos los subsistemas, excepto Transact-SQL, necesitan una cuenta de proxy. Los miembros de **sysadmin** tienen acceso a todos los servidores proxy y pueden utilizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio del agente para el proxy.  
+ Si el paso de trabajo requiere acceso a un proxy, el creador del paso de trabajo debe tener acceso al proxy del paso de trabajo. Todos los subsistemas, excepto Transact-SQL, necesitan una cuenta de proxy. Los miembros de **sysadmin** tienen acceso a todos los servidores proxy y pueden utilizar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente para el proxy.  
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se modifica el número de reintentos para el primer paso del trabajo `Weekly Sales Data Backup`. Después de ejecutar este ejemplo, el número de reintentos es `10`.  

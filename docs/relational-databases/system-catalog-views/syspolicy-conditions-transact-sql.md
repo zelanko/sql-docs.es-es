@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - syspolicy_conditions view
 ms.assetid: af97d26c-4bd5-4b08-be51-8419e3b2832c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ee0f269fcfda93733d36a0b7396fd72d16bc01d9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f047007397eb302859f80bb5efe4b106a33ae61
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121171"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833833"
 ---
 # <a name="syspolicy_conditions-transact-sql"></a>syspolicy_conditions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Muestra una fila para cada condición de administración basada en directivas en la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. syspolicy_conditions pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista de syspolicy_conditions.  
+  Muestra una fila para cada condición de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_conditions pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista de syspolicy_conditions.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -40,7 +40,7 @@ ms.locfileid: "68121171"
 |date_modified|**datetime**|Fecha y hora en que se creó la condición. Es NULL si nunca se produjo una modificación.|  
 |is_name_condition|**smallint**|Especifica si la condición es de denominación.<br /><br /> 0 = la expresión de condición no contiene la variable @Name.<br /><br /> 1 = la expresión de condición contiene la variable @Name.|  
 |facet|**nvarchar(max)**|Nombre de la faceta en que está basada la condición.|  
-|Expression|**nvarchar(max)**|Expresión de los estados de faceta.|  
+|Expresión|**nvarchar(max)**|Expresión de los estados de faceta.|  
 |obj_name|**sysname**|Nombre de objeto asignado a @Name si la expresión de condición contiene esta variable.|  
   
 ## <a name="remarks"></a>Observaciones  

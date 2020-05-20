@@ -17,19 +17,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.server_file_audits catalog view
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e81cb385da40b5d8aff52368bb59d0c91322321d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68133129"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832759"
 ---
 # <a name="sysserver_file_audits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información extendida sobre el tipo de auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivos en una auditoría en una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Contiene información extendida sobre el tipo de auditoría de archivos en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auditoría en una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "68133129"
 |create_date|**datetime**|Fecha UTC en la que se creó la auditoría de archivos.|  
 |modify_date|**datatime**|Fecha UTC en la que se modificó por última vez la auditoría de archivos.|  
 |principal_id|**int**|Identificador del propietario de la auditoría tal y como se registró en el servidor.|  
-|type|**char(2)**|Tipo de auditoría:<br /><br /> 0 = Registro de eventos de seguridad de NT<br /><br /> 1 = Registro de eventos de aplicación de NT<br /><br /> 2 = Archivo del sistema de archivos|  
+|tipo|**char(2)**|Tipo de auditoría:<br /><br /> 0 = Registro de eventos de seguridad de NT<br /><br /> 1 = Registro de eventos de aplicación de NT<br /><br /> 2 = Archivo del sistema de archivos|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de auditoría.|  
 |on_failure|**tinyint**|Condición en caso de error:<br /><br /> 0 = Continuar<br /><br /> 1 = Cerrar la instancia del servidor<br /><br /> 2 = Error en la operación|  
 |on_failure_desc|**nvarchar(60)**|En caso de error escribir una entrada de acción:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

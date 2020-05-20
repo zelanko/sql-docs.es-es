@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942492"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833726"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,18 +46,18 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@retention_days =] *retention_days*  
+ [ @retention_days =] *retention_days*  
  Número de días que se van a retener los datos en las tablas de almacén de administración de datos. Los datos con una marca de tiempo anterior a *retention_days* se quitan. *retention_days* es de **smallint**y su valor predeterminado es NULL. Si se especifica, el valor debe ser positivo. Cuando es NULL, el valor de la columna valid_through de la vista core.snapshots determina las filas que pueden eliminarse.  
   
- [@instance_name = ] '*instance_name*'  
+ [ @instance_name =] '*instance_name*'  
  Nombre de la instancia del conjunto de recopilación. *instance_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- *instance_name* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo*\\*nombreDeInstancia*. Cuando es NULL, se utiliza la instancia predeterminada en el servidor local.  
+ *instance_name* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo* \\ *nombreDeInstancia*. Cuando es NULL, se utiliza la instancia predeterminada en el servidor local.  
   
- [@collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier**y su valor predeterminado es NULL. Cuando es NULL, se quitan las filas certificadas de todos los conjuntos de recopilación. Para obtener este valor, consulte la vista de catálogo syscollector_collection_sets.  
   
- [@duration = ] *duración* de  
+ [ @duration =] *duración*  
  El número máximo de minutos que debe durar la ejecución de la operación de purga. *Duration* es **smallint**y su valor predeterminado es NULL. Si se especifica, el valor debe ser cero o un entero positivo. Cuando es NULL, la operación se ejecuta hasta que se quitan todas las filas certificadas o se detiene manualmente la operación.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -66,7 +66,7 @@ core.sp_purge_data
 ## <a name="remarks"></a>Observaciones  
  Este procedimiento selecciona las filas de la vista core.snapshots que pueden quitarse de acuerdo con el período de retención. Todas las filas que se pueden quitar se eliminan de la tabla core.snapshots_internal. La eliminación de las filas precedentes desencadenará una acción de eliminación en cascada en todas las tablas del almacén de administración de datos. Esto se consigue al usar la cláusula ON DELETE CASCADE, que se define para todas las tablas que contienen datos recopilados.  
   
- Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si se detiene manualmente la operación de purga o se supera @duration el valor especificado para, solo se conservan los datos no confirmados. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  
+ Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si se detiene manualmente la operación de purga o se supera el valor especificado para @duration , solo se conservan los datos no confirmados. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  
   
  El procedimiento se debe ejecutar en el contexto de la base de datos de almacén de administración de datos.  
   
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. Especificación de valores de retención y duración  
- En el ejemplo siguiente se quitan los datos del almacén de administración de datos anteriores a 7 días. Además, se especifica @duration el parámetro para que la operación no se ejecute más de 5 minutos.  
+ En el ejemplo siguiente se quitan los datos del almacén de administración de datos anteriores a 7 días. Además, @duration se especifica el parámetro para que la operación no se ejecute más de 5 minutos.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Especificación de un nombre de instancia y un conjunto de recopilación  
- En el ejemplo siguiente se quitan los datos del almacén de administración de datos que contiene un conjunto de recopilación determinado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada. Dado @retention_days que no se especifica, el valor de la columna valid_through de la vista Core. snapshots se usa para determinar las filas del conjunto de recopilación que pueden quitarse.  
+ En el ejemplo siguiente se quitan los datos del almacén de administración de datos que contiene un conjunto de recopilación determinado en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificada. Dado que @retention_days no se especifica, el valor de la columna valid_through de la vista Core. snapshots se usa para determinar las filas del conjunto de recopilación que pueden quitarse.  
   
 ```  
 USE <management_data_warehouse>;  

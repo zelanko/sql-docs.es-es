@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergefilter
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769177"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831826"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Especifica el tipo de filtro que se va a agregar. *filter_type* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Solo filtro de combinación. Necesario para admitir [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores.|  
 |**2**|Solo relación de registros lógicos.|  

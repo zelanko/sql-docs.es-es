@@ -18,19 +18,19 @@ helpviewer_keywords:
 - machine names [SQL Server]
 - computer names
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1d89da6675fba33af3c6e2d1c054273b6e420ec3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8578cccba27f38999ef786e1fb48b46445ad682c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172312"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833668"
 ---
 # <a name="sp_addserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Define el nombre de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se cambie el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nombre del equipo que hospeda, utilice **sp_addserver** para informar a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] la instancia del nombre del nuevo equipo. Este procedimiento debe ejecutarse en todas las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedado en el equipo. No se puede cambiar el nombre de instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para cambiar el nombre de instancia de una instancia con nombre, instale una instancia nueva con el nombre deseado, desasocie los archivos de base de datos de la instancia antigua, asocie las bases de datos a la nueva instancia y quite la antigua instancia. Como alternativa, puede crear un nombre de alias de cliente en el equipo cliente, redirigir la conexión a un servidor y nombre de instancia diferentes o a la combinación **servidor:puerto** sin cambiar el nombre de la instancia en el equipo servidor.
+  Define el nombre de la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se cambie el nombre del equipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda, utilice **sp_addserver** para informar a la instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] nombre del nuevo equipo. Este procedimiento debe ejecutarse en todas las instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] hospedado en el equipo. No se puede cambiar el nombre de instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Para cambiar el nombre de instancia de una instancia con nombre, instale una instancia nueva con el nombre deseado, desasocie los archivos de base de datos de la instancia antigua, asocie las bases de datos a la nueva instancia y quite la antigua instancia. Como alternativa, puede crear un nombre de alias de cliente en el equipo cliente, redirigir la conexión a un servidor y nombre de instancia diferentes o a la combinación **servidor:puerto** sin cambiar el nombre de la instancia en el equipo servidor.
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -48,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
 
  Cuando se instalan varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo, una instancia opera como si estuviera en un servidor independiente. Especifique una instancia con nombre haciendo referencia al *servidor* como *nombredeservidor\nombredeinstancia*.
 
-`[ @local = ] 'LOCAL'`Especifica que el servidor que se va a agregar como servidor local. local es **VARCHAR (10)** y su valor predeterminado es NULL. ** \@** Al especificar ** \@local** como **local** , se define ** \@Server** como el nombre del servidor local y se hace@SERVERNAME que la función @ devuelva el valor de *Server*.
+`[ @local = ] 'LOCAL'`Especifica que el servidor que se va a agregar como servidor local. ** \@ local** es **VARCHAR (10)** y su valor predeterminado es NULL. Al especificar ** \@ local** como **local** , se define ** \@ Server** como el nombre del servidor local y se hace que la @SERVERNAME función @ devuelva el valor de *Server*.
 
  El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] establece esta variable en el nombre del equipo durante la instalación. De manera predeterminada, el nombre del equipo es la forma en que los usuarios se conectan a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin requerir ninguna configuración adicional.
 
  La definición local solo surte efecto después de reiniciarse el [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Solo puede definirse un servidor local en cada instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
-`[ @duplicate_ok = ] 'duplicate_OK'`Especifica si se permite un nombre de servidor duplicado. duplicate_OK es de tipo **VARCHAR (13)** y su valor predeterminado es NULL. ** \@** duplicate_OK solo puede tener el valor **duplicate_OK** o null. ** \@** Si se especifica **duplicate_OK** y el nombre del servidor que se va a agregar ya existe, no se genera ningún error. Si no se utilizan parámetros con nombre ** \@** , se debe especificar local.
+`[ @duplicate_ok = ] 'duplicate_OK'`Especifica si se permite un nombre de servidor duplicado. ** \@ duplicate_OK** es de tipo **VARCHAR (13)** y su valor predeterminado es NULL. ** \@ duplicate_OK** solo puede tener el valor **duplicate_OK** o null. Si se especifica **duplicate_OK** y el nombre del servidor que se va a agregar ya existe, no se genera ningún error. Si no se utilizan parámetros con nombre, se debe especificar ** \@ local** .
 
 ## <a name="return-code-values"></a>Valores de código de retorno
  0 (correcto) o 1 (error)

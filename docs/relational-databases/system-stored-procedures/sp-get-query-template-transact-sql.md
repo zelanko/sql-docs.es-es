@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_get_query_template
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124081"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833243"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_get_query_template
  Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir la forma parametrizada de *query_text* como un literal de cadena.  
   
  @parameters  
- Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir un literal de cadena de los nombres de parámetro y los tipos de datos @templatetextcon parámetros en.  
+ Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir un literal de cadena de los nombres de parámetro y los tipos de datos con parámetros en @templatetext .  
   
 ## <a name="remarks"></a>Observaciones  
  sp_get_query_template devuelve un error cuando se produce lo siguiente:  
@@ -58,7 +58,7 @@ sp_get_query_template
   
 -   *query_text* es null, no una cadena Unicode, no es válido sintácticamente o no se puede compilar.  
   
- Si sp_get_query_template devuelve un error, no modifica los valores de los @templatetext parámetros de salida @parameters y.  
+ Si sp_get_query_template devuelve un error, no modifica los valores de los parámetros de @templatetext @parameters salida y.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol de base de datos public.  

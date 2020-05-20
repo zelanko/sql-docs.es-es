@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_batch_params
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e9a7cb410a1e520ee05b7f93263dcc46750dfb87
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68001808"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833479"
 ---
 # <a name="sp_batch_params-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve un conjunto de filas que contiene información sobre los parámetros incluidos [!INCLUDE[tsql](../../includes/tsql-md.md)] en un lote. **sp_batch_params** solo analiza el lote especificado y devuelve información acerca de los valores de los parámetros incrustados. No ejecuta el lote ni modifica el entorno de ejecución.  
+  Devuelve un conjunto de filas que contiene información sobre los parámetros incluidos en un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. **sp_batch_params** solo analiza el lote especificado y devuelve información acerca de los valores de los parámetros incrustados. No ejecuta el lote ni modifica el entorno de ejecución.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -55,7 +55,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**PRECISIÓN**|**int**|Número de dígitos significativos. El valor devuelto para la columna **Precision** está en base 10.|  
 |**LENGTH**|**int**|Tamaño de transferencia de los datos. Este valor es NULL.|  
 |**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal. Este valor es NULL.|  
-|**RADIX**|**smallint**|Es la base de tipos numéricos. Este valor es NULL.|  
+|**FIJO**|**smallint**|Es la base de tipos numéricos. Este valor es NULL.|  
 |**ACEPTA valores NULL**|**smallint**|Especifica la nulabilidad:<br /><br /> 1 = Tipo de datos de parámetro que se puede crear con valores NULL.<br /><br /> 0 = No se permiten valores NULL.<br /><br /> Este valor es NULL.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tal como aparece en el campo TYPE del descriptor. Esta columna es igual que la columna **data_type** , excepto los tipos de datos **DateTime** e **Interval** ISO. Esta columna siempre devuelve un valor. Este valor es NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|El subcódigo de **intervalo** **DateTime** o ISO si el valor de **SQL_DATA_TYPE** es SQL_DATETIME o SQL_INTERVAL. Para tipos de datos distintos de **datetime** e **interval** de ISO, esta columna es NULL. Este valor es NULL.|  

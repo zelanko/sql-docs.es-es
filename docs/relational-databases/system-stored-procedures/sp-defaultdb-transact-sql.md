@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultdb
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09c28c955dd89a889600982882c6bdafdc2b10cb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085817"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833430"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia la base de datos predeterminada [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para un inicio de sesión.  
+  Cambia la base de datos predeterminada para un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Utilice [ALTER login](../../t-sql/statements/alter-login-transact-sql.md) en su lugar.  
@@ -42,7 +42,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser un inicio de sesión existente o un usuario o grupo de Windows. Si un inicio de sesión del usuario o grupo de Windows no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se agrega automáticamente.  
+`[ @loginame = ] 'login'`Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows. Si un inicio de sesión del usuario o grupo de Windows no existe en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se agrega automáticamente.  
   
 `[ @defdb = ] 'database'`Es el nombre de la nueva base de datos predeterminada. *Database* es de **tipo sysname**y no tiene ningún valor predeterminado. la *base de datos* ya debe existir.  
   

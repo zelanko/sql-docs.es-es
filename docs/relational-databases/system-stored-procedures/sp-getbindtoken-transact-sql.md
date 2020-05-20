@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_getbindtoken
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dca4015832f8bebf5501c4b3a7e84339bf62957b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124002"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833217"
 ---
 # <a name="sp_getbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [@out_token=] '*RETURN_VALUE*'  
+ [ @out_token =] '*RETURN_VALUE*'  
  Es el token que se va a utilizar para enlazar las sesiones. *RETURN_VALUE* es de tipo **VARCHAR (255)** y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -65,7 +65,7 @@ Cannot get a transaction token if there is no transaction active.
 Reissue the statement after a transaction has been started.  
 ```  
   
- Cuando se usa sp_getbindtoken para dar de alta una conexión de transacción distribuida dentro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una transacción abierta, devuelve el mismo token. Por ejemplo:  
+ Cuando se usa sp_getbindtoken para dar de alta una conexión de transacción distribuida dentro de una transacción abierta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve el mismo token. Por ejemplo:  
   
 ```  
 USE AdventureWorks2012;  

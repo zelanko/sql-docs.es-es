@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_get_distributor
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0e714018ed35a7b6c12c0c00bd8eeffda5630b67
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124117"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833262"
 ---
 # <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_get_distributor
 |**tiene publicador de distribución remoto**|**int**|**0** = no; **1** = sí|  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_get_distributor** utiliza principalmente en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] replicación de instantáneas, transaccional y de mezcla.  
+ **sp_get_distributor** utiliza principalmente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] en la replicación de instantáneas, transaccional y de mezcla.  
   
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario puede ejecutar **sp_get_distributor**. Se devuelve un conjunto de resultados no NULL cuando este procedimiento almacenado lo ejecutan los miembros de los roles fijos de base de datos **db_owner** o **replmonitor** en la base de datos de distribución, o los miembros del rol fijo de base de datos **db_owner** en al menos una base de datos publicada. También se devuelve un conjunto de resultados no NULL cuando los usuarios de la lista de acceso a la publicación (PAL) de al menos una base de datos publicada ejecutan este procedimiento almacenado, o en la PAL de la base de datos de distribución para un publicador que no es de SQL Server, también pueden ejecutar **sp_get_distributor**.  

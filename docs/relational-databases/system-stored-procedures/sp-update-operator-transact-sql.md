@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_operator
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084844"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832534"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,56 +53,56 @@ sp_update_operator
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @name=] '*nombre*'  
+ [ @name =] '*nombre*'  
  El nombre del operador que se va a modificar. *Name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @new_name=] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  Nuevo nombre del operador. El nombre debe ser único. *new_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @enabled=] *habilitado*  
+ [ @enabled =] *habilitado*  
  Número que indica el estado actual del operador (**1** si está habilitado actualmente; **0** si no lo está). *Enabled* es de **tinyint**y su valor predeterminado es NULL. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
   
- [ @email_address=] '*EMAIL_ADDRESS*'  
+ [ @email_address =] '*EMAIL_ADDRESS*'  
  Dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *EMAIL_ADDRESS* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
- [ @pager_address=] '*pager_number*'  
+ [ @pager_address =] '*pager_number*'  
  Dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
- [ @weekday_pager_start_time=] *weekday_pager_start_time*  
+ [ @weekday_pager_start_time =] *weekday_pager_start_time*  
  Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @weekday_pager_end_time=] *weekday_pager_end_time*  
+ [ @weekday_pager_end_time =] *weekday_pager_end_time*  
  Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas al operador especificado, de lunes a viernes. *weekday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @saturday_pager_start_time=] *saturday_pager_start_time*  
+ [ @saturday_pager_start_time =] *saturday_pager_start_time*  
  Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @saturday_pager_end_time=] *saturday_pager_end_time*  
+ [ @saturday_pager_end_time =] *saturday_pager_end_time*  
  Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los sábados al operador especificado. *saturday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @sunday_pager_start_time=] *sunday_pager_start_time*  
+ [ @sunday_pager_start_time =] *sunday_pager_start_time*  
  Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_start_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @sunday_pager_end_time=] *sunday_pager_end_time*  
+ [ @sunday_pager_end_time =] *sunday_pager_end_time*  
  Especifica la hora a partir de la cual no puede enviarse una notificación por buscapersonas los domingos al operador especificado. *sunday_pager_end_time*es de **tipo int**, su valor predeterminado es NULL y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
   
- [ @pager_days=] *pager_days*  
- Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es de **tinyint**, su valor predeterminado es NULL y debe ser un valor comprendido entre **0** y **127**. *pager_days* se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2**+**4**+**8**+**16**+**32** = **64**.  
+ [ @pager_days =] *pager_days*  
+ Especifica los días en que el operador está disponible para recibir mensajes por buscapersonas (de acuerdo con las horas inicial y final especificadas). *pager_days*es de **tinyint**, su valor predeterminado es NULL y debe ser un valor comprendido entre **0** y **127**. *pager_days* se calcula agregando los valores individuales de los días necesarios. Por ejemplo, de lunes a viernes, **2** + **4** + **8** + **16** + **32**  =  **64**.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
 |**4**|Martes|  
-|**203**|Miércoles|  
+|**8**|Miércoles|  
 |**dieciséi**|Jueves|  
 |**32**|Viernes|  
 |**64**|Sábado|  
   
- [ @netsend_address=] '*netsend_address*'  
+ [ @netsend_address =] '*netsend_address*'  
  La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es de tipo **nvarchar (100)** y su valor predeterminado es NULL.  
   
- [ @category_name=] '*categoría*'  
+ [ @category_name =] '*categoría*'  
  El nombre de la categoría de esta alerta. *Category* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

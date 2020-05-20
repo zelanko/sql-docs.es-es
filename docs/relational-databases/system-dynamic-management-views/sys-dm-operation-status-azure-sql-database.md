@@ -16,15 +16,15 @@ helpviewer_keywords:
 - dm_operation_status dynamic management view
 - sys.dm_operation_status dynamic management view
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70911204"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833765"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 
@@ -39,7 +39,7 @@ ms.locfileid: "70911204"
 |resource_type_desc|**nvarchar(2048)**|Descripción del tipo de recurso en el que se realiza la operación. En la versión actual, esta vista solo realiza el seguimiento de las operaciones realizadas en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
 |major_resource_id|**sql_variant**|Nombre del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el que se realiza la operación. No NULL.|  
 |minor_resource_id|**sql_variant**|Solo para uso interno. NOT NULL.|  
-|operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)], como Create o ALTER.|  
+|operation|**nvarchar(60)**|Operación realizada en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , como Create o ALTER.|  
 |state|**tinyint**|El estado de la operación.<br /><br /> 0 = Pendiente<br />1 = en curso<br />2= Completado<br />3 = error<br />4 = Cancelado|  
 |state_desc|**nvarchar(120)**|PENDING = la operación está esperando disponibilidad de los recursos o la cuota.<br /><br /> IN_PROGRESS = la operación se ha iniciado y está en curso.<br /><br /> COMPLETED = la operación finalizó correctamente.<br /><br /> FAILED= se produjo un error en la operación Vea la columna **error_desc** para obtener más información.<br /><br /> CANCELLED = la operación se detuvo a petición del usuario.|  
 |percent_complete|**int**|Porcentaje de la operación que se ha completado. Los valores no son continuos y los valores válidos se enumeran a continuación. NOT NULL.<br/><br/>0 = operación no iniciada<br/>50 = operación en curso<br/>100 = operación completada|  
@@ -54,7 +54,7 @@ ms.locfileid: "70911204"
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
 ## <a name="remarks"></a>Observaciones  
- Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la **master** base de datos maestra [!INCLUDE[ssSDS](../../includes/sssds-md.md)] del servidor para realizar un seguimiento del estado de las siguientes operaciones [!INCLUDE[ssSDS](../../includes/sssds-md.md)]realizadas en un:  
+ Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la base de datos **maestra** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para realizar un seguimiento del estado de las siguientes operaciones realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Crear base de datos  
   

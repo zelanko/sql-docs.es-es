@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c312f8798ba4ad42eed327123c9adc5feacba8a8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5d9f68c1e3b4f0bec4ba338af12fb1f24c5ff204
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74412845"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833705"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -33,7 +33,7 @@ ms.locfileid: "74412845"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+  > En [instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), se admiten la mayoría de los tipos de trabajo de Agente SQL Server, pero no todos. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -73,11 +73,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'`Nombre del paso. *step_name* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @subsystem = ] 'subsystem'`Subsistema utilizado por el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del agente para ejecutar el *comando*. el *subsistema* es **nvarchar (40)** y puede tener uno de estos valores.  
+`[ @subsystem = ] 'subsystem'`Subsistema utilizado por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente para ejecutar el *comando*. el *subsistema* es **nvarchar (40)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|'**ACTIVESCRIPTING**'|Script Active<br /><br /> ** \* Importante \* \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|'**ACTIVESCRIPTING**'|Script Active<br /><br /> ** \* \* \* Importante \* **[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|Comando del sistema operativo o programa ejecutable|  
 |'**Distribución**'|Trabajo del Agente de distribución de replicación|  
 |'**Snapshot**'|Trabajo del Agente de instantáneas de replicación|  
@@ -110,7 +110,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_success_action = ] success_action`Acción que se va a realizar si el paso se realiza correctamente. *success_action* es **tinyint**y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1** (predeterminado)|Salir con éxito|  
 |**2**|Salir con error|  
@@ -121,7 +121,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_action = ] fail_action`Acción que se va a realizar si se produce un error en el paso. *fail_action* es **tinyint**y puede tener uno de estos valores.  
   
-|Value|Descripción (acción)|  
+|Valor|Descripción (acción)|  
 |-----------|----------------------------|  
 |**1**|Salir con éxito|  
 |**2** (predeterminado)|Salir con error|  
@@ -130,11 +130,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id`IDENTIFICADOR del paso de este trabajo que se va a ejecutar si se produce un error en el paso y *fail_action* es **4**. *fail_step_id* es de **tipo int**y su valor predeterminado es **0**.  
   
-`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
+`[ @server = ] 'server'`[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]el *servidor* es de tipo **nvarchar (30)** y su valor predeterminado es NULL.  
   
-`[ @database_name = ] 'database'`Nombre de la base de datos en la que se [!INCLUDE[tsql](../../includes/tsql-md.md)] va a ejecutar un paso. *Database* es de **tipo sysname y su**valor predeterminado es null, en cuyo caso se utiliza la base de datos **maestra** . No se permiten nombres incluidos entre corchetes ([ ]). En un paso de trabajo de ActiveX, la *base de datos* es el nombre del lenguaje de scripting que usa el paso.  
+`[ @database_name = ] 'database'`Nombre de la base de datos en la que se va a ejecutar un [!INCLUDE[tsql](../../includes/tsql-md.md)] paso. *Database* es de **tipo sysname y su**valor predeterminado es null, en cuyo caso se utiliza la base de datos **maestra** . No se permiten nombres incluidos entre corchetes ([ ]). En un paso de trabajo de ActiveX, la *base de datos* es el nombre del lenguaje de scripting que usa el paso.  
   
-`[ @database_user_name = ] 'user'`Nombre de la cuenta de usuario que se va a usar al [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecutar un paso. *User* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *User* es null, el paso se ejecuta en el contexto de usuario del propietario del trabajo en la *base de datos*.  El Agente SQL Server solo incluirá este parámetro si el propietario del trabajo es un administrador de sistema de SQL Server. En ese caso, el paso de Transact-SQL dado se ejecutará en el contexto del nombre de usuario de SQL Server determinado. Si el propietario del trabajo no es un SQL Server sysadmin, el paso de Transact-SQL siempre se ejecutará en el contexto del inicio de sesión que posee este trabajo y @database_user_name se omitirá el parámetro.  
+`[ @database_user_name = ] 'user'`Nombre de la cuenta de usuario que se va a usar al ejecutar un [!INCLUDE[tsql](../../includes/tsql-md.md)] paso. *User* es de **tipo sysname y su**valor predeterminado es NULL. Cuando *User* es null, el paso se ejecuta en el contexto de usuario del propietario del trabajo en la *base de datos*.  El Agente SQL Server solo incluirá este parámetro si el propietario del trabajo es un administrador de sistema de SQL Server. En ese caso, el paso de Transact-SQL dado se ejecutará en el contexto del nombre de usuario de SQL Server determinado. Si el propietario del trabajo no es un SQL Server sysadmin, el paso de Transact-SQL siempre se ejecutará en el contexto del inicio de sesión que posee este trabajo y se @database_user_name omitirá el parámetro.  
   
 `[ @retry_attempts = ] retry_attempts`Número de reintentos que se deben usar si se produce un error en este paso. *retry_attempts* es de **tipo int**y su valor predeterminado es **0**, que indica que no hay reintentos.  
   
@@ -142,23 +142,23 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority`Sector.  
   
-`[ @output_file_name = ] 'file_name'`Nombre del archivo en el que se guarda la salida de este paso. *file_name* es de tipo **nvarchar (200)** y su valor predeterminado es NULL. *file_name* puede incluir uno o varios de los tokens enumerados en *comando*. Este parámetro solo es válido con los comandos que se [!INCLUDE[tsql](../../includes/tsql-md.md)]ejecutan en los subsistemas [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o.  
+`[ @output_file_name = ] 'file_name'`Nombre del archivo en el que se guarda la salida de este paso. *file_name* es de tipo **nvarchar (200)** y su valor predeterminado es NULL. *file_name* puede incluir uno o varios de los tokens enumerados en *comando*. Este parámetro solo es válido con los comandos que se ejecutan en los [!INCLUDE[tsql](../../includes/tsql-md.md)] subsistemas, **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 `[ @flags = ] flags`Es una opción que controla el comportamiento. *Flags* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sobrescribir el archivo de salida|  
 |**2**|Anexar al archivo de salida|  
 |**4**|Escribir la salida del paso de trabajo [!INCLUDE[tsql](../../includes/tsql-md.md)] en el historial de pasos|  
-|**203**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
+|**8**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
 |**dieciséi**|Escribir el registro en la tabla (anexar al historial existente)|  
 |**32**|Escribir todo el resultado en el historial de trabajos|  
 |**64**|Crear un evento Windows para usarlo como señal y que se anule el paso de trabajo de Cmd|  
   
-`[ @proxy_id = ] proxy_id`El número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**y su valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio para el agente.  
+`[ @proxy_id = ] proxy_id`El número de identificación del proxy con el que se ejecuta el paso de trabajo. *proxy_id* es de tipo **int**y su valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como la cuenta de servicio para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
-`[ @proxy_name = ] 'proxy_name'`Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname y su**valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la cuenta de servicio para el agente.  
+`[ @proxy_name = ] 'proxy_name'`Nombre del proxy con el que se ejecuta el paso de trabajo. *proxy_name* es de tipo **sysname y su**valor predeterminado es NULL. Si no se especifica ningún *proxy_id* , no se especifica ningún *proxy_name* y no se especifica ningún *user_name* , el paso de trabajo se ejecuta como la cuenta de servicio para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -171,7 +171,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  SQL Server Management Studio ofrece un método gráfico sencillo para administrar trabajos y es el método recomendado para crear y administrar la infraestructura de trabajo.  
   
- De forma predeterminada, un paso de trabajo se ejecutará como la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente, a menos que se especifique otro proxy. Un requisito de esta cuenta es ser miembro del rol fijo de seguridad **sysadmin** .
+ De forma predeterminada, un paso de trabajo se ejecutará como la cuenta de servicio del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente, a menos que se especifique otro proxy. Un requisito de esta cuenta es ser miembro del rol fijo de seguridad **sysadmin** .
   
  Un proxy puede identificarse mediante *proxy_name* o *proxy_id*.  
   
@@ -192,7 +192,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  En este ejemplo se crea un paso de trabajo que cambia el acceso a la base de datos de modo que sea de solo lectura para la base de datos Sales. Además, en este ejemplo se especifican 5 reintentos, cada uno de los cuales se produce tras una espera de 5 minutos.  
   
 > [!NOTE]  
->  En este ejemplo se da `Weekly Sales Data Backup` por supuesto que el trabajo ya existe.  
+>  En este ejemplo se da por supuesto que el `Weekly Sales Data Backup` trabajo ya existe.  
   
 ```sql
 USE msdb;  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_articleview
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7cc40187ccafebee672214a0926a3ca0d0bc4176
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d5a65254061160374120ef1d7cf54974f7a3dc2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768990"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833510"
 ---
 # <a name="sp_articleview-transact-sql"></a>sp_articleview (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,10 +68,10 @@ sp_articleview [ @publication = ] 'publication'
   
  **1** especifica que los cambios en el artículo hacen que se reinicialice la suscripción existente y concede permiso para que se produzca la reinicialización de la suscripción.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al publicar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un publicador.  
+>  no se debe usar el *publicador* al publicar desde un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 `[ @refreshsynctranprocs = ] refreshsynctranprocs`Indica si los procedimientos almacenados utilizados para sincronizar la replicación se vuelven a crear automáticamente. *refreshsynctranprocs* es de **bit**y su valor predeterminado es 1.  
   

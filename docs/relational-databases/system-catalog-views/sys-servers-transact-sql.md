@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.servers catalog view
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7b9cb03b97660bedc9c8e86cc72ae2bf9ebdd56d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68132949"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832757"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68132949"
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Id. local del servidor vinculado.|  
 |**name**|**sysname**|Cuando **server_id** = 0, el valor devuelto es el nombre del servidor.<br /><br /> Cuando **server_id** > 0, el valor devuelto es el nombre local del servidor vinculado.|  
-|**product**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Manuales**|**sysname**|Nombre de producto del servidor vinculado. Un valor de "SQL Server" indica otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**presta**|**sysname**|Nombre del proveedor OLE DB para la conexión con el servidor vinculado.|  
 |**data_source**|**nvarchar(4000)**|Propiedad de conexión del origen de datos OLE DB.|  
 |**ubicación**|**nvarchar(4000)**|Propiedad de conexión de la ubicación OLE DB. Es NULL si no hay ninguna.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68132949"
   
  No se necesitan permisos para ver el servidor local (**server_id** = 0).  
   
- Cuando se crea un servidor vinculado o remoto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , crea una asignación de inicio de sesión predeterminada para el rol de servidor **público** . La asignación de inicio de sesión predeterminada significa que todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad de estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificando null para el parámetro *locallogin* .  
+ Cuando se crea un servidor vinculado o remoto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea una asignación de inicio de sesión predeterminada para el rol de servidor **público** . La asignación de inicio de sesión predeterminada significa que todos los inicios de sesión pueden ver todos los servidores vinculados y remotos. Para restringir la visibilidad de estos servidores, quite la asignación de inicio de sesión predeterminada ejecutando [sp_droplinkedsrvlogin](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md) y especificando null para el parámetro *locallogin* .  
   
  Si se elimina la asignación de inicio de sesión predeterminada, solo los usuarios que se hayan agregado de forma explícita como un inicio de sesión vinculado o remoto podrán ver los servidores vinculados o remotos para los que tienen un inicio de sesión.  Los siguientes permisos son necesarios para ver todos los servidores vinculados y remotos después de la asignación de inicio de sesión predeterminada:  
   

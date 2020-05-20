@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.query_store_runtime_stats_interval catalog view
 - query_store_runtime_stats_interval catalog view
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c76e22bc0041c69ffc8ab9d0632ff69f8518031b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4c652ee6f0634816a4bc5313c968ee2e59197b5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68067945"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82834127"
 ---
 # <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>Sys. query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68067945"
 |**runtime_stats_interval_id**|**bigint**|Clave principal.|
 |**start_time**|**datetimeoffset**|Hora de inicio del intervalo.|
 |**end_time**|**datetimeoffset**|Hora de finalización del intervalo.|
-|**Comentario**|**nvarchar(32)**|Siempre es NULL.|
+|**comment**|**nvarchar(32)**|Siempre es NULL.|
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso **View Database State** .  
@@ -51,7 +51,7 @@ ms.locfileid: "68067945"
  [Sys. query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
  [Sys. query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [Supervisar el rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Vistas de catálogo &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Procedimientos almacenados del almacén de consultas &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_alert
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69890846"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832553"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,13 +78,13 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Especifica si la descripción del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error del registro de aplicación de Windows debe incluirse en el mensaje de notificación. *include_event_description_in* es de **tinyint**, su valor predeterminado es NULL y puede ser uno o varios de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|None|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|Todo|  
   
 `[ @database_name = ] 'database'`Nombre de la base de datos en la que debe producirse el error para que se desencadene la alerta. *Database* es de **tipo sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
@@ -115,7 +115,7 @@ sp_update_alert
 |Elemento de formato|Descripción|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores: **>**, **<**,**=**|  
+|*Comparador*|Uno de estos operadores: **>** , **<** ,**=**|  
 |*Valor*|Valor numérico del contador|  
   
 `[ @category_name = ] 'category'`El nombre de la categoría de alerta. *Category* es de **tipo sysname y su** valor predeterminado es NULL.  
@@ -128,7 +128,7 @@ sp_update_alert
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Solo los **sysmessages** escritos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] el registro de aplicación de Windows pueden activar una alerta.  
+ Solo los **sysmessages** escritos en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows pueden activar una alerta.  
   
  **sp_update_alert** solo cambia la configuración de alerta para la que se proporcionan los valores de parámetro. Si se omite un parámetro, se conserva la configuración actual.  
   

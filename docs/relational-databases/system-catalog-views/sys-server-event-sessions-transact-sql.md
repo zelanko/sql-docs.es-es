@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.server_event_sessions catalog view
 - xe
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 142e4bfd81a60ec6f80294bce16bfb7a59d3211a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313708"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82832746"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "72313708"
 |memory_partition_mode|**NCHAR (1)**|Ubicación en memoria donde se crean los búferes de eventos. El modo de la partición predeterminado es G. No admite valores NULL. memory_partition_mode es uno de los siguientes:<br /><br /> G - NONE<br /><br /> C - PER_CPU<br /><br /> N - PER_NODE|  
 |memory_partition_mode_desc|**sysname**|El valor predeterminado es NONE. No admite valores NULL. Es uno de los siguientes valores:<br /><br /> NONE. Se crea un único conjunto de búferes dentro de una instancia de SQL Server.<br /><br /> PER_CPU. Se crea un conjunto de búferes para cada CPU.<br /><br /> PER_NODE. Se crea un conjunto de búferes para cada nodo de acceso no uniforme a memoria (NUMA).|  
 |track_causality|**bit**|Habilite o deshabilite el seguimiento de causalidad. Si está establecido en 1 (ON), se habilita el seguimiento y se pueden correlacionar los eventos relacionados en diferentes conexiones con el servidor. El valor predeterminado es 0 (OFF). No admite valores NULL.|  
-|startup_state|**bit**|Valor que determina si se inicia automáticamente la sesión cuando el servidor se inicia. El valor predeterminado es 0. No admite valores NULL. Puede ser uno de los siguientes:<br /><br /> 0 (OFF). La sesión no se inicia cuando el servidor se inicia.<br /><br /> 1 (ON). La sesión de eventos se inicia cuando el servidor se inicia.|  
+|startup_state|**bit**|Valor que determina si se inicia automáticamente la sesión cuando el servidor se inicia. El valor predeterminado es 0. No admite valores NULL. Puede ser uno de los siguientes:<br /><br /> 0 (OFF). La sesión no se inicia cuando el servidor se inicia.<br /><br /> 1 (ON). La sesión de eventos se inicia cuando el servidor se inicia.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

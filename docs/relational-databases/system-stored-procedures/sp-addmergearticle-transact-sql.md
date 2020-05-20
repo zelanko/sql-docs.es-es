@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergearticle
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9163e6d34a0de6200eafd413d163bb6d92fd4a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7ba2cebf6c4b779119696f19ee78b7ce8ec1cf66
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "72174004"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831899"
 ---
 # <a name="sp_addmergearticle-transact-sql"></a>sp_addmergearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ sp_addmergearticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación que contiene el artículo. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. El nombre debe ser único en la publicación. *article* es de **tipo sysname**y no tiene ningún valor predeterminado. el *artículo* debe estar en el equipo local [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que ejecuta y debe ajustarse a las reglas de los identificadores.  
+`[ @article = ] 'article'`Es el nombre del artículo. El nombre debe ser único en la publicación. *article* es de **tipo sysname**y no tiene ningún valor predeterminado. el *artículo* debe estar en el equipo local que ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y debe ajustarse a las reglas de los identificadores.  
   
 `[ @source_object = ] 'source_object'`Es el objeto de base de datos que se va a publicar. *source_object* es de **tipo sysname**y no tiene ningún valor predeterminado. Para obtener más información sobre los tipos de objetos que se pueden publicar mediante la replicación de mezcla, vea [publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 `[ @type = ] 'type'`Es el tipo de artículo. *Type* es de tipo **sysname, su**valor predeterminado es **TABLE**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**tabla** (valor predeterminado)|Tabla con esquema y datos. La replicación supervisa la tabla para determinar los datos que se van a replicar.|  
 |**func schema only**|Función con solo esquema.|  
@@ -101,7 +101,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @pre_creation_cmd = ] 'pre_creation_cmd'`Especifica lo que debe hacer el sistema si la tabla existe en el suscriptor al aplicar la instantánea. *pre_creation_cmd* es **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguna**|Si la tabla ya existe en el suscriptor, no se lleva a cabo ninguna acción.|  
 |**delete**|Emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.|  
@@ -115,7 +115,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @schema_option = ] schema_option`Es un mapa de bits de la opción de generación de esquemas para el artículo dado. *schema_option* es **binario (8)** y puede ser el [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0x00**|Deshabilita el scripting por el Agente de instantáneas y usa el script de creación previa de esquemas proporcionado definido en *creation_script*.|  
 |**0x01**|Genera la creación del objeto (CREATE TABLE, CREATE PROCEDURE, etc.). Este es el valor predeterminado en los artículos de procedimientos almacenados.|  
@@ -144,17 +144,17 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x4000000**|Replica índices en columnas **XML** .|  
 |**0x8000000**|Crea los esquemas que no están ya presentes en el suscriptor.|  
 |**0x10000000**|Convierte las columnas **XML** en **ntext** en el suscriptor.|  
-|**0x20000000**|Convierte los tipos de datos de objetos grandes (**nvarchar (Max)**, **VARCHAR (Max)** y **varbinary (Max)**) introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] en tipos de datos que [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]se admiten en.|  
+|**0x20000000**|Convierte los tipos de datos de objetos grandes (**nvarchar (Max)**, **VARCHAR (Max)** y **varbinary (Max)**) introducidos en en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de datos que se admiten en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 |**0x40000000**|Replica permisos.|  
 |**0x80000000**|Intenta quitar dependencias a objetos que no forman parte de la publicación.|  
-|**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en columnas **varbinary (Max)** . No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] tienen columnas FileStream en suscriptores, independientemente de cómo se establezca esta opción de esquema. Vea la opción relacionada **0x800000000**.|  
-|**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset**y **datetime2**) introducidos en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en tipos de datos que se admiten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en versiones anteriores de.|  
+|**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en columnas **varbinary (Max)** . No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que tienen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] suscriptores, independientemente de cómo se establezca esta opción de esquema. Vea la opción relacionada **0x800000000**.|  
+|**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset**y **datetime2**) introducidos en en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipos de datos que se admiten en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |**0x800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar scripts antes y después de aplicar la instantánea](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Vea la opción relacionada **0x100000000**.|  
-|**0x1000000000**|Convierte los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) a **varbinary (Max)** para que las columnas de tipo UDT se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0x2000000000**|Convierte el tipo de datos **hierarchyid** a **varbinary (Max)** para que las columnas de tipo **hierarchyid** se puedan replicar en los suscriptores que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ejecutan. Para obtener más información sobre cómo usar las columnas **hierarchyid** en tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x1000000000**|Convierte los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) a **varbinary (Max)** para que las columnas de tipo UDT se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
+|**0x2000000000**|Convierte el tipo de datos **hierarchyid** a **varbinary (Max)** para que las columnas de tipo **hierarchyid** se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obtener más información sobre cómo usar las columnas **hierarchyid** en tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Replica los índices filtrados de la tabla. Para obtener más información acerca de los índices filtrados, vea [crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).|  
-|**0x8000000000**|Convierte los tipos de datos **Geography** y **Geometry** en **varbinary (Max)** para que las columnas de estos tipos se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|**0x8000000000**|Convierte los tipos de datos **Geography** y **Geometry** en **varbinary (Max)** para que las columnas de estos tipos se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 |**0x10000000000**|Replica los índices en columnas de tipo **Geography** y **Geometry**.|  
   
  Si este valor es NULL, el sistema genera automáticamente una opción de esquema válida para el artículo. La tabla predeterminada de la **opción de esquema** de la sección Comentarios muestra el valor que se elige en función del tipo de artículo. Además, no todos los valores *schema_option* son válidos para cada tipo de replicación y tipo de artículo. La tabla de **Opciones de esquema válidas** que se proporciona en la sección Notas muestra las opciones que se pueden especificar para un tipo de artículo determinado.  
@@ -191,7 +191,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 `[ @identity_range = ] identity_range`Controla el tamaño del intervalo de identidad asignado al publicador y al suscriptor cuando se utiliza la administración automática del intervalo de identidad. *identity_range* es de tipo **BIGINT**y su valor predeterminado es NULL. Debe especificar este parámetro si *identityrangemanagementoption* es **auto** o si *auto_identity_range* es **true**.  
   
 > [!NOTE]  
->  *identity_range* controla el tamaño del intervalo de identidad en los suscriptores de republicación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que utilizan versiones anteriores de.  
+>  *identity_range* controla el tamaño del intervalo de identidad en los suscriptores de republicación que utilizan versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @threshold = ] threshold`Valor de porcentaje que controla cuándo el Agente de mezcla asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de mezcla crea un nuevo intervalo de identidad. *Threshold* es de **tipo int**y su valor predeterminado es NULL. Debe especificar este parámetro si *identityrangemanagementoption* es **auto** o si *auto_identity_range* es **true**.  
   
@@ -201,7 +201,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  **1** especifica que se comprobará la firma para ver si procede de un origen de confianza.  
   
-`[ @destination_object = ] 'destination_object'`Es el nombre del objeto en la base de datos de suscripciones. *destination_object* es de **tipo sysname y su**valor predeterminado es lo que se encuentra en ** \@source_object**. Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor *@source_object* de invalida el valor de *destination_object*.  
+`[ @destination_object = ] 'destination_object'`Es el nombre del objeto en la base de datos de suscripciones. *destination_object* es de **tipo sysname y su**valor predeterminado es lo que se encuentra en ** \@ source_object**. Este parámetro se puede especificar únicamente si el artículo es de solo esquema, como procedimientos almacenados, vistas y UDF. Si el artículo especificado es un artículo de tabla, el valor de *@source_object* invalida el valor de *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`Habilita o deshabilita el uso del solucionador interactivo en un artículo. *allow_interactive_resolver* es de tipo **nvarchar (5)** y su valor predeterminado es false. **true** habilita el uso del solucionador interactivo en el artículo; **false** lo deshabilita.  
   
@@ -212,7 +212,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @check_permissions = ] check_permissions`Es un mapa de bits de los permisos de nivel de tabla que se comprueban cuando el Agente de mezcla aplica los cambios al publicador. Si la cuenta de inicio de sesión o usuario del publicador que utiliza el proceso de mezcla no dispone de los permisos de tabla correctos, los cambios no válidos se registran como conflictos. *check_permissions* es de **tipo int**y puede ser el valor de [| (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) producto de uno o varios de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0x00** (valor predeterminado)|Los permisos no se comprueban.|  
 |**0x10**|Comprueba los permisos en el publicador antes de cargar las operaciones de inserción creadas en un suscriptor.|  
@@ -240,7 +240,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** especifica que la detección de conflictos predeterminada se usa tal y como se especifica en *column_tracking*. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Dado que los [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores no admiten registros lógicos, debe especificar un valor de **false** para que *logical_record_level_conflict_detection* admita estos suscriptores.  
+>  Dado que los suscriptores no admiten registros lógicos [!INCLUDE[ssEW](../../includes/ssew-md.md)] , debe especificar un valor de **false** para que *logical_record_level_conflict_detection* admita estos suscriptores.  
   
 `[ @logical_record_level_conflict_resolution = ] 'logical_record_level_conflict_resolution'`Especifica el nivel de resolución de conflictos para un artículo que es miembro de un registro lógico. *logical_record_level_conflict_resolution* es de tipo **nvarchar (5)** y su valor predeterminado es false.  
   
@@ -249,11 +249,11 @@ sp_addmergearticle [ @publication = ] 'publication'
  **false** especifica que las filas ganadoras no se restringen al registro lógico. Si *logical_record_level_conflict_detection* es **true**, *logical_record_level_conflict_resolution* también se debe establecer en **true**. Para más información, vea [Agrupar cambios en filas relacionadas con registros lógicos](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 > [!NOTE]  
->  Dado que los [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores no admiten registros lógicos, debe especificar un valor de **false** para que *logical_record_level_conflict_resolution* admita estos suscriptores.  
+>  Dado que los suscriptores no admiten registros lógicos [!INCLUDE[ssEW](../../includes/ssew-md.md)] , debe especificar un valor de **false** para que *logical_record_level_conflict_resolution* admita estos suscriptores.  
   
 `[ @partition_options = ] partition_options`Define la manera en que se crean las particiones de los datos en el artículo, lo que permite optimizar el rendimiento cuando todas las filas pertenecen solo a una partición o a una sola suscripción. *partition_options* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|El filtrado para el artículo es estático o no produce un subconjunto único de datos para cada partición, es decir, una partición "superpuesta".|  
 |**1**|Las particiones se superponen y las actualizaciones del lenguaje de manipulación de datos (DML) realizadas en el suscriptor no pueden cambiar la partición a la que pertenece la fila.|  
@@ -267,7 +267,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @subscriber_upload_options = ] subscriber_upload_options`Define las restricciones en las actualizaciones realizadas en un suscriptor con una suscripción de cliente. Para más información, vea [Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md). *subscriber_upload_options* es **tinyint**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Sin restricciones. Los cambios realizados en el suscriptor se cargan en el publicador.|  
 |**1**|Se permiten cambios en el suscriptor, pero éstos no se cargan en el publicador.|  
@@ -280,11 +280,11 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @identityrangemanagementoption = ] identityrangemanagementoption`Especifica cómo se controla la administración del intervalo de identidad para el artículo. *identityrangemanagementoption* es de tipo **nvarchar (10)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Ninguna**|Deshabilita la administración de intervalos de identidad.|  
 |**Manual**|Marca la columna de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad.|  
-|**Automático**|Especifica la administración automática de intervalos de identidad.|  
+|**auto**|Especifica la administración automática de intervalos de identidad.|  
 |NULL (valor predeterminado)|Tiene como valor predeterminado **None**cuando el valor de *auto_identity_range* no es **true**.|  
   
  Por compatibilidad con versiones anteriores, cuando el valor de *identityrangemanagementoption* es null, se comprueba el valor de *auto_identity_range* . Sin embargo, cuando el valor de *identityrangemanagementoption* no es null, se omite el valor de *auto_identity_range* . Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).  
@@ -334,11 +334,11 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**func schema only**|**0x01**|  
 |**indexed view schema only**|**0x01**|  
 |**proc schema only**|**0x01**|  
-|**table**|**0x0C034FD1** -  0x0C034FD1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo nativo.<br /><br /> **0x08034FF1** -  0x08034FF1[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo de carácter.|  
+|**table**|**0x0C034FD1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo nativo.<br /><br /> **0x08034FF1**  -  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y publicaciones compatibles con versiones posteriores con una instantánea en modo de carácter.|  
 |**view schema only**|**0x01**|  
   
 > [!NOTE]  
->  Si la publicación admite versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción de esquema predeterminada para la **tabla** es **0x30034FF1**.  
+>  Si la publicación admite versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la opción de esquema predeterminada para la **tabla** es **0x30034FF1**.  
   
 ## <a name="valid-schema-option-table"></a>Tabla Opciones de esquema válidas  
  En la tabla siguiente se describen los valores permitidos *schema_option* en función del tipo de artículo.  

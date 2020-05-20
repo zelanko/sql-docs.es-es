@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriber
 ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a3b575b39055976262858fcf527d1b892790a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762780"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833412"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 ## <a name="arguments"></a>Argumentos  
 `[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor en el que se van a cambiar las opciones. *Subscriber* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @type = ] type`Es el tipo de suscriptor. el *tipo* es **tinyint**y su valor predeterminado es NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica un suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servidor de origen de datos ODBC distinto de u otro.  
+`[ @type = ] type`Es el tipo de suscriptor. el *tipo* es **tinyint**y su valor predeterminado es NULL. **0** indica un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor. **1** especifica un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptor del servidor de origen de datos ODBC distinto de u otro.  
   
 `[ @login = ] 'login'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identificador de inicio de sesión de autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
-`[ @password = ] 'password'`Es la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *password* es de **%** **tipo sysname y su**valor predeterminado es. **%** indica que no hay ningún cambio en la propiedad de contraseña.  
+`[ @password = ] 'password'`Es la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *password* es de **tipo sysname y su**valor predeterminado es **%** . **%** indica que no hay ningún cambio en la propiedad de contraseña.  
   
 `[ @commit_batch_size = ] commit_batch_size`Solo se admite por compatibilidad con versiones anteriores.  
   
@@ -72,12 +72,12 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa la tarea de distribución. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -87,24 +87,24 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha de la tarea de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Indica la frecuencia con la que debe repetirse la tarea de distribución durante el *frequency_type*definido. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequence_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -120,15 +120,15 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`Es el modo de seguridad implementado. *security_mode* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación|  
 |**1**|Autenticación de Windows|  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
+>  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

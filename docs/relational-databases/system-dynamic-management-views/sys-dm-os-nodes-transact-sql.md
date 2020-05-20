@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_nodes dynamic management view
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3069bbf376fbd1a94be6697e6bbb4ea2552c5c27
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265734"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833750"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "68265734"
 Un componente interno denominado SQLOS crea las estructuras de nodo que imitan el procesador de hardware. Estas estructuras se pueden cambiar mediante [el uso de Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md) para crear diseños de nodo personalizados.  
 
 > [!NOTE]
-> A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]de, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] el usará automáticamente Soft-Numa para ciertas configuraciones de hardware. Para obtener más información, consulte [Automatic Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] usará automáticamente Soft-Numa para ciertas configuraciones de hardware. Para obtener más información, consulte [Automatic Soft-Numa](../../database-engine/configure-windows/soft-numa-sql-server.md#automatic-soft-numa).
   
 En la tabla siguiente se proporciona información acerca de estos nodos.  
   
 > [!NOTE]
-> Para llamar a esta DMV [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] desde [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]o, use el nombre **Sys. dm_pdw_nodes_os_nodes**.  
+> Para llamar a esta DMV desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_nodes**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -59,11 +59,11 @@ En la tabla siguiente se proporciona información acerca de estos nodos.
 |online_scheduler_mask|**bigint**|Identifica la máscara de afinidad de proceso para este nodo.|  
 |processor_group|**smallint**|Identifica el grupo de procesadores para este nodo.|  
 |cpu_count |**int** |Número de CPU disponibles para este nodo. |
-|pdw_node_id|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|pdw_node_id|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte también    

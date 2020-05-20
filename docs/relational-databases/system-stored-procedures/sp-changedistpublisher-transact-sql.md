@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedistpublisher
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb90ec6a3d5413d22f4721491d3b151a7e28ac05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771363"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833441"
 ---
 # <a name="sp_changedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**distribution_db**||Nombre de la base de datos de distribución.|  
 |**Inicio**||Nombre de inicio de sesión.|  
 |**password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  
-|**security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
-||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*|  
+|**security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. *No se puede cambiar para un no* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
+||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador. *No se puede cambiar para un no* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*|  
 |**working_directory**||Directorio de trabajo utilizado para almacenar archivos de datos y esquemas para la publicación.|  
 |NULL (predeterminado)||Se imprimen todas las opciones de *propiedad* disponibles.| 
 |**storage_connection_string**| Clave de acceso | La clave de acceso para el directorio de trabajo cuando se Instancia administrada de Azure SQL Database la base de datos. 

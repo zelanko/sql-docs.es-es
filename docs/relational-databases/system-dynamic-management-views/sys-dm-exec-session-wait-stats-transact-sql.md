@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - sys.dm_exec_session_wait_stats
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6fc51bec78cf01522e6731648bdb7870ea7d9fb0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4d668fbabc20ef6e7acf8b38064378f74a3b15c6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982608"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833782"
 ---
 # <a name="sysdm_exec_session_wait_stats-transact-sql"></a>Sys. dm_exec_session_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "73982608"
  Para obtener información sobre los tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  
- Si el usuario tiene el permiso **View Server State** en el servidor, el usuario verá todas las sesiones en ejecución en la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de; de lo contrario, el usuario solo verá la sesión actual.  
+ Si el usuario tiene el permiso **View Server State** en el servidor, el usuario verá todas las sesiones en ejecución en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de lo contrario, el usuario solo verá la sesión actual.  
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

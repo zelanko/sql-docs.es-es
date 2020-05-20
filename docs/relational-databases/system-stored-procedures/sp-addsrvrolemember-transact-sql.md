@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_addsrvrolemember
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab49a6572bfe8b2879b832642eeb1cf692177bb6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022417"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833654"
 ---
 # <a name="sp_addsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
   
 ## <a name="arguments"></a>Argumentos  
  [ @loginame **=** ] **'**_Inicio de sesión_**'**  
- Es el nombre del inicio de sesión que se va a agregar al rol fijo de servidor. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio* de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ser un inicio de sesión de o un inicio de sesión de Windows. Si el inicio de sesión de Windows no tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todavía, se le concede el acceso automáticamente.  
+ Es el nombre del inicio de sesión que se va a agregar al rol fijo de servidor. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un inicio de sesión de Windows. Si el inicio de sesión de Windows no tiene acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todavía, se le concede el acceso automáticamente.  
   
  [ @rolename **=** ] **'**_role_**'**  
  Es el nombre del rol fijo de servidor al que se va a agregar el inicio de sesión. *role* es de **tipo sysname, su**valor predeterminado es NULL y debe ser uno de los siguientes valores:  
@@ -81,7 +81,7 @@ sp_addsrvrolemember [ @loginame= ] 'login'
  Debe pertenecer al rol al que se agrega el nuevo miembro.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se agrega el `Corporate\HelenS` inicio de `sysadmin` sesión de Windows al rol fijo de servidor.  
+ En el ejemplo siguiente se agrega el inicio de sesión de Windows `Corporate\HelenS` al `sysadmin` rol fijo de servidor.  
   
 ```  
 EXEC sp_addsrvrolemember 'Corporate\HelenS', 'sysadmin';  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sp_fulltext_keymappings
 - full-text indexes [SQL Server], troubleshooting
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc68be51382b72dee1b143a3535d631ae93dbb7c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124244"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82833283"
 ---
 # <a name="sp_fulltext_keymappings-transact-sql"></a>sp_fulltext_keymappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -89,10 +89,10 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="examples"></a>Ejemplos  
   
 > [!NOTE]  
->  En los ejemplos de esta sección se usa la tabla `Production.ProductReview` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Puede crear este índice ejecutando el ejemplo proporcionado para la `ProductReview` tabla en [create fulltext index &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
+>  En los ejemplos de esta sección se usa la tabla `Production.ProductReview` de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Puede crear este índice ejecutando el ejemplo proporcionado para la `ProductReview` tabla en [CREATE FULLTEXT index &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md).  
   
 ### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. Obtener todos los valores Key y DocId  
- En el ejemplo siguiente se usa una instrucción [declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) para crear una `@table_id` variable local y para asignar el identificador `ProductReview` de la tabla como su valor. En el ejemplo se ejecuta **sp_fulltext_keymappings** especificando para el parámetro *table_id.* `@table_id`  
+ En el ejemplo siguiente se usa una instrucción [declare](../../t-sql/language-elements/declare-local-variable-transact-sql.md) para crear una variable local `@table_id` y para asignar el identificador de la `ProductReview` tabla como su valor. En el ejemplo se ejecuta **sp_fulltext_keymappings** especificando `@table_id` para el parámetro *table_id* .  
   
 > [!NOTE]  
 >  El uso de **sp_fulltext_keymappings** solo con el parámetro *table_id* es adecuado para tablas pequeñas.  
@@ -117,7 +117,7 @@ GO
 |`4`|`4`|`4`|  
   
 ### <a name="b-obtaining-the-docid-value-for-a-specific-key-value"></a>B. Obtener el valor DocId para un valor Key específico  
- En el ejemplo siguiente se usa una instrucción DECLARE para crear una variable local, `@table_id`, y asignar el identificador de la tabla `ProductReview` como su valor. En el ejemplo se ejecuta **sp_fulltext_keymappings** `@table_id` especificando para el parámetro *table_id* , null para el parámetro *DocID* y 4 para el parámetro *key* .  
+ En el ejemplo siguiente se usa una instrucción DECLARE para crear una variable local, `@table_id`, y asignar el identificador de la tabla `ProductReview` como su valor. En el ejemplo se ejecuta **sp_fulltext_keymappings** especificando `@table_id` para el parámetro *table_id* , null para el parámetro *DocID* y 4 para el parámetro *key* .  
   
 > [!NOTE]  
 >  El uso de **sp_fulltext_keymappings** solo con el parámetro *table_id* es adecuado para tablas pequeñas.  

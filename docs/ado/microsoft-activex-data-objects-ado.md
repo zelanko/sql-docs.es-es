@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18b9a6590ce777402456c8e9f8c8f28807ec5670
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921877"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606617"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
-ADO se utiliza en programas de C++ para conectarse a SQL Server. Por supuesto, también funciona para conectarse a Azure SQL Database en la nube.
+Objetos de datos ActiveX es un modelo de programación, lo que significa que no depende de ningún motor de back-end determinado. En la actualidad, sin embargo, el único motor que admite el modelo ADO es OLE DB. Hay muchos proveedores OLE DB nativos, así como un proveedor OLE DB para ODBC. ADO se utiliza en C++ y Visual Basic programas para conectarse a SQL Server y otras bases de datos. Por supuesto, también funciona para conectarse a Azure SQL Database en la nube.
 
 En cada sección de este artículo se describe un componente de ADO.
 

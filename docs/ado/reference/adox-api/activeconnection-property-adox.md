@@ -19,14 +19,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActiveConnection property [ADOX]
 ms.assetid: 25fff69b-7556-4a28-b6f5-600a4bb0f607
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4ddd18225f8497294f1f44fa134a2d02040c8ada
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0318fbdafea09e3728699f448c1483ac53e5e80a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764206"
 ---
 # <a name="activeconnection-property-adox"></a>ActiveConnection (propiedad, ADOX)
 Indica el objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) ADO al que pertenece el [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) .  
@@ -34,7 +34,7 @@ Indica el objeto de [conexión](../../../ado/reference/ado-api/connection-object
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece un objeto de **conexión** o una **cadena** que contiene la definición de una conexión. Devuelve el objeto de **conexión** activo.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor predeterminado es una referencia de objeto null.  
   
 ## <a name="applies-to"></a>Se aplica a  

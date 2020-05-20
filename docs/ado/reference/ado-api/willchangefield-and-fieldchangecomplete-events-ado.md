@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WillChangeField event [ADO]
 - fieldchangecomplete event [ADO]
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4a4fb74e95bf0e1ba9dc9d0001b3d653f9294c1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945883"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764496"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>Eventos WillChangeField y FieldChangeComplete (ADO)
 Se llama al evento **WillChangeField** antes de que una operación pendiente cambie el valor de uno o más objetos de [campo](../../../ado/reference/ado-api/field-object.md) en el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md). Se llama al evento **FieldChangeComplete** una vez cambiado el valor de uno o más objetos **Field** .  
@@ -41,7 +41,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *cFields*  
  Un **valor de tipo Long** que indica el número de objetos de **campo** en *los campos*.  
   
- *Campos*  
+ *Fields*  
  En el caso de **WillChangeField**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores originales. En **FieldChangeComplete**, el parámetro *Fields* es una matriz de **variantes** que contiene objetos de **campo** con los valores modificados.  
   
  *pError*  
@@ -61,7 +61,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede producirse un evento **WillChangeField** o **FieldChangeComplete** al establecer la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) y llamar al método [Update](../../../ado/reference/ado-api/update-method.md) con parámetros de matriz de valores y campos.  
   
 ## <a name="see-also"></a>Consulte también  

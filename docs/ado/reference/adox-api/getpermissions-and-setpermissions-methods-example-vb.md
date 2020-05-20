@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], Visual Basic example
 - GetPermissions method [ADOX], Visual Basic example
 ms.assetid: aa366d98-8c7a-4189-bdd8-1d663b243d33
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 11250cf591f576052434c641d8c65ba681000666
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f87e7f9b32c123cae2918f89b92ac2928bb65c65
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966243"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764899"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vb"></a>Ejemplo de métodos GetPermissions y SetPermissions (VB)
 En este ejemplo se muestran los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . El código siguiente proporciona acceso completo para la tabla Orders al usuario administrador.  

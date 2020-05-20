@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Caption property [ADO MD]
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 63c43cb220bc58f83da13fde7af83893a8316c4b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 79b8108f832e70aca4620c35c95e34952b4a0268
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930485"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765166"
 ---
 # <a name="caption-property-ado-md"></a>Propiedad Caption (ADO MD)
 Indica el título de texto que se va a usar al mostrar un [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) o un objeto de [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md) .  

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Dimensions collection [ADO MD], members
 ms.assetid: 0025687e-e20d-4c36-8242-b9ab56e50706
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd8efea8b3e1aad41430b6dc7170331ab65bf127
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 40d3a6e5bb88e8b38441a8ff4869ac17b74e8bb1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938472"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764256"
 ---
 # <a name="dimensions-collection-properties-methods-and-events"></a>Propiedades de la colección de dimensiones, métodos y eventos
 ## <a name="properties"></a>Propiedades  
@@ -28,7 +28,7 @@ ms.locfileid: "67938472"
 ## <a name="methods"></a>Métodos  
  [Refresh (método)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

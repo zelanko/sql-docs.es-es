@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - connection pooling in RDS [ADO]
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2ffcc64cb9d0e45d371e927cd1c15be51cd917c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0e94670162c1d9c120786bfc08ed8d5f8cf59972
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921936"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764606"
 ---
 # <a name="using-rds-with-odbc-connection-pooling"></a>Uso de RDS con la agrupación de conexiones de ODBC
 Si utiliza un origen de datos ODBC, puede usar la opción de agrupación de conexiones en Internet Information Services (IIS) para lograr un alto rendimiento en el control de la carga de cliente. La agrupación de conexiones es un administrador de recursos para las conexiones, manteniendo el estado abierto en las conexiones usadas con frecuencia.  

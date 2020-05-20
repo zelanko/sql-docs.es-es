@@ -23,14 +23,14 @@ helpviewer_keywords:
 - MoveFirst method [ADO]
 - MovePrevious method [ADO]
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 4acdf777429e879ed22b99ea5a0f07775bc3798c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918109"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764506"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>Métodos MoveFirst, MoveLast, MoveNext y MovePrevious (ADO)
 Se desplaza al registro primero, último, siguiente o anterior de un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) especificado y hace que registre el registro actual.  
@@ -42,7 +42,7 @@ Se desplaza al registro primero, último, siguiente o anterior de un objeto de [
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use el método **MoveFirst** para mover la posición del registro actual al primer registro del **conjunto de registros**.  
   
  Utilice el método **MoveLast** para mover la posición del registro actual al último registro del **conjunto de registros**. El objeto de **conjunto de registros** debe admitir marcadores o movimiento de cursor hacia atrás; de lo contrario, la llamada al método generará un error.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - EditMode property
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1cbe93a06eb6521b2210edc08cdca421cd5de982
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918983"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765576"
 ---
 # <a name="editmode-property"></a>Propiedad EditMode
 Indica el estado de edición del registro actual.  
@@ -28,10 +28,10 @@ Indica el estado de edición del registro actual.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor de [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  ADO mantiene un búfer de edición asociado al registro actual. Esta propiedad indica si se han realizado cambios en este búfer o si se ha creado un nuevo registro. Utilice la propiedad **EditMode** para determinar el estado de edición del registro actual. Puede comprobar los cambios pendientes si se ha interrumpido un proceso de edición y determinar si necesita usar el método [Update](../../../ado/reference/ado-api/update-method.md) o [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) .  
   
- En el *modo de actualización inmediata* , la propiedad **EditMode** se restablece a **adEditNone** después de que se llame a la llamada correcta al método **Update** . Cuando una llamada a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) no elimina correctamente el registro o los registros del origen de datos (por ejemplo, debido a infracciones de la integridad referencial), el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) permanece en modo de edición (**EditMode** = **adEditInProgress**). Por consiguiente, se debe llamar a **CancelUpdate** antes de salir del registro actual (por ejemplo, con [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
+ En el *modo de actualización inmediata* , la propiedad **EditMode** se restablece a **adEditNone** después de que se llame a la llamada correcta al método **Update** . Cuando una llamada a [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) no elimina correctamente el registro o los registros del origen de datos (por ejemplo, debido a infracciones de la integridad referencial), el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) permanece en modo de edición (**EditMode**  =  **adEditInProgress**). Por consiguiente, se debe llamar a **CancelUpdate** antes de salir del registro actual (por ejemplo, con [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)o [Close](../../../ado/reference/ado-api/close-method-ado.md) ).  
   
  En el *modo de actualización por lotes* (en el que el proveedor almacena en caché varios cambios y los escribe en el origen de datos subyacente solo cuando se llama al método [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) ), el valor de la propiedad **EditMode** se cambia cuando se realiza la primera operación y no se restablece mediante una llamada al método **Update** . Las operaciones posteriores no cambian el valor de la propiedad **EditMode** , aunque se realicen diferentes operaciones. Por ejemplo, si la primera operación es agregar un nuevo registro y la segunda realiza cambios en un registro existente, la propiedad de **EditMode** seguirá siendo **adEditAdd**. La propiedad **EditMode** no se restablece en **adEditNone** hasta después de la llamada a **UpdateBatch**. Para determinar qué operaciones se han realizado, establezca la propiedad [Filter](../../../ado/reference/ado-api/filter-property.md) en [adFilterPending](../../../ado/reference/ado-api/filtergroupenum.md) para que solo los registros con cambios pendientes sean visibles y examine la propiedad [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) de cada registro para determinar qué cambios se han realizado en los datos.  
   

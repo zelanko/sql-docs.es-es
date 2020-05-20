@@ -13,14 +13,14 @@ helpviewer_keywords:
 - APPEND clause [ADO]
 - COMPUTE command [ADO]
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f66bde29a5036ed671f9af17bf5aab1df4acbca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924722"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764786"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de proceso de comandos con parámetros con intermedias
 Un comando APPEND de forma parametrizada típico tiene una cláusula que crea un **conjunto de registros** primario con un comando de consulta y otra cláusula que crea un **conjunto de registros** secundario con un comando de consulta con parámetros, es decir, un comando que contiene un marcador de posición de parámetro (un signo de interrogación "?"). El conjunto de **registros** con forma resultante tiene dos niveles, en los que el elemento primario ocupa el nivel superior y el secundario ocupa el nivel inferior.  

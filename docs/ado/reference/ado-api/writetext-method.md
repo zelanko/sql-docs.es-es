@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WriteText method [ADO]
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3ee7f4b99b40b6aec3e384f9f5739f8f5d2280f4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947495"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764416"
 ---
 # <a name="writetext-method"></a>Método WriteText
 Escribe una cadena de texto especificada en un objeto de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) .  
@@ -40,7 +40,7 @@ Stream.WriteText Data, Options
  *Opciones*  
  Opcional. Valor [StreamWriteEnum](../../../ado/reference/ado-api/streamwriteenum.md) que especifica si se debe escribir un carácter separador de línea al final de la cadena especificada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las cadenas especificadas se escriben en el objeto de **secuencia** sin espacios ni caracteres intermedios entre cada cadena.  
   
  La [posición](../../../ado/reference/ado-api/position-property-ado.md) actual se establece en el carácter que sigue a los datos escritos. El método **WRITETEXT** no trunca el resto de los datos de una secuencia. Si desea truncar estos caracteres, llame a [seteos](../../../ado/reference/ado-api/seteos-method.md).  

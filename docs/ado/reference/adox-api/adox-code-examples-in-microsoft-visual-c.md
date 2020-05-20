@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADOX code examples, Visual C++
 ms.assetid: b63ec31e-488c-4677-ab58-01371015e692
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d8ee6ac768cc7cb0225f78602754c64e0363786f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ab7c47857ac8a25b50567660ca8fbcc0ed51994c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67952126"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764176"
 ---
 # <a name="adox-code-examples-in-microsoft-visual-c"></a>Ejemplos de código ADOX en Microsoft Visual C++
 En estos temas se proporciona código de ejemplo para ayudarle a entender cómo usar ADOX. Todos los ejemplos de código se escriben mediante Microsoft Visual C++.  

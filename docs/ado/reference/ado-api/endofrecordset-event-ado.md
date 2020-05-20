@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - EndOfRecordset event [ADO]
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd7710ebc7a5af323c247860baedd4b30d91fe21
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918938"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765556"
 ---
 # <a name="endofrecordset-event-ado"></a>Evento EndOfRecordset (ADO)
 Se llama al evento **EndOfRecordset** cuando se intenta moverse a una fila más allá del final del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,7 +47,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un evento **EndOfRecordset** puede producirse si se produce un error en la operación [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) .  
   
  Se llama a este controlador de eventos cuando se realiza un intento de moverse más allá del final del objeto de **conjunto de registros** , quizás como resultado de llamar a **MoveNext**. Sin embargo, mientras que en este evento, podría recuperar más registros de una base de datos y anexarlos al final del **conjunto de registros**. En ese caso, establezca *fMoreData* en VARIANT_TRUE y vuelva de **EndOfRecordset**. A continuación, llame de nuevo a **MoveNext** para acceder a los registros recién recuperados.  

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e413913d3064b4302d4673098b82d220acc23aa1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920893"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764566"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -55,7 +55,7 @@ ms.locfileid: "67920893"
 |[OCASIONA](../../../ado/reference/ado-api/eos-property.md)|Indica si la posición actual está al final de la secuencia.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Indica un filtro para los datos de un **conjunto de registros**.|  
 |[HelpContext y HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Indica el archivo de ayuda y el tema asociados a un objeto de **error** .<br /><br /> **HelpContextID** devuelve un identificador de contexto, como un valor **largo** , para un tema de un archivo de ayuda.<br /><br /> **HelpFile** devuelve un valor de **cadena** que se evalúa como una ruta de acceso totalmente resuelta de un archivo de ayuda.|  
-|[Ajustar](../../../ado/reference/ado-api/index-property.md)|Indica el nombre del índice actualmente activo para un objeto de **conjunto de registros** .|  
+|[Índice](../../../ado/reference/ado-api/index-property.md)|Indica el nombre del índice actualmente activo para un objeto de **conjunto de registros** .|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Indica el nivel de aislamiento para un objeto de **conexión** .|  
 |[Elemento](../../../ado/reference/ado-api/item-property-ado.md)|Indica un miembro específico de una colección, por nombre o número ordinal.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Indica el carácter binario que se va a utilizar como separador de línea en los objetos de **flujo** de texto.|  
@@ -65,14 +65,14 @@ ms.locfileid: "67920893"
 |[Modo](../../../ado/reference/ado-api/mode-property-ado.md)|Indica los permisos disponibles para modificar los datos de un objeto de **conexión**, **registro**o **secuencia** .|  
 |[Nombre](../../../ado/reference/ado-api/name-property-ado.md)|Indica el nombre de un objeto.|  
 |[NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md)|Indica el código de error específico del proveedor para un objeto de **error** determinado.|  
-|[número](../../../ado/reference/ado-api/number-property-ado.md)|Indica el número que identifica de forma única un objeto de **error** .|  
+|[Number](../../../ado/reference/ado-api/number-property-ado.md)|Indica el número que identifica de forma única un objeto de **error** .|  
 |[NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md)|Indica la escala de valores numéricos en un **parámetro** o un objeto de **campo** .|  
 |[OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md)|Indica el valor de un **campo** que existía en el registro antes de que se realizaran cambios.|  
 |[NúmeroDePáginas](../../../ado/reference/ado-api/pagecount-property-ado.md)|Indica el número de páginas de datos que contiene el objeto de **conjunto de registros** .|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|Indica el número de registros que representan una página en el **conjunto de registros**.|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Establece el contenedor de un objeto de **fila** OLE DB en un objeto **ADORecordConstruction** , de modo que el elemento primario de la fila se convierta en un objeto **Record** de ADO.|  
 |[ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md)|Indica una cadena de dirección URL absoluta que apunta al **registro** primario del objeto de **registro** actual.|  
-|[Localización](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
+|[Posición](../../../ado/reference/ado-api/position-property-ado.md)|Indica la posición actual dentro de un objeto de **flujo** .|  
 |[Precisión](../../../ado/reference/ado-api/precision-property-ado.md)|Indica el grado de precisión de los valores numéricos de un objeto de **parámetro** o de los objetos de **campo** numérico.|  
 |[Prepared](../../../ado/reference/ado-api/prepared-property-ado.md)|Indica si se debe guardar una versión compilada de un comando antes de la ejecución.|  
 |[Proveedor](../../../ado/reference/ado-api/provider-property-ado.md)|Indica el nombre del proveedor de un objeto de **conexión** .|  
@@ -90,7 +90,7 @@ ms.locfileid: "67920893"
 |[Status (conjunto de registros ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Indica el estado del registro actual en relación con las actualizaciones por lotes u otras operaciones masivas.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Indica, en un objeto de **conjunto de registros** jerárquico, si la referencia a los registros secundarios subyacentes (es decir, el *capítulo*) cambia cuando cambia la posición de la fila primaria.|  
 |[Propiedad de la secuencia](../../../ado/reference/ado-api/stream-property.md)|Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .|  
-|[Type](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo**o objeto de **propiedad** .|  
+|[Tipo](../../../ado/reference/ado-api/type-property-ado.md)|Indica el tipo operativo o el tipo de datos de un **parámetro**, **campo**o objeto de **propiedad** .|  
 |[Type (secuencia de ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Indica el tipo de datos contenidos en la **secuencia** (binario o de texto).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Indica el valor actual de la base de datos para un objeto de **campo** .|  
 |[Valor](../../../ado/reference/ado-api/value-property-ado.md)|Indica el valor asignado a un **campo**, un **parámetro**o un objeto de **propiedad** .|  

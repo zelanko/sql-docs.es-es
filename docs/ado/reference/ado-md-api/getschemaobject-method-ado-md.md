@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - GetSchemaObject method [ADO MD]
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a8853e967a75a67aadccc7e48d684ab92819a71d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67949762"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764216"
 ---
 # <a name="getschemaobject-method-ado-md"></a>Método GetSchemaObject (ADO MD)
 Recupera un objeto de esquema ADO MD ([dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md)o [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md)) por su [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  
@@ -40,7 +40,7 @@ Set object = CubeDef.GetSchemaObject (ObjType, UniqueName)
  *UniqueName*  
  **Cadena** que especifica el valor de la propiedad **UniqueName** del objeto que se va a recuperar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **GetSchemaObject** recupera objetos usando sus nombres únicos, tal como se especifica en la propiedad **UniqueName** . No es necesario conocer los nombres de los objetos primarios y no es necesario rellenar las colecciones primarias para recuperar un objeto de esquema.  
   
 ## <a name="applies-to"></a>Se aplica a  

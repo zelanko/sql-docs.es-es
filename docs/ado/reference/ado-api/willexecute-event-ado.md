@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - WillExecute event [ADO]
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef47b4bac626d82754ce01685504b4a48303a4b4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936613"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764456"
 ---
 # <a name="willexecute-event-ado"></a>Evento WillExecute (ADO)
 Se llama al evento **WillExecute** justo antes de que se ejecute un comando pendiente en una conexión.  
@@ -58,7 +58,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *pConnection*  
  Objeto de [conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) al que se aplica esta notificación de eventos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un evento **WillExecute** puede producirse debido a una conexión.  Método [Execute (conexión ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md), método [Execute (comando ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)o método [Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) el parámetro *pConnection* siempre debe contener una referencia válida a un objeto **Connection** . Si el evento se debe a **Connection. Execute**, los parámetros *pRecordset* y *pCommand* se establecen en **Nothing**. Si el evento se debe a **Recordset. Open**, el parámetro *pRecordset* hará referencia al objeto de **conjunto de registros** y el parámetro *pCommand* se establecerá en **Nothing**. Si el evento se debe a **Command. Execute**, el parámetro *pCommand* hará referencia al objeto **Command** y el parámetro *pRecordset* se establecerá en **Nothing**.  
   
  **WillExecute** permite examinar y modificar los parámetros de ejecución pendientes. Este evento puede devolver una solicitud de cancelación del comando pendiente.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Delete method [ADO], VBScript example
 ms.assetid: 78935d6d-1c1a-4306-a83a-1763210c69f9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9464af64c9b55d49aa23336d48a21480c4c54013
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8f88d533d22987b5aa2669ee421da951f74224eb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919116"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765586"
 ---
 # <a name="delete-method-example-vbscript"></a>Ejemplo del método Delete (VBScript)
 En este ejemplo se usa el método [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) para quitar un registro especificado de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  

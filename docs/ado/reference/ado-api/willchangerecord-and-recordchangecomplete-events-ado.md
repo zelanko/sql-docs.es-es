@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WillChangeRecord event [ADO]
 - recordchangecomplete event [ADO]
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c34aa614b7e152f21479e09a16fd2ed9d22febfc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938673"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764486"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord y RecordChangeComplete (ADO)
 Se llama al evento **WillChangeRecord** antes de que cambien uno o más registros (filas) del [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) . Se llama al evento **RecordChangeComplete** después de que uno o varios registros cambien.  
@@ -60,7 +60,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  Objeto de **conjunto de registros** . **Conjunto de registros** para el que se produjo este evento.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Es posible que se produzca un evento **WillChangeRecord** o **RecordChangeComplete** para el primer campo modificado de una fila debido a las siguientes operaciones de **conjunto de registros** : [Update](../../../ado/reference/ado-api/update-method.md), [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)y [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). El valor de [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) del **conjunto de registros** determina qué operaciones hacen que se produzcan los eventos.  
   
  Durante el evento **WillChangeRecord** , la propiedad del [filtro](../../../ado/reference/ado-api/filter-property.md) del **conjunto de registros** se establece en **adFilterAffectedRecords**. No se puede cambiar esta propiedad mientras se procesa el evento.  

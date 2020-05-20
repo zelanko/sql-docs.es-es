@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ADO MD code examples, VBScript
 ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ad4aac57c2876c8f924044f0f27da79ebdb1d72c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67947414"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765321"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>Ejemplos de código ADO MD en Visual Basic Scripting Edition
 En los siguientes ejemplos se requiere Microsoft Active Server páginas (ASP) para Microsoft Internet Information Server 4,0.  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SchemaEnum enumeration [ADO]
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb004c33ae413c93506bc1c90b331494b7e56adc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931117"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765436"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de **conjunto de registros** de esquema que recupera el método [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede encontrar información adicional sobre la función y las columnas devueltas para cada constante de ADO en los temas del [Apéndice B: conjuntos de filas de esquema](https://msdn.microsoft.com/2b5fbf03-e50d-44ee-bc57-5a57666c55f1) de la referencia del programador de OLE DB. El nombre de cada tema se muestra entre paréntesis en la sección Descripción de la tabla siguiente.  
   
  Puede encontrar información adicional sobre la función y las columnas devueltas para cada ADO MD constante en los temas de [OLE DB para los objetos OLAP y los conjuntos de filas de esquema](https://msdn.microsoft.com/d20bb2a6-68bd-423f-9ec8-eb930cd0c144) en la OLE DB para la documentación de procesamiento analítico en línea (OLAP). El nombre de cada tema se muestra entre paréntesis en la columna Descripción de la tabla siguiente.  
@@ -34,7 +34,7 @@ Especifica el tipo de **conjunto de registros** de esquema que recupera el méto
   
  ADO genera resultados similares a los esquemas para las constantes, **adSchemaDBInfoKeywords** y **adSchemaDBInfoLiterals**. ADO crea un **conjunto de registros**y, a continuación, rellena cada fila con los valores devueltos por los métodos **IDBInfo:: GetKeywords** y **IDBInfo:: GetLiteralInfo** . Puede encontrar información adicional sobre estos métodos en la sección [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) de la referencia del programador de OLE DB.  
   
-|Constante|Value|Descripción|Columnas de restricción|  
+|Constante|Valor|Descripción|Columnas de restricción|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|Devuelve las aserciones definidas en el catálogo que son propiedad de un usuario determinado.<br /><br /> (Conjunto de filas ASERCIONES)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Devuelve los atributos físicos asociados a los catálogos accesibles desde DBMS.<br /><br /> (Conjunto de filas CATALOGs)|CATALOG_NAME|  

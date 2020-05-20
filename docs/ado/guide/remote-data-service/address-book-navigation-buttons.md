@@ -11,14 +11,14 @@ helpviewer_keywords:
 - RDS scenarios [ADO], navigation buttons
 - address book application scenario [ADO], navigation buttons
 ms.assetid: f0dd84c6-5c33-4ab9-82b4-4c42dfdd2277
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 158b9084ebe9aac28a2ec05c18938338c1bc90ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fcb9ef043f27cd36c57b35605c8bf8257613af5d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922968"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764716"
 ---
 # <a name="address-book-navigation-buttons"></a>Botones de navegación de la libreta de direcciones
 La aplicación de libreta de direcciones muestra los botones de navegación en la parte inferior de la Página Web. Puede usar los botones de navegación para desplazarse por los datos de la pantalla de la cuadrícula HTML seleccionando la primera o la última fila de datos o las filas adyacentes a la selección actual.  

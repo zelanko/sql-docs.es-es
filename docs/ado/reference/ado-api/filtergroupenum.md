@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FilterGroupEnum enumeration [ADO]
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97add08a1d656e8c163600bb0ea8dda7fca264b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b7b6a8d449d27539100f467da1eea19ec42e0a72
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932647"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764516"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 Especifica el grupo de registros que se van a filtrar de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|Filtros para ver solo los registros afectados por la llamada de última [eliminación](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [resincronización](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)o [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) .|  
 |**adFilterConflictingRecords**|5|Filtros para ver los registros que dieron error en la última actualización por lotes.|  

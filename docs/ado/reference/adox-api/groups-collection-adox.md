@@ -15,26 +15,26 @@ f1_keywords:
 helpviewer_keywords:
 - Groups collection [ADOX]
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e39be3cf32f04a60e554928f66cdc6123322f19c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e2b6e7b7669e0976cf47e5b4d5d2c827a824f919
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67966183"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764856"
 ---
 # <a name="groups-collection-adox"></a>Colección de grupos (ADOX)
 Contiene todos los objetos de [Grupo](../../../ado/reference/adox-api/group-object-adox.md) almacenados de un catálogo o usuario.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La colección de **grupos** de un [Catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las cuentas de grupo del catálogo. La colección de **grupos** para un [usuario](../../../ado/reference/adox-api/user-object-adox.md) representa solo el grupo al que pertenece el usuario.  
   
- El método [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) de una colección **Groups** es único para ADOX. Puede realizar lo siguiente:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-groups.md) de una colección **Groups** es único para ADOX. Puede:  
   
 -   Agregue un nuevo grupo de seguridad a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a un grupo de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ADO, glossary
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0b6bd1cb1f5b0461236c0604bb5818d9dcbadd2a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925600"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765306"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se definen los términos relevantes para ADO.  
@@ -100,7 +100,7 @@ En este tema se definen los términos relevantes para ADO.
  operador de comparación  
  Operador que compara dos expresiones y devuelve un valor booleano.  
   
- Un parámetro de criterios que se puede expresar como ">" (mayor que),\<"" (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
+ Un parámetro de criterios que se puede expresar como ">" (mayor que), " \< " (menor que), "=" (igual), ">=" (mayor o igual que), "<=" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia de patrones).  
   
  component  
  Objeto que encapsula los datos y el código, y proporciona un conjunto bien especificado de servicios disponibles públicamente.  

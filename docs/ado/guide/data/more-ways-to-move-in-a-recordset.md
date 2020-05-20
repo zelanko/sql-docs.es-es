@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3d68fb018e3b72e193127f8f49160813c06a1332
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924888"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764816"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Otras formas de mover en un conjunto de registros
 Los cuatro métodos siguientes se usan para moverse o desplazarse por el **conjunto de registros**: [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Algunos de estos métodos no están disponibles en los cursores de solo avance).  
@@ -46,7 +46,7 @@ If oRs.BOF Then oRs.MoveFirst
 . . .  
 ```  
   
- En los casos en que el **conjunto de registros** se ha filtrado u ordenado y se han modificado los datos del registro actual, también puede cambiar la posición. En tales casos, el método **MoveNext** funciona con normalidad, pero tenga en cuenta que la posición se mueve un registro hacia delante desde la nueva posición, no la posición anterior. Por ejemplo, si se cambian los datos en el registro actual, de modo que el registro se mueve al final del **conjunto de registros**ordenado, significaría que, al llamar a **MoveNext** , se obtiene el valor de ADO al establecer el registro actual en la posición posterior al último registro del **conjunto de registros** (**EOF** = **true**).  
+ En los casos en que el **conjunto de registros** se ha filtrado u ordenado y se han modificado los datos del registro actual, también puede cambiar la posición. En tales casos, el método **MoveNext** funciona con normalidad, pero tenga en cuenta que la posición se mueve un registro hacia delante desde la nueva posición, no la posición anterior. Por ejemplo, si se cambian los datos en el registro actual, de modo que el registro se mueve al final del **conjunto de registros**ordenado, significaría que, al llamar a **MoveNext** , se obtiene el valor de ADO al establecer el registro actual en la posición posterior al último registro del **conjunto de registros** (**EOF**  =  **true**).  
   
  El comportamiento de los distintos métodos de movimiento del objeto de **conjunto de registros** depende, en cierta medida, de los datos del **conjunto de registros**. Los nuevos registros agregados al **conjunto de registros** se agregan inicialmente en un orden determinado, definido por el origen de datos y pueden ser dependientes implícita o explícitamente en los datos del nuevo registro. Por ejemplo, si se realiza una ordenación o una combinación dentro de la consulta que rellena el **conjunto de registros**, el nuevo registro se insertará en el lugar adecuado del conjunto de **registros**. Si no se especifica explícitamente el orden al crear el **conjunto de registros**, los cambios en la implementación del origen de datos pueden hacer que el orden de las filas devueltas cambie sin darse cuenta. Además, las funciones de ordenación, filtrado y edición del conjunto de **registros** pueden afectar al orden y, posiblemente, las filas del conjunto de registros que serán visibles.  
   

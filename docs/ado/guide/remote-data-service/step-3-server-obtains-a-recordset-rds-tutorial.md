@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RDS tutorial [ADO], server obtains Recordset
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1bd510ae09bf4c4d3cdc684925823381e40235c4
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67922080"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764676"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Paso 3: Obtención de un conjunto de registros por parte del servidor (Tutorial de RDS)
 El programa de servidor utiliza la cadena de conexión y el texto del comando para consultar el origen de datos para las filas deseadas. ADO suele usarse para recuperar este **conjunto de registros**, aunque podrían usarse otras interfaces de acceso a datos de Microsoft, como OLE DB.  

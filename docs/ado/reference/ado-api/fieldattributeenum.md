@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - FieldAttributeEnum enumeration [ADO]
 ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ca14531410942a77add7c6c99756b64bf99e785c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918702"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764526"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Especifica uno o más atributos de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adFldCacheDeferred**|0x1000|Indica que el proveedor almacena en memoria caché los valores de campo y que las lecturas posteriores se realizan desde la memoria caché.|  
 |**adFldFixed**|0x10|Indica que el campo contiene datos de longitud fija.|  

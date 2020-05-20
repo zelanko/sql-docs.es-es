@@ -11,14 +11,14 @@ helpviewer_keywords:
 - records-provided fields [ADO]
 - provider-supplied fields [ADO]
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abfa226c5bc6c94613a5d45c48a351811235455f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924515"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764796"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Registros y campos proporcionados por el proveedor
 Cuando se abre un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) , su origen puede ser la fila actual de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md)abierto, una dirección URL absoluta o una dirección URL relativa junto con un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) abierto.  
@@ -63,7 +63,7 @@ Cuando se abre un objeto de [registro](../../../ado/reference/ado-api/record-obj
 |RESOURCE_ISHIDDEN|AdBoolean|True si el recurso está oculto. No se devolverá ninguna fila a menos que el comando que crea el conjunto de filas seleccione explícitamente las filas en las que RESOURCE_ISHIDDEN sea true.|  
 |RESOURCE_ISREADONLY|AdBoolean|True si el recurso es de solo lectura. Intenta abrir este recurso con DBBINDFLAG_WRITE y producirá un error con DB_E_READONLY. Esta propiedad se puede editar incluso cuando el recurso solo se ha abierto para lectura.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indica el uso probable del documento (por ejemplo, la breve de un abogado). Esto puede corresponder a la plantilla de Office que se usó para crear el documento.|  
-|RESOURCE_CONTENTCLASS|AdVarWChar|Indica el tipo MIME del documento, que indica el formato, por ejemplo`text/html`, "".|  
+|RESOURCE_CONTENTCLASS|AdVarWChar|Indica el tipo MIME del documento, que indica el formato, por ejemplo, " `text/html` ".|  
 |RESOURCE_CONTENTLANGUAGE|AdVarWChar|Indica el idioma en el que se almacena el contenido.|  
 |RESOURCE_CREATIONTIME|adFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora a la que se creó el recurso. La hora se registra en formato de hora universal coordinada (UTC).|  
 |RESOURCE_LASTACCESSTIME|AdFileTime|Solo lectura. Indica una estructura FILETIME que contiene la hora a la que se produjo el último acceso al recurso. La hora está en formato UTC. Los miembros FILETIME son cero si el proveedor no admite este miembro de hora.|  

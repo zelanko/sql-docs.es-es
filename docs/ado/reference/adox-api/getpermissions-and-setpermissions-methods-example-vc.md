@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SetPermissions method [ADOX], VC++ example
 - GetPermissions method [ADOX], VC++ example
 ms.assetid: 8c75d547-d3d7-44c4-b7de-eead5d11b92e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e5b72a5c8fc99e8e2baccc01a17bb110b1aaa973
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 238b9d82c3d71fde58a967b9d73d6a410f3883a5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76917824"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82764878"
 ---
 # <a name="getpermissions-and-setpermissions-methods-example-vc"></a>Ejemplo de métodos GetPermissions y SetPermissions (VC++)
 En este ejemplo se muestran los métodos [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) y [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) . El código siguiente proporciona acceso completo a la tabla Orders al usuario administrador.  

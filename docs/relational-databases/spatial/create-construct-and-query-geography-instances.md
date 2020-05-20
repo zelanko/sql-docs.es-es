@@ -180,7 +180,7 @@ ms.locfileid: "68048748"
  [STIsEmpty &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Clausura  
- Una instancia de _geography_**cerrada** es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+ Una instancia de **geography**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   

@@ -45,5 +45,5 @@ El registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 5. Aparecerá el **Visor de archivos de registro** (puede tardar un momento) con una lista de los registros que puede ver.
 
   ## <a name="see-also"></a>Consulte también
-  Para obtener más información, consulte la publicación [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/) (Identificar la ubicación del archivo de registro de errores de SQL Server) de [MSSQLTips.com's](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/).
+  Para obtener más información, consulte la publicación [Identify location of the SQL Server Error Log file](https://www.mssqltips.com/sqlservertip/2506/identify-location-of-the-sql-server-error-log-file/) (Identificar la ubicación del archivo de registro de errores de SQL Server) de [MSSQLTips.com's](https://www.mssqltips.com/).
 

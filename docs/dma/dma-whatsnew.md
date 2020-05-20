@@ -12,18 +12,23 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, new features
 ms.assetid: ''
-author: HJToland3
-ms.author: jtoland
-ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rajeshsetlem
+ms.author: rajpo
+ms.openlocfilehash: 287e3396ec26652f43754be313b02e3bf7d9831d
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78896799"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924629"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 
 En este artículo se enumeran las adiciones en cada versión de Data Migration Assistant.
+
+## <a name="data-migration-assistant-v-52"></a>Data Migration Assistant v 5,2
+La versión v 5.2 del Data Migration Assistant proporciona compatibilidad con:
+- La carga de evaluaciones en Azure Migrate con compatibilidad con Azure Government y nubes nacionales (oferta soberano).  Esta característica permite evaluar la preparación de SQL Server la migración de datos a Azure SQL.
+- Compatibilidad con la línea de comandos para cargar evaluaciones en Azure Migrate con compatibilidad con Azure Government y nubes nacionales.  Ahora puede automatizar completamente la carga de las evaluaciones en el proyecto de Azure Migrate para obtener un informe de disponibilidad consolidado de Azure SQL. 
 
 ## <a name="data-migration-assistant-v-50"></a>Data Migration Assistant v 5,0
 
@@ -176,7 +181,7 @@ La versión v 2.0 de Data Migration Assistant incluye recomendaciones de caracte
 La versión v 1.0 de Data Migration Assistant es la versión inicial y proporciona:
 
 - Detección de problemas que pueden afectar a una actualización a una versión local de SQL Server. Los hallazgos se describen como problemas de compatibilidad y se clasifican en las siguientes áreas:
-  - Últimos cambios
+  - Cambios importantes
   - Cambios de comportamiento
   - Características en desuso
 - Detección de nuevas características en la plataforma de SQL Server de destino en la que se puede beneficiar la base de datos después de una actualización. Los hallazgos se describen como recomendaciones de características y se clasifican en las siguientes áreas:

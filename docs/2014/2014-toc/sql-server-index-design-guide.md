@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe493927d269c092e775970b3089550203271f0e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68475983"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000515"
 ---
 # <a name="sql-server-index-design-guide"></a>Guía de diseño de índices de SQL Server
 
   Los índices mal diseñados y la falta de índices constituyen las principales fuentes de atascos en aplicaciones de base de datos. El diseño eficaz de los índices tiene gran importancia para conseguir un buen rendimiento de una base de datos y una aplicación. Esta guía de diseño de índices de SQL Server contiene información y prácticas recomendadas que le ayudarán a diseñar índices eficaces que resuelvan las necesidades de la aplicación.  
   
-**Se aplica a** [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] : [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] a menos que se indique lo contrario.  
+**Se aplica a**: a [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] menos que se indique lo contrario.  
   
  En esta guía se da por supuesto que el lector tiene información general sobre los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener una descripción general de los tipos de índice, vea [Tipos de índice](../relational-databases/indexes/indexes.md).  
   
@@ -267,7 +267,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   Columnas sometidas a cambios frecuentes  
   
-     Esto provoca que se mueva toda la fila, ya que [!INCLUDE[ssDE](../includes/ssde-md.md)] debe mantener los valores de los datos de la fila ordenados físicamente. Esta consideración es importante en sistemas de procesamiento de transacciones de gran volumen en los que los datos tienden a ser volátiles.  
+     Esto hace que se mueva toda la fila, ya que [!INCLUDE[ssDE](../includes/ssde-md.md)] debe mantener los valores de datos de una fila en orden físico. Esta consideración es importante en sistemas de procesamiento de transacciones de gran volumen en los que los datos tienden a ser volátiles.  
   
 -   Claves amplias  
   
@@ -628,7 +628,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  ![Icono de flecha usado con el vínculo volver al principio](media/uparrow16x16.gif "Icono de flecha usado con el vínculo Volver al principio") [de esta guía](#Top)  
   
-##  <a name="additional-reading"></a><a name="Additional_Reading"></a>Lecturas adicionales  
+##  <a name="additional-reading"></a><a name="Additional_Reading"></a> Lecturas adicionales  
 
  [Mejorar el rendimiento con vistas indizadas de SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
   

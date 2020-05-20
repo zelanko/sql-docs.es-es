@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a648902b97a8224b9032c24ee8c7715a4030777
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721100"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000434"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
   En esta lección configurará la distribución en el publicador y establecerá los permisos requeridos en las bases de datos de publicación y distribución. Si ya ha configurado el distribuidor, debe deshabilitar la publicación y distribución antes de iniciar esta lección. No lo haga si debe mantener una topología de replicación existente.  
@@ -35,11 +35,11 @@ ms.locfileid: "62721100"
   
      Se iniciará el Asistente para configurar la distribución.  
   
-3.  En la página **distribuidor** , seleccione **'**_\<ServerName>_ **' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**y, a continuación, haga clic en **siguiente**.  
+3.  En la página **distribuidor** , seleccione **'**_ \< ServerName>_ **' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**y, a continuación, haga clic en **siguiente**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Escriba ** \\ ** \< _Machine_Name>_ **\repldata** en el cuadro de texto **carpeta de instantáneas** , donde \< *Machine_Name>* es el nombre del publicador y, a continuación, haga clic en **siguiente**.  
+5.  Escriba **\\\\** \< _Machine_Name>_ **\repldata** en el cuadro de texto **carpeta de instantáneas** , donde \< *Machine_Name>* es el nombre del publicador y, a continuación, haga clic en **siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
@@ -47,17 +47,17 @@ ms.locfileid: "62721100"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>Establecer permisos de base de datos en el publicador  
   
-1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **seguridad**, haga clic con el botón secundario en **inicios de sesión**y seleccione **nuevo inicio de sesión**.  
+1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda **seguridad**, haga clic con el botón secundario en **inicios de sesión**y seleccione **nuevo inicio de sesión**.  
   
-2.  En la página **General** , haga clic en **Buscar**, escriba \< _Machine_Name>_ **\ repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar** , donde \< *Machine_Name>* es el nombre del servidor del publicador local, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
+2.  En la página **General** , haga clic en **buscar**, escriba \< _Machine_Name>_ **\ repl_snapshot** en el cuadro **escriba el nombre del objeto que desea seleccionar** , donde \< *Machine_Name>* es el nombre del servidor del publicador local, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
-3.  En la **Página asignación de usuarios** , en la lista **usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de.  
+3.  En la página **asignación de usuarios** , en la lista **usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
-     En la lista **pertenencia al rol** de `db_owner` la base de datos, seleccione el rol para el inicio de sesión de las dos bases de datos.  
+     En la lista **pertenencia al rol** de la base de datos, seleccione el `db_owner` rol para el inicio de sesión de las dos bases de datos.  
   
 4.  Haga clic en **Aceptar** para crear el inicio de sesión.  
   
-5.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_logreader. Este inicio de sesión también se debe asignar a usuarios que son miembros `db_owner` del rol fijo de base de datos en las bases de datos de **distribución** y **AdventureWorks** .  
+5.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_logreader. Este inicio de sesión también se debe asignar a usuarios que son miembros del `db_owner` rol fijo de base de datos en las bases de datos de **distribución** y **AdventureWorks** .  
   
 6.  Repita los pasos 1 a 4 para crear un inicio de sesión para la cuenta local de repl_distribution. Este inicio de sesión debe estar asignado a un usuario que sea miembro del `db_owner` rol fijo de base de datos en la base de datos de **distribución** .  
   

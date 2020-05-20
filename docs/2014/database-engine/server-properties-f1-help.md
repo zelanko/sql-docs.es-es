@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3a44c98f-6750-48b9-90c7-82391b134c9d
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1048ecf02da0df649043034c2d9db5071284017b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089839"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000525"
 ---
 # <a name="server-properties-f1-help"></a>Propiedades del servidor (Ayuda F1)
   Esta sección contiene los temas de la Ayuda F1 para las páginas **Propiedades del servidor** de in SQL Server Management Studio.  

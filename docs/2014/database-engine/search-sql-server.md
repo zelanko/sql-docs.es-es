@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 2b4e890a-f83d-482f-b558-8fa6882c9556
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab4fbf86cffea9af6aef03a176aef3d559472506
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843733"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000565"
 ---
 # <a name="search-sql-server"></a>Buscar (SQL Server)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]proporciona características de búsqueda de texto y documentos que van más allá de la [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` funcionalidad de la palabra clave.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]proporciona características de búsqueda de texto y documentos que van más allá de la funcionalidad de la [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` palabra clave.  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Búsqueda de texto completo](../relational-databases/search/full-text-search.md)  

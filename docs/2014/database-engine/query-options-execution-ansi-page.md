@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.ansi.f1
 ms.assetid: c90d7cdf-3309-46f4-b900-220521bb9552
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d9a8b5dea5ab90137c95c9ddaf609c63532dd5b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b383c290bb507cdafaf824c16b3a1587b998bd3
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089078"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000626"
 ---
 # <a name="query-options-execution-ansi-page"></a>Ejecución de Opciones de consulta (página ANSI)
   Use esta página para especificar que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecutará las consultas utilizando todos o parte de los valores de configuración especificados en el estándar ISO (ANSI).  

@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f770ea7ed5257cdca5def868b1bdfa8359af79a
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175926"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925099"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Supervisar y solucionar problemas de uso de memoria
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consume memoria en patrones distintos que las tablas basadas en disco. Puede supervisar la cantidad de memoria asignada y usada por las tablas e índices optimizados para memoria en la base de datos mediante las DMV o los contadores de rendimiento suministrados para la memoria y el subsistema de recolección de elementos no utilizados.  Esto le ofrece visibilidad en los niveles de sistema y de base de datos, y permite evitar problemas debidos al agotamiento de la memoria.
@@ -113,7 +113,7 @@ ms.locfileid: "78175926"
 ##  <a name="monitoring-memory-usage"></a>Supervisar el uso de la memoria
 
 ###  <a name="using-ssmanstudiofull"></a>Uso de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede obtener acceso a estos informes mediante el Explorador de objetos como se describe [aquí](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas optimizadas para memoria individuales.
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] se envía con informes estándar integrados para supervisar la memoria que han usado las tablas en memoria. Puede acceder a estos informes mediante el Explorador de objetos. También puede utilizar el explorador de objetos para supervisar la memoria utilizada por las tablas optimizadas para memoria individuales.
 
 #### <a name="consumption-at-the-database-level"></a>Consumo en el nivel de base de datos
  Puede supervisar el uso de memoria en el nivel de base de datos como se indica a continuación.
@@ -122,7 +122,7 @@ ms.locfileid: "78175926"
 
 2.  En el Explorador de objetos, haga clic con el botón secundario en la base de datos en la que desee los informes.
 
-3.  En el menú contextual, **Reports** -> seleccione informes**estándar informes** -> **uso de memoria por objetos con optimización para memoria**
+3.  En el menú contextual, **Seleccione informes**  ->  **estándar informes**  ->  **uso de memoria por objetos con optimización para memoria**
 
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuse.gif "HK_MM_SSMS")
 

@@ -15,21 +15,21 @@ ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 0ec82b7cca2062e1ed918e300eeb76dad16cbb20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245620"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922149"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
-  Las notificaciones del servicio de token de Windows (c2WTS) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint son necesarias con el modo de SharePoint si desea usar la autenticación de Windows para los orígenes de datos que están fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
+  Las notificaciones del servicio de token de Windows (c2WTS) de SharePoint son necesarias con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint si desea usar la autenticación de Windows para los orígenes de datos que están fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
   
  c2WTS es necesario aunque los orígenes de datos estén en el mismo equipo que el servicio compartido. Sin embargo, en este escenario no es necesaria la delegación restringida.  
   
  Los tokens creados por c2WTS funcionarán solo con delegación restringida (limitaciones a servicios concretos) y la opción de configuración "Usar cualquier protocolo de autenticación". Como se indicaba anteriormente, si los orígenes de datos están en el mismo equipo que el servicio compartido, la delegación restringida no es necesaria.  
   
- Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePoint Server y los orígenes de datos externos deben residir en el mismo dominio de Windows. Cualquier servicio que use Notificaciones del servicio de token de Windows (c2WTS) debe emplear la delegación **restringida** de Kerberos para permitir que c2WTS use la transición del protocolo Kerberos para traducir las notificaciones en credenciales de Windows. Estos requisitos son verdaderos para todos los servicios compartidos de SharePoint. Para obtener más información, vea [información general sobre la autenticación Kerberos para productos dehttps://technet.microsoft.com/library/gg502594.aspx)Microsoft SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
+ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePoint Server y los orígenes de datos externos deben residir en el mismo dominio de Windows. Cualquier servicio que use Notificaciones del servicio de token de Windows (c2WTS) debe emplear la delegación **restringida** de Kerberos para permitir que c2WTS use la transición del protocolo Kerberos para traducir las notificaciones en credenciales de Windows. Estos requisitos son verdaderos para todos los servicios compartidos de SharePoint. Para obtener más información, vea [información general sobre la autenticación Kerberos para productos de https://technet.microsoft.com/library/gg502594.aspx) Microsoft SharePoint 2010 (](https://technet.microsoft.com/library/gg502594.aspx).  
   
  El procedimiento se resume en este tema.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "75245620"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 > [!NOTE]  
 >  Nota: algunos pasos de configuración pueden cambiar o no funcionar en algunas topologías de granja. Por ejemplo, una instalación de un solo servidor no admite los servicios c2WTS de Windows Identity Foundation, por lo que las notificaciones a los escenarios de delegación de token de Windows no son posibles con esta configuración de granja.  
@@ -65,7 +65,7 @@ ms.locfileid: "75245620"
   
         -   Seleccione "usar cualquier protocolo de autenticación".  
   
-         Para obtener más información, vea la sección "configurar la delegación restringida de Kerberos para equipos y cuentas de servicio" de las notas del producto siguientes, [configurar la autenticación Kerberos para los productos de SharePoint 2010 y SQL Server 2008 R2](https://blogs.technet.com/b/tothesharepoint/archive/2010/07/22/whitepaper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products.aspx) .  
+         Para obtener más información, vea la sección "configurar la delegación restringida de Kerberos para equipos y cuentas de servicio" de las notas del producto siguientes, [configurar la autenticación Kerberos para los productos de SharePoint 2010 y SQL Server 2008 R2](https://docs.microsoft.com/archive/blogs/tothesharepoint/white-paper-configuring-kerberos-authentication-for-sharepoint-2010-and-sql-server-2008-r2-products) .  
   
 2.  Configurar c2WTS ' AllowedCallers '  
   

@@ -10,12 +10,12 @@ ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c5e44910c72e5162b9acb74ebbf74cd19d7ce1bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cbece7c2ee5aad3b65a0b4066b409d9f0b6b6e
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149525"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925060"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
   Los detalles de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay se especifican en archivos XML en Distributed Replay Controller, en los clientes y donde se encuentra instalada la herramienta de administración. Entre los archivos figuran los siguientes:  
@@ -164,10 +164,10 @@ ms.locfileid: "63149525"
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Opciones de la línea de comandos de la herramienta de administración &#40;Distributed Replay utilidad&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [SQL Server Foro de Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Uso de Distributed Replay para la prueba de carga de la SQL Server, parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Foro de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2)   
+ [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)  
   
   

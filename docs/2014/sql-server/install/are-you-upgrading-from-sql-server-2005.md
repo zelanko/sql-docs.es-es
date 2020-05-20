@@ -10,12 +10,12 @@ ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2db6a47de02b49397847dc9d713277ffcb152156
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feed59c01a9fe77c226164c6b5b5df5caf0c77c1
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656582"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922165"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>¿Desea actualizar desde SQL Server 2005?
   Como el soporte extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Base de datos SQL de Azure. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  
@@ -57,11 +57,11 @@ ms.locfileid: "75656582"
   
 -   Lea la siguiente serie de publicaciones de blog del equipo de SQL Server sobre cómo planear su actualización.  
   
-    -   [Planear una actualización eficaz de SQL Server 2005: paso 1 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3.aspx)  
+    -   [Planear una actualización eficaz de SQL Server 2005: paso 1 de 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/10/planning-an-efficient-upgrade-from-sql-server-2005-step-1-of-3/)  
   
-    -   [Planear una actualización eficaz de SQL Server 2005: paso 2 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3.aspx)  
+    -   [Planear una actualización eficaz de SQL Server 2005: paso 2 de 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/15/planning-an-efficient-upgrade-from-sql-server-2005-step-2-of-3/)  
   
-    -   [Planear una actualización eficaz de SQL Server 2005: paso 3 de 3](https://blogs.technet.com/b/dataplatforminsider/archive/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3.aspx)  
+    -   [Planear una actualización eficaz de SQL Server 2005: paso 3 de 3](https://cloudblogs.microsoft.com/sqlserver/2015/12/17/planning-an-efficient-upgrade-from-sql-server-2005-step-3-of-3/)  
   
 -   Revise los requisitos y las consideraciones en [planeación de una instalación de SQL Server](../../../2014/sql-server/install/planning-a-sql-server-installation.md), incluidos los [requisitos de hardware y Software para instalar SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   

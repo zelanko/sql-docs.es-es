@@ -10,15 +10,15 @@ ms.assetid: d7bce6a5-d414-488d-a3cd-50c1c62019c4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5f25a42b54e0ae310c7033a81f75cad75582416
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172094"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925069"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opción Replay (herramienta de administración de Distributed Replay)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herramienta de administración de `DReplay.exe`Distributed Replay,, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción de la línea de comandos **replay** y la sintaxis correspondiente.
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, `DReplay.exe` , es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción de la línea de comandos **replay** y la sintaxis correspondiente.
 
  La opción **replay** inicia la fase de reproducción de eventos, en la que el controlador envía los datos de reproducción a los clientes especificados, inicia la reproducción distribuida y sincroniza los clientes. Opcionalmente, cada cliente que participa en la reproducción puede grabar la actividad de reproducción y guardar un archivo de seguimiento del resultado localmente.
 
@@ -50,11 +50,11 @@ ms.locfileid: "78172094"
 
 -   No se admiten las rutas de acceso UNC.
 
- **-o** Captura la actividad de reproducción de los clientes y la guarda en un archivo de seguimiento de resultados en la ruta de `<ResultDirectory>` acceso especificada por el elemento en el `DReplayClient.xml`archivo de configuración del cliente,.
+ **-o** Captura la actividad de reproducción de los clientes y la guarda en un archivo de seguimiento de resultados en la ruta de acceso especificada por el `<ResultDirectory>` elemento en el archivo de configuración del cliente, `DReplayClient.xml` .
 
  Cuando no se especifica el parámetro **-o**, no se genera el archivo de seguimiento de resultados. La salida de la consola devuelve información de resumen al final de la reproducción, pero no hay ninguna otra estadística de reproducción disponible.
 
- **-s** *target_server* especifica la instancia de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en la que se debe volver a reproducir la carga de trabajo distribuida. Debe especificar este parámetro con el formato **nombre_servidor[\nombre de instancia]**.
+ **-s** *target_server* especifica la instancia de destino de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se debe volver a reproducir la carga de trabajo distribuida. Debe especificar este parámetro con el formato **nombre_servidor[\nombre de instancia]**.
 
  No se puede utilizar "`localhost`" ni "`.`" como servidor de destino.
 
@@ -148,6 +148,6 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
  Para más información, consulte [Distributed Replay Security](distributed-replay-security.md).
 
 ## <a name="see-also"></a>Consulte también
- [Reproducir datos de seguimiento](replay-trace-data.md) [Revise los resultados de la reproducción](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [configurar Distributed Replay](configure-distributed-replay.md) [SQL Server Foro de Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/) [con Distributed Replay para realizar una prueba de carga de la SQL Server, parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx) [usando Distributed Replay para la prueba de carga de la SQL Server, parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)
+ [Reproducir datos de seguimiento](replay-trace-data.md) [Revise los resultados de la reproducción](review-the-replay-results.md) [SQL Server Distributed Replay](sql-server-distributed-replay.md) [configurar Distributed Replay](configure-distributed-replay.md) [SQL Server Foro de Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/) [con Distributed Replay para realizar una prueba de carga de la SQL Server, parte 2](https://docs.microsoft.com/archive/blogs/msdn/mspfe/using-distributed-replay-to-load-test-your-sql-serverpart-2) [usando Distributed Replay para la prueba de carga de la SQL Server, parte 1](https://docs.microsoft.com/archive/blogs/batuhanyildiz/using-distributed-replay-to-load-test-your-sql-serverpart-1)
 
 

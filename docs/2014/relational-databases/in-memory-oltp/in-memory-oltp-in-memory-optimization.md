@@ -10,15 +10,15 @@ helpviewer_keywords:
 - In-Memory OLTP
 - memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 530e620be1a1c0f9d457eb23712c5228a3883d45
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 418cdbb85781cd99d3febc2371ed69751d29f588
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175938"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922099"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en memoria (optimización en memoria)
 
@@ -26,7 +26,7 @@ ms.locfileid: "78175938"
 
 |||
 |-|-|
-|![Máquina virtual de Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina virtual de Azure")|¿Quiere probar SQL Server 2016? Suscríbase a Microsoft Azure y, después, vaya **[aquí](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** para sincronizar una máquina virtual que ya tenga SQL Server 2016 instalado. Puede eliminar la máquina virtual cuando haya terminado.|
+|![Máquina virtual de Azure](../../master-data-services/media/azure-virtual-machine.png "Máquina virtual de Azure")|¿Quiere probar SQL Server 2016? Suscríbase a Microsoft Azure y, después, vaya **[aquí](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** para sincronizar una máquina virtual que ya tenga SQL Server 2016 instalado. Puede eliminar la máquina virtual cuando haya terminado.|
 
  Para usar [!INCLUDE[hek_2](../../../includes/hek-2-md.md)], debe definir una tabla a la que se accede con mucha frecuencia como que está optimizada para memoria. Las tablas con optimización para memoria son completamente transaccionales y durables, y se accede a ellas mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] , igual que con las tablas basadas en disco. Una consulta puede hacer referencia tanto a tablas optimizadas para memoria como a tablas basadas en disco. Una transacción puede actualizar datos en tablas optimizadas para memoria y en tablas basadas en disco. Los procedimientos almacenados que solo hacen referencia a tablas optimizadas para memoria se pueden compilar de forma nativa en código máquina para obtener nuevas mejoras en el rendimiento. El motor [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] se ha diseñado para sesiones de simultaneidad muy elevada para el tipo OLTP de transacciones que se derivan de un nivel medio con gran capacidad de ampliación horizontal. Para lograr esto, usa estructuras de datos sin bloqueos temporales y control de simultaneidad optimista de múltiples versiones. El resultado es predecible, de baja latencia por debajo de los milisegundos y de gran rendimiento con escalado lineal para transacciones de bases de datos. La ganancia de rendimiento real depende de muchos factores, pero es habitual obtener un rendimiento entre 5 y 20 veces superior.
 
@@ -40,7 +40,7 @@ ms.locfileid: "78175938"
 |Baja latencia.|Requerir transacciones empresariales de baja latencia que no pueden realizar las soluciones de bases de datos habituales.|Eliminar contención.<br /><br /> Minimizar el tiempo de ejecución del código.<br /><br /> Ejecución de código de baja latencia.<br /><br /> Recuperación eficaz de datos.|
 |Administración del estado de la sesión.|Inserciones, actualizaciones y búsquedas de punto frecuentes.<br /><br /> Carga de escala alta de numerosos servidores web sin estado.|Eliminar contención.<br /><br /> Recuperación eficaz de datos.<br /><br /> Opcional: reducción o eliminación de E/S cuando se usen tablas que no sean durables|
 
- Para obtener más información sobre los [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] escenarios en los que se obtendrán las mayores mejoras de rendimiento, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones de migración](https://msdn.microsoft.com/library/dn673538.aspx).
+ Para obtener más información sobre los escenarios en los que se obtendrán [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] las mayores mejoras de rendimiento, vea [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones de migración](https://msdn.microsoft.com/library/dn673538.aspx).
 
  [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] mejorará el rendimiento de forma óptima en OLTP con transacciones de breve ejecución.
 
@@ -71,7 +71,7 @@ ms.locfileid: "78175938"
 |[Requisitos para utilizar las tablas con optimización para memoria](memory-optimized-tables.md)|Describe los requisitos de hardware y software y las instrucciones para utilizar tablas optimizadas para memoria.|
 |[Uso de OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)|Se ocupa del uso de [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] en entornos virtualizados.|
 |[Ejemplos de código de OLTP en memoria](in-memory-oltp-code-samples.md)|Contiene ejemplos de código en los que se muestra cómo crear y utilizar una tabla optimizada para memoria.|
-|[Tablas con optimización para memoria](memory-optimized-tables.md)|Presenta las tablas optimizadas para memoria.|
+|[Tablas optimizadas para la memoria](memory-optimized-tables.md)|Presenta las tablas optimizadas para memoria.|
 |[Variables de tabla con optimización para memoria](../../database-engine/memory-optimized-table-variables.md)|Ejemplo de código que muestra cómo utilizar una variable de tabla optimizada para memoria en lugar de una variable de tabla tradicional para reducir el uso de tempdb.|
 |[Índices en tablas optimizadas para memoria](../../database-engine/indexes-on-memory-optimized-tables.md)|Presenta los índices optimizados para memoria.|
 |[procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)|Presenta los procedimientos almacenados compilados de forma nativa.|
@@ -79,7 +79,7 @@ ms.locfileid: "78175938"
 |[Crear y administrar el almacenamiento de objetos con optimización para memoria](creating-and-managing-storage-for-memory-optimized-objects.md)|Describe los archivos delta y de datos, que almacenan información sobre las transacciones en tablas optimizadas para memoria.|
 |[Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria](restore-and-recovery-of-memory-optimized-tables.md)|Describe las copias de seguridad, las restauraciones y las recuperaciones para tablas optimizadas para memoria.|
 |[Compatibilidad de Transact-SQL con OLTP en memoria](transact-sql-support-for-in-memory-oltp.md)|Describe la compatibilidad de [!INCLUDE[tsql](../../../includes/tsql-md.md)] para [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
-|[Compatibilidad con alta disponibilidad para bases de datos OLTP en memoria](high-availability-support-for-in-memory-oltp-databases.md)|Describe los grupos de disponibilidad y los clústeres de conmutación por error en [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
+|[Compatibilidad con alta disponibilidad para bases de datos de OLTP en memoria](high-availability-support-for-in-memory-oltp-databases.md)|Describe los grupos de disponibilidad y los clústeres de conmutación por error en [!INCLUDE[hek_2](../../../includes/hek-2-md.md)].|
 |[Compatibilidad de SQL Server con OLTP en memoria](sql-server-support-for-in-memory-oltp.md)|Enumera la sintaxis nueva y la actualizada, y las características que admiten tablas optimizadas para memoria.|
 |[Migrar a OLTP en memoria](migrating-to-in-memory-oltp.md)|Describe cómo migrar las tablas basadas en disco a tablas optimizadas para memoria.|
 
@@ -87,7 +87,7 @@ ms.locfileid: "78175938"
 
 -   [¿Microsoft?? ¿¿SQL Server?? Guía del producto 2014](https://www.microsoft.com/download/confirmation.aspx?id=39269)
 
--   [Blog de OLTP en memoria](https://go.microsoft.com/fwlink/?LinkId=311696)
+-   [Blog de OLTP en memoria](https://cloudblogs.microsoft.com/sqlserver/2013/06/26/sql-server-2014-in-memory-technologies-blog-series-introduction/)
 
 -   [OLTP en memoria: patrones de carga de trabajo comunes y consideraciones de migración](https://msdn.microsoft.com/library/dn673538.aspx)
 

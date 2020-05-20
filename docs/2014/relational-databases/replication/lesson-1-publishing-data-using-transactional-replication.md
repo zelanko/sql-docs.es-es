@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721095"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000462"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lección 1: Publicar datos con la replicación transaccional
   En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
@@ -76,9 +76,9 @@ ms.locfileid: "62721095"
   
 3.  Seleccione la página **Lista de acceso a la publicación** y haga clic en **Agregar**.  
   
-4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione _<nombre_equipo>_**\repl_distribution** y haga clic en **Aceptar**. Haga clic en **Aceptar**.  
+4.  \En el cuadro de diálogo **Agregar acceso de publicación**, seleccione _<nombre_equipo>_**\repl_distribution** y haga clic en **Aceptar**. Haga clic en **OK**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Ha creado correctamente la publicación transaccional. A continuación se suscribirá a esta publicación. Consulte [Lección 2: Crear una suscripción a la publicación transaccional](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Consulte también  

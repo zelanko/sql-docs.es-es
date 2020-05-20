@@ -10,15 +10,15 @@ f1_keywords:
 - Full-Text Search
 - Upgrade options, Full-Text Search
 ms.assetid: 16c9376b-5fbb-4495-a429-06a2493849c9
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce419321dc3201c4db8d103e1d256e14168c6ec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095086"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000220"
 ---
 # <a name="full-text-search-upgrade-options"></a>Opciones de actualización de búsqueda de texto completo
   Use la página de opciones de actualización de búsqueda de texto completo del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar la opción de actualización de búsqueda de texto completo que usará con las bases de datos cuya actualización está realizando en este momento.  
@@ -38,7 +38,7 @@ ms.locfileid: "66095086"
   
  Para obtener información sobre el impacto de importar un índice de texto completo, vea "Consideraciones sobre la elección de una opción de actualización de texto completo" más adelante en este tema.  
   
- **Volver a generar**  
+ **Recompilación**  
  Los catálogos de texto completo se vuelven a generar con los separadores de palabras nuevos y mejorados. El proceso de recompilación de los índices puede llevar mucho tiempo y podría ser necesaria una cantidad significativa de CPU y de memoria después de la actualización.  
   
  **Restablecer**  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 1a9509f0-c663-4b31-b396-7f5dc4371651
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51ad78c95881daacebcb3f2b7999a299cd4ebd7d
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089209"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000595"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
 
@@ -25,7 +25,7 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
  **Etiquetas de cierre**  
  El Editor de texto agrega etiquetas de cierre al crear elementos XML. Si se selecciona la etiqueta de inicio de un elemento, el editor inserta la etiqueta de cierre correspondiente, incluido el prefijo de espacio de nombres. Esta casilla está activada de forma predeterminada.  
   
- **Comillas para atributos**  
+ **Comillas de atributos**  
  Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación (**^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
   
  **Declaraciones de espacio de nombres**  
@@ -44,4 +44,4 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
   
 ## <a name="caching"></a>Almacenamiento en memoria caché  
  **Esquemas**  
- Especifica la ubicación de la caché de esquemas. El botón Examinar (...) abre la ubicación de la caché de esquemas actual en una ventana nueva. La ubicación predeterminada es * \<Management Studio directorio de instalación>* \Xml\Schemas.  
+ Especifica la ubicación de la caché de esquemas. El botón Examinar (...) abre la ubicación de la caché de esquemas actual en una ventana nueva. La ubicación predeterminada es * \< Management Studio directorio de instalación>* \Xml\Schemas.  

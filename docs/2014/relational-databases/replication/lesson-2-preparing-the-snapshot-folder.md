@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - replication [SQL Server], tutorials
 ms.assetid: f286cde9-c0d0-43ef-b7ba-53c3cbb8906c
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bbe571002a1168ca3f60592b86fb58fd482ecd05
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721025"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000429"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lección 2: Preparar la carpeta de instantáneas
   En esta lección aprenderá a configurar la carpeta de instantáneas que se utiliza para crear y almacenar la instantánea de publicación.  
@@ -36,9 +36,9 @@ ms.locfileid: "62721025"
   
 6.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-7.  En el cuadro de diálogo **Permisos** , haga clic en **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos** , escriba el nombre de la cuenta de agente de instantáneas creada en la lección \<1, como _Machine_Name>_ **\ repl_snapshot**, donde \< *Machine_Name>* es el nombre del publicador. Haga clic en **Comprobar nombres**y luego en **Aceptar**.  
+7.  En el cuadro de diálogo **Permisos** , haga clic en **Agregar**. En el cuadro de texto **Seleccionar usuarios, equipos, cuentas de servicio o grupos** , escriba el nombre de la cuenta de agente de instantáneas creada en la lección 1, como \< _Machine_Name>_ **\ repl_snapshot**, donde \< *Machine_Name>* es el nombre del publicador. Haga clic en **Comprobar nombres**y luego en **Aceptar**.  
   
-8.  Repita el paso anterior para agregar permisos para el agente de distribución, como \< _Machine_Name>_ **\ repl_distribution**y para el agente de mezcla como \< _Machine_Name _>**\ repl_merge**.  
+8.  Repita el paso anterior para agregar permisos para el Agente de distribución, como \< _Machine_Name>_ **\ repl_distribution**y para el Agente de mezcla como \< _Machine_Name _>**\ repl_merge**.  
   
 9. Compruebe que se admiten los siguientes permisos:  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721025"
   
 10. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de repldata** y crear el recurso compartido repldata.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Ha configurado correctamente el recurso compartido para la carpeta de instantáneas. A continuación configurará la distribución. Consulte [Lección 3: Configurar la distribución](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Consulte también  

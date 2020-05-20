@@ -10,12 +10,12 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb77d8abdc0b4a8ca67996433e5399740c7bdc0c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 087ca52acea1cace7eb218cc33ce31cd21e10cc8
+ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82086893"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82922239"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
   Este tutorial le enseña cómo crear dos tipos de informes: un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. En la siguiente ilustración se muestran los informes que creará.  
@@ -141,7 +141,7 @@ ms.locfileid: "82086893"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Next**.  
+14. Haga clic en **Siguiente**.  
   
 ##  <a name="1b-create-an-mdx-query"></a><a name="DMDXQuery"></a>ter. Crear una consulta MDX  
  En un informe puede usar un conjunto de datos compartido que tenga una consulta predefinida o crear un conjunto de datos incrustado para usarlo exclusivamente en ese informe. En este tutorial, creará un conjunto de datos incrustado.  
@@ -210,7 +210,7 @@ ms.locfileid: "82086893"
   
 6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)**.  
   
-7.  Haga clic en **Next**.  
+7.  Haga clic en **Siguiente**.  
   
 ##  <a name="1c-organize-data-into-groups"></a><a name="DLayout"></a>1C. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -236,7 +236,7 @@ ms.locfileid: "82086893"
   
      Los pasos 4 y 5 especifican los datos que deben aparecer en la matriz.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 ##  <a name="1d-add-subtotals-and-totals"></a><a name="DTotals"></a>1D. Agregar subtotales y totales  
  Después de crear grupos, puede agregar filas y darles formato, donde se mostrarán los valores agregados para los campos. Puede decidir también si mostrar todos los datos o permitir que los usuarios expandan y contraigan de forma interactiva los datos agrupados.  
@@ -247,7 +247,7 @@ ms.locfileid: "82086893"
   
      El panel Vista previa del asistente muestra una matriz con cuatro filas.  
   
-2.  Haga clic en **Next**.  
+2.  Haga clic en **Siguiente**.  
   
 ##  <a name="1e-choose-a-style"></a><a name="DStyle"></a>1E. Elegir un estilo  
  Un estilo especifica un estilo de fuente, un conjunto de colores y un estilo de borde.  
@@ -340,7 +340,7 @@ ms.locfileid: "82086893"
   
 1.  En el panel Datos de informe, expanda **Parámetros**.  
   
-2.  Haga clic con \@el botón secundario en ProductProductCategoryName y, a continuación, haga clic en **propiedades de parámetro**.  
+2.  Haga clic con el botón secundario en \@ ProductProductCategoryName y, a continuación, haga clic en **propiedades de parámetro**.  
   
     > [!NOTE]  
     >  El carácter \@ situado al lado del nombre indica que se trata de un parámetro.  
@@ -413,7 +413,7 @@ ms.locfileid: "82086893"
   
 5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)**.  
   
-6.  En **nombre del servidor**, escriba el nombre de un servidor donde esté instalada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] una instancia de.  
+6.  En **nombre del servidor**, escriba el nombre de un servidor donde [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] esté instalada una instancia de.  
   
 7.  En la lista **Seleccione o escriba un nombre de base de datos**, seleccione el cubo de Contoso.  
   
@@ -435,7 +435,7 @@ ms.locfileid: "82086893"
   
 13. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-14. Haga clic en **Next**.  
+14. Haga clic en **Siguiente**.  
   
 ##  <a name="1b-create-an-mdx-query"></a><a name="MMDXQuery"></a>ter. Crear una consulta MDX  
  Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseñador de consultas para crear filtros, parámetros y miembros calculados, así como el propio conjunto de datos.  
@@ -447,7 +447,7 @@ ms.locfileid: "82086893"
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
     > [!TIP]  
-    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar al modo de diseño](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Cambiar al modo de diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
+    >  Si no quiere compilar la consulta MDX manualmente, haga clic en el icono ![Cambiar al modo de diseño](media/rsqdicon-designmode.gif "Cambiar al modo de diseño"), alterne el diseñador de consultas al modo Consulta, pegue la MDX completada en el diseñador de consultas y, después, vaya al paso 5 de [Crear el conjunto de datos](#MSkip).  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -533,7 +533,7 @@ ms.locfileid: "82086893"
   
      Revise el conjunto de resultados de la consulta.  
   
-6.  Haga clic en **Next**.  
+6.  Haga clic en **Siguiente**.  
   
 ##  <a name="1c-organize-data-into-groups"></a><a name="MLayout"></a>1C. Organizar los datos en grupos  
  Al seleccionar los campos por los que desea agrupar los datos, diseñe una matriz con filas y columnas que muestre datos detallados y datos agregados.  
@@ -563,7 +563,7 @@ ms.locfileid: "82086893"
   
      El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
   
-2.  Haga clic en **Next**.  
+2.  Haga clic en **Siguiente**.  
   
 ##  <a name="1e-choose-a-style"></a><a name="MStyle"></a>1E. Elegir un estilo  
  Aplique el estilo Pizarra al informe. Es el mismo estilo que usa el informe detallado.  

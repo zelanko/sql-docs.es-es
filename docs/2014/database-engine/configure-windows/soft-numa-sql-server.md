@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4bcd90b17228283859e2dd1a2897406e8ea95f
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809049"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82924781"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar SQL Server para que use NUMA de software (SQL Server)
 Los procesadores de hoy en día tienen varios núcleos por socket. Normalmente, cada socket se representa como un solo nodo NUMA. El motor de base de datos de SQL Server crea particiones de las diversas estructuras internas y de los subprocesos de servicio por nodo NUMA. Con los procesadores que contienen 10 o más núcleos por socket, el uso de NUMA de software (Soft-NUMA) para dividir los nodos NUMA de hardware suele aumentar la escalabilidad y el rendimiento.   
@@ -40,7 +40,7 @@ En la ilustración siguiente se muestra el tipo de información sobre Soft-NUMA 
 
 ## <a name="manual-soft-numa"></a>soft-NUMA manual
   
-Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que use Numa de software manualmente, debe modificar el registro para agregar una máscara de afinidad de configuración de nodo. La máscara soft-NUMA se puede establecer como una entrada del Registro binaria, DWORD (hexadecimal o decimal) o QWORD (hexadecimal o decimal). Para configurar más de las primeras 32 CPU use valores del Registro QWORD o BINARY. (Los valores QWORD no se pueden usar [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]antes de). Debe reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para configurar Soft-Numa.  
+Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que use Numa de software manualmente, debe modificar el registro para agregar una máscara de afinidad de configuración de nodo. La máscara soft-NUMA se puede establecer como una entrada del Registro binaria, DWORD (hexadecimal o decimal) o QWORD (hexadecimal o decimal). Para configurar más de las primeras 32 CPU use valores del Registro QWORD o BINARY. (Los valores QWORD no se pueden usar antes de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ). Debe reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para configurar Soft-Numa.  
   
 > [!TIP]  
 >  Las CPU se numeran a partir de 0.  
@@ -57,7 +57,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
   
  La instancia A, que experimenta actividades de E/S importantes, tiene ahora dos subprocesos de E/S y un subprocesos de escritura diferida, mientras que la instancia B, que realiza operaciones que requieren un uso intensivo del procesador, solo tiene un subproceso de E/S y un subproceso de escritura diferida. Se pueden asignar diferentes cantidades de memoria a las instancias, pero, a diferencia de lo que ocurre con el NUMA de hardware, ambas reciben memoria del mismo bloque de memoria del sistema operativo y no hay afinidad entre la memoria y el procesador.  
   
- El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, siempre que el hardware se presente como nodos físicos de NUMA, será igual al número de subprocesos de escritura diferida que se creen. Para obtener más información, vea el artículo acerca de [cómo funciona: NUMA de software, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, siempre que el hardware se presente como nodos físicos de NUMA, será igual al número de subprocesos de escritura diferida que se creen. Para obtener más información, vea el artículo acerca de [cómo funciona: NUMA de software, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria](https://docs.microsoft.com/archive/blogs/psssql/how-it-works-soft-numa-io-completion-thread-lazy-writer-workers-and-memory-nodes).  
   
 > [!NOTE]  
 >  Las claves del Registro de **Soft-NUMA** no se copian al actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

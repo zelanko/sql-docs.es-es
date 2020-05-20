@@ -10,23 +10,23 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 - replication [SQL Server], administering
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721161"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000475"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lección 1: Crear cuentas de Windows para replicación
   En esta lección creará cuentas de Windows para ejecutar agentes de replicación. Creará distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
-|Agente|Ubicación|Nombre de cuenta|  
+|Agente|Location|Nombre de cuenta|  
 |-----------|--------------|------------------|  
-|Agente de instantáneas|Publicador|\<*nombreDeEquipo*>\repl_snapshot|  
-|Agente de registro del LOG|Publicador|\<*nombreDeEquipo*>\repl_logreader|  
+|Agente de instantáneas|Publisher|\<*nombreDeEquipo*>\repl_snapshot|  
+|Agente de registro del LOG|Publisher|\<*nombreDeEquipo*>\repl_logreader|  
 |Agente de distribución|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_distribution|  
 |Agente de mezcla|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_merge|  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62721161"
   
 6.  Haga clic en **Cerrar**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Ha creado correctamente cuentas de Windows para agentes de replicación. A continuación, configurará la carpeta de instantáneas. Consulte [Lección 2: Preparar la carpeta de instantáneas](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Consulte también  

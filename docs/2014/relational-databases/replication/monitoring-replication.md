@@ -15,20 +15,20 @@ helpviewer_keywords:
 - replication [SQL Server], monitoring
 - administering replication, monitoring
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 615582b2d961f87a2d3df151175d7bd5d06e305f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666873"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000431"
 ---
 # <a name="monitoring-replication"></a>Supervisar (replicación)
   Supervisar una topología de replicación es un aspecto importante en la implementación de la replicación. Debido a que la actividad de replicación se distribuye, es fundamental realizar un seguimiento de la actividad y el estado de todos los equipos que participan en la replicación. Para supervisar la replicación se pueden utilizar las siguientes herramientas:  
   
--   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] Monitor de replicación  
+-   [!INCLUDE[msCoName](../../includes/msCoName-md.md)][!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]Monitor de replicación  
   
      El Monitor de replicación es la herramienta más importante para supervisar la replicación, ya que presenta una vista de la actividad de la replicación centrada en el publicador. Para obtener más información, vea [supervisar el rendimiento con el monitor de replicación](monitor/monitor-performance-with-replication-monitor.md).  
   

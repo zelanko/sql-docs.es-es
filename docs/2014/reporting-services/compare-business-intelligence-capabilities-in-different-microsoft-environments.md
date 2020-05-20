@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 12/15/2019
-ms.openlocfilehash: a5f9e9b52186a2d4569ac30a591ae95acfa36101
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1acbc2c75a7cd0dc45c0f9dd329951e073f8120
+ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75656592"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82925079"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar funciones de Business Intelligence en diferentes entornos de Microsoft
 
@@ -44,7 +44,7 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
   
  **<sup>2</sup>**  [Power BI Q&a: optimizar un libro de Power BI (modelado en la nube)](https://powerbi.microsoft.com/nl-nl/blog/new-in-power-bi-cloud-modeling-for-q-and-a/).  
   
- **<sup>3</sup>**  [Introducción de nuevas capacidades de previsión en Power View para Office 365](https://blogs.msdn.com/b/powerbi/archive/2014/05/08/introducing-new-forecasting-capabilities-in-power-view-for-office-365.aspx).  
+ **<sup>3</sup>**  [Introducción de nuevas capacidades de previsión en Power View para Office 365](https://powerbi.microsoft.com/blog/introducing-new-forecasting-capabilities-in-power-view-for-office-365/).  
   
 ## <a name="view-and-browse-bi-data-reports-and-dashboards"></a>Vea y explore datos de BI, informes y paneles.  
   

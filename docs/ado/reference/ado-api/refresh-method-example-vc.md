@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Refresh method [ADO], VC++ example
 ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: abd6a67cdec9e330cb2f21baeedfe3518fd3b7d0
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917274"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756529"
 ---
 # <a name="refresh-method-example-vc"></a>Actualización de ejemplo del método (VC ++)
 En este ejemplo se muestra cómo usar el método [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) para actualizar la colección de [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) para un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) de procedimiento almacenado.  

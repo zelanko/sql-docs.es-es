@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Keyset cursors [ADO]
 - cursors [ADO], Keyset
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c7a12d1579af407bca77c9fa61d660a84a09f04e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3df797be676961227687117e1fd7bdb748370efd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924906"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757751"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor de conjunto de claves proporciona funcionalidad entre un cursor estático y dinámico en su capacidad para detectar cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados.  

@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Resync Command property [ADO]
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 916afef294a76e62702dbbd7cc413a0540484f62
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917146"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756476"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resincronizar comando propiedad dinámicos (ADO)
 Especifica una cadena de comandos proporcionada por el usuario que el método [Resync](../../../ado/reference/ado-api/resync-method.md) emite para actualizar los datos de la tabla denominada en la propiedad dinámica de [tabla única](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) .  
@@ -33,7 +33,7 @@ Especifica una cadena de comandos proporcionada por el usuario que el método [R
   
  A continuación se muestran dos ejemplos basados en SQL:  
   
- 1\) el **conjunto de registros** se define mediante un comando:  
+ 1 \) el **conjunto de registros** se define mediante un comando:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -54,7 +54,7 @@ WHERE Orders.OrderID = ?"
   
  La **tabla única** es *Orders* y su clave principal, *OrderID*, tiene parámetros. La subselección proporciona una manera sencilla de asegurarse mediante programación de que el mismo número y orden de las columnas se devuelven como en el comando original.  
   
- 2\) el **conjunto de registros** se define mediante un procedimiento almacenado:  
+ 2 \) el **conjunto de registros** se define mediante un procedimiento almacenado:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   

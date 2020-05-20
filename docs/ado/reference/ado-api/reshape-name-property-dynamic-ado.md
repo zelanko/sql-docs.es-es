@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - Reshape Name property [ADO]
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 490a69a022c2098de1dc4ade67af484b6e50131a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917172"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756507"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Propiedad dinámica Reshape Name (ADO)
 Especifica un nombre para el objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -26,7 +26,7 @@ Especifica un nombre para el objeto de [conjunto de registros](../../../ado/refe
 ## <a name="return-values"></a>Valores devueltos  
  Devuelve un valor de **cadena** que es el nombre del **conjunto de registros**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los nombres se conservan mientras dure la conexión o hasta que se cierra el **conjunto de registros** .  
   
  La propiedad **Reshape Name** está pensada principalmente para su uso con la característica de cambio de forma del servicio de forma de [datos de Microsoft para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) proveedor de servicios. Los nombres deben ser únicos para participar en el cambio de forma.  

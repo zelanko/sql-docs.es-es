@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - DefaultDatabase property
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c78dfdc476dc9dcf599fcfe7cb87bd5e1a39d281
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5a68a41985515e63e6e8520c30fc662c69e1ced6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919165"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82757451"
 ---
 # <a name="defaultdatabase-property"></a>Propiedad DefaultDatabase
 Indica la base de datos predeterminada para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +28,7 @@ Indica la base de datos predeterminada para un objeto de [conexión](../../../ad
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que se evalúa como el nombre de una base de datos disponible en el proveedor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **DefaultDatabase** para establecer o devolver el nombre de la base de datos predeterminada en un objeto de **conexión** específico.  
   
  Si hay una base de datos predeterminada, las cadenas SQL pueden usar una sintaxis incompleta para tener acceso a los objetos de esa base de datos. Para obtener acceso a los objetos de una base de datos distinta de la especificada en la propiedad **DefaultDatabase** , debe calificar los nombres de objeto con el nombre de base de datos deseado. Tras la conexión, el proveedor escribirá información de base de datos predeterminada en la propiedad **DefaultDatabase** . Algunos proveedores solo permiten una base de datos por conexión, en cuyo caso no se puede cambiar la propiedad **DefaultDatabase** .  

@@ -15,14 +15,14 @@ f1_keywords:
 helpviewer_keywords:
 - Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 48fc3a1adf8dbeae010e4035ac4f2e390c015e54
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931250"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82756535"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
 Actualiza los objetos de una colección para reflejar los objetos disponibles en el proveedor y específicos de este.  
@@ -34,7 +34,7 @@ Actualiza los objetos de una colección para reflejar los objetos disponibles en
 collection.Refresh  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **Refresh** realiza diferentes tareas en función de la colección de la que se llama.  
   
 ### <a name="parameters"></a>Parámetros  

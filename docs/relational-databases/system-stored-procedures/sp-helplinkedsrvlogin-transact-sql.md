@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplinkedsrvlogin
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c9e0a996728c6bf0b352afc9615808773eefec0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122463"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818468"
 ---
 # <a name="sp_helplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @rmtsrvname = ] 'rmtsrvname'`Es el nombre del servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se presentan todas las asignaciones de inicio de sesión establecidas con todos los servidores vinculados definidos en el equipo local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname y su**valor predeterminado es NULL. NULL especifica que se devuelven todas las asignaciones de inicio de sesión definidas en *rmtsrvname* . Si no es NULL, ya debe existir una asignación para *locallogin* a *rmtsrvname* . *locallogin* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión de o un usuario de Windows. El usuario de Windows tiene que haber recibido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directamente o a través de su pertenencia a un grupo de Windows al que se haya concedido acceso.  
+`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname y su**valor predeterminado es NULL. NULL especifica que se devuelven todas las asignaciones de inicio de sesión definidas en *rmtsrvname* . Si no es NULL, ya debe existir una asignación para *locallogin* a *rmtsrvname* . *locallogin* puede ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión de o un usuario de Windows. El usuario de Windows tiene que haber recibido acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directamente o a través de su pertenencia a un grupo de Windows al que se haya concedido acceso.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -56,7 +56,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
 |**Is Self Mapping**|**smallint**|0 = el **Inicio de sesión local** se asigna a **sesión remota** al conectarse al **servidor vinculado**.<br /><br /> 1 = el **Inicio de sesión local** se asigna al mismo inicio de sesión y contraseña cuando se conecta al **servidor vinculado**.|  
 |**Remote Login**|**sysname**|Nombre de inicio de sesión en **LinkedServer** que se asigna a **LocalLogin** cuando **IsSelfMapping** es 0. Si **IsSelfMapping** es 1, **RemoteLogin** es NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Antes de eliminar las asignaciones de inicio de sesión, utilice **sp_helplinkedsrvlogin** para determinar los servidores vinculados que están implicados.  
   
 ## <a name="permissions"></a>Permisos  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_resync_targetserver
 ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6aa435a7c0a65634323f6c3f90874cd3694fa876
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995489"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816852"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_resync_targetserver
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Informa del resultado de **sp_post_msx_operation** acciones.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_resync_targetserver** elimina el conjunto actual de instrucciones para el servidor de destino y envía un nuevo conjunto para que lo descargue el servidor de destino. El nuevo conjunto está compuesto de la instrucción que va a eliminar todos los trabajos multiservidor, seguida de una inserción por cada trabajo que haya actualmente en el servidor de destino.  
   
 ## <a name="permissions"></a>Permisos  

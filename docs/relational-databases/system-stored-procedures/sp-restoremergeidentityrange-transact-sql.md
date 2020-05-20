@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_restoremergeidentityrange
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5160e0f734f68450f868f3b1c670b1e5647524ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a41b725d46c96f1ab79444246ab538b0c3f539f0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817006"
 ---
 # <a name="sp_restoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_restoremergeidentityrange** se utiliza con la replicación de mezcla.  
   
  **sp_restoremergeidentityrange** obtiene la información de asignación de intervalo de identidad máxima del distribuidor y actualiza los valores de la columna **max_used** de [MSmerge_identity_range_allocations &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/msmerge-identity-range-allocations-transact-sql.md) para los artículos que usan la administración automática del intervalo de identidad.  

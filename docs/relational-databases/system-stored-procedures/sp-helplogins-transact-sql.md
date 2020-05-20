@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helplogins
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c26bf0ff225a593a6427402fc15543edbfc15637
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122449"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818295"
 ---
 # <a name="sp_helplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
 |**Junction**|**varbinary(85)**|Identificador de seguridad (SID) del inicio de sesión.|  
-|**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de.|  
+|**DefDBName**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**DefLangName**|**sysname**|Idioma predeterminado usado por **LoginName**.|  
 |**Auser**|**Char (5)**|Sí = **LoginName** tiene un nombre de usuario asociado en una base de datos.<br /><br /> No = **LoginName** no tiene un nombre de usuario asociado.|  
 |**ARemote**|**Char (7)**|Sí = **LoginName** tiene asociado un inicio de sesión remoto.<br /><br /> No = **LoginName** no tiene un inicio de sesión asociado.|  
@@ -61,11 +61,11 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nombre de inicio de sesión.|  
-|**Nombrebd**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instancia de.|  
+|**Nombrebd**|**sysname**|Base de datos predeterminada que **LoginName** usa al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**Nombre**|**sysname**|Cuenta de usuario a la que **LoginName** está asignada en **dbname**y los roles de los que **LoginName** es miembro en **dbname**.|  
 |**UserOrAlias**|**Char (8)**|MemberOf = **username** es un rol.<br /><br /> User = **username** es una cuenta de usuario.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Antes de quitar un inicio de sesión, utilice **sp_helplogins** para identificar las cuentas de usuario que se asignan al inicio de sesión.  
   
 ## <a name="permissions"></a>Permisos  

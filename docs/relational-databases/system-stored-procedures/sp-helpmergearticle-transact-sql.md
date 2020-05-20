@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergearticle
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e01a1c9c96813c14827ca2f941c84d151c147195
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68122341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82818165"
 ---
 # <a name="sp_helpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación de la que se va a recuperar información. *Publication*es de **tipo sysname**y su **%** valor predeterminado es, que devuelve información acerca de todos los artículos de mezcla contenidos en todas las publicaciones de la base de datos actual.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación de la que se va a recuperar información. *Publication*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los artículos de mezcla contenidos en todas las publicaciones de la base de datos actual.  
   
-`[ @article = ] 'article'`Es el nombre del artículo para el que se va a devolver información. *article*es de **%** **tipo sysname y su**valor predeterminado es, que devuelve información acerca de todos los artículos de mezcla de la publicación especificada.  
+`[ @article = ] 'article'`Es el nombre del artículo para el que se va a devolver información. *article*es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los artículos de mezcla de la publicación especificada.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
@@ -68,7 +68,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**int**|Si está habilitado el control automático de intervalos de identidad; donde **1** está habilitado y **0** está deshabilitado.|  
 |**pub_identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Tamaño del intervalo que se va a utilizar al asignar nuevos valores de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**mínimo**|**int**|Valor de porcentaje utilizado para los suscriptores que [!INCLUDE[ssEW](../../includes/ssew-md.md)] ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o versiones anteriores de. **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**mínimo**|**int**|Valor de porcentaje utilizado para los suscriptores que ejecutan [!INCLUDE[ssEW](../../includes/ssew-md.md)] o versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Threshold** controla cuándo el agente de mezcla asigna un nuevo intervalo de identidad. Si se utiliza el porcentaje de valores especificado en el umbral, el Agente de mezcla crea un nuevo intervalo de identidad. Para obtener más información, vea la sección "replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**int**|Es si se comprueba una firma digital antes de utilizar un solucionador en la replicación de mezcla; donde **0** significa que no se comprueba la firma y **1** significa que se comprueba la firma para ver si proviene de una fuente de confianza.|  
 |**destination_object**|**sysname**|Nombre del objeto de destino. Aplicable únicamente a procedimientos almacenados de mezcla, vistas y artículos de esquema UDF.|  
 |**allow_interactive_resolver**|**int**|Si se utiliza el solucionador interactivo en un artículo; donde **1** significa que se utiliza este solucionador y **0** significa que no se utiliza.|  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexes
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d678b5643c4288c07ff7576bfced5cd9f0655d1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139919"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82817942"
 ---
 # <a name="sp_indexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,25 +44,25 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @table_server= ] '*table_server*'  
+ [ @table_server =] '*table_server*'  
  Es el nombre de un servidor vinculado que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se solicita información de tablas. *table_server* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @table_name= ] '*TABLE_NAME*'  
+ [ @table_name =] '*TABLE_NAME*'  
  Es el nombre de la tabla remota para la que se proporciona información de índice. *TABLE_NAME* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, se devuelven todas las tablas de la base de datos especificada.  
   
- [ @table_schema= ] '*TABLE_SCHEMA*'  
+ [ @table_schema =] '*TABLE_SCHEMA*'  
  Especifica el esquema de la tabla. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla. *TABLE_SCHEMA* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @table_catalog= ] '*table_db*'  
+ [ @table_catalog =] '*table_db*'  
  Es el nombre de la base de datos en la que reside *TABLE_NAME* . *table_db* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL, *table_db* toma como valor predeterminado **Master**.  
   
- [ @index_name= ] '*index_name*'  
+ [ @index_name =] '*index_name*'  
  Es el nombre del índice para el que se solicita información. *index* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @is_unique= ] '*is_unique*'  
+ [ @is_unique =] '*is_unique*'  
  Es el tipo de índice para el que se devuelve información. *is_unique* es de **bit**, su valor predeterminado es NULL y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |1|Devuelve información acerca de índices únicos.|  
 |0|Devuelve información acerca de índices que no son únicos.|  
@@ -76,7 +76,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |TABLE_SCHEM|**sysname**|Esquema de la tabla.|  
 |TABLE_NAME|**sysname**|Nombre de la tabla remota.|  
 |NON_UNIQUE|**smallint**|Indica si el índice es único o no:<br /><br /> 0 = Único<br /><br /> 1 = No único|  
-|INDEX_QUALIFER|**sysname**|Nombre del propietario del índice. Algunos productos DBMS permiten crear índices a usuarios que no sean los propietarios de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna es siempre igual que **TABLE_NAME**.|  
+|INDEX_QUALIFER|**sysname**|Nombre del propietario del índice. Algunos productos DBMS permiten crear índices a usuarios que no sean los propietarios de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , esta columna es siempre igual que **TABLE_NAME**.|  
 |INDEX_NAME|**sysname**|Nombre del índice.|  
 |TYPE|**smallint**|Tipo de índice:<br /><br /> 0 = Estadísticas de una tabla<br /><br /> 1 = Clúster<br /><br /> 2 = Hash<br /><br /> 3 = otro|  
 |ORDINAL_POSITION|**int**|Posición ordinal de la columna en el índice. La primera columna del índice es 1. Esta columna siempre devuelve un valor.|  

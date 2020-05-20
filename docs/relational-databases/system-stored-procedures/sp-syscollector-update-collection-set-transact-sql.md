@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cb261fdfb745e935b94fc5c2944640c507674ece
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010550"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816548"
 ---
 # <a name="sp_syscollector_update_collection_set-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ sp_syscollector_update_collection_set
   
 `[ @logging_level = ] logging_level`Es el nivel de registro. *logging_level* es **smallint** con uno de los siguientes valores:  
   
- 0: registrar la información de [!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución y los eventos que realizan el seguimiento:  
+ 0: registrar la información de ejecución y [!INCLUDE[ssIS](../../includes/ssis-md.md)] los eventos que realizan el seguimiento:  
   
 -   Iniciar/detener los conjuntos de recopilaciones  
   
@@ -112,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_update_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
  *Collection_set_id* o *Name* deben tener un valor, ambos no pueden ser null. Para obtener estos valores, consulte la vista del sistema syscollector_collection_sets.  

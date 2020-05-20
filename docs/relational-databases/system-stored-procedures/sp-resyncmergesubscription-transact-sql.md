@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_resyncmergesubscription
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a20fd73874ddb93af5224c3ce6c86383c0e15ace
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041030"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82816849"
 ---
 # <a name="sp_resyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @resync_type = ] resync_type`Define cuándo debe comenzar la resincronización. *resync_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|La sincronización comienza después de la instantánea inicial. Esta es la opción que consume más recursos, puesto que se vuelven a aplicar al suscriptor todos los cambios a partir de la instantánea inicial.|  
 |**1**|La sincronización comienza después de la última validación correcta. Todas las generaciones nuevas o incompletas originadas a partir de la última validación correcta se aplicarán de nuevo al suscriptor.|  
@@ -66,7 +66,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_resyncmergesubscription** se utiliza en la replicación de mezcla.  
   
  Un valor de **0** para el parámetro *resync_type* , que vuelve a aplicar todos los cambios desde la instantánea inicial, puede consumir muchos recursos, pero posiblemente mucho menos que una reinicialización completa. Por ejemplo, si la instantánea inicial tuvo lugar hace un mes, este valor dará lugar a que se apliquen de nuevo los datos del pasado mes. Si la instantánea inicial contenía 1 GB de datos, pero la cantidad de cambios del mes pasado ocupaba 2 MB de datos cambiados, sería mucho más eficaz volver a aplicar los datos que aplicar de nuevo la instantánea de 1 GB completa.  

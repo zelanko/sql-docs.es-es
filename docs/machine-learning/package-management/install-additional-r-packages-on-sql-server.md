@@ -1,6 +1,6 @@
 ---
 title: Instalación de paquetes de R adicionales
-description: Aprenda a usar sqlmlutils para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services.
+description: Obtenga más información sobre cómo usar sqlmlutils para instalar nuevos paquetes de R en una instancia de Machine Learning Services de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/11/2020
@@ -10,18 +10,18 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2b2c561791b88340fd0a77977843f582fa60c648
-ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
+ms.openlocfilehash: efea0d4306c71607de93652e08f347586a17450e
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83269439"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606883"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Instalación de nuevos paquetes de R con sqlmlutils
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describe cómo usar las funciones del paquete de [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de R en una instancia de SQL Server Machine Learning Services o SQL Server R Services. Los paquetes que se instalen podrán usarse en los scripts de R que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
+En este artículo se describe cómo usar las funciones del paquete [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) para instalar nuevos paquetes de R en una instancia de Machine Learning Services de SQL Server. Los paquetes que se instalen podrán usarse en los scripts de R que se ejecutan en la base de datos mediante la instrucción T-SQL [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql).
 
 > [!NOTE]
 > El paquete **sqlmlutils** que se describe en este artículo se usa para agregar paquetes de R a SQL Server 2019 o versiones posteriores. Respecto a SQL Server 2017 y versiones anteriores, vea [Instalación de paquetes con herramientas de R](https://docs.microsoft.com/sql/machine-learning/package-management/install-r-packages-standard-tools?view=sql-server-2017&viewFallbackFrom=sql-server-ver15).
@@ -30,7 +30,7 @@ En este artículo se describe cómo usar las funciones del paquete de [**sqlmlut
 
 - Instale [R](https://www.r-project.org) y [RStudio Desktop](https://www.rstudio.com/products/rstudio/download/) en el equipo cliente que usa para conectarse a SQL Server. Puede usar cualquier IDE de R para ejecutar scripts, pero en este artículo se da por supuesto que es RStudio.
 
-- Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio o SSMS.
+- Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio.
 
 ### <a name="other-considerations"></a>Otras consideraciones
 
@@ -194,7 +194,6 @@ En un equipo con acceso a Internet:
    ```
    ::: moniker-end
 
-
    Para el valor `Rversion`, use la versión de R instalada en SQL Server. Para comprobar la versión instalada, use el siguiente comando de T-SQL.
 
    ```sql
@@ -227,7 +226,7 @@ En el equipo cliente:
 
 Una vez instalado el paquete de **glue**, puede usarlo en un script de R en SQL Server con el comando T-SQL **sp_execute_external_script**.
 
-1. Abra Azure Data Studio o SSMS y conéctese a la base de datos de SQL Server.
+1. Abra Azure Data Studio y conéctese a la base de datos de SQL Server.
 
 1. Ejecute el siguiente comando:
 

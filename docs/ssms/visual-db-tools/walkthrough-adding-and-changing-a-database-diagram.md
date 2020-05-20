@@ -22,11 +22,11 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 03/29/2020
 ms.locfileid: "75246249"
 ---
-# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Visita guiada: Agregar y modificar un diagrama de base de datos
+# <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 En este tutorial se muestra cómo crear y modificar un diagrama de base de datos, así como la forma de realizar cambios en la base de datos mediante el componente Diagramas de base de datos. También se explica cómo agregar tablas al diagrama, crear relaciones entre las tablas, crear restricciones e índices en las columnas y modificar el nivel de información que puede verse en cada tabla.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerrequisitos  
 Para completar esta visita guiada, necesitará:  
   
 -   Acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]  
@@ -46,7 +46,7 @@ Para completar esta visita guiada, necesitará:
   
 3.  Haga clic con el botón derecho en el nodo Diagramas de base de datos y elija **Nuevo diagrama de base de datos**.  
   
-    Si la base de datos no dispone de los objetos necesarios para crear diagramas, aparecerá el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
+    Si la base de datos no tiene los objetos necesarios para crear diagramas, aparece el mensaje siguiente: **Esta base de datos no tiene uno o varios de los objetos de soporte necesarios para usar diagramas de base de datos. ¿Desea crearlos?** Elija **Sí**.  
   
     Aparecerá el cuadro de diálogo **Agregar tabla** .  
   
@@ -60,7 +60,7 @@ Para completar esta visita guiada, necesitará:
   
 1.  Haga clic con el botón secundario en la tabla `Address` . En el menú contextual, seleccione **Vista de tabla**y, a continuación, haga clic en **Estándar**.  
   
-    En la tabla con cuadrícula se muestran tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
+    La cuadrícula de tabla muestra tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
   
 2.  Haga clic con el botón derecho en la tabla `Address` , haga clic en **Vista de tabla** y seleccione **Claves**.  
   
@@ -74,7 +74,7 @@ Para completar esta visita guiada, necesitará:
   
 2.  En el cuadro de diálogo **Elegir nombre** , haga clic en **Aceptar** para admitir el nombre predeterminado, **Table1**.  
   
-    Aparecerá una nueva tabla con cuadrícula con tres columnas: **Nombre de columna**, **Tipo de datos**y **Permitir valores NULL**.  
+    Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
   
 3.  Agregue la siguiente información a **Table1**:  
   
@@ -92,7 +92,7 @@ Para completar esta visita guiada, necesitará:
   
 6.  En el cuadro de diálogo **Elegir nombre**, haga clic en **Aceptar** para admitir el nombre predeterminado **Diagram1**.  
   
-7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que ** se guardará en la base de datos. Haga clic en **Sí**.  
+7.  Aparecerá el cuadro de diálogo **Guardar`Table1` con un mensaje que indica que**  se guardará en la base de datos. Haga clic en **Sí**.  
   
 ## <a name="modifying-table-structure"></a>Modificar la estructura de la tabla  
 Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el Diseñador de diagramas.  
@@ -132,7 +132,7 @@ Se pueden agregar restricciones CHECK y crear relaciones entre las tablas en el 
   
 2.  Arrastre `T2col1` hasta `T1col1`.  
   
-    Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** , en primer plano.  
+    Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** en primer plano.  
   
 3.  Haga clic en **Aceptar** para guardar la nueva relación.  
   

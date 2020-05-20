@@ -271,7 +271,7 @@ SELECT @g.STBoundary().ToString();
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
 ###  <a name="closure"></a><a name="closure"></a> Clausura  
- Una instancia de _geometry_**cerrada** es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
+ Una instancia de **geometry**_cerrada_ es una figura cuyos puntos de inicio y de finalización son los mismos. Las instancias**Polygon** se consideran cerradas. Las instancias**Point** no son cerradas.  
   
  Un anillo es una instancia de **LineString** simple y cerrada.  
   

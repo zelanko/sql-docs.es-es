@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - SaveToFile method [ADO]
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c8434841442ee61b31d021e5f2c46f57f1d2b147
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917032"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755824"
 ---
 # <a name="savetofile-method"></a>Método SaveToFile
 Guarda el contenido binario de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) en un archivo.  
@@ -43,7 +43,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  Si sobrescribe un archivo existente (cuando se establece **adSaveCreateOverwrite** ), **SaveToFile** truncará cualquier byte del archivo existente original que siga el nuevo [EOS](../../../ado/reference/ado-api/eos-property.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **SaveToFile** se puede usar para copiar el contenido de un objeto de **secuencia** en un archivo local. No hay ningún cambio en el contenido o las propiedades del objeto de **secuencia** . El objeto de **secuencia** debe estar abierto antes de llamar a **SaveToFile**.  
   
  Este método no cambia la Asociación del objeto de **secuencia** a su origen subyacente. El objeto de **secuencia** todavía se asociará a la dirección URL o **registro** original que era su origen al abrirse.  

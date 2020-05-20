@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - SaveOptionsEnum enumeration [ADO]
 ms.assetid: 59339100-6e29-48d1-aea3-6873796d186b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 807a8d7e5757a2caf76f100a1ae51c4a8a3f4e98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3423d215fa4a52286509769bb2ac0b75d2283a02
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931143"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82755837"
 ---
 # <a name="saveoptionsenum"></a>SaveOptionsEnum
 Especifica si se debe crear o sobrescribir un archivo al guardar desde un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) . Los valores pueden ser **adSaveCreateNotExist** o **adSaveCreateOverWrite**.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adSaveCreateNotExist**|1|Predeterminada. Crea un nuevo archivo si el archivo especificado por el parámetro *filename* todavía no existe.|  
 |**adSaveCreateOverWrite**|2|Sobrescribe el archivo con los datos del objeto de **secuencia** abierto actualmente, si el archivo especificado por el parámetro *filename* ya existe. Si el archivo especificado por el parámetro *filename* no existe, se crea un archivo nuevo.|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_profiles dynamic management view
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd30a6c07bccde04bb38189fab00f688dd763356
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b8a060195e5fba5ae5e97e2ded6afb51c1636687
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165504"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82812077"
 ---
 # <a name="sysdm_exec_query_profiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "74165504"
 Supervisa el progreso de la consulta en tiempo real mientras la consulta está en ejecución. Por ejemplo, use esta DMV para determinar qué parte de la consulta se está ejecutando con lentitud. Combine esta DMV con otras DMV del sistema mediante las columnas identificadas en el campo de descripción. O bien, combine esta DMV con otros contadores de rendimiento (como el Monitor de rendimiento, xperf) mediante las columnas de marca de tiempo.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
-Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no coinciden con los resultados de las opciones `SET STATISTICS XML ON` existentes, como, por ejemplo, las que solo crean los resultados cuando finaliza la consulta.  
+Los contadores devueltos son por operador y por subproceso. Los resultados son dinámicos y no coinciden con los resultados de las opciones existentes, como, por ejemplo, las `SET STATISTICS XML ON` que solo crean los resultados cuando finaliza la consulta.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -72,7 +72,7 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
 |segment_read_count|**int**|Número de lecturas anticipadas de segmento hasta ahora.|  
 |segment_skip_count|**int**|Número de segmentos omitidos hasta ahora.| 
 |actual_read_row_count|**bigint**|Número de filas leídas por un operador antes de que se aplicara el predicado residual.| 
-|estimated_read_row_count|**bigint**|**Se aplica a:** A partir [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] de SP1. <br/>Número de filas que un operador debe leer antes de que se aplicara el predicado residual.|  
+|estimated_read_row_count|**bigint**|**Se aplica a:** A partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1. <br/>Número de filas que un operador debe leer antes de que se aplicara el predicado residual.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Si el nodo del plan de consulta no tiene ninguna e/s, todos los contadores relacionados con la e/s se establecen en NULL.  
@@ -83,17 +83,17 @@ Los contadores devueltos son por operador y por subproceso. Los resultados son d
   
 -   Si se realizaran búsquedas en paralelo, esta DMV informa sobre los contadores para cada uno de los subprocesos paralelos que se ejecutan en la búsqueda.
  
-A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de SP1, la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar* existe en paralelo con una *infraestructura ligera de generación de perfiles de estadísticas de ejecución de consultas*. `SET STATISTICS XML ON`y `SET STATISTICS PROFILE ON` usan siempre la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar*. Para `sys.dm_exec_query_profiles` que se rellene, una de las infraestructuras de generación de perfiles de consulta debe estar habilitada. Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).    
+A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar* existe en paralelo con una *infraestructura ligera de generación de perfiles de estadísticas de ejecución de consultas*. `SET STATISTICS XML ON`y `SET STATISTICS PROFILE ON` usan siempre la *infraestructura de generación de perfiles de estadísticas de ejecución de consultas estándar*. Para `sys.dm_exec_query_profiles` que se rellene, una de las infraestructuras de generación de perfiles de consulta debe estar habilitada. Para obtener más información, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).    
 
 >[!NOTE]
-> La consulta en investigación tiene que iniciarse **después** de que se haya habilitado la infraestructura de generación de perfiles de consulta, lo que lo habilitará después de iniciar la consulta no producirá resultados en `sys.dm_exec_query_profiles`. Para obtener más información sobre cómo habilitar las infraestructuras de generación de perfiles de consulta, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
+> La consulta en investigación tiene que iniciarse **después** de que se haya habilitado la infraestructura de generación de perfiles de consulta, lo que lo habilitará después de iniciar la consulta no producirá resultados en `sys.dm_exec_query_profiles` . Para obtener más información sobre cómo habilitar las infraestructuras de generación de perfiles de consulta, consulte la [infraestructura de generación de perfiles de consulta](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] en instancia administrada `VIEW DATABASE STATE` , requiere el permiso y `db_owner` la pertenencia al rol de base de datos.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] instancia administrada, requiere `VIEW DATABASE STATE` el permiso y la pertenencia al `db_owner` rol de base de datos.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
 ## <a name="examples"></a>Ejemplos  
- Paso 1: inicie sesión en una sesión en la que vaya a ejecutar la consulta que va a `sys.dm_exec_query_profiles`analizar. Para configurar la consulta para el uso `SET STATISTICS PROFILE ON`de la generación de perfiles. Ejecute la consulta en esta misma sesión.  
+ Paso 1: inicie sesión en una sesión en la que vaya a ejecutar la consulta que va a analizar `sys.dm_exec_query_profiles` . Para configurar la consulta para el uso de la generación de perfiles `SET STATISTICS PROFILE ON` . Ejecute la consulta en esta misma sesión.  
   
 ```sql  
 --Configure query for profiling with sys.dm_exec_query_profiles  

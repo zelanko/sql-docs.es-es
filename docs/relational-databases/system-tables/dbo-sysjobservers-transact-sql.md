@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysjobservers system table
 ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 50bc55ab39f61e8c1588770b3b1a0adec82d6f53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70026203"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806964"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ Almacena la asociación o relación de un trabajo determinado con uno o más ser
 |last_outcome_ message|**nvarchar(1024)**|Mensaje asociado, si existe, a la columna last_run_outcome.|  
 |last_run_date|**int**|Fecha en que se ejecutó el trabajo por última vez.|  
 |last_run_time|**int**|Hora a la que se ejecutó el trabajo por última vez.|  
-|last_run_duration|**int**|Duración de la ejecución del trabajo, en horas, minutos y segundos. Se calcula mediante la fórmula: (*horas*\*10000) + (*minutos*\*100) + *segundos*.|  
+|last_run_duration|**int**|Duración de la ejecución del trabajo, en horas, minutos y segundos. Se calcula mediante la fórmula: (*horas* \* 10000) + (*minutos* \* 100) + *segundos*.|  
 
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
 Un valor superior A *4* significa que el Agente SQL no conoce el estado de ese trabajo. El *last_run_outcome* se establece inicialmente en *5* cuando se crea un trabajo.
 

@@ -112,7 +112,7 @@ End Function
 ```  
   
 ## <a name="reinitializemetadata-method"></a>Método ReinitializeMetaData  
- El Diseñador <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> llama al método [!INCLUDE[ssIS](../../../includes/ssis-md.md)] siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
+ El Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A> siempre que se edita un componente que devuelve <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_NEEDSNEWMETADATA> desde su método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>. Los componentes deben contener código que detecte y corrija los problemas identificados por el componente durante la validación.  
   
  En el ejemplo siguiente se muestra un componente que detecta problemas durante la validación y los corrige en el método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ReinitializeMetaData%2A>.  
   

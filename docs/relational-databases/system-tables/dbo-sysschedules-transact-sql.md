@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysschedules system table
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cbf570a09f3316172a60206730b91644cc603f0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: de79a475b8edb8f02eee15d79f1259b8032b60e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79090576"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806800"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "79090576"
 |**freq_interval**|**int**|Días en que se ejecuta el trabajo. Depende del valor de **freq_type**. El valor predeterminado es **0**, que indica que **freq_interval** no se usa. Vea la tabla siguiente para ver los valores posibles y sus efectos.|  
 |**freq_subday_type**|**int**|Unidades para el **freq_subday_interval**. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> <br /><br /> **1** : en el momento especificado<br /><br /> **2** : segundos<br /><br /> **4** : minutos<br /><br /> **8** : horas|  
 |**freq_subday_interval**|**int**|Número de períodos de **freq_subday_type** entre cada ejecución del trabajo.|  
-|**freq_relative_interval**|**int**|Cuando se produce **freq_interval** cada mes, si **freq_type** es **32** (relativo mensual). Puede ser uno de los siguientes valores:<br /><br /> **0** = **freq_relative_interval** no se usa<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
+|**freq_relative_interval**|**int**|Cuando se produce **freq_interval** cada mes, si **freq_type** es **32** (relativo mensual). Puede ser uno de los siguientes valores:<br /><br /> **0**  =  **freq_relative_interval** no se usa<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
 |**freq_recurrence_**<br /><br /> **diez**|**int**|Número de semanas o meses entre la ejecución programada de un trabajo. **freq_recurrence_factor** solo se utiliza si **freq_type** es **8**, **16**o **32**. Si esta columna contiene **0**, **freq_recurrence_factor** no se usa.|  
 |**active_start_date**|**int**|Fecha en la que puede comenzar la ejecución de un trabajo. La fecha tiene el formato AAAAMMDD. NULL indica la fecha actual.|  
 |**active_end_date**|**int**|Fecha en la que se puede detener la ejecución de un trabajo. La fecha tiene el formato AAAAMMDD.|  
@@ -64,7 +64,7 @@ ms.locfileid: "79090576"
 |**64** (se inicia cuando se inicia Agente SQL Server servicio)|**freq_interval** no se usa (**0**)|  
 |**128** (se ejecuta cuando el equipo está inactivo)|**freq_interval** no se usa (**0**)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Consulte también:  
  [DBO. sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

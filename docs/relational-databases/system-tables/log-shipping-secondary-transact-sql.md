@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5debab1572bc2f788c0dc13773d0dc140c693108
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095821"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82805998"
 ---
 # <a name="log_shipping_secondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68095821"
 |**last_copied_file**|**nvarchar (500)**|Nombre del último archivo de copia de seguridad copiado en el servidor secundario.|  
 |**last_copied_date**|**datetime**|Fecha y hora de la última operación de copia en el servidor secundario.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Varias bases de datos secundarias del mismo servidor secundario de una base de datos principal comparten algunas opciones de configuración en la tabla **log_shipping_secondary** . Si se modifica un valor compartido en alguna de ellas, este valor se modifica para todas.  
   
 ## <a name="see-also"></a>Consulte también  

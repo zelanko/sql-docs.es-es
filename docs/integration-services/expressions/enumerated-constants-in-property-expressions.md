@@ -536,7 +536,7 @@ ms.locfileid: "71297636"
 |Archivos|1|  
 |Log|2|  
   
- Propiedad **BackupDevice**: se establece mediante el uso de valores de la enumeración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DeviceType**de los objetos de administración de** (SMO).  
+ Propiedad **BackupDevice**: se establece mediante el uso de valores de la enumeración **DeviceType** de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
   
 |Nombre descriptivo en DeviceType|Valor numérico|  
 |---------------------------------|-------------------|  
@@ -564,7 +564,7 @@ ms.locfileid: "71297636"
 |Year|3|  
   
 ### <a name="update-statistics-task"></a>Tarea Actualizar estadísticas  
- Propiedad **UpdateType**: se establece mediante el uso de valores de la enumeración [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]StatisticsTarget**de los objetos de administración de** (SMO).  
+ Propiedad **UpdateType**: se establece mediante el uso de valores de la enumeración **StatisticsTarget** de los objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO).  
   
 |Nombre descriptivo en StatisticsTarget|Valor numérico|  
 |---------------------------------------|-------------------|  

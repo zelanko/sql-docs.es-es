@@ -57,7 +57,7 @@ Una memoria caché volátil rápida que se enfrenta a un medio considerablemente
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describe cómo configurar la memoria persistente (PMEM) con la `ndctl`memoria persistente[ de la utilidad ](../linux/sql-server-linux-configure-pmem.md).
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] describe cómo configurar la memoria persistente (PMEM) con la [memoria persistente](../linux/sql-server-linux-configure-pmem.md) de la utilidad `ndctl`.
 
 ## <a name="persisted-log-buffer"></a>Búfer de registro persistente
 

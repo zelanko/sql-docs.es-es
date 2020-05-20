@@ -82,7 +82,7 @@ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], use la DMV [sys.d
 Las entradas del registro de transacciones que realizó cada transacción en una base de datos. Para obtener más información, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Guía de arquitectura y administración de registros de transacciones de SQL Server](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md).
   
 ## <a name="permissions"></a>Permisos  
-Para ejecutar consultas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en `DBCC SQLPERF(LOGSPACE)` se necesita el permiso `VIEW SERVER STATE` en el servidor. Para restablecer las estadísticas de esperas y bloqueos temporales, se requiere el permiso `ALTER SERVER STATE` en el servidor.
+Para ejecutar consultas `DBCC SQLPERF(LOGSPACE)`, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se necesita el permiso `VIEW SERVER STATE` en el servidor. Para restablecer las estadísticas de esperas y bloqueos temporales, se requiere el permiso `ALTER SERVER STATE` en el servidor.
   
 En los niveles Premium y críticos para la empresa de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se necesita el permiso `VIEW DATABASE STATE` en la base de datos. En los niveles estándar, básico y de uso general de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], se requiere la cuenta de administrador de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. No se admiten el reinicio de las estadísticas de espera y bloqueos temporales.
   

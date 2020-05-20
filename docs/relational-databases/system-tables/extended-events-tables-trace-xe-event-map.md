@@ -16,14 +16,14 @@ helpviewer_keywords:
 - trace_xe_event_map
 - extended events [SQL Server], tables
 ms.assetid: 537aa292-3540-47e8-be28-56dc01abc343
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07810bcd1f43bd3fd2428361e5f429edb9c7c3d5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f3908fb257b761d5bee12aec07141b191e0328e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68056241"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806344"
 ---
 # <a name="extended-events-tables---trace_xe_event_map"></a>Tablas de eventos extendidos: trace_xe_event_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68056241"
 |package_name|**nvarchar(60)**|El nombre del paquete de eventos extendidos donde reside el evento asignado.|  
 |xe_event_name|**nvarchar(60)**|El nombre del evento de eventos extendidos que está asignado a la clase de eventos de Seguimiento de SQL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede utilizar la siguiente consulta para identificar las acciones de eventos de eventos extendidos que son equivalentes a las clases de eventos de Seguimiento de SQL:  
   
 ```  

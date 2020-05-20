@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sysproxysubsystem system table
 ms.assetid: 6d7713f5-1253-4a19-b1fb-635c377c95c1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f3a140a4cf1c82deda3b9d6a15b419b33b411974
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4065c65b8e93d551fcf0af8f2bd242fa71d8d0aa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82806835"
 ---
 # <a name="dbosysproxysubsystem-transact-sql"></a>dbo.sysproxysubsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68097019"
 |**subsystem_id**|**int**|Id. del subsistema. Este valor corresponde al **subsystem_id** columna de la tabla **syssubsystems** .|  
 |**proxy_id**|**int**|Id. de la cuenta de proxy. Este valor corresponde al **proxy_id** columna de la tabla **sysproxies** .|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden tener acceso a esta tabla.  
   
 ## <a name="see-also"></a>Consulte también  

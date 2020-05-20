@@ -1,7 +1,7 @@
-- name: Documentación de Machine Learning Services para SQL Server
+- name: Documentación del aprendizaje automático en SQL
   href: ../machine-learning/index.yml
-- name: Documentación de SQL Server >
-  href: ../sql-server/index.yml
+- name: "Documentación de Microsoft\_SQL >"
+  href: ../index.yml
 - name: Información general
   expanded: true
   items:
@@ -113,6 +113,26 @@
       items:
         - name: Tutoriales de R
           href: ../machine-learning/tutorials/r-tutorials.md
+        - name: Alquiler de material para esquiar (árbol de decisión)
+          items:
+            - name: 1 - Introducción
+              href: ../machine-learning/tutorials/r-predictive-model-introduction.md
+            - name: 2 - Preparación de los datos
+              href: ../machine-learning/tutorials/r-predictive-model-prepare-data.md
+            - name: 3 - Entrenamiento del modelo
+              href: ../machine-learning/tutorials/r-predictive-model-train.md
+            - name: 4 - Implementación del modelo
+              href: ../machine-learning/tutorials/r-predictive-model-deploy.md
+        - name: Categorización de clientes (agrupación en clústeres k-means)
+          items:
+            - name: 1 - Introducción
+              href: ../machine-learning/tutorials/r-clustering-model-introduction.md
+            - name: 2 - Preparación de los datos
+              href: ../machine-learning/tutorials/r-clustering-model-prepare-data.md
+            - name: 3 - Creación del modelo
+              href: ../machine-learning/tutorials/r-clustering-model-build.md
+            - name: 4 - Implementación del modelo
+              href: ../machine-learning/tutorials/r-clustering-model-deploy.md
         - name: Creación de modelos basados en particiones
           href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
         - name: Uso de R en T-SQL

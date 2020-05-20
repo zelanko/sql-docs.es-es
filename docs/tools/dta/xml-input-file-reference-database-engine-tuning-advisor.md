@@ -1,6 +1,7 @@
 ---
 title: Referencia del archivo de entrada XML
 titleSuffix: Database Engine Tuning Advisor
+description: En este artículo se resumen los elementos disponibles para un archivo de entrada XML que usa el Asistente para la optimización de motor de base de datos para optimizar una base de datos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -12,12 +13,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 12646cd7f2c737696f8c86d25c9c6bf2d6c2ada8
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c4ff0fbe1077e1ec0aa953c4ddf30a2f2635c610
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75247509"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151788"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Referencia del archivo de entrada XML (Asistente para la optimización de motor de base de datos)
 

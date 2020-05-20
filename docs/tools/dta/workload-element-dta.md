@@ -1,5 +1,6 @@
 ---
 title: Workload (DTA, elemento)
+description: En la utilidad DTA, el elemento Workload especifica la carga de trabajo que se va a utilizar para una sesión de optimización. En este artículo se describe ese elemento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -15,12 +16,12 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 22331332715639b12f7a2cc82d8b71d723a1fecd
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 5ac7f5a55ce968eeb2ca274deff09ff8b7f2e4ae
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307894"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151469"
 ---
 # <a name="workload-element-dta"></a>Workload (DTA, elemento)
 

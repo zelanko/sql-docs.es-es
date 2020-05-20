@@ -1,5 +1,5 @@
 ---
-title: Instalación de versiones anteriores de la documentación de SQL Server sin conexión
+title: Instalación de la documentación de SQL Server para la vista sin conexión
 description: Obtenga información sobre cómo instalar la documentación sin conexión de SQL Server 2019, 2017, 2016, 2014 y 2012. Utilice SQL Server Management Studio (SSMS) para ver el contenido sin conexión.
 ms.prod: sql
 ms.technology: install
@@ -8,15 +8,15 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: markingmyname
 ms.author: maghan
 ms.reviewer: carlrab
-ms.date: 05/05/2020
-ms.openlocfilehash: d505a8435dc222e1ef9c76539e5a7b37e891778e
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.date: 05/08/2020
+ms.openlocfilehash: 5ca11e672e91b8d2b8801838c40057d6b2c8fbfd
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849724"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151545"
 ---
-# <a name="install-previous-versions-of-sql-server-documentation-to-view-offline-in-ssms"></a>Instalación de versiones anteriores de la documentación de SQL Server para la visualización sin conexión en SSMS
+# <a name="install-sql-server-documentation-to-view-offline-in-ssms"></a>Instalación de la documentación de SQL Server para la vista sin conexión en SSMS
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -97,6 +97,9 @@ Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL�
 
    ![Libros de SQL Server 2014 actualizados automáticamente](../sql-server/media/sql-server-offline-documentation/sql-2014-content.png)
 
+> [!Tip]
+> El contenido de Transact-SQL de SQL 2014 solo está disponible sin conexión.
+
 ## <a name="sql-server-2012-offline-content"></a>Contenido sin conexión de SQL Server 2012
 
 Con los siguientes pasos se explica cómo cargar contenido sin conexión en SQL Server 2012.
@@ -167,7 +170,7 @@ Revise el ciclo de vida de los productos de Microsoft para obtener información 
 
 Para obtener más información sobre el contenido archivado y el visor de la Ayuda, vea los siguientes vínculos.
 
-- [Un vínculo directo a las versiones anteriores de la documentación de SQL Server](https://docs.microsoft.com/previous-versions/sql/)
-- [Visor de Ayuda de Microsoft (Visual Studio)](https://docs.microsoft.com/visualstudio/help-viewer/overview)
-- [Documentación de SQL Server, inicio](../sql-server/index.yml?view=sql-server-2016)
+- [Documentación de SQL Server](../sql-server/index.yml?view=sql-server-2016)
+- [Documentación de SQL Server 2014](../2014/database-engine/install-windows/installation-for-sql-server.md)
+- [Documentación de versiones anteriores de SQL Server](https://docs.microsoft.com/previous-versions/sql/)
 - [Control del sistema de versiones de la documentación de SQL](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

@@ -1,6 +1,7 @@
 ---
 title: Opción de estado en la herramienta de administración
 titleSuffix: SQL Server Distributed Replay
+description: En este artículo se describe la opción de la línea de comandos de estado y la sintaxis de la herramienta de administración Distributed Replay de SQL Server, que muestra el estado actual.
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: tools-other
@@ -10,12 +11,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 35851ce2f16ba5cb0e96ba24e9e67c887efd4aaf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 658b32d8c66d07505cfc8a95e143decfa26f8013
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992192"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152078"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opción Status (herramienta de administración de Distributed Replay)
 

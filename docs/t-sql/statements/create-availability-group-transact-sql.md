@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 8266791ae6621dbf81f16b2eb5c83ef8c9a3c1b5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5260ccc53fbdba1e0773dc43c021f0ec4f21e255
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244588"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151558"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "75244588"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```SQL  
+```syntaxsql
   
 CREATE AVAILABILITY GROUP group_name  
    WITH (<with_option_spec> [ ,...n ] )  
@@ -115,7 +115,7 @@ CREATE AVAILABILITY GROUP group_name
   
 ## <a name="arguments"></a>Argumentos  
  *group_name*  
- Especifica el nombre del nuevo grupo de disponibilidad. *group_name* debe ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identificador[ de ](../../relational-databases/databases/database-identifiers.md) válido y debe ser único en todos los grupos de disponibilidad del clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
+ Especifica el nombre del nuevo grupo de disponibilidad. *group_name* debe ser un [identificador](../../relational-databases/databases/database-identifiers.md) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válido y debe ser único en todos los grupos de disponibilidad del clúster de WSFC. La longitud máxima del nombre de un grupo de disponibilidad es 128 caracteres.  
   
  AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
  Especifica una preferencia sobre cómo un trabajo de copia de seguridad debe evaluar la réplica principal cuando elige realizar copias de seguridad. Puede crear un script con un trabajo de copia de seguridad para que se tenga en cuenta la preferencia de copia de seguridad automatizada. Es importante entender que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no aplica la preferencia, por lo que las copias de seguridad ad hoc no resultan afectadas.  
@@ -150,7 +150,7 @@ CREATE AVAILABILITY GROUP group_name
   
 |Nivel|Condición de error|  
 |-----------|-----------------------|  
-|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> \- El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> \- La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia de servidor. Para obtener más información, vea [Cómo funciona: tiempo de espera de concesión de AlwaysOn de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
+|1|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> \- El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está inactivo.<br /><br /> \- La concesión del grupo de disponibilidad para conectarse al clúster de WSFC expira porque no se ha recibido ninguna confirmación de la instancia de servidor. Para más información, vea [Cómo funciona: tiempo de espera de concesión de Always On de SQL Server](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-AlwaysOn-lease-timeout.aspx).|  
 |2|Especifica que se debe iniciar una conmutación por error automática en los casos siguientes:<br /><br /> \- La instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se conecta al clúster y se ha superado el umbral HEALTH_CHECK_TIMEOUT especificado por el usuario del grupo de disponibilidad.<br /><br /> \- La réplica de disponibilidad tiene un estado de error.|  
 |3|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] graves, como bloqueos por subproceso huérfanos, infracciones graves de acceso de escritura o un volcado excesivo.<br /><br /> Este es el comportamiento predeterminado.|  
 |4|Especifica que se debe iniciar una conmutación automática por error en caso de errores internos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] moderados, tales como una condición persistente de memoria insuficiente en el grupo de recursos de servidor interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -294,7 +294,7 @@ CREATE AVAILABILITY GROUP group_name
   
 -   0 indica que esta réplica de disponibilidad no es para realizar copias de seguridad. Esto es útil, por ejemplo, para una réplica de disponibilidad remota en la que no desee nunca realizar la conmutación por error para las copias de seguridad.  
   
- Para obtener más información, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, consulte [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  SECONDARY_ROLE **(** ... **)**  
  Especifica la configuración específica de rol que se aplica si esta réplica de disponibilidad posee actualmente el rol secundario (es decir, siempre que es una réplica secundaria). Dentro de los paréntesis, especifique una o ambas de las opciones de rol secundario. Si se especifican ambas, utilice una lista separada por comas.  
@@ -313,14 +313,14 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Se permiten todas las conexiones con las bases de datos de la réplica secundaria para acceso de solo lectura.  
   
- Para obtener más información, vea [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Para más información, consulte [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad AlwaysOn&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica la dirección URL que se va a usar para enrutar las solicitudes de conexión de intención de lectura de enrutamiento para esta réplica de disponibilidad. Es la dirección URL en la que escucha el motor de base de datos de SQL Server. Normalmente, la instancia predeterminada del motor de base de datos de SQL Server escucha en el puerto TCP 1433.  
   
  En una instancia con nombre, puede obtener el número de puerto si consulta a las columnas **port** y **type_desc** de la vista de administración dinámica [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). La instancia de servidor usa el agente de escucha de Transact-SQL (**type_desc='TSQL'** ).  
   
- Para obtener más información sobre el cálculo de la dirección URL de enrutamiento de solo lectura para una réplica, vea [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx) (Calcular read_only_routing_url para AlwaysOn).  
+ Para obtener más información sobre el cálculo de la dirección URL de enrutamiento de solo lectura para una réplica, vea [Calculating read_only_routing_url for Always On](https://docs.microsoft.com/archive/blogs/mattn/calculating-read_only_routing_url-for-alwayson) (Calcular read_only_routing_url para AlwaysOn).  
   
 > [!NOTE]  
 >  En el caso de una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe configurar el agente de escucha de Transact-SQL para que use un puerto específico. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -355,7 +355,16 @@ CREATE AVAILABILITY GROUP group_name
   
  Ninguno  
  Especifica que cuando esta réplica de disponibilidad es la réplica principal, no se admite el enrutamiento de solo lectura. Este es el comportamiento predeterminado.  
-  
+
+ READ_WRITE_ROUTING_URL **=** { **("** \<instancia_servidor> **")** }  
+ Se aplica a: SQL Server (a partir de SQL Server 2019 [15.x]) 
+
+ Especifica instancias de servidor que hospedan réplicas de disponibilidad para este grupo de disponibilidad que cumplen los requisitos siguientes al ejecutarse con el rol primario:
+-   La especificación de réplica PRIMARY_ROLE incluye READ_WRITE_ROUTING_URL.
+-   La cadena de conexión es ReadWrite definiendo ApplicationIntent como ReadWrite o no estableciendo ApplicationIntent y permitiendo que el valor predeterminado (ReadWrite) surta efecto.
+
+Para obtener más información, consulte [Redireccionamiento de la conexión de lectura/escritura de réplicas de secundaria a principal (grupos de disponibilidad AlwaysOn)](../../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md).
+
  SESSION_TIMEOUT **=** *integer*  
  Especifica el período de espera de la sesión en segundos. Si no especifica esta opción, el período equivale a 10 segundos de forma predeterminada. El valor mínimo es de 5 segundos.  
   

@@ -1,7 +1,7 @@
 ---
 title: Novedades de los índices de almacén de columnas | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2018
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 690455f8dba76b45643ac4971c988059c56e33f9
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0728c62f3c866a75a88702b7fdd2f7e8cea557dc
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009424"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269454"
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Novedades de los índices de almacén de columnas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,6 +49,12 @@ ms.locfileid: "70009424"
 |El índice de almacén de columnas puede tener una columna calculada no persistente||||sí|||   
   
  <sup>1</sup> Para crear un índice de almacén de columnas no agrupado de solo lectura, almacénelo en un grupo de archivos de solo lectura.  
+
+## [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
+ [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] agrega estas nuevas características.
+
+### <a name="functional"></a>Funcional
+- A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. Anteriormente, se necesitaba una operación de reorganización de índices para combinar grupos de filas con datos eliminados parcialmente. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo. 
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] agrega estas nuevas características.

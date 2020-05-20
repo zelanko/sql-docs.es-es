@@ -12,46 +12,48 @@ ms.assetid: 7b3a5c74-05cf-4385-8ee6-6176d003cb8a
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 3b548dd789bc7e234eb527ffe5766f433a06d77e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e3505d476350d3342ebb57d1b0ae43d88e6b52a8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75244765"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151909"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Creación de alias (Azure SQL Data Warehouse, Almacenamiento de datos paralelos)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  La creación de alias permite la sustitución temporal de una cadena breve y fácil de recordar en lugar de un nombre de tabla o columna en consultas de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Los alias de tabla se usan a menudo en consultas JOIN porque la sintaxis de JOIN requiere nombres de objeto completos al hacer referencia a columnas.  
-  
- Los alias deben ser palabras individuales que se ajusten a las reglas de nomenclatura de objetos. Para obtener más información, vea "Reglas de nomenclatura de objetos" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Los alias no pueden contener espacios en blanco y no se pueden incluir entre comillas simples o dobles.  
-  
-## <a name="syntax"></a>Sintaxis  
-  
-```  
-object_source [ AS ] alias  
-```  
-  
-## <a name="arguments"></a>Argumentos  
- *origen_del_objeto*  
- El nombre de la tabla o columna de origen.  
-  
- AS  
- Una preposición alias opcional. Cuando se trabaja con alias de variable de rango, se prohíbe la palabra clave AS.  
-  
- *alias*  
- El nombre de referencia temporal deseado para la tabla o columna. Se puede usar cualquier nombre de objeto válido. Para obtener más información, vea "Reglas de nomenclatura de objetos" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
-  
+La creación de alias permite la sustitución temporal de una cadena breve y fácil de recordar en lugar de un nombre de tabla o columna en consultas de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)][!INCLUDE[DWsql](../../includes/dwsql-md.md)]. Los alias de tabla se usan a menudo en consultas JOIN porque la sintaxis de JOIN requiere nombres de objeto completos al hacer referencia a columnas.  
+
+Los alias deben ser palabras individuales que se ajusten a las reglas de nomenclatura de objetos. Para obtener más información, vea "Reglas de nomenclatura de objetos" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]. Los alias no pueden contener espacios en blanco y no se pueden incluir entre comillas simples o dobles.  
+
+## <a name="syntax"></a>Sintaxis
+
+```tsql
+object_source [ AS ] alias
+```
+
+## <a name="arguments"></a>Argumentos
+
+*origen_del_objeto*  
+El nombre de la tabla o columna de origen.  
+
+AS  
+Una preposición alias opcional. Cuando se trabaja con alias de variable de rango, se prohíbe la palabra clave AS.  
+
+*alias* El nombre de referencia temporal deseado para la tabla o columna. Se puede usar cualquier nombre de objeto válido. Para obtener más información, vea "Reglas de nomenclatura de objetos" en la [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
+
 ## <a name="examples-sssdw-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- En el siguiente ejemplo se muestra una consulta con varias combinaciones. En este ejemplo se describen tanto los alias de tabla como los de columna.  
-  
--   Alias de columna: en este ejemplo, se crean alias de las columnas y las expresiones que implican columnas en la lista de selección. `SalesTerritoryRegion AS SalesTR` muestra un alias de columna simple. `Sum(SalesAmountQuota) AS TotalSales` muestra  
-  
--   la creación de alias de tabla: `dbo.DimSalesTerritory AS st` muestra la creación del alias `st` para la tabla `dbo.DimSalesTerritory`.  
-  
-```  
--- Uses AdventureWorks  
-  
+
+En el siguiente ejemplo se muestra una consulta con varias combinaciones. En este ejemplo se describen tanto los alias de tabla como los de columna.  
+
+- Alias de columna: en este ejemplo, se crean alias de las columnas y las expresiones que implican columnas en la lista de selección. `SalesTerritoryRegion AS SalesTR` muestra un alias de columna simple. `Sum(SalesAmountQuota) AS TotalSales` muestra  
+
+- la creación de alias de tabla: `dbo.DimSalesTerritory AS st` muestra la creación del alias `st` para la tabla `dbo.DimSalesTerritory`.  
+
+```tsql
+-- Uses AdventureWorks
+
 SELECT LastName, SUM(SalesAmountQuota) AS TotalSales, SalesTerritoryRegion AS SalesTR,  
     RANK() OVER (PARTITION BY SalesTerritoryRegion ORDER BY SUM(SalesAmountQuota) DESC ) AS RankResult  
 FROM dbo.DimEmployee AS e  
@@ -59,14 +61,13 @@ INNER JOIN dbo.FactSalesQuota AS sq ON e.EmployeeKey = sq.EmployeeKey
 INNER JOIN dbo.DimSalesTerritory AS st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'  
 GROUP BY LastName, SalesTerritoryRegion;  
-  
-```  
-  
- La palabra clave AS se puede excluir, tal y como se muestra a continuación, pero a menudo se incluye para mejorar la legibilidad.  
-  
-```  
--- Uses AdventureWorks  
-  
+```
+
+La palabra clave AS se puede excluir, tal y como se muestra a continuación, pero a menudo se incluye para mejorar la legibilidad.  
+
+```tsql
+-- Uses AdventureWorks
+
 SELECT LastName, SUM(SalesAmountQuota) TotalSales, SalesTerritoryRegion SalesTR,  
 RANK() OVER (PARTITION BY SalesTerritoryRegion ORDER BY SUM(SalesAmountQuota) DESC ) RankResult  
 FROM dbo.DimEmployee e  
@@ -74,11 +75,10 @@ INNER JOIN dbo.FactSalesQuota sq ON e.EmployeeKey = sq.EmployeeKey
 INNER JOIN dbo.DimSalesTerritory st ON e.SalesTerritoryKey = st.SalesTerritoryKey  
 WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'  
 GROUP BY LastName, SalesTerritoryRegion;  
-```  
-  
-## <a name="see-also"></a>Consulte también  
- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  
-  
-  
+```
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)
+- [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)
+- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)

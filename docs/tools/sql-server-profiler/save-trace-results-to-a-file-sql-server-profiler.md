@@ -1,6 +1,7 @@
 ---
 title: Guardar los resultados de un seguimiento en un archivo
 titleSuffix: SQL Server Profiler
+description: Averigüe cómo guardar los datos de eventos capturados en un archivo de seguimiento, especifique un tamaño máximo para el archivo de seguimiento y habilite la opción de sustitución incremental de archivos en SQL Server Profiler.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: dc77ef698496e79e56d818ab00a63f38e0ad7c38
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: f792be448dc9e11ce4245e7dd5cda08d9d750c2b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307456"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151706"
 ---
 # <a name="save-trace-results-to-a-file-sql-server-profiler"></a>Guardar los resultados de un seguimiento en un archivo (SQL Server Profiler)
 

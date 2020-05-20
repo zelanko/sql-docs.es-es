@@ -22,12 +22,12 @@ ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fe7a6cd5d42c73307462df8c711fdac57e7febb
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 9579c639e1c731c30a145a856a889796795c90b8
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633240"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151524"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 
@@ -51,6 +51,9 @@ WITH IDENTITY = 'identity_name'
 *credential_name* Especifica el nombre de la credencial con ámbito de base de datos que se va a crear. *credential_name* no puede comenzar por el signo de almohadilla (#). Las credenciales del sistema comienzan por ##.
 
 IDENTITY **="** _nombre\_identidad_ **"** Especifica el nombre de la cuenta que se va a usar para conectarse fuera del servidor. Para importar un archivo desde Azure Blob Storage usando una clave compartida, el nombre de identidad debe ser `SHARED ACCESS SIGNATURE`. Para cargar datos en SQL DW, se puede usar cualquier valor válido para la identidad. Para saber más sobre las firmas de acceso compartido, vea [Uso de firmas de acceso compartido (SAS)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).
+
+> [!NOTE]
+WITH IDENTITY no es necesario si el contenedor de Azure Blob Storage está habilitado para el acceso anónimo. Para ver un ejemplo en el que se consulta Azure Blob Storage, consulte [Importación en una tabla desde un archivo almacenado en Azure Blob Storage](../functions/openrowset-transact-sql.md#j-importing-into-a-table-from-a-file-stored-on-azure-blob-storage).
 
 SECRET **="** _secreto_ **"** Especifica el secreto necesario para la autenticación de salida. `SECRET` es necesario para importar un archivo del almacenamiento de blobs de Azure. Para cargar datos de Azure Blob Storage a SQL DW o Almacenamiento de datos paralelos, el secreto debe ser la clave de Azure Storage.
 > [!WARNING]

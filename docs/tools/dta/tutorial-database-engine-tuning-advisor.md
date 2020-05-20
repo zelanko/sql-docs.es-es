@@ -1,5 +1,6 @@
 ---
-title: 'Tutorial: Asistente para la optimización de motor de base de datos'
+title: 'Tutorial: Database Engine Tuning Advisor'
+description: El Asistente para la optimización de motor de base de datos examina cómo se procesan las consultas y recomienda cómo mejorar el rendimiento del procesamiento de las consultas mediante la modificación de las estructuras de base de datos.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -14,14 +15,14 @@ ms.manager: jroth
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: a6fea0bbb9c9471885f76f3f6f44a86b50718d3e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ad92ad29414afcf849ef0dd8a1ade0463748af35
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75304703"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151485"
 ---
-# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Asistente para la optimización de motor de base de datos
+# <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Database Engine Tuning Advisor
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -35,10 +36,10 @@ Este tutorial le mostrará cómo navegar por la GUI del Asistente para la optimi
 [Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos](../../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md)  
 En esta lección, se familiarizará con la GUI del Asistente para la optimización de motor de base de datos y aprenderá a configurar las opciones de visualización y el diseño.  
   
-[Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
 En esta lección, aprenderá a realizar tareas básicas de optimización con la GUI del Asistente para la optimización de motor de base de datos.  
   
-[Lección 3: Usar la utilidad del símbolo del sistema dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Lección 3: Uso de la utilidad del símbolo del sistema DTA](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
 En esta lección, aprenderá a iniciar la utilidad del símbolo del sistema **dta** y a ejecutar algunos comandos de optimización sencillos.  
   
 ## <a name="requirements"></a>Requisitos  

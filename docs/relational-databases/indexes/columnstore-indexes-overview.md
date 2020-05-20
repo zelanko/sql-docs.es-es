@@ -1,7 +1,7 @@
 ---
-title: Introducción a los índices de almacén de columnas | Microsoft Docs
+title: 'Índices de almacén de columnas: Introducción | Microsoft Docs'
 ms.custom: ''
-ms.date: 06/08/2018
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -18,17 +18,17 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 48139f3da39cb280a95ccff8ab9aca2efc67a13b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70009405"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83269492"
 ---
-# <a name="columnstore-indexes-overview"></a>Introducción a los índices de almacén de columnas
+# <a name="columnstore-indexes-overview"></a>Índices de almacén de columnas: Información general
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-Los índices de almacén de columnas son el estándar para almacenar y consultar las tablas de hechos de almacenamiento de datos de gran tamaño. Este índice usa el almacenamiento de datos basado en columnas y el procesamiento de consultas para lograr ganancias de hasta **10 veces el rendimiento de las consultas** en el almacenamiento de datos sobre el almacenamiento tradicional orientado a filas. También puede conseguir ganancias de hasta **10 veces la compresión de datos** sobre el tamaño de los datos sin comprimir. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], los índices de almacén de columnas permiten los análisis operativos, es decir, ejecutar análisis de rendimiento en tiempo real en una carga de trabajo transaccional.  
+Los índices de almacén de columnas son el estándar para almacenar y consultar las tablas de hechos de almacenamiento de datos de gran tamaño. Este índice usa el almacenamiento de datos basado en columnas y el procesamiento de consultas para lograr ganancias de hasta 10 veces el rendimiento de las consultas en el almacenamiento de datos sobre el almacenamiento tradicional orientado a filas. También puede lograr ganancias de hasta 10 veces la compresión de datos sobre el tamaño de los datos sin comprimir. Desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, los índices de almacén de columnas permiten los análisis operativos, es decir, ejecutar análisis de rendimiento en tiempo real en una carga de trabajo transaccional.  
   
 Obtenga información sobre un escenario relacionado:  
   
@@ -55,6 +55,16 @@ En un grupo de filas, las filas se comprimen al mismo tiempo con el formato del 
   
 Para conseguir unas tasas elevadas de rendimiento y compresión, el índice de almacén de columnas segmenta la tabla en grupos de filas y luego comprime cada grupo de filas a modo de columna. El número de filas del grupo de filas debe ser suficientemente grande como para mejorar las tasas de compresión y suficientemente pequeño como para beneficiarse de las operaciones en memoria.    
 
+Un grupo de filas del que se han eliminado todos los datos pasa del estado COMPRESSED al estado TOMBSTONE, y luego se elimina mediante un proceso en segundo plano denominado "motor de tupla". Para obtener más información sobre los estados de filas, vea [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md).
+
+> [!TIP]
+> Tener demasiados grupos de filas pequeños reduce la calidad del índice de almacén de columnas. Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], se requiere una operación de reorganización para combinar grupos de filas COMPRESSED más pequeños, siguiendo una directiva de umbral interno que determina cómo quitar las filas eliminadas y combinar los grupos de filas comprimidos.    
+> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], una tarea de combinación en segundo plano también funciona para combinar filas de grupos COMPRESSED de donde se ha eliminado un gran número de filas.     
+> Después de combinar grupos de filas más pequeños, se debe mejorar la calidad del índice. 
+
+> [!NOTE]
+> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo.         
+
 #### <a name="column-segment"></a>segmento de columna
 Un segmento de columna es una columna de datos perteneciente al grupo de filas.  
   
@@ -71,9 +81,16 @@ Un índice de almacén de columnas agrupado es el almacenamiento físico de toda
 Para reducir la fragmentación de los segmentos de columna y mejorar el rendimiento, el índice de almacén de columnas puede almacenar temporalmente algunos datos en un índice agrupado (denominado *almacén delta*), así como una lista en forma de árbol b de los identificadores de las filas eliminadas. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta.  
   
 #### <a name="delta-rowgroup"></a>Grupo de filas delta
-Un grupo de filas delta es un índice agrupado que solo se usa con índices de almacén de columnas. Mejora el rendimiento y la compresión de almacén de columnas mediante el almacenamiento de filas hasta que el número de filas alcanza un umbral y luego se mueve al almacén de columnas.  
+Un grupo de filas delta es un índice de árbol B agrupado que solo se usa con índices de almacén de columnas. Mejora el rendimiento y la compresión de almacén de columnas mediante el almacenamiento de filas hasta que el número de filas alcanza un umbral (1 048 576 filas) y luego se mueve al almacén de columnas.  
 
-Cuando un grupo de filas delta alcanza el número máximo de filas, se cierra. Un proceso de motor de tupla comprueba si hay grupos de filas cerrados. Si el proceso encuentra un grupo de filas cerrado, comprime el grupo de filas y lo almacena en el almacén de columnas.  
+Cuando un grupo de filas delta alcanza el número máximo de filas, pasa de un estado OPEN a un estado CLOSED. Un proceso en segundo plano denominado "motor de tupla" comprueba si hay grupos de filas cerrados. Si el proceso encuentra un grupo de filas cerrado, comprime el grupo de filas delta y lo almacena en el almacén de columnas como un grupo de filas COMPRESSED. 
+
+Cuando se ha comprimido un grupo de filas delta, el grupo de filas delta existente pasa al estado TOMBSTONE para que lo quite más adelante el motor de tupla cuando no haya referencias a él. 
+
+Para obtener más información sobre los estados de filas, vea [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!NOTE]
+> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo.         
   
 #### <a name="deltastore"></a>Almacén delta
 Un índice de almacén de columnas puede tener más de un grupo de filas delta. Todos los grupos de filas delta se denominan colectivamente almacén delta.   

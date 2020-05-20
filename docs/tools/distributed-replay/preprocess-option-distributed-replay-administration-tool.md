@@ -1,6 +1,7 @@
 ---
 title: Opción de preprocesamiento
 titleSuffix: SQL Server Distributed Replay
+description: La herramienta Distributed Replay de Microsoft SQL Server, DReplay.exe, es una herramienta de la línea de comandos que se puede usar para comunicarse con el controlador de reproducción distribuida.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,20 +12,20 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 1b003bf2441e3cffc2e21557497695f92df50135
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 7baf79900fb89903c9d398dfb1e7b72c3600f1e0
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307020"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152194"
 ---
 # <a name="preprocess-option-distributed-replay-administration-tool"></a>Opción de preprocesamiento (herramienta de administración Distributed Replay)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, **DReplay.exe**, es una herramienta de línea de comandos que se puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describen la opción del símbolo del sistema **preprocess** y la sintaxis correspondiente.  
+  La herramienta de administración de Distributed Replay de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **DReplay.exe**, es una herramienta de línea de comandos que se puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describen la opción del símbolo del sistema **preprocess** y la sintaxis correspondiente.  
   
  La opción **preprocess** inicia la fase de preprocesamiento. Durante esta fase, el controlador prepara los datos de seguimiento de entrada para la reproducción en el servidor destino.  
   
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") Para obtener más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") Para más información sobre las convenciones de sintaxis que se usan con la sintaxis de la herramienta de administración, consulte [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   

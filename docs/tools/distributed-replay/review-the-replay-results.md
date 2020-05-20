@@ -1,6 +1,7 @@
 ---
 title: Revisar los resultados de la reproducción
 titleSuffix: SQL Server Distributed Replay
+description: Una vez que la característica Distributed Replay de SQL Server completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede guardar en los archivos de seguimiento de cada cliente.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 03c6f6e0bcb58037e362ffd4b3ad20914fd9c328
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: e36130f4901b0f5bcbdba7ab82b512c0075e25b1
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306942"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152143"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
 

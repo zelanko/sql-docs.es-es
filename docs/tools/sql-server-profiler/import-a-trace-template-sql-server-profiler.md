@@ -1,6 +1,7 @@
 ---
 title: Importar una plantilla de seguimiento
 titleSuffix: SQL Server Profiler
+description: Obtenga información acerca de cómo importar una plantilla definida por el usuario en SQL Server Profiler para que esté disponible para seguimientos junto con las plantillas del sistema predefinidas.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: 309edccd7793e2dbf17105b4bf8f31e976994742
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 51bb55eb4213464fbaca2fd9e5990894c46c3c14
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307191"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151728"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importar una plantilla de seguimiento (SQL Server Profiler)
 

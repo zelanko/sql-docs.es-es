@@ -1,6 +1,7 @@
 ---
 title: Preparación de los datos de seguimiento de entrada
 titleSuffix: SQL Server Distributed Replay
+description: Para poder iniciar una reproducción distribuida con Distributed Replay de SQL Server, prepare la información de seguimiento de entrada iniciando la fase de preprocesamiento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
-ms.openlocfilehash: 514d11ded0761cd4719b3d3a44b7c91d08d97e04
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4bb84ab2f8df17bba52b41d115b2c67d47931eb3
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307003"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152206"
 ---
 # <a name="prepare-the-input-trace-data"></a>Preparar los datos de seguimiento de entrada
 
@@ -33,7 +34,7 @@ Para poder iniciar una repetición distribuida con la característica Distribute
   
 ### <a name="to-prepare-the-input-trace-data"></a>Para preparar la información de seguimiento de entrada  
   
-1.  **(Opcional) Modificar los valores de configuración de preprocesamiento:** si quiere modificar los valores de configuración de preprocesamiento, por ejemplo, si se van a filtrar las sesiones del sistema o se va a configurar el tiempo máximo de inactividad, debe modificar el elemento `<PreprocessModifiers>` del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
+1.  **(Opcional) Modificar los valores de configuración de preprocesamiento**: si quiere modificar los valores de configuración de preprocesamiento, por ejemplo, si se van a filtrar las sesiones del sistema o se va a configurar el tiempo máximo de inactividad, debe modificar el elemento `<PreprocessModifiers>` del archivo de configuración de preprocesamiento basado en XML, `DReplay.exe.preprocess.config`. Si modifica el archivo de configuración de preprocesamiento, se recomienda que modifique una copia en vez del original. Para modificar los valores de configuración, siga estos pasos:  
   
     1.  Haga una copia del archivo de configuración de preprocesamiento predeterminado, `DReplay.exe.preprocess.config`, y cambie el nombre del nuevo archivo. El archivo de configuración de preprocesamiento predeterminado se encuentra en la carpeta de instalación de la herramienta de administración.  
   
@@ -43,7 +44,7 @@ Para poder iniciar una repetición distribuida con la característica Distribute
   
      Para obtener más información sobre el archivo de configuración de preprocesamiento, vea [Configurar Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md).  
   
-2.  **Iniciar la fase de preprocesamiento**: para preparar la información de seguimiento de entrada, debe ejecutar la herramienta de administración con la opción **preprocess** . Para obtener más información, vea [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Iniciar la fase de preprocesamiento**: para preparar la información de seguimiento de entrada, debe ejecutar la herramienta de administración con la opción de **preprocesamiento**. Para obtener más información, vea [Opción de preprocesamiento &#40;herramienta de administración Distributed Replay&#41;](../../tools/distributed-replay/preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Abra la utilidad de símbolo del sistema de Windows (**CMD.exe**) y navegue hasta la ubicación de instalación de la herramienta de administración de Distributed Replay (**DReplay.exe**).  
   

@@ -32,12 +32,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fee0e8af2e4d556e388fc72086286d4a21184a8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 03690af5e9ec4ce835372378ca3bdf13eff3073a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220720"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152031"
 ---
 # <a name="resolve-index-fragmentation-by-reorganizing-or-rebuilding-indexes"></a>Solución de la fragmentación de índices mediante la reorganización o recompilación de índices
 
@@ -223,6 +223,7 @@ Para desfragmentar un índice fragmentado, use uno de los métodos siguientes:
 La reorganización de un índice usa muy pocos recursos del sistema y es una operación en línea. Esto significa que los bloqueos de tabla a largo plazo no se mantienen y que las consultas o actualizaciones en la tabla subyacente pueden continuar durante la transacción `ALTER INDEX REORGANIZE`.
 
 - Para los [índices de almacén de filas](clustered-and-nonclustered-indexes-described.md), el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] desfragmenta el nivel hoja de los índices agrupados y no agrupados de las tablas y las vistas mediante la reordenación física de las páginas de nivel hoja para que coincidan con el orden lógico de los nodos hoja (de izquierda a derecha). La reorganización también compacta las páginas de índice en función del valor de factor de relleno del índice. Para ver el valor de factor de relleno, use [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para obtener ejemplos de sintaxis, vea [Ejemplos: Reorganización del almacén de filas](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
+
 - Al usar [índices de almacén de columnas](columnstore-indexes-overview.md), el almacén delta puede acabar con múltiples grupos filas de pequeño tamaño después de insertar, actualizar y eliminar datos a lo largo del tiempo. La reorganización de un índice de almacén de columnas fuerza a todos los grupos de filas al almacén de columnas y, luego, los combina en menos grupos de filas con más filas. La operación de reorganización también quita las filas que se hayan eliminado del almacén de columnas. Inicialmente, el proceso de reorganización requiere recursos de CPU adicionales para comprimir los datos, lo que puede reducir el rendimiento general del sistema. Pero tan pronto como se comprimen los datos, el rendimiento de las consultas mejora. Para obtener ejemplos de sintaxis, vea [Ejemplos: Reorganización de ColumnStore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="rebuild-an-index"></a>Volver a generar un índice
@@ -230,7 +231,13 @@ La reorganización de un índice usa muy pocos recursos del sistema y es una ope
 El proceso de volver a crear un índice quita y vuelve a crear el índice. En función del tipo de índice y de la versión del [!INCLUDE[ssde_md](../../includes/ssde_md.md)], una operación de recompilación puede realizarse en línea o sin conexión. Para obtener la sintaxis de T-SQL, vea [ALTER INDEX REBUILD](../../t-sql/statements/alter-index-transact-sql.md#rebuilding-indexes)
 
 - Para los [índices de almacén de filas](clustered-and-nonclustered-indexes-described.md), la recompilación quita la fragmentación, reclama el espacio en disco mediante la compactación de las páginas según el valor de factor de relleno especificado o existente, y reordena las filas del índice en páginas contiguas. Cuando se especifica `ALL`, todos los índices de la tabla se quitan y se vuelven a generar en una única transacción. No es necesario quitar las restricciones FOREIGN KEY por adelantado. Cuando se regeneran índices con 128 extensiones o más, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] difiere las cancelaciones de asignación de página y sus bloqueos asociados hasta después de la confirmación de la transacción. Para obtener ejemplos de sintaxis, vea [Ejemplos: Reorganización del almacén de filas](../../t-sql/statements/alter-index-transact-sql.md#examples-rowstore-indexes).
-- Para los [índices de almacén de columnas](columnstore-indexes-overview.md), la recompilación quita la fragmentación, mueve todas las filas al almacén de columnas y recupera el espacio en disco mediante la eliminación física de las filas que se han quitado de forma lógica de la tabla. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], normalmente no es necesario volver a generar el índice de almacén de columnas, ya que `REORGANIZE` realiza las operaciones básicas de una regeneración en segundo plano como una operación en línea. Para obtener ejemplos de sintaxis, vea [Ejemplos: Reorganización de ColumnStore](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
+
+- Para los [índices de almacén de columnas](columnstore-indexes-overview.md), la recompilación quita la fragmentación, mueve todas las filas al almacén de columnas y recupera el espacio en disco mediante la eliminación física de las filas que se han quitado de forma lógica de la tabla. 
+  
+  > [!TIP]
+  > A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], normalmente no es necesario volver a generar el índice de almacén de columnas, ya que `REORGANIZE` realiza las operaciones básicas de una regeneración en segundo plano como una operación en línea. 
+  
+  Para obtener ejemplos de sintaxis, vea [Ejemplos: recompilación de almacén de columnas](../../t-sql/statements/alter-index-transact-sql.md#examples-columnstore-indexes).
 
 ### <a name="permissions"></a><a name="Permissions"></a> Permisos
 
@@ -254,9 +261,6 @@ Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser mie
 6. En el cuadro de diálogo **Reorganizar índices** , compruebe que el índice correcto se encuentra en la cuadrícula **Índices que se van a reorganizar** y haga clic en **Aceptar**.
 7. Active la casilla **Compactar datos de columnas de objetos de gran tamaño** para especificar que se compacten también todas las páginas que contengan datos de objetos grandes (LOB).
 8. Haga clic en **Aceptar**.
-
-> [!NOTE]
-> La reorganización de un índice de almacén de columnas mediante [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combinará grupos de filas `COMPRESSED`, pero no obligará a que todos los grupos de filas se compriman en el almacén de columnas. Se comprimirán los grupos de filas con el estado CLOSED, mientras que los grupos de filas con el estado OPEN no se comprimirán en el almacén de columnas. Para comprimir todos los grupos de filas, use el ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)][siguiente](#TsqlProcedureReorg).
 
 #### <a name="to-reorganize-all-indexes-in-a-table"></a>Para reorganizar todos los índices de una tabla
 
@@ -357,6 +361,13 @@ Cuando se especifica `ALL` en la instrucción `ALTER INDEX`, se reorganizan los 
 
 Cuando se vuelve a generar un índice de almacén de columnas, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] lee todos los datos del índice original de almacén de columnas, incluido el almacén delta. Combina los datos en grupos de filas nuevos y comprime los grupos de filas en el almacén de columnas. El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] desfragmenta el almacén de columnas mediante la eliminación física de las filas que se han eliminado lógicamente de la tabla. Los bytes eliminados se reclaman en el disco.
 
+> [!NOTE]
+> La reorganización de un índice de almacén de columnas mediante [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] combinará grupos de filas COMPRESSED, pero no obligará a que todos los grupos de filas se compriman en el almacén de columnas. Se comprimirán los grupos de filas con el estado CLOSED, mientras que los grupos de filas con el estado OPEN no se comprimirán en el almacén de columnas. Para comprimir forzosamente todos los grupos de filas, use el ejemplo de [!INCLUDE[tsql](../../includes/tsql-md.md)] [siguiente](#TsqlProcedureReorg).
+
+> [!NOTE]
+> A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas. De este modo, se mejora la calidad del índice de almacén de columnas a lo largo del tiempo.    
+> Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../../relational-databases/indexes/columnstore-indexes-overview.md).
+
 ### <a name="rebuild-a-partition-instead-of-the-entire-table"></a>Recompilación de una partición en lugar de la tabla completa
 
 - Volver a generar la tabla completa tarda mucho si el índice es grande y requiere el espacio en disco suficiente para almacenar una copia adicional del índice durante la regeneración. Por lo general, solo es necesario volver a generar la partición que se ha usado más recientemente.
@@ -375,7 +386,9 @@ La recompilación de una partición después de cargar datos permite asegurarse 
 Al reorganizar un índice de almacén de columnas, [!INCLUDE[ssde_md](../../includes/ssde_md.md)] comprime cada grupo de filas delta con el estado CLOSED en el almacén de columnas como un grupo de filas comprimido. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el comando `REORGANIZE` realiza estas otras optimizaciones de desfragmentación en línea:
 
 - Quita físicamente las filas de un grupo de filas cuando el 10 % o más de las filas se hayan eliminado lógicamente. Los bytes eliminados se reclaman en los medios físicos. Por ejemplo, si en un grupo de filas comprimido que contiene un millón de filas se eliminan 100 000 filas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] quita las filas eliminadas y vuelve a comprimir el grupo de filas con 900 000 filas. Ahorra almacenamiento mediante la eliminación de filas eliminadas.
+
 - Combina uno o varios grupos de filas comprimidos para aumentar las filas por grupo de filas, hasta alcanzar el máximo de 1 048 576 filas. Por ejemplo, si importa de forma masiva 5 lotes de 102 400 filas, obtendrá 5 grupos de filas comprimidos. Si ejecuta REORGANIZE, estos grupos de filas se combinarán en un grupo de filas comprimido del tamaño de 512 000 filas. Se supone que no había ninguna limitación de memoria o de tamaño de diccionario.
+
 - Para los grupos de filas en los que un 10 % o más de las filas se han eliminado lógicamente, el [!INCLUDE[ssde_md](../../includes/ssde_md.md)] intenta combinar este grupo de filas con uno o varios grupos de filas. Por ejemplo, el grupo de filas 1 se comprimió con 500 000 filas y el grupo de filas 21 se comprimió con el máximo de 1 048 576 filas. El grupo de filas 21 tiene el 60 % de las filas eliminadas, lo que deja 409 830 filas. [!INCLUDE[ssde_md](../../includes/ssde_md.md)] favorece la opción de combinar estos dos grupos de filas para comprimir un nuevo grupo de filas que tenga 909 830 filas.
 
 Después de realizar cargas de datos, puede haber varios grupos de filas pequeños en el almacén delta. Puede usar `ALTER INDEX REORGANIZE` para forzar a todos los grupos de filas al almacén de columnas y luego combinar los grupos de filas en menos grupos de filas con más filas. La operación de reorganización también quitará las filas que se hayan eliminado del almacén de columnas.
@@ -400,11 +413,11 @@ Estadísticas:
 No es posible reorganizar un índice cuando `ALLOW_PAGE_LOCKS` está establecido en OFF.
 
 Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], la regeneración de un índice de almacén de columnas agrupado es una operación sin conexión. El motor de base de datos tiene que adquirir un bloqueo exclusivo en la tabla o la partición mientras se produce la regeneración. Los datos están sin conexión y no se encuentran disponibles durante el proceso, incluso si se usa `NOLOCK`, el aislamiento de instantánea de lectura confirmada (RCSI) o el aislamiento de instantánea.
-A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se puede volver a generar un índice de almacén de columnas agrupado mediante la opción `ONLINE=ON`.
+A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], se puede volver a generar un índice de almacén de columnas agrupado mediante la opción `ONLINE = ON`.
 
-Para una tabla de Azure Synapse Analytics (anteriormente Azure SQL Data Warehouse) con un índice de almacén de columnas agrupado ordenado, `ALTER INDEX REBUILD` reordenará los datos mediante TempDB. Supervise TempDB durante las operaciones de regeneración. Si necesita más espacio en TempDB, escale verticalmente el almacenamiento de datos. Vuelva a reducirlo verticalmente una vez completada la recompilación del índice.
+Para una tabla de Azure Synapse Analytics (anteriormente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un índice de almacén de columnas agrupado ordenado, `ALTER INDEX REBUILD` reordenará los datos mediante TempDB. Supervise TempDB durante las operaciones de regeneración. Si necesita más espacio en TempDB, escale verticalmente el almacenamiento de datos. Vuelva a reducirlo verticalmente una vez completada la recompilación del índice.
 
-Para una tabla de Azure Synapse Analytics (anteriormente Azure SQL Data Warehouse) con un índice de almacén de columnas agrupado ordenado, `ALTER INDEX REORGANIZE` no reordena los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
+Para una tabla de Azure Synapse Analytics (anteriormente [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]) con un índice de almacén de columnas agrupado ordenado, `ALTER INDEX REORGANIZE` no reordena los datos. Para reordenar los datos, use `ALTER INDEX REBUILD`.
 
 ## <a name="using-index-rebuild-to-recover-from-hardware-failures"></a>Uso de INDEX REBUILD para recuperarse de errores de hardware
 

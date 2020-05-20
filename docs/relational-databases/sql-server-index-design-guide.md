@@ -22,12 +22,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 68b29bd0497598909914cb71f9f180ccf57191c0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4d6547436a3338805d9dd81c88ae786a187f9576
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79486520"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152000"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guía de diseño y de arquitectura de índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
 
  Un índice de SQL Server es una estructura en disco o en memoria asociada con una tabla o vista que acelera la recuperación de filas de la tabla o vista. Un índice contiene claves generadas a partir de una o varias columnas de la tabla o la vista. En el caso de los índices en disco, dichas claves están almacenadas en una estructura de árbol (árbol B) que permite que SQL Server busque de forma rápida y eficiente la fila o las filas asociadas a los valores de cada clave.  
 
- Los índices almacenan los datos organizados de forma lógica como una tabla con filas y columnas, y físicamente almacenados en un formato de datos por fila llamado *almacén de filas* <sup>1</sup>, o bien en un formato de datos por columna llamado *[almacén de columnas](#columnstore_index)*.  
+ Los índices almacenan los datos organizados de forma lógica como una tabla con filas y columnas, y físicamente almacenados en un formato de datos por fila llamado *almacén de filas* <sup>1</sup>, o bien en un formato de datos por columna llamado *[almacén de columnas](#columnstore_index)* .  
     
  La selección de los índices apropiados para una base de datos y su carga de trabajo es una compleja operación que busca el equilibrio entre la velocidad de la consulta y el costo de actualización. Los índices estrechos, o con pocas columnas en la clave de índice, necesitan menos espacio en el disco y son menos susceptibles de provocar sobrecargas debido a su mantenimiento. Por otra parte, la ventaja de los índices anchos es que cubren más consultas. Puede que tenga que experimentar con distintos diseños antes de encontrar el índice más eficaz. Es posible agregar, modificar y quitar índices sin que esto afecte al esquema de la base de datos o al diseño de la aplicación. Por lo tanto, no debe dudar en experimentar con índices diferentes.  
   
@@ -124,7 +124,7 @@ Para obtener más información sobre los índices de texto completo, vea [Rellen
   
 -   Utilice una longitud corta en la clave de los índices clúster. Los índices clúster también mejoran si se crean en columnas únicas o que no admitan valores NULL.  
   
--   Las columnas de los tipos de datos **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)** y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
+-   Las columnas de los tipos de datos **ntext**, **text**, **image**, **varchar(max)** , **nvarchar(max)** y **varbinary(max)** no pueden especificarse como columnas de clave de índice. En cambio, los tipos de datos **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml** pueden participar en un índice no agrupado como columnas de índice sin clave. Para obtener más información, vea la sección ['Índice con columnas incluidas](#Included_Columns)' en esta guía.  
   
 -   El tipo de datos **xml** solo puede ser una columna de clave en un índice XML. Para obtener más información, consulte [Índices XML &#40;SQL Server&#41;](../relational-databases/xml/xml-indexes-sql-server.md). SQL Server 2012 SP1 presenta un nuevo tipo de índice XML denominado índice XML selectivo. Este nuevo índice puede mejorar el rendimiento de las consultas en datos almacenados como XML en SQL Server, lo que permitirá indizar mucho más rápidamente grandes cargas de trabajo de datos XML y mejorar la escalabilidad reduciendo los costos de almacenamiento del propio índice. Para obtener más información, consulte [Índices XML selectivos &#40;SXI&#41;](../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
@@ -465,7 +465,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Cabrán menos filas de índice en una página. Esto puede crear incrementos de E/S y una reducción de la eficacia de la caché.  
   
--   Se necesitará más espacio en disco para almacenar el índice. En concreto, al agregar los tipos de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)** o **xml** como columnas de índice sin clave, se pueden aumentar significativamente los requisitos de espacio en disco. Esto se debe a que los valores de columnas se copian en el nivel hoja del índice. Por lo tanto, residen en el índice y en la tabla base.  
+-   Se necesitará más espacio en disco para almacenar el índice. En concreto, al agregar los tipos de datos **varchar(max)** , **nvarchar(max)** , **varbinary(max)** o **xml** como columnas de índice sin clave, se pueden aumentar significativamente los requisitos de espacio en disco. Esto se debe a que los valores de columnas se copian en el nivel hoja del índice. Por lo tanto, residen en el índice y en la tabla base.  
   
 -   Puede que el mantenimiento del índice haga aumentar el tiempo necesario para realizar operaciones de modificación, inserción, actualización o eliminación en la tabla subyacente o la vista indizada.  
   
@@ -659,6 +659,8 @@ Al tratar los índices de almacén de columnas, se usan los términos *almacén 
   Un índice de almacén de columnas también guarda físicamente algunas filas en un formato de almacén de filas denominado "almacén delta" (también llamado "grupos de filas delta"). Se trata de un lugar donde se colocan las filas que son insuficientes para poder comprimirse en el almacén de columnas. Cada grupo de filas delta se implementa como un índice de árbol B agrupado. 
 
 - El **almacén delta** es un lugar donde se colocan las filas que son insuficientes para poder comprimirse en el almacén de columnas. En el almacén delta se almacenan las filas en formato de almacén de filas. 
+
+Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../relational-databases/indexes/columnstore-indexes-overview.md).
   
 #### <a name="operations-are-performed-on-rowgroups-and-column-segments"></a>Las operaciones se realizan en segmentos de columna y grupos de filas
 
@@ -667,17 +669,27 @@ El índice de almacén de columnas agrupa las filas en unidades administrables. 
 Por ejemplo, el índice de almacén de columnas realiza estas operaciones en grupos de filas:
 
 * Comprime los grupos de filas en el almacén de columnas. La compresión se realiza en cada segmento de columna de un grupo de filas.
-* Combina los grupos de filas durante una operación `ALTER INDEX ... REORGANIZE`.
+* Combina grupos de filas durante una operación de `ALTER INDEX ... REORGANIZE`, incluida la retirada de los datos eliminados.
 * Crea grupos de filas durante una operación `ALTER INDEX ... REBUILD`.
 * Informa de la fragmentación y el estado de los grupos de filas en las vistas de administración dinámica (DMV).
 
-El almacén delta se compone de uno o varios grupos de filas denominados **grupos de filas delta**. Cada grupo de filas delta es un índice de árbol B agrupado que almacena operaciones de carga e inserción masivas pequeñas hasta que el grupo de filas contiene 1 048 576 filas, o bien hasta que se vuelve a generar el índice.  Cuando un grupo de filas delta tiene 1 048 576 filas, se marca como cerrado y espera a que un proceso llamado "motor de tupla" lo comprima en el almacén de columnas. 
+El almacén delta se compone de uno o varios grupos de filas denominados **grupos de filas delta**. Cada grupo de filas delta es un índice de árbol B agrupado que almacena pequeñas cargas masivas e inserciones hasta que el grupo de filas contenga 1 048 576 filas, momento en el que un proceso llamado **motor de tupla** comprime automáticamente el grupo de filas cerrado en el almacén de columnas. 
+
+Para obtener más información sobre los estados de filas, vea [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+> [!TIP]
+> Tener demasiados grupos de filas pequeños reduce la calidad del índice de almacén de columnas. Una operación de reorganización combinará grupos de filas más pequeños, siguiendo una directiva de umbral interno que determina cómo quitar filas eliminadas y combinar los grupos de filas comprimidos. Después de una combinación, se debe mejorar la calidad del índice. 
+
+> [!NOTE]
+> A partir de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], el motor de tupla cuenta con la ayuda de una tarea de combinación en segundo plano que comprime automáticamente los grupos de filas delta OPEN que han existido durante algún tiempo, según lo determinado por un umbral interno, o combina los grupos de filas COMPRESSED desde donde se ha eliminado un gran número de filas.      
 
 Cada columna tiene algunos de sus valores en cada grupo de filas. Estos valores se denominan **segmentos de columna**. Cada grupo de filas contiene un segmento de cada columna de la tabla. Cada columna tiene un segmento de columna en cada grupo de filas.
 
 ![Segmento de columna](../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "segmento de columna") 
  
-Cuando el índice de almacén de columnas comprime un grupo de filas, lo hace con cada segmento de columna de manera independiente. Para descomprimir una columna entera, el índice de almacén de columnas solo debe descomprimir un segmento de columna de cada grupo de filas.   
+Cuando el índice de almacén de columnas comprime un grupo de filas, lo hace con cada segmento de columna de manera independiente. Para descomprimir una columna entera, el índice de almacén de columnas solo debe descomprimir un segmento de columna de cada grupo de filas. 
+
+Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="small-loads-and-inserts-go-to-the-deltastore"></a>Las inserciones y las cargas pequeñas pasan al almacén delta
 Un índice de almacén de columnas mejora el rendimiento y la compresión del almacén de columnas comprimiendo, al menos, 102 400 filas a la vez en el índice de almacén de columnas. Para comprimir las filas de forma masiva, el índice de almacén de columnas acumula inserciones y cargas pequeñas en el almacén delta. Las operaciones del almacén delta se administran en segundo plano. Para devolver los resultados correctos de la consulta, el índice clúster de almacén de columnas combina los resultados de la consulta tanto del almacén de columnas como del almacén delta. 
@@ -689,11 +701,19 @@ Las filas pasan al almacén delta cuando se dan estas circunstancias:
 
 El almacén delta también guarda una lista de identificadores de las filas eliminadas que se han marcado como eliminadas, pero que aún no se han suprimido físicamente del almacén de columnas. 
 
+Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../relational-databases/indexes/columnstore-indexes-overview.md). 
+
 #### <a name="when-delta-rowgroups-are-full-they-get-compressed-into-the-columnstore"></a>Cuando se llenan los grupos de filas delta se comprimen en el almacén de columnas
 
-Los índices agrupados de almacén de columnas recopilan hasta 1 048 576 filas en cada grupo de filas delta antes de comprimir dicho grupo de filas en el almacén de columnas. De este modo, se mejora la compresión del índice de almacén de columnas. Cuando un grupo de filas de almacén delta contiene 1 048 576 filas, el índice de almacén de columnas lo marca como cerrado. Un proceso en segundo plano denominado" *motor de tupla*" identifica cada grupo de filas marcado como cerrado y lo comprime en el almacén de columnas. 
+Los índices agrupados de almacén de columnas recopilan hasta 1 048 576 filas en cada grupo de filas delta antes de comprimir dicho grupo de filas en el almacén de columnas. De este modo, se mejora la compresión del índice de almacén de columnas. Cuando un grupo de filas delta alcanza el número máximo de filas, pasa de un estado OPEN a un estado CLOSED. Un proceso en segundo plano denominado "motor de tupla" comprueba si hay grupos de filas cerrados. Si el proceso encuentra un grupo de filas cerrado, comprime el grupo de filas y lo almacena en el almacén de columnas.  
 
-Puede forzar grupos de filas delta del almacén de columnas mediante [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) para generar o reorganizar el índice.  Tenga en cuenta que si hay presión de memoria durante la compresión, el índice de almacén de columnas podría reducir el número de filas de filas en el grupo de filas comprimido.
+Cuando se ha comprimido un grupo de filas delta, el grupo de filas delta existente pasa al estado TOMBSTONE para que lo quite más adelante el motor de tupla cuando no haya referencias a él, y el nuevo grupo de filas comprimido se marca como COMPRESSED. 
+
+Para obtener más información sobre los estados de filas, vea [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md). 
+
+Puede forzar grupos de filas delta del almacén de columnas mediante [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) para generar o reorganizar el índice. Tenga en cuenta que si hay presión de memoria durante la compresión, el índice de almacén de columnas podría reducir el número de filas de filas en el grupo de filas comprimido.   
+
+Para obtener más información sobre los términos y conceptos de almacén de columnas, vea [Índices de almacén de columnas: Información general](../relational-databases/indexes/columnstore-indexes-overview.md). 
 
 #### <a name="each-table-partition-has-its-own-rowgroups-and-delta-rowgroups"></a>Cada partición de tabla tiene sus propios grupos de filas y grupos de filas delta
 
@@ -701,8 +721,11 @@ El concepto de partición es el mismo en un índice agrupado, un montón y un í
 
 Los grupos de filas siempre se definen dentro de una partición de tabla. Cuando un índice de almacén de columnas tiene particiones, cada una de ellas tiene sus propios grupos de filas y grupos de filas delta comprimidos.
 
+> [!TIP]
+> Considere la posibilidad de usar la creación de particiones de tabla si es necesario quitar datos del almacén de columnas. Desactivar y truncar las particiones que ya no son necesarias es una estrategia eficaz para eliminar datos sin generar la fragmentación ocasionada por tener grupos de filas más pequeños.
+
 ##### <a name="each-partition-can-have-multiple-delta-rowgroups"></a>Cada partición puede contener varios grupos de filas delta
-Cada partición puede tener más de un grupos de filas delta. Cuando el índice de almacén de columnas necesita agregar datos a un grupo de filas delta y este se ha bloqueado, el índice de almacén de columnas tratará de obtener un bloqueo en otro grupo de filas delta. Si no hay ningún grupo de filas delta disponible, el índice de almacén columnas creará un grupo de filas delta.  Por ejemplo, una tabla con 10 particiones podría tener fácilmente 20 o más grupos de filas delta. 
+Cada partición puede tener más de un grupos de filas delta. Cuando el índice de almacén de columnas necesita agregar datos a un grupo de filas delta y este se ha bloqueado, el índice de almacén de columnas tratará de obtener un bloqueo en otro grupo de filas delta. Si no hay ningún grupo de filas delta disponible, el índice de almacén columnas creará un grupo de filas delta. Por ejemplo, una tabla con 10 particiones podría tener fácilmente 20 o más grupos de filas delta. 
 
 #### <a name="you-can-combine-columnstore-and-rowstore-indexes-on-the-same-table"></a>Puede combinar los índices de almacén de filas y de columnas en la misma tabla
 Un índice no agrupado contiene una copia de parte o la totalidad de las filas y columnas de la tabla subyacente. El índice se define como una o varias columnas de la tabla y tiene una condición opcional que filtra las filas. 

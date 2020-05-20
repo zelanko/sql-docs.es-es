@@ -1,5 +1,6 @@
 ---
 title: Utilidades del símbolo del sistema de SQL (motor de base de datos)
+description: Las utilidades de símbolo del sistema permiten incluir en scripts las operaciones de SQL Server. En este artículo se enumeran muchas utilidades del símbolo del sistema que se incluyen con SQL Server.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,12 +18,12 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: a25fcbb39b2b4edacd3d9e6ddab64a88d5888fe9
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c201c13c0d2a77f4005ad2fe788c783431c88094
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74992739"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151429"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades del símbolo del sistema de SQL (motor de base de datos)
 

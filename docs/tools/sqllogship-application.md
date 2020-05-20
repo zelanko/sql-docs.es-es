@@ -1,5 +1,6 @@
 ---
 title: sqllogship (aplicación)
+description: La aplicación sqllogship realiza una operación de copia de seguridad, copia o restauración y las tareas de limpieza en una configuración de trasvase de registros en una base de datos de SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 8f66feb78bb789bf976d6b44b025af20c6575ee6
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 6926c31163108da988338920ce77389e9300a0aa
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75306654"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151596"
 ---
 # <a name="sqllogship-application"></a>sqllogship (aplicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

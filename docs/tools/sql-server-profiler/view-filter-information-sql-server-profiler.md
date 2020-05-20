@@ -1,6 +1,7 @@
 ---
 title: Ver la información del filtro
 titleSuffix: SQL Server Profiler
+description: Descubra cómo ver los filtros que SQL Server Profiler está aplicando actualmente a las columnas de datos para limitar los eventos de los que se realiza un seguimiento.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,12 +12,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
-ms.openlocfilehash: fb79fc3c75686d2a09d46d1a336a3376028382e2
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 39c2d73e634d26ab28b890d72f08b55abfe2394b
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75307751"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151622"
 ---
 # <a name="view-filter-information-sql-server-profiler"></a>Ver información de un filtro (SQL Server Profiler)
 

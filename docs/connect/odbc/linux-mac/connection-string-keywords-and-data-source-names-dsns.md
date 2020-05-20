@@ -2,7 +2,7 @@
 title: Conexión mediante ODBC
 description: Obtenga información sobre cómo crear una conexión a una base de datos desde Linux o macOS mediante Microsoft ODBC Driver for SQL Server.
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 05/11/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,14 +15,15 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 2a17f9a69adae4bc785560ac3e06b8025a34089a
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81632816"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152050"
 ---
 # <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
+
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 En este tema se describe cómo crear una conexión a una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,22 +37,27 @@ Consulte [Atributos y palabras clave de cadena de conexión y DSN](../dsn-connec
   
 El valor transmitido a la palabra clave **Driver** puede ser uno de los siguientes:  
   
--   El nombre que usó cuando instaló el controlador.
+- El nombre que usó cuando instaló el controlador.
 
--   La ruta de acceso a la biblioteca del controlador, que se especificó en el archivo .ini de plantilla utilizado para instalar el controlador.  
+- La ruta de acceso a la biblioteca del controlador, que se especificó en el archivo .ini de plantilla utilizado para instalar el controlador.  
 
-Para crear un DSN, cree (si es necesario) y edite el archivo **~/.odbc.ini** (`.odbc.ini` en su directorio principal) para un DSN de usuario accesible solo para el usuario actual, o `/etc/odbc.ini` para un DSN de sistema (se requieren privilegios administrativos). A continuación se muestra un archivo de ejemplo que muestra las entradas requeridas mínimas para un DSN:  
+Los DSN son opcionales. Puede usar un DSN para definir palabras clave de cadena de conexión bajo un nombre `DSN` al que puede hacer referencia en la cadena de conexión. Para crear un DSN, cree (si es necesario) y edite el archivo **~/.odbc.ini** (`.odbc.ini` en su directorio principal) para un DSN de usuario accesible solo para el usuario actual, o `/etc/odbc.ini` para un DSN de sistema (se requieren privilegios administrativos). A continuación se muestra un archivo de ejemplo que muestra las entradas requeridas mínimas para un DSN:  
 
-```  
+```ini
+# [DSN name]
 [MSSQLTest]  
-Driver = ODBC Driver 13 for SQL Server  
-Server = [protocol:]server[,port]  
-#   
+Driver = ODBC Driver 17 for SQL Server  
+# Server = [protocol:]server[,port]  
+Server = tcp:localhost,1433
+#
 # Note:  
 # Port is not a valid keyword in the odbc.ini file  
 # for the Microsoft ODBC driver on Linux or macOS
 #  
 ```  
+
+Para conectarse con el DSN anterior en una cadena de conexión, debe especificar la palabra clave `DSN`, como en este caso: `DSN=MSSQLTest;UID=my_username;PWD=my_password`  
+La cadena de conexión anterior sería equivalente a especificar una cadena de conexión sin la palabra clave `DSN`, como en este caso: `Driver=ODBC Driver 17 for SQL Server;Server=tcp:localhost,1433;UID=my_username;PWD=my_password`
 
 También puede especificar el protocolo y el puerto para conectarse al servidor. Por ejemplo, **Server=tcp:** _servername_ **,12345**. Tenga en cuenta que el único protocolo compatible con los controladores de Linux y macOS es `tcp`.
 
@@ -59,11 +65,12 @@ Para conectarse a una instancia con nombre en un puerto estático, use <b>Server
 
 De forma alternativa, puede agregar la información de DSN a un archivo de plantilla y ejecutar el siguiente comando para agregarlo a `~/.odbc.ini`:
  - **odbcinst -i -s -f** _template_file_  
- 
+
 Puede comprobar que el controlador funciona mediante `isql` para probar la conexión, o puede usar este comando:
  - **bcp master.INFORMATION_SCHEMA.TABLES out OutFile.dat -S <server> -U <name> -P <password>**  
 
 ## <a name="using-tlsssl"></a>Uso de TLS/SSL  
+
 Puede usar la Seguridad de la capa de transporte (TLS), antes conocida como Capa de sockets seguros (SSL), para cifrar las conexiones con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este protocolo protege los nombres de usuario y las contraseñas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a través de la red. TLS también comprueba la identidad del servidor para protegerse de ataques de tipo "Man in the middle" (MITM).  
 
 Al habilitar el cifrado, aumenta la seguridad a expensas del rendimiento.
@@ -79,7 +86,7 @@ Con independencia de la configuración de **Encrypt** y **TrustServerCertificate
 
 De forma predeterminada, las conexiones cifradas siempre comprueban el certificado del servidor. Sin embargo, si se conecta a un servidor que tiene un certificado autofirmado, agregue también la opción `TrustServerCertificate` para omitir la comprobación del certificado con respecto a la lista de entidades de certificación de confianza:  
 
-```  
+```
 Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_validate_redirected_publisher
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b01fba8260e86d135e740964022187b9914e5fc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 09ef147b9051ecbacdc1a33468100f4be2b372e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252053"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809178"
 ---
 # <a name="sp_validate_redirected_publisher-transact-sql"></a>sp_validate_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,8 @@ ms.locfileid: "72252053"
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Observaciones  
- Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null en el parámetro * \@* de salida redirected_publisher. Si existe una entrada, esta se devuelve en el parámetro de salida en ambos casos: correcto y error.  
+## <a name="remarks"></a>Comentarios  
+ Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null en el parámetro de salida * \@ redirected_publisher*. Si existe una entrada, esta se devuelve en el parámetro de salida en ambos casos: correcto y error.  
   
  Si la validación se realiza correctamente, **sp_validate_redirected_publisher** devuelve una indicación de éxito.  
   

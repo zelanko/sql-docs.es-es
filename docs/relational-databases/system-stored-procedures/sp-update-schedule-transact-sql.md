@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_update_schedule
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946642"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809281"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Valor que indica cuándo se va a ejecutar un trabajo. *freq_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente, con respecto al *intervalo de frecuencia*|  
 |**64**|Se ejecuta cuando se inicia el servicio SQLServerAgent|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`Especifica las unidades de *freq_subday_interval * *.* *freq_subday_type*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0X2**|Segundos|  
@@ -100,12 +100,12 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`La repetición de un trabajo de *freq_interval* en cada mes, si *freq_interval* es **32** (relativo mensual). *freq_relative_interval*es de **tipo int**, su valor predeterminado es **0**y puede tener uno de estos valores.  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Número de semanas o meses entre la ejecución programada de un trabajo. *freq_recurrence_factor* solo se utiliza si *freq_type* es **8**, **16**o **32**. *freq_recurrence_factor*es de **tipo int**y su valor predeterminado es **0**.  
@@ -127,7 +127,7 @@ sp_update_schedule
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los trabajos que utilizan la programación emplean de inmediato la nueva configuración. No obstante, el cambio de la programación no detiene la ejecución en curso de los trabajos.  
   
 ## <a name="permissions"></a>Permisos  

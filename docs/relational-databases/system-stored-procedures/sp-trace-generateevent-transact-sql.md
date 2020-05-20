@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_generateevent
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5c5807225c2bda185b61050433cc3378b25b6fe1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68096025"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809885"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,8 @@ sp_trace_generateevent [ @eventid = ] event_id
 |**3**|El evento especificado no es válido. Puede que el evento no exista o que no sea adecuado para el procedimiento almacenado.|  
 |**13**|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
   
-## <a name="remarks"></a>Observaciones  
- **sp_trace_generateevent** realiza muchas de las acciones ejecutadas previamente por los procedimientos almacenados extendidos de **xp_trace_\* ** . Use **sp_trace_generateevent** en lugar de **xp_trace_generate_event**.  
+## <a name="remarks"></a>Comentarios  
+ **sp_trace_generateevent** realiza muchas de las acciones ejecutadas previamente por los procedimientos almacenados extendidos de **xp_trace_ \* ** . Use **sp_trace_generateevent** en lugar de **xp_trace_generate_event**.  
   
  Solo se pueden usar los números de ID. de eventos definidos por el usuario con **sp_trace_generateevent**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error si se utilizan otros números de Id. de eventos.  
   
@@ -94,7 +94,7 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Consulte también:  
  [Sys. fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sp_trace_setevent &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Seguimiento de SQL](../../relational-databases/sql-trace/sql-trace.md)  

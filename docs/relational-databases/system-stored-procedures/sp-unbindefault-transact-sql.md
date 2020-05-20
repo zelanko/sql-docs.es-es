@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_unbindefault
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095881"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809698"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para mostrar el texto de un valor predeterminado, ejecute **sp_helptext** con el nombre del parámetro predeterminado.  
   
 ## <a name="permissions"></a>Permisos  

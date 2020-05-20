@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_active_snapshot_database_transactions dynamic management view
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42ed4cebfda43801cdbc3ab42225783c674612e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262702"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811125"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "68262702"
  Esta vista de administración dinámica no incluye transacciones del sistema.  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_tran_active_snapshot_database_transactions**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -69,14 +69,14 @@ sys.dm_tran_active_snapshot_database_transactions
 |**max_version_chain_traversed**|**int**|Longitud máxima de la cadena de versiones que se recorre para buscar la versión coherente desde el punto de vista de las transacciones.|  
 |**average_version_chain_traversed**|**real**|Promedio de versiones de fila en las cadenas de versiones que se recorren.|  
 |**elapsed_time_seconds**|**bigint**|Tiempo transcurrido desde que la transacción obtuvo su número de secuencia de la transacción.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **Sys. dm_tran_active_snapshot_database_transactions** notifica las transacciones que tienen asignado un número de secuencia de la transacción (xsn). Este XSN se asigna cuando la transacción tiene acceso por primera vez al almacén de versiones. En una base de datos habilitada para el aislamiento de instantáneas o el aislamiento de lectura confirmada que utiliza las versiones de fila, los ejemplos muestran cuándo se asigna un valor XSN a una transacción:  
   
 -   Si una transacción se ejecuta con el nivel de aislamiento serializable, se asigna un XSN cuando la transacción ejecuta por primera vez una instrucción, como una operación UPDATE, que provoca la creación de una versión de fila.  
@@ -145,7 +145,7 @@ elapsed_time_seconds
   
  La siguiente información evalúa los resultados de **Sys. dm_tran_active_snapshot_database_transactions**:  
   
--   XSN-57: dado que esta transacción no se ejecuta con aislamiento de instantánea `is_snapshot` , el `first_snapshot_sequence_num` valor `0`y son. `transaction_sequence_num` muestra que se ha asignado un número de secuencia de la transacción a esta transacción, ya que una o ambas de las opciones de base de datos ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT están establecidas en ON.  
+-   XSN-57: dado que esta transacción no se ejecuta con aislamiento de instantánea, el `is_snapshot` valor y `first_snapshot_sequence_num` son `0` . `transaction_sequence_num` muestra que se ha asignado un número de secuencia de la transacción a esta transacción, ya que una o ambas de las opciones de base de datos ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT están establecidas en ON.  
   
 -   XSN-58: esta transacción no se ejecuta con aislamiento de instantáneas y se aplica la misma información que en XSN-57.  
   

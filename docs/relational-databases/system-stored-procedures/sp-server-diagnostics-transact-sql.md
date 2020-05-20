@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_server_diagnostics
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d150d9b027b9a2c4d309ca2055722bb47ba092a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d6d418bcdefbb3977a98f04743b7e1b2a58bf54
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982117"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810622"
 ---
 # <a name="sp_server_diagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +77,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **eventos**: recopila datos y superficies a través del procedimiento almacenado en los errores y eventos de interés registrados por el servidor, incluidos los detalles sobre las excepciones de búfer de anillo, eventos de búfer de anillo sobre el agente de memoria, memoria insuficiente, monitor de programador, grupo de búferes, bloqueos por subproceso, seguridad y conectividad. Los eventos mostrarán siempre 0 como estado.  
   
--   **nombre del grupo de disponibilidad>: recopila datos para el grupo de disponibilidad especificado (si component_type = "Always On: AvailabilityGroup"). \< **  
+-   ** \< nombre del grupo de disponibilidad>**: recopila datos para el grupo de disponibilidad especificado (si component_type = "Always On: AvailabilityGroup").  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 Desde la perspectiva de los errores, los componentes del sistema, recursos y procesamiento de consultas se aprovecharán para la detección de errores mientras que los componentes de eventos e io_subsystem se aprovecharán solo con fines de diagnóstico.  
   
 En la tabla siguiente se asignan los componentes a sus estados de mantenimiento asociados.  

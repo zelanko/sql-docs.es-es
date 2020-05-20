@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bd09706d1b3de9ebe4a5b333f79be9644c433e7c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982342"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811431"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73982342"
   
 -   Desencadenadores DDL de nivel de servidor   
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (y versiones posteriores [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]),.  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,17 +96,17 @@ sys.dm_sql_referencing_entities (
   
  Devuelve un error si la entidad especificada a la que se hace referencia es un procedimiento almacenado numerado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
-|Ver|Sí|Sí|  
-|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|No|Sí|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|No|Sí|  
+|Ver|Yes|Yes|  
+|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|procedimiento almacenado CLR|No|Yes|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
+|Función CLR definida por el usuario|No|Yes|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
@@ -118,7 +118,7 @@ sys.dm_sql_referencing_entities (
 |Colección de esquemas XML|No|Sí|  
 |Función de partición|No|Sí|  
   
- \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando [!INCLUDE[tsql](../../includes/tsql-md.md)] hace referencia a un módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
+ \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Devolver las entidades que hacen referencia a un tipo determinado  
- El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas de la `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción CHECK o una restricción DEFAULT de la tabla, no se devuelve `HumanResources.Employee` ninguna fila para la tabla.  
+ El ejemplo siguiente devuelve las entidades que hacen referencia al tipo de alias `dbo.Flag`. El conjunto de resultados muestra que dos procedimientos almacenados utilizan este tipo. El `dbo.Flag` tipo también se utiliza en la definición de varias columnas de la `HumanResources.Employee` tabla; sin embargo, dado que el tipo no está en la definición de una columna calculada, una restricción check o una restricción default de la tabla, no se devuelve ninguna fila para la `HumanResources.Employee` tabla.  
   
 ```sql  
 USE AdventureWorks2012;  

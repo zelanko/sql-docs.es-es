@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsrvrolemember
 ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ba1cbbfb95dafaa99a33d95b1d92a9e6e5f4e9a2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 73a8052af35854b0e2a1d557b1b31050dbb560ea
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010765"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810836"
 ---
 # <a name="sp_helpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,10 +65,10 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 |MemberName|**sysname**|Nombre de un miembro de ServerRole|  
 |MemberSID|**varbinary(85)**|Identificador de seguridad de MemberName|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para presentar los miembros de un rol de base de datos, utilice sp_helprolemember.  
   
- Todos los inicios de sesión son miembros de Public. sp_helpsrvrolemember no reconoce el rol Public porque, internamente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no implementa Public como role.  
+ Todos los inicios de sesión son miembros de Public. sp_helpsrvrolemember no reconoce el rol Public porque, internamente, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa Public como role.  
   
  Para agregar o quitar miembros de roles de servidor, vea [ALTER Server ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_start_collection_set
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cad08f3866a17299aefce24df9701bb1817bc5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 52afba46b09552af62ba9f08c34e1749689f41cc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010602"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810028"
 ---
 # <a name="sp_syscollector_start_collection_set-transact-sql"></a>sp_syscollector_start_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_syscollector_start_collection_set
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_create_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb y el Agente SQL Server debe estar habilitado.  
   
  Este procedimiento producirá un error cuando se ejecute con un conjunto de recopilación que no tenga una programación. Si el conjunto de recopilación no tiene una programación (porque su modo de recopilación está establecido en sin almacenamiento en caché, por ejemplo), use el [sp_syscollector_run_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-run-collection-set-transact-sql.md) procedimiento almacenado para iniciar el conjunto de recopilación.  

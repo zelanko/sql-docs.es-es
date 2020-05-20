@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_trace_setstatus
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 98eaa39475b58c7fad5b20c4f6a65101d33b103d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68095931"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82809874"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  En la tabla siguiente se muestra una lista de los estados que podrían especificarse.  
   
-|Status|Descripción|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |**0**|Detiene el seguimiento especificado.|  
 |**1**|Inicia el seguimiento especificado.|  
@@ -64,13 +64,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |-----------------|-----------------|  
 |**0**|Ningún error.|  
 |**1**|Error desconocido.|  
-|**203**|El estado especificado no es válido.|  
+|**8**|El estado especificado no es válido.|  
 |**9**|El identificador de seguimiento especificado no es válido.|  
 |**13**|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
   
  Si el seguimiento ya está en el estado especificado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá **0**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los parámetros de todos los procedimientos almacenados de seguimiento de SQL (**sp_trace_xx**) tienen un tipo estricto. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devolverá un error.  
   
  Para obtener un ejemplo de cómo usar los procedimientos almacenados de seguimiento, vea [Crear un seguimiento &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  

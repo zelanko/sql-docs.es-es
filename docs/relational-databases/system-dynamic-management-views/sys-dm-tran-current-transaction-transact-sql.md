@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_tran_current_transaction dynamic management view
 ms.assetid: 75d5697d-b390-4963-99b8-fa0b4244a40c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4d1817910457d9d4e46dd1f923058ce98f02f51e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f98dd0533d73ec254e27d65d3e16befee52833a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262631"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810747"
 ---
 # <a name="sysdm_tran_current_transaction-transact-sql"></a>sys.dm_tran_current_transaction (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68262631"
   Devuelve una sola fila que muestra información del estado de la transacción en la sesión actual.  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_tran_current_transaction**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_tran_current_transaction**.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -52,11 +52,11 @@ sys.dm_tran_current_transaction
 |**first_snapshot_sequence_num**|**bigint**|Número más bajo de secuencia de la transacción de las transacciones que estaban activas cuando se obtuvo la instantánea. Cuando se ejecuta, una transacción de instantánea realiza una instantánea de todas las transacciones activas en ese momento. En las transacciones que no son de instantánea, en esta columna se muestra 0.|  
 |**last_transaction_sequence_num**|**bigint**|Número de secuencia global. Este valor representa el último número de secuencia de transacción generado por el sistema.|  
 |**first_useful_sequence_num**|**bigint**|Número de secuencia global. Este valor representa el número de secuencia de la transacción más antiguo con versiones de fila que deben conservarse en el almacén de versiones. Las versiones de fila creadas por transacciones anteriores se pueden quitar.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="examples"></a>Ejemplos  

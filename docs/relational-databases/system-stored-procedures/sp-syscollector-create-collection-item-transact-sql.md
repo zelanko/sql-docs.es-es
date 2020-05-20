@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_create_collection_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d597436277255441ad893215a3581580264d99a3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032669"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82810278"
 ---
 # <a name="sp_syscollector_create_collection_item-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,32 +46,32 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es de **tipo int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Es el GUID que identifica el tipo de recopilador que se va a usar para este elemento *collector_type_uid* es de tipo **uniqueidentifier** y no tiene ningún valor predeterminado. Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del elemento de colección. *Name* es de **tipo sysname** y no puede ser una cadena vacía o null.  
   
  *el nombre* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
- [ @frequency = ] *frecuencia*  
+ [ @frequency =] *frecuencia*  
  Se utiliza para especificar (en segundos) la frecuencia con la que este elemento de recopilación reúne los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5. El valor mínimo que se puede especificar es 5 segundos.  
   
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan con la programación especificada para el conjunto de recopilación. Para ver el modo de recopilación del conjunto de recopilación, consulte la vista del sistema [syscollector_collection_sets](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md) .  
   
- [ @parameters = ] '*Parameters*'  
+ [ @parameters =] '*Parameters*'  
  Parámetros de entrada del tipo de recopilador. *Parameters* es **XML** con un valor predeterminado de NULL. El esquema de *parámetros* debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Es el identifer único que identifica el elemento del conjunto de recopilación. *collection_item_id* es **int** y tiene output.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_create_collection_item se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
  El conjunto de recopilación al que se agrega el elemento de recopilación debe detenerse antes de crear dicho elemento. Los elementos de recopilación no se pueden agregar a los conjuntos de recopilación del sistema.  

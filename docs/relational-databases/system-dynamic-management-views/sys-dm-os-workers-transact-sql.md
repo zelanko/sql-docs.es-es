@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 87cc5d8dc07c0c4c927b7214bca01bfec09555e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72289352"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811539"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,12 +33,12 @@ ms.locfileid: "72289352"
   Devuelve una fila por cada trabajador del sistema. Para obtener más información sobre los trabajos, consulte la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md). 
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_workers**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_workers**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8**|Dirección de memoria del trabajador.|  
-|status|**int**|Exclusivamente para uso interno.|  
+|status|**int**|Solo para uso interno.|  
 |is_preemptive|**bit**|1 = El trabajador está trabajando con un programa preferente. Un trabajador que ejecuta código externo trabaja con un programa preferente.|  
 |is_fiber|**bit**|1 = El trabajador está trabajando con la opción de agrupación ligera. Para obtener más información, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = El trabajador está atascado intentando obtener un bloqueo por subproceso. Si este bit está establecido, podría indicar un problema con la contención de un objeto al que se tiene acceso con frecuencia.|  
@@ -63,9 +63,9 @@ ms.locfileid: "72289352"
 |end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
 |last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor devuelto de la última espera. Puede ser uno de los siguientes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|Exclusivamente para uso interno.|  
-|max_quantum|**bigint**|Exclusivamente para uso interno.|  
-|boost_count|**int**|Exclusivamente para uso interno.|  
+|quantum_used|**bigint**|Solo para uso interno.|  
+|max_quantum|**bigint**|Solo para uso interno.|  
+|boost_count|**int**|Solo para uso interno.|  
 |tasks_processed_count|**int**|Número de tareas procesadas por este trabajador.|  
 |fiber_address|**varbinary(8**|Dirección de memoria de la fibra con la que está asociado este trabajador.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para agrupación ligera.|  
 |task_address|**varbinary(8**|Dirección de memoria de la tarea actual. Para obtener más información, vea [Sys. dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
@@ -74,16 +74,16 @@ ms.locfileid: "72289352"
 |signal_worker_address|**varbinary(8**|Dirección de memoria del último trabajador que indicó este objeto. Para obtener más información, vea [Sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8**|Dirección de memoria del programador. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Almacena el identificador de grupo de procesadores que está asignado a este subproceso.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el estado de trabajador es RUNNING y se está ejecutando de forma no preferente, la dirección del trabajador coincide con active_worker_address en sys.dm_os_schedulers.  
   
  Cuando se señala a un trabajador que espera en un evento, el trabajador se coloca al principio de la cola de ejecutables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite que suceda esto 1.000 veces en una fila; después, el trabajador se coloca al final de la cola. Mover un trabajador al final de la cola tiene algunas implicaciones sobre el rendimiento.  
   
 ## <a name="permissions"></a>Permisos
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere la `Server Admin` pertenencia al rol o `Azure Active Directory admin` una cuenta.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere la `Server Admin` pertenencia al rol o una `Azure Active Directory admin` cuenta.   
 
 ## <a name="examples"></a>Ejemplos  
  Puede utilizar la siguiente consulta para saber cuánto tiempo se ha estado ejecutando un trabajador en un estado SUSPENDED o RUNNABLE.  
@@ -137,5 +137,5 @@ SELECT
   
 ## <a name="see-also"></a>Consulte también  
 [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)       
-[Guía de arquitectura de procesamiento de consultas](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#DOP)      (Guía de arquitectura de procesamiento de consultas)  
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)    

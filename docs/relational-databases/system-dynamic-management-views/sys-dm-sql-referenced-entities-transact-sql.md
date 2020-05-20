@@ -17,21 +17,21 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cb2b6e422b9b9e746e851e6d7b799cdf7c63387f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090670"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82811286"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Devuelve una fila por cada entidad definida por el usuario a la que se hace referencia por su nombre en la definición de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entidad de referencia especificada en. Se crea una dependencia entre dos entidades cuando una entidad definida por el usuario, denominada *entidad a la que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad definida por el usuario, denominada *entidad de referencia*. Por ejemplo, si un procedimiento almacenado es la entidad especificada de referencia, esta función devuelve todas las entidades definidas por el usuario a las que se hace referencia en el procedimiento almacenado, como tablas, vistas, tipos definidos por el usuario (UDT) u otros procedimientos almacenados.  
+Devuelve una fila por cada entidad definida por el usuario a la que se hace referencia por su nombre en la definición de la entidad de referencia especificada en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se crea una dependencia entre dos entidades cuando una entidad definida por el usuario, denominada *entidad a la que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad definida por el usuario, denominada *entidad de referencia*. Por ejemplo, si un procedimiento almacenado es la entidad especificada de referencia, esta función devuelve todas las entidades definidas por el usuario a las que se hace referencia en el procedimiento almacenado, como tablas, vistas, tipos definidos por el usuario (UDT) u otros procedimientos almacenados.  
   
  Puede usar esta función de administración dinámica para notificar los siguientes tipos de entidades referenciadas por la entidad de referencia especificada:  
   
@@ -114,7 +114,7 @@ sys.dm_sql_referenced_entities (
   
  Devuelve el error 2020 cuando no se pueden resolver las dependencias de columna. Este error no impide que la consulta devuelva dependencias de nivel de objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se puede ejecutar esta función en el contexto de cualquier base de datos para devolver las entidades que hacen referencia a un desencadenador DDL de servidor.  
   
  La tabla siguiente enumera los tipos de entidades para las que se crea y mantiene la información de dependencia. La información de dependencia no se crea ni mantiene para reglas, valores predeterminados, tablas temporales, procedimientos almacenados temporales u objetos del sistema.  
@@ -122,24 +122,24 @@ sys.dm_sql_referenced_entities (
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
-|Ver|Sí|Sí|  
-|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
-|procedimiento almacenado CLR|No|Sí|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
-|Función CLR definida por el usuario|No|Sí|  
+|Ver|Yes|Yes|  
+|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
+|procedimiento almacenado CLR|No|Yes|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
+|Función CLR definida por el usuario|No|Yes|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Sí|  
-|Cola|No|Sí|  
-|Synonym (Sinónimo)|No|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
-|Colección de esquemas XML|No|Sí|  
-|Función de partición|No|Sí|  
+|Procedimientos almacenados extendidos|No|Yes|  
+|Cola|No|Yes|  
+|Synonym (Sinónimo)|No|Yes|  
+|Tipo (tipo CLR y alias definido por el usuario)|No|Yes|  
+|Colección de esquemas XML|No|Yes|  
+|Función de partición|No|Yes|  
 | &nbsp; | &nbsp; | &nbsp; |
 
- \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando [!INCLUDE[tsql](../../includes/tsql-md.md)] hace referencia a un módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
+ \*Se realiza un seguimiento de una tabla como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, un tipo definido por el usuario o una colección de esquemas XML en la definición de una columna calculada, una restricción check o una restricción default.  
   
  ** No se realiza el seguimiento de los procedimientos almacenados numerados con un valor entero mayor que 1 como la entidad que hace referencia ni como la entidad a la que se hace referencia.  
   
@@ -268,7 +268,7 @@ The dependencies reported for entity "dbo.Proc1" might not include
 
 En este ejemplo E se supone que se ha ejecutado el ejemplo D. En el ejemplo E se muestra que las dependencias se mantienen dinámicamente. En el ejemplo se realiza lo siguiente:
 
-1. Vuelve a crear `Table1`, que se quitó en el ejemplo D.
+1. Vuelve a crear `Table1` , que se quitó en el ejemplo D.
 2. Ejecutar then `sys.dm_sql_referenced_entities` se ejecuta de nuevo con el procedimiento almacenado especificado como entidad de referencia.
 
 El conjunto de resultados muestra que se devuelven las dos tablas y sus respectivas columnas definidas en el procedimiento almacenado. Además, la columna `is_all_columns_found` devuelve un 1 para todos los objetos y columnas.
@@ -304,7 +304,7 @@ GO
  ```
  
 ### <a name="f-returning-object-or-column-usage"></a>F. Devolución del uso de objetos o columnas  
- El ejemplo siguiente devuelve los objetos y las dependencias de columna del procedimiento almacenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimiento actualiza las columnas `NationalIDNumber`, `BirthDate,``MaritalStatus`y `Gender` de la `Employee` tabla basándose en un valor `BusinessEntityID` especificado. Otro procedimiento almacenado, `upsLogError` se define en una instrucción try... CATCH bloque para capturar los errores de ejecución. Las columnas `is_selected`, `is_updated` y `is_select_all` devuelven información sobre cómo se utilizan estos objetos y columnas  dentro del objeto de referencia. La tabla y las columnas que se modifican se indican mediante un 1 en la columna is_updated. La columna `BusinessEntityID` solo se selecciona y el procedimiento almacenado `uspLogError` ni se selecciona ni se modifica.  
+ El ejemplo siguiente devuelve los objetos y las dependencias de columna del procedimiento almacenado `HumanResources.uspUpdateEmployeePersonalInfo`. Este procedimiento actualiza las columnas `NationalIDNumber` , `BirthDate,``MaritalStatus` y `Gender` de la `Employee` tabla basándose en un `BusinessEntityID` valor especificado. Otro procedimiento almacenado, `upsLogError` se define en una instrucción try... CATCH bloque para capturar los errores de ejecución. Las columnas `is_selected`, `is_updated` y `is_select_all` devuelven información sobre cómo se utilizan estos objetos y columnas  dentro del objeto de referencia. La tabla y las columnas que se modifican se indican mediante un 1 en la columna is_updated. La columna `BusinessEntityID` solo se selecciona y el procedimiento almacenado `uspLogError` ni se selecciona ni se modifica.  
 
 ```sql  
 USE AdventureWorks2012;

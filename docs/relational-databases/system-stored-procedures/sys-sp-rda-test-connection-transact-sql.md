@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.sp_rda_test_connection stored procedure
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ab377b42943c943f710d83661642423cfc070949
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305157"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814567"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>Sys. sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +48,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address= N '*azure_server_fully_qualified_address*'  
  La dirección completa del servidor de Azure.  
   
--   Si proporciona un valor para ** \@database_name**, pero la base de datos especificada no está habilitada para Stretch, tendrá que proporcionar un valor para ** \@SERVER_ADDRESS**.  
+-   Si proporciona un valor para ** \@ database_name**, pero la base de datos especificada no está habilitada para Stretch, tendrá que proporcionar un valor para ** \@ SERVER_ADDRESS**.  
   
--   Si proporciona un valor para ** \@database_name**y la base de datos especificada está habilitada para Stretch, no tiene que proporcionar un valor para ** \@SERVER_ADDRESS**. Si proporciona un valor para ** \@SERVER_ADDRESS**, el procedimiento almacenado lo omite y usa el servidor de Azure existente que ya está asociado a la base de datos habilitada para Stretch.  
+-   Si proporciona un valor para ** \@ database_name**y la base de datos especificada está habilitada para Stretch, no tiene que proporcionar un valor para ** \@ SERVER_ADDRESS**. Si proporciona un valor para ** \@ SERVER_ADDRESS**, el procedimiento almacenado lo omite y usa el servidor de Azure existente que ya está asociado a la base de datos habilitada para Stretch.  
   
  @azure_username= N '*azure_username*  
  El nombre de usuario para el servidor remoto de Azure.  

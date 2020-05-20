@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticlecolumns
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e87e542395c00797ce50b220ad8a6c981f43605a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c15a9051c6d706ddec55d031e93858a3d33c9d3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771092"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815955"
 ---
 # <a name="sp_helparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Es el nombre del artículo en el que se devuelven las columnas. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe especificar el *publicador* cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador publica el artículo solicitado.  
+>  no se debe especificar el *publicador* cuando un publicador publica el artículo solicitado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (columnas no publicadas) o **1** (columnas publicadas)  
@@ -56,12 +56,12 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**ID. de columna**|**int**|Identificador de la columna.|  
-|**artículo**|**sysname**|Nombre de la columna.|  
+|**column**|**sysname**|Nombre de la columna.|  
 |**sin**|**bit**|Indica si la columna está publicada:<br /><br /> **0** = no<br /><br /> **1** = sí|  
 |**tipo de publicador**|**sysname**|Tipo de datos de la columna del publicador.|  
 |**tipo de suscriptor**|**sysname**|Tipo de datos de la columna del suscriptor.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helparticlecolumns** se utiliza en la replicación de instantáneas y transaccional.  
   
  **sp_helparticlecolumns** es útil para comprobar una partición vertical.  

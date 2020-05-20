@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_publication_access
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7c562c039b65f99f1d3d9915f0dd00b93dc95860
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8fe57e26392a2a01c7074d7d019baa20c4b9cb5f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770990"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815881"
 ---
 # <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'`Es el identificador de inicio de sesión. *return_granted* es de **bit**y su valor predeterminado es 1. Si se especifica **0** y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si se especifica **0** y se utiliza la autenticación de Windows, se devuelven los inicios de sesión que no deniegan específicamente el acceso en el publicador o el distribuidor.  
   
-`[ @login = ] 'login'`Es el identificador de inicio de sesión de seguridad estándar. *login* es de **%** **tipo sysname y su**valor predeterminado es.  
+`[ @login = ] 'login'`Es el identificador de inicio de sesión de seguridad estándar. *login* es de **tipo sysname y su**valor predeterminado es **%** .  
   
 `[ @initial_list = ] initial_list`Especifica si se devuelven todos los miembros con acceso de publicación o solo aquellos que tenían acceso antes de que se agregaran nuevos miembros a la lista. *initial_list* es de bit y su valor predeterminado es **0**.  
   
@@ -63,10 +63,10 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_publication_access** se utiliza en todos los tipos de replicación.  
   
- Cuando **Isntname** y **del** en el conjunto de resultados son **0**, se supone que el inicio de sesión es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un inicio de sesión.  
+ Cuando **Isntname** y **del** en el conjunto de resultados son **0**, se supone que el inicio de sesión es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_help_publication_access**.  

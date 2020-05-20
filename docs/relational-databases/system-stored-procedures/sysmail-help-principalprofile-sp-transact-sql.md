@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_help_principalprofile_sp
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8c1ffcec53c40feef7d72baefd39208f3d289f1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68044521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82814147"
 ---
 # <a name="sysmail_help_principalprofile_sp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +64,8 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 |**profile_name**|**sysname**|Nombre del perfil de Correo electrónico de base de datos.|  
 |**is_default**|**bit**|Marca que indica si el perfil es el perfil predeterminado del usuario.|  
   
-## <a name="remarks"></a>Observaciones  
- Si **sysmail_help_principalprofile_sp** se invoca sin parámetros, el conjunto de resultados devuelto enumera todas las asociaciones de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En caso contrario, el conjunto de resultados contiene información para las asociaciones que coincidan con los parámetros suministrados. Por ejemplo, en el procedimiento se muestran todas las asociaciones para un perfil cuando se proporciona el nombre del perfil.  
+## <a name="remarks"></a>Comentarios  
+ Si **sysmail_help_principalprofile_sp** se invoca sin parámetros, el conjunto de resultados devuelto enumera todas las asociaciones de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En caso contrario, el conjunto de resultados contiene información para las asociaciones que coincidan con los parámetros suministrados. Por ejemplo, en el procedimiento se muestran todas las asociaciones para un perfil cuando se proporciona el nombre del perfil.  
   
  **sysmail_help_principalprofile_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
   

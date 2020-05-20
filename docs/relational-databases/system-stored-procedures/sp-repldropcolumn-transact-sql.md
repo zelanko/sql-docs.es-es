@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repldropcolumn
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf3aefc677f3eca48b26faf51eb92243e3806f10
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771472"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82815480"
 ---
 # <a name="sp_repldropcolumn-transact-sql"></a>sp_repldropcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -44,30 +44,30 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @source_object = ] '*source_object*'  
+ [ @source_object =] '*source_object*'  
  Es el nombre del artículo de la tabla que contiene la columna que se va a quitar. *source_object* es de tipo nvarchar (258) y no tiene ningún valor predeterminado.  
   
- [ @column = ] '*columna*'  
+ [ @column =] '*columna*'  
  Es el nombre de la columna de la tabla que se va a quitar. la *columna* es de tipo sysname y no tiene ningún valor predeterminado.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es de tipo int y su valor predeterminado es 0, donde un valor de 1 se utiliza cuando un agente de replicación está ejecutando este procedimiento almacenado y, en cualquier otro caso, se debe usar el valor predeterminado de 0.  
   
- [ @schema_change_script = ] '*schema_change_script*'  
+ [ @schema_change_script =] '*schema_change_script*'  
  Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *schema_change_script* es de tipo nvarchar (4000) y su valor predeterminado es NULL. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *schema_change_script* se ejecuta después de realizar un cambio de esquema en un artículo de tabla replicada mediante sp_repldropcolumn y se puede usar para realizar una de las acciones siguientes:  
   
 -   Si los procedimientos almacenados personalizados se vuelven a generar automáticamente, *schema_change_script* se pueden utilizar para quitar estos procedimientos almacenados personalizados y reemplazarlos con procedimientos almacenados personalizados definidos por el usuario que admitan el nuevo esquema.  
   
 -   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, *schema_change_script*se pueden usar para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un bit, con un valor predeterminado de 1.  
   
  El valor 1 significa que, al cambiar un artículo, la instantánea puede quedar invalidada y, en tal caso, el valor 1 concede el permiso necesario para que se produzca la nueva instantánea.  
   
  0 especifica que los cambios en el artículo no invalidarán la instantánea.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un bit con un valor predeterminado de 0.  
   
  0 especifica que los cambios en el artículo no harán que se reinicialice la suscripción.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1f9cb93ff669b5636497c10972baf64373e7f06e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932317"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758671"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>Ejemplo de las propiedades IsolationLevel y MODE (VC + +)
 En este ejemplo se usa la propiedad [mode](../../../ado/reference/ado-api/mode-property-ado.md) para abrir una conexión exclusiva y la propiedad [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) para abrir una transacción que se lleva a cabo en el aislamiento de otras transacciones.  

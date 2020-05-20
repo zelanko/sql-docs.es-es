@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecord method [ADO]
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5fc8cfec5752f88909214301931c69dddfe89dc5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933416"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758801"
 ---
 # <a name="copyrecord-method-ado"></a>Método CopyRecord (ADO)
 Copia una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md) en otra ubicación.  

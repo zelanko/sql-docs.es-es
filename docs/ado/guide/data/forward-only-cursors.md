@@ -11,14 +11,14 @@ helpviewer_keywords:
 - cursors [ADO], forward-only
 - forward-only cursors [ADO]
 ms.assetid: 2b1e062f-3294-4a6f-8241-a17045c4df18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e84fbf2b8fda2fa2b14088af1e0830d8109aba8a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8943e97e8ce246732f0153a53f8be8d80d4fa88f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925304"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758201"
 ---
 # <a name="forward-only-cursors"></a>Cursores de solo avance
 El tipo de cursor predeterminado típico, denominado cursor de solo avance (o no desplazable), solo puede avanzar por el conjunto de resultados. Un cursor de solo avance no admite el desplazamiento (la capacidad de moverse hacia delante y hacia atrás en el conjunto de resultados); solo admite la captura de filas desde el principio hasta el final del conjunto de resultados. Con algunos cursores de solo avance (por ejemplo, con la biblioteca de cursores SQL Server), todas las instrucciones INSERT, Update y DELETE realizadas por el usuario actual (o confirmadas por otros usuarios) que afectan a las filas del conjunto de resultados son visibles a medida que se capturan las filas. Pero como el cursor no se puede desplazar hacia atrás, los cambios realizados en las filas de la base de datos tras capturar la fila no son visibles a través del cursor.  

@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Version property [ADO], Visual Basic example
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 7392a6cf04ee2951cb0d9064d9321f75bb2db395
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938742"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758621"
 ---
 # <a name="version-property-example-vb"></a>Ejemplo de la propiedad Version (VB)
 En este ejemplo se usa la propiedad [version](../../../ado/reference/ado-api/version-property-ado.md) de un objeto [Connection](../../../ado/reference/ado-api/connection-object-ado.md) para mostrar la versión actual de ADO. También usa varias propiedades dinámicas para mostrar:  

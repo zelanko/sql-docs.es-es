@@ -11,14 +11,14 @@ helpviewer_keywords:
 - HelloData sample application [ADO]
 - ADO, samples
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 18f9f0cd227a258b1d2d9cd2d201527f614bcc49
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925138"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758831"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: una aplicación ADO sencilla
 Esta sencilla aplicación se guía a través de cada una de las cuatro operaciones de ADO principales: obtener, examinar, editar y actualizar datos. Estas operaciones se realizan en la base de datos de ejemplo Northwind incluida en Microsoft® SQL Server. Para centrarse en los aspectos básicos de ADO y evitar la confusión del código, el control de errores en el ejemplo es mínimo.  
@@ -42,19 +42,19 @@ Esta sencilla aplicación se guía a través de cada una de las cuatro operacion
   
  ![Muestra Form1 para la aplicación HelloData de VB](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Tipo de control|Propiedad|Value|  
+|Tipo de control|Propiedad|Valor|  
 |------------------|--------------|-----------|  
-|Form|Nombre|Form1|  
+|Form|Name|Form1|  
 ||Alto|6500|  
 ||Ancho|6500|  
-|DataGrid de MS|Nombre|grdDisplay1|  
-|TextBox|Nombre|txtDisplay1|  
+|DataGrid de MS|Name|grdDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||Multiline|true|  
-|Botón de comando|Nombre|cmdGetData|  
+|Botón de comando|Name|cmdGetData|  
 ||Caption|Get Data|  
-|Botón de comando|Nombre|cmdExamineData|  
+|Botón de comando|Name|cmdExamineData|  
 ||Caption|Examinar datos|  
-|Botón de comando|Nombre|cmdEditData|  
+|Botón de comando|Name|cmdEditData|  
 ||Caption| Editar datos|  
-|Botón de comando|Nombre|cmdUpdateData|  
+|Botón de comando|Name|cmdUpdateData|  
 ||Caption|Datos actualizados|

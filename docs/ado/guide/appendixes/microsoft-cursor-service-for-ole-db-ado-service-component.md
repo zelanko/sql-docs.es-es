@@ -11,14 +11,14 @@ helpviewer_keywords:
 - providers [ADO], cursor service for OLE DB
 - cursor service for OLE DB [ADO]
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6b0b4a3773f0de637458384e8819a7b913da3e40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926792"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758511"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Introducción al servicio de cursores de Microsoft para OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa las funciones de compatibilidad de cursores de los proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme de todos los proveedores de datos.
@@ -56,7 +56,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 > [!NOTE]
 >  El servicio de cursor no admite la propiedad dinámica DBPROP_SERVERDATAONINSERT, incluso si es compatible con el proveedor de datos subyacente.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Auto Calc (DBPROP_ADC_AUTORECALC)|En el caso de los conjuntos de registros creados con el servicio de forma de datos, este valor indica la frecuencia con la que se calculan las columnas calculadas y las agregadas. El valor predeterminado (valor = 1) es recalcular siempre que el servicio de forma de datos determine que los valores han cambiado. Si el valor es 0, las columnas calculadas o agregadas solo se calculan cuando se compila inicialmente la jerarquía.|
 |Tamaño de lote (DBPROP_ADC_BATCHSIZE)|Indica el número de instrucciones Update que se pueden procesar por lotes antes de que se envíen al almacén de datos. Cuantas más instrucciones tenga un lote, menos viajes de ida y vuelta al almacén de datos.|
@@ -82,7 +82,7 @@ rs.Properties("Optimize") = True
 ## <a name="built-in-property-behavior"></a>Comportamiento de la propiedad integrada
  El servicio de cursor para OLE DB también afecta al comportamiento de ciertas propiedades integradas.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|Complementa los tipos de cursores que están disponibles para un **conjunto de registros**.|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|Complementa los tipos de bloqueos disponibles para un **conjunto de registros**. Habilita las actualizaciones por lotes.|

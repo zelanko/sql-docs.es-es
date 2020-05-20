@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO], shape grammar
 - data shaping [ADO], shape grammar
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ce65f6961502a5bfe43278e4a29a11c4210d4af8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925347"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758261"
 ---
 # <a name="formal-shape-grammar"></a>Gramática formal de forma
 Esta es la gramática formal para crear cualquier comando de forma:  
@@ -41,28 +41,28 @@ Esta es la gramática formal para crear cualquier comando de forma:
   
 |Término|Definición|  
 |----------|----------------|  
-|\<> de comandos de forma|FORMA [\<Table-exp> [[as] \<alias>]] [\<Shape-Action>]|  
-|\<> de tabla-exp|{\<Provider-Command-Text>} &#124;<br /><br /> (\<> de comandos de forma) &#124;<br /><br /> TABLA \<entrecomillada: nombre> &#124;<br /><br /> \<nombre entre comillas>|  
-|\<> de acción de forma|ANEXAr \<> &#124; de lista de campos con alias<br /><br /> CALCULAR \<aliased-Field-List> [por \<lista de campos>]|  
-|\<> de lista de campos con alias|\<> de campo con alias [, \<campo con alias... >]|  
-|\<> de campo con alias|\<Field-exp> [[AS] \<alias>]|  
-|\<> de campo-exp|(\<relación-exp>) &#124;<br /><br /> \<calculado-exp> &#124;<br /><br /> \<> &#124; agregado-exp<br /><br /> \<New-exp>|  
-|<relation_exp>|\<Table-exp> [[AS] \<alias>]<br /><br /> Relación \<relacional-Cond-List>|  
-|\<> relación-Cond-List|\<relación-Cond> [, \<relación-Cond>...]|  
+|\<> de comandos de forma|FORMA [ \< TABLE-exp> [[as] \< alias>]] [ \< shape-Action>]|  
+|\<> de tabla-exp|{ \< Provider-Command-text>} &#124;<br /><br /> ( \<> de comandos de forma) &#124;<br /><br /> TABLA \< entrecomillada: nombre> &#124;<br /><br /> \<nombre entre comillas>|  
+|\<> de acción de forma|ANEXAr \<> &#124; de lista de campos con alias<br /><br /> CALCULAR \< aliased-Field-list> [por \< lista de campos>]|  
+|\<> de lista de campos con alias|\<> de campo con alias [, \< campo con alias... >]|  
+|\<> de campo con alias|\<Field-exp> [[AS] \< alias>]|  
+|\<> de campo-exp|( \< relación-exp>) &#124;<br /><br /> \<calculado-exp> &#124;<br /><br /> \<> &#124; agregado-exp<br /><br /> \<New-exp>|  
+|<relation_exp>|\<Table-exp> [[AS] \< alias>]<br /><br /> Relación RELACIONAl \< -Cond-list>|  
+|\<> relación-Cond-List|\<relación-Cond> [, \< relación-cond>...]|  
 |\<relación-Cond>|\<nombre de campo> a \<> de referencia secundaria|  
-|\<> de referencia secundaria|\<> &#124; de nombre de campo<br /><br /> PARÁMETRO \<param-Ref>|  
+|\<> de referencia secundaria|\<> &#124; de nombre de campo<br /><br /> PARÁMETRO \< param-ref>|  
 |\<parámetro-ref>|\<número>|  
-|\<> de lista de campos|\<> de nombre de campo [ \<, nombre de campo>]|  
-|\<> agregado-exp|SUM (\<Qualified-Field-Name>) &#124;<br /><br /> AVG (\<nombre de campo calificado>) &#124;<br /><br /> MIN (\<nombre de campo calificado>) &#124;<br /><br /> MAX (\<nombre de campo calificado>) &#124;<br /><br /> COUNT (\<alias calificado> &#124; \<nombre completo>) &#124;<br /><br /> STDEV (\<nombre de campo completo>) &#124;<br /><br /> ANY (\<Qualified-Field-Name>)|  
-|\<calculado-exp>|CALC (\<expresión>)|  
+|\<> de lista de campos|\<> de nombre de campo [, \< nombre de campo>]|  
+|\<> agregado-exp|SUM ( \< Qualified-Field-name>) &#124;<br /><br /> AVG ( \< nombre de campo calificado>) &#124;<br /><br /> MIN ( \< nombre de campo calificado>) &#124;<br /><br /> MAX ( \< nombre de campo calificado>) &#124;<br /><br /> COUNT ( \< alias calificado> &#124; \< nombre completo>) &#124;<br /><br /> STDEV ( \< nombre de campo completo>) &#124;<br /><br /> ANY ( \< Qualified-Field-name>)|  
+|\<calculado-exp>|CALC ( \< expresión>)|  
 |\<nombre de campo completo>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<nombre entre comillas>|  
-|\<> de nombre de campo|\<nombre entre comillas> [[AS \<] alias>]|  
-|\<nombre entre comillas>|"\<String>" &#124;<br /><br /> '\<String> ' &#124;<br /><br /> [\<String>] &#124;<br /><br /> \<nombre>|  
+|\<> de nombre de campo|\<nombre entre comillas> [[AS] \< alias>]|  
+|\<nombre entre comillas>|" \< string>" &#124;<br /><br /> ' \< string> ' &#124;<br /><br /> [ \< string>] &#124;<br /><br /> \<nombre>|  
 |\<nombre completo>|alias [. alias...]|  
 |\<nombre>|Alpha [alfa &#124; digit &#124; _ &#124; # &#124;: &#124;...]|  
 |\<número>|dígito [dígito...]|  
-|\<New-exp>|NUEVO \<> de tipo de campo [\<(número> [ \<, número>])]|  
+|\<New-exp>|NUEVO \<> de tipo de campo [( \< número> [, \< número>])]|  
 |\<> de tipo de campo|Un tipo de datos OLE DB o ADO.|  
 |\<> de cadena|Unicode-Char [Unicode-Char...]|  
 |\<> de expresiones|Visual Basic para Aplicaciones expresión cuyos operandos son otras columnas que no son de cálculo en la misma fila.|  

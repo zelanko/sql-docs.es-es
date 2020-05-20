@@ -13,14 +13,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Active Directory service
 - OLE DB provider for Active Directory service [ADO]
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 837f5fbcbb6c7730cdfcbe08e532a73c5faad06f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926679"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758331"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor de Microsoft OLE DB para el servicio Microsoft Active Directory
 El proveedor de interfaces de servicio Active Directory (ADSI) permite a ADO conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio Microsoft Windows NT 4,0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio de Novell. ADSI se basa en un modelo de proveedor, de modo que si hay un nuevo proveedor que concede acceso a otro directorio, la aplicación ADO podrá tener acceso a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -59,7 +59,7 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |*Raíces*|Indica el objeto **ADsPath** desde el que se va a iniciar la búsqueda (es decir, la raíz de la búsqueda).|  
 |*Filter*|Indica el filtro de búsqueda en el formato RFC 1960.|  
@@ -100,7 +100,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|  
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|  
-|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
+|[ALCANZAR](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|no disponible|  
@@ -120,20 +120,20 @@ objectClass='user' AND objectCategory='Person'"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
-|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|  
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Yes|  
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|  
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|  
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
-|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|  
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Sí|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|  
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Yes|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|  
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|  
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|  
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Yes|  
+|[Admite](../../../ado/reference/ado-api/supports-method.md)|Yes|  
 |[Actualizar](../../../ado/reference/ado-api/update-method.md)|No|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   

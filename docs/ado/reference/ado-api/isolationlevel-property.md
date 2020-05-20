@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - IsolationLevel property
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: dc360bc91e977228a6f9139089a7bfa87d912e1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ea8d538dbd5c4c06cb770a983a2733bb2f27e6b2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918438"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758661"
 ---
 # <a name="isolationlevel-property"></a>Propiedad IsolationLevel
 Indica el nivel de aislamiento para un objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) .  
@@ -28,7 +28,7 @@ Indica el nivel de aislamiento para un objeto de [conexión](../../../ado/refere
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de [IsolationLevelEnum](../../../ado/reference/ado-api/isolationlevelenum.md) . El valor predeterminado es **adXactReadCommitted**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **IsolationLevel** para establecer el nivel de aislamiento de un objeto de **conexión** . La configuración no surte efecto hasta la próxima vez que se llame al método [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) . Si el nivel de aislamiento solicitado no está disponible, el proveedor puede devolver el siguiente nivel mayor de aislamiento sin actualizar la propiedad **IsolationLevel** .  
   
  La propiedad **IsolationLevel** es de lectura y escritura.  

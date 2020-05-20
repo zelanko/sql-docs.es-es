@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f30b6663ff532fe12eede6042df5c9f0cc29ccb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b124dc502df261972621b554cb2992d0e6014737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67944463"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758641"
 ---
 # <a name="value-property-example-vc"></a>Ejemplo de la propiedad de valor (VC ++)
 En este ejemplo se muestra la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) con objetos [Field](../../../ado/reference/ado-api/field-object.md) y [Property](../../../ado/reference/ado-api/property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  

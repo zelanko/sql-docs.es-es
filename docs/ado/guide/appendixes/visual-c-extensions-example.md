@@ -13,19 +13,19 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO], VC++ extensions example
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d48315598c17b9462e9a42de58bd54313a4fd794
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926391"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761513"
 ---
 # <a name="visual-c-extensions-example"></a>Ejemplo de extensiones de Visual C++
 Este programa muestra cómo se recuperan los valores de los campos y se convierten en variables de C/C++.  
   
- En este ejemplo también se aprovechan los "punteros inteligentes", que controlan automáticamente los detalles específicos de `QueryInterface` com de la llamada y el recuento de referencias para la interfaz **IADORecordBinding** .  
+ En este ejemplo también se aprovechan los "punteros inteligentes", que controlan automáticamente los detalles específicos de COM de `QueryInterface` la llamada y el recuento de referencias para la interfaz **IADORecordBinding** .  
   
  Sin punteros inteligentes, se codificaría lo siguiente:  
   
@@ -50,7 +50,7 @@ _COM_SMARTPTR_TYPEDEF(IADORecordBinding, __uuidof(IADORecordBinding));
 IADORecordBindingPtr picRs(pRs);  
 ```  
   
- Dado que el objeto de **conjunto de registros** implementa las extensiones de Visual C++, el constructor del puntero `picRs`inteligente,, toma`RecordsetPtr` el puntero `pRs`_,. El constructor llama `QueryInterface` a `pRs` utilizando para buscar `IADORecordBinding` la interfaz.  
+ Dado que el objeto de **conjunto de registros** implementa las extensiones de Visual C++, el constructor del puntero inteligente, `picRs` , toma el `RecordsetPtr` puntero _, `pRs` . El constructor llama `QueryInterface` `pRs` a utilizando para buscar la `IADORecordBinding` interfaz.  
   
 ```cpp
 // Visual_Cpp_Extensions_Example.cpp  

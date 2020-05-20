@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - Cellset object [ADO MD]
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e50fb60fbde205171c066380a2c2023d485a5a09
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928646"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761773"
 ---
 # <a name="cellset-object-ado-md"></a>Objeto de conjunto de celdas (ADO MD)
 Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros celdas.  
   
 ## <a name="remarks"></a>Observaciones  
- Los datos de un conjunto de **celdas** se recuperan mediante acceso directo de tipo matriz. Puede explorar en profundidad hasta un miembro específico para obtener datos sobre ese miembro. Por ejemplo, el código siguiente devuelve el título del primer miembro en la primera posición del primer eje de un elemento Cellset denominado `cst`:  
+ Los datos de un conjunto de **celdas** se recuperan mediante acceso directo de tipo matriz. Puede explorar en profundidad hasta un miembro específico para obtener datos sobre ese miembro. Por ejemplo, el código siguiente devuelve el título del primer miembro en la primera posición del primer eje de un elemento Cellset denominado `cst` :  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  

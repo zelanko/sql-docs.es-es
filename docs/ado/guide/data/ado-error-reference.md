@@ -12,19 +12,19 @@ helpviewer_keywords:
 - errors [ADO], ErrorValueEnum
 - ErrorValueEnum enumeration [ADO]
 ms.assetid: f653393e-d4b0-4c34-ad5f-2bdf56bc1305
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: da9d7d2374f8e3410598bfdfbd97e59eb505b255
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 774a1c17f579c9274b700e4e1fea682cc462ed29
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926245"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761391"
 ---
 # <a name="ado-errors"></a>Errores de tiempo de ejecución de ADO
 La constante **ErrorValueEnum** describe los valores de error de ADO. Para obtener una lista completa de estas constantes enumeradas, incluidos los valores, vea el [Apéndice B: errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md). En esta sección se examinan algunos de los errores más interesantes y se explican algunas situaciones específicas que pueden generarlos, o soluciones para solucionar el problema. Se enumeran la constante **ErrorValueEnum** y el número decimal positivo corto.
 
-|número|ErrorValueEnum (constante)|Descripción/causas posibles|
+|Number|ErrorValueEnum (constante)|Descripción/causas posibles|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|El proveedor no pudo realizar la operación solicitada.|
 |**3001**|**adErrInvalidArgument**|Los argumentos son del tipo incorrecto, están fuera del intervalo aceptable o están en conflicto entre sí. Este error suele deberse a un error tipográfico en una instrucción SELECT de SQL. Por ejemplo, un nombre de campo o un nombre de tabla mal escrito puede generar este error. Este error también puede producirse cuando un campo o una tabla denominada en una instrucción SELECT no existe en el almacén de datos.|
@@ -63,7 +63,7 @@ La constante **ErrorValueEnum** describe los valores de error de ADO. Para obten
 |**3724**|**adErrCantConvertvalue**|No se puede convertir el valor de los datos por motivos distintos a un error de coincidencia de signos o desbordamiento de datos. Por ejemplo, la conversión tendría datos truncados.|
 |**3725**|**adErrCantCreate**|No se puede establecer ni recuperar el valor de los datos porque el tipo de datos del campo era desconocido o el proveedor no tenía suficientes recursos para realizar la operación.|
 |**3726**|**adErrColumnNotOnThisRow**|El registro no contiene este campo. Se especificó un nombre de campo incorrecto o se hizo referencia a un campo que no se encontraba en la colección de **campos** del registro actual.|
-|**3727**|**adErrURLDoesNotExist**|La dirección URL de origen o el elemento primario de la dirección URL de destino no existen. Hay un error tipográfico en la dirección URL de origen o de destino. Es posible que `https://mysite/photo/myphoto.jpg` tenga que realmente `https://mysite/photos/myphoto.jpg` tenga en su lugar. El error tipográfico en la dirección URL principal (en este caso, *Photo* en lugar de *fotos*) ha provocado el error.|
+|**3727**|**adErrURLDoesNotExist**|La dirección URL de origen o el elemento primario de la dirección URL de destino no existen. Hay un error tipográfico en la dirección URL de origen o de destino. Es posible que tenga que `https://mysite/photo/myphoto.jpg` realmente tenga `https://mysite/photos/myphoto.jpg` en su lugar. El error tipográfico en la dirección URL principal (en este caso, *Photo* en lugar de *fotos*) ha provocado el error.|
 |**3728**|**adErrTreePermissionDenied**|Los permisos son insuficientes para tener acceso al árbol o al subárbol. El usuario con el nombre en la cadena de conexión no tiene los permisos adecuados.|
 |**3729**|**adErrInvalidURL**|La dirección URL contiene caracteres no válidos. Asegúrese de que la dirección URL está escrita correctamente. La dirección URL sigue el esquema registrado en el proveedor actual (por ejemplo, el proveedor de publicación en Internet está registrado para http).|
 |**3730**|**adErrResourceLocked**|El objeto representado por la dirección URL especificada está bloqueado por uno o más procesos. Espere hasta que el proceso haya finalizado e intente la operación de nuevo. Otro usuario u otro proceso de la aplicación ha bloqueado el objeto al que está intentando obtener acceso. Lo más probable es que se produzca en un entorno de varios usuarios.|

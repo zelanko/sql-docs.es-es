@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - RecordCreateOptionsEnum enumeration [ADO]
 ms.assetid: 6d746670-0850-4065-9cd4-168dea1d3ea9
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 65fe33b73cf77a27fcd69743ffb09cb05e197797
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f76d7773df443a76597184ecdabd5f27aea0bb7e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917341"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761913"
 ---
 # <a name="recordcreateoptionsenum"></a>RecordCreateOptionsEnum
 Especifica si se debe abrir un **registro** existente o crear un nuevo **registro** para el método [Open](../../../ado/reference/ado-api/open-method-ado-record.md) del objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) . Los valores se pueden combinar con un operador AND.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCreateCollection**|0x2000|Crea un nuevo **registro** en el nodo especificado por el parámetro *source* , en lugar de abrir un **registro**existente. Si el origen apunta a un nodo existente, se produce un error en tiempo de ejecución, a menos que **adCreateCollection** se combine con **adOpenIfExists** o **adCreateOverwrite**.|  
 |**adCreateNonCollection**|0|Crea un nuevo **registro** de tipo [adSimpleRecord](../../../ado/reference/ado-api/recordtypeenum.md).|  

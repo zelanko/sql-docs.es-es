@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Field object [ADO]
 ms.assetid: 7d1c4ad5-4be3-42ab-b516-e7133ca300bc
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80e6576b236db44452c4e89b1d8f3bb8976ab120
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 07b58be0aed59707266f86b5e5074e82da80220b
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923986"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763096"
 ---
 # <a name="the-field-object"></a>El objeto de campo
 Cada objeto de **campo** suele corresponder a una columna de una tabla de base de datos. Sin embargo, un **campo** también puede representar un puntero a otro **conjunto de registros**, denominado capítulo. Las excepciones, como las columnas de capítulo, se tratarán más adelante en esta guía.  
@@ -68,9 +68,9 @@ Cada objeto de **campo** suele corresponder a una columna de una tabla de base d
 ### <a name="getting-more-field-information"></a>Obtener más información de campo  
  Los objetos ADO tienen dos tipos de propiedades: integrado y dinámico. Hasta este momento, solo se han analizado las propiedades integradas del objeto de **campo** .  
   
- Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto `MyObject.Property` nuevo, utilizando la sintaxis. No aparecen como objetos de **propiedad** en la colección de **propiedades** de un objeto.  
+ Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto nuevo, utilizando la `MyObject.Property` Sintaxis. No aparecen como objetos de **propiedad** en la colección de **propiedades** de un objeto.  
   
- El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de **propiedades** para el objeto ADO adecuado. Por ejemplo, una propiedad específica del proveedor puede indicar si un objeto de **conjunto de registros** admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como objetos de **propiedad** en la colección de **propiedades** del objeto de **conjunto de registros** . Solo se puede hacer referencia a las propiedades dinámicas a través de la `MyObject.Properties(0)` colección `MyObject.Properties("Name")`utilizando la sintaxis o.  
+ El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de **propiedades** para el objeto ADO adecuado. Por ejemplo, una propiedad específica del proveedor puede indicar si un objeto de **conjunto de registros** admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como objetos de **propiedad** en la colección de **propiedades** del objeto de **conjunto de registros** . Solo se puede hacer referencia a las propiedades dinámicas a través de la colección utilizando la sintaxis `MyObject.Properties(0)` o `MyObject.Properties("Name")` .  
   
  No se puede eliminar ningún tipo de propiedad.  
   

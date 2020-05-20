@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Move method [ADO], Visual Basic example
 ms.assetid: 55eb797a-0205-40d2-a797-55b216d1d3bb
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 258f915b560bf7da9110909ada0f015fdc36af63
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 37befcf2e00ad4b3555e114a2c7584ae31e6ca64
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932122"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762496"
 ---
 # <a name="move-method-example-vb"></a>Ejemplo del método Move (VB)
 En este ejemplo se usa el método [Move](../../../ado/reference/ado-api/move-method-ado.md) para colocar el puntero de registro en función de los datos proporcionados por el usuario.  

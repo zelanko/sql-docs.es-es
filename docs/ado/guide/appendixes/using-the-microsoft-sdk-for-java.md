@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b0e6c5f2eb5ad792141e77122ff9e132d97f62ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae18edeeb66691f0875a196e11e10f9f761b30c5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926465"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761563"
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>Mediante el SDK de Microsoft para Java
 
@@ -29,7 +29,7 @@ Microsoft SDK para Java es el kit para desarrolladores del entorno de Microsoft 
   
  La utilidad JActiveX. exe genera clases a partir de una biblioteca de tipos, pero solo se puede invocar en la línea de comandos. Esta característica no está integrada en el entorno de desarrollo de Visual J++. A diferencia de las clases generadas por el Asistente para la biblioteca de tipos de Java, puede ir a los contenedores de clase creados por el SDK. Esto resulta útil para depurar el modo en que el código utiliza las clases contenedoras de ADO.  
   
- Este mecanismo lee la biblioteca de tipos ADO y genera clases de las que se pueden crear instancias en la aplicación. Genera esas clases en la siguiente ubicación: \\<directorio\>de Windows \Java\trustlib\msado15.  
+ Este mecanismo lee la biblioteca de tipos ADO y genera clases de las que se pueden crear instancias en la aplicación. Genera esas clases en la siguiente ubicación: \\<directorio de Windows \> \Java\trustlib\msado15.  
   
  La creación de una aplicación ADO en Java mediante el SDK de Microsoft para Java es fundamentalmente idéntica, desde la perspectiva del código fuente, hasta el uso del Asistente para la biblioteca de tipos de Java. Para obtener código de ejemplo, vea [contenedores de clase de Java de ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md). La única diferencia real es la forma en que se generan las clases contenedoras en primer lugar, como se muestra en los pasos siguientes.  
   

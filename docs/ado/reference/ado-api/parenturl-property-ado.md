@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ParentURL property [ADO]
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cb0669abc03da183fc70c289631fed67bb41829d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931642"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761993"
 ---
 # <a name="parenturl-property-ado"></a>Propiedad ParentURL (ADO)
 Indica una cadena de dirección URL absoluta que apunta al [registro](../../../ado/reference/ado-api/record-object-ado.md) primario del objeto de **registro** actual.  
@@ -38,9 +38,9 @@ record.ActiveConnection = "https://first"
 record.Open "second"  
 ```  
   
- Ahora, el valor de `the` la propiedad **ParentURL** es `"https://first"`, el mismo que el de **ActiveConnection**.  
+ Ahora, el valor de la `the` propiedad **ParentURL** es `"https://first"` , el mismo que el de **ActiveConnection**.  
   
- El origen también puede ser una dirección URL absoluta como, `"https://first/second"`por ejemplo,. La propiedad **ParentURL** es entonces `"https://first"`el nivel superior `"second"`.  
+ El origen también puede ser una dirección URL absoluta como, por ejemplo, `"https://first/second"` . La propiedad **ParentURL** es entonces `"https://first"` el nivel superior `"second"` .  
   
  Esta propiedad puede ser un valor NULL si:  
   

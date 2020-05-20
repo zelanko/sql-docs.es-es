@@ -10,14 +10,14 @@ ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cc3f3e0f70864444e4ff07ba16ac37cbd42234df
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926058"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761311"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>Creación de instancias de eventos de ADO: Visual C++
 Esta es una descripción esquemática de cómo crear instancias de eventos de ADO en Microsoft® Visual C++®. Vea el [ejemplo de modelo de eventos ADO (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) para obtener una descripción completa.  

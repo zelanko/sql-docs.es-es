@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Attributes property [ADO], Visual Basic example
 - Name property [ADO], Visual Basic example
 ms.assetid: 258bdce3-1819-44a2-9217-105879c789ef
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7b591da347e71b4dcb2df070df4368f825354f90
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d6993ea70496673d3aae23e4a4b6c5982637a5f8
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920587"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762933"
 ---
 # <a name="attributes-and-name-properties-example-vb"></a>Ejemplo de propiedades de nombre (VB) y atributos
 En este ejemplo se muestra el valor de la propiedad [attributes](../../../ado/reference/ado-api/attributes-property-ado.md) para los objetos [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md)y [Property](../../../ado/reference/ado-api/property-object-ado.md) . Usa la propiedad [nombre](../../../ado/reference/ado-api/name-property-ado.md) para mostrar el nombre de cada **campo** y objeto de **propiedad** .  

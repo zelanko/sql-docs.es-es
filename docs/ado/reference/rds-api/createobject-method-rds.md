@@ -11,14 +11,14 @@ apitype: COM
 helpviewer_keywords:
 - CreateObject method [ADO]
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2b8cf7f5629158ccd1bdd74e30b7ba9bc5bb6942
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67964542"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762676"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. El proxy empaqueta y calcula las referencias de los datos en el código auxiliar del lado del servidor para las comunicaciones con el objeto comercial para enviar solicitudes y datos a través de Internet. En el caso de los objetos de componente en proceso, no se utiliza ningún proxy, solo se proporciona un puntero al objeto.  
@@ -31,19 +31,19 @@ Crea el proxy para el objeto comercial de destino y devuelve un puntero a él. E
   
 |Protocolo|Sintaxis|  
 |--------------|------------|  
-|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https\://awebsrvr")|  
+|HTTP|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
+|HTTPS|Set Object = DataSpace. CreateObject ("ProgId", "https \: //awebsrvr")|  
 |DCOM|Set Object = DataSpace. CreateObject ("ProgId", "COMPUTERNAME")|  
 |En proceso|Set Object = DataSpace. CreateObject ("ProgId", "")|  
   
 ## <a name="parameters"></a>Parámetros  
- *Object*  
+ *Objeto*  
  Variable de objeto que se evalúa como un objeto que es el tipo especificado en *ProgID*.  
   
  *DataSpace*  
  Variable de objeto que representa un objeto [RDS. Objeto DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) que se usa para crear una instancia del nuevo objeto.  
   
- *Id. de programa*  
+ *Programa*  
  Valor de **cadena** que contiene el identificador de programación que especifica un objeto comercial de servidor que implementa las reglas de negocios de la aplicación.  
   
  *awebsrvr* o *ComputerName*  

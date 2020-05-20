@@ -12,14 +12,14 @@ helpviewer_keywords:
 - OLE DB provider for Oracle [ADO]
 - Oracle provider [ADO]
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e956ca5486485c3dde8079f6b9067a8fef7e2f3a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926624"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761643"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Información general de Proveedor OLE DB de Microsoft para Oracle
 > [!IMPORTANT]
@@ -67,7 +67,7 @@ MSDAORA
 |**Identificador de ventana**|Indica el identificador de ventana que se va a usar para solicitar información adicional.|
 |**Identificador de configuración regional**|Indica un número único de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a las fechas y horas, los elementos se ordenan alfabéticamente, las cadenas se comparan, etc.|
 |**Servicios OLE DB**|Indica una máscara de máscara que especifica OLE DB servicios que se van a habilitar o deshabilitar.|
-|**Pregunta**|Indica si se debe preguntar al usuario mientras se establece una conexión.|
+|**Aviso**|Indica si se debe preguntar al usuario mientras se establece una conexión.|
 |**Propiedades extendidas**|Cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad únicamente para la información de conexión específica del proveedor que no se puede describir a través del mecanismo de propiedad.|
 
 ## <a name="see-also"></a>Consulte también

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - command streams [ADO]
 - streams [ADO], command
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0bf95d202d842a656ec4b42bc2277b8eb9a76689
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925842"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761211"
 ---
 # <a name="command-streams"></a>Secuencias de comandos
 ADO siempre admite la entrada de comandos en el formato de cadena especificado por la propiedad **CommandText** . Como alternativa, con ADO 2,7 o posterior, también puede usar un flujo de información para la entrada de comandos mediante la asignación de la secuencia a la propiedad **CommandStream** . Puede asignar un objeto de **secuencia** de ADO o cualquier objeto que admita la interfaz **IStream** de com.  
@@ -40,7 +40,7 @@ adoStreamQuery.Open
   
  El contenido de la secuencia de consulta será una consulta de plantilla XML.  
   
- La consulta de plantilla requiere una referencia al espacio de nombres XML identificado por el prefijo SQL \<: de la etiqueta SQL: query>. Se incluye una instrucción SELECT de SQL como contenido de la plantilla XML y se asigna a una variable de cadena de la siguiente manera:  
+ La consulta de plantilla requiere una referencia al espacio de nombres XML identificado por el prefijo SQL: de la \< etiqueta SQL: query>. Se incluye una instrucción SELECT de SQL como contenido de la plantilla XML y se asigna a una variable de cadena de la siguiente manera:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  

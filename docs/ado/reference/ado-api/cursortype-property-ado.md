@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CursorType property [ADO]
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5bf0790307ec8f8f739d3975620967a8671c3fcb
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919257"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763506"
 ---
 # <a name="cursortype-property-ado"></a>Propiedad CursorType (ADO)
 Indica el tipo de cursor utilizado en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) .  
@@ -39,7 +39,7 @@ Indica el tipo de cursor utilizado en un objeto de [conjunto de registros](../..
   
 |Para un conjunto de registros de este CursorType|El método Supports debe devolver true para todas estas constantes|  
 |----------------------------------------|---------------------------------------------------------------------|  
-|**adOpenForwardOnly**|None|  
+|**adOpenForwardOnly**|ninguno|  
 |**adOpenKeyset**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  
 |**adOpenDynamic**|**adMovePrevious**|  
 |**adOpenStatic**|**adBookmark**, **adHoldRecords**, **adMovePrevious**, **adResync**|  

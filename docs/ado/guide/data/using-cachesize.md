@@ -11,14 +11,14 @@ helpviewer_keywords:
 - locks [ADO], CacheSize property
 - CacheSize property [ADO]
 ms.assetid: ca1c3422-b6a4-4ba6-af55-54f975b698b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2e3a67e9ad0f1f26f804ecb38e960041863fad9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8014fc2b3a1d1614bc9b704b8838f0918f46c946
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923573"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763046"
 ---
 # <a name="using-cachesize"></a>Utilizar CacheSize
 Utilice la propiedad **CacheSize** para controlar el número de registros que se van a recuperar de una vez en la memoria local desde el proveedor. Por ejemplo, si el **CacheSize** es 10, después de abrir primero el objeto de **conjunto de registros** , el proveedor recupera los primeros 10 registros en la memoria local. A medida que se desplaza por el objeto de **conjunto de registros** , el proveedor devuelve los datos del búfer de memoria local. En cuanto se desplaza por encima del último registro de la memoria caché, el proveedor recupera los 10 registros siguientes del origen de datos en la memoria caché.  

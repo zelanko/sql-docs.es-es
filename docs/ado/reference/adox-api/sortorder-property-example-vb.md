@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - SortOrder property [ADOX]
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bd58cb2ec579586b25365abab9d6ff8b2b9c6617
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965199"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762776"
 ---
 # <a name="sortorder-property-example-vb"></a>Ejemplo de propiedad SortOrder (VB)
 En este ejemplo se muestra la propiedad [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) de una [columna](../../../ado/reference/adox-api/column-object-adox.md) que se ha anexado a la colección [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). El código anexa un índice ascendente a la columna Country de la tabla **Employees** y, a continuación, muestra los registros. A continuación, el código anexa un índice descendente a la columna Country de la tabla **Employees** y vuelve a mostrar los registros. Se muestra la diferencia entre los índices ascendentes y descendentes.  

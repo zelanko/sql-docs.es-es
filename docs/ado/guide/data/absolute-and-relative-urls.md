@@ -12,14 +12,14 @@ helpviewer_keywords:
 - absolute URLs [ADO]
 - URLs [ADO]
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8787d293c349ea921f9f0edd293e77a075e5f7a3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926362"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761483"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o en red. El destino puede ser un archivo, un directorio, una página HTML, una imagen, un programa, etc.  
@@ -70,13 +70,13 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
 recordset.Open "system32/Readme25.txt", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  
 ```  
   
- La dirección URL absoluta en la cadena de conexión especifica el`YourServer`servidor () y la`Winnt`ruta de acceso (). Esta dirección URL también define el contexto.  
+ La dirección URL absoluta en la cadena de conexión especifica el servidor ( `YourServer` ) y la ruta de acceso ( `Winnt` ). Esta dirección URL también define el contexto.  
   
- La dirección URL relativa en el texto del comando utiliza la dirección URL absoluta como punto de partida y especifica el resto de`system32`la ruta de acceso () y`Readme25.txt`el archivo que se va a abrir ().  
+ La dirección URL relativa en el texto del comando utiliza la dirección URL absoluta como punto de partida y especifica el resto de la ruta de acceso ( `system32` ) y el archivo que se va a abrir ( `Readme25.txt` ).  
   
- El campo de opciones`adCmdTableDirect`() indica que el tipo de comando es una dirección URL relativa.  
+ El campo de opciones ( `adCmdTableDirect` ) indica que el tipo de comando es una dirección URL relativa.  
   
- Como otro ejemplo, el código siguiente abrirá un **conjunto de registros** en el contenido del `Winnt` directorio:  
+ Como otro ejemplo, el código siguiente abrirá un **conjunto de registros** en el contenido del `Winnt` Directorio:  
   
 ```  
 recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect  

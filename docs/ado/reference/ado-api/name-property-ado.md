@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Name property [ADO]
 ms.assetid: cfd0e29c-8310-44ab-85c3-5761184b865d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a919bb377eee2da1c3c1a65e85ddfb9807ed8d50
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 38846bcb832df7cc535d35d8f07fb636f2db37f7
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918035"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762426"
 ---
 # <a name="name-property-ado"></a>Propiedad Name (ADO)
 Indica el nombre de un objeto.  
@@ -38,7 +38,7 @@ Indica el nombre de un objeto.
   
  En el caso de los objetos de **parámetro** que todavía no se han anexado a la colección [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) , la propiedad **Name** es de lectura y escritura. Para los objetos de **parámetro** anexados y todos los demás objetos, la propiedad **Name** es de solo lectura. Los nombres no tienen que ser únicos dentro de una colección.  
   
- Puede recuperar la propiedad **Name** de un objeto mediante una referencia ordinal, después de la cual puede hacer referencia al objeto directamente por su nombre. Por ejemplo, si `rstMain.Properties(20).Name` produce `Updatability`, puede hacer referencia posteriormente a esta propiedad como `rstMain.Properties("Updatability")`.  
+ Puede recuperar la propiedad **Name** de un objeto mediante una referencia ordinal, después de la cual puede hacer referencia al objeto directamente por su nombre. Por ejemplo, si `rstMain.Properties(20).Name` produce `Updatability` , puede hacer referencia posteriormente a esta propiedad como `rstMain.Properties("Updatability")` .  
   
 ## <a name="applies-to"></a>Se aplica a  
   

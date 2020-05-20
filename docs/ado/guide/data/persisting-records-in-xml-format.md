@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML persistence [ADO]
 - updating data [ADO], persisting data
 ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3afbec77df9a80ab7e304d2e3101e795b939eef2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924590"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763616"
 ---
 # <a name="persisting-records-in-xml-format"></a>Almacenar registros en formato XML
 Al igual que el formato ADTG, la persistencia del **conjunto de registros** en formato XML se implementa con el proveedor de persistencia de Microsoft OLE DB. Este proveedor genera un conjunto de filas de solo avance y de solo lectura desde un archivo o secuencia XML guardado que contiene la información de esquema generada por ADO. Del mismo modo, puede tomar un **conjunto de registros**ADO, generar XML y guardarlo en un archivo o en cualquier objeto que implemente la interfaz **IStream** com. (De hecho, un archivo es simplemente otro ejemplo de un objeto que admite **IStream**). En las versiones 2,5 y posteriores, ADO se basa en el analizador de Microsoft XML (MSXML) para cargar el XML en el **conjunto de registros**; por lo tanto, se requiere MSXML. dll.  
@@ -59,7 +59,7 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO siempre conserva todo el objeto de **conjunto de registros** . Si desea conservar un subconjunto de filas del objeto de **conjunto de registros** , use el método **Filter** para restringir las filas o cambiar la cláusula de selección. Sin embargo, debe abrir un objeto de **conjunto de registros** con un cursor del lado cliente (**CursorLocation** = **adUseClient**) para utilizar el método de **filtro** para guardar un subconjunto de filas. Por ejemplo, para recuperar títulos que comienzan por la letra "b", puede aplicar un filtro a un objeto de **conjunto de registros** abierto:  
+ ADO siempre conserva todo el objeto de **conjunto de registros** . Si desea conservar un subconjunto de filas del objeto de **conjunto de registros** , use el método **Filter** para restringir las filas o cambiar la cláusula de selección. Sin embargo, debe abrir un objeto de **conjunto de registros** con un cursor del lado cliente (**CursorLocation**  =  **adUseClient**) para utilizar el método de **filtro** para guardar un subconjunto de filas. Por ejemplo, para recuperar títulos que comienzan por la letra "b", puede aplicar un filtro a un objeto de **conjunto de registros** abierto:  
   
 ```  
 rs.Filter "title_id like 'B*'"  

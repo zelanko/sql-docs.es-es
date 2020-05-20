@@ -14,24 +14,24 @@ f1_keywords:
 helpviewer_keywords:
 - Procedures collection [ADOX]
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 91ce9f74f0198c52ecce404cb0145e33b941271c
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67965436"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763655"
 ---
 # <a name="procedures-collection-adox"></a>Colección de procedimientos (ADOX)
 Contiene todos los objetos de [procedimiento](../../../ado/reference/adox-api/procedure-object-adox.md) de un catálogo.  
   
 ## <a name="remarks"></a>Observaciones  
- El método [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede realizar lo siguiente:  
+ El método [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) de una colección **Procedures** es único para ADOX. Puede:  
   
 -   Agregue un nuevo procedimiento a la colección con el método **Append** .  
   
- Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede realizar lo siguiente:  
+ Las propiedades y los métodos restantes son estándar para las colecciones de ADO. Puede:  
   
 -   Obtener acceso a un procedimiento de la colección con la propiedad [Item](../../../ado/reference/ado-api/item-property-ado.md) .  
   

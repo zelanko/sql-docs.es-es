@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Open method [ADO]
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 723d42cda8ac741f697dec7be4a2c4f5ad662508
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917924"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82762196"
 ---
 # <a name="open-method-ado-record"></a>Open (método) (registro de ADO)
 Abre un objeto [Record](../../../ado/reference/ado-api/record-object-ado.md) existente o crea un nuevo elemento representado por el **registro**, como un archivo o un directorio.  

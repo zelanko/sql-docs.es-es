@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3c7b428e1127ac2431f6e0988774315c12ebd74f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926420"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761533"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de la API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO con una sintaxis similar a la de Microsoft Visual Basic. Aunque el público previsto es todos los usuarios, los programadores de ADO emplean diversos lenguajes, como Visual Basic, Visual C++ (con y sin la Directiva de **#import** ) y Visual J++ (con el paquete de clases ADO/WFC).  
@@ -64,7 +64,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- El compilador generará la llamada de_propiedad_ **Get**_-_, **Put**-o **PutRef**adecuada en función de la sintaxis alternativa que se declara y de si la propiedad se lee o se escribe.  
+ El compilador generará la llamada de propiedad **Get** _-_ , **Put**-o **PutRef**_Property_ adecuada en función de la sintaxis alternativa que se declara y de si la propiedad se lee o se escribe.  
   
  La Directiva del compilador **__declspec (propiedad...)** solo puede declarar la sintaxis alternativa **Get**, **Put**o **Get** y **Put** para una función. Las operaciones de solo lectura solo tienen una declaración **Get** ; las operaciones de solo escritura solo tienen una declaración **Put** ; las operaciones de lectura y escritura tienen las declaraciones **Get** y **Put** .  
   
@@ -84,7 +84,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Por ejemplo, asigne un valor a un campo de un objeto de **conjunto de registros** , denominado **_RS_**, derivado de la tabla **authors** de la base de datos **pubs** . Use la **propiedad Item ()** para tener acceso al **tercer campo** de la colección de **campos** del objeto de conjunto de **registros** (las colecciones se indizan desde cero; Supongamos que el tercer campo se denomina **_au\_fname_**). A continuación, llame al método **Value ()** en el objeto **Field** para asignar un valor de cadena.  
+ Por ejemplo, asigne un valor a un campo de un objeto de **conjunto de registros** , denominado **_RS_**, derivado de la tabla **authors** de la base de datos **pubs** . Use la **propiedad Item ()** para tener acceso al **tercer campo** de la colección de **campos** del objeto de conjunto de **registros** (las colecciones se indizan desde cero; Supongamos que el tercer campo se denomina **_au \_ fname_**). A continuación, llame al método **Value ()** en el objeto **Field** para asignar un valor de cadena.  
   
  Esto se puede expresar en Visual Basic de las cuatro maneras siguientes (las dos últimas formas son únicas de Visual Basic; otros lenguajes no tienen equivalentes):  
   
@@ -116,7 +116,7 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  Las excepciones a esta regla son los tipos de datos específicos de COM: **Variant**, **BSTR**y **SAFEARRAY**.  
   
-### <a name="variant"></a>Variant  
+### <a name="variant"></a>Variante  
  Una **variante** es un tipo de datos estructurados que contiene un miembro de valor y un miembro de tipo de datos. Una **variante** puede contener una amplia gama de otros tipos de datos, entre los que se incluyen otro tipo variante, BSTR, booleano, IDispatch o IUnknown, moneda, fecha, etc. COM también proporciona métodos que facilitan la conversión de un tipo de datos a otro.  
   
  La clase **_variant_t** encapsula y administra el tipo de datos **Variant** .  
@@ -150,16 +150,16 @@ rs->Fields->Item["au_fname"]->Value = "value";
   
  El `ActiveConnection` argumento toma una referencia a un **_variant_t**, que puede codificar como una cadena de conexión o un puntero a un objeto de **conexión** abierto.  
   
- Los **_variant_t** correctos se construirán implícitamente si se pasa una cadena como "`DSN=pubs;uid=MyUserName;pwd=MyPassword;`", o un puntero como "`(IDispatch *) pConn`".  
+ Los **_variant_t** correctos se construirán implícitamente si se pasa una cadena como " `DSN=pubs;uid=MyUserName;pwd=MyPassword;` ", o un puntero como " `(IDispatch *) pConn` ".  
   
 > [!NOTE]
 >  Si se va a conectar a un proveedor de origen de datos que admite la autenticación de Windows, debe especificar **Trusted_Connection = Yes** o **Integrated Security = SSPI** en lugar de la información de identificador de usuario y contraseña en la cadena de conexión.  
   
- O bien, puede codificar explícitamente una **_variant_t** que contiene un`_variant_t((IDispatch *) pConn, true)`puntero como "". La conversión de `(IDispatch *)`tipos,, resuelve la ambigüedad con otro constructor que toma un puntero a una interfaz IUnknown.  
+ O bien, puede codificar explícitamente una **_variant_t** que contiene un puntero como " `_variant_t((IDispatch *) pConn, true)` ". La conversión de tipos, `(IDispatch *)` , resuelve la ambigüedad con otro constructor que toma un puntero a una interfaz IUnknown.  
   
  Es un hecho fundamental, aunque rara vez mencionado, que ADO es una interfaz IDispatch. Cada vez que se debe pasar un puntero a un objeto ADO como **variante**, ese puntero debe convertirse en un puntero a una interfaz IDispatch.  
   
- En el último caso, se codifica explícitamente el segundo argumento booleano del constructor con su valor predeterminado `true`opcional de. Este argumento hace que el constructor **Variant** llame a su método **AddRef**(), que compensa a ADO llamando automáticamente al método **_variant_t:: Release**() cuando se completa la llamada al método o la propiedad de ADO.  
+ En el último caso, se codifica explícitamente el segundo argumento booleano del constructor con su valor predeterminado opcional de `true` . Este argumento hace que el constructor **Variant** llame a su método **AddRef**(), que compensa a ADO llamando automáticamente al método **_variant_t:: Release**() cuando se completa la llamada al método o la propiedad de ADO.  
   
 ### <a name="safearray"></a>SafeArray  
  **SAFEARRAY** es un tipo de datos estructurado que contiene una matriz de otros tipos de datos. Un **SAFEARRAY** se denomina *Safe* porque contiene información sobre los límites de cada dimensión de la matriz y limita el acceso a los elementos de la matriz dentro de esos límites.  
@@ -187,7 +187,7 @@ _RecordsetPtr <A HREF="mdmthnextrec.htm">NextRecordset</A>( VARIANT * Record
   
  Los parámetros, *RecordsAffected* y *Parameters*, son punteros a una **variante**. *Parameters* es un parámetro de entrada que especifica la dirección de una **variante** que contiene un parámetro único, o una matriz de parámetros, que modificará el comando que se está ejecutando. *RecordsAffected* es un parámetro de salida que especifica la dirección de una **variante**, donde se devuelve el número de filas afectadas por el método.  
   
- En el método de **ejecución** de objetos de **comando** , indique que no se especifica ningún parámetro estableciendo `&vtMissing` *los parámetros* en (que se recomienda) o en el puntero nulo (es decir, **null** o cero (0)). Si *los parámetros* se establecen en el puntero nulo, el método sustituye internamente el equivalente de **vtMissing**y, a continuación, completa la operación.  
+ En el método de **ejecución** de objetos de **comando** , indique que no se especifica ningún parámetro estableciendo *los parámetros* en `&vtMissing` (que se recomienda) o en el puntero nulo (es decir, **null** o cero (0)). Si *los parámetros* se establecen en el puntero nulo, el método sustituye internamente el equivalente de **vtMissing**y, a continuación, completa la operación.  
   
  En todos los métodos, indique que el número de registros afectados no debe devolverse estableciendo *RecordsAffected* en el puntero NULL. En este caso, el puntero nulo no es tan bien un parámetro que falta como una indicación de que el método debe descartar el número de registros afectados.  
   
@@ -200,7 +200,7 @@ pRecordset->NextRecordset(NULL);
 ```
   
 ## <a name="error-handling"></a>Tratamiento de errores  
- En COM, la mayoría de las operaciones devuelven un código de retorno HRESULT que indica si una función se ha completado correctamente. La directiva **#import** genera código de contenedor alrededor de cada método o propiedad "RAW" y comprueba el HRESULT devuelto. Si el valor HRESULT indica un error, el código de contenedor produce un error COM llamando a _com_issue_errorex () con el código de retorno HRESULT como argumento. Los objetos de error com se pueden detectar en un bloque **try**-**catch** . (Por motivos de eficacia, Capture una referencia a un objeto **_com_error** ).  
+ En COM, la mayoría de las operaciones devuelven un código de retorno HRESULT que indica si una función se ha completado correctamente. La directiva **#import** genera código de contenedor alrededor de cada método o propiedad "RAW" y comprueba el HRESULT devuelto. Si el valor HRESULT indica un error, el código de contenedor produce un error COM llamando a _com_issue_errorex () con el código de retorno HRESULT como argumento. Los objetos de error com se pueden detectar en un bloque **try** - **catch** . (Por motivos de eficacia, Capture una referencia a un objeto **_com_error** ).  
   
  Recuerde que se trata de errores de ADO: son el resultado de un error en la operación de ADO. Los errores devueltos por el proveedor subyacente aparecen como objetos de **error** en la colección de **errores** del objeto de **conexión** .  
   
@@ -216,7 +216,7 @@ pRecordset->NextRecordset(NULL);
 Dim rst As ADODB.Recordset  
 ```
   
- La cláusula, "`ADODB.Recordset`", es el ProgID del objeto de **conjunto de registros** tal y como se define en el registro. Una nueva instancia de un objeto de **registro** se declara de la siguiente manera:  
+ La cláusula, " `ADODB.Recordset` ", es el ProgID del objeto de **conjunto de registros** tal y como se define en el registro. Una nueva instancia de un objeto de **registro** se declara de la siguiente manera:  
   
 ```vb
 Dim rst As New ADODB.Recordset  
@@ -261,9 +261,9 @@ rs.CreateInstance(__uuidof(_Recordset));
 rs->Open(...);  
 ```
   
- Observe que en un caso, el operador`.`"" se utiliza como si la variable fuera una instancia de una clase (`rs.CreateInstance`) y, en otro caso, se usa`->`el operador "" como si la variable fuera un puntero a una interfaz (`rs->Open`).  
+ Observe que en un caso, el `.` operador "" se utiliza como si la variable fuera una instancia de una clase ( `rs.CreateInstance` ) y, en otro caso, `->` se usa el operador "" como si la variable fuera un puntero a una interfaz ( `rs->Open` ).  
   
- Una variable se puede usar de dos maneras porque el operador`->`"" se sobrecarga para permitir que una instancia de una clase se comporte como un puntero a una interfaz. Un miembro de clase privada de la variable de instancia contiene un puntero a la interfaz **_Recordset** ; el operador`->`"" devuelve ese puntero; y el puntero devuelto obtiene acceso a los miembros del objeto **_Recordset** .  
+ Una variable se puede usar de dos maneras porque el `->` operador "" se sobrecarga para permitir que una instancia de una clase se comporte como un puntero a una interfaz. Un miembro de clase privada de la variable de instancia contiene un puntero a la interfaz **_Recordset** ; el `->` operador "" devuelve ese puntero y el puntero devuelto obtiene acceso a los miembros del objeto **_Recordset** .  
   
 ### <a name="coding-a-missing-parameter---string"></a>Codificación de una cadena de parámetros que faltan  
  Cuando necesite codificar un operando de **cadena** que falta en Visual Basic, simplemente omita el operando. Debe especificar el operando en Visual C++. Codifique un **_bstr_t** que tenga una cadena vacía como valor.  
@@ -433,14 +433,14 @@ cn.Close
 End Sub  
 ```
   
- En este ejemplo Visual C++ se muestra la_propiedad_ **Get**/**Put**/**PutRef**.  
+ En este ejemplo Visual C++ se muestra la propiedad **Get** / **Put** / **PutRef**_Property_.  
   
 #### <a name="notes"></a>Notas  
  Las notas siguientes corresponden a las secciones comentadas en el ejemplo de código.  
   
 1.  En este ejemplo se usan dos formas de un argumento de cadena que falta: una constante explícita, **strMissing**, y una cadena que el compilador usará para crear un **_bstr_t** temporal que existirá para el ámbito del método **Open** .  
   
-2.  No es necesario convertir el operando de `rs->PutRefActiveConnection(cn)` en `(IDispatch *)` porque ya existe `(IDispatch *)`el tipo del operando.  
+2.  No es necesario convertir el operando de `rs->PutRefActiveConnection(cn)` en `(IDispatch *)` porque ya existe el tipo del operando `(IDispatch *)` .  
   
 ```cpp
 // Visual_CPP_ado_prog_2.cpp  
@@ -557,11 +557,11 @@ void main() {
 #### <a name="notes"></a>Notas  
  Las notas siguientes corresponden a las secciones comentadas en el ejemplo de código.  
   
-1.  Especifique un objeto de **conexión** abierto en una **variante**codificada explícitamente. Conviértalo con (IDispatch \*) para que se invoque el constructor correcto. Además, establezca explícitamente el segundo parámetro **_variant_t** en el valor predeterminado de **true**, por lo que el recuento de referencias de objeto será correcto cuando finalice la operación **Recordset:: Open** .  
+1.  Especifique un objeto de **conexión** abierto en una **variante**codificada explícitamente. Conviértalo con (IDispatch \* ) para que se invoque el constructor correcto. Además, establezca explícitamente el segundo parámetro **_variant_t** en el valor predeterminado de **true**, por lo que el recuento de referencias de objeto será correcto cuando finalice la operación **Recordset:: Open** .  
   
-2.  La expresión, `(_bstr_t)`, no es una conversión, sino un operador **_variant_t** que extrae una cadena **_bstr_t** de la **variante** devuelta por **Value**.  
+2.  La expresión, `(_bstr_t)` , no es una conversión, sino un operador **_variant_t** que extrae una cadena **_bstr_t** de la **variante** devuelta por **Value**.  
   
- La expresión, `(char*)`, no es una conversión, sino un operador **_bstr_t** que extrae un puntero a la cadena encapsulada en un objeto **_bstr_t** .  
+ La expresión, `(char*)` , no es una conversión, sino un operador **_bstr_t** que extrae un puntero a la cadena encapsulada en un objeto **_bstr_t** .  
   
  En esta sección de código se muestran algunos de los comportamientos útiles de los operadores **_variant_t** y **_bstr_t** .  
   

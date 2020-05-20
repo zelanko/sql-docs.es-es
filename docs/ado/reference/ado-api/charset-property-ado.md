@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d65a5330ea83b955629cd9de9684ecc47906ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a5750364a745cda43459ecba69ba42cbf6f3da40
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67920082"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763146"
 ---
 # <a name="charset-property-ado"></a>Propiedad de conjunto de caracteres (ADO)
 Indica el juego de caracteres en el que se debe traducir el contenido de una [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) de texto para el almacenamiento en el búfer interno del objeto de **secuencia** .  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Jet
 - OLE DB provider for Microsoft Jet [ADO]
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 204aca25a330dd912e1a9354adc92bbb7c58f847
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926649"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763216"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Introducción al proveedor de Microsoft OLE DB para Microsoft Jet
 El proveedor de OLE DB para Microsoft Jet permite a ADO obtener acceso a las bases de datos de Microsoft Jet.
@@ -45,8 +45,8 @@ Microsoft.Jet.OLEDB.4.0
 |Palabra clave|Descripción|
 |-------------|-----------------|
 |**Proveedor**|Especifica el proveedor de OLE DB para Microsoft Jet.|
-|**Data Source** (Origen de datos)|Especifica la ruta de acceso de la base de datos y `c:\Northwind.mdb`el nombre de archivo (por ejemplo,).|
-|**Id. de usuario**|Especifica el nombre de usuario. Si no se especifica esta palabra clave, se utiliza de`admin`forma predeterminada la cadena "".|
+|**Data Source** (Origen de datos)|Especifica la ruta de acceso de la base de datos y el nombre de archivo (por ejemplo, `c:\Northwind.mdb` ).|
+|**Id. de usuario**|Especifica el nombre de usuario. Si no se especifica esta palabra clave, `admin` se utiliza de forma predeterminada la cadena "".|
 |**Contraseña**|Especifica la contraseña del usuario. Si no se especifica esta palabra clave, se usa de forma predeterminada la cadena vacía ("").|
 
 > [!NOTE]
@@ -91,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>Propiedades de los conjuntos de registros y comandos específicos del proveedor
  El proveedor Jet también admite varias propiedades de **conjunto de registros** y **comandos** específicas del proveedor. Se tiene acceso a estas propiedades y se establecen a través de la colección **Properties** del objeto de **conjunto de registros** o del **comando** . En la tabla se muestra el nombre de la propiedad ADO y su nombre de propiedad OLE DB correspondiente entre paréntesis.
 
-|Nombre de propiedad|Descripción|
+|Nombre de la propiedad|Descripción|
 |-------------------|-----------------|
 |Jet OLEDB: transacciones masivas (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|Indica si las operaciones masivas de SQL son transacciones. Es posible que se produzcan errores en operaciones masivas de gran tamaño al realizar transacciones debido a retrasos de recursos.|
 |Jet OLEDB: habilitar cursores FAT (DBPROP_JETOLEDB_ENABLEFATCURSOR)|Indica si jet debe almacenar en caché varias filas al rellenar un conjunto de registros para los orígenes de filas remotos.|

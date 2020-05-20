@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ADO, Visual Basic
 - Visual Basic [ADO]
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e86bc925313a24a390dffc8f4e2d9e91e4db1c61
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926567"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761593"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Usar ADO con Microsoft Visual Basic y Visual Basic para Aplicaciones
 La configuración de un proyecto de ADO y la escritura de código ADO es similar si se utiliza Visual Basic o Visual Basic para Aplicaciones. En este tema se trata el uso de ADO con Visual Basic y Visual Basic para Aplicaciones y se indica cualquier diferencia.
@@ -34,7 +34,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
 2.  Seleccione **Microsoft objetos de datos ActiveX biblioteca x. x** de la lista. Compruebe que también están seleccionadas al menos las siguientes bibliotecas:
 
-    -   Aplicaciones para Visual Studio
+    -   Visual Basic para Aplicaciones
 
     -   Objetos y procedimientos en tiempo de ejecución de Visual Basic
 
@@ -54,7 +54,7 @@ La configuración de un proyecto de ADO y la escritura de código ADO es similar
 
 3.  Seleccione **Microsoft objetos de datos ActiveX biblioteca x. x** de la lista. Compruebe que también están seleccionadas al menos las siguientes bibliotecas:
 
-    -   Aplicaciones para Visual Studio
+    -   Visual Basic para Aplicaciones
 
     -   Biblioteca de objetos de Microsoft Access 8,0 (o posterior)
 

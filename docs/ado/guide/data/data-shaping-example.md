@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data shaping [ADO], about data shaping
 ms.assetid: 1bfdcad4-52e1-45bc-ad21-783657ef0a44
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a946329ad95a2b226f186e571152268baa5f37c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0f5f4095cc8c6d3d70bdb5d1e388532cefb7e76a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925662"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82763636"
 ---
 # <a name="data-shaping-example"></a>Ejemplo de la forma de datos
 El siguiente comando de forma de datos muestra cómo generar un conjunto de **registros** jerárquico a partir de las tablas **Customers** y **Orders** de la base de datos Northwind.  

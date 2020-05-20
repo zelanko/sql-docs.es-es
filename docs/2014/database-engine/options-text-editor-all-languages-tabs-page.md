@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089913"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000742"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opciones (Editor de texto - Todos los idiomas - Página Pestañas)
   Utilice este cuadro de diálogo para establecer el comportamiento de tabulación en los cinco editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para mostrar estas opciones, haga clic en **Opciones** en el menú **Herramientas** . Seleccione la carpeta **Editor de texto**, expanda la carpeta **Todos los lenguajes** y haga clic en **Tabulaciones**.  
@@ -29,16 +29,16 @@ ms.locfileid: "66089913"
  El mensaje "Los valores de la sangría (o del tabulador) para formatos de texto individuales están en conflicto entre sí" aparece si se han seleccionado diferentes valores para determinados editores. Por ejemplo, este mensaje aparece si la opción **Bloque** está seleccionada en **Texto simple**, pero se ha seleccionado **Ninguna** en **XML**.  
   
 ## <a name="indenting"></a>Sangrías  
- **None**  
+ **Ninguno**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **Sin**  
+ **Bloquear**  
  Cuando se selecciona esta opción, se aplica una sangría de forma automática a la nueva línea que se crea al presionar ENTRAR, a la misma distancia que la línea anterior.  
   
  **Automática**  
  Cuando se selecciona esta opción, la nueva línea que se crea al presionar ENTRAR se coloca conforme al contexto.  
   
-## <a name="tabs"></a>Pestañas  
+## <a name="tabs"></a>Tabulaciones  
  **Tamaño de tabulación**  
  Establece la distancia en espacios entre las tabulaciones. El valor predeterminado es cuatro espacios.  
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: 75522821-6daf-44ac-88bd-aa5b35258007
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6c4c3f2ac265c10f012e46b027754eb189f4e5
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807529"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000985"
 ---
 # <a name="database-engine-cross-instance-features"></a>Características entre instancias del motor de base de datos
   Esta sección contiene las herramientas y las tareas asociadas a la administración y la supervisión de los servidores y las instancias de base de datos.  
@@ -23,7 +23,7 @@ ms.locfileid: "62807529"
 ## <a name="in-this-section"></a>En esta sección  
   
 [SQL Server Management Studio](../ssms/sql-server-management-studio-ssms.md)  
-[Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+[Utilidad de SQL Server características y tareas](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
 [Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
 [Registrar servidores](../ssms/register-servers/register-servers.md)  
 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)  

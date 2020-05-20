@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], development
 - development [SQL Server Database Engine]
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 43aa8a23a7d9322e6865b83e3aee4d77fa40e49e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b181efac9660dda7b1ddd0e313f6562e1ea3ba0
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064978"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001007"
 ---
 # <a name="database-engine-features-and-tasks"></a>Características y tareas del motor de base de datos
   Busque información que cualquier usuario-diseñador, programador, analista o administrador necesite para crear [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de datos.  

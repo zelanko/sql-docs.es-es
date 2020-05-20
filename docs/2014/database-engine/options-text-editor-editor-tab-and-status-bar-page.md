@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.sqleditors.editorcontextsettings
 - VS.ToolsOptionsPages.Text_Editor.EditorTabAndStatusBar
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089240"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000725"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página de la barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
@@ -34,7 +34,7 @@ ms.locfileid: "66089240"
  **Mostrar tiempo de ejecución**  
  Incluye la hora de ejecución del script. La configuración es la siguiente:  
   
- **None**  
+ **Ninguno**  
  La barra de estado no muestra ninguna información horaria.  
   
  **Extremo**  
@@ -70,7 +70,7 @@ ms.locfileid: "66089240"
  **Arriba**  
  La barra de estado aparece en la parte superior de la ventana del Editor de consultas.  
   
- **Descendente**  
+ **Inferior**  
  La barra de estado aparece en la parte inferior de la ventana del Editor de consultas.  
   
 ## <a name="tab-text"></a>Texto de pestaña  

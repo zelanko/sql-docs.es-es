@@ -11,15 +11,15 @@ f1_keywords:
 dev_langs:
 - TSQL
 ms.assetid: 7021ecb7-8fb5-4d8c-b984-3d34fcde8be2
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0552e7cd3212d8fb65100c6bd8efbaca91af43c4
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089170"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000682"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Opciones (editor de texto-Transact-SQL-página general)
   Utilice el cuadro de diálogo **General** para cambiar el comportamiento general de la edición del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para modificar los scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas**, expanda la subcarpeta **Transact-SQL** y luego haga clic en **General**.  

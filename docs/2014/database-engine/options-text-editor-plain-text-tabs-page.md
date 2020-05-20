@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089860"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000703"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Editor de texto - Texto sin formato - Página Pestañas)
   Utilice este cuadro de diálogo para cambiar el comportamiento del tabulador del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto sin formato**y, a continuación, haga clic en **Tabulaciones**.  
@@ -26,16 +26,16 @@ ms.locfileid: "66089860"
  Las opciones del Editor de texto sin formato también se pueden establecer en el cuadro de diálogo **Todos los idiomas General** . Si usa los cuadros de diálogos **Todos los lenguajes** con el fin de establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de texto sin formato mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
- **None**  
+ **Ninguno**  
  No aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
- **Sin**  
+ **Bloquear**  
  Aplica una sangría a la nueva línea que se crea al presionar ENTRAR a la misma distancia a la que se creó la sangría de la línea anterior.  
   
  **Automática**  
  El editor de texto simple no admite este tipo de formato.  
   
-## <a name="tabs"></a>Pestañas  
+## <a name="tabs"></a>Tabulaciones  
  **Tamaño de tabulación**  
  Establece la distancia en espacios entre las tabulaciones. El valor predeterminado es cuatro espacios.  
   

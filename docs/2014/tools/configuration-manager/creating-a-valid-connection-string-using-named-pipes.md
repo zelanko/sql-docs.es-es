@@ -13,18 +13,18 @@ helpviewer_keywords:
 - aliases [SQL Server], named pipes
 - Named Pipes [SQL Server], connection strings
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065553"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001035"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Crear una cadena de conexión válida con canalizaciones con nombre
-  A menos que el usuario lo cambie, cuando la instancia [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada de escucha en el protocolo canalizaciones con nombre `\\.\pipe\sql\query` , usa como nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre `sql\query` y es el nombre de la canalización. Para conectarse a la canalización predeterminada, debe tener el alias `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa `\\.\pipe\unit\app` como canalización, el alias debe usar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  
+  A menos que el usuario lo cambie, cuando la instancia predeterminada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en el protocolo canalizaciones con nombre, usa `\\.\pipe\sql\query` como nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre y `sql\query` es el nombre de la canalización. Para conectarse a la canalización predeterminada, debe tener el alias `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa `\\.\pipe\unit\app` como canalización, el alias debe usar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  
   
  Para crear un nombre de canalización válido:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63065553"
   
 -   Especifique un **servidor**. Para una instancia con nombre, puede proporcionar un nombre de servidor y un nombre de instancia.  
   
- En el momento de la conexión, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el componente Native Client Lee los valores de servidor, protocolo y nombre de canalización del registro para el nombre de alias especificado y crea un nombre de canalización con el formato `np:\\<computer_name>\pipe\<pipename>` o `np:\\<IPAddress>\pipe\<pipename>`. En el caso de una instancia con nombre, el `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query`nombre de canalización predeterminado es.  
+ En el momento de la conexión, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componente Native Client Lee los valores de servidor, protocolo y nombre de canalización del registro para el nombre de alias especificado y crea un nombre de canalización con el formato `np:\\<computer_name>\pipe\<pipename>` o `np:\\<IPAddress>\pipe\<pipename>` . En el caso de una instancia con nombre, el nombre de canalización predeterminado es `\\<computer_name>\pipe\MSSQL$<instance_name>\sql\query` .  
   
 > [!NOTE]  
 >  De forma predeterminada, el Firewall de Windows de [!INCLUDE[msCoName](../../includes/msconame-md.md)] cierra el puerto 445. Dado que [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se comunica a través del puerto 445, debe volver a abrir el puerto si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar las conexiones de cliente entrantes que utilizan canalizaciones con nombre. Para obtener más información acerca de cómo configurar un firewall, vea “Cómo configurar un firewall para el acceso a SQL Server” en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o revise la documentación del firewall.  

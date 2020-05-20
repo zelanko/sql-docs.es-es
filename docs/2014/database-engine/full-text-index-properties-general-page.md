@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.fulltextindexproperties.general.f1
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 187366d9f289804942ba6e7d331a47bfaae68232
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62778946"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000945"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propiedades del índice de texto completo (página General)
   **Para ver o cambiar las propiedades modificables de un índice de texto completo**  
@@ -31,7 +31,7 @@ ms.locfileid: "62778946"
  **Base de datos**  
  Muestra el nombre de la base de datos en la que el índice de texto completo reside.  
   
- **Cuadro**  
+ **Tabla**  
  Muestra el nombre de la tabla en la que se define el índice de texto completo.  
   
  **Clave de índice de texto completo**  
@@ -65,7 +65,7 @@ ms.locfileid: "62778946"
  Grupo de archivos al que pertenece el índice de texto completo.  
   
  **Lista de palabras irrelevantes de índice de texto completo**  
- Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de [palabras irrelevantes](../relational-databases/search/full-text-search.md)es sinónimo de una lista de palabras sin trascendencia. La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando ** \<>** de la lista, o puede seleccionar una lista de palabras irrelevantes diferente;>del sistema indica la lista de palabras irrelevantes del sistema. ** \<**  
+ Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de [palabras irrelevantes](../relational-databases/search/full-text-search.md)es sinónimo de una lista de palabras sin trascendencia. La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando ** \<>** de la lista, o puede seleccionar una lista de palabras irrelevantes diferente; ** \<>del sistema** indica la lista de palabras irrelevantes del sistema.  
   
  **Para crear una lista de palabras irrelevantes**  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62778946"
  **Lista de propiedades de búsqueda**  
  La lista de propiedades de búsqueda asociada actualmente al índice de texto completo, si la hay. Una lista de propiedades de búsqueda especifica un conjunto de propiedades de documento que se incluyen en el índice de texto completo asociado cuando este se rellena. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- OFF>indica que actualmente no hay ninguna lista de propiedades de búsqueda asociada al índice. ** \<** Puede quitar la lista de propiedades de búsqueda actual del índice seleccionando ** \<>** de la lista, o puede seleccionar otra lista de propiedades de búsqueda de la lista. Esta lista solo contiene las listas de propiedades de búsqueda de la base de datos actual.  
+ ** \< OFF>** indica que actualmente no hay ninguna lista de propiedades de búsqueda asociada al índice. Puede quitar la lista de propiedades de búsqueda actual del índice seleccionando ** \<>** de la lista, o puede seleccionar otra lista de propiedades de búsqueda de la lista. Esta lista solo contiene las listas de propiedades de búsqueda de la base de datos actual.  
   
 > [!NOTE]  
 >  Puede asociar una lista de propiedades de búsqueda a más de un índice de texto completo en la misma base de datos.  
@@ -119,8 +119,8 @@ ms.locfileid: "62778946"
   
 |||  
 |-|-|  
-|**Reales**|Habilitada|  
-|**Es**|Deshabilitada|  
+|**Reales**|habilitado|  
+|**Es**|Disabled|  
   
  **Seguimiento de cambios**  
  Especifica si la tabla tiene el seguimiento de cambios de texto completo habilitado y, en ese caso, qué tipo. El seguimiento de cambios de texto completo mantiene un registro de las filas que se han modificado en una tabla o vista indizada configurada para la indización de texto completo. Estos cambios se pueden propagar al índice de texto completo.  
@@ -131,14 +131,14 @@ ms.locfileid: "62778946"
 |-|-|  
 |**Desactivado**|El índice de texto completo no se actualiza con los cambios en los datos subyacentes.|  
 |**Manual**|El índice de texto completo no se actualiza automáticamente cuando se producen cambios en los datos subyacentes. Sin embargo, estos cambios se mantienen y puede propagarlos al índice de texto completo según una programación usando el Agente SQL Server o de forma manual.|  
-|**Automático**|El índice de texto completo se actualiza automáticamente cuando se producen cambios en los datos subyacentes de la tabla base.|  
+|**Automática**|El índice de texto completo se actualiza automáticamente cuando se producen cambios en los datos subyacentes de la tabla base.|  
   
  **Volver a llenar el índice**  
  Haga clic para iniciar un rellenado en el índice de texto completo en salir del cuadro de diálogo. Seleccione uno de los tipos de rellenado siguientes:  
   
 |||  
 |-|-|  
-|**Completo**|Durante el rellenado completo de una tabla, se crean entradas de índice para todas las filas.|  
+|**Completa**|Durante el rellenado completo de una tabla, se crean entradas de índice para todas las filas.|  
 |**Incremental**|El rellenado incremental actualiza el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en su transcurso. Realizar un rellenado incremental requiere que la tabla base contenga una columna del tipo de datos `timestamp`.|  
 |**Actualizar**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
   

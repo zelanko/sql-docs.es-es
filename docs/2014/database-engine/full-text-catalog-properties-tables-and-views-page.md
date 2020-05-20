@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.tablesviews.f1
 ms.assetid: 2d45fcd2-0f0f-4167-9027-316d6696c106
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cab8e460b2091f9b4be90f32b7e08b15b4cf60b
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779196"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000955"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propiedades del catálogo de texto completo (Tablas/página Vistas)
   Utilice esta página de diálogo para ver o modificar las tablas y vistas asignadas al catálogo de texto completo.  
@@ -45,14 +45,14 @@ ms.locfileid: "62779196"
 |-|-|  
 |**Columnas disponibles**|Muestra todas las columnas con indización de texto completo. Active una casilla para agregar una columna al índice de texto completo.|  
 |**Idioma del separador de palabras**|Muestra el idioma del separador de palabras.|  
-|**Columna Tipo de datos**|Muestra el nombre de la columna de la tabla que contiene el tipo de documento de la columna mostrada en **columnas disponibles** si la columna `varbinary(max)` es `image` una columna de tipo o.|  
+|**Columna Tipo de datos**|Muestra el nombre de la columna de la tabla que contiene el tipo de documento de la columna mostrada en **columnas disponibles** si la columna es una columna de tipo `varbinary(max)` o `image` .|  
 |**Semántica estadística**|Seleccione si desea habilitar la indización semántica para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Si selecciona **Idioma** antes de seleccionar **Semántica estadística**y el idioma seleccionado no tiene un modelo semántico asociado, la casilla **Semántica estadística** está deshabilitada. Si selecciona **Semántica estadística** antes de seleccionar **Idioma**, los idiomas disponibles en el cuadro combinado desplegable estarán limitados a aquellos para los que exista un modelo de idioma semántico.|  
   
 ## <a name="track-changes"></a>Seguimiento de cambios  
   
 |||  
 |-|-|  
-|**Automático**|El índice de texto completo se actualiza automáticamente cuando los datos de la tabla subyacente se modifican, se agregan o se eliminan.|  
+|**Automática**|El índice de texto completo se actualiza automáticamente cuando los datos de la tabla subyacente se modifican, se agregan o se eliminan.|  
 |**Manual**|Cuando se modifican, se agregan o se eliminan datos en los datos indizados, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] realiza un seguimiento de los cambios. Cuando está activado el seguimiento de cambios **Manual** , el índice no se actualiza automáticamente con estos cambios. En su lugar, un administrador puede aplicar los cambios manualmente mediante el uso de una [instrucción ALTER fulltext index... INICIAR la instrucción UPDATE POPULATION](/sql/t-sql/statements/alter-fulltext-index-transact-sql) .|  
 |**No realizar seguimiento de cambios**|Con esta opción activa, no se registran los cambios realizados en los datos indizados del catálogo. Un administrador debe generar el índice utilizando FULLTEXT del ALTER INDICE con POBLACIÓN COMPLETA o la POBLACIÓN INCREMENTAL.|  
   

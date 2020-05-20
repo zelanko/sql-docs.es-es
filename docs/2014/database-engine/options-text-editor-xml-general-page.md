@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 46a9f913-d0b9-40ff-b382-9bbdec7461a6
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b32dcfc95c5fc6929454add71ff4452e00fdda6e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089199"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001048"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Options (Text Editor - XML - General Page)
   Utilice este cuadro de diálogo para cambiar el comportamiento de edición general del Editor XML, que se utiliza para modificar los documentos XML. Para mostrar esta configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la subcarpeta **XML** y luego haga clic en **General**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Establecer opciones en varias ubicaciones  
- Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] los demás editores, como los editores de DMX o MDX, debe restablecer las opciones del editor XML mediante este cuadro de diálogo.  
+ Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para los demás [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editores, como los editores de DMX o MDX, debe restablecer las opciones del editor XML mediante este cuadro de diálogo.  
   
 ## <a name="statement-completion"></a>Finalización de instrucciones  
  **Lista de miembros automática**  

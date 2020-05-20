@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_jobschedule
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11aa73828caba66637d5d5b87a478dca851bdaf9
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70810494"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83151954"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "70810494"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   > [!IMPORTANT]  
-  > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+  > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -50,7 +50,8 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
      [ , [ @active_end_date = ] active_end_date ]  
      [ , [ @active_start_time = ] active_start_time ]  
      [ , [ @active_end_time = ] active_end_time ]  
-     [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+     [ , [ @schedule_id = ] schedule_id OUTPUT ]
+     [ , [ @schedule_uid = ] _schedule_uid OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
@@ -67,11 +68,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Valor que indica cuándo se va a ejecutar el trabajo. *frequency_type* es de **tipo int**, su valor predeterminado es **0**y puede tener uno de los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente, con respecto a *frequency_interval.*|  
 |**64**|Se ejecuta cuando se inicia el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -79,19 +80,19 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval`Día en el que se ejecuta el trabajo. *frequency_interval* es de **tipo int**, su valor predeterminado es 0 y depende del valor de *frequency_type* como se indica en la tabla siguiente:  
   
-|Value|Efecto|  
+|Valor|Efecto|  
 |-----------|------------|  
 |**1** (una vez)|*frequency_interval* no se usa.|  
 |**4** (diariamente)|Cada *frequency_interval* días.|  
 |**8** (semanalmente)|*frequency_interval* es uno o más de los siguientes (combinados con un operador lógico or):<br /><br /> 1 = Domingo<br /><br /> 2 = Lunes<br /><br /> 4 = martes<br /><br /> 8 = miércoles<br /><br /> 16 = jueves<br /><br /> 32 = viernes<br /><br /> 64 = sábado|  
 |**16** (mensualmente)|En el *frequency_interval* día del mes.|  
 |**32** (relativo mensual)|*frequency_interval* es uno de los siguientes:<br /><br /> 1 = Domingo<br /><br /> 2 = Lunes<br /><br /> 3 = Martes<br /><br /> 4 = Miércoles<br /><br /> 5 = Jueves<br /><br /> 6 = Viernes<br /><br /> 7 = Sábado<br /><br /> 8 = Día<br /><br /> 9 = Día de la semana<br /><br /> 10 = Día del fin de semana|  
-|**64** (cuando se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicia el servicio del agente)|*frequency_interval* no se usa.|  
+|**64** (cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia el servicio del agente)|*frequency_interval* no se usa.|  
 |**128**|*frequency_interval* no se usa.|  
   
 `[ @freq_subday_type = ] frequency_subday_type`Especifica las unidades para *frequency_subday_interval*. *frequency_subday_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**0x1**|A la hora especificada|  
 |**0x4**|Minutos|  
@@ -103,12 +104,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes:  
   
-|Value|Descripción (unidad)|  
+|Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
  *frequency_relative_interval* indica la aparición del intervalo. Por ejemplo, si *frequency_relative_interval* está establecido en **2**, *frequency_type* se establece en **32**y *frequency_interval* se establece en **3**, el trabajo programado se produciría el segundo martes de cada mes.  
@@ -150,7 +151,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  Para detalles sobre los permisos de estos roles, consulte [Roles fijos de base de datos del Agente SQL Server](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
  
  ## <a name="example"></a>Ejemplo
- En el ejemplo siguiente se asigna una programación de trabajo `SaturdayReports` a la que se ejecutará cada sábado a las 2:00 a.m.
+ En el ejemplo siguiente se asigna una programación de trabajo a la `SaturdayReports` que se ejecutará cada sábado a las 2:00 a.m.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name

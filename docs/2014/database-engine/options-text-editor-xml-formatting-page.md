@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089845"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000637"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opciones (Editor de texto - XML - Página Formato)
 

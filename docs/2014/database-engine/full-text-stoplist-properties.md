@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.swb.fulltextsearch.ftstoplistproperties.general.f1
 - sql12.swb.fulltextsearch.ftstoplistproperties.schedule.f1
 ms.assetid: 2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 266687488dbd12b504b079314cc9d07b801b4f28
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779412"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000865"
 ---
 # <a name="full-text-stoplist-properties"></a>Propiedades de lista de palabras irrelevantes de texto completo
   Use este cuadro de diálogo para agregar o eliminar palabras irrelevantes individuales, eliminar todas las palabras irrelevantes para un idioma concreto o borrar la lista de palabras irrelevantes actual. Una palabra irrelevante es una palabra de uso frecuente que se incluye en una lista de palabras irrelevantes. Las palabras irrelevantes de una lista de palabras irrelevantes se omiten en la indización de texto completo para las tablas que usan dicha lista. Para obtener más información, vea [Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo](../relational-databases/search/full-text-search.md).  

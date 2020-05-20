@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_spaceused
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b0bd2f253dede1c427eda826eba0e998a144736
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f015625f168693da0c3c204ca85cbee1beb5d897
+ms.sourcegitcommit: b8933ce09d0e631d1183a84d2c2ad3dfd0602180
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252022"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83152134"
 ---
 # <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -44,7 +44,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
   
 ## <a name="arguments"></a>Argumentos  
 
-Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)], `sp_spaceused` debe especificar parámetros con nombre (por `sp_spaceused (@objname= N'Table1');` ejemplo, en lugar de confiar en la posición ordinal de los parámetros. 
+Para [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] y [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)] , `sp_spaceused` debe especificar parámetros con nombre (por ejemplo, `sp_spaceused (@objname= N'Table1');` en lugar de confiar en la posición ordinal de los parámetros. 
 
 `[ @objname = ] 'objname'`
    
@@ -60,27 +60,27 @@ Si no se especifica *objName* , se devuelven resultados para toda la base de dat
   
  El argumento *mode* puede tener los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |ALL|Devuelve las estadísticas de almacenamiento del objeto o la base de datos, incluida la parte local y la parte remota.|  
-|LOCAL_ONLY|Devuelve las estadísticas de almacenamiento de solo la parte local del objeto o la base de datos. Si el objeto o la base de datos no están habilitados para Stretch, devuelve las @mode mismas estadísticas que = ALL.|  
+|LOCAL_ONLY|Devuelve las estadísticas de almacenamiento de solo la parte local del objeto o la base de datos. Si el objeto o la base de datos no están habilitados para Stretch, devuelve las mismas estadísticas que @mode = ALL.|  
 |REMOTE_ONLY|Devuelve las estadísticas de almacenamiento de solo la parte remota del objeto o la base de datos. Esta opción genera un error cuando se cumple una de las condiciones siguientes:<br /><br /> La tabla no está habilitada para Stretch.<br /><br /> La tabla está habilitada para Stretch, pero nunca ha habilitado la migración de datos. En este caso, la tabla remota todavía no tiene un esquema.<br /><br /> El usuario ha quitado manualmente la tabla remota.<br /><br /> El aprovisionamiento del archivo de datos remotos devolvió el estado correcto, pero en realidad se produjo un error.|  
   
  el *modo* es **VARCHAR (11)** y su valor predeterminado es **N'ALL '**.  
   
 `[ @oneresultset = ] oneresultset`Indica si se va a devolver un único conjunto de resultados. El argumento *oneresultset* puede tener los siguientes valores:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|0|Cuando * \@objName* es null o no se especifica, se devuelven dos conjuntos de resultados. Dos conjuntos de resultados son el comportamiento predeterminado.|  
-|1|Cuando * \@objName* = null o no se especifica, se devuelve un conjunto de resultados único.|  
+|0|Cuando * \@ objName* es null o no se especifica, se devuelven dos conjuntos de resultados. Dos conjuntos de resultados son el comportamiento predeterminado.|  
+|1|Cuando * \@ objName* = null o no se especifica, se devuelve un conjunto de resultados único.|  
   
  *oneresultset* es de **bit**y su valor predeterminado es **0**.  
 
 `[ @include_total_xtp_storage] 'include_total_xtp_storage'`
-**Se aplica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)], [!INCLUDE[sssds-md](../../includes/sssds-md.md)].  
+**Se aplica a:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] , [!INCLUDE[sssds-md](../../includes/sssds-md.md)] .  
   
- Cuando @oneresultset= 1, el parámetro @include_total_xtp_storage determina si el conjunto de resultados único incluye columnas para MEMORY_OPTIMIZED_DATA almacenamiento. El valor predeterminado es 0, es decir, de forma predeterminada (si se omite el parámetro), las columnas XTP no se incluyen en el conjunto de resultados.  
+ Cuando @oneresultset = 1, el parámetro @include_total_xtp_storage determina si el conjunto de resultados único incluye columnas para MEMORY_OPTIMIZED_DATA almacenamiento. El valor predeterminado es 0, es decir, de forma predeterminada (si se omite el parámetro), las columnas XTP no se incluyen en el conjunto de resultados.  
 
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -160,12 +160,12 @@ Si se omite *objName* , el valor de oneresultset es 1 y *include_total_xtp_stora
 |**datos**|**VARCHAR (18)**|Cantidad total de espacio utilizado por los datos.|  
 |**index_size**|**VARCHAR (18)**|Cantidad total de espacio utilizado por índices.|  
 |**sin usar**|**VARCHAR (18)**|Espacio total reservado para los objetos de la base de datos, pero no utilizado todavía.|
-|**xtp_precreated**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con estado precreated, en KB. Esto cuenta en el espacio sin asignar en la base de datos en conjunto. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage= 1*.| 
-|**xtp_used**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con Estados en construcción, activo y de combinación destino, en KB. Este es el espacio en disco que se usa activamente para los datos de las tablas optimizadas para memoria. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage= 1*.| 
-|**xtp_pending_truncation**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con WAITING_FOR_LOG_TRUNCATION de estado, en KB. Es el espacio en disco usado para los archivos de punto de comprobación que esperan la limpieza, cuando se produce el truncamiento del registro. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. Esta columna solo se incluye si `@include_total_xtp_storage=1`.|
+|**xtp_precreated**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con estado precreated, en KB. Esto cuenta en el espacio sin asignar en la base de datos en conjunto. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage = 1*.| 
+|**xtp_used**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con Estados en construcción, activo y de combinación destino, en KB. Este es el espacio en disco que se usa activamente para los datos de las tablas optimizadas para memoria. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. *Esta columna solo se incluye si @include_total_xtp_storage = 1*.| 
+|**xtp_pending_truncation**|**VARCHAR (18)**|Tamaño total de los archivos de punto de comprobación con WAITING_FOR_LOG_TRUNCATION de estado, en KB. Es el espacio en disco usado para los archivos de punto de comprobación que esperan la limpieza, cuando se produce el truncamiento del registro. Devuelve NULL si la base de datos no tiene un grupo de archivos de memory_optimized_data con al menos un contenedor. Esta columna solo se incluye si `@include_total_xtp_storage=1` .|
 
 ## <a name="remarks"></a>Observaciones  
- **database_size** siempre es mayor que la suma del **reserved** + **espacio** reservado sin asignar porque incluye el tamaño de los archivos de registro, pero **reservado** y **unallocated_space** considerar solo las páginas de datos.  
+ **database_size** suele ser mayor que la suma del espacio **reservado**sin  +  **asignar** porque incluye el tamaño de los archivos de registro, pero **reservado** y **unallocated_space** considerar solo las páginas de datos. En algunos casos con Azure Synapse Analytics, es posible que esta instrucción no sea verdadera. 
   
  Las páginas que se usan en los índices XML y los índices de texto completo se incluyen en **index_size** para ambos conjuntos de resultados. Cuando se especifica *objName* , las páginas de los índices XML y los índices de texto completo del objeto también se cuentan en el total de resultados **reservados** y **index_size** .  
   
@@ -202,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Mostrar información de uso de espacio sobre la tabla remota asociada a una tabla habilitada para Stretch  
- En el ejemplo siguiente se resume el espacio utilizado por la tabla remota asociada a una tabla habilitada para Stretch ** \@** mediante el argumento MODE para especificar el destino remoto. Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
+ En el ejemplo siguiente se resume el espacio utilizado por la tabla remota asociada a una tabla habilitada para Stretch mediante el argumento ** \@ mode** para especificar el destino remoto. Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).  
   
 ```sql  
 USE StretchedAdventureWorks2016  

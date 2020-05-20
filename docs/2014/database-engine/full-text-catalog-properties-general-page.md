@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.swb.fulltextsearch.ftcatalogproperties.general.f1
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779668"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000965"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
   En esta sección se muestran las opciones y funciones disponibles en la página **General** del cuadro de diálogo **Propiedades del catálogo de texto completo** .  
@@ -34,7 +34,7 @@ ms.locfileid: "62779668"
  **Estado del rellenado**  
  Indica el estado del catálogo. Los valores posibles son:  
   
--   **Idle**  
+-   **Inactivo**  
   
 -   **Rastreo en curso**  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62779668"
  Nombre del catálogo de texto completo.  
   
  **Distinguir acentos**  
- Permite ver o modificar si el catálogo es sensible a las marcas diacríticas, como una tilde**~**(), un signo de acento agudo (**'**) o umlaut (**̈**). Los valores válidos son:  
+ Permite ver o modificar si el catálogo es sensible a las marcas diacríticas, como una tilde ( **~** ), un signo de acento agudo (**'**) o umlaut (**̈**). Los valores válidos son:  
   
 -   **No**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62779668"
   
 |||  
 |-|-|  
-|**None**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
+|**Ninguno**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
 |**Optimizar catálogo**|Optimiza el uso de espacio del catálogo y mejora el rendimiento de las consultas. También mejora la precisión de la clasificación de los aciertos de los resultados de las búsquedas.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
 |**Volver a generar el catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Volver a llenar el catálogo**|Actualiza el catálogo con los cambios recientes realizados en los datos. Para esta opción, el catálogo debe estar inactivo.|  

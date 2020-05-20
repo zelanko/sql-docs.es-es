@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6553d743fe3cb0ba4e4ab6229baa65cc9d94eec8
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035324"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001084"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Acerca de los términos de licencia de SQL Server (SSCM)
-  Los términos de licencia de software de [!INCLUDE[msCoName](../../includes/msconame-md.md)]se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:%ProgramFiles%\Microsoft SQL Server\110\License términos \ o% ProgramFiles (x86)% \ Microsoft SQL Server\110\License\\términos.  
+  Los términos de licencia de software de [!INCLUDE[msCoName](../../includes/msconame-md.md)]se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:%ProgramFiles%\Microsoft SQL Server\110\License términos \ o% ProgramFiles (x86)% \ Microsoft SQL Server\110\License términos \\ .  
   
  En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma.  
   

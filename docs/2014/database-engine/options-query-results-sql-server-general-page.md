@@ -13,15 +13,15 @@ f1_keywords:
 - MISCELLANEOUSFILESPROJECT
 - DevLang-TSQL
 ms.assetid: d3b31e81-c0b6-4615-8fb3-997edb2acb7a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48261d5ff0290dd5042b6604d9e492871bf6da38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4eb7ac1830554180b1de1ee67b6bc6f11fd2463f
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089326"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000803"
 ---
 # <a name="options-query-results-sql-server-general-page"></a>Opciones (resultados de la consulta-SQL Server-página general)
   Utilice esta página para determinar el comportamiento predeterminado del panel de resultados de la consulta. Para ver estos valores de configuración, en el menú **Herramientas**, haga clic en **Opciones**, expanda la carpeta **Resultados de la consulta**, seleccione **SQL Server** y haga clic en **General**. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **Consulta** o, en una ventana de consulta de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], haga clic con el botón derecho y seleccione **Opciones de consulta**.  

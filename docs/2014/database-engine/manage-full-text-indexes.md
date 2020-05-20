@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 28ff17dc-172b-4ac4-853f-990b5dc02fd1
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de736c48763973b48be41d4d63f5237a10b3fff6
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775047"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83000885"
 ---
 # <a name="manage-full-text-indexes"></a>Administrar índices de texto completo
      
@@ -37,7 +37,7 @@ ms.locfileid: "62775047"
     |----------|-----------------|  
     |**General**|Muestra las propiedades básicas de un índice de texto completo. Entre estas propiedades se incluyen varias propiedades modificables y varias propiedades invariables, como el nombre de base de datos, el nombre de tabla y el nombre de columna de clave de texto completo. Las propiedades modificables son:<br /><br /> **Lista de palabras irrelevantes de índice de texto completo**<br /><br /> **Indexación de texto completo habilitada**<br /><br /> **Seguimiento de cambios**<br /><br /> **Lista de propiedades de búsqueda**<br /><br /> <br /><br /> Para obtener más información, vea [Propiedades del índice de texto completo &#40;página General&#41;](full-text-index-properties-general-page.md).|  
     |**Columnas**|Muestra las columnas de tabla que están disponibles para la indización de texto completo. La columna o columnas seleccionadas son de índices de texto completo. Puede seleccionar tantas columnas disponibles como desee incluir en el índice de texto completo. Para obtener más información, vea [Propiedades del índice de texto completo &#40;página Columnas&#41;](../../2014/database-engine/full-text-index-properties-columns-page.md).|  
-    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> <strong> \* Importante \* \* </strong> Después de salir del cuadro de diálogo **propiedades del índice de texto completo** , cualquier programación recién creada se asocia a una agente SQL Server trabajo (iniciar rellenado de tabla incremental en *database_name*.* table_name*).|  
+    |**Programaciones**|Utilice esta página para crear o administrar programaciones para un trabajo del Agente SQL Server que inicie un rellenado de tabla incremental para los rellenados del índice de texto completo. Para obtener más información, vea [Rellenar índices de texto completo](../relational-databases/indexes/indexes.md).<br /><br /> <strong> \* \* Importante \* después \* </strong> de salir del cuadro de diálogo **propiedades del índice de texto completo** , cualquier programación recién creada se asocia a una agente SQL Server trabajo (iniciar rellenado de tabla incremental en *database_name*.* table_name*).|  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] para guardar cualquier cambio y salir del cuadro de diálogo **Propiedades del índice de texto completo**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62775047"
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>Para consultar si un índice único determinado se utiliza como columna de clave de texto completo  
   
-1.  Utilice una instrucción [SELECT](/sql/t-sql/queries/select-transact-sql) para llamar a la función [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) . En la llamada de función, use la función OBJECT_ID para convertir el nombre de la tabla (*TABLE_NAME*) en el identificador de tabla, especifique el nombre de un índice único para la tabla y `IsFulltextKey` especifique la propiedad de índice de la siguiente manera:  
+1.  Utilice una instrucción [SELECT](/sql/t-sql/queries/select-transact-sql) para llamar a la función [INDEXPROPERTY](/sql/t-sql/functions/indexproperty-transact-sql) . En la llamada de función, use la función OBJECT_ID para convertir el nombre de la tabla (*TABLE_NAME*) en el identificador de tabla, especifique el nombre de un índice único para la tabla y especifique la propiedad de índice de la `IsFulltextKey` siguiente manera:  
   
     ```  
     SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );  
@@ -92,7 +92,7 @@ SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID
   
 1.  Todas las tablas habilitadas para texto completo tienen una columna que se usa para aplicar las filas únicas de la tabla (*columna de clave**única*). La propiedad `TableFulltextKeyColumn` obtenida mediante la función OBJECTPROPERTY proporciona la identidad de esta columna de clave única.  
   
-     Para obtener este identificador, puede utilizar una instrucción SELECT con el fin de llamar a la función OBJECTPROPERTYEX. Utilice la función OBJECT_ID para convertir el nombre de la tabla (*TABLE_NAME*) en el identificador de tabla y especificar `TableFulltextKeyColumn` la propiedad, como se indica a continuación:  
+     Para obtener este identificador, puede utilizar una instrucción SELECT con el fin de llamar a la función OBJECTPROPERTYEX. Utilice la función OBJECT_ID para convertir el nombre de la tabla (*TABLE_NAME*) en el identificador de tabla y especificar la `TableFulltextKeyColumn` propiedad, como se indica a continuación:  
   
     ```  
     SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 'Column Identifier';  

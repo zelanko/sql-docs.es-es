@@ -12,15 +12,15 @@ helpviewer_keywords:
 - breaking changes [full-text search]
 - full-text indexes [SQL Server], breaking changes
 ms.assetid: c55a6748-e5d9-4fdb-9a1f-714475a419c5
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a223060768c35b2daf00837153e59218ff1c50e
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787763"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001026"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Cambios principales en la búsqueda de texto completo
   En este tema se describen los principales cambios producidos en la búsqueda de texto completo. Estos cambios pueden provocar errores en las aplicaciones, en los scripts o en las funcionalidades basados en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Podría encontrar estos problemas al actualizar. Para obtener más información, vea [Use Upgrade Advisor to Prepare for Upgrades](../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "62787763"
 |[sp_fulltext_database](/sql/relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql)|Habilitar o deshabilitar la búsqueda de texto completo con sp_fulltext_database.|No se devuelve ningún resultado para las consultas de texto completo. Si el texto completo está deshabilitado para la base de datos, no se permiten operaciones de texto completo.|Devuelve resultados para las consultas de texto completo y las operaciones de texto completo permitidas, aun cuando el texto completo esté deshabilitado para la base de datos.|  
 |Palabras irrelevantes específicas de la configuración regional|Consulta las variantes específicas de la configuración regional de un idioma primario, como el francés belga y el francés canadiense.|Los componentes (separadores de palabras, lematizadores y palabras vacías) procesan las variantes específicas de la configuración regional de su idioma primario. Por ejemplo, los componentes de francés (Francia) se utilizan para analizar el francés (Bélgica).|Debe agregar explícitamente las palabras irrelevantes para cada identificador de configuración regional (LCID). Por ejemplo, necesitaría especificar un LCID para Bélgica, Canadá y Francia.|  
 |Proceso de lematización de sinónimos|Usar el diccionario de sinónimos y formas no flexionadas (lematización).|Una palabra del diccionario de sinónimos se lematiza automáticamente después de su expansión.|Si desea la forma flexionada en la expansión, tiene que agregarla explícitamente.|  
-|Ruta de acceso del catálogo de texto completo y grupo de archivos|Trabajar con catálogos de texto completo.|Cada catálogo de texto completo tiene una ruta de acceso física y pertenece a un grupo de archivos. Se trata como un archivo de base de datos.|Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos. Un catálogo de texto completo es un concepto lógico que hace referencia a un grupo de índices de texto completo.<br /><br /> Nota: [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] las instrucciones de DDL que especifican los catálogos de texto completo funcionan correctamente.|  
+|Ruta de acceso del catálogo de texto completo y grupo de archivos|Trabajar con catálogos de texto completo.|Cada catálogo de texto completo tiene una ruta de acceso física y pertenece a un grupo de archivos. Se trata como un archivo de base de datos.|Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos. Un catálogo de texto completo es un concepto lógico que hace referencia a un grupo de índices de texto completo.<br /><br /> Nota: las [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)] instrucciones de DDL que especifican los catálogos de texto completo funcionan correctamente.|  
 |[sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql)|Utilizar la ruta de acceso, data_space_id y file_id de esta vista de catálogo.|Estas columnas devuelven un valor concreto.|Estas columnas devuelven NULL porque el catálogo de texto completo ya no se encuentra en el sistema de archivos.|  
 |[sys.sysfulltextcatalogs](/sql/relational-databases/system-compatibility-views/sys-sysfulltextcatalogs-transact-sql)|Utilizar la columna de ruta de acceso de esta tabla del sistema desusada.|Devuelve la ruta de acceso al sistema de archivos del catálogo de texto completo.|Devuelve NULL porque el catálogo de texto completo ya no se encuentra en el sistema de archivos.|  
 |[sp_help_fulltext_catalogs](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql)<br /><br /> [sp_help_fulltext_catalogs_cursor](/sql/relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql)|Utilizar la columna PATH de estos procedimientos almacenados desusados.|Devuelve la ruta de acceso al sistema de archivos del catálogo de texto completo.|Devuelve NULL porque el catálogo de texto completo ya no se encuentra en el sistema de archivos.|  

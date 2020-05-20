@@ -20,18 +20,18 @@ helpviewer_keywords:
 - Banyan VINES
 - protocols [SQL Server], client configuration
 ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
-author: craigg-msft
-ms.author: craigg
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9c167994c7145bce348b6959a57533e398e1d6bb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
+ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035294"
+ms.lasthandoff: 05/09/2020
+ms.locfileid: "83001095"
 ---
 # <a name="choosing-a-network-protocol"></a>Elegir un protocolo de red
-  Para conectarse a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , debe tener habilitado un protocolo de red. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede atender solicitudes en varios protocolos al mismo tiempo. Los clientes se conectan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un único protocolo. Si el programa cliente no sabe en qué protocolo escucha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el cliente para intentar secuencialmente varios protocolos. Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar, deshabilitar y configurar protocolos de red.  
+  Para conectarse a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , debe tener habilitado un protocolo de red. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puede atender solicitudes en varios protocolos al mismo tiempo. Los clientes se conectan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un único protocolo. Si el programa cliente no sabe en qué protocolo escucha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el cliente para intentar secuencialmente varios protocolos. Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar, deshabilitar y configurar protocolos de red.  
   
 ## <a name="shared-memory"></a>Memoria compartida  
  El protocolo de memoria compartida es el más sencillo de utilizar y no tiene ningún valor configurable. Dado que los clientes que utilizan el protocolo de memoria compartida solo se pueden conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecute en el mismo equipo, no es útil para la mayoría de las actividades de la base de datos. Utilice el protocolo de memoria compartida para la solución de problemas cuando sospeche que los demás protocolos no están configurados correctamente.  

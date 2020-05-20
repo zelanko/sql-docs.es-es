@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_procedure_stats dynamic management view
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3620efe22d2a285aed7f78f6573bdc2280be47f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68742902"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829429"
 ---
 # <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68742902"
   
 > [!NOTE]
 > Los resultados de **Sys. dm_exec_procedure_stats** pueden variar en cada ejecución, ya que los datos solo reflejan las consultas finalizadas y no las que todavía están en curso.
-> Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_exec_procedure_stats**. 
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
 |Nombre de la columna|Tipo de datos|Descripción|  
@@ -70,11 +70,11 @@ ms.locfileid: "68742902"
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, para la ejecución completada más recientemente de este procedimiento almacenado.|  
 |**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
 |**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este procedimiento almacenado.|  
-|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**max_spills**|**bigint**|Número máximo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|El número mínimo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Número máximo de páginas que este procedimiento almacenado ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**pdw_node_id**|**int**|Identificador del nodo en el que se encuentra esta distribución.<br /><br />**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este procedimiento almacenado desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el procedimiento almacenado.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que ha realizado este procedimiento almacenado durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
@@ -84,10 +84,10 @@ ms.locfileid: "68742902"
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las estadísticas en la vista se actualizan cuando una ejecución del procedimiento almacenado se completa.  
   
 ## <a name="examples"></a>Ejemplos  

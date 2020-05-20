@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changelogreader_agent
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf2a18543f6f5db30e36965c9e399968402292e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3fda7373aba20102a7842ba955d1275bae8e842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768884"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829655"
 ---
 # <a name="sp_changelogreader_agent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL. En Instancia administrada de Azure SQL Database, use una cuenta de SQL Server. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL. En Instancia administrada de Azure SQL Database, use una cuenta de SQL Server. *No se puede cambiar para un no* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publicador.*  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta con la que se ejecuta el agente. *job_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -67,7 +67,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changelogreader_agent** se utiliza en la replicación transaccional.  
   
  **sp_changelogreader_agent** se utiliza para cambiar la cuenta de Windows con la que se ejecuta un agente de registro del log. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  

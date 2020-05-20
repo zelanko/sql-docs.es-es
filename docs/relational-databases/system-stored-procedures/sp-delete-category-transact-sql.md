@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2e150318d4c334c67c51f6cf47c127793a25edb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120051"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831266"
 ---
 # <a name="sp_delete_category-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'`Clase de la categoría. la *clase* es **VARCHAR (8)**, no tiene ningún valor predeterminado y debe tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Elimina una categoría de trabajo.|  
 |**ONALERT**|Elimina una categoría de alerta.|  

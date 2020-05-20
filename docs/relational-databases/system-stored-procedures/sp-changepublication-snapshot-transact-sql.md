@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changepublication_snapshot
 ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ef9a2fd87ac283ee2a7072cfccac838df7f16d04
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762265"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829587"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -75,7 +75,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Especifica los días en los que se ejecuta el agente. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -84,19 +84,19 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**203**|Día|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday = ] frequency_subday`Son las unidades de *freq_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -127,22 +127,22 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. No se puede cambiar para un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sea de.  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. No se puede cambiar para un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname y su**valor predeterminado es NULL. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al crear un agente de instantáneas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
+>  no se debe usar el *publicador* al crear un agente de instantáneas en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changepublication_snapshot** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

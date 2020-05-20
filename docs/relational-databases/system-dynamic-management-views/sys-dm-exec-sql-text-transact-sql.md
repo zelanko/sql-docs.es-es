@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_sql_text dynamic management function
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de6ed0a0b8f91157b61c7d38564c8ab0941f1c6c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936895"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830644"
 ---
 # <a name="sysdm_exec_sql_text-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ El identificador del plan es un valor hash derivado del plan compilado del lote 
 ### <a name="a-conceptual-example"></a>A. Ejemplo conceptual
 A continuación se muestra un ejemplo básico para ilustrar el paso de un **sql_handle** directamente o con **Cross Apply**.
   1.  Crear actividad.  
-Ejecute el siguiente T-SQL en una nueva ventana de consulta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de.   
+Ejecute el siguiente T-SQL en una nueva ventana de consulta de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .   
       ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
@@ -111,7 +111,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta [!INCLUDE[ssManStudi
       ```
       
     2.  Usar **Cross Apply**.  
-    La sql_handle de **Sys. dm_exec_requests** se pasará a **Sys. DM_EXEC_SQL_TEXT** mediante **Cross Apply**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1. En este ejemplo, el SPID es `59`.
+    La sql_handle de **Sys. dm_exec_requests** se pasará a **Sys. DM_EXEC_SQL_TEXT** mediante **Cross Apply**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1. En este ejemplo, el SPID es `59` .
 
         ```sql
         SELECT t.*
@@ -121,7 +121,7 @@ Ejecute el siguiente T-SQL en una nueva ventana de consulta [!INCLUDE[ssManStudi
          ```      
  
     2.  Pasar **sql_handle** directamente.  
-Adquiera el **sql_handle** de **Sys. dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **Sys. dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1 a **Sys. dm_exec_requests**. En este ejemplo, el SPID es `59`. A continuación, pase el **sql_handle** devuelto como argumento a **Sys. dm_exec_sql_text**.
+Adquiera el **sql_handle** de **Sys. dm_exec_requests**. A continuación, pase el **sql_handle** directamente a **Sys. dm_exec_sql_text**. Abra una nueva ventana de consulta y pase el SPID identificado en el paso 1 a **Sys. dm_exec_requests**. En este ejemplo, el SPID es `59` . A continuación, pase el **sql_handle** devuelto como argumento a **Sys. dm_exec_sql_text**.
 
         ```sql
         -- acquire sql_handle

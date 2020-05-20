@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_first_result_set
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2033ae81a030fa57e2f4aaf962e5dd35f9a9a318
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831186"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-  Devuelve los metadatos para el primer conjunto de resultados posible [!INCLUDE[tsql](../../includes/tsql-md.md)] del lote. Devuelve un conjunto de resultados vacío si el lote no devuelve resultados. Genera un error si [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede determinar los metadatos de la primera consulta que se ejecutará realizando un análisis estático. La vista de administración dinámica [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) devuelve la misma información.  
+  Devuelve los metadatos para el primer conjunto de resultados posible del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Devuelve un conjunto de resultados vacío si el lote no devuelve resultados. Genera un error si [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede determinar los metadatos de la primera consulta que se ejecutará realizando un análisis estático. La vista de administración dinámica [Sys. dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) devuelve la misma información.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,9 +44,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="arguments"></a>Argumentos  
 `[ \@tsql = ] 'Transact-SQL_batch'`Una o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (***n***)** o **nvarchar (Max)**.  
   
-`[ \@params = ] N'parameters'`\@params proporciona una cadena de declaración para los parámetros [!INCLUDE[tsql](../../includes/tsql-md.md)] del lote, que es similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (Max)**.  
+`[ \@params = ] N'parameters'`\@params proporciona una cadena de declaración para los parámetros del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote, que es similar a sp_executesql. Los parámetros pueden ser **nvarchar (n)** o **nvarchar (Max)**.  
   
- Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado [!INCLUDE[tsql](../../includes/tsql-md.md)]en el *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en \@params. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, \@no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
+ Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en el [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en la instrucción deben definirse en \@ params. Si la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote de la instrucción no contiene parámetros, \@ no es necesario realizar ningún parámetro. NULL es el valor predeterminado para este parámetro.  
   
 `[ \@browse_information_mode = ] tinyint`Especifica si se devuelven columnas de clave adicionales e información de la tabla de origen. Si está establecido en 1, cada consulta se analiza como si incluyera una opción FOR BROWSE. Se devuelven las columnas de clave adicionales e información de la tabla de origen.  
   
@@ -113,17 +113,17 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
  **sp_describe_first_result_set** devuelve un error en cualquiera de los casos siguientes.  
   
--   Si el TSQL \@de entrada no es un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote válido. La validez se determina mediante el análisis y [!INCLUDE[tsql](../../includes/tsql-md.md)] el análisis del lote. Los errores causados por el lote durante la optimización de la consulta o durante la ejecución no se tienen [!INCLUDE[tsql](../../includes/tsql-md.md)] en cuenta al determinar si el lote es válido.  
+-   Si el TSQL de entrada \@ no es un [!INCLUDE[tsql](../../includes/tsql-md.md)] lote válido. La validez se determina mediante el análisis y el análisis del [!INCLUDE[tsql](../../includes/tsql-md.md)] lote. Los errores causados por el lote durante la optimización de la consulta o durante la ejecución no se tienen en cuenta al determinar si el [!INCLUDE[tsql](../../includes/tsql-md.md)] lote es válido.  
   
--   Si \@params no es NULL y contiene una cadena que no es una cadena de declaración sintácticamente válida para los parámetros, o si contiene una cadena que declara cualquier parámetro más de una vez.  
+-   Si \@ params no es NULL y contiene una cadena que no es una cadena de declaración sintácticamente válida para los parámetros, o si contiene una cadena que declara cualquier parámetro más de una vez.  
   
--   Si el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] de entrada declara una variable local con el mismo nombre que un parámetro declarado en \@params.  
+-   Si el lote de entrada [!INCLUDE[tsql](../../includes/tsql-md.md)] declara una variable local con el mismo nombre que un parámetro declarado en \@ params.  
   
 -   Si la instrucción utiliza una tabla temporal.  
   
 -   La consulta incluye la creación de una tabla permanente que se consulta.  
   
- Si todas las demás comprobaciones se realizan correctamente, se tienen en cuenta todas las rutas de flujo de control posibles incluidas en el lote de entrada. Esto tiene en cuenta todas las instrucciones de flujo de control (GOTO, IF/ELSE, [!INCLUDE[tsql](../../includes/tsql-md.md)] while, y bloques try/catch, así como los procedimientos [!INCLUDE[tsql](../../includes/tsql-md.md)] , lotes dinámicos o desencadenadores que se invocan desde el lote de entrada mediante una instrucción exec, una instrucción DDL que hace que se activen los desencadenadores DDL o una instrucción DML que hace que los desencadenadores se activen en una tabla de destino o en una tabla que se modifica debido a la acción en cascada en una restricción En el caso de que haya numerosas rutas de acceso de control posibles, los algoritmos se detienen en algún punto.  
+ Si todas las demás comprobaciones se realizan correctamente, se tienen en cuenta todas las rutas de flujo de control posibles incluidas en el lote de entrada. Esto tiene en cuenta todas las instrucciones de flujo de control (GOTO, IF/ELSE, WHILE, y [!INCLUDE[tsql](../../includes/tsql-md.md)] bloques try/catch, así como los procedimientos, lotes dinámicos [!INCLUDE[tsql](../../includes/tsql-md.md)] o desencadenadores que se invocan desde el lote de entrada mediante una instrucción exec, una instrucción DDL que hace que se activen los desencadenadores DDL o una instrucción DML que hace que los desencadenadores se activen en una tabla de destino o en una tabla que se modifica debido a la acción en cascada en una restricción En el caso de que haya numerosas rutas de acceso de control posibles, los algoritmos se detienen en algún punto.  
   
  Para cada ruta de acceso de flujo de control, la primera instrucción (si existe) que devuelve un conjunto de resultados viene determinada por **sp_describe_first_result_set**.  
   
@@ -152,7 +152,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set** no admite la recursividad indirecta.  
   
 ## <a name="permissions"></a>Permisos  
- Requiere permiso para ejecutar el \@argumento TSQL.  
+ Requiere permiso para ejecutar el \@ argumento TSQL.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -269,7 +269,7 @@ ELSE
     SELECT d FROM t2; '  
 ```  
   
- Resultado: \<nombre de columna desconocido> **VARCHAR (20) null**  
+ Resultado: \< nombre de columna desconocido> **VARCHAR (20) null**  
   
 #### <a name="column-name-forced-to-be-identical-through-aliasing"></a>Se exige que el nombre de columna sea idéntico en todos los alias  
  Igual que el caso anterior, pero las columnas tienen el mismo nombre en todos los alias de columna.  

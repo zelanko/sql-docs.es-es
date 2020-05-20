@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSreplication_monitordata system table
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 118602eadf5dc1f23aa811d9a295fae351f54f36
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079142"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829881"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68079142"
 |**lastrefresh**|**datetime**|La fecha y la hora a las que se actualizaron los datos del monitor.|  
 |**computetime**|**int**|El tiempo (en segundos) que se tardó en calcular los datos del monitor.|  
 |**publication_id**|**int**|El Id. de la publicación.|  
-|**publicador**|**sysname**|El nombre del publicador.|  
+|**publisher**|**sysname**|El nombre del publicador.|  
 |**publisher_srvid**|**int**|El Id. del servidor del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68079142"
 |**job_id**|**uniqueidentifier**|El GUID del trabajo del agente de replicación.|  
 |**status**|**int**|El estado del agente de replicación; puede ser uno de estos valores:<br /><br /> **1** = iniciado<br /><br /> **2** = correcto<br /><br /> **3** = en curso<br /><br /> **4** = inactivo<br /><br /> **5** = reintentando<br /><br /> **6** = error|  
 |**isagentrunningnow**|**bit**|Marca que indica si el trabajo del agente se está ejecutando actualmente, donde un valor de **1** significa que el trabajo se está ejecutando.|  
-|**advertencia**|**int**|Advertencia de umbral generada por una suscripción; puede ser el resultado OR lógico de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención. 8 = mergefastrunduration. El tiempo que se tarda en finalizar la sincronización de una suscripción de mezcla sobrepasa el umbral, en segundos, en una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
+|**warning**|**int**|Advertencia de umbral generada por una suscripción; puede ser el resultado OR lógico de uno o más de estos valores.<br /><br /> **1** = expiración: una suscripción a una publicación transaccional ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = mergeexpiration: una suscripción a una publicación de combinación ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención. 8 = mergefastrunduration. El tiempo que se tarda en finalizar la sincronización de una suscripción de mezcla sobrepasa el umbral, en segundos, en una conexión de red rápida.<br /><br /> **16** = mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
 |**last_distsync**|**datetime**|La fecha y la hora a las que se ejecutó por última vez el Agente de distribución.|  
 |**agentstoptime**|**datetime**|La fecha y la hora a las que se detuvo el agente.|  
 |**distdb**|**sysname**|El nombre de la base de datos de distribución para la suscripción.|  

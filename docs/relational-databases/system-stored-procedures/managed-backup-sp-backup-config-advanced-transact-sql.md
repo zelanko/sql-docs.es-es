@@ -18,19 +18,19 @@ helpviewer_keywords:
 - sp_backup_config_optional
 - managed_backup.sp_backup_config_optional
 ms.assetid: 4fae8193-1f88-48fd-a94a-4786efe8d6af
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 0178d4df6a5941b8896e6ff530802fd4c6bc6909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4ccb6e35354629391aecddbdfaa968adf743645b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77652954"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830398"
 ---
 # <a name="managed_backupsp_backup_config_advanced-transact-sql"></a>managed_backup. sp_backup_config_advanced (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Configura las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+  Configura las opciones avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Nombre de la base de datos para habilitar la copia de seguridad administrada en una base de datos específica. Si es NULL o *, esta copia de seguridad administrada se aplica a todas las bases de datos del servidor.  
   
  @encryption_algorithm  
- El nombre del algoritmo de cifrado utilizado durante la copia de seguridad para cifrar el archivo de copia de seguridad. Es @encryption_algorithm de **tipo SYSNAME**. Es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez para la base de datos. Especifique **NO_ENCRYPTION** si no desea cifrar el archivo de copia de seguridad. Al cambiar los [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores de configuración, este parámetro es opcional; si no se especifica el parámetro, se conservan los valores de configuración existentes. Los valores permitidos para este parámetro son:  
+ El nombre del algoritmo de cifrado utilizado durante la copia de seguridad para cifrar el archivo de copia de seguridad. @encryption_algorithmEs de **tipo SYSNAME**. Es un parámetro obligatorio al configurar [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] por primera vez para la base de datos. Especifique **NO_ENCRYPTION** si no desea cifrar el archivo de copia de seguridad. Al cambiar los [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] valores de configuración, este parámetro es opcional; si no se especifica el parámetro, se conservan los valores de configuración existentes. Los valores permitidos para este parámetro son:  
   
 -   AES_128  
   
@@ -65,10 +65,10 @@ EXEC managed_backup.sp_backup_config_advanced
  Para obtener más información sobre algoritmos de cifrado, vea [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- El tipo de sistema de cifrado, que puede ser "CERTIFICAte" o "ASYMMETRIC_KEY". Es @encryptor_type de tipo **nvarchar (32)**. Este parámetro es opcional si se especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
+ El tipo de sistema de cifrado, que puede ser "CERTIFICAte" o "ASYMMETRIC_KEY". Es de tipo @encryptor_type **nvarchar (32)**. Este parámetro es opcional si se especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
   
  @encryptor_name  
- Nombre de un certificado existente o clave asimétrica que se usa para cifrar la copia de seguridad. Es @encryptor_name de **tipo SYSNAME**. Si utiliza una clave asimétrica, debe configurarse con la administración de claves extendida (EKM). Este parámetro es opcional si se especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
+ Nombre de un certificado existente o clave asimétrica que se usa para cifrar la copia de seguridad. @encryptor_nameEs de **tipo SYSNAME**. Si utiliza una clave asimétrica, debe configurarse con la administración de claves extendida (EKM). Este parámetro es opcional si se especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
   
  Para obtener más información, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
@@ -84,7 +84,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y permisos **Execute** en **sp_delete_backuphistory** procedimiento almacenado.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se establecen las opciones [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de configuración avanzadas de para la instancia de SQL Server.  
+ En el ejemplo siguiente se establecen las opciones de configuración avanzadas de [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] para la instancia de SQL Server.  
   
 ```sql
 Use msdb;  

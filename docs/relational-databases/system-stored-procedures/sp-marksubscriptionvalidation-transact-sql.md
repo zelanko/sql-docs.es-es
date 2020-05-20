@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_marksubscriptionvalidation
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6ea2b5a6120395ad287a372b9d0edb3de7cb2b71
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68092671"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831039"
 ---
 # <a name="sp_marksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* para una publicación que pertenece [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un publicador.  
+>  no se debe usar el *publicador* para una publicación que pertenece a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -57,9 +57,9 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  **sp_marksubscriptionvalidation** se utiliza en la replicación transaccional.  
   
- **sp_marksubscriptionvalidation** no admite suscriptores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no sean de.  
+ **sp_marksubscriptionvalidation** no admite suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- En el caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los publicadores que no son de, no se puede ejecutar **sp_marksubscriptionvalidation** desde una transacción explícita. Esto se debe a que las transacciones explícitas no se admiten en la conexión al servidor vinculado que se utiliza para obtener acceso al publicador.  
+ En el caso de los publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no se puede ejecutar **sp_marksubscriptionvalidation** desde una transacción explícita. Esto se debe a que las transacciones explícitas no se admiten en la conexión al servidor vinculado que se utiliza para obtener acceso al publicador.  
   
  **sp_marksubscriptionvalidation** debe usarse junto con [sp_article_validation &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md), especificando un valor de **1** para *subscription_level*y se puede usar con otras llamadas a **sp_marksubscriptionvalidation** para marcar la transacción abierta actual para otros suscriptores.  
   

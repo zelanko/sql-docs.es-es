@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_stats dynamic management function
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25488898f7f8c6fb56ea75bc62480aefea171b59
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004837"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829494"
 ---
 # <a name="sysdm_db_log_stats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ Devuelve atributos de nivel de resumen e información sobre los archivos de regi
 
 *database_id* | NULL | **Valor predeterminado**
 
-Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de `NULL`una base `DEFAULT`de datos, o. De manera predeterminada, es `NULL`. `NULL`y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
+Es el ID. de la base de datos. `database_id` es `int`. Las entradas válidas son el número de identificación de una base de datos, `NULL` o `DEFAULT` . El valor predeterminado es `NULL`. `NULL`y `DEFAULT` son valores equivalentes en el contexto de la base de datos actual.  
 Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-transact-sql.md). Al usar `DB_ID` sin especificar un nombre de base de datos, el nivel de compatibilidad de la base de datos actual debe ser 90 o superior.
 
   
@@ -61,26 +61,26 @@ Se puede especificar la función integrada [DB_ID](../../t-sql/functions/db-id-t
 |total_log_size_mb  |**float**  |   Tamaño total del registro de transacciones en MB. |  
 |active_vlf_count   |**bigint** |   Número total de [archivos de registro virtuales activos (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) en el registro de transacciones.|  
 |active_log_size_mb |**float**  |   Tamaño total del registro de transacciones activo en MB.|  
-|log_truncation_holdup_reason   |**nvarchar(60)**   |   Motivo del parada de truncamiento del registro. El valor es el mismo `log_reuse_wait_desc` que el `sys.databases`de la columna de.  (Para obtener explicaciones más detalladas de estos valores, consulte [el registro de transacciones](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Los valores posibles son: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICACIÓN<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTROS TRANSITORIOS |  
+|log_truncation_holdup_reason   |**nvarchar(60)**   |   Motivo del parada de truncamiento del registro. El valor es el mismo que el `log_reuse_wait_desc` de la columna de `sys.databases` .  (Para obtener explicaciones más detalladas de estos valores, consulte [el registro de transacciones](../../relational-databases/logs/the-transaction-log-sql-server.md)). <br />Los valores posibles son: <br />NOTHING<br />CHECKPOINT<br />LOG_BACKUP<br />ACTIVE_BACKUP_OR_RESTORE<br />ACTIVE_TRANSACTION<br />DATABASE_MIRRORING<br />REPLICACIÓN<br />DATABASE_SNAPSHOT_CREATION<br />LOG_SCAN<br />AVAILABILITY_REPLICA<br />OLDEST_PAGE<br />XTP_CHECKPOINT<br />OTROS TRANSITORIOS |  
 |log_backup_time    |**datetime**   |   Hora de la última copia de seguridad del registro de transacciones.|   
 |log_backup_lsn |**nvarchar(24)**   |   Último número de secuencia de registro de la copia de seguridad del registro de transacciones [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|   
 |log_since_last_log_backup_mb   |**float**  |   Tamaño del registro en MB desde el último número de secuencia de registro de la copia de seguridad del registro de transacciones [(LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch).|  
 |log_checkpoint_lsn |**nvarchar(24)**   |   Último [número de secuencia de registro (LSN) del](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)punto de comprobación.|  
 |log_since_last_checkpoint_mb   |**float**  |   Tamaño del registro en MB desde el último [número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)del punto de comprobación.|  
-|log_recovery_lsn   |**nvarchar(24)**   |   [Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de recuperación de la base de datos. Si `log_recovery_lsn` se produce antes del LSN del `log_recovery_lsn` punto de comprobación, es el LSN de `log_recovery_lsn` la transacción activa más antiguo; de lo contrario, es el LSN del punto de comprobación.|  
+|log_recovery_lsn   |**nvarchar(24)**   |   [Número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) de recuperación de la base de datos. Si se `log_recovery_lsn` produce antes del LSN del punto de comprobación, `log_recovery_lsn` es el LSN de la transacción activa más antiguo; de lo contrario, `log_recovery_lsn` es el LSN del punto de comprobación.|  
 |log_recovery_size_mb   |**float**  |   Tamaño del registro en MB desde el [número de secuencia de registro (LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch)de recuperación de registro.|  
 |recovery_vlf_count |**bigint** |   Número total de [archivos de registro virtuales (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) que se van a recuperar, si se ha producido una conmutación por error o un reinicio del servidor. |  
 
 
-## <a name="remarks"></a>Observaciones
-Cuando se `sys.dm_db_log_stats` ejecuta en una base de datos que participa en un grupo de disponibilidad como una réplica secundaria, solo se devolverá un subconjunto de los campos descritos anteriormente.  Actualmente, solo `database_id` `recovery_model`se devolverá, y `log_backup_time` cuando se ejecute en una base de datos secundaria.   
+## <a name="remarks"></a>Comentarios
+Cuando `sys.dm_db_log_stats` se ejecuta en una base de datos que participa en un grupo de disponibilidad como una réplica secundaria, solo se devolverá un subconjunto de los campos descritos anteriormente.  Actualmente, solo `database_id` `recovery_model` `log_backup_time` se devolverá, y cuando se ejecute en una base de datos secundaria.   
 
 ## <a name="permissions"></a>Permisos  
 Requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
   
 ## <a name="examples"></a>Ejemplos  
 
-### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Determinar las bases de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una instancia con un gran número de VLF   
+### <a name="a-determining-databases-in-a-ssnoversion-instance-with-high-number-of-vlfs"></a>A. Determinar las bases de datos en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia con un gran número de VLF   
 La siguiente consulta devuelve las bases de datos con más de 100 VLF en los archivos de registro. Un gran número de VLF puede afectar al inicio, la restauración y el tiempo de recuperación de la base de datos.
 
 ```sql  
@@ -90,7 +90,7 @@ CROSS APPLY sys.dm_db_log_stats(s.database_id)
 WHERE total_vlf_count  > 100;
 ```   
 
-### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Determinar las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una instancia con copias de seguridad de registros de transacciones anteriores a 4 horas   
+### <a name="b-determining-databases-in-a-ssnoversion-instance-with-transaction-log-backups-older-than-4-hours"></a>B. Determinar las bases de datos de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia con copias de seguridad de registros de transacciones anteriores a 4 horas   
 La consulta siguiente determina la hora de la última copia de seguridad de registros para las bases de datos de la instancia.
 
 ```sql  

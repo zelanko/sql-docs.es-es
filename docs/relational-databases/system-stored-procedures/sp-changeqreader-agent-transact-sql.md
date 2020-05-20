@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changeqreader_agent
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2258510d8e28230d238d4187cb3d454078d60842
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099138"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829559"
 ---
 # <a name="sp_changeqreader_agent-transact-sql"></a>sp_changeqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`Es el inicio de sesión [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL.  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -48,7 +48,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changeqreader_agent** se utiliza en la replicación transaccional.  
   
  **sp_changeqreader_agent** se utiliza para cambiar la cuenta de Windows con la que se ejecuta un agente de lectura de cola. Puede cambiar la contraseña de un inicio de sesión de Windows existente o proporcionar una contraseña y un inicio de sesión de Windows nuevos.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droppublication
 ms.assetid: b52b37e6-4fec-40cf-abba-7dce4ff395fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2bbcd4c8c70d2d381df77ccf8a4a99cec82d3e49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3ef56f46696a2cb145804105d4d5f22fded6fe1f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768226"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830021"
 ---
 # <a name="sp_droppublication-transact-sql"></a>sp_droppublication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_droppublication [ @publication= ] 'publication'
   
  **sp_droppublication** quita recursivamente todos los artículos asociados a una publicación y, a continuación, quita la propia publicación. No se puede quitar una publicación si tiene una o más suscripciones. Para obtener información acerca de cómo quitar suscripciones, consulte [eliminar una suscripción de inserción](../../relational-databases/replication/delete-a-push-subscription.md) y [eliminar una suscripción de extracción](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
- La ejecución de **sp_droppublication** para quitar una publicación no quita los objetos publicados de la base de datos de publicación ni los objetos correspondientes de la base de datos de suscripciones. Utilice DROP \<Object> para quitar estos objetos manualmente si es necesario.  
+ La ejecución de **sp_droppublication** para quitar una publicación no quita los objetos publicados de la base de datos de publicación ni los objetos correspondientes de la base de datos de suscripciones. Utilice DROP \< object> para quitar estos objetos manualmente si es necesario.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar **sp_droppublication**.  

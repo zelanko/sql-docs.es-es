@@ -18,15 +18,15 @@ helpviewer_keywords:
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_details dynamic management view
 - sys.dm_db_missing_index_details dynamic management view
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 77b3faae57764a936e6115d22ac00ca855d3acb9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263786"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829446"
 ---
 # <a name="sysdm_db_missing_index_details-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "68263786"
 |**index_handle**|**int**|Identifica un índice que falta específico. El identificador es único en todo el servidor. **index_handle** es la clave de esta tabla.|  
 |**database_id**|**smallint**|Identifica la base de datos en la que reside la tabla en la que falta un índice.|  
 |**object_id**|**int**|Identifica la tabla en la que falta el índice.|  
-|**equality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de igualdad de la forma:<br /><br /> *tabla. columna* =*constant_value*|  
-|**inequality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de desigualdad; por ejemplo, a predicados de la forma:<br /><br /> *tabla. columna* > *constant_value*<br /><br /> Cualquier operador de comparación distinto de "=" expresa desigualdad.|  
+|**equality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de igualdad de la forma:<br /><br /> *tabla. columna*  = *constant_value*|  
+|**inequality_columns**|**nvarchar(4000)**|Lista de columnas separadas por comas que contribuyen a predicados de desigualdad; por ejemplo, a predicados de la forma:<br /><br /> *tabla. columna*  >  *constant_value*<br /><br /> Cualquier operador de comparación distinto de "=" expresa desigualdad.|  
 |**included_columns**|**nvarchar(4000)**|Lista de columnas de cobertura separadas por comas requeridas por la consulta. Para obtener más información sobre cómo abarcar o incluir columnas, vea [crear índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> En el caso de los índices optimizados para memoria (hash y optimizado para memoria no agrupado), omita **included_columns**. Todas las columnas de la tabla se incluyen en cada índice optimizado para memoria.|  
-|**privacidad**|**nvarchar(4000)**|Nombre de la tabla en la que falta el índice.|  
+|**statement**|**nvarchar(4000)**|Nombre de la tabla en la que falta el índice.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La información devuelta por **sys.dm_db_missing_index_details** se actualiza cuando se optimiza una consulta mediante el optimizador de consultas y no se guarda. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
  Para determinar a cuáles de los grupos de índices que faltan pertenece un índice que falta específico, puede consultar la vista de administración dinámica **sys.dm_db_missing_index_groups** mediante una combinación de igualdad con **sys.dm_db_missing_index_details** basada en la columna **index_handle**.  
@@ -64,7 +64,7 @@ ms.locfileid: "68263786"
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte también  

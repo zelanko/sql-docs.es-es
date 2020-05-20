@@ -16,19 +16,19 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_audit_actions dynamic management view
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 10558ea4d489ad39fe762f360affdaae372ddee6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67936976"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830915"
 ---
 # <a name="sysdm_audit_actions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
-  Devuelve una fila por cada acción de auditoría sobre la que se puede guardar información en el registro de auditoría y por cada grupo de acciones de auditoría que se puede configurar como parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acerca de la auditoría, consulte [SQL Server audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
+  Devuelve una fila por cada acción de auditoría sobre la que se puede guardar información en el registro de auditoría y por cada grupo de acciones de auditoría que se puede configurar como parte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. Para obtener más información acerca de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auditoría, consulte [SQL Server audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_connections dynamic management view
 ms.assetid: 6bd46fe1-417d-452d-a9e6-5375ee8690d8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df28b48c6a25d7d5661e46cbd06ce70029f1c677
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263803"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830684"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68263803"
   Devuelve información acerca de las conexiones establecidas con esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los detalles de cada conexión. Devuelve información de conexión del servidor para SQL Server. Devuelve la información de conexión de la base de datos actual para SQL Database.  
   
 > [!NOTE]
-> Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use [Sys. dm_pdw_exec_connections &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use [sys. dm_pdw_exec_connections &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-connections-transact-sql.md).  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -59,11 +59,11 @@ ms.locfileid: "68263803"
 |connection_id|**uniqueidentifier**|Identifica cada conexión de manera única. No admite valores NULL.|  
 |parent_connection_id|**uniqueidentifier**|Identifica la conexión principal utilizada por la sesión MARS. Acepta valores NULL.|  
 |most_recent_sql_handle|**varbinary (64)**|Identificador SQL de la última solicitud ejecutada en esta conexión. La columna most_recent_sql_handle siempre está sincronizada con la columna most_recent_session_id. Acepta valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="physical-joins"></a>Combinaciones físicas  

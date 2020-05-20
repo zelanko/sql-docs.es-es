@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_columns dynamic management function
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_columns dynamic management function
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b917a22efd85cf1dcc83f358d334683c579ee6d4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002652"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829480"
 ---
 # <a name="sysdm_db_missing_index_columns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,9 +54,9 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identificador de la columna.|  
 |**column_name**|**sysname**|Nombre de la columna de la tabla.|  
-|**column_usage**|**VARCHAR (20)**|Forma en que la consulta utiliza la columna. Los valores posibles y sus descripciones son:<br /><br /> IGUALDAD: la columna contribuye a un predicado que expresa igualdad, con el formato: <br />                        *tabla. columna* = *constant_value*<br /><br /> Desigualdad: la columna contribuye a un predicado que expresa desigualdad, por ejemplo, un predicado con el formato: *TABLE. Column* > *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: la columna no se utiliza para evaluar un predicado, pero se usa por otro motivo, por ejemplo, para cubrir una consulta.|  
+|**column_usage**|**VARCHAR (20)**|Forma en que la consulta utiliza la columna. Los valores posibles y sus descripciones son:<br /><br /> IGUALDAD: la columna contribuye a un predicado que expresa igualdad, con el formato: <br />                        *tabla. columna*  =  *constant_value*<br /><br /> Desigualdad: la columna contribuye a un predicado que expresa desigualdad, por ejemplo, un predicado con el formato: *TABLE. Column*  >  *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: la columna no se utiliza para evaluar un predicado, pero se usa por otro motivo, por ejemplo, para cubrir una consulta.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La información que devuelve **sys.dm_db_missing_index_columns** se actualiza cuando el optimizador de consultas optimiza una consulta, pero no se almacena. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  
   
 ## <a name="transaction-consistency"></a>Coherencia de las transacciones  

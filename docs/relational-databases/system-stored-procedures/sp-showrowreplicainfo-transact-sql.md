@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showrowreplicainfo
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032894"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830953"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binario (6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
-|**current_state**|**nvarchar (9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> los datos de la fila **y** representan el estado actual de la fila.<br /><br /> los datos de la fila **n** no representan el estado actual de la fila.<br /><br /> n/a>: no aplicable. ** \<**<br /><br /> >desconocido: no se puede determinar el estado actual. ** \<**|  
+|**current_state**|**nvarchar (9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> los datos de la fila **y** representan el estado actual de la fila.<br /><br /> los datos de la fila **n** no representan el estado actual de la fila.<br /><br /> ** \< n/a>** : no aplicable.<br /><br /> ** \<>desconocido** : no se puede determinar el estado actual.|  
 |**rowversion_table**|**NCHAR (17)**|Indica si las versiones de fila se almacenan en la tabla [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o en la tabla [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
-|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
+|**comment**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
   
 ## <a name="result-sets-for-column-information"></a>Conjuntos de resultados para información de columna  
   
@@ -69,7 +69,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_nickname**|**binario (6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
 |**colname**|**sysname**|Nombre de la columna del artículo que representa la entrada de la versión de columna.|  
-|**Comentario**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
+|**comment**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de columna. Este campo suele estar vacío.|  
   
 ## <a name="result-set-for-both"></a>Conjuntos de resultados para ambos  
  Si se elige el valor **both** para *Mostrar*, se devuelven los conjuntos de resultados de filas y columnas.  

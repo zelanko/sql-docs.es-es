@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_droplinkedsrvlogin
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3040f585e10816d4f8664566be8af1523048db88
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097665"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830137"
 ---
 # <a name="sp_droplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rmtsrvname = ] 'rmtsrvname'`Es el nombre de un servidor vinculado al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
+`[ @rmtsrvname = ] 'rmtsrvname'`Es el nombre de un servidor vinculado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que se aplica la asignación de inicio de sesión. *rmtsrvname* es de **tipo sysname**y no tiene ningún valor predeterminado. *rmtsrvname* ya debe existir.  
   
-`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname**y no tiene ningún valor predeterminado. Ya debe existir una asignación para *locallogin* a *rmtsrvname* . Si es NULL, se elimina la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión del servidor local a los inicios de sesión en el servidor vinculado.  
+`[ @locallogin = ] 'locallogin'`Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión en el servidor local que tiene una asignación al servidor vinculado *rmtsrvname*. *locallogin* es de **tipo sysname**y no tiene ningún valor predeterminado. Ya debe existir una asignación para *locallogin* a *rmtsrvname* . Si es NULL, se elimina la asignación predeterminada creada por **sp_addlinkedserver**, que asigna todos los inicios de sesión del servidor local a los inicios de sesión en el servidor vinculado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

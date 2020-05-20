@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_enumerate_fixed_drives dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: fa5834c14bfb1fafe3123c28a60359d64d059dfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c45db91b29c85d6ffced4e31e01fb8f24f338c16
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71342520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830545"
 ---
 # <a name="sysdm_os_enumerate_fixed_drives-transact-sql"></a>Sys. dm_os_enumerate_fixed_drives (Transact-SQL)
 
@@ -29,18 +29,18 @@ ms.locfileid: "71342520"
 
 Introducido en SQL Server 2019.
 
-Enumera los volúmenes montados en Letras de `C:\`unidad como.
+Enumera los volúmenes montados en Letras de unidad como `C:\` .
 
 |Nombre de la columna|Tipo de datos|Descripción|
 |-----------------|---------------|-----------------|  
-|`fixed_drive_path`|`nvarchar(512)`|Ruta de acceso al volumen, `C:\`como.|  
+|`fixed_drive_path`|`nvarchar(512)`|Ruta de acceso al volumen, como `C:\` .|  
 |`drive_type`|`int`|Código para el tipo de unidad. Vea [ `GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`drive_type_desc`|`nvarchar(512)`|Descripción del tipo de unidad. Vea [ `GetDriveTypeW` función](/windows/win32/api/fileapi/nf-fileapi-getdrivetypew).|
 |`free_space_in_bytes`|`bigint`|Espacio libre en disco en bytes.|
 
 ## <a name="permissions"></a>Permisos
 
-El usuario debe tener `VIEW SERVER STATE` el permiso en el servidor.
+El usuario debe tener el `VIEW SERVER STATE` permiso en el servidor.
 
 ## <a name="see-also"></a>Consulte también  
 

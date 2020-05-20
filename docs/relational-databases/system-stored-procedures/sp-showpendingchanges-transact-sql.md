@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_showpendingchanges
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6b09069cb5289e28d978a4f3b3483e14e63cebb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0f2430e334d5e7de4225a9c2022a719058837261
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632745"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829959"
 ---
 # <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,8 +62,8 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |article_name|**sysname**|Nombre del artículo de la tabla en la que se originaron los cambios.|  
 |pending_deletes|**int**|Número de eliminaciones a la espera de ser replicadas.|  
 |pending_ins_and_upd|**int**|Número de inserciones y actualizaciones a la espera de ser replicadas.|  
-|is_delete|**bit**|Indica si el cambio pendiente es una eliminación. Un valor de **1** indica que el cambio es una eliminación. Requiere un valor de **1** para @show_rows.|  
-|rowguid|**uniqueidentifier**|GUID que identifica la fila que cambió. Requiere un valor de **1** para @show_rows.|  
+|is_delete|**bit**|Indica si el cambio pendiente es una eliminación. Un valor de **1** indica que el cambio es una eliminación. Requiere un valor de **1** para @show_rows .|  
+|rowguid|**uniqueidentifier**|GUID que identifica la fila que cambió. Requiere un valor de **1** para @show_rows .|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

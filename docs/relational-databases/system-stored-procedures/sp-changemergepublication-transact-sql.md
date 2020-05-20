@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepublication
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3cc0e6bb77c49b7eefc17e5d1f16a185834f2061
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097683"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829615"
 ---
 # <a name="sp_changemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar, así como las restricciones de los valores de esas propiedades.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se admiten las suscripciones anónimas.|  
 ||**false**|No se admiten las suscripciones anónimas.|  
@@ -74,8 +74,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Los registros de conflictos se almacenan en el servidor que perdió en la resolución de conflictos. Si cambia esta propiedad, se deben reinicializar los suscriptores existentes.|  
 |**compress_snapshot**|**true**|La instantánea de una carpeta de instantáneas alternativa se comprime en formato CAB. La instantánea de la carpeta de instantáneas predeterminada no se puede comprimir. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 ||**false**|De forma predeterminada, no se comprime la instantánea. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
-|**conflict_logging**|**publicador**|Los registros de conflictos se almacenan en el publicador.|  
-||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite [!INCLUDE[ssEW](../../includes/ssew-md.md)] para los suscriptores de *.*|  
+|**conflict_logging**|**publisher**|Los registros de conflictos se almacenan en el publicador.|  
+||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para los [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores de *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
 |**conflict_retention**||Un valor **int** que especifica el período de retención, en días, durante el que se conservan los conflictos. Establecer *conflict_retention* en **0** significa que no se necesita ninguna limpieza de conflictos.|  
 |**denominación**||Descripción de la publicación.|  
@@ -139,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changemergepublication** se utiliza en la replicación de mezcla.  
   
  Si se cambian las propiedades siguientes, se requiere que se genere una nueva instantánea. Debe especificar el valor **1** para el parámetro *force_invalidate_snapshot* .  
@@ -178,7 +178,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 -   **validate_subscriber_info**  
   
- Para enumerar los objetos de publicación para Active Directory *publish_to_active_directory*mediante el publish_to_Active_Directory [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el objeto ya debe estar creado en Active Directory.  
+ Para enumerar los objetos de publicación para Active Directory mediante el *publish_to_Active_Directory*, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto ya debe estar creado en Active Directory.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_changemergepublication](../../relational-databases/replication/codesnippet/tsql/sp-changemergepublicatio_1.sql)]  

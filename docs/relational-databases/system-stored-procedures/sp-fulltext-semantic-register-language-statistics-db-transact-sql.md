@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_semantic_register_language_statistics_db
 ms.assetid: bef1b104-5a44-4327-9ae4-45eae3000f7e
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 59cf70574a73827887542221f556e65e46090395
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 263ea7b2bb0da7822554bbdcad934ef20ec54d3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124208"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830047"
 ---
 # <a name="sp_fulltext_semantic_register_language_statistics_db-transact-sql"></a>sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ GO
 ```  
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
- [ @dbname = ] '*database_name*'  
+ [ @dbname =] '*database_name*'  
  Es el nombre de la base de datos de estadísticas semánticas de lenguaje que se va a registrar para la instancia actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La base de datos debe estar ya adjunta. *database_name* es de **tipo sysname**y no puede ser null.  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
@@ -73,7 +73,7 @@ GO
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  
   
 ## <a name="metadata"></a>Metadatos  
- Para obtener información acerca de la base de datos de Estadísticas de lenguaje semántico [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instalada en una instancia de, consulte la vista de catálogo [sys. fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
+ Para obtener información acerca de la base de datos de Estadísticas de lenguaje semántico instalada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte la vista de catálogo [sys. Fulltext_semantic_language_statistics_database &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md).  
   
 ## <a name="security"></a>Seguridad  
   

@@ -11,14 +11,14 @@ dev_langs:
 helpviewer_keywords:
 - FileTables [SQL Server], dynamic management views
 ms.assetid: e50a135d-6644-42a4-a0df-1c7a2b722051
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bbe626428e0b7ffcf8c3fe4153c8b7c4938a4246
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 216cbfbfd1357298d4b816838fd8bfa5428a65f8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130795"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829524"
 ---
 # <a name="filestream-and-filetable-dynamic-management-views-transact-sql"></a>Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "68130795"
  Muestra los identificadores de archivos no transaccionales abiertos actualmente asociados a los datos de FileTable.  
 
 ## <a name="see-also"></a>Consulte también
-[Secuencia de archivos](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[Procedimientos almacenados del sistema de Filestream y FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

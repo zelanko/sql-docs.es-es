@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_cursors dynamic management function
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 79959d61b1753d833523e0618a41eef89dcb5e58
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097842"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830650"
 ---
 # <a name="sysdm_exec_cursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ dm_exec_cursors (session_id | 0 )
 |**is_open**|**bit**|Especifica si el cursor está abierto.|  
 |**is_async_population**|**bit**|Especifica si el subproceso en segundo plano aún está llenando asincrónicamente un cursor KEYSET o STATIC.|  
 |**is_close_on_commit**|**bit**|Especifica si el cursor se declaró mediante CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = El cursor se cerrará cuando finalice la transacción.|  
-|**fetch_status**|**int**|Devuelve el estado de la última recopilación del cursor. Este es el último@FETCH_STATUS valor devuelto.|  
+|**fetch_status**|**int**|Devuelve el estado de la última recopilación del cursor. Este es el último valor devuelto @FETCH_STATUS .|  
 |**fetch_buffer_size**|**int**|Devuelve información acerca del tamaño del búfer de lectura.<br /><br /> 1 = Cursores Transact-SQL. Se puede establecer en un valor mayor para los cursores API.|  
 |**fetch_buffer_start**|**int**|Para cursores FAST_FORWARD y DYNAMIC, devuelve 0 si el cursor no está abierto o si se ha colocado antes de la primera fila. De lo contrario, devuelve -1.<br /><br /> Para cursores STATIC y KEYSET, devuelve 0 si el cursor no está abierto y -1 si se ha colocado después de la última fila.<br /><br /> De lo contrario, devuelve el número de fila en la que se ha colocado.|  
 |**ansi_position**|**int**|Posición del cursor en el búfer de lectura.|  
@@ -81,11 +81,11 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca del tipo de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Tipo|Descripción|  
+|Tipo|Description|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
 |Dinámica|El cursor se ha declarado como dinámico.|  
-|Instantánea|El cursor se ha declarado como instantánea o estático.|  
+|Depurador de|El cursor se ha declarado como instantánea o estático.|  
 |Fast_Forward|El cursor se ha declarado como de avance rápido.|  
   
  En la tabla siguiente se proporciona información acerca de la simultaneidad de cursor y se incluyen los valores posibles para la columna de propiedades.  

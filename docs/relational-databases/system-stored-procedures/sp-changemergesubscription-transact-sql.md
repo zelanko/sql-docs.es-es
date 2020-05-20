@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergesubscription
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c205bab104bd81eda3e7d14dc30844352caa7f66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b3f7597272a1547a11f2c76e65fab391e2fbcd05
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124867"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829612"
 ---
 # <a name="sp_changemergesubscription-transact-sql"></a>sp_changemergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`Es el nuevo valor de la *propiedad*especificada. el *valor* es **nvarchar (255)** y puede ser uno de los valores de la tabla.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**denominación**||Descripción de esta suscripción de mezcla.|  
 |**Prior**||Es la prioridad de la suscripción. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos.|  
@@ -75,7 +75,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changemergesubscription** se utiliza en la replicación de mezcla.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 207b27a4d7006f8181cbfe7a6cb6e072ee741d82
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942467"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829676"
 ---
 # <a name="coresp_update_data_source-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +46,28 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_uid = ] '*collection_set_uid*'  
+ [ @collection_set_uid =] '*collection_set_uid*'  
  GUID del conjunto de recopilación. *collection_set_uid* es de tipo **uniqueidentifier**y no tiene ningún valor predeterminado. Para obtener el GUID, consulte la vista dbo.syscollector_collection_sets en la base de datos msdb.  
   
- [ @machine_name = ] '*machine_name*'  
+ [ @machine_name =] '*machine_name*'  
  Nombre del servidor en el que reside el conjunto de recopilación. *machine_name* es de **tipo sysname** y no tiene ningún valor predeterminado.  
   
- [ @named_instance = ] '*named_instance*'  
+ [ @named_instance =] '*named_instance*'  
  Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
->  *named_instance* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo*\\*nombreDeInstancia*.  
+>  *named_instance* debe ser el nombre completo de la instancia, que consta del nombre del equipo y el nombre de la instancia con el formato *NombreDeEquipo* \\ *nombreDeInstancia*.  
   
- [ @days_until_expiration = ] *days_until_expiration*  
+ [ @days_until_expiration =] *days_until_expiration*  
  Número de días restantes en el período de retención de datos de la instantánea. *days_until_expiration* es **smallint**.  
   
- [ @source_id = ] *Source_ID*  
+ [ @source_id =] *Source_ID*  
  El identificador único del origen de la actualización. *Source_ID* es de **tipo int** y se devuelve como salida.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada vez que un paquete de carga inicia la carga de datos en el almacén de administración de datos, el componente en tiempo de ejecución del recopilador de datos llama a core.sp_update_data_source. La tabla core.source_info_internal se actualiza si se produjo alguno de los cambios siguientes desde la última actualización:  
   
 -   Se agregó un nuevo conjunto de recopilación.  

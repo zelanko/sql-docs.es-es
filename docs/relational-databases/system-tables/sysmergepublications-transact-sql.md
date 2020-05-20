@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergepublications system table
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 96708a8109594e0978757a163840d605d09cb522
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029779"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829841"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68029779"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**publicador**|**sysname**|Nombre del servidor predeterminado.|  
+|**publisher**|**sysname**|Nombre del servidor predeterminado.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador predeterminado.|  
 |**name**|**sysname**|Nombre de la publicación.|  
 |**denominación**|**nvarchar(255)**|Descripción breve de la publicación.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68029779"
 |**allow_synctoalternate**|**bit**|Especifica si se permite un asociado de sincronización alternativo para sincronizar con este publicador. **0** significa que no se permite un asociado de sincronización.|  
 |**validate_subscriber_info**|**nvarchar (500)**|Enumera las funciones que se están utilizando para recuperar información del suscriptor y validar los criterios de filtrado de filas con parámetros del suscriptor.|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un GUID válido especifica que la publicación se publica en el Active Directory y el GUID es el **objectGUID**del objeto de publicación Active Directory correspondiente. Si es NULL, la publicación no se publica en Active Directory.|  
-|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos. Puede ser uno de los siguientes valores:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos. Puede ser uno de los siguientes valores:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .|  
 |**max_concurrent_merge**|**int**|Número máximo de procesos de mezcla simultáneos permitido. Un valor de **0** para esta propiedad significa que no hay ningún límite en el número de procesos de mezcla simultáneos que se ejecutan en un momento dado. Esta propiedad establece un límite en el número de procesos de mezcla simultáneos que se pueden ejecutar con una publicación de combinación en un momento determinado. Si hay más procesos de instantánea programados al mismo tiempo que los que permite ejecutar el valor, los trabajos sobrantes se colocarán en una cola y esperarán hasta que finalice el proceso de mezcla que se está ejecutando actualmente.|  
 |**max_concurrent_dynamic_snapshots**|**int**|Número máximo de sesiones de instantánea de datos filtrados simultáneas que se pueden ejecutar con la publicación de combinación. Si es **0**, no hay ningún límite en el número máximo de sesiones de instantáneas de datos filtrados simultáneas que se pueden ejecutar simultáneamente en la publicación en un momento dado. Esta propiedad establece un límite en el número de procesos de instantánea simultáneos que se pueden ejecutar con una publicación de combinación en un momento determinado. Si hay más procesos de instantánea programados al mismo tiempo que los que permite ejecutar el valor, los trabajos sobrantes se colocarán en una cola y esperarán hasta que finalice el proceso de mezcla que se está ejecutando actualmente.|  
 |**use_partition_groups**|**smallint**|Especifica si la publicación utiliza particiones precalculadas.|  

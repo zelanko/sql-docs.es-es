@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSpublications system table
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67939011"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829257"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67939011"
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**publication_id**|**int**|Id. de la publicación.|  
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional.<br /><br /> **1** = instantánea.<br /><br /> **2** = fusionar mediante combinación.|  
-|**thirdparty_flag**|**bit**|Indica si una publicación es una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = origen de datos distinto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
+|**thirdparty_flag**|**bit**|Indica si una publicación es una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** = origen de datos distinto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean o se vuelven a crear cada vez que se ejecuta el Agente de instantáneas.|  
 |**allow_push**|**bit**|Indica si es posible crear suscripciones de inserción para la publicación indicada.|  
@@ -47,7 +47,7 @@ ms.locfileid: "67939011"
 |**políticas**|**int**|Período de retención de la publicación, expresado en horas.|  
 |**sync_method**|**int**|Método de sincronización:<br /><br /> **0** = nativo (genera una salida de copia masiva en modo nativo de todas las tablas).<br /><br /> **1** = carácter (genera una salida de copia masiva en modo de carácter de todas las tablas).<br /><br /> **3** = simultáneo (genera una salida de copia masiva en modo nativo de todas las tablas, pero no bloquea la tabla durante la instantánea).<br /><br /> **4** = Concurrent_c (genera una salida de copia masiva en modo de carácter de todas las tablas, pero no bloquea la tabla durante la instantánea)<br /><br /> Los valores **3** y **4** están disponibles para la replicación transaccional y la replicación de mezcla, pero no para la replicación de instantáneas.|  
 |**allow_subscription_copy**|**bit**|Habilita o deshabilita la funcionalidad de copia de las bases de datos de suscripciones suscritas a esta publicación. **0** significa que la copia está deshabilitada y **1** significa que está habilitada.|  
-|**thirdparty_options**|**int**|Especifica si se suprime la presentación de una publicación en la [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] carpeta de replicación en:<br /><br /> **0** = muestra una publicación heterogénea en la carpeta de replicación [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]en.<br /><br /> **1** = suprime la visualización de una publicación heterogénea en la carpeta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de replicación en.|  
+|**thirdparty_options**|**int**|Especifica si se suprime la presentación de una publicación en la carpeta de replicación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] :<br /><br /> **0** = muestra una publicación heterogénea en la carpeta de replicación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .<br /><br /> **1** = suprime la visualización de una publicación heterogénea en la carpeta de replicación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**allow_queued_tran**|**bit**|Especifica si la publicación admite la actualización en cola:<br /><br /> **0 =** La publicación no está en cola.<br /><br /> **1** = la publicación está en cola.|  
 |**options**|**int**|No hay información disponible para esta versión.|  
   

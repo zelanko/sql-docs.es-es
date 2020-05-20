@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_mergearticlecolumn
 ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ff669af64b6aed312481264127d69eee1ad674e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 20967420eeb22a1c6418d06a9be3fc728106c141
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078161"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831017"
 ---
 # <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @article = ] 'article'`Es el nombre del artículo de la publicación. *article* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @column = ] 'column'`Identifica las columnas en las que se va a crear la partición vertical. la *columna* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. la *columna* no puede ser NULL cuando la *operación* está establecida en **Drop**. Para excluir columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique la `@operation = N'drop'` *columna* y para cada columna que se va a quitar del *artículo*especificado.  
+`[ @column = ] 'column'`Identifica las columnas en las que se va a crear la partición vertical. la *columna* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. la *columna* no puede ser NULL cuando la *operación* está establecida en **Drop**. Para excluir columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique la *columna* y `@operation = N'drop'` para cada columna que se va a quitar del *artículo*especificado.  
   
 `[ @operation = ] 'operation'`Es el estado de replicación. *Operation* es de tipo **nvarchar (4)** y su valor predeterminado es Add. **Agregar** marca la columna para la replicación. **Drop** borra la columna.  
   

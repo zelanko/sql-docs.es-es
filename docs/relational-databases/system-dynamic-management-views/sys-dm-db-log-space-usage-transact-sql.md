@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_log_space_usage dynamic management view
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfa102163012456e9b2660d26cb54dec3d58cfbb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a4ded8d065c43dcabdf9e57b5940e7c1baa0edd8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264579"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829521"
 ---
 # <a name="sysdm_db_log_space_usage-transact-sql"></a>Sys. dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ Devuelve información de uso de espacio para el registro de transacciones.
 |total_log_size_in_bytes |**bigint** |Tamaño del registro  |
 |used_log_space_in_bytes |**bigint** |Tamaño ocupado del registro  |     
 |used_log_space_in_percent |**real** |Tamaño ocupado del registro como porcentaje del tamaño total del registro |
-|log_space_in_bytes_since_last_backup |**bigint** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)]hasta [!INCLUDE[ssSDS](../../includes/sssds-md.md)],.|
+|log_space_in_bytes_since_last_backup |**bigint** |La cantidad de espacio que se usa desde la última copia de seguridad de registros <br />**Se aplica a:** [!INCLUDE[sssql14-md](../../includes/sssql14-md.md)] a través [!INCLUDE[sscurrent-md](../../includes/sscurrent-md.md)] de, [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|
     
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="examples"></a>Ejemplos  

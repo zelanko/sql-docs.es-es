@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changearticle
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771401"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829732"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -103,17 +103,17 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Replica índices en columnas **XML** .|  
 ||**0x8000000**|Crea esquemas que aún no existen en el suscriptor.|  
 ||**0x10000000**|Convierte las columnas **XML** en **ntext** en el suscriptor.|  
-||**0x20000000**|Convierte los tipos de datos de objetos grandes (**nvarchar (Max)**, **VARCHAR (Max)** y **varbinary (Max)**) que se introdujeron [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] en a tipos de datos que se [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]admiten en.|  
+||**0x20000000**|Convierte los tipos de datos de objetos grandes (**nvarchar (Max)**, **VARCHAR (Max)** y **varbinary (Max)**) que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que se admiten en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 ||**0x40000000**|Permisos de replicación.|  
 ||**0x80000000**|Intenta quitar las dependencias de los objetos que no forman parte de la publicación.|  
-||**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en columnas **varbinary (Max)** . No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] tienen columnas FileStream en suscriptores, independientemente de cómo se establezca esta opción de esquema.<br /><br /> Vea la opción relacionada **0x800000000**.|  
-||**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset**y **datetime2**) introducidos en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] en tipos de datos que se admiten en versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anteriores de.|  
+||**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en columnas **varbinary (Max)** . No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. No se admite la replicación de tablas que tienen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] suscriptores, independientemente de cómo se establezca esta opción de esquema.<br /><br /> Vea la opción relacionada **0x800000000**.|  
+||**0x200000000**|Convierte los tipos de datos de fecha y hora (**Date**, **Time**, **DateTimeOffset**y **datetime2**) introducidos en en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tipos de datos que se admiten en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 ||**0x400000000**|Replica la opción de compresión para los datos y los índices. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 ||**0x800000000**|Establezca esta opción para almacenar los datos de FILESTREAM en su propio grupo de archivos en el suscriptor. Si no se establece esta opción, los datos de FILESTREAM se almacenan en el grupo de archivos predeterminado. La replicación no crea grupos de archivos; por tanto, si establece esta opción, debe crear el grupo de archivos antes de aplicar la instantánea en el suscriptor. Para obtener más información sobre cómo crear objetos antes de aplicar la instantánea, vea [ejecutar scripts antes y después de aplicar la instantánea](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Vea la opción relacionada **0x100000000**.|  
-||**0x1000000000**|Convierte los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) de más de 8000 bytes a **varbinary (Max)** para que las columnas de tipo UDT se puedan replicar en los [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]suscriptores que ejecutan.|  
-||**0x2000000000**|Convierte el tipo de datos **hierarchyid** a **varbinary (Max)** para que las columnas de tipo **hierarchyid** se puedan replicar en los suscriptores que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ejecutan. Para obtener más información sobre cómo usar las columnas **hierarchyid** en tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0x1000000000**|Convierte los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) de más de 8000 bytes a **varbinary (Max)** para que las columnas de tipo UDT se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
+||**0x2000000000**|Convierte el tipo de datos **hierarchyid** a **varbinary (Max)** para que las columnas de tipo **hierarchyid** se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obtener más información sobre cómo usar las columnas **hierarchyid** en tablas replicadas, vea [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Replica los índices filtrados de la tabla. Para obtener más información acerca de los índices filtrados, vea [crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).|  
-||**0x8000000000**|Convierte los tipos de datos **Geography** y **Geometry** en **varbinary (Max)** para que las columnas de estos tipos se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+||**0x8000000000**|Convierte los tipos de datos **Geography** y **Geometry** en **varbinary (Max)** para que las columnas de estos tipos se puedan replicar en los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .|  
 ||**0x10000000000**|Replica los índices en columnas de tipo **Geography** y **Geometry**.|  
 ||**0x20000000000**|Replica el atributo SPARSE para las columnas. Para obtener más información sobre este atributo, vea [usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Habilite el scripting del agente de instantáneas para crear una tabla optimizada en memoria en el suscriptor.|  
@@ -157,15 +157,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
  Vea en la sección de Notas las propiedades que, si se cambian, requieren que se reinicialicen todas las suscripciones existentes.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
+>  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changearticle** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  Cuando un artículo pertenece a una publicación que admite la replicación transaccional punto a punto, solo se pueden cambiar las propiedades **Description**, **ins_cmd**, **upd_cmd**y **del_cmd** .  
@@ -212,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |Tipo de artículo|Tipo de replicación||  
 |------------------|----------------------|------|  
-||Transaccional|Instantánea|  
+||Transaccional|Depurador de|  
 |**logbased**|Todas las opciones|Todas las opciones pero **0x02**|  
 |**logbased manualfilter**|Todas las opciones|Todas las opciones pero **0x02**|  
 |**logbased manualview**|Todas las opciones|Todas las opciones pero **0x02**|  
@@ -228,7 +228,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**indexed view schema only**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**y **0x80000000**|**0x01**, **0x010**, **0x020**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x100000**, **0x200000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x40000000**y **0x80000000**|  
   
 > [!NOTE]
->  En las publicaciones de actualización en cola, se debe habilitar el valor de *schema_option* de **0x80** . Los valores de *schema_option* admitidos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las publicaciones que no son de son: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** y **0x4000**.  
+>  En las publicaciones de actualización en cola, se debe habilitar el valor de *schema_option* de **0x80** . Los valores de *schema_option* admitidos para las publicaciones que no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son de son: **0x01**, **0x02**, **0x10**, **0x40**, **0x80**, **0x1000** y **0x4000**.  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  

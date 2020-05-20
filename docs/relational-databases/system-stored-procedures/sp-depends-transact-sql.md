@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_depends
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9076d4bdda58a851e358371375b71f8934a945fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053102"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830242"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ sp_depends [ @objname = ] '<object>'
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_depends** muestra dos conjuntos de resultados.  
   
- En el siguiente conjunto de resultados se muestran los objetos de los que * \<depende>objeto* .  
+ En el siguiente conjunto de resultados se muestran los objetos de los que depende * \<>objeto* .  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar (257** **)**|Nombre del elemento que tiene una dependencia.|  
 |**type**|**nvarchar (16)**|Tipo del elemento.|  
-|**Actualice**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
+|**actualizado**|**nvarchar (7)**|Indica si el elemento está actualizado.|  
 |**seleccionadas**|**nvarchar (8)**|Indica si el elemento se utiliza en una instrucción SELECT.|  
-|**artículo**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
+|**column**|**sysname**|Columna o parámetro con el que existe la dependencia.|  
   
  El siguiente conjunto de resultados muestra los objetos que dependen de * \<>de objetos *.  
   

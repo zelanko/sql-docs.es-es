@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_droparticle
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 882c57c552d9666ec3ef308f63a6c5058c21e8e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768932"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830217"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ sp_droparticle [ @publication= ] 'publication'
   
  **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida y, si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para que la instantánea existente se marque como obsoleta y se genere una nueva instantánea.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al cambiar las propiedades [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de un artículo en un publicador.  
+>  no se debe usar el *publicador* al cambiar las propiedades de un artículo en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 `[ @from_drop_publication = ] from_drop_publication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

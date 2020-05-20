@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 417f2c7d63b129fda187068325702b9ff9768895
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053069"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831211"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,21 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return= ] *output_cursor_variable* GENERE  
+ [ @cursor_return =] *output_cursor_variable* salida  
  Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene valor predeterminado y no debe estar asociado a ningún cursor en el momento en que se llama a sp_describe_cursor. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
- [ @cursor_source= ] {N'local ' | N'global ' | N'variable' }  
+ [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
  Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
   
- [ @cursor_identity= ] N '*local_cursor_name*']  
+ [ @cursor_identity =] N '*local_cursor_name*']  
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL u obtuvo el valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*global_cursor_name*']  
+ [ @cursor_identity =] N '*global_cursor_name*']  
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL o cuyo valor predeterminado es GLOBAL. *global_cursor_name* es **nvarchar (128)**.  
   
  *global_cursor_name* también puede ser el nombre de un cursor de servidor de API abierto por una aplicación ODBC que, a continuación, llama llamando a SQLSetCursorName.  
   
- [ @cursor_identity= ] N '*input_cursor_variable*']  
+ [ @cursor_identity =] N '*input_cursor_variable*']  
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changedynamicsnapshot_job
 ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 67aeb7243b52ef4675b9effea27d3c81c1078538
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68768948"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829630"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -59,12 +59,12 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el agente. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -73,7 +73,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Los días en los que se ejecuta el agente. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -82,31 +82,31 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**203**|Día|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha en la que se ejecuta el Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
@@ -130,7 +130,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changedynamicsnapshot_job** se utiliza en la replicación de mezcla para publicaciones con filtros de fila con parámetros.  
   
  Después de cambiar un inicio de sesión o una contraseña de agente, debe detener y reiniciar el agente para que el cambio surta efecto.  

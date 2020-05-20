@@ -16,15 +16,15 @@ helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56dd563d63518c18db6448d2c86f21e6ad676144
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090875"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830859"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "68090875"
   
  Aunque el subproceso ya no esté en espera, no tiene que empezar a ejecutarse inmediatamente. Esto se debe a que un subproceso primero se pone en la cola de trabajadores ejecutables y debe esperar a que se ejecute un cuanto en el programador.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los contadores de tiempo de espera son valores **BIGINT** y, por tanto, no son tan propensos a la sustitución de contadores que los contadores equivalentes en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los contadores de tiempo de espera son valores **BIGINT** y, por tanto, no son tan propensos a la sustitución de contadores que los contadores equivalentes en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  En la tabla siguiente se muestran los tipos de espera encontrados por las tareas.  
   
@@ -256,8 +256,8 @@ ms.locfileid: "68090875"
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Se utiliza para esperar mientras los procesos del usuario finalizan en una base de datos que se ha pasado utilizando la cláusula de terminación ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produce cuando una tarea en segundo plano está esperando a que se termine la tarea en segundo plano que recibe (a través de sondeo) las notificaciones de Clústeres de conmutación por error de Windows Server.  Exclusivamente para uso interno.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Una operación de anexar, reemplazar o quitar está esperando para obtener un bloqueo de escritura en una lista interna de Always On (como una lista de redes, direcciones de red o agentes de escucha del grupo de disponibilidad).  Exclusivamente para uso interno.|  
+|PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Se produce cuando una tarea en segundo plano está esperando a que se termine la tarea en segundo plano que recibe (a través de sondeo) las notificaciones de Clústeres de conmutación por error de Windows Server.  Solo para uso interno.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Una operación de anexar, reemplazar o quitar está esperando para obtener un bloqueo de escritura en una lista interna de Always On (como una lista de redes, direcciones de red o agentes de escucha del grupo de disponibilidad).  Solo para uso interno.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Un Always On operación de eliminación de grupo de disponibilidad está esperando a que el grupo de disponibilidad de destino quede sin conexión antes de destruir los objetos de clústeres de conmutación por error de Windows Server.|  
 |PWAIT_HADR_ONLINE_COMPLETED|Un Always On operación de creación o conmutación por error del grupo de disponibilidad está esperando a que el grupo de disponibilidad de destino se ponga en línea.|  
 |PWAIT_HADR_POST_ONLINE_COMPLETED|Una operación de Always On Drop Availability Group está esperando la finalización de cualquier tarea en segundo plano programada como parte de un comando anterior. Por ejemplo, el puede haber una tarea en segundo plano que esté pasando las bases de datos de disponibilidad al rol principal. La DDL DROP AVAILABILITY GROUP siempre debe esperar a que esta tarea en segundo plano termine para evitar las condiciones de carrera.|  

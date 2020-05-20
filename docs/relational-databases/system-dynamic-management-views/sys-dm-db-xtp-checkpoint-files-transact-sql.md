@@ -17,22 +17,22 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_xtp_checkpoint_files dynamic management view
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3db08ac05d88bcea9f6b138ab08a48fd61a675fd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830851"
 ---
 # <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Muestra información sobre los archivos de puntos de comprobación, incluidos el tamaño de archivo, la ubicación física y el identificador de transacción.  
   
-> **Nota:** En el punto de control actual que no se ha cerrado, la columna`ys.dm_db_xtp_checkpoint_files` de estado de s estará en construcción para los nuevos archivos. Un punto de control se cierra automáticamente cuando hay suficiente crecimiento del registro de transacciones desde el último punto de control o `CHECKPOINT` si se emite el comando ([Checkpoint &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
+> **Nota:** En el punto de control actual que no se ha cerrado, la columna de estado de s estará `ys.dm_db_xtp_checkpoint_files` en construcción para los nuevos archivos. Un punto de control se cierra automáticamente cuando hay suficiente crecimiento del registro de transacciones desde el último punto de control o si se emite el `CHECKPOINT` comando ([Checkpoint &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)).  
   
  Un grupo de archivos optimizados para memoria usa internamente archivos de solo anexar para almacenar las filas insertadas y eliminadas para las tablas en memoria. Hay dos tipos de archivos: Un archivo de datos contiene filas insertadas mientras que un archivo Delta contiene referencias a las filas eliminadas. 
   
@@ -40,8 +40,8 @@ ms.locfileid: "68026911"
   
  Para obtener más información, vea [crear y administrar el almacenamiento de objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
-##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores  
- En la tabla siguiente se describen las `sys.dm_db_xtp_checkpoint_files`columnas de, **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** a partir de.  
+##  <a name="sssql15-and-later"></a><a name="bkmk_2016"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]y versiones posteriores  
+ En la tabla siguiente se describen las columnas de `sys.dm_db_xtp_checkpoint_files` , a partir de **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
@@ -67,7 +67,7 @@ ms.locfileid: "68026911"
 |encryption_status_desc|**nvarchar(60)**|0 => UNENCRTPTED<br /><br /> 1 => CIFRADO CON LA CLAVE 1<br /><br /> 2 => CIFRADO CON LA CLAVE 2. Válido solo para archivos activos.|  
   
 ##  <a name="sssql14"></a><a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- En **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** la tabla siguiente se describen las `sys.dm_db_xtp_checkpoint_files`columnas de para.  
+ En la tabla siguiente se describen las columnas de para `sys.dm_db_xtp_checkpoint_files` **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
 |Nombre de la columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  

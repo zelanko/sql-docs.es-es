@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 25d292ed7f45d921d2fc9eafbc1d2d5fe5912dbe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278184"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830237"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Especifica que el archivo de índice de texto completo asociado a la base de datos que se está desasociando no se quitará durante la operación de separación de la base de datos. *KeepFulltextIndexFile* es un valor de tipo **nvarchar (10)** y su valor predeterminado es **true**. Si *KeepFulltextIndexFile* es **false**, se quitan todos los archivos de índice de texto completo asociados a la base de datos y los metadatos del índice de texto completo, a menos que la base de datos sea de solo lectura. Si es NULL o **true**, se conservan los metadatos relacionados con el texto completo.  
   
 > [!IMPORTANT]
->  El ** \@parámetro keepfulltextindexfile** se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
+>  El parámetro ** \@ keepfulltextindexfile** se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -121,7 +121,7 @@ GO
  Requiere la pertenencia al rol fijo de servidor **sysadmin** o la pertenencia al rol **db_owner** de la base de datos.  
   
 ## <a name="examples"></a>Ejemplos  
- En el siguiente ejemplo se separa [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] la base de datos con *skipchecks* establecida en true.  
+ En el siguiente ejemplo se separa la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos con *skipchecks* establecida en true.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -136,7 +136,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  
   

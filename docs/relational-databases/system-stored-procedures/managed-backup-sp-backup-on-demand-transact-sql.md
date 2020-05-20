@@ -18,21 +18,21 @@ helpviewer_keywords:
 - smart_admin.sp_backup_on_demand
 - sp_backup_on_demand
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: e34cf20585ea7dcd3690d80ee415fc274bf852ca
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb2bda2d58504033469e8ed0f6455784efb113b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155403"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82830459"
 ---
 # <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup. sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Solicita [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] que realice una copia de seguridad de la base de datos especificada.  
   
- Utilice este procedimiento almacenado para realizar copias de seguridad ad hoc para una base de datos configurada con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esto evita cualquier interrupción en la cadena de copia [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de seguridad y los procesos son conscientes y la copia de seguridad se almacena en el mismo contenedor de almacenamiento de blobs de Azure.  
+ Utilice este procedimiento almacenado para realizar copias de seguridad ad hoc para una base de datos configurada con [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Esto evita cualquier interrupción en la cadena de copia de seguridad y los [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] procesos son conscientes y la copia de seguridad se almacena en el mismo contenedor de almacenamiento de blobs de Azure.  
   
  Tras finalizar correctamente la copia de seguridad, se devuelve la ruta de acceso al archivo de la copia de seguridad completa. Esto incluye el nombre y la ubicación del nuevo archivo de copia de seguridad resultante de la operación de copia de seguridad.  
   
@@ -50,7 +50,7 @@ EXEC managed_backup.sp_backup_on_demand
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @database_name  
- El nombre de la base de datos en la que se realiza la copia de seguridad. Es @database_name de **tipo SYSNAME**.  
+ El nombre de la base de datos en la que se realiza la copia de seguridad. @database_nameEs de **tipo SYSNAME**.  
   
  @type  
  Tipo de la copia de seguridad que se va a realizar: base de datos o registro. El @type parámetro es **nvarchar (32)**.  

@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2e3cfbea2f7ff9bb7cd976142db28acec3105fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68097705"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829419"
 ---
 # <a name="sysdm_exec_query_memory_grants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68097705"
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado. Además, se filtran los valores de las columnas **scheduler_id**, **wait_order**, **pool_id** **group_id** . el valor de la columna se establece en NULL.  
   
 > [!NOTE]  
-> Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_query_memory_grants**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ ms.locfileid: "68097705"
 |**max_used_memory_kb**|**bigint**|Memoria física máxima usada hasta este momento en kilobytes.|  
 |**query_cost**|**float**|Costo estimado de la consulta.|  
 |**timeout_sec**|**int**|Tiempo de espera en segundos antes de que esta consulta abandone la solicitud de concesión de memoria.|  
-|**resource_semaphore_id**|**smallint**|Identificador no único del semáforo de recursos al que está esperando esta consulta.<br /><br /> **Nota:** Este identificador es único en las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
+|**resource_semaphore_id**|**smallint**|Identificador no único del semáforo de recursos al que está esperando esta consulta.<br /><br /> **Nota:** Este identificador es único en las versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . Este cambio puede afectar a la solución de problemas de ejecución de consultas. Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**queue_id**|**smallint**|Id. de la cola de espera en la que esta consulta espera las concesiones de memoria. Es NULL si ya se ha concedido la memoria.|  
 |**wait_order**|**int**|Orden secuencial de las consultas en espera en el **queue_id** especificado. Este valor puede cambiar para una consulta determinada si otras consultas obtienen concesiones de memoria o agotan el tiempo de espera. Es NULL si ya se ha concedido la memoria.|  
 |**is_next_candidate**|**bit**|Candidata para la siguiente concesión de memoria.<br /><br /> 1 = Sí<br /><br /> 0 = No<br /><br /> NULL = Ya se ha concedido la memoria.|  
@@ -63,14 +63,14 @@ ms.locfileid: "68097705"
 |**pool_id**|**int**|Id. del grupo de recursos de servidor al que pertenece este grupo de cargas de trabajo.|  
 |**is_small**|**tinyint**|Cuando se establece en 1, indica que esta concesión utiliza el semáforo de recursos pequeño. Cuando se establece en 0, indica que se utiliza un semáforo normal.|  
 |**ideal_memory_kb**|**bigint**|Tamaño, en kilobytes (KB), de la concesión de memoria para ajustar todo en la memoria física. Está basado en la estimación de la cardinalidad.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  
   
 -   Compruebe el estado de la memoria del sistema global con [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) y diversos contadores de rendimiento.  
@@ -110,9 +110,9 @@ En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `V
   
 -   Si sospecha que hay una consulta descontrolada, examine el plan de presentación en [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) y el texto del lote en [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md).  
   
- Las consultas que utilizan vistas de administración dinámica `ORDER BY` que incluyen o agregados pueden aumentar el consumo de memoria y, por tanto, contribuir al problema que están solucionando.  
+ Las consultas que utilizan vistas de administración dinámica que incluyen `ORDER BY` o agregados pueden aumentar el consumo de memoria y, por tanto, contribuir al problema que están solucionando.  
   
- La característica del regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos de servidor, hasta un máximo de 64 fondos. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]de, cada grupo se comporta como una pequeña instancia de servidor independiente y requiere 2 semáforos. El número de filas que se devuelven desde **Sys. dm_exec_query_resource_semaphores** puede ser hasta 20 veces mayor que las filas devueltas [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]en.  
+ La característica del regulador de recursos permite que un administrador de bases de datos distribuya los recursos del servidor entre los grupos de recursos de servidor, hasta un máximo de 64 fondos. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , cada grupo se comporta como una pequeña instancia de servidor independiente y requiere 2 semáforos. El número de filas que se devuelven desde **Sys. dm_exec_query_resource_semaphores** puede ser hasta 20 veces mayor que las filas devueltas en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)     

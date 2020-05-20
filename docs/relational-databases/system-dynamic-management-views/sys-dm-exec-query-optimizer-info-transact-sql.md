@@ -17,40 +17,40 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_query_optimizer_info dynamic management view
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d15b171b20e81ea928528dc2124a0f33b697d2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68255352"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829409"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Devuelve información estadística detallada acerca de la operación del optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar esta vista al optimizar una carga de trabajo para identificar los problemas o las mejoras de la optimización de consultas. Por ejemplo, puede usar el número total de optimizaciones, el valor de tiempo transcurrido y el valor del costo final para comparar las optimizaciones de las consultas de la carga de trabajo actual y los cambios observados durante el proceso de optimización. Algunos contadores proporcionan datos que solo son relevantes para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el uso de diagnósticos internos. Estos contadores se marcan como "Solo para uso interno".  
+  Devuelve información estadística detallada acerca de la operación del optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede usar esta vista al optimizar una carga de trabajo para identificar los problemas o las mejoras de la optimización de consultas. Por ejemplo, puede usar el número total de optimizaciones, el valor de tiempo transcurrido y el valor del costo final para comparar las optimizaciones de las consultas de la carga de trabajo actual y los cambios observados durante el proceso de optimización. Algunos contadores proporcionan datos que solo son relevantes para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uso de diagnósticos internos. Estos contadores se marcan como "Solo para uso interno".  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_exec_query_optimizer_info**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nombre|Tipo de datos|Descripción|  
+|Name|Tipo de datos|Descripción|  
 |----------|---------------|-----------------|  
 |**bloque**|**nvarchar(4000)**|Nombre del evento de estadísticas del optimizador.|  
 |**occurrence**|**bigint**|Número de repeticiones del evento de optimización para este contador.|  
 |**value**|**float**|Valor promedio de la propiedad por repetición del evento.|  
-|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|**pdw_node_id**|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
     
-## <a name="remarks"></a>Observaciones  
- **Sys. dm_exec_query_optimizer_info** contiene las siguientes propiedades (contadores). Todos los valores de repetición son acumulativos y se establecen en 0 cuando se reinicia el sistema. Todos los valores de los campos de valor se establecen en NULL cuando se reinicia el sistema. Todos los valores de columnas de valor que especifican un promedio utilizan el valor de repetición de la misma fila que el denominador en el cálculo del promedio. Todas las optimizaciones de consultas se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] miden cuando determina los cambios en **dm_exec_query_optimizer_info**, incluidas las consultas generadas por el sistema y por el usuario. La ejecución de un plan ya almacenado en caché no cambia los valores de **dm_exec_query_optimizer_info**, solo las optimizaciones son significativas.  
+## <a name="remarks"></a>Comentarios  
+ **Sys. dm_exec_query_optimizer_info** contiene las siguientes propiedades (contadores). Todos los valores de repetición son acumulativos y se establecen en 0 cuando se reinicia el sistema. Todos los valores de los campos de valor se establecen en NULL cuando se reinicia el sistema. Todos los valores de columnas de valor que especifican un promedio utilizan el valor de repetición de la misma fila que el denominador en el cálculo del promedio. Todas las optimizaciones de consultas se miden cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina los cambios en **dm_exec_query_optimizer_info**, incluidas las consultas generadas por el sistema y por el usuario. La ejecución de un plan ya almacenado en caché no cambia los valores de **dm_exec_query_optimizer_info**, solo las optimizaciones son significativas.  
   
-|Contador|Repetición|Value|  
+|Contador|Repetición|Valor|  
 |-------------|----------------|-----------|  
 |optimizations|Número total de optimizaciones.|No aplicable|  
 |elapsed time|Número total de optimizaciones.|Tiempo promedio transcurrido por optimización de instrucción individual (consulta), en segundos.|  

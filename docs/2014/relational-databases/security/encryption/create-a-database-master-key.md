@@ -3,7 +3,6 @@ title: Creación de una clave maestra de base de datos | Microsoft Docs
 ms.custom: ''
 ms.date: 09/12/2019
 ms.prod: sql-server-2014
-ms.reviewer: carlrab
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,16 +11,17 @@ ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 author: jaszymas
 ms.author: jaszymas
 manager: craigg
-ms.openlocfilehash: 86f74710e99079d0acd28db09bcf1e4ba7c57865
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.reviewer: carlrab
+ms.openlocfilehash: cc0b3e0dccd1ecf674d583e4d1b7adc1a85341d2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957249"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82758891"
 ---
 # <a name="create-a-database-master-key"></a>Crear la clave maestra de una base de datos
 
-En este tema se describe cómo crear una clave maestra de base `master` de datos [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en la [!INCLUDE[tsql](../../../includes/tsql-md.md)]base de datos de mediante.
+En este tema se describe cómo crear una clave maestra de base de datos en la `master` base de datos de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] .
 
 **En este tema**
 

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9572bf6b50f359a5193dbe1b23034f1503afb1fc
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937841"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759461"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones de Batch pendientes en el disco.  
@@ -40,7 +40,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  Opcional. Valor **booleano** que especifica si se deben confirmar o no los cambios locales, como indica la propiedad de [Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md) . Si este valor se establece en **true**, la propiedad **status** de cada registro permanece sin cambios una vez completada la actualización.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use el método **UpdateBatch** al modificar un objeto de **conjunto de registros** en modo de actualización por lotes para transmitir todos los cambios realizados en un objeto de conjunto de **registros** a la base de datos subyacente.  
   
  Si el objeto de **conjunto de registros** admite la actualización por lotes, puede almacenar en caché varios cambios en uno o más registros localmente hasta que se llame al método **UpdateBatch** . Si está editando el registro actual o agregando un nuevo registro cuando se llama al método **UpdateBatch** , ADO llamará automáticamente al método [Update](../../../ado/reference/ado-api/update-method.md) para guardar los cambios pendientes en el registro actual antes de transmitir los cambios por lotes al proveedor. Debe usar la actualización por lotes solo con un cursor Keyset o static.  

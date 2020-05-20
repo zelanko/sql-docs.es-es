@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Schema section [ADO]
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8222b697fec7d0dd5bd1f32425cf48761f25308e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924290"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760901"
 ---
 # <a name="schema-section"></a>Sección de esquema
 La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO escribe metadatos detallados sobre cada columna para conservar la semántica de los valores de datos tanto como sea posible para la actualización. Sin embargo, para cargar en el XML, ADO solo requiere los nombres de las columnas y el conjunto de filas al que pertenecen. A continuación se muestra un ejemplo de un esquema mínimo:  
@@ -95,7 +95,7 @@ La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO e
 </rs:data>  
 ```  
   
- Del mismo modo, dado que no hay ningún `CompanyName` alias definido para en el `CompanyName` ejemplo anterior, se debe usar de forma coherente en todo el documento.  
+ Del mismo modo, dado que no hay ningún alias definido para `CompanyName` en el ejemplo anterior, `CompanyName` se debe usar de forma coherente en todo el documento.  
   
 ## <a name="data-types"></a>Tipo de datos  
  Puede aplicar un tipo de datos a una columna con el atributo dt: Type. Para obtener la guía definitiva de tipos XML permitidos, vea la sección tipos de datos de la [especificación W3C XML-Data Specification](http://www.w3.org/TR/1998/NOTE-XML-data/). Puede especificar un tipo de datos de dos maneras: especifique el atributo dt: Type directamente en la propia definición de columna o utilice la construcción s:DataType como un elemento anidado de la definición de columna. Por ejemplo,  
@@ -152,13 +152,13 @@ La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO e
 </s:AttributeType>  
 ```  
   
- La definición permite `CompanyName` que sea NULL, pero `ShipperID` no puede contener un valor null. Si la sección de datos contiene la fila siguiente, el proveedor de persistencia establecería el estado de los datos `CompanyName` de la columna en la constante de estado OLE DB DBSTATUS_S_ISNULL:  
+ La definición permite `CompanyName` que sea NULL, pero `ShipperID` no puede contener un valor null. Si la sección de datos contiene la fila siguiente, el proveedor de persistencia establecería el estado de los datos de la `CompanyName` columna en la constante de estado OLE DB DBSTATUS_S_ISNULL:  
   
 ```  
 <z:row ShipperID="1"/>  
 ```  
   
- Si la fila estaba completamente vacía, como se indica a continuación, el proveedor de persistencia devolvería un `ShipperID` estado OLE DB de DBSTATUS_E_UNAVAILABLE para y DBSTATUS_S_ISNULL para CompanyName.  
+ Si la fila estaba completamente vacía, como se indica a continuación, el proveedor de persistencia devolvería un estado OLE DB de DBSTATUS_E_UNAVAILABLE para `ShipperID` y DBSTATUS_S_ISNULL para CompanyName.  
   
 ```  
 <z:row/>   
@@ -170,7 +170,7 @@ La sección Schema es obligatoria. Como se muestra en el ejemplo anterior, ADO e
 <z:row ShipperID="1" CompanyName=""/>  
 ```  
   
- En el caso de la fila anterior, el proveedor de persistencia devolverá un OLE DB estado de DBSTATUS_S_OK para ambas columnas. `CompanyName` En este caso, es simplemente "" (una cadena de longitud cero).  
+ En el caso de la fila anterior, el proveedor de persistencia devolverá un OLE DB estado de DBSTATUS_S_OK para ambas columnas. `CompanyName`En este caso, es simplemente "" (una cadena de longitud cero).  
   
  Para obtener más información sobre las construcciones de OLE DB disponibles para su uso en el esquema de un documento XML para OLE DB, vea la definición de "urn: schemas-microsoft-com: Rowset" y la guía del programador de OLE DB.  
   

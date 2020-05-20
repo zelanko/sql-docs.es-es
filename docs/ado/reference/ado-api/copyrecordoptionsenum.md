@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CopyRecordOptionsEnum enumeration [ADO]
 ms.assetid: 2fa4eec5-d50b-4fd3-8ae7-40af441ba12b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6692125b7323bedc7a416e51555c373ef850ce0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8dc32a3cfad89e479b2541819b7ff6ad1bb1a4ed
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919374"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760261"
 ---
 # <a name="copyrecordoptionsenum"></a>CopyRecordOptionsEnum
 Especifica el comportamiento del método [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) .  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCopyAllowEmulation**|4|Indica que el proveedor de *origen* intenta simular la copia mediante operaciones de descarga y carga si se produce un error en este método debido a que el *destino*se encuentra en un servidor diferente o se presta servicio a través de un proveedor diferente del *origen*. Tenga en cuenta que las diferentes capacidades del proveedor pueden entorpecer el rendimiento o perder datos.|  
 |**adCopyNonRecursive**|2|Copia el directorio actual, pero ninguno de sus subdirectorios, al destino. La operación de copia no es recursiva.|  

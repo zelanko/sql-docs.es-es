@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2110384afa66e74e17d4e3c9a8600b5825cc412e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924064"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760791"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Paso 4: Relleno del cuadro de texto de detalles
 Para rellenar el cuadro de texto detalles, cree una nueva subrutina denominada **recFields** e inserte el código siguiente:  
@@ -44,7 +44,7 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Este código se rellena `lstDetails` con los campos y valores del registro simple que se pasa `recFields`a. Si el recurso es un archivo de texto, se abre una secuencia de texto desde el registro de recursos. El código determina si el juego de caracteres es ASCII y copia el contenido de `txtDetails`la secuencia en.  
+ Este código se rellena `lstDetails` con los campos y valores del registro simple que se pasa a `recFields` . Si el recurso es un archivo de texto, se abre una secuencia de texto desde el registro de recursos. El código determina si el juego de caracteres es ASCII y copia el contenido de la secuencia en `txtDetails` .  
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

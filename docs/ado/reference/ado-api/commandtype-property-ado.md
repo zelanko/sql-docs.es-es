@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - CommandType property [ADO]
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0cd6d06a50047f431700af9418a504faa4bd6957
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: bbc90dc2d818ca880a9f712d551fd6a98fb9ecf3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919692"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760431"
 ---
 # <a name="commandtype-property-ado"></a>Propiedad CommandType (ADO)
 Indica el tipo de un objeto de [comando](../../../ado/reference/ado-api/command-object-ado.md) .  
@@ -31,7 +31,7 @@ Indica el tipo de un objeto de [comando](../../../ado/reference/ado-api/command-
 > [!NOTE]
 >  No use los valores **CommandTypeEnum** de **adCmdFile** o **adCmdTableDirect** con **CommandType**. Estos valores solo se pueden usar como opciones con los métodos [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) y [Requery](../../../ado/reference/ado-api/requery-method.md) de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **CommandType** para optimizar la evaluación de la propiedad [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) .  
   
  Si el valor de la propiedad **CommandType** se establece en el valor predeterminado, **adCmdUnknown**, puede experimentar un rendimiento reducido porque ADO debe realizar llamadas al proveedor para determinar si la propiedad **CommandText** es una instrucción SQL, un procedimiento almacenado o un nombre de tabla. Si sabe qué tipo de comando está usando, el establecimiento de la propiedad **CommandType** indica a ADO que vaya directamente al código relevante. Si la propiedad **CommandType** no coincide con el tipo de comando de la propiedad **CommandText** , se produce un error al llamar al método [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) .  

@@ -14,14 +14,14 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 2fce89dd6df633f8cdcf78271c63336b3ecc7b05
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924547"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761001"
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error en tiempo de ejecución de-2147467259. Cuando reciba este error, Compruebe la colección de **errores** del objeto de **conexión** activo, que contendrá uno o más errores que describan lo que ha ocurrido.  
@@ -64,12 +64,12 @@ End Function
 ## <a name="the-error-object"></a>El objeto de error  
  Al examinar un objeto de **error** , puede determinar qué error se produjo y más importante, qué aplicación o qué objeto provocó el error. El objeto de **error** tiene las siguientes propiedades:  
   
-|Nombre de la propiedad|Descripción|  
+|Nombre de propiedad|Descripción|  
 |-------------------|-----------------|  
 |**Descripción**|Descripción de texto del error que se ha producido.|  
 |**HelpContext, HelpFile**|Hace referencia al tema de ayuda y al archivo de ayuda que contiene una descripción del error que se ha producido.|  
 |**NativeError**|El número de error específico del proveedor.|  
-|**número**|Entero largo que representa el número (incluido en **ErrorValueEnum**) del error que se ha producido.|  
+|**Number**|Entero largo que representa el número (incluido en **ErrorValueEnum**) del error que se ha producido.|  
 |**Origen**|Indica el nombre del objeto o la aplicación que ha generado un error.|  
 |**SQLState**|Un código de error de cinco caracteres que el proveedor devuelve durante el proceso de una instrucción SQL.|  
   

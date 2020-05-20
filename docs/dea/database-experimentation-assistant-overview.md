@@ -1,10 +1,8 @@
 ---
 title: Información general sobre el Asistente para experimentación con bases de datos
 description: Información general del Asistente para experimentación con bases de datos.
-ms.custom: seo-lt-2019
 ms.date: 12/12/2019
 ms.prod: sql
-ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ''
@@ -12,12 +10,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
-ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.custom: seo-lt-2019
+ms.openlocfilehash: dce2bfcafeb95a72e6584e4b619f1e4e5e12bdf1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247123"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759161"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Información general del Asistente para experimentación con bases de datos.
 
@@ -94,7 +93,7 @@ Para obtener más información, consulte preguntas más frecuentes [sobre los in
 
 ## <a name="set-up-telemetry"></a>Configuración de la telemetría
 
-DEA tiene una característica habilitada para Internet que puede enviar información de telemetría a Microsoft para su uso en la mejora de la experiencia del producto. La información recopilada también se guarda en el equipo para la auditoría local, por lo que siempre puede ver lo que se ha recopilado. Todos los archivos de registro de DEA se guardan en\\la carpeta% Temp% DEA.
+DEA tiene una característica habilitada para Internet que puede enviar información de telemetría a Microsoft para su uso en la mejora de la experiencia del producto. La información recopilada también se guarda en el equipo para la auditoría local, por lo que siempre puede ver lo que se ha recopilado. Todos los archivos de registro de DEA se guardan en la carpeta% Temp% \\ DEA.
 
 Los datos de telemetría se pueden recopilar en cuatro tipos de eventos:
 
@@ -105,7 +104,7 @@ Los datos de telemetría se pueden recopilar en cuatro tipos de eventos:
 
 Recopilar y enviar datos de telemetría es opcional. Para especificar los eventos que se recopilan y si los eventos recopilados se envían a Microsoft, siga estos pasos:
 
-1. Vaya a la ubicación en la que se ha instalado DEA (por ejemplo,\\C: archivos de programa\\(x86\\) Microsoft Corporation Asistente para experimentación con bases de datos).
+1. Vaya a la ubicación en la que se ha instalado DEA (por ejemplo, C: \\ archivos de programa (x86) \\ Microsoft Corporation \\ Asistente para experimentación con bases de datos).
 2. Abra y modifique los archivos. config **DEA. exe. config** (para la aplicación) y **DEACmd. exe. config** (para la CLI) para resolver el escenario según corresponda:
     - Para dejar de recopilar un tipo de evento, establezca el valor de *evento* (por ejemplo, **TraceEvent**) en **false**. Para empezar a recopilar el evento de nuevo, establezca el valor en **true**.
     - Para dejar de guardar las copias locales de los eventos, establezca el valor de **TraceLoggerEnabled** en **false**. Para volver a guardar las copias locales, establezca el valor en **true**.
@@ -113,6 +112,6 @@ Recopilar y enviar datos de telemetría es opcional. Para especificar los evento
 
 DEA se rige por la [declaración de privacidad de Microsoft](https://aka.ms/dea-privacy).
 
-## <a name="see-also"></a>Vea también
+## <a name="see-also"></a>Consulte también
 
 - El artículo [información general sobre el proceso de comparación de cargas de trabajo](database-experimentation-assistant-get-started.md), que explica el proceso implicado en la comparación de cargas de trabajo en dos entornos.

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - Command object [ADO]
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6f6b2e68947959ecd497645d2290bb7acaa03f86
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919796"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760419"
 ---
 # <a name="command-object-ado"></a>Objeto Command (ADO)
 Define un comando específico que se va a ejecutar en un origen de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use un objeto de **comando** para consultar una base de datos y devolver registros en un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) , para ejecutar una operación masiva o para manipular la estructura de una base de datos. Dependiendo de la funcionalidad del proveedor, algunas colecciones de **comandos** , métodos o propiedades pueden generar un error cuando se hace referencia a ellos.  
   
  Con las colecciones, los métodos y las propiedades de un objeto de **comando** , puede hacer lo siguiente:  

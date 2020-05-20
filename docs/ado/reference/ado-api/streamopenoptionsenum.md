@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - StreamOpenOptionsEnum enumeration [ADO]
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 1d61b11ee6fedd4229433570f6b159cccf658853
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928688"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759591"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 Especifica las opciones para abrir un objeto de [flujo](../../../ado/reference/ado-api/stream-object-ado.md) . Los valores se pueden combinar con una operación o.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|Abre el objeto de **secuencia** en modo asincrónico.|  
 |**adOpenStreamFromRecord**|4|Identifica el contenido del parámetro de *origen* para que sea un objeto de [registro](../../../ado/reference/ado-api/record-object-ado.md) ya abierto. El comportamiento predeterminado es tratar el *origen* como una dirección URL que apunta directamente a un nodo en una estructura de árbol. Se abre el flujo predeterminado asociado a ese nodo.|  

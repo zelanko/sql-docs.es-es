@@ -11,14 +11,14 @@ helpviewer_keywords:
 - persisted streams [ADO]
 - streams [ADO], persistence
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3e7c47c668bc2b64a511e316396da913d5dcb930
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924026"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760761"
 ---
 # <a name="streams-and-persistence"></a>Secuencias y persistencia
 El método [Save](../../../ado/reference/ado-api/save-method.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) almacena o *conserva*un **conjunto de registros** en un archivo y el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) restaura el **conjunto de registros** a partir de ese archivo.  

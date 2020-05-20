@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Connection object [ADO], members
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: bd6c95c7c761e2aadf9d42befcd4e2f740877196
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: eebe25e0950bcec0699160754c7be0b84e6b55e1
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919512"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760291"
 ---
 # <a name="connection-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Connection
 ## <a name="propertiescollections"></a>Propiedades/colecciones  
@@ -60,7 +60,7 @@ ms.locfileid: "67919512"
   
  [Método OpenSchema](../../../ado/reference/ado-api/openschema-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  [Eventos BeginTransComplete, CommitTransComplete y RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
  [Eventos ConnectComplete y Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  

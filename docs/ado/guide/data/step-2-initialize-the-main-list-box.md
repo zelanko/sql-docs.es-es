@@ -8,14 +8,14 @@ ms.date: 01/19/2017
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8ad89d806f8a6774cb0fe2de056e30fd274a517c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: c6aaf4d87e4e01e6f32e1d681d93e5a2291c3999
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924084"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760821"
 ---
 # <a name="step-2-initialize-the-main-list-box"></a>Paso 2: Inicialización del cuadro de lista principal
 Para declarar los objetos de registro global y de conjunto de registros, inserte el código siguiente en (general) (declaraciones) para Form1:  
@@ -45,9 +45,9 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- Este código crea instancias del registro global y de los objetos de conjunto de registros. El objeto de registro `grec`,, se abre con una dirección URL especificada como ActiveConnection. Si la dirección URL existe, se abre; Si aún no existe, se crea. Tenga en cuenta que debe reemplazar<https://servername/foldername/>"" por una dirección URL válida de su entorno.  
+ Este código crea instancias del registro global y de los objetos de conjunto de registros. El objeto de registro, `grec` , se abre con una dirección URL especificada como ActiveConnection. Si la dirección URL existe, se abre; Si aún no existe, se crea. Tenga en cuenta que debe reemplazar " <https://servername/foldername/> " por una dirección URL válida de su entorno.  
   
- El objeto de conjunto `grs`de registros,, se abre en los elementos secundarios `grec`del registro,. A `lstMain` continuación, se rellena con los nombres de archivo de los recursos publicados en la dirección URL.  
+ El objeto de conjunto de registros, `grs` , se abre en los elementos secundarios del registro, `grec` . A continuación, `lstMain` se rellena con los nombres de archivo de los recursos publicados en la dirección URL.  
   
 ## <a name="see-also"></a>Consulte también  
  [Escenario de publicación en Internet](../../../ado/guide/data/internet-publishing-scenario.md)   

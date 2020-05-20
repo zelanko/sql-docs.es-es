@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - class wrappers [ADO]
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 70486a27cfbe5c977d371906da89563059685093
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 485c53645387e5dafbe562442ec12503df0a6737
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67927007"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760561"
 ---
 # <a name="ado-java-class-wrappers"></a>Contenedores de clase Java de ADO
 Este código declara una instancia del contenedor de clase de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) de ADO y lo inicializa, todo en la misma línea de código. Además, declara variables para cada uno de los argumentos en el método [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) , especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) y [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque Java no admite tipos enumerados). Se abre y se cierra el objeto de **conjunto de registros** . Establecer RS1 en NULL simplemente programa esa variable para que se libere cuando Java realiza su liberación sistemática y intermitente de objetos no utilizados.  

@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - AddNew method [ADO]
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: a6359d1b9f69963120e9446c47aa5473beedd127
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921326"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760731"
 ---
 # <a name="addnew-method-ado"></a>AddNew (método) (ADO)
 Crea un nuevo registro para un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) actualizable.  
@@ -43,7 +43,7 @@ recordset.AddNew FieldList, Values
  *Valores*  
  Opcional. Un valor único, o una matriz de valores para los campos del nuevo registro. Si *FieldList* es una matriz, *los valores* también deben ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo de cada matriz.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use el método **AddNew** para crear e inicializar un nuevo registro. Use el método [Supports](../../../ado/reference/ado-api/supports-method.md) con **adAddNew** (un valor [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) ) para comprobar si puede agregar registros al objeto de **conjunto de registros** actual.  
   
  Después de llamar al método **AddNew** , el nuevo registro se convierte en el registro actual y permanece actual después de llamar al método [Update](../../../ado/reference/ado-api/update-method.md) . Dado que el nuevo registro se anexa al **conjunto de registros**, una llamada a **MoveNext** después de la actualización se moverá más allá del final del **conjunto de registros**, haciendo que **EOF** sea true. Si el objeto de **conjunto de registros** no admite marcadores, es posible que no pueda obtener acceso al nuevo registro una vez que se haya movido a otro registro. Dependiendo del tipo de cursor, puede que tenga que llamar al método [Requery](../../../ado/reference/ado-api/requery-method.md) para que el nuevo registro sea accesible.  

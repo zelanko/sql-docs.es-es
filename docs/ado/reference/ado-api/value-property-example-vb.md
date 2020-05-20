@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Value property [ADO], Visual Basic example
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ef7f31068c6ced2aab693756987ebccc1feaedca
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938780"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759441"
 ---
 # <a name="value-property-example-vb"></a>Ejemplo de la propiedad de valor (VB)
 En este ejemplo se muestra la propiedad [Value](../../../ado/reference/ado-api/value-property-ado.md) con objetos [Field](../../../ado/reference/ado-api/field-object.md) y [Property](../../../ado/reference/ado-api/property-object-ado.md) al mostrar los valores de campo y propiedad de la tabla ***Employees*** .  

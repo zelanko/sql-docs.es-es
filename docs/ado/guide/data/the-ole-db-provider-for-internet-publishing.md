@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Internet publishing [ADO]
 - providers [ADO], OLE DB provider for Internet publishing
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 813b7e108f375fdbd22ba10761678907aea912f6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67923904"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759061"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
 Los objetos de [secuencia](../../../ado/reference/ado-api/stream-object-ado.md) y [registro](../../../ado/reference/ado-api/record-object-ado.md) de ADO se pueden usar con el proveedor de Microsoft OLE DB para la publicación en Internet (proveedor de publicación en Internet) para obtener acceso y manipular recursos, como carpetas web o archivos servidos por Microsoft FrontPage. Con ADO, puede especificar que el origen de un **registro**, **secuencia**o [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Después, puede cargar, descargar, trasladar, copiar y eliminar recursos, o manipular directamente las propiedades de los recursos.  

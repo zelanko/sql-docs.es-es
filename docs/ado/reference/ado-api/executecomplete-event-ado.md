@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ExecuteComplete event [ADO]
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: ae8b426a0e4b95498cb0d4f9a4590c3aaf30196d
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67918781"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760141"
 ---
 # <a name="executecomplete-event-ado"></a>Evento ExecuteComplete (ADO)
 Se llama al evento **ExecuteComplete** una vez finalizada la ejecución de un comando.  
@@ -54,7 +54,7 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
  *pConnection*  
  Objeto de [conexión](../../../ado/reference/ado-api/connection-object-ado.md) . La conexión en la que se ejecutó la operación.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede producirse un evento **ExecuteComplete** debido a la **conexión.** [Ejecutar](../../../ado/reference/ado-api/execute-method-ado-connection.md), **comando.** [Ejecutar](../../../ado/reference/ado-api/execute-method-ado-command.md), **conjunto de registros.** [Abra](../../../ado/reference/ado-api/open-method-ado-recordset.md), **conjunto de registros.** [Requery](../../../ado/reference/ado-api/requery-method.md)o **Recordset.** Métodos [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md) .  
   
 ## <a name="see-also"></a>Consulte también  

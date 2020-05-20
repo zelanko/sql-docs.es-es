@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Clustered property [ADOX], VC++ example
 ms.assetid: b993e357-3e2e-48a7-a627-76909160c97f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: ac845019bf2f8a8582f20adb5d4f8861f622fe44
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8039f07bfdb750a5ed3632d2f7c28b51a02b8ec9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76925494"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759391"
 ---
 # <a name="clustered-property-example-vc"></a>Ejemplo de propiedad Clustered (VC++)
 En este ejemplo se muestra la propiedad [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) de un [Índice](../../../ado/reference/adox-api/index-object-adox.md). Tenga en cuenta que las bases de datos de Microsoft Jet no admiten índices clúster, por lo que en este ejemplo se devolverá **false** para la propiedad **Clustered** de todos los índices de la base de datos *Northwind* .  

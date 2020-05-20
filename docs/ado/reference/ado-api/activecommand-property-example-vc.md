@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - ActiveCommand property [ADO], VC++ example
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e8d189646cc421eb05d9f49d2da08dfe39d9cb34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: f0f0b39b26fb349222a3ad04cd1414d9cf3ddafe
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921632"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760771"
 ---
 # <a name="activecommand-property-example-vc"></a>Ejemplo de la propiedad ActiveCommand (VC ++)
 En este ejemplo se muestra la propiedad [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) .  

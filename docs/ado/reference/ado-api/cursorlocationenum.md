@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - CursorLocationEnum enumeration [ADO]
 ms.assetid: acb255ff-1734-4b70-89bb-aef862b4c63b
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: b3af18120af91fe06da48c2e3636bf8a7c572161
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 278f69e504ed4af7589b7e2be2c281e5de5957fa
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919290"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760181"
 ---
 # <a name="cursorlocationenum"></a>CursorLocationEnum
 Especifica la ubicación del servicio de cursor.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adUseClient**|3|Utiliza cursores del lado cliente proporcionados por una biblioteca de cursores local. Los servicios de cursor local a menudo permiten muchas características que los cursores proporcionados por el controlador pueden no, por lo que el uso de esta configuración puede proporcionar una ventaja con respecto a las características que se habilitarán. Por compatibilidad con versiones anteriores, también se admite el sinónimo **adUseClientBatch** .|  
 |**adUseNone**|1|No utiliza los servicios de cursor. (Esta constante está obsoleta y aparece únicamente por razones de compatibilidad con versiones anteriores).|  

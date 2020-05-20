@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3836d577ab9230e425f42a52b53ed82d3354d72a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925804"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761185"
 ---
 # <a name="comments-on-hellodata"></a>Comentarios en HelloData
 La aplicación HelloData guía a través de las operaciones básicas de una aplicación ADO típica: obtener, examinar, editar y actualizar datos. Cuando inicie la aplicación, haga clic en el primer botón, **obtener datos**. Se ejecutará la subrutina **GetData** .  
@@ -27,9 +27,9 @@ La aplicación HelloData guía a través de las operaciones básicas de una apli
   
  Asigne un controlador de errores mediante una instrucción Visual Basic **OnError** . Para obtener más información sobre el control de errores en ADO, vea [control de errores](../../../ado/guide/data/error-handling.md). Se crea un nuevo objeto de **conexión** y la propiedad **CursorLocation** está establecida en **AdUseClient** porque el ejemplo de HelloData crea un *conjunto de registros desconectado*. Esto significa que, tan pronto como se hayan recuperado los datos del origen de datos, se interrumpirá la conexión física con el origen de datos, pero puede seguir trabajando con los datos almacenados en caché localmente en el objeto de **conjunto de registros** .  
   
- Una vez abierta la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo objeto `m_oRecordset1`de conjunto de **registros** ,. En la siguiente línea de código, abra el **conjunto de registros** a **Connection**través de la conexión `sSQL` existente, pasando como el origen del **conjunto de registros**. Ayuda a ADO a tomar la decisión de que la cadena de SQL que ha pasado como origen del **conjunto de registros** es una definición textual de un comando pasando **adCmdText** en el argumento final al método Open de **conjunto de registros** . Esta línea también establece el **LockType** y **CursorType** asociados al **conjunto de registros**.  
+ Una vez abierta la conexión, asigne una cadena SQL a una variable (sSQL). A continuación, cree una instancia de un nuevo objeto de **conjunto de registros** , `m_oRecordset1` . En la siguiente línea de código, abra el **conjunto de registros** a través de la **conexión**existente, pasando `sSQL` como el origen del **conjunto de registros**. Ayuda a ADO a tomar la decisión de que la cadena de SQL que ha pasado como origen del **conjunto de registros** es una definición textual de un comando pasando **adCmdText** en el argumento final al método Open de **conjunto de registros** . Esta línea también establece el **LockType** y **CursorType** asociados al **conjunto de registros**.  
   
- La siguiente línea de código establece el valor de la propiedad **MarshalOptions** en **adMarshalModifiedOnly**. **MarshalOptions** indica qué registros deben calcularse en el nivel intermedio (o servidor Web). Para obtener más información sobre el cálculo de referencias, vea la documentación de COM. Cuando se usa **adMarshalModifiedOnly** con un cursor del lado cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) = **adUseClient**), solo los registros que se han modificado en el cliente se escriben de nuevo en el nivel intermedio. Establecer **MarshalOptions** en **adMarshalModifiedOnly** puede mejorar el rendimiento porque se calculan las referencias de menos filas.  
+ La siguiente línea de código establece el valor de la propiedad **MarshalOptions** en **adMarshalModifiedOnly**. **MarshalOptions** indica qué registros deben calcularse en el nivel intermedio (o servidor Web). Para obtener más información sobre el cálculo de referencias, vea la documentación de COM. Cuando se usa **adMarshalModifiedOnly** con un cursor del lado cliente ([CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  =  **adUseClient**), solo los registros que se han modificado en el cliente se escriben de nuevo en el nivel intermedio. Establecer **MarshalOptions** en **adMarshalModifiedOnly** puede mejorar el rendimiento porque se calculan las referencias de menos filas.  
   
  A continuación, desconecte el **conjunto de registros** estableciendo su propiedad **ActiveConnection** en **Nothing**. Para obtener más información, vea la sección "desconectar y volver a conectar el conjunto de registros" en [actualización y persistencia de datos](../../../ado/guide/data/updating-and-persisting-data.md).  
   
@@ -58,7 +58,7 @@ La aplicación HelloData guía a través de las operaciones básicas de una apli
  Los cambios no se realizarán en el origen de datos hasta que haga clic en el cuarto botón, **actualizar datos**. Se ejecutará la subrutina **UpdateData** .  
   
 ## <a name="updatedata"></a>UpdateData  
- En primer lugar, UpdateData quita el filtro que se ha aplicado al **conjunto de registros**. El código quita y restablece `m_oRecordset1` como el **origen** de los elementos DataGrid de Microsoft en el formulario para que el conjunto de **registros** sin filtrar aparezca en la cuadrícula.  
+ En primer lugar, UpdateData quita el filtro que se ha aplicado al **conjunto de registros**. El código quita y restablece `m_oRecordset1` como el **origen** de los elementos DataGrid de Microsoft en el formulario para que el **conjunto de registros** sin filtrar aparezca en la cuadrícula.  
   
  A continuación, el código comprueba para ver si puede moverse hacia atrás en el **conjunto de registros** mediante el método **Supports** con el argumento **adMovePrevious** .  
   
@@ -66,7 +66,7 @@ La aplicación HelloData guía a través de las operaciones básicas de una apli
   
  A continuación, se crea un nuevo objeto de **conexión** y se utiliza para restablecer una conexión con el origen de datos. Para volver a conectar el **conjunto de registros** al origen de datos, establezca la nueva **conexión** como el objeto **ActiveConnection** del **conjunto de registros**. Para enviar las actualizaciones al servidor, el código llama a **UpdateBatch** en el **conjunto de registros**.  
   
- Si la actualización por lotes se realiza correctamente, una variable de marcador de `m_flgPriceUpdated`nivel de módulo,, se establece en true. Esto le avisará más adelante para limpiar todos los cambios que se realizaron en la base de datos.  
+ Si la actualización por lotes se realiza correctamente, una variable de marcador de nivel de módulo, `m_flgPriceUpdated` , se establece en true. Esto le avisará más adelante para limpiar todos los cambios que se realizaron en la base de datos.  
   
  Por último, el código vuelve al primer registro del conjunto de **registros** y muestra los valores originales y actuales. Los valores son los mismos después de la llamada a **UpdateBatch**.  
   

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - Stream property
 ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: cdcd6d9fb734f50c110a3e59e9d24874ea71b974
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67916699"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759603"
 ---
 # <a name="stream-property"></a>Propiedad de la secuencia
 Obtiene o establece un objeto de **flujo** de OLE DB de/en un objeto **ADOStreamConstruction** .  

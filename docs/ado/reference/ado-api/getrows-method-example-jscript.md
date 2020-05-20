@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Getrows method [ADO], JScript example
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 8ba091ff7db668cc049c50eeb26492a2c9ee3422
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67932483"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760031"
 ---
 # <a name="getrows-method-example-jscript"></a>Ejemplo del método GetRows (JScript)
 En este ejemplo se usa el método [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) para recuperar todas las filas de la tabla *custiomers* de un [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El método **GetRows** devolverá menos que el número deseado de filas en dos casos: si se ha alcanzado [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) o si **GetRows** ha intentado recuperar un registro eliminado por otro usuario. La función devuelve **false** solo si se produce el segundo caso. Corte y pegue el código siguiente en el Bloc de notas o en otro editor de texto y guárdelo como **GetRowsJS. asp**.  

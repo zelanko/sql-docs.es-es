@@ -12,14 +12,14 @@ helpviewer_keywords:
 - compute clause [ADO]
 - data shaping [ADO], COMPUTE clause
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 44ccd2c978cb0356a2fcab75daa860db0f4f77f5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924142"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760851"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE Shape genera un conjunto de **registros**primario cuyas columnas constan de una referencia al **conjunto de registros**secundario; columnas opcionales cuyo contenido es el capítulo, el nuevo o las columnas calculadas, o el resultado de la ejecución de funciones de agregado en el **conjunto de registros** secundario o en un **conjunto de registros**con forma anterior; y cualquier columna del conjunto de **registros** secundario incluido en la cláusula opcional by.  
@@ -38,7 +38,7 @@ SHAPE child-command [AS] child-alias
  *comando secundario*  
  Consta de uno de los siguientes elementos:  
   
--   Un comando de consulta entre llaves ("{}") que devuelve un objeto secundario de conjunto de **registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
+-   Un comando de consulta entre llaves (" {} ") que devuelve un objeto secundario de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
 -   Nombre de un **conjunto de registros**con forma existente.  
   
@@ -94,7 +94,7 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
            objConnection  
 ```  
   
- Este comando abre un **conjunto de registros** con forma con dos niveles. El nivel primario es un **conjunto de registros** generado con una columna de`SUM(rs.population)`agregado (), una columna que hace referencia`rs`al conjunto de **registros** secundario () y una columna para agrupar el conjunto de **registros** secundario (`state`). El nivel secundario es el **conjunto de registros** devuelto por el`select * from demographics`comando de consulta ().  
+ Este comando abre un **conjunto de registros** con forma con dos niveles. El nivel primario es un **conjunto de registros** generado con una columna de agregado ( `SUM(rs.population)` ), una columna que hace referencia al **conjunto de registros** secundario ( `rs` ) y una columna para agrupar el **conjunto de registros** secundario ( `state` ). El nivel secundario es el **conjunto de registros** devuelto por el comando de consulta ( `select * from demographics` ).  
   
  Las filas de detalle del **conjunto de registros** secundario se agruparán por estado, pero de lo contrario no en ningún orden determinado. Es decir, los grupos no estarán en orden alfabético o numérico. Si desea que se ordene el **conjunto de registros** primario, puede utilizar el método de **ordenación del conjunto** de registros para ordenar el conjunto de **registros**primario.  
   

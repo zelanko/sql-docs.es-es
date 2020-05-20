@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - ChangePassword method [ADOX]
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 5b5ebf8304e4826d04d971e91606f8e9b0f4ead9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67967038"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759431"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword (método, ADOX)
 Cambia la contraseña de una cuenta de [usuario](../../../ado/reference/adox-api/user-object-adox.md) .  
@@ -40,7 +40,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  Valor de **cadena** que especifica la nueva contraseña.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Por motivos de seguridad, se debe especificar la contraseña anterior además de la nueva contraseña.  
   
  Se producirá un error si el proveedor no admite la administración de las propiedades de confianza.  

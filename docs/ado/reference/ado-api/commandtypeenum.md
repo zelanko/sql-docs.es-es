@@ -13,21 +13,21 @@ f1_keywords:
 helpviewer_keywords:
 - CommandTypeEnum enumeration [ADO]
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 5a2de155d9c4a61246245b2c7f9c3c73a535994a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 68572a642333e4e9c2c334cd7680b96b0cacced3
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67919684"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760381"
 ---
 # <a name="commandtypeenum"></a>CommandTypeEnum
 Especifica cómo debe interpretarse un argumento de comando.  
   
  Es importante validar los valores de *CommandString* proporcionados por el usuario para evitar que los usuarios de la aplicación tengan la oportunidad de insertar comandos potencialmente peligrosos para que ADO los ejecute.  
   
-|Constante|Value|Descripción|  
+|Constante|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**adCmdUnspecified**|-1|No especifica el argumento de tipo de comando.|  
 |**adCmdText**|1|Evalúa [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) como una definición textual de un comando o una llamada a un procedimiento almacenado.|  

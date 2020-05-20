@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - ActualSize property [ADO]
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: fd8288fa9f39593cb1f5fb91818925d36d731b9f
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67921427"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760692"
 ---
 # <a name="actualsize-property-ado"></a>Propiedad ActualSize (ADO)
 Indica la longitud real del valor de un campo en bytes.  
@@ -28,7 +28,7 @@ Indica la longitud real del valor de un campo en bytes.
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Devuelve un valor **Long** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use la propiedad **ActualSize** para devolver la longitud real del valor de un objeto de [campo](../../../ado/reference/ado-api/field-object.md) . En todos los campos, la propiedad **ActualSize** es de solo lectura. Si ADO no puede determinar la longitud del valor del objeto de **campo** , la propiedad **ActualSize** devuelve **adUnknown**.  
   
  Las propiedades **ActualSize** y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) son diferentes, tal como se muestra en el ejemplo siguiente. Un objeto de **campo** con un tipo declarado de **advarchar** y una longitud máxima de 50 caracteres devuelve el valor de la propiedad **DefinedSize** de 50, pero el valor de la propiedad **ActualSize** que devuelve es la longitud de los datos almacenados en el campo para el registro actual. **Los campos** con un **DefinedSize** mayor que 255 bytes se tratan como columnas de longitud variable.  

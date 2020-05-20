@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - CreateParameter method [RDS]
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 6cd78e3cbe992a3f2df5046a26eca990479cb3fd
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67933298"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760221"
 ---
 # <a name="createparameter-method-ado"></a>Método CreateParameter (ADO)
 Crea un nuevo objeto de [parámetro](../../../ado/reference/ado-api/parameter-object.md) con las propiedades especificadas.  
@@ -40,13 +40,13 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Nombre*  
  Opcional. Valor de **cadena** que contiene el nombre del objeto de **parámetro** .  
   
- *Type*  
+ *Tipo*  
  Opcional. Valor de [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) que especifica el tipo de datos del objeto de **parámetro** .  
   
  *Dirección*  
  Opcional. Valor [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) que especifica el tipo de objeto de **parámetro** .  
   
- *Tamaño*  
+ *Size*  
  Opcional. Valor de **tipo Long** que especifica la longitud máxima del valor del parámetro en caracteres o bytes.  
   
  *Valor*  

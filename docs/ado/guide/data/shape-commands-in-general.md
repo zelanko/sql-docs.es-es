@@ -11,14 +11,14 @@ helpviewer_keywords:
 - shape commands [ADO]
 - data shaping [ADO], shape commands
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0554da0486b58aff8da6fcf012732b6012f70ae6
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924176"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760861"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 La forma de datos define las columnas de un **conjunto de registros**con forma, las relaciones entre las entidades representadas por las columnas y la manera en que el **conjunto de registros** se rellena con datos.  
@@ -31,7 +31,7 @@ La forma de datos define las columnas de un **conjunto de registros**con forma, 
 |Capítulo|Referencia a otro **conjunto de registros**, denominado *capítulo*. Las columnas Chapter permiten definir una relación *de elementos primarios y secundarios* en la que el *elemento primario* es el **conjunto de registros** que contiene la columna Chapter y el *elemento secundario* es el **conjunto de registros** representado por el capítulo.|  
 |aggregate|El valor de la columna se deriva mediante la ejecución de una *función de agregado* en todas las filas o en una columna de todas las filas de un conjunto de **registros**secundario. (Vea funciones de agregado en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
 |expresión calculada|El valor de la columna se deriva calculando una expresión Visual Basic para Aplicaciones en las columnas de la misma fila del **conjunto de registros**. La expresión es el argumento de la función CALC. (Vea expresión calculada en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [funciones Visual Basic para aplicaciones](../../../ado/guide/data/visual-basic-for-applications-functions.md)).|  
-|new|Campos de fabricación vacíos, que se pueden rellenar con datos en otro momento. La columna se define con la palabra clave NEW. (Vea la nueva palabra clave en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
+|nuevo|Campos de fabricación vacíos, que se pueden rellenar con datos en otro momento. La columna se define con la palabra clave NEW. (Vea la nueva palabra clave en el tema siguiente, [funciones de agregado, la función Calc y la palabra clave New](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md)).|  
   
  Un comando de forma puede contener una cláusula que especifica un comando de consulta para un proveedor de datos subyacente que devolverá un objeto de **conjunto de registros** . La sintaxis de la consulta depende de los requisitos del proveedor de datos subyacente. Normalmente será SQL, aunque ADO no requiere el uso de un lenguaje de consulta determinado.  
   

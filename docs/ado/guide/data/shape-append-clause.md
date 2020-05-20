@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data shaping [ADO], APPEND clause
 - append clause [ADO]
 ms.assetid: f90fcf55-6b24-401d-94e1-d65bd24bd342
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: e09113b42f655a3b94ab3877ff81f2553a363931
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d26f83985ce74edc0581ff9ff8fee31d5064c7e5
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924182"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760871"
 ---
 # <a name="shape-append-clause"></a>Cláusula APPEND Shape
 La cláusula APPEND del comando Shape anexa una o varias columnas a un **conjunto de registros**. Con frecuencia, estas columnas son columnas de capítulo, que hacen referencia a un **conjunto de registros**secundario.  
@@ -36,7 +36,7 @@ SHAPE [parent-command [[AS] parent-alias]] APPEND column-list
  *comando primario*  
  Cero o uno de los siguientes (puede omitir completamente el *comando primario* ):  
   
--   Un comando de proveedor entre llaves ("{}") que devuelve un objeto de conjunto de **registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
+-   Un comando de proveedor entre llaves (" {} ") que devuelve un objeto de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
 -   Otro comando de forma se inserta entre paréntesis.  
   
@@ -66,7 +66,7 @@ SHAPE [parent-command [[AS] parent-alias]]
   
 ## <a name="remarks"></a>Observaciones  
  *child-recordset*  
- -   Un comando de proveedor entre llaves ("{}") que devuelve un objeto de conjunto de **registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
+ -   Un comando de proveedor entre llaves (" {} ") que devuelve un objeto de **conjunto de registros** . El comando se emite al proveedor de datos subyacente y su sintaxis depende de los requisitos de ese proveedor. Normalmente será el lenguaje SQL, aunque ADO no requiere ningún lenguaje de consulta determinado.  
   
 -   Otro comando de forma se inserta entre paréntesis.  
   
@@ -102,13 +102,13 @@ SHAPE [parent-command [[AS] parent-alias]]
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- La forma ejecutará dos comandos `select * from t1` : y`select * from t2 RELATE k1 TO k2)`(. Si el usuario proporciona un comando compuesto que consta de varios comandos de proveedor separados por punto y coma, la forma no puede distinguir la diferencia. Por lo tanto, en el siguiente comando SHAPE,  
+ La forma ejecutará dos comandos: `select * from t1` y ( `select * from t2 RELATE k1 TO k2)` . Si el usuario proporciona un comando compuesto que consta de varios comandos de proveedor separados por punto y coma, la forma no puede distinguir la diferencia. Por lo tanto, en el siguiente comando SHAPE,  
   
 ```  
 SHAPE {select * from t1; drop table t1} APPEND ({select * from t2} RELATE k1 TO k2)  
 ```  
   
- SHAPE ejecuta `select * from t1; drop table t1` y (`select * from t2 RELATE k1 TO k2),` sin darse cuenta de que `drop table t1` es un comando de proveedor independiente y en este caso, peligroso. Las aplicaciones siempre deben validar los datos proporcionados por el usuario para evitar que puedan producirse ataques de piratas informáticos potenciales.  
+ SHAPE ejecuta `select * from t1; drop table t1` y ( `select * from t2 RELATE k1 TO k2),` sin darse cuenta de que `drop table t1` es un comando de proveedor independiente y en este caso, peligroso. Las aplicaciones siempre deben validar los datos proporcionados por el usuario para evitar que puedan producirse ataques de piratas informáticos potenciales.  
   
  Esta sección contiene los temas siguientes.  
   

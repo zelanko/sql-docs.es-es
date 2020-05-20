@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Property object [ADO], members
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 863e3591e8160373129f740b0d6bc4fb218ae082
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917509"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759961"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Property
 ## <a name="properties"></a>Propiedades  
@@ -32,7 +32,7 @@ ms.locfileid: "67917509"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Eventos  
  Ninguno.  
   
 ## <a name="see-also"></a>Consulte también  

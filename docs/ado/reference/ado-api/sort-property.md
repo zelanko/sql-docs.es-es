@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ASC [ADO]
 - Sort property [ADO]
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 3dc6f7799e28fff65a1b6e60329ba9fb94d84824
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67930947"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759841"
 ---
 # <a name="sort-property"></a>Propiedad de ordenación
 Indica uno o más nombres de campo en los que se ordena el [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) y si cada campo se ordena en orden ascendente o descendente.  
@@ -34,7 +34,7 @@ Indica uno o más nombres de campo en los que se ordena el [conjunto de registro
 ## <a name="settings-and-return-values"></a>Configuración y valores devueltos  
  Establece o devuelve un valor de **cadena** que indica los nombres de campo del **conjunto de registros** por los que se va a ordenar. Cada nombre está separado por una coma y, opcionalmente, va seguido de un espacio en blanco y de la palabra clave, **ASC**, que ordena el campo en orden ascendente, o **DESC**, que ordena el campo en orden descendente. De forma predeterminada, si no se especifica ninguna palabra clave, el campo se ordena en orden ascendente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta propiedad requiere que la propiedad [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) esté establecida en **adUseClient**. Se creará un índice temporal para cada campo especificado en la propiedad **Sort** si aún no existe un índice.  
   
  La operación de ordenación es eficaz porque los datos no se reorganizan físicamente, pero solo se tiene acceso a ellos en el orden especificado por el índice.  
@@ -45,7 +45,7 @@ Indica uno o más nombres de campo en los que se ordena el [conjunto de registro
   
  Si establece la propiedad **Sort** en una cadena vacía, se restablecerán las filas a su orden original y se eliminarán los índices temporales. Los índices existentes no se eliminarán.  
   
- Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena "`lastName DESC, firstName ASC`", que ordenará el conjunto de **registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
+ Supongamos que un **conjunto de registros** contiene tres campos denominados *FirstName*, *middleInitial*y *LastName*. Establezca la propiedad **Sort** en la cadena " `lastName DESC, firstName ASC` ", que ordenará el conjunto de **registros** por apellido en orden descendente y luego por nombre en orden ascendente. Se omite la inicial del segundo nombre.  
   
  No se puede llamar a ningún campo "ASC" o "DESC" porque esos nombres entran en conflicto con las palabras clave **ASC** y **DESC**. Puede crear un alias para un campo con un nombre en conflicto mediante la palabra clave **as** en la consulta que devuelve el **conjunto de registros**.  
   

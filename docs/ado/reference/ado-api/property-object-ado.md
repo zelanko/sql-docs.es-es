@@ -13,24 +13,24 @@ f1_keywords:
 helpviewer_keywords:
 - Property object [ADO]
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d2f4a8b6cdeabcbab0802a0052ed697af70ef45a
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67917553"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759971"
 ---
 # <a name="property-object-ado"></a>Objeto Property (ADO)
 Representa una característica dinámica de un objeto ADO definido por el proveedor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los objetos ADO tienen dos tipos de propiedades: integrado y dinámico.  
   
- Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto `MyObject.Property` nuevo, utilizando la sintaxis. No aparecen como objetos de **propiedad** en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de un objeto, por lo que, aunque se pueden cambiar sus valores, no se pueden modificar sus características.  
+ Las propiedades integradas son aquellas que se implementan en ADO y que están inmediatamente disponibles para cualquier objeto nuevo, utilizando la `MyObject.Property` Sintaxis. No aparecen como objetos de **propiedad** en la colección de [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) de un objeto, por lo que, aunque se pueden cambiar sus valores, no se pueden modificar sus características.  
   
- El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de **propiedades** para el objeto ADO adecuado. Por ejemplo, una propiedad específica del proveedor puede indicar si un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como objetos de **propiedad** en la colección de **propiedades** del objeto de **conjunto de registros** . Solo se puede hacer referencia a las propiedades dinámicas a través de `MyObject.Properties(0)` la `MyObject.Properties("Name")` colección mediante la sintaxis o.  
+ El proveedor de datos subyacente define las propiedades dinámicas y aparecen en la colección de **propiedades** para el objeto ADO adecuado. Por ejemplo, una propiedad específica del proveedor puede indicar si un objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) admite transacciones o actualizaciones. Estas propiedades adicionales aparecerán como objetos de **propiedad** en la colección de **propiedades** del objeto de **conjunto de registros** . Solo se puede hacer referencia a las propiedades dinámicas a través de la colección mediante la `MyObject.Properties(0)` `MyObject.Properties("Name")` Sintaxis o.  
   
  No se puede eliminar ningún tipo de propiedad.  
   

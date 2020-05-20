@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - Count property [ADO]
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 9b611546b63dec8484785ba855f299925933e89e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67919354"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760241"
 ---
 # <a name="count-property-ado"></a>Count (propiedad, ADO)
 Indica el número de objetos de una colección.  
@@ -28,7 +28,7 @@ Indica el número de objetos de una colección.
 ## <a name="return-value"></a>Valor devuelto  
  Devuelve un valor **Long** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice la propiedad **Count** para determinar el número de objetos que hay en una colección determinada.  
   
  Dado que la numeración de los miembros de una colección comienza con cero, siempre debe codificar los bucles empezando por el miembro cero y terminando con el valor de la propiedad **Count** menos 1. Si usa Microsoft Visual Basic y desea crear un bucle a través de los miembros de una colección sin comprobar la propiedad Count, utilice el **parámetro** **for each... Comando siguiente** .  

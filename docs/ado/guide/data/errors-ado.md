@@ -11,14 +11,14 @@ helpviewer_keywords:
 - OLE DB providers [ADO]
 - ADO, OLE DB providers
 ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b014e68bce1e0fbcbabb9c8ee314ee7a9d6e7311
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67925435"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82761011"
 ---
 # <a name="errors-ado"></a>Errores (ADO)
 Cualquier operación relacionada con objetos ADO puede generar uno o más errores de proveedor. Cuando se produce cada error, se colocan uno o varios objetos de **error** en la colección de **errores** del objeto de **conexión** . Para obtener más información sobre cómo controlar las advertencias y los errores de la aplicación ADO, vea [control de errores](../../../ado/guide/data/error-handling.md).  

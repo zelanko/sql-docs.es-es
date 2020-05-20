@@ -11,14 +11,14 @@ helpviewer_keywords:
 - non-parameterized commands [ADO]
 - data shaping [ADO], non-parameterized commands
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: d69ff29f0baabc770da8a62b56962bdc44619b1e
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924748"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759131"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 En el caso de comandos sin parámetros, se ejecutan todos los comandos de proveedor y los **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todos los **conjuntos de registros** se rellenarán por completo. Si se ha seleccionado un modo de llenado asincrónico, el estado rellenado de los **conjuntos de registros** dependerá del modo de llenado y del tamaño de los **conjuntos de registros**.  

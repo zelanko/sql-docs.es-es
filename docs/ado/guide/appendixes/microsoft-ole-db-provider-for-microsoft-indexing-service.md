@@ -12,14 +12,14 @@ helpviewer_keywords:
 - providers [ADO], OLE DB provider for Microsoft Indexing service
 - OLE DB provider for Microsoft Indexing service [ADO]
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: e4bc6669f961e712ced994a590348604e7bd3274
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67926662"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760481"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Introducción al proveedor de Microsoft OLE DB para el servicio de indización de Microsoft
 El proveedor de Microsoft OLE DB para el servicio de indización de Microsoft proporciona acceso de solo lectura mediante programación al sistema de archivos y a los datos Web indexados por el servicio de indización de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar contenido e información de propiedades de archivo.
@@ -77,7 +77,7 @@ MSIDXS
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|
-|[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
+|[ALCANZAR](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|no disponible|
@@ -96,20 +96,20 @@ MSIDXS
 |Método|¿Disponible?|
 |------------|----------------|
 |[AgregarNuevo](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Yes|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
-|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
-|[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
+|[Clonar](../../../ado/reference/ado-api/clone-method-ado.md)|Yes|
+|[Close](../../../ado/reference/ado-api/close-method-ado.md)|Yes|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|
-|[Move](../../../ado/reference/ado-api/move-method-ado.md)|Sí|
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|
-|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|
-|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Sí|
-|[Admite](../../../ado/reference/ado-api/supports-method.md)|Sí|
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Yes|
+|[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Yes|
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Yes|
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Yes|
+|[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Yes|
+|[Requery](../../../ado/reference/ado-api/requery-method.md)|Yes|
+|[Resincronizar](../../../ado/reference/ado-api/resync-method.md)|Yes|
+|[Admite](../../../ado/reference/ado-api/supports-method.md)|Yes|
 |[Actualizar](../../../ado/reference/ado-api/update-method.md)|No|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
 

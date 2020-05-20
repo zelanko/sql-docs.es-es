@@ -12,14 +12,14 @@ helpviewer_keywords:
 - query results into stream [ADO]
 - retrieving results into stream [ADO]
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: b20363f3ffae96750046ab98bd623ea44d68a8e2
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67924345"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82760931"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir resultados en el objeto de **conjunto de registros** tradicional, ADO puede recuperar los resultados de la consulta en un flujo. El objeto de **secuencia** de ADO (u otros objetos que admiten la interfaz **IStream** com, como los objetos de **solicitud** y **respuesta** de ASP) se pueden usar para contener estos resultados. Un uso de esta característica consiste en recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML se pueden devolver de varias maneras, como usar la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  
@@ -178,5 +178,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Observaciones  
+### <a name="remarks"></a>Comentarios  
  En este momento, XML se ha transmitido al explorador del cliente y está listo para mostrarse. Esto se hace mediante el uso de VBScript del lado cliente para enlazar el documento XML a una instancia del DOM y recorrer en bucle cada nodo secundario para generar una lista de productos en HTML.

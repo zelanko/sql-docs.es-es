@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-author: MightyPen
-ms.author: genemi
-ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: rothja
+ms.author: jroth
+ms.openlocfilehash: 0a2ae26c61534996fcfb5094432ff2e0e81c90c9
+ms.sourcegitcommit: 6037fb1f1a5ddd933017029eda5f5c281939100c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67931024"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82759861"
 ---
 # <a name="sort-property-example-vb"></a>Ejemplo de la propiedad de ordenación (VB)
 En este ejemplo se usa la propiedad [Sort](../../../ado/reference/ado-api/sort-property.md) del objeto de [conjunto de registros](../../../ado/reference/ado-api/recordset-object-ado.md) para reordenar las filas de un **conjunto de registros** derivado de la tabla ***authors*** de la base de datos ***pubs*** . Una rutina de utilidad secundaria imprime cada fila.  

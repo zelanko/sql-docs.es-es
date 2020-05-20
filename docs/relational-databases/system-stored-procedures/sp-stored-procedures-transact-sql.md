@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_stored_procedures
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 865e86976a6da117d41ba2f22020f7137dee5038
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68702781"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820280"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'`Es el nombre del calificador del procedimiento. el *calificador* es de **tipo sysname y su**valor predeterminado es NULL. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 `[ @fUsePattern = ] 'fUsePattern'`Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpreta como caracteres comodín. *fUsePattern* es de **bit**y su valor predeterminado es 1.  
   

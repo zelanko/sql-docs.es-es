@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - syspublications system table
 ms.assetid: a86eb4f5-1f7b-493e-af55-3d15cf878228
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d7fb57743726a59c0b501544802ecc7c701da20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60b6557bdc8db86ef1d8092220fb91e7e506193f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029755"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820061"
 ---
 # <a name="syspublications-transact-sql"></a>syspublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "68029755"
 |**alt_snapshot_folder**|**nvarchar(255)**|Especifica la ubicación de la carpeta alternativa de la instantánea.|  
 |**pre_snapshot_script**|**nvarchar(255)**|Especifica un puntero a la ubicación de un archivo **. SQL** . El Agente de distribución ejecuta el script previo a la instantánea antes de la ejecución de cualquiera de los scripts de los objetos replicados al aplicar la instantánea en un suscriptor.|  
 |**post_snapshot_script**|**nvarchar(255)**|Especifica un puntero a la ubicación de un archivo **. SQL** . El Agente de distribución ejecuta el script posterior a la instantánea después de que se aplique el resto de scripts de objetos replicados y datos durante la sincronización inicial.|  
-|**compress_snapshot**|**bit**|Especifica que la instantánea que se escribe en la ubicación *alt_snapshot_folder* se va a comprimir en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB. **1** significa que se comprimirá la instantánea.|  
+|**compress_snapshot**|**bit**|Especifica que la instantánea que se escribe en la ubicación *alt_snapshot_folder* se va a comprimir en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] formato CAB.** 1** significa que se comprimirá la instantánea.|  
 |**ftp_address**|**sysname**|Dirección de red del servicio FTP para el distribuidor. Especifica dónde se encuentran los archivos de instantánea de la publicación para que los recoja el Agente de distribución.|  
 |**ftp_port**|**int**|El número de puerto del servicio FTP para el distribuidor. Especifica dónde se encuentran los archivos de instantáneas de la publicación a fin de que los recopile el Agente de distribución.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Especifica dónde estarán disponibles los archivos de instantáneas para que los recopile el Agente de distribución si la publicación admite la propagación de instantáneas mediante FTP.|  
@@ -64,13 +64,13 @@ ms.locfileid: "68029755"
 |**centralized_conflicts**|**bit**|Especifica si los registros de conflicto se almacenan en el publicador.<br /><br /> **0** = los registros de conflictos se almacenan tanto en el publicador como en el suscriptor que provocó el conflicto.<br /><br /> **1** = los registros de conflictos se almacenan en el publicador.|  
 |**conflict_retention**|**int**|Especifica el período de retención de conflictos, en días.|  
 |**conflict_policy**|**int**|Especifica la directiva de resolución de conflictos seguida cuando se utiliza la opción de suscriptor de actualización en cola. Puede ser uno de estos valores:<br /><br /> **1** = el publicador gana el conflicto.<br /><br /> **2** = el suscriptor gana el conflicto.<br /><br /> **3** = la suscripción se ha reinicializado.|  
-|**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** = MSMQ, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** = SQL, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar transacciones.<br /><br /> Nota: el [!INCLUDE[msCoName](../../includes/msconame-md.md)] uso de Message Queue Server ha quedado desusado y ya no está disponible.|  
+|**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** = MSMQ, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** = SQL, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar transacciones.<br /><br /> Nota: el uso [!INCLUDE[msCoName](../../includes/msconame-md.md)] de Message Queue Server ha quedado desusado y ya no está disponible.|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificador único global (GUID) válido especifica que la publicación se publica en el Active Directory y el GUID es el **objectGUID**del objeto de publicación Active Directory correspondiente. Si es NULL, la publicación no se publica en Active Directory.|  
-|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> **110** = 110[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].<br /><br /> **120** = 120[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
+|**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> **110**  =  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br /> **120**  =  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .|  
 |**allow_initialize_from_backup**|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación a partir de una copia de seguridad en lugar de una instantánea inicial. **1** significa que las suscripciones se pueden inicializar a partir de una copia de seguridad y **0** significa que no pueden hacerlo. Para obtener más información, consulte [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Indica si se admite la replicación de esquemas para la publicación. **1** indica que las instrucciones del lenguaje de definición de datos (DDL) ejecutadas en el publicador se replican y **0** indica que las instrucciones de DDL no se replican. Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**options**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales para la replicación punto a punto.<br /><br /> **0x4** : habilitado para suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **0x8** : habilitado para la detección de conflictos punto a punto.|  
+|**options**|**int**|Mapa de bits que especifica opciones de publicación adicionales. Los valores de opciones binarias son los siguientes:<br /><br /> **0x1** : habilitada para la replicación punto a punto.<br /><br /> **0X2** -publicar solo cambios locales para la replicación punto a punto.<br /><br /> **0x4** : habilitado para suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **0x8** : habilitado para la detección de conflictos punto a punto.|  
 |**originator_id**|**smallint**|Identifica cada nodo en una topología de replicación punto a punto para detectar conflictos. Para más información, consulte [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Consulte también  

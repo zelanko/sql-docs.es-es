@@ -14,14 +14,14 @@ helpviewer_keywords:
 - hobt [SQL Server]
 - base tables
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ac374b9222f9bd592312f79173859691b495276
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531190"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819913"
 ---
 # <a name="system-base-tables"></a>Tablas base del sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "80531190"
 |Tabla base|Descripción|  
 |----------------|-----------------|  
 |**sys.sysschobjs**|Existe en todas las bases de datos. Cada fila representa un objeto en la base de datos.|  
-|**sys.sysbinobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad de Service Broker en la base de datos. Las entidades de Service Broker contienen los siguientes elementos:<br /><br /> Tipo de mensaje<br /><br /> Contrato de servicio<br /><br /> Service<br /><br /> Los nombres y tipos utilizan intercalación binaria fija.|  
+|**sys.sysbinobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad de Service Broker en la base de datos. Las entidades de Service Broker contienen los siguientes elementos:<br /><br /> Tipo de mensaje<br /><br /> Contrato de servicio<br /><br /> Servicio<br /><br /> Los nombres y tipos utilizan intercalación binaria fija.|  
 |**sys.sysclsobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad clasificada que comparte las mismas propiedades comunes, entre las que se incluyen las siguientes:<br /><br /> Ensamblado<br /><br /> Dispositivo de copia de seguridad<br /><br /> Catálogo de texto completo<br /><br /> Función de partición<br /><br /> Esquema de partición<br /><br /> Grupo de archivos<br /><br /> Clave de ofuscación|  
 |**sys.sysnsobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad centrada en el espacio de nombres. Esta tabla se usa para almacenar entidades de la colección de XML.|  
 |**sys.syscolpars**|Existe en todas las bases de datos. Contiene una fila para cada columna en una tabla, vista o función con valores de tabla. También contiene las filas para cada parámetro de un procedimiento o función.|  

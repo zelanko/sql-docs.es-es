@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_workload_groups dynamic management view
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73da0ee5a47cf5b1c7443729e2a9b71dc01d18a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982289"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821065"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982289"
   Devuelve las estadísticas del grupo de cargas de trabajo y la configuración actual en memoria del grupo de cargas de trabajo. Puede unirse esta vista con sys.dm_resource_governor_resource_pools para obtener el nombre del grupo de recursos de servidor.  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_resource_governor_workload_groups**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_resource_governor_workload_groups**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -63,7 +63,7 @@ ms.locfileid: "73982289"
 |request_memory_grant_timeout_sec|**int**|Valor actual del tiempo de espera de concesiones de memoria, en segundos, para una única solicitud. No admite valores NULL.|  
 |group_max_requests|**int**|Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|  
 |max_dop|**int**|Grado máximo de paralelismo para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="remarks"></a>Observaciones  
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos almacenados de la configuración, utilice la vista de catálogo sys.resource_governor_workload_groups.  

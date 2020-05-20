@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysreplicationalerts system table
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6cbeab4c673390cb80300eb5ced2b4cb5c1bcf1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029737"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819995"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68029737"
 |**error_id**|**int**|IDENTIFICADOR del error almacenado en **MSrepl_errors**.|  
 |**alert_error_code**|**int**|Id. del mensaje de la alerta activada al registrar esta entrada.|  
 |**time**|**datetime**|Hora de inserción del registro.|  
-|**publicador**|**sysname**|Nombre del publicador asociado al agente que ha activado esta alerta.|  
+|**publisher**|**sysname**|Nombre del publicador asociado al agente que ha activado esta alerta.|  
 |**publisher_db**|**sysname**|Base de datos del publicador asociada al agente que ha activado esta alerta.|  
 |**publicaciones**|**sysname**|Publicación asociada al agente que ha activado esta alerta.|  
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = instantánea.<br /><br /> **1** = transaccional.<br /><br /> **2** = fusionar mediante combinación.|  

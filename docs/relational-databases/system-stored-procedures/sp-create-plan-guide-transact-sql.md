@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_create_plan_guide
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e55b45cf43e34982033d941ad9626f75afdec554
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60a3b1d27b483bac16cf2f51ab3ac9222e8e9053
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75688228"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820611"
 ---
 # <a name="sp_create_plan_guide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,45 +50,45 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@Name =] N '*plan_guide_name*'  
+ [ \@ Name =] N '*plan_guide_name*'  
  Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar por el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
- [ \@stmt =] N '*statement_text*'  
- Es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a utilizar en la creación de una guía de plan. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimizador de consultas reconoce una consulta que coincide con *statement_text*, *plan_guide_name* surte efecto. Para que la creación de una guía de plan sea correcta, *statement_text* debe aparecer en el contexto especificado \@por los \@parámetros Type, \@module_or_batch y params.  
+ [ \@ stmt =] N '*statement_text*'  
+ Es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a utilizar en la creación de una guía de plan. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optimizador de consultas reconoce una consulta que coincide con *statement_text*, *plan_guide_name* surte efecto. Para que la creación de una guía de plan sea correcta, *statement_text* debe aparecer en el contexto especificado por los \@ parámetros Type, \@ module_or_batch y \@ params.  
   
- *statement_text* debe proporcionarse de forma que permita que el optimizador de consultas coincida con la instrucción correspondiente suministrada dentro del lote o módulo identificado por \@module_or_batch y \@los parámetros. Para obtener más información, vea la sección "Notas". El tamaño de *statement_text* solo está limitado por la memoria disponible del servidor.  
+ *statement_text* debe proporcionarse de forma que permita que el optimizador de consultas coincida con la instrucción correspondiente suministrada dentro del lote o módulo identificado por \@ module_or_batch y los \@ parámetros. Para obtener más información, vea la sección "Notas". El tamaño de *statement_text* solo está limitado por la memoria disponible del servidor.  
   
- [\@type =] N ' {OBJECT | SQL | PLANTILLA} '  
+ [ \@ type =] N ' {Object | SQL | PLANTILLA} '  
  Es el tipo de entidad en la que aparece *statement_text* . Especifica el contexto para la coincidencia de *statement_text* que se va a *plan_guide_name*.  
   
  OBJECT  
- Indica *statement_text* aparece en el contexto de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado, una función escalar, una función con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] múltiples instrucciones o un desencadenador DML en la base de datos actual.  
+ Indica *statement_text* aparece en el contexto de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado, una función escalar, una función con valores de tabla de múltiples instrucciones o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML en la base de datos actual.  
   
  SQL  
- Indica *statement_text* aparece en el contexto de un lote o instrucción independiente que se puede enviar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de cualquier mecanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones enviadas por objetos de Common Language Runtime (CLR) o procedimientos almacenados extendidos, o mediante el uso de EXEC N '*sql_string*', se procesan como lotes en el servidor y, \@por **=** tanto, deben identificarse como tipo ' SQL '. Si se especifica SQL, la PARAMETRIZAción de la sugerencia de consulta {forzada | SIMPLE} no se puede especificar en \@el parámetro hints.  
+ Indica *statement_text* aparece en el contexto de un lote o instrucción independiente que se puede enviar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de cualquier mecanismo. [!INCLUDE[tsql](../../includes/tsql-md.md)]las instrucciones enviadas por objetos de Common Language Runtime (CLR) o procedimientos almacenados extendidos, o mediante el uso de EXEC N '*sql_string*', se procesan como lotes en el servidor y, por tanto, deben identificarse como \@ tipo **=** ' SQL '. Si se especifica SQL, la PARAMETRIZAción de la sugerencia de consulta {forzada | SIMPLE} no se puede especificar en el \@ parámetro hints.  
   
  TEMPLATE  
- Indica que la guía de plan se aplica a cualquier consulta que parametriza al formulario indicado en *statement_text*. Si se especifica TEMPLATE, solo la PARAMETRIZAción {forzada | SIMPLE} la sugerencia de consulta se puede especificar \@en el parámetro hints. Para obtener más información acerca de las guías de plan de plantilla, vea [especificar el comportamiento de parametrización de consultas mediante guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
+ Indica que la guía de plan se aplica a cualquier consulta que parametriza al formulario indicado en *statement_text*. Si se especifica TEMPLATE, solo la PARAMETRIZAción {forzada | SIMPLE} la sugerencia de consulta se puede especificar en el \@ parámetro hints. Para obtener más información acerca de las guías de plan de plantilla, vea [especificar el comportamiento de parametrización de consultas mediante guías de plan](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
- [\@module_or_batch =] {N ' [ *schema_name*. ] *object_name*' | N '*batch_text*' | ACEPTA  
+ [ \@ module_or_batch =] {N ' [ *schema_name*. ] *object_name*' | N '*batch_text*' | ACEPTA  
  Especifica el nombre del objeto en el que aparece *statement_text* o el texto del lote en el que aparece *statement_text* . El texto del lote no puede incluir una instrucción USE*Database* .  
   
- Para que una guía de plan coincida con un lote enviado desde una aplicación, se debe proporcionar *batch_tex*t en el mismo formato, carácter a carácter, al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]que se envía. Para facilitar esta concordancia no se realiza ninguna conversión interna. Para obtener más información, vea la sección Comentarios.  
+ Para que una guía de plan coincida con un lote enviado desde una aplicación, se debe proporcionar *batch_tex*t en el mismo formato, carácter a carácter, al que se envía [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para facilitar esta concordancia no se realiza ninguna conversión interna. Para obtener más información, vea la sección Comentarios.  
   
- [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado, una función escalar, una función con valores de tabla de [!INCLUDE[tsql](../../includes/tsql-md.md)] múltiples instrucciones o un desencadenador DML que contiene *statement_text*. Si no se especifica *schema_name* , *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y \@type = ' SQL ', el valor de \@module_or_batch se establece en el valor de \@stmt. Si \@type = ' template**\'**, \@module_or_batch debe ser null.  
+ [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado, una función escalar, una función con valores de tabla de múltiples instrucciones o un [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML que contiene *statement_text*. Si no se especifica *schema_name* , *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y \@ type = ' SQL ', el valor de \@ module_or_batch se establece en el valor de \@ stmt. Si \@ type = ' template **\'** , \@ MODULE_OR_BATCH debe ser null.  
   
- [ \@params =] {N '*\@parameter_name data_type* [,*... n* ] ' | ACEPTA  
+ [ \@ params =] {N '* \@ parameter_name data_type* [,*... n* ] ' | ACEPTA  
  Especifica las definiciones de todos los parámetros que están incrustados en *statement_text*. \@los parámetros solo se aplican cuando se cumple alguna de las siguientes condiciones:  
   
--   \@Type = ' SQL ' o ' TEMPLATE '. Si es ' TEMPLATE ' \@, los parámetros no deben ser null.  
+-   \@Type = ' SQL ' o ' TEMPLATE '. Si es ' TEMPLATE ', los \@ parámetros no deben ser null.  
   
--   *statement_text* se envía mediante sp_executesql y se especifica un valor para \@el parámetro params, o bien [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía internamente una instrucción después de la parametrización. Las consultas con parámetros enviadas desde las API de base de datos (incluidas ODBC, OLE DB y ADO.NET) se muestran en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como llamadas a sp_executesql o a rutinas de cursor de servidor API; por tanto, se pueden comparar con guías de plan de tipo SQL o TEMPLATE.  
+-   *statement_text* se envía mediante sp_executesql y se especifica un valor para el \@ parámetro params, o bien [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envía internamente una instrucción después de la parametrización. Las consultas con parámetros enviadas desde las API de base de datos (incluidas ODBC, OLE DB y ADO.NET) se muestran en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como llamadas a sp_executesql o a rutinas de cursor de servidor API; por tanto, se pueden comparar con guías de plan de tipo SQL o TEMPLATE.  
   
- parameter_name data_type se debe proporcionar exactamente en el mismo formato que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante sp_executesql o se envía internamente después de la parametrización. * \@* Para obtener más información, vea la sección Comentarios. Si el lote no contiene parámetros, debe especificarse NULL. El tamaño de \@los parámetros solo está limitado por la memoria del servidor disponible.  
+ * \@ parameter_name data_type* se debe proporcionar exactamente en el mismo formato que se envía a mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_executesql o se envía internamente después de la parametrización. Para obtener más información, vea la sección Comentarios. Si el lote no contiene parámetros, debe especificarse NULL. El tamaño de los \@ parámetros solo está limitado por la memoria del servidor disponible.  
   
- [\@hints =] {N'OPTION (*query_hint* [,*... n* ]) ' | N '*XML_showplan*' | ACEPTA  
+ [ \@ hints =] {N'OPTION (*query_hint* [,*... n* ]) ' | N '*XML_showplan*' | ACEPTA  
  N'OPTION (*query_hint* [,*... n* ])  
- Especifica una cláusula OPTION que se va a adjuntar \@a una \@consulta que coincida con stmt. las sugerencias deben ser sintácticamente iguales que una cláusula Option en una instrucción SELECT y pueden contener cualquier secuencia válida de sugerencias de consulta.  
+ Especifica una cláusula OPTION que se va a adjuntar a una consulta que coincide con \@ stmt. \@ las sugerencias deben ser sintácticamente iguales que una cláusula OPTION en una instrucción SELECT y pueden contener cualquier secuencia válida de sugerencias de consulta.  
   
  N '*XML_showplan*'  
  Es el plan de consulta en formato XML que se va a aplicar como una sugerencia.  
@@ -98,32 +98,32 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  Indica que no se aplica a la consulta ninguna sugerencia existente especificada en la cláusula OPTION de la consulta. Para obtener más información, vea [cláusula OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
-## <a name="remarks"></a>Observaciones  
- Los argumentos de sp_create_plan_guide deben indicarse en el orden que se muestra. Cuando se incluyen valores para los parámetros de **sp_create_plan_guide**, deben especificarse todos los nombres de parámetro de forma explícita, o bien no especificarse ninguno. Por ejemplo, si ** \@se especifica Name =** , también se debe especificar ** \@stmt =** , ** \@Type =**, etc. Del mismo modo ** \@** , si se omite Name = y solo se proporciona el valor del parámetro, también deben omitirse los demás nombres de parámetro y solo se proporcionarán sus valores. Los nombres de argumento solo se incluyen con fines de descripción, para ayudar a entender la sintaxis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no comprueba si el nombre del parámetro especificado coincide con el nombre del parámetro en la posición donde se utiliza.  
+## <a name="remarks"></a>Comentarios  
+ Los argumentos de sp_create_plan_guide deben indicarse en el orden que se muestra. Cuando se incluyen valores para los parámetros de **sp_create_plan_guide**, deben especificarse todos los nombres de parámetro de forma explícita, o bien no especificarse ninguno. Por ejemplo, si se especifica ** \@ Name =** , también se debe especificar ** \@ stmt =** , ** \@ Type =**, etc. Del mismo modo, si se omite ** \@ Name =** y solo se proporciona el valor del parámetro, también deben omitirse los demás nombres de parámetro y solo se proporcionarán sus valores. Los nombres de argumento solo se incluyen con fines de descripción, para ayudar a entender la sintaxis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no comprueba si el nombre del parámetro especificado coincide con el nombre del parámetro en la posición donde se utiliza.  
   
  Puede crearse más de una guía de plan OBJECT o SQL para la misma consulta y lote o módulo. Sin embargo, en un momento dado, solo puede estar habilitada una guía de plan.  
   
- No se pueden crear guías de plan de tipo OBJECT \@para un valor module_or_batch que hace referencia a un procedimiento almacenado, una función o un desencadenador DML que especifica la cláusula with Encryption o que es temporal.  
+ No se pueden crear guías de plan de tipo OBJECT para un \@ valor module_or_batch que hace referencia a un procedimiento almacenado, una función o un desencadenador DML que especifica la cláusula with Encryption o que es temporal.  
   
  Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia. También se producirá un error si se intenta quitar una tabla que tenga definido un desencadenador al que haga referencia una guía de plan.  
   
 > [!NOTE]
-> Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, vea [características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de realizar una actualización de servidor, debe comprobar la idoneidad de las guías de plan en cada base de datos.  
+> Las guías de plan no se pueden usar en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Las guías de plan son visibles en todas las ediciones. También se pueden adjuntar bases de datos que incluyen guías de plan a cualquier versión. Las guías de plan permanecen intactas cuando se restaura o adjunta una base de datos a una versión actualizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Después de realizar una actualización de servidor, debe comprobar la idoneidad de las guías de plan en cada base de datos.  
   
 ## <a name="plan-guide-matching-requirements"></a>Requisitos de coincidencia de la guía de plan  
- En el caso de las \@guías de plan que especifican \@type = ' SQL ' o type = ' template ' para que coincidan correctamente con una consulta, los valores de *batch_text* y * \@parameter_name data_type* [,*... n* ] debe proporcionarse exactamente en el mismo formato que sus homólogos enviados por la aplicación. Esto significa que es necesario suministrar el texto del lote exactamente como lo recibe el compilador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para capturar el texto real del lote y del parámetro, se puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Para obtener más información, vea [usar SQL Server Profiler para crear y probar guías de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
+ En el caso de las guías de plan que especifican \@ type = ' SQL ' o \@ type = ' template ' para que coincidan correctamente con una consulta, los valores de *batch_text* y * \@ parameter_name data_type* [,*... n* ] debe proporcionarse exactamente en el mismo formato que sus homólogos enviados por la aplicación. Esto significa que es necesario suministrar el texto del lote exactamente como lo recibe el compilador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para capturar el texto real del lote y del parámetro, se puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Para obtener más información, vea [usar SQL Server Profiler para crear y probar guías de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md).  
   
- Cuando \@type = ' SQL ' y \@MODULE_OR_BATCH está establecido en null, el valor de \@module_or_batch se establece en el valor de \@stmt. Esto significa que el valor de *statement_text* debe proporcionarse exactamente en el mismo formato, carácter a carácter, a medida que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna.  
+ Cuando \@ type = ' SQL ' y \@ module_or_batch está establecido en null, el valor de \@ module_or_batch se establece en el valor de \@ stmt. Esto significa que el valor de *statement_text* debe proporcionarse exactamente en el mismo formato, carácter a carácter, a medida que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para facilitar esta concordancia no se realiza ninguna conversión interna.  
   
- Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coincida con el valor de *statement_text* para *batch_text* y * \@parameter_name data_type* [,*... n* ], o si \@Type = **\'** Object ', al texto de la consulta correspondiente dentro de *object_name*, no se tienen en cuenta los siguientes elementos de cadena:  
+ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] coincida con el valor de *statement_text* para *batch_text* y * \@ parameter_name data_type* [,*... n* ], o si \@ Type = **\'** Object ', al texto de la consulta correspondiente dentro de *object_name*, no se tienen en cuenta los siguientes elementos de cadena:  
   
 -   Los caracteres de espacio en blanco (tabulaciones, espacios, retornos de carro o avances de línea) dentro de una cadena.  
   
--   Comentarios (**--** ** / \*o \*    **).  
+-   Comentarios ( **--** o **/\*   \*/** ).  
   
 -   Los signos de punto y coma al final.  
   
- Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede hacer coincidir la `N'SELECT * FROM T WHERE a = 10'` cadena de *statement_text* con la *batch_text*siguiente:  
+ Por ejemplo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede hacer coincidir la cadena de *statement_text* `N'SELECT * FROM T WHERE a = 10'` con la *batch_text*siguiente:  
   
  ```
  N'SELECT *
@@ -141,7 +141,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  Al crear una guía de plan en un módulo, se quita el plan de consulta para dicho módulo de la caché del plan. Al crear una guía de plan de tipo OBJECT o SQL en un lote, se quita el plan de consulta para un lote que tiene el mismo valor hash. Al crear una guía de plan de tipo TEMPLATE, se quitan todos los lotes de instrucción única de la memoria caché del plan dentro de esa base de datos.  
   
 ## <a name="permissions"></a>Permisos  
- Para crear una guía de plan de tipo OBJECT, `ALTER` se requiere el permiso en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE, `ALTER` se requiere el permiso en la base de datos actual.  
+ Para crear una guía de plan de tipo OBJECT, se requiere `ALTER` el permiso en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE, se requiere `ALTER` el permiso en la base de datos actual.  
   
 ## <a name="examples"></a>Ejemplos  
   

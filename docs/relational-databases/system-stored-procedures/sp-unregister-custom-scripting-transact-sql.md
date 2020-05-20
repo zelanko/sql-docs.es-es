@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_unregister_custom_scripting
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe6bfe4c93ccabfaaec27739f7a1fd0e09348526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8d54530c7cf6588a6ae07e1e504e3c53e86f8fa5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68017898"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820240"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Este procedimiento almacenado quita un archivo de script o [!INCLUDE[tsql](../../includes/tsql-md.md)] un procedimiento almacenado personalizado definido por el usuario que se registró ejecutando [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Este procedimiento almacenado quita un archivo de script o un procedimiento almacenado personalizado definido por el usuario [!INCLUDE[tsql](../../includes/tsql-md.md)] que se registró ejecutando [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -41,10 +41,10 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumentos  
 `[ @type = ] 'type'`Es el tipo de procedimiento almacenado personalizado o el script que se va a quitar. *Type* es de tipo **VARCHAR (16)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**introducir**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción INSERT.|  
-|**Update**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción UPDATE.|  
+|**update**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción UPDATE.|  
 |**delete**|El procedimiento almacenado personalizado registrado o el script se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El procedimiento almacenado personalizado registrado o el script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
@@ -55,7 +55,7 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_unregister_custom_scripting** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  

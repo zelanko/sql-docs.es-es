@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepushsubscription_agent
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb74cc0887d68ea01fabe7f6168c0d23275d8f4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2f0a3edd44f7795fd57fab1cf640e7ab95d59ee2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68769159"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820761"
 ---
 # <a name="sp_addmergepushsubscription_agent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,16 +68,16 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
 `[ @subscriber_login = ] 'subscriber_login'`Es el inicio de sesión del suscriptor que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_login* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL. Si se utiliza una contraseña de suscriptor, se cifra automáticamente.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
 `[ @publisher_login = ] 'publisher_login'`Es el inicio de sesión que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -97,12 +97,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de mezcla. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -114,7 +114,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_interval = ] frequency_interval`Los días en los que se ejecuta el Agente de mezcla. *frequency_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -123,19 +123,19 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**203**|Día|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
@@ -143,12 +143,12 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -161,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date`Es la fecha en la que el Agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publisherproperty
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0d3ba6552861f162a8ba0755dc37e30bc965e2a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf03396170972cf1e0c44a7a668e3651385579fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962378"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820386"
 ---
 # <a name="sp_publisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Muestra o cambia las propiedades del publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los publicadores que no son de. Este procedimiento almacenado se ejecuta en el distribuidor.  
+  Muestra o cambia las propiedades del publicador para los publicadores que no son de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este procedimiento almacenado se ejecuta en el distribuidor.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
 `[ @propertyname = ] 'propertyname'`Es el nombre de la propiedad que se va a establecer. *PropertyName* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**xactsetbatching**|Si las transacciones en el publicador están agrupadas en conjuntos transaccionalmente coherentes para el procesamiento subsiguiente, denominado Xactsets. Un valor de **habilitado** significa que Xactsets se puede crear, que es el valor predeterminado. Un valor de **Disabled** significa que los Xactsets existentes se procesan sin que se creen nuevos Xactsets.|  
 |**xactsetjob**|Si el trabajo Xactset está habilitado para la creación de Xactsets. Un valor de **habilitado** significa que el trabajo Xactset se ejecuta periódicamente para crear Xactsets en el publicador. Un valor de **deshabilitado** significa que los Xactsets solo los crea el agente de registro del log cuando sondea el publicador en busca de cambios.|  
@@ -64,8 +64,8 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
- **sp_publisherproperty** se utiliza en la replicación transaccional para publicadores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son de.  
+## <a name="remarks"></a>Comentarios  
+ **sp_publisherproperty** se utiliza en la replicación transaccional para publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando solo se especifica *Publisher* , el conjunto de resultados incluye la configuración actual de todas las propiedades que se pueden establecer.  
   

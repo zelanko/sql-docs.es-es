@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_foreignkeys
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0951bd857b6fbf2e3bdc8f5bc1ff850f80c43bcd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124377"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820490"
 ---
 # <a name="sp_foreignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  En el conjunto de resultados, las columnas FK_NAME y PK_NAME siempre devuelven NULL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_foreignkeys** consulta el conjunto de filas FOREIGN_KEYS de la interfaz **IDBSchemaRowset** del proveedor OLE DB que corresponde a *table_server*. Los parámetros *TABLE_NAME*, *TABLE_SCHEMA*, *TABLE_CATALOG*y *Column* se pasan a esta interfaz para restringir las filas devueltas.  
   
 ## <a name="permissions"></a>Permisos  

@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], catalog views
 - sys.database_mirroring_endpoints catalog view
 ms.assetid: f2285199-97ad-473c-a52d-270044dd862b
-author: MashaMSFT
-ms.author: mathoma
-ms.openlocfilehash: bcbe9d23bab18e47b69f82812f604a94d4c5ce9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc4f44e1b1d935f1abbd49532149edf078f7d1f7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022769"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823529"
 ---
 # <a name="sysdatabase_mirroring_endpoints-transact-sql"></a>sys.database_mirroring_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68022769"
 |-----------------|---------------|-----------------|  
 |**\<columnas heredadas>**|-|Hereda columnas de **Sys. endpoints** (para obtener más información, vea [Sys. endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)).|  
 |**role**|**tinyint**|Rol de creación de reflejo, uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = asociado<br /><br /> **2** = testigo<br /><br /> **3** = todo<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
-|**role_desc**|**nvarchar(60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NINGUNA**<br /><br /> **ASOCIADO**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
+|**role_desc**|**nvarchar(60)**|Descripción del rol de creación de reflejo, uno de los siguientes:<br /><br /> **NONE**<br /><br /> **ASOCIADO**<br /><br /> **TESTIGO**<br /><br /> **ALL**<br /><br /> Nota: este valor solo es relevante para la creación de reflejo de la base de datos.|  
 |**is_encryption_enabled**|**bit**|**1** significa que el cifrado está habilitado.<br /><br /> **0** significa que el cifrado está deshabilitado.|  
 |**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** : NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociación<br /><br /> **4** : certificado<br /><br /> **5** : NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -Negotiate, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -certificado, Negotiate|  
 |**connection_auth_desc**|**Nvarchar (60)**|Descripción del tipo de autenticación necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> NTLM<br /><br /> KERBEROS<br /><br /> NEGOTIATE<br /><br /> CERTIFICADO<br /><br /> NTLM, CERTIFICATE<br /><br /> KERBEROS, CERTIFICATE<br /><br /> NEGOTIATE, CERTIFICATE<br /><br /> CERTIFICATE, NTLM<br /><br /> CERTIFICATE, KERBEROS<br /><br /> CERTIFICATE, NEGOTIATE|  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 910c4a6a8ebf40de23069ecbf3c96d8d67533efa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67915121"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823548"
 ---
 # <a name="sysdatabase_event_session_fields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]

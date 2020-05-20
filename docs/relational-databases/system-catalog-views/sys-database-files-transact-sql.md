@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.database_files catalog view
 ms.assetid: 0f5b0aac-c17d-4e99-b8f7-d04efc9edf44
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41132cc875898b98a793e84a35b5c93eee2699e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f51c090baea876c662b3fa31210d1eec59139bf4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983181"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823493"
 ---
 # <a name="sysdatabase_files-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "73983181"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**file_id**|**int**|Identificador del archivo dentro de la base de datos.|  
-|**file_guid**|**uniqueidentifier**|GUID del archivo.<br /><br /> NULL = la base de datos se actualizó desde una versión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior de (válida para SQL Server 2005 y versiones anteriores).|  
+|**file_guid**|**uniqueidentifier**|GUID del archivo.<br /><br /> NULL = la base de datos se actualizó desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válida para SQL Server 2005 y versiones anteriores).|  
 |**type**|**tinyint**|Tipo de archivo:<br/><br /> 0 = filas<br /><br/> 1 = Registro<br/><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = texto completo|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS <br /><br /> REGISTRO<br /><br /> FILESTREAM<br /><br /> FULLTEXT|  
 |**data_space_id**|**int**|El valor puede ser 0 o mayor que 0. El valor 0 representa el archivo de registro de base de datos y un valor mayor que 0, el identificador del grupo de archivos donde está almacenado este archivo de datos.|  
@@ -79,7 +79,7 @@ size/128.0 - CAST(FILEPROPERTY(name, 'SpaceUsed') AS int)/128.0
    AS EmptySpaceInMB
 FROM sys.database_files;
 ```
-Para obtener más información sobre [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]cómo usar, vea [determinar el tamaño de la base de datos en Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog del equipo de asesoría de clientes de SQL.
+Para obtener más información sobre cómo usar [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , vea [determinar el tamaño de la base de datos en Azure SQL Database V12](https://blogs.msdn.microsoft.com/sqlcat/2016/09/21/determining-database-size-in-azure-sql-database-v12/) en el blog del equipo de asesoría de clientes de SQL.
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas de catálogo de archivos y bases de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   

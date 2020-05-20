@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: mashamsft
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 8bdf74e6ee774d9a0cc8e3d9128c659b75287511
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ccb2a6e1e8201fe623839fc52f4f0b99b789bbf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79198232"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820837"
 ---
 # <a name="sysdm_geo_replication_link_status-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -43,7 +43,7 @@ ms.locfileid: "79198232"
 |rol|**tinyint**|Rol de replicación geográfica, uno de los siguientes:<br /><br /> 0 = principal. El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.<br /><br /> 1 = secundaria.  El database_id hace referencia a la base de datos principal de la Asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de los siguientes:<br /><br /> 0 = no se permiten conexiones directas a la base de datos secundaria y la base de datos no está disponible para acceso de lectura.<br /><br /> 2 = se permiten todas las conexiones a la base de datos en el REPL secundario; ication para el acceso de solo lectura.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar(256)**|No<br /><br /> Todo|  
 |last_commit|**datetimeoffset**|Hora de la última transacción confirmada en la base de datos. Si se recupera en la base de datos principal, indica la hora de la última confirmación en la base de datos principal. Si se recupera en la base de datos secundaria, indica la hora de la última confirmación en la base de datos secundaria. Si se recupera en la base de datos secundaria cuando la réplica principal del vínculo de replicación está inactiva, indica hasta qué punto se ha detectado el elemento secundario.|
   
 > [!NOTE]  

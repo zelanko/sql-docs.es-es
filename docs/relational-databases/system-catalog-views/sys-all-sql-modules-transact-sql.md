@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.all_sql_modules catalog view
 ms.assetid: 7477a3fe-afb3-44c8-bb2c-c6e1d9bdee6f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b21f7e2bbed731e29334be1a87f5089ccfc1145
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e0d56da2a61f97a523ee67dcf4847c76ad07b26
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981841"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823414"
 ---
 # <a name="sysall_sql_modules-transact-sql"></a>sys.all_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "73981841"
 |**uses_database_collation**|**bit**|1 = La definición del módulo enlazado a un esquema depende de la intercalación predeterminada de la base de datos para la evaluación correcta; en caso contrario, 0. Esta dependencia impide cambiar la intercalación predeterminada de la base de datos.|  
 |**is_recompiled**|**bit**|Procedimiento creado con la opción WITH RECOMPILE.|  
 |**null_on_null_input**|**bit**|Módulo declarado para generar una salida NULL en cualquier entrada NULL.|  
-|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> IDENTIFICADOR de la entidad de seguridad especificada si EXECUTe AS SELF \<o EXECUTE as principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|Id. de la entidad de seguridad de base de datos EXECUTE AS.<br /><br /> NULL de manera predeterminada o si EXECUTE AS CALLER.<br /><br /> IDENTIFICADOR de la entidad de seguridad especificada si EXECUTe AS SELF o EXECUTe AS \< principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**uses_native_compilation**|bit|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> 0 = no está compilado de forma nativa<br /><br /> 1 = está compilado de forma nativa<br /><br /> El valor predeterminado es 0.|  
   
 ## <a name="permissions"></a>Permisos  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_createstats
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc6ff854079b740279127000a9edb04552245e1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108612"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820564"
 ---
 # <a name="sp_createstats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Cada nuevo objeto de estadísticas tiene el mismo nombre que la columna en la que se creó.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_createstats no crea ni actualiza las estadísticas de las columnas que son la primera columna de un objeto de estadísticas existente.  Esto incluye la primera columna de estadísticas creadas para índices, columnas con estadísticas de columna única generadas con AUTO_CREATE_STATISTICS opción y la primera columna de estadísticas creadas con la instrucción CREATE STATISTICs. sp_createstats no crea estadísticas en las primeras columnas de los índices deshabilitados a menos que se use esa columna en otro índice habilitado. sp_createstats no crea estadísticas en las tablas con un índice clúster deshabilitado.  
   
  Cuando la tabla contiene un conjunto de columnas, sp_createstats no crea automáticamente estadísticas en columnas dispersas. Para obtener más información sobre los conjuntos de columnas y las columnas dispersas, vea [usar conjuntos](../../relational-databases/tables/use-column-sets.md) de columnas y [usar columnas dispersas](../../relational-databases/tables/use-sparse-columns.md).  

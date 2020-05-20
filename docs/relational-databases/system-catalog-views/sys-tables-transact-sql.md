@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.tables catalog view
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1a6d6be7a51cf03442bb5576556b10c5c099ab0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25661cc9d9166da61bd7cef8e3368c2a393a931e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983313"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821295"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73983313"
 |-----------------|---------------|-----------------|  
 |\<columnas heredadas>||Para obtener una lista de las columnas que hereda esta vista, vea [Sys. objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |lob_data_space_id|**int**|Un valor diferente de cero es el identificador del espacio de datos (grupo de archivos o esquema de partición) que contiene los datos de objeto binario grande (LOB) para esta tabla. Entre los ejemplos de tipos de datos LOB se incluyen **varbinary (Max)**, **VARCHAR (Max)**, **Geography**o **XML**.<br /><br /> 0 = La tabla no contiene datos LOB.|  
-|filestream_data_space_id|**int**|Es el identificador del espacio de datos para un grupo de archivos FILESTREAM o un esquema de partición compuesto por grupos de archivos FILESTREAM.<br /><br /> Para notificar el nombre de un grupo de archivos FILESTREAM, `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`ejecute la consulta.<br /><br /> sys.tables se puede combinar con las vistas siguientes en filestream_data_space_id = data_space_id.<br /><br /> -Sys. grupos de archivos<br /><br /> -Sys. partition_schemes<br /><br /> -Sys. Indexes<br /><br /> -Sys. allocation_units<br /><br /> -Sys. fulltext_catalogs<br /><br /> -Sys. data_spaces<br /><br /> -Sys. destination_data_spaces<br /><br /> -Sys. master_files<br /><br /> -Sys. database_files<br /><br /> -backupfilegroup (combinación en filegroup_id)|  
+|filestream_data_space_id|**int**|Es el identificador del espacio de datos para un grupo de archivos FILESTREAM o un esquema de partición compuesto por grupos de archivos FILESTREAM.<br /><br /> Para notificar el nombre de un grupo de archivos FILESTREAM, ejecute la consulta `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables` .<br /><br /> sys.tables se puede combinar con las vistas siguientes en filestream_data_space_id = data_space_id.<br /><br /> -Sys. grupos de archivos<br /><br /> -Sys. partition_schemes<br /><br /> -Sys. Indexes<br /><br /> -Sys. allocation_units<br /><br /> -Sys. fulltext_catalogs<br /><br /> -Sys. data_spaces<br /><br /> -Sys. destination_data_spaces<br /><br /> -Sys. master_files<br /><br /> -Sys. database_files<br /><br /> -backupfilegroup (combinación en filegroup_id)|  
 |max_column_id_used|**int**|Identificador de columna máximo que se ha utilizado en esta tabla.|  
 |lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva. Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
 |uses_ansi_nulls|**bit**|La tabla se creó con la opción de base de datos SET ANSI_NULLS establecida en ON.|  
@@ -58,7 +58,7 @@ ms.locfileid: "73983313"
 |temporal_type_desc|**nvarchar(60)**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> La descripción de texto del tipo de tabla:<br /><br /> NON_TEMPORAL_TABLE<br /><br /> HISTORY_TABLE<br /><br /> SYSTEM_VERSIONED_TEMPORAL_TABLE|  
 |history_table_id|**int**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Cuando temporal_type en (2, 4) devuelve object_id de la tabla que mantiene los datos históricos; de lo contrario, devuelve NULL.|  
 |is_remote_data_archive_enabled|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores y[!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica si la tabla está habilitada para Stretch.<br /><br /> 0 = la tabla no está habilitada para Stretch.<br /><br /> 1 = la tabla está habilitada para Stretch.<br /><br /> Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
-|is_external|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]posteriores, [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)]y.<br /><br /> Indica que la tabla es una tabla externa.<br /><br /> 0 = la tabla no es una tabla externa.<br /><br /> 1 = la tabla es una tabla externa.| 
+|is_external|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)] y [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)] .<br /><br /> Indica que la tabla es una tabla externa.<br /><br /> 0 = la tabla no es una tabla externa.<br /><br /> 1 = la tabla es una tabla externa.| 
 |history_retention_period|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valor numérico que representa la duración del período de retención del historial temporal en unidades especificadas con history_retention_period_unit. |  
 |history_retention_period_unit|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>Valor numérico que representa el tipo de unidad de período de retención de historial temporal. <br /><br />-1: INFINITO <br /><br />3: DÍA <br /><br />4: SEMANA <br /><br />5: MES <br /><br />6: AÑO |  
 |history_retention_period_unit_desc|**nvarchar(10**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>La descripción de texto del tipo de unidad de período de retención de historial temporal. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  

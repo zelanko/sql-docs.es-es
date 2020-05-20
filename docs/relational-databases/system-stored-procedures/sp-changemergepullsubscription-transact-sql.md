@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changemergepullsubscription
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2182e922599e81a2333fcbf4da5970b55d7e5bc4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090853"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823484"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`Es el nuevo valor de la propiedad especificada. el *valor*es **nvarchar (255)** y puede ser uno de los valores de la tabla.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Ubicación donde se almacena la carpeta de instantáneas si la ubicación es distinta de la ubicación predeterminada o además de ella.|  
 |**denominación**||Descripción de esta suscripción de extracción de mezcla.|  

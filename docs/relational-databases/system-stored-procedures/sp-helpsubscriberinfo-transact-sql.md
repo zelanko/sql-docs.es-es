@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriberinfo
 ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fdb8e596405c9e205ec7a8cd907569644f8c9c5c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771488"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820410"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **%** **tipo sysname y su**valor predeterminado es, que devuelve toda la información.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información.  
   
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y su valor predeterminado es el nombre del servidor actual.  
   
@@ -49,11 +49,11 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**publicador**|**sysname**|Nombre del publicador.|  
+|**publisher**|**sysname**|Nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
-|**type**|**tinyint**|Tipo de suscriptor:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] base de datos 1 = origen de datos ODBC **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**tinyint**|Tipo de suscriptor:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos **1** = origen de datos ODBC|  
 |**Inicio**|**sysname**|Id. de inicio de sesión para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**password**|**sysname**|Contraseña para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación.|  
+|**password**|**sysname**|Contraseña para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**commit_batch_size**|**int**|No se admite.|  
 |**status_batch_size**|**int**|No se admite.|  
 |**flush_frequency**|**int**|No se admite.|  
@@ -70,7 +70,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retryattempt**|**int**|No se admite.|  
 |**retrydelay**|**int**|No se admite.|  
 |**denominación**|**nvarchar(255)**|Descripción del suscriptor.|  
-|**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
+|**security_mode**|**int**|Modo de seguridad implementado.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows|  
 |**frequency_type2**|**int**|Frecuencia de ejecución del Agente de mezcla:<br /><br /> **1** = una vez<br /><br /> **2** = a petición<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente relativo<br /><br /> **64** = AutoStart<br /><br /> **128** = recurrente|  
 |**frequency_interval2**|**int**|Valor que se aplica a la frecuencia establecida por *frequency_type*.|  
 |**frequency_relative_interval2**|**int**|Fecha de la Agente de mezcla utilizada cuando *frequency_type* está establecido en 32 (relativo mensual):<br /><br /> **1** = primero<br /><br /> **2** = segundo<br /><br /> **4** = tercero<br /><br /> **8** = cuarto<br /><br /> **16** = último|  
@@ -85,7 +85,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpsubscriberinfo** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

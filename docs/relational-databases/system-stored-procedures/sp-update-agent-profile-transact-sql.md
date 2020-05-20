@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_update_agent_profile
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 730f996a35e7ea2e31518322d710b197cf31f38b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1fcee7ea96d97fa4334cc1837e0a839d4781618c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73632826"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820212"
 ---
 # <a name="sp_update_agent_profile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="arguments"></a>Argumentos  
 `[ @agent_type = ] 'agent_type'`Es el tipo de agente. *agent_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Agente de instantáneas.|  
 |**2**|Agente de registro del LOG.|  
@@ -54,7 +54,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_update_agent_profile** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

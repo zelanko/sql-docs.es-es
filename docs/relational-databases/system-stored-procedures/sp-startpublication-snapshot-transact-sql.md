@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_startpublication_snapshot
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ab1b3487c3a1affe7a0dc40f62d241d19b29186b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 70423377372a4ff41b5bd90487bd2080fec96edc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032761"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820344"
 ---
 # <a name="sp_startpublication_snapshot-transact-sql"></a>sp_startpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher = ] 'publisher'`Es el nombre de un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'`Es el nombre de un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -48,7 +48,7 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ## <a name="remarks"></a>Observaciones  
  **sp_startpublication_snapshot** se usa con todos los tipos de replicación.  
   
- Para un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de, este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
+ Para un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_startpublication_snapshot**.  

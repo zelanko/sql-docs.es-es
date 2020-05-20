@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursor
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e99f8f657c3d35cc91ff92a9ae5d920271769b8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108573"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820618"
 ---
 # <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68108573"
   
 ||  
 |-|  
-|**Se aplica a**: SQL Server [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Se aplica a**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -98,7 +98,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Cuando se usa una RPC, una operación de eliminación o actualización posicionada con un número de búfer 0 devolverá un mensaje de finalización con un *recuento de filas* de 0 (error) o 1 (correcto) para cada fila del búfer de captura.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="optype-parameter"></a>Parámetro optype  
  Con la excepción de las combinaciones de SETPOSITION con UPDATE, DELETE, REFRESH o LOCK; o ABSOLUTE con UPDATE o DELETE, los valores de *optype* son mutuamente excluyentes.  
@@ -125,7 +125,7 @@ sp_cursor  cursor, optype, rownum, table
 ## <a name="value-parameter"></a>Parámetro value  
  Existen dos alternativas a las reglas para usar el *valor* tal y como se indicó anteriormente en la sección argumentos:  
   
-1.  Puede usar un nombre que esté\@precedido por el nombre de la columna en la lista de selección para cualquier parámetro de *valor* con nombre. Una ventaja de esta alternativa es que la conversión de datos puede no ser necesaria.  
+1.  Puede usar un nombre que esté precedido por \@ el nombre de la columna en la lista de selección para cualquier parámetro de *valor* con nombre. Una ventaja de esta alternativa es que la conversión de datos puede no ser necesaria.  
   
 2.  Use un parámetro para enviar una instrucción UPDATE o INSERT completa o usar varios parámetros para enviar partes de una instrucción UPDATE o INSERT que SQL Server compilará en una instrucción completa. Puede encontrar ejemplos de esto en la sección Ejemplos, posteriormente en este tema.  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Si se \<especifica Update table Name>, se omitirá cualquier valor especificado para el parámetro *TABLE* .  
+>  Si \< se especifica Update Table name>, se omitirá cualquier valor especificado para el parámetro *TABLE* .  
   
  Cuando se utilizan varios parámetros, el primero debe ser una cadena con el siguiente formato:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- En este caso, el \<nombre de tabla> en la instrucción UPDATE construida es el especificado o predeterminado por el parámetro de *tabla* .  
+ En este caso, el \< nombre de tabla> en la instrucción UPDATE construida es el especificado o predeterminado por el parámetro de *tabla* .  
   
  Para INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Si se especifica Insert * \<Table Name>* , se omitirá cualquier valor especificado para el parámetro *TABLE* .  
+>  Si se especifica INSERT * \< table Name>* , se omitirá cualquier valor especificado para el parámetro *TABLE* .  
   
  Cuando se utilizan varios parámetros, el primero debe ser una cadena con el siguiente formato:  
   
@@ -168,7 +168,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- excepto cuando se especificó VALUES, en cuyo caso debe haber un carácter ")" final después de la última expresión. En este caso, el * \<nombre de tabla>* en la instrucción UPDATE construida es el especificado o predeterminado por el parámetro de *tabla* .  
+ excepto cuando se especificó VALUES, en cuyo caso debe haber un carácter ")" final después de la última expresión. En este caso, el * \< nombre de tabla>* en la instrucción UPDATE construida es el especificado o predeterminado por el parámetro de *tabla* .  
   
 > [!NOTE]  
 >  Es posible enviar un parámetro como un parámetro con nombre, es decir "`@VALUES`". En este caso no se pueden usar otros parámetros con nombre.  

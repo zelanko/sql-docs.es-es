@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpushsubscription_agent
 ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 740437178b6d9ab444cabdbda3e37febc65b3897
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68894043"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820715"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -98,12 +98,12 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de distribución. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64** (valor predeterminado)|Iniciar automáticamente|  
@@ -116,24 +116,24 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1** (predeterminado)|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor* es de **tipo int**y su valor predeterminado es 0.  
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5.  
   
@@ -154,26 +154,26 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @dts_package_location = ] 'dts_package_location'`Especifica la ubicación del paquete. *dts_package_location* es de tipo **nvarchar (12)** y su valor predeterminado es Distributor. La ubicación del paquete puede ser **Distributor** o **Subscriber**.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica si la suscripción se puede sincronizar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] el administrador de sincronización. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Indica si la suscripción se puede sincronizar mediante el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @distribution_job_name = ] 'distribution_job_name'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_provider = ] 'subscriber_provider'`Es el identificador de programación único (PROGID) con el que se registra el proveedor de OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el origen de datos que no es de. *subscriber_provider* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor de OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_provider = ] 'subscriber_provider'`Es el identificador de programación único (PROGID) con el que se registra el proveedor de OLE DB para el origen de datos que no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de. *subscriber_provider* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_provider* debe ser único para el proveedor de OLE DB instalado en el distribuidor. *subscriber_provider* solo se admite para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Es el nombre del origen de datos tal y como lo entiende el proveedor de OLE DB. *subscriber_datasrc* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor de OLE DB. *subscriber_datasrc* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_datasrc = ] 'subscriber_datasrc'`Es el nombre del origen de datos tal y como lo entiende el proveedor de OLE DB. *subscriber_datasrc* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_datasrc* se pasa como la propiedad DBPROP_INIT_DATASOURCE para inicializar el proveedor de OLE DB. *subscriber_datasrc* solo se admite para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_location = ] 'subscriber_location'`Es la ubicación de la base de datos tal como la entiende el proveedor de OLE DB. *subscriber_location* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor de OLE DB. *subscriber_location* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_location = ] 'subscriber_location'`Es la ubicación de la base de datos tal como la entiende el proveedor de OLE DB. *subscriber_location* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_location* se pasa como la propiedad DBPROP_INIT_LOCATION para inicializar el proveedor de OLE DB. *subscriber_location* solo se admite para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Es la cadena de conexión específica del proveedor de OLE DB que identifica el origen de datos. *subscriber_provider_string* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_provider_string* se pasa a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor de OLE DB. *subscriber_provider_string* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_provider_string = ] 'subscriber_provider_string'`Es la cadena de conexión específica del proveedor de OLE DB que identifica el origen de datos. *subscriber_provider_string* es de tipo **nvarchar (4000)** y su valor predeterminado es NULL. *subscriber_provider_string* se pasa a IDataInitialize o se establece como la propiedad DBPROP_INIT_PROVIDERSTRING para inicializar el proveedor de OLE DB. *subscriber_provider_string* solo se admite para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-`[ @subscriber_catalog = ] 'subscriber_catalog'`Es el catálogo que se va a utilizar al realizar una conexión al proveedor de OLE DB. *subscriber_catalog* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor de OLE DB. *subscriber_catalog* solo se admite para suscriptores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no sean de.  
+`[ @subscriber_catalog = ] 'subscriber_catalog'`Es el catálogo que se va a utilizar al realizar una conexión al proveedor de OLE DB. *subscriber_catalog* es de **tipo sysname y su**valor predeterminado es NULL. *subscriber_catalog* se pasa como la propiedad DBPROP_INIT_CATALOG para inicializar el proveedor de OLE DB. *subscriber_catalog* solo se admite para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addpushsubscription_agent** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="example"></a>Ejemplo  

@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 11beb90fe3bf0be71d31f5e330c3588d6e1e0aaa
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68109542"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82822118"
 ---
 # <a name="sysconversation_endpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

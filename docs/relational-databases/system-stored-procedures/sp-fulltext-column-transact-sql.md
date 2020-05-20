@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_fulltext_column
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 724c3b71012014d6858554614fbed9239bbfeddc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124337"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820461"
 ---
 # <a name="sp_fulltext_column-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -56,12 +56,12 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'`Es la acción que se va a realizar. *Action* es de tipo **VARCHAR (20)**, no tiene ningún valor predeterminado y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**add**|Agrega *column_name* de *qualified_table_name* al índice de texto completo inactivo de la tabla. Esta acción habilita el indizado de texto completo de la columna.|  
 |**omisiones**|Quita *column_name* de *qualified_table_name* del índice de texto completo inactivo de la tabla.|  
   
-`[ @language = ] 'language_term'`Es el idioma de los datos almacenados en la columna. Para obtener una lista de los idiomas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]incluidos en, vea [sys. fulltext_languages &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
+`[ @language = ] 'language_term'`Es el idioma de los datos almacenados en la columna. Para obtener una lista de los idiomas incluidos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [sys. fulltext_languages &#40;&#41;de TRANSACT-SQL ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
   
 > [!NOTE]  
 >  Use 'Neutral' cuando una columna contiene datos en varios idiomas o en un idioma no admitido. El valor predeterminado se especifica en la opción de configuración 'default full-text language'.  

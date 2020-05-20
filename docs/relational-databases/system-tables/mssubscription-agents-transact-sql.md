@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_agents system table
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139788"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82823377"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68139788"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de la fila.|  
-|**publicador**|**sysname**|El nombre del publicador.|  
+|**publisher**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos de publicación.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> 0 = Inserción.<br /><br /> 1 = Extracción<br /><br /> 2 = Extracción anónima|  
@@ -47,7 +47,7 @@ ms.locfileid: "68139788"
 |**last_sync_status**|**int**|El último estado del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **1** = iniciado.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
 |**last_sync_summary**|**sysname**|El último mensaje del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **Introducción.**<br /><br /> **Completa.**<br /><br /> **En curso.**<br /><br /> **Activos.**<br /><br /> **Realizar.**<br /><br /> **Puedan.**|  
 |**last_sync_time**|**datetime**|Fecha y hora en que se actualizaron las columnas *last_sync_summary* y *last_sync_status* . Los Agentes de distribución anónimos o de extracción que se ejecutan como trabajos del servicio del Agente SQL Server no actualizan estas columnas. En su lugar, la información del historial se registra en la tabla del historial de trabajos en ese caso.|  
-|**queue_server**|**sysname**|Exclusivamente para uso interno.|  
+|**queue_server**|**sysname**|Solo para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

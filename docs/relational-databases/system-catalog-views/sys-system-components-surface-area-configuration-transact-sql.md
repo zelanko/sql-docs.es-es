@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.system_components_surface_area_configuration catalog view
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 665e73b3cd072bfffc214c518d75d96af3591f94
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d12a73f8efc2b4278fc24f41af4e1d720beef43
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108869"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821762"
 ---
 # <a name="syssystem_components_surface_area_configuration-transact-sql"></a>sys.system_components_surface_area_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68108869"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**component_name**|**sysname**|Nombre del componente. Tendrá la intercalación de palabras clave, Latin1_General_CI_AS_KS_WS. No puede ser NULL.|  
-|**database_name**|**sysname**|Base de datos que contiene el objeto. Tendrá la intercalación de palabras clave, Latin1_General_CI_AS_KS_WS. Debe ser una de las siguientes:<br /><br /> **maestro**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
+|**database_name**|**sysname**|Base de datos que contiene el objeto. Tendrá la intercalación de palabras clave, Latin1_General_CI_AS_KS_WS. Debe ser una de las siguientes:<br /><br /> **maestra**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
 |**schema_name**|**sysname**|Esquema que contiene el objeto. Tendrá la intercalación de palabras clave, Latin1_General_CI_AS_KS_WS. No puede ser NULL.|  
 |**object_name**|**sysname**|Nombre del objeto. Tendrá la intercalación de palabras clave, Latin1_General_CI_AS_KS_WS. No puede ser NULL.|  
 |**state**|**tinyint**|0 = Deshabilitado<br /><br /> 1 = Habilitado|  

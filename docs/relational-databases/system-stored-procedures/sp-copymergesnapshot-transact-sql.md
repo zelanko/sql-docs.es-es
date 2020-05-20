@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_copymergesnapshot
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d51f29399487ee156210e96fe598c38288755913
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8658790dc80ecdae843104f5ed1dd8be2684963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381707"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820635"
 ---
 # <a name="sp_copymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Copia la carpeta de instantáneas de la publicación especificada en la carpeta indicada en el ** \@destination_folder**. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
+  Copia la carpeta de instantáneas de la publicación especificada en la carpeta indicada en el ** \@ destination_folder**. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Observaciones  
- **sp_copymergesnapshot** se utiliza en la replicación de mezcla. Los suscriptores [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan la versión 7,0 y versiones anteriores no pueden usar la ubicación de instantáneas alternativa.  
+ **sp_copymergesnapshot** se utiliza en la replicación de mezcla. Los suscriptores que ejecutan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0 y versiones anteriores no pueden usar la ubicación de instantáneas alternativa.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_copymergesnapshot**.  

@@ -9,20 +9,20 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 0673a8f8-8bed-41eb-8959-a9e3e9e03a65
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8f275d48131ef7011307f39f38d37a8bfff4ea18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5fdb20b8fe35238e912c302bb57812e8e4791a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899316"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819413"
 ---
 # <a name="sysdm_pdw_os_performance_counters-transact-sql"></a>Sys. dm_pdw_os_performance_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Contiene información sobre los contadores de rendimiento de Windows para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]los nodos de.  
+  Contiene información sobre los contadores de rendimiento de Windows para los nodos de [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  

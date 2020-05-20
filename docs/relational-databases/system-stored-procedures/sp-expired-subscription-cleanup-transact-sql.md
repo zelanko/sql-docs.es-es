@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_expired_subscription_cleanup
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fb556a464077092cacd7107a8c2b4b124c6db707
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f739a51e57337628c666ac8e5ccee253785a1df6
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68124429"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820514"
 ---
 # <a name="sp_expired_subscription_cleanup-transact-sql"></a>sp_expired_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Comprueba el estado de todas las suscripciones de cada publicación y quita las que han expirado. Este procedimiento almacenado se ejecuta en el publicador en cualquier base de datos o en el distribuidor de la base de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de distribución para un publicador que no sea de.  
+  Comprueba el estado de todas las suscripciones de cada publicación y quita las que han expirado. Este procedimiento almacenado se ejecuta en el publicador en cualquier base de datos o en el distribuidor de la base de datos de distribución para un publicador que no sea de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre de un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publication* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @publisher = ] 'publisher'`Es el nombre de un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publication* es de **tipo sysname y su**valor predeterminado es NULL. No debe especificar este parámetro para un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

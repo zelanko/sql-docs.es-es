@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addpublication_snapshot
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3447b9111ec6d6a6fd6a4084f884647cbd38eec2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769111"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820690"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,11 +61,11 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se ejecuta el Agente de instantáneas. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez.|  
 |**4** (valor predeterminado)|Diariamente|  
-|**203**|Semanalmente|  
+|**8**|Semanalmente|  
 |**dieciséi**|Mensual.|  
 |**32**|Mensualmente, según el intervalo de frecuencia|  
 |**64**|Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inicia el agente.|  
@@ -77,7 +77,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* no se usa.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de Daily.|  
-|**203**|*frequency_interval* es uno o más de los siguientes (combinados con un operador lógico [&#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) :<br /><br /> **1** = Domingo &#124;<br /><br /> **2** = lunes &#124;<br /><br /> **4** = martes &#124;<br /><br /> **8** = miércoles &#124;<br /><br /> **16** = jueves &#124;<br /><br /> **32** = viernes &#124;<br /><br /> **64** = sábado|  
+|**8**|*frequency_interval* es uno o más de los siguientes (combinados con un operador lógico [&#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) :<br /><br /> **1** = Domingo &#124;<br /><br /> **2** = lunes &#124;<br /><br /> **4** = martes &#124;<br /><br /> **8** = miércoles &#124;<br /><br /> **16** = jueves &#124;<br /><br /> **32** = viernes &#124;<br /><br /> **64** = sábado|  
 |**dieciséi**|En el *frequency_interval* día del mes.|  
 |**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = Domingo &#124;<br /><br /> **2** = lunes &#124;<br /><br /> **3** = martes &#124;<br /><br /> **4** = miércoles &#124;<br /><br /> **5** = jueves &#124;<br /><br /> **6** = viernes &#124;<br /><br /> **7** = sábado &#124;<br /><br /> **8** = día &#124;<br /><br /> **9** = día de la semana &#124;<br /><br /> **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se usa.|  
@@ -85,12 +85,12 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Es la unidad de *freq_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4** (valor predeterminado)|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es 5, lo que significa cada 5 minutos.  
   
@@ -120,17 +120,17 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 `[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta con la que se ejecuta el agente. En Instancia administrada de Azure SQL Database, use una cuenta de SQL Server. *job_login* es de tipo **nvarchar (257)** y su valor predeterminado es NULL. Esta cuenta siempre se utiliza para las conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!NOTE]
->  En el caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los publicadores que no son de, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
+>  En el caso de los publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;&#41;de TRANSACT-SQL ](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname**y no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al crear un agente de instantáneas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
+>  no se debe usar el *publicador* al crear un agente de instantáneas en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

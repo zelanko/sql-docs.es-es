@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - cdc.change_tables
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 52f7a58c854d7081c13cfad606f71044361a02ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 585ebf4a2a01160eec18c4af8f6d25ec4480ddb7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73962448"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820080"
 ---
 # <a name="cdcchange_tables-transact-sql"></a>cdc.change_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "73962448"
 |**source_object_id**|**int**|Id. de la tabla de origen habilitada para la captura de datos modificados.|  
 |**capture_instance**|**sysname**|Nombre de la instancia de captura usada para nombrar los objetos de seguimiento específicos de la instancia. De forma predeterminada, el nombre se deriva del nombre del esquema de origen más el nombre de la tabla de origen en el formato *schemaname_sourcename*.|  
 |**start_lsn**|**binary(10)**|Número de secuencia de registro (LSN) que representa el extremo inferior al consultar los datos de cambio en la tabla de cambios.<br /><br /> NULL = no se ha establecido el extremo bajo.|  
-|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], esta columna siempre devuelve NULL.|  
+|**end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Para [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , esta columna siempre devuelve NULL.|  
 |**supports_net_changes**|**bit**|La consulta de los cambios de red está habilitada para la tabla de cambios.|  
 |**has_drop_pending**|**bit**|El proceso de captura ha recibido la notificación de que se ha quitado la tabla de origen.|  
 |**role_name**|**sysname**|Nombre del rol de base de datos usada para obtener acceso a los datos de cambio.<br /><br /> NULL = no se utiliza un rol.|  

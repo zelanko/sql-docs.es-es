@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_getqueuedrows
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7f12da71985fc0d2629c28500c4561eb1495c0ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123939"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820477"
 ---
 # <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |**table column1...n**||El valor de cada columna de la tabla especificada en *TableName*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_getqueuedrows** se utiliza en los suscriptores que participan en la actualización en cola.  
   
  **sp_getqueuedrows** encuentra filas de una tabla determinada en una base de datos de suscripciones que han participado en una actualización en cola, pero el agente de lectura de cola no las ha resuelto actualmente.  

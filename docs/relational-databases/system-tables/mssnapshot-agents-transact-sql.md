@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsnapshot_agents system table
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fcbbe40247742a1a5a1eda5e6f501aae279a12a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079964"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82821097"
 ---
 # <a name="mssnapshot_agents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68079964"
 |**profile_id**|**int**|El ID. de configuración de la [MSagent_profiles &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
 |**dynamic_filter_login**|**sysname**|El valor que se usa para evaluar el [SUSER_SNAME &#40;función de&#41;de Transact-SQL](../../t-sql/functions/suser-sname-transact-sql.md) en los filtros con parámetros que definen una partición. Esta columna se utiliza para una instantánea con particiones.|  
 |**dynamic_filter_hostname**|**sysname**|El valor que se usa para evaluar el [HOST_NAME &#40;función de&#41;de Transact-SQL](../../t-sql/functions/host-name-transact-sql.md) en los filtros con parámetros que definen una partición. Esta columna se utiliza para una instantánea con particiones.|  
-|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
+|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  

@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_mirroring_connections dynamic management view
 ms.assetid: e4df91b6-0240-45d0-ae22-cb2c0d52e0b3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 57987f90552897b57e2efe685a9f7ea95152daa9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bbb92c73f29c55cf30dde68e59489e64859a2267
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68090950"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82819718"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_connections"></a>Creación de reflejo de la base de datos: sys. dm_db_mirroring_connections
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "68090950"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**connection_id**|**uniqueidentifier**|Identificador de la conexión.|  
-|**transport_stream_id**|**uniqueidentifier**|Identificador de la conexión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la interfaz de red (SNI) utilizada por esta conexión para las comunicaciones TCP/IP.|  
+|**transport_stream_id**|**uniqueidentifier**|Identificador de la conexión de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interfaz de red (SNI) utilizada por esta conexión para las comunicaciones TCP/IP.|  
 |**state**|**smallint**|Estado actual de la conexión. Valores posibles:<br /><br /> 1 = NEW<br /><br /> 2 = CONNECTING<br /><br /> 3 = CONNECTED<br /><br /> 4 = LOGGED_IN<br /><br /> 5 = CERRADO|  
 |**state_desc**|**nvarchar(60)**|Estado actual de la conexión. Valores posibles:<br /><br /> NEW<br /><br /> CONNECTING<br /><br /> CONNECTED<br /><br /> LOGGED_IN<br /><br /> CLOSED|  
 |**connect_time**|**datetime**|Fecha y hora a la que se inició la conexión.|  

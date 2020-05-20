@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 16ebdd2ac874784c071fea7aa962d005436aac60
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820884"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "79289913"
 Devuelve información acerca de todas las esperas de bloqueos temporales organizadas por clase. 
   
 > [!NOTE]  
-> Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_latch_stats**.  
+> Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_latch_stats**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -39,10 +39,10 @@ Devuelve información acerca de todas las esperas de bloqueos temporales organiz
 |waiting_requests_count|**bigint**|Número de esperas en bloqueos temporales en esta clase Este recuento se incrementa al inicio de una espera de bloqueo temporal.|  
 |wait_time_ms|**bigint**|Tiempo total de espera, en milisegundos, en bloqueos temporales en esta clase<br /><br /> **Nota:** Esta columna se actualiza cada cinco minutos durante una espera de bloqueo temporal y al final de una espera de bloqueo temporal.|  
 |max_wait_time_ms|**bigint**|Tiempo máximo que un objeto de memoria ha esperado en este bloqueo temporal. Si este valor es extraordinariamente alto, puede indicar un bloqueo interno.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="remarks"></a>Observaciones  
@@ -61,7 +61,7 @@ GO
 >  Estas estadísticas no permanecen si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Todos los datos se acumulan desde la última vez que se restablecieron las estadísticas o desde que se inició [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="latches"></a><a name="latches"></a>Bloqueos temporales  
- Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en varios componentes. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
+ Un bloqueo temporal es un objeto de sincronización ligero interno similar a un bloqueo, que se usa en varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes. Un bloqueo temporal se usa principalmente para sincronizar páginas de base de datos durante operaciones como el acceso a archivos o búferes. Cada bloqueo temporal está asociado a una sola unidad de asignación. 
   
  Una espera de bloqueo temporal se produce cuando no se puede conceder una solicitud de bloqueo temporal inmediatamente, porque otro subproceso mantiene el bloqueo temporal en un modo de conflictos. A diferencia de los bloqueos, un bloqueo temporal se libera inmediatamente después de la operación, incluso en operaciones de escritura.  
   
@@ -103,95 +103,95 @@ GO
 |BUFFER|Se utiliza para sincronizar el acceso a corto plazo a páginas de la base de datos. Se requiere un bloqueo temporal de búfer antes de leer o modificar una página de la base de datos. La contención de bloqueos temporales de búfer puede indicar varios problemas, incluidas páginas activas y operaciones de E/S lentas.<br /><br /> Esta clase de bloqueo temporal cubre todos los usos posibles de bloqueos temporales de página. Sys. dm_os_wait_stats crea una diferencia entre las esperas de bloqueos temporales de página causadas por operaciones de e/s y las operaciones de lectura y escritura en la página.|  
 |BUFFER_POOL_GROW|Se utiliza para sincronizar el administrador del búfer interno durante operaciones de ampliación del grupo de búferes.|  
 |DATABASE_CHECKPOINT|Se utiliza para serializar puntos de comprobación en una base de datos.|  
-|CLR_PROCEDURE_HASHTABLE|Exclusivamente para uso interno.|  
-|CLR_UDX_STORE|Exclusivamente para uso interno.|  
-|CLR_DATAT_ACCESS|Exclusivamente para uso interno.|  
-|CLR_XVAR_PROXY_LIST|Exclusivamente para uso interno.|  
-|DBCC_CHECK_AGGREGATE|Exclusivamente para uso interno.|  
-|DBCC_CHECK_RESULTSET|Exclusivamente para uso interno.|  
-|DBCC_CHECK_TABLE|Exclusivamente para uso interno.|  
-|DBCC_CHECK_TABLE_INIT|Exclusivamente para uso interno.|  
-|DBCC_CHECK_TRACE_LIST|Exclusivamente para uso interno.|  
-|DBCC_FILE_CHECK_OBJECT|Exclusivamente para uso interno.|  
+|CLR_PROCEDURE_HASHTABLE|Solo para uso interno.|  
+|CLR_UDX_STORE|Solo para uso interno.|  
+|CLR_DATAT_ACCESS|Solo para uso interno.|  
+|CLR_XVAR_PROXY_LIST|Solo para uso interno.|  
+|DBCC_CHECK_AGGREGATE|Solo para uso interno.|  
+|DBCC_CHECK_RESULTSET|Solo para uso interno.|  
+|DBCC_CHECK_TABLE|Solo para uso interno.|  
+|DBCC_CHECK_TABLE_INIT|Solo para uso interno.|  
+|DBCC_CHECK_TRACE_LIST|Solo para uso interno.|  
+|DBCC_FILE_CHECK_OBJECT|Solo para uso interno.|  
 |DBCC_PERF|Se utiliza para sincronizar contadores de supervisión de rendimiento internos.|  
-|DBCC_PFS_STATUS|Exclusivamente para uso interno.|  
-|DBCC_OBJECT_METADATA|Exclusivamente para uso interno.|  
-|DBCC_HASH_DLL|Exclusivamente para uso interno.|  
-|EVENTING_CACHE|Exclusivamente para uso interno.|  
+|DBCC_PFS_STATUS|Solo para uso interno.|  
+|DBCC_OBJECT_METADATA|Solo para uso interno.|  
+|DBCC_HASH_DLL|Solo para uso interno.|  
+|EVENTING_CACHE|Solo para uso interno.|  
 |FCB|Se utiliza para sincronizar el acceso a un bloque de control de archivos.|  
-|FCB_REPLICA|Exclusivamente para uso interno.|  
+|FCB_REPLICA|Solo para uso interno.|  
 |FGCB_ALLOC|Se utiliza para sincronizar el acceso a información de asignación por turnos en un grupo de archivos.|  
 |FGCB_ADD_REMOVE|Se usa para sincronizar el acceso a los grupos de archivos para las operaciones de archivo agregar, quitar, aumentar y reducir.|  
-|FILEGROUP_MANAGER|Exclusivamente para uso interno.|  
-|FILE_MANAGER|Exclusivamente para uso interno.|  
-|FILESTREAM_FCB|Exclusivamente para uso interno.|  
-|FILESTREAM_FILE_MANAGER|Exclusivamente para uso interno.|  
-|FILESTREAM_GHOST_FILES|Exclusivamente para uso interno.|  
-|FILESTREAM_DFS_ROOT|Exclusivamente para uso interno.|  
-|LOG_MANAGER|Exclusivamente para uso interno.|  
-|FULLTEXT_DOCUMENT_ID|Exclusivamente para uso interno.|  
-|FULLTEXT_DOCUMENT_ID_TRANSACTION|Exclusivamente para uso interno.|  
-|FULLTEXT_DOCUMENT_ID_NOTIFY|Exclusivamente para uso interno.|  
-|FULLTEXT_LOGS|Exclusivamente para uso interno.|  
-|FULLTEXT_CRAWL_LOG|Exclusivamente para uso interno.|  
-|FULLTEXT_ADMIN|Exclusivamente para uso interno.|  
-|FULLTEXT_AMDIN_COMMAND_CACHE|Exclusivamente para uso interno.|  
-|FULLTEXT_LANGUAGE_TABLE|Exclusivamente para uso interno.|  
-|FULLTEXT_CRAWL_DM_LIST|Exclusivamente para uso interno.|  
-|FULLTEXT_CRAWL_CATALOG|Exclusivamente para uso interno.|  
-|FULLTEXT_FILE_MANAGER|Exclusivamente para uso interno.|  
-|DATABASE_MIRRORING_REDO|Exclusivamente para uso interno.|  
-|DATABASE_MIRRORING_SERVER|Exclusivamente para uso interno.|  
-|DATABASE_MIRRORING_CONNECTION|Exclusivamente para uso interno.|  
-|DATABASE_MIRRORING_STREAM|Exclusivamente para uso interno.|  
-|QUERY_OPTIMIZER_VD_MANAGER|Exclusivamente para uso interno.|  
-|QUERY_OPTIMIZER_ID_MANAGER|Exclusivamente para uso interno.|  
-|QUERY_OPTIMIZER_VIEW_REP|Exclusivamente para uso interno.|  
-|RECOVERY_BAD_PAGE_TABLE|Exclusivamente para uso interno.|  
-|RECOVERY_MANAGER|Exclusivamente para uso interno.|  
-|SECURITY_OPERATION_RULE_TABLE|Exclusivamente para uso interno.|  
-|SECURITY_OBJPERM_CACHE|Exclusivamente para uso interno.|  
-|SECURITY_CRYPTO|Exclusivamente para uso interno.|  
-|SECURITY_KEY_RING|Exclusivamente para uso interno.|  
-|SECURITY_KEY_LIST|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_CONNECTION_RECEIVE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSMISSION|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSMISSION_UPDATE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSMISSION_STATE|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSMISSION_ERRORS|Exclusivamente para uso interno.|  
-|SSBXmitWork|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_MESSAGE_TRANSMISSION|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_MAP_MANAGER|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_HOST_NAME|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_READ_CACHE|Exclusivamente para uso interno.|  
+|FILEGROUP_MANAGER|Solo para uso interno.|  
+|FILE_MANAGER|Solo para uso interno.|  
+|FILESTREAM_FCB|Solo para uso interno.|  
+|FILESTREAM_FILE_MANAGER|Solo para uso interno.|  
+|FILESTREAM_GHOST_FILES|Solo para uso interno.|  
+|FILESTREAM_DFS_ROOT|Solo para uso interno.|  
+|LOG_MANAGER|Solo para uso interno.|  
+|FULLTEXT_DOCUMENT_ID|Solo para uso interno.|  
+|FULLTEXT_DOCUMENT_ID_TRANSACTION|Solo para uso interno.|  
+|FULLTEXT_DOCUMENT_ID_NOTIFY|Solo para uso interno.|  
+|FULLTEXT_LOGS|Solo para uso interno.|  
+|FULLTEXT_CRAWL_LOG|Solo para uso interno.|  
+|FULLTEXT_ADMIN|Solo para uso interno.|  
+|FULLTEXT_AMDIN_COMMAND_CACHE|Solo para uso interno.|  
+|FULLTEXT_LANGUAGE_TABLE|Solo para uso interno.|  
+|FULLTEXT_CRAWL_DM_LIST|Solo para uso interno.|  
+|FULLTEXT_CRAWL_CATALOG|Solo para uso interno.|  
+|FULLTEXT_FILE_MANAGER|Solo para uso interno.|  
+|DATABASE_MIRRORING_REDO|Solo para uso interno.|  
+|DATABASE_MIRRORING_SERVER|Solo para uso interno.|  
+|DATABASE_MIRRORING_CONNECTION|Solo para uso interno.|  
+|DATABASE_MIRRORING_STREAM|Solo para uso interno.|  
+|QUERY_OPTIMIZER_VD_MANAGER|Solo para uso interno.|  
+|QUERY_OPTIMIZER_ID_MANAGER|Solo para uso interno.|  
+|QUERY_OPTIMIZER_VIEW_REP|Solo para uso interno.|  
+|RECOVERY_BAD_PAGE_TABLE|Solo para uso interno.|  
+|RECOVERY_MANAGER|Solo para uso interno.|  
+|SECURITY_OPERATION_RULE_TABLE|Solo para uso interno.|  
+|SECURITY_OBJPERM_CACHE|Solo para uso interno.|  
+|SECURITY_CRYPTO|Solo para uso interno.|  
+|SECURITY_KEY_RING|Solo para uso interno.|  
+|SECURITY_KEY_LIST|Solo para uso interno.|  
+|SERVICE_BROKER_CONNECTION_RECEIVE|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSMISSION|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSMISSION_UPDATE|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSMISSION_STATE|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSMISSION_ERRORS|Solo para uso interno.|  
+|SSBXmitWork|Solo para uso interno.|  
+|SERVICE_BROKER_MESSAGE_TRANSMISSION|Solo para uso interno.|  
+|SERVICE_BROKER_MAP_MANAGER|Solo para uso interno.|  
+|SERVICE_BROKER_HOST_NAME|Solo para uso interno.|  
+|SERVICE_BROKER_READ_CACHE|Solo para uso interno.|  
 |SERVICE_BROKER_WAITFOR_MANAGER| Se utiliza para sincronizar un mapa de nivel de instancia de colas de espera. Existe una cola por el identificador de base de datos, la versión de base de datos y la tupla de ID. de cola. La contención en bloqueos temporales de esta clase puede producirse cuando hay muchas conexiones: en un estado de espera de WAITFOR (RECEIVE); llamar a WAITFOR (RECEIVE); supera el tiempo de espera de WAITFOR; recibir un mensaje; confirmar o revertir la transacción que contiene WAITFOR (RECEIVE); Puede reducir la contención reduciendo el número de subprocesos en un estado de espera de WAITFOR (RECEIVE). |  
-|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_TRANSPORT|Exclusivamente para uso interno.|  
-|SERVICE_BROKER_MIRROR_ROUTE|Exclusivamente para uso interno.|  
-|TRACE_ID|Exclusivamente para uso interno.|  
-|TRACE_AUDIT_ID|Exclusivamente para uso interno.|  
-|TRACE|Exclusivamente para uso interno.|  
-|TRACE_CONTROLLER|Exclusivamente para uso interno.|  
-|TRACE_EVENT_QUEUE|Exclusivamente para uso interno.|  
-|TRANSACTION_DISTRIBUTED_MARK|Exclusivamente para uso interno.|  
-|TRANSACTION_OUTCOME|Exclusivamente para uso interno.|  
-|NESTING_TRANSACTION_READONLY|Exclusivamente para uso interno.|  
-|NESTING_TRANSACTION_FULL|Exclusivamente para uso interno.|  
-|MSQL_TRANSACTION_MANAGER|Exclusivamente para uso interno.|  
-|DATABASE_AUTONAME_MANAGER|Exclusivamente para uso interno.|  
-|UTILITY_DYNAMIC_VECTOR|Exclusivamente para uso interno.|  
-|UTILITY_SPARSE_BITMAP|Exclusivamente para uso interno.|  
-|UTILITY_DATABASE_DROP|Exclusivamente para uso interno.|  
-|UTILITY_DYNAMIC_MANAGER_VIEW|Exclusivamente para uso interno.|  
-|UTILITY_DEBUG_FILESTREAM|Exclusivamente para uso interno.|  
-|UTILITY_LOCK_INFORMATION|Exclusivamente para uso interno.|  
-|VERSIONING_TRANSACTION|Exclusivamente para uso interno.|  
-|VERSIONING_TRANSACTION_LIST|Exclusivamente para uso interno.|  
-|VERSIONING_TRANSACTION_CHAIN|Exclusivamente para uso interno.|  
-|VERSIONING_STATE|Exclusivamente para uso interno.|  
-|VERSIONING_STATE_CHANGE|Exclusivamente para uso interno.|  
-|KTM_VIRTUAL_CLOCK|Exclusivamente para uso interno.|  
+|SERVICE_BROKER_WAITFOR_TRANSACTION_DATA|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSMISSION_TRANSACTION_DATA|Solo para uso interno.|  
+|SERVICE_BROKER_TRANSPORT|Solo para uso interno.|  
+|SERVICE_BROKER_MIRROR_ROUTE|Solo para uso interno.|  
+|TRACE_ID|Solo para uso interno.|  
+|TRACE_AUDIT_ID|Solo para uso interno.|  
+|TRACE|Solo para uso interno.|  
+|TRACE_CONTROLLER|Solo para uso interno.|  
+|TRACE_EVENT_QUEUE|Solo para uso interno.|  
+|TRANSACTION_DISTRIBUTED_MARK|Solo para uso interno.|  
+|TRANSACTION_OUTCOME|Solo para uso interno.|  
+|NESTING_TRANSACTION_READONLY|Solo para uso interno.|  
+|NESTING_TRANSACTION_FULL|Solo para uso interno.|  
+|MSQL_TRANSACTION_MANAGER|Solo para uso interno.|  
+|DATABASE_AUTONAME_MANAGER|Solo para uso interno.|  
+|UTILITY_DYNAMIC_VECTOR|Solo para uso interno.|  
+|UTILITY_SPARSE_BITMAP|Solo para uso interno.|  
+|UTILITY_DATABASE_DROP|Solo para uso interno.|  
+|UTILITY_DYNAMIC_MANAGER_VIEW|Solo para uso interno.|  
+|UTILITY_DEBUG_FILESTREAM|Solo para uso interno.|  
+|UTILITY_LOCK_INFORMATION|Solo para uso interno.|  
+|VERSIONING_TRANSACTION|Solo para uso interno.|  
+|VERSIONING_TRANSACTION_LIST|Solo para uso interno.|  
+|VERSIONING_TRANSACTION_CHAIN|Solo para uso interno.|  
+|VERSIONING_STATE|Solo para uso interno.|  
+|VERSIONING_STATE_CHANGE|Solo para uso interno.|  
+|KTM_VIRTUAL_CLOCK|Solo para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  
 [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)       

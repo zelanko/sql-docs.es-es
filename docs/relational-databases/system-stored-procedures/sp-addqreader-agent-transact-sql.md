@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addqreader_agent
 ms.assetid: dc9f591a-e67e-4ba8-bf47-defd5eda0822
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a02082715dfc77384ebfde58d4c29f94cd3dd44c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0347a7346e42e212775267fc5849360abaa75423
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68769072"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82820652"
 ---
 # <a name="sp_addqreader_agent-transact-sql"></a>sp_addqreader_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ sp_addqreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'`Es el inicio de sesión [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   

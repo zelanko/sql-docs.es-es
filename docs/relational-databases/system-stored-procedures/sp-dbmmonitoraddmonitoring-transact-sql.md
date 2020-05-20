@@ -16,14 +16,14 @@ helpviewer_keywords:
 - database mirroring [SQL Server], monitoring
 - sp_dbmmonitoraddmonitoring
 ms.assetid: 9489dc30-af29-4363-a172-4645947fc95e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4ed53c6a72b201129cf9f75214261bbdd47d6fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4b8ddf9753578f6d73cd6baf7511c73d90377e1a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108150"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831655"
 ---
 # <a name="sp_dbmmonitoraddmonitoring-transact-sql"></a>sp_dbmmonitoraddmonitoring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
   
 ## <a name="arguments"></a>Argumentos  
  *update_period*  
- Especifica el intervalo entre actualizaciones, en minutos. Este valor puede estar comprendido entre 1 y 120 minutos. El valor predeterminado es 1 minuto.  
+ Especifica el intervalo entre actualizaciones, en minutos. Este valor puede estar comprendido entre 1 y 120 minutos. El valor predeterminado es 1 minuto.  
   
 > [!NOTE]  
 >  Si se establece un período de actualización demasiado corto, podría aumentar el tiempo de respuesta para los clientes.  
@@ -55,7 +55,7 @@ sp_dbmmonitoraddmonitoring [ update_period ]
 ## <a name="remarks"></a>Observaciones  
  Este procedimiento requiere que se permita la ejecución del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia del servidor y, para que se ejecute el trabajo del monitor de creación de reflejos de la base de datos, el Agente debe estar ejecutándose.  
   
- Si se inicia la creación de reflejo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de la base de datos, el procedimiento de **sp_dbmmonitoraddmonitoring** se ejecuta automáticamente. Si inicia la creación de reflejo manual mediante instrucciones ALTER DATABASE, para supervisar la base de datos reflejada en la instancia del servidor, debe ejecutar **sp_dbmmonitoraddmonitoring** manualmente.  
+ Si se inicia la creación de reflejo de la base de datos [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , el procedimiento de **sp_dbmmonitoraddmonitoring** se ejecuta automáticamente. Si inicia la creación de reflejo manual mediante instrucciones ALTER DATABASE, para supervisar la base de datos reflejada en la instancia del servidor, debe ejecutar **sp_dbmmonitoraddmonitoring** manualmente.  
   
 > [!NOTE]  
 >  Si ejecuta **sp_dbmmonitoraddmonitoring** antes de configurar la creación de reflejo de la base de datos, se ejecutará el trabajo de supervisión, pero no se actualizará la tabla de estado en la que se almacena el historial del monitor de creación de reflejo de la base de datos.  

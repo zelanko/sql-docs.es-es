@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_dbfixedrolepermission
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fe4c8864856ef9b324a5f44b4811cfff4e8de218
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78180120"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831696"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Muestra los permisos de un rol fijo de base de datos. **sp_dbfixedrolepermission** devuelve la información correcta [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]en. El resultado no refleja los cambios en la jerarquía de permisos que se implementaron [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]en. Para obtener más información, vea [roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que muestra una lista de roles fijos de base de datos y sus permisos correspondientes.  
+  Muestra los permisos de un rol fijo de base de datos. **sp_dbfixedrolepermission** devuelve la información correcta en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . El resultado no refleja los cambios en la jerarquía de permisos que se implementaron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obtener más información, vea [roles de nivel de base de datos](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), que muestra una lista de roles fijos de base de datos y sus permisos correspondientes.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @rolename = ] 'role'`Es el nombre de un rol [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fijo de base de datos válido. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role* , se muestran los permisos de todos los roles fijos de base de datos.  
+`[ @rolename = ] 'role'`Es el nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rol fijo de base de datos válido. *role* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *role* , se muestran los permisos de todos los roles fijos de base de datos.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

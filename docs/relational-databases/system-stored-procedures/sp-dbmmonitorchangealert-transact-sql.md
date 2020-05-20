@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorchangealert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c12e117682fe2e5286a6f4a1c650878ae0827010
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108147"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831641"
 ---
 # <a name="sp_dbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_dbmmonitorchangealert database_name
  *alert_id*  
  Valor entero que identifica la advertencia que se va a agregar o modificar. Especifique uno de los valores siguientes:  
   
-|Value|Métrica de rendimiento|Umbral de advertencia|  
+|Valor|Métrica de rendimiento|Umbral de advertencia|  
 |-----------|------------------------|-----------------------|  
 |1|Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de tiempo y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
 |2|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de KB y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
@@ -91,9 +91,9 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|Métrica de rendimiento|Umbral de advertencia|¿Está habilitada la advertencia?|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|Transacción no enviada más antigua|30 minutos|Sí|  
-|2|Registro sin enviar|10.000 KB|Sí|  
-|3|Registro sin restaurar|10.000 KB|Sí|  
+|1|Transacción no enviada más antigua|30 minutos|Yes|  
+|2|Registro sin enviar|10.000 KB|Yes|  
+|3|Registro sin restaurar|10.000 KB|Yes|  
 |4|Sobrecarga de confirmación del servidor reflejado|1.000 milisegundos|No|  
 |5|Período de retención|8 horas|Sí|  
   

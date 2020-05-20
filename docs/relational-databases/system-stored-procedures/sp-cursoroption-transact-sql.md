@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoroption
 ms.assetid: 88fc1dba-f4cb-47c0-92c2-bf398f4a382e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dce66e74f7415a8ff5ac6de4505d8a1f0632391b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 560c425c5bda4ee1f9dd7ecf454c65d3ba7eab1e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108455"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831729"
 ---
 # <a name="sp_cursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ sp_cursoroption cursor, code, value
   
 |Value|Nombre|Descripción|  
 |-----------|----------|-----------------|  
-|0x0001|TEXTPTR_ONLY|Devuelve el puntero de texto y no los datos reales, para ciertas columnas de imagen o texto designado.<br /><br /> TEXTPTR_ONLY permite usar punteros de texto como *identificadores* para objetos BLOB que se pueden recuperar o actualizar de forma selectiva mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o con instalaciones de DBLIB ( [!INCLUDE[tsql](../../includes/tsql-md.md)] por ejemplo, READTEXT o DBLIB DBWRITETEXT).<br /><br /> Si se asigna el valor "0", todas las columnas de imagen y texto de la lista de selección devolverán punteros de texto en lugar de datos.|  
-|0x0002|CURSOR_NAME|Asigna el nombre especificado en el *valor* al cursor. Esto, a su vez, permite a ODBC [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizar instrucciones UPDATE/DELETE posicionadas en cursores abiertos a través de Sp_cursoropen.<br /><br /> La cadena se puede especificar como cualquier tipo de datos Unicode o de caracteres.<br /><br /> Dado [!INCLUDE[tsql](../../includes/tsql-md.md)] que las instrucciones UPDATE/DELETE colocadas operan, de forma predeterminada, en la primera fila de un cursor FAT, se debe usar sp_cursor SETPOSITION para colocar el cursor antes de emitir la instrucción UPDATE/DELETE posicionada.|  
+|0x0001|TEXTPTR_ONLY|Devuelve el puntero de texto y no los datos reales, para ciertas columnas de imagen o texto designado.<br /><br /> TEXTPTR_ONLY permite usar punteros de texto como *identificadores* para objetos BLOB que se pueden recuperar o actualizar de forma selectiva mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o con instalaciones de DBLIB (por ejemplo, [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT o DBLIB DBWRITETEXT).<br /><br /> Si se asigna el valor "0", todas las columnas de imagen y texto de la lista de selección devolverán punteros de texto en lugar de datos.|  
+|0x0002|CURSOR_NAME|Asigna el nombre especificado en el *valor* al cursor. Esto, a su vez, permite a ODBC utilizar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones UPDATE/DELETE posicionadas en cursores abiertos a través de Sp_cursoropen.<br /><br /> La cadena se puede especificar como cualquier tipo de datos Unicode o de caracteres.<br /><br /> Dado que [!INCLUDE[tsql](../../includes/tsql-md.md)] las instrucciones UPDATE/DELETE colocadas operan, de forma predeterminada, en la primera fila de un cursor FAT, se debe usar SP_CURSOR SETPOSITION para colocar el cursor antes de emitir la instrucción UPDATE/DELETE posicionada.|  
 |0x0003|TEXTDATA|Devuelve los datos reales, no el puntero de texto, para ciertas columnas de imagen o texto en las capturas siguientes (es decir, se deshace el efecto de TEXTPTR_ONLY).<br /><br /> Si TEXTDATA está habilitado para una columna en particular, la fila se vuelve a capturar o actualizar, y puede establecerse a continuación de nuevo en TEXTPTR_ONLY. Como con TEXTPTR_ONLY, el parámetro de valor es un entero que especifica el número de columnas y un valor cero devuelve todas las columnas de texto o imagen.|  
 |0x0004|SCROLLOPT|Opción de desplazamiento. Vea "Valores del código de retorno", posteriormente en este tema, para obtener información adicional.|  
 |0x0005|CCOPT|Opción de control de simultaneidad. Vea "Valores del código de retorno", posteriormente en este tema, para obtener información adicional.|  

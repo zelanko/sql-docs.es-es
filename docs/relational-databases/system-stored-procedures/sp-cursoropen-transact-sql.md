@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cursoropen
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8f439fa61b8bfecfba9d03589af0d09ff737f3bc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108481"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831777"
 ---
 # <a name="sp_cursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  Opción de desplazamiento. *scrollopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -74,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  Opción de control de simultaneidad. *ccopt* es un parámetro opcional que requiere uno de los siguientes valores de entrada **int** .  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (conocido anteriormente como LOCKCC)|  
@@ -88,7 +88,7 @@ sp_cursoropen cursor OUTPUT, stmt
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Al igual *scrollopt*que con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] scrollopt, puede invalidar los valores de *ccopt* solicitados.  
+ Al igual que con *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede invalidar los valores de *ccopt* solicitados.  
   
  *empleado*  
  Número de filas del búfer de captura que se usan con AUTO_FETCH. El valor predeterminado es 20 filas. *RowCount* se comporta de forma diferente cuando se asigna como valor de entrada frente a un valor devuelto.  
@@ -154,7 +154,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  El contenido permitido del parámetro *stmt* depende de si el valor devuelto de *ccopt* ALLOW_DIRECT se ha vinculado o no al resto de los valores de *ccopt* , es decir:  
   
--   Si no se especifica ALLOW_DIRECT, se debe [!INCLUDE[tsql](../../includes/tsql-md.md)] usar una instrucción SELECT o EXECUTE que llame a para un procedimiento almacenado que contenga una sola instrucción SELECT. Además, la instrucción SELECT debe calificarse como un cursor; es decir, no puede contener las palabras clave SELECT INTO o FOR BROWSE.  
+-   Si no se especifica ALLOW_DIRECT, [!INCLUDE[tsql](../../includes/tsql-md.md)] se debe usar una instrucción SELECT o EXECUTE que llame a para un procedimiento almacenado que contenga una sola instrucción SELECT. Además, la instrucción SELECT debe calificarse como un cursor; es decir, no puede contener las palabras clave SELECT INTO o FOR BROWSE.  
   
 -   Si se especifica ALLOW_DIRECT, esto puede dar como resultado una o más instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)], incluso aquellas que, a su vez, ejecuten otros procedimientos almacenados con varias instrucciones. Las instrucciones que no sean SELECT o cualquier instrucción SELECT que contenga las palabras clave SELECT INTO o FOR BROWSE simplemente se ejecutarán y no darán como resultado la creación de un cursor. Lo mismo puede decirse de cualquier instrucción SELECT incluida en un lote de varias instrucciones. En los casos en los que una instrucción SELECT contenga cláusulas que solo sean relativas a los cursores, dichas cláusulas se omiten. Por ejemplo, cuando el valor de *ccopt* es 0x2002, se trata de una solicitud de:  
   
@@ -169,7 +169,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  AUTO_FETCH y AUTO_CLOSE se pueden vincular mediante OR a FAST_FORWARD.  
   
- Si CHECK_ACCEPTED_TYPES está activada, al menos uno de los cinco últimos valores de *scrollopt* (`,` KEYSET_ACCEPTABLE DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE) también debe estar activado.  
+ Si CHECK_ACCEPTED_TYPES está activada, al menos uno de los cinco últimos valores de *scrollopt* (KEYSET_ACCEPTABLE `,` DYNAMIC_ACCEPTABLE, FORWARD_ONLY_ACCEPTABLE, STATIC_ACCEPTABLE o FAST_FORWARD_ACCEPTABLE) también debe estar activado.  
   
  Los cursores STATIC se abren siempre como READ_ONLY. Esto significa que la tabla subyacente no se puede actualizar a través de este cursor.  
   

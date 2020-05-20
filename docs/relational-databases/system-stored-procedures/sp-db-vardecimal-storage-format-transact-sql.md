@@ -20,14 +20,14 @@ helpviewer_keywords:
 - database compression [SQL Server]
 - table compression [SQL Server]
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108222"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82831714"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*database_name*'  
+ [ @dbname =] '*database_name*'  
  Es el nombre de la base de datos para la que se cambia el formato de almacenamiento. *database_name* es de **tipo sysname**y no tiene ningún valor predeterminado. Si el nombre de la base de datos se omite, se devuelven los estados del formato de almacenamiento vardecimal de todas las base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [ @vardecimal_storage_format= ] {' ON ' | ' OFF '}  
+ [ @vardecimal_storage_format =] {' En ' | ' OFF '}  
  Especifica si el formato de almacenamiento vardecimal está habilitado. @vardecimal_storage_format puede ser ON u OFF. El parámetro es **VARCHAR (3)** y no tiene ningún valor predeterminado. Si se proporciona un nombre de base de datos pero se omite @vardecimal_storage_format, se devuelve la configuración actual de la base de datos especificada. Este argumento no tiene ningún efecto en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -59,7 +59,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Si el formato de almacenamiento de la base de datos no se puede cambiar, sp_db_vardecimal_storage_format devuelve un error. Si la base de datos ya se encuentra en el estado especificado, el procedimiento almacenado no tiene efecto.  
   
- Si no @vardecimal_storage_format se proporciona el argumento, devuelve el nombre de la base de datos de columnas y el estado vardecimal.  
+ Si @vardecimal_storage_format no se proporciona el argumento, devuelve el nombre de la base de datos de columnas y el estado vardecimal.  
   
 ## <a name="remarks"></a>Observaciones  
  sp_db_vardecimal_storage_format devuelve el estado vardecimal pero no lo puede cambiar.  

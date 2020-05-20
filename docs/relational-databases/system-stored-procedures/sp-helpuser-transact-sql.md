@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpuser
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9e186b87680ec0592f5c69ee5659c3b9c74f680b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048163"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826057"
 ---
 # <a name="sp_helpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "68048163"
   Proporciona información acerca de las entidades de seguridad de base de datos en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helpuser** no devuelve información acerca de los elementos protegibles que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]se introdujeron en. Use [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) en su lugar.  
+>  **sp_helpuser** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Use [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) en su lugar.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,7 +48,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
  0 (correcto) o 1 (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- En la tabla siguiente se muestra el conjunto de resultados cuando no se especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una cuenta de usuario ni un usuario de o de Windows para *security_account*.  
+ En la tabla siguiente se muestra el conjunto de resultados cuando no se especifica una cuenta de usuario ni un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usuario de o de Windows para *security_account*.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -76,7 +76,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 |**Users_in_role**|**sysname**|Miembro del rol en la base de datos actual.|  
 |**Deberían**|**smallint**|IDENTIFICADOR de usuario del miembro del rol.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener información acerca de la pertenencia a roles de base de datos, use [Sys. database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Para ver información sobre los miembros del rol de servidor, use [Sys. server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)y para ver información sobre las entidades de seguridad de nivel de servidor, use [Sys. server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos  

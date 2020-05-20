@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.partition_parameters catalog view
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8ea0d023e6e6cf151bc906b84794dd725b2c5c01
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68125341"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824986"
 ---
 # <a name="syspartition_parameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68125341"
 |**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**scale**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del parámetro, si está basado en caracteres; en caso contrario, es NULL.|  
-|**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. En el caso de los tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
+|**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. En el caso de los tipos de datos del sistema, **user_type_id**  =  **system_type_id**.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b375c1861d532445cd39d42f59f0a8d753e53b85
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68002499"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828843"
 ---
 # <a name="sp_refresh_log_shipping_monitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_refresh_log_shipping_monitor** actualiza las tablas **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail**y **log_shipping_monitor_error_detail** con cualquier información de sesión que todavía no se haya transferido. De esta manera, puede sincronizar el servidor de supervisión con el servidor primario o secundario si el monitor lleva un tiempo sin estar sincronizado. Además, puede eliminar la información del monitor en el servidor de supervisión, si así lo precisa.  
   
  **sp_refresh_log_shipping_monitor** se debe ejecutar desde la base de datos **maestra** en el servidor principal o secundario.  

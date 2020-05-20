@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_monitor
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 55386d32348257db3f89feb81d6a6b0ff7292499
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022318"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828326"
 ---
 # <a name="sp_monitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Muestra estadísticas sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Muestra estadísticas sobre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,10 +59,10 @@ sp_monitor
 |**total_errors**|Número de errores que ha encontrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al leer y escribir.|  
 |**connections**|Número de inicios de sesión o intentos de inicio de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  A través de una serie de funciones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza el seguimiento del trabajo que ha realizado. Al ejecutar **sp_monitor** se muestran los valores actuales devueltos por estas funciones y se muestra cuánto han cambiado desde la última vez que se ejecutó el procedimiento.  
   
- Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy**e **inactivo**) o el número total (para las demás variables) desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
+ Para cada columna, la estadística se imprime con el formato *número*(*número*)-*número*% o *número*(*número*). El primer *número* hace referencia al número de segundos (por **cpu_busy**, **io_busy**e **inactivo**) o el número total (para las demás variables) desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinició. El *número* entre paréntesis hace referencia al número de segundos o al número total transcurridos desde la última vez que se ejecutó **sp_monitor** . El porcentaje es el porcentaje de tiempo transcurrido desde la última vez que se ejecutó **sp_monitor** . Por ejemplo, si el informe muestra **cpu_busy** como 4250 (215)-68%, la CPU ha estado ocupada 4250 segundos desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez, 215 segundos desde la última vez que se ejecutó **sp_monitor** , y el 68% del tiempo total transcurrido desde la última vez que se ejecutó la **sp_monitor** .  
   
 ## <a name="permissions"></a>Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  

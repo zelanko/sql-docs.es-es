@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OADestroy
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 98907614a132cfafd297e48f0ef625bc8eb4155d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 68760a5d896569603f0ab2ff018b0c78cceeda15
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107905"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828817"
 ---
 # <a name="sp_oadestroy-transact-sql"></a>sp_OADestroy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_OADestroy objecttoken
   
  Para obtener más información sobre los códigos de retorno de HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si no se llama a **sp_OADestroy** , el objeto OLE creado se destruye automáticamente al final del lote.  
   
 ## <a name="permissions"></a>Permisos  

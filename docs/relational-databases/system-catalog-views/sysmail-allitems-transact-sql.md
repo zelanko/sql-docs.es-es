@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_allitems database mail view
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0ba144f6cf06104f406545e3c7651072784de3c3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70745453"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824908"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "70745453"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
-|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
 |**Asunto**|**nvarchar (510)**|Línea de asunto del mensaje.|  
@@ -61,7 +61,7 @@ ms.locfileid: "70745453"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use la vista **sysmail_allitems** para ver el estado de todos los mensajes procesados por correo electrónico de base de datos. Al solucionar problemas del Correo electrónico de base de datos, puede que esta vista le ayude a identificar la naturaleza del problema, pues en ella se muestran los atributos de los mensajes enviados comparados con los de los mensajes no enviados.  
   
  Las tablas del sistema que expone esta vista contienen todos los mensajes y pueden hacer que la base de datos **msdb** crezca. Elimine periódicamente los mensajes antiguos de la vista para reducir el tamaño de las tablas. Para obtener más información, vea [crear un trabajo de Agente SQL Server para archivar mensajes de correo electrónico de base de datos y registros de eventos](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  

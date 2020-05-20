@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpxactsetjob
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9fbc18b737c4c901527e6dc1684b75c2f5ddedda
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056796"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826083"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador que no es de al que pertenece el trabajo. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al que pertenece el trabajo. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -60,7 +60,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpxactsetjob** se utiliza en la replicación de instantáneas y en la replicación transaccional para un publicador de Oracle.  
   
  **sp_helpxactsetjob** siempre devuelve la configuración actual del trabajo Xactset (HREPL_XactSetJob) en el publicador. Si el trabajo Xactset se encuentra en la cola de trabajos, devuelve además los atributos del trabajo de la vista de diccionario de datos USER_JOB creada con la cuenta de administrador en el publicador de Oracle.  

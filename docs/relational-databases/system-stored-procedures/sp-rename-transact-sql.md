@@ -18,20 +18,20 @@ helpviewer_keywords:
 - sp_rename
 - renaming tables
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ef8c4583db152b2f81a574010a12030680704f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac92f07acb7e7322adcf00e09774f72e93e39963
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983066"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826580"
 ---
 # <a name="sp_rename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Cambia el nombre de un objeto creado por el usuario en la base de datos actual. Este objeto puede ser una tabla, un índice, una columna, un tipo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] datos de alias o un tipo definido por el usuario Common Language Runtime (CLR).  
+  Cambia el nombre de un objeto creado por el usuario en la base de datos actual. Este objeto puede ser una tabla, un índice, una columna, un tipo de datos de alias o un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] tipo definido por el usuario Common Language Runtime (CLR).  
   
 > [!CAUTION]  
 >  Al cambiar cualquier parte del nombre de un objeto se pueden interrumpir scripts y procedimientos almacenados. Se recomienda no utilizar esta instrucción para cambiar el nombre a procedimientos almacenados, desencadenadores, funciones definidas por el usuario o vistas; en su lugar, quite el objeto y vuelva a crearlo con el nuevo nombre.  
@@ -47,21 +47,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @objname = ] '*object_name*'  
+ [ @objname =] '*object_name*'  
  Es el nombre actual completo o incompleto del objeto de usuario o tipo de datos. Si el objeto al que se va a cambiar el nombre es una columna de una tabla, *object_name* debe tener el formato *tabla. columna* o *esquema. tabla. columna*. Si el objeto cuyo nombre se va a cambiar es un índice, *object_name* debe tener el formato *TABLE. index* o *Schema. Table. index*. Si el objeto cuyo nombre se va a cambiar es una restricción, *object_name* debe tener el formato *Schema. Constraint*.  
   
  Las comillas solo se necesitan si se especifica un objeto completo. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *object_name* es de tipo **nvarchar (776)** y no tiene ningún valor predeterminado.  
   
- [ @newname = ] '*new_name*'  
+ [ @newname =] '*new_name*'  
  Es el nuevo nombre del objeto especificado. *new_name* debe ser un nombre de una parte y debe cumplir las reglas de los identificadores. *NewName* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Los nombres de los desencadenadores no pueden comenzar por # o ##.  
   
- [ @objtype = ] '*object_type*'  
+ [ @objtype =] '*object_type*'  
  Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es de tipo **VARCHAR (13)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |COLUMN|Una columna cuyo nombre se va a cambiar.|  
 |DATABASE|Una base de datos definida por el usuario. Este tipo de objeto es necesario cuando se cambia el nombre de una base de datos|  
@@ -73,7 +73,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo se puede cambiar el nombre de un objeto o tipo de datos de la base de datos actual. No se pueden cambiar los nombres de la mayoría de los tipos de datos y objetos del sistema.  
   
  sp_rename cambia automáticamente el nombre del índice asociado cuando se cambia el nombre de una restricción PRIMARY KEY o UNIQUE. Si un índice cuyo nombre se ha cambiado está enlazado a una restricción PRIMARY KEY, sp_rename también cambia automáticamente el nombre de esta restricción.  
@@ -100,7 +100,7 @@ GO
 ```  
   
 ### <a name="b-renaming-a-column"></a>B. Cambiar el nombre de una columna  
- En el ejemplo siguiente se cambia el `TerritoryID` nombre de la `SalesTerritory` columna de `TerrID`la tabla a.  
+ En el ejemplo siguiente se cambia el nombre de la `TerritoryID` columna de la `SalesTerritory` tabla a `TerrID` .  
   
 ```  
 USE AdventureWorks2012;  

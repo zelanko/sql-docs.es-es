@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_databases
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 1c4cd06a540709b5e100a086a426fd5bdb46abf5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826261"
 ---
 # <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,11 @@ sp_databases
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**DATABASE_NAME**|**sysname**|Nombre de la base de datos. En [!INCLUDE[ssDE](../../includes/ssde-md.md)], esta columna representa el nombre de la base de datos tal y como se almacena en la vista de catálogo **Sys. Databases** .|  
+|**DATABASE_NAME**|**sysname**|Nombre de la base de datos. En [!INCLUDE[ssDE](../../includes/ssde-md.md)] , esta columna representa el nombre de la base de datos tal y como se almacena en la vista de catálogo **Sys. Databases** .|  
 |**DATABASE_SIZE**|**int**|Tamaño de la base de datos, en kilobytes.|  
 |**COMENTARIOS**|**VARCHAR (254)**|Para el [!INCLUDE[ssDE](../../includes/ssde-md.md)], este campo siempre devuelve NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los nombres de bases de datos devueltos pueden utilizarse como parámetros en la instrucción USE para cambiar el contexto de la base de datos actual.  
   
  **sp_databases** no tiene ningún equivalente en Conectividad abierta de bases de datos (ODBC).  

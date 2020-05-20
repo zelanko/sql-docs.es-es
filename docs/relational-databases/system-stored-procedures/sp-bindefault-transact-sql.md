@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindefault
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046052"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828509"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede usar **sp_bindefault** para enlazar un nuevo valor predeterminado a una columna, aunque se prefiere usar la restricción predeterminada, o a un tipo de datos de alias sin desenlazar un valor predeterminado existente. El valor predeterminado anterior se reemplaza. No puede enlazar un valor predeterminado con un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un tipo definido por el usuario CLR. Si el valor predeterminado no es compatible con la columna con la que se debe enlazar, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando intenta insertar el valor predeterminado y no cuando lo enlaza.  
   
  Las columnas existentes del tipo de datos de alias heredan el nuevo valor predeterminado, a menos que un valor predeterminado esté enlazado directamente a ellos o *futureonly_flag* se especifique como **futureonly**. Las nuevas columnas del tipo de datos de alias siempre heredan el valor predeterminado.  
@@ -90,7 +90,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn';
 ```  
   
 ### <a name="c-using-the-futureonly_flag"></a>C. Usar el futureonly_flag  
- En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con el tipo de datos de alias `ssn`. Dado que se especifica **futureonly** , no se ven afectadas `ssn` las columnas existentes de tipo.  
+ En el siguiente ejemplo se enlaza el valor predeterminado `def_ssn` con el tipo de datos de alias `ssn`. Dado que se especifica **futureonly** , no se ven afectadas las columnas existentes de tipo `ssn` .  
   
 ```  
 USE master;  
@@ -99,7 +99,7 @@ EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';
 ```  
   
 ### <a name="d-using-delimited-identifiers"></a>D. Usar identificadores delimitados  
- En el ejemplo siguiente se muestra el uso de identificadores delimitados, `[t.1]`, en *object_name*.  
+ En el ejemplo siguiente se muestra el uso de identificadores delimitados, `[t.1]` , en *object_name*.  
   
 ```  
 USE master;  

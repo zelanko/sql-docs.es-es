@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSlogreader_agents system table
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 802d2075a0146febc4521fb17b65f236533596bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 85afab7ff3183953da0a4655c98733dd66fb138a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67907298"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827261"
 ---
 # <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67907298"
 |**local_job**|**bit**|Indica si hay un trabajo de Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  en el distribuidor local.|  
 |**job_id**|**binario (16)**|El número de identificación del trabajo.|  
 |**profile_id**|**int**|IDENTIFICADOR de configuración de la tabla [MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) .|  
-|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
+|**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
 |**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  

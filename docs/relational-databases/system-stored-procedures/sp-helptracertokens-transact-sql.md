@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helptracertokens
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: b04bf618bccb5d4d49724e0b62f03ba193dc0f2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771536"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826059"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helptracertokens [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helptracertokens** se utiliza en la replicación transaccional.  
   
  **sp_helptracertokens** se utiliza para obtener los identificadores de token de seguimiento al ejecutar [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  

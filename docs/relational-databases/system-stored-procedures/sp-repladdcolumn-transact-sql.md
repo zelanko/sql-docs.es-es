@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repladdcolumn
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 75c66d1077b111837197957cc845b690b794ea24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826589"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @publication_to_add =] '*publication_to_add*'  
  Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es de tipo **nvarchar (4000)** y su valor predeterminado es **All**. Si es **All**, se ven afectadas todas las publicaciones que contienen esta tabla. Si se especifica *publication_to_add* , solo se agregará la nueva columna a esta publicación.  
   
- [ @from_agent = ] *from_agent*  
+ [ @from_agent =] *from_agent*  
  Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es de **tipo int**y su valor predeterminado es **0**, donde un valor de **1** se utiliza cuando un agente de replicación está ejecutando este procedimiento almacenado y, en cualquier otro caso, se debe usar el valor predeterminado de **0**.  
   
  [ @schema_change_script =] '*schema_change_script*'  
@@ -68,14 +68,14 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
   
 -   Si los procedimientos almacenados personalizados no se vuelven a generar automáticamente, *schema_change_script*se pueden usar para volver a generar estos procedimientos almacenados o para crear procedimientos almacenados personalizados definidos por el usuario.  
   
- [ @force_invalidate_snapshot = ] *force_invalidate_snapshot*  
+ [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  Habilita o deshabilita la capacidad de que se invalide una instantánea. *force_invalidate_snapshot* es un **bit**, con un valor predeterminado de **1**.  
   
  **1** especifica que los cambios en el artículo pueden hacer que la instantánea no sea válida y, en ese caso, el valor **1** concede permiso para que se produzca la nueva instantánea.  
   
  **0** especifica que los cambios en el artículo no hacen que la instantánea no sea válida.  
   
- [ @force_reinit_subscription = ] *force_reinit_subscription*  
+ [ @force_reinit_subscription =] *force_reinit_subscription*  
  Habilita o deshabilita la capacidad de reinicializar la suscripción. *force_reinit_subscription* es un **bit** con un valor predeterminado de **0**.  
   
  **0** especifica que los cambios en el artículo no harán que se reinicialice la suscripción.  

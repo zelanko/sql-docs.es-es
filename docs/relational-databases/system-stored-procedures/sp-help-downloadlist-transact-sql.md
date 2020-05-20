@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_downloadlist
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9dd52e6d2e4bf8a1a099ea2391a2c6ce2d6decdc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68055193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827729"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`Operación válida para el trabajo especificado. la *operación* es de tipo **VARCHAR (64)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**DEFECT**|Operación del servidor que solicita el defecto del servidor de destino al servicio **SQLServerAgent** maestro.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
@@ -87,7 +87,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Número de identificación entero único de la instrucción.|  
-|**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0, es siempre el nombre de equipo del servidor maestro (MSX).|  
+|**source_server**|**nvarchar(30)**|Nombre de equipo del servidor del que proviene la instrucción. En la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7,0, es siempre el nombre de equipo del servidor maestro (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Código de operación de la instrucción.|  
 |**object_name**|**sysname**|Objeto afectado por la instrucción.|  
 |**object_id**|**uniqueidentifier**|Número de identificación del objeto afectado por la instrucción (**job_id** para un objeto de trabajo, o 0x00 para un objeto de servidor) o un valor de datos específico del **operation_code**.|  

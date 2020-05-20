@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpfile
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 812be95c9584e75d8452c946d1935625468a79a1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67943493"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828341"
 ---
 # <a name="sp_helpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**name**|**sysname**|Nombre de archivo lógico.|  
 |**ID**|**smallint**|Identificador numérico del archivo. No se devuelve si *name* se especifica name *.*|  
 |**extensión**|**NCHAR (260)**|Nombre de archivo físico.|  
-|**grupo_de_archivos**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
+|**filegroup**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(15**|Tamaño del archivo en kilobytes.|  
 |**tamañomáximo**|**nvarchar(15**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crezca**|**nvarchar(15**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio nuevo.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  

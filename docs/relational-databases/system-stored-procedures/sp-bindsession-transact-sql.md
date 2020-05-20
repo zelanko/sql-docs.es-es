@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindsession
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046025"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828506"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enlaza o desenlaza una sesión a otras sesiones de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Las sesiones enlazadas permiten que dos o más sesiones participen en la misma transacción y compartan bloqueos hasta que se emita una instrucción ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
+  Enlaza o desenlaza una sesión a otras sesiones de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Las sesiones enlazadas permiten que dos o más sesiones participen en la misma transacción y compartan bloqueos hasta que se emita una instrucción ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] En su lugar, utilice conjuntos de resultados activos múltiples (MARS) o transacciones distribuidas. Para obtener más información, vea [usar conjuntos de resultados activos múltiples &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
@@ -48,12 +48,12 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las dos sesiones enlazadas comparten solo una transacción y bloqueos. Cada sesión conserva su propio nivel de aislamiento y la configuración de un nivel de aislamiento nuevo en una sesión no afecta al nivel de aislamiento de la otra sesión. Cada sesión sigue siendo identificada por su cuenta de seguridad y solo puede tener acceso a los recursos de la base de datos para los que se ha concedido acceso a la cuenta.  
   
  **sp_bindsession** usa un token de enlace para enlazar dos o más sesiones de cliente existentes. Estas sesiones de cliente deben estar en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde la que se obtuvo el token de enlace. Una sesión es un cliente que ejecuta un comando. Las sesiones de bases de datos enlazadas comparten la transacción y el espacio de bloqueo.  
   
- Un token de enlace obtenido a partir de una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede utilizarse en una sesión de cliente que esté en otra instancia, incluso si se trata de una transacción DTC. Un token de enlace solamente es válido dentro de cada instancia y no se puede compartir entre varias. Para enlazar las [!INCLUDE[ssDE](../../includes/ssde-md.md)]sesiones de cliente en otra instancia de, debe obtener un token de enlace diferente ejecutando **sp_getbindtoken**.  
+ Un token de enlace obtenido a partir de una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] no puede utilizarse en una sesión de cliente que esté en otra instancia, incluso si se trata de una transacción DTC. Un token de enlace solamente es válido dentro de cada instancia y no se puede compartir entre varias. Para enlazar las sesiones de cliente en otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , debe obtener un token de enlace diferente ejecutando **sp_getbindtoken**.  
   
  **sp_bindsession** producirá un error si usa un token que no está activo.  
   

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_peerconflictdetection
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d5c593127a16a5a1045b8b44f943079cd3335f3a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085293"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828391"
 ---
 # <a name="sp_help_peerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication= ] '*publicación*'  
+ [ @publication =] '*publicación*'  
  Es el nombre de la publicación para la que se devuelve información. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @timeout= ] *tiempo de espera*  
+ [ @timeout =] *tiempo de espera*  
  Especifica la cantidad de tiempo, en segundos, tras la cual el procedimiento quedará a la espera de respuesta de cada nodo en la topología. Si hay un suscriptor de solo lectura en la topología, no se puede especificar un valor de tiempo de espera. Los suscriptores de solo lectura nunca responderán a una llamada de este procedimiento. *timeout* es de **tipo int**y su valor predeterminado es 60.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
@@ -56,7 +56,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_help_peerconflictdetection se utiliza en la replicación transaccional punto a punto.  
   
 ## <a name="permissions"></a>Permisos  

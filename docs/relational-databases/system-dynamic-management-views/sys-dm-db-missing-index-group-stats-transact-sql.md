@@ -18,15 +18,15 @@ helpviewer_keywords:
 - sys.dm_db_missing_index_group_stats dynamic management view
 - missing indexes feature [SQL Server], sys.dm_db_missing_index_group_stats dynamic management view
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e91971d13b26d6a156307b2a0288de236456c880
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68051553"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828106"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68051553"
 |**avg_total_system_cost**|**float**|Costo medio de las consultas del sistema que podría reducirse mediante el índice del grupo.|  
 |**avg_system_impact**|**float**|Beneficio porcentual medio que podrían obtener las consultas del sistema si se implementara este grupo de índices que faltan. El valor significa que el costo de las consultas se reduciría este porcentaje como promedio si se implementara este grupo de índices que faltan.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La información devuelta por **sys.dm_db_missing_index_group_stats** se actualiza en cada ejecución de la consulta, no en cada compilación o recompilación de la consulta. Las estadísticas de uso no se guardan; solo se conservan hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar periódicamente una copia de seguridad de la información de los índices que faltan si desean conservar las estadísticas de uso después del reciclaje del servidor.  
 
   >[!NOTE]
@@ -86,7 +86,7 @@ INNER JOIN sys.dm_db_missing_index_details AS mid
 WHERE migs.group_handle = 24;  
 ```  
   
- Esta consulta proporciona el nombre de la base de datos, el esquema y la tabla en que falta un índice. También proporciona los nombres de las columnas que deben usarse para la clave de índice. Al escribir la instrucción CREATE index DDL para implementar índices que faltan, enumere primero las columnas de igualdad y después las columnas de desigualdad en la cláusula on \< *TABLE_NAME*> de la instrucción CREATE index. Las columnas incluidas deben mostrarse en la cláusula INCLUDE de la instrucción CREATE INDEX. Para determinar un orden efectivo para las columnas de igualdad, ordénelas en función de su selectividad, mostrando primero las columnas más selectivas (en la parte izquierda de la lista de columnas).  
+ Esta consulta proporciona el nombre de la base de datos, el esquema y la tabla en que falta un índice. También proporciona los nombres de las columnas que deben usarse para la clave de índice. Al escribir la instrucción CREATE INDEX DDL para implementar índices que faltan, enumere primero las columnas de igualdad y después las columnas de desigualdad en la cláusula ON \< *TABLE_NAME*> de la instrucción CREATE index. Las columnas incluidas deben mostrarse en la cláusula INCLUDE de la instrucción CREATE INDEX. Para determinar un orden efectivo para las columnas de igualdad, ordénelas en función de su selectividad, mostrando primero las columnas más selectivas (en la parte izquierda de la lista de columnas).  
   
 ## <a name="see-also"></a>Consulte también  
  [Sys. dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

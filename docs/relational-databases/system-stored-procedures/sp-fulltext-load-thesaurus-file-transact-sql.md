@@ -17,14 +17,14 @@ helpviewer_keywords:
 - full-text indexes [SQL Server], thesaurus files
 - thesaurus [full-text search], editing
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 96fb5c880346c534c3b956e577f15622e598d48c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ac01c2d29dbe79d0a5702e1bd42730d0b31efcf2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72305214"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827796"
 ---
 # <a name="sp_fulltext_load_thesaurus_file-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -44,10 +44,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición de XML del Diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia de servidor, use la vista de catálogo [Sys. fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) .  
   
- **\@** = *acción* loadOnlyIfNotLoaded  
+ ** \@ **  =  *acción* loadOnlyIfNotLoaded  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. la *acción* es una de las siguientes:  
   
-|Value|Definición|  
+|Valor|Definición|  
 |-----------|----------------|  
 |**0**|Se carga el archivo de diccionario de sinónimos sin tener en cuenta si ya está cargado. Éste es el comportamiento predeterminado de **sp_fulltext_load_thesaurus_file**.|  
 |1|Solo se carga el archivo de diccionario de sinónimos si todavía no está cargado.|  

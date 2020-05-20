@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - PolyBase
 ms.assetid: 48066431-fed2-4a8a-85af-ac704689e183
-author: rothja
-ms.author: jroth
-ms.openlocfilehash: ba22ffe282e6b4248ed58bed850bc6ac08255df5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: aa3b52dbc2f08e9cb504263afeb672956e4972d2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278115"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826379"
 ---
 # <a name="sp_polybase_join_group-transact-sql"></a>sp_polybase_join_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,14 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- head_node_address = N '*head_node_address*' * \@*  
- Nombre del equipo que hospeda el SQL Server nodo principal del grupo de escalado horizontal de polybase. head_node_address es nvarchar (255). * \@*  
+ * \@ head_node_address* = N '*head_node_address*'  
+ Nombre del equipo que hospeda el SQL Server nodo principal del grupo de escalado horizontal de polybase. * \@ head_node_address* es nvarchar (255).  
   
- * \@dms_control_channel_port* = dms_control_channel_port  
- Puerto en el que se está ejecutando el canal de control del nodo principal Movimiento de datos de PolyBase servicio. dms_control_channel_port es un __int16 sin signo. * \@* El valor predeterminado es **16450**.  
+ * \@ dms_control_channel_port* = dms_control_channel_port  
+ Puerto en el que se está ejecutando el canal de control del nodo principal Movimiento de datos de PolyBase servicio. * \@ dms_control_channel_port* es un __int16 sin signo. El valor predeterminado es **16450**.  
   
- * \@head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
- Nombre del nodo principal SQL Server instancia en el grupo de escalado horizontal de polybase. head_node_sql_server_instance_name es nvarchar (16). * \@*  
+ * \@ head_node_sql_server_instance_name* = head_node_sql_server_instance_name  
+ Nombre del nodo principal SQL Server instancia en el grupo de escalado horizontal de polybase. * \@ head_node_sql_server_instance_name* es nvarchar (16).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -55,7 +55,7 @@ sp_polybase_join_group (@head_node_address = N'head_node_address',
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso CONTROL SERVER.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Después de ejecutar el procedimiento almacenado, apague el motor de polybase y reinicie el servicio Movimiento de datos de PolyBase en el equipo. Para comprobar, ejecute la siguiente DMV en el nodo principal: **Sys. dm_exec_compute_nodes**.  
   
 ## <a name="example"></a>Ejemplo  

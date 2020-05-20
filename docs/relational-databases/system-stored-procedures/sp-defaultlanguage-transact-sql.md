@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_defaultlanguage
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7c06f03af5ab9cc8d06b8d7d0f87208895c1fc33
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68120090"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826165"
 ---
 # <a name="sp_defaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,17 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ser un inicio de sesión existente o un usuario o grupo de Windows.  
+`[ @loginame = ] 'login'`Es el nombre de inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. el *Inicio de sesión* puede ser un inicio de sesión existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un usuario o grupo de Windows.  
   
 `[ @language = ] 'language'`Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su**valor predeterminado es NULL. *Language* debe ser un idioma válido en el servidor. Si no se especifica *Language* , *Language* se establece en el idioma predeterminado del servidor; el idioma predeterminado se define mediante el **idioma predeterminado**de la variable de configuración **sp_configure** . El cambio del idioma predeterminado del servidor no cambia el idioma predeterminado de los inicios de sesión existentes.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_defaultlanguage** llama a Alter login, que admite opciones adicionales. Para obtener información sobre cómo cambiar otros valores predeterminados de inicio de sesión, vea [ALTER login &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md).  
   
- Use la instrucción SET LANGUAGE para cambiar el idioma de la sesión actual. Use la función@LANGUAGE @ para mostrar la configuración de idioma actual.  
+ Use la instrucción SET LANGUAGE para cambiar el idioma de la sesión actual. Use la @LANGUAGE función @ para mostrar la configuración de idioma actual.  
   
  Si el idioma predeterminado de un inicio de sesión se quita del servidor, el inicio de sesión adquiere el idioma predeterminado del servidor. **sp_defaultlanguage** no se puede ejecutar en una transacción definida por el usuario.  
   

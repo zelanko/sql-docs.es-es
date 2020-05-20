@@ -16,16 +16,16 @@ helpviewer_keywords:
 - dm_db_objects_impacted_on_version_change
 - sys.dm_db_objects_impacted_on_version_change
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 0255f7260044ee5c09d020f3ba6310d24bc8cb74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 482f64eff3c37aad08319e6ea8af348b014bd784
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73843861"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828066"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -65,9 +65,9 @@ class  class_desc        major_id    minor_id    dependency
 ### <a name="how-to-update-impacted-objects"></a>Cómo actualizar los objetos afectados  
  Los pasos ordenados siguientes describen la acción correctiva que se deberá realizar después de la próxima actualización de versión de servicio del mes de junio.  
   
-|Pedido de|Objeto afectado|Acción correctora|  
+|Ordenar|Objeto afectado|Acción correctora|  
 |-----------|---------------------|-----------------------|  
-|1|**Índices**|Vuelva a generar todos los índices identificados por **Sys. dm_db_objects_impacted_on_version_change** por ejemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />or<br />`ALTER TABLE <table> REBUILD`|  
-|2|**Object**|Todas las restricciones identificadas por **sys.dm_db_objects_impacted_on_version_change** deben volver a validarse tras volver a calcular los datos geometry y geography de la tabla subyacente. Para las restricciones, vuelva a realizar la validación mediante ALTER TABLE. <br />Por ejemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
+|1|**Índices**|Vuelva a generar todos los índices identificados por **Sys. dm_db_objects_impacted_on_version_change** por ejemplo:`ALTER INDEX ALL ON <table> REBUILD`<br />o<br />`ALTER TABLE <table> REBUILD`|  
+|2|**Objeto**|Todas las restricciones identificadas por **sys.dm_db_objects_impacted_on_version_change** deben volver a validarse tras volver a calcular los datos geometry y geography de la tabla subyacente. Para las restricciones, vuelva a realizar la validación mediante ALTER TABLE. <br />Por ejemplo: <br />`ALTER TABLE <tab> WITH CHECK CHECK CONSTRAINT <constraint name>`<br />or<br />`ALTER TABLE <tab> WITH CHECK CONSTRAINT ALL`|  
   
   

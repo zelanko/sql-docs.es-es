@@ -14,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_MSchange_snapshot_agent_properties
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6c5c3c2573465072de0d1f0a7c08d47df5d387b6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c3348590b002bb0ff5f154d983a56e3b66885073
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75321810"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828869"
 ---
 # <a name="sp_mschange_snapshot_agent_properties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Cambia las propiedades de un trabajo agente de instantáneas que se ejecuta en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] un distribuidor de o una versión posterior. Este procedimiento almacenado se utiliza para cambiar las propiedades cuando el publicador se ejecuta en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
+  Cambia las propiedades de un trabajo Agente de instantáneas que se ejecuta en un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] distribuidor de o una versión posterior. Este procedimiento almacenado se utiliza para cambiar las propiedades cuando el publicador se ejecuta en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,12 +65,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se ejecuta el Agente de instantáneas. *frequency_type* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**10**|Mensual|  
 |**20**|Mensualmente, dependiendo del intervalo de frecuencia|  
 |**40**|Cuando se inicia el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -79,12 +79,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`Son las unidades de *freq_subday_interval*. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y no tiene ningún valor predeterminado.  
   
@@ -111,16 +111,16 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
-`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. *No se puede cambiar para un publicador que no sea de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *.*  
+`[ @job_login = ] 'job_login'`Es el inicio de sesión de la cuenta de Windows con la que se ejecuta el agente. *job_login* es de tipo **nvarchar (257)** y no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas. *No se puede cambiar para un no* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Publicador.*  
   
 `[ @job_password = ] 'job_password'`Es la contraseña de la cuenta de Windows con la que se ejecuta el agente. *job_password* es de **tipo sysname**y no tiene ningún valor predeterminado. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
-`[ @publisher_type = ] 'publisher_type'`Especifica el tipo de publicador cuando el publicador no se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en una instancia de. *publisher_type* es de **tipo sysname**y puede tener uno de los valores siguientes.  
+`[ @publisher_type = ] 'publisher_type'`Especifica el tipo de publicador cuando el publicador no se está ejecutando en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|Especifica un publicador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Especifica un publicador estándar de Oracle.|  
@@ -131,12 +131,12 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_MSchange_snapshot_agent_properties** se utiliza en la replicación de instantáneas, la replicación transaccional y la replicación de mezcla.  
   
  Debe especificar todos los parámetros al ejecutar **sp_MSchange_snapshot_agent_properties**. Ejecute [sp_helppublication_snapshot](../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) para devolver las propiedades actuales del trabajo de agente de instantáneas.  
   
- Cuando el publicador se ejecuta en una [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] instancia de o una versión posterior, debe utilizar [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) para cambiar las propiedades de un trabajo agente de instantáneas.  
+ Cuando el publicador se ejecuta en una instancia de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o una versión posterior, debe utilizar [sp_changepublication_snapshot](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) para cambiar las propiedades de un trabajo agente de instantáneas.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** en el distribuidor pueden ejecutar **sp_MSchange_snapshot_agent_properties**.  

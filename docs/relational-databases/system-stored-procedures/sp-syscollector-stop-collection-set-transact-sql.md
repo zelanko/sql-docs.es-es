@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_stop_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6385f4dd17f4b3f04d145db7ce5a59169dbc4ccb
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010571"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828232"
 ---
 # <a name="sp_syscollector_stop_collection_set-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es de **tipo int** y su valor predeterminado es NULL. *collection_set_id* debe tener un valor si *el nombre* es NULL.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_set_id* es NULL.  
   
- [ @stop_collection_job = ] *stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  Especifica que el trabajo de recopilación del conjunto de recopilación debe detenerse si está en ejecución. *stop_collection_job* es de **bit** y su valor predeterminado es 1.  
   
  *stop_collection_job* solo se aplica a los conjuntos de recopilación con el modo de recopilación establecido en almacenado en caché. Para obtener más información, vea [sp_syscollector_create_collection_set &#40;&#41;de Transact-SQL ](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  
@@ -57,7 +57,7 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_create_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
 ## <a name="permissions"></a>Permisos  

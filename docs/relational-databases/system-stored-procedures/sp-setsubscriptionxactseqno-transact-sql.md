@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_setsubscriptionxactseqno
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021085"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827507"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_setsubscriptionxactseqno** se utiliza en la replicación transaccional.  
   
  no se puede usar **sp_setsubscriptionxactseqno** en una topología de replicación transaccional punto a punto.  

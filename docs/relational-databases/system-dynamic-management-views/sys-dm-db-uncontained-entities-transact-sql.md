@@ -16,14 +16,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_db_uncontained_entities dynamic management view
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4e42daae837968ddcf0f61b860886e372bb47245
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68026920"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828003"
 ---
 # <a name="sysdm_db_uncontained_entities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "68026920"
   
 ||||  
 |-|-|-|  
-|**Nombre de la columna**|**Tipo**|**Descripción**|  
+|**Nombre de columna**|**Tipo**|**Descripción**|  
 |*class*|**int**|1 = Objeto o columna (incluye módulos, XP, vistas, sinónimos y tablas).<br /><br /> 4 = entidad de seguridad de base de datos<br /><br /> 5 = Ensamblado<br /><br /> 6 = Tipo<br /><br /> 7 = Índice (índice de texto completo)<br /><br /> 12 = desencadenador DDL de base de datos<br /><br /> 19 = Ruta<br /><br /> 30 = Especificación de auditoría|  
-|*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Uno de los siguientes para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TIPO**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
+|*class_desc*|**nvarchar(120)**|Descripción de la clase de la entidad. Uno de los siguientes para que coincida con la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBL**<br /><br /> **TIPO**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
 |*major_id*|**int**|Identificador de la entidad.<br /><br /> Si *Class* = 1, object_id<br /><br /> Si *Class* = 4, entonces sys. database_principals. principal_id.<br /><br /> Si *Class* = 5, entonces sys. Assemblies. assembly_id.<br /><br /> Si *Class* = 6, entonces sys. types. user_type_id.<br /><br /> Si *Class* = 7, entonces sys. Indexes. index_id.<br /><br /> Si *Class* = 12, entonces sys. Triggers. object_id.<br /><br /> Si *Class* = 19, entonces sys. Routes. Route_ID.<br /><br /> Si *Class* = 30, entonces sys. database_audit_specifications. database_specification_id.|  
 |*statement_line_number*|**int**|Si la clase es un módulo, devuelve el número de línea en el que se encuentra el uso del objeto no contenido.  De lo contrario, el valor es NULL.|  
 |*statement_ offset_begin*|**int**|Si la clase es un módulo, indica en bytes, comenzando por 0, la posición inicial donde comienza el uso del objeto no contenido. De lo contrario el valor devuelto es NULL.|  
@@ -45,7 +45,7 @@ ms.locfileid: "68026920"
 |*nombre del feature_*|**nvarchar(256)**|Devuelve el nombre externo del objeto.|  
 |*feature_type_name*|**nvarchar(256)**|Devuelve el tipo de característica.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Sys. dm_db_uncontained_entities muestra las entidades que pueden cruzar el límite de la base de datos. Devolverá cualquier entidad del usuario que tenga potencial para usar los objetos fuera de la base de datos.  
   
  Se notifican los siguientes tipos de características.  

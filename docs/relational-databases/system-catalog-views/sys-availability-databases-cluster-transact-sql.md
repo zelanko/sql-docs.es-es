@@ -20,19 +20,19 @@ helpviewer_keywords:
 - sys.availability_databases_cluster catalog view
 - Availability Groups [SQL Server], databases
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 206c9b1c250cb95a6ad49ccf20f8badf11f870ae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c36c1574ae1ad289c9980e1df9bfbe3b241e164
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046535"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829179"
 ---
 # <a name="sysavailability_databases_cluster-transact-sql"></a>sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Contiene una fila por cada base de datos de disponibilidad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instancia de que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad de Always on en el clúster de clústeres de conmutación por error de Windows Server (WSFC), independientemente de si la base de datos de copia local ya se ha unido al grupo de disponibilidad.  
+  Contiene una fila por cada base de datos de disponibilidad en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica de disponibilidad para cualquier grupo de disponibilidad de Always on en el clúster de clústeres de conmutación por error de Windows Server (WSFC), independientemente de si la base de datos de copia local ya se ha unido al grupo de disponibilidad.  
   
 > [!NOTE]  
 >  Cuando una base de datos se agrega a un grupo de disponibilidad, la base de datos principal se une automáticamente al grupo. Las bases de datos secundarias se deben preparar en cada réplica secundaria para poder unirse al grupo de disponibilidad.   

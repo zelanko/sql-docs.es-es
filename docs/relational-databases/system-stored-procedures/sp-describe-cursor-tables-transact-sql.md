@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_describe_cursor_tables
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68053089"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827819"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,26 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cursor_return= ] *output_cursor_variable* GENERE  
+ [ @cursor_return =] *output_cursor_variable*salida  
  Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene valor predeterminado y no debe estar asociado a ningún cursor en el momento en que se llama a sp_describe_cursor_tables. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
- [ @cursor_source= ] {N'local ' | N'global ' | N'variable' }  
+ [ @cursor_source =] {N'local ' | N'global ' | N'variable' }  
  Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
   
- [ @cursor_identity= ] N '*local_cursor_name*'  
+ [ @cursor_identity =] N '*local_cursor_name*'  
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL, o bien el valor predeterminado es LOCAL. *local_cursor_name* es **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*global_cursor_name*'  
+ [ @cursor_identity =] N '*global_cursor_name*'  
  Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* también puede ser el nombre de un cursor de servidor de API abierto por una aplicación ODBC que, a continuación, ha llamado al cursor llamando a SQLSetCursorName. *global_cursor_name* es **nvarchar (128)**.  
   
- [ @cursor_identity= ] N '*input_cursor_variable*'  
+ [ @cursor_identity =] N '*input_cursor_variable*'  
  Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
   
 ## <a name="cursors-returned"></a>Cursores devueltos  
- sp_describe_cursor_tables encapsula su informe como un parámetro [!INCLUDE[tsql](../../includes/tsql-md.md)] de salida de **cursor** . De esta forma, los lotes, los procedimientos almacenados y los desencadenadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden trabajar con la salida de fila en fila. También significa que no se puede llamar al procedimiento directamente desde funciones de una API. El parámetro de salida **cursor** debe estar enlazado a una variable de programa, pero las API no admiten parámetros de **cursor** de enlace o variables.  
+ sp_describe_cursor_tables encapsula su informe como un parámetro de salida de [!INCLUDE[tsql](../../includes/tsql-md.md)] **cursor** . De esta forma, los lotes, los procedimientos almacenados y los desencadenadores de [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden trabajar con la salida de fila en fila. También significa que no se puede llamar al procedimiento directamente desde funciones de una API. El parámetro de salida **cursor** debe estar enlazado a una variable de programa, pero las API no admiten parámetros de **cursor** de enlace o variables.  
   
  En la tabla siguiente se muestra el formato del cursor devuelto por sp_describe_cursor_tables.  
   
@@ -82,7 +82,7 @@ sp_describe_cursor_tables
 |dbid|**int**|Identificador de la base de datos en la que reside la tabla. 0 cuando se utiliza OPENQUERY u OPENROWSET.|  
 |dbname|**sysname**, **aceptan valores NULL**|Nombre de la base de datos en la que reside la tabla. NULL cuando se utiliza OPENQUERY u OPENROWSET.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_describe_cursor_tables describe las tablas base a las que hace referencia un cursor de servidor. Utilice sp_describe_cursor_columns para obtener una descripción de los atributos del conjunto de resultados devuelto por el cursor. Para obtener una descripción de las características globales del cursor, como por ejemplo sus posibilidades de desplazamiento y actualización, use sp_describe_cursor. Para obtener un informe de los [!INCLUDE[tsql](../../includes/tsql-md.md)] cursores de servidor que están visibles en la conexión, use sp_cursor_list.  
   
 ## <a name="permissions"></a>Permisos  

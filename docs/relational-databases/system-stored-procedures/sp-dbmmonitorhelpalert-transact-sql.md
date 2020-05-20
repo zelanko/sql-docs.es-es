@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_dbmmonitorhelpalert
 - database mirroring [SQL Server], monitoring
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899189"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826191"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_dbmmonitorhelpalert database_name
   
  Para devolver una advertencia determinada, especifique uno de los valores siguientes:  
   
-|Value|Métrica de rendimiento|Umbral de advertencia|  
+|Valor|Métrica de rendimiento|Umbral de advertencia|  
 |-----------|------------------------|-----------------------|  
 |1|Transacción no enviada más antigua|Especifica el número de minutos de transacciones que se pueden acumular en la cola de envío antes de que se genere una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de tiempo y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
 |2|Registro sin enviar|Especifica cuántos kilobytes (KB) de registro sin enviar generan una advertencia en la instancia del servidor principal. Esta advertencia ayuda a medir el potencial de pérdida de datos en términos de KB y es especialmente relevante para el modo de alto rendimiento. No obstante, la advertencia también es relevante para el modo de alta seguridad cuando la creación de reflejo se detiene o suspende debido a que los asociados se han desconectado.|  
@@ -71,7 +71,7 @@ sp_dbmmonitorhelpalert database_name
 |**mínimo**|**int**|Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la advertencia. Si el umbral no está establecido actualmente, el valor es NULL.<br /><br /> **Nota:** Para ver los valores actuales, ejecute el procedimiento almacenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**activó**|**bit**|0 = El evento está deshabilitado.<br /><br /> 1 = El evento está habilitado.<br /><br /> **Nota:** El período de retención está siempre habilitado.|  
   
-|Value|Métrica de rendimiento|Unidad|  
+|Valor|Métrica de rendimiento|Unidad|  
 |-----------|------------------------|----------|  
 |1|Transacción no enviada más antigua|Minutos|  
 |2|Registro sin enviar|KB|  

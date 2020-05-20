@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_category
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2c09dfe73df914a38e53a39b99c99388590c8d9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304805"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827778"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @class = ] 'class'`Clase sobre la que se solicita información. la *clase* es **VARCHAR (8)** y su valor predeterminado es **Job**. la *clase* puede ser uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**TRABAJO**|Proporciona información acerca de una categoría de trabajo.|  
 |**ONALERT**|Proporciona información acerca de una categoría de alerta.|  
@@ -52,11 +52,11 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Tipo de categoría para la que se solicita información. *Type* es de tipo **VARCHAR (12)**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**LOCALIZAR**|Categoría de trabajo local.|  
 |**MULTI -SERVER**|Categoría de trabajo multiservidor.|  
-|**NINGUNA**|Categoría para una clase distinta de **Job**.|  
+|**NONE**|Categoría para una clase distinta de **Job**.|  
   
 `[ @name = ] 'name'`Nombre de la categoría para la que se solicita información. *Name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -66,7 +66,7 @@ sp_help_category [ [ @class = ] 'class' ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando ** \@el sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando el ** \@ sufijo** es **0**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -74,7 +74,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
 |**name**|**sysname**|Nombre de la categoría|  
   
- Cuando ** \@el sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
+ Cuando el ** \@ sufijo** es **1**, **sp_help_category** devuelve el siguiente conjunto de resultados:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -82,7 +82,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**category_type**|**sysname**|Tipo de categoría. Uno de los **locales**, **varios servidores**o **ninguno**|  
 |**name**|**sysname**|Nombre de la categoría|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_category** se debe ejecutar desde la base de datos **msdb** .  
   
  Si no se especifica ningún parámetro, el conjunto de resultados proporciona información acerca de todas las categorías de trabajo.  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprotect
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 8ff791855f7e65652f64d18f3128831172da9229
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997474"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828889"
 ---
 # <a name="sp_helprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67997474"
   Devuelve un informe con información acerca de los permisos de usuario para un objeto o los permisos de una instrucción en la base de datos actual.  
   
 > [!IMPORTANT]  
->  **sp_helprotect** no devuelve información acerca de los elementos protegibles que [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]se introdujeron en. Use [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
+>  **sp_helprotect** no devuelve información acerca de los elementos protegibles que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Use [Sys. database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md) y [fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) en su lugar.  
   
  No muestra los permisos que se asignan siempre a los roles fijos de servidor o a los roles fijos de base de datos. No incluye los inicios de sesión o los usuarios que reciben los permisos en función de su pertenencia a un rol.  
   
@@ -65,14 +65,14 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Propietario**|**sysname**|Nombre del propietario del objeto.|  
-|**Object**|**sysname**|Nombre del objeto.|  
+|**Objeto**|**sysname**|Nombre del objeto.|  
 |**Receptores**|**sysname**|Nombre de la entidad de seguridad en la que se conceden los permisos.|  
 |**Otorgante**|**sysname**|Nombre de la entidad de seguridad que ha concedido los permisos al receptor de permisos especificado.|  
 |**ProtectType**|**nvarchar(10**|Nombre del tipo de protección:<br /><br /> GRANT REVOKE|  
 |**Acción**|**nvarchar(60)**|Nombre del permiso. Las instrucciones válidas de permisos dependen del tipo de objeto.|  
 |**Columna**|**sysname**|Tipo de permiso:<br /><br /> All = Permiso sobre todas las columnas actuales del objeto.<br /><br /> New = Permiso sobre las nuevas columnas del objeto que se pueden cambiar (mediante la instrucción ALTER) posteriormente.<br /><br /> All+New = Combinación de Todas y Nuevas.<br /><br /> Devuelve un punto si el tipo de permiso no se aplica a las columnas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los parámetros del siguiente procedimiento son opcionales. Si se ejecuta sin parámetros, `sp_helprotect` presenta todos los permisos que se han concedido o denegado en la base de datos actual.  
   
  Si se especifican algunos parámetros, pero no todos, se tienen que utilizar parámetros con nombre para identificar el parámetro concreto o `NULL` como marcador de posición. Por ejemplo, para presentar todos los permisos del propietario de la base de datos del otorgante de permisos (`dbo`), ejecute:  
@@ -81,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- Or  
+ O bien  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  

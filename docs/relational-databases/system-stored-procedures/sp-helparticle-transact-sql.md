@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helparticle
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771102"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828357"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre de un artículo de la publicación. *article* es de **%** **tipo sysname y su**valor predeterminado es. Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
+`[ @article = ] 'article'`Es el nombre de un artículo de la publicación. *article* es de **tipo sysname y su**valor predeterminado es **%** . Si no se proporciona el *artículo* , se devuelve información sobre todos los artículos de la publicación especificada.  
   
 `[ @returnfilter = ] returnfilter`Especifica si se debe devolver la cláusula de filtro. *returnfilter* es de **bit**y su valor predeterminado es **1**, que devuelve la cláusula de filtro.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe especificar el *publicador* al solicitar información sobre un artículo publicado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un publicador.  
+>  no se debe especificar el *publicador* al solicitar información sobre un artículo publicado por un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 `[ @found = ] found OUTPUT`Solo para uso interno.  
   
@@ -92,7 +92,7 @@ sp_helparticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helparticle** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
 ## <a name="permissions"></a>Permisos  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_publication_validation
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bdfe70e3df86f792d250cd7abcc3ef3013e9df19
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4fd1c7bf329334bee0d8b3c29ba5d1d97909818e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056233"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826013"
 ---
 # <a name="sp_publication_validation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @rowcount_only = ] 'rowcount_only'`Indica si se devuelve solo el recuento de filas de la tabla. *rowcount_only* es **smallint** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza una suma de comprobación compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Nota: cuando un artículo se filtra horizontalmente, se realiza una operación de recuento de filas en lugar de una operación de suma de comprobación.|  
 |**1** (predeterminado)|Realiza solamente un recuento de filas.|  
-|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores de la versión 7,0, solo se realiza una validación del recuento de filas.|  
+|**2**|Realiza un recuento de filas y una suma de comprobación binaria.<br /><br /> Nota: para los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suscriptores de la versión 7,0, solo se realiza una validación del recuento de filas.|  
   
 `[ @full_or_fast = ] 'full_or_fast'`Es el método utilizado para calcular el recuento de filas. *full_or_fast* es **tinyint** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Realiza un recuento completo mediante COUNT(*).|  
 |**1**|Realiza un recuento rápido de **sysindexes. Rows**. Contar las filas en [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) es mucho más rápido que contar las filas de la tabla real. Sin embargo, dado que [Sys. sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) se actualiza de forma diferida, es posible que el recuento de filas no sea preciso.|  
@@ -61,15 +61,15 @@ sp_publication_validation [ @publication = ] 'publication'
   
 `[ @shutdown_agent = ] 'shutdown_agent'`Indica si el Agente de distribución debe cerrarse inmediatamente al completarse la validación. *shutdown_agent* es de **bit**y su valor predeterminado es **0**. Si es **0**, el agente de replicación no se cierra. Si es **1**, el agente de replicación se cierra después de validar el último artículo.  
   
-`[ @publisher = ] 'publisher'`Especifica un publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es de. *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @publisher = ] 'publisher'`Especifica un publicador que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
->  no se debe usar el *publicador* al solicitar la validación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un publicador.  
+>  no se debe usar el *publicador* al solicitar la validación en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_publication_validation** se utiliza en la replicación transaccional.  
   
  se puede llamar a **sp_publication_validation** en cualquier momento después de activar los artículos asociados a la publicación. Se puede ejecutar el procedimiento una vez de forma manual, o bien como parte de un trabajo programado de forma regular que valide los datos.  

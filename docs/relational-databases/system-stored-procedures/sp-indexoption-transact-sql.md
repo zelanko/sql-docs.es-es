@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_indexoption
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17189e3acebd81e977b02b1b1b235f8e300e5e9c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826039"
 ---
 # <a name="sp_indexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'`Es un nombre de opción de índice. *option_name* es de tipo **VARCHAR (35)** y no tiene ningún valor predeterminado. *option_name* puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Cuando el valor es TRUE, se permiten bloqueos de fila al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila. Cuando es FALSE, no se utilizan bloqueos de fila. El valor predeterminado es TRUE.|  
 |**AllowPageLocks**|Cuando el valor es TRUE, se permiten bloqueos de página al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página. Cuando es FALSE, no se utilizan bloqueos de página. El valor predeterminado es TRUE.|  
@@ -62,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o mayor que 0 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los índices XML no se admiten. Si se especifica un índice XML o un nombre de tabla sin ningún nombre de índice y la tabla contiene un índice XML, la instrucción produce un error. Para establecer estas opciones, utilice [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) en su lugar.  
   
  Para mostrar las propiedades actuales de bloqueo de fila y de página, use [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) o la vista de catálogo [Sys. Indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) .  
@@ -85,7 +85,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-setting-an-option-on-a-specific-index"></a>A. Definir una opción en un índice específico  
- En el siguiente ejemplo se deniegan los bloqueos de página en el `IX_Customer_TerritoryID` índice de la `Customer` tabla.  
+ En el siguiente ejemplo se deniegan los bloqueos de página en el `IX_Customer_TerritoryID` Índice de la `Customer` tabla.  
   
 ```sql  
 USE AdventureWorks2012;  
@@ -117,7 +117,7 @@ GO
 ```  
   
 ### <a name="c-setting-an-option-on-a-table-with-no-clustered-index"></a>C. Definir una opción en una tabla sin clúster  
- El siguiente ejemplo no permite bloqueos de página en una tabla sin clúster (un montón). La `sys.indexes` vista de catálogo se consulta antes y después `sp_indexoption` de ejecutar el procedimiento para mostrar los resultados de la instrucción.  
+ El siguiente ejemplo no permite bloqueos de página en una tabla sin clúster (un montón). La `sys.indexes` vista de catálogo se consulta antes y después de `sp_indexoption` ejecutar el procedimiento para mostrar los resultados de la instrucción.  
   
 ```sql  
 USE AdventureWorks2012;  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_updatenotification
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7282472dcb916d7122625534cb64f80ce9f4ea6a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68084862"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827494"
 ---
 # <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sp_update_notification
   
 `[ @notification_method = ] notification`Método por el que se notifica al operador. la *notificación*es de **tinyint**, no tiene ningún valor predeterminado y puede tener uno o varios de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -59,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_update_notification** se debe ejecutar desde la base de datos **msdb** .  
   
  Puede actualizar una notificación para un operador que no tenga la información de dirección necesaria mediante el *notification_method*especificado. Si se produce algún error al enviar un mensaje de correo electrónico o una notificación por buscapersonas, el error se refleja en el registro de errores del Agente SQL Server.  
@@ -68,7 +68,7 @@ sp_update_notification
  Para ejecutar este procedimiento almacenado, se debe conceder a los usuarios el rol fijo de servidor **sysadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se modifica el método de notificación para las notificaciones `François Ajenstat`enviadas `Test Alert`a para la alerta.  
+ En el ejemplo siguiente se modifica el método de notificación para las notificaciones enviadas a `François Ajenstat` para la alerta `Test Alert` .  
   
 ```  
 USE msdb ;  

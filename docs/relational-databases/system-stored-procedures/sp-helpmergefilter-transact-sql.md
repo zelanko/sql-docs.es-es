@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpmergefilter
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 709472c434d2ddb80d33832e7c466abdb5a7d0fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68137685"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828901"
 ---
 # <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor **%** predeterminado es, que devuelve los nombres de todos los artículos.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
   
-`[ @filtername = ] 'filtername'`Es el nombre del filtro sobre el que se va a devolver información. *filtername* es de **%** **tipo sysname y su**valor predeterminado es, que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
+`[ @filtername = ] 'filtername'`Es el nombre del filtro sobre el que se va a devolver información. *filtername* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -64,7 +64,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpmergefilter** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

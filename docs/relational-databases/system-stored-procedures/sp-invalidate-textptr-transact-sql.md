@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_invalidate_textptr
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f479daec811e9953bdb0b9e23727dd1a58ad15e4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68113193"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826019"
 ---
 # <a name="sp_invalidate_textptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un máximo de 1.024 punteros de texto consecutivos activos y válidos por transacción y base de datos; sin embargo, una transacción que comprenda más de una base de datos puede disponer de 1.024 punteros de texto consecutivos en cada una. **sp_invalidate_textptr** se puede usar para invalidar los punteros de texto consecutivos y, por tanto, espacio libre para los punteros de texto consecutivos adicionales.  
   
  Para más información sobre la opción text in row, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  

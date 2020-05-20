@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085283"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828421"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,11 +51,11 @@ sp_help_proxy
   
  En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Sistema operativo (CmdExec)|  
-|Instantánea|Agente de instantáneas de replicación|  
+|Depurador de|Agente de instantáneas de replicación|  
 |LogReader|Agente de registro del LOG de replicación|  
 |Distribución|Agente de distribución de replicación|  
 |Merge|Replication Merge Agent|  
@@ -65,7 +65,7 @@ sp_help_proxy
 |Dts|Ejecución de paquetes SSIS|  
 |PowerShell|Script de PowerShell|  
   
-`[ @name = ] 'name'`Nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para el que se van a enumerar los servidores proxy. El nombre es **nvarchar (256)** y su valor predeterminado es NULL. Cuando se especifica *Name* , también se debe especificar *subsystem_name* .  
+`[ @name = ] 'name'`Nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión para el que se van a enumerar los servidores proxy. El nombre es **nvarchar (256)** y su valor predeterminado es NULL. Cuando se especifica *Name* , también se debe especificar *subsystem_name* .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -83,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|Identificador de la credencial asociada con este proxy.|  
 |**credential_identity_exists**|**int**|Si existe credential_identity. { 0 = no existe, 1 = existe }|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando no se proporcionan parámetros, **sp_help_proxy** muestra información de todos los servidores proxy de la instancia.  
   
  Para determinar qué servidores proxy puede usar un inicio de sesión para un subsistema determinado, especifique *el nombre y el* *subsystem_name*. Cuando se proporcionan estos argumentos, **sp_help_proxy** muestra los servidores proxy a los que puede tener acceso el inicio de sesión especificado y que se pueden usar para el subsistema especificado.  

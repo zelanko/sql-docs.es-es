@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_os_buffer_descriptors dynamic management view
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d2b1ed24045f609b2feff1bfef6f288cd97047cf
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265864"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827903"
 ---
 # <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68265864"
   
  Cuando se lee una página de datos del disco, esta se copia en el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se almacena en caché para volver a utilizarla. Cada página de datos almacenada en caché tiene un descriptor de búfer. Los descriptores de búfer únicamente identifican cada página de datos que está almacenada actualmente en memoria caché en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors devuelve páginas en memoria caché para todas las bases de datos de usuario y de sistema. Esto incluye las páginas que están asociadas a la base de datos Resource.  
   
-> **Nota:** Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_os_buffer_descriptors**.  
+> **Nota:** Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -50,17 +50,17 @@ ms.locfileid: "68265864"
 |numa_node|**int**|Nodo de acceso no uniforme a memoria para el búfer. Acepta valores NULL.|  
 |read_microsec|**bigint**|El tiempo real (en microsegundos) necesario para leer la página en el búfer. Este número se restablece cuando se reutiliza el búfer. Acepta valores NULL.|  
 |is_in_bpool_extension|**bit**|1 = la página está en la extensión del grupo de búferes. Acepta valores NULL.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
    
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Sys. dm_os_buffer_descriptors devuelve páginas que utiliza la base de datos de recursos. Sys. dm_os_buffer_descriptors no devuelve información acerca de las páginas gratuitas o robadas o de las páginas que tenían errores cuando se leyeron.  
   
-|De|En|Por|Relación|  
+|De|En|Activado|Relación|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|varios a uno|  
 |sys.dm_os_buffer_descriptors|\<UserDB>. sys. allocation_units|allocation_unit_id|varios a uno|  
@@ -116,7 +116,7 @@ ORDER BY cached_pages_count DESC;
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
  [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [Base de datos de recursos](../../relational-databases/databases/resource-database.md)   
+ [Base de datos Resource](../../relational-databases/databases/resource-database.md)   
  [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   

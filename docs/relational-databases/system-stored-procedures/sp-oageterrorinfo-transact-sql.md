@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_OAGetErrorInfo
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68107913"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828865"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,14 +77,14 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**HelpFile**|**nvarchar (NN)**|Archivo de ayuda del origen.|  
 |**HelpID**|**int**|Id. del contexto de Ayuda del archivo de origen correspondiente.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada llamada a un procedimiento almacenado de OLE Automation (excepto **sp_OAGetErrorInfo**) restablece la información de error; por tanto, **sp_OAGetErrorInfo** solo obtiene la información de error de la llamada más reciente a un procedimiento almacenado de OLE Automation. Tenga en cuenta que, dado que **sp_OAGetErrorInfo** no restablece la información de error, se puede llamar varias veces para obtener la misma información de error.  
   
  La tabla siguiente muestra los errores de OLE Automation y sus causas comunes.  
   
 |Error y HRESULT|Causa común|  
 |-----------------------|------------------|  
-|**Tipo de variable incorrecto ?(0x80020008)**|El tipo de datos [!INCLUDE[tsql](../../includes/tsql-md.md)] de un valor pasado como parámetro de método no coincidía [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] con el tipo de datos del parámetro de método o se pasó un valor NULL como parámetro de método.|  
+|**Tipo de variable incorrecto ?(0x80020008)**|El tipo de datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] valor pasado como parámetro de método no coincidía con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de datos del parámetro de método o se pasó un valor NULL como parámetro de método.|  
 |**Nombre desconocido? (0x8002006)**|No se encontró el nombre de la propiedad o del método especificado para el objeto especificado.|  
 |**Cadena de clase no válida (0x800401f3)**|El ProgID o CLSID especificado no está registrado como objeto OLE en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores de automatización OLE personalizados deben registrarse para poder crear instancias de ellos mediante **sp_OACreate**. Para ello, puede usar la utilidad regsvr32. exe para los servidores en proceso (. dll) o el modificador de la línea de comandos **/regserver** para los servidores locales (. exe).|  
 |**Error de ejecución del servidor (0x80080005)**|El objeto OLE especificado está registrado como servidor OLE local (archivo .exe), pero no se pudo encontrar o iniciar el archivo .exe.|  

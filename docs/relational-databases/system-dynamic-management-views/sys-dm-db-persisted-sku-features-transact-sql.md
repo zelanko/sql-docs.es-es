@@ -17,14 +17,14 @@ helpviewer_keywords:
 - editions [SQL Server]
 - sys.dm_db_persisted_sku_features dynamic management view
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: f689541d455f4f7e6da4cc68742519a74f671506
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c92a9271575a725aef6981b97cb9b35c81829044
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73981831"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828072"
 ---
 # <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,18 @@ ms.locfileid: "73981831"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si no se usa ninguna característica que pueda estar restringida por una edición específica en la base de datos, la vista no devuelve ninguna fila.  
   
- Sys. dm_db_persisted_sku_features puede enumerar las siguientes características de cambio de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como restringidas a ediciones específicas:  
+ Sys. dm_db_persisted_sku_features puede enumerar las siguientes características de cambio de base de datos como restringidas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones específicas:  
   
 -   **ChangeCapture**: indica que una base de datos tiene habilitada la captura de datos modificados. Para quitar la captura de datos modificados, use el procedimiento almacenado [Sys. sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md) . Para obtener más información, vea [Acerca de la captura de datos modificados &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
--   **ColumnStoreIndex**: indica que al menos una tabla tiene un índice de almacén de columnas. Para permitir que una base de datos se mueva a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición de que no admite esta característica, utilice la instrucción [Drop index](../../t-sql/statements/drop-index-transact-sql.md) o [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) para quitar el índice de almacén de columnas. Para obtener más información, consulte [índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).  
+-   **ColumnStoreIndex**: indica que al menos una tabla tiene un índice de almacén de columnas. Para permitir que una base de datos se mueva a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, utilice la instrucción [Drop index](../../t-sql/statements/drop-index-transact-sql.md) o [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) para quitar el índice de almacén de columnas. Para obtener más información, consulte [índices de almacén de columnas](../../relational-databases/indexes/columnstore-indexes-overview.md).  
   
     **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores)  
   
--   **Compression**: indica que al menos una tabla o un índice utiliza la compresión de datos o el formato de almacenamiento vardecimal. Para permitir que una base de datos se mueva a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edición de que no admite esta característica, utilice la instrucción [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) para quitar la compresión de datos. Para quitar el formato de almacenamiento vardecimal, utilice la instrucción sp_tableoption. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
+-   **Compression**: indica que al menos una tabla o un índice utiliza la compresión de datos o el formato de almacenamiento vardecimal. Para permitir que una base de datos se mueva a una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no admite esta característica, utilice la instrucción [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) o [ALTER index](../../t-sql/statements/alter-index-transact-sql.md) para quitar la compresión de datos. Para quitar el formato de almacenamiento vardecimal, utilice la instrucción sp_tableoption. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).  
   
 -   **MultipleFSContainers**: indica que la base de datos utiliza varios contenedores de FileStream. La base de datos tiene un grupo de archivos FILESTREAM con varios contenedores (archivos). Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "73981831"
 -   **TransparentDataEncryption.** Indica que una base de datos se ha cifrado utilizando el cifrado de datos transparente. Para quitar el cifrado de datos transparente, utilice la instrucción ALTER DATABASE. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
 
 > [!NOTE]
-> A partir [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] de Service Pack 1, estas características, excepto **TransparentDataEncryption.** están disponibles en varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones y no se limitan únicamente a las ediciones Enterprise o developer.
+> A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1, estas características, excepto **TransparentDataEncryption.** están disponibles en varias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ediciones y no se limitan únicamente a las ediciones Enterprise o developer.
 
  Para determinar si una base de datos utiliza alguna característica que esté restringida a ediciones concretas, ejecute la instrucción siguiente en la base de datos:  
   

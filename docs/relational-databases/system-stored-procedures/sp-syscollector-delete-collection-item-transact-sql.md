@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_delete_collecton_item
 - data collector [SQL Server], stored procedures
 ms.assetid: 9c2b0990-1d3d-4a59-94a0-3cca6fef4681
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 5ae8cb259f1dfa424de37c7342cf1f6081a8c8b8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: ecf578b1ce23aa47e9bf71360f1211b5667c08c5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826540"
 ---
 # <a name="sp_syscollector_delete_collection_item-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Es el identificador único del elemento de recopilación. *collection_item_id* es de **tipo int** y su valor predeterminado es NULL. *collection_item_id* debe tener un valor si *el nombre* es NULL.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del elemento de colección. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_item_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_delete_collection_item se debe ejecutar dentro del contexto de la base de datos del sistema msdb. Los elementos de recopilación no se pueden eliminar de los conjuntos de recopilación del sistema.  
   
  El conjunto de recopilación que contiene el elemento de recopilación se detiene y reinicia durante esta operación.  

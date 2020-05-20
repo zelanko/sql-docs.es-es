@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_event_log database mail view
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cfca5caa10e36196f38817c828cbd4d062763107
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060221"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824925"
 ---
 # <a name="sysmail_event_log-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68060221"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila. En el caso de los mensajes de correo electrónico, se trata del usuario que envió el mensaje. En el caso de los mensajes generados por el programa externo del Correo electrónico de base de datos, se trata del contexto de usuario del programa.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para solucionar problemas de Correo electrónico de base de datos, busque en la vista de **sysmail_event_log** los eventos relacionados con errores de correo electrónico. Algunos mensajes, como los de error del programa externo del Correo electrónico de base de datos, no están asociados con mensajes de correo electrónico determinados. Para buscar errores relacionados con mensajes de correo electrónico específicos, busque el **mailitem_id** del mensaje de error en la vista de **sysmail_faileditems** y, a continuación, busque en el **sysmail_event_log** los mensajes relacionados con ese **mailitem_id**. Cuando se devuelve un error de **sp_send_dbmail**, el correo electrónico no se envía al sistema correo electrónico de base de datos y el error no se muestra en esta vista.  
   
  Si se producen errores en los intentos de entrega de cuentas individuales, el Correo electrónico de base de datos conservará los mensajes de error durante los reintentos hasta que la entrega del elemento de correo se realice correctamente o provoque un error. En caso de éxito final, todos los errores acumulados se registran como advertencias independientes, incluido el **ACCOUNT_ID**. Por tanto, puede que aparezcan advertencias aunque se haya enviado el mensaje. En caso de que se produzca un error de entrega, todas las advertencias anteriores se registran como un mensaje de error sin un **ACCOUNT_ID**, ya que se ha producido un error en todas las cuentas.  

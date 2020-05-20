@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.asymmetric_keys catalog view
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c5266b758c965574e7b810804fbbbfd3bb4958ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070472"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829171"
 ---
 # <a name="sysasymmetric_keys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

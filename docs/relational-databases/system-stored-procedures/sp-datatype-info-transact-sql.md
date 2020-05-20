@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_datatype_info
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e88bc45995574dcde29427773e3e8d9bec62ed96
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108299"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826219"
 ---
 # <a name="sp_datatype_info-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -72,14 +72,14 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |INTERVAL_PRECISION|**smallint**|Valor de precisión inicial del intervalo si *data_type* es **Interval**; de lo contrario, NULL.|  
 |USERTYPE|**smallint**|valor **usertype** de la tabla systypes.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_datatype_info es equivalente a SQLGetTypeInfo en ODBC. Los resultados devueltos se ordenan por DATA_TYPE y, a continuación, por la proximidad de la asignación de los tipos de datos a los tipos de datos de ODBC SQL correspondientes.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol public.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se recupera información de los tipos de datos **sysname** y **nvarchar** especificando el valor de `-9` *data_type* de.  
+ En el ejemplo siguiente se recupera información de los tipos de datos **sysname** y **nvarchar** especificando el valor de *data_type* de `-9` .  
   
 ```  
 USE master;  

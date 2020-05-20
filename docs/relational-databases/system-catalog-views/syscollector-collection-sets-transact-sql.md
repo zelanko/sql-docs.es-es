@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_collection_sets view
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e258fbd2e0d7a9d15e3c8aa9c2ec3e7bcc7ddc0c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060383"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824948"
 ---
 # <a name="syscollector_collection_sets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "68060383"
 |logging_level|**smallint**|Especifica el nivel de registro (0, 1 ó 2). No admite valores NULL.|  
 |days_until_expiration|**smallint**|Número de días que los datos recopilados se guardan en el almacén de administración de datos. No admite valores NULL.|  
 |description|**nvarchar(4000)**|Describe el conjunto de recopilación. Acepta valores NULL.|  
-|dump_on_any_error|**bit**|Está activado (1) o desactivado (0) para indicar si se [!INCLUDE[ssIS](../../includes/ssis-md.md)] debe crear un archivo de volcado de memoria en cualquier error. No admite valores NULL.|  
+|dump_on_any_error|**bit**|Está activado (1) o desactivado (0) para indicar si se debe crear un [!INCLUDE[ssIS](../../includes/ssis-md.md)] archivo de volcado de memoria en cualquier error. No admite valores NULL.|  
 |dump_on_codes|**nvarchar(max)**|Contiene la lista de [!INCLUDE[ssIS](../../includes/ssis-md.md)] códigos de error que se usan para desencadenar el archivo de volcado de memoria. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere SELECT para dc_operator, dc_proxy.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El recopilador de datos API solamente permite cambiar o eliminar los conjuntos de recopilación creados por el usuario. Los conjuntos de recopilación que se proporcionan con el sistema no pueden modificarse ni eliminarse. No obstante, es posible habilitar o deshabilitar un conjunto de recopilación del sistema y cambiar su configuración.  
   
 ## <a name="see-also"></a>Consulte también  

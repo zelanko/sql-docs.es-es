@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_bindrule
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c89b2cb803df80872d82f18b5f26b207e9e4bc38
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68046028"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828498"
 ---
 # <a name="sp_bindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Puede enlazar una nueva regla a una columna (aunque se prefiere usar una restricción CHECK) o a un tipo de datos de alias con **sp_bindrule** sin desenlazar una regla existente. Se reemplaza la regla anterior. Si se enlaza una regla a una columna con una restricción CHECK existente, se evalúan todas las restricciones. No se puede enlazar una regla a un tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La regla se aplica cuando se intenta ejecutar una instrucción INSERT, no en la operación de enlace. Puede enlazar una regla de caracteres a una columna de tipo de datos **numérico** , aunque una operación de inserción no sea válida.  
@@ -86,7 +86,7 @@ EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Enlazar una regla a un tipo de datos de alias  
- Suponiendo que existe una regla denominada `rule_ssn` y un tipo de datos de alias denominado `ssn`, este ejemplo enlaza `rule_ssn` a `ssn`. En una instrucción CREATE TABLE, las columnas del tipo `ssn` heredan la regla `rule_ssn`. Las columnas existentes de `ssn` tipo también heredan `rule_ssn` la regla, a menos que se especifique **futureonly** para *futureonly_flag*o `ssn` que tenga una regla enlazada directamente a ella. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos.  
+ Suponiendo que existe una regla denominada `rule_ssn` y un tipo de datos de alias denominado `ssn`, este ejemplo enlaza `rule_ssn` a `ssn`. En una instrucción CREATE TABLE, las columnas del tipo `ssn` heredan la regla `rule_ssn`. Las columnas existentes de tipo `ssn` también heredan la `rule_ssn` regla, a menos que se especifique **futureonly** para *futureonly_flag*o `ssn` que tenga una regla enlazada directamente a ella. Las reglas enlazadas a columnas siempre tienen prioridad sobre las enlazadas a tipos de datos.  
   
 ```  
 USE master;  

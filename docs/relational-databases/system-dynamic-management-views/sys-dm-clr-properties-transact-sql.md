@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_properties dynamic management view
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8cb9cfc6e645e9777a697e62183db874c47cfeb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68266063"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824735"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68266063"
   
  La propiedad **version** indica la versión del .NET Framework y el CLR hospedado en el servidor.  
   
- La vista administrada dinámica **Sys. dm_clr_properties** puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son estos:  
+ La vista administrada dinámica **Sys. dm_clr_properties** puede devolver seis valores diferentes para la propiedad **State** , que refleja el estado del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR hospedado. Son las siguientes:  
   
 -   Mscoree is not loaded.  
   
@@ -62,18 +62,18 @@ ms.locfileid: "68266063"
   
  La **versión de CLR bloqueada con** el estado Mscoree puede aparecer en la que no se está usando el CLR hospedado y, por lo tanto, aún no se ha inicializado. El CLR hospedado se inicializa la primera vez que se ejecuta una instrucción DDL (como [Create assembly &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)) o un objeto de base de datos administrado.  
   
- El estado **inicializado de CLR** indica que el CLR hospedado se ha inicializado correctamente. Tenga en cuenta que esto no indica si se ha habilitado la ejecución de código CLR de usuario. Si la ejecución del código CLR de usuario se habilita por primera vez y después [!INCLUDE[tsql](../../includes/tsql-md.md)] se deshabilita mediante el [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado, el valor de Estado seguirá siendo **CLR inicializado**.  
+ El estado **inicializado de CLR** indica que el CLR hospedado se ha inicializado correctamente. Tenga en cuenta que esto no indica si se ha habilitado la ejecución de código CLR de usuario. Si la ejecución del código CLR de usuario se habilita por primera vez y después se deshabilita mediante el [!INCLUDE[tsql](../../includes/tsql-md.md)] [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) procedimiento almacenado, el valor de Estado seguirá siendo **CLR inicializado**.  
   
  El estado de **error de inicialización de CLR** indica que se produjo un error de inicialización de CLR hospedado. Una causa probable es la presión de memoria, o también podría ser el resultado de un error del protocolo de enlace de hospedaje entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el entorno CLR. En este caso se producirá el mensaje de error 6512 o 6513.  
   
  El **estado detenida de CLR** solo aparece cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está cerrando.  
   
-## <a name="remarks"></a>Observaciones  
- Las propiedades y los valores de esta vista pueden cambiar en una versión futura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de debido a las mejoras de la funcionalidad de integración de CLR.  
+## <a name="remarks"></a>Comentarios  
+ Las propiedades y los valores de esta vista pueden cambiar en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debido a las mejoras de la funcionalidad de integración de CLR.  
   
 ## <a name="permissions"></a>Permisos  
   
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="examples"></a>Ejemplos  

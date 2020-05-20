@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_redirect_publisher
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 6062522ca6c5c3a311ba2f2c796f791c47e874ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 60cd08c7ddf8ab520b6ff5e8ffb588b1a8f118c9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72252118"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828260"
 ---
 # <a name="sp_redirect_publisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ sp_redirect_publisher
 ## <a name="remarks"></a>Observaciones  
  **sp_redirect_publisher** se usa para permitir que un publicador de replicación se redirija a la réplica principal actual de un grupo de disponibilidad de Always on mediante la Asociación del par de publicador y base de datos con el agente de escucha de un grupo de disponibilidad. Ejecute **sp_redirect_publisher** después de configurar el agente de escucha del AG para el grupo de disponibilidad que contiene la base de datos publicada.  
   
- Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el * \@parámetro redirected_publisher* para quitar el redireccionamiento del par publicador/base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de datos de publicación alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
+ Si la base de datos de publicación del publicador original se quita de un grupo de disponibilidad en la réplica principal, ejecute **sp_redirect_publisher** sin especificar un valor para el parámetro * \@ redirected_publisher* para quitar el redireccionamiento del par publicador/base de datos. Para obtener más información sobre cómo redirigir el publicador cuando, vea [mantener una base de datos de publicación alwayson &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md).  
   
 ## <a name="permissions"></a>Permisos  
  El autor de la llamada debe ser miembro del rol fijo de servidor **sysadmin** , el rol fijo de base de datos **db_owner** para la base de datos de distribución, o un miembro de una lista de acceso a la publicación para una publicación definida asociada a la base de datos del publicador.  

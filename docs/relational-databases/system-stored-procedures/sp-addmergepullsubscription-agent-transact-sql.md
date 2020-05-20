@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addmergepullsubscription_agent
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 07cc514d615c86a90dcf37fbd4748c3ab1776f06
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 69b751dc93ad4512498530ddd99cf4fc8edee62a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "81528989"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826309"
 ---
 # <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -98,7 +98,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @publication = ] 'publication'`Es el nombre de la publicación. *Publication* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @publisher_security_mode = ] publisher_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un publicador durante la sincronización. *publisher_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -116,7 +116,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @subscriber_db = ] 'subscriber_db'`Es el nombre de la base de datos de suscripciones. *subscriber_db* es de **tipo sysname y su**valor predeterminado es NULL.  
   
-`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especifica autenticación. Si es **1**, especifica la autenticación de Windows.  
+`[ @subscriber_security_mode = ] subscriber_security_mode`Es el modo de seguridad que se va a utilizar al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es de **tipo int**y su valor predeterminado es 1. Si es **0**, especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. Si es **1**, especifica la autenticación de Windows.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. El Agente de mezcla siempre conecta con el suscriptor local mediante Autenticación de Windows. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
@@ -126,7 +126,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
   
-`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL.  
+`[ @subscriber_password = ] 'subscriber_password'`Es la contraseña del suscriptor para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *subscriber_password* es necesario si *subscriber_security_mode* está establecido en **0**. *subscriber_password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Si se especifica un valor para este parámetro, se devolverá un mensaje de advertencia, pero el valor se pasará por alto.  
@@ -149,12 +149,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_type = ] frequency_type`Es la frecuencia con la que se programa el Agente de mezcla. *frequency_type* es de **tipo int**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una vez|  
 |**2**|A petición|  
 |**4**|Diario|  
-|**203**|Semanal|  
+|**8**|Cada semana|  
 |**dieciséi**|Mensual|  
 |**32**|Mensualmente relativa|  
 |**64**|Iniciar automáticamente|  
@@ -166,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval`El día o los días en los que se ejecuta el Agente de mezcla. *frequency_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Domingo|  
 |**2**|Lunes|  
@@ -175,19 +175,19 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|Jueves|  
 |**6**|Viernes|  
 |**7**|Sábado|  
-|**203**|Día|  
+|**8**|Día|  
 |**9**|Días de la semana|  
 |**10**|Días del fin de semana|  
 |NULL (predeterminado)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Es la fecha del Agente de mezcla. Este parámetro se utiliza cuando *frequency_type* se establece en **32** (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Primero|  
 |**2**|Segundo|  
 |**4**|Tercero|  
-|**203**|Cuarto|  
+|**8**|Cuarto|  
 |**dieciséi**|Último|  
 |NULL (predeterminado)||  
   
@@ -195,12 +195,12 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_subday = ] frequency_subday`Es la frecuencia con que se vuelve a programar durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
 |**2**|Segundo|  
 |**4**|Minute|  
-|**203**|Hour|  
+|**8**|Hora|  
 |NULL (predeterminado)||  
   
 `[ @frequency_subday_interval = ] frequency_subday_interval`Es el intervalo de *frequency_subday*. *frequency_subday_interval* es de **tipo int**y su valor predeterminado es NULL.  
@@ -221,7 +221,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @merge_jobid = ] merge_jobid`Es el parámetro de salida del ID. de trabajo. *merge_jobid* es **binario (16)** y su valor predeterminado es NULL.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'`Especifica si la suscripción se puede sincronizar mediante el administrador de sincronización de Windows. *enabled_for_syncmgr* es de tipo **nvarchar (5)** y su valor predeterminado es false. Si es **false**, la suscripción no está registrada en el administrador de sincronización. Si es **true**, la suscripción se registra con el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 `[ @ftp_address = ] 'ftp_address'`Solo para la compatibilidad con versiones anteriores.  
   
@@ -255,7 +255,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @use_web_sync = ] use_web_sync`Indica que la sincronización web está habilitada. *use_web_sync* es de **bit**y su valor predeterminado es 0. **1** especifica que la suscripción de extracción se puede sincronizar a través de Internet mediante http.  
   
-`[ @internet_url = ] 'internet_url'`Es la ubicación del agente de escucha de replicación (REPLISAPI. DLL) para la sincronización Web. *internet_url* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. *internet_url* es una dirección URL completa, con el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
+`[ @internet_url = ] 'internet_url'`Es la ubicación del agente de escucha de replicación (REPLISAPI. DLL) para la sincronización Web. *internet_url* es de tipo **nvarchar (260)** y su valor predeterminado es NULL. *internet_url* es una dirección URL completa, con el formato `http://server.domain.com/directory/replisapi.dll` . Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
   
 `[ @internet_login = ] 'internet_login'`Es el inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante la autenticación básica HTTP. *internet_login* es de **tipo sysname y su**valor predeterminado es NULL.  
   
@@ -266,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode`Es el método de autenticación utilizado por el Agente de mezcla al conectarse al servidor Web durante la sincronización Web mediante HTTPS. *internet_security_mode* es de **tipo int** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Se utiliza Autenticación básica.|  
 |**1** (predeterminado)|Se utiliza Autenticación integrada de Windows.|  
@@ -288,7 +288,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addmergepullsubscription_agent** se utiliza en la replicación de mezcla y utiliza una funcionalidad similar a la de [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md).  
   
  Para obtener un ejemplo de cómo especificar correctamente la configuración de seguridad al ejecutar **sp_addmergepullsubscription_agent**, vea [crear una suscripción de extracción](../../relational-databases/replication/create-a-pull-subscription.md).  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_add_job
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c78536fbf8e9bb00133d7724f218c60c3d005fb2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72381911"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826361"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "72381911"
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
  > [!IMPORTANT]  
- > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Consulte [instancia administrada de Azure SQL Database diferencias de T-SQL de SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
+ > En [Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), la mayoría de las características de agente SQL Server son compatibles actualmente, aunque no todas. Vea [Diferencias de T-SQL en Instancia administrada de Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) para obtener más información.
  
 ## <a name="syntax"></a>Sintaxis  
   
@@ -57,7 +57,7 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'`Nombre del trabajo. El nombre debe ser único y no puede contener el carácter**%** de porcentaje (). *job_name*es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
+`[ @job_name = ] 'job_name'`Nombre del trabajo. El nombre debe ser único y no puede contener el carácter de porcentaje ( **%** ). *job_name*es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado.  
   
 `[ @enabled = ] enabled`Indica el estado del trabajo agregado. *Enabled*es de **tinyint**y su valor predeterminado es 1 (habilitado). Si es **0**, el trabajo no está habilitado y no se ejecuta según su programación; sin embargo, se puede ejecutar manualmente.  
   
@@ -69,11 +69,11 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id`Mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es de **tipo int**y su valor predeterminado es NULL.  
   
-`[ @owner_login_name = ] 'login'`Nombre del inicio de sesión al que pertenece el trabajo. *login*es de **tipo sysname y su**valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de ** \@owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de ** \@owner_login_name**, la ejecución de este procedimiento almacenado no se realiza correctamente y se devuelve un error.  
+`[ @owner_login_name = ] 'login'`Nombre del inicio de sesión al que pertenece el trabajo. *login*es de **tipo sysname y su**valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de ** \@ owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de ** \@ owner_login_name**, la ejecución de este procedimiento almacenado no se realiza correctamente y se devuelve un error.  
   
 `[ @notify_level_eventlog = ] eventlog_level`Valor que indica cuándo se debe colocar una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es de **tipo int**y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**0**|Nunca|  
 |**1**|En caso de éxito|  
@@ -106,9 +106,9 @@ sp_add_job [ @job_name = ] 'job_name'
  None  
   
 ## <a name="remarks"></a>Observaciones  
- originating_server existe en **sp_add_job,** pero no aparece en argumentos. ** \@** originating_server está reservado para uso interno. ** \@**  
+ ** \@ originating_server** existe en **sp_add_job,** pero no aparece en argumentos. ** \@ originating_server** está reservado para uso interno.  
   
- Una vez que se ha ejecutado **sp_add_job** para agregar un trabajo, **sp_add_jobstep** se puede usar para agregar pasos que realizan las actividades del trabajo. **sp_add_jobschedule** se puede utilizar para crear la programación que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente utiliza para ejecutar el trabajo. Use **sp_add_jobserver** para establecer la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia en la que se ejecuta el trabajo y **sp_delete_jobserver** para quitar el trabajo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instancia.  
+ Una vez que se ha ejecutado **sp_add_job** para agregar un trabajo, **sp_add_jobstep** se puede usar para agregar pasos que realizan las actividades del trabajo. **sp_add_jobschedule** se puede utilizar para crear la programación que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente utiliza para ejecutar el trabajo. Use **sp_add_jobserver** para establecer la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia en la que se ejecuta el trabajo y **sp_delete_jobserver** para quitar el trabajo de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia.  
   
  Si el trabajo se va a ejecutar en uno o varios servidores de destino en un entorno multiservidor, utilice **sp_apply_job_to_targets** para establecer los servidores de destino o los grupos de servidores de destino para el trabajo. Para quitar trabajos de los servidores de destino o de los grupos de servidores de destino, use **sp_remove_job_from_targets**.  
   
@@ -125,7 +125,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Para obtener información sobre los permisos específicos asociados a cada uno de estos roles fijos de base de datos, vea [Agente SQL Server roles fijos de base de datos](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de ** \@owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de ** \@owner_login_name**, la ejecución de este procedimiento almacenado no se realiza correctamente y se devuelve un error.  
+ Solo los miembros del rol fijo de servidor **sysadmin** pueden establecer o cambiar el valor de ** \@ owner_login_name**. Si los usuarios que no son miembros del rol **sysadmin** establecen o cambian el valor de ** \@ owner_login_name**, la ejecución de este procedimiento almacenado no se realiza correctamente y se devuelve un error.  
   
 ## <a name="examples"></a>Ejemplos  
   

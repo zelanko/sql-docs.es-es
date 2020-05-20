@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdbfixedrole
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d5c34cba36e4427c2f0def227b0641fa2f2fa84
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123829"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828943"
 ---
 # <a name="sp_helpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**DbFixedRole**|**sysname**|Nombre del rol fijo de base de datos.|  
 |**Descripción**|**nvarchar (70)**|Descripción de **DbFixedRole.**|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los roles fijos de base de datos, como se muestra en la siguiente tabla, se definen de nivel de base de datos y tienen permisos para realizar actividades administrativas específicas en la base de datos. No es posible agregar o quitar roles fijos de base de datos. No es posible cambiar los permisos concedidos a un rol fijo de base de datos.  
   
 |Rol fijo de base de datos|Descripción|  

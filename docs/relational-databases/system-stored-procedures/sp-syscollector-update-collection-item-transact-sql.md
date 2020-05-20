@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_update_collection_item
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e14f60cb3e1a4493e58968913a3ae840625e190f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010559"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828224"
 ---
 # <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,27 +46,27 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_item_id = ] *collection_item_id*  
+ [ @collection_item_id =] *collection_item_id*  
  Es el identifer único que identifica el elemento de recopilación. *collection_item_id* es de **tipo int** y su valor predeterminado es NULL. *collection_item_id* debe tener un valor si *el nombre* es NULL.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del elemento de colección. *Name* es de **tipo sysname y su** valor predeterminado es NULL. *el nombre* debe tener un valor si *collection_item_id* es NULL.  
   
- [ @new_name = ] '*new_name*'  
+ [ @new_name =] '*new_name*'  
  Es el nuevo nombre del elemento de recopilación. *new_name* es de **tipo sysname**y, si se utiliza, no puede ser una cadena vacía.  
   
  *new_name* debe ser único. Para obtener una lista de los nombres de elementos de recopilación actuales, consulte la vista del sistema syscollector_collection_items.  
   
- [ @frequency = ] *frecuencia*  
+ [ @frequency =] *frecuencia*  
  Es la frecuencia (en segundos) con que este elemento de recopilación recopila los datos. *Frequency* es de **tipo int**y su valor predeterminado es 5, el valor mínimo que se puede especificar.  
   
- [ @parameters = ] '*Parameters*'  
+ [ @parameters =] '*Parameters*'  
  Parámetros de entrada para el elemento de recopilación. *Parameters* es **XML** con un valor predeterminado de NULL. El esquema de *parámetros* debe coincidir con el esquema de parámetros del tipo de recopilador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el conjunto de recopilación se establece en modo sin almacenamiento en caché, se omite el cambio de la frecuencia porque este modo hace que la recopilación de datos y la carga se produzcan en la programación especificada para el conjunto de recopilación. Para ver el estado del conjunto de recopilación, ejecute la consulta siguiente. Reemplace `<collection_item_id>` con el identificador del elemento de recopilación que se va a actualizar.  
   
 ```  

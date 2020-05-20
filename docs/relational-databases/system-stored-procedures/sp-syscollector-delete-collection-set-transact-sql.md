@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_delete_collecton_set
 ms.assetid: 29c63a74-4db4-4068-bd57-9fb519b0c598
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e60fb13244d6740b7d52c568835e54155eeb8c46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0d684fd74271b6c9c1d29f17e0570991c4668b4f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68000878"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826543"
 ---
 # <a name="sp_syscollector_delete_collection_set-transact-sql"></a>sp_syscollector_delete_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,16 @@ sp_syscollector_delete_collection_set [[ @collection_set_id = ] collection_set_i
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Es el identificador único del conjunto de recopilación. *collection_set_id* es de **tipo int** y debe tener un valor si *el nombre* es NULL.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del conjunto de recopilación. *Name* es de **tipo sysname** y debe tener un valor si *collection_set_id* es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_syscollector_delete_collection_set se debe ejecutar en el contexto de la base de datos del sistema msdb.  
   
  *Collection_set_id* o *Name* deben tener un valor, ambos no pueden ser null. Para obtener estos valores, consulte la vista del sistema syscollector_collection_set.  

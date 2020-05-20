@@ -17,14 +17,14 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_key_passwords catalog view
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 926acd9beb00102e19dbc2844e282d74bc890915
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7d4bdd76786d4c70b0c27bf60c1a51f08828d1b2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80752901"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825100"
 ---
 # <a name="sysmaster_key_passwords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "80752901"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**credential_id**|**int**|Id. de la credencial a la que pertenece la contraseña. Este identificador es único en la instancia del servidor.|  
-|**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este GUID sigue igual después de restaurar o adjuntar la base de datos, incluso si se cambia el nombre de la base de datos.<br /><br /> Si se produce un error al descifrar automáticamente la clave [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maestra de servicio, utiliza el **family_guid** para identificar las credenciales que pueden contener la contraseña usada para proteger la clave maestra de la base de datos.|  
+|**family_guid**|**uniqueidentifier**|Id. único de la base de datos original cuando se creó. Este GUID sigue igual después de restaurar o adjuntar la base de datos, incluso si se cambia el nombre de la base de datos.<br /><br /> Si se produce un error al descifrar automáticamente la clave maestra de servicio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza el **family_guid** para identificar las credenciales que pueden contener la contraseña usada para proteger la clave maestra de la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

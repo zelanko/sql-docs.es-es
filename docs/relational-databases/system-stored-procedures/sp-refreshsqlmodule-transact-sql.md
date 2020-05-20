@@ -23,15 +23,15 @@ helpviewer_keywords:
 - stored procedures [SQL Server], refreshing metadata
 - user-defined functions [SQL Server], refreshing metadata
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df5ff458c45a4ac804591a8a4d77d9367b8cb6c4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2de8653c0a18cc6fabaf2570a10c73184e5c9706
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982769"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825993"
 ---
 # <a name="sp_refreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @name = ] 'module\_name'`Es el nombre del procedimiento almacenado, la función definida por el usuario, la vista, el desencadenador DML, el desencadenador DDL de nivel de base de datos o el desencadenador DDL de nivel de servidor. *MODULE_NAME* no puede ser un procedimiento almacenado de Common Language Runtime (CLR) o una función CLR. *MODULE_NAME* no se pueden enlazar a un esquema. *MODULE_NAME* es de tipo **nvarchar**y no tiene ningún valor predeterminado. *MODULE_NAME* puede ser un identificador de varias partes, pero solo puede hacer referencia a objetos de la base de datos actual.  
   
-`[ , @namespace = ] ' \<class> '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL \<, se requiere la clase>. la>de clase es **nvarchar**(20). * \<* Las entradas válidas son:  
+`[ , @namespace = ] ' \<class> '`Es la clase del módulo especificado. Cuando *MODULE_NAME* es un desencadenador DDL, \< se requiere la clase>. la * \<>de clase* es **nvarchar**(20). Las entradas válidas son:  
   
 |||  
 |-|-|  
@@ -68,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_refreshsqlmodule** debe ejecutarse cuando se realicen cambios en los objetos subyacentes del módulo que afecten a su definición. De lo contrario, el módulo podría producir resultados inesperados cuando se consulta o se invoca. Para actualizar una vista, puede usar **sp_refreshsqlmodule** o **sp_refreshview** con los mismos resultados.  
   
  **sp_refreshsqlmodule** no afecta a ningún permiso, propiedad extendida o opciones set asociadas al objeto.  

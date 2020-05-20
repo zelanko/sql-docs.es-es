@@ -12,14 +12,14 @@ dev_langs:
 helpviewer_keywords:
 - spatial indexes [SQL Server], stored procedures
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: be45e7dd794ab7e03ffc70eb9b73109411fd3a02
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69028906"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827460"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Procedimientos almacenados de índice espacial: argumentos y propiedades
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "69028906"
 `[ @xml_output = ] 'xml_output'`Es un parámetro de salida que devuelve el conjunto de resultados de un fragmento XML. *xml_output* es **XML** y no tiene ningún valor predeterminado.  
   
 ## <a name="properties"></a>Propiedades  
- Establezca ** \@verboseoutput** = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente. verboseoutput > 0 para devolver todas las propiedades del índice espacial. ** \@**  
+ Establezca ** \@ verboseoutput** = 0 para que se devuelvan las propiedades básicas como se muestra en la tabla siguiente. ** \@ verboseoutput** > 0 para devolver todas las propiedades del índice espacial.  
   
  **Base_Table_Rows**  
  Número de filas de la tabla base. El valor es **BIGINT**.  
@@ -300,7 +300,7 @@ ms.locfileid: "69028906"
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto. Esto se aplica a todos los procedimientos almacenados de índice espacial.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades que contienen valores NULL están incluidas en el conjunto que se devuelve.  
   
 ## <a name="examples"></a>Ejemplos  

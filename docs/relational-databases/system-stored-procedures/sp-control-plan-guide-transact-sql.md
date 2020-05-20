@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_control_plan_guide
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 137189bf0c49667b238c09ba2291463e3922cfde
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108761"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824847"
 ---
 # <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,12 +71,12 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  ENABLE ALL  
  Habilita todas las guías de plan de la base de datos actual. No se puede especificar **N '**_plan_guide_name_**'** cuando se especifica enable ALL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia.  
   
  Al deshabilitar una guía de plan deshabilitada o habilitar una guía de plan habilitada, no se produce ningún cambio o error.  
   
- Las guías de planes no están disponibles en todas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]las ediciones de. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o Drop All en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las guías de planes no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sin embargo, puede ejecutar **sp_control_plan_guide** con la opción DROP o Drop All en cualquier edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
  Para ejecutar **sp_control_plan_guide** en una guía de plan de tipo Object (creada especificando ** @type = '** Object **'** ), se requiere el permiso ALTER en el objeto al que hace referencia la guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
@@ -136,7 +136,7 @@ EXEC sp_control_plan_guide N'DISABLE ALL';
 ## <a name="see-also"></a>Consulte también  
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [Sys. plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Guías de plan](../../relational-databases/performance/plan-guides.md)  
   

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscriber_schedule system table
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: bb5a31470af2630b0df53907db285e1206cc6fb4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139800"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824820"
 ---
 # <a name="mssubscriber_schedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "68139800"
   La tabla **MSsubscriber_schedule** contiene programaciones de sincronización de transacciones y de mezcla predeterminadas para cada par de publicador y suscriptor. Esta tabla se almacena en la base de datos de distribución.  
   
 > [!NOTE]
->  Esta tabla del sistema ha quedado desusada y se mantiene para admitir versiones anteriores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Esta tabla del sistema ha quedado desusada y se mantiene para admitir versiones anteriores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**publicador**|**sysname**|El nombre del publicador.|  
+|**publisher**|**sysname**|El nombre del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**agent_type**|**smallint**|El tipo de agente:<br /><br /> 0 = Agente de distribución.<br /><br /> 1 = Agente de mezcla.|  
 |**frequency_type**|**int**|Frecuencia con que se programa el Agente de distribución:<br /><br /> **1** = una vez.<br /><br /> **2** = a petición.<br /><br /> **4** = diariamente.<br /><br /> **8** = semanalmente.<br /><br /> **16** = mensualmente.<br /><br /> **32** = mensualmente relativo.<br /><br /> **64** = AutoStart.<br /><br /> **128** = recurrente.|  

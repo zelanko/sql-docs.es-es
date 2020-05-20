@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_msx_get_account
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e0fbfe21194dbfa30c54942352d9bd28d6df45b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68108042"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828851"
 ---
 # <a name="sp_msx_get_account-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_msx_get_account
 |msx_credential_name|**sysname**|Nombre de la credencial utilizada para esta conexión al servidor maestro.|  
 |msx_login_name|**nvarchar(4000)**|Nombre de dominio y nombre de usuario de Windows para la credencial.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Devuelve un conjunto de resultados vacío si no se especifica ninguna credencial para este servidor de destino. Para configurar la credencial, utilice sp_msx_set_account.  
   
 ## <a name="permissions"></a>Permisos  

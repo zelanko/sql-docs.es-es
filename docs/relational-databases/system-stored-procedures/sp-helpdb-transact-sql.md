@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdb
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fb3ab70170f1b96bcfd62a9d7108792871ccd5d7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67903019"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828969"
 ---
 # <a name="sp_helpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**propietario**|**sysname**|Propietario de la base de datos, como **SA**.|  
 |**DBID**|**smallint**|Id. de la base de datos.|  
 |**created**|**nvarchar(11)**|Fecha de creación de la base de datos.|  
-|**status**|**nvarchar (600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name*=*valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
+|**status**|**nvarchar (600)**|Lista de valores separados por comas de las opciones actualmente establecidas en la base de datos.<br /><br /> Las opciones con valores booleanos aparecen solamente si están habilitadas. Las opciones no booleanas se muestran con sus valores correspondientes en forma de *option_name* = *valor*.<br /><br /> Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |**compatibility_level**|**tinyint**|Nivel de compatibilidad de la base de datos: 60, 65, 70, 80 o 90.|  
   
  Si se especifica *Name* , hay un conjunto de resultados adicional que muestra la asignación de archivos para la base de datos especificada.  
@@ -63,13 +63,13 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**name**|**nchar(128)**|Nombre de archivo lógico.|  
 |**ID**|**smallint**|Identificador de archivo.|  
 |**extensión**|**NCHAR (260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
-|**grupo_de_archivos**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
+|**filegroup**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar (18)**|Tamaño del archivo, en megabytes.|  
 |**tamañomáximo**|**nvarchar (18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**crezca**|**nvarchar (18)**|Incremento de crecimiento del archivo. Indica la cantidad de espacio que se agrega al archivo cada vez que se necesita espacio nuevo.|  
 |**uso**|**VARCHAR (9)**|Uso del archivo. En el caso de un archivo de datos, el valor es **' solo datos '** y, para el archivo de registro, el valor es **' solo registro '**.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La columna **status** del conjunto de resultados informa de las opciones que se han establecido en on en la base de datos. La columna de **Estado** no muestra todas las opciones de base de datos. Para ver una lista completa de los valores actuales de las opciones de base de datos, use la vista de catálogo **Sys. Databases** .  
   
 ## <a name="permissions"></a>Permisos  

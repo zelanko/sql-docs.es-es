@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector [SQL Server], stored procedures
 - sp_syscollector_set_cache_directory stored procedure
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 03236c2882cad61e42ffa0fcdeb322d4ada53c2a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 46193a7fa201dedc9f3936c727ac45d221cdd9da
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76910048"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828789"
 ---
 # <a name="sp_syscollector_set_cache_directory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe deshabilitar el recopilador de datos antes de cambiar la configuración del directorio de la memoria caché. Se produce un error en este procedimiento almacenado si se habilita el recopilador de datos. Para obtener más información, vea [habilitar o deshabilitar la recopilación de datos](../../relational-databases/data-collection/enable-or-disable-data-collection.md)y administrar la recopilación de [datos](../../relational-databases/data-collection/manage-data-collection.md).  
   
  No es necesario que el directorio especificado exista en el momento en que se ejecuta el sp_syscollector_set_cache_directory; sin embargo, los datos no se pueden almacenar en caché y cargar correctamente hasta que se cree el directorio. Recomendamos crear el directorio antes de ejecutar este procedimiento almacenado.  
@@ -54,7 +54,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
  Debe pertenecer al rol fijo de base de datos dc_admin (con permiso EXECUTE) para ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se deshabilita el recopilador de datos, se establece el directorio de `D:\tempdata`caché para el recopilador de datos en y, a continuación, se habilita el recopilador de datos.  
+ En el ejemplo siguiente se deshabilita el recopilador de datos, se establece el directorio de caché para el recopilador de datos en `D:\tempdata` y, a continuación, se habilita el recopilador de datos.  
   
 ```sql  
 USE msdb;  

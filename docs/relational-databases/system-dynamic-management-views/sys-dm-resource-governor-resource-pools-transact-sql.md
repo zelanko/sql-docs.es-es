@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_resource_governor_resource_pools dynamic management view
 ms.assetid: 9bfc926e-d8bc-40f8-9229-ab1f8a1e69c5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c39c32a907cecd8f670875fffba9f21995f2ccee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae7fd97640b048d504dd03599bf991e9ae91929d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982307"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827856"
 ---
 # <a name="sysdm_resource_governor_resource_pools-transact-sql"></a>sys.dm_resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "73982307"
   Devuelve información acerca del estado actual del grupo de recursos de servidor, la configuración actual de los grupos de recursos de servidor y estadísticas del grupo de recursos de servidor.  
   
 > [!NOTE]  
->  Para llamar a este [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] método [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]desde o, use el nombre **Sys. dm_pdw_nodes_resource_governor_resource_pools**.  
+>  Para llamar a este método desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , use el nombre **Sys. dm_pdw_nodes_resource_governor_resource_pools**.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -76,9 +76,9 @@ ms.locfileid: "73982307"
 |write_io_stall_queued_ms|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Tiempo total (en milisegundos) desde que llegó la operación de E/S de escritura hasta que hubo el problema. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.<br /><br /> Este es el retraso que introduce la gobernanza de recursos de E/S.|  
 |io_issue_violations_total|**int**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Total de infracciones de emisiones de operaciones de E/S. Es decir, el número de veces en que la tasa de emisiones de operaciones de E/S ha sido inferior a la tasa reservada. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.|  
 |io_issue_delay_total_ms|**bigint**|**Válido para** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y versiones posteriores.<br /><br /> Tiempo total (en milisegundos) entre la emisión programada y la emisión real de operaciones de E/S. Acepta valores NULL. Es NULL si el grupo de recursos de servidor no está regulado para las operaciones de E/S. Es decir, el MIN_IOPS_PER_VOLUME de grupo de recursos y la configuración de MAX_IOPS_PER_VOLUME son 0.|  
-|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
+|pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los grupos de cargas de trabajo y los grupos de recursos de servidor del regulador de recursos tienen una asignación de varios a uno. Como resultado, muchas de las estadísticas del grupo de recursos de servidor se derivan de las estadísticas del grupo de cargas de trabajo.  
   
  Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos de configuración almacenados, utilice la vista de catálogo sys. resource_governor_resource_pools.  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscriptionerrors
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c41294867de508ed39815b16183d5151c55197a4
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771520"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826086"
 ---
 # <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpsubscriptionerrors** se utiliza con la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  

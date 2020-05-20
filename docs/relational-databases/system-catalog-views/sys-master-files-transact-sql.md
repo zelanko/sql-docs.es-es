@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.master_files catalog view
 ms.assetid: 803b22f2-0016-436b-a561-ce6f023d6b6a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2aa7c30f132f0c0e8774dcb39f31e1a254e8689c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2baa122d56582cfdf0bef780434f9f5ba98711ca
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313722"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825154"
 ---
 # <a name="sysmaster_files-transact-sql"></a>sys.master_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,8 +36,8 @@ ms.locfileid: "72313722"
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Id. de la base de datos a la que se refiere este archivo. El masterdatabase_id es siempre 1.|  
 |file_id|**int**|Identificador del archivo dentro de la base de datos. El valor de file_id principal siempre es 1.|  
-|file_guid|**uniqueidentifier**|Identificador único del archivo.<br /><br /> NULL = la base de datos se actualizó desde una versión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior de (válida para SQL Server 2005 y versiones anteriores).|  
-|type|**tinyint**|Tipo de archivo:<br /><br /> 0 = Filas.<br /><br /> 1 = Registro<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; los catálogos de texto completo actualizados o creados en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores notificarán un tipo de archivo 0).|  
+|file_guid|**uniqueidentifier**|Identificador único del archivo.<br /><br /> NULL = la base de datos se actualizó desde una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (válida para SQL Server 2005 y versiones anteriores).|  
+|tipo|**tinyint**|Tipo de archivo:<br /><br /> 0 = Filas.<br /><br /> 1 = Registro<br /><br /> 2 = FILESTREAM<br /><br /> 3 =[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> 4 = Texto completo (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]; los catálogos de texto completo actualizados o creados en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores notificarán un tipo de archivo 0).|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de archivo:<br /><br /> ROWS<br /><br /> REGISTRO<br /><br /> FILESTREAM<br /><br /> FULLTEXT (catálogos de texto completo anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]).|  
 |data_space_id|**int**|Id. del espacio de datos al que pertenece este archivo. El espacio de datos es un grupo de archivos.<br /><br /> 0 = Archivos de registro|  
 |name|**sysname**|Nombre lógico del archivo de la base de datos.|  
@@ -64,7 +64,7 @@ ms.locfileid: "72313722"
 |redo_target_lsn|**numeric(25,0)**|LSN en el que se puede detener la puesta al día en línea de este archivo.<br /><br /> Es NULL a menos que state = RESTORING o state = RECOVERY_PENDING.|  
 |redo_target_fork_guid|**uniqueidentifier**|La bifurcación de recuperación en la que se puede recuperar el contenedor. Se empareja con redo_target_lsn.|  
 |backup_lsn|**numeric(25,0)**|El LSN de los datos más recientes o de la copia de seguridad diferencial del archivo.|  
-|credential_id|**int**|De `credential_id` `sys.credentials` que se utiliza para almacenar el archivo. Por ejemplo, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en una máquina virtual de Azure y los archivos de base de datos se almacenan en Azure BLOB Storage, se configura una credencial con las credenciales de acceso a la ubicación de almacenamiento.|  
+|credential_id|**int**|De que se `credential_id` `sys.credentials` utiliza para almacenar el archivo. Por ejemplo, cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en una máquina virtual de Azure y los archivos de base de datos se almacenan en Azure BLOB Storage, se configura una credencial con las credenciales de acceso a la ubicación de almacenamiento.|  
   
 > [!NOTE]  
 >  Al quitar o volver a generar índices grandes, o al quitar o truncar tablas grandes, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] difiere las cancelaciones de asignación de páginas, así como sus bloqueos asociados, hasta que se confirma la transacción. Las operaciones de eliminación diferidas no liberan inmediatamente el espacio asignado. Por lo tanto, es posible que los valores devueltos por sys.master_files inmediatamente después de quitar o truncar un objeto grande no reflejen el espacio en disco disponible real.  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_set_cache_window stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 80462381e058c4cb9107aa4ac07138e42d27e677
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010633"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828769"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +41,10 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @cache_window = ] *cache_window*  
+ [ @cache_window =] *cache_window*  
  Es el número de veces que se va a reintentar una carga de datos al almacén de administración de datos en caso de error sin perder datos. *cache_window* es de **tipo int** y su valor predeterminado es 1. *cache_window* puede tener uno de los valores siguientes:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |-1|Almacenar en memoria caché todos los datos de carga provenientes de los errores de carga anteriores.|  
 |0|No almacenar en memoria caché ningún dato proveniente de un error de carga.|  
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe deshabilitar el recopilador de datos antes de cambiar la configuración de la ventana de la caché. Se produce un error en este procedimiento almacenado si se habilita el recopilador de datos. Para obtener más información, vea [habilitar o deshabilitar la recopilación de datos](../../relational-databases/data-collection/enable-or-disable-data-collection.md)y administrar la recopilación de [datos](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Permisos  

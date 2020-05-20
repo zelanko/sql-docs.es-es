@@ -15,19 +15,19 @@ dev_langs:
 helpviewer_keywords:
 - sp_migrate_user_to_contained
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: a641f363b4a39b28b7a7ea767914d952c83d697e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022334"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828316"
 ---
 # <a name="sp_migrate_user_to_contained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Convierte a un usuario de base de datos asignado a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un usuario de base de datos independiente con contraseña. En una base de datos independiente, utilice este procedimiento para quitar las dependencias sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se instala la base de datos. **sp_migrate_user_to_contained** separa al usuario del inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] original, de modo que la configuración como la contraseña y el idioma predeterminado se puedan administrar por separado para la base de datos independiente. **sp_migrate_user_to_contained** puede usarse antes de mover la base de datos independiente a una instancia [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] diferente del para eliminar las dependencias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de los inicios de sesión de la instancia actual.  
+  Convierte a un usuario de base de datos asignado a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un usuario de base de datos independiente con contraseña. En una base de datos independiente, utilice este procedimiento para quitar las dependencias sobre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se instala la base de datos. **sp_migrate_user_to_contained** separa al usuario del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión original, de modo que la configuración como la contraseña y el idioma predeterminado se puedan administrar por separado para la base de datos independiente. **sp_migrate_user_to_contained** puede usarse antes de mover la base de datos independiente a una instancia diferente del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] para eliminar las dependencias de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de la instancia actual.  
   
 > [!NOTE]
 > Tenga cuidado al usar **sp_migrate_user_to_contained**, ya que no podrá invertir el efecto. Este procedimiento solo se usa en una base de datos independiente. Para obtener más información, vea bases de datos [independientes](../../relational-databases/databases/contained-databases.md).  
@@ -42,19 +42,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@username =** ] **N '***usuario***'**  
+ [** @username =** ] **N '***usuario***'**  
  Nombre de un usuario en la base de datos independiente actual asignado a un inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El valor es de **tipo sysname y su**valor predeterminado es **null**.  
   
- [**@rename =** ] **N '***copy_login_name***'** | **n '***keep_name***'**  
+ [** @rename =** ] **N '***copy_login_name***'**  |  **N '***keep_name***'**  
  Cuando un usuario de base de datos basado en un inicio de sesión tiene un nombre de usuario distinto al nombre de inicio de sesión, utilice *keep_name* para conservar el nombre de usuario de la base de datos durante la migración. Utilice *copy_login_name* para crear el nuevo usuario de base de datos independiente con el nombre del inicio de sesión, en lugar del usuario. Cuando un usuario de la base de datos basado en inicio de sesión tiene el mismo nombre de usuario que el nombre de inicio de sesión, ambas opciones crean el usuario de la base de datos independiente sin cambiar el nombre.  
   
- [**@disablelogin =** ] **N '***disable_login***'** | **n '***do_not_disable_login***'**  
+ [** @disablelogin =** ] **N '***disable_login***'**  |  **N '***do_not_disable_login***'**  
  *disable_login* deshabilita el inicio de sesión en la base de datos maestra. Para conectarse cuando el inicio de sesión está deshabilitado, la conexión debe proporcionar el nombre de la base de datos independiente como el **catálogo inicial** como parte de la cadena de conexión.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_migrate_user_to_contained** crea el usuario de base de datos independiente con contraseña, independientemente de las propiedades o los permisos del inicio de sesión. Por ejemplo, el procedimiento puede realizarse correctamente si el inicio de sesión está deshabilitado o si al usuario se le deniega el permiso **Connect** para la base de datos.  
   
  **sp_migrate_user_to_contained** tiene las restricciones siguientes.  

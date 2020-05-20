@@ -19,14 +19,14 @@ helpviewer_keywords:
 - sys.availability_group_listeners catalog view
 - Availability Groups [SQL Server], listeners
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 5e4ae93cfcb4df935b3b006413ab8d8c884090ff
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041062"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82829122"
 ---
 # <a name="sysavailability_group_listeners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "68041062"
 |**group_id**|**uniqueidentifier**|IDENTIFICADOR de grupo de disponibilidad (**group_id**) de [Sys. availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar (36)**|GUID del identificador de recursos del clúster.|  
 |**dns_name**|**nvarchar (63)**|Nombre de red configurado (nombre de host) del agente de escucha del grupo de disponibilidad.|  
-|**port**|**int**|Número de puerto TCP configurado para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = El agente de escucha se ha configurado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su número de puerto no se ha agregado al grupo de disponibilidad. Para agregar el puerto, utilice la opción Modify Listener de la instrucción [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
+|**port**|**int**|Número de puerto TCP configurado para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = El agente de escucha se ha configurado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y su número de puerto no se ha agregado al grupo de disponibilidad. Para agregar el puerto, utilice la opción MODIFY Listener de la instrucción [ALTER Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] .|  
 |**is_conformant**|**bit**|Si esta configuración IP es conforme; puede ser:<br /><br /> 1 = El agente de escucha es conforme. Solo existen relaciones "OR" entre las direcciones del Protocolo de Internet (IP). *Compatible* engloba cada una de las configuraciones de IP que creó la instrucción [Create Availability Group](../../t-sql/statements/create-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] . Además, si una configuración IP fue creada fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo mediante el Administrador de clústeres de conmutación por error de WSFC, pero se puede modificar mediante la instrucción tsql ALTER AVAILABILITY GROUP, la configuración IP se califica como conforme.<br /><br /> 0 = El agente de escucha es no conforme. Normalmente, esto indica que una dirección IP que no pudo configurarse utilizando los comandos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se definió, sin embargo, directamente en el clúster de WSFC.|  
 |**ip_configuration_string_from_cluster**|**nvarchar(max)**|Cadenas de configuración IP de clúster, si existen, para este agente de escucha. NULL = El agente de escucha no tiene direcciones IP virtuales. Por ejemplo:<br /><br /> Dirección IPv4: `65.55.39.10`.<br /><br /> Dirección IPv6: `2001::4898:23:1002:20f:1fff:feff:b3a3`|  
   

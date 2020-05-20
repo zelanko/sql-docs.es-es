@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2567640f49beb0c1921811a9d04671833dca11be
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054897"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827593"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ sp_help_jobs_in_schedule
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
 |**type**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = el trabajo no tiene ningún servidor de destino.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este procedimiento muestra información acerca de los trabajos adjuntos a la programación especificada.  
   
 ## <a name="permissions"></a>Permisos  

@@ -17,19 +17,19 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
 - sys.dm_hadr_database_replica_states dynamic management view
 ms.assetid: 1a17b0c9-2535-4f3d-8013-cd0a6d08f773
-author: MikeRayMSFT
-ms.author: mikeray
-ms.openlocfilehash: 83b3c369add51a853078dd64a8861d633ac330ec
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 2edfbd187835a321f513f3fb9d14aaa1aef65ec5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982277"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827969"
 ---
 # <a name="sysdm_hadr_database_replica_states-transact-sql"></a>sys.dm_hadr_database_replica_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada base de datos que participa en un Always On grupo de disponibilidad para el que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia local de hospeda una réplica de disponibilidad. Esta vista de administración dinámica expone información de estado en las réplicas principal y secundaria. En una réplica secundaria, esta vista devuelve una fila por cada base de datos secundaria de la instancia de servidor. En la réplica principal, esta vista devuelve una fila por cada base de datos principal y una fila adicional para la base de datos secundaria correspondiente.  
+  Devuelve una fila para cada base de datos que participa en un Always On grupo de disponibilidad para el que la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hospeda una réplica de disponibilidad. Esta vista de administración dinámica expone información de estado en las réplicas principal y secundaria. En una réplica secundaria, esta vista devuelve una fila por cada base de datos secundaria de la instancia de servidor. En la réplica principal, esta vista devuelve una fila por cada base de datos principal y una fila adicional para la base de datos secundaria correspondiente.  
   
 > [!IMPORTANT]
 > Dependiendo de la acción y los estados de nivel superior, la información del estado de la base de datos puede no estar disponible u obsoleta. Además, los valores solo tienen relevancia local. Por ejemplo, en la réplica principal, el valor de la columna **last_hardened_lsn** refleja la información sobre una base de datos secundaria determinada que está disponible actualmente para la réplica principal, no el valor de LSN protegido real que la réplica secundaria podría tener actualmente.  

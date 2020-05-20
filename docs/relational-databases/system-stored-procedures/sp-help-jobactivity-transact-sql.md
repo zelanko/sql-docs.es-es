@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobactivity
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 755ba9552945e0e983fa5eef6cc53de1c29be5e3
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054978"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827645"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_netsent**|**int**|Número de ID. del operador notificado mediante **net send** al finalizar el trabajo.|  
 |**operator_id_paged**|**int**|Número de Id. del operador notificado a través de buscapersonas al término del trabajo.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este procedimiento proporciona una instantánea del estado actual de los trabajos. Los resultados devueltos representan la información disponible en el momento de procesar la solicitud.  
   
  El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un Id. de sesión cada vez que se inicia el servicio del Agente. El ID. de sesión se almacena en la tabla **msdb. DBO. syssessions**.  

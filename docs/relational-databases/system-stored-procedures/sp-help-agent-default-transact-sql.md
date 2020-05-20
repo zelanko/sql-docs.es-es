@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_help_agent_default
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: c0797b8fe4a2ba496b28f0c347eb5349e77e91e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 57b3016f0f5ee9f58e41ce6993af69c33aa3b742
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762764"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827786"
 ---
 # <a name="sp_help_agent_default-transact-sql"></a>sp_help_agent_default (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
   
 `[ @agent_type = ] 'agent_type'`Es el tipo de agente. *agent_type* es de **tipo int**, no tiene ningún valor predeterminado y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Agente de instantáneas.|  
 |**2**|Agente de registro del LOG.|  
@@ -53,7 +53,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_agent_default** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpsort
 ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 511b5b8f01a96f860d9f0c4266f92b323e6f1240
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997360"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82826089"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ sp_helpsort
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve la intercalación predeterminada del servidor.  
   
-## <a name="remarks"></a>Observaciones  
- Si se instala una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de con una intercalación especificada para ser compatible con una instalación anterior [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
+## <a name="remarks"></a>Comentarios  
+ Si se instala una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una intercalación especificada para ser compatible con una instalación anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_helpsort** devuelve resultados en blanco. En casos como éste, se puede determinar la intercalación consultando el objeto SERVERPROPERTY; por ejemplo: `SELECT SERVERPROPERTY ('Collation');`.  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  

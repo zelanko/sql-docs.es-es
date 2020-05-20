@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 08569c2313bfb7c9d992c510ef4c9c7548f51e64
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304836"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827763"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +57,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Cuando ** \@legacy_format** es **0**, **sp_help_alert** genera el siguiente conjunto de resultados.  
+ Cuando ** \@ legacy_format** es **0**, **sp_help_alert** genera el siguiente conjunto de resultados.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador entero único asignado por el sistema.|  
 |**name**|**sysname**|Nombre de la alerta (por ejemplo, demo: registro de **msdb** completo).|  
-|**event_source**|**nvarchar(100**|Origen del evento. Siempre será **MSSQLSERVER** para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0|  
+|**event_source**|**nvarchar(100**|Origen del evento. Siempre será **MSSQLSERVER** para la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
@@ -89,15 +89,15 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Siempre será '[Sin clasificar]' en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Si el **tipo** es **3**, esta columna muestra el espacio de nombres para el evento WMI.|  
 |**wmi_query**|**nvarchar(512)**|Si el **tipo** es **3**, esta columna muestra la consulta para el evento WMI.|  
-|**type**|**int**|Tipo del evento:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
+|**type**|**int**|Tipo del evento:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
   
- Cuando ** \@legacy_format** es **1**, **sp_help_alert** genera el siguiente conjunto de resultados.  
+ Cuando ** \@ legacy_format** es **1**, **sp_help_alert** genera el siguiente conjunto de resultados.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador entero único asignado por el sistema.|  
 |**name**|**sysname**|Nombre de la alerta (por ejemplo, demo: registro de **msdb** completo).|  
-|**event_source**|**nvarchar(100**|Origen del evento. Siempre será **MSSQLSERVER** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 7,0|  
+|**event_source**|**nvarchar(100**|Origen del evento. Siempre será **MSSQLSERVER** para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7,0|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Número del mensaje de error que define la alerta. (Normalmente se corresponde con un número de error en la tabla **sysmessages** ). Si se usa la gravedad para definir la alerta, **message_id** es **0** o null.|  
@@ -121,9 +121,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Si el **tipo** es **2**, esta columna muestra la definición de la condición de rendimiento. Si el **tipo** es **3**, esta columna muestra la consulta para el evento WMI. De lo contrario, la columna es NULL.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Siempre será '**[sin clasificar]**' para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0.|  
-|**type**|**int**|Tipo de alerta:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
+|**type**|**int**|Tipo de alerta:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de evento<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta de rendimiento<br /><br /> **3** = alerta de evento WMI|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_alert** se debe ejecutar desde la base de datos **msdb** .  
   
 ## <a name="permissions"></a>Permisos  

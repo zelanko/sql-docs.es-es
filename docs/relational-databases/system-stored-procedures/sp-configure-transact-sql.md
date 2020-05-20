@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_configure
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 09f5a26493600fd346192f6ba7ebbc73ea7ed184
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8d3284d8231b01b58cc807aeb70c55f5fe18c2b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73536216"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828429"
 ---
 # <a name="sp_configure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -84,7 +84,7 @@ RECONFIGURE
 |**config_value**|**int**|Valor en el que se estableció la opción de configuración mediante **sp_configure** (valor en sys. Configurations **. Value**). Para obtener más información sobre estas opciones, vea [Opciones de configuración del servidor &#40;SQL Server&#41;y sys. Configurations](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|Valor que se está ejecutando actualmente de la opción de configuración (valor en sys. Configurations **. value_in_use**).<br /><br /> Para obtener más información, vea sys. Configurations [&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use **sp_configure** para mostrar o cambiar la configuración de nivel de servidor. Para cambiar la configuración de la base de datos, utilice ALTER DATABASE. Para cambiar la configuración que afecta solo a la sesión de usuario actual, utilice la instrucción SET.  
   
 ### [!INCLUDE [ssbigdataclusters-ss-nover](../../includes/ssbigdataclusters-ss-nover.md)]
@@ -99,7 +99,7 @@ RECONFIGURE
 > [!CAUTION]  
 > Un valor de opción inapropiado puede afectar negativamente a la configuración de la instancia de servidor. Utilice RECONFIGURE WITH OVERRIDE con precaución.  
   
- La instrucción RECONFIGURE actualiza algunas opciones dinámicamente; para otras opciones es necesario detener y reiniciar el servidor. Por ejemplo, las opciones de memoria de servidor **min server memory** y **Max Server Memory** se actualizan dinámicamente en el [!INCLUDE[ssDE](../../includes/ssde-md.md)]; por lo tanto, puede cambiarlos sin necesidad de reiniciar el servidor. Por el contrario, para volver a configurar el valor de ejecución de la opción de **factor** de [!INCLUDE[ssDE](../../includes/ssde-md.md)]relleno, es necesario reiniciar el.  
+ La instrucción RECONFIGURE actualiza algunas opciones dinámicamente; para otras opciones es necesario detener y reiniciar el servidor. Por ejemplo, las opciones de memoria de servidor **min Server** Memory y **Max Server Memory** se actualizan dinámicamente en el [!INCLUDE[ssDE](../../includes/ssde-md.md)] ; por lo tanto, puede cambiarlas sin necesidad de reiniciar el servidor. Por el contrario, para volver a configurar el valor de ejecución de la opción de **factor de relleno** , es necesario reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
  Después de ejecutar reconfigure en una opción de configuración, puede ver si la opción se ha actualizado dinámicamente ejecutando **sp_configure "***option_name***"**. Los valores de las columnas **run_value** y **config_value** deben coincidir para una opción actualizada dinámicamente. También puede comprobar qué opciones son dinámicas examinando la columna **is_dynamic** de la vista de catálogo **Sys.** Configurations.  
  
@@ -157,7 +157,7 @@ RECONFIGURE WITH OVERRIDE;
 EXEC sp_configure;  
 ```  
   
- El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. El **config_value** es el valor que [!INCLUDE[ssDW](../../includes/ssdw-md.md)] se utilizará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
+ El resultado devuelve el nombre de opción seguido por los valores mínimo y máximo de la opción. El **config_value** es el valor que se [!INCLUDE[ssDW](../../includes/ssdw-md.md)] utilizará cuando se complete la reconfiguración. El valor **run_value** es el valor que se está usando actualmente. Los valores **config_value** y **run_value** son normalmente los mismos, a menos que el valor se esté modificando.  
   
 ### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>D. Lista de las opciones de configuración para un nombre de configuración  
   

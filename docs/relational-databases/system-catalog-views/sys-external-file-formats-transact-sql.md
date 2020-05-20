@@ -10,32 +10,32 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 75e3f884e09d41c2ae7aa5c7610b0c7ac24691a7
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68048389"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82828521"
 ---
 # <a name="sysexternal_file_formats-transact-sql"></a>Sys. external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Contiene una fila para cada formato de archivo externo en la base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datos [!INCLUDE[ssSDS](../../includes/sssds-md.md)]actual para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], y.  
+  Contiene una fila para cada formato de archivo externo en la base de datos actual para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
- Contiene una fila para cada formato de archivo externo en el servidor [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]para.  
+ Contiene una fila para cada formato de archivo externo en el servidor para [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] .  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|IDENTIFICADOR de objeto para el formato de archivo externo.||  
-|name|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], es único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], es único para el servidor de.||  
+|name|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] , es único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , es único para el servidor de.||  
 |format_type|**tinyint**|Tipo de formato de archivo.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |field_terminator|**nvarchar(10**|Por format_type = DELIMITEDTEXT, este es el terminador de campo.||  
 |string_delimiter|**nvarchar(10**|Por format_type = DELIMITEDTEXT, este es el delimitador de cadena.||  
 |date_format|**nvarchar(50)**|Por format_type = DELIMITEDTEXT, este es el formato de fecha y hora definido por el usuario.||  
-|use_type_default|**bit**|En format_type = texto delimitado, especifica cómo controlar los valores que faltan cuando polybase está importando datos de archivos de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]texto HDFS en.|0: almacena los valores que faltan como la cadena "NULL".<br /><br /> 1-almacenar los valores que faltan como valor predeterminado de la columna.|  
+|use_type_default|**bit**|En format_type = texto delimitado, especifica cómo controlar los valores que faltan cuando polybase está importando datos de archivos de texto HDFS en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .|0: almacena los valores que faltan como la cadena "NULL".<br /><br /> 1-almacenar los valores que faltan como valor predeterminado de la columna.|  
 |serde_method|**nvarchar(255)**|Por format_type = RCFILE, este es el método de serialización y deserialización.||  
 |row_terminator|**nvarchar(10**|Por format_type = DELIMITEDTEXT, esta es la cadena de caracteres que finaliza cada fila del archivo de Hadoop externo.|Siempre es "\n".|  
 |encoding|**nvarchar(10**|Por format_type = DELIMITEDTEXT, este es el método de codificación del archivo de Hadoop externo.|Siempre es ' UTF8 '.|  

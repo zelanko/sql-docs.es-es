@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: c9ad27602bbaa537fd74b1c6c730675c904f0b7e
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68054932"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827623"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`El estado de ejecución del trabajo. *run_status* es de **tipo int**, su valor predeterminado es NULL y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Failed|  
+|**0**|Con error|  
 |**1**|Correcto|  
 |**2**|Reintento (solo pasos)|  
 |**3**|Canceled|  
 |**4**|Mensaje en curso|  
-|**5**|Unknown|  
+|**5**|Desconocido|  
   
 `[ @minimum_retries = ] minimum_retries`El número mínimo de veces que un trabajo debe volver a ejecutarse. *minimum_retries* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -118,7 +118,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**retries_attempted**|**int**|Número de veces que se ha vuelto a intentar el paso (siempre es 0 para un historial de trabajos).|  
 |**servidor**|**nvarchar(30)**|Servidor en el que se ejecuta el paso o el trabajo. Siempre es (**local**).|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_jobhistory** devuelve un informe con el historial de los trabajos programados especificados. Si no se especifican parámetros, el informe contiene el historial de todos los trabajos programados.  
   
 ## <a name="permissions"></a>Permisos  

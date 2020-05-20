@@ -16,33 +16,33 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_clr_loaded_assemblies dynamic management view
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d1597a3b6f8366b74e713eaeeda2ce412762809b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68138655"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824741"
 ---
 # <a name="sysdm_clr_loaded_assemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por cada ensamblado de usuario administrado cargado en el espacio de direcciones del servidor. Use esta vista para comprender y solucionar problemas de los objetos de base de datos administrados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de integración CLR que se ejecutan en.  
+  Devuelve una fila por cada ensamblado de usuario administrado cargado en el espacio de direcciones del servidor. Use esta vista para comprender y solucionar problemas de los objetos de base de datos administrados de integración CLR que se ejecutan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Los ensamblados son archivos DLL que se utilizan para definir e implementar objetos de base de datos administrados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siempre que un usuario ejecuta uno de estos objetos de base de datos administrados, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y CLR cargan el ensamblado en el que se define el objeto de base de datos administrado, así como sus referencias. El ensamblado permanece cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para aumentar el rendimiento, de modo que pueda llamarse en el futuro a los objetos de base de datos administrados incluidos en el ensamblado sin tener que volver a cargar el ensamblado. El ensamblado no se descarga hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra bajo presión de la memoria. Para obtener más información sobre los ensamblados y la integración CLR, vea [entorno hospedado de CLR](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Para obtener más información acerca de los objetos de base de datos administrados, vea [crear objetos de base de datos con Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**int**|Id. del ensamblado cargado. El **assembly_id** se puede utilizar para buscar más información acerca del ensamblado en la vista de catálogo [Sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Tenga en cuenta [!INCLUDE[tsql](../../includes/tsql-md.md)] que el catálogo [Sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) solo muestra ensamblados en la base de datos actual. La vista **SQS. dm_clr_loaded_assemblies** muestra todos los ensamblados cargados en el servidor.|  
+|**assembly_id**|**int**|Id. del ensamblado cargado. El **assembly_id** se puede utilizar para buscar más información acerca del ensamblado en la vista de catálogo [Sys. Assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) . Tenga en cuenta que el [!INCLUDE[tsql](../../includes/tsql-md.md)] Catálogo [Sys. Assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) solo muestra ensamblados en la base de datos actual. La vista **SQS. dm_clr_loaded_assemblies** muestra todos los ensamblados cargados en el servidor.|  
 |**appdomain_address**|**int**|Dirección del dominio de aplicación (**AppDomain**) en el que se carga el ensamblado. Todos los ensamblados que pertenecen a un solo usuario se cargan siempre en el mismo **AppDomain**. El **appdomain_address** se puede usar para buscar más información sobre el **AppDomain** en la vista [Sys. dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) .|  
-|**load_time**|**datetime**|Hora a la que se cargó el ensamblado. Tenga en cuenta que el ensamblado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permanece cargado hasta que se encuentra en la presión de memoria y descarga el **AppDomain**. Puede supervisar **load_time** para saber con qué frecuencia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se produce la presión de memoria y descargar el **AppDomain**.|  
+|**load_time**|**datetime**|Hora a la que se cargó el ensamblado. Tenga en cuenta que el ensamblado permanece cargado hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se encuentra en la presión de memoria y descarga el **AppDomain**. Puede supervisar **load_time** para saber con qué frecuencia se produce [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la presión de memoria y descargar el **AppDomain**.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La vista **dm_clr_loaded_assemblies. appdomain_address** tiene una relación de varios a uno con **dm_clr_appdomains. appdomain_address**. La vista **dm_clr_loaded_assemblies. assembly_id** tiene una relación de uno a varios con **Sys. assemblies. assembly_id**.  
   
 ## <a name="examples"></a>Ejemplos  

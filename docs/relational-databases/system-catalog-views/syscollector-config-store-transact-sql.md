@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data collector view
 - syscollector_config_store view
 ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 17271cf5e5f7f3bfafe8b0fbf52ddb77a2746e3f
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060372"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824953"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,10 @@ ms.locfileid: "68060372"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso SELECT en la vista o la pertenencia a los roles fijos de base de datos dc_operator, dc_proxy o dc_admin.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La lista de propiedades disponibles se corrige y sus valores solo se pueden cambiar usando el procedimiento almacenado adecuado. En la tabla siguiente se describen las propiedades que se exponen a través de esta vista.  
   
-|Nombre de la propiedad|Descripción|  
+|Nombre de propiedad|Descripción|  
 |-------------------|-----------------|  
 |CacheDirectory|Nombre del directorio en el sistema de archivos donde los paquetes de tipos de recopilador almacenan la información temporal.<br /><br /> NULL = se usa el directorio temporal de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |CacheWindow|Indica la directiva de retención de datos del directorio de memoria caché para las cargas de datos que no han podido realizarse.<br /><br /> -1 = retener los datos de todas las cargas con errores.<br /><br /> 0 = no retener ningún dato de las cargas con errores.<br /><br /> *n* = retener datos de *n* errores de carga anteriores, donde *n* >= 1.<br /><br /> Utilice el procedimiento almacenado sp_syscollector_set_cache_window para cambiar este valor.|  

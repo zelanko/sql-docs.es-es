@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - MSsubscription_properties system table
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 38013350a75e6632995d8025535ea115110894e0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68139722"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82827196"
 ---
 # <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,17 +31,17 @@ ms.locfileid: "68139722"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**publicador**|**sysname**|El nombre del publicador.|  
+|**publisher**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicaciones**|**sysname**|Nombre de la publicación.|  
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = transaccional.<br /><br /> **2** = fusionar mediante combinación.|  
 |**publisher_login**|**sysname**|Identificador de inicio de sesión utilizado en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el publicador para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server la autenticación.<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar una llamada a procedimiento remoto (RPC) y el *publicador* debe definirse en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
+|**publisher_security_mode**|**int**|Modo de seguridad aplicado en el publicador:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server la autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.<br /><br /> **2** = los desencadenadores de sincronización utilizan una entrada **sysservers** estática para realizar una llamada a procedimiento remoto (RPC) y el *publicador* debe definirse en la tabla **sysservers** como un servidor remoto o un servidor vinculado.|  
 |**distribuidor**|**sysname**|Nombre del distribuidor.|  
 |**distributor_login**|**sysname**|Id. de inicio de sesión utilizado en el distribuidor para la autenticación de SQL Server.|  
 |**distributor_password**|**nvarchar (524)**|Contraseña (cifrada) utilizada en el distribuidor para la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**distributor_security_mode**|**int**|Modo de seguridad aplicado en el distribuidor:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1** = autenticación de Windows.|  
+|**distributor_security_mode**|**int**|Modo de seguridad aplicado en el distribuidor:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1** = autenticación de Windows.|  
 |**ftp_address**|**sysname**|Dirección de red del servicio FTP (Protocolo de transferencia de archivos) del distribuidor.|  
 |**ftp_port**|**int**|El número de puerto del servicio FTP para el distribuidor.|  
 |**ftp_login**|**sysname**|El nombre de usuario utilizado para conectarse al servicio FTP.|  
@@ -52,14 +52,14 @@ ms.locfileid: "68139722"
 |**dts_package_name**|**sysname**|Especifica el nombre del paquete de Servicios de transformación de datos (DTS).|  
 |**dts_package_password**|**nvarchar (524)**|Especifica la contraseña del paquete.|  
 |**dts_package_location**|**int**|Ubicación donde se almacena el paquete DTS.|  
-|**enabled_for_syncmgr**|**bit**|Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = la suscripción no está registrada en el administrador de sincronización.<br /><br /> **1** = la suscripción está registrada en el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
+|**enabled_for_syncmgr**|**bit**|Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = la suscripción no está registrada en el administrador de sincronización.<br /><br /> **1** = la suscripción está registrada en el administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .|  
 |**offload_agent**|**bit**|Especifica si el agente puede activarse de manera remota. Si es **0**, no se puede activar el agente de forma remota.|  
 |**offload_server**|**sysname**|Especifica el nombre de red del servidor utilizado para la activación remota.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Especifica la ruta de acceso a la carpeta donde se guardan los archivos de instantáneas.|  
 |**use_web_sync**|**bit**|Especifica si la suscripción puede sincronizarse mediante HTTP. Un valor de **1** significa que esta característica está habilitada.|  
 |**internet_url**|**nvarchar(260)**|Dirección URL que representa la ubicación de la escucha de replicación de la sincronización web.|  
-|**internet_login**|**sysname**|Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de.|  
-|**internet_password**|**nvarchar (524)**|Contraseña del inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de.|  
+|**internet_login**|**sysname**|Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de.|  
+|**internet_password**|**nvarchar (524)**|Contraseña del inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web mediante la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de.|  
 |**internet_security_mode**|**int**|El modo de autenticación utilizado al conectarse al servidor Web que hospeda la sincronización Web, donde un valor de **1** significa autenticación de Windows y un valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**internet_timeout**|**int**|Tiempo que transcurre, en segundos, hasta que expira una solicitud de sincronización web.|  
 |**hostname**|**sysname**|Especifica el valor de **host_name** cuando esta función se utiliza en la cláusula **Where** de un filtro de combinación o una relación de registros lógicos.|  

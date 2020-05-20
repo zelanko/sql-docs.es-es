@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmergesubscriptions system table
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029774"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824789"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68029774"
 |subscriber_server|**sysname**|Identificador del servidor. Se utiliza para asignar el campo srvid al valor específico del servidor cuando se migra una copia de la base de datos de suscripciones a un servidor diferente.|  
 |db_name|**sysname**|Nombre de la base de datos de suscripción.|  
 |pubid|**uniqueidentifier**|Identificador de la publicación a partir de la que se creó la suscripción actual.|  
-|datasource_type|**int**|Tipo del origen de datos:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **2** = OLE DB jet.|  
+|datasource_type|**int**|Tipo del origen de datos:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> **2** = OLE DB jet.|  
 |subid|**uniqueidentifier**|Número de identificación único para la suscripción.|  
 |replnickname|**binary**|Alias comprimido de la réplica.|  
 |replicastate|**uniqueidentifier**|Identificador único que se utiliza para determinar si la sincronización anterior se realizó correctamente comparando el valor del publicador con el valor del suscriptor.|  
@@ -59,9 +59,9 @@ ms.locfileid: "68029774"
 |partition_id|**int**|Identifica la partición precalculada a la que pertenece la suscripción.|  
 |cleanedup_unsent_changes|**bit**|Identifica que los metadatos de los cambios no enviados se han eliminado en el suscriptor.|  
 |replica_version|**int**|Identifica la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del suscriptor al que pertenece la suscripción, que puede ser uno de estos valores:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|Exclusivamente para uso interno.|  
-|application_name|**nvarchar(128)**|Exclusivamente para uso interno.|  
-|subscriber_number|**int**|Exclusivamente para uso interno.|  
+|supportability_mode|**int**|Solo para uso interno.|  
+|application_name|**nvarchar(128)**|Solo para uso interno.|  
+|subscriber_number|**int**|Solo para uso interno.|  
 |last_makegeneration_datetime|**datetime**|Última **fecha y hora** que el proceso makegeneration ejecutó para el publicador. Para obtener más información, consulte el parámetro-MakeGenerationInterval en [replication agente de mezcla](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Consulte también  

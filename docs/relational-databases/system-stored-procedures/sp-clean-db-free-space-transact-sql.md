@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_clean_db_free_space
 - ghost records
 ms.assetid: faa96f7e-be92-47b1-8bc5-4dbba5331655
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 8f6aa21345fe4ba16c06a5ead3381a6e1ccdef8e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: cf21502e06d67edd2e9d5c3dcfdd3c5caa42704c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070384"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824021"
 ---
 # <a name="sp_clean_db_free_space-transact-sql"></a>sp_clean_db_free_space (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,16 @@ sp_clean_db_free_space
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*database_name*'  
+ [ @dbname =] '*database_name*'  
  Es el nombre de la base de datos que se va a limpiar. *dbname* es de **tipo sysname** y no puede ser null.  
   
- [ @cleaning_delay= ] '*delay_in_seconds*'  
+ [ @cleaning_delay =] '*delay_in_seconds*'  
  Especifica un intervalo de retardo entre la limpieza de páginas. Esto ayuda a reducir el efecto en el sistema de E/S. *delay_in_seconds* es de **tipo int** y su valor predeterminado es 0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las operaciones de eliminación de una tabla o de las operaciones de actualización que hacen que una fila se mueva pueden liberar inmediatamente el espacio de una página quitando las referencias a la fila. Sin embargo, en determinadas circunstancias, la fila puede permanecer físicamente en la página de datos como un registro fantasma. Los registros fantasma se quitan periódicamente mediante un proceso en segundo plano. No devuelve estos datos residuales [!INCLUDE[ssDE](../../includes/ssde-md.md)] en respuesta a las consultas. Sin embargo, en entornos en los que la seguridad física de los datos o de los archivos de copia de seguridad corre un riesgo, puede utilizar sp_clean_db_free_space para limpiar estos registros fantasma.  
   
  El período de tiempo necesario para ejecutar sp_clean_db_free_space depende del tamaño del archivo, del espacio disponible y de la capacidad del disco. Dado que la ejecución de sp_clean_db_free_space puede afectar significativamente a la actividad de E/S, se recomienda ejecutar este procedimiento fuera del horario de funcionamiento habitual.  

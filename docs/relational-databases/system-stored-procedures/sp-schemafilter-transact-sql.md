@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_schemafilter
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 231796d1678a19106eb89f3039cd755e8385082c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 3e9873045fd7e4fb11ad19bbbce953a086512df9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73633014"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824378"
 ---
 # <a name="sp_schemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'`Es el nombre del publicador que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no es de. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @publisher = ] 'publisher'`Es el nombre del publicador que no es de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
 `[ @schema = ] 'schema'`Es el nombre del esquema. *Schema* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 `[ @operation = ] 'operation'`Es la acción que se va a realizar en este esquema. la *operación* es **nvarchar (4)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**add**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
 |**omisiones**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
@@ -60,7 +60,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_schemafilter** solo se debe usar para publicadores heterogéneos.  
   
 ## <a name="permissions"></a>Permisos  

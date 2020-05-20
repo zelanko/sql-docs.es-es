@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_subset_filter
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 3c1510260a5b381b91a399984121834ca4ce30b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 371caa4c77e719491216fb685265c907bd8bfddd
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771315"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824034"
 ---
 # <a name="sp_check_subset_filter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_check_subset_filter** se utiliza en la replicación de mezcla.  
   
  **sp_check_subset_filter** se pueden ejecutar en cualquier tabla, incluso si la tabla no está publicada. Este procedimiento almacenado se puede utilizar para comprobar una cláusula de filtro antes de definir un artículo filtrado.  

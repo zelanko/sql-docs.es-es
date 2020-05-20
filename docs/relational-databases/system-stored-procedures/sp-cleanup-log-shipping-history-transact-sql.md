@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_cleanup_log_shipping_history
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 6d956e3760599e2de92c1b6b4eb313a91adbc5f2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070369"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824003"
 ---
 # <a name="sp_cleanup_log_shipping_history-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_cleanup_log_shipping_history
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_cleanup_log_shipping_history** se debe ejecutar desde la base de datos **maestra** en cualquier servidor de trasvase de registros. Este procedimiento almacenado limpia las copias locales y remotas de **log_shipping_monitor_history_detail** y **log_shipping_monitor_error_detail** según el período de retención del historial.  
   
 ## <a name="permissions"></a>Permisos  

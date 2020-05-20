@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_repltrans
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 40477973efebac9a484e89e7627f0996285b430b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9338d427a3a957a531456d9ea29448a2148b56e9
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770860"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824412"
 ---
 # <a name="sp_repltrans-transact-sql"></a>sp_repltrans (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ sp_repltrans
 ## <a name="result-sets"></a>Conjuntos de resultados  
  **sp_repltrans** devuelve información acerca de la base de datos de publicación desde la que se ejecuta, lo que le permite ver las transacciones que no se distribuyen actualmente (aquellas transacciones que permanecen en el registro de transacciones que no se han enviado al distribuidor). El conjunto de resultados muestra los números de secuencia del registro relativos al primer y último registro de cada transacción. **sp_repltrans** es similar a [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) pero no devuelve los comandos de las transacciones.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_repltrans** se utiliza en la replicación transaccional.  
   
- **sp_repltrans** no se admite para publicadores [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son de.  
+ **sp_repltrans** no se admite para publicadores que no son de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_repltrans**.  

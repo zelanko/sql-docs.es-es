@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_trigger_stats dynamic management function
 ms.assetid: 863498b4-849c-434d-b748-837411458738
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 65072bd42e1e1f85189afe8bb832a2b0811417e2
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262213"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824585"
 ---
 # <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,24 +63,24 @@ ms.locfileid: "68262213"
 |**last_elapsed_time**|**bigint**|Tiempo transcurrido, en microsegundos, hasta la finalización de la ejecución más reciente de este desencadenador.|  
 |**min_elapsed_time**|**bigint**|Tiempo mínimo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.|  
 |**max_elapsed_time**|**bigint**|Tiempo máximo transcurrido, en microsegundos, para cualquier ejecución completada de este desencadenador.| 
-|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**min_spills**|**bigint**|Número mínimo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
-|**max_spills**|**bigint**|Número máximo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a**: a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] partir de CU3|  
+|**total_spills**|**bigint**|Número total de páginas desbordadas por la ejecución de este desencadenador desde que se compiló.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**bigint**|Número de páginas desbordadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**bigint**|Número mínimo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**bigint**|Número máximo de páginas que este desencadenador ha sobrevertido durante una ejecución.<br /><br /> **Se aplica a: a**partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**total_page_server_reads**|**bigint**|Número total de lecturas del servidor de páginas realizadas por las ejecuciones de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**last_page_server_reads**|**bigint**|Número de lecturas del servidor de páginas realizadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**min_page_server_reads**|**bigint**|Número mínimo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 |**max_page_server_reads**|**bigint**|Número máximo de lecturas del servidor de páginas que ha realizado este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: hiperescala Azure SQL Database|  
 
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, se filtran todas las filas que contienen datos que no pertenecen al inquilino conectado.  
 
 Cuando se completa una consulta, se actualizan las estadísticas en la vista.  
   
 ## <a name="permissions"></a>Permisos  
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
   
 ## <a name="examples"></a>Ejemplos  

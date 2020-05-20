@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdistributiondb
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68770928"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824503"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @database = ] 'database_name'`Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor **%** predeterminado es para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
+`[ @database = ] 'database_name'`Es el nombre de la base de datos cuyas propiedades se devuelven. *database_name* es de **tipo sysname y su**valor predeterminado es **%** para todas las bases de datos asociadas al distribuidor y en el que el usuario tiene permisos.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
-|**status**|**int**|Exclusivamente para uso interno.|  
+|**status**|**int**|Solo para uso interno.|  
 |**data_folder**|**nvarchar(255)**|Nombre del directorio que se utiliza para almacenar los archivos de base de datos.|  
 |**data_file**|**nvarchar(255)**|Nombre del archivo de la base de datos.|  
 |**data_file_size**|**int**|Tamaño inicial del archivo de datos en megabytes.|  
@@ -60,7 +60,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpdistributiondb** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_check_for_sync_trigger
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 7e4260d05e0ed2967e9fbf151faeb53007080c21
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72251245"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824043"
 ---
 # <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,13 +39,13 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@tabid =** ] '*tabid*'  
+ [** @tabid =** ] '*tabid*'  
  Es el identificador de objeto de la tabla en la que se comprueba si hay desencadenadores de actualización inmediata. *tabid* es de **tipo int** y no tiene ningún valor predeterminado.  
   
- [**@trigger_op =** ] salida '*trigger_output_parameters*'  
+ salida de [** @trigger_op =** ] '*trigger_output_parameters*'  
  Especifica si el parámetro de salida va a devolver el tipo de desencadenador desde el que se le llama. *trigger_output_parameters* es **Char (10)** y puede tener uno de estos valores.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Complemento**|Desencadenador INSERT.|  
 |**Upd**|Desencadenador UPDATE.|  
@@ -55,9 +55,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher`Especifica la ubicación donde se ejecuta el procedimiento almacenado. *fonpublisher* es de **bit**y su valor predeterminado es 0. Si es 0, la ejecución está en el suscriptor y si es 1, la ejecución está en el publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama en el contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve en * \@trigger_op*.  
+ El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama en el contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve en * \@ trigger_op*.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_check_for_sync_trigger** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  **sp_check_for_sync_trigger** se utiliza para coordinar entre la replicación y los desencadenadores definidos por el usuario. Este procedimiento almacenado determina si se le llama en el contexto de un desencadenador de replicación. Por ejemplo, puede llamar al procedimiento **sp_check_for_sync_trigger** en el cuerpo de un desencadenador definido por el usuario. Si **sp_check_for_sync_trigger** devuelve **0**, el desencadenador definido por el usuario continúa el procesamiento. Si **sp_check_for_sync_trigger** devuelve **1**, se cierra el desencadenador definido por el usuario. Así se garantiza que el desencadenador definido por el usuario no se activa cuando el desencadenador de replicación actualiza la tabla.  

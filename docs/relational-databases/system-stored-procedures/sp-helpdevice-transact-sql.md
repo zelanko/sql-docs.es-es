@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpdevice
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 59b7f4a0cf0c3ba3335a181b35560af8847fca8b
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67902992"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824528"
 ---
 # <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 |**cntrltype**|**smallint**|Tipo de controlador del dispositivo:<br /><br /> 2 = Dispositivo de disco<br /><br /> 5 = Dispositivo de cinta|  
 |**size**|**int**|Tamaño del dispositivo en páginas de 2 KB.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se especifica *Name* , **sp_helpdevice** muestra información sobre el dispositivo de volcado de memoria especificado. Si no se especifica *Name* , **sp_helpdevice** muestra información acerca de todos los dispositivos de volcado en la vista de catálogo **Sys. backup_devices** .  
   
  Los dispositivos de volcado de memoria se agregan al sistema mediante **sp_addumpdevice**.  
@@ -74,8 +74,8 @@ EXEC sp_helpdevice;
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_addumpdevice &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
- [sp_dropdevice &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
+ [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [Motor de base de datos procedimientos almacenados &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

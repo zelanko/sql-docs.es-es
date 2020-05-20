@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sysmail_faileditems database mail view
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: dc783b97430f5ddc456ebba82dd76a50c6d3cd2a
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68060211"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824080"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68060211"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil que se usa para enviar el mensaje.|  
-|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
 |**Asunto**|**nvarchar (510)**|Línea de asunto del mensaje.|  
@@ -61,7 +61,7 @@ ms.locfileid: "68060211"
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use la vista **sysmail_faileditems** para ver qué mensajes no se enviaron por correo electrónico de base de datos. Al solucionar problemas del Correo electrónico de base de datos, puede que esta vista le ayude a identificar la naturaleza del problema, pues en ella se muestran los atributos de los mensajes no enviados. Para ver el motivo del error, vea la entrada del mensaje con errores en la [sysmail_event_log &#40;vista&#41;de Transact-SQL](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md) .  
   
 ## <a name="permissions"></a>Permisos  

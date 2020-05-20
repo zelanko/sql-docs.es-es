@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpsubscription
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: f6ad28ace9f8b3a1b4852c54e3e4f427bd22c06d
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771571"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824460"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'`Es el nombre de la publicación asociada. *Publication* es de **tipo sysname**y su **%** valor predeterminado es, que devuelve toda la información de suscripción de este servidor.  
+`[ @publication = ] 'publication'`Es el nombre de la publicación asociada. *Publication* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de este servidor.  
   
-`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor **%** predeterminado es, que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
+`[ @article = ] 'article'`Es el nombre del artículo. *article* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los suscriptores seleccionados. Si es **All**, solo se devuelve una entrada para la suscripción completa en una publicación.  
   
-`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su**valor **%** predeterminado es, que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
+`[ @subscriber = ] 'subscriber'`Es el nombre del suscriptor en el que se va a obtener información de suscripción. *Subscriber* es de **tipo sysname y su**valor predeterminado es **%** , que devuelve toda la información de suscripción de las publicaciones y los artículos seleccionados.  
   
-`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **%** **tipo sysname y su**valor predeterminado es.  
+`[ @destination_db = ] 'destination_db'`Es el nombre de la base de datos de destino. *destination_db* es de **tipo sysname y su**valor predeterminado es **%** .  
   
 `[ @found = ] 'found'OUTPUT`Es una marca que indica que se devuelven filas. *found*es de **tipo int** y un parámetro output, con un valor predeterminado de 23456.  
   
@@ -97,7 +97,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpsubscription** se utiliza en la replicación de instantáneas y transaccional.  
   
 ## <a name="permissions"></a>Permisos  

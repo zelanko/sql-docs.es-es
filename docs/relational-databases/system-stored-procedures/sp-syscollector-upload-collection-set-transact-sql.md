@@ -16,14 +16,14 @@ helpviewer_keywords:
 - sp_syscollector_upload_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: eed9232c-2b0a-4b6a-8ba0-76b7c99f48dc
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: eb5b4b9dce229a028be45565203bce90883e21f3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 9302728bf93a53ce333dce5a38bfa7e046d38fe0
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68010530"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824244"
 ---
 # <a name="sp_syscollector_upload_collection_set-transact-sql"></a>sp_syscollector_upload_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_syscollector_upload_collection_set [[ @collection_set_id = ] collection_set_i
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  *Collection_set_id* o *el nombre* deben tener un valor; ambos no pueden ser NULL.  
   
  Este procedimiento se puede usar para iniciar una carga a petición para un conjunto de recopilación en ejecución. Solo se puede utilizar para conjuntos de recopilación configurados para la recopilación y carga de datos en modo de almacenamiento en caché. Esto permite al usuario obtener datos para analizarlos sin tener que esperar a una carga programada.  

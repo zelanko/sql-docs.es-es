@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_changesubscriptiondtsinfo
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: a091df0cbbeb2883ff9905d7c5b3718d50efa86b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fd0d08a045f67b436bd732b01a2279c923fc9461
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68762552"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824089"
 ---
 # <a name="sp_changesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="arguments"></a>Argumentos  
 `[ @job_id = ] job_id`Es el ID. de trabajo de la Agente de distribución para la suscripción de extracción. *job_id* es **varbinary (16)** y no tiene ningún valor predeterminado. Para buscar el identificador de trabajo de distribución, ejecute **sp_helpsubscription** o **sp_helppullsubscription**.  
   
-`[ @dts_package_name = ] 'dts_package_name'`Especifica el nombre del paquete DTS. *dts_package_name* es de **tipo sysname y su**valor predeterminado es NULL. Por ejemplo, para especificar un paquete denominado **DTSPub_Package**, debe especificar `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'`Especifica el nombre del paquete DTS. *dts_package_name* es de **tipo sysname y su**valor predeterminado es NULL. Por ejemplo, para especificar un paquete denominado **DTSPub_Package**, debe especificar `@dts_package_name = N'DTSPub_Package'` .  
   
 `[ @dts_package_password = ] 'dts_package_password'`Especifica la contraseña del paquete. *dts_package_password* es de **tipo sysname y su** valor predeterminado es null, lo que especifica que la propiedad de contraseña se dejará sin cambios.  
   
@@ -54,7 +54,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_changesubscriptiondtsinfo** se usa para la replicación de instantáneas y la replicación transaccional que solo son suscripciones de extracción.  
   
 ## <a name="permissions"></a>Permisos  

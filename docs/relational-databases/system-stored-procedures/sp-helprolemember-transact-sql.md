@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helprolemember
 ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 2ac7ec92a47f56982300e81395d24fc5b197ed64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 65a1f4d2098e55c7007bd04e2fef00bcbac30ffc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997491"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824433"
 ---
 # <a name="sp_helprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |**MemberName**|**sysname**|Nombre de un miembro de **DbRole.**|  
 |**MemberSID**|**varbinary(85)**|Identificador de seguridad de **memberName.**|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si la base de datos contiene roles anidados, **memberName** puede ser el nombre de un rol. **sp_helprolemember** no muestra la pertenencia obtenida a través de roles anidados. Por ejemplo, si User1 es miembro de Role1 y Role1 es miembro de Role2, `EXEC sp_helprolemember 'Role2'`, devolverá Role1, pero no los miembros de Role1 (User1 en este ejemplo). Para devolver pertenencias anidadas, debe ejecutar **sp_helprolemember** repetidas veces para cada rol anidado.  
   
  Utilice **sp_helpsrvrolemember** para mostrar los miembros de un rol fijo de servidor.  

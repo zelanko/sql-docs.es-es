@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_text_query_plan dynamic management function
 ms.assetid: 9d5e5f59-6973-4df9-9eb2-9372f354ca57
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 082de052d40cc41a81ea7a0963b2e3174338b8a5
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73983140"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824590"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Devuelve el plan de presentación en formato de texto para un lote [!INCLUDE[tsq
 -   El resultado del plan de consulta no está limitado en tamaño.  
 -   Se pueden especificar instrucciones individuales dentro del lote.  
   
-**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (y versiones posteriores [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]),.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -93,7 +93,7 @@ El valor -1 indica el final del lote. El valor predeterminado es -1.
 |**cifra**|**bit**|Indica si el procedimiento almacenado correspondiente está cifrado.<br /><br /> 0 = no cifrado<br /><br /> 1 = cifrado<br /><br /> La columna no acepta valores NULL.|  
 |**query_plan**|**nvarchar(max)**|Contiene la representación del plan de presentación de tiempo de compilación del plan de ejecución de consultas especificado con *plan_handle*. El plan de presentación está en formato de texto. Se genera un plan para cada lote que contiene, por ejemplo, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] "ad hoc", llamadas a procedimientos almacenados y llamadas a funciones definidas por el usuario.<br /><br /> Esta columna acepta valores NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  En las siguientes condiciones, no se devuelve ningún plan de presentación en la columna **plan** de la tabla devuelta para **sys.dm_exec_text_query_plan**:  
   
 -   Si el plan de consulta especificado mediante *plan_handle* se ha expulsado de la caché del plan, la columna **query_plan** de la tabla devuelta es NULL. Por ejemplo, esta condición puede producirse si hay un retraso entre el momento en que se captura el identificador del plan y el momento en que se utiliza con **sys.dm_exec_text_query_plan**.  
@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>B. Recuperar todos los planes de consulta de caché del plan  
- Para recuperar una instantánea de todos los planes de consulta que residen en la caché del plan, recupere los identificadores de todos los planes de consulta de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_cached_plans`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_cached_plans`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. La salida del plan de presentación de cada plan que se encuentra actualmente en `query_plan` la caché del plan está en la columna de la tabla que se devuelve.  
+ Para recuperar una instantánea de todos los planes de consulta que residen en la caché del plan, recupere los identificadores de todos los planes de consulta de la caché; para ello, consulte la vista de administración dinámica `sys.dm_exec_cached_plans`. Los identificadores del plan se almacenan en la columna `plan_handle` de `sys.dm_exec_cached_plans`. Acto seguido, utilice el operador CROSS APPLY para pasar los identificadores del plan a `sys.dm_exec_text_query_plan` como se indica a continuación. La salida del plan de presentación de cada plan que se encuentra actualmente en la caché del plan está en la `query_plan` columna de la tabla que se devuelve.  
   
 ```sql  
 USE master;  

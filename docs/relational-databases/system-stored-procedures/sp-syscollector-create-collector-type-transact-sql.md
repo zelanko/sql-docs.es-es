@@ -16,19 +16,19 @@ helpviewer_keywords:
 - sp_syscollector_create_collector_type
 - data collector [SQL Server], stored procedures
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 4290d2ecff4b76675f464c5e2a396703e7fc370c
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68032636"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824290"
 ---
 # <a name="sp_syscollector_create_collector_type-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Crea un tipo de recopilador para el recopilador de datos. Un tipo de recopilador es un contenedor lógico [!INCLUDE[ssIS](../../includes/ssis-md.md)] alrededor de los paquetes que proporcionan el mecanismo real para recopilar datos y cargarlos en el almacén de administración de datos.  
+  Crea un tipo de recopilador para el recopilador de datos. Un tipo de recopilador es un contenedor lógico alrededor de los [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquetes que proporcionan el mecanismo real para recopilar datos y cargarlos en el almacén de administración de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,22 +46,22 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Es el GUID para el tipo de recopilador. *collector_type_uid* es de tipo **uniqueidentifier** y si es null, se creará automáticamente y se devolverá como salida.  
   
- [ @name = ] '*nombre*'  
+ [ @name =] '*nombre*'  
  Es el nombre del tipo de recopilador. *Name* es **sysname** y debe especificarse.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  Es el esquema XML para este tipo de recopilador. *parameter_schema* es **XML** con un valor predeterminado de NULL.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  Es la plantilla que debe usarse para transformar el XML a fin de usarlo en la página de propiedades del conjunto de recopilación. *parameter_formatter* es **XML** con un valor predeterminado de NULL.  
   
- [@collection_package_id = ] *collection_package_id*  
+ [ @collection_package_id =] *collection_package_id*  
  Es un identificador local único que apunta al paquete de recopilaciones de [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado por el conjunto de recopilaciones. *collection_package_id* es **uniqueidentifier** y es obligatorio.  
   
- [@upload_package_id = ] *upload_package_id*  
+ [ @upload_package_id =] *upload_package_id*  
  Es un identificador local único que apunta al paquete de carga de [!INCLUDE[ssIS](../../includes/ssis-md.md)] usado por el conjunto de recopilaciones. *upload_package_id* es **uniqueidentifier** y es obligatorio.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

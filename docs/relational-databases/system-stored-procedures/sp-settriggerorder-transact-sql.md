@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - sp_settriggerorder
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e258badbcf304fddbaf7575269194bd409ec8645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad5239e2761ed1cc788f7826a054ac0e038d9e79
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73982230"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824300"
 ---
 # <a name="sp_settriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,27 +50,27 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 > [!IMPORTANT]  
 >  Los desencadenadores **primero** y **último** deben ser dos desencadenadores diferentes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Lugar**|El desencadenador se activa primero.|  
 |**Guardado**|El desencadenador se activa el último.|  
-|**None**|El desencadenador se activa sin un orden definido.|  
+|**Ninguno**|El desencadenador se activa sin un orden definido.|  
   
 `[ @stmttype = ] 'statement_type'`Especifica la instrucción SQL que activa el desencadenador. *statement_type* es **VARCHAR (50)** y puede ser INSERT, Update, Delete, Logon o cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] evento de instrucción enumerado en [eventos DDL](../../relational-databases/triggers/ddl-events.md). Los grupos de eventos no se pueden especificar.  
   
- Un desencadenador se puede designar como **primer** o **último** desencadenador para un tipo de instrucción solo después de que ese desencadenador se haya definido como desencadenador para ese tipo de instrucción. Por ejemplo, el desencadenador **TR1** se puede designar **primero** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. Devuelve un error si **TR1**, que se ha definido solo como desencadenador de inserción, se establece como **primer**o último desencadenador para una instrucción UPDATE. **Last** [!INCLUDE[ssDE](../../includes/ssde-md.md)] Para obtener más información, vea la sección Comentarios.  
+ Un desencadenador se puede designar como **primer** o **último** desencadenador para un tipo de instrucción solo después de que ese desencadenador se haya definido como desencadenador para ese tipo de instrucción. Por ejemplo, el desencadenador **TR1** se puede designar **primero** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Devuelve un error si **TR1**, que se ha definido solo como desencadenador de inserción, se establece como **primer**o **último**desencadenador para una instrucción UPDATE. Para obtener más información, vea la sección Comentarios.  
   
- espacio de nombres = { **' base de datos** | '**' servidor '** | ** \@** ACEPTA  
- Cuando *triggername* es un desencadenador DDL ** \@** , el espacio de nombres especifica si *triggername* se creó con ámbito de base de datos o ámbito de servidor. Si *triggername* es un desencadenador Logon, se debe especificar Server. Para obtener más información sobre el ámbito del desencadenador DDL, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md). Si no se especifica, o si se especifica NULL, *triggername* es un desencadenador DML.  
+ ** \@ espacio de nombres =** { **' base de datos**'  |  **' servidor '** | ACEPTA  
+ Cuando *triggername* es un desencadenador DDL, el ** \@ espacio de nombres** especifica si *triggername* se creó con ámbito de base de datos o ámbito de servidor. Si *triggername* es un desencadenador Logon, se debe especificar Server. Para obtener más información sobre el ámbito del desencadenador DDL, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md). Si no se especifica, o si se especifica NULL, *triggername* es un desencadenador DML.  
   
 ||  
 |-|  
-|SERVER se aplica a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] : y versiones posteriores.|  
+|SERVER se aplica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="dml-triggers"></a>Desencadenadores DML  
  Solo puede haber un **primero** y un **último** desencadenador para cada instrucción en una sola tabla.  

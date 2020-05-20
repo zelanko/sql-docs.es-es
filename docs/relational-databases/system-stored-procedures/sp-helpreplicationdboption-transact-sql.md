@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpreplicationdboption
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: 84f009a2f2184ce2974f837006471d2b9bb97346
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771529"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824457"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,11 +39,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'`Es el nombre de la base de datos. *dbname* es de **%** **tipo sysname y su**valor predeterminado es. Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
+`[ @dbname = ] 'dbname'`Es el nombre de la base de datos. *dbname* es de **tipo sysname y su**valor predeterminado es **%** . Si **%** es, el conjunto de resultados contiene todas las bases de datos del publicador; de lo contrario, solo se devuelve información sobre la base de datos especificada. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
   
 `[ @type = ] 'type'`Restringe el conjunto de resultados para que contenga solo las bases de datos en las que se ha habilitado el valor de *tipo* de opción de replicación especificado. *Type* es de tipo **sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**publicar**|La replicación transaccional está permitida.|  
 |**merge publish**|La replicación de mezcla está permitida.|  
@@ -67,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpreplicationdboption** se utiliza en la replicación de instantáneas, transaccional y de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

@@ -15,14 +15,14 @@ dev_langs:
 helpviewer_keywords:
 - sp_helpremotelogin
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: d37cae4776a5a5fe67ed7e2265d9a23a28a725e8
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997580"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824480"
 ---
 # <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 |remote_user_name|**sysname**|Inicio de sesión del servidor remoto asignado a local_user_name.|  
 |opciones|**sysname**|Trusted = El inicio de sesión remoto no necesita contraseña cuando se conecta con el servidor local desde el servidor remoto.<br /><br /> Untrusted (o en blanco) = El inicio de sesión remoto tiene que suministrar una contraseña cuando se conecta con el servidor local desde el servidor remoto.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice sp_helpserver para presentar los nombres de los servidores remotos definidos en el servidor local.  
   
 ## <a name="permissions"></a>Permisos  

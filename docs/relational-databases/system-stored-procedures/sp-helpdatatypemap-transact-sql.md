@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - sp_helpdatatypemap
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
-author: stevestein
-ms.author: sstein
-ms.openlocfilehash: 0b9666c13a2e4d8183d19fade64bf49b13377b9a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+author: CarlRabeler
+ms.author: carlrab
+ms.openlocfilehash: fcf2bbd2d6c1ab7c9b73c1e122c746e56814c4fc
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68771061"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824540"
 ---
 # <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Devuelve información sobre las asignaciones de tipos de datos definidos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sistemas de administración de bases de datos (DBMS) que no son de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
+  Devuelve información sobre las asignaciones de tipos de datos definidos entre [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los sistemas de administración de bases de datos (DBMS) que no son de. Este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,7 +45,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="arguments"></a>Argumentos  
 `[ @source_dbms = ] 'source_dbms'`Es el nombre del DBMS desde el que se asignan los tipos de datos. *source_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
@@ -56,7 +56,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 `[ @destination_dbms = ] 'destination_dbms'`Es el nombre del DBMS de destino. *destination_dbms* es de **tipo sysname**y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|El destino es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El destino es una base de datos de Oracle.|  
@@ -83,8 +83,8 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
- **sp_helpdatatypemap** define las asignaciones de tipos de datos tanto de los publicadores que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son de SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como de los publicadores que no son de.  
+## <a name="remarks"></a>Comentarios  
+ **sp_helpdatatypemap** define las asignaciones de tipos de datos tanto de los publicadores que no son de SQL Server como de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Cuando no se admite la combinación especificada de DBMS de origen y de destino, **sp_helpdatatypemap** devuelve un conjunto de resultados vacío.  
   

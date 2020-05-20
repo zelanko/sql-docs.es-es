@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_database_encryption_keys dynamic management view
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e716c826fd366fda4505b7fcf9ec8e3b756ec25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a1057be51a987e694fa1a29de4299ff63a70733
+ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80531049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82824640"
 ---
 # <a name="sysdm_database_encryption_keys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "80531049"
 |key_algorithm|**nvarchar(32)**|Muestra el algoritmo utilizado por la clave.|  
 |key_length|**int**|Muestra la longitud de la clave.|  
 |encryptor_thumbprint|**varbinary(20)**|Muestra la huella digital del sistema de cifrado.|  
-|encryptor_type|**nvarchar(32)**|**Se aplica a** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
+|encryptor_type|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] desde hasta la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
 |percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|
 |encryption_state_desc|**nvarchar(32)**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Cadena que indica si la base de datos está cifrada o no está cifrada.<br><br>Ninguno<br><br>SIN cifrar<br><br>CIFRA<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
 |encryption_scan_state|**int**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Indica el estado actual del examen de cifrado. <br><br>0 = no se ha iniciado ningún examen, TDE no está habilitado<br><br>1 = el examen está en curso.<br><br>2 = el examen está en curso, pero se ha suspendido, el usuario se puede reanudar.<br><br>3 = el examen se ha anulado por alguna razón, se requiere la intervención manual. Póngase en contacto con Soporte técnico de Microsoft para obtener más ayuda.<br><br>4 = el examen se ha completado correctamente, TDE está habilitado y el cifrado se ha completado.|
@@ -53,7 +53,7 @@ ms.locfileid: "80531049"
   
 ## <a name="permissions"></a>Permisos
 
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .   
 
 ## <a name="see-also"></a>Consulte también  

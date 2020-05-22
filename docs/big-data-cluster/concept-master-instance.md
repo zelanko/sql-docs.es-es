@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es la instancia maestra?
 titleSuffix: SQL Server big data clusters
-description: En este artículo, se describe la instancia maestra de SQL Server en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: En este artículo, se describe la instancia maestra de SQL Server en un clúster de macrodatos de SQL Server 2019.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 42e16066a08c0b30fd8b43eaf481525c4f510b80
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0cb2f253f56fc58e215d1c800788294e2df7b0aa
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652276"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606652"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Cuál es la instancia maestra en un clúster de macrodatos de SQL Server?
 

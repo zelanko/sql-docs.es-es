@@ -1,28 +1,34 @@
 ---
 title: 'Tutorial de Python: Creación del modelo del clúster'
-description: En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo de k-means para realizar la agrupación en clústeres en Python con SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo de k-means para realizar la agrupación en clústeres en Python con aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 08/27/2019
+ms.date: 05/14/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9669686d0163b9ce1c362e7cdf2814c7a95bfaa8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6e0aa1bcbf1bc79b6f77fc0b564d840194ffa8ec
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116598"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606450"
 ---
-# <a name="tutorial-build-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Creación de un modelo en Python para clasificar clientes por categorías con SQL Server Machine Learning Services
+# <a name="python-tutorial-build-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial de Python: Creación de un modelo para clasificar clientes con aprendizaje automático de SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo de k-means en Python para realizar la agrupación en clústeres. En la siguiente parte de esta serie, implementará el modelo en una base de datos SQL con SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo de k-means en Python para realizar la agrupación en clústeres. En la siguiente parte de esta serie, implementará este modelo en una base de datos con SQL Server Machine Learning Services o en clústeres de macrodatos.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+En la parte tres de esta serie de tutoriales de cuatro partes, creará un modelo de k-means en Python para realizar la agrupación en clústeres. En la siguiente parte de esta serie, implementará este modelo en una base de datos con SQL Server Machine Learning Services.
+::: moniker-end
 
 En este artículo, aprenderá a:
 
@@ -33,9 +39,9 @@ En este artículo, aprenderá a:
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
 
-En la [parte dos](python-clustering-model-prepare-data.md), ha aprendido a preparar los datos de una base de datos SQL para realizar la agrupación en clústeres.
+En la [parte dos](python-clustering-model-prepare-data.md), ha aprendido a preparar los datos de una base de datos para realizar la agrupación en clústeres.
 
-En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos SQL que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
+En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -147,7 +153,7 @@ El clúster 0 es claramente un conjunto de clientes inactivos. Puede que quiera 
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos
 
-Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb de la instancia de SQL Server.
+Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -160,4 +166,4 @@ En la parte tres de esta serie de tutoriales, ha completado estos pasos:
 Para implementar el modelo de aprendizaje automático que ha creado, siga la parte cuatro de esta serie de tutoriales:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Implementación de un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services](python-clustering-model-deploy.md)
+> [Tutorial de Python: Implementación de un modelo de agrupación en clústeres](python-clustering-model-deploy.md)

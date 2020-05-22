@@ -1,25 +1,31 @@
 ---
 title: 'Tutorial de Python: Preparación de los datos'
-description: En la segunda parte de esta serie de tutoriales de cuatro partes, usará Python para preparar los datos para predecir los alquileres de esquíes en SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: En la parte dos de esta serie de tutoriales de cuatro partes, usará Python para preparar los datos para predecir los alquileres de esquíes con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9aeefb0b6fd9ca1a744d132fccf1eedfedbaa6e7
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 75f475f8a2b4b0d23d95498a69f5e5d745f7510d
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116428"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606727"
 ---
-# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-in-sql-server-machine-learning-services"></a>Tutorial de Python: Preparación de datos para entrenar un modelo de regresión lineal en SQL Server Machine Learning Services
+# <a name="python-tutorial-prepare-data-to-train-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial de Python: Preparación de datos para entrenar un modelo de regresión lineal con aprendizaje automático de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos de SQL Server mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de regresión lineal en Python con SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de regresión lineal en Python con SQL Server Machine Learning Services o en clústeres de macrodatos.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de una base de datos mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de regresión lineal en Python con SQL Server Machine Learning Services.
+::: moniker-end
 
 En este artículo, aprenderá a:
 
@@ -31,7 +37,7 @@ En la [parte uno](python-ski-rental-linear-regression.md), ha aprendido a restau
 
 En la [parte tres](python-ski-rental-linear-regression-train-model.md), aprenderá a entrenar un modelo de aprendizaje automático de regresión lineal en Python.
 
-En la [parte cuatro](python-ski-rental-linear-regression-deploy-model.md), aprenderá a almacenar el modelo en SQL Server y, después, creará procedimientos almacenados de los scripts de Python que ha desarrollado en las partes dos y tres. Los procedimientos almacenados se ejecutarán en SQL Server para realizar predicciones basándose en datos nuevos.
+En la [parte cuatro](python-ski-rental-linear-regression-deploy-model.md), aprenderá a almacenar el modelo en una base de datos y, luego, a crear procedimientos almacenados a partir de los scripts de Python desarrollados en las partes dos y tres. Los procedimientos almacenados se ejecutarán en el servidor para realizar predicciones basándose en datos nuevos.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -39,7 +45,7 @@ En la [parte cuatro](python-ski-rental-linear-regression-deploy-model.md), apren
 
 ## <a name="explore-and-prepare-the-data"></a>Exploración y preparación de los datos
 
-Para usar los datos en Python, cargará los datos de la base de datos de SQL Server en una trama de datos de pandas.
+Para usar los datos en Python, cargará los datos de la base de datos en una trama de datos de Pandas.
 
 Cree un cuaderno de Python en Azure Data Studio y ejecute el script siguiente. Reemplace `<SQL Server>` por el nombre de su instancia de SQL Server.
 
@@ -54,7 +60,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 
 # Connection string to your SQL Server instance
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=TutorialDB; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=TutorialDB; Trusted_Connection=yes')
 
 query_str = 'SELECT Year, Month, Day, Rentalcount, Weekday, Holiday, Snow FROM dbo.rental_data'
 
@@ -92,7 +98,7 @@ Data frame:      Year  Month  Day  RentalCount  WeekDay  Holiday  Snow
 
 En la parte dos de esta serie de tutoriales, ha completado estos pasos:
 
-* Cargar los datos desde la base de datos de SQL Server en una trama de datos de **pandas**
+* Cargar los datos desde la base de datos en una trama de datos de **Pandas**
 * Quitar columnas para preparar los datos en Python
 
 Para entrenar un modelo de aprendizaje automático que use datos de la base de datos TutorialDB, siga la parte tres de esta serie de tutoriales:

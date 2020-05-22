@@ -3,18 +3,18 @@ title: Instalación de paquetes de Python con sqlmlutils
 description: Obtenga más información sobre cómo usar PIP de Python para instalar nuevos paquetes de Python en una instancia de SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/30/2020
+ms.date: 04/24/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9271d10c83575ba1203c145d217c4b179976eff6
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: 69da04eaad729225ed0629ba78d2f214b30ba942
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886464"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606497"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Instalación de paquetes de Python con sqlmlutils
 
@@ -33,11 +33,11 @@ Para obtener más información sobre la ubicación de los paquetes y las rutas d
 
 + Instale [python](https://www.python.org/) en el equipo cliente que usa para conectarse a SQL Server. También puede interesarle un entorno de desarrollo de Python como [Visual Studio Code](https://code.visualstudio.com/download) con la [extensión de Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python). 
 
-+ Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) o [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio o SSMS.
++ Instale [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) en el equipo cliente que usa para conectarse a SQL Server. Puede usar otras herramientas de consulta o administración de bases de datos, pero en este artículo se da por supuesto que emplea Azure Data Studio.
 
 ### <a name="other-considerations"></a>Otras consideraciones
 
-+ Los paquetes deben ser compatibles con la versión de Python que tenga. Para obtener más información sobre la versión de Python incluida en cada versión de SQL Server, vea las [versiones de Python y R en ¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md#versions)
++ Los paquetes deben ser compatibles con la versión de Python que tenga. Para obtener información sobre la versión de Python que se incluye con cada versión de SQL Server, consulte [Versiones de Python y R](../sql-server-machine-learning-services.md#versions).
 
 + La biblioteca de paquetes de Python se encuentra en la carpeta Archivos de programa de la instancia de SQL Server y, de forma predeterminada, se requieren permisos de administrador para instalar contenido en esta carpeta. Para obtener más información, consulte [Ubicación de la biblioteca de paquetes](../package-management/python-package-information.md#default-python-library-location).
 
@@ -134,7 +134,7 @@ connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdataba
 sqlmlutils.SQLPackageManager(connection).install("text_tools-1.0.0-py3-none-any.whl")
 ```
 
-## <a name="use-the-package-in-sql-server"></a>Uso del paquete en SQL Server
+## <a name="use-the-package"></a>Uso del paquete
 
 Ahora puede usar el paquete en un script de Python en SQL Server. Por ejemplo:
 
@@ -158,7 +158,7 @@ Si quiere quitar el paquete **text-tools**, use el siguiente comando de Python e
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>Consulte también
+## <a name="next-steps"></a>Pasos siguientes
 
 + Para ver información sobre los paquetes de Python instalados en SQL Server Machine Learning Services, consulte [Obtención de información de paquetes de Python](../package-management/python-package-information.md).
 

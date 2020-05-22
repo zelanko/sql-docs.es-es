@@ -1,7 +1,7 @@
 ---
 title: Implementación de aplicaciones con azdata
 titleSuffix: SQL Server Big Data Clusters
-description: Implemente un script de Python o R como una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: Implemente un script de Python o R como una aplicación en un clúster de macrodatos de SQL Server 2019.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,12 +10,12 @@ ms.date: 12/13/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33b5bf6061e9168fd150adcb4a7ccf29302bce63
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab28a6bbe7bbf108305f065dcdf7b870c0f76602
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75253147"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606636"
 ---
 # <a name="how-to-deploy-an-app-on-big-data-clusters-2019"></a>Cómo implementar una aplicación en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -37,7 +37,7 @@ Se admiten los siguientes tipos de aplicaciones:
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos de SQL Server 2019](deployment-guidance.md)
 - [Utilidad de línea de comandos azdata](deploy-install-azdata.md)
@@ -296,4 +296,4 @@ azdata app delete --name add-app --version v1
 
 Averigüe cómo integrar aplicaciones implementadas en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] en aplicaciones propias en [Consumo de aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información. También puede ver otros ejemplos en [Ejemplos de implementación de aplicaciones](https://aka.ms/sql-app-deploy).
 
-Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)].

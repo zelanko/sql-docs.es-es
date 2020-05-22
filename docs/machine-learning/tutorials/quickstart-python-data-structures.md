@@ -3,24 +3,29 @@ title: 'Inicio rápido: estructuras de datos de Python'
 description: En este inicio rápido, aprenderá a trabajar con estructuras de datos y objetos de datos en Python y SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/15/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 03d578b2cd6419a676ed6bd1b581dd57107d4209
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 3023287504cbb7b25e194b53d0957e82405d1ea8
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487341"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606700"
 ---
 # <a name="quickstart-data-structures-and-objects-using-python-in-sql-server-machine-learning-services"></a>Inicio rápido: estructuras de datos y objetos mediante Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido aprenderá a usar estructuras de datos cuando use Python en SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos cuando use Python en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Aprenderá a mover datos entre Python y SQL Server, así como los problemas comunes que pueden producirse.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+En este inicio rápido, aprenderá a usar estructuras de datos y tipos de datos cuando use Python en [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Aprenderá a mover datos entre Python y SQL Server, así como los problemas comunes que pueden producirse.
+::: moniker-end
 
 SQL Server se basa en el paquete **pandas** de Python, que es excelente para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a SQL Server y esperar que funcione. En esta guía de inicio rápido, revisará algunas definiciones de estructura de datos básicas para prepararle para problemas adicionales que podrían ocurrir al pasar datos tabulares entre Python y SQL Server.
 
@@ -37,9 +42,15 @@ Los conceptos más comunes son:
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-- Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
+Para ejecutar este inicio rápido, debe cumplir los siguientes requisitos previos.
 
-- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). También puede [habilitar Machine Learning Services en clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. SQL Server Machine Learning Services: para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido se utiliza [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## <a name="scalar-value-as-a-series"></a>Valor escalar como una serie
 

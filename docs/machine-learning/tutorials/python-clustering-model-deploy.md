@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial de Python: Implementación del modelo del clúster'
-description: En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services.
+description: En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres en Python con el aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -11,28 +11,33 @@ ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: df0fd7cb27977679a6ca879d7ae01045ed3fa8c8
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 0343c3c410c8cf7b76b391fecd6ff57bff5e80d3
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116568"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606453"
 ---
-# <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>Tutorial: Implementación de un modelo en Python para clasificar clientes por categorías con SQL Server Machine Learning Services
+# <a name="python-tutorial-deploy-a-model-to-categorize-customers-with-sql-machine-learning"></a>Tutorial de Python: Implementación de un modelo para clasificar clientes por categorías con aprendizaje automático de SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos SQL con SQL Server Machine Learning Services o en clústeres de macrodatos.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de agrupación en clústeres, desarrollado en Python, en una base de datos SQL mediante SQL Server Machine Learning Services.
+::: moniker-end
 
-Para realizar la agrupación en clústeres de forma periódica cuando se registren nuevos clientes, necesita llamar al script de Python desde cualquier aplicación. Para hacerlo, puede implementar el script de Python en SQL Server si lo coloca dentro de un procedimiento almacenado en SQL en la base de datos. Como el modelo se ejecuta en la base de datos SQL, se puede entrenar fácilmente con los datos almacenados en la base de datos.
+Para realizar la agrupación en clústeres de forma periódica cuando se registren nuevos clientes, necesita llamar al script de Python desde cualquier aplicación. Para hacerlo, puede implementar el script de Python en una base de datos si lo coloca dentro de un procedimiento almacenado de SQL. Como el modelo se ejecuta en la base de datos, se puede entrenar fácilmente con los datos almacenados en la base de datos.
 
-En esta sección, migrará el código de Python que acaba de escribir en SQL Server e implementará la agrupación de clústeres con la ayuda de SQL Server Machine Learning Services.
+En esta sección, moverá el código de Python que acaba de escribir en el servidor e implementará la agrupación en clústeres.
 
 En este artículo, aprenderá a:
 
 > [!div class="checklist"]
 > * Crear un procedimiento almacenado que genere el modelo
-> * Agrupar en clústeres en SQL Server
+> * Agrupación en clústeres en el servidor
 > * Uso de la información de agrupación en clústeres
 
 En la [parte uno](python-clustering-model.md), ha instalado los requisitos previos y ha restaurado la base de datos de ejemplo.
@@ -175,19 +180,18 @@ Puede cambiar el valor de **c.cluster** a las direcciones de correo electrónico
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos
 
-Cuando termine este tutorial, puede eliminar la base de datos tpcxbb_1gb de SQL Server.
+Cuando termine este tutorial, puede eliminar la base de datos tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 En la parte cuatro de esta serie de tutoriales, ha aprendido a:
 
 * Crear un procedimiento almacenado que genere el modelo
-* Agrupar en clústeres en SQL Server
+* Agrupación en clústeres en el servidor
 * Uso de la información de agrupación en clústeres
 
-Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea:
+Para más información sobre cómo usar Python en el aprendizaje automático de SQL, consulte:
 
-* [Inicio rápido: Crear y ejecutar scripts de Python simples con SQL Server Machine Learning Services](quickstart-python-create-script.md)
-* [Otros tutoriales de Python para SQL Server Machine Learning Services](sql-server-python-tutorials.md)
+* [Inicio rápido: Creación y ejecución de scripts de Python](quickstart-python-create-script.md)
+* [Otros tutoriales de Python para aprendizaje automático de SQL](python-tutorials.md)
 * [Instalación de paquetes de Python con sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md)
-

@@ -1,7 +1,7 @@
 ---
 title: Configuración de la organización en niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos de Azure Data Lake Storage externo en HDFS en un clúster de macrodatos de SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 008a62d3d36acf96b0c63559cd4d8ecbf27641c1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: c156e117b3a26c09feb5afb3bb2f3ee1c594c43b
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "74190401"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606607"
 ---
 # <a name="configure-hdfs-tiering-on-big-data-clusters-2019"></a>Configuración de la organización en [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -43,7 +43,7 @@ En las secciones siguientes se ofrece un ejemplo de cómo configurar la organiza
 
 La organización en niveles de HDFS admite la actualización. Actualice un montaje existente para la instantánea más reciente de los datos remotos.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -81,4 +81,4 @@ En la lista siguiente se indican los problemas conocidos y las limitaciones actu
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

@@ -3,24 +3,29 @@ title: 'Inicio rápido: Entrenamiento de un modelo en Python'
 description: En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2eeb4bd6a384b37d8a0d7f2bd15e8ea126654a4e
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 929491de1eb99835133d04d396023b84680af9f4
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487344"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606880"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>Inicio rápido: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En este inicio rápido, creará y entrenará un modelo predictivo con Python. Guardará el modelo en una tabla en la instancia de SQL Server y, a continuación, usará el modelo para predecir los valores de los datos nuevos con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
 
 Creará y ejecutará dos procedimientos almacenados que se ejecutan en SQL. En el primero, se usa el conjunto de datos de flores Iris clásico y se genera un modelo de Bayes naive para predecir una especie de Iris basándose en las características florales. El segundo procedimiento es para puntuación: realiza una llamada al modelo generado en el primer procedimiento para generar un conjunto de predicciones basadas en datos nuevos. Al colocar código de Python en un procedimiento almacenado en SQL, las operaciones se incluyen en SQL, son reutilizables y pueden recibir llamadas de otros procedimientos almacenados y aplicaciones cliente.
 
@@ -33,9 +38,15 @@ Después de completar este inicio rápido, aprenderá a:
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
-- Para este inicio rápido, es necesario tener acceso a una instancia de SQL Server con [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) que tenga instalado el lenguaje de Python.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. Para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md) o la [Guía de instalación para Linux](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). También puede [habilitar Machine Learning Services en clústeres de macrodatos de SQL Server](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. SQL Server Machine Learning Services: para obtener información sobre cómo instalar Machine Learning Services, vea la [Guía de instalación para Windows](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
 
-- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- Una herramienta para ejecutar consultas de SQL que contengan scripts de R. En este inicio rápido se utiliza [Azure Data Studio](../../azure-data-studio/what-is.md).
+
 
 - Los datos de ejemplo usados en este ejercicio son los datos de ejemplo de Iris. Siga las instrucciones en [Datos de demo de Iris](demo-data-iris-in-sql.md) para crear la base de datos de ejemplo **irissql**.
 
@@ -43,7 +54,7 @@ Después de completar este inicio rápido, aprenderá a:
 
 En este paso, creará un procedimiento almacenado que genera un modelo para la predicción de resultados.
 
-1. Abra SSMS, conéctese a su instancia de SQL Server y abra una nueva ventana de consulta.
+1. Abra Azure Data Studio, conéctese a su instancia de SQL Server y abra una nueva ventana de consulta.
 
 1. Conéctese a la base de datos irissql.
 
@@ -83,7 +94,7 @@ En este paso, creará un procedimiento almacenado que genera un modelo para la p
 
 1. Asegúrese de que el procedimiento almacenado exista. 
 
-   Si el script de T-SQL del paso anterior se ha ejecutado sin errores, se creará un procedimiento almacenado denominado **generate_iris_model** y se agregará a la base de datos **irissql**. Encontrará los procedimientos almacenados en el **Explorador de objetos de SSMS**, en **Programación**.
+   Si el script de T-SQL del paso anterior se ha ejecutado sin errores, se creará un procedimiento almacenado denominado **generate_iris_model** y se agregará a la base de datos **irissql**. Encontrará los procedimientos almacenados en el **Explorador de objetos** de Azure Data Studio, en **Programación**.
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>Ejecución del procedimiento para crear y entrenar modelos
 
@@ -174,7 +185,7 @@ Después de crear, entrenar y guardar un modelo, continúe con el paso siguiente
 
 En este ejercicio, ha aprendido a crear procedimientos almacenados dedicados a tareas distintas, donde cada procedimiento almacenado ha usado el procedimiento almacenado del sistema `sp_execute_external_script` para iniciar un proceso de Python. Las entradas en el proceso de Python se pasan a `sp_execute_external` como parámetros. Tanto el script de Python en sí como las variables de datos de una base de datos de SQL Server se pasan como entradas.
 
-Normalmente, solo se usará SSMS con código de Python correcto, o bien código de Python que devuelve resultados basados en filas. Como herramienta, SSMS admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planos. Si el código genera un resultado visual como un diagrama de dispersión o un histograma, necesita una herramienta o una aplicación de usuario final independiente que pueda representar la imagen fuera del procedimiento almacenado.
+Normalmente, solo se usará Azure Data Studio con código de Python correcto, o bien código de Python que devuelve resultados basados en filas. Como herramienta, Azure Data Studio admite lenguajes de consulta como T-SQL y devuelve conjuntos de filas planos. Si el código genera un resultado visual como un diagrama de dispersión o un histograma, necesita una herramienta o una aplicación de usuario final independiente que pueda representar la imagen fuera del procedimiento almacenado.
 
 Puede que a algunos desarrolladores de Python, acostumbrados a escribir scripts con todo incluido y que procesan una amplia variedad de operaciones, les parezca innecesario organizar las tareas en procedimientos separados. Pero el entrenamiento y la puntuación tienen distintos casos de uso. Al separarlos, puede colocar cada tarea en una programación distinta y asignar permisos de ámbito distintos a cada operación.
 
@@ -184,6 +195,6 @@ La ventaja final es que los procesos pueden modificarse mediante parámetros. En
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Para más información sobre SQL Server Machine Learning Services, vea:
+Para obtener más información sobre los tutoriales de Python con el aprendizaje automático de SQL, consulte:
 
-- [¿Qué es SQL Server Machine Learning Services (Python y R)?](../sql-server-machine-learning-services.md)
+- [Tutoriales de Python](python-tutorials.md)

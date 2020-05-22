@@ -3,24 +3,31 @@ title: 'Inicio rápido: funciones de Python'
 description: En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de Python con SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 04/28/2020
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
-ms.reviewer: davidph
+author: cawrites
+ms.author: chadam
+ms.reviewer: garye
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 577bb4e6d956c53182a20f0e363642946c33c92c
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.openlocfilehash: 6afe1685956c43e30ace59f3e5cc794a2abbd88f
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81487338"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606711"
 ---
 # <a name="quickstart-python-functions-with-sql-server-machine-learning-services"></a>Inicio rápido: funciones de Python con SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de Python con SQL Server Machine Learning Services. Las funciones estadísticas suelen ser complicadas de implementar en T-SQL, pero esto se puede hacer en Python con solo unas pocas líneas de código.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de Python con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) o en [clústeres de macrodatos](../../big-data-cluster/machine-learning-services.md). Las funciones estadísticas suelen ser complicadas de implementar en T-SQL, pero esto se puede hacer en Python con solo unas pocas líneas de código.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilidad de Python con [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Las funciones estadísticas suelen ser complicadas de implementar en T-SQL, pero esto se puede hacer en Python con solo unas pocas líneas de código.
+::: moniker-end
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -28,7 +35,7 @@ En este inicio rápido, aprenderá a usar las funciones matemáticas y de utilid
 
   Su instancia de SQL Server puede estar en una máquina virtual de Azure o en un entorno local. Tenga en cuenta que la característica de scripts externos está deshabilitada de forma predeterminada, por lo que puede que tenga que [habilitar scripts externos](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) y asegurarse de que el **servicio SQL Server Launchpad** esté ejecutándose antes de empezar.
 
-- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido, se usa [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- También necesita una herramienta para ejecutar consultas SQL que contengan scripts de Python. Puede ejecutar estos scripts con cualquier herramienta de consultas o administración de bases de datos, siempre que pueda conectarse a una instancia de SQL Server y ejecutar una consulta T-SQL o un procedimiento almacenado. En este inicio rápido se utiliza [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio).
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>Creación de un procedimiento almacenado para generar números aleatorios
 

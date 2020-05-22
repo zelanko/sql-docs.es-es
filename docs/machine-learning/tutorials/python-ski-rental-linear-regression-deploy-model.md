@@ -1,25 +1,31 @@
 ---
 title: 'Tutorial de Python: Implementación de un modelo'
-description: En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de Python para predecir los alquileres de esquíes en una base de datos de SQL Server mediante Machine Learning Services.
+titleSuffix: SQL machine learning
+description: En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de Python para predecir los alquileres de esquíes en una base de datos con aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/02/2020
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e78f099f108f9affa58f53d1ad46b802eae004dd
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1771cc70a2e5b36109ba028c86939ce66fa00993
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116488"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606739"
 ---
-# <a name="python-tutorial-deploy-a-linear-regression-model-to-sql-server-machine-learning-services"></a>Tutorial de Python: Implementación de un modelo de regresión lineal en SQL Server Machine Learning Services
+# <a name="python-tutorial-deploy-a-linear-regression-model-with-sql-machine-learning"></a>Tutorial de Python: Implementación de un modelo de regresión lineal con aprendizaje automático de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server mediante Machine Learning Services o clústeres de macrodatos.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 En la parte cuatro de esta serie de tutoriales de cuatro partes, implementará un modelo de regresión lineal desarrollado en Python en una base de datos de SQL Server mediante Machine Learning Services.
+::: moniker-end
 
 En este artículo, aprenderá a:
 
@@ -31,7 +37,7 @@ En este artículo, aprenderá a:
 
 En la [parte uno](python-ski-rental-linear-regression.md), ha aprendido a restaurar la base de datos de ejemplo.
 
-En la [parte dos](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos desde SQL Server en una trama de datos de Python y ha preparado los datos en Python.
+En la [parte dos](python-ski-rental-linear-regression-prepare-data.md), ha aprendido a cargar los datos desde una base de datos en una trama de datos de Python y a preparar los datos en Python.
 
 En la [parte tres](python-ski-rental-linear-regression-train-model.md), ha aprendido a entrenar un modelo de aprendizaje automático de regresión lineal en Python.
 
@@ -119,11 +125,11 @@ Cree una tabla en la base de datos TutorialDB y, después, guarde el modelo en l
    CREATE PROCEDURE py_predict_rentalcount (@model varchar(100))
    AS
    BEGIN
-    DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
+       DECLARE @py_model varbinary(max) = (select model from rental_py_models where model_name = @model);
    
-    EXECUTE sp_execute_external_script
-                @language = N'Python',
-                @script = N'
+       EXECUTE sp_execute_external_script
+                   @language = N'Python',
+                   @script = N'
    
    # Import the scikit-learn function to compute error.
    from sklearn.metrics import mean_squared_error
@@ -196,7 +202,7 @@ Cree una tabla en la base de datos TutorialDB y, después, guarde el modelo en l
 
    :::image type="content" source="media/python-tutorial-prediction-results.png" alt-text="Resultados de predicción del procedimiento almacenado":::
 
-Ha creado, entrenado e implementado correctamente un modelo en una instancia de SQL Server Machine Learning Services. Después, ha usado el modelo en un procedimiento almacenado para predecir valores basándose en datos nuevos.
+Ha creado, entrenado e implementado correctamente un modelo. Después, ha usado el modelo en un procedimiento almacenado para predecir valores basándose en datos nuevos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -207,6 +213,6 @@ En la parte cuatro de esta serie de tutoriales, ha aprendido a:
 * Crear un procedimiento almacenado que realice predicciones mediante el modelo
 * Ejecutar el modelo con datos nuevos
 
-Para más información sobre cómo usar Python en SQL Server Machine Learning Services, vea:
+Para más información sobre cómo usar Python en el aprendizaje automático de SQL, consulte:
 
-+ [Tutoriales de Python para SQL Server Machine Learning Services](sql-server-python-tutorials.md)
++ [Tutoriales de Python](python-tutorials.md)

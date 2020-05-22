@@ -1,7 +1,7 @@
 ---
 title: Montaje de S3 para los niveles de HDFS
 titleSuffix: SQL Server big data clusters
-description: En este artículo se explica cómo configurar la organización en niveles de HDFS para montar un sistema de archivos S3 externo en HDFS en un [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
+description: En este artículo se explica cómo configurar los niveles de HDFS para montar un sistema de archivos S3 externo en HDFS en un clúster de macrodatos de SQL Server 2019.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -9,18 +9,18 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fce89b5c2ee40fc7229c0c330fefe9e253a4fdc6
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "69652305"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606594"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo montar S3 para los niveles de HDFS en un clúster de macrodatos
 
 En las secciones siguientes se proporciona un ejemplo de cómo configurar los niveles de HDFS con un origen de datos de almacenamiento S3.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Prerrequisitos
 
 - [Clúster de macrodatos implementado](deployment-guidance.md)
 - [Herramientas de macrodatos](deploy-big-data-tools.md)
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Vea [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]¿Qué son los [?[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] para obtener más información sobre los ](big-data-cluster-overview.md).
+Vea [¿Qué son los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md) para obtener más información sobre los [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].

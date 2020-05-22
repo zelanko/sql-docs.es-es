@@ -1,28 +1,34 @@
 ---
 title: 'Tutorial de Python: Preparación de los datos del clúster'
-description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de SQL para realizar la agrupación en clústeres en Python con SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: En la parte dos de esta serie de tutoriales de cuatro partes, preparará los datos de SQL para realizar la agrupación en clústeres en Python con aprendizaje automático de SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 12/17/2019
+ms.date: 04/15/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ee19ddfa59f8f1a4a32c0adf08b8f36eef9aa1f
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25ccde4580e43ce68b74ef32f37f9c92cad12dfe
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116518"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606852"
 ---
-# <a name="tutorial-prepare-data-to-categorize-customers-in-python-with-sql-server-machine-learning-services"></a>Tutorial: Preparación de los datos para clasificar clientes por categorías en Python con SQL Server Machine Learning Services
+# <a name="python-tutorial-prepare-data-to-categorize-customers-with-sql-machine-learning"></a>Tutorial de Python: Preparación de datos para clasificar clientes por categorías con aprendizaje automático de SQL
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En la parte dos de esta serie de tutoriales de cuatro partes, restaurará y preparará los datos de una base de datos SQL mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, restaurará y preparará los datos de una base de datos mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services o en clústeres de macrodatos.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+En la parte dos de esta serie de tutoriales de cuatro partes, restaurará y preparará los datos de una base de datos mediante Python. Más adelante en esta serie, usará estos datos para entrenar e implementar un modelo de agrupación en clústeres en Python con SQL Server Machine Learning Services.
+::: moniker-end
 
 En este artículo, aprenderá a:
 
@@ -34,7 +40,7 @@ En la [parte uno](python-clustering-model.md), ha instalado los requisitos previ
 
 En la [parte tres](python-clustering-model-build.md), aprenderá a crear y entrenar un modelo de agrupación en clústeres k-means en Python.
 
-En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos SQL que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
+En la [parte cuatro](python-clustering-model-deploy.md), aprenderá a crear un procedimiento almacenado en una base de datos que pueda realizar la agrupación en clústeres en Python basándose en datos nuevos.
 
 ## <a name="prerequisites"></a>Prerrequisitos
 
@@ -69,7 +75,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<SQL Server>; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -139,16 +145,16 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## <a name="clean-up-resources"></a>Limpieza de recursos
 
-Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb de la instancia de SQL Server.
+Si no quiere continuar con este tutorial, elimine la base de datos tpcxbb_1gb.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 En la parte dos de esta serie de tutoriales, ha completado estos pasos:
 
 * Separación de los clientes en distintas dimensiones mediante Python
-* Carga de datos de la base de datos SQL en una trama de datos de Python
+* Carga de datos de la base de datos en una trama de datos de Python
 
 Para crear un modelo de aprendizaje automático que use estos datos de clientes, siga la parte tres de esta serie de tutoriales:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Creación y puntuación de un modelo predictivo en Python con SQL Server Machine Learning Services](python-clustering-model-build.md)
+> [Tutorial de Python: Creación de un modelo predictivo](python-clustering-model-build.md)

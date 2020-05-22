@@ -9,12 +9,12 @@ ms.author: davidph
 author: dphansen
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 997896520a72f7803e656a42d2e38ebc6bf59d3d
-ms.sourcegitcommit: d3e7c06fe989135f70d97f5ec6613fad4d62b145
+ms.openlocfilehash: 9c45fa9db06980f05bdaf059aae857a36b326c24
+ms.sourcegitcommit: dc965772bd4dbf8dd8372a846c67028e277ce57e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82619668"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83606687"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutorial: Creación de modelos basados en particiones en R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ Para realizar este tutorial, debe disponer de lo siguiente:
 
 + Instancia del motor de base de datos de SQL Server 2019 con Machine Learning Services e integración de R.
 
-+ En el tutorial se usa una [conexión de bucle invertido con SQL Server desde un script de R por ODBC](../connect/loopback-connection.md]. Por lo tanto, debe [crear un inicio de sesión para SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
++ En el tutorial se usa una [conexión de bucle invertido con SQL Server desde un script de R por ODBC](../connect/loopback-connection.md). Por lo tanto, debe [crear un inicio de sesión para SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md).
 
 Compruebe la versión mediante la ejecución de **`SELECT @@Version`** como una consulta de T-SQL en una herramienta de consulta.
 

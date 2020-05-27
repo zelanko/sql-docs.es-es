@@ -293,7 +293,7 @@ GO
 ```  
   
 ### <a name="d-using-the---wildcard-characters"></a>D. Utilizar el carácter comodín [ ]  
- El ejemplo siguiente busca empleados cuyo nombre sea `Person` o `Cheryl` en la tabla `Sheryl`.  
+ El ejemplo siguiente busca empleados cuyo nombre sea `Cheryl` o `Sheryl` en la tabla `Person`.  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -319,7 +319,7 @@ GO
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="e-using-like-with-the--wildcard-character"></a>E. Utilizar LIKE con el carácter comodín %  
- El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `DimEmployee` en la tabla `612`.  
+ El siguiente ejemplo busca todos los empleados cuyo número de teléfono empieza por `612` en la tabla `DimEmployee`.  
   
 ```sql  
 -- Uses AdventureWorks  

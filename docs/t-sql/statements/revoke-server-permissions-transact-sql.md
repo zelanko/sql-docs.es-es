@@ -146,7 +146,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-a-permission-from-a-login"></a>A. Revocar un permiso de un inicio de sesión  
- En el siguiente ejemplo se revoca el permiso `VIEW SERVER STATE` del inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `WanidaBenshoof`.  
+ En el siguiente ejemplo se revoca el permiso `VIEW SERVER STATE` del inicio de sesión `WanidaBenshoof` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -155,7 +155,7 @@ GO
 ```  
   
 ### <a name="b-revoking-the-with-grant-option"></a>B. Revocar la opción WITH GRANT  
- En el siguiente ejemplo se revoca el derecho a conceder `CONNECT SQL` desde el inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `JanethEsteves`.  
+ En el siguiente ejemplo se revoca el derecho a conceder `CONNECT SQL` desde el inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  

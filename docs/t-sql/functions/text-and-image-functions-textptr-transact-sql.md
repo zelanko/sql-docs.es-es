@@ -73,7 +73,7 @@ TEXTPTR ( column )
 >  Para ejecutar estos ejemplos, es necesario instalar la base de datos **pubs**.  
   
 ### <a name="a-using-textptr"></a>A. Usar TEXTPTR  
- En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna **de**image`logo` asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
+ En el ejemplo siguiente se utiliza la función `TEXTPTR` para encontrar la columna `logo` de **image** asociada a `New Moon Books` en la tabla `pub_info` de la base de datos `pubs`. El puntero de texto se coloca en la variable local `@ptrval.`  
   
 ```  
 USE pubs;  

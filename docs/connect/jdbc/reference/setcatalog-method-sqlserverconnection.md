@@ -45,7 +45,7 @@ public void setCatalog(java.lang.String catalog)
 ## <a name="remarks"></a>Observaciones  
  El método setCatalog especifica este método setCatalog en la interfaz java.sql.Connection.  
   
- *elude automáticamente el argumento*catalog[!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. Al utilizar este método, se establece la propiedad de catálogo para el objeto Connection. No se establece implícitamente de cualquier otra manera.  
+ [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] elude automáticamente el argumento *catalog*. Al utilizar este método, se establece la propiedad de catálogo para el objeto Connection. No se establece implícitamente de cualquier otra manera.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

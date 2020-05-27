@@ -145,7 +145,7 @@ GRANT permission [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-a-permission-to-a-login"></a>A. Conceder un permiso a un inicio de sesión  
- En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `TerryEminhizer`.  
+ En el siguiente ejemplo se concede el permiso `CONTROL SERVER` al inicio de sesión `TerryEminhizer` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -154,7 +154,7 @@ GO
 ```  
   
 ### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Conceder un permiso que dispone del permiso GRANT  
- En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `JanethEsteves` con el derecho para conceder este permiso a otro inicio de sesión.  
+ En el siguiente ejemplo se concede `ALTER ANY EVENT NOTIFICATION` al inicio de sesión `JanethEsteves` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el derecho para conceder este permiso a otro inicio de sesión.  
   
 ```  
 USE master;  

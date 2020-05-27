@@ -96,7 +96,7 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>A. Denegar el permiso VIEW DEFINITION en un extremo  
- En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `ZArifin`.  
+ En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión `ZArifin` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>B. Denegar el permiso TAKE OWNERSHIP con la opción CASCADE  
- En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `PKomosinski` y a las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP`.  
+ En el siguiente ejemplo se deniega el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP`.  
   
 ```  
 USE master;  

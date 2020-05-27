@@ -42,7 +42,7 @@ STRING_ESCAPE( text , type )
 ## <a name="arguments"></a>Argumentos
 
  *text*  
- Es una **expresión**[nvarchar](../../t-sql/language-elements/expressions-transact-sql.md) que representa el objeto que se debe escapar.  
+ Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md)**nvarchar** que representa el objeto que se debe escapar.  
   
  *type*  
  Reglas de escape que se aplicarán. Actualmente el valor admitido es `'json'`.  

@@ -172,7 +172,7 @@ GO
 ```  
   
 ### <a name="c-denying-impersonate-permission-on-a-user-to-an-application-role"></a>C. Denegar el permiso IMPERSONATE para un usuario a un rol de aplicación  
- En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de `AccountsPayable17`.  
+ En el ejemplo siguiente se deniega el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AccountsPayable17` de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]  
   

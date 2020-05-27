@@ -63,7 +63,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
 |`abc`|`111`|`7`|  
   
 ## <a name="technical-definition-of-grouping_id-"></a>Definición técnica de GROUPING_ID ()  
- Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el <sup>bit</sup> de menor orden de N-1**ésimo**, al argumento 1.  
+ Cada argumento de GROUPING_ID debe ser un elemento de la lista GROUP BY. GROUPING_ID () devuelve un mapa de bits de **integer** cuyos bits N más bajos pueden ser literales. Un **bit** literal indica que el argumento correspondiente no es una columna de agrupación en la fila de salida determinada. El **bit** de menor orden corresponde al argumento N y el **bit** de menor orden de N-1<sup>ésimo</sup>, al argumento 1.  
   
 ## <a name="grouping_id--equivalents"></a>Equivalentes de GROUPING_ID ()  
  En una consulta de agrupación única, GROUPING (\<column_expression>) equivale a GROUPING_ID (\<column_expression>) y ambos devuelven 0.  

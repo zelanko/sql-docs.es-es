@@ -96,7 +96,7 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>A. Conceder el permiso VIEW DEFINITION para un extremo  
- En el siguiente ejemplo se concede el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `ZArifin`.  
+ En el siguiente ejemplo se concede el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión `ZArifin` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>B. Conceder el permiso TAKE OWNERSHIP con la opción GRANT  
- En el siguiente ejemplo se concede el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `PKomosinski` con `GRANT OPTION`.  
+ En el siguiente ejemplo se concede el permiso `TAKE OWNERSHIP` para el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con `GRANT OPTION`.  
   
 ```  
 USE master;  

@@ -163,7 +163,7 @@ NULL       NULL
   
 -   La columna `ProdID` del conjunto de filas se asigna al atributo `ProductID`, y la columna `Qty` del conjunto de filas se asigna al atributo `Quantity` de los nodos identificados en *rowpattern*.  
   
- Aunque el parámetro **flags** especifica la asignación *centrada en elementos*, la asignación especificada en *ColPattern* sobrescribe la anterior.  
+ Aunque el parámetro *flags* especifica la asignación **centrada en elementos**, la asignación especificada en *ColPattern* sobrescribe la anterior.  
   
 ```  
 DECLARE @idoc int, @doc varchar(1000);   

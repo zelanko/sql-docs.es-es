@@ -150,7 +150,7 @@ El uso de AS en esta instrucción no implica la capacidad de suplantar a otro us
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-denying-connect-sql-permission-to-a-sql-server-login-and-principals-to-which-the-login-has-regranted-it"></a>A. Denegar el permiso CONNECT SQL para un inicio de sesión de SQL Server y las entidades de seguridad para las que el inicio de sesión ha vuelto a concederlo  
- En el siguiente ejemplo se deniega el permiso `CONNECT SQL` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `Annika` y a las entidades de seguridad a las que ha concedido el permiso.  
+ En el siguiente ejemplo se deniega el permiso `CONNECT SQL` al inicio de sesión `Annika` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a las entidades de seguridad a las que ha concedido el permiso.  
   
 ```  
 USE master;  

@@ -104,7 +104,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-view-definition-permission-on-an-endpoint"></a>A. Revocar el permiso VIEW DEFINITION en un extremo  
- En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `ZArifin`.  
+ En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el extremo `Mirror7` al inicio de sesión `ZArifin` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```  
 USE master;  
@@ -113,7 +113,7 @@ GO
 ```  
   
 ### <a name="b-revoking-take-ownership-permission-with-the-cascade-option"></a>B. Revocar el permiso TAKE OWNERSHIP con la opción CASCADE  
- En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el extremo `Shipping83` al usuario [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de `PKomosinski` y a todas las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP` en `Shipping83`.  
+ En el siguiente ejemplo se revoca el permiso `TAKE OWNERSHIP` en el extremo `Shipping83` al usuario `PKomosinski` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a todas las entidades de seguridad a las que `PKomosinski` concedió `TAKE OWNERSHIP` en `Shipping83`.  
   
 ```  
 USE master;  

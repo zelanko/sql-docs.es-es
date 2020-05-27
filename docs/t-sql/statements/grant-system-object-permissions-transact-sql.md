@@ -76,7 +76,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-granting-select-permission-on-a-view"></a>A. Conceder el permiso SELECT para una vista  
- En este ejemplo se concede el permiso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión de `Sylvester1` para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
+ En este ejemplo se concede el permiso `Sylvester1` del inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para seleccionar una vista que presente todos los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. A continuación, el ejemplo concede el permiso adicional necesario para ver los metadatos para los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son propiedad del usuario.  
   
 ```  
 USE AdventureWorks2012;  

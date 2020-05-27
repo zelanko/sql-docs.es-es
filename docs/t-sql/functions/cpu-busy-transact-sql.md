@@ -50,7 +50,7 @@ Esta función devuelve el tiempo que [!INCLUDE[ssNoVersion](../../includes/ssnov
 **integer**
   
 ## <a name="remarks"></a>Observaciones  
-Ejecute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_monitor[ para ver un informe que contenga varias estadísticas de ](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md), incluida la actividad de CPU.
+Ejecute [sp_monitor](../../relational-databases/system-stored-procedures/sp-monitor-transact-sql.md) para ver un informe que contenga varias estadísticas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluida la actividad de CPU.
   
 ## <a name="examples"></a>Ejemplos  
 En este ejemplo se devuelve la actividad de CPU de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta la fecha y hora actuales. El ejemplo convierte uno de los valores al tipo de datos `float`. Esto evita problemas de desbordamiento aritmético cuando se calcula un valor en microsegundos.

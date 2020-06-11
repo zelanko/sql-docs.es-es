@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65a6c852200c72fb9040cf5e93efbac02bb065b3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086648"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526342"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validación cruzada (Complementos de minería de datos de SQL Server)
   ![Botón Validación cruzada, cinta Minería de datos](media/dmc-xvalid.gif "Botón Validación cruzada, cinta Minería de datos")  
@@ -75,7 +74,7 @@ ms.locfileid: "66086648"
  Si elige una estructura que admite tanto modelos de agrupación en clústeres como otros tipos de modelos, los primeros no se probarán.  
   
 ## <a name="understanding-cross-validation-results"></a>Descripción de los resultados de la validación cruzada  
- Los resultados de la validación cruzada se muestran en una nueva hoja de cálculo, denominada **Informe de validación \<cruzada para el nombre de atributo>**. La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
+ Los resultados de la validación cruzada se muestran en una nueva hoja de cálculo, denominada **Informe de validación \<attribute name> cruzada para **. La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
   
  La segunda sección del informe proporciona un resumen estadístico que indica el grado de eficacia del modelo original. En este Resumen, se analizan las diferencias entre los modelos creados para cada plegamiento para tres medidas clave: *error cuadrado medio*, error medio *absoluto*y *puntuación del registro*. Éstas son medidas estadísticas estándar que se usan no solo en la minería de datos, sino también en la mayoría de los análisis estadísticos.  
   

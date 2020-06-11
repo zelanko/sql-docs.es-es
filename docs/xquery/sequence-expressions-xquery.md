@@ -1,5 +1,6 @@
 ---
 title: Expresiones de secuencias (XQuery) | Microsoft Docs
+description: Obtenga información sobre las expresiones de secuencia XQuery que crean, filtran y combinan una secuencia de elementos.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 72b8a066ce1480cd70f46658c8756b2548174b5b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946306"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529769"
 ---
 # <a name="sequence-expressions-xquery"></a>Expresiones de secuencias (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +100,7 @@ go
 ```  
   
 ### <a name="example-c"></a>Ejemplo C  
- La siguiente consulta se especifica en la columna AdditionalContactInfo del tipo **XML** de la tabla Contact. Esta columna almacena información de contacto adicional, como uno o más números de teléfono adicionales, números de buscapersonas y direcciones. El \<telephoneNumber>, \<el> de buscapersonas y otros nodos pueden aparecer en cualquier parte del documento. La consulta crea una secuencia que contiene todos \<los elementos del nodo de contexto>, \<a los que se>. Observe el uso del operador de comas de la secuencia en la expresión devuelta, `($a//act:telephoneNumber, $a//act:pager)`.  
+ La siguiente consulta se especifica en la columna AdditionalContactInfo del tipo **XML** de la tabla Contact. Esta columna almacena información de contacto adicional, como uno o más números de teléfono adicionales, números de buscapersonas y direcciones. Los \<telephoneNumber> \<pager> nodos, y pueden aparecer en cualquier parte del documento. La consulta crea una secuencia que contiene todos los \<telephoneNumber> elementos secundarios del nodo de contexto, seguidos de los \<pager> elementos secundarios. Observe el uso del operador de comas de la secuencia en la expresión devuelta, `($a//act:telephoneNumber, $a//act:pager)`.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ContactTypes' AS act,  
@@ -202,7 +203,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- En el ejemplo siguiente se aplica un filtro de predicado. La expresión busca elementos <`a`> y <`b`> que contengan `c` el elemento <>.  
+ En el ejemplo siguiente se aplica un filtro de predicado. La expresión busca elementos <`a`> y <`b`> que contengan el elemento <> `c` .  
   
 ```  
 declare @x xml  

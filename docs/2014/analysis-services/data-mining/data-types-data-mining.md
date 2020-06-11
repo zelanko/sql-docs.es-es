@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 4af5b7db-790b-459c-b2b4-00f0cf6b5ce4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9027ff3928f40d43f16bb31b52e0c1d52e072847
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084799"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522741"
 ---
 # <a name="data-types-data-mining"></a>Tipos de datos (minería de datos)
-  Al crear un modelo de minería de datos o una estructura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de minería de datos en, debe definir los tipos de datos de cada una de las columnas de la estructura de minería de datos. Los tipos de datos indican al motor de minería de datos si los datos del origen de datos son numéricos o de texto y cómo deben procesarse los datos. Por ejemplo, si el origen de datos contiene datos numéricos, puede especificar si los números deben tratarse como enteros o utilizando posiciones decimales.  
+  Al crear un modelo de minería de datos o una estructura de minería de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe definir los tipos de datos de cada una de las columnas de la estructura de minería de datos. Los tipos de datos indican al motor de minería de datos si los datos del origen de datos son numéricos o de texto y cómo deben procesarse los datos. Por ejemplo, si el origen de datos contiene datos numéricos, puede especificar si los números deben tratarse como enteros o utilizando posiciones decimales.  
   
  Cada tipo de datos admite uno o varios tipos de contenido. Puede personalizar el modo en que se procesan o se calculan los datos de la columna en el modelo de minería estableciendo su tipo de contenido.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33fad74c354d4560a00718292616d842b4ffc7e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70151832"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527161"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Conectarse a un informe o a una fuente de distribución de datos (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con una fuente de distribución de datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -55,7 +54,7 @@ ms.locfileid: "70151832"
  **Clave de cuenta**  
  Especifique la clave de cuenta que se usa para acceder a las suscripciones del conjunto de los conjuntos de Azure Marketplace.  
   
- **Localización**  
+ **Buscar**  
  Busque una clave de cuenta asociada a una cuenta de Windows Live.  
   
  **Guardar mi clave de cuenta**  

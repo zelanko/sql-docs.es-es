@@ -1,5 +1,6 @@
 ---
 title: Instalación de SSMA para MySQL (MySqlToSql) | Microsoft Docs
+description: Use estos artículos para instalar, actualizar y desinstalar SQL Server Migration Assistant (SSMA) para MySQL, que incluye una aplicación cliente y un paquete de extensión.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,15 +12,15 @@ helpviewer_keywords:
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: e944daafdbcfc0bf9fdcec3498a6d2f75342fdc6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4aedce85a63c5f931cfab0b590810d1fac36d64b
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086812"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293652"
 ---
 # <a name="installing-ssma-for-mysql-mysqltosql"></a>Instalación de SSMA para MySQL (MySqlToSql)
-SQL Server Migration Assistant (SSMA) para MySQL se compone de una aplicación cliente que se utiliza para realizar una migración desde MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a o SQL Azure. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de MySQL en las bases de datos migradas.  
+SQL Server Migration Assistant (SSMA) para MySQL se compone de una aplicación cliente que se utiliza para realizar una migración desde MySQL a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de MySQL en las bases de datos migradas.  
   
 Instale la aplicación cliente en el equipo desde el que llevará a cabo los pasos de migración. Debe instalar los archivos del paquete de extensión en el equipo donde se hospedarán las bases de datos migradas.  Dicho equipo debe ejecutar SQL Server.  
   
@@ -30,9 +31,9 @@ Si desea actualizar a una versión posterior de SSMA para MySQL, primero debe de
   
 |||  
 |-|-|  
-|**Tema**|**Descripción**|  
+|**Relacionados**|**Descripción**|  
 |[Instalación de SSMA para MySQL Client &#40;MySQLToSQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)|Proporciona información e instrucciones para instalar el cliente de SSMA.|  
-|[Instalación de componentes de SSMA en SQL Server (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
+|[Instalación de componentes de SSMA en SQL Server (MySQL to SQL)](https://msdn.microsoft.com/6772d0c5-258f-4d7b-afb0-b5f810e71af1)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Quitar los componentes de SSMA para MySQL &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Proporciona instrucciones para desinstalar el programa cliente.|  
   
 ## <a name="see-also"></a>Consulte también  

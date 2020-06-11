@@ -1,5 +1,6 @@
 ---
 title: 'Migración de bases de datos de Access a SQL Server: Azure SQL DB | Microsoft Docs'
+description: Utilice este proceso recomendado para migrar bases de datos de Access a SQL Server o Azure SQL Database mediante SQL Server Migration Assistant (SSMA).
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -16,15 +17,15 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3cbe1565642d43aabf3e36604fac5bfc2979c65
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68260243"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293745"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>Migración de bases de datos de Access a SQL Server: Azure SQL DB (AccessToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) es una herramienta que proporciona un entorno completo que le ayuda a migrar rápidamente las bases de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Access a o SQL Azure. Con SSMA, puede revisar el acceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure objetos de base de datos, evaluar la base de datos de Access para la migración, convertir los objetos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de datos de Access, cargarlos en o SQL Azure y, a continuación, migrar los datos.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) es una herramienta que proporciona un entorno completo que le ayuda a migrar rápidamente las bases de datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Con SSMA, puede revisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el acceso o SQL Azure objetos de base de datos, evaluar la base de datos de Access para la migración, convertir los objetos de base de datos de Access, cargarlos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure y, a continuación, migrar los datos.  
   
 ## <a name="recommended-migration-process"></a>Proceso de migración recomendado  
 Para migrar correctamente objetos y datos de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, utilice el siguiente proceso:  
@@ -39,15 +40,15 @@ Para migrar correctamente objetos y datos de Access a [!INCLUDE[ssNoVersion](../
   
     Puede conectarse a SQL Server o SQL Azure.  
   
-4.  Para personalizar la asignación entre una o varias bases de datos de Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y o SQL Azure esquemas, [asigne las bases de datos de origen y de destino](mapping-source-and-target-databases-accesstosql.md).  
+4.  Para personalizar la asignación entre una o varias bases de datos de Access y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure esquemas, [asigne las bases de datos de origen y de destino](mapping-source-and-target-databases-accesstosql.md).  
   
-5.  Opcionalmente, puede [crear un informe de evaluación](assessing-access-database-objects-for-conversion-accesstosql.md) para determinar si los objetos de base de datos de Access se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden convertir o SQL Azure correctamente.  
+5.  Opcionalmente, puede [crear un informe de evaluación](assessing-access-database-objects-for-conversion-accesstosql.md) para determinar si los objetos de base de datos de Access se pueden convertir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure correctamente.  
   
-6.  [Convierta objetos](converting-access-database-objects-accesstosql.md) de base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de Access en o SQL Azure definiciones de objeto.  
+6.  [Convierta objetos de base de datos de Access](converting-access-database-objects-accesstosql.md) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure definiciones de objeto.  
   
 7.  [Cargue los objetos de base de datos convertidos en SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
-    Puede cargar los objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en o SQL Azure mediante SSMA, o puede guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
+    Puede cargar los objetos de base de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure mediante SSMA, o puede guardar [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts.  
   
 8.  [Migre los datos de Access en SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   

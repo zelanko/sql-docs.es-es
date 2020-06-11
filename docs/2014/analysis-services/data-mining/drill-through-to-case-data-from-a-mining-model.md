@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b4d3f350-e543-4ea9-b3a2-b4f7c0a9ae27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6d683c9dc9a201b1f4351ee00d718ad0d7917606
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71ca6e81a11b53d7a614fcffb498a1bf5fa2b32
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084612"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522543"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
   Si un modelo de minería de datos se ha configurado para obtener detalles de los casos de modelos, al examinar el modelo, puede recuperar información detallada sobre los casos que se usaron para crear el modelo. Además, si la estructura de minería de datos subyacente se ha configurado para permitir la obtención de detalles de la estructura de casos, y tiene los permisos adecuados, puede devolver información de la estructura de minería de datos. Puede incluir columnas que no se incluían en el modelo de minería de datos.  
@@ -31,7 +30,7 @@ ms.locfileid: "66084612"
   
 |Nombre del visor|Nombre de la pestaña o del panel|Seleccionar nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visor de árboles de Microsoft**|Pestaña **árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Nota:** Evite el uso de la `All` obtención de detalles en el nodo, ya que puede tardar mucho tiempo en devolver resultados.|  
+|**Visor de árboles de Microsoft**|Pestaña **árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Nota:** Evite el uso de la obtención de detalles en el `All` nodo, ya que puede tardar mucho tiempo en devolver resultados.|  
 |**Visor de clústeres de Microsoft**|**Diagrama del clúster**|Haga clic en un nodo de clúster.|  
 |**Visor de clústeres de Microsoft**|**Perfiles del clúster**|Haga clic en cualquier lugar de la columna de clúster.|  
 |**Visor de asociación de Microsoft**|Pestaña **reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  

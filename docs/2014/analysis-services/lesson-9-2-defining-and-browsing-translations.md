@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb624116ca42f32ab20615d1c34fcb786d150a1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493779"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542247"
 ---
 # <a name="defining-and-browsing-translations"></a>Definir y examinar traducciones
   Una traducción es una representación de los nombres de objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un idioma específico. Entre estos objetos se incluyen grupos de medida, medidas, dimensiones, atributos, jerarquías, KPI, acciones y miembros calculados. Las traducciones ofrecen compatibilidad de servidor para aplicaciones cliente que admitan varios idiomas. Mediante el uso de dicho cliente, éste pasa el identificador local (LCID) a la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], que utiliza el LCID para determinar el conjunto de traducciones que se va a utilizar al proporcionar metadatos para los objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Si un objeto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no contiene una traducción para ese idioma o no contiene una traducción para un objeto determinado, al devolver los metadatos de objeto al cliente se usa el idioma predeterminado. Por ejemplo, si un usuario corporativo de Francia tiene acceso a un cubo de una estación de trabajo con configuración regional francesa, el usuario corporativo verá los títulos y valores de propiedades de miembro en francés si existe una traducción al francés. Sin embargo, si un usuario corporativo de Alemania tiene acceso al mismo cubo desde una estación de trabajo con una configuración regional alemana, verá los títulos y los valores de propiedades de miembro en alemán. Para obtener más información, vea [traducciones de dimensiones](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), traducciones de [cubos](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [traducciones &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -42,7 +41,7 @@ ms.locfileid: "69493779"
   
 5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila del objeto de **título** del atributo **Month Name** , `Mes del Año` escriba en la columna de traducción **Español (España)** y `Mois d'Année` en la columna de traducción **francés (Francia)** .  
+6.  En la fila del objeto de **título** del atributo **Month Name** , escriba `Mes del Año` en la columna de traducción **Español (España)** y `Mois d'Année` en la columna de traducción **francés (Francia)** .  
   
      Tenga en cuenta que al escribir estas traducciones, aparece un botón de puntos suspensivos (**...**). Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
@@ -82,9 +81,9 @@ ms.locfileid: "69493779"
   
 5.  En la fila del objeto **Caption** de la dimensión **Date** , escriba `Fecha` en la columna de traducción **Español (España)** y `Temps` en la columna de traducción **francés (Francia)** .  
   
-6.  En la fila del objeto **Caption** del grupo de **medida Internet sales** , `Ventas del lnternet` escriba en la columna de traducción **Español (España)** y `Ventes D'Internet` en la columna de traducción **francés (Francia)** .  
+6.  En la fila del objeto **Caption** del grupo de medida **Internet sales** , escriba `Ventas del lnternet` en la columna de traducción **Español (España)** y `Ventes D'Internet` en la columna de traducción **francés (Francia)** .  
   
-7.  En la fila del objeto **Caption** de la medida Internet sales-Sales amount, `Cantidad de las Ventas del Internet` escriba en la columna de traducción **Español (España)** y `Quantité de Ventes d'Internet` en la columna de traducción **francés (Francia)** .  
+7.  En la fila del objeto **Caption** de la medida Internet sales-Sales amount, escriba `Cantidad de las Ventas del Internet` en la columna de traducción **Español (España)** y `Quantité de Ventes d'Internet` en la columna de traducción **francés (Francia)** .  
   
      Los pasos de este procedimiento ilustran el proceso de definición de traducciones de metadatos para objetos de cubos.  
   
@@ -102,13 +101,13 @@ ms.locfileid: "69493779"
   
 5.  En la barra de herramientas, seleccione **Español (España)** en la lista **Idioma** .  
   
-     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar `Ventas del lnternet`denominada, como se muestra en la siguiente imagen.  
+     Observe que los elementos del panel de metadatos se vuelven a rellenar. Una vez que los elementos del panel de metadatos se vuelvan a rellenar, observe cómo la medida Internet Sales-Sales Amount ya no aparece en la carpeta para mostrar Venta por Internet. En su lugar, aparece en español en una nueva carpeta para mostrar denominada `Ventas del lnternet` , como se muestra en la siguiente imagen.  
   
      ![Panel de metadatos vuelto a llenar](../../2014/tutorials/media/l9-translations-6.gif "Panel de metadatos vuelto a llenar")  
   
-6.  En el panel metadatos, haga clic `Cantidad de las Ventas del Internet` con el botón secundario y seleccione **Agregar a consulta**.  
+6.  En el panel metadatos, haga clic con el botón secundario `Cantidad de las Ventas del Internet` y seleccione **Agregar a consulta**.  
   
-7.  En el panel metadatos, `Fecha`expanda y fecha **. Calendar Date**, haga clic con el botón secundario en fecha **. Calendar Date**y, a continuación, seleccione **Agregar a filtro**.  
+7.  En el panel metadatos, expanda `Fecha` y fecha **. Calendar Date**, haga clic con el botón secundario en fecha **. Calendar Date**y, a continuación, seleccione **Agregar a filtro**.  
   
 8.  En el panel **Filtro** , seleccione **CY 2007** como expresión de filtro.  
   

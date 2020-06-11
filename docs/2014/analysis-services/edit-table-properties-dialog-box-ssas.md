@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: 8d913e83-7246-44cc-8fc7-31729023c0d8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8bb8afc256881c96f70a3dd53a31e75c8fa2b5ce
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081434"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528451"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Editar propiedades de tabla, cuadro de diálogo (SSAS)
   El cuadro de diálogo **Editar propiedades de tabla** le permite ver y modificar las propiedades de las tablas importadas en el diseñador de modelos mediante el Asistente para la importación de tablas. Para obtener acceso a este cuadro de diálogo, en el diseñador de modelos, seleccione una tabla, haga clic en el menú **Tabla** y, a continuación, haga clic en **Propiedades de tabla**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Las opciones de este cuadro de diálogo varían dependiendo de si importó los datos originalmente seleccionando las tablas en una lista o usando una consulta SQL.  
   
 ## <a name="table-preview-mode"></a>Modo de vista previa de tabla  
@@ -67,7 +66,7 @@ ms.locfileid: "66081434"
  **Borrar filtros de fila**  
  Haga clic en esta opción para quitar los filtros que se hayan aplicado.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="query-design-mode"></a>Modo de diseño de consulta  
@@ -89,13 +88,13 @@ ms.locfileid: "66081434"
  **Instrucción SQL**  
  Muestra la instrucción SQL que se emite al origen de datos actual para recuperar filas. De forma predeterminada, se recuperan todas las filas, pero se puede recuperar un subconjunto de filas diseñando un filtro o editando la instrucción SQL manualmente.  
   
- **Vali**  
+ **Validación**  
  Haga clic en esta opción para comprobar si la instrucción es sintácticamente correcta para el origen de datos y el proveedor seleccionados.  
   
  **Diseño**  
  Haga clic en esta opción para abrir un diseñador de consultas visual y generar una instrucción de consulta. Para obtener información acerca de cómo utilizar el diseñador, presione F1 desde el diseñador.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Haga clic en esta opción para aplicar todos los cambios, incluso el reemplazo de columnas.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5cb21b733fd1663f0e26c765f519544597aa9063
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087772"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527431"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparar soluciones tabulares y multidimensionales (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]proporciona dos enfoques distintos para el modelado de datos: tabular y multidimensional. Aunque existe una superposición significativa entre ellos, también hay diferencias importantes que influirán en su decisión sobre cómo avanzar. En este tema se ofrecen comparaciones de características y se explica cómo cada enfoque aborda los requisitos de proyecto comunes. Por ejemplo, si la compatibilidad de un origen de datos concreto es una consideración fundamental, la sección sobre orígenes de datos puede servirle de guía para tomar la decisión sobre qué enfoque de modelado usar.  
@@ -101,16 +100,16 @@ ms.locfileid: "66087772"
 |Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
 |Medidas calculadas|[Sí](multidimensional-models/create-calculated-members.md)|Sí|  
 |Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
-|Resúmenes personalizados|Sí|Sin|  
+|Resúmenes personalizados|Sí|No|  
 |Distinct Count|[Sí](multidimensional-models/use-aggregate-functions.md)|Sí (a través de DAX) *|  
 |Obtención de detalles|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sí|  
 |Jerarquías|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  
 |KPI|[Sí](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|Sí|  
 |Grupos de medida vinculados|[Sí](multidimensional-models/linked-measure-groups.md)|No|  
-|Relaciones varios a varios|[Sí](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
+|Relaciones de varios a varios|[Sí](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)|No|  
 |Jerarquías de elementos primarios y secundarios|[Sí](multidimensional-models/parent-child-dimension.md)|Sí (mediante DAX)|  
 |Particiones|[Sí](tabular-models/partitions-ssas-tabular.md)|  
-|perspectivas|[Sí](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sí](tabular-models/partitions-ssas-tabular.md)|  
+|Perspectivas|[Sí](multidimensional-models/perspectives-in-multidimensional-models.md)|[Sí](tabular-models/partitions-ssas-tabular.md)|  
 |Medidas de suma parcial|[Sí](multidimensional-models/define-semiadditive-behavior.md)|Sí (mediante DAX)|  
 |Translations|[Sí](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |Jerarquías definidas por el usuario|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  

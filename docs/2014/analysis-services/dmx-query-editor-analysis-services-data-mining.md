@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7ac877a1-0f29-46b9-9a51-73b02172bef1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3be28b0a402743e4d9c26b346386202127c5f74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc14281cebe3a8e5e401acb7b84367f1688ad0ea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081565"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528506"
 ---
 # <a name="dmx-query-editor-analysis-services---data-mining"></a>Editor de consultas DMX (Analysis Services: minería de datos)
   Use el Editor de consultas DMX para diseñar y ejecutar instrucciones escritas en el lenguaje de Extensiones de minería de datos (DMX).  
@@ -40,7 +39,7 @@ ms.locfileid: "66081565"
 |Término|Definición|  
 |----------|----------------|  
 |**Conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de Analysis Services.|  
-|**Conecto**|Desconecta el Editor de consultas DMX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Desconectar**|Desconecta el Editor de consultas DMX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambiar conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Consulta con conexión actual**|Abre una nueva ventana del Editor de consultas DMX y usa la información de conexión de la ventana actual del Editor de consultas DMX.|  
 |**Bases de datos disponibles**|Cambia la conexión a una base de datos distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la misma instancia.|  

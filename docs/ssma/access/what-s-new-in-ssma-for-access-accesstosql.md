@@ -1,24 +1,29 @@
 ---
 title: Novedades de SSMA para Access (AccessToSQL) | Microsoft Docs
+description: Obtenga información sobre los cambios en SQL Server Migration Assistant (SSMA) para Access (AccessToSQL) para cada versión.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 ms.author: jtoland;alexiva
-ms.openlocfilehash: e1bc77c0fac3698d7d36ebfb47dde547d475142e
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: da71576b58487fa5d2d1e069d56c9fa6db783fc2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220270"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292962"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 
 En este artículo se enumeran SQL Server Migration Assistant (SSMA) para obtener acceso a los cambios en cada versión.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La versión v 8.10 de SSMA para Access contiene mejoras de rendimiento y correcciones de errores menores.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -194,7 +199,7 @@ La versión de mayo de 2016 de SSMA para Access contiene los siguientes cambios:
 * Carga de datos de tablas fijas para pestañas de interfaz de usuario para el acceso.
 * Se corrigió el error en la configuración global.
 
-## <a name="march-2016"></a>marzo de 2016
+## <a name="march-2016"></a>Marzo de 2016
 
 La versión de vista previa de marzo de 2016 de SSMA para Access agrega compatibilidad para la migración a SQL Server 2016.
 

@@ -1,5 +1,6 @@
 ---
 title: Función Ceiling (XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar la función Ceiling () de XQuery para devolver el número más pequeño sin una parte fraccionaria que no es menor que el valor del argumento de la función.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946575"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689765"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funciones de valores numéricos: ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -75,11 +76,11 @@ WHERE ProductModelID=7
   
 -   **Instructions** es una columna de tipo **XML** . Por lo tanto, el [método Query () (tipo de datos XML)](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar XQuery. La instrucción de XQuery se especifica como el argumento para el método de consulta.  
   
--   **para... Return** es una construcción de bucle. En la consulta, el bucle **for** identifica una lista de \<elementos> ubicación. Para cada ubicación del centro de trabajo, la instrucción **Return** del bucle **for** describe el XML que se va a generar:  
+-   **para... Return** es una construcción de bucle. En la consulta, el bucle **for** identifica una lista de \< elementos> ubicación. Para cada ubicación del centro de trabajo, la instrucción **Return** del bucle **for** describe el XML que se va a generar:  
   
-    -   Una \<ubicación> elemento que tiene los atributos LocationID y LaborHrs. La expresión correspondiente situada dentro de las llaves ({ }) recupera los valores requeridos del documento.  
+    -   Una \< ubicación> elemento que tiene los atributos LocationID y LaborHrs. La expresión correspondiente situada dentro de las llaves ({ }) recupera los valores requeridos del documento.  
   
-    -   La expresión {i/@LotSize $} recupera el atributo de exceso del documento, si está presente.  
+    -   La expresión {$ i/@LotSize } recupera el atributo de exceso del documento, si está presente.  
   
     -   El resultado es el siguiente:  
   

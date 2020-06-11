@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13c3a8cc-b1db-4aba-ad9b-038b7971be8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e18298e152089f361faa839228415909133663f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078971"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543457"
 ---
 # <a name="lesson-2-add-data"></a>Lección 2: Agregar datos
   En esta lección usará el Asistente para la importación de tablas de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para conectarse a la base de datos SQL AdventureWorksDW, seleccionar datos, obtener una vista previa, filtrar los datos e importarlos al área de trabajo del modelo.  
@@ -39,7 +38,7 @@ ms.locfileid: "66078971"
   
 2.  En el **Asistente para la importación de tablas**, bajo **Bases de datos relacionales**, haga clic en **Microsoft SQL Server**y después en **Siguiente**.  
   
-3.  En la página **conectar a una base de datos de Microsoft SQL Server** , en **nombre descriptivo**de la conexión, escriba `Adventure Works DB from SQL`.  
+3.  En la página **conectar a una base de datos de Microsoft SQL Server** , en **nombre descriptivo**de la conexión, escriba `Adventure Works DB from SQL` .  
   
 4.  En **Nombre del servidor**, escriba el nombre del servidor en el que instaló la base de datos AdventureWorksDW.  
   

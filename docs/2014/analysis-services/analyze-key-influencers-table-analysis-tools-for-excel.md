@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 54d7b4ce-7b79-407a-985c-aa655ad19280
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2a349ea881e463043aea5bb069d3ed34be74a78b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062258"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527991"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizar influenciadores clave (Herramientas de análisis de tabla para Excel)
   ![Botón Analizar influenciadores clave de la cinta](media/tat-aki.gif "Botón Analizar influenciadores clave de la cinta")  
@@ -46,7 +45,7 @@ ms.locfileid: "66062258"
   
 6.  Si no se detecta ningún modelo, el asistente crea una nueva hoja de cálculo que contiene una descripción del problema.  
   
-7.  Si se detectan patrones, el asistente crea un informe en una nueva hoja de cálculo que muestra los patrones. El informe se denomina **influenciadores clave para \<>de columna **. Puede personalizar el informe como se describe en el procedimiento siguiente.  
+7.  Si se detectan patrones, el asistente crea un informe en una nueva hoja de cálculo que muestra los patrones. El informe se denomina **influenciadores clave para \<column> **. Puede personalizar el informe como se describe en el procedimiento siguiente.  
   
 #### <a name="create-a-custom-report"></a>Creación de un informe personalizado  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66062258"
 -   Crea un informe que describe los influenciadores clave, ordenados por las puntuaciones de confianza.  
   
 ### <a name="requirements"></a>Requisitos  
- Si la columna de destino contiene valores numéricos continuos, la herramienta segmenta automáticamente los valores numéricos en grupos. Estas agrupaciones representan clústeres de casos que tienen características similares. Sin embargo, los valores numéricos podrían no estar divididos en grupos fáciles de usar. Por ejemplo, el informe puede contener una agrupación como "\<12,85701", mientras que los usuarios de informes normalmente desean ver las agrupaciones que utilizan números enteros, como 10-19, 20-29, etc.  
+ Si la columna de destino contiene valores numéricos continuos, la herramienta segmenta automáticamente los valores numéricos en grupos. Estas agrupaciones representan clústeres de casos que tienen características similares. Sin embargo, los valores numéricos podrían no estar divididos en grupos fáciles de usar. Por ejemplo, el informe puede contener una agrupación como " \< 12,85701", mientras que los usuarios de informes normalmente desean ver las agrupaciones que utilizan números enteros, como 10-19, 20-29, etc.  
   
  Si desea agrupar los datos numéricos de otra forma, debe segmentar los datos de la forma deseada antes de crear el análisis. Por ejemplo, puede usar la herramienta cambiar [etiquetas](relabel-sql-server-data-mining-add-ins.md) del cliente de minería de datos para Excel para crear una nueva etiqueta de agrupación en una columna independiente y, a continuación, utilizar solo esa nueva columna en el análisis.  
   

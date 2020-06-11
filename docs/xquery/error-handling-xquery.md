@@ -1,5 +1,6 @@
 ---
 title: Control de errores (XQuery) | Microsoft Docs
+description: Obtenga información sobre el control de errores en XQuery y vea ejemplos de control de errores dinámicos.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b80fda53a6ce0acfd326f6f897cb6cde1bf0e610
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038966"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305921"
 ---
 # <a name="error-handling-xquery"></a>Control de errores (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +46,7 @@ ms.locfileid: "68038966"
  A menudo, en una situación en la que el error dinámico se produciría dentro de un predicado, no emitir el error es no cambiar la semántica, porque () se asigna a False. Sin embargo, en algunos casos, devolver () en lugar de un error dinámico puede dar lugar a resultados inesperados. Los ejemplos siguientes lo muestran.  
   
 ### <a name="example-using-the-avg-function-with-a-string"></a>Ejemplo: utilizar la función avg() con una cadena  
- En el ejemplo siguiente, se llama a la [función AVG](../xquery/aggregate-functions-avg.md) para calcular el promedio de los tres valores. Uno de estos valores es una cadena. Puesto que la instancia XML en este caso no tiene tipo, todos los datos que contiene son de tipo atómico sin tipo. La función **AVG ()** convierte primero estos valores a **xs: Double** antes de calcular el promedio. Sin embargo, el valor `"Hello"`,, no se puede convertir a **xs: Double** y crea un error dinámico. En este caso, en lugar de devolver un error dinámico, la conversión de `"Hello"` a **xs: Double** produce una secuencia vacía. La función **AVG ()** omite este valor, calcula la media de los otros dos valores y devuelve 150.  
+ En el ejemplo siguiente, se llama a la [función AVG](../xquery/aggregate-functions-avg.md) para calcular el promedio de los tres valores. Uno de estos valores es una cadena. Puesto que la instancia XML en este caso no tiene tipo, todos los datos que contiene son de tipo atómico sin tipo. La función **AVG ()** convierte primero estos valores a **xs: Double** antes de calcular el promedio. Sin embargo, el valor, `"Hello"` , no se puede convertir a **xs: Double** y crea un error dinámico. En este caso, en lugar de devolver un error dinámico, la conversión de `"Hello"` a **xs: Double** produce una secuencia vacía. La función **AVG ()** omite este valor, calcula la media de los otros dos valores y devuelve 150.  
   
 ```  
 DECLARE @x xml  
@@ -58,7 +59,7 @@ SELECT @x.query('avg(//*)')
 ```  
   
 ### <a name="example-using-the-not-function"></a>Ejemplo: utilizar la función not  
- Cuando se usa la [función not](../xquery/functions-on-boolean-values-not-function.md) en un predicado, por ejemplo `/SomeNode[not(Expression)]`, y la expresión produce un error dinámico, se devolverá una secuencia vacía en lugar de un error. Al aplicar **Not ()** a la secuencia vacía, se devuelve true, en lugar de un error.  
+ Cuando se usa la [función not](../xquery/functions-on-boolean-values-not-function.md) en un predicado, por ejemplo, `/SomeNode[not(Expression)]` y la expresión produce un error dinámico, se devolverá una secuencia vacía en lugar de un error. Al aplicar **Not ()** a la secuencia vacía, se devuelve true, en lugar de un error.  
   
 ### <a name="example-casting-a-string"></a>Ejemplo: convertir una cadena  
  En el ejemplo siguiente, la cadena literal "NaN" se convierte a xs:string, y después a xs:double. El resultado es un conjunto de filas vacío. Aunque la cadena "NaN" no se puede convertir correctamente a xs:double, esto no se puede determinar hasta el tiempo de ejecución, porque la cadena se convierte primero a xs:string.  

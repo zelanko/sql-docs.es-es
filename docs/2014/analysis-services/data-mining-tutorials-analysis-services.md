@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 96eea930-4a4f-42d8-bf72-6c5daf1a5f09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d358a47631f2ca048e41b9e0d978795e175c5966
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f1e7d35ac11059c57889a0938914f339cc7d8d1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086331"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525881"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Tutoriales de minería de datos (Analysis Services)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] facilita la creación de soluciones de minería de datos sofisticadas [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Las herramientas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ayudan a diseñar, crear y administrar los modelos de minería de datos que usan datos relacionales o de cubo. Puede administrar el acceso de cliente a los modelos de minería de datos y crear consultas de predicción a partir de varios clientes.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] facilita la creación de soluciones de minería de datos sofisticadas. Las herramientas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] le ayudan a diseñar, crear y administrar los modelos de minería de datos que usan datos relacionales o de cubo. Puede administrar el acceso de cliente a los modelos de minería de datos y crear consultas de predicción a partir de varios clientes.  
   
  Los tutoriales paso a paso de la lista siguiente le ayudarán a obtener el máximo provecho de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], para poder realizar análisis avanzado y resolver problemas empresariales que están fuera del alcance de los métodos tradicionales de Business Intelligence.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9f7e4f7c9d97878be9f2cd2f3251ac463332faf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174685"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522301"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
   Un **gráfico de elevación** representa gráficamente la mejora que proporciona un modelo de minería de datos en comparación con una estimación aleatoria y mide el cambio en términos de una puntuación de *elevación* . Al comparar las puntuaciones de mejora de las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.
@@ -65,7 +64,7 @@ ms.locfileid: "78174685"
 
  La **Leyenda de minería de datos** también contiene puntuaciones y estadísticas que ayudan a interpretar el gráfico. Estos resultados representan la exactitud del modelo en la línea gris, que en este escenario está situada para que incluya el 30 por ciento de los casos de prueba totales.
 
-|Serie y modelo|Puntuación|Población de destino|Probabilidad de predicción|
+|Serie y modelo|Score|Población de destino|Probabilidad de predicción|
 |-----------------------|-----------|-----------------------|-------------------------|
 |Correo destinado a todos|0.71|47,40 %|61,38 %|
 |Correo destinado a menores de 30|0.85|51,81 %|46.62 %|
@@ -95,7 +94,7 @@ ms.locfileid: "78174685"
 
  Puede hacer clic en el gráfico para mover la barra gris vertical y la **Leyenda de minería de datos** muestra el porcentaje de casos total y el porcentaje de casos que se predijeron correctamente. Por ejemplo, si coloca la barra deslizante gris en la marca del 50 por ciento, la **Leyenda de minería de datos** muestra las puntuaciones de precisión siguientes. Estas cifras se basan en el modelo TM_Decision Tree creado en el Tutorial básico de minería de datos.
 
-|Serie, Modelo|Puntuación|Población de destino|Probabilidad de predicción|
+|Serie, Modelo|Score|Población de destino|Probabilidad de predicción|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50 %|72.91 %|
 |Modelo ideal||50.00%||

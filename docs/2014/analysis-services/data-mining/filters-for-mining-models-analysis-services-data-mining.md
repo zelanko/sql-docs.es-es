@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f29c19c-4be3-4bc7-ab60-f4130a10d59c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a7695bef91ace5eb6ff8d642c51b379343fb0b1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084426"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522352"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
   El filtrado de modelos basado en datos ayuda a crear modelos de minería de datos que usan subconjuntos de datos en una estructura de minería de datos. El filtrado proporciona flexibilidad a la hora de diseñar orígenes de datos y estructuras de minería de datos propios, porque se puede crear una estructura de minería de datos única basándose en una vista del origen de datos completa. A continuación, puede crear filtros para usar solo una parte de esos datos para aprendizaje y probar una variedad de modelos, en lugar de generar una estructura diferente y un modelo relacionado para cada subconjunto de datos.  
@@ -43,14 +42,14 @@ ms.locfileid: "66084426"
   
 -   Usar la pestaña **Modelos de minería de datos** en el Diseñador de minería de datos para generar condiciones con la ayuda de los cuadros de diálogo del editor de filtros.  
   
--   Escribir una expresión de filtro directamente en `Filter` la propiedad del modelo de minería de datos.  
+-   Escribir una expresión de filtro directamente en la `Filter` propiedad del modelo de minería de datos.  
   
 -   Establecer condiciones de filtro en un modelo mediante programación usando AMO.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Crear filtros de modelo mediante el Diseñador de minería de datos  
  Primero filtra un modelo en el Diseñador de minería de datos cambiando la propiedad `Filter` del modelo de minería de datos. Puede escribir una expresión de filtro directamente en el panel **Propiedades** o bien, puede abrir un cuadro de diálogo de filtro para generar condiciones.  
   
- Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones mediante el `AND` / `OR` uso de operadores. Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores `greater than` y `less than`. Sin embargo, para valores discretos, solo puede usar los operadores `= (equal to)`, `!= (not equal to)` y `is null`.  
+ Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones mediante el uso de `AND` / `OR` operadores. Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores `greater than` y `less than`. Sin embargo, para valores discretos, solo puede usar los operadores `= (equal to)`, `!= (not equal to)` y `is null`.  
   
 > [!NOTE]  
 >  No se admite la palabra clave `LIKE`. Si desea incluir varios atributos discretos, debe crear condiciones individuales y vincularlas mediante el operador `OR`.  
@@ -82,7 +81,7 @@ ms.locfileid: "66084426"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>¿Cómo puedo saber si se está usando un filtro?  
  Hay varias formas de determinar si se está aplicando un filtro a un modelo:  
   
--   En el diseñador, haga clic en la pestaña **modelos de minería de datos** , Abra `Filter` **propiedades**y vea la propiedad del modelo de minería de datos.  
+-   En el diseñador, haga clic en la pestaña **modelos de minería de datos** , Abra **propiedades**y vea la `Filter` propiedad del modelo de minería de datos.  
   
 -   La DMV DMSCHEMA_MINING_MODELS muestra una columna que contiene el texto del filtro. Puede usar la consulta siguiente en una DMV para devolver los nombres de los modelos y sus filtros:  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0280b963-4c5a-4ad1-904b-360b43dfb10a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dbd71697e606a0d631a729d3d96d2ac2311899f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d095a023885dab54d1c46cac06fa137a9f03e29
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081220"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528321"
 ---
 # <a name="filter-details-ssas"></a>Detalles del filtro (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite ver los filtros que se especifican para la importación de datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

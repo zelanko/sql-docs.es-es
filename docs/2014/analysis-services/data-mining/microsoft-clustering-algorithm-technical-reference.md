@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec40868a-6dc7-4dfa-aadc-dedf69e555eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ee9019f821c5608527e0bdca5eddc8f1ead52f41
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084029"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522141"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
   En esta sección se explica la implementación del algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , incluidos los parámetros que se pueden usar para controlar el comportamiento de los modelos de agrupación en clústeres. Además, incluye instrucciones sobre cómo mejorar el rendimiento durante la creación y el procesamiento de modelos de agrupación en clústeres.  
@@ -94,7 +93,7 @@ ms.locfileid: "66084029"
  CLUSTERING_METHOD  
  Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son:  
   
-|Id.|Método|  
+|ID|Método|  
 |--------|------------|  
 |1|EM escalable|  
 |2|EM no escalable|  
@@ -113,7 +112,7 @@ ms.locfileid: "66084029"
   
  Cambiando este número, se puede cambiar la manera en que se generan los clústeres iniciales y, a continuación, comparar modelos que se han generado usando inicializaciones diferentes. Si se cambia la inicialización pero los clústeres hallados no cambian en gran medida, el modelo se puede considerar relativamente estable.  
   
- El valor predeterminado es 0.  
+ El valor predeterminado es 0.  
   
  MINIMUM_SUPPORT  
  Especifica el número mínimo de casos requeridos para generar un clúster. Si el número de casos del clúster es inferior a este número, el clúster se trata como vacío y se descarta.  

@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acf5d2f16271cf525194c1df48ac02c4c4241467
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088488"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527711"
 ---
 # <a name="browsing-a-forecasting-model"></a>Examinar un modelo de pronóstico
-  Al abrir un modelo de previsión mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de serie temporal de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  
+  Al abrir un modelo de previsión mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de serie temporal de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El visor sirve para explorar las tendencias, comparar series, crear predicciones y obtener información sobre el modelo y los datos subyacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar el modelo  
  El visor de **búsqueda** de modelos de predicción proporciona una vista de gráfico, que muestra las tendencias a lo largo del tiempo y permite crear predicciones, y una vista de modelo, que representa la serie temporal como un árbol de decisión o un árbol de regresión.  
   
 -   [Vista de gráfico](#bkmk_charts)  
   
--   [Vista de modelo](#bkmk_Model)  
+-   [Vista Modelo](#bkmk_Model)  
   
  Para experimentar con un modelo de predicción, puede utilizar los datos de ejemplo de la pestaña Previsión del libro de datos de ejemplo y generar un modelo de serie temporal mediante el [Asistente para previsión &#40;complementos de minería de datos para excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) en la cinta de opciones **minería de datos** o [previsión &#40;herramientas de análisis de tabla para Excel&#41;](forecast-table-analysis-tools-for-excel.md) en la cinta de opciones **analizar** .  
   

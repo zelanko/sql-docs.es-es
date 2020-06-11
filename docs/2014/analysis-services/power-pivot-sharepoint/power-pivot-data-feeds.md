@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6b1337c5-50a0-4fc2-b079-377dc241d2cc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b3080996eca3395e8be3cab5e17eaea7305dbfa2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3dd788c51867924882eba80fb9cbed280143fd6d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535134"
 ---
 # <a name="powerpivot-data-feeds"></a>Fuentes de distribución de datos de PowerPivot
-  Una fuente de distribución de datos proporciona una flujo de datos a petición de un origen de datos con conexión a una aplicación cliente. En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede utilizar fuentes de datos para agregar datos de una aplicación o un servicio Web compatible con Atom a un origen de datos PowerPivot en un libro de Excel.  
+  Una fuente de distribución de datos proporciona una flujo de datos a petición de un origen de datos con conexión a una aplicación cliente. En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede utilizar fuentes de datos para agregar datos de una aplicación o un servicio Web compatible con Atom a un origen de datos PowerPivot en un libro de Excel.  
   
  En esta sección se proporciona información para ayudarle a realizar un mejor uso de las fuentes de distribución de datos para llevar los datos de grupos de trabajo o corporativos existentes a los libros PowerPivot. También proporciona información sobre cómo compartir las fuentes de distribución de datos con los demás en una organización y cómo se construyen y utilizan en caso de que haya que solucionar algún problema.  
   

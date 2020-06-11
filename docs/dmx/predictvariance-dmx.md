@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13beb2a9a99ceea1d517e9ef2c77a071d7c72d30
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68041696"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666862"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ PredictVariance(<scalar column reference>)
  Una columna escalar.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- Valor escalar del tipo especificado por la referencia de * \<columna escalar>*.  
+ Valor escalar del tipo especificado por la referencia de * \< columna escalar>*.  
   
 ## <a name="remarks"></a>Observaciones  
  Si la referencia de columna es discreta, **PredictVariance** devuelve 0 porque la varianza no se puede calcular a partir de valores discretos.  

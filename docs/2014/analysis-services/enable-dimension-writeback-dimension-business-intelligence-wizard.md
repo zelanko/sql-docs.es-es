@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 85ed1433-81f9-468a-a14d-60c6f82bee76
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99f98507289acd8f8fd0f2ff9ef8fed49813d80f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081326"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528441"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Habilitar reescritura en la dimensión (Dimensión) (Asistente de Business Intelligence)
   Use la página **Habilitar reescritura en la dimensión** para seleccionar la dimensión para la que el Asistente de Business Intelligence habilitará la reescritura.  

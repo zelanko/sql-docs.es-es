@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d840d581fe4dba1ce9d65dfef6878a1e5a697864
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083768"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521642"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algoritmo de serie temporal de Microsoft
   El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal de proporciona algoritmos de regresión que están optimizados para la previsión de valores continuos, como las ventas de productos, a lo largo del tiempo. Mientras que otros algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , como por ejemplo los árboles de decisión, requieren columnas adicionales de nueva información como entrada para predecir una tendencia, los modelos de serie temporal no las necesitan. Un modelo de serie temporal puede predecir tendencias basadas únicamente en el conjunto de datos original utilizado para crear el modelo. Es posible también agregar nuevos datos al modelo al realizar una predicción e incorporar automáticamente los nuevos datos en el análisis de tendencias.  
@@ -47,11 +46,11 @@ ms.locfileid: "66083768"
  Cada trimestre, la compañía tiene previsto actualizar el modelo con datos recientes de ventas y actualizar sus predicciones a las tendencias recientes del modelo. Para suplir los datos de los almacenes que no actualizan los datos de ventas de forma precisa o regular, crearán un modelo de predicción general que utilizarán para crear predicciones para todas las regiones.  
   
 ## <a name="how-the-algorithm-works"></a>Cómo funciona el algoritmo  
- En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal utilizaba un único algoritmo, ARTXP. El algoritmo ARTXP se optimizó para predicciones a corto plazo y, por consiguiente, predecía el siguiente valor probable en una serie. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]de, [!INCLUDE[msCoName](../../includes/msconame-md.md)] el algoritmo de serie temporal de utiliza el algoritmo ARTXP y un segundo algoritmo, Arima. El algoritmo ARIMA está optimizado para la predicción a largo plazo. Para obtener una explicación detallada sobre la implementación de los algoritmos ARIMA y ARTXP, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
+ En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal utilizaba un único algoritmo, ARTXP. El algoritmo ARTXP se optimizó para predicciones a corto plazo y, por consiguiente, predecía el siguiente valor probable en una serie. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal de utiliza el algoritmo ARTXP y un segundo algoritmo, Arima. El algoritmo ARIMA está optimizado para la predicción a largo plazo. Para obtener una explicación detallada sobre la implementación de los algoritmos ARIMA y ARTXP, vea [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
  De forma predeterminada, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utiliza una mezcla de los dos algoritmos al analizar patrones y realizar predicciones. El algoritmo entrena dos modelos independientes en los mismos datos: un modelo usa el algoritmo ARTXP y un modelo usa el algoritmo ARIMA. A continuación, el algoritmo combina los resultados de los dos modelos para obtener la mejor predicción sobre un número variable de intervalos de tiempo. Dado que ARTXP obtiene mejores resultados en las predicciones a corto plazo, se le da mayor importancia al principio de una serie de predicciones. Sin embargo, a medida que los intervalos de tiempo que se están prediciendo se adentran en el futuro, se va dando más importancia a ARIMA.  
   
- Es posible también controlar la mezcla de algoritmos para favorecer la predicción a corto o a largo plazo en las series temporales. A partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de Standard, puede especificar que el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal use una de las siguientes opciones:  
+ Es posible también controlar la mezcla de algoritmos para favorecer la predicción a corto o a largo plazo en las series temporales. A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard, puede especificar que el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal use una de las siguientes opciones:  
   
 -   Utilizar solo ARTXP para la predicción a corto plazo.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "66083768"
   
 -   Utilizar la mezcla predeterminada de los dos algoritmos.  
   
- A partir [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]de, puede personalizar la forma [!INCLUDE[msCoName](../../includes/msconame-md.md)] en que el algoritmo de serie temporal de combina los modelos para la predicción. Al utilizar un modelo mixto, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] combina los dos algoritmos de la manera siguiente:  
+ A partir de [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] , puede personalizar la forma en que el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de serie temporal de combina los modelos para la predicción. Al utilizar un modelo mixto, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] combina los dos algoritmos de la manera siguiente:  
   
 -   Solo ARTXP se utiliza siempre para realizar el primer par de predicciones.  
   
@@ -103,8 +102,8 @@ ms.locfileid: "66083768"
   
 |TimeID|Producto|Sales|Volumen|  
 |------------|-------------|-----------|------------|  
-|1/2001|Un|1000|600|  
-|2/2001|Un|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   

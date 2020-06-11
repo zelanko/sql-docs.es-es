@@ -1,5 +1,6 @@
 ---
 title: Formato XML del lado cliente (SQLXML)
+description: Obtenga información sobre el formato XML del lado cliente en SQLXML 4,0 mediante la cláusula FOR XML.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 968af0ed24f14b4766e312a0cec0e9d3e7b5022b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1b03c1cb91c17e330d73f192bbd364c95591c721
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247021"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84530019"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Aplicación de formato XML en el cliente (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75247021"
 > [!NOTE]  
 >  En este tema se proporciona información adicional acerca de la forma de usar la cláusula FOR XML en el cliente y se da por sentado que está familiarizado con la cláusula FOR XML. Para obtener más información acerca de FOR XML, vea [generar XML mediante for XML](../../../relational-databases/xml/for-xml-sql-server.md).  
   
- **Importante** Para usar la funcionalidad FOR XML del lado cliente con el nuevo tipo de datos **XML** , los clientes deben [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usar siempre el proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El comportamiento de FOR XML del lado cliente con el proveedor SQLOLEDB tratará los tipos de datos **XML** como cadenas.  
+ **Importante** Para usar la funcionalidad FOR XML del lado cliente con el nuevo tipo de datos **XML** , los clientes deben usar siempre el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de datos de Native Client (SQLNCLI11) en lugar del proveedor SQLOLEDB. SQLNCLI11 es la versión más reciente del proveedor de SQL Server y entiende a la perfección los tipos de datos incluidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. El comportamiento de FOR XML del lado cliente con el proveedor SQLOLEDB tratará los tipos de datos **XML** como cadenas.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>Aplicar formato a documentos XML en el cliente  
  Cuando una aplicación cliente ejecuta la siguiente consulta:  
@@ -119,7 +120,7 @@ AS
      Puede especificar el formato del lado cliente estableciendo esta propiedad de las clases administradas SQLXML en True.  
   
 ## <a name="enhanced-xml-template-support"></a>Compatibilidad mejorada con plantillas XML  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]de, la plantilla XML [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de se ha mejorado con la adición del atributo **Client-Side-XML** . Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en la funcionalidad de la propiedad Clientsidexml, específica del proveedor de SQLXMLOLEDB.  
+ A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , la plantilla XML de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se ha mejorado con la adición del atributo **Client-Side-XML** . Si este atributo está establecido en True, se aplica formato al XML en el cliente. Tenga en cuenta que este atributo de plantilla es idéntico en la funcionalidad de la propiedad Clientsidexml, específica del proveedor de SQLXMLOLEDB.  
   
 > [!NOTE]  
 >  Si ejecuta una plantilla XML en una aplicación ADO que usa el proveedor SQLXMLOLEDB y especifica el atributo **Client-Side-XML** en la plantilla y la propiedad Provider clientsidexml,, el valor especificado en la plantilla tiene prioridad.  

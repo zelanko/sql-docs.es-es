@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0bbd80998f7a6fd74f76f641cc16fe81ba715dde
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be257e4da206c1c30d54341fbfda4c0aed894ab2
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889847"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669853"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \<columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  
   
 ## <a name="remarks"></a>Observaciones  
- El valor que proporciona la expresión de \<rango> argumento determina el orden creciente de rango para las filas que se proporcionan en la \<expresión de tabla> argumento, y se devuelve el número de filas de la parte inferior que se \<especifica en el argumento Count>.  
+ El valor que proporciona la expresión de \< rango> argumento determina el orden creciente de rango para las filas que se proporcionan en la \< expresión de tabla> argumento, y se devuelve el número de filas de la parte inferior que se especifica en el \< argumento Count>.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

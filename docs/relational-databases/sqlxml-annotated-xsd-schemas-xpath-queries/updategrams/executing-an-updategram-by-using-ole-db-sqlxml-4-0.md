@@ -1,5 +1,6 @@
 ---
 title: Ejecutar un diagrama mediante OLE DB (SQLXML)
+description: Aprenda a usar OLE DB en SQLXML 4,0 para ejecutar un diagrama.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 754db698b7c82a64f66cbb7a4df43bd4127413d1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9267699ff8edbaf0d615dbdb45a915e24e842b11
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241279"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215253"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +61,7 @@ ms.locfileid: "75241279"
 </Schema>  
 ```  
   
- La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el ** \<elemento person. contact>** se asigna a la tabla person. contact de la base de datos AdventureWorks.  
+ La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el **\<Person.Contact>** elemento se asigna a la tabla person. contact de la base de datos AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para establecer XML como un comando y recuperar el resultado como un documento XML  
   
@@ -515,7 +516,7 @@ FOR XML AUTO</sql:query>
 </ROOT>  
 ```  
   
- La plantilla incluye una consulta SQL. La consulta requiere un valor para su parámetro (@Title). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
+ La plantilla incluye una consulta SQL. La consulta requiere un valor para su parámetro ( @Title ). Si no se pasa ningún valor de parámetro, se utiliza el valor predeterminado ("Mr.").  
   
  Al pasar valores de parámetro a una plantilla, se deben especificar tanto el nombre de parámetro como el valor.  
   

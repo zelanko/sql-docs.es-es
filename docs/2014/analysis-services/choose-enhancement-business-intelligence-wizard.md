@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 39e2f36c-2c02-4a71-af8f-5dbd373190dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9c28c39ef94c5dd28821e23c6ddbe83efd7fd11
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088114"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527583"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Elegir mejora (Asistente de Business Intelligence)
   Use la página **Elegir mejora** para elegir la mejora de Business Intelligence que se agregará al cubo o a la dimensión.  

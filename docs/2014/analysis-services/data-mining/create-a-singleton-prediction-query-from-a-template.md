@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54523b9c2302deafb0faa9c23708224470bd69b8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085490"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523761"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
   Una consulta singleton es útil cuando tiene un modelo que desea usar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externo ni realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  
@@ -69,20 +68,20 @@ AS [t]
   
 5.  En la fila **modelo de minería de datos** , escriba el nombre del modelo de minería de datos entre la lista de modelos de minería de datos que aparecen en el **Explorador de objetos**.  
   
-     En el código de ejemplo que se muestra al principio de este tema, la fila del **modelo de minería** de datos `TM_Decision_Tree`se estableció en el nombre.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila del **modelo de minería de datos** se estableció en el nombre `TM_Decision_Tree` .  
   
 6.  En la fila **value** , escriba el nuevo valor de datos para el que desea realizar una predicción.  
   
-     En el código de ejemplo que se muestra al principio de este tema, la fila **Value** se `2` estableció en para predecir el comportamiento de compra de bicicletas en función del número de hijos en casa.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila **Value** se estableció en `2` para predecir el comportamiento de compra de bicicletas en función del número de hijos en casa.  
   
 7.  En la fila **column** , escriba el nombre de la columna del modelo de minería de datos al que deberían estar asignados los nuevos datos.  
   
-     En el código de ejemplo que se muestra al principio de este tema **column** , la fila de la `Number Children at Home`columna estaba establecida en.  
+     En el código de ejemplo que se muestra al principio de este tema, la fila de la **columna** estaba establecida en `Number Children at Home` .  
   
     > [!NOTE]  
     >  Al usar el cuadro de diálogo **Especificar valores para parámetros de plantilla** , no tiene que agregar corchetes al nombre de columna. Los corchetes se agregarán automáticamente.  
   
-8.  Deje el **alias** de entrada `t`como.  
+8.  Deje el **alias de entrada** como `t` .  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

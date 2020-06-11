@@ -1,5 +1,6 @@
 ---
 title: Instalación de SQL Server Migration Assistant para Access (AccessToSQL) | Microsoft Docs
+description: Obtenga información sobre los requisitos previos de instalación de SQL Server Migration Assistant (SSMA) para el acceso y cómo instalar, licencia, actualizar y desinstalar.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/15/2017
@@ -22,26 +23,26 @@ helpviewer_keywords:
 ms.assetid: dd50eebd-75df-4e0d-8c4d-88b511aae4c7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: cbbb7ed7a20937d9963af7080fb16be4f6c78da5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ca42e406bb7483617afe6364027014650e838f2
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79111908"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293762"
 ---
 # <a name="installing-sql-server-migration-assistant-for-access-accesstosql"></a>Instalación de SQL Server Migration Assistant para Access (AccessToSQL)
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para el acceso se instala mediante un asistente basado en Windows Installer. En este tema se proporciona información sobre los requisitos previos de instalación, un vínculo a la versión más reciente de SSMA e instrucciones para instalar, conceder licencias, desinstalar y actualizar SSMA.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para el acceso se instala mediante un asistente basado en Windows Installer. En este tema se proporciona información sobre los requisitos previos de instalación, un vínculo a la versión más reciente de SSMA e instrucciones para instalar, conceder licencias, desinstalar y actualizar SSMA.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 Antes de instalar SSMA, asegúrese de que el sistema cumple los requisitos siguientes:  
   
 -   Windows 7 o una versión posterior, o Windows Server 2008 o una versión posterior.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame_md.md)]Windows Installer 3,1 o una versión posterior.  
   
--   La [!INCLUDE[msCoName](../../includes/msconame_md.md)] versión de .NET Framework 4,0 o una versión posterior. La versión .NET Framework 4,0 está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disco del producto y con la información de la [Guía de Microsoft .net](https://docs.microsoft.com/dotnet/framework/).
+-   La [!INCLUDE[msCoName](../../includes/msconame_md.md)] versión de .NET Framework 4,0 o una versión posterior. La versión .NET Framework 4,0 está disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disco del producto y con la información de la [guía de Microsoft .net](https://docs.microsoft.com/dotnet/framework/).
   
--   Acceso a los permisos y suficientes en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]destino de/SQL Azure dB a la que va a migrar los datos y los objetos de base de datos.  
+-   Acceso a los permisos y suficientes en el equipo que hospeda la instancia de destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] /SQL Azure dB a la que va a migrar los datos y los objetos de base de datos.  
   
 -   Proveedor de Microsoft Data Access Object (DAO) versión 12,0 o 14,0. Puede instalar el proveedor de DAO desde Microsoft Office producto 2010/2007 o descargarlo desde el sitio web de Microsoft.  
   

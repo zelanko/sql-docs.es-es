@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 491a863031af677a719db97503ce8aac57686fb6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075025"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546717"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
   Un cubo o modelo tabular es el objeto de consulta principal en un modelo de datos de Analysis Services. Cuando se conecte a datos multidimensionales o tabulares desde Excel para una exploración de datos ad hoc, los usuarios por lo general comienzan seleccionando un cubo o modelo tabular específico como la estructura de datos que subyace tras el objeto de informe dinámico. En este tema, se describe cómo otorgar los permisos necesarios para tener acceso a cubos o datos tabulares.  
@@ -58,7 +57,7 @@ ms.locfileid: "66075025"
   
 #### <a name="step-3-set-cube-permissions"></a>Paso 3: Establecimiento de los permisos de los cubos  
   
-1.  En el panel **cubos** , seleccione un cubo y, a continuación `Read` , haga clic en acceso de **lectura y escritura** .  
+1.  En el panel **cubos** , seleccione un cubo y, a continuación, haga clic en `Read` acceso de lectura y **escritura** .  
   
      `Read`el acceso es suficiente para la mayoría de las operaciones. **Lectura y escritura** solo se usa para reescribir y no para procesar. Para obtener más información acerca de esta capacidad, vea [Set Partition Writeback](set-partition-writeback.md) .  
   
@@ -93,7 +92,7 @@ ms.locfileid: "66075025"
   
 2.  En SSMS, vaya a la carpeta **Roles** y haga clic con el botón derecho en un rol existente.  
   
-3.  Seleccione **rol de script como** | **crear para** | **archivo**.  
+3.  Seleccione **rol de script como**  |  **crear para**  |  **archivo**.  
   
 4.  Guarde el archivo con una extensión de archivo .xmla. Para probar el script, elimine el rol actual, abra el archivo en SSMS y presione F5 para ejecutar el script.  
   

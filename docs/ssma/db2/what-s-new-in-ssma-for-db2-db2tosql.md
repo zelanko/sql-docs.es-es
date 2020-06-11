@@ -1,24 +1,29 @@
 ---
 title: Novedades de SSMA para DB2 (DB2ToSQL) | Microsoft Docs
+description: Obtenga información sobre los cambios en SQL Server Migration Assistant (SSMA) para DB2 (DB2ToSQL) para cada versión.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 3b3fca46fb5e30cfa446e0ca9de8dc0324d2f7f8
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 73a0afb17e8c44aea6cdb25d590cedeecdc274cf
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220092"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293982"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para DB2 en cada versión.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La versión v 8.10 de SSMA para DB2 aborda una regresión en la detección de claves externas y contiene pequeñas mejoras de rendimiento.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -52,7 +57,7 @@ Además, SSMA para DB2 ahora proporciona:
 * Conversión mejorada para la `COUNT` función en tablas MQ.
 * Conversión de `SAVEPOINT` instrucciones.
 * Conversión para emular el comportamiento de DB2's para `NULL` los valores de la `ORDER BY` cláusula.
-* Compatibilidad de análisis para la instrucción Associate RESULT SET.
+* Compatibilidad con el análisis de la `ASSOCIATE RESULT SET` instrucción.
 
 > [!IMPORTANT]
 > Con SSMA v 8.5 y versiones posteriores, .NET 4.7.2 es un requisito previo de instalación. Si necesita instalar esta versión, puede descargar el archivo en tiempo de ejecución desde [aquí](https://dotnet.microsoft.com/download/dotnet-framework/net472).
@@ -240,7 +245,7 @@ La versión de mayo de 2016 de SSMA para DB2 contiene los siguientes cambios:
 * Recuento fijo de objetos para la carga inicial.
 * Se corrigió el error en la configuración global.
   
-## <a name="march-2016"></a>marzo de 2016
+## <a name="march-2016"></a>Marzo de 2016
 
 La versión de vista previa de marzo de 2016 de SSMA para DB2 agrega compatibilidad para la migración a SQL Server 2016.
 

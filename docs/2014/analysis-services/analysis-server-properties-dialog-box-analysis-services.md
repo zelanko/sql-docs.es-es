@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32b0fa678df98494f91c1026adebe701d807342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a876a11f51731fdd7ff6de679f80cdb8d62fff94
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062621"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528107"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Cuadro de diálogo Propiedades de Analysis Server (Analysis Services)
   Use el cuadro de diálogo **Propiedades de Analysis Server** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer la configuración general, de idioma o intercalación, y de seguridad para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de Analysis Server** , haga clic con el botón derecho en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de objetos** y seleccione **Propiedades** en el menú contextual. El cuadro de diálogo **Propiedades de Analysis Server** contiene las propiedades siguientes.  
@@ -28,7 +27,7 @@ ms.locfileid: "66062621"
 ## <a name="information-properties"></a>Propiedades de información  
  Use esta página para ver el modo, la versión y el nivel de compatibilidad del servidor. Cada instancia se instala en modo de servidor tabular o multidimensional, con la posibilidad de cargar modelos tabulares o multidimensionales. Si necesita admitir ambos modos, debe instalar dos instancias.  
   
- El **nivel de compatibilidad compatible** es equivalente `DefaultCompatibilityLevel` a la propiedad en amo. Es de solo lectura, según el modo de implementación del servidor especificado durante la instalación. El servidor comprueba esta propiedad al realizar operaciones que varían según el modo o la versión del servidor, como restaurar una copia de seguridad de una base de datos tabular en una instancia de servidor tabular. No debe confundirse con el modo de compatibilidad de la base de datos de los modelos tabulares o multidimensionales, que tienen nombres y valores similares. Entre los valores válidos de esta propiedad de servidor se incluyen:  
+ El **nivel de compatibilidad compatible** es equivalente a la `DefaultCompatibilityLevel` propiedad en amo. Es de solo lectura, según el modo de implementación del servidor especificado durante la instalación. El servidor comprueba esta propiedad al realizar operaciones que varían según el modo o la versión del servidor, como restaurar una copia de seguridad de una base de datos tabular en una instancia de servidor tabular. No debe confundirse con el modo de compatibilidad de la base de datos de los modelos tabulares o multidimensionales, que tienen nombres y valores similares. Entre los valores válidos de esta propiedad de servidor se incluyen:  
   
 -   **1100** es el nivel de compatibilidad predeterminado para un modo de implementación de 0, para el modo multidimensional y de minería de datos.  
   
@@ -51,17 +50,17 @@ ms.locfileid: "66062621"
   
 -   [Propiedades del administrador de bloqueos](server-properties/lock-manager-properties.md)  
   
--   [Propiedades de registro](server-properties/log-properties.md)  
+-   [Propiedades del registro](server-properties/log-properties.md)  
   
 -   [Propiedades de memoria](server-properties/memory-properties.md)  
   
 -   [Propiedades de red](server-properties/network-properties.md)  
   
--   [Propiedades OLAP](server-properties/olap-properties.md)  
+-   [Propiedades de OLAP](server-properties/olap-properties.md)  
   
 -   [Propiedades de seguridad](server-properties/security-properties.md)  
   
--   [Propiedades de grupos de subprocesos](server-properties/thread-pool-properties.md)  
+-   [Propiedades del grupo de subprocesos](server-properties/thread-pool-properties.md)  
   
 ## <a name="language-collation-properties"></a>Propiedades de idioma o intercalación  
  Use esta página para establecer las opciones de idioma y de intercalación predeterminadas para una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La lista siguiente contiene una breve descripción de cada opción. Para más información, vea [Languages and Collations &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md) .  

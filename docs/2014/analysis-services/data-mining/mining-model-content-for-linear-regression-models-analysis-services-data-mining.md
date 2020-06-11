@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6abcb75-524e-4e0a-a375-c10475ac0a9d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4ee781a5c15e38676ca11c4385f271988ba615
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083643"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521597"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de regresión lineal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -180,7 +179,7 @@ ms.locfileid: "66083643"
 #### <a name="intercept"></a>Interceptar  
  Normalmente, la *intersección* (VALUETYPE = 11) o *valor residual* en una ecuación de regresión indica el valor del atributo de predicción en el punto donde el atributo de entrada es igual a 0. En muchos casos, esto podría no suceder y se podrían producir resultados poco intuitivos.  
   
- Por ejemplo, en un modelo que prediga los ingresos según la edad, es inútil obtener información sobre los ingresos a los 0 años. En la vida real, suele ser más útil saber el comportamiento en el margen con respecto a los valores medios. Por consiguiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , modifica la intersección para expresar cada regresor en una relación con la media.  
+ Por ejemplo, en un modelo que prediga los ingresos según la edad, es inútil obtener información sobre los ingresos a los 0 años. En la vida real, suele ser más útil saber el comportamiento en el margen con respecto a los valores medios. Por consiguiente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] modifica la intersección para expresar cada regresor en una relación con la media.  
   
  Este ajuste es difícil de ver en el contenido del modelo de minería de datos, pero es obvio si se ve la ecuación completada en la **Leyenda de minería de datos** del **Visor de árboles de Microsoft**. La fórmula de regresión se desvía del punto 0 al punto que representa la media. Esto presenta una vista que es más intuitiva dados los datos actuales.  
   

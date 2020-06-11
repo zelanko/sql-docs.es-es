@@ -12,17 +12,17 @@ ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9a96b77c3f1243bc3d95cf38242463724348134b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b215ff16f5e4a42a6d43f0a6e5f9758f158a682
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68188502"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859855"
 ---
 # <a name="options-environment-general-page"></a>Opciones (Entorno - Página General)
   Use el cuadro de diálogo **Opciones** para configurar las acciones de inicio de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], opciones generales de administración de ventanas y otros valores de configuración generales. En el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Entorno** y haga clic en **General**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Al iniciar**  
  Seleccione la acción que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] debe llevar a cabo una vez que se ha iniciado. Las opciones son:  
   
@@ -51,7 +51,7 @@ ms.locfileid: "68188502"
  Si esta casilla está seleccionada, solo se cierra la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla está activada.  
   
  **El botón Ocultar automáticamente afecta solo a la pestaña activa**  
- Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla no está activada.  
+ Si esta casilla está seleccionada, solo se oculta automáticamente la ventana de herramientas activa, no todas las ventanas del conjunto de ventanas acopladas. De forma predeterminada, esta casilla de verificación está desactivada.  
   
 ## <a name="display"></a>Pantalla  
  **Mostrar n archivos de la lista de archivos recientes**  

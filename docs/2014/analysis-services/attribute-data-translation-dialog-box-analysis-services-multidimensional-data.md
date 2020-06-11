@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed286de-1e9b-49de-b09e-3cd076aba152
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2304f664178ab1f5d3718cccdcb4b1775a72948e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76af68a7f9668b46a55a3bf28f9cf07dd64766aa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063066"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527931"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Traducción de datos de atributos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Traducción de datos de atributos** para establecer la columna que contiene los datos del título de la traducción, así como la intercalación y el orden que desea utilizar en los datos traducidos. Para mostrar el cuadro de diálogo **Traducción de datos de atributos** :  
@@ -29,10 +28,10 @@ ms.locfileid: "66063066"
 -   Haga clic con el botón derecho en el panel **Detalles de traducción** de la pestaña **Traducciones** del **Diseñador de dimensiones** y seleccione **Nueva columna de títulos** o **Editar columna de títulos**.  
   
 ## <a name="options"></a>Opciones  
- **Atributo**  
+ **Attribute**  
  Muestra el atributo seleccionado.  
   
- **Lenguaje**  
+ **Idioma**  
  Muestra el idioma seleccionado.  
   
  **Título traducido**  

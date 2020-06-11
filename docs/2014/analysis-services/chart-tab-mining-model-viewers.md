@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8803cdbb-f1b3-436c-994d-ee662ecf64dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 219ff4143b0f673b36ca6092d5ef8d5bf39f06ee
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088176"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527577"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Pestaña Gráfico (Visores de modelos de minería de datos)
   Utilice el panel **Gráfico** para mostrar los datos históricos utilizados para entrenar un modelo de serie temporal, junto con los valores de predicción. El eje vertical del gráfico representa el valor de la serie y el eje horizontal representa el tiempo. Las predicciones futuras se representan mediante una línea de puntos.  

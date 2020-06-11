@@ -1,7 +1,7 @@
 ---
 title: Sesiones de SQL Server Extended Events | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 05/26/2020
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: xevents
@@ -14,12 +14,12 @@ ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 83440163bdb1e03690fe4f5dcf93fdfc6779057f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 63a94ef98eeb1b460672e50657b5ece6ef491764
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706607"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868354"
 ---
 # <a name="sql-server-extended-events-sessions"></a>SQL Server Extended Events Sessions
   Una sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Extended Events se crea en el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda el motor de Extended Events. Los aspectos siguientes de una sesión de Extended Events proporcionan un contexto para entender la infraestructura de Extended Events y el procesamiento general que se produce:  
@@ -30,9 +30,9 @@ ms.locfileid: "82706607"
   
 ## <a name="session-states"></a>Estados de sesión  
  La ilustración siguiente muestra los diversos estados de una sesión de Extended Events.  
-  
- ![Estado de la sesión de eventos extendidos](../../database-engine/media/xesessionstate.gif "Estado de la sesión de eventos extendidos")  
-  
+
+![Estado de la sesión de eventos extendidos](../../database-engine/media/xesessionstate.png "Estado de la sesión de eventos extendidos")
+
  En la figura anterior, observe que el estado de la sesión cambia cuando se emiten los distintos comandos DDL para una sesión de evento. En la tabla siguiente se describen estos cambios de estado.  
   
 |Etiqueta de la ilustración|Instrucción DDL|Descripción|  

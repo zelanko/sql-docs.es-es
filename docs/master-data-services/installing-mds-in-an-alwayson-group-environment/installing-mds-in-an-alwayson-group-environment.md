@@ -5,17 +5,17 @@ ms.date: 07/28/2017
 ms.prod: sql
 ms.prod_service: mds
 ms.reviewer: ''
-ms.technology: high-availability
+ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: ad7041700d2ded9b20eb79b648d170333961745f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
+ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728095"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83732473"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -90,7 +90,7 @@ Como se muestra en la figura 1 de la sección anterior, la solución descrita en
 
 WSFC es una característica que sirve para mejorar la alta disponibilidad de aplicaciones y servicios. Consta de un grupo de instancias independientes de Windows Server, donde se ejecuta el Servicio de clúster de conmutación por error de Microsoft. Las instancias de Windows Server (o, como se denominan a veces, "nodos") están conectadas para que se puedan comunicar entre ellas y se puedan detectar errores. WSFC ofrece funcionalidades de detección de errores y de conmutación por error. Si se produce un error en un nodo o servicio del clúster, se detectará el error y otro nodo empezará a proporcionar de forma automática o manual los servicios hospedados en el nodo erróneo. Por lo tanto, los usuarios solo experimentarán una interrupción mínima en los servicios y se mejorará la disponibilidad de estos.  
 
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 El sistema operativo Windows Server debe estar instalado en todas las instancias y se debe haber revisado todas las actualizaciones.
 
@@ -207,7 +207,7 @@ Un AG proporciona disponibilidad en el nivel de base de datos. Los grupos de dis
 
 FCI proporcionan alta disponibilidad en el nivel de instancia. El servicio de SQL Server y sus servicios relacionados se registran como recursos en WSFC. Además, la solución FCI requiere un almacenamiento en disco compartido simétrico, como los recursos compartidos de archivos SAN o SMB, que tienen que estar disponibles para todos los nodos en el clúster de WFC.
    
-### <a name="prerequisites"></a>Prerrequisitos
+### <a name="prerequisites"></a>Requisitos previos
 
 - Instale SQL Server en todos los nodos. Para obtener más información, vea [Instalar SQL Server 2016](../../database-engine/install-windows/install-sql-server.md).
 
@@ -343,7 +343,7 @@ Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos est�
 
 2. En **Explorador de objetos**, expanda la carpeta **Always on alta disponibilidad** , haga clic con el botón secundario en el AG que acaba de crear en la sección [creación de un grupo de disponibilidad](#create-an-availability-group) y, a continuación, haga clic en **Mostrar panel**. Vea la figura 20. Aparecerá el estado del grupo de disponibilidad nuevo y sus réplicas.
 
-   ![Visualización del panel](media/Fig20_ShowDashboard.png)
+   ![Ver el panel](media/Fig20_ShowDashboard.png)
 
    Figura 20 
 

@@ -1,24 +1,29 @@
 ---
 title: Novedades de SSMA para SAP ASE (SybaseToSQL) | Microsoft Docs
+description: Obtenga información sobre los cambios en SQL Server Migration Assistant (SSMA) para Sybase (SybaseToSQL) para cada versión.
 authors: HJToland3;nahk-ivanov
 ms.prod: sql
 ms.custom: ''
-ms.date: 4/27/2020
+ms.date: 6/2/2020
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 ms.author: jtoland;alexiva
-ms.openlocfilehash: 258ddb758824c1d823cc1a7a306b05bf491d087b
-ms.sourcegitcommit: 9afb612c5303d24b514cb8dba941d05c88f0ca90
+ms.openlocfilehash: 1124349e961de7b4dc384b2db67d503d82e305fe
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82220680"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293703"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
 
 En este artículo se enumeran los cambios de SQL Server Migration Assistant (SSMA) para SAP ASE (anteriormente SSMA para Sybase) en cada versión.
+
+## <a name="ssma-v810"></a>SSMA v 8.10
+
+La versión v 8.10 de SSMA for SAP ASE contiene pequeñas mejoras de rendimiento y correcciones de errores.
 
 ## <a name="ssma-v89"></a>SSMA v 8.9
 
@@ -205,7 +210,7 @@ La versión de mayo de 2016 de SSMA para Sybase contiene los siguientes cambios:
 * Recuento fijo de objetos para la carga inicial.
 * Se corrigió el error en la configuración global.
 
-## <a name="march-2016"></a>marzo de 2016
+## <a name="march-2016"></a>Marzo de 2016
 
 La versión de vista previa de marzo de 2016 de SSMA para Sybase agrega compatibilidad para la migración a SQL Server 2016.
 

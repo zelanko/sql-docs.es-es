@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c5b33f75-42d4-4598-89e7-94815c142ce6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c4d728f810da7abf96d1addc6ef91156a3d5ea
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081033"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544437"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Asistente para pronóstico (Complementos de minería de datos para Excel)
   ![Asistente para asociación, cinta de opciones Minería de datos](media/dmc-forecast.gif "Asistente para asociación, cinta de opciones Minería de datos")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081033"
   
 3.  En la página **previsión** , en **marca de tiempo**, seleccione una columna que contenga el valor numérico único (esto incluye los valores de fecha y hora) que se puede utilizar como serie de casos. El origen de datos se debe ordenar de forma ascendente según esta columna.  
   
-     Si los datos no tienen este tipo de columna, puede usar la opción \<sin marca de tiempo>. El asistente agregará una columna de orden única para los datos de entrada; por consiguiente, debe asegurarse de que los datos están ordenados de la manera que desea antes de ejecutar el asistente y elegir esta opción.  
+     Si los datos no tienen este tipo de columna, puede usar la opción \<no time stamp> . El asistente agregará una columna de orden única para los datos de entrada; por consiguiente, debe asegurarse de que los datos están ordenados de la manera que desea antes de ejecutar el asistente y elegir esta opción.  
   
 4.  Opcionalmente, puede hacer clic en **parámetros** y personalizar el comportamiento del modelo de minería de datos.  
   

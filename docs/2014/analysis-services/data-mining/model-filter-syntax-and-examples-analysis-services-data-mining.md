@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c729d9b3-8fda-405e-9497-52b2d7493eae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e52fae59d05447ef28eac7b9be408279ffcefb96
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521078"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Sintaxis y ejemplos del filtro de modelos (Analysis Services: Minería de datos)
   En esta sección se proporciona información detallada sobre la sintaxis para los filtros de modelo, junto con expresiones de ejemplo.  
@@ -240,7 +239,7 @@ FILTER (EXISTS (Products))
 ###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Ejemplo 7: combinaciones de filtros complejas  
  El escenario para este modelo se parece al del ejemplo 4 pero es mucho más complejo. La tabla anidada, **ProductsOnSale**, tiene la condición `(OnSale)` de filtro que significa que el valor de **alventa** debe ser `true` para el producto enumerado en **ProductName**. Aquí, **OnSale** es una columna de estructura.  
   
- La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis, pero filtra los productos para los que el valor de **alventa** es `not true``(!OnSale)`.  
+ La segunda parte del filtro, para **ProductsNotOnSale**, repite esta sintaxis, pero filtra los productos para los que el valor de **alventa** es `not true``(!OnSale)` .  
   
  Finalmente, se combinan las condiciones y se agrega una restricción adicional a la tabla de casos. El resultado es predecir compras de productos en la lista **ProductsNotOnSale** , basándose en los casos incluidos en la lista **ProductsOnSale** , para todos los clientes mayores de 25.  
   

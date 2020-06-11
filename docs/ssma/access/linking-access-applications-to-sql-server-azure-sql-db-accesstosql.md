@@ -1,5 +1,6 @@
 ---
 title: 'Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB | Microsoft Docs'
+description: Obtenga información sobre cómo vincular las tablas de Access a las tablas migradas para poder usar las aplicaciones de Access existentes con SQL Server o Azure SQL Database.
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -23,21 +24,21 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 382a1d94b46eeef39ca90103691afe45389002e3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112061"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293772"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB (AccessToSQL)
-Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de acceso a datos usan los datos de la base de datos o SQL Azure en lugar de los datos de la base de datos de Access.  
+Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede vincular las tablas de Access originales a las tablas migradas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. La vinculación modifica la base de datos de Access de forma que las consultas, los formularios, los informes y las páginas de acceso a datos usan los datos de la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure en lugar de los datos de la base de datos de Access.  
   
 > [!NOTE]  
 > Las tablas de Access permanecen en el acceso, pero no se actualizan junto con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure actualizaciones. Después de vincular las tablas y comprobar la funcionalidad, es posible que desee eliminar las tablas de Access.  
   
 ## <a name="linking-access-and-sql-server-tables"></a>Vinculación de tablas de acceso y SQL Server  
-Al vincular una tabla de Access a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabla o SQL Azure, el motor de base de datos Jet almacena la información de conexión y los metadatos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la tabla, pero los datos se almacenan en o SQL Azure. Esta vinculación permite que las aplicaciones de Access operen en las tablas de Access, aunque las tablas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y los datos reales están en o SQL Azure.  
+Al vincular una tabla de Access a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla o SQL Azure, el motor de base de datos Jet almacena la información de conexión y los metadatos de la tabla, pero los datos se almacenan en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Esta vinculación permite que las aplicaciones de Access operen en las tablas de Access, aunque las tablas y los datos reales están en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
 > [!NOTE]  
 > Si usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de, la contraseña se almacena en texto no cifrado en las tablas de acceso vinculadas. Se recomienda usar la autenticación de Windows.  
@@ -59,7 +60,7 @@ Al abrir una tabla en Access, los datos se recuperan mediante un cursor de conju
 > Puede obtener la versión más reciente de SNAC del [Feature Pack de Microsoft® SQL Server® 2008 R2](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## <a name="unlinking-access-tables"></a>Desvincular tablas de acceso  
-Al desvincular una tabla de Access de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una tabla o SQL Azure, SSMA restaura la tabla de acceso original y sus datos.  
+Al desvincular una tabla de Access de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla o SQL Azure, SSMA restaura la tabla de acceso original y sus datos.  
   
 **Para desvincular tablas**  
   
@@ -78,14 +79,14 @@ Si ha vinculado las tablas de Access a una instancia de SQL Server y posteriorme
   
 3.  Haga clic en el botón **volver a conectar a SQL Server** .  
   
-4.  Conéctese a la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de o SQL Azure a la que desea vincular las tablas de Access.  
+4.  Conéctese a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure a la que desea vincular las tablas de Access.  
   
 5.  En el explorador de metadatos de Access, seleccione las tablas que desea vincular.  
   
 6.  Haga clic con el botón derecho en **tablas**y seleccione **vínculo**.  
   
 ## <a name="updating-linked-tables"></a>Actualizar tablas vinculadas  
-Si se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] modifican las definiciones de tabla o SQL Azure, puede desvincular y, a continuación, volver a vincular las tablas en SSMA mediante los procedimientos mostrados anteriormente en este tema. También puede actualizar las tablas mediante el acceso.  
+Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se modifican las definiciones de tabla o SQL Azure, puede desvincular y, a continuación, volver a vincular las tablas en SSMA mediante los procedimientos mostrados anteriormente en este tema. También puede actualizar las tablas mediante el acceso.  
   
 **Para actualizar las tablas vinculadas mediante el acceso**  
   
@@ -125,7 +126,7 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>No hay nuevos registros disponibles  
-**Causa:** Cuando se agrega un registro a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla o SQL Azure con VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no se asigna un valor a ese campo, el nuevo registro no aparece hasta que se vuelve a abrir la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en o SQL Azure. Si intenta obtener un valor del nuevo registro, recibirá el mensaje de error siguiente:  
+**Causa:** Cuando se agrega un registro a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla o SQL Azure con VBA, si el campo de índice único de la tabla tiene un valor predeterminado y no se asigna un valor a ese campo, el nuevo registro no aparece hasta que se vuelve a abrir la tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. Si intenta obtener un valor del nuevo registro, recibirá el mensaje de error siguiente:  
   
 `Run-time error '3167' Record is deleted.`  
   
@@ -141,7 +142,7 @@ Recordset.LastModified
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>No se puede modificar un esquema de tabla vinculada con acceso  
 **Causa:** Después de migrar datos y vincular tablas, el usuario no puede modificar el esquema de una tabla en Access.  
   
-**Solución:** Modifique el esquema [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de tabla mediante y, a continuación, actualice el vínculo en Access.  
+**Solución:** Modifique el esquema de tabla mediante y, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] a continuación, actualice el vínculo en Access.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>La funcionalidad de hipervínculo se pierde después de migrar los datos  
 **Causa:** Después de migrar los datos, los hipervínculos de las columnas pierden su funcionalidad y se convierten en columnas **nvarchar (Max)** simples.  

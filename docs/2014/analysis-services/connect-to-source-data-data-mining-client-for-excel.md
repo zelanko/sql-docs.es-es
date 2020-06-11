@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 548672ce-e403-4aca-b67a-c2c797f053dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c90031f3c1191e99ff6274f6198d513225f0927
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087100"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527031"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar con los datos de origen (Cliente de minería de datos para Excel)
   En este tema se describe cómo crear y usar las conexiones utilizadas para almacenar modelos de minería de datos y para obtener acceso a datos externos almacenados en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "66087100"
  Para conectarse a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], debe tener permisos para obtener acceso al servidor de base de datos. Además, las sesiones de minería de datos deben estar habilitadas y se debe contar con permisos de lectura o de lectura y escritura en los objetos de base de datos almacenados en el servidor.  
   
 ##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Crear conexiones del servidor de minería de datos  
- El grupo **conexiones** del cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel proporciona herramientas para administrar las conexiones [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]a una instancia de.  
+ El grupo **conexiones** del cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel proporciona herramientas para administrar las conexiones a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 -   Puede crear la conexión cuando instale el complemento o agregar una conexión posteriormente.  
   
@@ -45,14 +44,14 @@ ms.locfileid: "66087100"
 -   Solo puede haber una conexión activa de cada vez.  
   
 ### <a name="connections-in-the-excel-add-ins"></a>Conexiones en los complementos de Excel  
- El grupo **conexiones** del cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel es donde se administran las [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]conexiones a una instancia de.  
+ El grupo **conexiones** del cliente de minería de datos para Excel y las herramientas de análisis de tabla para Excel es donde se administran las conexiones a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ##### <a name="create-a-new-server-connection-in-the-excel-add-ins"></a>Crear una nueva conexión al servidor en los complementos de Excel  
   
 1.  Haga clic en el botón **conexión** de la cinta de opciones **analizar** o **minería de datos** .  
   
     > [!NOTE]  
-    >  El texto del botón indica si existe una conexión. Cuando no se ha realizado ninguna conexión en la hoja de cálculo, el botón contiene\<el texto "sin> de conexión". Si se estableció una conexión previamente en el libro, el nombre de ésta aparece en el botón.  
+    >  El texto del botón indica si existe una conexión. Cuando no se ha realizado ninguna conexión en la hoja de cálculo, el botón contiene el texto " \<No connection> ." Si anteriormente se realizó una conexión en el libro, el nombre de esa conexión aparece en el botón.  
   
 2.  En el cuadro de diálogo **Analysis Services conexiones** , haga clic en **nuevo**.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66087100"
 8.  Haga clic en **Aceptar** y, a continuación, en **Cerrar**.  
   
 ### <a name="connections-using-a-web-service"></a>Conexiones mediante un servicio web  
- Si usa una arquitectura de cliente ligero para habilitar la exploración de cubos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y datos, también puede configurar una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor a través de servicios Web. Para obtener información acerca de cómo definir un cliente basado en web, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ Si usa una arquitectura de cliente ligero para habilitar la exploración de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubos y datos, también puede configurar una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor a través de servicios Web. Para obtener información acerca de cómo definir un cliente basado en web, vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Si dispone de acceso a un servidor configurado para servicios Web, podrá especificar el tipo de conexión cuando la cree por primera vez.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66087100"
   
 2.  Si debe modificar la cadena de conexión para aumentar el tiempo de espera de consulta o para agregar otros parámetros específicos para la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], una opción es modificar el archivo .dmc, donde se almacena la cadena de conexión.  
   
-     \<unidad: > \Usuarios\\<el complemento\>de minería de datos \AppData\Local\Microsoft\Data  
+     \<drive:>\Users \\<\> el complemento de minería de datos \AppData\Local\Microsoft\Data  
   
 ##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Conexión a orígenes de datos externos  
  Mientras que las herramientas de la cinta de opciones **analizar** funcionan exclusivamente con los datos de Excel, las herramientas de la cinta de opciones **minería de datos** permiten conectarse directamente a orígenes de datos externos para usarlos como entradas para el modelo o para el muestreo.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 68e1934a-e147-4d53-b122-fa15e3fd5485
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf196f1c026fe8878f572a6797ba2e738ba5b782
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083565"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521277"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia(Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -154,7 +153,7 @@ ms.locfileid: "66083565"
 ###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION tabla  
  En la tabla NODE_DISTRIBUTION se proporciona información detallada de la compatibilidad y la probabilidad de las transiciones y secuencias de un clúster concreto.  
   
- Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información sobre lo `Missing` que significa el valor y cómo afecta a los cálculos, vea [valores ausentes &#40;Analysis Services-&#41;de minería de datos ](missing-values-analysis-services-data-mining.md).  
+ Una fila siempre se agrega a la tabla de transiciones para representar los posibles valores `Missing`. Para obtener información sobre lo que `Missing` significa el valor y cómo afecta a los cálculos, vea [valores ausentes &#40;Analysis Services-&#41;de minería de datos ](missing-values-analysis-services-data-mining.md).  
   
  Los cálculos de compatibilidad y probabilidad difieren en función de si el cálculo se aplica a los casos de entrenamiento o al modelo terminado. Esto se debe a que el método de agrupación en clústeres predeterminado, maximización de la expectativa (EM), supone que cualquier caso puede pertenecer a más de un clúster. Al calcular la compatibilidad para los casos en el modelo, es posible utilizar recuentos netos y probabilidades netas. Sin embargo, las probabilidades de una secuencia determinada en un clúster deben ser compensadas por la suma de todas las combinaciones posibles de clústeres y secuencias.  
   

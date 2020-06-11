@@ -1,5 +1,6 @@
 ---
 title: Usar operadores aritméticos en consultas XPath (SQLXML)
+description: Obtenga información sobre cómo especificar operadores aritméticos en consultas SQLXML 4,0 XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44b03e86ae2667b669d85533b04a2d973cef1833
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64b13492b7359fa6baad7cee21dfb291f655cdea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252633"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529895"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.locfileid: "75252633"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-specify-the--arithmetic-operator"></a>A. Especificar el operador aritmético *  
- Esta consulta XPath devuelve ** \<los elementos OrderDetail>** que cumplen el predicado especificado:  
+ Esta consulta XPath devuelve **\<OrderDetail>** los elementos que satisfacen el predicado especificado:  
   
 ```  
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (true si **OrderDetail** es un ** \<nodo de elemento>**, porque el ** \<elemento>** nodo es el nodo principal para el eje **secundario** ). Para todos los nodos de elemento ** \<>OrderDetail** , se aplica la prueba en el predicado y solo se devuelven los nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (true si **OrderDetail** es **\<element node>** , porque el **\<element>** nodo es el nodo principal del eje **secundario** ). En todos los **\<OrderDetail>** nodos de elemento, se aplica la prueba del predicado y solo se devuelven los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  

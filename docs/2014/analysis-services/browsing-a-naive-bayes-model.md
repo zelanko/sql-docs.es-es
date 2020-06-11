@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cceead32ca14d2a5261c0ef35cb4444be2effcf5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088481"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527721"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Examinar un modelo Bayes naive
   Al abrir un modelo Bayes naive con **examinar**, el modelo se muestra en un visor interactivo con cuatro paneles diferentes. El visor se usa para explorar las correlaciones y obtener información sobre el modelo y los datos subyacentes.  

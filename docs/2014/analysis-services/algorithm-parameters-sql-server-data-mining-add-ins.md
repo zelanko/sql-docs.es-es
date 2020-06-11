@@ -46,20 +46,19 @@ helpviewer_keywords:
 ms.assetid: fcdc3f85-813d-4279-90b0-16e26edd008d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e902272c58f1e841a3108199e53d51ac12f8ae4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6d89f8e1724875268e27a29c2df9053704f0883d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062600"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528131"
 ---
 # <a name="algorithm-parameters-sql-server-data-mining-add-ins"></a>Parámetros de algoritmo (Complementos de minería de datos de SQL Server)
   Cuando se realiza la minería de datos con las Herramientas de análisis de tabla para Excel, no es necesario configurar el algoritmo de minería de datos ni ningún parámetro; cada herramienta analiza los datos y selecciona automáticamente los parámetros óptimos. Sin embargo, si desea modificar el modelo o crear un modelo de minería de datos desde cero, el Cliente de minería de datos para Excel dispone de varias opciones para la personalización.  
   
 -   Cree un modelo de minería de datos manualmente; para ello, haga clic en **Opciones avanzadas** y, a continuación, haga clic en **Agregar modelo a estructura**.  
   
--   Use cualquiera de los asistentes para modelado del cliente de minería de datos y haga clic en **parámetros** para controlar el [!INCLUDE[msCoName](../includes/msconame-md.md)] comportamiento de los algoritmos de minería de datos.  
+-   Use cualquiera de los asistentes para modelado del cliente de minería de datos y haga clic en **parámetros** para controlar el comportamiento de los [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos.  
   
 -   Haga clic en **consulta** para abrir el Asistente para crear modelo de consulta y, a continuación, haga clic en **avanzadas** para abrir el **Editor de consultas avanzadas de minería de datos**. En este editor, puede generar modelos usando plantillas DMX.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66062600"
 |--------------------|-------------|-----------------|  
 |AUTO_DETECT_PERIODICITY|Algoritmo de serie temporal de Microsoft|Especifica un valor numérico entre 0 y 1 que se usa para detectar la periodicidad. Cuando este valor es más cercano a 1 se favorece el descubrimiento de varios patrones casi periódicos y la generación automática de sugerencias de periodicidad. Un gran número de sugerencias de periodicidad puede aumentar el tiempo de entrenamiento de los modelos y proporcionar modelos más precisos. Si el valor está más próximo a 0, la periodicidad sólo se detecta en datos con una periodicidad muy marcada.<br /><br /> El valor predeterminado es 0,6.|  
 |CLUSTER_COUNT|Algoritmo de clústeres de Microsoft<br /><br /> Algoritmo de clústeres de secuencia de Microsoft|Especifica el número aproximado de clústeres que generará el algoritmo. Si no se puede generar el número aproximado de clústeres a partir de los datos, el algoritmo genera tantos clústeres como sea posible. Si CLUSTER_COUNT se establece en 0, el algoritmo utiliza la heurística para determinar el mejor número de clústeres que debe generar.<br /><br /> El valor predeterminado es 10.|  
-|CLUSTER_SEED|Algoritmo de clústeres de Microsoft|Especifica el número de inicialización usado para generar clústeres aleatoriamente para la fase inicial de generación del modelo.<br /><br /> El valor predeterminado es 0.|  
+|CLUSTER_SEED|Algoritmo de clústeres de Microsoft|Especifica el número de inicialización usado para generar clústeres aleatoriamente para la fase inicial de generación del modelo.<br /><br /> El valor predeterminado es 0.|  
 |CLUSTERING_METHOD|Algoritmo de clústeres de Microsoft|Especifica el método de agrupación en clústeres que va a usar el algoritmo. Los métodos de agrupación en clústeres disponibles son: EM escalable (1), EM no escalable (2), mediana-K escalable (3) y mediana-K no escalable (4).<br /><br /> El valor predeterminado es 1.|  
 |COMPLEXITY_PENALTY|Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de serie temporal de Microsoft|Controla el crecimiento del árbol de decisión. Un valor bajo aumenta el número de divisiones y un valor alto lo reduce. El valor predeterminado se basa en el número de atributos de un modelo concreto, como se describe en la lista siguiente:<br /><br /> De 1 a 9 atributos, el valor predeterminado es 0,5.<br /><br /> De 10 a 99 atributos, el valor predeterminado es 0,9.<br /><br /> Para 100 o más atributos, el valor predeterminado es 0,99.<br /><br /> Nota: en los modelos de serie temporal, este parámetro solo se aplica a los modelos que se compilan con el algoritmo ARTxp, o a los modelos mixtos.|  
 |FORCED_REGRESSOR|Algoritmo de árboles de decisión de Microsoft<br /><br /> Algoritmo de regresión lineal de Microsoft|Fuerza al algoritmo a usar las columnas indicadas como regresores, independientemente de su importancia según los cálculos del algoritmo.<br /><br /> Nota: este parámetro solo se usa para árboles de decisión que predicen un atributo continuo. Por definición, un modelo de regresión lineal es un caso especial de árboles de decisión que predice atributos continuos. Sin embargo, cualquier modelo de árbol de decisión puede contener un nodo que representa una fórmula de regresión lineal.|  

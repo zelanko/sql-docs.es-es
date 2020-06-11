@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 92eb21a8-5fc4-4999-ad37-1332ce26431d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 545c6f45339047d3a632f9e18d69108f3c8b5111
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079199"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543587"
 ---
 # <a name="lesson-11-create-partitions"></a>Lección 11: Crear particiones
   En esta lección, creará particiones para dividir la tabla Internet Sales en piezas lógicas más pequeñas que puedan procesarse (actualizarse) independientemente de otras particiones. De forma predeterminada, cada tabla que se incluye en el modelo tiene una partición que incluye todas las columnas y filas de la tabla. En la tabla Internet sales, queremos dividir los datos por año. una partición para cada uno de los cinco años de la tabla.  Cada partición se podrá procesar entonces independientemente. Para obtener más información, consulte [Particiones &#40;SSAS tabular&#41;](tabular-models/partitions-ssas-tabular.md).  
@@ -35,7 +34,7 @@ ms.locfileid: "66079199"
   
 2.  En el cuadro de diálogo **Administrador de particiones** , en **particiones**, haga clic en la partición **Internet sales** .  
   
-3.  En **nombre de partición**, cambie el nombre `Internet Sales 2005`a.  
+3.  En **nombre de partición**, cambie el nombre a `Internet Sales 2005` .  
   
     > [!TIP]  
     >  Antes de continuar con el paso siguiente, observe que los nombres de columna de la ventana Vista previa de la tabla muestran las columnas incluidas (activadas) en la tabla del modelo con los nombres de columna del origen. Esto es porque la ventana Vista previa de la tabla muestra las columnas de la tabla de origen, no de la tabla del modelo.  
@@ -85,7 +84,7 @@ ms.locfileid: "66079199"
   
 1.  En el cuadro de diálogo **Administrador de particiones** , en **particiones**, haga clic en la `Internet Sales 2005` partición que acaba de crear y, a continuación, **copie**.  
   
-2.  En **nombre de partición**, `Internet Sales 2006`escriba.  
+2.  En **nombre de partición**, escriba `Internet Sales 2006` .  
   
 3.  En la instrucción SQL, para que la partición incluya solo las filas del año 2006, reemplace la cláusula WHERE por lo siguiente:  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66079199"
   
 1.  En el cuadro de diálogo **Administrador de partición** , haga clic en **Copiar**.  
   
-2.  En **nombre de partición**, `Internet Sales 2007`escriba.  
+2.  En **nombre de partición**, escriba `Internet Sales 2007` .  
   
 3.  En **cambiar a**, seleccione **Editor de consultas**.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "66079199"
   
 1.  En el cuadro de diálogo **Administrador de partición** , haga clic en **Nuevo**.  
   
-2.  En **nombre de partición**, `Internet Sales 2008`escriba.  
+2.  En **nombre de partición**, escriba `Internet Sales 2008` .  
   
 3.  En **cambiar a**, seleccione **Editor de consultas**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66079199"
   
 1.  En el cuadro de diálogo **Administrador de partición** , haga clic en **Nuevo**.  
   
-2.  En **nombre de partición**, `Internet Sales 2009`escriba.  
+2.  En **nombre de partición**, escriba `Internet Sales 2009` .  
   
 3.  En **cambiar a**, seleccione **Editor de consultas**.  
   
@@ -152,7 +151,7 @@ ms.locfileid: "66079199"
   
      A continuación, aparece el cuadro de diálogo **proceso de datos** y muestra los detalles del proceso de cada partición. Observe que se ha transferido un número diferente de filas para cada partición. Esto es porque cada partición incluye solamente las filas del año especificado en la cláusula WHERE de la instrucción SQL. No hay datos para el año 2010.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 12: Crear roles](lesson-11-create-roles.md).  
   
   

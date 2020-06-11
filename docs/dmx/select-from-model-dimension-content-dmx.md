@@ -1,24 +1,24 @@
 ---
-title: Seleccione del &lt;modelo&gt;. DIMENSION_CONTENT (DMX) | Microsoft Docs
+title: Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7fac89454cd31c1334e41d4c2367143f31476e20
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7ffc372ad0c44208d246a2afc9259428e354e480
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928368"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669585"
 ---
-# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Seleccione del &lt;modelo&gt;. DIMENSION_CONTENT (DMX)
+# <a name="select-from-ltmodelgtdimension_content-dmx"></a>Seleccione del &lt; modelo &gt; . DIMENSION_CONTENT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Un modelo de minería de datos se puede utilizar como una dimensión en un cubo OLAP, donde cada nodo del modelo se representa como un miembro de la dimensión. **> seleccionar del \<modelo. Dimension_CONTENT** instrucción devuelve el contenido del modelo que pertenece a su uso como una dimensión.  
+  Un modelo de minería de datos se puede utilizar como una dimensión en un cubo OLAP, donde cada nodo del modelo se representa como un miembro de la dimensión. **> seleccionar del \< modelo. Dimension_CONTENT** instrucción devuelve el contenido del modelo que pertenece a su uso como una dimensión.  
   
 ## <a name="syntax"></a>Sintaxis  
   

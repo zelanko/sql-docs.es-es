@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c7e9ebb-d0c9-498e-a9ba-cc13eaa43520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a507e0d77cd81165b0220e3d09ec10227d32d853
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175234"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528711"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Detectar categorías (Herramientas de análisis de tabla para Excel)
   ![Botón Detectar categorías en cinta de opciones](media/tat-detectcat.gif "Botón Detectar categorías en cinta de opciones")
@@ -78,13 +77,13 @@ ms.locfileid: "78175234"
 >  Cuando se usa la herramienta **detectar categorías** , se crea una nueva columna, categoría, en la tabla de datos original. Si deja esta columna en la tabla de datos y después realiza operaciones de minería de datos posteriores, la presencia de esta columna podría influir en los resultados. Para asegurarse de que otras operaciones no se verán afectadas, debería hacer una copia de la tabla de datos sin la columna Categoría antes de usar otras herramientas de minería de datos.
 
 ## <a name="related-tools"></a>Herramientas relacionadas
- Cuando la herramienta **detectar categorías** analiza los datos, crea una estructura de minería de datos y un modelo de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] mediante el algoritmo de clústeres.
+ Cuando la herramienta **detectar categorías** analiza los datos, crea una estructura de minería de datos y un modelo de minería de datos mediante el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres.
 
  Después de crear un modelo de minería de datos con la herramienta **analizar influenciadores clave** , puede usar el cliente de minería de datos para Excel para examinar el modelo y explorar las relaciones con más detalle. El Cliente de minería de datos para Excel es un complemento independiente que proporciona funciones de minería de datos más avanzadas. Para obtener más información, vea [examinar modelos en Excel &#40;SQL Server complementos de minería de datos&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md).
 
  Para obtener más información acerca del uso de las funcionalidades de modelado de datos en el cliente de minería de datos para Excel, vea [crear un modelo de minería de datos](creating-a-data-mining-model.md).
 
- Para obtener más información acerca del algoritmo usado por la herramienta **detectar categorías** , vea el tema "algoritmo de clústeres de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Microsoft" en los libros en pantalla de.
+ Para obtener más información acerca del algoritmo usado por la herramienta **detectar categorías** , vea el tema "algoritmo de clústeres de Microsoft" en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libros en pantalla de.
 
 ## <a name="see-also"></a>Consulte también
  [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)

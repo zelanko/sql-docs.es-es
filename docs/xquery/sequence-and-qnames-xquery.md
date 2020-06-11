@@ -1,5 +1,6 @@
 ---
 title: Sequence y QNames (XQuery) | Microsoft Docs
+description: Obtenga información sobre los conceptos fundamentales de las secuencias y QNames en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: c71a7139c3adb354923b3c953b367ab506f30545
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 017c2289864b8d2d475bea63a5828d37543b7292
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80380786"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305824"
 ---
 # <a name="sequence-and-qnames-xquery"></a>Secuencia y QName (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +112,7 @@ SELECT @x.query('/Root/a');
   
  En la expresión (`/Root/a`), `Root` y `a` son elementos QName.  
   
- En el ejemplo siguiente, se especifica una consulta en una columna **XML** con tipo. La consulta recorre en iteración todos los \<elementos> del paso en la primera ubicación centro.  
+ En el ejemplo siguiente, se especifica una consulta en una columna **XML** con tipo. La consulta recorre en iteración todos los \<step> elementos de la primera ubicación centro.  
   
 ```  
 SELECT Instructions.query('  
@@ -132,7 +133,7 @@ WHERE ProductModelID=7;
   
  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] existen los siguientes espacios de nombres predefinidos compatibles con XQuery.  
   
-|Prefijo|URI|  
+|Prefijo|Identificador URI|  
 |------------|---------|  
 |xs|http://www.w3.org/2001/XMLSchema|  
 |xsi|http://www.w3.org/2001/XMLSchema-instance|  
@@ -146,7 +147,7 @@ WHERE ProductModelID=7;
  Cada base de datos que se crea tiene la colección de esquemas XML **Sys** . Estos esquemas se reservan para que estén accesibles desde cualquier otra colección de esquemas XML creada por el usuario.  
   
 > [!NOTE]  
->  Esta implementación no admite el `local` prefijo tal y como se describe en la http://www.w3.org/2004/07/xquery-local-functionsespecificación de XQuery en.  
+>  Esta implementación no admite el `local` prefijo tal y como se describe en la especificación de XQuery en http://www.w3.org/2004/07/xquery-local-functions .  
   
 ## <a name="see-also"></a>Consulte también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)  

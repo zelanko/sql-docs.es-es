@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49ec8adeaf5d8726220ed03f29c1be3088f9ccb2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547707"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Usar fuentes de distribución de datos (PowerPivot para SharePoint)
   Las fuentes de distribución de datos son una o varias secuencias de datos que se generan en un origen de datos en línea y se difunden en un documento o aplicación de destino. Si está utilizando PowerPivot para Excel, las fuentes de distribución de datos pueden ayudarle a poner los datos empresariales o corporativos existentes de orígenes de datos arbitrarios en la ventana de PowerPivot de un libro de Excel 2010. Después de importar una fuente de distribución de datos en un libro, puede hacer referencia a ella posteriormente en cualquier operación de actualización de datos que programe en un servidor de SharePoint.  
   
  El modo de utilizar una fuente de distribución de datos depende de si se utilizan las características de exportación integradas en las aplicaciones compatibles con las fuentes de distribución de datos de Atom, o si se crean y usan servicios de datos personalizados. Las aplicaciones que pueden publicar y leer los datos XML de Atom permiten una transferencia de datos sin problemas que oculta la mecánica de los servicios de datos y fuentes de distribución de datos a los usuarios. Para un usuario, simplemente mueve los datos de una aplicación a otra.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y Microsoft SharePoint 2010 proporcionan fuentes de datos que se pueden utilizar en los libros PowerPivot. Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]y Microsoft SharePoint 2010 proporcionan fuentes de datos que se pueden utilizar en los libros PowerPivot. Puede utilizar la información de este tema para saber cómo tener acceso a las fuentes de distribución de datos de los informes y las listas de que ya disponga.  
   
  Este tema contiene las siguientes secciones:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66070905"
 ##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
  Para importar una fuente de distribución de datos en Excel 2010, debe tener PowerPivot para Excel.  
   
- Debe tener un servicio web o un servicio de datos que proporcione los datos en el formato de Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Y SharePoint 2010 pueden proporcionar datos en este [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] formato.  
+ Debe tener un servicio web o un servicio de datos que proporcione los datos en el formato de Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Y SharePoint 2010 pueden proporcionar datos en este formato.  
   
  Antes de poder exportar una lista de SharePoint como una fuente de distribución de datos, debe instalar ADO.NET Data Services en el servidor de SharePoint. Para obtener más información, vea [Instalar ADO.NET Data Services para admitir las exportaciones de fuentes de distribución de datos de las listas de SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66070905"
   
     1.  La**Dirección URL base** es opcional. Debería especificarla si un documento de servicio de datos proporciona varias fuentes. La dirección URL base debería especificar la parte de la dirección URL que sea común a todas las fuentes (por ejemplo, el nombre del servidor y el sitio). Si está creando un documento de servicio de datos para un informe de Reporting Services, la dirección URL base sería la dirección URL del servidor de informes y el informe.  
   
-    2.  La**Dirección URL del servicio web** es obligatoria. Sin la dirección URL base, este valor debe incluir http:// o https:// en la dirección. Si especificó una dirección URL base, la dirección URL del servicio web es la parte que sigue a la dirección URL base. Por ejemplo, si la dirección URL completa http://adventure-works/inventory/today.aspxes, la dirección URL base http://adventure-works/inventorysería y la dirección URL del servicio Web sería/Today.aspx.  
+    2.  La**Dirección URL del servicio web** es obligatoria. Sin la dirección URL base, este valor debe incluir http:// o https:// en la dirección. Si especificó una dirección URL base, la dirección URL del servicio web es la parte que sigue a la dirección URL base. Por ejemplo, si la dirección URL completa es http://adventure-works/inventory/today.aspx , la dirección URL base sería http://adventure-works/inventory y la dirección URL del servicio Web sería/Today.aspx.  
   
          La dirección URL del servicio web puede incluir parámetros que filtran o seleccionan un subconjunto de datos. La aplicación o servicio que proporciona la fuente debe admitir los parámetros que especifique en la dirección URL.  
   

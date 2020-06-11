@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0d34ea224efd5b218cafee58dec09ff4590b8511
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939506"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668762"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Algoritmos que contienen tablas anidadas de predicción, incluidos algoritmos de asociación y de clasificación. Los algoritmos de clasificación que admiten tablas anidadas incluyen los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)] árboles de decisión, [!INCLUDE[msCoName](../includes/msconame-md.md)] Bayes Naive y [!INCLUDE[msCoName](../includes/msconame-md.md)] de red neuronal.  
+ Algoritmos que contienen tablas anidadas de predicción, incluidos algoritmos de asociación y de clasificación. Los algoritmos de clasificación que admiten tablas anidadas incluyen los [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de árboles de decisión, [!INCLUDE[msCoName](../includes/msconame-md.md)] Bayes Naive y de [!INCLUDE[msCoName](../includes/msconame-md.md)] red neuronal.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  

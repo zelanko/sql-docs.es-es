@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 668ca4cfae7b660ff9e44de06c8523d8f9324cc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83ba32e732a590881803d87c73d9853ee6c20abf
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086028"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525455"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Examinar un modelo usando el visor Bayes naive de Microsoft
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor Bayes Naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que [!INCLUDE[msCoName](../../includes/msconame-md.md)] se generan con el algoritmo Bayes Naive de. El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que se adapta muy bien a las tareas de modelado de predicción. Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor Bayes Naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo Bayes Naive de. El algoritmo Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clasificación que se adapta muy bien a las tareas de modelado de predicción. Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md).  
   
  Como uno de los principales propósitos de un modelo Bayes naive es ofrecer una manera rápida de explorar los datos de un conjunto de datos, el Visor Bayes naive de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona varios métodos para mostrar la interacción entre los atributos de predicción y los atributos de entrada.  
   
@@ -74,16 +73,16 @@ ms.locfileid: "66086028"
 ##  <a name="attribute-discrimination"></a><a name="BKMK_Discrimination"></a>Distinción de atributos  
  Para usar la pestaña **Distinción del atributo** , seleccione un atributo de predicción y dos de sus estados en las listas **Atributo**, **Valor 1**y **Valor 2** . La cuadrícula de la pestaña **Distinción del atributo** mostrará entonces la siguiente información en columnas:  
   
- **Atributo**  
+ **Attribute**  
  Muestra otros atributos del conjunto de datos que contienen un estado que favorece claramente un estado del atributo de predicción.  
   
  **Valores**  
  Muestra el valor del atributo en la columna **Atributo**.  
   
- **Favorece el \<valor 1>**  
+ **Favorece\<value 1>**  
  Muestra una barra coloreada que indica la intensidad con la que el valor de atributo favorece el valor de atributo predecible mostrado en **Valor 1**.  
   
- **Favorece el \<valor 2>**  
+ **Favorece\<value 2>**  
  Muestra una barra coloreada que indica la intensidad con la que el valor de atributo favorece el valor de atributo predecible mostrado en **Valor 2**.  
   
  [Volver al principio](#BKMK_ViewerTabs)  

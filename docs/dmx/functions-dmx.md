@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: f68a66e778d44059a83ca6eca3cee35b4dffca9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ad02b8414f2b59bf8e226b8d3d2cbbc05f161d9c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892762"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670183"
 ---
 # <a name="functions-dmx"></a>Funciones (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Al utilizar extensiones de minería de datos (DMX) para consultar objetos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]en, puede utilizar funciones para devolver más información que solo los valores de las columnas del modelo de minería de datos o del conjunto de datos de entrada. Por ejemplo, puede usar consultas DMX para devolver no solo el valor de predicción de una columna, sino también la probabilidad de que la predicción sea correcta. Además de las funciones DMX, también puede utilizar funciones de Microsoft Visual Basic para Aplicaciones (VBA) y de Microsoft Excel, y procedimientos almacenados.  
+  Al utilizar extensiones de minería de datos (DMX) para consultar objetos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede utilizar funciones para devolver más información que solo los valores de las columnas del modelo de minería de datos o del conjunto de datos de entrada. Por ejemplo, puede usar consultas DMX para devolver no solo el valor de predicción de una columna, sino también la probabilidad de que la predicción sea correcta. Además de las funciones DMX, también puede utilizar funciones de Microsoft Visual Basic para Aplicaciones (VBA) y de Microsoft Excel, y procedimientos almacenados.  
   
 ## <a name="dmx-functions"></a>Funciones DMX  
  Puede usar funciones DMX para realizar las tareas siguientes:  
@@ -43,7 +43,7 @@ SELECT lCase([Attribute_Name])
 FROM [TM_Decision_Tree].CONTENT  
 ```  
   
- Si existe la misma función en VBA y en Excel, debe prefijar el nombre de la función en la instrucción DMX con **VBA** o **Excel**. Por ejemplo, puede usar `VBA!Log` o. `Excel!Log` Si la función de VBA o Excel que desea usar también existe en DMX o MDX (Expresiones multidimensionales), o si la función contiene un signo de moneda ($), deberá usar corchetes ([]) como caracteres de escape para la función. Por ejemplo, la llamada a la función sería `[VBA!Format]`.  
+ Si existe la misma función en VBA y en Excel, debe prefijar el nombre de la función en la instrucción DMX con **VBA** o **Excel**. Por ejemplo, puede usar `VBA!Log` o `Excel!Log` . Si la función de VBA o Excel que desea usar también existe en DMX o MDX (Expresiones multidimensionales), o si la función contiene un signo de moneda ($), deberá usar corchetes ([]) como caracteres de escape para la función. Por ejemplo, la llamada a la función sería `[VBA!Format]`.  
   
 ## <a name="stored-procedures"></a>Procedimientos almacenados  
  Puede usar lenguajes de programación de Common Language Runtime para crear procedimientos almacenados que amplíen la funcionalidad de DMX. Por ejemplo, un modelo de minería de datos de árbol de regresión devuelve coeficientes, como A, B, etc., que describen la ecuación de regresión, pero el modelo no devuelve la propia ecuación, como un + BX = y. Sin embargo, puede escribir un procedimiento almacenado que use el objeto de modelo de minería de datos para navegar por el esquema de contenido y para devolver la ecuación de regresión como salida. Por lo tanto, una instrucción DMX puede devolver una lista de las ecuaciones de regresión como parte del resultado de la consulta.  

@@ -1,5 +1,6 @@
 ---
 title: Introducción con SSMA para MySQL (MySQLToSQL) | Microsoft Docs
+description: Obtenga información sobre el proceso de instalación de SQL Server Migration Assistant (SSMA) para MySQL y familiarícese con la interfaz de usuario de SSMA.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6dce90d0c8626032d92c9ecec61cbbaf2556e90
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67984538"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293802"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Introducción a SSMA para MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) para MySQL permite convertir rápidamente esquemas de base de datos de MySQL en esquemas de SQL Server o de Azure SQL DB, cargar los esquemas resultantes en SQL Server o en Azure SQL DB, y migrar datos de MySQL a SQL Server o a Azure SQL DB.  
@@ -96,7 +97,7 @@ En la tabla siguiente se muestran los comandos de la barra de herramientas de mi
   
 |||  
 |-|-|  
-|**Botón**|**Función**|  
+|**Botón**|**Function**|  
 |**Crear informe**|Convierte los objetos de MySQL seleccionados en SQL Server o en objetos de base de de Azure SQL y, a continuación, crea un informe que muestra el éxito de la conversión.<br /><br />Este comando está deshabilitado a menos que se seleccionen objetos en el explorador de metadatos de MySQL.|  
 |**Convertir esquema**|Convierte los objetos de MySQL seleccionados en SQL Server o en objetos de base de Azure SQL.<br /><br />Este comando está deshabilitado a menos que se seleccionen objetos en el explorador de metadatos de MySQL.|  
 |**Migrar datos**|Migra datos de la base de datos MySQL a SQL Server o a Azure SQL DB. Antes de ejecutar este comando, debe convertir los esquemas de MySQL en SQL Server o en esquemas de Azure SQL DB y, a continuación, cargar los objetos en SQL Server o en Azure SQL DB.<br /><br />Este comando está deshabilitado a menos que se seleccionen objetos en el explorador de metadatos de MySQL.|  
@@ -110,7 +111,7 @@ En la tabla siguiente se muestran los menús de SSMA.
 |**Menú**|**Descripción**|  
 |**Archivo**|Contiene comandos para trabajar con proyectos, conectarse a MySQL y conectarse a SQL Server o a Azure SQL DB.|  
 |**Edición**|Contiene comandos para buscar y trabajar con texto en las páginas de detalles. Para abrir el cuadro de diálogo **administrar marcadores** , en el menú Edición, haga clic en administrar marcadores. En el cuadro de diálogo verá una lista de marcadores existentes. Puede usar los botones que se encuentran en el lado derecho del cuadro de diálogo para administrar los marcadores.|  
-|**Ver**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos de MySQL y SQL Server o el explorador de metadatos de Azure SQL DB. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones que se van a administrar con los diseños.|  
+|**Vista**|Contiene el comando **sincronizar exploradores de metadatos** . Que sincroniza los objetos entre el explorador de metadatos de MySQL y SQL Server o el explorador de metadatos de Azure SQL DB. También contiene comandos para mostrar y ocultar los paneles de **salida** y **lista de errores** y los **diseños** de opciones que se van a administrar con los diseños.|  
 |**Herramientas**|Contiene comandos para crear informes, convertir esquemas, actualizar desde la base de datos, migrar objetos y datos y guardar como script. También proporciona acceso a los cuadros de diálogo **configuración global, configuración de proyecto predeterminada** y **configuración del proyecto** .|  
 |**Ayuda**|Proporciona acceso a la ayuda de SSMA y al cuadro **de diálogo acerca de** .|  
   

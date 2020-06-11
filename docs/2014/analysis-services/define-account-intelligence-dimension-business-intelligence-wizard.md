@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 42ce4c2b-e058-43ad-8d63-19ba07a31b67
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 99836d3b224b0c4d07d454d994df684d49d3325a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528847"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Definir la inteligencia de cuentas (Dimensión del Asistente de Business Intelligence)
   Use esta página para seleccionar la dimensión a la que se aplicará la inteligencia de cuentas, incluida la configuración de tipo de atributo y dimensión, la definición de medidas de suma parcial y otras características.  

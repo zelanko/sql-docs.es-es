@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3a249a83aba62c7881be024caa3931cb5ad07204
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7154ce0ad66346634225734fe829c36e7bf3ad58
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083293"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520908"
 ---
 # <a name="neural-network-model-query-examples"></a>Ejemplos de consultas de modelos de red neuronal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de red neuronal podría recuperar metadatos del modelo, por ejemplo, el número de niveles ocultos. O bien, una consulta de predicción podría sugerir las clasificaciones según una entrada y proporcionar, si se desea, las probabilidades para cada clasificación.  
@@ -181,7 +180,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
 ###  <a name="sample-query-5-creating-a-singleton-prediction"></a><a name="bkmk_Query5"></a>Consulta de ejemplo 5: crear una predicción singleton  
  La manera más fácil de generar una consulta de predicción en un modelo de red neuronal es utilizar el Generador de consultas de predicción, disponible en la pestaña **Predicción de minería de datos** del Diseñador de minería de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Puede examinar el modelo en el Visor de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para filtrar los atributos de interés y las tendencias de vista, y a continuación cambiar a la pestaña **Predicción de minería de datos** para crear una consulta y predecir los valores nuevos para esas tendencias.  
   
- Por ejemplo, puede examinar el modelo de centro de atención telefónica para ver las correlaciones entre los volúmenes de pedidos y otros atributos. Para ello, abra el modelo en el visor y, para **entrada**, seleccione ** \<todos los>**.  Después, como **Salida**, seleccione **Number of Orders**. Como **Valor 1**, seleccione el intervalo que representa la mayoría de los pedidos y como **Valor 2**, seleccione el intervalo que representa los pedidos menores. A continuación, puede ver de un vistazo todos los atributos que el modelo pone en correlación con el volumen de pedidos.  
+ Por ejemplo, puede examinar el modelo de centro de atención telefónica para ver las correlaciones entre los volúmenes de pedidos y otros atributos. Para ello, abra el modelo en el visor y, para **entrada**, seleccione **\<All>** .  Después, como **Salida**, seleccione **Number of Orders**. Como **Valor 1**, seleccione el intervalo que representa la mayoría de los pedidos y como **Valor 2**, seleccione el intervalo que representa los pedidos menores. A continuación, puede ver de un vistazo todos los atributos que el modelo pone en correlación con el volumen de pedidos.  
   
  Al examinar los resultados en el visor, puede ver que ciertos días de la semana tienen los menores volúmenes de pedidos y que un aumento en el número de operadores parece estar correlacionado con ventas mayores. Después, podría utilizar una consulta de predicción en el modelo para probar una hipótesis "qué sucedería si" y preguntar si al aumentar el número de operadores de nivel 2 en un día de volumen bajo, aumentarían los pedidos. Para ello, cree una consulta como la siguiente:  
   

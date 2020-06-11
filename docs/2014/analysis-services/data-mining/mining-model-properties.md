@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aa158dba22938d347030ada0c9b2ea8e589cab5d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083512"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521237"
 ---
 # <a name="mining-model-properties"></a>Propiedades del modelo de minería de datos
   Los modelos de minería de datos tienen las siguientes clases de propiedades:  
@@ -39,7 +38,7 @@ ms.locfileid: "66083512"
 ## <a name="properties-of-models"></a>Propiedades de los modelos  
  En la tabla siguiente se describen las propiedades específicas de los modelos de minería de datos. Además, hay propiedades que puede establecer en columnas individuales de la minería de datos  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |**Algoritmo**|Establece el tipo de algoritmo para el modelo de minería de datos.|  
 |**AlgorithmParameters**|Establece los valores de los parámetros de algoritmo disponibles para cada tipo de algoritmo.|  
@@ -50,7 +49,7 @@ ms.locfileid: "66083512"
 ## <a name="properties-of-model-columns"></a>Propiedades de las columnas de un modelo  
  Puede configurar las siguientes propiedades específicas de la minería de datos para cada columna de un modelo de minería de datos. Puede establecer estas propiedades con un valor diferente para cada modelo de la estructura de minería de datos.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |**Descripción**|Describe el propósito de la columna de minería.|  
 |**Nombre**|Establece el nombre de la columna del modelo de minería de datos. Puede escribir un nuevo nombre que sirva de alias para la columna del modelo de minería de datos.|  

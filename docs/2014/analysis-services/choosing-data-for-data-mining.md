@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c72d80e-913c-4bbe-b258-444294a78838
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 589a1f64a3bed5455f8004e51f6cddf84e83fec5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088031"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527591"
 ---
 # <a name="choosing-data-for-data-mining"></a>Elegir datos para minería de datos
   Al iniciar la minería de datos, podría preguntar "¿Cuántos datos necesito?" o "¿hay algún requisito especial que debo conocer al limpiar o dar formato a mis datos?"  
@@ -205,7 +204,7 @@ ms.locfileid: "66088031"
   
  Normalmente, la columna de clave es un identificador numérico o de texto que no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros. Las excepciones son las claves de serie temporal y las claves de secuencia.  
   
- Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información acerca de las tablas anidadas, vea [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx):  
+ Las**claves de tabla anidada** solo se utilizan al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para obtener más información acerca de las tablas anidadas, vea [https://msdn.microsoft.com/library/ms175659.aspx](https://msdn.microsoft.com/library/ms175659.aspx) :  
   
  Este tipo de contenido se puede utilizar con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "66088031"
   
  Este tipo de contenido es compatible con los siguientes tipos de datos: `Double`, `Long` y `Date`.  
   
- **Cuadro**  
+ **Tabla**  
  Este tipo de contenido también se utiliza únicamente al obtener datos de un origen de datos externo definido como una vista del origen de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Lo que significa es que cada fila de datos contiene realmente una tabla de datos anidada, con una o más columnas y una o más filas.  

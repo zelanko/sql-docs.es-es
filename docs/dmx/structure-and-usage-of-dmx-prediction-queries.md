@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 167bf7e17b172b9d3e6c58df1f52510f93a668aa
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67938067"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669988"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estructura y uso de las consultas de predicción DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede utilizar la consulta de predicción de extensiones de minería de datos (DMX) para predecir valores de columna desconocidos en un nuevo conjunto de datos, en función de los resultados de un modelo de minería de datos.  
+  En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede utilizar la consulta de predicción de extensiones de minería de datos (DMX) para predecir valores de columna desconocidos en un nuevo conjunto de datos, en función de los resultados de un modelo de minería de datos.  
   
  El tipo de consulta utilizado depende de la información que desee obtener del modelo. Si desea crear predicciones sencillas en tiempo real, como por ejemplo para saber si el perfil de un cliente potencial de un sitio web se ajusta al perfil de un comprador de bicicletas, entonces deberá usar una consulta singleton. Si desea crear un lote de predicciones a partir de un conjunto de escenarios incluidos en un origen de datos, deberá usar una consulta de predicción normal.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "67938067"
   
 -   **TOP**  
   
--   **Del***\<modelo>* **combinación de predicción**      
+-   **Del*** \< modelo>* **combinación de predicción**      
   
--   **EN**  
+-   **ON**  
   
 -   **WHERE**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67938067"
   
 -   Funciones que devuelven una columna de datos.  
   
- El elemento **del** * \<modelo>* **combinación de predicción** define los datos de origen que se van a usar para crear la predicción. Para una consulta singleton, se trata de una serie de valores que se asignan a columnas. Para una combinación de predicción vacía, se deja en blanco.  
+ El elemento **del** * \< modelo>* **combinación de predicción** define los datos de origen que se van a usar para crear la predicción. Para una consulta singleton, se trata de una serie de valores que se asignan a columnas. Para una combinación de predicción vacía, se deja en blanco.  
   
  El elemento **on** asigna las columnas definidas en el modelo de minería de datos a las columnas de un conjunto de datos externo. No es necesario incluir este elemento si se va a crear una consulta de combinación de predicción vacía o una combinación de predicción natural.  
   

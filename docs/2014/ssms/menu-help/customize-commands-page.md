@@ -12,17 +12,17 @@ ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56df884317c13b860ba19d66d9680c79356c9080
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62470022"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859247"
 ---
 # <a name="customize-commands-page"></a>Personalizar (página Comandos)
   Este cuadro de diálogo permite agregar comandos en las barras de herramientas y menús, y eliminarlos de éstos; también permite cambiar las imágenes que se utilizan para los botones de barra de herramientas o los comandos de los menús. Para tener acceso a la página **Comandos** , haga clic en **Personalizar** en el menú **Herramientas** y, a continuación, haga clic en **Comandos**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Categorías**  
  Especifica el conjunto de comandos que se muestran en el cuadro de lista **Comandos** . Las categorías de los comandos se basan en los títulos de menú proporcionados por las herramientas y los diseñadores admitidos por el entorno. Esta lista de títulos es dinámica, por lo que el orden de las categorías y los títulos de los menús cambian en función de las herramientas y del diseñador, así como de las personalizaciones que hayan podido efectuarse. Por consiguiente, es posible que dos menús de dos diseñadores distintos tengan el mismo nombre y que el mismo título aparezca dos veces, pero ofrezca distintos conjuntos de comandos.  
   

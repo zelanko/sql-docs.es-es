@@ -19,12 +19,12 @@ ms.assetid: 91dbc61b-e4c0-4826-976c-b2fce88b7793
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b0ed500b1217ae70dca72ab6eab64ab661c22ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08d9a3d71cb099e171e4e8a850766e685319d556
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078535"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669497"
 ---
 # <a name="routine_columns-transact-sql"></a>ROUTINE_COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68078535"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Nombre de catálogo o base de datos de la función con valores de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la función con valores de tabla.<br /><br /> <strong> \* Importante \* \* </strong> No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la función con valores de tabla.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |**TABLE_NAME**|**nvarchar (** 128 **)**|Nombre de la función con valores de tabla.|  
 |**COLUMN_NAME**|**nvarchar (** 128 **)**|Nombre de la columna.|  
 |**ORDINAL_POSITION**|**int**|Número de identificación de la columna.|  
@@ -56,7 +56,7 @@ ms.locfileid: "68078535"
 |**COLLATION_SCHEMA**|**VARCHAR (** 3 **)**|Siempre devuelve NULL.|  
 |**COLLATION_NAME**|**nvarchar (** 128 **)**|Devuelve el nombre único del criterio de ordenación si la columna es de tipo de datos de caracteres o de **texto** . De lo contrario, devuelve NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos de alias, esta columna es el nombre de la base de datos en que se creó el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna indica el nombre del esquema que contiene el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.<br /><br /> <strong> \* Importante \* \* </strong> No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna indica el nombre del esquema que contiene el tipo de datos definido por el usuario. De lo contrario, devuelve NULL.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. De lo contrario, devuelve NULL.|  
   
 ## <a name="see-also"></a>Consulte también  

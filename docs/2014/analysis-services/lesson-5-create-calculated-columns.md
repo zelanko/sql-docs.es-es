@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d126766a-5699-4e9f-8213-8c7eea0fc14e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b39909acacb29f68b0de49ba2093c9b812510172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542717"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lección 6: Crear columnas calculadas
   En esta lección creará nuevos datos en el modelo agregando columnas calculadas. Una columna calculada está basada en datos que ya existen en el modelo. Para obtener más información, consulte [Columnas calculadas &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns.md).  
@@ -52,7 +51,7 @@ ms.locfileid: "66078558"
     > [!NOTE]  
     >  Si aparece un error, compruebe que los nombres de columna de la fórmula coinciden con los nombres de columna que cambió en [Lección 3: Cambiar el nombre de las columnas](rename-columns.md).  
   
-5.  Cambie el nombre de esta `Month Calendar`columna a.  
+5.  Cambie el nombre de esta columna a `Month Calendar` .  
   
  La columna calculada Calendario del mes proporciona un nombre ordenable del mes.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66078558"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
-3.  Cambie el nombre de la `Day of Week`columna a.  
+3.  Cambie el nombre de la columna a `Day of Week` .  
   
 4.  Haga clic en el encabezado de columna y, después, arrastre la columna entre la columna **Day Name** y la columna **Day of Month** .  
   
@@ -89,7 +88,7 @@ ms.locfileid: "66078558"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
-4.  Cambie el nombre de la `Product Subcategory Name`columna a.  
+4.  Cambie el nombre de la columna a `Product Subcategory Name` .  
   
  La columna calculada Nombre de subcategoría del producto se utiliza para crear una jerarquía en la tabla Product que incluya los datos de la columna con igual nombre en la tabla Product Subcategory. Las jerarquías no pueden abarcar más de una tabla. Más adelante, en la lección 7, creará jerarquías.  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66078558"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
-3.  Cambie el nombre de la `Product Category Name`columna a.  
+3.  Cambie el nombre de la columna a `Product Category Name` .  
   
  La columna calculada Nombre de categoría del producto se utiliza para crear una jerarquía en la tabla Product que incluya los datos de la columna con igual nombre en la tabla Product Category. Las jerarquías no pueden abarcar más de una tabla.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "66078558"
   
      Cuando termine de crear la fórmula, presione ENTRAR.  
   
-4.  Cambie el nombre de la `Margin`columna a.  
+4.  Cambie el nombre de la columna a `Margin` .  
   
 5.  Arrastre la columna entre la columna **Sales Amount** y la columna **Tax Amt** .  
   

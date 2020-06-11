@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f8c14a123fcdb23efade07e78dec94d242df7fc7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f634f6c0a435c733af7f223de333cb52d95ce897
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175694"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547717"
 ---
 # <a name="use-powerpivot-gallery"></a>Usar la galería de PowerPivot
   La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una biblioteca de documentos de SharePoint con una finalidad especial que permite obtener una eficaz vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.
@@ -23,7 +22,7 @@ ms.locfileid: "78175694"
 > [!NOTE]
 >  Según cómo esté configurado el servidor, podría ver mensajes de error o advertencia en el área de vista previa para documentos concretos. Los mensajes pueden aparecer cuando un libro de Excel se establece para actualizar sus datos automáticamente cada vez que se abre. Los mensajes de advertencia de actualización de datos aparecerán como imagen de vista previa si Servicios de Excel está configurado para mostrar mensajes de error de advertencia de actualización de datos. Los administradores de servicios o de la granja pueden modificar la configuración para permitir que aparezca una vista previa de la hoja de cálculo real. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>En este tema
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> En este tema
 
 -   [Iconos de la Galería de PowerPivot](#icons)
 
@@ -146,16 +145,16 @@ ms.locfileid: "78175694"
 
 3.  Haga clic en la flecha abajo a la derecha y seleccione **Modificar propiedades**.
 
-4.  Haga clic en **Save**(Guardar). Al guardar el documento, obliga al servicio de instantánea a regenerar la imagen de vista previa.
+4.  Haga clic en **Guardar**. Al guardar el documento, obliga al servicio de instantánea a regenerar la imagen de vista previa.
 
-##  <a name="known-issues"></a><a name="bkmk_known_issues"></a>Problemas conocidos
+##  <a name="known-issues"></a><a name="bkmk_known_issues"></a> Problemas conocidos
 
 ### <a name="document-type-is-not-supported"></a>El tipo de documento no se admite
  No se admite el tipo de contenido **Documento de galería de PowerPivot** . Si habilita el tipo de contenido **Documento de galería de PowerPivot** para una biblioteca de documentos e intenta crear un nuevo documento de ese tipo, verá un mensaje de error similar al siguiente:
 
 -   ' Nuevo documento ' requiere una aplicación compatible con Microsoft SharePoint Foundation y un explorador Web. Para agregar un documento a esta biblioteca de documentos, haga clic en el botón ' cargar documento '.
 
--   "La dirección de Internet ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx ' no es válida." " Microsoft Excel no puede acceder al archivo ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/template. xlsx '. Existen varias razones posibles:
+-   "La dirección de Internet ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx ' no es válida." " Microsoft Excel no puede acceder al archivo ' http://[nombre de servidor]/TestSite/PowerPivot Gallery Gallery/ReportGallery/Forms/Template.xlsx '. Existen varias razones posibles:
 
  El tipo de contenido **Documento de galería de PowerPivot** no se agrega automáticamente a las bibliotecas de documentos. No encontrará este problema a menos que habilite manualmente el tipo de contenido no admitido.
 

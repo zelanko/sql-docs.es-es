@@ -12,18 +12,18 @@ ms.assetid: 69928b3e-53c8-4e6c-83a5-3dd3cf7ece7c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5afadecc745057344fd86df21b4479dabc1f7685
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c657b4670acaab008bafa24def05102938a99d0e
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068832"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858045"
 ---
 # <a name="set-advanced-properties-ssas"></a>Establecer propiedades avanzadas (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar valores de propiedades adicionales para una conexión con un origen de datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
- **Presta**  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
+ **Proveedores**  
  Seleccione el proveedor que se va a usar para la conexión con el origen de datos. Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado.  
   
  **Cadena de conexión**  

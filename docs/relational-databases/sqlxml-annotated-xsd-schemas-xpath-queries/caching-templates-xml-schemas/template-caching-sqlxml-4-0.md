@@ -1,5 +1,6 @@
 ---
 title: Almacenamiento en caché de plantillas (SQLXML)
+description: Obtenga información acerca de cómo mejorar significativamente el rendimiento al ejecutar plantillas mediante el almacenamiento en caché de plantillas en SQLXML 4,0.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac28f41ca90b686dd469640abaaabe6855b07766
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8055210f85a23d37bb670091bd19cd4ce5c01663
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246658"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215809"
 ---
 # <a name="template-caching-sqlxml-40"></a>Almacenamiento en caché de plantillas (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

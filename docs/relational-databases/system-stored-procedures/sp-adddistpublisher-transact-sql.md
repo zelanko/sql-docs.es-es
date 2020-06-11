@@ -1,7 +1,7 @@
 ---
 title: sp_adddistpublisher (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/15/2018
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04e15011-a902-4074-b38c-3ec2fc73b838
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 2190e31245cde19eca4c5a47f21ac48e12f57f53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f341a881ca33c66121d6b87ee30d437c621f973
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771388"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627145"
 ---
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -48,10 +48,13 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 ## <a name="arguments"></a>Argumentos  
 `[ @publisher = ] 'publisher'`Es el nombre del publicador. *Publisher* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+
+> [!NOTE]
+> El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
   
 `[ @distribution_db = ] 'distribution_db'`Es el nombre de la base de datos de distribución. *distributor_db* es de **tipo sysname**y no tiene ningún valor predeterminado. Los agentes de replicación utilizan este parámetro para conectarse al publicador.  
   
-`[ @security_mode = ] security_mode`Es el modo de seguridad implementado. Este parámetro solo lo utilizan los agentes de replicación para conectarse al publicador para las suscripciones de actualización en cola o con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un publicador que no sea de. *security_mode* es de **tipo int**y puede tener uno de estos valores.  
+`[ @security_mode = ] security_mode`Es el modo de seguridad implementado. Este parámetro solo lo utilizan los agentes de replicación para conectarse al publicador para las suscripciones de actualización en cola o con un publicador que no sea de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *security_mode* es de **tipo int**y puede tener uno de estos valores.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -65,9 +68,9 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
   
-`[ @working_directory = ] 'working_directory'`Es el nombre del directorio de trabajo utilizado para almacenar los archivos de datos y de esquema para la publicación. *working_directory* es **nvarchar (255)** y su valor predeterminado es la carpeta ReplData para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], por ejemplo `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`. El nombre se debe especificar en el formato UNC.  
+`[ @working_directory = ] 'working_directory'`Es el nombre del directorio de trabajo utilizado para almacenar los archivos de datos y de esquema para la publicación. *working_directory* es **nvarchar (255)** y su valor predeterminado es la carpeta ReplData para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , por ejemplo `C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData` . El nombre se debe especificar en el formato UNC.  
 
- Para Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>`.
+ Para Azure SQL Database, use `\\<storage_account>.file.core.windows.net\<share>` .
 
 `[ @storage_connection_string = ] 'storage_connection_string'`Se requiere para SQL Database. Use la clave de acceso de Azure portal en configuración de > de almacenamiento.
 
@@ -77,14 +80,14 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 `[ @encrypted_password = ] encrypted_password`Ya no se admite la configuración de *encrypted_password* . Si se intenta establecer este parámetro de **bits** en **1** se producirá un error.  
   
-`[ @thirdparty_flag = ] thirdparty_flag`Es cuando el publicador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]es. *thirdparty_flag* es de **bits**y puede tener uno de los valores siguientes.  
+`[ @thirdparty_flag = ] thirdparty_flag`Es cuando el publicador es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *thirdparty_flag* es de **bits**y puede tener uno de los valores siguientes.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**0** (valor predeterminado)|Base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**1**|Otra base de datos distinta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
-`[ @publisher_type = ] 'publisher_type'`Especifica el tipo de publicador cuando el publicador no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo es. *publisher_type* es de tipo sysname y puede tener uno de los valores siguientes.  
+`[ @publisher_type = ] 'publisher_type'`Especifica el tipo de publicador cuando el publicador no lo es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . *publisher_type* es de tipo sysname y puede tener uno de los valores siguientes.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -112,6 +115,6 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
  [sp_dropdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

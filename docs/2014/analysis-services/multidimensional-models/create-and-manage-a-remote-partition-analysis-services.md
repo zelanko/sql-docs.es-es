@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4322b5cb-af07-4e79-8ecb-59e1121a9eb8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c87de5fb72036848088afd2fbfd651be5d7b850
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076262"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536177"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Crear y administrar una partición remota (Analysis Services)
   Al crear particiones en un grupo de medida, puede configurar una base de datos secundaria en una instancia remota de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] como almacenamiento de partición.  
@@ -80,7 +79,7 @@ ms.locfileid: "66076262"
   
 #### <a name="set-the-masterdatasourceid-database-property-on-the-remote-server-in-ssms"></a>Establecer la propiedad de base de datos MasterDataSourceID en el servidor remoto (en SSMS)  
   
-1.  En el servidor subordinado: haga clic con el botón derecho en la base de datos de almacenamiento, dB-Storage, seleccione **incluir la base de datos** | en el editor**de** | **consultas nuevo**.  
+1.  En el servidor subordinado: haga clic con el botón derecho en la base de datos de almacenamiento, dB-Storage, seleccione **incluir la base de datos**en el  |  Editor**de**  |  **consultas nuevo**.  
   
 2.  Agregue **MasterDataSourceID** al código XMLA y especifique después el identificador de la base de datos de cubo, db-master, como valor. El XMLA debe ser similar a lo siguiente.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a58f7f8620924d4f707fe61c45ae87e19737471f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a060efe0c4d6a3ed34d59d755398e0079402cc4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070169"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547417"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Revisar el uso de agregaciones (Asistente para optimización basada en el uso)
   Utilice la página **Revisar el uso de agregaciones** para configurar el uso de agregaciones.  
@@ -26,7 +25,7 @@ ms.locfileid: "66070169"
  **Valor predeterminado**  
  Seleccione esta opción para establecer como predeterminada la configuración del uso de agregaciones del atributo. Esta configuración permite que el diseñador aplique una regla predeterminada basada en el tipo de atributo y dimensión.  
   
- **Completo**  
+ **Completa**  
  Seleccione esta opción para establecer la configuración del uso de agregaciones del atributo en Full. Con esta configuración es necesario que cada agregación del cubo incluya ese atributo o un atributo relacionado que tenga un valor inferior en la cadena de atributos. Se recomienda no establecer la configuración del uso de agregaciones en Full cuando un atributo contiene muchos miembros. Cuando la configuración se ha especificado para varios atributos o atributos con varios miembros, es posible que esta configuración impida que se diseñen las agregaciones debido a un tamaño excesivo.  
   
  **None**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef23d99b4542880d9756bbdad2e5cfb368b4f43c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070318"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539367"
 ---
 # <a name="lesson-3-rename-columns"></a>Lección 3: Cambiar el nombre de las columnas
   En esta lección, cambiará el nombre de muchas de las columnas de cada tabla que ha importado. El cambio de nombre permite navegar de forma más sencilla por el diseñador de modelos y facilita la selección de campos de los usuarios en una aplicación cliente. Para obtener más información, consulte [Cambiar el nombre de una tabla o una columna &#40;SSAS tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "66070318"
   
      Al hacer clic en una pestaña, la tabla se activa en la ventana del diseñador de modelos.  
   
-2.  Haga doble clic **CustomerKey** en el nombre de la columna `Customer  Id`CustomerKey, escriba y, a continuación, presione Entrar.  
+2.  Haga doble clic en el nombre de la columna **CustomerKey** , escriba `Customer  Id` y, a continuación, presione Entrar.  
   
     > [!TIP]  
     >  También puede cambiar el nombre de una columna en la propiedad **nombre de columna** en la ventana **propiedades** de la columna o en la vista de diagrama.  
@@ -59,7 +58,7 @@ ms.locfileid: "66070318"
     |YearlyIncome|Yearly Income|  
     |TotalChildren|Total Children|  
     |NumberChildrenAtHome|Hijos a su cuidado|  
-    |EnglishEducation|Educación|  
+    |EnglishEducation|Education|  
     |EnglishOccupation|Occupation|  
     |HouseOwnerFlag|Propietario de una vivienda|  
     |NumberCarsOwned|Número de vehículos en propiedad|  
@@ -69,7 +68,7 @@ ms.locfileid: "66070318"
     |DateFirstPurchase|Fecha de la primera compra|  
     |CommuteDistance|Commute Distance|  
   
-     **Date**  
+     **Fecha**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  
@@ -100,7 +99,7 @@ ms.locfileid: "66070318"
     |PostalCode|Código postal|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Manuales**  
+     **Producto**  
   
     |Nombre de origen|Nombre descriptivo|  
     |-----------------|-------------------|  

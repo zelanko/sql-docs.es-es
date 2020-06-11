@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9e68187207798a04b49f87b2a4b004661d873834
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 08c0eeb1315b9ca7ab63a870e2e31ad4896b2d59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175304"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542927"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
   Hasta este punto del tutorial, cada dimensión de cubo que definió se basaba en una tabla que estaba directamente vinculada a la tabla de hechos para un grupo de medida a través de una relación de clave principal a clave externa. En las tareas de este tema, debe vincular la dimensión **Geography** a la tabla de hechos de ventas por distribuidor a través de la dimensión **Reseller** , denominada *dimensión de referencia*. Esto permite a los usuarios dimensionar las ventas de distribuidor por geografía. Para obtener más información, consulte [Definir relaciones referenciadas y propiedades de las relaciones referenciadas](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).
@@ -88,7 +87,7 @@ ms.locfileid: "78175304"
 
      El atributo Geography Key de la dimensión Reseller solamente se utilizará para vincular la dimensión Geography a la tabla de hechos Reseller Sales. Puesto que no se utilizará para examinar, definir esta jerarquía de atributo como visible no aporta ningún valor. Además, ordenar y optimizar la jerarquía de atributo solo afectaría negativamente al proceso. No obstante, el atributo debe estar habilitado para poder servir como vínculo entre las dos dimensiones.
 
-4.  Cambie al diseñador de cubos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para el cubo tutorial de, haga clic en la pestaña **uso de dimensiones** y, a continuación, haga clic en el botón de puntos suspensivos (**...**) en la intersección del grupo de medida **reseller sales** y la dimensión de cubo **Geography** .
+4.  Cambie al diseñador de cubos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo tutorial de, haga clic en la pestaña **uso de dimensiones** y, a continuación, haga clic en el botón de puntos suspensivos (**...**) en la intersección del grupo de medida **reseller sales** y la dimensión de cubo **Geography** .
 
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.
 
@@ -104,7 +103,7 @@ ms.locfileid: "78175304"
 
 9. En la lista **Dimensiones** de la pestaña **Uso de dimensiones** , haga clic con el botón secundario en **Geography**y, después, haga clic en **Rename**.
 
-10. Cambie el nombre de esta dimensión de cubo `Reseller Geography`a.
+10. Cambie el nombre de esta dimensión de cubo a `Reseller Geography` .
 
      Como esta dimensión de cubo ahora está vinculada al grupo de medida **Reseller Sales** , los usuarios se beneficiarán de definir explícitamente su uso en el cubo, con el fin de evitar una posible confusión de los usuarios.
 
@@ -114,7 +113,7 @@ ms.locfileid: "78175304"
 
 2.  Cuando la implementación se haya completado correctamente, haga clic en la pestaña **Explorador** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y, a continuación, haga clic en el botón **Volver a conectar** .
 
-3.  En el panel metadatos, `Reseller Geography`expanda, haga clic con el botón secundario en **Geographies**y, a continuación, haga clic en **Agregar a área de fila**.
+3.  En el panel metadatos, expanda `Reseller Geography` , haga clic con el botón secundario en **Geographies**y, a continuación, haga clic en **Agregar a área de fila**.
 
      Observe que la medida **Reseller Sales-Sales Amount** no aparece bien dimensionada por el atributo **Country-Region** de la jerarquía definida por el usuario **Geographies** , como se muestra en la imagen siguiente.
 

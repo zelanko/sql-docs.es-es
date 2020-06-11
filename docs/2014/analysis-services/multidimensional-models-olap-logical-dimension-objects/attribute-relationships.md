@@ -23,16 +23,15 @@ helpviewer_keywords:
 ms.assetid: 2491422a-4cf5-4b23-b6ab-289222b22ce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81d51c8778cfbc6e3891dfb3b6783db48f0c65a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 122638a2728a8a85ee58661196797383da20eef8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62728521"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545213"
 ---
 # <a name="attribute-relationships"></a>Relaciones de atributo
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los atributos de una dimensión siempre están relacionados directa o indirectamente con el atributo clave. Al definir una dimensión basada en un esquema en estrella, donde todos los atributos de la dimensión se derivan de la misma tabla relacional, se define automáticamente una relación de atributo entre el atributo clave y cada atributo no clave de la dimensión. Al definir una dimensión basada en un esquema de copo de nieve, donde los atributos de la dimensión se derivan de varias tablas relacionadas, se define automáticamente una relación de atributo del modo siguiente:  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , los atributos de una dimensión siempre están relacionados directa o indirectamente con el atributo clave. Al definir una dimensión basada en un esquema en estrella, donde todos los atributos de la dimensión se derivan de la misma tabla relacional, se define automáticamente una relación de atributo entre el atributo clave y cada atributo no clave de la dimensión. Al definir una dimensión basada en un esquema de copo de nieve, donde los atributos de la dimensión se derivan de varias tablas relacionadas, se define automáticamente una relación de atributo del modo siguiente:  
   
 -   Entre el atributo clave y cada atributo sin clave enlazado a columnas de la tabla principal de dimensiones.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "62728521"
   
  La propiedad `SourceAttribute` de un nivel determina qué atributo se utiliza para describir el nivel. La propiedad `KeyColumns` del atributo especifica la columna de la vista del origen de datos que proporciona los miembros. La propiedad `NameColumn` del atributo puede especificar una columna de nombre diferente para los miembros.  
   
- Para definir un nivel en una jerarquía definida por el usuario [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mediante, el **Diseñador de dimensiones** permite seleccionar un atributo de dimensión, una columna de una tabla de dimensiones o una columna de una tabla relacionada incluida en la vista del origen de datos para el cubo. Para obtener más información sobre la creación de jerarquías definidas por el usuario, vea [Crear jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md).  
+ Para definir un nivel en una jerarquía definida por el usuario mediante [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , el **Diseñador de dimensiones** permite seleccionar un atributo de dimensión, una columna de una tabla de dimensiones o una columna de una tabla relacionada incluida en la vista del origen de datos para el cubo. Para obtener más información sobre la creación de jerarquías definidas por el usuario, vea [Crear jerarquías definidas por el usuario](../multidimensional-models/user-defined-hierarchies-create.md).  
   
  En Analysis Services, se suele hacer una suposición acerca del contenido de los miembros. Los miembros hoja no tienen descendientes y contienen datos derivados de los orígenes de datos subyacentes. Los miembros no hoja tienen descendientes y contienen datos derivados de agregaciones realizadas en miembros secundarios. En los niveles agregados, los miembros se basan en agregaciones de niveles subordinados. Por lo tanto, cuando la propiedad `IsAggregatable` está establecida en `False` en un atributo de origen de un nivel, no se deben agregar atributos agregables como niveles por encima de él.  
   

@@ -4,24 +4,24 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eeaeef25f27f29234aaa5a96a9272b4bea43dca3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892884"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670401"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referencia de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Extensiones de minería de datos (DMX) es un lenguaje que puede usar para crear y trabajar con modelos de minería [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de datos en. Puede usar DMX para crear la estructura de modelos de minería de datos nuevos, para entrenar esos modelos y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
+  Extensiones de minería de datos (DMX) es un lenguaje que puede usar para crear y trabajar con modelos de minería de datos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede usar DMX para crear la estructura de modelos de minería de datos nuevos, para entrenar esos modelos y para explorar, administrar y realizar predicciones con ellos. DMX se compone de instrucciones de lenguaje de definición de datos (DDL), instrucciones de lenguaje de manipulación de datos (DML), y funciones y operadores.  
   
 ## <a name="microsoft-ole-db-for-data-mining-specification"></a>Especificación Microsoft OLE DB para minería de datos  
- Las características de minería de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] datos de se crean para cumplir [!INCLUDE[msCoName](../includes/msconame-md.md)] con el OLE DB para la especificación de minería de datos.  
+ Las características de minería de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] se crean para cumplir con el [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos.  
   
  El [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos define lo siguiente:  
   

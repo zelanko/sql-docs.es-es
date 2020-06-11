@@ -1,6 +1,7 @@
 ---
 title: sp_addsubscription (Transact-SQL) | Microsoft Docs
-ms.date: 10/28/2015
+description: Agrega una suscripción a una publicación y define el estado del suscriptor. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73789c16cbea481cc159774e6c629d3a131d7478
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a87ba30f69027849ea5444163291465dec00d9be
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833639"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627621"
 ---
 # <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,6 +84,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber =] '*suscriptor*'  
  Es el nombre del suscriptor. *Subscriber* es de **tipo sysname y su**valor predeterminado es NULL.  
+
+> [!NOTE]
+> El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
   
  [ @destination_db =] '*destination_db*'  
  Es el nombre de la base de datos de destino en la que se colocan los datos replicados. *destination_db* es de **tipo sysname y su**valor predeterminado es NULL. Cuando es NULL, *destination_db* se establece en el nombre de la base de datos de publicación. En el caso de los publicadores de Oracle, se debe especificar *destination_db* . Para un suscriptor que no sea de SQL Server, especifique un valor de (destino predeterminado) para *destination_db*.  
@@ -90,7 +94,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type =] '*sync_type*'  
  Es el tipo de sincronización de suscripción. *sync_type* es **nvarchar (255)** y puede tener uno de los valores siguientes:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |ninguno|El suscriptor tiene ya el esquema y los datos iniciales de las tablas publicadas.<br /><br /> Nota: esta opción está en desuso. En su lugar, utilice replication support only.|  
 |automatic (predeterminado)|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
@@ -104,7 +108,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @status =] '*Estado*'  
  Es el estado de la suscripción. *status* es de **tipo sysname y su**valor predeterminado es NULL. Si este parámetro no se establece de forma explícita, la replicación lo establece automáticamente en uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |active|La suscripción está inicializada y lista para aceptar cambios. Esta opción se establece cuando el valor de *sync_type* es None, Initialize with backup o solo soporte de replicación.|  
 |subscribed|La suscripción debe inicializarse. Esta opción se establece cuando el valor de *sync_type* es automático.|  
@@ -118,7 +122,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode =] '*update_mode*'  
  Es el tipo de actualización. *update_mode* es **nvarchar (30)** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |read only (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se envían al publicador.|  
 |sync tran|Habilita la compatibilidad con las suscripciones de actualización inmediata. No es compatible con publicadores de Oracle.|  
@@ -131,7 +135,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @loopback_detection =] '*loopback_detection*'  
  Especifica si el agente de distribución envía transacciones originadas en el suscriptor al mismo suscriptor. *loopback_detection* es de tipo **nvarchar (5)** y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |true|El Agente de distribución no envía las transacciones originadas en el suscriptor al mismo suscriptor. Se utilizan con replicación transaccional bidireccional. Para obtener más información, consulte la [replicación transaccional bidireccional](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |false|El Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor.|  
@@ -140,7 +144,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_type =] *frequency_type*  
  Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es de tipo int y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |1|Una vez|  
 |2|A petición|  
@@ -157,10 +161,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_relative_interval =] *frequency_relative_interval*  
  Es la fecha del Agente de distribución. Este parámetro se utiliza cuando *frequency_type* se establece en 32 (relativo mensual). *frequency_relative_interval* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
-|1|Primero|  
-|2|Segundo|  
+|1|First|  
+|2|Second|  
 |4|Tercero|  
 |8|Cuarto|  
 |16|Último|  
@@ -172,10 +176,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @frequency_subday =] *frequency_subday*  
  Indica la frecuencia, en minutos, con que se reprograma durante el período definido. *frequency_subday* es de **tipo int**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |1|Una sola vez|  
-|2|Segundo|  
+|2|Second|  
 |4|Minute|  
 |8|Hora|  
 |NULL||  
@@ -237,7 +241,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicetype =] '*backupdevicetype*'  
  Especifica el tipo de dispositivo de copia de seguridad utilizado al inicializar un suscriptor a partir una copia de seguridad. *backupdevicetype* es de tipo **nvarchar (20)** y puede tener uno de estos valores:  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |logical (predeterminado)|El dispositivo de copia de seguridad es un dispositivo lógico.|  
 |disk|El dispositivo de copia de seguridad es una unidad de disco.|  
@@ -255,7 +259,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password =] '*contraseña*'  
- Especifica una contraseña para la copia de seguridad si esta se estableció al crear la copia de seguridad. *password*es de **tipo sysname y su**valor predeterminado es NULL.  
+ Especifica una contraseña para la copia de seguridad si esta se estableció al crear la copia de seguridad. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
  [ @fileidhint =] *fileidhint*  
  Identifica un valor ordinal del conjunto de copia de seguridad que se va a restaurar. *fileidhint* es de **tipo int**y su valor predeterminado es NULL.  
@@ -275,7 +279,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type =] *subscriber_type*  
  Es el tipo de suscriptor. *subscriber_type* es **tinyint**y puede tener uno de estos valores.  
   
-|Valor|Descripción|  
+|Value|Descripción|  
 |-----------|-----------------|  
 |0 (predeterminado)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Suscriptor|  
 |1|Servidor del origen de datos ODBC|  

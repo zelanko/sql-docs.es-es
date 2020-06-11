@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c4ce1b1485885719bcd31cb085d43379239612d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5578bed4ce59ffb3c431c30e33418abe693a4165
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079866"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543847"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
   Una instancia de PowerPivot para SharePoint que instale en una granja de servidores de SharePoint se administra a través de Administración central de SharePoint. Como mínimo, puede comprobar las páginas de Administración central y de sitios de SharePoint para comprobar que están disponibles los componentes de servidor y las características de PowerPivot. Sin embargo, para comprobar una instalación por completo, debe tener un libro PowerPivot que pueda publicar en SharePoint y al que pueda tener acceso desde una biblioteca. Para realizar la prueba, puede publicar un libro de ejemplo que contenga datos PowerPivot y usarlo para confirmar que la integración de SharePoint está configurada correctamente.  
@@ -59,7 +58,7 @@ ms.locfileid: "66079866"
 ## <a name="verify-integration-at-the-site-level"></a>Comprobar la integración en el nivel de sitio  
  Para comprobar la integración de PowerPivot con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede\<especificar http://el nombre del equipo> en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede especificar http:// \<your computer name> en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de PowerPivot están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por PowerPivot:  
   
@@ -84,14 +83,14 @@ ms.locfileid: "66079866"
   
 6.  Inicie SQL Server Management Studio desde el grupo de programas [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] en el menú Inicio. Si esta herramienta no está instalada en el servidor, puede pasar al último paso para confirmar la presencia de archivos almacenados en caché.  
   
-7.  En Tipo de servidor, seleccione **Analysis Services**.  
+7.  En tipo de servidor, seleccione **Analysis Services**.  
   
-8.  En nombre del servidor, escriba ** \<el nombre del servidor> \powerpivot**, donde ** \<nombre** del servidor>es el nombre del equipo que tiene la PowerPivot para SharePoint instalación.  
+8.  En nombre del servidor, escriba ** \<server-name> \powerpivot**, donde **\<server-name>** es el nombre del equipo que tiene la instalación de PowerPivot para SharePoint.  
   
 9. Haga clic en **Conectar**. De este modo se comprueba que el servidor de Analysis Services está disponible.  
   
 10. En Explorador de objetos, puede hacer clic en **bases** de datos para ver la lista de archivos de datos PowerPivot que se cargan.  
   
-11. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché de archivos, vaya \<a la unidad>: \Archivos de Programa\microsoft SQL Server\MSAS11. POWERPIVOT\OLAP\Backup\Sandboxes\Default carpeta de aplicación de servicio PowerPivot. Cada base de datos de la memoria caché está almacenada en su propia carpeta, con una convención de nomenclatura basada en GUID para asegurarse de que tiene un nombre único.  
+11. En el sistema de archivos del equipo, compruebe la siguiente carpeta para determinar si hay archivos almacenados en la memoria caché del disco. La presencia de archivos almacenados en caché es una prueba más de que la implementación está operativa. Para ver la memoria caché de archivos, vaya a la carpeta \<drive> : \Archivos de programa\Microsoft SQL Server\MSAS11. POWERPIVOT\OLAP\Backup\Sandboxes\Default carpeta de aplicación de servicio PowerPivot. Cada base de datos de la memoria caché está almacenada en su propia carpeta, con una convención de nomenclatura basada en GUID para asegurarse de que tiene un nombre único.  
   
   

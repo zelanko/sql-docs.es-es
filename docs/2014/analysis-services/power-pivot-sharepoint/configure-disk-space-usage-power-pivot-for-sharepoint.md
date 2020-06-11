@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ed6668b4e9b35cb6c311fbbbbc7b17be88d6296
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071809"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547566"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Configurar el uso del espacio en disco (PowerPivot para SharePoint)
   Una implementación de PowerPivot para SharePoint usa el espacio en disco del equipo host para almacenar en memoria caché las bases de datos PowerPivot para obtener recargas más rápidas. Cada base de datos PowerPivot que se carga en la memoria primero se almacena en la memoria caché en el disco para que se pueda volver a cargar rápidamente más tarde para atender las nuevas solicitudes. De forma predeterminada, PowerPivot para SharePoint utiliza todo el espacio en disco disponible para almacenar en memoria caché las bases de datos, pero puede modificar este comportamiento estableciendo las propiedades que restringen cuánto espacio en disco se utiliza.  
@@ -42,7 +41,7 @@ ms.locfileid: "66071809"
   
  La carpeta de copia de seguridad proporciona un almacenamiento común en caché para cualquier base de datos PowerPivot que se cargue en la memoria en el equipo local. Si tiene varias aplicaciones de servicio PowerPivot definidas en la granja, cualquiera de ellas puede utilizar el servidor local para cargar y almacenar después en la memoria caché los datos PowerPivot. Tanto la carga de datos como el almacenamiento en caché son operaciones de servidor de Analysis Services. Por tanto, el uso total de espacio en disco se administra en las instancias de Analysis Services, en la carpeta de copia de seguridad. La configuración que limita el uso del espacio en disco se establece así en la instancia de SQL Server Analysis Services que se ejecuta en un servidor de aplicaciones de SharePoint.  
   
- La memoria caché solo contiene las bases de datos PowerPivot. Las bases de datos PowerPivot se almacenan en varios archivos en una sola carpeta primaria (la carpeta de copia de seguridad). Dado que las bases de datos PowerPivot están destinadas para usarse como datos internos en un libro de Excel, los nombres de base de datos se basan en los GUID en lugar de ser descriptivos. Una carpeta GUID en ** \<nombredeaplicacióndeservicio>** es la carpeta principal de una base de datos PowerPivot. A medida que las bases de datos PowerPivot se cargan en el servidor, se crean carpetas adicionales para cada una.  
+ La memoria caché solo contiene las bases de datos PowerPivot. Las bases de datos PowerPivot se almacenan en varios archivos en una sola carpeta primaria (la carpeta de copia de seguridad). Dado que las bases de datos PowerPivot están destinadas para usarse como datos internos en un libro de Excel, los nombres de base de datos se basan en los GUID en lugar de ser descriptivos. Una carpeta GUID en **\<serviceApplicationName>** es la carpeta principal de una base de datos PowerPivot. A medida que las bases de datos PowerPivot se cargan en el servidor, se crean carpetas adicionales para cada una.  
   
  Dado que los datos PowerPivot se pueden cargar en una instancia de Analysis Services en una granja, los mismos datos podrían almacenarse también en memoria caché en varios equipos de la granja. Esta práctica favorece el rendimiento sobre el uso del espacio en disco pero, como contrapartida, los usuarios consiguen un acceso más rápido a los datos si ya están disponibles en el disco.  
   
@@ -50,11 +49,11 @@ ms.locfileid: "66071809"
   
  En el nivel de sistema, puede crear alertas de correo electrónico que notifiquen que hay poco espacio en disco. Microsoft System Center incluye una característica de alerta por correo electrónico. Para configurar las alertas, también puede utilizar un script de PowerShell, el Administrador de recursos del servidor de archivos o el Programador de tareas. Los vínculos siguientes proporcionan información útil para configurar notificaciones sobre la existencia de poco espacio en disco:  
   
--   [Novedades de administrador de recursos de servidor de archivos](https://technet.microsoft.com/library/hh831746.aspx) (https://technet.microsoft.com/library/hh831746.aspx).  
+-   [Novedades de administrador de recursos de servidor de archivos](https://technet.microsoft.com/library/hh831746.aspx) ( https://technet.microsoft.com/library/hh831746.aspx) .  
   
--   [Servidor de archivos administrador de recursos guía paso a paso para Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) (https://go.microsoft.com/fwlink/?LinkID=204875).  
+-   [Servidor de archivos administrador de recursos guía paso a paso para Windows server 2008 R2](https://go.microsoft.com/fwlink/?LinkID=204875) ( https://go.microsoft.com/fwlink/?LinkID=204875) .  
   
--   [Establecer alertas de poco espacio en disco en Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870).  
+-   [Establecer alertas de poco espacio en disco en Windows Server 2008](https://go.microsoft.com/fwlink/?LinkID=204870) ( https://go.microsoft.com/fwlink/?LinkID=204870) .  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>Limitar el espacio en disco utilizado para almacenar archivos en memoria caché  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66071809"
   
 5.  Haga clic en **Aceptar** para guardar los cambios.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Una instalación de PowerPivot para SharePoint proporciona reglas de estado para que pueda realizar una acción correctora cuando se detecten problemas en el estado, la configuración o la disponibilidad del servidor. Algunas de estas reglas utilizan la configuración para determinar las condiciones en las que se desencadenan las reglas de estado. Si va a optimizar activamente el rendimiento del servidor, puede que también desee consultar estos valores para garantizar que los predeterminados son la mejor opción para el sistema. Para obtener más información, vea [reglas de estado de PowerPivot: configurar](configure-power-pivot-health-rules.md).  
   
 ## <a name="see-also"></a>Consulte también  

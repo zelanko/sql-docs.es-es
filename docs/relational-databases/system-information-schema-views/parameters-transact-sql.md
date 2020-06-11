@@ -19,12 +19,12 @@ ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6233a44137427d607cb36283b911bd6fd5f5ef52
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68103281"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669506"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68103281"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar (** 128 **)**|Nombre del catálogo de la rutina de la cual éste es un parámetro.|  
-|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> <strong> \* Importante \* \* </strong> No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|**SPECIFIC_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema de la rutina de la cual éste es un parámetro.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. <strong> \* \* \* \* </strong> INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |**SPECIFIC_NAME**|**nvarchar (** 128 **)**|Nombre de la rutina de la cual éste es un parámetro.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal del parámetro que empieza en 1. para el valor devuelto de una función, es un 0.|  
 |**PARAMETER_MODE**|**nvarchar (** 10 **)**|Devuelve IN si es un parámetro de entrada, OUT si es un parámetro de salida e INOUT si es un parámetro de entrada/salida.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 987f6cfc-da82-4b2e-96ef-a8af88339e5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbac2e675a08bbcdba6a43727e3de6896a52e56c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076537"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536950"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar el almacenamiento de cadenas para dimensiones y particiones
   Puede volver a configurar el almacenamiento de cadenas para dar cabida a cadenas muy grandes en los atributos de dimensión o en las particiones que superan el límite de tamaño de archivo de 4 GB para los almacenes de cadenas. Si las dimensiones o las particiones incluyen almacenes de cadenas de este tamaño, puede evitar la restricción del tamaño del archivo si cambia la propiedad **StringStoresCompatibilityLevel** en el nivel de la dimensión o de la partición, tanto en objetos locales como vinculados (locales o remotos).  

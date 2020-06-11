@@ -1,5 +1,6 @@
 ---
 title: Ejecutar plantillas que contienen consultas XPath (SQLXMLOLEDB)
+description: Vea un ejemplo de una aplicación ADO que utiliza el proveedor SQLXMLOLEDB para ejecutar una plantilla que contiene consultas XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2da1b575b2df79321c87cbd88542c1210c9310b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5d746b898aaf0ea050409585b88e8c6861b4fa2e
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257287"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215648"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas XPath (Proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "75257287"
   
 -   Esquema de asignación  
   
- En esta aplicación ADO de ejemplo, se especifica una plantilla XML compuesta de una consulta XPath (raíz) en el esquema de asignación XSD (Schema. xml) que se describe en [ejecutar consultas xpath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
+ En esta aplicación ADO de ejemplo, se especifica una plantilla XML compuesta de una consulta XPath (raíz) en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas xpath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La propiedad esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad ruta de acceso base proporciona la ruta de acceso del archivo al esquema de asignación.  
   

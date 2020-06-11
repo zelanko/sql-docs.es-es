@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58e44b24-cfcd-4908-b445-d4374b961b98
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058248b5b2cb66a73124d8632ad6426ee9f3ad59
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077909"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541597"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Grupos de medida (pestaña Particiones, Diseñador de cubos) (Analysis Services - Datos multidimensional)
   Use el panel **Grupos de medida** de la pestaña **Particiones** del Diseñador de cubos para administrar las particiones asociadas con cada grupo de medida del cubo.  
@@ -70,7 +69,7 @@ ms.locfileid: "66077909"
 |**Configuración de almacenamiento**|Haga clic para ver el cuadro de diálogo **Configuración de almacenamiento** y especifique el modo de almacenamiento, el almacenamiento en caché automático y la configuración de notificación para la partición seleccionada.|  
 |**Configuración de reescritura**|Haga clic para mostrar el cuadro de diálogo **Enable/Disable Writeback** (Habilitar/Deshabilitar reescritura) y especifique la configuración de reescritura para el grupo de medida que contiene la partición seleccionada.|  
 |**Optimización basada en uso**|Haga clic para mostrar el **Asistente para optimización basada en el uso** y cree un diseño de agregaciones basado en los patrones de uso existentes para la partición seleccionada.<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  
-|**Proceso**|Haga clic para mostrar el cuadro de diálogo **Proceso** y procese la partición seleccionada.|  
+|**Process**|Haga clic para mostrar el cuadro de diálogo **Proceso** y procese la partición seleccionada.|  
 |**Copiar**|Esta opción está deshabilitada.|  
 |**Pegar**|Esta opción está deshabilitada.|  
 |**Propiedades**|Seleccione esta opción para mostrar la ventana **Propiedades** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para la partición seleccionada.|  

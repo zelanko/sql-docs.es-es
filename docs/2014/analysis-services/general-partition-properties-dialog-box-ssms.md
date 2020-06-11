@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: efb505be-354f-4d23-8f2d-3e76fa50d27b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05d840d4e43d9856dedeb3fd446c8158f23275b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 434eb332c7fc8829d515ac33102604dd9ca46d5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081070"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544417"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>General (cuadro de diálogo Propiedades de la partición, SSMS)
   Use la página **General** del cuadro de diálogo **Propiedades de la partición** en SQL Server Management Studio para establecer las propiedades generales de una partición en un grupo de medida para un cubo de una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -37,13 +36,13 @@ ms.locfileid: "66081070"
 |**Procesado por última vez**|Muestra la fecha y la hora de la última vez en que se procesó la partición.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora de la última vez en que se actualizaron los metadatos de la partición.|  
 |**Nombre**|Muestra el nombre de la partición.|  
-|**Modo de procesamiento**|Seleccione el modo de procesamiento para la partición. Para obtener más información sobre los modos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de procesamiento de los objetos, vea [procesamiento de objetos de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
+|**Modo de procesamiento**|Seleccione el modo de procesamiento para la partición. Para obtener más información sobre los modos de procesamiento de los [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos, vea [procesamiento de objetos de modelo multidimensional](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
 |**Id. de origen de datos remoto**|Muestra el identificador del origen de datos remoto desde el que se recuperan los datos de origen para la partición.<br /><br /> Nota: Esta propiedad contiene un valor únicamente para las particiones remotas.|  
-|**División**|Muestra la expresión que identifica el segmento de datos representado por la partición.|  
+|**Segmento**|Muestra la expresión que identifica el segmento de datos representado por la partición.|  
 |**Origen**|Muestra la tabla o consulta que proporciona el origen de datos para la partición.|  
 |**State**|Muestra el estado de procesamiento actual de la partición.|  
 |**Ubicación de almacenamiento**|Muestra la carpeta en la que se almacenan los datos de la partición.<br /><br /> Nota: Esta propiedad solo contiene un valor si se ha especificado una ubicación de almacenamiento distinta de la ubicación de almacenamiento predeterminada de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Type**|Muestra el tipo de la partición.|  
+|**Tipo**|Muestra el tipo de la partición.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Particiones &#40;Analysis Services de datos multidimensionales&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   

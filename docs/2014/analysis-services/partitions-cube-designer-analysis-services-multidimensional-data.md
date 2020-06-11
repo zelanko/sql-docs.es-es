@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ac3ce774-eebf-4915-9307-90d0ac11c271
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 59a6bb7d661e7761e2c28259bf8d95ae05545fa1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7feff5a0c905e3975aeb840ab6a1883a5084b31e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072080"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540707"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>Particiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Particiones** del Diseñador de cubos para crear y modificar particiones, incluidos la configuración de almacenamiento, el almacenamiento en caché automático y la reescritura, para cada grupo de medida del cubo.  

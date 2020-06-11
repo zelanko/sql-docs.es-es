@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc620811209d854af5a9c874956847236819f462
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a08cdf759ad3accd1f3c1405cefff9cde6b5319f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081047"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544497"
 ---
 # <a name="forecast-table-analysis-tools-for-excel"></a>Pronóstico (Herramientas de análisis de tabla para Excel)
   ![Botón Pronóstico, cinta de opciones Herramientas de análisis de tabla](media/tat-forecast.gif "Botón Pronóstico, cinta de opciones Herramientas de análisis de tabla")  
@@ -41,11 +40,11 @@ ms.locfileid: "66081047"
   
 3.  Especifique las columnas que desea pronosticar. La herramienta selecciona automáticamente las columnas de los datos que tienen un tipo de datos predecible, es decir, datos numéricos continuos. Es posible que la herramienta no seleccione algunas columnas que tienen datos numéricos continuos si esas columnas contienen muchos valores NULL o valores cero, ya que los datos ausentes pueden afectar a los resultados. Si esto ocurre, puede corregir los datos mediante la herramienta cambiar [etiquetas &#40;SQL Server complementos de minería de datos&#41;](relabel-sql-server-data-mining-add-ins.md) .  
   
-4.  Especifique la columna que contiene la fecha, hora u otro identificador de serie. Si selecciona la opción ** \<sin marca de tiempo>** la herramienta creará una serie basada en la secuencia de filas en los datos de origen.  
+4.  Especifique la columna que contiene la fecha, hora u otro identificador de serie. Si selecciona la opción, **\<no time stamp>** la herramienta creará una serie basada en la secuencia de filas en los datos de origen.  
   
 5.  Especifique el número de predicciones que se deben realizar.  
   
-6.  Opcionalmente, proporcione una sugerencia al algoritmo sobre si espera que los datos se repitan de forma semanal, mensual o en otros períodos. Si los datos no se ajustan a ninguno de los patrones especificados, o si no está al tanto de los patrones, seleccione ** \<detectar automáticamente>** para que la herramienta busque los períodos de tiempo de repetición.  
+6.  Opcionalmente, proporcione una sugerencia al algoritmo sobre si espera que los datos se repitan de forma semanal, mensual o en otros períodos. Si los datos no se ajustan a ninguno de los patrones especificados, o si no está al tanto de los patrones, seleccione **\<detect automatically>** para que la herramienta busque los períodos de tiempo repetidos.  
   
 7.  El asistente agrega las predicciones a la tabla de origen y crea un informe de pronóstico en una nueva hoja de cálculo.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66081047"
 ## <a name="related-tools"></a>Herramientas relacionadas  
  El Cliente de minería de datos para Excel, que es un complemento independiente que proporciona funciones más avanzadas de minería de datos, también incluye un asistente para pronóstico.  
   
- Tanto la herramienta **previsión** (en las herramientas de análisis de tabla para Excel) como el Asistente para **previsión** (en el cliente de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] para Excel) utilizan el algoritmo de serie temporal.  
+ Tanto la herramienta **previsión** (en las herramientas de análisis de tabla para Excel) como el Asistente para **previsión** (en el cliente de minería de datos para Excel) utilizan el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de serie temporal.  
   
 -   La herramienta de **previsión** es más fácil de usar porque configura automáticamente el algoritmo para usar la configuración más adecuada para los datos.  
   

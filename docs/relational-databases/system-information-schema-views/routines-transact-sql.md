@@ -19,12 +19,12 @@ ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2e302d454ba0bf243f702b90b24cf7076ed97cb6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68078522"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669467"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "68078522"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_CATALOG.|  
-|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> ** \* Importante \* \* ** No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|SPECIFIC_SCHEMA|**nvarchar (** 128 **)**|Nombre específico del esquema.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. ** \* \* \* \* ** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |SPECIFIC_NAME|**nvarchar (** 128 **)**|Nombre específico del catálogo. Este nombre es el mismo que ROUTINE_NAME.|  
 |ROUTINE_CATALOG|**nvarchar (** 128 **)**|Nombre del catálogo de la función.|  
-|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> ** \* Importante \* \* ** No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|ROUTINE_SCHEMA|**nvarchar (** 128 **)**|Nombre del esquema que contiene esta función.<br /><br /> Importante no use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. ** \* \* \* \* ** INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |ROUTINE_NAME|**nvarchar (** 128 **)**|El nombre de la función.|  
 |ROUTINE_TYPE|**nvarchar (** 20 **)**|Devuelve PROCEDURE para los procedimientos almacenados y FUNCTION para las funciones.|  
 |MODULE_CATALOG|**nvarchar (** 128 **)**|NULL. Reservado para uso futuro.|  

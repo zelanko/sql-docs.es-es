@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: bd8365b2d3aac82c184af549ef21952fd4c8e649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d6f5d30d107bb2011a470849dd78e940b74a38d6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893905"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666954"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ PredictProbability(<scalar column reference>, [<predicted state>])
  Un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan \<, establezca el> de estado de predicción en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, \<establezca el> de estado de predicción en NULL.  
+ Si se omite el estado predicho, se usa el estado que tenga la mayor probabilidad de predicción, sin incluir el depósito de estados que faltan. Para incluir el depósito de Estados que faltan, establezca el \<> de estado de predicción en **INCLUDE_NULL**. Para devolver la probabilidad de los Estados que faltan, establezca el \<> de estado de predicción en NULL.  
   
 > [!NOTE]  
 >  Algunos modelos de minería de datos no proporcionan los valores de probabilidad y, por consiguiente, no pueden utilizar esta función. Además, los valores de probabilidad de cualquier valor del objetivo determinado se calcula de manera diferente o podría tener una interpretación distinta que dependa del tipo de modelo que esté consultando. Para obtener más información sobre cómo se calcula la probabilidad para un tipo de modelo determinado, vea el tema sobre el algoritmo individual del [contenido del modelo de minería de datos &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).  

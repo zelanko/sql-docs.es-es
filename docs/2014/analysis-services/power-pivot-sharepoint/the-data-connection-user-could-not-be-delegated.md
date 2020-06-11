@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d2006df1-d244-4786-b272-49d8996cc88c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9611bc9d922caee25f841b709ee8a743cd539357
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071032"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547757"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot
   En los libros de Excel que contienen datos PowerPivot, Excel Services devuelve este error si no puede conectarse a una instancia del servidor PowerPivot en SharePoint.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071032"
   
 |||  
 |-|-|  
-|Aplicable a|PowerPivot para SharePoint|  
+|Se aplica a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Error en la conexión al intentar utilizar un proveedor de datos PowerPivot.|  
 |Texto del mensaje|La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos PowerPivot|  

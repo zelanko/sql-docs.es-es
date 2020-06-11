@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fabd1de8361d9cc8753b42c35e0597769545c6b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67826336"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540327"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Autenticación y autorización de PowerPivot
   Una implementación de PowerPivot para SharePoint que se ejecuta dentro de una granja de servidores de SharePoint 2010 usa el subsistema de autenticación y el modelo de autorización que proporcionan los servidores de SharePoint. La infraestructura de seguridad de SharePoint se extiende al contenido y a las operaciones de PowerPivot porque todo el contenido relacionado con PowerPivot está almacenado en bases de datos de contenido de SharePoint, y todas las operaciones relacionadas con PowerPivot las realizan los servicios compartidos de PowerPivot en la granja. Los usuarios que solicitan un libro que contiene los datos PowerPivot se autentican usando una identidad de usuario de SharePoint que se basa en su identidad de usuario de Windows. Los permisos para ver el libro determinan si la solicitud se concede o se deniega.  

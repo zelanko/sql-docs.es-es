@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4f5a2949d82f612ed9a85c81a89a4ab1588bbe
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071150"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547777"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Compartir las fuentes de distribución de datos mediante una biblioteca de fuentes de distribución de datos (PowerPivot para SharePoint)
-  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de PowerPivot para SharePoint, las fuentes de distribución de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] se utilizan para rellenar un origen de datos con datos de una aplicación o servicio que tiene en cuenta Atom.  
+  Una fuente de distribución de datos es un flujo de datos XML que se genera a partir de un servicio o aplicación que expone los datos en el formato en línea de Atom. Se usa cada vez más para transportar los datos entre las aplicaciones y a los visores del lado cliente. En una implementación de PowerPivot para SharePoint, las fuentes de distribución de datos se utilizan para rellenar un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] origen de datos con datos de una aplicación o servicio que tiene en cuenta Atom.  
   
  Si ya utiliza una combinación de aplicaciones que pueden usar Atom, puede que nunca necesite saber cómo se generan y usan las fuentes porque la transferencia de datos se realiza sin problemas entre las aplicaciones. Sin embargo, las organizaciones que utilizan soluciones personalizadas para publicar fuentes Atom a menudo necesitan una manera de hacer que las fuentes estén disponibles para los trabajadores de la información. Una forma de conseguirlo es crear y compartir archivos de documento de servicio de datos (.atomsvc) que proporcionan las conexiones a los orígenes en línea que producen las fuentes. Una biblioteca de propósito especial, denominada biblioteca de fuentes de distribución de datos, permite crear y compartir los documentos de servicio de datos en una aplicación web de SharePoint.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66071150"
 >  Aunque las fuentes de distribución de datos se usan para agregar datos web a un origen de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cree en [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], cualquier aplicación cliente que pueda leer una fuente Atom puede procesar un documento de servicio de datos.  
   
 ##  <a name="prerequisites"></a><a name="prereq"></a> Requisitos previos  
- Debe tener una implementación de PowerPivot para SharePoint [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] que agregue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] el procesamiento de consultas a una granja de servidores de SharePoint. La compatibilidad con las fuentes de distribución de datos se implementa a través del paquete de soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+ Debe tener una implementación de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot para SharePoint que agregue [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] el procesamiento de consultas a una granja de servidores de SharePoint. La compatibilidad con las fuentes de distribución de datos se implementa a través del paquete de soluciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Debe tener una biblioteca de SharePoint que admita el tipo de contenido de documento de servicio de datos. Para este fin se recomienda la biblioteca de fuentes de distribución de datos predeterminada, pero puede agregar manualmente el tipo de contenido a cualquier biblioteca. Para obtener más información, vea [crear o personalizar una biblioteca de fuentes de distribución de datos &#40;PowerPivot para SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
   

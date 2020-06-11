@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 69ba952e-09ae-49a9-9297-00e32e8e89a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aca2cd956850de245f507e8cf24b93e87404429b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39a1622ceccf6465b616fcc23de7093b4aa45d8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543561"
 ---
 # <a name="granting-process-database-permissions"></a>Conceder permisos Procesar base de datos
   Después de instalar una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], todos los miembros del rol de administrador de servidor [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de dicha instancia tienen permisos en el servidor para llevar a cabo cualquier tarea dentro de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. De manera predeterminada, ningún otro usuario tiene permiso para administrar o ver objetos en la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].
@@ -30,7 +29,7 @@ ms.locfileid: "78174298"
 
 2.  Haga clic en la casilla **Procesar base de datos** .
 
-3.  En el ventana Propiedades, cambie la propiedad **nombre** de este nuevo rol a `Process Database Objects Role`.
+3.  En el ventana Propiedades, cambie la propiedad **nombre** de este nuevo rol a `Process Database Objects Role` .
 
      ![Diseñador de roles](../../2014/tutorials/media/l10-security-1.png "Diseñador de roles")
 

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ad0917d6-349a-4923-97be-83c778424286
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e861532cfd185d07d94bd3b62659303e8162696
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072687"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541377"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Usar una plantilla para crear una acción
   La vista **Acciones** del Diseñador de cubos contiene varias plantillas que puede usar para crear acciones comunes. Se puede obtener acceso al Diseñador de cubos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

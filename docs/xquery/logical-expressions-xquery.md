@@ -1,5 +1,6 @@
 ---
 title: Expresiones lógicas (XQuery) | Microsoft Docs
+description: Obtenga información sobre las expresiones lógicas admitidas en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62552e4e533126bc1e6b53e78e2b0456557e7f45
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004507"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689021"
 ---
 # <a name="logical-expressions-xquery"></a>Expresiones lógicas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- Las expresiones de prueba `expression1,``expression2`,, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en pueden dar como resultado una secuencia vacía, una secuencia de uno o más nodos o un solo valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:    
+ Las expresiones de prueba, `expression1,``expression2` , en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden dar como resultado una secuencia vacía, una secuencia de uno o más nodos o un solo valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:    
   
 -   Si la expresión de prueba da como resultado una secuencia vacía, el resultado será False.  
   

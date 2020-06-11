@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23efdeddd568c815ad22ce6cf0b5d2026bab813e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8b44e09f929ad6a331bb335e801838ed3de64de
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080333"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544128"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatizar tareas administrativas de Analysis Services con SSIS
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite automatizar la ejecución de scripts DDL, tareas de procesamiento de cubos y de modelos de minería de datos, y tareas de consulta de minería de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permite automatizar la ejecución de scripts DDL, tareas de procesamiento de cubos y de modelos de minería de datos, y tareas de consulta de minería de datos. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede considerarse como una colección de tareas de flujo de control y de mantenimiento, que pueden vincularse para formar trabajos de procesamiento de datos secuenciales y paralelos.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se ha diseñado para realizar operaciones de limpieza de datos durante las tareas de procesamiento y para reunir datos procedentes de diferentes orígenes de datos. Cuando se trabaja con cubos y modelos de minería de datos, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede transformar datos no numéricos en datos numéricos y puede garantizar que esos valores de datos se encuentran dentro de los límites esperados, creando así datos limpios desde los cuales llenar dimensiones y tablas de hechos.  
   

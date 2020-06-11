@@ -1,5 +1,6 @@
 ---
 title: Expresiones cuantificadas (XQuery) | Microsoft Docs
+description: Aprenda a usar expresiones cuantificadas en XQuery para aplicar existencial o la cuantificación universal a una expresión sobre una o varias secuencias.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: a3a75a6c-8f67-4923-8406-1ada546c817f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1cdbff23d2158dec00b6b8d050d6a4a90341bd23
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7c79cd185b88b8681460d2811f0d0ac4c20557
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946375"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215248"
 ---
 # <a name="quantified-expressions-xquery"></a>Expresiones cuantificadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +49,7 @@ ms.locfileid: "67946375"
   
  Puede utilizar estas expresiones en una consulta para aplicar explícitamente una cuantificación existencial o universal a una expresión en una o varias secuencias. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la expresión de la cláusula `satisfies` debe dar uno de los resultados siguientes: una secuencia de nodos, una secuencia vacía o un valor booleano. El valor booleano efectivo del resultado de la expresión se utilizará en la cuantificación. La cuantificación existencial que usa **algunos** devolverá True si al menos uno de los valores enlazados por el cuantificador tiene un resultado TRUE en la expresión de satisfacción. La cuantificación universal que usa **cada** debe tener true para todos los valores enlazados por el cuantificador.  
   
- Por ejemplo, la consulta siguiente comprueba cada \<ubicación> elemento para ver si tiene un atributo LocationID.  
+ Por ejemplo, la consulta siguiente comprueba cada \<Location> elemento para ver si tiene un atributo LocationID.  
   
 ```  
 SELECT Instructions.query('  
@@ -64,7 +65,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Dado que LocationID es un atributo necesario del \<elemento Location>, recibirá el resultado esperado:  
+ Dado que LocationID es un atributo necesario del \<Location> elemento, recibirá el resultado esperado:  
   
 ```  
 <Result>All work centers have Location ID</Result>   

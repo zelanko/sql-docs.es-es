@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8a451d9904edffe665d90dba5bd3ba1c18aac3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b62bcdd7bb492a877572621bd7cfe9a3b150d04
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071740"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547527"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurar la recolección de datos de uso para PowerPivot para SharePoint
   La recopilación de datos de uso es una característica propia de SharePoint para las granjas. PowerPivot para SharePoint usa y extiende este sistema para proporcionar informes en el panel de administración de PowerPivot que muestran cómo se usan los datos y servicios PowerPivot. Según cómo haya instalado SharePoint, la recopilación de datos de uso podría estar desactivada para la granja. El administrador de una granja debe habilitar el registro de uso para crear los datos de uso que aparecen en el Panel de administración de PowerPivot.  
@@ -64,7 +63,7 @@ ms.locfileid: "66071740"
     > [!NOTE]  
     >  El estado del servidor y las operaciones de actualización de datos también generan datos de uso, pero no hay ningún evento asociado a estos procesos.  
   
-5.  También puede actualizar la ubicación de los archivos de registro. Para obtener más información, vea la próxima sección.  
+5.  También puede actualizar la ubicación de los archivos de registro. Para obtener más información, vea la siguiente sección.  
   
 6.  Haga clic en **Aceptar** para guardar los cambios.  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66071740"
   
      Los datos se eliminan realmente cuando se produce el evento siguiente. El límite del historial de datos de uso solo se comprueba cuando el sistema procesa un evento.  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
  Para obtener más información sobre cómo se recopilan y almacenan los datos de uso, vea [recopilación de datos de uso de PowerPivot](power-pivot-usage-data-collection.md).  
   
@@ -146,7 +145,7 @@ ms.locfileid: "66071740"
   
      Cualquier solicitud que supere este límite se clasifica como *Superada*. No hay ningún umbral configurable para *Superada*. Se deduce del límite superior que especifique como límite superior de las solicitudes de ejecución prolongada. Las solicitudes que entran en la categoría Superada se ejecutan más tiempo de lo que se permite en el contrato de nivel de servicio que se haya definido.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ##  <a name="specify-how-often-query-statistics-are-reported-to-the-usage-data-collection-system"></a><a name="ttr"></a>Especificar la frecuencia con que se envían las estadísticas de consulta al sistema de recopilación de datos de uso  
  El intervalo de tiempo de informe especifica la frecuencia con que las estadísticas de consulta se notifican al sistema de recopilación de datos de uso. Las estadísticas de consulta se acumulan en un proceso y se notifican como un evento único a intervalos regulares. Puede ajustar el intervalo para escribir más o menos a menudo en el archivo de registro.  
@@ -161,7 +160,7 @@ ms.locfileid: "66071740"
   
      Si eleva este valor a un número mucho mayor, podría perder los datos estadísticos antes de que se puedan notificar. Por ejemplo, si se reinicia el servicio, las estadísticas de consulta se perderán. Por el contrario, si los informes de actividad integrados muestran que los datos son insuficientes, considere disminuir el intervalo para obtener eventos para indicar el tiempo para la notificación con más frecuencia.  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
 ##  <a name="open-the-powerpivot-service-application-page-to-access-configuration-settings"></a><a name="openconfig"></a>Abrir la página aplicación de servicio PowerPivot para tener acceso a la configuración  
  Debe ser administrador de un servicio o granja para modificar las configuraciones de las aplicaciones de servicio. Si definió varias aplicaciones de servicio PowerPivot en la granja, debe modificar cada una individualmente.  
@@ -181,7 +180,7 @@ ms.locfileid: "66071740"
   
 |Configuración|Valor predeterminado|Tipo|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado>|Boolean|Estos valores están habilitados o deshabilitados.|  
+|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<enabled>|Boolean|Estos valores están habilitados o deshabilitados.|  
 |**Intervalo de informes de consulta**|300 (en segundos)|Entero|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
 |**Historial de datos de uso**|365 (en días)|Entero|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
 |Límite superior de respuesta trivial|500 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  

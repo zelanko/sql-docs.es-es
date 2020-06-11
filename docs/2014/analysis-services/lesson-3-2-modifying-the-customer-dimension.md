@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63cfc1fc4b5bcc3e1c468bbb456a660587757f2b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078929"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543447"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificar la dimensión Customer
   Existen varios métodos para hacer que las dimensiones de un cubo sean más fáciles de usar y tengan más funciones. En las tareas de este tema, debe modificar la dimensión Customer.  
@@ -27,7 +26,7 @@ ms.locfileid: "66078929"
   
 1.  Cambie al **Diseñador de dimensiones** para la dimensión Customer en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para ello, haga doble clic en la dimensión **Customer** del nodo **Dimensiones** del Explorador de soluciones.  
   
-2.  En el panel **Atributos** , haga clic con el botón derecho en **English Country Region Name**y haga clic en **Cambiar nombre**. Cambie el nombre del atributo a `Country-Region`.  
+2.  En el panel **Atributos** , haga clic con el botón derecho en **English Country Region Name**y haga clic en **Cambiar nombre**. Cambie el nombre del atributo a `Country-Region` .  
   
 3.  Cambie los nombres de los atributos siguientes del mismo modo:  
   
@@ -37,7 +36,7 @@ ms.locfileid: "66078929"
   
     -   Atributo de **nombre de provincia de estado** : cambiar a`State-Province`  
   
-4.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+4.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="creating-a-hierarchy"></a>Creación de una jerarquía  
  Puede crear una nueva jerarquía si arrastra un atributo desde el panel **Atributos** hasta el panel **Jerarquías** .  
@@ -46,26 +45,26 @@ ms.locfileid: "66078929"
   
 1.  Arrastre el `Country-Region` atributo desde el panel **atributos** al panel **jerarquías** .  
   
-2.  Arrastre el `State-Province` atributo desde el panel **atributos** a la ** \<celda nuevo nivel>** del panel **jerarquías** , debajo del `Country-Region` nivel.  
+2.  Arrastre el `State-Province` atributo desde el panel **atributos** a la **\<new level>** celda del panel **jerarquías** , debajo del `Country-Region` nivel.  
   
-3.  Arrastre el **atributo City** desde el **Panel atributos** a la ** \<celda nuevo nivel>** del panel **jerarquías** , debajo del `State-Province` nivel.  
+3.  Arrastre el atributo **City** desde el panel **atributos** a la **\<new level>** celda del panel **jerarquías** , debajo del `State-Province` nivel.  
   
-4.  En el **Panel jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, seleccione `Customer Geography` **cambiar nombre**y, a continuación, escriba. **Hierarchy**  
+4.  En el panel **jerarquías** de la pestaña **estructura de dimensión** , haga clic con el botón secundario en la barra de título de la jerarquía jerarquía, seleccione **cambiar nombre**y, a continuación, escriba **Hierarchy** `Customer Geography` .  
   
-     El nombre de la jerarquía es ahora `Customer Geography`.  
+     El nombre de la jerarquía es ahora `Customer Geography` .  
   
-5.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+5.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="adding-a-named-calculation"></a>Agregar un cálculo con nombre  
  Puede agregar un cálculo con nombre, que es una expresión SQL representada como columna calculada en una tabla de la vista del origen de datos. Aparece la expresión y se comporta como columna en la tabla. Los cálculos con nombre permiten ampliar el esquema relacional de las tablas existentes de la vista del origen de datos sin modificar la tabla en el origen de datos subyacente. Para obtener más información, vea [definir cálculos con nombre en una vista del origen de datos &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
 #### <a name="to-add-a-named-calculation"></a>Para agregar un cálculo con nombre  
   
-1.  Abra la ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] ** vista del origen de datos DW 2012 haciendo doble clic en ella en la carpeta **vistas del origen de datos** en explorador de soluciones.  
+1.  Abra la vista del origen de datos ** [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012** haciendo doble clic en ella en la carpeta **vistas del origen de datos** en explorador de soluciones.  
   
 2.  En el panel **Tablas** , haga clic con el botón derecho en **Customer**y, después, haga clic en **Nuevo cálculo con nombre**.  
   
-3.  En el cuadro de diálogo **crear cálculo con nombre** , escriba `FullName` en el cuadro **nombre de columna** y, a continuación, escriba o `CASE` copie y pegue la siguiente instrucción en el cuadro **expresión** :  
+3.  En el cuadro de diálogo **crear cálculo con nombre** , escriba `FullName` en el cuadro **nombre de columna** y, a continuación, escriba o copie y pegue la siguiente `CASE` instrucción en el cuadro **expresión** :  
   
     ```  
     CASE  
@@ -82,7 +81,7 @@ ms.locfileid: "66078929"
   
      El `FullName` cálculo con nombre aparece en la lista de columnas de la tabla Customer, con un icono que indica que se trata de un cálculo con nombre.  
   
-5.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+5.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 6.  En el panel **Tablas** , haga clic con el botón derecho en **Customer**y haga clic en **Explorar datos**.  
   
@@ -103,15 +102,15 @@ ms.locfileid: "66078929"
   
 3.  Abra la ventana Propiedades y haga clic en el botón **Ocultar automáticamente** de la barra de título para que permanezca abierta.  
   
-4.  En el **Name** campo de la propiedad nombre `Full Name`, escriba.  
+4.  En el campo de la propiedad **nombre** , escriba `Full Name` .  
   
 5.  Haga clic en el campo de la propiedad **NameColumn** situado en la parte inferior y, a continuación, haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **columna de nombre** .  
   
 6.  Seleccione `FullName` en la parte inferior de la lista **columna de origen** y, a continuación, haga clic en **Aceptar**.  
   
-7.  En la pestaña estructura de dimensiones, arrastre `Full Name` el atributo desde el panel **atributos** a la ** \<celda nuevo nivel>** del panel **jerarquías** , debajo del nivel de **ciudad** .  
+7.  En la pestaña estructura de dimensiones, arrastre el `Full Name` atributo desde el panel **atributos** a la **\<new level>** celda del panel **jerarquías** , debajo del nivel **City** .  
   
-8.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+8.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="defining-display-folders"></a>Definir carpetas para mostrar  
  Puede utilizar carpetas para mostrar para agrupar jerarquías de usuario y de atributo en estructuras de carpeta con el fin de facilitar el uso de dichas estructuras.  
@@ -130,9 +129,9 @@ ms.locfileid: "66078929"
   
     -   `State-Province`  
   
-3.  En el ventana Propiedades, haga clic en el campo de la propiedad **AttributeHierarchyDisplayFolder** en la parte superior (puede que tenga que apuntar para ver el nombre completo) `Location`y, a continuación, escriba.  
+3.  En el ventana Propiedades, haga clic en el campo de la propiedad **AttributeHierarchyDisplayFolder** en la parte superior (puede que tenga que apuntar para ver el nombre completo) y, a continuación, escriba `Location` .  
   
-4.  En el panel **jerarquías** , haga `Customer Geography`clic en y, en el ventana Propiedades de la derecha, `Location` seleccione como el valor de la propiedad **DisplayFolder** .  
+4.  En el panel **jerarquías** , haga clic en `Customer Geography` y, en el ventana Propiedades de la derecha, seleccione `Location` como el valor de la propiedad **DisplayFolder** .  
   
 5.  En el panel **Atributos** , mantenga pulsada la tecla CTRL mientras hace clic en cada uno de los atributos siguientes para seleccionarlos:  
   
@@ -156,7 +155,7 @@ ms.locfileid: "66078929"
   
     -   **Yearly Income**  
   
-6.  En el ventana Propiedades, haga clic en el campo de la propiedad **AttributeHierarchyDisplayFolder** en la parte `Demographic`superior y, a continuación, escriba.  
+6.  En el ventana Propiedades, haga clic en el campo de la propiedad **AttributeHierarchyDisplayFolder** en la parte superior y, a continuación, escriba `Demographic` .  
   
 7.  En el panel **Atributos** , mantenga pulsada la tecla CTRL mientras hace clic en cada uno de los atributos siguientes para seleccionarlos:  
   
@@ -164,12 +163,12 @@ ms.locfileid: "66078929"
   
     -   **Teléfono**  
   
-8.  En el ventana Propiedades, haga clic **AttributeHierarchyDisplayFolder** en el campo de la `Contacts`propiedad AttributeHierarchyDisplayFolder y escriba.  
+8.  En el ventana Propiedades, haga clic en el campo de la propiedad **AttributeHierarchyDisplayFolder** y escriba `Contacts` .  
   
-9. En el menú **Archivo** , haga clic en **Guardar todo**.  
+9. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="defining-composite-keycolumns"></a>Definir KeyColumns compuestas  
- La propiedad **KeyColumns** contiene la columna o columnas que representan la clave para el atributo. En esta lección, creará una clave compuesta para la **ciudad** y `State-Province` los atributos. Las claves compuestas pueden resultar de utilidad cuando necesite identificar un atributo de forma inequívoca. Por ejemplo, al definir las relaciones de atributo más adelante en este tutorial, un atributo **City** debe identificar de `State-Province` forma única un atributo. Sin embargo, podrían existir varias ciudades con el mismo nombre en estados diferentes. Por este motivo, deberá crear una clave compuesta formada por las columnas **StateProvinceName** y **City** para el atributo **City** . Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
+ La propiedad **KeyColumns** contiene la columna o columnas que representan la clave para el atributo. En esta lección, creará una clave compuesta para la **ciudad** y `State-Province` los atributos. Las claves compuestas pueden resultar de utilidad cuando necesite identificar un atributo de forma inequívoca. Por ejemplo, al definir las relaciones de atributo más adelante en este tutorial, un atributo **City** debe identificar de forma única un `State-Province` atributo. Sin embargo, podrían existir varias ciudades con el mismo nombre en estados diferentes. Por este motivo, deberá crear una clave compuesta formada por las columnas **StateProvinceName** y **City** para el atributo **City** . Para más información, vea [Modificar la propiedad KeyColumns de un atributo](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
 #### <a name="to-define-composite-keycolumns-for-the-city-attribute"></a>Para definir KeyColumns compuestas para el atributo City  
   
@@ -183,19 +182,19 @@ ms.locfileid: "66078929"
   
      Las columnas **City** y **StateProvinceName** se muestran ahora en la lista **Columnas de clave** .  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **City**y, después, haga clic en **Aceptar**.  
   
-8.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+8.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 #### <a name="to-define-composite-keycolumns-for-the-state-province-attribute"></a>Para definir KeyColumns compuestas para el atributo State-Province  
   
 1.  Asegúrese de que la pestaña **Estructura de dimensión** para la dimensión Customer está abierta.  
   
-2.  En el panel **atributos** , haga clic `State-Province` en el atributo.  
+2.  En el panel **atributos** , haga clic en el `State-Province` atributo.  
   
 3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
   
@@ -203,13 +202,13 @@ ms.locfileid: "66078929"
   
      Las columnas **EnglishCountryRegionName** y **StateProvinceName** se muestran ahora en la lista **Columnas de clave** .  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para establecer la propiedad **NameColumn** del `State-Province` atributo, haga clic en el campo **NameColumn** en el ventana Propiedades y, a continuación, haga clic en el botón Examinar (**...**).  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **StateProvinceName**y, después, haga clic en **Aceptar**.  
   
-8.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+8.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="defining-attribute-relationships"></a>Definición de relaciones de atributo  
  Si los datos subyacentes lo permiten, debería definir relaciones de atributo entre atributos. La definición de relaciones de atributo acelera el procesamiento de las dimensiones, las particiones y las consultas. Para obtener más información, consulte [Definir relaciones de atributo](multidimensional-models/attribute-relationships-define.md) y [Relaciones de atributo](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
@@ -220,7 +219,7 @@ ms.locfileid: "66078929"
   
 2.  En el diagrama, haga clic con el botón derecho en el atributo **City** y haga clic en **Nueva relación de atributo**.  
   
-3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **City**. Establezca el **atributo relacionado** en `State-Province`.  
+3.  En el cuadro de diálogo **Crear relación de atributo** , el **Atributo de origen** es **City**. Establezca el **atributo relacionado** en `State-Province` .  
   
 4.  En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
@@ -228,15 +227,15 @@ ms.locfileid: "66078929"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  En el diagrama, haga clic con el `State-Province` botón secundario en el atributo y seleccione **nueva relación de atributo**.  
+6.  En el diagrama, haga clic con el botón secundario en el `State-Province` atributo y seleccione **nueva relación de atributo**.  
   
-7.  En el cuadro de diálogo **crear relación de atributo** , el atributo `State-Province`de **origen** es. Establezca el **atributo relacionado** en `Country-Region`.  
+7.  En el cuadro de diálogo **crear relación de atributo** , el **atributo de origen** es `State-Province` . Establezca el **atributo relacionado** en `Country-Region` .  
   
 8.  En la lista **Tipo de relación** , establezca el tipo de relación en **Rígida**.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
-10. En el menú **Archivo** , haga clic en **Guardar todo**.  
+10. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="deploying-changes-processing-the-objects-and-viewing-the-changes"></a>Implementar cambios, procesar los objetos y ver los cambios  
  Una vez que ha cambiado los atributos y las jerarquías, debe implementar los cambios y procesar de nuevo los objetos relacionados antes de ver los cambios.  
@@ -259,7 +258,7 @@ ms.locfileid: "66078929"
   
      Observe que, en lugar de una lista larga de atributos, debajo de Customer solamente aparecen las carpetas para mostrar y los atributos que no tienen valores de carpeta para mostrar.  
   
-7.  En el menú **Archivo** , haga clic en **Guardar todo**.  
+7.  En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Modificar la dimensión Product](lesson-3-3-modifying-the-product-dimension.md)  

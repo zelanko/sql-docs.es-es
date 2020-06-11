@@ -10,12 +10,12 @@ ms.assetid: ba0d57b5-87cc-43f0-bfbb-f06123c546bd
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c4df53093cf7d7dff00a8a5e16fb4bef58442213
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d691c0f7712e70f9f9870ca737edf201b9b9f6c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092388"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858550"
 ---
 # <a name="select-a-prepared-instance"></a>Seleccionar una instancia preparada
   Use la página **Seleccionar una instancia preparada** para especificar la instancia preparada que desea completar.  
@@ -23,7 +23,7 @@ ms.locfileid: "66092388"
 ## <a name="options"></a>Opciones  
  En el cuadro **Seleccione un identificador de instancia** se enumeran las instancias preparadas que puede completar. Seleccione una instancia preparada que desee completar.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Seleccione un identificador de instancia**  
  La lista incluye todas las instancias preparadas que puede completar en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Seleccione una instancia preparada que desee completar.  
   

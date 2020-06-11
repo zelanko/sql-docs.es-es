@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c215d2967fdea20cd6828d41bd4c96a70ff4b35e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536357"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Crear un proyecto de Analysis Services (SSDT)
   Puede definir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] usando la plantilla de proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a fin de leer el contenido de una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si no hay ninguna solución cargada en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la creación de un nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crea automáticamente una nueva solución. De lo contrario, el nuevo proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se agregará a la solución existente. Las prácticas recomendadas para el desarrollo de soluciones pasan por crear proyectos distintos para diferentes tipos de datos de aplicación, usando una única solución si los proyectos están relacionados. Por ejemplo, puede tener una solución que contiene proyectos distintos para los paquetes de Integration Services, las bases de datos de Analysis Services y los informes de Reporting Services que usa la misma aplicación empresarial.  
@@ -62,7 +61,7 @@ ms.locfileid: "66076239"
   
      Para crear una nueva solución, en la lista desplegable **Solución** , seleccione **Crear nueva solución**. Para crear una nueva carpeta para la nueva solución, seleccione **Crear directorio para la solución**. En **Nombre de la solución**, escriba el nombre de la nueva solución.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ##  <a name="create-a-new-project-using-an-existing-analysis-services-database"></a><a name="bkmk_NewUsingWizard"></a> Crear un nuevo proyecto usando una base de datos existente de Analysis Services  
  Use el Asistente para importar bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para crear un proyecto basado en los objetos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente. Cuando se define un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basado en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existente, los metadatos de dicha base de datos se abrirán en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. A continuación, estos objetos se pueden modificar en el proyecto, sin que lo objetos originales se vean afectados, y se pueden implementar en la misma base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] si las propiedades de implantación así lo especifican, o en otra recién creada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para llevar a cabo pruebas comparativas. Hasta que se implementen los cambios, no tendrá efecto ningún cambio en la base de datos existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -75,7 +74,7 @@ ms.locfileid: "66076239"
   
 2.  En el cuadro de diálogo **Nuevo proyecto** , en la categoría **Plantillas instaladas de Visual Studio** , seleccione **Importar base de datos de Analysis Services**.  
   
-3.  Escriba la información de propiedades del proyecto y la solución, incluyendo el nombre de los archivos y su ubicación. Haga clic en **Aceptar**.  
+3.  Escriba la información de propiedades del proyecto y la solución, incluyendo el nombre de los archivos y su ubicación. Haga clic en **OK**.  
   
 4.  En la página de inicio del **Asistente para importar bases de datos de Analysis Services** , haga clic en **Siguiente**.  
   

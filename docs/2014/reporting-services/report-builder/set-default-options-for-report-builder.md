@@ -12,17 +12,17 @@ ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bae94dfd09495d271b668390b17059e067f092c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e119a0f4423b07a4c97339d843fbc60181886eb3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66107615"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858597"
 ---
 # <a name="report-builder-options-dialog-box-settings-report-builder"></a>Cuadro de diálogo Opciones del Generador de informes, Configuración (Generador de informes)
   Haga clic en el botón **generador de informes** y, a continuación, haga clic en **Opciones** para establecer las opciones para mostrar archivos y conexiones recientes. También puede cambiar el servidor de informes predeterminado o agregar uno si no lo tiene predeterminado.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Usar este servidor de informes o sitio de SharePoint de forma predeterminada**  
  Puede que su administrador lo haya configurado. El valor puede ser una dirección URL bien formada con http:// o https://. Este valor determina qué conexiones de origen de datos aparecen de forma predeterminada en los Asistentes para tabla/matriz y para gráfico. Además, sus informes se procesarán en este servidor y puede hacer referencia a los recursos que contiene.  
   

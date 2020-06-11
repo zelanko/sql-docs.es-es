@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7288979fdba0752149d8bdc6491e8c51cdebedc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547517"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Conectar una aplicación de servicio PowerPivot a una aplicación Web de SharePoint en administración central
   Una aplicación de servicio PowerPivot puede ser utilizada por cualquier número de aplicaciones web de SharePoint de la granja de servidores. Para hacer que una aplicación de servicio PowerPivot esté disponible, agréguela a una lista de asociaciones de servicio.  
@@ -40,7 +39,7 @@ ms.locfileid: "66071679"
   
 3.  Active la casilla situada al lado de la aplicación de servicio PowerPivot (lo que se indica por el nombre de tipo `PowerPivot Service Application Proxy`). Si tiene más de una aplicación de servicio PowerPivot, simplemente elija una.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Agregar la aplicación de servicios PowerPivot a una lista de asociaciones de servicio personalizadas  
  El grupo personalizado puede reemplazar a una lista predeterminada. Una lista personalizada se crea específicamente para una sola aplicación web de SharePoint. Invalida el grupo predeterminado y lo reemplaza solo con las asociaciones de servicio que un administrador o servicio de la granja especifique. Si creó varias aplicaciones de servicio PowerPivot, debe utilizar una lista personalizada para especificar cuál utilizar. Otras aplicaciones web no pueden reutilizar una lista personalizada. Solo se aplica a la aplicación web para la que se creó.  
@@ -55,7 +54,7 @@ ms.locfileid: "66071679"
   
 5.  Active la casilla situada al lado de cada conexión de aplicación de servicio que desee utilizar. Si tiene varias aplicaciones de servicio PowerPivot (que se indican con el tipo establecido en `PowerPivot Service Application Proxy`), asegúrese de elegir solo una.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear y configurar una aplicación de servicio PowerPivot en administración central](create-and-configure-power-pivot-service-application-in-ca.md)   

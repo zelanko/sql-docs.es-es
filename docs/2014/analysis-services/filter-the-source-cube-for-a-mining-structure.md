@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 05dce7e1-2fe5-4500-bacf-c1a8a76e1424
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74220f2385e27484c5cc511c84be5625290a28db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 058ba6e78fd6c6e5aa7b06fbd5d34c256dac07b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544457"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrar el cubo de origen para una estructura de minería de datos
   Al crear una estructura de minería de datos que se basa en los datos de un modelo multidimensional (un cubo OLAP), puede *segmentar* el cubo en el que se basa la estructura de minería de datos. La segmentación permite crear subconjuntos de datos, como un tipo de filtro en los datos que se utilizan para entrenar el modelo de minería de datos.  
   
 ### <a name="to-slice-a-cube"></a>Para segmentar un cubo  
   
-1.  En el diseñador de minería [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]de datos de, seleccione la pestaña **estructura de minería** de datos o la pestaña **modelos de minería** de datos.  
+1.  En el diseñador de minería de datos de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , seleccione la pestaña **estructura de minería** de datos o la pestaña **modelos de minería** de datos.  
   
 2.  En el menú **modelo de minería de datos** , seleccione **definir segmento de cubo de estructura de minería de datos**.  
   

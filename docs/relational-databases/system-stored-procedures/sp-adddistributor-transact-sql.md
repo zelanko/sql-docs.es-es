@@ -1,7 +1,7 @@
 ---
 title: sp_adddistributor (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/09/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 45088122cfb6824598aaf40486264d41216d3c39
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c82ffa7ad254fc56f1c544a714d8633b7d1a33c
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68771320"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627179"
 ---
 # <a name="sp_adddistributor-transact-sql"></a>sp_adddistributor (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Crea una entrada en la tabla [Sys. sysservers](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (si no hay ninguna), marca la entrada del servidor como distribuidor y almacena la información de la propiedad. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos maestra para registrar y marcar el servidor como un distribuidor. En el caso de un distribuidor remoto, se ejecuta también en el publicador desde la base de datos maestra para registrar el distribuidor remoto.  
+  Crea una entrada en la tabla [servidores desys.sys](../../relational-databases/system-compatibility-views/sys-sysservers-transact-sql.md) (si no hay ninguna), marca la entrada del servidor como distribuidor y almacena la información de la propiedad. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos maestra para registrar y marcar el servidor como un distribuidor. En el caso de un distribuidor remoto, se ejecuta también en el publicador desde la base de datos maestra para registrar el distribuidor remoto.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,10 @@ sp_adddistributor [ @distributor= ] 'distributor'
   
 ## <a name="arguments"></a>Argumentos  
 `[ @distributor = ] 'distributor'`Es el nombre del servidor de distribución. *Distributor* es de **tipo sysname**y no tiene ningún valor predeterminado. Este parámetro se utiliza únicamente si se está configurando un distribuidor remoto. Agrega entradas para las propiedades del distribuidor en **msdb. Tabla MSdistributor** .  
-  
+
+> [!NOTE]
+> El nombre del servidor se puede especificar como `<Hostname>,<PortNumber>` . Es posible que tenga que especificar el número de puerto para la conexión cuando SQL Server se implementa en Linux o Windows con un puerto personalizado, y el servicio explorador está deshabilitado.
+
 `[ @heartbeat_interval = ] heartbeat_interval`Es el número máximo de minutos que un agente puede pasar sin registrar un mensaje de progreso. *heartbeat_interval* es de **tipo int**y su valor predeterminado es 10 minutos. Se crea un trabajo del Agente SQL Server que se ejecuta en este intervalo para comprobar el estado de los agentes de replicación que se están ejecutando.  
   
 `[ @password = ] 'password']`Es la contraseña del inicio de sesión de **distributor_admin** . *password* es de **tipo sysname y su**valor predeterminado es NULL. Si es NULL o una cadena vacía, la contraseña se restablece a un valor aleatorio. La contraseña debe configurarse cuando se agrega el primer distribuidor remoto. **distributor_admin** inicio de sesión y la *contraseña* se almacenan para las entradas del servidor vinculado utilizadas para una conexión RPC del *distribuidor* , incluidas las conexiones locales. Si el *distribuidor* es local, la contraseña de **distributor_admin** se establece en un valor nuevo. En el caso de los publicadores con un distribuidor remoto, se debe especificar el mismo valor de *contraseña* al ejecutar **Sp_adddistributor** en el publicador y el distribuidor. [sp_changedistributor_password](../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) se puede usar para cambiar la contraseña del distribuidor.  
@@ -71,6 +74,6 @@ sp_adddistributor [ @distributor= ] 'distributor'
  [sp_dropdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar la distribución](../../relational-databases/replication/configure-distribution.md)  
+ [Configurar distribución](../../relational-databases/replication/configure-distribution.md)  
   
   

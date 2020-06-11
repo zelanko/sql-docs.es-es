@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d4b91b06470c9cb22e98ac76ea52494728a7ca11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f93df1c1388f6a85272ced6bf419140c74105ddc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893105"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669951"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopCount(<table expression>, <rank expression>, <count>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \<columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  
   
 ## <a name="remarks"></a>Observaciones  
- El valor proporcionado por la expresión de \<rango> argumento determina el orden decreciente de rango para las filas que se proporcionan en la \<expresión de tabla> argumento, y se devuelve el número de filas de nivel superior que se especifica \<en el argumento Count>.  
+ El valor proporcionado por la expresión de \< rango> argumento determina el orden decreciente de rango para las filas que se proporcionan en la \< expresión de tabla> argumento, y se devuelve el número de filas de nivel superior que se especifica en el \< argumento Count>.  
   
  La función Topcount se introdujo originalmente para habilitar las predicciones asociativas y, en general, genera los mismos resultados que una instrucción que incluye las cláusulas **Select Top** y **order by** . Obtendrá un mejor rendimiento para las predicciones asociativas si usa la función **PREDICT (DMX)** , que admite la especificación de un número de predicciones para devolver.  
   

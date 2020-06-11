@@ -10,17 +10,17 @@ ms.assetid: 6e51b7bb-a733-4852-8c33-7f4dbdf931c2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d2b01eceff763d554644065fdb5137695bd82f69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f962ead45c4c0670cd5adfb5da0be9373c4097
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774348"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858941"
 ---
 # <a name="managed-instance-details-sql-server-utility"></a>Detalles de las instancias administradas (Utilidad de SQL Server)
   La información de la vista Instancias administradas del Explorador de Utilidad proporciona los detalles de utilización para las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el historial de uso de la CPU, los detalles de utilización del almacenamiento en el nivel de archivo y la capacidad de ver y actualizar los umbrales de la directiva. Los umbrales de la directiva se pueden controlar en el nivel de instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , para un equipo, para los archivos de base de datos y los archivos de registro, y en el nivel de volúmenes de almacenamiento. También se pueden ver los detalles sobre las propiedades correspondientes a las instancias administradas individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Vista de lista  
  La vista de lista del panel superior muestra los datos sobre las instancias individuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se enumeran en las filas según mombreDeEquipo\nombreDeInstancia.  
   

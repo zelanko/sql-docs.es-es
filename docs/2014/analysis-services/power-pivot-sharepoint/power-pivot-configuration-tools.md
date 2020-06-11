@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: f934c51d-01fe-4e67-971d-cd87d7d7ee51
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 299b40b92b3d2f8c5559a5e10e511f80ab5a5bc9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: de11cdaf304b3010dcf21725edd2d3cbfa84ae0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175664"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540257"
 ---
 # <a name="powerpivot-configuration-tools"></a>PowerPivot Configuration Tools
-  Configure, repare o quite [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] un con la herramientas de configuración de PowerPivot.
+  Configure, repare o quite un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] con la herramientas de configuración de PowerPivot.
 
  El Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala la Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2010 y una Herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint 2013. En este tema se describe el uso general de las dos herramientas y las diferencias existentes entre ellas.
 
@@ -91,7 +90,7 @@ ms.locfileid: "78175664"
 
 1.  En la pantalla **Inicio** , escriba`powerpivot`
 
-     En la pantalla **Inicio** , escriba `powerpivot` o en el menú **Inicio** , haga clic en todos los [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] **programas**,, haga clic en **herramientas de configuración**y, a continuación, haga clic en una de las opciones siguientes:
+     En la pantalla **Inicio** , escriba `powerpivot` o en el menú **Inicio** , haga clic en todos los **programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)] , haga clic en **herramientas de configuración**y, a continuación, haga clic en una de las opciones siguientes:
 
     -   **Herramienta de configuración de PowerPivot**.
 

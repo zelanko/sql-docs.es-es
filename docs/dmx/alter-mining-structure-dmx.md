@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4f4cd71f7ecfaa0f8221f599a2814c153af97be
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889862"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669875"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ USING <algorithm> [(<parameter list>)]
  Nombre de un algoritmo de minería de datos definido por el proveedor.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de, vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
@@ -161,7 +161,7 @@ USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)
 ```  
   
 ## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Ejemplo 2: agregar un modelo filtrado a una estructura  
- En el ejemplo siguiente se agrega un modelo `Naive Bayes Women`de minería de datos,, a la **nueva** estructura de minería de datos. El nuevo modelo tiene la misma estructura básica que el modelo de minería de datos que se agregó en el ejemplo 1; sin embargo, este modelo restringe los casos de la estructura de minería de datos a las clientas con una edad superior a 50 años.  
+ En el ejemplo siguiente se agrega un modelo de minería de datos, `Naive Bayes Women` , a la **nueva** estructura de minería de datos. El nuevo modelo tiene la misma estructura básica que el modelo de minería de datos que se agregó en el ejemplo 1; sin embargo, este modelo restringe los casos de la estructura de minería de datos a las clientas con una edad superior a 50 años.  
   
 ```  
 ALTER MINING STRUCTURE [New Mailing]  

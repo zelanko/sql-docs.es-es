@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5675cdbf-bfaa-4b6e-b716-31b8e9da72b4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23845118c4c202db781fe325c4afc2402ceee271
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8905ba7019ba85d8e9e0711b1102bf37e1185d42
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072202"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541117"
 ---
 # <a name="notifications-storage-options-dialog-box-analysis-services---multidimensional-data"></a>Notificaciones (cuadro de diálogo Opciones de almacenamiento) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para establecer el método de notificación y las configuraciones relacionadas para una dimensión, un cubo, un grupo de medida o una partición.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072202"
 |----------|----------------|  
 |**Modo de almacenamiento**|Seleccione el modo de almacenamiento que debe utilizarse para el objeto.<br /><br /> **MOLAP**<br /> El objeto utiliza almacenamiento OLAP multidimensional (MOLAP).<br /><br /> **HOLAP**<br /> El objeto utiliza almacenamiento OLAP híbrido (HOLAP).<br /><br /> **ROLAP**<br /> El objeto utiliza almacenamiento OLAP relacional (ROLAP).|  
 |**Habilita el almacenamiento en caché automático**|Habilitar el almacenamiento en caché automático.<br /><br /> Nota: Si no se selecciona esta opción, todas las opciones, excepto **Modo de almacenamiento**, quedarán deshabilitadas.|  
-|**SQL Server**|Utiliza un mecanismo de seguimiento especializado [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en para identificar los cambios en las tablas subyacentes para el objeto.|  
+|**SQL Server**|Utiliza un mecanismo de seguimiento especializado en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para identificar los cambios en las tablas subyacentes para el objeto.|  
 |**Especificar tablas de seguimiento**|Especifique las tablas subyacentes de las que debe realizarse el seguimiento para el objeto y, después, escriba una lista de tablas delimitadas por el carácter de punto y coma (;) o haga clic en el botón de puntos suspensivos (**…**) para abrir el cuadro de diálogo **Objetos relacionales** y elija las tablas de las que debe realizarse el seguimiento. Para obtener más información, vea [Cuadro de diálogo Objetos relacionales &#40;Analysis Services - Datos multidimensionales&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si esta opción no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] intenta determinar la lista de tablas subyacentes de las que debe realizarse el seguimiento para el objeto, si se cumplen determinados requisitos. Para obtener más información sobre estos requisitos, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Cliente iniciado**|Seleccione el comando XMLA (XML for Analysis) `NotifyTableChange` para identificar cambios en tablas subyacentes para el objeto. Por lo general, esta opción se activa si se desea utilizar un proceso de notificación basado en el cliente.|  
 |**Especificar tablas de seguimiento**|Seleccione esta opción para especificar las tablas subyacentes de las que debe realizarse el seguimiento para el objeto y, después, escriba una lista de tablas delimitadas por el carácter de punto y coma (;) o haga clic en el botón de puntos suspensivos (**…**) para abrir el cuadro de diálogo **Objetos relacionales** y elija las tablas de las que debe realizarse el seguimiento. Para obtener más información, vea [Cuadro de diálogo Objetos relacionales &#40;Analysis Services - Datos multidimensionales&#41;](relational-objects-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Si esta opción no está seleccionada, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] intenta determinar la lista de tablas subyacentes de las que debe realizarse el seguimiento para el objeto, si se cumplen determinados requisitos. Para obtener más información sobre estos requisitos, vea [Almacenamiento en caché automático &#40;Particiones&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  

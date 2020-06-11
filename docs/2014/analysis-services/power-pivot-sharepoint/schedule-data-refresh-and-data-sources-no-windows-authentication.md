@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f291020e77bf557a352c07451665172f9c4bb225
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547797"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualización de datos programada y orígenes de datos no compatibles con la Autenticación de Windows (PowerPivot para SharePoint)
   En este tema se describe un flujo de trabajo de nuevos datos de programación de PowerPivot para SharePoint que pueden usar orígenes de datos que **NO** admiten la autenticación de Windows. Por ejemplo, orígenes de datos Oracle o IBM DB2. Las ilustraciones y los pasos de este tema hacen referencia a orígenes de datos Oracle, pero se aplica el mismo flujo de trabajo a otros orígenes de datos.  
@@ -64,15 +63,15 @@ ms.locfileid: "66071155"
   
     -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página Credenciales, deje los dos valores predeterminados de nombre de campo y tipos de campo para **Nombre de usuario Windows** y **Contraseña de Windows**.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. El nuevo identificador de aplicación de destino se agrega a la lista. Seleccione el identificador de la aplicación de destino y haga clic en **establecer credenciales**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
@@ -98,23 +97,23 @@ ms.locfileid: "66071155"
   
     -   **Dirección URL de la página de la aplicación de destino:** Ninguna.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
-6.  En la página **credenciales** , cambie el primer nombre de `Oracle User ID` campo a y cambie el tipo `User Name`de **campo** a.  
+6.  En la página **credenciales** , cambie el primer nombre de campo a `Oracle User ID` y cambie el **tipo de campo** a `User Name` .  
   
-     Cambie el segundo nombre de campo `Oracle Password` a y el **tipo** de `Password`campo a.  
+     Cambie el segundo nombre de campo a `Oracle Password` y el **tipo de campo** a `Password` .  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 10. El nuevo identificador de aplicación de destino se agrega a la lista. Seleccione el identificador de la aplicación de destino y haga clic en **establecer credenciales**![as_powerpivot_refresh_sss_set_key](../media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key").  
   
 11. Escriba el identificador de usuario Oracle y la contraseña de Oracle y, a continuación, haga clic en **Aceptar**.  
   
- Para obtener más información, vea la sección "para crear una aplicación de destino para la autenticación de SQL Server" en [usar almacenamiento seguro con autenticación de SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) (https://technet.microsoft.com/library/gg298949.aspx).  
+ Para obtener más información, vea la sección "para crear una aplicación de destino para la autenticación de SQL Server" en [usar almacenamiento seguro con autenticación de SQL Server (SharePoint Server 2013)](https://technet.microsoft.com/library/gg298949.aspx) ( https://technet.microsoft.com/library/gg298949.aspx) .  
   
 ## <a name="to-configure-the-powerpivot-service-application"></a>Para configurar la aplicación de servicio PowerPivot  
   
@@ -124,7 +123,7 @@ ms.locfileid: "66071155"
   
 3.  Haga clic en **Configurar las opciones de aplicación de servicio** en la sección Acciones.  
   
-4.  En la **sección actualización de datos** , establezca la cuenta de actualización de **datos desatendida de PowerPivot**en`PowerPivotDataRefresh` y, a continuación, haga clic en **Aceptar**.  
+4.  En la sección **actualización de datos** , establezca la cuenta de actualización de **datos desatendida de PowerPivot**en `PowerPivotDataRefresh` y, a continuación, haga clic en **Aceptar**.  
   
      ![as_powerpivot_refresh_new_refresh_acount](../media/as-powerpivot-refresh-new-refresh-acount.gif "as_powerpivot_refresh_new_refresh_acount")  
   
@@ -148,9 +147,9 @@ ms.locfileid: "66071155"
   
 9. Seleccione **Conectar con las credenciales guardadas en el servicio de almacenamiento seguro (SSS) para iniciar sesión en el origen de datos. Especifique el identificador usado para buscar las credenciales en el cuadro de identificador de SSS**.  
   
-10. En el cuadro **ID.:** , `OracleAuthentication`escriba.  
+10. En el cuadro **ID.:** , escriba `OracleAuthentication` .  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
      Si se muestra un mensaje de error similar al siguiente: `The provided Secure Store target application is either incorrectly configured or does not exist`.  
   

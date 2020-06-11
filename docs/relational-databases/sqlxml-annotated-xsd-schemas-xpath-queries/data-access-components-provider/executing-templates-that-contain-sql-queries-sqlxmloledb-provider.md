@@ -1,5 +1,6 @@
 ---
 title: Ejecutar plantillas con consultas SQL (SQLXMLOLEDB)
+description: Vea un ejemplo de una aplicación ADO del lado cliente con el proveedor SQLXMLOLEDB para ejecutar una plantilla XML de servidor que contenga una consulta SQL.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a6a1df48e97877aeca05e1aa72a248ec5bbcf659
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82f770d8b17ee1ec93e33efa07b6658363b0de2d
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246670"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215661"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas SQL (proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "75246670"
   
  Dado que la propiedad Clientsidexml, está establecida en true, la instrucción SELECT sin la cláusula FOR XML se envía al servidor. El servidor ejecuta la consulta y devuelve un conjunto de filas al cliente. A continuación, el cliente aplica la transformación FOR XML al conjunto de filas y genera un documento XML.  
   
- La plantilla XML proporciona un único elemento raíz de nivel superior (\<> raíz) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad raíz de XML.  
+ La plantilla XML proporciona un único elemento raíz de nivel superior ( \<ROOT> ) para el documento XML que se genera; por lo tanto, no se proporciona la propiedad raíz de XML.  
   
  Para ejecutar plantillas XML, se debe especificar el dialecto {5d531cb2-e6ed-11d2-b252-00c04f681b71}.  
   

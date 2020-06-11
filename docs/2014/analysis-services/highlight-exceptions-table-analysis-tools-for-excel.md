@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab9289705bbea8d1e2c21d5f5820746e58b48cc5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080761"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544304"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Resaltar excepciones (Herramientas de análisis de tabla para Excel)
   ![Botón Resaltar excepciones en cinta de opciones](media/tat-highlightex.gif "Botón Resaltar excepciones en cinta de opciones")  
@@ -39,7 +38,7 @@ ms.locfileid: "66080761"
   
 3.  Haga clic en **Ejecutar**.  
   
-4.  Abra la hoja de \<cálculo titulada nombre de tabla> valores atípicos para ver un resumen de los valores atípicos encontrados.  
+4.  Abra la hoja de cálculo titulada \<table name> valores atípicos para ver un resumen de los valores atípicos encontrados.  
   
 5.  Para cambiar el número de resaltados, haga clic en las flechas arriba y abajo de la fila **umbral de excepción** del **Informe resaltar excepciones**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66080761"
 ## <a name="related-tools"></a>Herramientas relacionadas  
  Cuando esté limpiando o revisando datos como preparación para la minería de datos, también debería probar las características de exploración de datos del Cliente de minería de datos para Excel. Este complemento dispone de más herramientas avanzadas que le ayudarán a encontrar valores atípicos, cambiar etiquetas de datos o ver la distribución de datos. Para obtener más información acerca de las herramientas de exploración de datos en el cliente de minería de datos para Excel, vea [explorar y limpiar datos](exploring-and-cleaning-data.md).  
   
- La herramienta **resaltar excepciones** usa [!INCLUDE[msCoName](../includes/msconame-md.md)] el algoritmo de clústeres. Un modelo de clústeres detecta grupos de filas que comparten características similares. El cliente de minería de datos para Excel proporciona una ventana **examinar** que utiliza gráficos y perfiles característicos para permitir explorar los modelos de minería de datos creados por la agrupación en clústeres. Para obtener información acerca de cómo examinar el modelo de agrupación en clústeres creado por la herramienta **resaltar excepciones** , vea [examinar modelos (cliente de minería de datos para Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
+ La herramienta **resaltar excepciones** usa el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo de clústeres. Un modelo de clústeres detecta grupos de filas que comparten características similares. El cliente de minería de datos para Excel proporciona una ventana **examinar** que utiliza gráficos y perfiles característicos para permitir explorar los modelos de minería de datos creados por la agrupación en clústeres. Para obtener información acerca de cómo examinar el modelo de agrupación en clústeres creado por la herramienta **resaltar excepciones** , vea [examinar modelos (cliente de minería de datos para Excel)](highlight-exceptions-table-analysis-tools-for-excel.md).  
   
  Para obtener más información sobre el algoritmo de clústeres de [!INCLUDE[msCoName](../includes/msconame-md.md)], vea el tema "Algoritmo de clústeres de Microsoft" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

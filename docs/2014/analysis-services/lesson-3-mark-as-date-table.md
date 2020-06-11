@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c32cc336-b7d8-4122-9d62-4936344d2315
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26877c4892b050cbf9c8dcc6553530dff513f8fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b714999109d4935130d7787983e18b76f9a442a7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078784"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543387"
 ---
 # <a name="lesson-4-mark-as-date-table"></a>Lección 4: Marcar como tabla de fechas
   En la lección 2: Agregar datos, importó una tabla de dimensiones denominada DimDate. A continuación cambió el nombre de la tabla DimDate, en la lección 3: Cambiar el nombre de las columnas a, simplemente, Date. Aunque en el modelo esta tabla se denomina Date, puede ser también conocida como *tabla Date*, porque contiene datos de fecha y hora.  
@@ -37,7 +36,7 @@ ms.locfileid: "66078784"
   
 3.  En el cuadro de diálogo **Marcar como tabla de fechas** en el cuadro de lista **Date** , seleccione la columna **Date** como identificador único.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 5: Crear relaciones](lesson-4-create-relationships.md).  
   
   

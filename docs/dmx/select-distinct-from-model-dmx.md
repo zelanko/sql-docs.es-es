@@ -1,21 +1,21 @@
 ---
-title: Seleccione DISTINCt &lt;from &gt; Model (DMX) | Microsoft Docs
+title: Seleccione DISTINCt FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 67ed5236aad0549fa6850114280ee15d8cebcaeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea538271bf84d7d5b4e0fbea0a860f68bb1f62b6
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892529"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669622"
 ---
-# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCt &lt;from &gt; Model (DMX)
+# <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCt FROM &lt; Model &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve todas los estados posibles para la columna seleccionada del modelo. Los valores devueltos varían dependiendo de si la columna especificada contiene valores discretos, valores numéricos de datos discretos o valores numéricos continuos.  
@@ -35,7 +35,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *lista de expresiones*  
  Lista delimitada por comas de expresiones o identificadores de columna (derivados del modelo) relacionados.  
   
- *modelo*  
+ *model*  
  Identificador de modelo.  
   
  *lista de condiciones*  
@@ -53,7 +53,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 <model>.<table column reference>.<column reference>  
 ```  
   
- Los resultados de la instrucción **SELECT DISTINCT from \<Model>** varían según el tipo de columna. En la siguiente tabla se describen los tipos de columna admitidos y la salida de la instrucción.  
+ Los resultados de la instrucción **SELECT DISTINCT from \< Model>** varían según el tipo de columna. En la siguiente tabla se describen los tipos de columna admitidos y la salida de la instrucción.  
   
 |Tipo de columna|Output|  
 |-----------------|------------|  
@@ -62,7 +62,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |Continuo|Punto medio de los valores de la columna.|  
   
 ## <a name="discrete-column-example"></a>Ejemplo de columna discreta  
- El siguiente ejemplo de código se basa en `[TM Decision Tree]` el modelo que se crea en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
+ El siguiente ejemplo de código se basa en el `[TM Decision Tree]` modelo que se crea en el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La consulta devuelve los valores únicos que existen en la columna discreta `Gender`.  
   
 ```  
 SELECT DISTINCT [Gender]  
@@ -99,7 +99,7 @@ FROM [TM Decision Tree]
  La consulta también devuelve una fila de valores nulos para representar los valores ausentes.  
   
 ## <a name="discretized-column-example"></a>Ejemplo de columnas de datos discretos  
- El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de `Yearly Income` la columna **continuo** a **discreto**.  
+ El ejemplo de código siguiente devuelve el punto medio y los valores máximo y mínimo de cada depósito creado por el algoritmo para la columna [`Yearly Income]`. Para reproducir los resultados de este ejemplo, debe crear una nueva estructura de minería de datos que sea igual que `[Targeted Mailing]`. En el asistente, cambie el tipo de contenido de la `Yearly Income` columna **continuo** a **discreto**.  
   
 > [!NOTE]  
 >  También puede cambiar el modelo de minería datos creado en el Tutorial básico de minería de datos para discretizar la columna de estructura de minería de datos [`Yearly Income]`. Para obtener información sobre cómo hacerlo, vea [cambiar la discretización de una columna en un modelo de minería de datos](https://docs.microsoft.com/analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model). Sin embargo, al cambiar la discretización de la columna, se volverá a procesar la estructura de minería de datos, lo que cambiará los resultados de otros modelos generados usando esa estructura.  

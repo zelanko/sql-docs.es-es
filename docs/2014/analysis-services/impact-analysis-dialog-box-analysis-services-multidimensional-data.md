@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 208268eb-4e14-44db-9c64-6f74b776adb6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c08690cd2f5b77471392cab3aad1587b4cb0f9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92c7e91e090b8e82e2844cf1999328c6ef7a8684
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544277"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Análisis de impacto (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Análisis de impacto** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para identificar y, opcionalmente, procesar objetos dependientes que se ven afectados si se procesan los objetos enumerados en el cuadro de diálogo **Proceso** . Para mostrar el cuadro de diálogo **Análisis de impacto** , haga clic en **Análisis de impacto** en el cuadro de diálogo **Proceso** .  
@@ -32,7 +31,7 @@ ms.locfileid: "66080749"
  **Nombre de objeto**  
  Muestra el nombre del objeto dependiente que puede ser necesario procesar. El icono que se muestra a la izquierda del nombre indica el tipo de objeto.  
   
- **Type**  
+ **Tipo**  
  Muestra el tipo del objeto dependiente que puede ser necesario procesar.  
   
  **Tipo de impacto**  

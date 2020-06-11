@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0b413a53aa0b5f423a5977ef051e55c2abf3f65e
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893848"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666797"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  Los histogramas generan columnas de estadísticas. La estructura de columnas del histograma devuelto depende del tipo de referencia de columna que se usa con la función **PredictHistogram** .  
   
 ## <a name="scalar-columns"></a>Columnas escalares  
- En el \<caso de una referencia de columna escalar>, el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
+ En el caso de una \< referencia de columna escalar>, el histograma que devuelve la función **PredictHistogram** consta de las siguientes columnas:  
   
 -   El valor que se predice.  
   
@@ -55,10 +55,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$AdjustedProbability**  
   
-     La columna **$AdjustedProbability** es una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del OLE DB [!INCLUDE[msCoName](../includes/msconame-md.md)] para la especificación de minería de datos.  
+     La columna **$AdjustedProbability** es una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] extensión del [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB para la especificación de minería de datos.  
   
 ## <a name="cluster-columns"></a>Columnas de clúster  
- El histograma que devuelve la función **PredictHistogram** para una \<referencia de columna de clúster> consta de las siguientes columnas:  
+ El histograma que devuelve la función **PredictHistogram** para una \< referencia de columna de clúster> consta de las siguientes columnas:  
   
 -   **$Cluster** (representa el nombre del clúster)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 62956774e203b1438de1ea07708940d0711053ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 641f161ede6daebdd879c3316ce73a2e446c21c1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543677"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Idiomas e intercalaciones (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admite los idiomas e intercalaciones que proporcionan los sistemas operativos [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Las propiedades de `Language` y `Collation` se establecen inicialmente en el nivel de instancia durante la instalación, pero se pueden cambiar más tarde en diferentes niveles de la jerarquía de objetos.  
@@ -51,7 +50,7 @@ ms.locfileid: "66079378"
 -   [Compatibilidad con GB18030 en Analysis Services](#bkmk_gb18030)  
   
 ##  <a name="objects-that-support-language-and-collation-properties"></a><a name="bkmk_object"></a>Objetos que admiten propiedades de idioma e intercalación  
- `Language`a `Collation` menudo, las propiedades y se exponen juntas `Language`: donde puede establecer, `Collation`también puede establecer.  
+ `Language``Collation`a menudo, las propiedades y se exponen juntas: donde puede establecer `Language` , también puede establecer `Collation` .  
   
  Puede establecer `Language` y `Collation` en estos objetos:  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66079378"
   
      Sea cual sea la combinación de idioma e intercalación que establezca en el cubo, se usa con todas las medidas y dimensiones contenidas en el cubo. La única forma de establecer propiedades de intercalación más depuradas se produce cuando se crean traducciones en un atributo de dimensión. De lo contrario, suponiendo que no haya ninguna traducción en el nivel de atributo, hay una intercalación por cubo.  
   
- Además, puede establecer `Language`, por sí mismo, en un objeto **Translation** .  
+ Además, puede establecer `Language` , por sí mismo, en un objeto **Translation** .  
   
  Al agregar traducciones a un cubo o dimensión se crea un objeto de traducción. `Language`forma parte de la definición de la traducción. `Collation`, sin embargo, se configura en el cubo o en un nivel superior y todas las traducciones la comparten. Esto es evidente en el XMLA de un cubo que contiene traducciones, donde se verán varias propiedades de idioma (una para cada traducción), pero solo una intercalación. Tenga en cuenta que hay una excepción en el caso de traducciones de atributo de dimensión, donde puede reemplazar la intercalación de cubo para especificar una intercalación de atributo que coincida con la columna de origen (el motor de base de datos admite la configuración de intercalación en columnas individuales y se acostumbra a configurar traducciones individuales para obtener datos de miembro de diferentes columnas de origen). Pero, en caso contrario, para las demás traducciones, `Language` se usa por sí mismo, sin un corolario de `Collation`. Vea [Translations &#40;Analysis Services&#41; (Traducciones &#40;Analysis Services&#41;)](translations-analysis-services.md) para más información.  
   
@@ -140,9 +139,9 @@ ms.locfileid: "66079378"
   
 -   Volver a procesar las particiones y dimensiones después de actualizar la intercalación.  
   
- Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar la ** \<configuración de Language>** y ** \<CollationName>** en el archivo msmdsrv. ini, especificando el LCID del idioma.  
+ Puede usar SQL Server Management Studio o PowerShell AMO para cambiar la configuración de idioma o intercalación predeterminada en el nivel de servidor. Como alternativa, puede modificar la **\<Language>** **\<CollationName>** configuración de y en el archivo de msmdsrv.ini, especificando el LCID del idioma.  
   
-1.  En Management Studio, haga clic con el botón secundario en nombre del servidor | **Properties** | **Idioma o intercalación**de propiedades.  
+1.  En Management Studio, haga clic con el botón secundario en nombre del servidor | **Propiedades**  |  de **Idioma o intercalación**.  
   
 2.  Elija las opciones de ordenación. Para seleccionar **Binario** o **Binario 2**, desactive primero la casilla **Distinguir acentos**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "66079378"
   
  Antes de usar XMLA para modificar una base de datos existente, asegúrese de que no está incorporando discrepancias entre la base de datos y los archivos de origen utilizados para crearla. Por ejemplo, tal vez quiera usar XMLA para cambiar rápidamente el idioma o la intercalación para pruebas de prueba de concepto, pero seguir realizando cambios en el archivo de origen (vea [Cambiar idioma o intercalación en un cubo](#bkmk_cube)), volviendo a implementar la solución con los procedimientos operativos existentes ya en vigor.  
   
-1.  En Management Studio, haga clic con el botón secundario en la base de datos | **Script de base de datos como** | **ALTER en** | **nueva ventana del editor de consultas**.  
+1.  En Management Studio, haga clic con el botón secundario en la base de datos | **Incluir la base de datos como**  |  **Modificar a**  |  **Nueva ventana del editor de consultas**.  
   
 2.  Busque y reemplace el idioma o la intercalación existente con otro valor.  
   

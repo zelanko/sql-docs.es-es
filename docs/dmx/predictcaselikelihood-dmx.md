@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18e988f55f68717f4e2054ec5c38869efba74ab1
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893925"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668189"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  El valor devuelto contiene la probabilidad sin procesar del caso, que es el producto de las probabilidades de los atributos del caso.  
   
 ## <a name="applies-to"></a>Se aplica a  
- Modelos compilados con los algoritmos de [!INCLUDE[msCoName](../includes/msconame-md.md)] agrupación en clústeres y [!INCLUDE[msCoName](../includes/msconame-md.md)] agrupación en clústeres de secuencia.  
+ Modelos compilados con los algoritmos de agrupación en clústeres [!INCLUDE[msCoName](../includes/msconame-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] agrupación en clústeres de secuencia.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  Número de punto flotante de doble precisión entre 0 y 1. Un número más cercano a 1 indica que el caso tiene mayor probabilidad de producirse en este modelo. Un número más cercano a 0 indica que es menos probable que se produzca el caso en este modelo.  

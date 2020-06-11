@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b0f0388e-3d75-450d-b5fb-8a1d31cf8376
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85046febbaa348216a48e51860f7dbcf604f9f8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5693369574a7c7fc8ea357248347fb89dee0f214
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079403"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543651"
 ---
 # <a name="kpi-organizer-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Organizador de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Organizador de KPI** en la pestaña **KPI** del Diseñador de cubos para acceder a los indicadores clave de rendimiento (KPI) del cubo especificado para ordenarlos.  

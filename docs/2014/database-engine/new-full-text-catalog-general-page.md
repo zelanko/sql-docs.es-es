@@ -12,12 +12,12 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 52eb88fa2607068f01f41be9d14d828c0a04e1e3
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 2bb0825175ac10c3dcf2dfbd4d5d28bb3dc884ba
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000852"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858639"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nuevo catálogo de texto completo (página General)
   Use este cuadro de diálogo para crear un nuevo catálogo de texto completo.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000852"
   
 -   [Creación y administración de catálogos de texto completo](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre del catálogo de texto completo**  
  Nombre del catálogo de texto completo.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: abac1a00-f827-4c3e-a473-6db5c8a3a66f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7a80f607c3187e967404ce018b7eed00497d9c01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63fe9b7d83eea026a9a0f61213e2ccd30bba3591
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078579"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542913"
 ---
 # <a name="lesson-5-create-relationships"></a>Lección 5: Crear relaciones
   En esta lección, comprobará las relaciones que se han creado de forma automática al importar datos y agregará nuevas relaciones entre tablas diferentes. Una relación es una conexión entre dos tablas de datos que establece cómo se deben poner en correlación los datos de esas tablas. Por ejemplo, la tabla Product y la tabla Product Subcategory tienen una relación basada en el hecho de que cada producto pertenece a una subcategoría. Para obtener más información, consulte [Relaciones &#40;SSAS tabular&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "66078579"
   
 3.  Use el diseñador de modelos en la vista de diagrama o el cuadro de diálogo **Administrar relaciones** para comprobar que se han creado las siguientes relaciones al importar cada una de las tablas de la base de datos AdventureWorksDW:  
   
-    |Active|Tabla|Tabla de búsqueda relacionada|  
+    |Activo|Tabla|Tabla de búsqueda relacionada|  
     |------------|-----------|--------------------------|  
     |Sí|**Customer [Geography Id]**|**Geography [Geography Id]**|  
     |Sí|**Product [Product Subcategory Id]**|**Product Subcategory [Product Subcategory Id]**|  

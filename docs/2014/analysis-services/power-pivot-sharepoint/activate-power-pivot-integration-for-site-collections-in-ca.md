@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62a27e53-446a-42d7-b5db-c009e02d4904
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b479564984727e47432754d0a660e6aa979244b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072007"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547638"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Activar la integración de características de PowerPivot para colecciones de sitios en Administración central
   Activar la integración de características de PowerPivot para colecciones de sitios concretos es necesario si usó la opción de instalación Granja existente para instalar SQL Server PowerPivot para SharePoint. Si instaló PowerPivot para SharePoint con la opción Nuevo servidor, puede omitir esta tarea, porque el programa de instalación de SQL Server ya activó la integración de características de PowerPivot para la colección de sitios raíz al configurar la implementación.  
@@ -31,7 +30,7 @@ ms.locfileid: "66072007"
   
 1.  En un sitio de SharePoint, haga clic en **Acciones de sitio**.  
   
-     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que, a menudo, puede tener acceso a un sitio\<de SharePoint escribiendo http://nombre del equipo> para abrir la colección de sitios raíz.  
+     De forma predeterminada, se tiene acceso a las aplicaciones web de SharePoint a través del puerto 80. Esto significa que normalmente puede acceder a un sitio de SharePoint si escribe http://\<computer name> para abrir la colección de sitios raíz.  
   
 2.  Haga clic en **Configuración del sitio**.  
   

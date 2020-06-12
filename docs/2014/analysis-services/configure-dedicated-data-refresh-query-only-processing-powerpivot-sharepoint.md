@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5e027605-1086-4941-bb01-f315df8f829b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67cc581c177f5d07df035927eb979c09061a537
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087509"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527301"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Configurar la actualización de datos dedicada o el proceso de una sola consulta (PowerPivot para SharePoint)
   En el modo integrado de SharePoint, se puede configurar una instancia del servidor de Analysis Services para admitir un tipo específico de solicitud de procesamiento, como la actualización de datos o el procesamiento de una sola consulta. De forma predeterminada, ambos tipos de solicitudes de carga están habilitados. Puede desactivar cualquiera de los tipos para crear un motor de consulta dedicado o un servidor de actualización de datos.  
@@ -59,7 +58,7 @@ ms.locfileid: "66087509"
   
  Puede aumentar el número de trabajos de actualización de datos que se pueden ejecutar al mismo tiempo si el sistema tiene la capacidad de admitir carga adicional.  
   
-|Valor|Valores válidos|Descripción|  
+|Configuración|Valores válidos|Descripción|  
 |-------------|------------------|-----------------|  
 |Valor predeterminado|Se calcula en función de la RAM.|El valor predeterminado se basa en la cantidad de memoria disponible dividida entre 4 gigabytes. Una fórmula calcula el valor predeterminado para que la configuración se pueda ajustar en función de las capacidades del sistema.<br /><br /> Nota: el divisor de 4 gigabytes se seleccionó en función del uso de RAM para un gran muestreo de orígenes de datos PowerPivot reales. No se basa en la arquitectura física o lógica de PowerPivot.|  
 |Valor máximo|Se calcula en función del número de CPU.|El número máximo de trabajos simultáneos que puede especificar se basa en el número de procesadores del equipo. Por ejemplo, en un equipo de cuatro núcleos y cuatros sockets, el número máximo de trabajos que puede ejecutar de forma simultánea es 16.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 718b9072-0f35-482a-a803-9178002ff5b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea26856075d37d815d819fa0eada61d677f77819
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68809855"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523651"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Validación cruzada (Analysis Services - Minería de datos)
   La *validación cruzada* es una herramienta estándar de Analytics y es una característica importante para ayudarle a desarrollar y ajustar modelos de minería de datos. La validación cruzada se usa después de crear una estructura de minería de datos y los modelos de minería de datos relacionados para determinar la validez del modelo.  La validación cruzada tiene las aplicaciones siguientes:  
@@ -82,7 +81,7 @@ ms.locfileid: "68809855"
 ### <a name="choosing-models-and-columns-to-validate"></a>Elegir los modelos y columnas para la validación  
  Al utilizar la pestaña **Validación cruzada** del Diseñador de minería de datos, debe seleccionar primero la columna de predicción de la lista. Normalmente, una estructura de minería de datos puede admitir muchos modelos de minería, de los cuales no todos utilizan la misma columna de predicción. Al ejecutar una validación cruzada, solo se podrán incluir en el informe aquellos modelos que utilicen la misma columna de predicción.  
   
- Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada mediante el formato \<de nombre de tabla anidada> (clave). \<> de columna anidada. Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<el nombre de tabla anidado> (clave).  
+ Para elegir un atributo de predicción, haga clic en **Atributo de destino** y seleccione la columna de la lista. Si el atributo de destino es una columna anidada o una columna de una tabla anidada, debe escribir el nombre de la columna anidada con el formato \<Nested Table Name> (clave). \<Nested Column> Si la única columna utilizada de la tabla anidada es la columna de clave, puede usar \<Nested Table Name> (clave).  
   
  Después de seleccionar el atributo de predicción, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prueba todos los modelos que utilizan el mismo atributo de predicción automáticamente. Si el atributo de destino contiene valores discretos, después de haber seleccionado la columna de predicción, puede escribir un estado de destino, en caso de que haya un valor concreto que desee predecir.  
   

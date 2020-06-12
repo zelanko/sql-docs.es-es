@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 15574819cf0f0fec0d95fa2353c187cc55091e56
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae3e672932dd320c6b369f23f03c1f056d30d4ba
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084202"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522181"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Administración de las soluciones y los objetos de minería de datos
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona herramientas cliente que puede utilizar para administrar estructuras y modelos de minería de datos existentes. Esta sección describe las operaciones de administración que puede realizar con cada entorno.  
@@ -35,7 +34,7 @@ ms.locfileid: "66084202"
 ## <a name="location-of-data-mining-objects"></a>Ubicación de los objetos de minería de datos  
  Las estructuras y los modelos de minería de datos que se han procesado se almacenan en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Si crea una conexión a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos `Immediate` de en modo al desarrollar los objetos de minería de datos, los objetos que cree se agregarán inmediatamente al servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
+ Si crea una conexión a una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de en `Immediate` modo al desarrollar los objetos de minería de datos, los objetos que cree se agregarán inmediatamente al servidor mientras trabaja. Sin embargo, si diseña los objetos de minería de datos en modo **Sin conexión** , que es el predeterminado cuando se trabaja en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], los objetos de minería que cree solo serán contenedores de metadatos, hasta que los implemente en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por lo tanto, siempre que realice un cambio en un objeto, deberá volver a implementarlo en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre la arquitectura de minería de datos, vea [Arquitectura física &#40;Analysis Services - Minería de datos&#41;](physical-architecture-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Algunos clientes, como los complementos de minería de datos para [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007, también permiten crear modelos de minería de datos y estructuras de minería de datos de sesión que usan una conexión a una instancia, aunque solo almacenan la estructura y los modelos de minería de datos en el servidor durante el transcurso de la sesión. Aun así, podrá administrar estos modelos a través del cliente, al igual que si las estructuras y los modelos estuvieran almacenados en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Sin embargo, los objetos no se conservarán después de que se desconecte de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

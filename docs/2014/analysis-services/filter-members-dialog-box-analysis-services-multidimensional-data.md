@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 52c6da1d-9fb5-4dbc-bffa-248d11cd337c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00725279ef55d2cd69662d30e16c1bdc0954adae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66980b1afe9d4eed353ae18c37ed1fdd052e62b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544469"
 ---
 # <a name="filter-members-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Filtrar miembros (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Filtrar miembros** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para filtrar los miembros de dimensión por título del miembro, nombre del miembro, nombre exclusivo del miembro, valor de columna de clave o valor de columna de valor para el nivel actual mientras busca una dimensión en la pestaña **Examinador** del **Diseñador de dimensiones**.  

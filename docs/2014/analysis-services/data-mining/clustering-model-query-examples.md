@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4996ba378319e442df07a4ff09af3404034474d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe12b82ce2d237acd060b1e387e7a6dfbf958851
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085719"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524211"
 ---
 # <a name="clustering-model-query-examples"></a>Ejemplos de consultas de modelos de agrupación en clústeres
   Al crear una consulta en un modelo de minería de datos, puede recuperar metadatos sobre el modelo o crear una consulta de contenido que proporcione detalles sobre los patrones detectados en el análisis. También puede crear una consulta de predicción, que usa los patrones del modelo para realizar predicciones para los nuevos datos. Cada tipo de consulta proporcionará información diferente. Por ejemplo, una consulta de contenido puede proporcionar detalles adicionales sobre los clústeres encontrados, mientras que una consulta de predicción puede indicar a qué clúster pertenece con mayor probabilidad un nuevo punto de datos.  
@@ -77,7 +76,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Modelo de clúster|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|All|  
+|NODE_DESCRIPTION|Todo|  
   
  Para ver una definición de lo que significan estas columnas en un modelo de agrupación en clústeres, vea [Contenido del modelo de minería de datos para modelos de agrupaciones en clúster &#40;Analysis Services - Minería de datos&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   
@@ -216,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  Resultados de ejemplo:  
   
-|Atributos|Valores|Puntuación|  
+|Atributos|Valores|Score|  
 |----------------|------------|-----------|  
 |Region|Norteamérica|100|  
 |English Occupation|Skilled Manual|94.9003803898654|  
@@ -273,13 +272,13 @@ NATURAL PREDICTION JOIN
   
  Ejemplo de resultados cuando el uso se establece en `Predict`:  
   
-|Bike Buyer|Expression|  
+|Bike Buyer|Expresión|  
 |----------------|----------------|  
 |1|0.592924735740338|  
   
  Ejemplo de resultados cuando el uso se establece en `PredictOnly` y se vuelve a procesar el modelo:  
   
-|Bike Buyer|Expression|  
+|Bike Buyer|Expresión|  
 |----------------|----------------|  
 |1|0.55843544003102|  
   
@@ -324,11 +323,11 @@ NATURAL PREDICTION JOIN
   
  Resultados de ejemplo:  
   
-|$CLUSTER|Expression|  
+|$CLUSTER|Expresión|  
 |--------------|----------------|  
 |Clúster 2|0.397918596951617|  
   
- **Nota:** De forma predeterminada, `ClusterProbability` la función devuelve la probabilidad del clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
+ **Nota:** De forma predeterminada, la `ClusterProbability` función devuelve la probabilidad del clúster más probable. Sin embargo, puede especificar otro clúster utilizando la sintaxis `ClusterProbability('cluster name')`. Si lo hace, sea consciente de que los resultados de cada función de predicción son independientes de los demás resultados. Por consiguiente, la puntuación de probabilidad en la segunda columna podría hacer referencia a un clúster distinto del clúster mencionado en la primera columna.  
   
  [Volver al principio](#bkmk_top2)  
   

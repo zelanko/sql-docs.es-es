@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a997244a2d54cca8732196107dd21927b5f9e2f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62703093"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545457"
 ---
 # <a name="creating-stored-procedures"></a>Creación de procedimientos almacenados
-  Todos los procedimientos almacenados deben asociarse a una clase de Common Language Runtime (CLR) o Modelo de objetos componentes (COM) para poder usarse. La clase debe instalarse en el servidor (normalmente en forma de una [!INCLUDE[msCoName](../../includes/msconame-md.md)] biblioteca de vínculos dinámicos (dll) de ActiveX® y registrada como un ensamblado en el servidor o [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una base de datos.  
+  Todos los procedimientos almacenados deben asociarse a una clase de Common Language Runtime (CLR) o Modelo de objetos componentes (COM) para poder usarse. La clase debe instalarse en el servidor (normalmente en forma de una [!INCLUDE[msCoName](../../includes/msconame-md.md)] biblioteca de vínculos dinámicos (dll) de ActiveX® y registrada como un ensamblado en el servidor o en una [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos.  
   
- Los procedimientos almacenados se registran en un servidor o en una base de datos. Se puede llamar a los procedimientos almacenados del servidor desde cualquier contexto de consulta. Solo se puede tener acceso a los procedimientos almacenados de base de datos si el contexto de base de datos es la base de datos bajo la cual se define el procedimiento almacenado. Si las funciones de un ensamblado llaman a las funciones en otro ensamblado, debe registrar ambos ensamblados en el mismo contexto (servidor o base de datos). Para un servidor o una base [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de datos implementada en un servidor, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede usar para registrar un ensamblado. Para un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Diseñador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar un ensamblado en el proyecto.  
+ Los procedimientos almacenados se registran en un servidor o en una base de datos. Se puede llamar a los procedimientos almacenados del servidor desde cualquier contexto de consulta. Solo se puede tener acceso a los procedimientos almacenados de base de datos si el contexto de base de datos es la base de datos bajo la cual se define el procedimiento almacenado. Si las funciones de un ensamblado llaman a las funciones en otro ensamblado, debe registrar ambos ensamblados en el mismo contexto (servidor o base de datos). Para un servidor o una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos implementada en un servidor, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para registrar un ensamblado. Para un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el Diseñador de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para registrar un ensamblado en el proyecto.  
   
 > [!IMPORTANT]  
 >  Los ensamblados COM pueden suponer un riesgo para la seguridad. Debido a esto y a otras consideraciones, los ensamblados COM están en desuso en [!INCLUDE[ssASversion10](../../includes/ssasversion10-md.md)]. Es posible que este tipo de ensamblados no esté disponible en versiones futuras.  
@@ -36,7 +35,7 @@ ms.locfileid: "62703093"
   
 ### <a name="to-create-a-server-assembly"></a>Para crear un ensamblado de servidor  
   
-1.  Expanda la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra el cuadro de diálogo **registrar ensamblado de servidor** .  
+1.  Expanda la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y, a continuación, haga clic en **nuevo ensamblado**. Esto muestra el cuadro de diálogo **registrar ensamblado de servidor** .  
   
 2.  En **tipo** , especifique el tipo de ensamblado:  
   
@@ -84,9 +83,9 @@ ms.locfileid: "62703093"
   
 1.  Expanda la instancia [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la base de datos en explorador de objetos, haga clic con el botón secundario en la carpeta **ensamblados** y haga clic en **nueva referencia de ensamblado**. Esto muestra el cuadro de diálogo **Agregar referencia** . En la pestaña **.net** del cuadro de diálogo **Agregar referencia se** enumeran los ensamblados .net (CLR) existentes, mientras que la pestaña **proyectos** enumera los proyectos.  
   
-2.  Puede hacer clic en un componente o proyecto existente y, **Add** a continuación, hacer clic en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregar para agregarlo al proyecto. Para agregar una referencia a una DLL COM, haga clic en la pestaña **examinar** para buscar el archivo. La lista **proyectos y componentes seleccionados** muestra el nombre, el tipo, la versión y la ubicación de cada componente que se va a agregar al proyecto.  
+2.  Puede hacer clic en un componente o proyecto existente y, a continuación, hacer clic en **Agregar** para agregarlo al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto. Para agregar una referencia a una DLL COM, haga clic en la pestaña **examinar** para buscar el archivo. La lista **proyectos y componentes seleccionados** muestra el nombre, el tipo, la versión y la ubicación de cada componente que se va a agregar al proyecto.  
   
-3.  Cuando haya terminado de seleccionar los componentes que desea agregar, haga clic en **Aceptar** para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agregarlos al proyecto.  
+3.  Cuando haya terminado de seleccionar los componentes que desea agregar, haga clic en **Aceptar** para agregarlos al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto.  
   
 ## <a name="script-format-for-an-assembly"></a>Formato de script para un ensamblado  
  Registrar un ensamblado .NET es bastante sencillo. Un ensamblado .NET se agrega a una base de datos en formato binario con el siguiente formato:  

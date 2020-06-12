@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cebfdd07-e376-46d6-86ef-b6f816a2f360
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eeb3df670097c0d511a9f5b779b6705f40a5e897
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b514d2d85a01fdb4b13c922e81a39e694308334
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070296"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539307"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción de informe (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Editor de Formulario de acción de informe** en la pestaña **Acciones** del Diseñador de cubos para modificar la acción de informe seleccionada en el panel **Organizador de acciones** .  
@@ -44,7 +43,7 @@ ms.locfileid: "66070296"
 |Miembros del nivel|Se seleccionará un miembro del nivel en **Objeto de destino** .|  
   
  **Objeto de destino**  
- Seleccione el objeto al que desea asociar la acción. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] La [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de devuelve al cliente solo aquellas acciones que se aplican al objeto seleccionado. La lista de objetos disponibles se restringe por la selección del **Tipo de destino**.  
+ Seleccione el objeto al que desea asociar la acción. La [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de devuelve al cliente solo aquellas acciones que se aplican al objeto seleccionado. La lista de objetos disponibles se restringe por la selección del **Tipo de destino**.  
   
  **Condición (opcional)**  
  Escriba la expresión de Expresiones multidimensionales (MDX) que describe una condición opcional que, usada con **Objeto de destino**, restringe aún más la lista si la acción está disponible. La expresión devuelve un valor booleano que, si es verdadero, indica que la acción se encuentra disponible.  
@@ -91,8 +90,8 @@ ms.locfileid: "66070296"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|Batch|La acción debe ejecutarse como parte de una operación por lotes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o una tarea.|  
-|Interactive (Interactivo)|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Batch|La acción debe ejecutarse como parte de una operación por lotes o una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tarea.|  
+|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -106,7 +105,7 @@ ms.locfileid: "66070296"
  **Descripción**  
  Escriba la descripción opcional de la acción.  
   
- **Hayan**  
+ **Caption**  
  Escriba el título que se mostrará para la acción en la aplicación cliente si establece **El título es MDX** en **False**.  
   
  Escriba la expresión MDX que devuelve una cadena para el título si establece **True** en **El título es MDX**.  

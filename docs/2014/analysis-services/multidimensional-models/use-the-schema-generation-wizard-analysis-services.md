@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e434493813f0237533ca2e50ff089974f3556f34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea4eee9909b4af80a5d8471f58d569690ff0962
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072648"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535917"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Usar el Asistente para generar esquemas (Analysis Services)
   El Asistente para generar esquemas requiere una cantidad limitada de información durante la fase de generación. La mayoría de la información que el Asistente para generar esquemas requiere para generar esquemas relacionales se extrae de los cubos y las dimensiones de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se han creado previamente en el proyecto. Además, puede personalizar el modo en que se genera el esquema de la base de datos del área de asunto y cómo se asignan nombres a los objetos del esquema.  

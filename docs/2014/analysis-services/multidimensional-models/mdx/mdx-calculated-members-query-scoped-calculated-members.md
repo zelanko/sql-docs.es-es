@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4507149-e67b-4e5d-9192-cc911acd9adc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e6153b78b0dda1a72e2f7dfd790fa8bcecd0bb37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c0b3e7184f3cc6abd189344bbce1b6e1f948ebb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074528"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546479"
 ---
 # <a name="creating-query-scoped-calculated-members-mdx"></a>Crear miembros calculados en el ámbito de consulta (MDX)
   Si un miembro calculado solamente es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese miembro calculado mediante la palabra clave WITH. Un miembro calculado que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  

@@ -11,46 +11,45 @@ helpviewer_keywords:
 ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cddb6b604e0fc397e6640637db7320898d2beb5c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62726121"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546767"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensiones de personalización de Analysis Services
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización son la base de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Como tal, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]las [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización son la base de la idea de implementar una arquitectura de complemento. En una arquitectura de este tipo se pueden desarrollar de forma dinámica nuevos objetos y funcionalidad de cubo, y compartirlos fácilmente con otros programadores. Como tal, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización proporcionan la funcionalidad que permite lograr lo siguiente:  
   
 -   **Diseño e implementación dinámicos** Inmediatamente después de diseñar e implementar [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización, los usuarios tienen acceso a los objetos y la funcionalidad al inicio de la siguiente sesión de usuario.  
   
 -   **Independencia** de la interfaz Independientemente de la interfaz que use para crear las [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensiones de personalización, los usuarios pueden utilizar cualquier interfaz para tener acceso a los objetos y a la funcionalidad.  
   
--   Las extensiones de personalización de **contexto** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de sesión no son objetos permanentes en la infraestructura existente y no requieren que se vuelva a procesar el cubo. Se exponen y se crean para el usuario en el momento en que este se conecta a la base de datos, y permanecen disponibles durante esa sesión de usuario.  
+-   **Contexto** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de sesión las extensiones de personalización no son objetos permanentes en la infraestructura existente y no requieren que se vuelva a procesar el cubo. Se exponen y se crean para el usuario en el momento en que este se conecta a la base de datos, y permanecen disponibles durante esa sesión de usuario.  
   
 -   **Distribución rápida** Comparta [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] las extensiones de personalización con otros desarrolladores de software sin tener que entrar en especificaciones detalladas sobre dónde o cómo encontrar esta funcionalidad extendida.  
   
  Las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] tienen muchos usos. Por ejemplo, supongamos que su compañía tiene ventas que implican monedas diferentes. Crea un miembro calculado que devuelve las ventas consolidadas en la moneda local de la persona que está teniendo acceso al cubo. Crea este miembro como una extensión de personalización. A continuación, comparte este miembro calculado con un grupo de usuarios. Una vez compartido, esos usuarios tienen acceso inmediato al miembro calculado en cuanto se conectan al servidor. Tienen acceso aunque no usen la misma interfaz que la que se usó para crear el miembro calculado.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]las extensiones de personalización son una modificación simple y elegante de la arquitectura de ensamblado administrado existente [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> y se exponen en el modelo de objetos, la sintaxis de las expresiones multidimensionales (MDX) y los conjuntos de filas de esquema.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]las extensiones de personalización son una modificación simple y elegante de la arquitectura de ensamblado administrado existente y se exponen en el [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> modelo de objetos, la sintaxis de las expresiones multidimensionales (MDX) y los conjuntos de filas de esquema.  
   
 ## <a name="logical-architecture"></a>Arquitectura lógica  
  La arquitectura de las extensiones de personalización de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se basa en la arquitectura de ensamblado administrado y en los cuatro elementos básicos siguientes:  
   
  El atributo personalizado [PlugInAttribute]  
- Al iniciar el servicio, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carga los ensamblados necesarios y determina qué clases tienen <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> el atributo personalizado.  
+ Al iniciar el servicio, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] carga los ensamblados necesarios y determina qué clases tienen el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado.  
   
 > [!NOTE]  
->  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[información general sobre los atributos](https://go.microsoft.com/fwlink/?LinkId=82929)" [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] en la guía del desarrollador de MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] define los atributos personalizados como una manera de describir el código e influir en el comportamiento en tiempo de ejecución. Para obtener más información, vea el tema "[información general sobre los atributos](https://go.microsoft.com/fwlink/?LinkId=82929)" en la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Guía del desarrollador de MSDN.  
   
- Para todas las clases con <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> el atributo personalizado [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , invoca sus constructores predeterminados. La llamada a todos los constructores en el inicio proporciona una ubicación común desde la que se pueden generar nuevos objetos y que es independiente de cualquier actividad del usuario.  
+ Para todas las clases con el <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> atributo personalizado, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] invoca sus constructores predeterminados. La llamada a todos los constructores en el inicio proporciona una ubicación común desde la que se pueden generar nuevos objetos y que es independiente de cualquier actividad del usuario.  
   
  Además de generar una pequeña memoria caché de información sobre la creación y administración de las extensiones de personalización, el constructor de clase se suscribe normalmente a los eventos <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened> y <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionClosing>. Si no se produce la suscripción a estos eventos, es posible que el recolector de elementos no utilizados de Common Language Runtime (CLR) marque de forma inadecuada la clase para la limpieza.  
   
  Contexto de la sesión  
- Para los objetos que se basan en extensiones de personalización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un entorno de ejecución durante la sesión del cliente y genera dinámicamente la mayor parte de esos objetos en este entorno. Como cualquier otro ensamblado de CLR, este entorno de ejecución también tiene acceso a otras funciones y procedimientos almacenados. Cuando finaliza la sesión de usuario [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , quita los objetos creados dinámicamente y cierra el entorno de ejecución.  
+ Para los objetos que se basan en extensiones de personalización, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] crea un entorno de ejecución durante la sesión del cliente y genera dinámicamente la mayor parte de esos objetos en este entorno. Como cualquier otro ensamblado de CLR, este entorno de ejecución también tiene acceso a otras funciones y procedimientos almacenados. Cuando finaliza la sesión de usuario, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] quita los objetos creados dinámicamente y cierra el entorno de ejecución.  
   
- Events  
+ Eventos  
  Los eventos de sesión `On-Cube-OpenedCubeOpened` y `On-Cube-ClosingCubeClosing` desencadenan la creación de objetos.  
   
  La comunicación entre el cliente y el servidor se produce a través de eventos concretos. Estos eventos hacen que el cliente conozca las situaciones que conducen a que se generen los objetos del cliente. El entorno del cliente se crea dinámicamente mediante el uso de dos conjuntos de eventos: eventos de sesión y eventos de cubo.  

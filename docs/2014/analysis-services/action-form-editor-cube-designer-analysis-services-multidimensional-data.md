@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0353d2af250f620237a165a3f9878a4efc14fdf0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062958"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528271"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de acción (pestaña Acciones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel del Editor de Formulario de acción de la pestaña **Acciones** del Diseñador de cubos para crear y modificar acciones estándar.  
@@ -54,7 +53,7 @@ ms.locfileid: "66062958"
  **Contenido de la acción**  
  Expanda esta opción para ver las opciones **Tipo** y **Expresión de acción** .  
   
- **Type**  
+ **Tipo**  
  Seleccione el tipo de acción que desea realizar durante la ejecución de la acción. Están disponibles los siguientes tipos de acciones:  
   
 |Value|Descripción|  
@@ -63,7 +62,7 @@ ms.locfileid: "66062958"
 |Propietario|Devuelve una cadena del propietario que pueden interpretar las aplicaciones cliente asociadas a la configuración **Aplicación** para esta acción.|  
 |Conjunto de filas|Devuelve una instrucción de Expresiones multidimensionales (MDX) que representa un conjunto de filas tabular que se ejecutará y se mostrará en la aplicación cliente.|  
 |.|Devuelve una cadena de comandos que se ejecutará en la aplicación cliente.|  
-|URL|Devuelve una cadena del localizador uniforme de recursos (URL) que abrirá la aplicación cliente, por lo general, con un explorador de Internet.|  
+|Resolución|Devuelve una cadena del localizador uniforme de recursos (URL) que abrirá la aplicación cliente, por lo general, con un explorador de Internet.|  
   
  Para más información sobre los tipos de acción, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66062958"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Batch|La acción debe ejecutarse como parte de una operación de lote o una tarea de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
-|Interactive (Interactivo)|La acción se ejecuta cuando el usuario invoca la acción.|  
+|Interactive|La acción se ejecuta cuando el usuario invoca la acción.|  
 |Al abrir|La acción se ejecuta cuando se abre el cubo por primera vez.|  
   
  **Aplicación**  
@@ -98,7 +97,7 @@ ms.locfileid: "66062958"
  **Descripción**  
  Escriba la descripción opcional de la acción.  
   
- **Hayan**  
+ **Caption**  
  Escriba el título que se mostrará para la acción en la aplicación cliente si establece **El título es MDX** en **False**.  
   
  Escriba la expresión de Expresiones multidimensionales (MDX) que devuelve una cadena para el título si establece **El título es MDX** en **True**.  

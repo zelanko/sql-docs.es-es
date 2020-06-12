@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f0347835-4983-4d26-acbb-6c8fae7992bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7587e3304d1464beb7ef94cd7d3093982f394bcc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac49d37f11584bfbc5d372241056da39e7dd8c93
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074588"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546507"
 ---
 # <a name="building-measures-in-mdx"></a>Generar medidas en MDX
   En las expresiones multidimensionales (MDX), una medida es una expresión DAX con nombre que se resuelve calculando la expresión para devolver un valor en un modelo tabular. Esta definición tan genérica tiene un alcance notable. La capacidad de construir y utilizar medias en una consulta MDX proporciona una gran solución para manipular datos tabulares.  

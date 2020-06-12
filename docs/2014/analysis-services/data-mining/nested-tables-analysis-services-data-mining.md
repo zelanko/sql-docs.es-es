@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdd83e0a0d24a67fb5389b5c836212bffb3fa424
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083248"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521012"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tablas anidadas (Analysis Services - Minería de datos)
-  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los datos se deben alimentar a un algoritmo de minería de datos como una serie de casos contenidos en una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]proporciona un método único para controlar estos casos mediante el uso de *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
+  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , los datos se deben alimentar a un algoritmo de minería de datos como una serie de casos contenidos en una tabla de casos. Sin embargo, no todos los casos pueden describirse mediante una sola fila de datos. Por ejemplo, un caso puede derivarse de dos tablas: una que contenga la información del cliente y otra que contenga las compras de ese cliente. Un solo cliente de la tabla de información de clientes podría tener varios elementos en la tabla de compras del cliente, lo que dificulta describir los datos mediante una sola fila. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]proporciona un método único para controlar estos casos mediante el uso de *tablas anidadas*. El concepto de una tabla anidada se muestra en la siguiente ilustración.  
   
  ![Dos tablas combinadas mediante una tabla anidada](../media/nested-tables.gif "Dos tablas combinadas mediante una tabla anidada")  
   

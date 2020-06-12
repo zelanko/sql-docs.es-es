@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4efca206c40c685f81c2c4629714e285ba6119af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c728f865cb905414525048e5b4678005a1613a28
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527345"
 ---
 # <a name="completing-the-wizard-dimension-wizard"></a>Finalización del asistente (Asistente para dimensiones)
   Use la página **Finalización del asistente** para realizar los procedimientos siguientes:  
@@ -36,7 +35,7 @@ ms.locfileid: "66087597"
  **Nombre**  
  Escriba el nombre de la nueva dimensión.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra los atributos y las jerarquías que se crearán para la nueva dimensión.  
   
  **Generar el esquema ahora**  

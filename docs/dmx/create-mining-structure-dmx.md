@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 07cda29c288f574fd960398f8a607c04f1d8dce7
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892824"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669454"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -106,7 +106,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  Puede definir varios valores de marcas de modelado para una columna. Sin embargo, solo puede haber un tipo de contenido y un tipo de datos para cada columna.  
   
 ### <a name="column-relationships"></a>Relaciones entre columnas  
- Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<cláusula de relación de columna>.  
+ Puede agregar una cláusula a cualquier instrucción de definición de columna para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \< cláusula de relación de columna>.  
   
  **RELACIONADO CON**  
  Indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  
@@ -131,7 +131,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
  El valor de inicialización de la exclusión controla el punto inicial del proceso que asigna de forma aleatoria los casos a los conjuntos de datos de aprendizaje o de pruebas. Si establece un valor de inicialización de la exclusión, puede asegurarse de que se puede repetir la partición. Si no especifica un valor de inicialización de la exclusión, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utiliza el nombre de la estructura de minería de datos para crear un valor de inicialización. Si cambia el nombre de la estructura, cambiará el valor de inicialización. El parámetro del valor de inicialización de la exclusión se puede utilizar con cualquiera de los otros dos parámetros de exclusión o con ambos.  
   
 > [!NOTE]  
->  Dado que la información de la partición se almacena en la memoria caché con los datos de entrenamiento, para usar la exclusión, debe asegurarse de que la propiedad **CacheMode** de la estructura de minería de datos está establecida en **KeepTrainingData**. Ésta es la configuración predeterminada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para las estructuras de minería de datos nuevas. Cambiar la propiedad **CacheMode** a **ClearTrainingCases** en una estructura de minería de datos existente que contenga una partición de exclusión no afectará a los modelos de minería de datos que se hayan procesado. Sin embargo, <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> si no se establece en **KeepTrainingData**, los parámetros de exclusión no tendrán ningún efecto. Esto significa que todos los datos de origen se utilizarán para el aprendizaje y no habrá ningún conjunto de pruebas disponible. La definición de la partición se almacena en memoria caché con la estructura; si borra la memoria caché de casos de aprendizaje, también borrará la memoria caché de datos de pruebas y la definición del conjunto de exclusión.  
+>  Dado que la información de la partición se almacena en la memoria caché con los datos de entrenamiento, para usar la exclusión, debe asegurarse de que la propiedad **CacheMode** de la estructura de minería de datos está establecida en **KeepTrainingData**. Ésta es la configuración predeterminada en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para las estructuras de minería de datos nuevas. Cambiar la propiedad **CacheMode** a **ClearTrainingCases** en una estructura de minería de datos existente que contenga una partición de exclusión no afectará a los modelos de minería de datos que se hayan procesado. Sin embargo, si <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> no se establece en **KeepTrainingData**, los parámetros de exclusión no tendrán ningún efecto. Esto significa que todos los datos de origen se utilizarán para el aprendizaje y no habrá ningún conjunto de pruebas disponible. La definición de la partición se almacena en memoria caché con la estructura; si borra la memoria caché de casos de aprendizaje, también borrará la memoria caché de datos de pruebas y la definición del conjunto de exclusión.  
   
 ## <a name="examples"></a>Ejemplos  
  En los ejemplos siguientes se muestra cómo crear una estructura de minería de datos con exclusión mediante DMX.  

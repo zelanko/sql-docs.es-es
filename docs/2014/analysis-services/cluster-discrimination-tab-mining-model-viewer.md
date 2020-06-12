@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ae7cfff7-ab1c-4cf5-9a91-97b21d15d85f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d55f61d9255d19f22fffb7380785a2ada1a2763
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eef8453ec15268638559964e669b70e1f55b3b85
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087899"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527451"
 ---
 # <a name="cluster-discrimination-tab-mining-model-viewer"></a>Pestaña Distinción del clúster (Visor de modelos de minería de datos)
   Utilice la pestaña **Distinción del clúster** para comparar dos clústeres que existan en un modelo de agrupación en clústeres. Puede ver cómo las diferentes combinaciones de atributos y valores se representan dentro de los clústeres.  
@@ -40,15 +39,15 @@ ms.locfileid: "66087899"
  **Clúster 2**  
  Seleccione un segundo clúster de la lista de clústeres del modelo de minería de datos para compararlo con el **Clúster 1**. También puede comparar un clúster con su complemento, es decir, con todos los casos del modelo excepto los del clúster seleccionado.  
   
- **Puntuaciones de \<distinción para clúster 1 \<> y clúster 2>**  
+ **Puntuaciones de distinción para \<cluster 1> y\<cluster 2>**  
  Las columnas del gráfico proporcionan información sobre cómo se relaciona cada par de atributo-valor con los dos clústeres seleccionados.  
   
 |||  
 |-|-|  
 |**Variables**|Un atributo del modelo de minería de datos.|  
 |**Valores**|Un valor del atributo seleccionado en **Variables**.|  
-|**Favorece el \<clúster 1>**|El gráfico de barras de la izquierda representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 1**. Puede detener el mouse sobre la barra ver el valor, representado como un porcentaje. Tenga en cuenta que incluso si el valor es cero, no significa que el valor del atributo-value no se encuentre necesariamente en el clúster, solo que la distribución favorece un clúster sobre el otro.|  
-|**Favorece el \<clúster 2>**|El gráfico de barras de la derecha representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 2**.|  
+|**Favorece\<cluster 1>**|El gráfico de barras de la izquierda representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 1**. Puede detener el mouse sobre la barra ver el valor, representado como un porcentaje. Tenga en cuenta que incluso si el valor es cero, no significa que el valor del atributo-value no se encuentre necesariamente en el clúster, solo que la distribución favorece un clúster sobre el otro.|  
+|**Favorece\<cluster 2>**|El gráfico de barras de la derecha representa la probabilidad de que el par de atributo-valor seleccionado sea representativo del clúster seleccionado en **Clúster 2**.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

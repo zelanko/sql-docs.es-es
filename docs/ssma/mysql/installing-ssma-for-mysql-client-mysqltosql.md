@@ -1,5 +1,6 @@
 ---
 title: Instalación de SSMA para el cliente de MySQL (MySQLToSQL) | Microsoft Docs
+description: Obtenga información sobre los requisitos previos de instalación para el SQL Server Migration Assistant (SSMA) para el cliente MySQL y cómo instalar.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bf1a3c8c5a01bb2553f773d5b650805667c116a3
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68086824"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293902"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Instalación del cliente de SSMA para MySQL (MySQLToSQL)
 SSMA para el cliente de MySQL se compone de los archivos de programa que realizan las siguientes tareas:  
@@ -25,7 +26,7 @@ SSMA para el cliente de MySQL se compone de los archivos de programa que realiza
   
 -   Conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
--   Convierta los objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos MySQL en los objetos o SQL Azure.  
+-   Convierta los objetos de base de datos MySQL en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos o SQL Azure.  
   
 -   Cargue los objetos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure.  
   
@@ -33,7 +34,7 @@ SSMA para el cliente de MySQL se compone de los archivos de programa que realiza
   
 En este tema se proporcionan los requisitos previos de instalación y las instrucciones para instalar SSMA para el cliente de MySQL.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
 SSMA para MySQL está diseñado para funcionar con MySQL 4,1 o versiones posteriores y todas las ediciones de SQL Server 2005, SQL Server 2008, SQL Server 2012, SQL Server 2014, SQL Server 2016, SQL Server 2017 y Azure SQL DB.  
   
 Antes de instalar SSMA, asegúrese de que el equipo cumple los requisitos siguientes:  
@@ -59,7 +60,7 @@ Después de descargar la versión más reciente, debe extraer los archivos de in
   
 **Para instalar el cliente SSMA**  
   
-1.  Haga doble clic en SSMA para MySQL *n*. Instale. exe, donde *n* es el número de compilación.  
+1.  Haga doble clic en SSMA para MySQL *n*.Install.exe, donde *n* es el número de compilación.  
   
 2.  En la página de bienvenida, haga clic en **Siguiente**.  
   

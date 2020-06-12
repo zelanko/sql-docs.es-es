@@ -18,17 +18,17 @@ ms.assetid: 79c41dd9-abcb-434e-9326-00a341d5c867
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c66359dde77a8dcaceca26304df9ac5b32d5339b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754112"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858697"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
   La información en la vista de aplicaciones de capa de datos implementadas del explorador de Utilidad facilita datos de utilización para las aplicaciones de capa de datos individuales, el historial de la utilización de la CPU, los detalles de la utilización del almacenamiento de nivel de archivo, y la capacidad para ver y actualizar los umbrales de directivas. Los umbrales de directivas se pueden supervisar en el nivel de la aplicación de capa de datos para la utilización de la CPU y para los archivos de datos y de registro de la base de datos. También puede ver los detalles de propiedades para las aplicaciones de capa de datos individuales.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Vista de lista  
  La vista de lista en el panel superior muestra los datos sobre las aplicaciones de capa de datos individuales. Los iconos de estado de mantenimiento proporcionan un resumen del estado para cada aplicación de capa de datos por categoría de utilización:  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62754112"
   
 -   De confianza: (True o False)  
   
--   Collation  
+-   Intercalación  
   
 -   Nivel de compatibilidad: (por ejemplo, Versión100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62754112"
   
 -   De confianza: (True o False)  
   
--   Collation  
+-   Intercalación  
   
 -   Nivel de compatibilidad: (por ejemplo, Versión100)  
   
@@ -169,6 +169,6 @@ ms.locfileid: "62754112"
  [Instancia administrada detalles &#40;Utilidad de SQL Server&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Utilidad de SQL Server de &#40;del panel de utilidad&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Supervisar instancias de SQL Server en el Utilidad de SQL Server](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
- [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Utilidad de SQL Server características y tareas](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

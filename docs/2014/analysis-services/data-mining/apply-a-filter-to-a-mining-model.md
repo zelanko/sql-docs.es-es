@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a7f00e4d9ecbcc539b470cf5b2afe5864eb6114
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086216"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525531"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Aplicar un filtro a un modelo de minería de datos
   Si la estructura de minería de datos contiene una tabla anidada, puede aplicar un filtro a la tabla de casos, a la tabla anidada o a ambas.  
@@ -66,7 +65,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Haga clic en el cuadro de texto **Valor** y escriba un valor:  
   
-     Por ejemplo, seleccione `Income` como columna, seleccione el operador mayor que (>) y, a continuación, `30000`escriba.  
+     Por ejemplo, seleccione `Income` como columna, seleccione el operador mayor que (>) y, a continuación, escriba `30000` .  
   
 9. Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -78,7 +77,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Seleccione un operador y escriba un valor tal como se describe en los pasos 7 y 8.  
   
-     Por ejemplo, seleccione `Income` como columna de nuevo, seleccione el operador menor que (<) y, a continuación `40000`, escriba.  
+     Por ejemplo, seleccione `Income` como columna de nuevo, seleccione el operador menor que (<) y, a continuación, escriba `40000` .  
   
 12. Haga clic en la siguiente fila de la cuadrícula.  
   
@@ -86,7 +85,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 ### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>Para agregar un filtro en la tabla anidada en un modelo de minería de datos  
   
-1.  En el ** \<cuadro de diálogo nombre>filtro del modelo** , haga clic en una fila vacía de la cuadrícula situada debajo de la **columna estructura de minería de datos**.  
+1.  En el cuadro de diálogo ** \<name> filtro del modelo** , haga clic en una fila vacía de la cuadrícula situada debajo de la **columna estructura de minería de datos**.  
   
 2.  Seleccione el nombre de la tabla anidada en la lista desplegable.  
   
@@ -98,7 +97,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  Haga clic en el cuadro **valor** y, a continuación, haga clic en el botón **(...)** para generar una expresión.  
   
-     Se abre el cuadro de ** \<diálogo nombre>filtro** . Este cuadro de diálogo solo puede establecer condiciones en la tabla actual, que en este caso es la tabla anidada.  
+     Se abrirá el cuadro de diálogo ** \<name> filtro** . Este cuadro de diálogo solo puede establecer condiciones en la tabla actual, que en este caso es la tabla anidada.  
   
 5.  Haga clic en el cuadro **Columna de la estructura de minería de datos** y seleccione un nombre de columna en las listas desplegables de las columnas de tabla anidadas.  
   
@@ -106,7 +105,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Haga clic en **Valor** y escriba un valor.  
   
-     Por ejemplo, para columna de la estructura de `Model`minería de **datos,** seleccione. Para **operador**, seleccione `<>`y escriba el valor `Water Bottle`. Esta condición crea la siguiente expresión de filtro:  
+     Por ejemplo, para **columna de la estructura de minería de datos,** seleccione `Model` . Para **operador**, seleccione `<>` y escriba el valor `Water Bottle` . Esta condición crea la siguiente expresión de filtro:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   

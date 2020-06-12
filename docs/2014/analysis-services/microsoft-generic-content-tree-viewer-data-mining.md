@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96a259ed9436bb7c8b79a8eb9da1c3c899e6d994
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077807"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545487"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Visor de árbol de contenido genérico de Microsoft (Minería de datos)
   El **Visor de árbol de contenido genérico de Microsoft** muestra información detallada sobre el contenido de un modelo de minería de datos en un formato de tabla HTML normalizado. Esta vista es útil porque expone la estructura subyacente del modelo, así como los detalles sobre los coeficientes, la distribución de valores y mucho más.  

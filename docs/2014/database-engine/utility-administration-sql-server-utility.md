@@ -10,17 +10,17 @@ ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773757"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857857"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administración de la utilidad (utilidad de SQL Server)
   Utilice las pestañas Administración de la utilidad para administrar la configuración de directivas, la seguridad y el almacenamiento de datos de una utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información sobre conceptos de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Pestaña Directiva: utilice la pestaña de directivas para ver o especificar las directivas globales de supervisión.  
   
  Establezca directivas globales de supervisión de aplicaciones de capas de datos. Para expandir la lista de valores correspondiente a esta opción, haga clic en la flecha junto al nombre de la directiva o haga clic en el título de la directiva.  
@@ -64,7 +64,7 @@ ms.locfileid: "62773757"
  Reducción del ruido que provoca la infracción de directivas en recursos muy volátiles. Para expandir los controles correspondientes a esta característica, haga clic en la flecha hacia abajo a la derecha de la pantalla.  
  Para obtener más información, vea [reducir el ruido en las directivas de uso de CPU &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Pestaña Seguridad: muestra los nombres de inicio de sesión con permisos para administrar el UCP o poder leer desde él.  
   
  Seleccione los inicios de sesión del UCP que se agregarán al rol Lector de utilidad.  
@@ -80,7 +80,7 @@ ms.locfileid: "62773757"
   
  Para ser administrador de la utilidad, debe disponer de privilegios sysadmin en la instancia de SQL Server. Para agregar o cambiar las cuentas de usuario para el UCP de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], utilice Explorador de objetos en SSMS con el fin de agregar al usuario a los inicios de sesión del servidor de la instancia de UCP de SQL Server. Para obtener más información, vea [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql).  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Pestaña Almacenamiento de datos: muestra los detalles de configuración para el almacén de administración de datos de la utilidad.  
   
  Retención de datos  

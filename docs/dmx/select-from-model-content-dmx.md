@@ -1,21 +1,21 @@
 ---
-title: Seleccione del &lt;modelo&gt;. CONTENIDO (DMX) | Microsoft Docs
+title: Seleccione del &lt; modelo &gt; . CONTENIDO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0fe7de8ce6ee6f40d0d50ce76a148dc3d000a808
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892828"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669593"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt;modelo&gt;. CONTENIDO (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>Seleccione del &lt; modelo &gt; . CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Devuelve el conjunto de filas de esquema del modelo de minería de datos para el modelo de minería de datos especificado.  
@@ -46,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- >**seleccionar del** _ \<modelo _ **. **La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **> seleccionar del \<modelo. **Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
+ >**seleccionar del** _ \< modelo _ **. **La instrucción de contenido devuelve contenido específico de cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar una **> seleccionar del \< modelo. **Instrucción de contenido para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   

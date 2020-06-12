@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a6c8ac2b-64ba-456f-b418-7bf0afe145d1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d9d3145583670fb849321bac5b57928caacfbc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 123393c061d151240949f41e59e5d14b19056c52
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078373"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542324"
 ---
 # <a name="lesson-8-create-key-performance-indicators"></a>Lección 8: Crear indicadores clave de rendimiento
   En esta lección, creará indicadores clave de rendimiento (KPI). Los KPI miden el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , también definido por una medida o por un valor absoluto. En aplicaciones cliente de generación de informes, los KPI pueden proporcionar a los profesionales de empresa una manera rápida y sencilla de comprender un resumen de logros empresariales o para identificar tendencias. Para obtener más información, consulte [KPI &#40;SSAS tabular&#41;](tabular-models/kpis-ssas-tabular.md).  
@@ -47,9 +46,9 @@ ms.locfileid: "66078373"
   
 5.  En el cuadro de diálogo **Indicador clave de rendimiento** , en **Definir valor de destino**, seleccione la opción **Valor absoluto** .  
   
-6.  En el campo **valor absoluto** , escriba `1.1`y, a continuación, presione Entrar.  
+6.  En el campo **valor absoluto** , escriba `1.1` y, a continuación, presione Entrar.  
   
-7.  En **definir umbrales de estado**, en el campo de control deslizante de la `1`izquierda (bajo), escriba y, a continuación, en el `1.07`campo de control deslizante derecho (alto), escriba.  
+7.  En **definir umbrales de estado**, en el campo de control deslizante de la izquierda (bajo), escriba `1` y, a continuación, en el campo de control deslizante derecho (alto), escriba `1.07` .  
   
 8.  En **Seleccionar el estilo de icono**, seleccione el tipo de icono de rombo (rojo), triángulo (amarillo), círculo (verde).  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66078373"
   
 4.  En el cuadro de diálogo **Indicador clave de rendimiento** , en **Definir valor de destino**, seleccione la opción **Valor absoluto** .  
   
-5.  En el campo **valor absoluto** , escriba `1.25`.  
+5.  En el campo **valor absoluto** , escriba `1.25` .  
   
 6.  En **Definir umbrales de estado**, desplace el campo de control deslizante de abajo a la izquierda hasta que el campo muestre **0.8**y el de arriba a la derecha hasta que muestre **1.03**.  
   

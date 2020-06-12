@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b70742b07fd6450b01cf205147a05f40c4b6121
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736398"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545677"
 ---
 # <a name="assl-xml-conventions"></a>Convenciones XML de ASSL
   Analysis Services Scripting Language (ASSL) representa la jerarquía de objetos como un conjunto de tipos de elemento, cada uno de los cuales define los elementos secundarios que puede contener.  
@@ -117,7 +116,7 @@ ms.locfileid: "62736398"
   
  ``  
   
-## <a name="data-types"></a>Tipos de datos  
+## <a name="data-types"></a>Tipo de datos  
  Analysis Services utiliza los siguientes tipos de datos del lenguaje de definición de esquema XML (XSD) estándar:  
   
  `Int`  
@@ -135,10 +134,10 @@ ms.locfileid: "62736398"
   
 -   Se conserva el espacio en blanco interno.  
   
- Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener más información `Name` sobre `ID` las convenciones de y, consulte [objetos y características](assl-objects-and-object-characteristics.md)de objetos de ASSL.  
+ Las propiedades `Name` e `ID` tienen limitaciones especiales respecto a los caracteres válidos en los elementos de cadena. Para obtener más información sobre las `Name` convenciones de y `ID` , consulte [objetos y características](assl-objects-and-object-characteristics.md)de objetos de ASSL.  
   
  `DateTime`  
- `DateTime` Estructura del .NET Framework. Un valor `DateTime` no puede ser NULL. La fecha más antigua que admite el tipo de datos `DataTime` es el 1 de enero de 1601, disponible para los programadores como `DateTime.MinValue`. La fecha más antigua admitida indica que falta un valor `DateTime`.  
+ `DateTime`Estructura del .NET Framework. Un valor `DateTime` no puede ser NULL. La fecha más antigua que admite el tipo de datos `DataTime` es el 1 de enero de 1601, disponible para los programadores como `DateTime.MinValue`. La fecha más antigua admitida indica que falta un valor `DateTime`.  
   
  `Boolean`  
  Enumeración con solo dos valores, como {true, false} o {0, 1}.  

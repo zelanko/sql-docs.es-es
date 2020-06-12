@@ -12,17 +12,17 @@ ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 2aea2292ada0256e5ae7b988a8e65649dbc50c0d
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000755"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83856652"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opciones (resultados de la consulta-SQL Server-resultados a página de texto)
   Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **consulta** o haga clic con el botón derecho en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ventana de consulta y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Texto**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Formato de salida**  
  De manera predeterminada, la salida se muestra en columnas que se han creado rellenando de espacios los resultados. Otras de las opciones son el uso de comas, tabulaciones o espacios para separar las columnas. Seleccione **Delimitador personalizado** en esta lista desplegable para especificar un carácter delimitador distinto en el cuadro de texto **Delimitador personalizado**.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 627eaa08-7638-4edd-bdfa-0d8175a7cde5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c5e1d6b92dce1a1be42ae1bc30ae3a3d5e48d59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064398"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527861"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use este panel para administrar los atributos asociados con la dimensión seleccionada. Los atributos se pueden arrastrar desde este panel hasta el panel **Jerarquías** para crear jerarquías y niveles. Para obtener más información, vea [Hierarchies &#40;Dimension Structure Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](hierarchies-dimension-designer-analysis-services-multidimensional-data.md).  
@@ -58,11 +57,11 @@ ms.locfileid: "66064398"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Normal|Identifica un atributo normal.|  
-|Key|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos (**…**) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
+|Clave|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos (**…**) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
 |Parent|Indica el atributo primario para una relación de elementos primarios y secundarios. El atributo secundario de esta relación siempre debe ser el atributo clave.|  
 |AccountType|Indica un atributo de tipo de cuenta. Lo usa el servidor o el motor cuando la función de agregación para una medida está establecida en “por cuenta”.|  
   
- **Type**  
+ **Tipo**  
  Establece el tipo de atributo. Haga clic en la flecha abajo para seleccionar entre las opciones disponibles.  
   
  **Columna de clave**  

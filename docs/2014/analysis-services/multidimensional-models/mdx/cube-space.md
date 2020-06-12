@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a6a6da73815f06aa5ab80f6ad5a9d06227ed842
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074709"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546574"
 ---
 # <a name="cube-space"></a>Espacio de cubo
   El espacio de cubo es el producto de los miembros de las jerarquías de atributo de un cubo con las medidas de un cubo. Por consiguiente, el espacio del cubo se determina con el producto combinatorio de todos los miembros de jerarquía de atributo en el cubo y las medidas del cubo, y define el tamaño máximo del cubo. Es importante tener en cuenta que este espacio incluye todas las posibles combinaciones de miembros de la jerarquía de atributos, incluso las que podrían ser consideradas como imposibles en el mundo real, es decir, aquellas en las que la ciudad es París y los países son Gran Bretaña, España, Japón, India, etc.  
@@ -55,7 +54,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Observe que 0 se utiliza para designar al eje de columna, que es una abreviatura para el eje(0), que es el eje de columna.  
   
- La consulta anterior solo devuelve celdas para los miembros de cada jerarquía de atributo de la consulta que existen entre sí. La consulta anterior también se puede escribir con la nueva * variante de la [ \* función (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
+ La consulta anterior solo devuelve celdas para los miembros de cada jerarquía de atributo de la consulta que existen entre sí. La consulta anterior también se puede escribir con la nueva * variante de la función [ \* (Crossjoin) (MDX)](/sql/mdx/crossjoin-mdx) .  
   
 ```  
 SELECT   
@@ -78,7 +77,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  Los valores de celda devueltos serán idénticos, aunque los metadatos del conjunto de resultados serán diferentes. Por ejemplo, con la consulta anterior, la jerarquía Country se movió al eje segmentador (en la cláusula WHERE), por lo que no aparece explícitamente en el conjunto de resultados.  
   
- Cada una de estas tres consultas anteriores muestra el efecto del comportamiento de autoexists [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]en.  
+ Cada una de estas tres consultas anteriores muestra el efecto del comportamiento de autoexists en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="user-defined-hierarchies-and-cube-space"></a>Jerarquías definidas por el usuario y espacio de cubo  
  Los ejemplos anteriores de este tema definen posiciones en el espacio de cubo mediante jerarquías de atributo. Sin embargo, también se puede definir una posición en un espacio de cubo mediante jerarquías definidas por el usuario que se han definido en base a las jerarquías de atributo de una dimensión. Una jerarquía definida por el usuario es una jerarquía de jerarquías de atributo diseñadas para facilitar la exploración del cubo por parte de los usuarios.  
@@ -112,7 +111,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Observe que la `WITH` palabra clave se usa con las funciones [CurrentMember (MDX)](/sql/mdx/current-mdx) y [Name (MDX)](/sql/mdx/members-string-mdx) para crear un miembro calculado para su uso en la consulta. Para más información, vea [Consulta de MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
+>  Observe que la `WITH` palabra clave se usa con las funciones [CURRENTMEMBER (MDX)](/sql/mdx/current-mdx) y [Name (MDX)](/sql/mdx/members-string-mdx) para crear un miembro calculado para su uso en la consulta. Para más información, vea [Consulta de MDX básica &#40;MDX&#41;](mdx-query-the-basic-query.md).  
   
  En la consulta anterior, se devuelve el nombre del miembro de la jerarquía de atributo Country asociado con cada miembro de la jerarquía de atributo State. Aparece el miembro Country esperado (debido a que hay una relación de atributo definida entre los atributos City y Country). Sin embargo, si no se define una relación de atributo entre las jerarquías de atributo de la misma dimensión, se devuelve el miembro (All), como se muestra en la consulta siguiente.  
   

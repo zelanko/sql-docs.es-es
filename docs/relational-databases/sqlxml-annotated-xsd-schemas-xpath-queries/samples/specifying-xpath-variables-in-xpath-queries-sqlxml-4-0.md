@@ -1,5 +1,6 @@
 ---
 title: Especificar variables XPath en consultas XPath (SQLXML)
+description: Ver ejemplos de cómo especificar variables XPath en consultas SQLXML 4,0 XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -14,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f73bb6880fb19f3e49387d9d3d0bb57100ffdf42
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56169fafb9d5705360899fb38757abaf599f96a9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252536"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529871"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Especificar variables XPath en consultas XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,7 +29,7 @@ ms.locfileid: "75252536"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Usar las variables XPath  
- Una plantilla de ejemplo consta de dos consultas XPath. Cada uno de las consultas XPath toma un parámetro. La plantilla también especifica los valores predeterminados para estos parámetros. Los valores predeterminados se usan si no se especifican valores de parámetro. En ** \<SQL: header>** se especifican dos parámetros con valores predeterminados.  
+ Una plantilla de ejemplo consta de dos consultas XPath. Cada uno de las consultas XPath toma un parámetro. La plantilla también especifica los valores predeterminados para estos parámetros. Los valores predeterminados se usan si no se especifican valores de parámetro. En se especifican dos parámetros con valores predeterminados **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

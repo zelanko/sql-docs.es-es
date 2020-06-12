@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3c9abd1b891d47f1711db21eec017ec755526e02
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e7fca367c72aaff5f02280829740942a36915ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087346"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527241"
 ---
 # <a name="connect-to-a-data-mining-server"></a>Conectar con un servidor de minería de datos
   ![Botón Conexiones](media/misc-connection.gif "Botón Conexiones")  
   
- Haga clic en el botón **conexión** para seleccionar una conexión existente o para crear una nueva conexión a una instancia [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de.  
+ Haga clic en el botón **conexión** para seleccionar una conexión existente o para crear una nueva conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **¿Por qué necesito conectarme con un servidor?**  
   

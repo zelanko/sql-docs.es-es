@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 887e3b8c57d0aaf13cc88dea944cf8b74e78266a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543397"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Agrupar miembros de atributo automáticamente
   Cuando se examina un cubo, generalmente se dimensionan los miembros de una jerarquía de atributo según los miembros de otra jerarquía de atributo. Por ejemplo, puede agrupar las ventas de cliente por ciudad, producto comprado o género. Sin embargo, con ciertos tipos de atributos, resulta útil [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crear automáticamente agrupaciones de miembros de atributos en función de la distribución de los miembros dentro de una jerarquía de atributo. Por ejemplo, puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cree grupos de valores de ingresos anuales de los clientes. Al hacerlo, los usuarios que examinen la jerarquía de atributo verán los nombres y los valores de los grupos en lugar de los miembros propiamente dichos. Esto limita el número de niveles que se presentan a los usuarios, lo que puede resultar más útil para el análisis.
@@ -24,7 +23,7 @@ ms.locfileid: "78175344"
 
  **EqualAreas** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea intervalos de grupos de modo que la población total de los miembros de dimensión quede distribuida de forma homogénea en los grupos.
 
- Los **clústeres** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crean grupos mediante la agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres K-means con distribuciones gaussiano. Esta opción solo es válida para columnas numéricas.
+ **Clústeres de** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crea grupos realizando una agrupación en clústeres unidimensionales en los valores de entrada mediante el método de agrupación en clústeres K-means con distribuciones gaussiano. Esta opción solo es válida para columnas numéricas.
 
  Una vez que haya especificado un método de agrupación, debe especificar el número de grupos mediante la propiedad **DiscretizationBucketCount** . Para obtener más información, vea [Group Attribute members &#40;discretización&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
@@ -42,7 +41,7 @@ ms.locfileid: "78175344"
 
 4.  En el panel **Atributos** , seleccione **Yearly Income**.
 
-5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **automático** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.
+5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **automático** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5` .
 
      En la imagen siguiente se muestran las propiedades modificadas para **Yearly Income**.
 
@@ -60,11 +59,11 @@ ms.locfileid: "78175344"
 
 4.  En el panel **Atributos** , seleccione **Sick Leave Hours**.
 
-5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **clusters** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.
+5.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **clusters** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5` .
 
 6.  En el panel **Atributos** , seleccione **Vacation Hours**.
 
-7.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **áreas iguales** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5`.
+7.  En el ventana Propiedades, cambie el valor de la propiedad **DiscretizationMethod** a **áreas iguales** y cambie el valor de la propiedad **DiscretizationBucketCount** a `5` .
 
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Examinar las jerarquías de atributo modificadas
 

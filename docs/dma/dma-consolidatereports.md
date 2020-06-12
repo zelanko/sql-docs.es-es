@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 456d71e2abccdddb4b14c06dc2ad9b2e4ce9a032
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: e7a3c58612761e046b71cddf35c87680bb6e9528
+ms.sourcegitcommit: f66804e93cf4a7624bfa10168edbf1ed9a83cb86
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82886172"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "83868384"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Evaluación de una empresa y consolidación de informes de evaluación con DMA.
 
@@ -33,7 +33,7 @@ Las siguientes instrucciones paso a paso le ayudarán a usar la Data Migration A
   - [PowerShell](https://aka.ms/wmf5download) v 5.0 o versiones posteriores.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 o superior.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 o superior.
-  - [Escritorio Power BI](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
+  - [Escritorio Power BI](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Módulos de Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Descargar y extraer:
   - La [plantilla de Power BI de informes DMA](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).

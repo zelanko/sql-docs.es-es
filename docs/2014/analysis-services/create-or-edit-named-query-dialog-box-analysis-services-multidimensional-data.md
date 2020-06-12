@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87253123e42349aac4a6fef204de0bffb63c101c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086809"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526601"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Crear o Editar consulta con nombre (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Crear/Editar consulta con nombre** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear o editar una consulta con nombre en el **Diseñador de vistas del origen de datos**. Una consulta con nombre puede tratarse como una tabla en la que se pueden basar otros objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede mostrar el cuadro de diálogo **Crear/Editar consulta con nombre** de distintas maneras:  

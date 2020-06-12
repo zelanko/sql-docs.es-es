@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bd48810-15ce-45ff-862b-372d08606995
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ce255a2dfe9e959ed0d68da62266e3a8acc353e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078898"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543437"
 ---
 # <a name="modifying-measures"></a>Modificar medidas
   Puede usar la propiedad **FormatString** para definir parámetros de formato que controlen cómo se presentan las medidas a los usuarios. En esta tarea, debe especificar las propiedades de formato para las medidas de moneda y porcentaje del cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -56,13 +55,13 @@ ms.locfileid: "66078898"
   
 7.  En la lista desplegable de la parte superior de la ventana Propiedades (justo debajo de la barra de título), seleccione la medida **Unit Price Discount Pct**y, después, seleccione **Porcentaje** en la lista **FormatString** .  
   
-8.  En el ventana Propiedades, cambie la propiedad **nombre** de la medida **unidad de descuento por precio unitario** a `Unit Price Discount Percentage`.  
+8.  En el ventana Propiedades, cambie la propiedad **nombre** de la medida **unidad de descuento por precio unitario** a `Unit Price Discount Percentage` .  
   
-9. En el panel **medidas** , haga clic en **Tax AMT** y cambie el nombre de esta `Tax Amount`medida a.  
+9. En el panel **medidas** , haga clic en **Tax AMT** y cambie el nombre de esta medida a `Tax Amount` .  
   
 10. En la ventana Propiedades, haga clic en el icono **Ocultar automáticamente** para ocultar la ventana Propiedades y, a continuación, haga clic en **Mostrar el árbol de medidas** en la barra de herramientas de la pestaña **Estructura de cubo** .  
   
-11. En el menú **Archivo** , haga clic en **Guardar todo**.  
+11. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Modificar la dimensión Customer](lesson-3-2-modifying-the-customer-dimension.md)  

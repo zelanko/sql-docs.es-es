@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10858ca8d245a9a63169b555674941bf29a6363a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081667"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528571"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso de dimensiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Uso de dimensiones** del Diseñador de cubos para ver y editar las relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo.  
@@ -27,7 +26,7 @@ ms.locfileid: "66081667"
 |Panel|Definición|  
 |----------|----------------|  
 |**Barra**|Use la barra de herramientas para realizar operaciones comunes en esta pestaña. Para obtener más información sobre este panel, vea [barra de herramientas &#40;pestaña uso de dimensiones, diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Cuadrícula**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Grid**|Use la cuadrícula para ver y editar relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo. Para más información sobre este panel, vea [Cuadrícula &#40;pestaña Uso de dimensiones, Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Consulte también  
  [Relaciones de dimensión](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

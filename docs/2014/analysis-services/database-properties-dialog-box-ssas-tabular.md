@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f0ec02f-7b55-40ea-8a04-ed0deb1efd7a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8361508d678e407be9bed6eb18e8c221364daf61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 41bf7838a714c35e2149e8163e21a7b8044a77c6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082362"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528931"
 ---
 # <a name="database-properties-dialog-box-ssas---tabular"></a>Cuadro de diálogo Propiedades de base de datos (SSAS: tabular)
   Este cuadro de diálogo proporciona marcas de tiempo y otra información descriptiva, además de propiedades personalizables que determinan si la base de datos usa datos almacenados en caché. Entre las propiedades personalizables se incluyen la posibilidad de cambiar el nombre de la base de datos y especificar las opciones de suplantación.  

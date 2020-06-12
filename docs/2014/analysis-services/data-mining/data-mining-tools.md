@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dd0e6b696e692a9e88edd234d22f41983acbe961
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4be2f343f0fb7969f76b63ec1eb1677c1c9e589f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084824"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522971"
 ---
 # <a name="data-mining-tools"></a>Herramientas de minería de datos
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona las siguientes herramientas que puede utilizar para crear soluciones de minería de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona las siguientes herramientas que puede utilizar para crear soluciones de minería de datos:  
   
 -   El **Asistente para minería de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] facilita la creación de estructuras y de modelos de minería de datos, usando orígenes de datos relacionales o datos multidimensionales en cubos.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66084824"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es la interfaz en la que administra las soluciones de minería de datos implementadas en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Puede volver a procesar las estructuras y modelos para actualizar los datos que contienen.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contiene herramientas que puede utilizar para limpiar datos, automatizar tareas como la creación de predicciones y la actualización de modelos, y para crear soluciones de minería de texto.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]contiene herramientas que puede utilizar para limpiar datos, automatizar tareas como la creación de predicciones y la actualización de modelos, y para crear soluciones de minería de texto.  
   
  Las siguientes secciones proporcionan más información sobre las herramientas de minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,7 +68,7 @@ ms.locfileid: "66084824"
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] también contiene editores de consultas que puede usar para diseñar y ejecutar consultas de extensiones de minería de datos (DMX) o trabajar con objetos de minería de datos con XMLA.  
   
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Transformaciones y tareas de minería de datos en Integration Services  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona muchos componentes que admiten la minería de datos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]proporciona muchos componentes que admiten la minería de datos.  
   
  Algunas herramientas de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] están diseñadas para ayudar a automatizar tareas de datos comunes, incluida la predicción, la compilación de modelos y el procesamiento. Por ejemplo:  
   

@@ -1,5 +1,6 @@
 ---
 title: Coincidencia de tipos de secuencia | Microsoft Docs
+description: Obtenga información acerca de cómo hacer coincidir el tipo de secuencia devuelto por una expresión XQuery con un tipo específico.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8904ab2ea9e8f78037b03f886e6b61d692b65e60
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946224"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306077"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "67946224"
   
 -   También puede saber si la expresión devuelve un elemento XML o un nodo de atributo con un nombre y tipo específicos.  
   
- Para conocer el tipo de secuencia correspondiente se puede utilizar el operador booleano `instance of`. Para obtener más información sobre `instance of` la expresión, vea [expresiones SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
+ Para conocer el tipo de secuencia correspondiente se puede utilizar el operador booleano `instance of`. Para obtener más información sobre la `instance of` expresión, vea [expresiones SequenceType &#40;XQuery&#41;](../xquery/sequencetype-expressions-xquery.md).  
   
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>Comparar el tipo de valor atómico devuelto por una expresión  
  Si una expresión devuelve una secuencia de valores atómicos, es posible que se deba buscar el tipo del valor en la secuencia. Los ejemplos siguientes muestran cómo se puede utilizar la sintaxis de tipo de secuencia para evaluar el tipo de valor atómico devuelto por una expresión.  
@@ -51,7 +52,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Ahora, si una instancia XML con tipo especifica un valor para el elemento `root` <>, `instance of empty()` devuelve false.  
+ Ahora, si una instancia XML con tipo especifica un valor para el `root` elemento <>, `instance of empty()` devuelve false.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -61,7 +62,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Si el elemento `root` <> es nillable en la instancia de, su valor es una secuencia vacía y `instance of empty()` devuelve true.  
+ Si el `root` elemento <> es nillable en la instancia de, su valor es una secuencia vacía y `instance of empty()` devuelve true.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -112,7 +113,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>Ejemplo: cardinalidad en expresiones de secuencia  
- Este ejemplo ilustra el efecto de la cardinalidad en una expresión de secuencia. El siguiente esquema XML define un elemento `root` de> de <que es de tipo byte y es nillable.  
+ Este ejemplo ilustra el efecto de la cardinalidad en una expresión de secuencia. El siguiente esquema XML define un `root` elemento de> de <que es de tipo byte y es nillable.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -160,7 +161,7 @@ GO
  Si se dan ambas condiciones, la expresión `instance of` devuelve True.  
   
 ### <a name="example-querying-against-an-xml-type-column"></a>Ejemplo: realizar una consulta contra una columna de tipo XML  
- En el ejemplo siguiente, se especifica una consulta en una columna instructions de tipo **XML** de [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] la base de datos. Es una columna XML con tipo, porque tiene un esquema asociado. El esquema XML define el atributo `LocationID` del tipo entero. Por lo tanto, en la expresión de `instance of xs:integer?` secuencia, devuelve true.  
+ En el ejemplo siguiente, se especifica una consulta en una columna instructions de tipo **XML** de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos. Es una columna XML con tipo, porque tiene un esquema asociado. El esquema XML define el atributo `LocationID` del tipo entero. Por lo tanto, en la expresión de secuencia, `instance of xs:integer?` devuelve true.  
   
 ```  
 SELECT Instructions.query('   
@@ -198,14 +199,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- En la primera consulta, la expresión devuelve el valor con tipo del elemento <`a`>. En la segunda consulta, la expresión devuelve el elemento `a` <>. Ambos son elementos. Por tanto, ambas consultas devuelven True.  
+ En la primera consulta, la expresión devuelve el valor con tipo del elemento <`a`>. En la segunda consulta, la expresión devuelve el elemento <`a`>. Ambos son elementos. Por tanto, ambas consultas devuelven True.  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- Todas las expresiones XQuery en las tres consultas siguientes devuelven el nodo de elemento secundario `root` del elemento <>. Por tanto, la expresión de tipo de secuencia (`instance of node()`) devuelve True y las otras dos expresiones (`instance of text()` y `instance of document-node()`) devuelven False.  
+ Todas las expresiones XQuery en las tres consultas siguientes devuelven el nodo de elemento secundario del `root` elemento <>. Por tanto, la expresión de tipo de secuencia (`instance of node()`) devuelve True y las otras dos expresiones (`instance of text()` y `instance of document-node()`) devuelven False.  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -213,7 +214,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- En la consulta siguiente, la `instance of document-node()` expresión devuelve true, porque el elemento primario del elemento `root` <> es un nodo de documento.  
+ En la consulta siguiente, la `instance of document-node()` expresión devuelve true, porque el elemento primario del `root` elemento <> es un nodo de documento.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -255,7 +256,7 @@ element(*, ElementType?)
  Los ejemplos siguientes ilustran situaciones en las que son útiles las pruebas de elementos y atributos.  
   
 ### <a name="example-a"></a>Ejemplo A  
- El siguiente esquema XML define el `CustomerType` tipo complejo donde <`firstName` elementos> y `lastName` <> son opcionales. Puede que sea necesario determinar, para una instancia XML específica, si existe un nombre para un cliente concreto.  
+ El siguiente esquema XML define el `CustomerType` tipo complejo donde <`firstName` elementos> y <`lastName`> son opcionales. Puede que sea necesario determinar, para una instancia XML específica, si existe un nombre para un cliente concreto.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -308,7 +309,7 @@ GO
 ### <a name="example-b"></a>Ejemplo B  
  En el ejemplo siguiente se muestra cómo determinar si el nodo devuelto por una expresión es un nodo de elemento con un nombre específico. Usa la prueba **Element ()** .  
   
- En el ejemplo siguiente, los dos <`Customer`> elementos de la instancia XML que se consultan son de dos tipos diferentes, `CustomerType` y `SpecialCustomerType`. Suponga que desea conocer el tipo de <`Customer` elemento> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
+ En el ejemplo siguiente, los dos <`Customer`> elementos de la instancia XML que se consultan son de dos tipos diferentes, `CustomerType` y `SpecialCustomerType` . Suponga que desea conocer el tipo de <`Customer` elemento> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -335,7 +336,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Esta colección de esquemas XML se usa para crear una variable **XML** con tipo. La instancia XML asignada a esta variable tiene dos `customer` <> elementos de dos tipos diferentes. El primer elemento es de tipo `CustomerType` y el segundo elemento es de tipo `SpecialCustomerType`.  
+ Esta colección de esquemas XML se usa para crear una variable **XML** con tipo. La instancia XML asignada a esta variable tiene dos <`customer`> elementos de dos tipos diferentes. El primer elemento es de tipo `CustomerType` y el segundo elemento es de tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -358,7 +359,7 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Si cambia la expresión de la consulta anterior y recupera el segundo <`customer` elemento> (`/x:customer)[2]`), `instance of` devolverá True.  
+ Si cambia la expresión de la consulta anterior y recupera el segundo <`customer` elemento> ( `/x:customer)[2]` ), `instance of` devolverá True.  
   
 ### <a name="example-c"></a>Ejemplo C  
  En este ejemplo se utiliza la prueba de atributos. El siguiente esquema XML define el tipo complejo CustomerType, con los atributos CustomerID y Age. El atributo Age es opcional. Para una instancia XML específica, puede que desee determinar si el atributo Age está presente en el elemento <`customer`>.  
@@ -415,7 +416,7 @@ RETURN
         ()')  
 ```  
   
- También puede especificar la sintaxis del tipo `attribute(*, type)` de secuencia. De esta manera se buscará una coincidencia para el nodo de atributo, si el tipo de atributo coincide con el tipo especificado, sea cual sea su nombre.  
+ También puede especificar la `attribute(*, type)` Sintaxis del tipo de secuencia. De esta manera se buscará una coincidencia para el nodo de atributo, si el tipo de atributo coincide con el tipo especificado, sea cual sea su nombre.  
   
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones específicas:  
@@ -424,7 +425,7 @@ RETURN
   
 -   no se admite el **elemento (ElementName, TypeName)** .  
   
--   no se admite el **elemento (\*, TypeName)** .  
+-   no se admite el **elemento ( \* , TypeName)** .  
   
 -   **Schema-Element ()** no se admite.  
   

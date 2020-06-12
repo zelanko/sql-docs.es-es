@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20a10c066fc77e8d760bde456be54b366def8f59
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085846"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524892"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Elegir y asignar datos de entrada para una consulta de predicción
   Generalmente, la creación de predicciones a partir de un modelo de minería de datos se realiza proporcionando datos nuevos al modelo. (La excepción son los modelos de serie temporal, que pueden realizar predicciones basadas únicamente en datos históricos). Para proporcionar nuevos datos al modelo, debe asegurarse de que los datos están disponibles como parte de una vista del origen de datos. Si conoce de antemano los datos que va a usar para la predicción, puede incluirlos en la vista del origen de datos usada para crear el modelo. De lo contrario, es posible que tenga que crear una nueva vista del origen de datos. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "66085846"
   
 3.  En **Nombre de tabla o vista**, seleccione la tabla que contiene los datos que quiere usar para probar los modelos.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
      Las columnas de la estructura de minería de datos se asignarán automáticamente a las columnas que tengan el mismo nombre en la tabla de entrada.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66085846"
   
 4.  Seleccione una columna nueva en la lista de columnas disponibles del origen de datos externo. Seleccione el elemento en blanco en la lista para eliminar la asignación de columnas.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
      Las nuevas asignaciones de columnas se muestran en el diseñador.  
   
@@ -78,7 +77,7 @@ ms.locfileid: "66085846"
   
 3.  Haga clic en **Quitar relación**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
      La relación entre la tabla de casos y la tabla anidada se ha eliminado.  
   

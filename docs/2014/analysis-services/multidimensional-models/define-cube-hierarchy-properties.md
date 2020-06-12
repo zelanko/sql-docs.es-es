@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 819d0a4e-7815-4332-a605-b07ca2ade6ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0ace708cc4ee09295380b814bbf21f5a1c350974
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8903a49754357aad9cf24ee63fffa45fbf120e4d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075705"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546997"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Definir propiedades de las jerarquías de cubos
   Las propiedades de la jerarquía de cubo permiten especificar valores únicos para jerarquías definidas por el usuario en dimensiones de cubo basadas en la misma dimensión de base de datos. En la siguiente tabla se describen las propiedades de una jerarquía de cubo.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`Enabled`|Determina si está habilitada la jerarquía para la dimensión de cubo.|  
 |`HierarchyID`|Contiene el identificador único de la jerarquía.|  

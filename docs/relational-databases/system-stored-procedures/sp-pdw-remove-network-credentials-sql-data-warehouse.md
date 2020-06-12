@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_remove_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,17 +13,18 @@ ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7068beee49260db17e7b8f704e5aba316deb6ea3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: 12adbc7c7f10b16591b2fc8c6b0473e86036957b
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844441"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627571"
 ---
 # <a name="sp_pdw_remove_network_credentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Se quitan las credenciales [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de red almacenadas en para tener acceso a un recurso compartido de archivos de red. Por ejemplo, use este procedimiento almacenado para quitar el permiso [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de para realizar operaciones de copia de seguridad y restauración en un servidor que resida dentro de su propia red.  
+  Se quitan las credenciales de red almacenadas en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para tener acceso a un recurso compartido de archivos de red. Por ejemplo, use este procedimiento almacenado para quitar el permiso de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] para realizar operaciones de copia de seguridad y restauración en un servidor que resida dentro de su propia red.  
   
  ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="arguments"></a>Argumentos  
  '*target_server_name*'  
- Especifica el nombre de host o la dirección IP del servidor de destino. Las credenciales para tener acceso a este servidor [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]se quitarán de. Esto no cambia ni quita ningún permiso en el servidor de destino real administrado por su propio equipo.  
+ Especifica el nombre de host o la dirección IP del servidor de destino. Las credenciales para tener acceso a este servidor se quitarán de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . Esto no cambia ni quita ningún permiso en el servidor de destino real administrado por su propio equipo.  
   
  *target_server_name* se define como nvarchar (337).  
   
@@ -52,7 +52,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
  Se produce un error si la eliminación de credenciales no se realiza correctamente en el nodo de control y en todos los nodos de proceso.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Este procedimiento almacenado quita las credenciales de red de la [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]cuenta NetworkService para. La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para tener acceso al servidor de destino.  
+ Este procedimiento almacenado quita las credenciales de red de la cuenta NetworkService para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para tener acceso al servidor de destino.  
   
 ## <a name="metadata"></a>Metadatos  
  Para obtener una lista de todas las credenciales y comprobar las credenciales que se han quitado, use [Sys. dm_pdw_network_credentials &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-network-credentials-transact-sql.md).  

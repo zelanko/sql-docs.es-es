@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 251c369d-6b02-4687-964e-39bf55c9b009
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e09018fad9c291ec1f47bbb776797d634950381
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083837"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521708"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de secuencia de Microsoft
   El algoritmo de clústeres de secuencia de Microsoft es un algoritmo híbrido que usa el análisis de cadenas de Markov para identificar secuencias ordenadas, y combina los resultados de este análisis con técnicas de agrupación en clústeres para generar clústeres basados en las secuencias y otros atributos del modelo. En este tema se describe la implementación del algoritmo y cómo personalizarlo, y se detallan los requisitos especiales para los modelos de agrupación en clústeres de secuencia.  
@@ -99,7 +98,7 @@ ms.locfileid: "66083837"
  El valor predeterminado es 64.  
   
  MAXIMUM_STATES  
- Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los Estados más populares del atributo y trata los Estados restantes como `Missing`.  
+ Especifica el número máximo de estados que admite el algoritmo para un atributo sin secuencia. Si el número de Estados para un atributo sin secuencia es mayor que el número máximo de Estados, el algoritmo utiliza los Estados más populares del atributo y trata los Estados restantes como `Missing` .  
   
  El valor predeterminado es 100.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "66083837"
   
 ## <a name="remarks"></a>Observaciones  
   
--   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+-   Use la función [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) para la predicción de secuencias. Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la predicción de secuencias, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 -   El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] no admite el uso del lenguaje de marcado de modelos de predicción (PMML) para crear modelos de minería de datos.  
   

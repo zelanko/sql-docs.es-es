@@ -10,19 +10,19 @@ ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773817"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857787"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
   Para ver los datos en el panel de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione el nodo superior en el árbol del explorador de la utilidad (identificado como "Utilidad<UCP_Name>\\(nombreDeEquipo\UCP)"). El panel incluye un resumen y datos detallados de todas las instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de todas las aplicaciones de capa de datos en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para actualizar los datos en el panel, haga clic con el botón derecho en el nodo superior del árbol del explorador de la utilidad y seleccione **Actualizar**.  
   
  Para obtener más información sobre cómo crear un punto de control de la utilidad, vea [Crear un punto de control de la Utilidad de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). Para obtener más información sobre cómo agregar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la Utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea [Inscribir una instancia de SQL Server &#40;Utilidad de SQL Server&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  Estado de mantenimiento de la instancia administrada  
  El estado de mantenimiento de las instancias administrados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se muestra en a la izquierda del panel de contenido del explorador de la utilidad.  
   

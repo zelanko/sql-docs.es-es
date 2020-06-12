@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 755a7f9c8708664dbb3a65c223873cf1dd4e20c8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082279"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528873"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Tutorial del diagrama de árbol de decisión (complementos de minería de datos)
   Si ha creado un modelo de árbol de decisión, podrá crear un diagrama personalizado en Visio con la forma Árbol de decisión o la forma Red de dependencias. En este tema se describen las personalizaciones que puede realizar con la forma **árbol de decisión** y estos controles:  
@@ -40,13 +39,13 @@ ms.locfileid: "66082279"
   
 1.  Si no ve formas de **minería de datos de Microsoft** en la lista **formas** , haga clic en **más formas**, seleccione **Abrir Galería de símbolos**y abra la plantilla desde la ubicación de instalación predeterminada.  
   
-     \<> de unidad: \Archivos de programa (x85) \Microsoft SQL Server 2012 DM-ins  
+     \<drive>: \Archivos de programa (x85) \Microsoft SQL Server 2012 DM-ins  
   
 2.  Arrastre la forma **árbol de decisión** hasta la página.  
   
 3.  En la página de bienvenida del **Asistente para crear formas árbol de decisión de Visio**, haga clic en **siguiente**.  
   
-4.  En la página **seleccionar un origen de datos** del **Asistente para clúster**, elija una conexión a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un servidor que tenga el modelo que desea visualizar.  
+4.  En la página **seleccionar un origen de datos** del **Asistente para clúster**, elija una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que tenga el modelo que desea visualizar.  
   
 5.  Seleccione un modelo de minería de datos adecuado y haga clic en **siguiente**.  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f53ddb6e7e3fc6b9d14ddcc726c2766a598860
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b97bee2099ea82508ba9e66414bb9527a3c3a8c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727581"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545328"
 ---
 # <a name="partition-storage-modes-and-processing"></a>Procesamiento y modos de almacenamiento de particiones
   El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
@@ -39,7 +38,7 @@ ms.locfileid: "62727581"
   
 -   OLAP híbrido (HOLAP)  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los tres modos de almacenamiento [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] básicos. También admite el almacenamiento en caché automático, que permite combinar las características de almacenamiento ROLAP y MOLAP para mejorar la disponibilidad de los datos y el rendimiento de las consultas. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](partitions-proactive-caching.md).  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite los tres modos de almacenamiento básicos. También admite el almacenamiento en caché automático, que permite combinar las características de almacenamiento ROLAP y MOLAP para mejorar la disponibilidad de los datos y el rendimiento de las consultas. Para más información, vea [Almacenamiento en caché automático &#40;Particiones&#41;](partitions-proactive-caching.md).  
   
 ## <a name="molap"></a>MOLAP  
  El modo de almacenamiento MOLAP da lugar a que las agregaciones de la partición y una copia de sus datos de origen se almacenen en una estructura multidimensional en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Esta estructura MOLAP está muy optimizada para maximizar el rendimiento de las consultas. La ubicación de almacenamiento puede estar en el equipo en donde se define la partición o en otro equipo que ejecute [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Dado que una copia de los datos de origen reside en la estructura multidimensional, las consultas se pueden resolver sin necesidad de obtener acceso a los datos de origen de la partición. Si se utilizan agregaciones, los tiempos de respuesta a las consultas pueden disminuir notablemente. Los datos de la estructura MOLAP de la partición están tan actualizados como el procesamiento más reciente de la misma.  
@@ -72,14 +71,14 @@ ms.locfileid: "62727581"
   
     -   QUOTED_IDENTIFIER  
   
--   En [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el tamaño total de la clave de índice no puede superar los 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]validará esta condición basándose en las columnas de clave de longitud fija cuando se procese la instrucción CREATE INDEX. Sin embargo, si hay columnas de longitud variable en la clave de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] índice, también validará esta condición para cada actualización de las tablas base. Dado que las agregaciones diferentes tienen definiciones de vistas distintas, el procesamiento ROLAP mediante vistas indizadas puede realizarse correcta o incorrectamente, dependiendo del diseño de las agregaciones.  
+-   En [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el tamaño total de la clave de índice no puede superar los 900 bytes. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]validará esta condición basándose en las columnas de clave de longitud fija cuando se procese la instrucción CREATE INDEX. Sin embargo, si hay columnas de longitud variable en la clave de índice, también validará [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] esta condición para cada actualización de las tablas base. Dado que las agregaciones diferentes tienen definiciones de vistas distintas, el procesamiento ROLAP mediante vistas indizadas puede realizarse correcta o incorrectamente, dependiendo del diseño de las agregaciones.  
   
 -   La sesión que crea la vista indizada debe tener activadas las siguientes opciones: ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING y ANSI_WARNING. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   La sesión que crea la vista indizada debe tener desactivada la siguiente opción: NUMERIC_ROUNDABORT. Esta configuración puede crearse en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
- El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Consultas que tienen acceso a datos de origen; por ejemplo, si desea profundizar en una celda atómica de un cubo para el que no hay datos de agregación, debe recuperar los datos de la base de datos relacional y no será tan rápido como si los datos de origen estuvieran almacenados en la estructura MOLAP. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  
+ El modo de almacenamiento HOLAP combina atributos de los modos MOLAP y ROLAP. Al igual que MOLAP, HOLAP hace que las agregaciones de la partición se almacenen en una estructura multidimensional en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instancia de. HOLAP no hace que se almacene una copia de los datos de origen. HOLAP es el equivalente de MOLAP para las consultas que solo tienen acceso a los datos de resumen de las agregaciones de una partición. Consultas que tienen acceso a datos de origen; por ejemplo, si desea profundizar en una celda atómica de un cubo para el que no hay datos de agregación, debe recuperar los datos de la base de datos relacional y no será tan rápido como si los datos de origen estuvieran almacenados en la estructura MOLAP. Con el modo de almacenamiento HOLAP, los usuarios suelen experimentar notables diferencias en cuanto a los tiempos de las consultas según si la consulta se puede resolver desde la caché o las agregaciones frente a los propios datos de origen.  
   
  Las particiones almacenadas como HOLAP son más pequeñas que sus equivalentes MOLAP dado que no contienen datos de origen y responden más rápidamente que las particiones ROLAP a las consultas que implican datos de resumen. El modo de almacenamiento HOLAP suele ser más adecuado para particiones en cubos que requieren una respuesta de consultas rápida para resúmenes basados en una gran cantidad de datos de origen. No obstante, si los usuarios generan consultas que deben utilizar datos del nivel hoja (por ejemplo, para calcular valores medios), MOLAP suele ser una opción mejor.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5702e3e2e5b12edecff4dd6d6f46b632575d211d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1af06d7ffe12301f6b8b678f41665e5c3146a13
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084267"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522322"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>Arquitectura lógica (Analysis Services - Minería de datos)
   La minería de datos es un proceso que implica la interacción de varios componentes.  
@@ -41,7 +40,7 @@ ms.locfileid: "66084267"
 ##  <a name="data-mining-source-data"></a><a name="bkmk_SourceData"></a>Datos de origen de minería de datos  
  Los datos que se usan en la minería de datos no se almacenan en la solución de minería de datos; solo se almacenan los enlaces. Los datos podrían residir en una base de datos creada en una versión anterior de SQL Server, en un sistema CRM o incluso en un archivo plano. Cuando se entrena la estructura o el modelo mediante un proceso, se crea un resumen estadístico de los datos y se almacena en una memoria caché que puede conservarse para usarse en operaciones posteriores, o puede eliminarse después del procesamiento. Para obtener más información, vea [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-structures-analysis-services-data-mining.md).  
   
- Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información acerca de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] creación y el uso de orígenes de datos y vistas del origen de datos, vea orígenes de datos [compatibles &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
+ Combine datos dispares dentro del objeto de vista del origen de datos (DSV) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , que proporciona una capa de abstracción sobre el origen de datos. También puede especificar combinaciones entre tablas o agregar tablas que tengan una relación de varios a uno para crear columnas de tabla anidadas. La definición de estos objetos, el origen de datos y la vista del origen de datos se almacenan en la solución con las extensiones de nombre de archivo *.ds y \*.dsv. Para obtener más información acerca de la creación y el uso de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] orígenes de datos y vistas del origen de datos, vea orígenes de datos [compatibles &#40;SSAS multidimensional&#41;](../multidimensional-models/supported-data-sources-ssas-multidimensional.md).  
   
  También puede definir y modificar orígenes de datos y vistas del origen de datos utilizando AMO o XMLA. Para obtener más información sobre cómo trabajar con estos objetos mediante programación, vea [Información general de arquitectura lógica &#40;Analysis Services - Datos multidimensionales&#41;](../multidimensional-models/olap-logical/logical-architecture-overview-analysis-services-multidimensional-data.md).  
   

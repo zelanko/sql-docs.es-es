@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6a3d94e2e003410bfdeb632d30fc0e5e3f8a0d4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086852"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526641"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Cuadro de diálogo crear-editar cálculo con nombre (Analysis Services)
   Utilice el cuadro de diálogo **crear/editar cálculo con nombre** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir o modificar un cálculo con nombre para una tabla en una vista del origen de datos. Para mostrar el cuadro de diálogo **Crear/editar cálculo con nombre**:  

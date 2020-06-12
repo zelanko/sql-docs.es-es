@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: c2c6a3da-555e-4362-a83f-88da28427520
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c73600d934bb87540487e0d82874650d708e034f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077410"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544797"
 ---
 # <a name="configure-attribute-types"></a>Configurar tipos de atributos
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], los tipos de atributos ayudan a clasificar un atributo en función de la funcionalidad empresarial. Existen muchos tipos de atributos que, en su mayor parte, se utilizan en las aplicaciones cliente para mostrar o admitir un atributo. No obstante, algunos tipos de atributos también tienen significado específico para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, algunos tipos de atributos identifican atributos que representan períodos en diferentes calendarios para las dimensiones de tiempo.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , los tipos de atributos ayudan a clasificar un atributo en función de la funcionalidad empresarial. Existen muchos tipos de atributos que, en su mayor parte, se utilizan en las aplicaciones cliente para mostrar o admitir un atributo. No obstante, algunos tipos de atributos también tienen significado específico para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Por ejemplo, algunos tipos de atributos identifican atributos que representan períodos en diferentes calendarios para las dimensiones de tiempo.  
   
 ##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a> Establecer tipos de atributos  
  El valor de la propiedad `Type` de un atributo determina el tipo de atributo de dicho atributo. Distintos asistentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establecen los tipos de atributos al definir dimensiones o atributos. Estos asistentes de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también establecen los tipos de atributos al agregar funcionalidad a las dimensiones. Por ejemplo, el Asistente de Business Intelligence aplica varios tipos de atributo a los atributos en una dimensión cuando agrega inteligencia de cuentas para identificar atributos que contienen los nombres, códigos, números y estructuras de cuentas en la dimensión. El Asistente de Business Intelligence también utiliza tipos de atributo, por ejemplo para la conversión de moneda. Para más información, vea [Crear una dimensión de tipo moneda](database-dimensions-create-a-currency-type-dimension.md).  

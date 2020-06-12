@@ -1,5 +1,6 @@
 ---
 title: Especificar AXIS en un paso de expresión de trazado | Microsoft Docs
+description: Obtenga información sobre cómo especificar un paso de eje en una expresión de ruta de acceso XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f8e753f4961d33251120151bff6db1f8cd5e14c
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946480"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215757"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: Especificación de ejes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +48,20 @@ ms.locfileid: "67946480"
 |----------|-----------------|  
 |**Child1**|Devuelve elementos secundarios del nodo de contexto.|  
 |**descendant**|Devuelve todos los descendientes del nodo de contexto.|  
-|**primario**|Devuelve el elemento primario del nodo de contexto.|  
+|**aérea**|Devuelve el elemento primario del nodo de contexto.|  
 |**attribute**|Devuelve atributos del nodo de contexto.|  
 |**mismo**|Devuelve el propio nodo de contexto.|  
 |**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
- Todos estos ejes, excepto el eje **primario** , son ejes hacia delante. El eje **primario** es un eje inverso, porque busca hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. En el primer paso se recupera \<el elemento ProductDescription> elementos secundarios del nodo de contexto. Para cada \<nodo de elemento de> de ProductDescription, el segundo paso \<recupera los elementos secundarios del nodo de elemento de Resumen>.  
+ Todos estos ejes, excepto el eje **primario** , son ejes hacia delante. El eje **primario** es un eje inverso, porque busca hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. En el primer paso se recuperan los \<ProductDescription> elementos secundarios del nodo de contexto. Para cada \<ProductDescription> nodo de elemento, el segundo paso recupera los \<Summary> elementos secundarios del nodo de elemento.  
   
- La expresión de ruta de acceso relativa, `child::root/child::Location/attribute::LocationID`, tiene tres pasos. Cada uno de los dos primeros especifica un eje `child` y el tercero especifica el eje `attribute`. Cuando se ejecuta en los documentos XML de instrucciones de fabricación de la tabla **Production. ProductModel** , la `LocationID` expresión devuelve el \<atributo de la ubicación> nodo de \<elemento secundario del elemento de> raíz.  
+ La expresión de ruta de acceso relativa, `child::root/child::Location/attribute::LocationID`, tiene tres pasos. Cada uno de los dos primeros especifica un eje `child` y el tercero especifica el eje `attribute`. Cuando se ejecuta en los documentos XML de instrucciones de fabricación de la tabla **Production. ProductModel** , la expresión devuelve el `LocationID` atributo del \<Location> nodo de elemento secundario del \<root> elemento.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos de consulta de este tema se especifican con las columnas de tipo **XML** de la base de datos **AdventureWorks** .  
   
 ### <a name="a-specifying-a-child-axis"></a>A. Especificar un eje child  
- En el caso de un modelo de producto específico, la consulta \<siguiente recupera las características> nodos de \<elemento secundarios del nodo de elemento de> ProductDescription de la descripción `Production.ProductModel` del catálogo de productos almacenada en la tabla.  
+ Para un modelo de producto específico, la consulta siguiente recupera los nodos \<Features> de elemento secundarios del \<ProductDescription> nodo de elemento de la descripción del catálogo de productos almacenada en la `Production.ProductModel` tabla.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -108,11 +109,11 @@ select @y
   
  En esta expresión, si especifica un eje descendant para la expresión de ruta de acceso,  
   
- `/child::a/child::b/descendant::*`, se solicitan todos los descendientes del nodo elemento `b` de> de <.  
+ `/child::a/child::b/descendant::*`, se solicitan todos los descendientes del `b` nodo elemento de> de <.  
   
  El asterisco (*) en la prueba de nodo representa el nombre del nodo como prueba de nodo. Por tanto, el tipo de nodo principal del eje descendant, el nodo de elemento, determina los tipos de nodos devueltos. Es decir, la expresión devuelve todos los nodos de elemento. No se devuelven los nodos de texto. Para obtener más información sobre el tipo de nodo principal y su relación con la prueba de nodo, vea el tema [especificar una prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md) .  
   
- Se devuelven `c` los nodos de `d` elemento <> y <>, como se muestra en el resultado siguiente:  
+ Se devuelven los nodos de elemento <`c`> y <`d`>, como se muestra en el resultado siguiente:  
   
 ```  
 <c>text2  
@@ -139,7 +140,7 @@ select @y
 <d>text3</d>   
 ```  
   
- La consulta de ejemplo siguiente en la base de datos **AdventureWorks** recupera todos los nodos de elementos descendientes `Features` del elemento secundario <> del `ProductDescription` elemento <>:  
+ La consulta de ejemplo siguiente en la base de datos **AdventureWorks** recupera todos los nodos de elementos descendientes del elemento `Features` secundario <> del elemento <`ProductDescription`>:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -151,9 +152,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Especificar un eje parent  
- La consulta siguiente devuelve el elemento `Summary` secundario <> del elemento <`ProductDescription`> del documento XML del catálogo de productos almacenado en la `Production.ProductModel` tabla.  
+ La consulta siguiente devuelve el `Summary` elemento secundario <> del elemento <`ProductDescription`> del documento XML del catálogo de productos almacenado en la `Production.ProductModel` tabla.  
   
- En este ejemplo se usa el eje primario para volver al elemento primario del `Feature` elemento <> y recuperar el `Summary` elemento secundario <> del `ProductDescription` elemento <>.  
+ En este ejemplo se usa el eje primario para volver al elemento primario del `Feature` elemento <> y recuperar el `Summary` elemento secundario <> del elemento <> `ProductDescription` .  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -174,7 +175,7 @@ WHERE  ProductModelID=19
   
  A continuación se ofrece un ejemplo más útil del eje parent.  
   
- Cada descripción del catálogo de modelos de producto almacenada en la columna **CatalogDescription** de la `<ProductDescription>` tabla **ProductModel** tiene un `ProductModelID` elemento que `<Features>` tiene el atributo y el elemento secundario, tal y como se muestra en el fragmento siguiente:  
+ Cada descripción del catálogo de modelos de producto almacenada en la columna **CatalogDescription** de la tabla **ProductModel** tiene un `<ProductDescription>` elemento que tiene el `ProductModelID` atributo y el `<Features>` elemento secundario, tal y como se muestra en el fragmento siguiente:  
   
 ```  
 <ProductDescription ProductModelID="..." >  
@@ -193,7 +194,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Para agregar la `ProductModelID` para cada `<Feature` elemento>, se `parent` especifica el eje:  
+ Para agregar la `ProductModelID` para cada `<Feature` elemento>, `parent` se especifica el eje:  
   
 ```  
 SELECT CatalogDescription.query('  

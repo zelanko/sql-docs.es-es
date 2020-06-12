@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e60456afe700d3bfb793d214331871445190eb10
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547087"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definir una relación de varios a varios y las propiedades de las relaciones de varios a varios
   En este tema se explican las dimensiones varios a varios de Analysis Services, incluido cuándo usarlas y cómo crearlas.  
@@ -142,7 +141,7 @@ ms.locfileid: "66075774"
   
 1.  Implemente el proyecto y examine el cubo para confirmar que las agregaciones son válidas.  
   
-2.  En Excel, haga clic en **datos** | **de otros orígenes** | **desde Analysis Services**. Especifique el nombre del servidor, y elija la base de datos y el cubo.  
+2.  En Excel, haga clic en **datos**  |  **de otros orígenes**  |  **desde Analysis Services**. Especifique el nombre del servidor, y elija la base de datos y el cubo.  
   
 3.  Cree una tabla dinámica que use lo siguiente:  
   

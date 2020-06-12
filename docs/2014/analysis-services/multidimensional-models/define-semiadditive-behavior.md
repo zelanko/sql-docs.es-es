@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd433f05f17a046ed49f49ea9fbdd9f36b90a3e2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075537"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546937"
 ---
 # <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior
   Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
@@ -50,7 +49,7 @@ ms.locfileid: "66075537"
   
 -   None  
   
- Esta opción no cambia las medidas con una función de agregación `Sum`normal `Min`: `Max`, `Count`,, `Distinct``Count`o.  
+ Esta opción no cambia las medidas con una función de agregación normal: `Sum` , `Min` , `Max` , `Count` o `Distinct``Count` .  
   
  **El asistente ha detectado la dimensión de cuenta "cuenta", que contiene miembros de suma parcial. El servidor agregará los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Hace que el sistema establezca todas las medidas de un grupo de medida con una dimensión de tipo Cuenta en la función de agregación By Account; el servidor agregará los miembros de dimensión según el comportamiento de suma parcial especificado para cada tipo de cuenta.  

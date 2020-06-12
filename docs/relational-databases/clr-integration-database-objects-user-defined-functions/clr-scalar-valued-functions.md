@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a44187fc41409d149501c4cda7e99817be034a12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4c9f5fe3a3fa9a58b8c1a103bcb2cf359d842190
+ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488440"
+ms.lasthandoff: 05/23/2020
+ms.locfileid: "83806773"
 ---
 # <a name="clr-scalar-valued-functions"></a>Funciones escalares de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Una función escalar (SVF) devuelve un valor único, como una cadena, un entero o un valor de bit. Puede crear funciones escalares definidas por el usuario en código administrado mediante cualquier lenguaje de programación .NET Framework. Estas funciones son accesibles para [!INCLUDE[tsql](../../includes/tsql-md.md)] u otro código administrado. Para obtener información sobre las ventajas de la integración CLR y la elección entre [!INCLUDE[tsql](../../includes/tsql-md.md)]código administrado y, consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Una función escalar (SVF) devuelve un valor único, como una cadena, un entero o un valor de bit. Puede crear funciones escalares definidas por el usuario en código administrado mediante cualquier lenguaje de programación .NET Framework. Estas funciones son accesibles para [!INCLUDE[tsql](../../includes/tsql-md.md)] u otro código administrado. Para obtener información sobre las ventajas de la integración CLR y la elección entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Requisitos de las funciones escalares de CLR  
  Las SVF de .NET Framework se implementan como métodos en una clase de un ensamblado de .NET Framework. Los parámetros de entrada y el tipo devueltos de una SVF pueden ser cualquiera de los tipos de datos escalares admitidos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], excepto **varchar**, **char**, **rowversion**, **text**, **ntext**, **image**, **timestamp**, **table**o **cursor**. Las SVF deben asegurar una coincidencia entre el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el tipo de datos de retorno del método de implementación. Para obtener más información sobre las conversiones de tipos, vea [asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
@@ -91,7 +91,7 @@ End Class
   
  [C#]  
   
-```  
+```csharp
 using(SqlConnection conn = new SqlConnection("context connection=true"))   
 {  
    conn.Open();  
@@ -103,7 +103,7 @@ using(SqlConnection conn = new SqlConnection("context connection=true"))
   
  [Visual Basic]  
   
-```  
+```vb
 Using conn As New SqlConnection("context connection=true")  
    conn.Open()  
    Dim cmd As New SqlCommand( _  
@@ -136,7 +136,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
   
  La consulta [!INCLUDE[tsql](../../includes/tsql-md.md)] y una invocación de ejemplo para registrar el ensamblado y una UDF son:  
   
-```  
+```sql
 CREATE ASSEMBLY FirstUdf FROM 'FirstUdf.dll';  
 GO  
   

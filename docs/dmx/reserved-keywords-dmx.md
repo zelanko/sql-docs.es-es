@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fa17a4fb673ad6508fbfc70d5bab39e398d6c3aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 610e9f5d575134d3d6948528622637662b65c9f3
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928453"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669652"
 ---
 # <a name="reserved-keywords-dmx"></a>Palabras clave reservadas (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] reserva ciertas palabras clave para su uso exclusivo. Estas palabras clave no se pueden usar en ninguna parte de las instrucciones DMX (Extensiones de minería de datos), excepto en las posiciones que define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la referencia del lenguaje DMX. Estas palabras clave DMX restringidas incluyen los miembros siguientes:  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)]reserva ciertas palabras clave para su uso exclusivo. Estas palabras clave no se pueden usar en ninguna parte de las instrucciones DMX (Extensiones de minería de datos), excepto en las posiciones que define [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la referencia del lenguaje DMX. Estas palabras clave DMX restringidas incluyen los miembros siguientes:  
   
 -   Todas las instrucciones de definición de datos enumeradas en el tema [instrucciones de definición de datos DMX](../dmx/dmx-statements-data-definition.md).  
   

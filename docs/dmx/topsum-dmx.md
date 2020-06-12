@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 373fe2f1458b30412f4ee5852baa57b930af4878
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5a616db3e2fd0927faf9273bfaf55bb31e94391c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893045"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669904"
 ---
 # <a name="topsum-dmx"></a>TopSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \<columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  
   
 ## <a name="remarks"></a>Observaciones  
- La función de **Tops** up devuelve las filas de nivel superior en orden decreciente de rango en función del valor evaluado \<de la expresión de rango> argumento de cada fila, de modo que \<la suma de la expresión de rango> valores sea al menos el total especificado \<por el argumento SUM>. **Topse** devuelve el menor número posible de elementos mientras se cumple el valor de suma especificado.  
+ La función de **Tops** up devuelve las filas de nivel superior en orden decreciente de rango en función del valor evaluado de la \< expresión de rango> argumento de cada fila, de modo que la suma de la \< expresión de rango> valores sea al menos el total especificado por el \< argumento SUM>. **Topse** devuelve el menor número posible de elementos mientras se cumple el valor de suma especificado.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

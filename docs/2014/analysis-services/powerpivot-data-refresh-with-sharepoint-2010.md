@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01b54e6f-66e5-485c-acaa-3f9aa53119c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f9f042a937b1ce2a51bc6d8dbb50b8fc39c4fb78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18c879aaaa5bc63b4312f0461404e830dcbc2029
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175634"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547697"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Actualización de datos PowerPivot con SharePoint 2010
   La actualización de datos [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] es una operación del lado servidor programada que consulta orígenes de datos externos para actualizar datos [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] incrustados en un libro de Excel 2010 almacenado en una biblioteca de contenido.
@@ -75,7 +74,7 @@ ms.locfileid: "78175634"
 
 5.  En **base de datos**, especifique la instancia de SQL Server que hospedará la base de datos para esta aplicación de servicio. El valor predeterminado es la instancia del motor de base de datos de SQL Server que hospeda las bases de datos de configuración de la granja.
 
-6.  En **nombre**de la base de datos, escriba el nombre de la base de datos de aplicación de servicio. El valor predeterminado es Secure_Store_Service_DB_\<guid>. El nombre predeterminado corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.
+6.  En **nombre**de la base de datos, escriba el nombre de la base de datos de aplicación de servicio. El valor predeterminado es Secure_Store_Service_DB_ \<guid> . El nombre predeterminado corresponde al de la aplicación de servicio. Si escribió un nombre de aplicación del servicio único, siga una convención de nomenclatura similar para el nombre de la base de datos, de modo que pueda administrarlos juntos.
 
 7.  En **Autenticación de bases de datos**, el valor predeterminado es Autenticación de Windows. Si elige Authentication SQL, consulte la guía de administrador de SharePoint para obtener información sobre cómo utilizar el tipo de autenticación en la granja.
 
@@ -116,7 +115,7 @@ ms.locfileid: "78175634"
 
  ![SSAS_PPS_ScheduleDataRefreshCreds](media/ssas-pps-scheduledatarefreshcreds.gif "SSAS_PPS_ScheduleDataRefreshCreds")
 
- Esta opción de credencial se habilita de forma predeterminada. Cuando se habilite esta opción de credencial, el Servicio de sistema de PowerPivot generará una aplicación de destino en el Servicio de almacenamiento seguro para almacenar el nombre de usuario y la contraseña especificados por el propietario de la programación. Una aplicación de destino generada se crea con esta Convención de\<nomenclatura: PowerPivotDataRefresh_ guid>. Las aplicaciones de destino se crean para cada conjunto de credenciales de Windows. Si ya existe una aplicación de destino que es propiedad del Servicio de sistema PowerPivot y almacena el nombre de usuario y la contraseña especificados por la persona que ha definido la programación, el Servicio de sistema de PowerPivot utilizará esa aplicación de destino en lugar de crear otra.
+ Esta opción de credencial se habilita de forma predeterminada. Cuando se habilite esta opción de credencial, el Servicio de sistema de PowerPivot generará una aplicación de destino en el Servicio de almacenamiento seguro para almacenar el nombre de usuario y la contraseña especificados por el propietario de la programación. Una aplicación de destino generada se crea con esta Convención de nomenclatura: PowerPivotDataRefresh_ \<guid> . Las aplicaciones de destino se crean para cada conjunto de credenciales de Windows. Si ya existe una aplicación de destino que es propiedad del Servicio de sistema PowerPivot y almacena el nombre de usuario y la contraseña especificados por la persona que ha definido la programación, el Servicio de sistema de PowerPivot utilizará esa aplicación de destino en lugar de crear otra.
 
  La principal ventaja de utilizar esta opción de credencial es la facilidad de uso y la simplicidad. El trabajo previo es mínimo porque las aplicaciones de destino ya están creadas. Además, al ejecutar la actualización de datos con las credenciales del propietario de la programación (que probablemente es la persona que creó el libro), también, se simplifica el nivel inferior de los requisitos de permiso. Probablemente, este usuario ya tiene los permisos de la base de datos de destino. Cuando la actualización de datos se ejecuta con la identidad de usuario de Windows de esta persona, las conexiones de datos que especifican "usuario actual" funcionarán automáticamente.
 
@@ -204,7 +203,7 @@ ms.locfileid: "78175634"
 
  Si ve **Integrated Security = SSPI** en la cadena de conexión, no puede invalidar las credenciales en la cadena de conexión. La conexión siempre utilizará al usuario actual. Se omitirá cualquier credencial que proporcione.
 
- Si ve **\*\*\*\*\*\*\*\*\*\*Persist Security info = false, password =\*, userid =\<userlogin>**, tendrá una cadena de conexión que aceptará invalidaciones de credenciales. Las credenciales que aparecen en una cadena de conexión (como las de identificación de usuario y contraseña) no son credenciales de Windows, sino que son inicios de sesión de base de datos u otras cuentas de inicio de sesión válidos para el origen de datos de destino.
+ Si ve **Persist Security info = false, password = \* \* \* \* \* \* \* \* \* \* \* , userid = \<userlogin> **, tendrá una cadena de conexión que aceptará invalidaciones de credenciales. Las credenciales que aparecen en una cadena de conexión (como las de identificación de usuario y contraseña) no son credenciales de Windows, sino que son inicios de sesión de base de datos u otras cuentas de inicio de sesión válidos para el origen de datos de destino.
 
  **Cómo invalidar credenciales en la cadena de conexión**
 

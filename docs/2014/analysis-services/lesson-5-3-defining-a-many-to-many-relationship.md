@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 013a56ef71c33a283fb298ca322ed0e30b8933eb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b0b1d50095584a86074ebe1fb7eac9b7de98256
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175294"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542857"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>Definir una relación de varios a varios
   Generalmente, cuando se define una dimensión cada hecho se combina con un único miembro de dimensión, mientras que un mismo miembro puede estar asociado a varios hechos distintos. Por ejemplo, cada cliente puede tener varios pedidos, pero cada pedido pertenece a un solo cliente. En terminología de bases de datos relacionales, esto se conoce como una *relación de uno a varios*. No obstante, algunas veces un único hecho puede combinarse con varios miembros de dimensión. En terminología de bases de datos relacionales, esto se conoce como *relación de varios a varios*. Por ejemplo, un cliente puede tener varios motivos para realizar una compra, y un motivo de compra puede estar asociado a varias compras. Para definir los motivos de venta que se relacionan con cada compra, se utiliza una tabla de combinación. Una dimensión de motivo de venta creada a partir de relaciones de este tipo tendría varios miembros que estarían relacionados a una única transacción de venta. Las dimensiones de varios a varios amplían el modelo dimensional más allá del esquema de estrella y admiten análisis complejos cuando las dimensiones no están directamente relacionadas con una tabla de hechos.
@@ -35,7 +34,7 @@ ms.locfileid: "78175294"
 
 1.  Abra el Diseñador de vistas del origen de datos para la vista del origen de datos **Adventure Works DW 2012** .
 
-2.  Haga clic con el botón secundario en cualquier lugar del panel **organizador de diagramas** , `Internet Sales Order Reasons` haga clic en **nuevo diagrama**y especifique como nombre de este nuevo diagrama.
+2.  Haga clic con el botón secundario en cualquier lugar del panel **organizador de diagramas** , haga clic en **nuevo diagrama**y especifique `Internet Sales Order Reasons` como nombre de este nuevo diagrama.
 
 3.  Arrastre la tabla **InternetSales** al panel **Diagrama** desde el panel **Tablas** .
 
@@ -47,13 +46,13 @@ ms.locfileid: "78175294"
 
 6.  En el menú **Formato** , seleccione **Diseño automático**y haga clic en **Diagrama**.
 
-7.  En el ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** a `SalesReason`y, a continuación, cambie la propiedad **FriendlyName** de la tabla `InternetSalesReason` **FactInternetSalesReason** a.
+7.  En el ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** a `SalesReason` y, a continuación, cambie la propiedad **FriendlyName** de la tabla **FactInternetSalesReason** a `InternetSalesReason` .
 
 8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.
 
      Observe que el tipo de datos para la columna **SalesOrderNumber** es un tipo de datos de cadena.
 
-9. Revise los tipos de datos de las demás columnas de `InternetSalesReason` la tabla.
+9. Revise los tipos de datos de las demás columnas de la `InternetSalesReason` tabla.
 
      Observe que los datos de las otras dos columnas de esta tabla son de tipo numérico.
 
@@ -69,7 +68,7 @@ ms.locfileid: "78175294"
 
 2.  Haga clic con el botón derecho en cualquier punto del panel **Medidas** y, después, haga clic en **Nuevo grupo de medida**. Para obtener más información, consulte [Crear medidas y grupos de medida en modelos multidimensionales](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).
 
-3.  En el cuadro de diálogo **nuevo grupo** de medida `InternetSalesReason` , seleccione en la lista **Seleccione una tabla de la vista del origen de datos** y, a continuación, haga clic en **Aceptar**.
+3.  En el cuadro de diálogo **nuevo grupo de medida** , seleccione `InternetSalesReason` en la lista **Seleccione una tabla de la vista del origen de datos** y, a continuación, haga clic en **Aceptar**.
 
      Observe que el grupo de medida **Internet Sales Reason** ahora aparece en el panel **Medidas** .
 
@@ -99,7 +98,7 @@ ms.locfileid: "78175294"
 
 4.  En la página **Especificar información de origen** , compruebe que la vista del origen de datos [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 está seleccionada.
 
-5.  En la lista **tabla principal** , seleccione `SalesReason`.
+5.  En la lista **tabla principal** , seleccione `SalesReason` .
 
 6.  En la lista **Columnas de clave** , compruebe que aparece **SalesReasonKey** .
 
@@ -107,15 +106,15 @@ ms.locfileid: "78175294"
 
 8.  Haga clic en **Next**.
 
-9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type`y, a continuación, haga clic en **siguiente**.
+9. En la página **Seleccionar los atributos de la dimensión** , el atributo **Sales Reason Key** se selecciona automáticamente porque es el atributo clave. Active la casilla situada junto al atributo **sales Reason Reason Type** , cambie su nombre a `Sales Reason Type` y, a continuación, haga clic en **siguiente**.
 
 10. En la página **Finalización del asistente** , haga clic en **Finalizar** para crear la dimensión Sales Reason.
 
-11. En el menú **Archivo** , haga clic en **Guardar todo**.
+11. En el menú **Archivo**, haga clic en **Guardar todo**.
 
 12. En el panel **atributos** del diseñador de dimensiones para la dimensión **sales Reason** , seleccione **sales Reason Key**y, a continuación, cambie la propiedad **Name** en el ventana Propiedades a`Sales Reason.`
 
-13. En el panel **jerarquías** del diseñador de dimensiones, cree una jerarquía de usuario **sales reasons** que `Sales Reason Type` contenga el nivel y el nivel **sales Reason** , en ese orden.
+13. En el panel **jerarquías** del diseñador de dimensiones, cree una jerarquía de usuario **sales reasons** que contenga el nivel `Sales Reason Type` y el nivel **sales Reason** , en ese orden.
 
 14. En el ventana Propiedades, defina `All Sales Reasons` como el valor de la propiedad **AllMemberName** de la jerarquía sales reasons.
 
@@ -125,7 +124,7 @@ ms.locfileid: "78175294"
 
 17. En el cuadro de diálogo **Agregar dimensión de cubo** , seleccione **Sales Reason** y, a continuación, haga clic en **Aceptar**.
 
-18. En el menú **Archivo** , haga clic en **Guardar todo**.
+18. En el menú **Archivo**, haga clic en **Guardar todo**.
 
 ## <a name="defining-the-many-to-many-relationship"></a>Definir la relación de varios a varios
 
@@ -161,7 +160,7 @@ ms.locfileid: "78175294"
 
 5.  En el panel de metadatos, expanda sucesivamente **Customer**, **Location**, **Customer Geography**, **Members**, **All Customers**y **Australia**, haga clic con el botón derecho en **Queensland**y, después, haga clic en **Agregar a filtro**.
 
-6.  Expanda cada miembro del `Sales Reason Type` nivel para revisar los valores en dólares que están asociados a cada razón que un cliente de Queensland dio por su compra [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] de un producto a través de Internet.
+6.  Expanda cada miembro del `Sales Reason Type` nivel para revisar los valores en dólares que están asociados a cada razón que un cliente de Queensland dio por su compra de un [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] producto a través de Internet.
 
      Observe que los totales que están asociados con cada motivo de ventas se suman y dan lugar a un valor superior a las ventas totales. Esto es así porque algunos clientes citaron varios motivos para su compra.
 

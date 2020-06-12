@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: debf1257667ea3aa3380117bbbc4c31399283252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28db322a38ae90206ae0c43db1c8c039e6395b8b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075131"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546747"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorar datos en una vista del origen de datos (Analysis Services)
   Puede usar el cuadro de diálogo **Explorar datos** del Diseñador de vistas del origen de datos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para explorar los datos de una tabla, vista o consulta con nombre en una vista del origen de datos (DSV). Al explorar los datos en el Diseñador de vistas del origen de datos, puede ver el contenido de cada columna de datos de una tabla, vista o consulta con nombre seleccionada. Observar el contenido real le puede ayudar a determinar si todas las columnas son necesarias, si se necesitan cálculos con nombre para mejorar la facilidad de uso, y si los cálculos o consultas con nombre devuelven los valores previstos.  
@@ -38,15 +37,15 @@ ms.locfileid: "66075131"
   
 3.  Haga clic con el botón derecho en la tabla, vista o consulta con nombre que contiene los datos que quiere ver y, después, haga clic en **Explorar datos**.  
   
-     El origen de datos subyacente de la tabla, vista o consulta con nombre de la vista del origen de datos es consultas y los resultados aparecen en la pestaña **explorar \<nombre del objeto> tabla** .  
+     El origen de datos subyacente de la tabla, vista o consulta con nombre de la vista del origen de datos es consultas y los resultados aparecen en la pestaña **explorar \<object name> tabla** .  
   
-4.  En la barra de herramientas **explorar \<nombre de objeto> tabla** , haga clic en el icono **Opciones de muestreo** .  
+4.  En la barra de herramientas **explorar \<object name> tabla** , haga clic en el icono **Opciones de muestreo** .  
   
      Se abrirá el cuadro de diálogo **Opciones de exploración de datos** . En este cuadro de diálogo puede especificar el método de muestreo (más o menos registros que el tamaño de muestreo predeterminado de 5000 filas) o el número de muestras.  
   
 5.  Haga clic en **Aceptar** o en **Cancelar** , según corresponda.  
   
-6.  Para volver a muestrear los datos, haga clic en volver a **muestrear datos** en la barra de herramientas ** \<explorar nombre de objeto> tabla** .  
+6.  Para volver a muestrear los datos, haga clic en volver a **muestrear datos** en la barra de herramientas **explorar \<object name> tabla** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Vistas del origen de datos en modelos multidimensionales](data-source-views-in-multidimensional-models.md)  

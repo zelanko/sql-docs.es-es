@@ -12,26 +12,26 @@ ms.assetid: e4128221-3b46-48be-b0f1-d82477ce6782
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: baf3349bc72a6d6baff4defd9a9cd4799397b716
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682fbbbeba570ad067a3f702edf66959eabfd5ee
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068510"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857807"
 ---
 # <a name="specify-a-sql-or-mdx-query-ssas"></a>Especificar una consulta SQL o MDX (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite importar datos usando una consulta SQL o MDX. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
  La consulta puede tratar los datos que se importan. Por ejemplo, podría combinar los datos de tablas diferentes o seleccionar únicamente las filas que cumplan ciertos criterios.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
   
 |||  
 |-|-|  
 |Término|Definición|  
 |**Nombre descriptivo de la consulta**|Escriba un nombre único para la consulta. Este campo es obligatorio.|  
 |**Instrucción SQL**|Escriba o pegue una instrucción SQL.|  
-|**Vali**|Determine si la instrucción SQL es válida.|  
+|**Validación**|Determine si la instrucción SQL es válida.|  
 |**Diseño**|Diseñe una instrucción SQL utilizando el cuadro de diálogo de diseñador de consultas. Para más información, vea [Diseñador de consultas relacionales &#40;SSAS&#41;](relational-query-designer-ssas.md).|  
   
   

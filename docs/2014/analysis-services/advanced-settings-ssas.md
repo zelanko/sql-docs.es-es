@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f6ccea00-3419-489c-affc-ed8b002cffc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0ac2ff0a1617e2228d6b7b5f2651380b3a08ea17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69839dc912784380d51160aa08f62b42df2cb899
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062731"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528181"
 ---
 # <a name="advanced-settings-ssas"></a>Configuración avanzada (SSAS)
   Este cuadro de diálogo del **Asistente para la importación de tablas** le permite especificar la codificación y la configuración regional del archivo plano con el que se está conectando. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
   
 |||  
 |-|-|  

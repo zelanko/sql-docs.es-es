@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a646d152abaa3c352bf5ca1c576760e1715c3578
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09cf6ff2e755dd8493b4d923f8bd328d7b07c351
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544037"
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Conectarse desde aplicaciones cliente (Analysis Services)
   Si no está familiarizado con Analysis Services, use la información de este tema para conectarse a una instancia existente de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] mediante herramientas y aplicaciones comunes. En este tema también explica cómo conectarse bajo distintas identidades de usuario para realizar pruebas.  
@@ -95,7 +94,7 @@ ms.locfileid: "66080212"
   
 -   [Tipo de conexión de Analysis Services para MDX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
--   [administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+-   [Administrador de conexiones de Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
 > [!NOTE]  
 >  Cuando use SQL Server Data Tools para trabajar en un proyecto de Analysis Services existente, recuerde que puede conectarse sin conexión mediante un proyecto local o un proyecto con control de versiones, o puede conectarse en modo en línea para actualizar objetos de Analysis Services mientras la base de datos está en ejecución. Para obtener más información, vea [Connect in Online Mode to an Analysis Services Database](../multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md). Normalmente, las conexiones desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] están en modo de proyecto, en el que los cambios se implementan en la base de datos solo cuando el proyecto se implementa de modo explícito.  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: afad5c39-d4c3-4307-b3b9-a06617da0028
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 72e36e7d8f0efc9880d0dd164a253030712ee120
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdc5bcd2e0500749edfa298a871b6fec7243ddfb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544989"
 ---
 # <a name="managing-caches-xmla"></a>Administrar cachés (XMLA)
-  Puede usar el comando [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) en XML for Analysis (XMLA) para borrar la memoria caché de una dimensión o partición especificada. Al borrar las fuerzas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de caché, se vuelve a generar la memoria caché para ese objeto.  
+  Puede usar el comando [ClearCache](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/clearcache-element-xmla) en XML for Analysis (XMLA) para borrar la memoria caché de una dimensión o partición especificada. Al borrar las fuerzas de caché, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se vuelve a generar la memoria caché para ese objeto.  
   
 ## <a name="specifying-objects"></a>Especificar objetos  
  La propiedad [Object](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/object-element-xmla) del `ClearCache` comando solo puede contener una referencia de objeto para uno de los siguientes objetos. Si se utiliza una referencia de objeto para un objeto distinto de los siguientes, se produce un error:  
@@ -40,7 +39,7 @@ ms.locfileid: "62727591"
  Grupo de medida  
  Borra la memoria caché para todas las particiones contenidas en el grupo de medida.  
   
- Partition  
+ Partición  
  Borra la memoria caché para la partición especificada.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: cdeecd50-1d91-4162-a4a2-01c7799b02a8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0af68d7aa25d00f257399ade415e0287dd275fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0348a23a6def4c3cdbd083354083947ce1390b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62732191"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528669"
 ---
 # <a name="analysis-services-ole-db-provider-analysis-services---multidimensional-data"></a>Proveedor OLE DB de Analysis Services (Analysis Services - Datos multidimensionales)
-  El Proveedor OLE DB de Analysis Services es una interfaz para las aplicaciones que interactúan con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se utiliza para generar aplicaciones cliente que interactúan con datos multidimensionales. Este proveedor también proporciona los métodos para el análisis en línea y sin conexión de la minería de datos multidimensionales y relacionales y está incluido como parte de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se puede redistribuir a aplicaciones cliente de otro fabricante.  
+  El Proveedor OLE DB de Analysis Services es una interfaz para las aplicaciones que interactúan con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Se utiliza para generar aplicaciones cliente que interactúan con datos multidimensionales. Este proveedor también proporciona los métodos para el análisis en línea y sin conexión de la minería de datos multidimensionales y relacionales y está incluido como parte de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Se puede redistribuir a aplicaciones cliente de otro fabricante.  
   
  El proveedor OLE DB de Analysis Services es el método principal para interactuar con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para lograr tareas como conectarse a un cubo o modelo de minería de datos, consultar un cubo o modelo de minería de datos y recuperar información del esquema.  
   

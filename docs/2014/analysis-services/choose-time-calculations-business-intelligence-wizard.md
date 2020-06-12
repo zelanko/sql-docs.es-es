@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f363fbf5-c51f-42ee-8ab4-86ab35cab597
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 829a4092e8a55e3b2581a09e4afcc8c826152179
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088076"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527531"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Elegir cálculos y jerarquía de destino (Asistente de Business Intelligence)
   Utilice la página **Elegir cálculos y jerarquía de destino** para definir la resolución de los cálculos de tiempo nuevos que deben crearse para una jerarquía de tiempo existente.  

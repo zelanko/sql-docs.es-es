@@ -1,5 +1,6 @@
 ---
 title: Función string-length (XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar la longitud de cadena de la función XQuery ().
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004653"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689247"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funciones usadas en valores de cadena: string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ fn:string-length($arg as xs:string?) as xs:integer
   
  Si el valor contiene un carácter Unicode de 4 bytes representado por dos caracteres suplentes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contará los caracteres suplentes individualmente.  
   
- La **longitud de cadena ()** sin un parámetro solo se puede usar dentro de un predicado. Por ejemplo, la consulta siguiente devuelve el elemento `ROOT` <>:  
+ La **longitud de cadena ()** sin un parámetro solo se puede usar dentro de un predicado. Por ejemplo, la consulta siguiente devuelve el `ROOT` elemento <>:  
   
 ```  
 DECLARE @x xml;  
@@ -61,7 +62,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Usar la función string-length() de XQuery para recuperar productos con descripciones resumidas largas  
- En el caso de los productos cuya descripción de Resumen sea superior a 50 caracteres, la consulta siguiente recupera el identificador del producto, la longitud de la descripción del Resumen y el `Summary` propio resumen, el elemento de> de <.  
+ En el caso de los productos cuya descripción de Resumen sea superior a 50 caracteres, la consulta siguiente recupera el identificador del producto, la longitud de la descripción del Resumen y el propio resumen, el elemento de> de <`Summary` .  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,9 +100,9 @@ Result
 ```  
   
 ### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Usar la función de XQuery string-length() para recuperar productos cuya descripción de garantía es corta  
- En el caso de los productos cuyas descripciones de garantía tengan menos de 20 caracteres, la consulta siguiente recupera XML que incluye el identificador del producto, la longitud `Warranty` , la descripción de la garantía y el <> propio elemento.  
+ En el caso de los productos cuyas descripciones de garantía tengan menos de 20 caracteres, la consulta siguiente recupera XML que incluye el identificador del producto, la longitud, la descripción de la garantía y el <`Warranty`> propio elemento.  
   
- Warranty es una de las características del producto. Después del elemento `Warranty` de> <`Features` se muestra un elemento secundario de> <opcional.  
+ Warranty es una de las características del producto. `Warranty`Después del elemento de> <se muestra un elemento secundario de> <opcional `Features` .  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -129,7 +130,7 @@ WHERE CatalogDescription.exist('/pd:ProductDescription')=1;
   
 -   **PD** y **WM** son los prefijos de espacio de nombres utilizados en esta consulta. Identifican los mismos espacios de nombres utilizados en el documento que se va a consultar.  
   
--   La consulta XQuery especifica un bucle FOR anidado. El bucle FOR externo es necesario porque se desean recuperar los atributos **ProductModelID** del elemento <`ProductDescription`>. El bucle FOR interno es necesario, porque solo desea obtener aquellos productos que tengan descripciones de garantía con menos de 20 caracteres.  
+-   La consulta XQuery especifica un bucle FOR anidado. El bucle FOR externo es necesario porque se desean recuperar los atributos **ProductModelID** del `ProductDescription` elemento <>. El bucle FOR interno es necesario, porque solo desea obtener aquellos productos que tengan descripciones de garantía con menos de 20 caracteres.  
   
  Éste es el resultado parcial:  
   

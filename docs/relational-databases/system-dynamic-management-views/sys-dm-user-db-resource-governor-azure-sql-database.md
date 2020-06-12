@@ -3,9 +3,9 @@ title: Sys. dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/17/2019
 ms.prod: sql
-ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
+ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -20,12 +20,12 @@ ms.assetid: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: aa7c7e7a7c510f797377c3cbbceb7c2751418da3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f853f1778a62b345accff745aade5fb5608322fd
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74165919"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627398"
 ---
 # <a name="sysdm_user_db_resource_governance-transact-sql"></a>Sys. dm_user_db_resource_governance (Transact-SQL)
 
@@ -61,7 +61,7 @@ Devuelve la configuración y los valores de capacidad reales que usan los mecani
 |**initial_db_file_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de datos, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**log_size_in_mb**|bigint|Tamaño predeterminado del nuevo archivo de registro, en MB. Vea [Sys. database_files](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).|
 |**instance_cap_cpu**|int|Exclusivamente para uso interno.|
-|**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la `tempdb` instancia de, incluidas y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
+|**instance_max_log_rate**|bigint|Límite de velocidad de generación de registros para la instancia de SQL Server, en bytes por segundo. Se aplica a todos los registros generados por la instancia de, incluidas `tempdb` y otras bases de datos del sistema. En un grupo elástico, se aplica al registro generado por todas las bases de datos del grupo.|
 |**instance_max_worker_threads**|int|Límite de subprocesos de trabajo para la instancia de SQL Server.|
 |**replica_type**|int|Tipo de réplica, donde 0 es principal y 1 es secundario.|
 |**max_transaction_size**|bigint|Espacio de registro máximo usado por cualquier transacción, en KB.|

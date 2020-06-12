@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a912bab0c43764c0c09844fd26ca66a708b3c495
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d75636280033ff0dcedfc3c281939a2484a4cac0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175674"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540617"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Crear y personalizar la Galería de PowerPivot
   La Galería de PowerPivot es un tipo especial de biblioteca de documentos de SharePoint que permite obtener una vista previa y administrar los documentos de los libros de Excel publicados y los informes de Reporting Services que contienen datos PowerPivot.
 
-##  <a name="in-this-topic"></a><a name="bkmk_top"></a>En este tema
+##  <a name="in-this-topic"></a><a name="bkmk_top"></a> En este tema
 
 -   [Requisitos previos](#prereq)
 
@@ -53,7 +52,7 @@ ms.locfileid: "78175674"
 
 -   Para crear o ver un informe de Reporting Services que se base en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , el libro y el informe deben estar en la misma Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . El informe debe usar un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con datos incrustados o el libro debe contener como máximo un origen de datos externo que sea un libro [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .
 
-##  <a name="overview"></a>Información general del <a name="overview"></a>
+##  <a name="overview"></a><a name="overview"></a> Información general
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es una plantilla de biblioteca que está disponible al instalar [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] en un servidor de SharePoint. La Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] combina una vista previa precisa del contenido del archivo con información sobre el origen del documento. Puede ver inmediatamente quién creó el documento y cuándo se modificó por última vez. Para crear las imágenes de la vista previa, la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] utiliza un servicio de instantánea que puede leer los libros de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] e informes de Reporting Services que contienen los datos PowerPivot. Si publica un archivo que el servicio de instantánea no puede leer, no habrá ninguna imagen de vista previa disponible para el mismo.
 
  Las imágenes de vista previa se basan en el modo en que el libro se representa en Excel Services. La representación de la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] debería ser idéntica a lo que se ve en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] con un explorador. Sin embargo, la vista previa tiene un área expuesta limitada. Las partes de un libro o un informe podrían reducirse para ajustarse al espacio disponible. Es posible que tenga que abrir un libro o informe para ver todo el documento.

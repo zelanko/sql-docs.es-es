@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 0bae4ee4-1742-40e9-bebe-17c788854484
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21c7dd1e5ebe5e7b860a3b1f6a375772f236839c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075400"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546947"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definir una vista del origen de datos (Analysis Services)
-  Una vista del origen de datos contiene el modelo lógico del esquema utilizado [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] por los objetos de base de datos multidimensionales, es decir, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
+  Una vista del origen de datos contiene el modelo lógico del esquema utilizado por los [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos de base de datos multidimensionales, es decir, cubos, dimensiones y estructuras de minería de datos. Una vista del origen de datos es la definición de metadatos, almacenada en formato XML, de estos elementos de esquema que utilizan el modelo UDM (Unified Dimensional Model) y las estructuras de minería de datos. Una vista del origen de datos:  
   
 -   Contiene los metadatos que representan objetos seleccionados de uno o varios orígenes de datos subyacentes, o los metadatos que se usarán para generar un almacén de datos relacional subyacente si emplea el enfoque de arriba abajo para la generación de esquemas.  
   

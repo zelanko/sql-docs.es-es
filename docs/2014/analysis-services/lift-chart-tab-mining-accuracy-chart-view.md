@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d083611d7a72164cf2ad7cf63663cfadb0d77a51
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078100"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541897"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Pestaña Gráfico de elevación (vista Gráfico de precisión de minería de datos)
   Utilice el panel **Gráfico de elevación** para ver un gráfico que compara todos los modelos de minería seleccionados en la estructura de minería de datos seleccionada.  

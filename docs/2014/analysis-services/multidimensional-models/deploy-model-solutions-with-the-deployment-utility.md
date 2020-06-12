@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 950a498e10205050fb610b7afb369e61ea3fb799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075345"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546891"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
   La utilidad **Microsoft.AnalysisServices.Deployment** permite iniciar el motor de implementación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] desde el símbolo del sistema. Como archivo de entrada, la utilidad utiliza archivos de salida XML creados al construir un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Los archivos de entrada se pueden modificar fácilmente para personalizar la implementación de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El script de implementación generado puede ejecutarse inmediatamente o guardarse para su implementación posterior.  
@@ -40,7 +39,7 @@ ms.locfileid: "66075345"
  **modificado**  
  Ejecuta la utilidad en modo silencioso y no muestra cuadros de diálogo. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
- *archivoDeRegistro*  
+ *MSDTC*  
  Ruta completa y nombre del archivo de registro. Los eventos de seguimiento se registrarán en el archivo de registro especificado. Si el archivo de registro ya existe, se reemplazará el contenido del archivo.  
   
  **/a**  

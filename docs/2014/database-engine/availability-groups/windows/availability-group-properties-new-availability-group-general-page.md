@@ -12,12 +12,12 @@ ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815658"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858929"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General)
    Este tema se aplica a la pestaña **General** del cuadro de diálogo **Nuevo grupo de disponibilidad** y el cuadro de diálogo **Propiedades de grupo de disponibilidad**.  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
@@ -28,7 +28,7 @@ ms.locfileid: "62815658"
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
@@ -36,17 +36,17 @@ ms.locfileid: "62815658"
  **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
- **Add (Agregar)**  
+ **Add**  
  Haga clic para agregar una base de datos al grupo de disponibilidad.  
   
- **Remove**  
+ **Quitar**  
  Haga clic para quitar una base de datos seleccionada del grupo de disponibilidad.  
   
 ## <a name="availability-replicas"></a>Réplicas de disponibilidad  
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
- **Rol**  
+ **Role**  
  **Principal**  
  Actualmente la réplica principal.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62815658"
  **Modo de conmutación por error**  
  Modo de conmutación por error de la réplica, que puede ser uno de los siguientes:  
   
- **Automático**  
+ **Automática**  
  Conmutación por error automática. La réplica es un destino de las conmutaciones por error automáticas. Esto solo se admite si el modo de disponibilidad se establece en confirmación sincrónica.  
   
  **Manual**  
@@ -83,7 +83,7 @@ ms.locfileid: "62815658"
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
   
  **Permitir conexiones de lectura o escritura**  
- No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Cuando la propiedad Application Intent se establece en **ReadWrite** o no se establece la propiedad de conexión Application Intent, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Secundario legible**  
  Si una réplica de disponibilidad que está realizando el rol secundario (es decir, una réplica secundaria) puede aceptar conexiones de clientes; puede tener uno de los valores siguientes:  
@@ -103,10 +103,10 @@ ms.locfileid: "62815658"
  **Dirección URL del extremo**  
  La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Add (Agregar)**  
+ **Add**  
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
- **Remove**  
+ **Quitar**  
  Haga clic para quitar una réplica secundaria del grupo de disponibilidad.  
   
 ## <a name="see-also"></a>Consulte también  

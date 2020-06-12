@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c065248c-9001-4f0c-928f-9c59eccb618b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 32411ff5b715e15fd52b832d8047d8382a603924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6b9ab6db9fc50b09b752b5deaa59d42c4664bd5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070744"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539997"
 ---
 # <a name="process-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Procesar (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Proceso** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para procesar objetos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Procesar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] :  
@@ -39,7 +38,7 @@ ms.locfileid: "66070744"
  **Nombre de objeto**  
  Muestra el nombre del objeto que se va a procesar. El icono que se muestra a la izquierda del nombre indica el tipo de objeto.  
   
- **Type**  
+ **Tipo**  
  Muestra el tipo de objeto que se va a procesar.  
   
  **Opciones de proceso**  
@@ -48,7 +47,7 @@ ms.locfileid: "66070744"
  **Configuración**  
  Muestra el hipervínculo **Configurar** si elige **Procesar incremental** en **Opciones de proceso** para cubos, grupos de medida o particiones. Haga clic en **Configurar** para abrir el cuadro de diálogo **Actualización incremental** . Para obtener más información sobre el cuadro de diálogo **Actualización incremental**, vea [Cuadro de diálogo Actualización incremental &#40;Analysis Services - Datos multidimensionales&#41;](incremental-update-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Remove**  
+ **Quitar**  
  Haga clic para quitar los elementos seleccionados de la **Lista de objetos**.  
   
  **Análisis de impacto**  

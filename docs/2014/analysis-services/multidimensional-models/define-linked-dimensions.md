@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c120afe4f4cd873c91ae67bad73b2baab2d18fa
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075576"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547019"
 ---
 # <a name="define-linked-dimensions"></a>Definir dimensiones vinculadas
   Una dimensión vinculada se basa en una dimensión creada y almacenada en otra base de datos de Analysis Services de la misma versión y con el mismo nivel de compatibilidad. Con una dimensión vinculada, puede crear, almacenar y mantener una dimensión en una base de datos y permitir que esa dimensión esté disponible para los usuarios de varias bases de datos. Para los usuarios, una dimensión vinculada es como cualquier otra dimensión.  
@@ -62,7 +61,7 @@ ms.locfileid: "66075576"
   
 2.  En el Administrador de conexiones, compruebe que el proveedor está establecido en **Proveedor OLE DB de Microsoft\OLE DB nativo para Analysis Services 11.0**.  
   
-3.  Escriba el nombre del servidor (use *ServerName*\\*nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o escriba **localhost** para conectarse a un servidor de Analysis Services que se esté ejecutando en el mismo equipo.  
+3.  Escriba el nombre del servidor (use *ServerName* \\ *nombreDeInstancia* para una instancia con nombre)<sup>1</sup> o escriba **localhost** para conectarse a un servidor de Analysis Services que se esté ejecutando en el mismo equipo.  
   
 4.  Use la autenticación de Windows para la conexión.  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66075576"
   
 7.  En la página Información de suplantación, haga clic en **Utilizar la cuenta de servicio**. Haga clic en **Siguiente**y, a continuación, finalice el Asistente. La conexión que acaba de definir se seleccionará en el Asistente para objetos vinculados.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  No puede cambiar la estructura de una dimensión vinculada, de manera que no se la puede ver en la pestaña **Estructura de dimensión** del Diseñador de dimensiones. Después de procesar la dimensión vinculada, puede verla en la pestaña **Explorador** . También puede cambiar su nombre y crear una traducción para el nombre.  
   
 ## <a name="see-also"></a>Consulte también  

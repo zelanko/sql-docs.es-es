@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d154477d-3e4b-4e9b-a306-8166a0d83d21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ec2b1ec7c4f9a3dc0053ad323fcc54cf36522da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070176"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547427"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Panel de resultados (Vista Predicción de modelo de minería de datos)
   En el panel de **resultados** se muestran los resultados de la consulta de predicciones de minería de datos diseñada en la vista **Diseño** del Generador de consultas de predicción. Puede copiar una selección de la cuadrícula o la cuadrícula completa de resultados en el Portapapeles.  

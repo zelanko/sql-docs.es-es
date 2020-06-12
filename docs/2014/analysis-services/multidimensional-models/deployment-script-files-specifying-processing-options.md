@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: e9e50817-908e-4210-bc3d-8e2957568241
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da6b52d4b1d6b4179a88860b5fe1dc79b92657cf
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075227"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546837"
 ---
 # <a name="specifying-processing-options"></a>Especificar opciones de procesamiento
-  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para la implementación de Lee las opciones \<de procesamiento del *nombre del proyecto*> archivo. archivo deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea este archivo al compilar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el proyecto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa las opciones de procesamiento especificadas en la página **implementación** del * \<nombre del proyecto>* cuadro de diálogo **páginas de propiedades** para crear el nombre del \< *proyecto*> archivo. archivo deploymentoptions.  
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para la implementación de Lee las opciones de procesamiento del \<*project name*> archivo. archivo deploymentoptions. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea este archivo al compilar el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa las opciones de procesamiento especificadas en la página **implementación** del *\<project name>* cuadro de diálogo páginas de **propiedades** para crear el \<*project name*> archivo. archivo deploymentoptions.  
   
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Revisar las opciones de procesamiento para implementación  
- Los valores de configuración almacenados en \<el *nombre del proyecto*> archivo. archivo deploymentoptions son los siguientes:  
+ Los valores de configuración almacenados en el \<*project name*> archivo. archivo deploymentoptions son los siguientes:  
   
 -   **Método de procesamiento** Este valor controla si los objetos implementados se procesan después de la implementación y el tipo de procesamiento que se realizará. Existen tres opciones de procesamiento:  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075227"
     -   Si esta opción es `False`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] implementa los cambios de metadatos en una sola transacción e implementa cada comando de procesamiento en su propia transacción.  
   
 ## <a name="modifying-the-processing-options-for-deployment"></a>Modificar las opciones de procesamiento para implementación  
- Sin embargo, puede que tenga que implementar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el proyecto con distintas opciones de procesamiento que las almacenadas en el \< *nombre del proyecto*> archivo. archivo deploymentoptions. Por ejemplo, puede que desee tener todos los objetos totalmente procesados, o procesados con la opción de procesamiento predeterminada, o que no se produzca ningún procesamiento. Si los cubos o las dimensiones están habilitadas para escritura, puede especificar si se utilizará una tabla de reescritura nueva o ya existente.  
+ Sin embargo, puede que tenga que implementar el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto con distintas opciones de procesamiento que las almacenadas en el \<*project name*> archivo. archivo deploymentoptions. Por ejemplo, puede que desee tener todos los objetos totalmente procesados, o procesados con la opción de procesamiento predeterminada, o que no se produzca ningún procesamiento. Si los cubos o las dimensiones están habilitadas para escritura, puede especificar si se utilizará una tabla de reescritura nueva o ya existente.  
   
  Para modificar las opciones de procesamiento utilizadas durante la implementación, puede editar y volver a generar el proyecto, o cambiar las opciones de procesamiento del archivo de entrada mediante uno de los métodos descritos en el siguiente procedimiento.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66075227"
   
      o bien  
   
--   Modifique el \< *nombre del proyecto*> archivo. archivo deploymentoptions con cualquier editor de texto.  
+-   Modifique el \<*project name*> archivo. archivo deploymentoptions con cualquier editor de texto.  
   
 ## <a name="see-also"></a>Consulte también  
  [Especificar el destino de instalación](deployment-script-files-specifying-the-installation-target.md)   

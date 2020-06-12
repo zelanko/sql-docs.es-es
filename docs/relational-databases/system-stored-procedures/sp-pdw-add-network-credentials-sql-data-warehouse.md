@@ -1,7 +1,6 @@
 ---
 title: sp_pdw_add_network_credentials
 titleSuffix: Azure SQL Data Warehouse
-ms.custom: seo-dt-2019
 ms.date: 03/14/2017
 ms.service: sql-data-warehouse
 ms.reviewer: ''
@@ -12,17 +11,18 @@ ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 88ddae78b3c866556edbd9e3026e3cb86c747f51
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.custom: seo-dt-2019
+ms.openlocfilehash: a4f4fac6f7b7dc1f7809042bd9b784b754bec1a2
+ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73844410"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84627488"
 ---
 # <a name="sp_pdw_add_network_credentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Esto almacena las credenciales [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] de red en y las asocia a un servidor. Por ejemplo, utilice este procedimiento almacenado para proporcionar [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los permisos de lectura y escritura adecuados para realizar operaciones de copia de seguridad y restauración de bases de datos en un servidor de destino, o para crear una copia de seguridad de un certificado usado para TDE.  
+  Esto almacena las credenciales de red en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y las asocia a un servidor. Por ejemplo, utilice este procedimiento almacenado para proporcionar [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] los permisos de lectura y escritura adecuados para realizar operaciones de copia de seguridad y restauración de bases de datos en un servidor de destino, o para crear una copia de seguridad de un certificado usado para TDE.  
   
  ![Icono de vínculo a temas](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
  Se produce un error si la adición de credenciales no se realiza correctamente en el nodo de control y en todos los nodos de proceso.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Este procedimiento almacenado agrega credenciales de red a la cuenta [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]NetworkService para. La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para obtener permiso de lectura y escritura en el servidor de destino.  
+ Este procedimiento almacenado agrega credenciales de red a la cuenta NetworkService para [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] . La cuenta NetworkService ejecuta cada instancia de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo de control y los nodos de proceso. Por ejemplo, cuando se ejecuta una operación de copia de seguridad, el nodo de control y cada nodo de proceso utilizarán las credenciales de la cuenta NetworkService para obtener permiso de lectura y escritura en el servidor de destino.  
   
 ## <a name="examples-sssdwfull-and-sspdw"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

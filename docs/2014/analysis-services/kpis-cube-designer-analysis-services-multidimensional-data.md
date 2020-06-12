@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3cd99acc-368d-4e21-ad18-298fff056acd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aad6b1f02ad5fc10eb254a50eefe67166ddb563d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079424"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543639"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPI (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **KPI** del Diseñador de cubos para ver y editar indicadores clave de rendimiento (KPI) en el cubo seleccionado.  

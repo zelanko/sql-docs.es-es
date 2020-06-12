@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a365991e-eded-4cd8-89c0-0daf6d658d15
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 970a55b709e164da573fbd224c13cc641a3ba06a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087360"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527201"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Conectarse a un archivo plano (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite conectar con un archivo plano (.txt), un archivo separado por caracteres de tabulación (.tab) o un archivo delimitado por comas (.csv). Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087360"
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar un archivo en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer el archivo seleccionado.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   

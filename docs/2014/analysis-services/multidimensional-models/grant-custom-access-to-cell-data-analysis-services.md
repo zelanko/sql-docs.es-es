@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3b13a4ae-f3df-4523-bd30-b3fdf71e95cf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ac8113348a749837867a6dacba7fa23fb5e85f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546707"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Otorgar acceso personalizado a los datos de las celdas (Analysis Services)
   La seguridad de celdas se usa para permitir o denegar el acceso para medir los datos de un cubo. En la siguiente ilustración presentamos una combinación de medidas permitidas y denegadas en una tabla dinámica, cuando se está conectado como usuario con un rol que solamente permite el acceso a ciertas medidas. En este ejemplo, **Importe de venta del distribuidor** y **Coste total del producto del distribuidor** son las únicas medidas disponibles mediante este rol. El resto de medidas se deniegan de forma implícita (los pasos que se siguen para obtener este resultado se describen a continuación, en la sección siguiente: Permitir el acceso a medidas específicas).  
@@ -37,7 +36,7 @@ ms.locfileid: "66074978"
   
  Como administrador, puede especificar si los miembros del rol van a tener permisos de Lectura, Contingente de lectura o Lectura y escritura. Conferir permisos a una celda es tan solo el nivel inferior de seguridad permitido, por tanto, antes de comenzar a aplicar permisos en este nivel, es importante que tenga en cuenta diversos aspectos:  
   
--   La seguridad de nivel de celda no puede expandir los derechos que se hayan restringido a un nivel superior. Un jemplo: si un rol deniega el acceso a los datos de dimensiones, la seguridad a nivel de celda no puede invalidar el conjunto que se ha denegado. Otro ejemplo: considerar un rol con `Read` permiso en un cubo y permiso de **lectura y escritura** en una celda) también el permiso de datos de celda no será de **lectura/escritura**; será `Read`.  
+-   La seguridad de nivel de celda no puede expandir los derechos que se hayan restringido a un nivel superior. Un jemplo: si un rol deniega el acceso a los datos de dimensiones, la seguridad a nivel de celda no puede invalidar el conjunto que se ha denegado. Otro ejemplo: considerar un rol con `Read` permiso en un cubo y permiso de **lectura y escritura** en una celda) también el permiso de datos de celda no será de **lectura/escritura**; será `Read` .  
   
 -   Los permisos personalizados, por lo general, se deben coordinar entre miembros de dimensión y celdas en el mismo rol. Por ejemplo, si quiere denegar el acceso a diversas medidas relacionadas con descuentos correspondientes a diferentes combinaciones de distribuidores. Con los **Distribuidores** como datos de dimensión y el **Importe de descuento** como medida, debería combinar, dentro del mismo rol, permisos en la medida (con la ayuda de las instrucciones de este tema) y en los miembros de dimensión. Vea [Conceder acceso personalizado a datos de dimensión &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) para obtener más información sobre cómo establecer permisos de dimensión.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66074978"
      La expresión identifica explícitamente las medidas que verán los usuarios. No estarán disponibles otras medidas para los usuarios que se conecten mediante este rol. Tenga en cuenta que [CurrentMember &#40;MDX&#41;](/sql/mdx/current-mdx) establece el contexto y está seguido de la medida permitida. El efecto de esta expresión es mostrar el valor, en caso de que el miembro actual incluya el **Importe de venta del distribuidor** o el **Coste total del producto del distribuidor**. De lo contrario, denegará el acceso. La expresión consta de varias partes, cada una de ellas entre paréntesis. El operador `OR` se usa para especificar varias medidas.  
   
 ## <a name="deny-access-to-specific-measures"></a>Denegar el acceso a medidas específicas  
- La siguiente expresión MDX, también especificada en **crear rol** | **datos** | **de celda permitir la lectura del contenido del cubo**, tiene el efecto contrario, lo que permite que determinadas medidas no estén disponibles. En este ejemplo, **importe de descuento** y **porcentaje de descuento** no están disponibles `NOT` mediante `AND` los operadores y. El resto de medidas estará visible para los usuarios que se conecten mediante este rol.  
+ La siguiente expresión MDX, también especificada en **crear rol**  |  **datos**  |  **de celda permitir la lectura del contenido del cubo**, tiene el efecto contrario, lo que permite que determinadas medidas no estén disponibles. En este ejemplo, **importe de descuento** y **porcentaje de descuento** no están disponibles mediante los `NOT` `AND` operadores y. El resto de medidas estará visible para los usuarios que se conecten mediante este rol.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Discount Amount]) AND (NOT Measures.CurrentMember IS [Measures].[Discount Percentage])  
@@ -74,7 +73,7 @@ ms.locfileid: "66074978"
 ## <a name="set-read-permissions-on-calculated-measures"></a>Establecer permisos de Lectura en medidas calculadas  
  Los permisos en medidas calculadas se pueden establecer independientemente de sus partes constituyentes. Si quiere coordinar los permisos entre una medida calculada y sus medidas dependientes, pase a la siguiente sección sobre Contingente de lectura.  
   
- Para saber como actúan los permisos de Lectura en una medida calculada, remítase a **Reseller Gross Profit** de AdventureWorks. Se deriva de las medidas **Reseller Sales Amount** y **Reseller Total Product Cost** . Siempre que un rol tenga permiso de Lectura en celdas **Reseller Gross Profit** , se podrá ver esta medida incluso si los permisos se han denegado expresamente en otras medidas. Como demostración, copie la siguiente expresión MDX en **crear** | **datos** | **de celda de rol permitir la lectura del contenido del cubo**.  
+ Para saber como actúan los permisos de Lectura en una medida calculada, remítase a **Reseller Gross Profit** de AdventureWorks. Se deriva de las medidas **Reseller Sales Amount** y **Reseller Total Product Cost** . Siempre que un rol tenga permiso de Lectura en celdas **Reseller Gross Profit** , se podrá ver esta medida incluso si los permisos se han denegado expresamente en otras medidas. Como demostración, copie la siguiente expresión MDX en **crear**  |  **datos**  |  **de celda de rol permitir la lectura del contenido del cubo**.  
   
 ```  
 (NOT Measures.CurrentMember IS [Measures].[Reseller Sales Amount])  
@@ -86,7 +85,7 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  ![Tabla de Excel con celdas disponibles y no disponibles](../media/ssas-permscalculatedcells.png "Tabla de Excel con celdas disponibles y no disponibles")  
   
 ## <a name="set-read-contingent-permissions-on-calculated-measures"></a>Establecer permisos de Contingente de lectura en medidas calculadas  
- La seguridad de celda ofrece una alternativa, Contingente de lectura, para establecer permisos en las celdas asociadas que participan en un cálculo. Remítase de nuevo al ejemplo de **Reseller Gross Profit** . Cuando escriba la misma expresión MDX que se proporcionó en la sección anterior, coloque esta vez en la segunda área de texto del cuadro de diálogo **crear** | **datos de celda** de rol (en el área de texto que aparece debajo de **permitir la lectura del contingente de contenido de celda en la seguridad de celda**), el resultado es aparente cuando se ve en Excel. Dado que **Reseller Gross Profit** depende de **Reseller Sales Amount** y **Reseller Total Product Cost**, ahora no se puede tener acceso al beneficio bruto porque no se tiene acceso a sus partes constituyentes.  
+ La seguridad de celda ofrece una alternativa, Contingente de lectura, para establecer permisos en las celdas asociadas que participan en un cálculo. Remítase de nuevo al ejemplo de **Reseller Gross Profit** . Cuando escriba la misma expresión MDX que se proporcionó en la sección anterior, coloque esta vez en la segunda área de texto del cuadro de diálogo **crear**  |  **datos de celda** de rol (en el área de texto que aparece debajo de **permitir la lectura del contingente de contenido de celda en la seguridad de celda**), el resultado es aparente cuando se ve en Excel. Dado que **Reseller Gross Profit** depende de **Reseller Sales Amount** y **Reseller Total Product Cost**, ahora no se puede tener acceso al beneficio bruto porque no se tiene acceso a sus partes constituyentes.  
   
 > [!NOTE]  
 >  ¿Qué sucede si se establecen los permisos de Lectura y Contingente de lectura en una celda dentro del mismo rol? El rol concederá permisos de Lectura en la celda, pero no de Contingente de lectura.  

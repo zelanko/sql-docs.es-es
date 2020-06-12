@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d57fe93-6e5f-4a50-844f-dd2bbdbb94a5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f5e6bab81e982adbf8ee443bd84a5e806b960db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c723d46b6c51fae0ccc227b5e58cf96f72c7b4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545109"
 ---
 # <a name="proactive-caching-dimensions"></a>Almacenamiento en caché automático (Dimensiones)
   El almacenamiento en caché automático proporciona la creación y administración automáticas de la memoria caché MOLAP para objetos OLAP. Los cubos incorporan inmediatamente los cambios que se realizan en los datos de la base de datos, basándose en las notificaciones recibidas de la base de datos. El objetivo del almacenamiento en caché automático consiste en proporcionar el rendimiento de MOLAP tradicional, a la vez que se conserva la inmediatez y la facilidad de administración que proporciona ROLAP.  

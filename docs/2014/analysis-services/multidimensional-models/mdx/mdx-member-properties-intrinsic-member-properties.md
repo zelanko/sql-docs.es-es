@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 84e6fe64-9b37-4e79-bedf-ae02e80bfce8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 268203d044734bb4e6a1d2acf6311ee7ef828a53
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074209"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546367"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propiedades de miembro intrínsecas (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expone propiedades intrínsecas de los miembros de dimensión que se pueden incluir en una consulta para devolver datos o metadatos adicionales para usarlos en una aplicación personalizada o como ayuda durante la investigación o la construcción de un modelo. Si utiliza las herramientas de cliente de SQL Server, puede ver las propiedades intrínsecas en SQL Server Management Studio (SSMS).  
@@ -34,7 +33,7 @@ ms.locfileid: "66074209"
 >  Es posible que otros proveedores además de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] admitan propiedades de miembro intrínsecas adicionales. Para obtener más información acerca de las propiedades de miembro intrínsecas compatibles con otros proveedores, vea la documentación que suministra cada uno de ellos.  
   
 ## <a name="types-of-member-properties"></a>Tipos de propiedades de miembro  
- Las propiedades de miembro intrínsecas [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] compatibles con son de dos tipos:  
+ Las propiedades de miembro intrínsecas compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] son de dos tipos:  
   
  Propiedades de miembro contextuales  
  Estas propiedades de miembro deben utilizarse en el contexto de una jerarquía o un nivel específicos y proporcionan valores para cada miembro de la dimensión o el nivel especificado.  
@@ -54,12 +53,12 @@ ms.locfileid: "66074209"
   
 -   Se puede utilizar la palabra clave `PROPERTIES` para realizar consultas sobre las propiedades.  
   
- En las secciones siguientes se describen las distintas propiedades de miembro intrínsecas contextuales y no contextuales disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], y `PROPERTIES` cómo usar la palabra clave con cada tipo de propiedad.  
+ En las secciones siguientes se describen las distintas propiedades de miembro intrínsecas contextuales y no contextuales disponibles en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , y cómo usar la `PROPERTIES` palabra clave con cada tipo de propiedad.  
   
 ## <a name="context-sensitive-member-properties"></a>Propiedades de miembro contextuales  
  Todos los miembros de dimensión y de nivel admiten una lista de propiedades de miembro intrínsecas contextuales. En la siguiente tabla se incluyen estas propiedades contextuales.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`ID`|Id. interno del miembro.|  
 |`Key`|Valor de la clave de miembro en el tipo de datos original. MEMBER_KEY se incluye por cuestiones de compatibilidad con versiones anteriores.  La propiedad MEMBER_KEY tiene el mismo valor que KEY0 para las claves no compuestas y es NULL para las claves compuestas.|  
@@ -84,12 +83,12 @@ ms.locfileid: "66074209"
 ## <a name="non-context-sensitive-member-properties"></a>Propiedades de miembro no contextuales  
  Todos los miembros admiten una lista de propiedades de miembro intrínsecas idénticas independientemente del contexto. Estas propiedades proporcionan información adicional que pueden usar las aplicaciones para mejorar la experiencia del usuario.  
   
- En la tabla siguiente se enumeran las propiedades intrínsecas no contextuales compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ En la tabla siguiente se enumeran las propiedades intrínsecas no contextuales compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 > [!NOTE]  
->  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre `MEMBERS` el conjunto de filas de esquema, vea [MDSCHEMA_MEMBERS conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
+>  Las columnas del conjunto de filas del esquema MEMBERS admiten las propiedades de miembro intrínsecas incluidas en la siguiente tabla. Para obtener más información sobre el `MEMBERS` conjunto de filas de esquema, vea [MDSCHEMA_MEMBERS conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`CATALOG_NAME`|Nombre del cubo al que pertenece este miembro.|  
 |`CHILDREN_CARDINALITY`|Número de elementos secundarios que tiene este miembro. Puede ser una estimación; por tanto, no debe pensar que este valor es el recuento exacto. Los proveedores deben devolver la mejor estimación posible.|  
@@ -128,7 +127,7 @@ ms.locfileid: "66074209"
   
  `DIMENSION PROPERTIES DESCRIPTION`  
   
- Esta instrucción devuelve la descripción de cada miembro de la dimensión del eje. Si intenta calificar la propiedad con una dimensión o un nivel, como en la *dimensión* `.DESCRIPTION` o el *nivel*`.DESCRIPTION`, la instrucción no se validaría.  
+ Esta instrucción devuelve la descripción de cada miembro de la dimensión del eje. Si intenta calificar la propiedad con una dimensión o un nivel, como en la *dimensión* `.DESCRIPTION` o el *nivel* `.DESCRIPTION` , la instrucción no se validaría.  
   
 ### <a name="example"></a>Ejemplo  
  En los ejemplos siguientes se muestran consultas MDX que devuelven propiedades intrínsecas.  

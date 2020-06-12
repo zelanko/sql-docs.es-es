@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17bae8ae-2ba0-4978-be70-61c687f59d54
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26fa80cc770d4bee9163ec18c21b35bd8c807bde
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6e68e92658bcc32530d787630998c52e1295596
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086992"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526831"
 ---
 # <a name="connection-properties-dialog-box-ssas---tabular"></a>Propiedades de conexión (cuadro de diálogo) (SSAS: tabular)
   Utilice esta página para ver o modificar en SQL Server Management Studio las propiedades de conexión de un origen de datos que usa una base de datos modelo tabular.  
@@ -36,7 +35,7 @@ ms.locfileid: "66086992"
 |**Cadena de conexión**|Muestra la cadena de conexión utilizada para conectarse al origen de datos que proporciona datos al modelo.|  
 |**Número máximo de conexiones**|Especifica el número máximo de conexiones de cliente para esta base de datos.|  
 |**Aislamiento**|Los valores válidos son ReadCommitted o Snapshot. Para más información, vea [Elemento de aislamiento &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/isolation-element-assl).|  
-|**Tiempo de espera de consulta**|Especifica el tiempo, en segundos, después del que se agotará el tiempo de espera si se intentan recuperar los datos.|  
+|**Tiempo de espera de la consulta**|Especifica el tiempo, en segundos, después del que se agotará el tiempo de espera si se intentan recuperar los datos.|  
 |**Proveedor administrado**|Especifica el nombre del proveedor administrado. Si la conexión de origen de datos usa un proveedor OLE DB nativo, este valor está vacío.|  
 |**Información de suplantación**|Especifica la cuenta de suplantación que se usa en las conexiones a bases de datos al procesar o actualizar los datos, las consultas que se ejecutan en un almacén de datos relacional (mediante DirectQuery), los enlaces fuera de línea, las particiones remotas y la sincronización de bases de datos del destino al origen.<br /><br /> Los valores válidos incluyen la cuenta de servicio de Analysis Services o un conjunto específico de credenciales de Windows. No especifique **Usar las credenciales del usuario actual** o **Heredar**. Esas opciones de credenciales no se admiten para una base de datos de modelo tabular.|  
   

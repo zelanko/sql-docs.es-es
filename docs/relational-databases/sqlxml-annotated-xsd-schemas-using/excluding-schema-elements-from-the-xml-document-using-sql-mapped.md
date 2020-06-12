@@ -1,5 +1,6 @@
 ---
 title: 'Excluir elementos de esquema de documento XML con SQL: asignado'
+description: 'Obtenga información sobre cómo usar la anotación sql: alpped para crear un elemento en el esquema XSD que no se asigna a una tabla (vista) o columna de base de datos.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -23,12 +24,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cf2f3302d4e609975ebb993e5388cbd6561c2bc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257442"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689397"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,11 +43,11 @@ ms.locfileid: "75257442"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un ** \<elemento person. contact>** con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un elemento ** \< Person. contact>** con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
   
  Al asignar este esquema XSD a la tabla person. contact de la base de datos AdventureWorks, se especifica **SQL: alpped** en el atributo **HomeAddress** porque la tabla Employees no almacena las direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   
- Para el resto del esquema se produce una asignación predeterminada. El ** \<elemento person. contact>** se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
+ Para el resto del esquema se produce una asignación predeterminada. El elemento ** \< Person. contact>** se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

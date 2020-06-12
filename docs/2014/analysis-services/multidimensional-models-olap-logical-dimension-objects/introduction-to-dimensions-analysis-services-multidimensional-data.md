@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab170fdd-4144-42db-9497-690b9189fc25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1a78735cd5aee5ebc87adaac6fab48bb4e183d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8df85723676df5f9fb1475465c8f7585384013ab
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81387905"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545127"
 ---
 # <a name="introduction-to-dimensions-analysis-services---multidimensional-data"></a>Introducción a las dimensiones (Analysis Services - Datos multidimensionales)
   Todas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensiones de Microsoft son grupos de atributos basados en columnas de tablas o vistas en una vista del origen de datos. Las dimensiones son independientes de un cubo, se pueden utilizar en varios cubos, se pueden emplear varias veces en un único cubo y pueden vincularse entre instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Una dimensión independiente de un cubo se denomina dimensión de base de datos, mientras que una instancia de una dimensión de base de datos de un cubo se denomina dimensión de cubo.  
@@ -29,7 +28,7 @@ ms.locfileid: "81387905"
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimensión basada en un diseño de esquema en estrella  
  La estructura de una dimensión depende en gran medida de la estructura de la tabla o tablas de dimensiones subyacentes. La estructura más sencilla se denomina esquema en estrella, en la que cada dimensión se basa en una única tabla de dimensiones que se vincula directamente a la tabla de hechos mediante una relación de clave principal a clave externa.  
   
- En el diagrama siguiente se muestra una subsección de [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] la base de datos de ejemplo, en la que la tabla de hechos **FactResellerSales** está relacionada con dos tablas de dimensiones, **DimReseller** y **DimPromotion**. La columna **ResellerKey** de la tabla de hechos **FactResellerSales** define una relación de clave externa con la columna de clave principal **ResellerKey** de la tabla de dimensiones **DimReseller** . Del mismo modo, la columna **PromotionKey** de la tabla de hechos **FactResellerSales** define una relación de clave externa con la columna de clave principal **PromotionKey** de la tabla de dimensiones **DimPromotion** .  
+ En el diagrama siguiente se muestra una subsección de la [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] base de datos de ejemplo, en la que la tabla de hechos **FactResellerSales** está relacionada con dos tablas de dimensiones, **DimReseller** y **DimPromotion**. La columna **ResellerKey** de la tabla de hechos **FactResellerSales** define una relación de clave externa con la columna de clave principal **ResellerKey** de la tabla de dimensiones **DimReseller** . Del mismo modo, la columna **PromotionKey** de la tabla de hechos **FactResellerSales** define una relación de clave externa con la columna de clave principal **PromotionKey** de la tabla de dimensiones **DimPromotion** .  
   
  ![Esquema lógico de relación de dimensiones de hechos](../../analysis-services/dev-guide/media/dimfactrelationship.gif "Esquema lógico de relación de dimensiones de hechos")  
   

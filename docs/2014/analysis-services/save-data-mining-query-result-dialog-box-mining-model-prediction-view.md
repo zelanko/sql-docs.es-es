@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0838c90f0797a0db9c8a66cd8c5f877aaecdad0a
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070019"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538937"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Guardar resultado de consulta de minería de datos (cuadro de diálogo de la vista Predicción de modelo de minería de datos)
   Use el cuadro de diálogo **Guardar resultado de consulta de minería de datos** para guardar los resultados de una consulta de minería de datos en una tabla nueva.  

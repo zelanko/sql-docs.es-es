@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d7c17bf520f1feaf454d784658c8abc423dbe7a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d92ccd9d1eeb05272a95c6f429f8c756bcb0022e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229429"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546387"
 ---
 # <a name="understanding-pass-order-and-solve-order-mdx"></a>Descripción de orden de paso y orden de resolución (MDX)
   Cuando un cubo se calcula como el resultado de un script de MDX, puede atravesar varias fases de computación según el uso de varias características relativas al cálculo. Cada una de estas fases se denomina paso de cálculo.  
@@ -37,7 +36,7 @@ ms.locfileid: "75229429"
 ## <a name="solve-order"></a>Orden de resolución  
  El orden de resolución determina la prioridad de cálculo en el caso de expresiones enfrentadas. En un solo paso, el orden de resolución determina dos cosas:  
   
--   El orden en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] que evalúa dimensiones, miembros, miembros calculados, resúmenes personalizados y celdas calculadas.  
+-   El orden en el que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] evalúa dimensiones, miembros, miembros calculados, resúmenes personalizados y celdas calculadas.  
   
 -   El orden en el que [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calcula miembros personalizados, miembros calculados, resúmenes personalizados y celdas calculadas.  
   
@@ -163,7 +162,7 @@ FROM [Adventure Works]
 ((9,770,899.74 - 9,791,060.30) - (5,721,205.24 - 5,718,327.17)) / (9,770,899.74 - 9,791,060.30) = 1.14275744   
 ```  
   
- or  
+ o  
   
 ```  
 (23,038.63) / (20,160.56) = 114.28%  

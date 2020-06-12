@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e55e6833b1fdeb600ddecdbf70f615565a38bb05
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493773"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542277"
 ---
 # <a name="defining-and-browsing-perspectives"></a>Definir y examinar perspectivas
   Una perspectiva puede simplificar la vista de un cubo para fines específicos. De manera predeterminada, los usuarios pueden ver todos los elementos de un cubo para los que tengan permisos. Lo que observan los usuarios cuando ven un cubo [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] entero es la perspectiva predeterminada del cubo. Una vista de todo el cubo puede resultar muy compleja para que los usuarios naveguen por ella, en especial aquellos usuarios que solo necesitan interactuar con una pequeña parte del cubo a fin de satisfacer sus requisitos de informes e inteligencia empresarial.  
@@ -41,7 +40,7 @@ ms.locfileid: "69493773"
   
      ![Nueva perspectiva en la columna Nombre de perspectiva](../../2014/tutorials/media/l9-perspectives-2.gif "Nueva perspectiva en la columna Nombre de perspectiva")  
   
-3.  Cambie el nombre de la `Internet Sales`perspectiva a.  
+3.  Cambie el nombre de la perspectiva a `Internet Sales` .  
   
 4.  En la fila siguiente, establezca DefaultMeasure en **Internet Sales-Sales Amount**.  
   
@@ -93,7 +92,7 @@ ms.locfileid: "69493773"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambie el nombre de la nueva perspectiva a `Reseller Sales`.  
+2.  Cambie el nombre de la nueva perspectiva a `Reseller Sales` .  
   
 3.  Establezca **Reseller Sales-Sales Amount** como medida predeterminada.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "69493773"
   
 1.  En la barra de herramientas de la pestaña **Perspectivas** , haga clic en el botón **Nueva perspectiva** .  
   
-2.  Cambie el nombre de la nueva perspectiva a `Sales Summary`.  
+2.  Cambie el nombre de la nueva perspectiva a `Sales Summary` .  
   
     > [!NOTE]  
     >  No puede especificar una medida calculada como medida predeterminada.  
@@ -182,7 +181,7 @@ ms.locfileid: "69493773"
   
 7.  En el panel de metadatos, expanda **Medidas**.  
   
-     Observe que solo aparece `Internet Sales` el grupo de medida, junto con los miembros calculados **Internet GPM** e **Internet sales ratio to All Products** .  
+     Observe que solo `Internet Sales` aparece el grupo de medida, junto con los miembros calculados **Internet GPM** e **Internet sales ratio to All Products** .  
   
 8.  En el modelo, seleccione Excel de nuevo. Seleccione `Sales Summary`.  
   

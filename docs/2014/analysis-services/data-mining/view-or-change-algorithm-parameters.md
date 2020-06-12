@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b7f41394c2adb8cbaaee2011e52ba6155a24e2e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd144d3adba59fd179ab756f95223ea5e0e2968c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082691"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520291"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Ver o cambiar parámetros del algoritmo
   Puede cambiar los parámetros proporcionados con los algoritmos que se utilizan para crear modelos de minería de datos para personalizar los resultados del modelo.  
   
- Los parámetros de algoritmo que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se proporcionan en cambian mucho más que las propiedades del modelo: se pueden usar para modificar fundamentalmente la manera en que se procesan, agrupan y muestran los datos. Por ejemplo, puede usar parámetros de algoritmo para hacer lo siguiente:  
+ Los parámetros de algoritmo que se proporcionan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] cambian mucho más que las propiedades del modelo: se pueden usar para modificar fundamentalmente la manera en que se procesan, agrupan y muestran los datos. Por ejemplo, puede usar parámetros de algoritmo para hacer lo siguiente:  
   
 -   Cambiar el método de análisis, como el método de clústeres.  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66082691"
   
      Si no especifica un valor en la columna **Valor** , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza el valor de parámetro predeterminado. La columna **Intervalo** describe los posibles valores que se pueden especificar.  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
      El parámetro de algoritmo se establece con el nuevo valor. El cambio de parámetro no se reflejará en el modelo de minería de datos hasta que vuelva a procesar el modelo.  
   

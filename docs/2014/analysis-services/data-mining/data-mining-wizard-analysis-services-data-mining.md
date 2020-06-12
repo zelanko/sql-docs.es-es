@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: d5fea90f-5f38-4639-8851-7707f6606a12
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb853898d91533a61ae220ff2d73c032f2c65330
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0fb91b5343bd6f45eaadb93f71a73b85cb7f3a1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084738"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522853"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Asistente para minería de datos (Analysis Services - Minería de datos)
-  El Asistente para minería de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos de se inicia cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
+  El Asistente para minería de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se inicia cada vez que se agrega una nueva estructura de minería de datos a un proyecto de minería de datos. El asistente le ayuda a elegir un origen de datos y a configurar una vista del origen de datos que defina los datos que se van a utilizar para el análisis, y luego le ayuda a crear un modelo inicial.  
   
  En la fase final del asistente, si lo desea puede dividir los datos en conjuntos de entrenamiento y de prueba, y habilitar características como la obtención de detalles.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66084738"
   
 -   ¿Qué columnas o atributos desea utilizar para la predicción? ¿Qué columnas o atributos es apropiado utilizar como entrada para el análisis?  
   
--   ¿Qué algoritmo debe utilizar? Los algoritmos proporcionados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en tienen características diferentes y generan resultados diferentes. Por suerte, no está limitado a un modelo para cada conjunto de datos, de modo que puede experimentar agregando modelos diferentes.  
+-   ¿Qué algoritmo debe utilizar? Los algoritmos proporcionados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tienen características diferentes y generan resultados diferentes. Por suerte, no está limitado a un modelo para cada conjunto de datos, de modo que puede experimentar agregando modelos diferentes.  
   
 -   ¿Necesita poder probar sus modelos en un conjunto de datos unificado? Si es así, se recomienda utilizar la opción de apartar algunos datos para realizar pruebas. Puede elegir un porcentaje y limitarlo con un número especificado de filas, si lo desea.  
   

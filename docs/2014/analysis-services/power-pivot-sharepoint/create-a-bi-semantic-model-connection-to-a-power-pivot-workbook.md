@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55812c7df95b49fecbdbf8ed1a17c7403c04fbcb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071642"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547487"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Creación de una conexión de modelo semántico de BI a un libro de PowerPivot
   Utilice la información de este tema para configurar una conexión de modelo semántico de BI que redirija a un libro PowerPivot de la misma granja.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071642"
   
  En este tema se incluyen las secciones siguientes. Realice cada tarea en el orden indicado.  
   
- [Revisar los requisitos previos](#bkmk_prereq)  
+ [Requisitos previos de revisión](#bkmk_prereq)  
   
  [Crear una conexión](#bkmk_create)  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66071642"
   
  Debe tener una biblioteca que admita el tipo de contenido de la conexión de modelo semántico de BI. Para obtener más información, vea [Agregar un tipo de contenido de conexión de modelo semántico de BI a una biblioteca &#40;PowerPivot para SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Debe conocer la dirección URL del libro PowerPivot para el que va a configurar una conexión de modelo semántico de BI (por ejemplo http://adventure-works/shared , documentos/libro. xlsx). El libro debe estar en la misma granja.  
+ Debe conocer la dirección URL del libro PowerPivot para el que está configurando una conexión de modelo semántico de BI (por ejemplo, http://adventure-works/shared documentos/myworkbook.xlsx). El libro debe estar en la misma granja.  
   
  Todos los equipos y usuarios que forman parte de la secuencia de conexión deben estar en el mismo dominio o en dominios de confianza (confianza bidireccional).  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66071642"
   
      ![Submenú Nuevo documento en una biblioteca de SharePoint](../media/ssas-bismconnection-new.gif "Submenú Nuevo documento en una biblioteca de SharePoint")  
   
-2.  Establezca la propiedad del **servidor** en la dirección URL de SharePoint del libro PowerPivot (por ejemplo, ** http://mysharepoint/shared documentos/libro. xlsx**. En una implementación de PowerPivot para SharePoint, los datos se pueden cargar en cualquier servidor de la granja. Por este motivo, las conexiones de origen de datos a datos PowerPivot especifican solo la ruta de acceso al libro. El Servicio de sistema de PowerPivot determina qué servidor carga los datos.  
+2.  Establezca la propiedad del **servidor** en la dirección URL de SharePoint del libro PowerPivot (por ejemplo, ** http://mysharepoint/shared documentos/myWorkbook.xlsx**. En una implementación de PowerPivot para SharePoint, los datos se pueden cargar en cualquier servidor de la granja. Por este motivo, las conexiones de origen de datos a datos PowerPivot especifican solo la ruta de acceso al libro. El Servicio de sistema de PowerPivot determina qué servidor carga los datos.  
   
      No use la propiedad de **base de datos** ; no se utiliza al especificar la ubicación de un libro PowerPivot.  
   

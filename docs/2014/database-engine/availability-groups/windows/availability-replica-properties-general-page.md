@@ -12,12 +12,12 @@ ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c1455e4330ef4d9c8c0c6e3e07e285cf548c7b4
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791909"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858924"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propiedades de las réplicas de disponibilidad (página General)
   Use este cuadro de diálogo para ver las propiedades de una réplica de disponibilidad.  
@@ -29,14 +29,14 @@ ms.locfileid: "62791909"
   
 -   [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre del grupo de disponibilidad**  
  Nombre del grupo de disponibilidad. Es un nombre definido por el usuario que debe ser único dentro del clúster de conmutación por error de Windows Server (WSFC).  
   
  **Instancia del servidor**  
  Nombre de servidor de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda esta réplica y, para una instancia no predeterminada, su nombre de instancia.  
   
- **Rol**  
+ **Role**  
  **Principal**  
  Actualmente la réplica principal.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62791909"
  **Modo de conmutación por error**  
  Modo de conmutación por error de la réplica, que puede ser uno de los siguientes:  
   
- **Automático**  
+ **Automática**  
  Conmutación por error automática. La réplica es un destino de las conmutaciones por error automáticas. Esto solo se admite si el modo de disponibilidad se establece en confirmación sincrónica.  
   
  **Manual**  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83b301239264351da33d0b22379f00c48b08c836
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076510"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536703"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
   Seleccione **Generar el cubo sin un origen de datos** en la primera página del Asistente para cubos para crear un cubo sin usar una vista del origen de datos. Posteriormente, podrá usar el Asistente para generar esquemas para generar el esquema relacional para la vista del origen de datos basándose en la estructura de cubo y, posiblemente, en otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Para más información sobre cómo generar un esquema, vea [Asistente para generar esquemas &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  
@@ -28,7 +27,7 @@ ms.locfileid: "66076510"
 ## <a name="selecting-dimensions"></a>Seleccionar dimensiones  
  Use la página **Seleccionar dimensiones** del asistente para agregar dimensiones existentes al cubo. Esta página solo aparece si ya existen dimensiones compartidas sin un origen de datos en el proyecto o en la base de datos. No muestra las dimensiones que tienen un origen de datos.  
   
- Para agregar dimensiones existentes, selecciónelas en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de**>>** flecha doble () para desplace todas las dimensiones de la lista.  
+ Para agregar dimensiones existentes, selecciónelas en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de flecha doble ( **>>** ) para desplace todas las dimensiones de la lista.  
   
 ## <a name="defining-new-measures"></a>Definir nuevas medidas  
  Use la página **Definir nuevas medidas** del asistente para especificar las medidas y grupos de medida del nuevo cubo. Los grupos de medida que especifique aquí se corresponderán con las tablas de hechos del esquema generado. Las medidas que especifique aquí se corresponderán con las columnas numéricas sin clave de las tablas.  
@@ -51,7 +50,7 @@ ms.locfileid: "66076510"
   
  Si usa una plantilla para crear el cubo, las cuadrícula situada debajo de **Seleccionar dimensiones de plantilla** mostrará las dimensiones de la plantilla. Puede desactivar la casilla situada junto a cualquier dimensión para quitarla del cubo. Para quitar todas las dimensiones de la lista, desactive la casilla situada en la barra de título de la cuadrícula. Si no usa una plantilla, la cuadrícula muestra solo la dimensión de tiempo.  
   
- Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda `Name` de la columna que contiene el texto **Agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
+ Para agregar dimensiones al cubo, use la cuadrícula situada debajo de **Agregar nuevas dimensiones**. Para agregar una dimensión, haga clic en la celda de la `Name` columna que contiene el texto **Agregar nueva dimensión**y, a continuación, escriba un nombre para la dimensión. Para quitar una fila de la lista, haga clic en el icono de eliminar (**X**).  
   
  Las cuadrículas **Seleccionar dimensiones de plantilla** y **Agregar nuevas dimensiones** muestran valores debajo de las columnas descritas en la tabla siguiente. Puede hacer clic en un valor de cualquier lista para cambiarlo.  
   

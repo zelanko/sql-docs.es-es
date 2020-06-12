@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1810eb23a8d0d0541606cb69197b8030463748
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079280"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543662"
 ---
 # <a name="defining-a-data-source-view"></a>Definir una vista del origen de datos
   Tras definir los orígenes de datos que utilizará en un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , el paso siguiente generalmente consiste en definir una vista del origen de datos para el proyecto. Una vista del origen de datos es una sola vista unificada de metadatos de las tablas y vistas especificadas que el origen de datos define en el proyecto. Almacenar metadatos en la vista del origen de datos permite trabajar con los metadatos durante el proceso de desarrollo sin ninguna conexión abierta con ningún origen de datos subyacente. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -26,9 +25,9 @@ ms.locfileid: "66079280"
   
 1.  En el Explorador de soluciones (a la derecha de la ventana de Microsoft Visual Studio), haga clic con el botón derecho en **Vistas del origen de datos**y, después, haga clic en **Nueva vista del origen de datos**.  
   
-2.  En la página inicial del **Asistente para orígenes de datos**, haga clic en **Siguiente**. Aparece la página **Seleccionar un origen de datos** .  
+2.  En la página inicial del **Asistente para orígenes de datos** , haga clic en **Siguiente**. Aparece la página **Seleccionar un origen de datos** .  
   
-3.  En **Orígenes de datos relacionales**, el origen de datos **Adventure Works DW 2012** aparece seleccionado. Haga clic en **Siguiente**.  
+3.  En **Orígenes de datos relacionales**, el origen de datos **Adventure Works DW 2012** aparece seleccionado. Haga clic en **Next**.  
   
     > [!NOTE]  
     >  Para crear una vista del origen de datos que se base en varios orígenes de datos, defina primero una vista del origen de datos que se base en un único origen de datos. Este origen de datos luego se llama origen de datos principal. A continuación, puede agregar tablas y vistas a partir de un origen de datos secundario. Al diseñar dimensiones que contengan atributos basados en tablas relacionadas en varios orígenes de datos, puede que necesite definir un origen de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] como el origen de datos principal para usar sus capacidades del motor de consultas distribuidas.  
@@ -50,7 +49,7 @@ ms.locfileid: "66079280"
   
     -   **FactInternetSales (dbo)**  
   
-5.  Haga **>** clic en esta opción para agregar las tablas seleccionadas a la lista **objetos incluidos** .  
+5.  Haga clic en **>** esta opción para agregar las tablas seleccionadas a la lista **objetos incluidos** .  
   
 6.  Haga clic en **Siguiente**.  
   

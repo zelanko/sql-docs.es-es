@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ba4dcf72-0667-41d0-816b-ab8ff9a7d9cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb5ef5f0f9d662f66b9fb3203e518316d87c21b9
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076938"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544627"
 ---
 # <a name="batch-processing-analysis-services"></a>Procesamiento por lotes (Analysis Services)
   En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede usar el comando Batch para enviar varios comandos de procesamiento al servidor en una única solicitud. El procesamiento por lotes ofrece una forma de controlar qué objetos se deben procesar y en qué orden. Además, un lote se puede ejecutar como una serie de trabajos independientes o como una transacción en la que un error en un proceso causa la reversión del lote completo.  

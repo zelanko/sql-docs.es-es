@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42d48d088b72c28c6e44b6f96aab1e1493e47577
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536057"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Crear medidas y grupos de medida en modelos multidimensionales
   Una *medida* es una agregación de valores de datos numéricos, como una suma, un recuento, un mínimo, un máximo, un promedio o una expresión MDX personalizada que usted crea. Un *grupo de medida* es un contenedor para una o más medidas. Todas las medidas existen en un grupo de medida, incluso si solo hay una medida. Un cubo debe tener al menos una medida y un grupo de medida.
@@ -49,7 +48,7 @@ ms.locfileid: "78175774"
 
 |||
 |-|-|
-|**de origen**|La mayoría de las medidas se derivan de las columnas numéricas de tablas de hechos en un almacén de datos externo, como la columna Sales Amount de las tablas Internet Sales y Reseller Sales del almacenamiento de datos AdventureWorks, pero también puede crear nuevas medidas que se basen completamente en los cálculos que usted defina.<br /><br /> Las columnas de atributo de las tablas de dimensiones pueden utilizarse para definir medidas, pero generalmente son de suma parcial o no aditivas en términos de comportamiento de agregación. Para más información sobre el comportamiento de suma parcial, vea [Definir el comportamiento de suma parcial](define-semiadditive-behavior.md).|
+|**source**|La mayoría de las medidas se derivan de las columnas numéricas de tablas de hechos en un almacén de datos externo, como la columna Sales Amount de las tablas Internet Sales y Reseller Sales del almacenamiento de datos AdventureWorks, pero también puede crear nuevas medidas que se basen completamente en los cálculos que usted defina.<br /><br /> Las columnas de atributo de las tablas de dimensiones pueden utilizarse para definir medidas, pero generalmente son de suma parcial o no aditivas en términos de comportamiento de agregación. Para más información sobre el comportamiento de suma parcial, vea [Definir el comportamiento de suma parcial](define-semiadditive-behavior.md).|
 |**concentrado**|De manera predeterminada, las medidas se suman en cada dimensión. Sin embargo, la propiedad `AggregateFunction` permite modificar este comportamiento. Vea [Use Aggregate Functions](use-aggregate-functions.md) para obtener una lista.|
 |**Propiedades**|Vea [Configure Measure Properties](configure-measure-properties.md) para obtener descripciones de propiedad adicionales.|
 

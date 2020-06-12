@@ -1,5 +1,6 @@
 ---
 title: Usar la carga masiva SQLXML en el entorno .NET
+description: Aprenda a usar el objeto COM de carga masiva SQLXML 4,0 en el entorno de .NET para cargar datos XML de forma masiva en una base de datos.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5800c6323408f7b018021c041fbba17d2e8f6b89
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d60df5334b34061138852340e56876057e398c79
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252448"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529839"
 ---
 # <a name="sqlxml-40-net-framework-support---using-bulk-load"></a>Compatibilidad de SQLXML 4.0 con .NET Framework: utilizar la carga masiva
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ ms.locfileid: "75252448"
   
 6.  En el menú **proyecto** , seleccione **Agregar referencia**.  
   
-7.  En la pestaña **com** , seleccione **biblioteca de tipos de carga masiva de Microsoft SQLXML 4,0** (xblkld4. dll) y haga clic en **Aceptar**. Verá el ensamblado **Interop. SQLXMLBULKLOADLib** creado en el proyecto.  
+7.  En la pestaña **com** , seleccione **biblioteca de tipos de carga masiva de Microsoft SQLXML 4,0** (xblkld4.dll) y haga clic en **Aceptar**. Verá el ensamblado **Interop. SQLXMLBULKLOADLib** creado en el proyecto.  
   
 8.  Reemplace el método Main() por el código siguiente. Actualice la propiedad **ConnectionString** y la ruta de acceso del archivo para el esquema y los archivos de datos.  
   

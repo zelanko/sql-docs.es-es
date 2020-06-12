@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a2fb0b79-802a-4dac-bd9a-32dfe2e8c4d4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 23bdc92e18a7f2cae351faddd69370c9e08a7371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b9088dc5dc222d8dd1c0c861746f225e6f5b469
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062506"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528081"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Diseñador de consultas MDX de Analysis Services (SSAS)
-  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis Services proporciona interfaces gráficas de usuario para ayudarle a crear [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consultas MDX para un origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
+  El diseñador de consultas de expresiones multidimensionales (MDX) de Analysis Services proporciona interfaces gráficas de usuario para ayudarle a crear consultas MDX para un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos. El diseñador gráfico de consultas MDX tiene dos modos: modo de diseño y modo de consulta. Cada modo proporciona un panel de metadatos desde el que puede arrastrar miembros de los cubos seleccionados para crear una consulta MDX que recupera los datos que desee usar.  
   
 > [!IMPORTANT]  
 >  Los usuarios tienen acceso a los orígenes de datos cuando crean y ejecutan las consultas. Debe conceder permisos mínimos para los orígenes de datos, por ejemplo permisos de solo lectura.  

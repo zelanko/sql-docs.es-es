@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e127f72-ef23-44ad-81e6-3dd58981770e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 730ba13c22c8dcecf503398baae683f5d9c2b667
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072958"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545637"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
   Al crear un objeto de `data source` en un modelo de Analysis Services, uno de los valores que debe configurar es una opción de suplantación. Esta opción determina si Analysis Services asume la identidad de una cuenta de usuario de Windows concreta al realizar las operaciones locales relacionadas con la conexión, como cargar un proveedor de datos OLE DB o resolver la información de perfil de usuario en entornos que admiten perfiles de itinerancia.  
@@ -49,7 +48,7 @@ ms.locfileid: "66072958"
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto use las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: * \<nombre de dominio>***\\*** \<nombre de la cuenta de usuario>*.  
+ Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objeto use las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Domain name>***\\***\<User account name>* .  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   

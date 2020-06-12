@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 984face4-00fc-46d3-8ae1-9755bf737bdf
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ec4bad8ef036e8f19ce0a856f3d9c04bafd0e7c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d44846f37960ebebf4bce03924270163dabe8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079267"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543567"
 ---
 # <a name="lesson-12-create-roles"></a>Lección 12: Crear roles
   En esta lección, creará roles. Los roles proporcionan seguridad a los objetos y datos de la base de datos del modelo limitando el acceso únicamente a los usuarios de Windows que sean miembros del rol. Cada rol se define con un permiso único: Ninguno, Lectura, Lectura y procesamiento, Procesamiento o Administrador. Los roles se pueden definir durante la creación del modelo mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Una vez implementado un modelo, los roles se pueden administrar con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para obtener más información, consulte [Roles &#40;SSAS tabular&#41;](tabular-models/roles-ssas-tabular.md).  
@@ -48,7 +47,7 @@ ms.locfileid: "66079267"
   
      Se agrega a la lista un nuevo rol con el permiso Ninguno.  
   
-3.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el `Internet Sales Manager`nombre del rol a.  
+3.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el nombre del rol a `Internet Sales Manager` .  
   
 4.  En la columna **Permisos**, haga clic en la lista desplegable y, luego, seleccione el permiso **Lectura**.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66079267"
   
      Se agrega a la lista un nuevo rol con el permiso Ninguno.  
   
-3.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el `Internet Sales US`nombre del rol a.  
+3.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el nombre del rol a `Internet Sales US` .  
   
 4.  En la columna **Permisos**, haga clic en la lista desplegable y, luego, seleccione el permiso **Lectura**.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66079267"
   
 1.  En el cuadro de diálogo **Administrador de roles** , haga clic en **Nuevo**.  
   
-2.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el `Internet Sales Administrator`nombre del rol a.  
+2.  Haga clic en el nuevo rol y, a continuación, en la columna **nombre** , cambie el nombre del rol a `Internet Sales Administrator` .  
   
 3.  En la columna **Permisos** , haga clic en la lista desplegable y luego seleccione el permiso **Administrador** .  
   
@@ -98,7 +97,7 @@ ms.locfileid: "66079267"
   
 6.  Compruebe las selecciones y, a continuación, haga clic en **Aceptar** .  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 13: Analizar en Excel](lesson-12-analyze-in-excel.md).  
   
   

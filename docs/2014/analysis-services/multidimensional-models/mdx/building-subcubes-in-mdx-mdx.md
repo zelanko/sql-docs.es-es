@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 653b4d30aa86f52179c7b13619ac4347aa65c339
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074719"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546559"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Generar subcubos en MDX (MDX)
   Un subcubo es un subconjunto de un cubo en la representación de una vista filtrada de los datos subyacentes. El hecho de limitar un cubo a un subcubo permite mejorar el rendimiento de las consultas.  

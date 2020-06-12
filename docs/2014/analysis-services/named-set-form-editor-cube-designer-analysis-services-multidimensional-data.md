@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0fcdb908-b160-4c66-917f-3185cd272079
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58fe34478e718ef356c03c42b8c2149f9256f1a2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541257"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de conjuntos con nombres (pestaña Cálculo, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de conjuntos con nombres** que se encuentra en la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un conjunto con nombre.  

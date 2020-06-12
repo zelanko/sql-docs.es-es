@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ad4dde5-4651-4069-875c-7ab73cd8b4f4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 489076bed7238f9367eeb8a353da358239673edb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072112"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540757"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
   Utilice la página **Particiones** del cuadro de diálogo **Restaurar base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para especificar la ubicación en la que se restaurarán las particiones locales y si es necesario restaurar particiones remotas, así como los archivos de copia de seguridad remotos que se utilizarán al restaurar las particiones remotas.  
@@ -63,7 +62,7 @@ ms.locfileid: "66072112"
 |------------|-----------------|  
 |**BD**|Muestra el nombre del cubo que contiene la partición local.|  
 |**MeasureGroup**|Muestra el nombre del grupo de medida que contiene la partición local.|  
-|**Divide**|Muestra el nombre de la partición local.|  
+|**Partición**|Muestra el nombre de la partición local.|  
 |**Tamaño (MB)**|Muestra el tamaño de la partición local en megabytes.|  
 |**Carpeta original**|Muestra el nombre de la carpeta original en la que se almacenó la partición local.|  
 |**Carpeta de restauración**|Escriba el nombre de la carpeta de restauración de la partición local, o bien haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccione la ruta de acceso a la carpeta que quiera usar. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  

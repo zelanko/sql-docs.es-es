@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_os_job_object (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/11/2020
+ms.date: 06/03/2020
 ms.service: sql-database
 ms.reviewer: ''
 ms.topic: language-reference
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b7674e3e7696d91170f9bf955808923d713479a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fe2f22206d0882cafc8428d0fb9ccda22151ea2
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77147410"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423439"
 ---
 # <a name="sysdm_os_job_object-azure-sql-database"></a>sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,13 +35,13 @@ Un objeto de trabajo es una construcción de Windows que implementa la CPU, la m
   
 |Columnas|Tipo de datos|Descripción|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**int**|Especifica la parte de los ciclos del procesador que los subprocesos de SQL Server pueden utilizar durante cada intervalo de programación. El valor se muestra como un porcentaje de los ciclos disponibles dentro de un intervalo de programación del ciclo 10000. Por ejemplo, el valor 100 significa que los subprocesos pueden usar los núcleos de CPU tienen toda su capacidad.|
+|cpu_rate|**int**|Especifica la parte de los ciclos del procesador que SQL Server subprocesos pueden utilizar durante cada intervalo de programación. El valor se muestra como un porcentaje de los ciclos disponibles dentro de un intervalo de programación del ciclo 10000, multiplicado por el número de CPU lógicas. Por ejemplo, el valor 800 en una instancia de SQL Server con 8 CPU lógicas significa que los subprocesos pueden usar CPU tienen toda su capacidad.|
 |cpu_affinity_mask|**bigint**|Máscara de bits que describe qué procesadores lógicos puede utilizar el SQL Server proceso en el grupo de procesadores. Por ejemplo, cpu_affinity_mask 255 (1111 1111 en binario) significa que se pueden usar los primeros ocho procesadores lógicos. <br /><br />Esta columna se proporciona por compatibilidad con versiones anteriores. No notifica el grupo de procesadores y el valor notificado puede ser incorrecto cuando un grupo de procesadores contiene más de 64 procesadores lógicos. Use la `process_physical_affinity` columna para determinar la afinidad del procesador en su lugar.|
 |cpu_affinity_group|**int**|El número del grupo de procesadores que usa SQL Server.|
 |memory_limit_mb|**bigint**|Cantidad máxima de memoria asignada, en MB, que todos los procesos del objeto de trabajo, incluido SQL Server, pueden usar de manera acumulativa.| 
 |process_memory_limit_mb |**bigint**|La cantidad máxima de memoria asignada, en MB, que un único proceso en el objeto de trabajo, como SQL Server, puede usar.|
 |workingset_limit_mb |**bigint**|Cantidad máxima de memoria, en MB, que puede usar el espacio de trabajo de SQL Server.|
-|non_sos_mem_gap_mb|**bigint**|Cantidad de memoria, en MB, reservada para pilas de subprocesos, archivos dll y otras asignaciones de memoria no SOS. La memoria de destino de SOS es `process_memory_limit_mb` la `non_sos_mem_gap_mb`diferencia entre y.| 
+|non_sos_mem_gap_mb|**bigint**|Cantidad de memoria, en MB, reservada para pilas de subprocesos, archivos dll y otras asignaciones de memoria no SOS. La memoria de destino de SOS es la diferencia entre `process_memory_limit_mb` y `non_sos_mem_gap_mb` .| 
 |low_mem_signal_threshold_mb|**bigint**|Umbral de memoria, en MB. Cuando la cantidad de memoria disponible para el objeto de trabajo está por debajo de este umbral, se envía una señal de notificación de memoria baja al proceso de SQL Server. |
 |total_user_time|**bigint**|El número total de 100 pasos NS que los subprocesos del objeto de trabajo han pasado en modo de usuario, desde que se creó el objeto de trabajo. |
 |total_kernel_time |**bigint**|El número total de 100 pasos NS que los subprocesos del objeto de trabajo han pasado en modo kernel, desde que se creó el objeto de trabajo. |
@@ -49,10 +49,10 @@ Un objeto de trabajo es una construcción de Windows que implementa la CPU, la m
 |read_operation_count |**bigint**|El número total de operaciones de e/s de lectura en discos locales emitidos por SQL Server desde que se creó el objeto de trabajo. |
 |peak_process_memory_used_mb|**bigint**|Cantidad máxima de memoria, en MB, que un único proceso en el objeto de trabajo, como SQL Server, ha usado desde que se creó el objeto de trabajo.| 
 |peak_job_memory_used_mb|**bigint**|Cantidad máxima de memoria, en MB, que todos los procesos del objeto de trabajo han utilizado de manera acumulativa desde que se creó el objeto de trabajo.|
-|process_physical_affinity|**nvarchar (a.**|Máscaras de bits que describen qué procesadores lógicos puede utilizar el SQL Server proceso en cada grupo de procesadores. El valor de esta columna está formado por uno o varios pares de valores, cada uno entre llaves. En cada par, el primer valor es el número de grupo del procesador y el segundo valor es la máscara de bits de afinidad para ese grupo de procesadores. Por ejemplo, el valor `{{0,a}{1,2}}` significa que la máscara de afinidad para el grupo `0` de `a` procesadores`1010` es (en binario, lo que indica que se usan los procesadores 2 y 4) y la máscara `1` de `2` afinidad`10` para el grupo de procesadores es (en binario, lo que indica que se usa el procesador 2).|
+|process_physical_affinity|**nvarchar (a.**|Máscaras de bits que describen qué procesadores lógicos puede utilizar el SQL Server proceso en cada grupo de procesadores. El valor de esta columna está formado por uno o varios pares de valores, cada uno entre llaves. En cada par, el primer valor es el número de grupo del procesador y el segundo valor es la máscara de bits de afinidad para ese grupo de procesadores. Por ejemplo, el valor `{{0,a}{1,2}}` significa que la máscara de afinidad para el grupo de procesadores `0` es `a` ( `1010` en binario, lo que indica que se usan los procesadores 2 y 4) y la máscara de afinidad para el grupo de procesadores `1` es `2` ( `10` en binario, lo que indica que se usa el procesador 2).|
   
 ## <a name="permissions"></a>Permisos  
-En Instancia administrada de SQL Database, requiere `VIEW SERVER STATE` el permiso. En SQL Database, se requiere el permiso `VIEW DATABASE STATE` en la base de datos.  
+En Instancia administrada de SQL Database, requiere el `VIEW SERVER STATE` permiso. En SQL Database, se requiere el permiso `VIEW DATABASE STATE` en la base de datos.  
  
 ## <a name="see-also"></a>Consulte también  
 

@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9dfbe291c1aa7d856862de54ed10c845b4e5544
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68074811"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670390"
 ---
 # <a name="identifiers-dmx"></a>Identificadores (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Todos los objetos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de deben tener un identificador. El nombre del objeto es su identificador. Los servidores, las bases de datos y los objetos de base de datos, como los orígenes de datos, las vistas del origen de datos, los cubos, las dimensiones, los modelos de minería de datos, etc., tienen identificadores.  
+  Todos los objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] deben tener un identificador. El nombre del objeto es su identificador. Los servidores, las bases de datos y los objetos de base de datos, como los orígenes de datos, las vistas del origen de datos, los cubos, las dimensiones, los modelos de minería de datos, etc., tienen identificadores.  
   
  Existen dos clases de identificadores en Extensiones de minería de datos (DMX):  
   
@@ -75,7 +75,7 @@ SELECT * FROM [Targeted Mailing].CONTENT;
   
 -   Cuando utilice palabras reservadas en los nombres de objeto o partes de nombres de objeto.  
   
-     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos que se actualizan desde versiones [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] anteriores de pueden contener identificadores que incluyen palabras que no estaban reservadas en la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] versión anterior de pero que son[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]palabras reservadas para. Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
+     Se recomienda evitar el uso de palabras clave reservadas en los nombres de objeto. Las bases de datos que se actualizan desde versiones anteriores de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pueden contener identificadores que incluyen palabras que no estaban reservadas en la versión anterior de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pero que son palabras reservadas para [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Puede hacer referencia al objeto con identificadores delimitados hasta que se pueda cambiar el nombre.  
   
 -   Cuando utilice caracteres no considerados como identificadores aceptados.  
   

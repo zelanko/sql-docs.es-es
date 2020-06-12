@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eaa95278-9ce9-47d5-a6b6-1046e7076599
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7251f9e9422a79c214d27d913112a28ff43d56b1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175794"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536237"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Crear y administrar una partición local (Analysis Services)
   Puede crear particiones adicionales para un grupo de medida con el fin de mejorar el rendimiento de procesamiento. Tener varias particiones permite asignar datos de hechos en un número correspondiente de archivos de datos físicos tanto en servidores locales como en servidores remotos. En Analysis Services, las particiones se pueden procesar independientemente y en paralelo, lo que permite tener más control sobre las cargas de trabajo de procesamiento del servidor.
@@ -27,7 +26,7 @@ ms.locfileid: "78175794"
  Las particiones se pueden crear en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] durante el diseño del modelo o una vez implementada la solución mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o XMLA. Se recomienda elegir un enfoque solamente. Si alterna entre las herramientas, puede que los cambios realizados en una base de datos implementada en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se sobrescriban al volver a implementar la solución posteriormente desde [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].
 
 ## <a name="before-you-start"></a>Antes de comenzar
- Compruebe si tiene la edición Business Intelligence o Enterprise. La edición Standard no admite varias particiones. Para comprobar la edición, haga clic con el botón secundario en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] el nodo de servidor en y elija **informes** | **General**. Para obtener más información sobre la disponibilidad de características, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ Compruebe si tiene la edición Business Intelligence o Enterprise. La edición Standard no admite varias particiones. Para comprobar la edición, haga clic con el botón secundario en el nodo de servidor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y elija **informes**  |  **General**. Para obtener más información sobre la disponibilidad de características, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  Desde el principio, es importante entender que las particiones deben compartir el mismo diseño de agregaciones si se desea mezclarlas posteriormente. Solo se pueden mezclar particiones si tienen diseños de agregaciones y modos de almacenamiento idénticos.
 
@@ -108,7 +107,7 @@ ms.locfileid: "78175794"
 
 7.  En la última página, Finalización del asistente, asigne un nombre descriptivo a la partición.
 
-8.  Haga clic en **Finalizar**.
+8.  Haga clic en **Finalizar**
 
 9. Repita los pasos anteriores para crear las particiones restantes, eligiendo una consulta con nombre diferente cada vez para seleccionar el segmento de datos siguiente.
 

@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: acd35dc68c4f42231aa6f71d6cc2a150ff027811
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3f2f97ef9c7a1cdfa2bb1ba1b86dbe4cf60c8404
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893063"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669926"
 ---
 # <a name="toppercent-dmx"></a>TopPercent (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,13 +28,13 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ```  
   
 ## <a name="applies-to"></a>Se aplica a  
- Expresión que devuelve una tabla, como una referencia de \<columna de tabla>, o una función que devuelve una tabla.  
+ Expresión que devuelve una tabla, como una referencia de \< columna de tabla>, o una función que devuelve una tabla.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
  \<> de expresión de tabla  
   
 ## <a name="remarks"></a>Observaciones  
- La función de **porcentaje** devuelve las filas de nivel superior en orden decreciente de rango en función del valor evaluado de \<la expresión de rango> argumento de cada fila, de modo que la \<suma de la expresión de rango> valores sea al menos el porcentaje especificado que \<se especifica en el argumento de porcentaje>. El valor de **porcentaje** devuelve el menor número posible de elementos mientras se cumple el valor de porcentaje especificado.  
+ La función de **porcentaje** devuelve las filas de nivel superior en orden decreciente de rango en función del valor evaluado de la \< expresión de rango> argumento de cada fila, de modo que la suma de la \< expresión de rango> valores sea al menos el porcentaje especificado que se especifica en el \< argumento de porcentaje>. El valor de **porcentaje** devuelve el menor número posible de elementos mientras se cumple el valor de porcentaje especificado.  
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se crea una consulta de predicción con el modelo de asociación que se genera mediante el [tutorial básico de minería de datos](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  

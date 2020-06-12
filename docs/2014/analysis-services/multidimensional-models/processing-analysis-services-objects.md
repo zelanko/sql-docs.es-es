@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a9d83baaecbfdba3612acbdcf7a80c9093aac519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f67384dc44710cc71ae30b8a558746410171dcbb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073288"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545827"
 ---
 # <a name="processing-analysis-services-objects"></a>Procesar objetos de Analysis Services
-  El procesamiento afecta a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] los siguientes tipos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de objetos: bases de datos, cubos, dimensiones, grupos de medida, particiones y estructuras y modelos de minería de datos. Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
+  El procesamiento afecta a los siguientes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tipos de objetos: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bases de datos, cubos, dimensiones, grupos de medida, particiones y estructuras y modelos de minería de datos. Puede especificar el nivel de procesamiento de cada objeto, o bien puede especificar la opción Procesar predeterminado para permitir que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seleccione automáticamente el nivel óptimo de procesamiento. Para más información sobre los distintos niveles de procesamiento de cada objeto, vea [Opciones y valores de procesamiento &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
  Debe tener en cuenta las consecuencias del comportamiento del procesamiento a fin de reducir las repercusiones negativas. Por ejemplo, el procesamiento completo de una dimensión establece automáticamente todas las particiones como dependientes de esa dimensión en un estado sin procesar. Esto hace que los cubos afectados no estén disponibles para consulta hasta que se procesen las particiones dependientes.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66073288"
 ##  <a name="processing-a-dimension"></a><a name="bkmk_procdim"></a>Procesar una dimensión  
  Al procesar una dimensión, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] formula y ejecuta consultas en tablas de dimensiones para devolver información necesaria para el procesamiento.  
   
-|Country|Sales Region|State|  
+|País|Sales Region|Estado|  
 |-------------|------------------|-----------|  
 |Estados Unidos|West|California|  
 |Estados Unidos|West|Oregón|  

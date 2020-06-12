@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 620eb875dfb4b3e7594000777feb23993d9e129e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493848"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528311"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Especificar relaciones de atributo entre los atributos de una jerarquía definida por el usuario
   Como ya ha visto en este tutorial, es posible organizar jerarquías de atributo en niveles dentro de jerarquías de usuario para proporcionar rutas de navegación a los usuarios de un cubo. Una jerarquía de usuario puede representar una jerarquía natural, como una ciudad, un estado o un país, o simplemente representar una ruta de navegación, como el nombre de un empleado, su cargo y el nombre de departamento. Para el usuario que navega por una jerarquía, estos dos tipos de jerarquía de usuario son el mismo.  
@@ -42,7 +41,7 @@ ms.locfileid: "69493848"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     Aparece un icono de advertencia en el diagrama porque la relación es redundante. El**código postal** de -> **geografía**->  **nombre completo**de la relación ya existía y acaba de crear el -> **código postal**de **nombre completo**de la relación. El**código postal** de **geografía**-> de la relación es ahora redundante, por lo que se quitará.  
+     Aparece un icono de advertencia en el diagrama porque la relación es redundante. El código postal de geografía **nombre completo**de la relación  ->  **Geography** ->  **Postal Code** ya existía y acaba de crear el código postal de **nombre completo**de la relación  ->  **Postal Code**. El código postal de **geografía**de la relación ->  **Postal Code** es ahora redundante, por lo que se quitará.  
   
 6.  En el panel **Relaciones de atributo** , haga clic con el botón derecho en **Geography**-> **Postal Code** y, después, haga clic en **Eliminar**.  
   
@@ -54,9 +53,9 @@ ms.locfileid: "69493848"
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     La**ciudad** de **geografía**-> de la relación es ahora redundante, por lo que la eliminaremos.  
+     La ciudad de **geografía**de la relación ->  **City** es ahora redundante, por lo que la eliminaremos.  
   
-11. En el panel relación de los atributos, haga clic con el botón secundario en **Geography**-> **City** y haga clic en **eliminar**.  
+11. En el panel relación de los atributos, haga clic con el botón secundario en **Geography** ->  **City** y haga clic en **eliminar**.  
   
 12. Cuando aparezca el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "69493848"
   
 20. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-21. En el panel relación de los atributos, haga clic con el botón secundario en **geografía**-> **Country-region** y haga clic en **eliminar**.  
+21. En el panel relación de los atributos, haga clic con el botón secundario en **geografía** ->  **Country-region** y haga clic en **eliminar**.  
   
 22. Cuando aparezca el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "69493848"
   
      Observe que al eliminar la última relación de atributo entre **Geography** y otros atributos, se elimina **Geography** . Esto se debe a que el atributo ya no se usa.  
   
-24. En el menú Archivo , haga clic en **Guardar todo**.  
+24. En el menú Archivo, haga clic en **Guardar todo**.  
   
 ## <a name="defining-attribute-relationships-for-attributes-in-the-sales-territory-hierarchy"></a>Definir relaciones de atributo para atributos de la jerarquía Sales Territory  
   
@@ -176,7 +175,7 @@ ms.locfileid: "69493848"
   
 12. Establezca la propiedad **AttributeHierarchyOptimizedState** en **NotOptimized**, la propiedad **AttributeHierarchyOrdered** en **False**y la propiedad **AttributeHierarchyVisible** en **False**.  
   
-13. En el menú **Archivo** , haga clic en **Guardar todo**.  
+13. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 14. En el menú **Generar** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], haga clic en **Implementar Tutorial de Analysis Services**.  
   

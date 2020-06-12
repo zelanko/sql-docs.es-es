@@ -12,26 +12,26 @@ ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068552"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83857941"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar una cadena de conexión (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar una cadena de conexión para conectar con un origen de datos OLE DB u ODBC. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
   
  Para conectarse a un origen de datos, debe tener instalado en el equipo el proveedor adecuado. Para más información sobre los proveedores y los orígenes de datos admitidos, vea [Orígenes de datos compatibles &#40;SSAS tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo para esta conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
  **Cadena de conexión**  
  Escriba la cadena de conexión que desea utilizar para conectarse al origen de datos OLE DB o ODBC.  
   
- **Compilar**  
+ **Compilación**  
  Especifique las propiedades de una cadena de conexión con el cuadro de diálogo **Propiedades de vínculo de datos** . Para obtener más información, vea la Ayuda de Vínculos a datos de Microsoft, que está disponible en ese cuadro de diálogo.  
   
  **Probar la conexión**  

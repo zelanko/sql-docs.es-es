@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8f0f1c959d44b4d3e133e5676e9aca9365a628d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727455"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545097"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensiones habilitadas para escritura
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
- Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], al habilitar una dimensión para escritura, los usuarios empresariales pueden modificar el contenido de la dimensión y ver el efecto inmediato de los cambios en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
+ Los datos de una dimensión son normalmente de solo lectura. Con todo, en ciertos casos, puede interesarle habilitar una dimensión para escritura. En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , al habilitar una dimensión para escritura, los usuarios empresariales pueden modificar el contenido de la dimensión y ver el efecto inmediato de los cambios en las jerarquías de la dimensión. Es posible habilitar para escritura cualquier dimensión basada en una sola tabla. En una dimensión habilitada para escritura, los usuarios empresariales y los administradores pueden cambiar, mover, agregar y eliminar los miembros de atributo de la dimensión. Estas actualizaciones se denominan de forma colectiva *reescritura de dimensión*.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la reescritura en la dimensión en todos los atributos de dimensión y, además, cualquier miembro de una dimensión puede modificarse. En un cubo o partición habilitados para escritura, las actualizaciones se almacenan en una tabla de reescritura separada de las tablas de origen del cubo. Sin embargo, para una dimensión habilitada para escritura, las actualizaciones se registran directamente en la tabla de la dimensión. Además, si la dimensión habilitada para escritura está incluida en un cubo con varias particiones en las que algunos o todos sus orígenes de datos tienen copias de la tabla de dimensión, solo se actualizará la tabla de dimensión original durante el proceso de reescritura.  
   

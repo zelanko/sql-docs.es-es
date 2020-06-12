@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: a99f5330-efe0-47c7-8393-8dfd9bb2d490
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a4a4a6362d76afc39234acccc6366c7169244663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b968046a09214c4b5d7922302c911ca4d1f2b875
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077680"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537477"
 ---
 # <a name="modify-mapping-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Modificar asignación (gráfico de precisión de minería de datos)
-  Use el cuadro de diálogo **Modificar asignación** para cambiar el modo en que las columnas de entrada se unen a las columnas en el modelo de minería de datos. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] asignará las columnas automáticamente según el nombre de columna y el tipo de datos, pero puede usar este cuadro de diálogo para cambiar las asignaciones de columnas. Si realiza cambios, debe asegurarse de que las columnas del origen de datos externo tienen tipos de datos y tipos de contenido que coinciden con las columnas del modelo de minería que está probando.  
+  Use el cuadro de diálogo **Modificar asignación** para cambiar el modo en que las columnas de entrada se unen a las columnas en el modelo de minería de datos. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]asignará las columnas automáticamente según el nombre de columna y el tipo de datos, pero puede usar este cuadro de diálogo para cambiar las asignaciones de columnas. Si realiza cambios, debe asegurarse de que las columnas del origen de datos externo tienen tipos de datos y tipos de contenido que coinciden con las columnas del modelo de minería que está probando.  
   
 ## <a name="options"></a>Opciones  
  **Columna de la estructura de minería de datos**  

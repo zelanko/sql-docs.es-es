@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a08f7fbccf1192f946043ebe932020d0fe5d3409
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175810"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537617"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Visores de modelos de minería de datos (Diseñador de modelos de minería de datos)
   Use la pestaña **Visor de modelos de minería de datos** para explorar los modelos de minería de datos que contiene una estructura de minería de datos.
@@ -31,7 +30,7 @@ ms.locfileid: "78175810"
 
  **Modelo de minería de datos** Elija esta opción para ver un modelo de minería de datos que se encuentra en la estructura de minería de datos actual. El modelo de minería de datos se abrirá primero en su visor personalizado asociado.
 
- **Visor** Elija un visor para explorar el modelo de minería de datos seleccionado. Esta lista [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] incluye los visores que proporciona para cada modelo de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] , el visor de contenido de minería de datos y los visores de complementos.
+ **Visor** Elija un visor para explorar el modelo de minería de datos seleccionado. Esta lista incluye los visores que [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona para cada modelo de minería de datos, el [!INCLUDE[msCoName](../includes/msconame-md.md)] visor de contenido de minería de datos y los visores de complementos.
 
  El siguiente diagrama muestra un visor personalizado y el visor genérico para el mismo modelo.
 

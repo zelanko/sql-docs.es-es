@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a01e63e6-97dc-43e5-ad12-ae6580afc606
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cd62e74083ec7e6ad8d55b9127376297567a4413
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 216721a187d86e56154d5d25c5e3174d231f7f36
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547547"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Reglas de mantenimiento de PowerPivot - Configurar
   PowerPivot para SharePoint incluye reglas de mantenimiento de SharePoint que ayudan a supervisar y remediar problemas de configuración y disponibilidad del servidor. Las reglas de estado que se aplican a PowerPivot para SharePoint aparecen en la página Revisar las definiciones de la regla.  
@@ -42,7 +41,7 @@ Get-SPHealthAnalysisRule | Select name, enabled, summary | Where {$_.summary -li
   
  [Configurar las reglas de estado que se utilizan para evaluar la estabilidad de la aplicación (Aplicación de servicio PowerPivot)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador de la aplicación de servicio para cambiar las propiedades de configuración de la instancia de Analysis Services y de la aplicación de servicio PowerPivot.  
   
 ##  <a name="view-powerpivot-health-rules"></a><a name="bkmk_view"></a>Ver las reglas de estado de PowerPivot  

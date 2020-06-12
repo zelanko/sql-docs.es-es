@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c4b36d8f-2328-45f7-8bd4-cc0111571e25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a748a81412f015f556f9224fb6e390eb0be1ef24
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080410"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544142"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Cuadro de diálogo Insertar función (SSAS)
   El cuadro de diálogo **Insertar función** le permite elegir funciones en una lista y usarlas para generar fórmulas. Para obtener acceso a este cuadro de diálogo desde el diseñador de modelos, haga clic en el botón de función (**fx**) de la barra de fórmulas situada encima de cada tabla. Para obtener más información sobre cómo elegir las funciones que puede usar en las fórmulas, vea Introducción a DAX y Generar una fórmula.  
@@ -32,19 +31,19 @@ ms.locfileid: "66080410"
 ## <a name="function-categories"></a>Categorías de funciones  
  DAX (Expresiones de análisis de datos) proporciona los siguientes tipos de categorías de función en el cuadro de diálogo **Insertar función** .  
   
- All  
+ Todo  
   
  Fecha y hora  
   
  Filter  
   
- Lógicos  
+ Lógico  
   
  Matemáticas y trigonométricas  
   
  Estadística  
   
- Text  
+ Texto  
   
 ## <a name="measures-and-formulas"></a>Medidas y fórmulas  
  El cuadro de diálogo **Insertar función** solo está disponible cuando se está generando una fórmula. Puede crear los cálculos en una columna calculada, en una tabla dinámica o en un gráfico dinámico. Las fórmulas que genera expresamente para usarse en una tabla dinámica también se denominan *medidas*. Para obtener más información, vea [Crear una columna calculada &#40;SSAS tabular&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) y [Crear y administrar medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  

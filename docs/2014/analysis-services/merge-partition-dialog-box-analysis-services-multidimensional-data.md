@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1c94e250-ee18-4f98-b112-985f6346102a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07fb8bf093d4a6e0dfa7f73e771bd667a6383a79
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077827"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545497"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Partición de mezcla (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Partición de mezcla** de **SQL Server Management Studio** para mezclar las particiones de un grupo de medida en un cubo. Para mostrar el cuadro de diálogo **Partición de mezcla** , haga clic con el botón derecho en la carpeta Particiones o en una partición del **Explorador de objetos** y seleccione **Partición de mezcla** en el menú contextual.  

@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 41887413-2d47-49b8-8614-553cb799fb18
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4447f58baaa5ea88a48c67a9a32fcda77681d8d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a0c62698f1aed231128803cb91c80264a2fbdbf4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077486"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544837"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Adjuntar y separar bases de datos de Analysis Services
-  Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. En todos esos casos y más, los `Attach` comandos `Detach` y permiten al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA dejar la base de datos sin conexión y volver a ponerla en línea con poco esfuerzo.  
+  Con frecuencia se producen situaciones en las que un administrador de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere dejar sin conexión una base de datos durante un tiempo para después volver a ponerla en línea en la misma instancia de servidor o en otra distinta. Estas situaciones suelen responder a necesidades empresariales, como mover la base de datos a otro disco para mejorar el rendimiento, disponer de más espacio para que la base de datos pueda crecer o actualizar un producto. En todos esos casos y más, los `Attach` `Detach` comandos y permiten al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA dejar la base de datos sin conexión y volver a ponerla en línea con poco esfuerzo.  
   
 ## <a name="attach-and-detach-commands"></a>Los comandos Attach y Detach  
  El comando `Attach` le permite poner en línea una base de datos que se dejó sin conexión. Puede adjuntar la base de datos a la instancia del servidor original o a otra instancia. Al adjuntar una base de datos, es posible especificar el valor de la propiedad **ReadWriteMode** de la base de datos. El comando `Detach` le permite dejar sin conexión una base de datos del servidor.  
@@ -48,7 +47,7 @@ ms.locfileid: "66077486"
 |--------------------------------------|-------------------------------------|  
 |1) El servidor emite una solicitud de bloqueo CommitExclusive para la base de datos<br />2) El servidor espera hasta que todas las transacciones en curso se confirmen o se reviertan<br />3) El servidor genera todos los metadatos que necesita para separar la base de datos<br />4) La base de datos se marca como eliminada<br />5) El servidor confirma la transacción|1) La base de datos se marca como eliminada<br />2) El servidor confirma la transacción<br /><br /> <br /><br /> Nota: No es posible cambiar la contraseña de separación para una base de datos de solo lectura. Se produce un error si se proporciona el parámetro de contraseña para una base de datos adjuntada que ya contiene una contraseña.|  
   
- Los comandos `Attach` y `Detach` se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Además, los `Attach` comandos `Detach` y son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
+ Los comandos `Attach` y `Detach` se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Además, los `Attach` `Detach` comandos y son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
   
 > [!IMPORTANT]  
 >  Se necesitan privilegios de administrador de bases de datos o de servidores para ejecutar el comando `Detach`.  

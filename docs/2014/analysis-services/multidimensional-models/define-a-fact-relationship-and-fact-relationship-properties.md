@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d8e41724-da77-4ac1-bc42-956b5d91ea5d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 471a65cb8f7560b409e6ddf8f73969d83d42a346
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 15f67a4bdf699bbc6443fc76ce54bcfb35831827
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075790"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547097"
 ---
 # <a name="define-a-fact-relationship-and-fact-relationship-properties"></a>Definir relaciones de hechos y propiedades de las relaciones de hechos
   Al definir una nueva dimensión de cubo o un nuevo grupo de medida, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intentará detectar si existe una relación de dimensión de hechos y, a continuación, establecerá la configuración de uso de la dimensión en `Fact`. Puede ver o modificar una relación de dimensión de hechos en la pestaña **Uso de dimensiones** del Diseñador de cubos. La relación de hechos entre una dimensión y un grupo de medida presenta las siguientes restricciones:  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1d7451c82261e23c75b748d4b1cde473191b7749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f6b6ed2674d5f1d852b6281c6244af4f2f6ad3a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082749"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520335"
 ---
 # <a name="time-series-model-query-examples"></a>Ejemplos de consultas de modelos de serie temporal
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que usa las asociaciones detectadas en los datos para realizar predicciones. Por ejemplo, una consulta de contenido para un modelo de serie temporal podría proporcionar detalles adicionales sobre las estructuras periódicas que se detectaron, mientras que una consulta de predicción podría ofrecer predicciones para los intervalos de tiempo 5 a 10 siguientes. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -66,7 +65,7 @@ WHERE MODEL_NAME = '<model name>'
   
 |MINING_PARAMETERS|  
 |------------------------|  
-|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT ={1,3},....|  
+|COMPLEXITY_PENALTY = 0.1, MINIMUM_SUPPORT = 10, PERIODICITY_HINT = {1,3} ,....|  
   
  La sugerencia de periodicidad predeterminada es {1} y aparece en todos los modelos; este modelo de ejemplo se creó con una sugerencia adicional que podría no estar presente en el modelo final.  
   
@@ -156,7 +155,7 @@ AND NODE_TYPE = 15
   
  Por ejemplo, suponga que el modelo existente incluye datos de seis meses. Desea ampliar este modelo agregando las cifras de ventas de los últimos tres meses. Al mismo tiempo, desea realizar una predicción acerca de los tres meses siguientes. Para obtener solo las nuevas predicciones al agregar los nuevos datos, especifique el punto inicial como el intervalo de tiempo 4 y el punto final como el intervalo de tiempo 7. También puede solicitar seis predicciones en total, pero los intervalos de tiempo para las tres primeras se superpondrían con los nuevos datos recién agregados.  
   
- Para obtener ejemplos de consultas y más información sobre la sintaxis `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar y, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Para obtener ejemplos de consultas y más información sobre la sintaxis para usar `REPLACE_MODEL_CASES` y `EXTEND_MODEL_CASES` , consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="making-predictions-with-extend_model_cases"></a><a name="bkmk_EXTEND"></a> Realizar predicciones con EXTEND_MODEL_CASES  
  El comportamiento de la predicción varía en función de si se amplían o se reemplazan los casos del modelo. Al ampliar un modelo, los nuevos datos se asocian al final de la serie y el tamaño del conjunto de aprendizaje aumenta. Sin embargo, los intervalos de tiempo usados en las consultas de predicción siempre se inician al final de la serie original. Por tanto, si agrega tres nuevos puntos de datos y solicita seis predicciones, las tres primeras predicciones devueltas se superponen a los nuevos datos. En este caso, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] devuelve los nuevos puntos de datos reales en lugar de realizar una predicción, hasta que se agoten los nuevos puntos de datos. A continuación, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] realiza predicciones basadas en la serie compuesta.  
@@ -198,10 +197,10 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  Con REPLACE_MODEL_CASES, al comenzar en la marca de tiempo 1, se obtienen predicciones nuevas basadas en los datos nuevos, que reemplazan los datos de entrenamiento antiguos.  
   
- Para obtener ejemplos de consultas y más información sobre la sintaxis `REPLACE_MODEL_CASES` para `EXTEND_MODEL_CASES`usar y, consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
+ Para obtener ejemplos de consultas y más información sobre la sintaxis para usar `REPLACE_MODEL_CASES` y `EXTEND_MODEL_CASES` , consulte [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="missing-value-substitution-in-time-series-models"></a><a name="bkmk_MissingValues"></a>Sustitución de valores que faltan en los modelos de serie temporal  
- Al agregar nuevos datos a un modelo de serie temporal con una instrucción `PREDICTION JOIN`, en el nuevo conjunto de datos no puede faltar ningún valor. Si alguna serie está incompleta, el modelo debe proporcionar los valores ausentes mediante un valor NULL, una media numérica, una media numérica concreta o un valor de predicción. Si especifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores ausentes con predicciones basadas en el modelo original. Si usa `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores que faltan por el valor que especifique en el parámetro *MISSING_VALUE_SUBSTITUTION* .  
+ Al agregar nuevos datos a un modelo de serie temporal con una instrucción `PREDICTION JOIN`, en el nuevo conjunto de datos no puede faltar ningún valor. Si alguna serie está incompleta, el modelo debe proporcionar los valores ausentes mediante un valor NULL, una media numérica, una media numérica concreta o un valor de predicción. Si especifica `EXTEND_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores ausentes con predicciones basadas en el modelo original. Si usa `REPLACE_MODEL_CASES` , [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] reemplaza los valores que faltan por el valor que especifique en el parámetro *MISSING_VALUE_SUBSTITUTION* .  
   
 ## <a name="list-of-prediction-functions"></a>Lista de funciones de predicción  
  Todos los algoritmos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] son compatibles con un conjunto común de funciones. No obstante, el algoritmo de serie temporal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las funciones adicionales que figuran en la siguiente tabla.  

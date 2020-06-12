@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f7719b9e-b1e6-4792-90a6-30d9d8eb1196
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 432300f54a7678970f394b27712bcb28ba8a7e7d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35c9ee36bf30b18859fa3ded540e607a48d0beb9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088368"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527662"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Editor de Formulario de miembro calculado (pestaña Cálculos, Diseñador de cubos) (Analysis Services -  Datos multidimensionales)
   Utilice el panel del **Editor de Formulario de miembro calculado** de la pestaña **Cálculos** del Diseñador de cubos para crear o modificar un miembro calculado.  
@@ -39,7 +38,7 @@ ms.locfileid: "66088368"
   
  **Nota** Esta opción está disponible si **Jerarquía primaria** especifica una jerarquía distinta de MEASURES.  
   
- **Cambios**  
+ **Cambio**  
  Seleccione esta opción para mostrar el cuadro de diálogo **Seleccionar miembro primario** y, luego, un miembro para **Miembro primario**. Para más información sobre el cuadro de diálogo **Seleccionar miembro primario**, vea [Cuadro de diálogo Seleccionar miembro primario &#40;Analysis Services - Datos multidimensionales&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expression**  
@@ -65,7 +64,7 @@ ms.locfileid: "66088368"
  Seleccione el nombre de la medida utilizada para resolver las consultas NON EMPTY en MDX para el miembro calculado. Si la propiedad **Comportamiento si no está vacío** está en blanco, es necesario evaluar el miembro calculado repetidamente para determinar si está vacío. Si la propiedad **Comportamiento si no está vacío** contiene el nombre de una medida, el miembro calculado se trata como si estuviera vacío si la medida especificada está vacía.  
   
 > [!WARNING]  
->  Esta propiedad está en desuso. No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
+>  Esta propiedad está desusada. No la active. Consulte [características Desusadas Analysis Services en SQL Server 2014](deprecated-analysis-services-features-in-sql-server-2014.md) para obtener más información.  
   
  **Expresiones de color**  
  Expanda para ver las opciones **Color en primer plano** y **Color de fondo** .  

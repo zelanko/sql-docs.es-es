@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c8daa38dd1bda5c23d60478394cd1f6450d41ff
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543747"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona un conjunto de plantillas para ayudarle a crear scripts XMLA, DMX o consultas MDX; para crear KPI en un cubo o un modelo tabular; incluir en scripts las operaciones de copia de seguridad y restauración; y otras muchas tareas. Las plantillas se encuentran en el **Explorador de plantillas** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
@@ -69,13 +68,13 @@ ms.locfileid: "78175229"
 
 3.  Mediante el **Explorador de metadatos**, arrastre los campos y las medidas siguientes en la plantilla de consulta:
 
-    1.  Reemplace \<row_axis, mdx_set> por **[categoría de producto]. [ Nombre de categoría de producto]**.
+    1.  Reemplazar \<row_axis, mdx_set> por **[categoría de producto]. [ Nombre de categoría de producto]**.
 
-    2.  Reemplace \<column_axis, mdx_set> por **[Date]. [ Año natural]. [Año natural]**.
+    2.  Reemplazar \<column_axis, mdx_set> por **[Date]. [ Año natural]. [Año natural]**.
 
     3.  Reemplace \<from_clause, mdx_name> por **[ventas por Internet]**.
 
-    4.  Reemplace \<where_clause, mdx_set> por **[Measures]. [ Ventas totales por Internet]**.
+    4.  Reemplazar \<where_clause, mdx_set> por **[Measures]. [ Ventas totales por Internet]**.
 
 4.  Puede ejecutar la consulta tal cual, pero probablemente deseará hacer algunos cambios, como agregar una función para devolver miembros concretos. Por ejemplo, escriba `.members` después de **[categoría de producto]. [ Nombre de categoría de producto]**. Para más información, vea [Using Member Expressions](/sql/mdx/using-member-expressions).
 
@@ -101,11 +100,11 @@ ms.locfileid: "78175229"
 
 2.  Arrastre la `Backup` plantilla a la ventana de consulta vacía.
 
-3.  Haga doble clic en el texto dentro \<del elemento DatabaseID>.
+3.  Haga doble clic en el texto dentro del \<DatabaseID> elemento.
 
 4.  En el Explorador de objetos, seleccione la base de datos de la que desee hacer una copia de seguridad y arrastre y coloque la base de datos entre corchetes del elemento DatabaseID.
 
-5.  Haga doble clic en el texto del \<archivo>. Escriba el nombre del archivo de copia de seguridad, incluida la extensión de archivo .abf. Especifique la ruta de acceso completa si no usa la ubicación predeterminada de copia de seguridad. Para más información, vea [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
+5.  Haga doble clic en el texto dentro del \<File> elemento. Escriba el nombre del archivo de copia de seguridad, incluida la extensión de archivo .abf. Especifique la ruta de acceso completa si no usa la ubicación predeterminada de copia de seguridad. Para más información, vea [Restaurar, sincronizar y realizar copias de seguridad de bases de datos &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
 ##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>Generar una consulta de conjunto de filas de esquema mediante una plantilla XMLA
  El **Explorador de plantillas** contiene solo una plantilla para las consultas de conjunto de filas de esquema. Para usar esta plantilla, debe conocer los requisitos del conjunto de filas de esquema individual que desea utilizar, incluido cualquier elemento necesario, y las columnas que se pueden usa como restricciones. Para más información, vea [Conjuntos de filas de esquema de Analysis Services](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
@@ -165,14 +164,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Referencia de plantillas de Analysis Services
  Las plantillas siguientes se proporcionan para trabajar con bases de datos de Analysis Services y los objetos de la base de datos, incluidas las restricciones de minería de datos y los modelos de minería de datos, los cubos y los modelos tabulares:
 
-|Category|Plantilla de elementos|Descripción|
+|Categoría|Plantilla de elementos|Descripción|
 |--------------|-------------------|-----------------|
-|DMX\Contenido del modelo|Content Query|Muestra cómo usar DMX Select from * \<Model>*. Instrucción de contenido para recuperar el contenido del conjunto de filas de esquema del modelo de minería de datos para un modelo de minería de datos especificado.|
-||Continuous Column Values|Muestra cómo usar la instrucción DMX SELECT DISTINCT from * \<Model>* con las funciones `RangeMin` DMX `RangeMax` y para recuperar un conjunto de valores de un intervalo especificado de las columnas continuas de un modelo de minería de datos especificado.|
-||Discrete Column Values|Muestra cómo usar la instrucción DMX SELECT DISTINCT from * \<Model>* recuperar un conjunto completo de valores de las columnas discretas de un modelo de minería de datos especificado.|
+|DMX\Contenido del modelo|Content Query|Muestra cómo usar DMX SELECT FROM *\<model>* . Instrucción de contenido para recuperar el contenido del conjunto de filas de esquema del modelo de minería de datos para un modelo de minería de datos especificado.|
+||Continuous Column Values|Muestra cómo usar la instrucción DMX SELECT DISTINCt FROM *\<model>* con las `RangeMin` funciones DMX y `RangeMax` para recuperar un conjunto de valores de un intervalo especificado de las columnas continuas de un modelo de minería de datos especificado.|
+||Discrete Column Values|Muestra cómo usar la instrucción DMX SELECT DISTINCt FROM para *\<model>* recuperar un conjunto completo de valores de las columnas discretas de un modelo de minería de datos especificado.|
 ||Drillthrough Query|Muestra cómo usar la instrucción DMX SELECT * FROM Model.CASES con la función DMX IsInNode para llevar a cabo una consulta de obtención de detalles.|
 ||Model Attributes|Muestra cómo usar la función DMX System.GetModelAttributes para obtener la lista de los atributos utilizados por un modelo.|
-||PMML Content|Muestra cómo usar DMX SELECT \* from * \<Model>*. La instrucción PMML para recuperar la representación del lenguaje de marcado de modelos de predicción (PMML) del modelo de minería de datos, para los algoritmos que admiten esta funcionalidad.|
+||PMML Content|Muestra cómo usar DMX SELECT \* from *\<model>* . La instrucción PMML para recuperar la representación del lenguaje de marcado de modelos de predicción (PMML) del modelo de minería de datos, para los algoritmos que admiten esta funcionalidad.|
 |DMX\Administración de modelos|Add Model|Muestra cómo usar la instrucción DMX ALTER MINING MODEL STRUCTURE para agregar un modelo de minería de datos.|
 ||Clear Model|Muestra cómo usar la instrucción DMX DELETE * FROM MINING MODEL para eliminar el contenido de un modelo de minería de datos especificado.|
 ||Clear Structure Cases|Muestra cómo usar la instrucción DMX DELETE FROM MINING STRUCTURE para borrar casos de estructura de modelo de minería de datos.|
@@ -184,16 +183,16 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Drop Structure|Muestra cómo usar la instrucción DMX DROP MINING STRUCTURE para eliminar una estructura de minería de datos existente.|
 ||Export Model|Muestra cómo usar la instrucción DMX EXPORT MINING MODEL con las cláusulas WITH DEPENDENCIES y PASSWORD para exportar a un archivo un modelo de minería de datos, incluyendo el origen de datos y la vista del origen de datos de la que depende el modelo.|
 ||Export Structure|Muestra cómo usar la instrucción DMX EXPORT MINING STRUCTURE con la cláusula WITH DEPENDENCIES para exportar a un archivo una estructura de minería de datos, incluyendo todos los modelos de minería de datos que contiene la estructura, el origen de datos y la vista del origen de datos de la que depende la estructura.|
-||Importar|Muestra cómo usar la instrucción DMX IMPORT FROM con la cláusula WITH PASSWORD para llevar a cabo una importación.|
+||Importación|Muestra cómo usar la instrucción DMX IMPORT FROM con la cláusula WITH PASSWORD para llevar a cabo una importación.|
 ||Rename Model|Muestra cómo usar la instrucción DMX RENAME MINING MODEL para cambiar el nombre de un modelo de minería de datos existente.|
 ||Rename Structure|Muestra cómo usar la instrucción DMX RENAME MINING STRUCTRE para cambiar el nombre de una estructura de minería de datos existente.|
 ||Train Model (Entrenar modelo)|Muestra cómo usar la instrucción DMX INSERT INTO MINING MODEL para entrenar un modelo de minería de datos en una estructura ya entrenada.|
 ||Train Nested Structure|Muestra cómo combinar la instrucción DMX INSERT INTO MINING STRUCTURE con la consulta de datos de origen SHAPE para entrenar un modelo de minería de datos que contiene columnas anidadas con datos que contienen tablas anidadas, recuperadas mediante una consulta, de un origen de datos existente.|
 ||Train Structure|Muestra cómo combinar la instrucción DMX INSERT INTO MINING STRUCTURE con la consulta de datos de origen OPENQUERY para entrenar una estructura de minería de datos.|
-|DMX\Consultas de predicción|Base Prediction|Muestra cómo combinar una instrucción DMX Select from * \<Model>* join join con la consulta de datos de origen OPENQUERY para ejecutar una consulta de predicción en un modelo de minería de datos utilizando datos, recuperados mediante una consulta, de un origen de datos existente.|
-||Nested Prediction|Muestra cómo combinar una instrucción DMX Select from * \<Model>* join join con las consultas de datos de origen de Shape y OPENQUERY para ejecutar una consulta de predicción en un modelo de minería de datos usando datos que contienen tablas anidadas, recuperadas mediante una consulta, de un origen de datos existente.|
-||Nested Singleton Prediction|Muestra cómo usar una cláusula DMX Select from * \<Model>* combinación de predicción natural para ejecutar una consulta de predicción en un modelo de minería de datos utilizando un valor único. se especifica explícitamente en la consulta de predicción, en una columna cuyo nombre coincide con una columna del modelo de minería de datos y que contiene un conjunto de valores de una tabla anidada creada mediante una instrucción Union cuyos nombres también coinciden con las columnas anidadas del modelo de minería de datos.|
-||Singleton Prediction|Muestra cómo usar una instrucción DMX SELECT FROM \<Model> combinación de predicción natural para ejecutar una consulta de predicción en un modelo de minería de datos utilizando un solo valor, especificado explícitamente en la consulta de predicción, en una columna cuyo nombre coincide con una columna del modelo de minería de datos.|
+|DMX\Consultas de predicción|Base Prediction|Muestra cómo combinar una instrucción DMX SELECT FROM *\<model>* PREDICT join con la consulta de datos de origen OPENQUERY para ejecutar una consulta de predicción en un modelo de minería de datos utilizando los datos, recuperados mediante una consulta, de un origen de datos existente.|
+||Nested Prediction|Muestra cómo combinar una instrucción DMX SELECT FROM *\<model>* PREDICT join con las consultas de datos de origen Shape y OPENQUERY para ejecutar una consulta de predicción en un modelo de minería de datos utilizando los datos que contienen tablas anidadas, recuperadas mediante una consulta, de un origen de datos existente.|
+||Nested Singleton Prediction|Muestra cómo usar una cláusula DMX SELECT FROM *\<model>* natural PREDICT join para ejecutar una consulta de predicción en un modelo de minería de datos utilizando un solo valor, especificado explícitamente en la consulta de predicción, en una columna cuyo nombre coincide con una columna del modelo de minería de datos y que contiene un conjunto de valores de una tabla anidada creada mediante una instrucción Union cuyos nombres también coinciden con las|
+||Singleton Prediction|Muestra cómo usar una instrucción DMX SELECT FROM \<model> natural PREDICT join para ejecutar una consulta de predicción en un modelo de minería de datos utilizando un solo valor, especificado explícitamente en la consulta de predicción, en una columna cuyo nombre coincide con una columna del modelo de minería de datos.|
 ||Stored Procedure Call|Muestra cómo usar la instrucción DMX CALL para llamar a un procedimiento almacenado.|
 |MDX\Expresiones|Moving Average-Fixed|Muestra cómo usar las funciones MDX `ParallelPeriod` y `CurrentMember` con un conjunto ordenado de forma natural para crear una medida calculada que proporcione una media móvil de una medida a lo largo de un número fijo de períodos de tiempo incluidos en una jerarquía de una dimensión temporal.|
 ||Moving Average-Variable|Muestra cómo usar la instrucción MDX `CASE` dentro de la función `Avg` para crear una medida calculada que proporcione una media móvil de una medida a lo largo de un número variable de períodos de tiempo incluidos en una jerarquía de una dimensión temporal.|

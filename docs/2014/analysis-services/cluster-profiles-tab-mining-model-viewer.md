@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1ebafa1f-74e9-4c05-b278-a690fa8543bd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31620135818f77db11938c67059319932e98fc51
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087870"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527441"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del clúster (Visor de modelos de minería de datos)
   Utilice la pestaña **Perfiles del clúster** para obtener una vista general de los clústeres que ha descubierto el algoritmo en un modelo de agrupación en clústeres. La pestaña muestra cada atributo junto con la distribución del atributo en cada clúster.  
@@ -43,7 +42,7 @@ ms.locfileid: "66087870"
  **Atributos**  
  Enumera las columnas incluidas en el modelo de agrupación en clústeres. Los histogramas de cada atributo muestran cómo se distribuye el atributo entre los clústeres identificados por el algoritmo.  
   
- **States**  
+ **Estados**  
  Proporciona una clave que denota qué color representa cada estado en la fila de clústeres correspondiente, o un control deslizante con rombo que indica la distribución de los valores numéricos continuos. Puede mostrar u ocultar esta columna mediante la casilla **Mostrar leyenda** .  
   
  **Perfiles del clúster**  

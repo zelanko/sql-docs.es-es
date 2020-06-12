@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bbd5ef006674a61830bf07de31f73c3915b0d4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bfe876f6874193fd0885f16d91caa9f6fe8b172
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62701993"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544947"
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Administrar conexiones y sesiones (XMLA)
   *Estados* es una condición en la que el servidor conserva la identidad y el contexto de un cliente entre las llamadas de método. *Estados* es una condición en la que el servidor no recuerda la identidad y el contexto de un cliente después de que finalice una llamada al método.  
@@ -72,7 +71,7 @@ ms.locfileid: "62701993"
     </SOAP-ENV:Envelope>  
     ```  
   
-2.  El mensaje de respuesta SOAP del proveedor incluye el identificador de sesión en el área de encabezado de devolución, con la \<etiqueta de encabezado XMLA SessionID>.  
+2.  El mensaje de respuesta SOAP del proveedor incluye el identificador de sesión en el área de encabezado de devolución, utilizando la etiqueta de encabezado XMLA \<SessionId> .  
   
     ```  
     <SOAP-ENV:Header>  
@@ -93,7 +92,7 @@ ms.locfileid: "62701993"
     </SOAP-ENV:Header>  
     ```  
   
-4.  Una vez completada la sesión, \<se usa la etiqueta EndSession>, que contiene el valor de ID. de sesión relacionado.  
+4.  Una vez completada la sesión, \<EndSession> se usa la etiqueta, que contiene el valor de identificador de sesión relacionado.  
   
     ```  
     <SOAP-ENV:Header>  

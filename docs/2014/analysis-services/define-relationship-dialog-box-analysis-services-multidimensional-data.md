@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d80be1c4898ae00dfdbb88e22771c071636cf73c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 134a6dc66ea80bf9bd3d89f1853f30a30e51bd9e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082101"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528801"
 ---
 # <a name="define-relationship-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Definir relación (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Definir relación** para definir una relación entre una dimensión de cubo y un grupo de medida en el Diseñador de cubos. Puede mostrar el cuadro de diálogo **Definir relación** haciendo clic en los **...** de una celda del panel **Cuadrícula** que se encuentra en la pestaña **Uso de dimensiones** en el Diseñador de cubos.  
@@ -30,7 +29,7 @@ ms.locfileid: "66082101"
   
  Si se elige **Sin relación** , no se crea ninguna relación de dimensión.  
   
- **Detail**  
+ **Detalle**  
  Muestra las opciones disponibles para el tipo de relación de dimensión seleccionado en **Seleccionar tipo de relación**.  
   
 ## <a name="detail-pane-options"></a>Opciones del panel Detalle  

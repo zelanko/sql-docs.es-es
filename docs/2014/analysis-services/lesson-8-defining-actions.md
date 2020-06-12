@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 15459396-83c9-48a0-b10a-99ae38768c79
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8293bb8d1f0465d09b296cbd18702b569f073766
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5299599a2431d68e3ea13370f51aceef58efaf14
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078229"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542237"
 ---
 # <a name="lesson-8-defining-actions"></a>Lección 8: definir acciones
   En esta lección, aprenderá a definir acciones en el proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Una acción es solo una instrucción de Expresiones multidimensionales (MDX) que se almacena en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y que se puede incorporar en las aplicaciones cliente e iniciarse por el usuario.  
@@ -35,7 +34,7 @@ ms.locfileid: "66078229"
 |Informe|Envía una solicitud parametrizada basada en una dirección URL a un servidor de informes y devuelve un informe a una aplicación cliente.|  
 |Conjunto de filas|Devuelve un conjunto de filas a una aplicación cliente.|  
 |.|Ejecuta un comando OLE DB.|  
-|URL|Muestra una página web dinámica en un explorador de Internet.|  
+|Resolución|Muestra una página web dinámica en un explorador de Internet.|  
   
  Las acciones permiten a los usuarios iniciar una aplicación o realizar otros pasos en el contexto de un elemento seleccionado. Para obtener más información, vea [Acciones &#40;Analysis Services - Datos multidimensionales&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md), [Acciones en modelos multidimensionales](multidimensional-models/actions-in-multidimensional-models.md)  
   

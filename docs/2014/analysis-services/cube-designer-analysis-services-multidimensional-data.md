@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a6692467-da88-4312-8b03-d812f2ae5a96
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e206bcbddb1f6db8c58ecba8c5550809f79457a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086605"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526211"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Diseñador de cubos (Analysis Services - Datos multidimensionales)
   Use el **Diseñador de cubos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para editar diversas propiedades de un cubo existente, incluidos los grupos de medidas y las medidas, las dimensiones del cubo y las relaciones de dimensión, los cálculos, los indicadores clave de rendimiento (KPI), las acciones, las particiones, las perspectivas y las traducciones incluidas en el cubo, así como para examinar los datos incluidos en el cubo. Para mostrar el cuadro de diálogo **Diseñador de cubos** :  
@@ -28,7 +27,7 @@ ms.locfileid: "66086605"
   
  El **Diseñador de cubos** presenta las siguientes pestañas:  
   
-## <a name="tabs"></a>Pestañas  
+## <a name="tabs"></a>Tabulaciones  
   
 |Pestaña|Definición|  
 |---------|----------------|  
@@ -38,7 +37,7 @@ ms.locfileid: "66086605"
 |**KPI**|Use esta pestaña para crear y modificar los KPI incluidos en el cubo. Para más información sobre esta pestaña, vea [KPI &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Acciones**|Use esta pestaña para crear y modificar acciones incluidas en el cubo, como las acciones de obtención de detalles y las acciones de informe. Para más información sobre esta pestaña, vea [Acciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](actions-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Particiones**|Use esta pestaña para crear y modificar particiones incluidas en el cubo, como la configuración de almacenamiento en caché automático para grupos de medida y particiones. Para más información sobre esta pestaña, vea [Particiones &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](partitions-cube-designer-analysis-services-multidimensional-data.md).|  
-|**perspectivas**|Use esta pestaña para crear y modificar las perspectivas incluidas en el cubo. Para más información sobre esta pestaña, vea [Perspectivas &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Perspectivas**|Use esta pestaña para crear y modificar las perspectivas incluidas en el cubo. Para más información sobre esta pestaña, vea [Perspectivas &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](perspectives-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Translations**|Use esta pestaña para crear y modificar las traducciones de grupos de medida, medidas, dimensiones del cubo, perspectivas, KPI, acciones, conjuntos con nombre y miembros calculados incluidos en el cubo. Para más información sobre esta pestaña, vea [Traducciones &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](translations-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Browser**|Use esta pestaña para explorar datos y metadatos del cubo. Para más información sobre esta pestaña, vea [Explorador &#40;Diseñador de cubos&#41; &#40;Analysis Services - Datos multidimensionales&#41;](browser-cube-designer-analysis-services-multidimensional-data.md).|  
   

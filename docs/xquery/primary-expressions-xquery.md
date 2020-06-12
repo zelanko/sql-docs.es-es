@@ -1,5 +1,6 @@
 ---
 title: Expresiones principales (XQuery) | Microsoft Docs
+description: Obtenga información sobre las expresiones primarias de XQuery que incluyen literales, referencias de variables, expresiones de elementos de contexto, constructores y llamadas de función.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7e3504b4f04b1b9842f786eeef3ecf1f105563f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa06923eeceff312def44ff13ab12b8371439c7
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74200514"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529792"
 ---
 # <a name="primary-expressions-xquery"></a>Expresiones principales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.locfileid: "74200514"
 |`&quot;`|"|  
 |`&apos;`|'|  
   
- Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del euro se puede representar mediante la referencia de carácter " \#&8364;".  
+ Un literal de cadena también puede contener una referencia de carácter, una referencia de estilo XML a un carácter Unicode, que se identifica mediante su punto de código decimal o hexadecimal. Por ejemplo, el símbolo del euro se puede representar mediante la referencia de carácter "&\# 8364;".  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza la versión 1.0 de XML como base para el análisis.  
@@ -156,7 +157,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Expresiones de elementos de contexto  
  El elemento de contexto es el elemento que se está procesando en el contexto de una expresión de ruta de acceso. Se inicializa en una instancia de tipo de datos XML distinta de NULL con el nodo de documento. También puede cambiarse mediante el método Nodes (), en el contexto de las expresiones XPath o de los predicados [].  
   
- Una expresión que contiene un punto (.) devuelve el elemento de contexto. Por ejemplo, la consulta siguiente evalúa cada elemento <`a`> para la presencia del atributo. `attr` Si el atributo está presente, se devuelve el elemento. Tenga en cuenta que la condición del predicado especifica que el nodo de contexto se especifica mediante un solo punto.  
+ Una expresión que contiene un punto (.) devuelve el elemento de contexto. Por ejemplo, la consulta siguiente evalúa cada elemento <`a`> para la presencia del atributo `attr` . Si el atributo está presente, se devuelve el elemento. Tenga en cuenta que la condición del predicado especifica que el nodo de contexto se especifica mediante un solo punto.  
   
 ```  
 DECLARE @var XML  
@@ -171,8 +172,8 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
   
  `<a attr="1">2</a>`  
   
-## <a name="function-calls"></a>Llamadas a funciones  
- Puede llamar a funciones de XQuery integradas y a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las funciones SQL: variable () y SQL: column (). Para obtener una lista de las funciones implementadas, vea [funciones de XQuery con el tipo de datos XML](../xquery/xquery-functions-against-the-xml-data-type.md).  
+## <a name="function-calls"></a>Llamadas de función  
+ Puede llamar a funciones de XQuery integradas y a las [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] funciones SQL: variable () y SQL: column (). Para obtener una lista de las funciones implementadas, vea [funciones de XQuery con el tipo de datos XML](../xquery/xquery-functions-against-the-xml-data-type.md).  
   
 #### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones de la implementación:  

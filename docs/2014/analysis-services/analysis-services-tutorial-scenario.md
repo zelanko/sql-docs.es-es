@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062439"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528041"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
   Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
@@ -46,7 +45,7 @@ ms.locfileid: "66062439"
 -   Es difícil auditar la información. Actualmente, el departamento de finanzas usa la base de datos **AdventureWorksDW2012** solo como origen de datos en la que pueden realizarse consultas masivas. Luego descargan los datos en hojas de cálculo individuales e invierten mucho tiempo en preparar los datos y manipular dichas hojas de cálculo. Por consiguiente, el proceso de preparación, auditoría y administración de los informes financieros de la compañía es complejo.  
   
 ## <a name="the-solution"></a>Solución  
- Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] usar para realizar lo siguiente:  
+ Recientemente, el equipo del almacenamiento de datos ha realizado una revisión del diseño del sistema de análisis actual. La revisión ha incluido un análisis de las lagunas que presentan los problemas actuales y las demandas futuras. Este equipo ha determinado que la base de datos **AdventureWorksDW2012** es una base de datos dimensional bien diseñada con dimensiones compatibles y claves suplentes. Las dimensiones compatibles permiten utilizar una dimensión en varios puestos de datos, como una dimensión de tiempo o una dimensión de producto. Las claves suplentes son claves artificiales que vinculan tablas de dimensiones y de hechos y se utilizan para garantizar la unicidad y mejorar el rendimiento. Además, el equipo de almacenamiento de datos ha determinado que actualmente no existen problemas significativos con la carga y la administración de las tablas base de la base de datos **AdventureWorksDW2012** . Por tanto, el equipo ha decidido usar [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para realizar lo siguiente:  
   
 -   Proporcionar el acceso a datos unificados a través de una capa de metadatos común para la creación de informes y el análisis analítico.  
   

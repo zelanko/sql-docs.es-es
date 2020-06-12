@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7ffd5880120184249d89c4d702b30c8d6e01e1f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79a675d0d27c5bfe033075c92e7ed06aa9c914c5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076501"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536733"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Crear un cubo con el Asistente para cubos
   Puede crear un nuevo cubo usando el Asistente para cubos de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "66076501"
   
     2.  En la lista **Tablas de grupos de medida** , seleccione las tablas que se van a usar para crear grupos de medida.  
   
-    3.  Haga clic en **Siguiente**.  
+    3.  Haga clic en **Next**.  
   
 4.  En la página **Seleccionar medidas** , seleccione las medidas que desee incluir en el cubo y, a continuación, haga clic en **Siguiente**.  
   

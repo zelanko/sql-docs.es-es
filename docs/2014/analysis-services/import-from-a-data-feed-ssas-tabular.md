@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0686e519-67c2-4f9b-8cd2-84a4871499ee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f1343f8234e23156981e416613cd2b899cf57f2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080571"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544227"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importar datos de una fuente de distribución de datos (SSAS tabular)
   Las fuentes de distribución de datos son uno o varios flujos de datos XML que se generan a partir de un origen de datos en línea y se transmiten a un documento o aplicación de destino. Puede importar datos desde una fuente de distribución de datos en el modelo mediante el Asistente para la importación de tablas.  
@@ -69,7 +68,7 @@ ms.locfileid: "66080571"
   
 9. En la página del asistente **Seleccionar tablas y vistas** , en el campo **Nombre descriptivo** , escriba un nombre descriptivo que identifique la tabla que contendrá estos datos una vez se hayan importado.  
   
-10. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
+10. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
   
 11. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "66080571"
   
 8.  En la página del asistente **Seleccionar tablas y vistas** , en el campo **Nombre descriptivo** , reemplace el contenido de la fuente de distribución de datos con un nombre descriptivo que identifique la tabla que contendrá estos datos una vez se hayan importado.  
   
-9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
+9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
   
 10. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
@@ -122,7 +121,7 @@ ms.locfileid: "66080571"
   
 3.  En la página **Conectarse a una fuente de distribución de datos** , escriba un nombre descriptivo para la fuente a la que está obteniendo acceso. Si está importando varias fuentes u orígenes de datos, el uso de nombres descriptivos para la conexión puede ayudarle a recordar cómo se usa la conexión.  
   
-4.  En dirección URL de fuente de distribución de datos, escriba una dirección para el \<servicio de datos de lista, reemplazando el nombre del servidor> por el nombre real del servidor de SharePoint:  
+4.  En dirección URL de fuente de distribución de datos, escriba una dirección para el servicio de datos de lista y reemplace \<server-name> por el nombre real del servidor de SharePoint:  
   
     ```  
     http://<server-name>/_vti_bin/listdata.svc  
@@ -139,7 +138,7 @@ ms.locfileid: "66080571"
     > [!NOTE]  
     >  Solo puede importar listas que contienen columnas.  
   
-9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
+9. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
   
 10. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   
@@ -156,7 +155,7 @@ ms.locfileid: "66080571"
   
 4.  Haga clic en **Examinar** y seleccione un servidor de informes.  
   
-     Si usa regularmente los informes en un servidor de informes, el servidor puede aparecer en **Sitios y servidores recientes**. De lo contrario, en Nombre, escriba una dirección de un servidor de informes y haga clic en **Abrir** para examinar las carpetas en el sitio del servidor de informes. Una dirección de ejemplo para un servidor de informes podría\<ser http://COMPUTERNAME>/ReportServer.  
+     Si usa regularmente los informes en un servidor de informes, el servidor puede aparecer en **Sitios y servidores recientes**. De lo contrario, en Nombre, escriba una dirección de un servidor de informes y haga clic en **Abrir** para examinar las carpetas en el sitio del servidor de informes. Una dirección de ejemplo para un servidor de informes podría ser http:// \<computername> /ReportServer.  
   
 5.  Seleccione el informe y, a continuación, haga clic en **Abrir**. Alternativamente, puede pegar un vínculo al informe, incluida la ruta de acceso completa y nombre del informe, en el cuadro de texto **Nombre** . El Asistente para la importación de tablas conecta con el informe y lo representa en el área de vista previa.  
   
@@ -185,7 +184,7 @@ ms.locfileid: "66080571"
   
      De forma predeterminada, se usa el nombre del control de Reporting Services si no se ha asignado ningún nombre: por ejemplo, Tablix1 o Tablix2. Recomendamos cambiar este nombre durante la importación para que pueda identificar el origen de la fuente de distribución de datos importada más fácilmente.  
   
-11. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **Aceptar**.  
+11. Haga clic en **Vista previa y filtro** para revisar los datos y cambiar las selecciones de columna. No puede restringir las filas que se importan de la fuente de distribución de datos del informe, pero puede quitar columnas. Haga clic en **OK**.  
   
 12. En la página **Seleccionar tablas y vistas** , haga clic en **Finalizar**.  
   

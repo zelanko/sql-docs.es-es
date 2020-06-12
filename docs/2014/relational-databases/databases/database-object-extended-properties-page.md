@@ -12,17 +12,17 @@ ms.assetid: caa4f4a1-fd54-466e-975d-3e7e1cc5de54
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8561661b2893cceb1cea9a31326d856bc1287acb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7575fc5d539c31e901b5229d215a3bfeb42b221c
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917210"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859449"
 ---
 # <a name="database-object-extended-properties-page"></a>Objeto de base de datos (página Propiedades extendidas)
   Las propiedades extendidas permiten agregar propiedades personalizadas a los objetos de base de datos. Utilice esta página para ver o modificar las propiedades extendidas del objeto seleccionado. La página **Propiedades extendidas** es la misma para todos los tipos de objeto de base de datos.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Base de datos**  
  Muestra el nombre de la base de datos seleccionada. Este campo es de solo lectura.  
   

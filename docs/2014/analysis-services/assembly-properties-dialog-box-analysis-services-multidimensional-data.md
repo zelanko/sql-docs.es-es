@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: da1174d6-d82b-4337-ac19-7368dbd95a84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b21230ddff5a3db043b533a4f921a30b02da739b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc203f0a4117a2f59e09a53308f0c26bbcbce85b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062294"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527981"
 ---
 # <a name="assembly-properties-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Propiedades del ensamblado (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Propiedades del ensamblado** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una referencia de ensamblado en una base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades del ensamblado** , haga clic con el botón derecho en **Explorador de objetos** y seleccione **Propiedades**.  
@@ -31,9 +30,9 @@ ms.locfileid: "66062294"
 |**Descripción**|Escriba para cambiar la descripción de la referencia de ensamblado.|  
 |**Marca de tiempo de creación**|Muestra la fecha y la hora de creación de la referencia de ensamblado.|  
 |**Última actualización de esquema**|Muestra la fecha y la hora de la última actualización de los metadatos de la referencia de ensamblado.|  
-|**Type**|Muestra el tipo de referencia de ensamblado. Se muestran las siguientes opciones:<br /><br /> **Ensamblado .net**: la referencia de ensamblado [!INCLUDE[msCoName](../includes/msconame-md.md)] hace referencia a un ensamblado de .NET Framework.<br /><br /> **Dll com**: la referencia de ensamblado se refiere a una biblioteca com.|  
+|**Tipo**|Muestra el tipo de referencia de ensamblado. Se muestran las siguientes opciones:<br /><br /> **Ensamblado .net**: la referencia de ensamblado hace referencia a un [!INCLUDE[msCoName](../includes/msconame-md.md)] ensamblado de .NET Framework.<br /><br /> **Dll com**: la referencia de ensamblado se refiere a una biblioteca com.|  
 |**Origen**|Muestra el origen de la referencia de ensamblado. Esta propiedad normalmente contiene la ruta completa y el nombre de archivo del ensamblado al que se refiere la referencia de ensamblado.|  
-|**Conjunto de permisos**|Seleccione el conjunto de permisos utilizado para determinar el acceso a la referencia de ensamblado. Para obtener más información acerca de los valores disponibles para esta propiedad <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A>, vea.|  
+|**Conjunto de permisos**|Seleccione el conjunto de permisos utilizado para determinar el acceso a la referencia de ensamblado. Para obtener más información acerca de los valores disponibles para esta propiedad, vea <xref:Microsoft.AnalysisServices.ClrAssembly.PermissionSet%2A> .|  
 |**Información de suplantación**|Seleccione la información de suplantación que se utilizará al obtener acceso a la referencia de ensamblado. Para más información sobre los valores disponibles para esta propiedad, vea [Elemento ImpersonationInfo &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl).|  
   
 ## <a name="see-also"></a>Consulte también  

@@ -1,5 +1,6 @@
 ---
 title: Asignar tipos de datos de Oracle y SQL Server (OracleToSQL) | Microsoft Docs
+description: Obtenga información acerca de cómo personalizar SSMA para asignaciones de Oracle entre tipos de datos de Oracle y SQL Server o acepte el valor predeterminado.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,15 +13,15 @@ ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a9cb39213ed2809b7074a474edf5e4e20bd9122
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68262958"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293842"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Asignación de tipos de datos de Oracle y de SQL Server (OracleToSQL)
-Los tipos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Oracle se diferencian de los tipos Al convertir objetos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Oracle en objetos, debe especificar cómo se asignan los tipos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de datos de Oracle a. Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
+Los tipos de base de datos de Oracle se diferencian de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos Al convertir objetos de base de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos de Oracle en objetos, debe especificar cómo se asignan los tipos de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede aceptar las asignaciones de tipos de datos predeterminadas o puede personalizar las asignaciones tal y como se muestra en las secciones siguientes.  
   
 ## <a name="default-mappings"></a>Asignaciones predeterminadas  
 SSMA tiene un conjunto predeterminado de asignaciones de tipos de datos. Para ver la lista de asignaciones predeterminadas, vea [configuración del proyecto &#40;asignación de tipos&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-type-mapping-oracletosql.md).  
@@ -87,7 +88,7 @@ En el procedimiento siguiente se muestra cómo asignar tipos de datos en el nive
   
         No se pueden quitar las asignaciones heredadas. Sin embargo, las asignaciones heredadas se reemplazan por asignaciones personalizadas en un objeto o categoría de objeto específicos.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
 El siguiente paso del proceso de migración consiste en [crear un informe de evaluación](assessing-oracle-schemas-for-conversion-oracletosql.md) o [convertir los objetos de base de datos de Oracle en SQL Server sintaxis](converting-oracle-schemas-oracletosql.md). Si crea un informe de evaluación, los objetos de Oracle se convierten automáticamente durante la evaluación.  
   
 ## <a name="see-also"></a>Consulte también  

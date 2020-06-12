@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e075e2de-11cc-4f71-9603-0b161bca8a24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f41ffd3091ccf38498f1484d9a1bf5a908e50e39
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086430"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525944"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Cliente de minería de datos para Excel (Complementos de minería de datos de SQL Server)
   El Cliente de minería de datos para Excel es un conjunto de herramientas que permiten realizar tareas comunes de minería de datos, desde limpieza de datos hasta generación de modelos y consultas de predicción. Puede utilizar los datos de las tablas o los rangos de Excel, o tener acceso a orígenes de datos externos.  
@@ -140,15 +139,15 @@ ms.locfileid: "66086430"
  Si tiene los permisos necesarios, podrá eliminar, modificar, cambiar el nombre o procesar las estructuras y los modelos de minería de datos existentes sin salir de Excel.  
   
  [Seguimiento &#40;cliente de minería de datos para Excel&#41;](trace-data-mining-client-for-excel.md)  
- Haga clic en **seguimiento** para ver una captura continua de la interacción entre el cliente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Excel y el servidor de. Todas las actividades se almacenan como instrucciones DMX o XMLA, por lo que puede solucionar problemas de la sesión de minería de datos o guardar la información para su uso posterior.  
+ Haga clic en **seguimiento** para ver una captura continua de la interacción entre el cliente de Excel y el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] servidor de. Todas las actividades se almacenan como instrucciones DMX o XMLA, por lo que puede solucionar problemas de la sesión de minería de datos o guardar la información para su uso posterior.  
   
  [Conectar con un servidor de minería de datos](connect-to-a-data-mining-server.md)  
  Para usar Excel como cliente para la minería de datos, debe establecer una conexión con una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La conexión le proporcionará acceso al motor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Si tiene permisos, la conexión le permitirá almacenar cualquier patrón que haya detectado y modificar objetos de minería de datos existentes.  
   
- La barra de herramientas **conexiones** proporciona asistentes para administrar las conexiones a una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]instancia de. Para usar las herramientas de minería de datos y los algoritmos, debe definir una conexión con una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede crear la conexión cuando instale el complemento o agregar una conexión posteriormente.  
+ La barra de herramientas **conexiones** proporciona asistentes para administrar las conexiones a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para usar las herramientas de minería de datos y los algoritmos, debe definir una conexión con una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede crear la conexión cuando instale el complemento o agregar una conexión posteriormente.  
   
  **Introducción**  
- Haga clic en el botón **Introducción** para iniciar un asistente de configuración que le guía por el proceso de creación de una conexión [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]a una instancia de y la obtención de los permisos necesarios para la minería de datos.  
+ Haga clic en el botón **Introducción** para iniciar un asistente de configuración que le guía por el proceso de creación de una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y la obtención de los permisos necesarios para la minería de datos.  
   
  **Ayuda**  
  El menú desplegable **ayuda** proporciona vínculos a la ayuda en línea, sitios web y un asistente de configuración para ayudarle a completar la configuración e iniciar la minería de datos.  

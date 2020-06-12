@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e68aea7325094af7b60d4b3f0c8ca0cd9525df71
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070379"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539447"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Particiones remotas - Cuadro de diálogo Configuración avanzada (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Particiones remotas - Configuración avanzada** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para editar la configuración avanzada, como la cadena de conexión del origen de datos que representa la base de datos remota de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que mantiene las particiones remotas, a la vez que restaura las particiones remotas desde un archivo de copia de seguridad remoto a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mediante el cuadro de diálogo **Restaurar base de datos** . Puede mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** desde la página **Particiones** del cuadro de diálogo **Restaurar base de datos** si hace clic en el botón de puntos suspensivos (**…**) de una partición remota tras seleccionar la opción **Restaurar particiones remotas** .  

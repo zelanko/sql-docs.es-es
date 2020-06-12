@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dac57d8f-1c65-4878-8ea0-9c680df5e4fb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3894f8ea42c0c5c91c3b6a5c5e7a6677b763b02
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081316"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528351"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Rellenar desde ejemplo (Herramientas de análisis de tabla para Excel)
   ![Botón Rellenar desde ejemplo, Herramientas de análisis de tabla](media/tat-fillex.gif "Botón Rellenar desde ejemplo, Herramientas de análisis de tabla")  
@@ -41,7 +40,7 @@ ms.locfileid: "66081316"
   
      Por ejemplo, si sabe por experiencia que existe un efecto causal entre una columna y la columna con valores ausentes, puede anular la selección de otras columnas para obtener mejores resultados.  
   
-     Haga clic en **Aceptar**.  
+     Haga clic en **OK**.  
   
 5.  Haga clic en **Ejecutar**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66081316"
 > [!NOTE]  
 >  El **impacto relativo** se muestra como una barra sombreada. Cuanto más larga es la barra, mayor es la probabilidad de que esa regla sirva para predecir el valor rellenado.  
   
- La herramienta también agrega una nueva columna a la tabla de datos original, \<con el nombre de columna> Extended.  
+ La herramienta también agrega una nueva columna a la tabla de datos original, denominada \<column name> Extended.  
   
  Si la columna de datos original contenía un valor, éste se copia en la nueva columna. Sin embargo, si la columna original contenía una celda en blanco, la nueva columna contendrá el valor predicho por el asistente.  
   

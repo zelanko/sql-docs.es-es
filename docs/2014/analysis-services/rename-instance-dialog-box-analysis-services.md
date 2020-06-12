@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3708d992-8dd9-461c-8aa0-5da6df96ed70
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1f5196f8dd60dae731b7173730648d809438c262
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69d30a75f07197abce7990f6c55299a6064969db
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070373"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539250"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Cambiar nombre de instancia (cuadro de diálogo de Analysis Services)
   Use el cuadro de diálogo **Cambiar nombre de instancia** para cambiar el nombre de una instancia existente de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El cuadro de diálogo **Cambiar nombre de instancia** se puede mostrar iniciando la herramienta **Cambiar nombre de instancia** (asinstancerename.exe) desde C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  
@@ -27,7 +26,7 @@ ms.locfileid: "66070373"
 |Término|Definición|  
 |----------|----------------|  
 |**Instancia cuyo nombre se cambiará**|Seleccione la instancia cuyo nombre se cambiará.|  
-|**Nuevo nombre de instancia**|Escriba el nombre de instancia que desee. No incluya el nombre del servidor. Es decir, en lugar de escribir \<el nombre de \\ servidor><\>nombre de instancia \<, escriba solo el nombre de instancia>.<br /><br /> Si desea que la instancia cuyo nombre va a cambiar sea la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , deje el nombre en blanco.|  
+|**Nuevo nombre de instancia**|Escriba el nombre de instancia que desee. No incluya el nombre del servidor. Es decir, en lugar de escribir \<server name> \\<nombre de instancia \> , escriba solo \<instance name> .<br /><br /> Si desea que la instancia cuyo nombre va a cambiar sea la instancia predeterminada de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , deje el nombre en blanco.|  
 |**Nombre de usuario**|Muestra la cuenta que el servicio utilizará al iniciarse. El nombre de usuario no puede modificarse.|  
 |**Contraseña**|Escriba la contraseña de la cuenta del servicio.|  
   

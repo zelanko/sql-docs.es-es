@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d86ba50c76c167e0f6d17cd0dee7e00e6ac938
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085142"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523406"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de minería de datos (Analysis Services: Minería de datos)
   Un *algoritmo de minería de datos* es un conjunto de heurística y cálculos que crea un modelo de minería de datos a partir de los datos. Para crear un modelo, el algoritmo analiza primero los datos proporcionados, en busca de tipos específicos de patrones o tendencias. El algoritmo usa los resultados de este análisis para definir los parámetros óptimos para la creación del modelo de minería de datos. A continuación, estos parámetros se aplican en todo el conjunto de datos para extraer patrones procesables y estadísticas detalladas.  
@@ -41,7 +40,7 @@ ms.locfileid: "66085142"
   
 -   Un conjunto de reglas que describen cómo se agrupan los productos en una transacción, y las probabilidades de que dichos productos se adquieran juntos.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varios algoritmos para su uso en las soluciones de minería de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos. Estos algoritmos son implementaciones de algunas de las metodologías más conocidas usadas en la minería de datos. Todos los algoritmos de minería de datos de Microsoft se pueden personalizar y son totalmente programables, bien mediante las API proporcionadas o bien mediante los componentes de minería de datos de SQL Server Integration Services.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varios algoritmos para su uso en las soluciones de minería de datos. Estos algoritmos son implementaciones de algunas de las metodologías más conocidas usadas en la minería de datos. Todos los algoritmos de minería de datos de Microsoft se pueden personalizar y son totalmente programables, bien mediante las API proporcionadas o bien mediante los componentes de minería de datos de SQL Server Integration Services.  
   
  También puede usar algoritmos de minería de datos desarrollados por terceros que cumplan la especificación OLE DB para minería de datos, o desarrollar algoritmos personalizados que se pueden registrar como servicios para usarlos a continuación en el marco de la minería de datos de SQL Server.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66085142"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|**Tema**|**Descripción**|  
+|**Relacionados**|**Descripción**|  
 |---------------|---------------------|  
 |Determinar el algoritmo usado por un modelo de minería de datos|[Consultar los parámetros usados para crear un modelo de minería de datos](query-the-parameters-used-to-create-a-mining-model.md)|  
 |Crear un algoritmo complementario personalizado|[Algoritmos de complemento](plugin-algorithms.md)|  

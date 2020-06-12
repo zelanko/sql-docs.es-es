@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: efe50306-cf7c-46b3-9cc4-e7f0b6968b0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f535aa831824b2ab283b2b596d0de49ef0e72515
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080739"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544367"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Buscar objetivo (escenario de Herramientas de análisis de tabla para Excel)
   ![Botón Buscar objetivo, Herramientas de análisis de tabla](media/tat-goalseek.gif "Botón Buscar objetivo, Herramientas de análisis de tabla")  
@@ -99,7 +98,7 @@ ms.locfileid: "66080739"
 ## <a name="related-tools"></a>Herramientas relacionadas  
  El Cliente de minería de datos para Excel, que es un complemento independiente que ofrece funciones de minería de datos más avanzadas, incluye asistentes para crear modelos de minería de datos que predicen el comportamiento. Para obtener más información, vea [crear un modelo de minería de datos](creating-a-data-mining-model.md).  
   
- Para obtener más información acerca del algoritmo usado por la herramienta de escenario **Buscar objetivo** , vea el tema "algoritmo de regresión logística [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de Microsoft" en los libros en pantalla de.  
+ Para obtener más información acerca del algoritmo usado por la herramienta de escenario **Buscar objetivo** , vea el tema "algoritmo de regresión logística de Microsoft" en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libros en pantalla de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dde94a8d08bba3ea529c9edf3fde12ee0260a3f0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081940"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528741"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Pestaña Red de dependencias (Visor de modelos de minería de datos)
   La pestaña **Red de dependencias** proporciona una vista gráfica de todos los atributos que contiene el modelo de minería de datos, y muestra cómo se relacionan los atributos.  

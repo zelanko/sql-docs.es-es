@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 0ed3caf1-249d-4307-b588-d8a0ef315faa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5b0e292589a669155e8dc51da942cf1eca012537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31d06fc65248ac6ecfc192329d55079fd13745a3
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082448"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529011"
 ---
 # <a name="data-source-wizard-f1-help-analysis-services"></a>Asistente para orígenes de datos (Ayuda F1) (Analysis Services)
   Use el Asistente para orígenes de datos para crear un origen de datos y usarlo en los siguientes proyectos de Business Intelligence de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Proyecto de  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Proyecto  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Proyecto de  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Proyecto  
   
 -   Proyecto de modelos de informe  
   

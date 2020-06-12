@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: bc028030-dda2-4660-b818-c3160d79fd6d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b909423c431507d7709d814bfa4061eaf0a0e342
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e3631310e55089647559191dbefed67778d0241
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076079"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547207"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Orígenes de datos y enlaces (SSAS multidimensional)
   Es posible enlazar cubos, dimensiones y otros objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a un origen de datos. Un origen de datos puede ser uno de los objetos siguientes:  
@@ -168,7 +167,7 @@ ms.locfileid: "66076079"
   
  Los enlaces fuera de línea se especifican incluyendo el objeto de colección opcional `Bindings` con el comando de procesamiento. La colección `Bindings` opcional contiene los elementos siguientes.  
   
-|Propiedad|Cardinalidad|Tipo|Descripción|  
+|Propiedad.|Cardinalidad|Tipo|Descripción|  
 |--------------|-----------------|----------|-----------------|  
 |`Binding`|0-n|`Binding`|Proporciona una colección de nuevos enlaces.|  
 |`DataSource`|0-1|`DataSource`|Reemplaza `DataSource` del servidor que se habría usado.|  
@@ -177,9 +176,9 @@ ms.locfileid: "66076079"
  Todos los elementos que se relacionan con los enlaces fuera de línea son opcionales. Para cualquier elemento no especificado, ASSL usa la especificación contenida en el DDL del objeto almacenado. La especificación de `DataSource` o `DataSourceView` en el comando `Process` es opcional. Si se especifican `DataSource` o `DataSourceView`, no se crean instancias de los mismos y no se almacenan después de que el comando `Process` se haya completado.  
   
 ### <a name="definition-of-the-out-of-line-binding-type"></a>Definición del tipo de enlace fuera de línea  
- Dentro de la colección `Bindings` fuera de línea, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos `Binding`. Cada `Binding` tiene una referencia de objeto extendida, similar a la referencia a objeto, pero que también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medidas). Este objeto toma la forma plana típica del elemento `Object` en los `Process` comandos, excepto en que \<las etiquetas del *objeto*>\<*/Object*> no están presentes.  
+ Dentro de la colección `Bindings` fuera de línea, ASSL permite una colección de enlaces para varios objetos, cada uno de ellos `Binding`. Cada `Binding` tiene una referencia de objeto extendida, similar a la referencia a objeto, pero que también puede hacer referencia a objetos secundarios (por ejemplo, atributos de dimensión y atributos de grupo de medidas). Este objeto toma la forma plana típica del `Object` elemento en los `Process` comandos, excepto en que las \<*Object*> \<*/Object*> etiquetas no están presentes.  
   
- Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML del \< *objeto* de formulario>identificador (por ejemplo `DimensionID`,). Después de haber identificado el objeto de la forma más específica posible con \<el *objeto* de formulario>identificador, se identifica el elemento para el que se especifica el enlace, que `Source`suele ser. Un caso común para tener en cuenta es en qué `Source` es una propiedad del `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
+ Cada objeto para el que se especifica el enlace se identifica mediante un elemento XML con el \<*object*> identificador de formulario (por ejemplo, `DimensionID` ). Después de haber identificado el objeto de la forma más específica posible con el identificador de formulario \<*object*> , se identifica el elemento para el que se especifica el enlace, que suele ser `Source` . Un caso común para tener en cuenta es en qué `Source` es una propiedad del `DataItem`, que es el caso para enlaces de columna en un atributo. En este caso, no especifica la etiqueta `DataItem`; en su lugar, simplemente especifica la propiedad `Source`, como si estuviera directamente en la columna que se va a enlazar.  
   
  `KeyColumns` se identifican por su orden dentro de la colección `KeyColumns`. Allí no es posible especificar, por ejemplo, solo la primera y la tercera columna de clave de un atributo, porque no hay manera de indicar que se va a omitir la segunda columna de clave. Todas las columnas de clave deben encontrarse en el enlace fuera de línea para un atributo de dimensión.  
   

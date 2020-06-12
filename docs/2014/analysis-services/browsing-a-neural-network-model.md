@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4224cb7-115b-4889-ac07-03f096fb55fc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e47f887425c2294785bd6e6624961727bf65eb17
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174248"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527736"
 ---
 # <a name="browsing-a-neural-network-model"></a>Examinar un modelo de red neuronal
   Cuando abre un modelo de red neuronal o de regresión lógica a través de **Examinar**, el modelo se muestra en un visor interactivo, similar al visor de modelos de red neuronal en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. El visor sirve para explorar correlaciones y obtener información sobre los patrones del modelo y los datos subyacentes.
@@ -31,7 +30,7 @@ ms.locfileid: "78174248"
 
 -   [Variables](#BKMK_Variables)
 
--   [Comentarios](#BKMK_Inputs)
+-   [Entradas](#BKMK_Inputs)
 
 -   [Salidas](#BKMK_Outputs)
 
@@ -89,7 +88,7 @@ ms.locfileid: "78174248"
 
 1.  Imagine que desea fijar como destino un grupo específico y que sabe los factores que influencian en mayor medida a las compras de ese grupo.
 
-     En el panel **entrada** , haga clic en la ** \<celda todos los>** en **atributo**y seleccione **Age**.
+     En el panel **entrada** , haga clic en la **\<All>** celda situada debajo de **atributo**y seleccione **Age**.
 
      Para **Valor**, seleccione la categoría de edad más joven.
 

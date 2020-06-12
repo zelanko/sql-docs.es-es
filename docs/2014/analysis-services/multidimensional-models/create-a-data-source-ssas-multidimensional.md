@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e7f387bb62f15acff8e3443e7e9fdc8888896e8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175918"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536759"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
   En un modelo multidimensional de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , un objeto de origen de datos representa una conexión al origen de datos del que va a procesar o importar los datos. Un modelo multidimensional debe contener al menos un objeto de origen de datos, pero puede agregar más para combinar datos de varios almacenamientos de datos. Siga las instrucciones de este tema para crear un objeto de origen de datos para el modelo. Para obtener más información sobre cómo establecer propiedades en este objeto, vea [Establecer propiedades de origen de datos &#40;SSAS multidimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
@@ -82,11 +81,11 @@ ms.locfileid: "70175918"
   
      El proveedor predeterminado para una conexión nueva es el proveedor OLE DB nativo\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Este proveedor se usa para conectarse a una instancia del Motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante OLE DB. Normalmente, para las conexiones con una base de datos relacional de SQL Server, el uso de OLE DB nativo\SQL Server Native Client 11.0 ofrece más velocidad que el uso de proveedores alternativos.  
   
-     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y las bases de datos relacionales compatibles con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vea orígenes de [datos compatibles &#40;&#41;de SSAS multidimensionales ](supported-data-sources-ssas-multidimensional.md).  
+     También puede elegir un proveedor diferente para acceder a otros orígenes de datos. Para obtener una lista de los proveedores y las bases de datos relacionales compatibles con [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vea [orígenes de datos compatibles &#40;&#41;de SSAS multidimensionales ](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Especifique la información solicitada por el proveedor seleccionado para conectar con el origen de datos subyacente. Si selecciona el proveedor **OLE DB nativo\SQL Server Native Client** , especifique la siguiente información:  
   
-    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si el servidor está instalado como una instancia con nombre, debe incluir el nombre de instancia (por ejemplo \<, computername \\><\>InstanceName).  
+    1.  **Nombre del servidor** es el nombre de red de la instancia del motor de base de datos. Se puede especificar como la dirección IP, el nombre NETBIOS del equipo o un nombre de dominio completo. Si el servidor está instalado como una instancia con nombre, debe incluir el nombre de instancia (por ejemplo, \<computername> \\<InstanceName \> ).  
   
     2.  **Iniciar sesión en el servidor** especifica cómo se autenticará la conexión. **Usar la autenticación de Windows** usa la autenticación de Windows. **Usar autenticación de SQL Server** especifica un inicio de sesión de usuario de base de datos para instancias de Azure SQL Database o una instancia de SQL Server que admite la autenticación de modo mixto.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "70175918"
   
 8.  Haga clic en **Next**.  En **Finalización del asistente**, escriba un nombre del origen de datos o use el nombre predeterminado. El nombre predeterminado es el nombre de la base de datos especificada en la conexión. En el panel **Vista previa** se muestra la cadena de conexión de este nuevo origen de datos.  
   
-9. Haga clic en **Finalizar**.  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
+9. Haga clic en **Finalizar**  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
   
 ##  <a name="create-a-data-source-using-an-existing-connection"></a><a name="bkmk_connection"></a>Crear un origen de datos con una conexión existente  
  Al trabajar en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el origen de datos se puede basar en un origen de datos existente de la solución o en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El Asistente para orígenes de datos ofrece varias opciones para crear el objeto de origen de datos, como es usar una conexión existente en el mismo proyecto.  
@@ -151,7 +150,7 @@ ms.locfileid: "70175918"
  Puede crear más de un objeto de origen de datos para admitir conexiones a orígenes de datos adicionales. Cada origen de datos debe tener columnas que se puedan usar para crear relaciones.  
   
 > [!NOTE]  
->  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, como en el caso de una dimensión en copos de nieve, debe definir un origen de datos `OpenRowset`que admita consultas remotas mediante. Normalmente, será un origen de datos de Microsoft SQL Server.  
+>  Si se definen varios orígenes de datos y se consultan los datos de varios orígenes en una sola consulta, como en el caso de una dimensión en copos de nieve, debe definir un origen de datos que admita consultas remotas mediante `OpenRowset` . Normalmente, será un origen de datos de Microsoft SQL Server.  
   
  Algunos requisitos para usar varios orígenes de datos son los siguientes:  
   

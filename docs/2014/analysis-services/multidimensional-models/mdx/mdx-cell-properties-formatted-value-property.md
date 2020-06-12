@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7534ff5f-954e-47d4-a2ed-4b5b8ccb30e6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dbc390b046eed3e0caa0394d9e463625e054192e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074396"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546427"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE y FORMAT_STRING en FORMATED_VALUE
   La propiedad FORMATTED_VALUE se basa en las interacciones de las propiedades VALUE, LANGUAGE y FORMAT_STRING de la celda. En este tema se explica cómo interactúan estas propiedades para generar la propiedad FORMATTED_VALUE.  
@@ -76,9 +75,9 @@ ms.locfileid: "66074396"
   
  Cuando la consulta MDX anterior se ejecuta utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sobre un servidor y un cliente con la configuración regional 1033, los resultados (transpuestos) son los siguientes:  
   
-|Member|FORMATTED_VALUE|Explicación|  
+|Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
+|A|$5,040.00|FORMAT_STRING se establece en `Currency` y LANGUAGE es `1033`al heredar el valor de la configuración regional del sistema.|  
 |B|€5.040,00|FORMAT_STRING se establece en `Currency` (al heredar de A) y LANGUAGE se establece explícitamente en `1034` (España); por tanto, se usa el signo de euro, además de un separador decimal y un separador de miles diferentes.|  
 |C|$5.040,00|FORMAT_STRING se establece en `$#,##0.00` e invalida a Currency (heredado de A) y LANGUAGE se establece explícitamente en `1034` (España). Dado que la propiedad FORMAT_STRING establece de forma explícita el símbolo de moneda en $, FORMATTED_VALUE se presenta con el signo $. Sin embargo, dado que `.` (punto) y `,` (coma) son respectivamente los marcadores de posición del separador decimal y el separador de miles, la especificación del lenguaje tiene efecto a la hora de generar una salida adaptada para el separador decimal y el separador de miles.|  
 |D|5.04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.|  
@@ -126,9 +125,9 @@ ms.locfileid: "66074396"
   
  Cuando la consulta MDX anterior se ejecuta utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] sobre un servidor y un cliente con la configuración regional 1033, los resultados (transpuestos) son los siguientes:  
   
-|Member|FORMATTED_VALUE|Explicación|  
+|Miembro|FORMATTED_VALUE|Explicación|  
 |------------|----------------------|-----------------|  
-|Un|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
+|A|3/12/1959 6:30:00 AM|FORMAT_STRING se establece implícitamente en `General Date` a través de la expresión CDate() y LANGUAGE es `1033` (inglés), al heredar el valor de la configuración regional del sistema.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE es `1033` (inglés) al heredar el valor de la configuración regional del sistema.|  
 |C|12/03/1959 6:30:00|FORMAT_STRING se establece explícitamente en `General Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día cambian de lugar con respecto al estilo de formato de EE.UU.|  
 |D|jueves, 12 de marzo de 1959|FORMAT_STRING se establece explícitamente en `Long Date` y LANGUAGE en `1034` (español).<br /><br /> Observe que el mes y el día de la semana se expresan alfabéticamente en español.|  

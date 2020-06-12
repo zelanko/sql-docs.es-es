@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17c7e7ae-273c-4a6b-9a35-e8b9b8e65999
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b2bb75ec06d9b5c14ce5c2dcc85561412b362b40
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4df97455d2fae8cb3375967a8e37a2329a7509fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66063170"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527921"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del atributo (Visor de modelos de minería de datos)
   Utilice la pestaña **Perfiles del atributo** para ver cómo la distribución de los valores de entrada en un estado del modelo Bayes naive contribuye a cada estado del atributo de resultados. La distribución de los valores se muestra como un histograma con colores, todas las distribuciones se presentan en un formato tabular, para facilitar la comparación de los valores.  
@@ -49,7 +48,7 @@ ms.locfileid: "66063170"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Atributos**|Muestra las columnas del modelo de minería de datos contenidas en el modelo de minería de datos.|  
-|**States**|Una columna opcional que describe el estado que representa el color en la fila de atributos correspondiente. Agregue o quite mediante la casilla **Mostrar leyenda** .|  
+|**Estados**|Una columna opcional que describe el estado que representa el color en la fila de atributos correspondiente. Agregue o quite mediante la casilla **Mostrar leyenda** .|  
 |**Llenado**|Muestra la distribución del atributo en todo el conjunto de datos.|  
 |**Columna para estados de atributo de predicción**|Muestra una columna para cada estado de la columna de predicción, con cada fila correspondiente a un atributo de entrada en el modelo.|  
   

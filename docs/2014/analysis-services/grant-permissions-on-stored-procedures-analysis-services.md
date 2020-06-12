@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 960b0ef3f050b780998a0f86dcd7b7edf121676d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080730"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544317"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Conceder permisos para procedimientos almacenados (Analysis Services)
   Los procedimientos almacenados, o ensamblados, en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] son rutinas externas escritas en lenguaje de programación [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET que amplían las capacidades de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Los ensamblados permiten a los programadores beneficiarse de la integración entre lenguajes, el tratamiento de excepciones, la compatibilidad de control de versiones, la compatibilidad de implementación y la compatibilidad de depuración.  
@@ -29,7 +28,7 @@ ms.locfileid: "66080730"
   
  A continuación se enumeran los conjuntos de permisos utilizados para ejecutar procedimientos almacenados:  
   
--   **Safe** Con el conjunto de permisos Safe, un procedimiento almacenado no puede tener acceso a los [!INCLUDE[msCoName](../includes/msconame-md.md)] recursos protegidos en el .NET Framework. Este conjunto de permisos solamente permite realizar cálculos. Se trata del conjunto de permisos más seguro, puesto que impide cualquier pérdida de información en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los permisos no pueden elevarse y el riesgo de ataques que dañan los datos es mínimo.  
+-   **Safe** Con el conjunto de permisos Safe, un procedimiento almacenado no puede tener acceso a los recursos protegidos en el [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework. Este conjunto de permisos solamente permite realizar cálculos. Se trata del conjunto de permisos más seguro, puesto que impide cualquier pérdida de información en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], los permisos no pueden elevarse y el riesgo de ataques que dañan los datos es mínimo.  
   
 -   **Acceso externo** Con el conjunto de permisos de acceso externo, un procedimiento almacenado puede tener acceso a recursos externos mediante código administrado. Cuando se establece un procedimiento almacenado en este conjunto de permisos, no se producen errores de programación que podrían dar como resultado un funcionamiento inestable del servidor. Sin embargo, al utilizar este conjunto de permisos puede producirse alguna pérdida de información del servidor y existe la posibilidad de una elevación de los permisos y ataques que pueden dañar los datos.  
   

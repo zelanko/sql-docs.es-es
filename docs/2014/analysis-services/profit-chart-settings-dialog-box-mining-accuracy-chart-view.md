@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e534b40b-f4d2-4fbc-80e7-3b1dd8784cfd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf009e45e97586a50c01f6e949120c09e3625ebc
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070686"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84539877"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Configuración del gráfico de beneficios (cuadro de diálogo de la vista Gráfico de precisión de minería de datos)
   Utilice **Configuración del gráfico de beneficios** para definir la configuración para generar un gráfico de beneficios. Para más información sobre los gráficos de beneficios, vea [Gráfico de mejora respecto al modelo predictivo &#40;Analysis Services - Minería de datos&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  

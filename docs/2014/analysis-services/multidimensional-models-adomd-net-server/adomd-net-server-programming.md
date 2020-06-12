@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 7f7ff5be-3826-43a5-b94d-ddeec5ddb2eb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 843d3037d2acb2876a21ae25d1bf15e52686e327
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 522478af0b19f1745d80f167e40345d4751136b7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217154"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545454"
 ---
 # <a name="adomdnet-server-programming"></a>Programación del servidor ADOMD.NET
-  Los componentes de servidor ADOMD.NET de ADOMD.NET residen en el espacio de nombres `Microsoft.AnalysisServices.AdomdServer` (en msmgdsrv.dll). Estos componentes de servidor se usan para crear funciones de expresiones multidimensionales (MDX) y procedimientos almacenados que se ejecutan en una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]instancia de. Los objetos de servidor proporcionan las capacidades necesarias para realizar consultas en cubos y modelos de minería de datos, así como para evaluar expresiones en un contexto determinado. Entre las ventajas de crear funciones y procedimientos almacenados personalizados se incluyen una ejecución rápida, una implementación centralizada y un mantenimiento mejorado.  
+  Los componentes de servidor ADOMD.NET de ADOMD.NET residen en el espacio de nombres `Microsoft.AnalysisServices.AdomdServer` (en msmgdsrv.dll). Estos componentes de servidor se usan para crear funciones de expresiones multidimensionales (MDX) y procedimientos almacenados que se ejecutan en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los objetos de servidor proporcionan las capacidades necesarias para realizar consultas en cubos y modelos de minería de datos, así como para evaluar expresiones en un contexto determinado. Entre las ventajas de crear funciones y procedimientos almacenados personalizados se incluyen una ejecución rápida, una implementación centralizada y un mantenimiento mejorado.  
   
  Los temas de la tabla siguiente le ayudarán a desarrollar aplicaciones de servidor ADOMD.NET.  
   

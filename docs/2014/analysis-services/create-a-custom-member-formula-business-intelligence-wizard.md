@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef4d185b143e0a89781e6fbf0c9efe874f7f0ec5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5df5d8e67ce19d3aa509f3eb111f74779a27c844
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086995"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526772"
 ---
 # <a name="create-a-custom-member-formula-business-intelligence-wizard"></a>Crear una fórmula de miembro personalizado (Asistente de Business Intelligence)
   Use la página **crear una fórmula de miembro personalizado** para asociar atributos de la dimensión especificada con columnas de fórmula de miembro personalizado columnas que contengan instrucciones MDX (expresiones multidimensionales) que definan los valores de miembro de ese atributo.  
   
 ## <a name="options"></a>Opciones  
- **Atributo**  
+ **Attribute**  
  Seleccione el atributo que se debe asociar con una fórmula de miembro personalizado.  
   
  **Columna de origen**  

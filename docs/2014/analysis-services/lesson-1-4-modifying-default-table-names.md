@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ddd97483-a76d-43c1-8b40-fc7cc57fb0c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6e43196f5bc318630a52073e22969dc58a0e64a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44e7142da8c639f63b198983b1fda829c9099d38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079232"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543617"
 ---
 # <a name="modifying-default-table-names"></a>Modificar los nombres de tabla predeterminados
   Puede cambiar el valor de la propiedad **FriendlyName** para los objetos de la vista del origen de datos para que sean más fáciles de identificar y usar.  
@@ -33,11 +32,11 @@ ms.locfileid: "66079232"
   
      Es más fácil cambiar las propiedades de cada tabla en la vista del origen de datos cuando la ventana Propiedades permanece abierta. Si no fija la ventana abierta mediante el botón **Ocultar automáticamente** , la ventana se cerrará al hacer clic en un objeto distinto del panel **Diagrama** .  
   
-3.  Cambie la propiedad **FriendlyName** del objeto **FactInternetSales** a *`InternetSales`*.  
+3.  Cambie la propiedad **FriendlyName** del objeto **FactInternetSales** a *`InternetSales`* .  
   
      Al hacer clic fuera de la celda de la propiedad **FriendlyName** , se aplica el cambio. En la siguiente lección, definirá un grupo de medida que se basa en esta tabla de hechos. El nombre de la tabla de hechos será InternetSales en lugar de FactInternetSales debido al cambio realizado en esta lección.  
   
-4.  Haga clic en **DimProduct** en el panel **Tablas** . En el ventana Propiedades, cambie la propiedad **FriendlyName** a *`Product`*.  
+4.  Haga clic en **DimProduct** en el panel **Tablas** . En el ventana Propiedades, cambie la propiedad **FriendlyName** a *`Product`* .  
   
 5.  Cambie la propiedad **FriendlyName** de cada una de las tablas restantes en la vista del origen de datos del mismo modo, para eliminar el prefijo "**Dim**".  
   

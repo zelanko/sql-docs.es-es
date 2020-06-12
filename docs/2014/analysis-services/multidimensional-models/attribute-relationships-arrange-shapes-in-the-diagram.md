@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f8e3809-507c-496b-b96d-1fa4e028fe1a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac7fe46583c579c861de7b639fe72e58801f2e5c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7c3a1e5e72f13546f971bedba4af14e4e2d4264
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544697"
 ---
 # <a name="arrange-shapes-in-the-attribute-relationship-diagram"></a>Organizar formas en el diagrama de relación de los atributos
   Puede cambiar el diseño de las formas en la pestaña **Relación de los atributos** de la vista Estructura de dimensión del Diseñador de dimensiones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

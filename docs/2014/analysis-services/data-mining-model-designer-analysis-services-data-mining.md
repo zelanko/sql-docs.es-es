@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7ad4cef-4567-4b84-8b70-0bd81e7b2e1e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4af526dd7ced7a5116e6727ffd2b5ebd3b998bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e7ad0b89687e24e5220e091cc39737aabf4c89e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086408"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525867"
 ---
 # <a name="data-mining-model-designer-analysis-services---data-mining"></a>Diseñador de modelos de minería de datos (Analysis Services: minería de datos)
   Esta sección contiene los temas de la Ayuda F1 para el Diseñador de modelos de minería de datos en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Utilizará este espacio de diseño para crear, administrar y trabajar con modelos de minería de datos.  

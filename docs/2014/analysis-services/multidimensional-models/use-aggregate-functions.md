@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83cdc571019cffd8ae99e00f119541736c6f503b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072714"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541287"
 ---
 # <a name="use-aggregate-functions"></a>Usar funciones de agregado
   Al usar una dimensión para segmentar una medida, la medida se resume en las jerarquías contenidas en la dimensión. El comportamiento de suma depende de la función de agregado especificada en la medida. Para la mayoría de las medidas que contienen datos numéricos, la función de agregado es `Sum`. El valor de la medida se suma a cantidades diferentes dependiendo del nivel de la jerarquía que esté activo.  
   
- En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Entre `Sum`los tipos de agregación `Min`predefinidos se incluyen,, `Max`, `Count`, **recuento distintivo**y otras funciones más especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ En Analysis Services, todas las medidas que se crean están respaldadas por una función de agregación que determina la operación de la medida. Entre los tipos de agregación predefinidos se incluyen `Sum` , `Min` , `Max` , `Count` , **recuento distintivo**y otras funciones más especializadas. O bien, si necesita agregaciones basadas en fórmulas complejas o personalizadas, puede crear un cálculo MDX en vez de usar una función de agregación creada previamente. Por ejemplo, si quiere definir una medida para un valor de porcentaje, lo haría en MDX con una medida calculada. Vea, [CREATE MEMBER &#40;instrucción MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
  A las medidas que se crean mediante el Asistente para cubos se les asigna un tipo de agregación como parte de la definición de la medida. El tipo de agregación es siempre `Sum`, asumiendo que la columna de origen contiene datos numéricos. `Sum` se asigna independientemente del tipo de datos de la columna de origen. Por ejemplo, si usó el Asistente para cubos para crear medidas y extrajo todas las columnas de una tabla de hechos, notará que todas las medidas resultantes tienen una agregación de `Sum`, incluso si el origen es una columna de fecha y hora. Debe revisar siempre los métodos de agregación asignados previamente para las medidas creadas mediante el asistente para asegurarse de que la función de agregación sea la adecuada.  
   
@@ -31,7 +30,7 @@ ms.locfileid: "66072714"
 ##  <a name="aggregate-functions"></a><a name="AggFunction"></a>Funciones de agregado  
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] proporciona funciones para agregar medidas a las dimensiones que se incluyen en los grupos de medida. El *grado de agregación* de una función de agregación determina cómo se agrega la medida en todas las dimensiones del cubo. Las funciones de agregación pertenecen a uno de tres niveles de grado de agregación:  
   
- Aditivo  
+ Aditiva  
  Una medida aditiva, también denominada medida completamente aditiva, se puede agregar en todas las dimensiones que están incluidas en el grupo de medida que contiene la medida, sin restricciones.  
   
  Semiaditiva  
@@ -44,8 +43,8 @@ ms.locfileid: "66072714"
   
 |Función de agregación|grado de agregación|Valor devuelto|  
 |--------------------------|----------------|--------------------|  
-|`Sum`|Aditivo|Calcula la suma de valores de todos los miembros secundarios. Es la función de agregación predeterminada.|  
-|`Count`|Aditivo|Recupera el recuento de todos los miembros secundarios.|  
+|`Sum`|Aditiva|Calcula la suma de valores de todos los miembros secundarios. Es la función de agregación predeterminada.|  
+|`Count`|Aditiva|Recupera el recuento de todos los miembros secundarios.|  
 |`Min`|Semiaditiva|Recupera el valor más bajo para todos los miembros secundarios.|  
 |`Max`|Semiaditiva|Recupera el valor más alto para todos los miembros secundarios.|  
 |`DistinctCount`|No aditiva|Recupera el recuento de todos los miembros secundarios únicos. Para más detalles, vea [About Distinct Count Measures](use-aggregate-functions.md#bkmk_distinct) en la próxima sección.|  

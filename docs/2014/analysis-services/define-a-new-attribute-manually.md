@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 554ea10e-b0b0-4987-add8-19113d824787
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3739728631ae0273150c010600f099623bb98c2a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082336"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528893"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definir un nuevo atributo manualmente
   En este procedimiento se describe cómo crear un nuevo atributo en una dimensión mediante el panel **atributos** del diseñador de dimensiones.  
@@ -31,7 +30,7 @@ ms.locfileid: "66082336"
   
      Haga clic con el botón secundario en el panel **atributos** , seleccione **Mostrar atributos en**y, a continuación, haga clic en **cuadrícula**.  
   
-3.  Desplácese hasta la última fila de la cuadrícula y, a continuación, haga clic en ** \<nuevo atributo>**.  
+3.  Desplácese hasta la última fila de la cuadrícula y, a continuación, haga clic en **\<new attribute>** .  
   
 4.  Escriba un nombre para el atributo para establecer la propiedad `Name` y, a continuación, presione Entrar.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce837a-89ed-46cf-9ce1-801ccb75fa04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a963743dff12a239fb5d45a05c0af91af00620eb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085582"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524022"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Crear una consulta de contenido en un modelo de minería de datos
   Puede consultar mediante programación el contenido del modelo de minería de datos utilizando AMO o XML/A, pero crear las consultas mediante DMX resulta más fácil. También puede crear consultas con los conjuntos de filas de esquema de minería de datos estableciendo una conexión a la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y crear una consulta mediante la DMV que proporciona [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -40,11 +39,11 @@ ms.locfileid: "66085582"
   
      La plantilla **Consulta de contenido** se abre en el editor de código adecuado. El panel de metadatos muestra los modelos que están disponibles en la base de datos actual. Para cambiar la base de datos, seleccione una diferente en la lista **Bases de datos disponibles** .  
   
-5.  Escriba el nombre de un modelo de minería de datos en `FROM` la línea [*\<modelo de minería de datos, nombre, el modelo>*].`.CONTENT` Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
+5.  Escriba el nombre de un modelo de minería de datos en la línea `FROM` [ *\<mining model, name, MyModel>* ] `.CONTENT` . Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
   
      Si no desea escribir el nombre, puede seleccionar un modelo de minería de datos en el **Explorador de objetos** y arrastrarlo a la plantilla.  
   
-6.  En la línea, `SELECT` * \<seleccione lista, lista de expresión \*, *, escriba los nombres de las columnas del conjunto de filas de esquema de contenido del modelo de minería de datos.  
+6.  En la línea, `SELECT` *\<select list, expr list, \*>* Escriba los nombres de las columnas del conjunto de filas de esquema de contenido del modelo de minería de datos.  
   
      Para obtener una lista de las columnas que puede devolver en las consultas de contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   
@@ -79,6 +78,6 @@ ms.locfileid: "66085582"
   
 ## <a name="see-also"></a>Consulte también  
  [Contenido del modelo de minería de datos &#40;Analysis Services:&#41;de minería de datos](mining-model-content-analysis-services-data-mining.md)   
- [Conjuntos de filas de esquema de minería de datos](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
+ [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

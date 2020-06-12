@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: a2c60d98-c15f-4f0d-ba95-7ee2def4277e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e2d8784c79ed4bbce63d8f9a18dce6b1b12f33f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7de859d94c2881b3c46997dac14d6309745db591
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086472"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526031"
 ---
 # <a name="data-mining-designers-and-dialog-boxes"></a>Cuadros de diálogo y diseñadores de minería de datos
-  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona herramientas de diseño que puede usar para crear, ver, probar y crear predicciones a partir de modelos de minería de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] datos.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona herramientas de diseño que puede usar para crear, ver, probar y crear predicciones a partir de modelos de minería de datos.  
   
  En la siguiente tabla se muestran los temas de referencia de las herramientas y los diseñadores de minería de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   

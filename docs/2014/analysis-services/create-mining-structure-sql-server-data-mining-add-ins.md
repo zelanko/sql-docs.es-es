@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 485a3e12b46700319c760b878ecbdcfb8c97545d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086818"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526684"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Crear estructura de minería de datos (Complementos de minería de datos de SQL Server)
   ![Botón Crear estructura de minería de datos, cinta de opciones Minería de datos](media/dmc-createstruct.gif "Botón Crear estructura de minería de datos, cinta de opciones Minería de datos")  
@@ -37,7 +36,7 @@ ms.locfileid: "66086818"
   
 2.  En el cuadro de diálogo **seleccionar datos de origen** , especifique el intervalo de Excel, la tabla de datos de Excel o el origen de datos externo que contiene los datos que desea utilizar para el análisis.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 3.  En el cuadro de diálogo **seleccionar columnas** , revise la lista de columnas disponibles en el origen de datos seleccionado.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66086818"
   
      Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
      Según el tipo de datos que esté usando, puede completar el asistente después de este paso. En ese caso, vaya a la página **Finalizar** para asignar un nombre a la estructura de minería de datos.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66086818"
   
      Opcionalmente, escriba el número máximo de filas que desea usar para las pruebas.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 8.  En el cuadro de diálogo **Finalizar** , escriba un nombre y una descripción para la nueva estructura de minería de datos.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66086818"
   
 |Opción|Comentarios|  
 |------------|--------------|  
-|Cuadro de diálogo **seleccionar datos de origen**|Al seleccionar una tabla de Excel, debe indicar si los datos ya tienen encabezados. Si omite este paso, la primera fila de datos se usará como nombre de columna.<br /><br /> Si usa la opción origen de **datos externo**, puede usar cualquier tipo de datos que se pueda definir en un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] origen de datos. Sin embargo, el cuadro de diálogo del complemento para crear nuevos orígenes de datos no incluye todos los orígenes de datos compatibles con Analysis Services, por lo que se recomienda crear de antemano los orígenes de datos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y conectarse después mediante los complementos.|  
+|Cuadro de diálogo **seleccionar datos de origen**|Al seleccionar una tabla de Excel, debe indicar si los datos ya tienen encabezados. Si omite este paso, la primera fila de datos se usará como nombre de columna.<br /><br /> Si usa la opción origen de **datos externo**, puede usar cualquier tipo de datos que se pueda definir en un origen de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] datos. Sin embargo, el cuadro de diálogo del complemento para crear nuevos orígenes de datos no incluye todos los orígenes de datos compatibles con Analysis Services, por lo que se recomienda crear de antemano los orígenes de datos en el servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y conectarse después mediante los complementos.|  
 |Cuadro de diálogo **Editor de consultas de origen de datos**|Después de haberse conectado al origen de datos especificado, puede agregar columnas o crear una consulta personalizada para generar columnas personalizadas.|  
 |**Dividir datos en conjuntos de entrenamiento y de prueba**|Un valor recomendado para el entrenamiento y los conjuntos de pruebas es del 70 por ciento para el entrenamiento y el 30 por ciento para las pruebas; sin embargo, si tiene muchos datos, puede especificar un número máximo de filas para las pruebas.|  
 |Cuadro de diálogo Finalizar|En algunos tipos de modelo hay disponibles opciones de obtención de detalles, que son muy útiles si incluyó columnas de detalles en la estructura de minería de datos. Por ejemplo, si crea un modelo de clústeres, puede incluir detalles como el nombre o la dirección de correo electrónico para la obtención de detalles pero no para el análisis, lo que facilitar ponerse en contacto con los clientes de un clúster determinado.|  
@@ -94,7 +93,7 @@ ms.locfileid: "66086818"
   
 |Valores|Descripción|  
 |------------|-----------------|  
-|**Inclui**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
+|**Include**|Especifica que la columna contiene datos quede pueden usarse para análisis o para predicción.|  
 |**Clave**|Especifica que la columna contiene un identificador de transacción, un identificador de serie u otra clave necesaria para el procesamiento.<br /><br /> Todos los algoritmos requieren una columna de clave. No obstante, algunos algoritmos admiten una sola clave, mientras que otros admiten varias.<br /><br /> Si la columna contiene una clave pero no es necesaria para el procesamiento, seleccione no **usar**.|  
 |**Key Time**|Especifica que la columna contiene una fecha u otro valor numérico que puede usarse para identificar de forma única los elementos de una serie temporal.|  
 |**No usar**|Especifica que la columna debe omitirse. No se procesarán los datos de la columna.|  

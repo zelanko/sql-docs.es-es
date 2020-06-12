@@ -1,5 +1,6 @@
 ---
 title: Funciones de constructor (XQuery) | Microsoft Docs
+description: Obtenga información sobre las funciones de constructor de XQuery que le permiten crear instancias de los tipos atómicos integrados de XSD o definidos por el usuario.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 105ba6fb68e8d8031858fcf54dddc56b655ddcea
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529211"
 ---
 # <a name="constructor-functions-xquery"></a>Funciones de constructor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +139,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usar la función dateTime() de XQuery para recuperar descripciones antiguas de productos  
- En este ejemplo, primero se asigna un documento XML de ejemplo a una variable de tipo **XML** . Este documento contiene tres <`ProductDescription` de> de ejemplo, cada uno de los cuales contiene `DateCreated` un <> elemento secundario.  
+ En este ejemplo, primero se asigna un documento XML de ejemplo a una variable de tipo **XML** . Este documento contiene tres <de `ProductDescription`> de ejemplo, cada uno de los cuales contiene un <`DateCreated`> elemento secundario.  
   
  A continuación, se realiza una consulta en la variable para recuperar solo las descripciones de producto que se crearon antes de una fecha específica. En lo que respecta a la comparación, la consulta utiliza la función constructora **xs: DateTime ()** para escribir las fechas.  
   
@@ -173,7 +174,7 @@ select @x.query('
   
  Observe lo siguiente en la consulta anterior:  
   
--   La... La estructura de bucle WHERE se utiliza para \<recuperar el elemento> ProductDescription que satisface la condición especificada en la cláusula WHERE.  
+-   La... La estructura de bucle WHERE se utiliza para recuperar el \<ProductDescription> elemento que satisface la condición especificada en la cláusula WHERE.  
   
 -   La función constructora **DateTime ()** se usa para crear valores de tipo **DateTime** para que se puedan comparar adecuadamente.  
   

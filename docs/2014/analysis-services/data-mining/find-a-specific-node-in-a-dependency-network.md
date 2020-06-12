@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 37c54602-ab25-48be-ae7a-59819deea8ed
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f27398948ed2c89578921bf6404244bcf5072652
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d22d6201c48ac77de5ab1e86ebed276478de683
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084374"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522421"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Buscar un nodo determinado en una red de dependencias
-  Una red de dependencias [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de un modelo de minería de datos puede contener muchos nodos, lo que dificulta la búsqueda de los datos que le interesan. Para buscar un nodo específico, puede usar el cuadro de diálogo **Buscar nodo** en la pestaña **Red de dependencias** del Diseñador de minería de datos.  
+  Una red de dependencias de un modelo de minería de datos [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] puede contener muchos nodos, lo que dificulta la búsqueda de los datos que le interesan. Para buscar un nodo específico, puede usar el cuadro de diálogo **Buscar nodo** en la pestaña **Red de dependencias** del Diseñador de minería de datos.  
   
 ### <a name="to-find-a-specific-node-in-a-dependency-network"></a>Para buscar un nodo determinado en una red de dependencias  
   

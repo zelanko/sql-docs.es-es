@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 596011e40eb6ed7ca2276da58dbbc1379e5b032c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f06781ea61a1958d41f37a55026a60cba67b387
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081499"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528471"
 ---
 # <a name="analysis-services-duplicate-security-role-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo de Rol de seguridad duplicado de Analysis Services (Analysis Services - Datos multidimensionales)
-  Use el **Analysis Services rol de seguridad \<duplicado: nombre de \<la base de datos>-copiar desde el nombre de rol>** cuadro de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] diálogo en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar un rol existente en una base de datos de. Puede mostrar el cuadro de diálogo **Rol duplicado** si hace clic con el botón derecho en un rol del Explorador de objetos y selecciona **Duplicar**.  
+  Utilice el cuadro de diálogo **Analysis Services rol \<database name>  -  \<copy from role name> de seguridad duplicado-** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para duplicar un rol existente en una [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos de. Puede mostrar el cuadro de diálogo **Rol duplicado** si hace clic con el botón derecho en un rol del Explorador de objetos y selecciona **Duplicar**.  
   
 ## <a name="options"></a>Opciones  
   

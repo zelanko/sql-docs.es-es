@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 82317f4a4e5f4c4fddd4ffaf45c5897dfd4d0df5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68065396"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669982"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,14 +32,14 @@ StructureColumn('structure column name')
  Nombre de una columna de estructura de minería de datos de tabla anidada o caso.  
   
 ## <a name="result-type"></a>Tipo de resultado  
- El tipo que se devuelve depende del tipo de la columna a la que se hace referencia en \<el nombre de la columna de estructura> parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
+ El tipo que se devuelve depende del tipo de la columna a la que se hace referencia en el nombre de la \< columna de estructura> parámetro. Por ejemplo, si la columna de estructura de minería de datos a la que se hace referencia contiene un valor escalar, la función devuelve un valor escalar.  
   
  Si es una tabla anidada, la función devuelve un valor de tabla. El valor de tabla devuelto se puede utilizar en la cláusula FROM de una instrucción sub-SELECT.  
   
 ## <a name="remarks"></a>Observaciones  
  Esta función es polimórfica y se puede utilizar en cualquier parte de una instrucción que permita expresiones, por ejemplo en una lista de expresiones SELECT, una expresión de condición WHERE y una expresión ORDER BY.  
   
- El nombre de la columna de la estructura de minería de datos es un valor de cadena y, como tal, se debe incluir entre comillas simples: por ejemplo, `StructureColumn('` **columna 1**`')`. Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
+ El nombre de la columna de la estructura de minería de datos es un valor de cadena y, como tal, se debe incluir entre comillas simples: por ejemplo, `StructureColumn('` **columna 1** `')` . Si hay varias columnas que tienen el mismo nombre, el nombre se resuelve en el contexto de la instrucción SELECT contenedora.  
   
  Los resultados que se devuelven desde una consulta mediante la función **StructureColumn** se ven afectados por la presencia de filtros en el modelo. Es decir, el filtro del modelo controla los casos que se incluyen en el modelo de minería de datos. Por consiguiente, una consulta en la columna de estructura puede devolver solo los casos que se utilizaron en el modelo de minería de datos. Consulte la sección Ejemplos de este tema para obtener un ejemplo de código que muestre el efecto de los filtros de un modelo de minería de datos tanto en las tablas de casos como en una tabla anidada.  
   
@@ -112,10 +112,10 @@ SELECT CustomerName, Age,
 WHERE StructureColumn('Occupation') = 'Architect'  
 ```  
   
- Tenga en cuenta que, en este ejemplo, se aplica un filtro a la columna de la estructura para restringir los casos a los clientes cuya`WHERE StructureColumn('Occupation') = 'Architect'`profesión sea ' arquitecto ' (). Dado que la condición de filtro del modelo siempre se aplica a los casos al crearse el modelo, solo se incluyen en los casos del modelo aquellos que tienen en la tabla `Products` por lo menos una fila que la cumpla. Por consiguiente, se aplica tanto el filtro en la tabla anidada `Products` como el filtro en el caso `('Occupation')`.  
+ Tenga en cuenta que, en este ejemplo, se aplica un filtro a la columna de la estructura para restringir los casos a los clientes cuya profesión sea ' arquitecto ' ( `WHERE StructureColumn('Occupation') = 'Architect'` ). Dado que la condición de filtro del modelo siempre se aplica a los casos al crearse el modelo, solo se incluyen en los casos del modelo aquellos que tienen en la tabla `Products` por lo menos una fila que la cumpla. Por consiguiente, se aplica tanto el filtro en la tabla anidada `Products` como el filtro en el caso `('Occupation')`.  
   
 ### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Consulta de ejemplo 3: Seleccionar columnas de una tabla anidada  
- La consulta del ejemplo siguiente devuelve los nombres de los clientes que se usaron como casos de entrenamiento del modelo. Para cada cliente, la consulta devuelve también una tabla anidada que contiene los detalles de la compra. Aunque el modelo incluye la `ProductName` columna, el modelo no utiliza el valor de la `ProductName` columna. El modelo solo comprueba si el producto se adquirió a precio`NOT``OnSale`normal (). Esta consulta no devuelve solo el nombre del producto, sino que también devuelve la cantidad comprada, que no está incluida en el modelo.  
+ La consulta del ejemplo siguiente devuelve los nombres de los clientes que se usaron como casos de entrenamiento del modelo. Para cada cliente, la consulta devuelve también una tabla anidada que contiene los detalles de la compra. Aunque el modelo incluye la `ProductName` columna, el modelo no utiliza el valor de la `ProductName` columna. El modelo solo comprueba si el producto se adquirió a precio normal ( `NOT``OnSale` ). Esta consulta no devuelve solo el nombre del producto, sino que también devuelve la cantidad comprada, que no está incluida en el modelo.  
   
 ```  
 SELECT CustomerName,    

@@ -1,5 +1,6 @@
 ---
 title: Introducción a la carga masiva XML (SQLXML)
+description: Obtenga información sobre la utilidad de carga masiva XML, un objeto COM independiente en SQLXML 4,0 que le permite cargar datos XML semiestructurados en tablas de Microsoft SQL Server.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4116bef21a70e6de699046019fd404798826bf18
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 11b89a9d6981281bdb2e89bb5511c2f803c91b31
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246738"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84529728"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Introducción a la carga masiva XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75246738"
 ## <a name="streaming-of-xml-data"></a>Transmitir datos XML por secuencias  
  Dado que el documento XML de origen puede ser grande, en el procesamiento de carga masiva no se carga en memoria todo el documento. En su lugar, Carga masiva XML interpreta los datos XML como un flujo y lo lee. A medida que la utilidad lee los datos, identifica las tablas de base de datos, genera los registros adecuados a partir del origen de datos XML y, a continuación, envía los registros a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para la inserción.  
   
- Por ejemplo, el siguiente documento XML de origen se compone de elementos ** \<>del cliente** y ** \<un pedido>** elementos secundarios:  
+ Por ejemplo, el siguiente documento XML de origen consta de **\<Customer>** elementos y **\<Order>** elementos secundarios:  
   
 ```  
 <Customer ...>  
@@ -58,7 +59,7 @@ ms.locfileid: "75246738"
 ...  
 ```  
   
- A medida que la carga masiva XML lee el elemento ** \<>del cliente** , genera un registro para el Customertable. Cuando lee la ** \</Customer>** etiqueta de cierre, la carga masiva XML inserta el registro en la tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Del mismo modo, cuando lee el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** \<elemento Order>** , la carga masiva XML genera un registro para el Ordertable y, a continuación, inserta ese registro en la tabla al leer la ** \<** etiqueta de cierre/Order>.  
+ A medida que la carga masiva XML lee el **\<Customer>** elemento, genera un registro para el Customertable. Cuando lee la **\</Customer>** etiqueta de cierre, la carga masiva XML inserta el registro en la tabla de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Del mismo modo, cuando lee el **\<Order>** elemento, la carga masiva XML genera un registro para el Ordertable y, a continuación, inserta ese registro en la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tabla al leer la **\</Order>** etiqueta de cierre.  
   
 ## <a name="transacted-and-nontransacted-xml-bulk-load-operations"></a>Operaciones de Carga masiva XML con y sin transacciones  
  Carga masiva XML puede funcionar tanto en modo con transacciones como en modo sin transacciones. El rendimiento suele ser óptimo si se realiza una carga masiva en un modo no transactd: es decir, la propiedad de transacción se establece en FALSE y se cumple cualquiera de las condiciones siguientes:  

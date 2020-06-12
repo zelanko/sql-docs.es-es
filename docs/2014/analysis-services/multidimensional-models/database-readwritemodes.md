@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d775b8fbfb7d50b5db245073fdc52fc274638eb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723eb7c1c0e8547ee411fc54ecd4aca613011b38
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075871"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547117"
 ---
 # <a name="database-readwritemodes"></a>Modos de la propiedad de base de datos ReadWriteMode
-  Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere cambiar una base de datos de lectura y escritura a una base de datos de solo lectura o viceversa. Estas situaciones suelen responder a necesidades empresariales, como compartir la misma carpeta de base de datos entre varios servidores para la ampliación horizontal de una solución y la mejora del rendimiento. En estas situaciones, la `ReadWriteMode` propiedad de base de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos permite al DBA cambiar fácilmente el modo operativo de la base de datos.  
+  Con frecuencia, se producen situaciones en las que un administrador de base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere cambiar una base de datos de lectura y escritura a una base de datos de solo lectura o viceversa. Estas situaciones suelen responder a necesidades empresariales, como compartir la misma carpeta de base de datos entre varios servidores para la ampliación horizontal de una solución y la mejora del rendimiento. En estas situaciones, la `ReadWriteMode` propiedad de base de datos permite al [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DBA cambiar fácilmente el modo operativo de la base de datos.  
   
 ## <a name="readwritemode-database-property"></a>Propiedad de base de datos ReadWriteMode  
  La propiedad de base de datos `ReadWriteMode` especifica si la base de datos está en modo de lectura/escritura o en modo de solo lectura. Éstos son los dos únicos valores posibles de la propiedad. Cuando la base de datos está en modo de solo lectura, no puede aplicársele ningún cambio ni actualización. Sin embargo, cuando está en modo de lectura/escritura, se pueden producir cambios y actualizaciones. La propiedad de base de datos `ReadWriteMode` se define como una propiedad de solo lectura; solamente se puede establecer a través de un comando `Attach`.  
@@ -38,7 +37,7 @@ ms.locfileid: "66075871"
 ## <a name="readwritemode-usage"></a>Uso de ReadWriteMode  
  La propiedad de base de datos `ReadWriteMode` debe utilizarse como parte de un comando de base de datos `Attach`. El comando `Attach` permite establecer la propiedad de base de datos en `ReadWrite` o `ReadOnly`. El valor de la propiedad de base de datos `ReadWriteMode` no se puede actualizar directamente porque la propiedad está definida como de solo lectura. Las bases de datos se crean con la propiedad `ReadWriteMode` establecida en `ReadWrite`. No es posible crear una base de datos en modo de solo lectura.  
   
- Para cambiar la `ReadWriteMode` propiedad de base `ReadWrite` de `ReadOnly`datos entre y, debe emitir una `Detach/Attach` secuencia de comandos.  
+ Para cambiar la `ReadWriteMode` propiedad de base `ReadWrite` de datos entre y `ReadOnly` , debe emitir una secuencia de `Detach/Attach` comandos.  
   
  Con la excepción de `Attach`, todas las operaciones de base de datos mantienen la propiedad de base de datos `ReadWriteMode` en su estado actual. Por ejemplo, operaciones como `Alter`, `Backup`, `Restore` y `Synchronize` conservan el valor de `ReadWriteMode`.  
   

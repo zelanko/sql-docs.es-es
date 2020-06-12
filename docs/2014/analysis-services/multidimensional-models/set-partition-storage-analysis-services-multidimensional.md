@@ -24,16 +24,15 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8d86734023080c9b7fc62cff636d4f1952d00d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f921fc106adb88bcf2f9b9e863165153981f904
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072989"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545653"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Establecer el almacenamiento de particiones (Analysis Services - Multidimensional)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y las opciones de almacenamiento en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y las opciones de almacenamiento en caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
   
  Puede especificar el almacenamiento de las particiones en la pestaña Particiones del cubo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o en la página de propiedades de la partición de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

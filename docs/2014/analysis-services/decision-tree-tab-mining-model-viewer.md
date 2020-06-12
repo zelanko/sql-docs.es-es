@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc88606f-ba7c-4f8d-af65-bfa17ec16e2b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b13eb819edc2a33117d45954423466343f5de18a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082298"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528881"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Pestaña Árbol de decisión (Visor de modelos de minería de datos)
   El panel **Árbol de decisión** muestra una representación visual de las reglas de decisión que se crean en un modelo de árbol de decisión. Las reglas de decisión describen las rutas hacia un determinado resultado.  
@@ -55,7 +54,7 @@ ms.locfileid: "66082298"
  **Palmera**  
  Elija un árbol para mostrarlo en el visor. Si crea un modelo que tiene varios atributos de predicción, el algoritmo creará un árbol independiente para cada atributo de predicción.  
   
- **Información preliminar**  
+ **Fondo**  
  Elija un valor del atributo de predicción para utilizarlo a la hora de representar el color de fondo de cada nodo. Así, en los modelos de ejemplo de AdventureWorks, si establece **Background** en 1 ([Bike Buyer] = Yes), los nodos se sombrean más si tienen una proporción mayor de compradores de bicicletas. Esta opción proporciona una indicación visual adicional sobre el significado de las bifurcaciones y nodos del árbol.  
   
  **Expansión predeterminada**  

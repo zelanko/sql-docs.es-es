@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1702ad82c65b5a7370a62c4bc31a08007f374c9f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084981"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523167"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de consultas de minería de datos
   Las consultas de minería de datos se basan en el lenguaje DMX (Extensiones de minería de datos). DMX se usa para todas las tareas de predicción y modelado, incluida la clasificación, el análisis de riesgos, la generación de recomendaciones y la regresión lineal. También puede recuperar los patrones y estadísticas que se generaron al procesar el modelo.  
@@ -60,8 +59,8 @@ ms.locfileid: "66084981"
   
  Si utiliza el generador de consultas, puede utilizar las herramientas gráficas para seleccionar un modelo de minería de datos, agregar nuevos datos del caso y agregar funciones de predicción. La predicción Generador de consultas incluye un editor de texto que puede usar para modificar manualmente la consulta y un panel de **resultados** sencillo para ver los resultados de la consulta.  
   
-###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a>Editor de consultas  
- El editor de consultas [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de proporciona herramientas que puede utilizar para compilar y ejecutar consultas DMX. Puede conectar a una instancia de SQL Server Analysis Services y, a continuación, seleccionar una base de datos, columnas de estructura de minería de datos y un modelo de minería de datos. El **Explorador de metadatos** contiene una lista de funciones de predicción que puede examinar.  
+###  <a name="query-editor"></a><a name="bkmk_QueryEditor"></a> Editor de consultas  
+ El editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona herramientas que puede utilizar para compilar y ejecutar consultas DMX. Puede conectar a una instancia de SQL Server Analysis Services y, a continuación, seleccionar una base de datos, columnas de estructura de minería de datos y un modelo de minería de datos. El **Explorador de metadatos** contiene una lista de funciones de predicción que puede examinar.  
   
 ###  <a name="dmx-templates"></a><a name="bkmk_Templates"></a>Plantillas DMX  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona plantillas de consulta DMX interactivas que puede usar para compilar consultas DMX. Si no ve la lista de plantillas, haga clic en **Ver** en la barra de herramientas y seleccione **Explorador de plantillas**. Para ver todas las plantillas de Analysis Services, incluidas las plantillas para DMX, MDX y XMLA, haga clic en el icono de cubo.  

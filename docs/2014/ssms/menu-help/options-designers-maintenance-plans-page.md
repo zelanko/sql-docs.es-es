@@ -12,17 +12,17 @@ ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4fe825b4f42f8899774cf0a33510ce095ca67939
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e995fcdb128f7b9f67bb75ae41222c7d6d022d3
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283178"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859843"
 ---
 # <a name="options-designers-maintenance-plans-page"></a>Opciones (diseñadores-página planes de mantenimiento)
   Utilice el cuadro de diálogo **Opciones** para determinar el comportamiento predeterminado del diseñador cuando se agregan nuevas formas a la superficie de diseño. En el menú **Herramientas** , haga clic en **Opciones**, expanda **Diseñadores**y seleccione **Planes de mantenimiento**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Conectar una nueva forma a la forma seleccionada de manera predeterminada**  
  Cuando se selecciona esta casilla, las nuevas formas se conectan automáticamente a otras formas cuando se agregan a la superficie de diseño. Cuando esta casilla está desactivada, las nuevas formas no se conectan al agregarse. Al activar esta casilla, se habilitan los siguientes cuadros.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac0c6637dd08dc2ea8927853b7a6bf8dccca454d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef72741b09666a4059fc0fdd09f282d749e4e99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080350"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544147"
 ---
 # <a name="analysis-services-instance-management"></a>Administración de una instancia de Analysis Services
   Una instancia de Analysis Services es una copia del ejecutable `msmdsrv.exe` que se ejecuta como un servicio de sistema operativo. Cada instancia es totalmente independiente de otras instancias en el mismo servidor y tiene su propia configuración, permisos, puertos, cuentas de inicio, almacenamiento de archivos, y propiedades del modo de servidor.  
@@ -44,7 +43,7 @@ ms.locfileid: "66080350"
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Vínculo|Descripción de la tarea|  
+|Link|Descripción de la tarea|  
 |----------|----------------------|  
 |[Configuración posterior a la instalación &#40;Analysis Services&#41;](post-install-configuration-analysis-services.md)|Describe las tareas necesarias y opcionales que completan o modifican una instalación de Analysis.|  
 |[Conectar a Analysis Services](connect-to-analysis-services.md)|Describe las propiedades de cadena de conexión, las bibliotecas de cliente, las metodologías de autenticación y los pasos para establecer o borrar conexiones.|  

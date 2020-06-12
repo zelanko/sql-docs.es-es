@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 7f3f0949-d791-403a-88e2-54cb1a803dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3682d65ac06d970fed2d5346e9d39684485c5dfe
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064680"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527761"
 ---
 # <a name="browsing-a-clustering-model"></a>Examinar un modelo de clústeres
-  Al abrir un modelo de agrupación en clústeres mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]agrupación en clústeres de. El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
+  Al abrir un modelo de agrupación en clústeres mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de agrupación en clústeres de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El visor le ayudará a explorar los clústeres que se han creado y a conocer las características del clúster. Asimismo, podrá comparar y contrastar segmentos individuales con otros segmentos o con la población.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Explorar el modelo  
  La ventana **examinar** incluye las siguientes herramientas para ayudarle a entender el modelo de agrupación en clústeres y explorar los atributos de los grupos de datos subyacentes:  
@@ -65,7 +64,7 @@ ms.locfileid: "66064680"
   
 5.  Ahora, haga clic en la lista desplegable **variable de sombreado** y elija la variable **Age** . Al hacerlo, aparecerá una lista de valores en el cuadro de texto **Estado** .  
   
-     La columna Edad se usa como entrada en este modelo y contiene valores numéricos continuos, pero para fines de agrupación en clústeres, el algoritmo siempre discretiza números. Aquí puede ver las ubicaciones o los grupos creados por el algoritmo, como "muy bajo (\<= 27)" y "muy alto (>= 63)".  
+     La columna Edad se usa como entrada en este modelo y contiene valores numéricos continuos, pero para fines de agrupación en clústeres, el algoritmo siempre discretiza números. Aquí puede ver las ubicaciones o los grupos creados por el algoritmo, como "muy bajo ( \<=27)" and "Very High (> = 63)".  
   
 6.  En las listas desplegables **Estado** , seleccione **muy alta** y vea cómo cambia el diagrama.  
   

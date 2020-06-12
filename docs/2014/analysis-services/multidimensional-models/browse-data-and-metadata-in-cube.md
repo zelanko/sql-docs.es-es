@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 371b515bbd548b544fba0125cf3d6b58b0098470
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076759"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544557"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
   Use la pestaña **Explorador** del Diseñador de cubos para examinar los datos de un cubo. Puede usar esta vista para examinar la estructura de un cubo y comprobar los datos, el cálculo, el formato y la seguridad de los objetos de la base de datos. Puede examinar rápidamente un cubo tal como lo ven los usuarios finales con las herramientas de elaboración de informes o con otras aplicaciones cliente. Si examina los datos de un cubo, podrá ver las distintas dimensiones, explorar en profundidad los miembros y segmentar las dimensiones.  
@@ -57,14 +56,14 @@ ms.locfileid: "66076759"
   
      \- o -  
   
--   En la columna **dimensión** del panel **filtro** , haga clic en ** \<seleccionar dimensión>** y seleccione una dimensión de la lista; a continuación, haga clic ** \<en seleccionar jerarquía>** en la columna **jerarquía** y seleccione una jerarquía de la lista.  
+-   En la columna **dimensión** del panel **filtro** , haga clic en **\<Select dimension>** y seleccione una dimensión de la lista y, a continuación, haga clic **\<Select hierarchy>** en la columna **jerarquía** y seleccione una jerarquía de la lista.  
   
  Después de especificar la jerarquía, especifique el operador y la expresión de filtro. En la tabla siguiente se describen los operadores y las expresiones de filtro.  
   
 |Operador|Expresión de filtro|Descripción|  
 |--------------|-----------------------|-----------------|  
 |Igual|Uno o varios miembros|Los valores deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
-|No igual|Uno o varios miembros|Los valores no deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
+|No es igual|Uno o varios miembros|Los valores no deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
 |En|Uno o varios conjuntos con nombre|Los valores deben estar en un conjunto con nombre especificado.<br /><br /> (Se admite solo para las jerarquías de atributo).|  
 |No en el|Uno o varios conjuntos con nombre|Los valores no deben estar en un conjunto con nombre especificado.<br /><br /> (Se admite solo para las jerarquías de atributo).|  
 |Intervalo (Inclusivo)|Uno o dos miembros delimitadores de un intervalo|Los valores deben estar entre los miembros delimitadores o ser iguales que ellos. Si los miembros delimitadores son iguales o solo se ha especificado un miembro, no se impone ningún intervalo y se permiten todos los valores.<br /><br /> (Se admite solo para las jerarquías de atributo. El intervalo debe estar en un nivel de una jerarquía. Actualmente, no se admiten los intervalos sin límites).|  
@@ -91,7 +90,7 @@ ms.locfileid: "66076759"
   
  Por razones de seguridad, la pestaña **Explorador** solo admite las siguientes acciones:  
   
--   URL  
+-   Resolución  
   
 -   Conjunto de filas  
   

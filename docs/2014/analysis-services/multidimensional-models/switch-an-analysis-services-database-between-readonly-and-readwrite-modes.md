@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d028c4ca47567a1f0f6b7d4b874ad78c98ea2d1
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072886"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547347"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
   Con frecuencia se producen situaciones en las que un administrador de bases de datos (dba) de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] quiere cambiar el modo de lectura/escritura de una base de datos tabular o multidimensional. Estas situaciones suelen responder a necesidades empresariales, como compartir la base de datos entre un grupo de servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para proporcionar una mejor experiencia para el usuario.  
@@ -47,7 +46,7 @@ ms.locfileid: "66072886"
   
 4.  Asigne una contraseña a la base de datos que se va separar y, a continuación, haga clic en **Aceptar** para ejecutar el comando Detach.  
   
-5.  Busque la carpeta **bases de datos** en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Busque la carpeta **bases de datos** en el panel izquierdo o derecho de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   
 6.  Haga clic con el botón secundario en la carpeta **bases** de datos y seleccione **adjuntar..** .  
   

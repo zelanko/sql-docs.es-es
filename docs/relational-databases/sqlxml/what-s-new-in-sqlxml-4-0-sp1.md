@@ -1,5 +1,6 @@
 ---
 title: Novedades de SQLXML 4,0 SP1&#39;
+description: Vea un resumen de las actualizaciones y mejoras de SQLXML 4,0 SP1 con vínculos a información más detallada.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -20,12 +21,12 @@ ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64d531dc8eeee5a55cb0bcabbee14c06e1e5db93
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 684711a9fc1fbab2d4556868d051df0b503eac23
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252157"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689789"
 ---
 # <a name="what39s-new-in-sqlxml-40-sp1"></a>Novedades de SQLXML 4,0 SP1&#39;
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +85,7 @@ ms.locfileid: "75252157"
  También necesitará redistribuir [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client si lo utiliza como proveedor de datos con la aplicación. Para obtener más información, vea [Instalar SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md).  
   
 ## <a name="support-for-sql-server-native-client"></a>Compatibilidad con SQL Server Native Client  
- SQLXML 4,0 es compatible con los proveedores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de SQLOLEDB y Native Client. Se recomienda que use la misma versión del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se desarrolle para admitir los nuevos tipos de datos que se distribuyen en el servidor, como los tipos de datos **Date, Time**, **DateTime2**y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **dateTimeOffset** en y [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] compatibles con Native Client.  
+ SQLXML 4,0 es compatible con los proveedores de SQLOLEDB y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Se recomienda que use la misma versión del proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client se desarrolle para admitir los nuevos tipos de datos que se distribuyen en el servidor, como los tipos de datos **Date, Time**, **DateTime2**y **dateTimeOffset** en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y compatibles con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client es una tecnología de acceso a datos introducida en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Combina el proveedor SQLOLEDB y el controlador SQLODBC en una biblioteca de vínculos dinámicos (DLL) nativa, a la vez que ofrece una nueva funcionalidad independiente y distinta de Microsoft Data Access Components (MDAC).  
   
@@ -199,15 +200,15 @@ ms.locfileid: "75252157"
  Para obtener más información, vea [usar ado para ejecutar consultas SQLXML 4,0](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ### <a name="supportability-for-sqlxml-30-isapi-and-data-types-introduced-in-sql-server-2005"></a>Compatibilidad con SQLXML 3.0 ISAPI y tipos de datos introducidos en SQL Server 2005  
- Dado que la compatibilidad con ISAPI se ha quitado de SQLXML 4,0, si la solución requiere las características de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de datos mejoradas introducidas en, como el [tipo de datos XML](../../t-sql/xml/xml-transact-sql.md) o los [tipos de datos definidos por el usuario (UDT)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) y el acceso basado en Web, deberá usar otra solución como [las clases administradas de SQLXML](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) u otro tipo de controlador HTTP, como los servicios Web XML nativos 2005 SQL Server para  
+ Dado que la compatibilidad con ISAPI se ha quitado de SQLXML 4,0, si la solución requiere las características de tipos de datos mejoradas introducidas en, como [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] el [tipo de datos XML](../../t-sql/xml/xml-transact-sql.md) o los [tipos de datos definidos por el usuario (UDT)](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md) y el acceso basado en Web, deberá usar otra solución como [las clases administradas de SQLXML](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-4-0-net-framework-support-managed-classes.md) u otro tipo de controlador http, como los servicios Web XML nativos 2005 SQL Server para  
   
- Como alternativa, si no necesita estas extensiones de tipo, puede seguir usando SQLXML 3,0 para conectarse a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] las instalaciones de y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . La compatibilidad con la ISAPI SQLXML 3,0 funcionará con estas versiones posteriores, pero no admite ni reconoce el tipo de datos **XML** o la compatibilidad [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]con tipos UDT introducida en.  
+ Como alternativa, si no necesita estas extensiones de tipo, puede seguir usando SQLXML 3,0 para conectarse a las instalaciones de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] . La compatibilidad con la ISAPI SQLXML 3,0 funcionará con estas versiones posteriores, pero no admite ni reconoce el tipo de datos **XML** o la compatibilidad con tipos UDT introducida en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
 ### <a name="xml-bulk-load-security-changes-for-temporary-files"></a>Cambios de seguridad de la carga masiva XML para archivos temporales  
  En SQLXML 4.0 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los permisos de archivo de carga masiva XML se conceden al usuario que ejecuta la operación de carga masiva. Los permisos de lectura y escritura se heredan del sistema de archivos. En versiones anteriores de SQLXML y SQL Server, la carga masiva XML en SQLXML creaba archivos temporales que no estaban protegidos y que podía leer cualquier usuario.  
   
 ### <a name="migration-issues-for-client-side-for-xml"></a>Problemas de migración en consultas FOR XML del lado cliente  
- Debido a los cambios en el motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución, puede devolver valores diferentes en los metadatos de una tabla base que se devolverían si la consulta for [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]XML se ejecutara en. En los casos en los que esto ocurre, el formato del lado cliente de los resultados de la consulta FOR XML será diferente según la versión en la que se ejecute la consulta.  
+ Debido a los cambios en el motor de ejecución, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede devolver valores diferentes en los metadatos de una tabla base que se devolverían si la consulta for XML se ejecutara en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] . En los casos en los que esto ocurre, el formato del lado cliente de los resultados de la consulta FOR XML será diferente según la versión en la que se ejecute la consulta.  
   
  Si una consulta FOR XML se ejecuta en el lado cliente mediante SQLXML 3,0 sobre una columna de tipo de datos **XML** , los datos de los resultados volverán a ser una cadena totalmente entidades. En SQLXML 4.0, si se especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) como proveedor, los datos se devolverán como XML.  
   

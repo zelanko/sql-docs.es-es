@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 01bd2ad7-09b7-49ae-ad80-83f25da301aa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef487927098e63c7fc870aa65e55f57faa26767d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078432"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542567"
 ---
 # <a name="lesson-7-create-measures"></a>Lección 7: Crear medidas
   En esta lección, creará medidas para incluirlas en su modelo. Al igual que las columnas calculadas que creó en la lección anterior, una medida es esencialmente un cálculo creado usando una fórmula DAX. Sin embargo, a diferencia de las columnas calculadas, las medidas se evalúan en función de un *filtro*seleccionado por el usuario; por ejemplo, una columna o una segmentación de datos determinada agregada al campo Etiquetas de filas en una tabla dinámica.   Luego, la medida aplicada calculará un valor para cada celda del filtro. Las medidas son cálculos eficaces y flexibles que deseará incluir en casi todos los modelos tabulares para realizar cálculos dinámicos sobre datos numéricos. Para obtener más información, vea [Medidas &#40;SSAS tabular&#41;](tabular-models/measures-ssas-tabular.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "66078432"
   
      Observe que ahora la celda superior izquierda contiene un nombre de medida, **Medida 1**, seguido del resultado, **30**. El nombre de medida también precede a la fórmula en la barra de fórmulas.  
   
-5.  Para cambiar el nombre de la medida, en la barra de fórmulas, resalte el nombre, `Days Current Quarter to Date` **medida 1**, escriba y, a continuación, presione Entrar.  
+5.  Para cambiar el nombre de la medida, en la barra de fórmulas, resalte el nombre, **medida 1**, escriba `Days Current Quarter to Date` y, a continuación, presione Entrar.  
   
     > [!TIP]  
     >  Cuando escriba una fórmula en la barra de fórmulas, también puede escribir el nombre de la medida seguido de dos puntos (:), seguido de un espacio y seguido de la fórmula. Con este método, no tiene que cambiar el nombre de la medida.  

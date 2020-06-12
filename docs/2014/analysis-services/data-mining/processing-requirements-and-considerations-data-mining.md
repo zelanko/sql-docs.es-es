@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f0a1dcf4793244a17bb52b38894bba2cb06d219
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083127"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520904"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos y consideraciones de procesamiento (minería de datos)
   En este tema se describen algunas consideraciones técnicas que debe tener en cuenta al procesar objetos de minería de datos. Para obtener una explicación general de qué es el procesamiento y cómo se aplica a la minería de datos, vea [Procesar objetos de minería de datos](processing-data-mining-objects.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "66083127"
   
  Al procesar el modelo, éste no vuelve a leer directamente los datos del origen de datos, sino que recibe el resumen de los datos de la estructura de minería de datos. Utilizando el cubo que se creó, junto con el índice y los datos del caso almacenados en memoria caché, el servidor crea subprocesos independientes para entrenar los modelos.  
   
- Para obtener más información sobre las ediciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) ( https://go.microsoft.com/fwlink/?linkid=232473) .  
   
 ##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a> Procesar estructuras de minería de datos  
  Una estructura de minería de datos se puede procesar con todos los modelos dependientes, o por separado. Procesar una estructura de minería de datos independientemente de los modelos puede ser útil cuando se prevé que el procesamiento de algunos modelos llevará mucho tiempo y se desee diferir esa operación.  

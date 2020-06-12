@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 925821cba91a8a62076f0dcfa327453d035671d9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e13b648b35cb0a6b6d9272ec9a2b9d560c3c7f4
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070968"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547747"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Este libro contiene al menos una consulta que actualiza los datos externos.
   En los libros de Excel que contienen datos PowerPivot, Excel Services muestra esta advertencia cuando detecta información de conexión y le indica que habilite o deshabilite las consultas para este libro.  
@@ -49,7 +48,7 @@ ms.locfileid: "66070968"
   
 5.  En Datos externos, desactive la casilla de **Advertencia en actualización de datos**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
  O bien, puede crear una nueva ubicación de confianza para los sitios que contienen los libros PowerPivot y, a continuación, modificar la configuración solo para ese sitio. Para obtener más información, consulte [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   

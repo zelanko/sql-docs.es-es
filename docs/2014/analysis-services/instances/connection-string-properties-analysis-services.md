@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7cd6ea975462a7967c7938de8900d5b1877ff524
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3888642f73fc0898c12ed471c7bc09d678303989
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217065"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544027"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
   En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
@@ -48,11 +47,11 @@ ms.locfileid: "79217065"
 ##  <a name="connection-parameters-in-common-use"></a><a name="bkmk_common"></a>Parámetros de conexión en uso común  
  En la tabla siguiente se describen las propiedades más usadas para generar una cadena de conexión.  
   
-|Propiedad|Descripción|Ejemplo|  
+|Propiedad.|Descripción|Ejemplo|  
 |--------------|-----------------|-------------|  
 |`Data Source` o `DataSource`|Especifica la instancia del servidor. Esta propiedad es necesaria para todas las conexiones. Los valores válidos incluyen el nombre de red o la dirección IP del servidor, local o localhost para las conexiones locales, una dirección URL si el servidor está configurado para acceso HTTP o HTTPS, o el nombre de un archivo de cubo (.cub) local.|`Data source=AW-SRV01` para la instancia predeterminada y el puerto (TCP 2383).<br /><br /> `Data source=AW-SRV01$Finance:8081` para una instancia con nombre ($Finance) y un puerto fijo.<br /><br /> `Data source=AW-SRV01.corp.Adventure-Works.com` para un nombre de dominio completo, suponiendo la instancia y el puerto predeterminados.<br /><br /> `Data source=172.16.254.1` para una dirección IP del servidor, omitiendo la búsqueda del servidor DNS, que es útil para solucionar problemas de conexión.|  
 |`Initial Catalog` o `Catalog`|Especifica el nombre de la base de datos de Analysis Services a la que se va a conectar. La base de datos se debe implementar en Analysis Services y debe tener permiso para conectarse a ella. Esta propiedad es opcional para las conexiones de AMO, pero es obligatoria para ADOMD.NET.|`Initial catalog=AdventureWorks2012`|  
-|`Provider`|Entre los valores válidos se incluyen MSOLAP o MSOLAP. \<versión>, donde \<versión> es 3, 4 o 5. En el sistema de archivos, el nombre del proveedor de datos es msolap110.dll para la versión SQL Server 2012, msolap100.dll para SQL Server 2008 y 2008 R2, y msolap90.dll para SQL Server 2005.<br /><br /> La versión actual es MSOLAP.5. Esta propiedad es opcional. De forma predeterminada, las bibliotecas de cliente leen la versión actual del proveedor OLE DB del Registro. Solo necesita establecer esta propiedad si necesita una versión específica del proveedor de datos, por ejemplo para conectarse a una instancia de SQL Server 2008.<br /><br /> Los proveedores de datos corresponden a las versiones de SQL Server. Si su organización usa la versión actual y versiones anteriores de Analysis Services, lo más probable es que tenga que especificar manualmente qué proveedor usará en las cadenas de conexión que cree. Puede que también sea necesario descargar e instalar versiones específicas del proveedor de datos en aquellos equipos que no tengan la versión necesaria. Puede descargar el proveedor OLE DB desde las páginas de SQL Server Feature Pack del Centro de descarga. Vaya a [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) para descargar el proveedor OLE DB de Analysis Services para SQL Server 2012.<br /><br /> MSOLAP.4 se publicó tanto en SQL Server 2008 como en SQL Server 2008 R2. La versión 2008 R2 admite libros PowerPivot en ocasiones debe instalarse manualmente en los servidores de SharePoint. Para distinguir entre estas versiones, debe comprobar el número de compilación en las propiedades de archivo del proveedor: vaya a Archivos de programa\Microsoft Analysis Services\AS OLEDB\10. Haga clic con el botón secundario en msolap110.dll y seleccione **Propiedades**. Haga clic en **Detalles**. Vea la información de la versión del archivo. La versión debe incluir 10,50. \<BuildNumber> para SQL Server 2008 R2. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) y [Proveedores de datos usados para las conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 se lanzó en SQL Server 2005.<br /><br /> MSOLAP. 4 se publicó en SQL Server 2008 y de nuevo SQL Server 2008 R2<br /><br /> MSOLAP. 5 se publicó en SQL Server 2012|`Provider=MSOLAP.3` se usa para las conexiones que necesitan la versión SQL Server 2005 del proveedor OLE DB para Analysis Services.|  
+|`Provider`|Entre los valores válidos se incluyen MSOLAP o MSOLAP. \<version> , donde \<version> es 3, 4 o 5. En el sistema de archivos, el nombre del proveedor de datos es msolap110.dll para la versión SQL Server 2012, msolap100.dll para SQL Server 2008 y 2008 R2, y msolap90.dll para SQL Server 2005.<br /><br /> La versión actual es MSOLAP.5. Esta propiedad es opcional. De forma predeterminada, las bibliotecas de cliente leen la versión actual del proveedor OLE DB del Registro. Solo necesita establecer esta propiedad si necesita una versión específica del proveedor de datos, por ejemplo para conectarse a una instancia de SQL Server 2008.<br /><br /> Los proveedores de datos corresponden a las versiones de SQL Server. Si su organización usa la versión actual y versiones anteriores de Analysis Services, lo más probable es que tenga que especificar manualmente qué proveedor usará en las cadenas de conexión que cree. Puede que también sea necesario descargar e instalar versiones específicas del proveedor de datos en aquellos equipos que no tengan la versión necesaria. Puede descargar el proveedor OLE DB desde las páginas de SQL Server Feature Pack del Centro de descarga. Vaya a [Microsoft SQL Server 2012 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=296473) para descargar el proveedor OLE DB de Analysis Services para SQL Server 2012.<br /><br /> MSOLAP.4 se publicó tanto en SQL Server 2008 como en SQL Server 2008 R2. La versión 2008 R2 admite libros PowerPivot en ocasiones debe instalarse manualmente en los servidores de SharePoint. Para distinguir entre estas versiones, debe comprobar el número de compilación en las propiedades de archivo del proveedor: vaya a Archivos de programa\Microsoft Analysis Services\AS OLEDB\10. Haga clic con el botón secundario en msolap110.dll y seleccione **Propiedades**. Haga clic en **Detalles**. Vea la información de la versión del archivo. La versión debe incluir 10,50.\<buildnumber> por SQL Server 2008 R2. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) y [Proveedores de datos usados para las conexiones de Analysis Services](data-providers-used-for-analysis-services-connections.md).<br /><br /> MSOLAP. 3 se lanzó en SQL Server 2005.<br /><br /> MSOLAP. 4 se publicó en SQL Server 2008 y de nuevo SQL Server 2008 R2<br /><br /> MSOLAP. 5 se publicó en SQL Server 2012|`Provider=MSOLAP.3` se usa para las conexiones que necesitan la versión SQL Server 2005 del proveedor OLE DB para Analysis Services.|  
 |`Cube`|Nombre del cubo o nombre de la perspectiva. Una base de datos puede contener varios cubos y perspectivas. Cuando hay varios destinos posibles, incluya el nombre del cubo o de la perspectiva en la cadena de conexión.|`Cube=SalesPerspective` muestra que puede usar la propiedad de cadena de conexión Cube para especificar el nombre de un cubo o el nombre de una perspectiva.|  
   
 ##  <a name="authentication-and-security"></a><a name="bkmk_auth"></a>Autenticación y seguridad  
@@ -60,7 +59,7 @@ ms.locfileid: "79217065"
   
  Las propiedades se muestran en orden alfabético.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`EffectiveUserName`|Se emplea cuando se debe suplantar una identidad de usuario final en el servidor. Especifique la cuenta en el formato dominio\usuario. Para usar esta propiedad, el autor de la llamada debe tener permisos administrativos en Analysis Services. Para obtener más información acerca de esta propiedad en un libro de Excel desde SharePoint, vea [Usar EffectiveUserName de Analysis Services en SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkId=311905). Para obtener una ilustración de cómo se usa esta propiedad con Reporting Services, vea [Usar EffectiveUserName para suplantar en SSAS](https://www.artisconsulting.com/blogs/greggalloway/2010/4/1/using-effectiveusername-to-impersonate-in-ssas).<br /><br /> `EffectiveUserName` se usa en una instalación de PowerPivot para SharePoint con el fin de capturar información de uso. La identidad del usuario se proporciona al servidor para poder grabar en los archivos de registro los eventos o los errores que incluyen la identidad del usuario. En el caso de PowerPivot, no se emplea con fines de autorización.|  
 |**Cifrar la contraseña**|Especifica si se va a usar una contraseña local para cifrar cubos locales. Los valores válidos son True o False. El valor predeterminado es False.|  
@@ -80,7 +79,7 @@ ms.locfileid: "79217065"
   
  Las propiedades se muestran en orden alfabético.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
 |`Application Name`|Establece el nombre de la aplicación asociada a la conexión. Este valor puede ser útil para supervisar eventos de seguimiento, especialmente si varias aplicaciones tienen acceso a las mismas bases de datos. Por ejemplo, agregar Application name = ' test ' a una cadena de conexión hace que ' test ' aparezca en un seguimiento de SQL Server Profiler, como se muestra en la siguiente captura de pantalla:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Los alias para esta propiedad incluyen `sspropinitAppName`, `AppName`. Para obtener más información, vea [Usar el parámetro de nombre de aplicación al conectarse a SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  
 |`AutoSyncPeriod`|Establece la frecuencia (en milisegundos) de sincronización de caché de cliente y servidor. ADOMD.NET proporciona almacenamiento en caché de cliente para los objetos usados con frecuencia que tienen una sobrecarga mínima de memoria. Esto ayuda a reducir el número de ciclos de ida y vuelta al servidor. El valor predeterminado es de 10000 milisegundos (o diez segundos). Cuando se establece en NULL o en 0, se desactiva la sincronización automática.|  
@@ -166,11 +165,11 @@ ms.locfileid: "79217065"
   
  **Conexiones HTTP a los libros PowerPivot (archivos .xlsx, .xlsb o .xlsm)**  
   
- `Data Source=<URL>`, donde URL es la ruta de acceso de SharePoint a un libro PowerPivot publicado en una biblioteca de SharePoint. Por ejemplo, "Data Source =<http://localhost/Shared> Documents/sales. xlsx".  
+ `Data Source=<URL>`, donde URL es la ruta de acceso de SharePoint a un libro PowerPivot publicado en una biblioteca de SharePoint. Por ejemplo, "Data Source = <http://localhost/Shared> Documents/Sales.xlsx".  
   
  **Conexiones HTTP a los archivos de conexión de modelos semánticos BI**  
   
- `Data Source=<URL>` donde URL es la ruta de acceso de SharePoint al archivo .bism. Por ejemplo, "Data Source =<http://localhost/Shared> Documents/sales. Bism".  
+ `Data Source=<URL>` donde URL es la ruta de acceso de SharePoint al archivo .bism. Por ejemplo, "Data Source = <http://localhost/Shared> Documents/sales. Bism".  
   
  **Conexiones incrustadas de PowerPivot**  
   

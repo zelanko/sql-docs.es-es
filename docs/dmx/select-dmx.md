@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8bf766c6f0a7fd757b280b0f950a43cfdc025929
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 544071565a18ade74b3dd4f26945991987295cbc
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928423"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669603"
 ---
 # <a name="select-dmx"></a>SELECT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,11 +46,11 @@ FROM <model/structure>[.aspect]
 SELECT FLATTENED <select list> FROM ...  
 ```  
   
-## <a name="top-n-and-order-by"></a>TOP \<n> y order by  
- Puede ordenar los resultados de una consulta mediante una expresión y, a continuación, devolver un subconjunto de los resultados usando una combinación de las cláusulas **order by** y **Top** . Esto resulta útil en un escenario como el correo directo, en el que solo se desea enviar resultados a los destinatarios que tienen más probabilidad de responder. Puede ordenar los resultados de una consulta de predicción de correo de destino por la probabilidad de predicción y, a continuación, \<devolver solo los n primeros> resultados.  
+## <a name="top-n-and-order-by"></a>TOP \< n> y order by  
+ Puede ordenar los resultados de una consulta mediante una expresión y, a continuación, devolver un subconjunto de los resultados usando una combinación de las cláusulas **order by** y **Top** . Esto resulta útil en un escenario como el correo directo, en el que solo se desea enviar resultados a los destinatarios que tienen más probabilidad de responder. Puede ordenar los resultados de una consulta de predicción de correo de destino por la probabilidad de predicción y, a continuación, devolver solo los \< n primeros> resultados.  
   
 ## <a name="select-list"></a>Lista de selección  
- La * \<lista de selección>* puede incluir referencias de columnas escalares, funciones de predicción y expresiones. Las opciones que estén disponibles dependen del algoritmo y de los contextos siguientes:  
+ La * \< lista de selección>* puede incluir referencias de columnas escalares, funciones de predicción y expresiones. Las opciones que estén disponibles dependen del algoritmo y de los contextos siguientes:  
   
 -   Si está consultando una estructura de minería de datos o un modelo de minería de datos  
   
@@ -76,7 +76,7 @@ JOIN <source data query>
 ```  
   
 ## <a name="where"></a>WHERE  
- Puede limitar los casos devueltos por la consulta mediante el uso de una cláusula **Where** . La cláusula **Where** especifica que las referencias de columna en la expresión **Where** deben tener la misma semántica que las referencias de columna en la * \<lista de selección>* de la instrucción **Select** , y solo pueden devolver una expresión booleana. La sintaxis de la cláusula **Where** es la siguiente:  
+ Puede limitar los casos devueltos por la consulta mediante el uso de una cláusula **Where** . La cláusula **Where** especifica que las referencias de columna en la expresión **Where** deben tener la misma semántica que las referencias de columna en la * \< lista de selección>* de la instrucción **Select** , y solo pueden devolver una expresión booleana. La sintaxis de la cláusula **Where** es la siguiente:  
   
 ```  
 WHERE < condition expression >  

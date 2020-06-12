@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f0793ea-a4c7-42e9-b722-2164a454ebca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 666b7fdf5af10b6726a1e1d7a2aaafa075bf8777
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c062bab47317d121a2b1895742d70c79048413d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080558"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544237"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Importar datos de un origen de datos multidimensionales (SSAS tabular)
   Puede usar una base de datos de cubo de Analysis Services como origen de datos para un modelo tabular. Para importar datos de un cubo de Analysis Services, debe definir una consulta MDX para seleccionar los datos que desea importar.  

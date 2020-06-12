@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b34abdc-7ed4-4ec1-8780-052a704d6dbe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91bc709d61c786c165711cfdb31ff696456997ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521227"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Valores ausentes (Analysis Services - Minería de datos)
   Controlar los  *valores ausentes* correctamente constituye una parte importante del modelado eficiente. En esta sección se explica qué son los valores ausentes, y se describen las características proporcionadas en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para trabajar con valores ausentes al generar estructuras y modelos de minería de datos.  
@@ -42,9 +41,9 @@ ms.locfileid: "66083357"
 ## <a name="calculation-of-the-missing-state"></a>Cálculo del estado ausente  
  Para el algoritmo de minería de datos, los valores ausentes son informativos. En las tablas de casos, `Missing` es un estado tan válido como cualquier otro. Es más, un modelo de minería de datos puede usar otros valores para predecir la ausencia de un valor. En otras palabras, la ausencia de un valor no es un error.  
   
- Al crear un modelo de minería de datos `Missing` , se agrega automáticamente un estado al modelo para todas las columnas discretas. Por ejemplo, si la columna de entrada [Sexo] contiene dos posibles valores, Hombre y Mujer, automáticamente se agrega un tercer valor para representar el valor `Missing`, y el histograma que muestra la distribución de todos los valores de la columna siempre incluirá el recuento de los casos con valores `Missing`. Si en la columna Sexo no hay ningún valor ausente, el histograma muestra que el estado Missing aparece en 0 casos.  
+ Al crear un modelo de minería de datos, `Missing` se agrega automáticamente un estado al modelo para todas las columnas discretas. Por ejemplo, si la columna de entrada [Sexo] contiene dos posibles valores, Hombre y Mujer, automáticamente se agrega un tercer valor para representar el valor `Missing`, y el histograma que muestra la distribución de todos los valores de la columna siempre incluirá el recuento de los casos con valores `Missing`. Si en la columna Sexo no hay ningún valor ausente, el histograma muestra que el estado Missing aparece en 0 casos.  
   
- La inclusión del estado `Missing` de forma predeterminada está justificada si cree probable que los datos no dispongan de ejemplos de todos los valores posibles y no desea que el modelo excluya la posibilidad solo porque no existe ningún ejemplo en los datos. Por ejemplo, si los datos de ventas de una tienda muestran que todos los clientes que compraron un determinado producto resultaron ser mujeres, probablemente no desee crear un modelo que prediga que únicamente las mujeres podrán adquirir el producto. En su lugar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , agrega un marcador de posición para el valor desconocido `Missing`adicional, denominado, como una forma de acomodar posibles otros Estados.  
+ La inclusión del estado `Missing` de forma predeterminada está justificada si cree probable que los datos no dispongan de ejemplos de todos los valores posibles y no desea que el modelo excluya la posibilidad solo porque no existe ningún ejemplo en los datos. Por ejemplo, si los datos de ventas de una tienda muestran que todos los clientes que compraron un determinado producto resultaron ser mujeres, probablemente no desee crear un modelo que prediga que únicamente las mujeres podrán adquirir el producto. En su lugar, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] agrega un marcador de posición para el valor desconocido adicional, denominado `Missing` , como una forma de acomodar posibles otros Estados.  
   
  Por ejemplo, la tabla siguiente muestra la distribución de valores para el nodo (Todos) del modelo de árbol de decisión creado para el tutorial de Bike Buyer. En el ejemplo, la columna [Bike Buyer] es el atributo de predicción, donde 1 indica "Sí" y 0 indica "No".  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66083357"
 |1|9098|  
 |Missing|0|  
   
- Esta distribución muestra que aproximadamente la mitad de los clientes han comprado una bicicleta, y la otra mitad no lo ha hecho. Este conjunto de datos concreto es muy limpio; por consiguiente, cada caso tiene un valor en la columna [Bike Buyer] y el recuento de valores `Missing` es 0. Sin embargo, si un caso tuviera un valor null en el campo [Bike Buyer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ], contaría esa fila como un caso `Missing` con un valor.  
+ Esta distribución muestra que aproximadamente la mitad de los clientes han comprado una bicicleta, y la otra mitad no lo ha hecho. Este conjunto de datos concreto es muy limpio; por consiguiente, cada caso tiene un valor en la columna [Bike Buyer] y el recuento de valores `Missing` es 0. Sin embargo, si un caso tuviera un valor null en el campo [Bike Buyer], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contaría esa fila como un caso con un `Missing` valor.  
   
  Si la entrada es una columna continua, el modelo tabula dos posibles estados para el atributo: `Existing` y `Missing`. En otras palabras, o la columna contiene un valor de algún tipo de datos numéricos o no contiene ningún valor. Para los casos que tienen un valor, el modelo calcula la media, la desviación estándar y otras estadísticas significativas. Para los casos que no tienen ningún valor, el modelo proporciona un recuento de los valores `Missing` y ajusta las predicciones de la forma apropiada. El método para ajustar la predicción difiere dependiendo del algoritmo y se describe en la sección siguiente.  
   

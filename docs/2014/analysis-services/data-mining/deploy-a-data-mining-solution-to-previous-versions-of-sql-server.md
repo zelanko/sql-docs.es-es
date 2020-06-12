@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29bd841ea0dd2d4676e087c9886f678eedc9a8f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084684"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522709"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Implementar soluciones de minería de datos para versiones anteriores de SQL Server
   En esta sección se describen problemas conocidos de compatibilidad que pueden surgir al intentar implementar un modelo o estructura de minería de datos que se creó en una instancia de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] en una base de datos que utiliza SQL Server 2005 Analysis Services, o al implementar modelos creados en SQL Server 2005 en una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -60,7 +59,7 @@ ms.locfileid: "66084684"
   
  Al abrir la estructura de minería de datos en SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] produce un error y, a continuación, vuelve a generar la estructura para quitar la partición de datos de exclusión.  
   
- Una vez que se ha vuelto a generar la estructura, el tamaño de la partición de exclusión ya no está disponible en el ventana Propiedades; sin embargo, el \<valor Ddl100_100: HoldoutMaxPercent>\<30/ddl100_100: HoldoutMaxPercent>) puede estar aún presente en el archivo de script ASSL.  
+ Una vez que se ha vuelto a generar la estructura, el tamaño de la partición de exclusión ya no está disponible en el ventana Propiedades; sin embargo, el valor \<ddl100_100:HoldoutMaxPercent> 30 \</ddl100_100:HoldoutMaxPercent> ) puede seguir estando presente en el archivo de script ASSL.  
   
 ##  <a name="deploying-models-with-filters"></a><a name="bkmk_Filter"></a>Implementar modelos con filtros  
  Si utiliza [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] para aplicar un filtro a un modelo de minería de datos, este se puede implementar en una instancia de SQL Server 2005, pero el filtro no se aplicará.  

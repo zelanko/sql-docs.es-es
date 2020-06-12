@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2f8d8b3d-810b-4c31-98f2-341015e13da8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad25ecae16a9b5e5f32554350a315156e9818241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 30d7e6aafe613e5ca43307aa75540d8fb1cea3ec
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086966"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526842"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copiar y pegar datos (SSAS tabular)
   Puede copiar los datos de tabla de las aplicaciones externas y pegarlos en una tabla nueva o en una ya existente en el diseñador de modelos. Los datos que pega del Portapapeles deben estar en formato HTML, como los datos que se copian de Excel o Word. El diseñador de modelos detectará y aplicará automáticamente tipos de datos a los datos pegados. También puede modificar el tipo de datos o el formato para mostrar de una columna de forma manual.  

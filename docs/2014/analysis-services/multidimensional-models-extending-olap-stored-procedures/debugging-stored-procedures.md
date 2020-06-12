@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f5971fe611f06a413ca48b2bc91237a8c87ee8e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62727751"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545397"
 ---
 # <a name="debugging-stored-procedures"></a>Depurar procedimientos almacenados
   Los procedimientos almacenados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] son bibliotecas CLR o COM (generalmente DLL) escritas en C# (u otro lenguaje de bibliotecas CLR o COM). Por consiguiente, la depuración de un procedimiento almacenado es muy similar a la depuración de cualquier otra aplicación del entorno de depuración de Visual Studio. Los procedimientos almacenados del entorno de desarrollo de Visual Studio pueden depurarse con las funciones de depuración integradas. Con ellas podrá detenerse en ubicaciones de procedimientos, inspeccionar los valores de memoria y registro, cambiar variables, observar el tráfico de mensajes y examinar cómo funciona el código.  
@@ -41,11 +40,11 @@ ms.locfileid: "62727751"
   
     2.  En el cuadro de diálogo **asociar toProcess** , seleccione **Mostrar procesos de todos los usuarios**.  
   
-    3.  En la lista **procesos disponibles** , en la columna **proceso** , haga clic en **msmdsrv. exe**. Si se ejecutase más de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el servidor, necesita identificar el proceso mediante el Id. de la instancia que desee utilizar.  
+    3.  En la lista **procesos disponibles** , en la columna **proceso** , haga clic en **Msmdsrv.exe**. Si se ejecutase más de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el servidor, necesita identificar el proceso mediante el Id. de la instancia que desee utilizar.  
   
     4.  En el cuadro de texto **adjuntar a** , asegúrese de que está seleccionado el tipo de programa adecuado. Para un archivo DLL de CLR, haga clic en **seleccionar**, elija **depurar estos tipos de código**, haga clic en **administrado**y, a continuación, haga clic en **Aceptar**. Para un archivo DLL COM, haga clic en **seleccionar**, elija **depurar estos tipos de código**, haga clic en **nativo**y, a continuación, haga clic en **Aceptar**.  
   
-    5.  Haga clic en **Asociar**.  
+    5.  Haga clic en **Adjuntar**.  
   
 7.  En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], invoque el programa o el script MDX que llama al procedimiento almacenado. El depurador se interrumpirá al alcanzar una línea que contiene un punto de interrupción. Podrá evaluar variables en la ventana de inspección, ver variables locales y reproducir el código.  
   

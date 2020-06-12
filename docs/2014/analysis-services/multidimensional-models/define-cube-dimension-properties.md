@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ecf47eff045aa379a8e67332a82b2045a8569a2a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c58cf6a2f55e57c9faa65ddec72fe1bda6000c2
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075691"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547027"
 ---
 # <a name="define-cube-dimension-properties"></a>Definir las propiedades de una dimensión de cubo
   Una dimensión de cubo es una instancia de una dimensión de base de datos en un cubo. Se puede utilizar una dimensión de base de datos en varios cubos y se pueden basar varias dimensiones de cubo en una sola dimensión de base de datos. En la siguiente tabla se describen las propiedades de una dimensión de cubo.  
   
-|Propiedad|Descripción|  
+|Propiedad.|Descripción|  
 |--------------|-----------------|  
-|`AllMemberAggregationUsage`|Controla cómo se diseñan las agregaciones mediante el diseñador [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]de agregaciones en. Esta propiedad puede tener los valores siguientes:<br /><br /> **Full**: todas las agregaciones del cubo deben incluir el miembro All.<br /><br /> **None**: ninguna agregación del cubo puede incluir el miembro All. Este es el valor predeterminado.<br /><br /> **Unrestricted**: no se aplica ninguna restricción en el Diseñador de agregaciones.<br /><br /> **Default**: la misma funcionalidad que Unrestricted.|  
+|`AllMemberAggregationUsage`|Controla cómo se diseñan las agregaciones mediante el diseñador de agregaciones en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Esta propiedad puede tener los valores siguientes:<br /><br /> **Full**: todas las agregaciones del cubo deben incluir el miembro All.<br /><br /> **None**: ninguna agregación del cubo puede incluir el miembro All. Este es el valor predeterminado.<br /><br /> **Unrestricted**: no se aplica ninguna restricción en el Diseñador de agregaciones.<br /><br /> **Default**: la misma funcionalidad que Unrestricted.|  
 |`Description`|Proporciona un nombre descriptivo para el nivel.|  
 |`DimensionID`|Contiene el identificador único de la dimensión de base de datos.|  
 |`HierarchyUniqueNameStyle`|Determina cómo se generan los nombres únicos para las jerarquías contenidas en la dimensión de cubo. Esta propiedad puede tener los valores siguientes:<br /><br /> `IncludeDimensionName`: el nombre de la dimensión se incluye como parte del nombre de la jerarquía. Este es el valor predeterminado.<br /><br /> `ExcludeDimensionName`: el nombre de la dimensión no se incluye como parte del nombre de la jerarquía.|  

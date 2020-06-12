@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b34883d3dfa5a3d38f26a7ed905b5f00e7bcf8e6
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69493821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542327"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
   El dimensionamiento de datos de hecho mediante una dimensión de hecho sin filtrar correctamente los datos devueltos por la consulta puede producir un rendimiento lento de las consultas. Para evitarlo, puede definir una acción de obtención de detalles que restrinja el número total de filas que se devuelven. Esto mejorará significativamente el rendimiento de las consultas.  
@@ -38,7 +37,7 @@ ms.locfileid: "69493821"
   
      ![Plantilla Acción en blanco en el panel de visualización](../../2014/tutorials/media/l8-action2.gif "Plantilla Acción en blanco en el panel de visualización")  
   
-3.  En el cuadro **nombre** , cambie el nombre de esta acción a `Internet Sales Details Drillthrough Action`.  
+3.  En el cuadro **nombre** , cambie el nombre de esta acción a `Internet Sales Details Drillthrough Action` .  
   
 4.  En la lista **Miembros de grupo de medida** , seleccione **Internet Sales**.  
   
@@ -52,9 +51,9 @@ ms.locfileid: "69493821"
   
      ![Cuadro Propiedades adicionales](../../2014/tutorials/media/l8-action4.gif "Cuadro Propiedades adicionales")  
   
-8.  En el cuadro **número máximo** de filas `10`, escriba.  
+8.  En el cuadro **número máximo de filas** , escriba `10` .  
   
-9. En el cuadro **título** , escriba `Drillthrough to Order Details...`.  
+9. En el cuadro **título** , escriba `Drillthrough to Order Details...` .  
   
      Esta configuración limita el número de filas devueltas y especifica el título que aparece en el menú de la aplicación cliente. En la ilustración siguiente se muestra esta configuración en el cuadro **Propiedades adicionales** .  
   
@@ -104,11 +103,11 @@ ms.locfileid: "69493821"
   
     -   ShipDateKey  
   
-6.  Cambie la **propiedad nombre** del atributo **Order Date Key** a `Order Date` then, haga clic en el botón examinar de la propiedad **columna Name** y, en el cuadro de diálogo **columna de nombre** , seleccione **Date** como la tabla de origen y seleccione SimpleDate como columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Cambie la propiedad **nombre** del atributo **Order Date Key** a `Order Date` then, haga clic en el botón examinar de la propiedad **columna Name** y, en el cuadro de diálogo **columna de nombre** , seleccione **Date** como la tabla de origen y seleccione SimpleDate como columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cambie la propiedad **nombre** del atributo de **clave de fecha** de `Due Date`vencimiento a y, a continuación, use el mismo método que el atributo de **clave de fecha de pedido** y cambie la propiedad columna de **nombre** de este atributo por **Date. SimpleDate (WCHAR)**.  
+7.  Cambie la propiedad **nombre** del atributo de **clave de fecha de vencimiento** a y, `Due Date` a continuación, use el mismo método que el atributo de **clave de fecha de pedido** y cambie la propiedad columna de **nombre** de este atributo por **Date. SimpleDate (WCHAR)**.  
   
-8.  Cambie la propiedad **nombre** del atributo **Ship Date Key** a `Ship Date`y, a continuación, cambie la propiedad **columna Name** de este atributo por **Date. SimpleDate (WCHAR)**.  
+8.  Cambie la propiedad **nombre** del atributo **Ship Date Key** a `Ship Date` y, a continuación, cambie la propiedad **columna Name** de este atributo por **Date. SimpleDate (WCHAR)**.  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

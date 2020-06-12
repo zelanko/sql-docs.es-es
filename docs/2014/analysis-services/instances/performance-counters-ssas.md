@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2909ec00d184dc06eaa5ee05108752b47ac7186b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079709"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543837"
 ---
 # <a name="performance-counters-ssas"></a>Contadores de rendimiento (SSAS)
   Mediante el Monitor de rendimiento, puede supervisar el rendimiento de una instancia de Microsoft SQL Server Analysis Services (SSAS) mediante contadores de rendimiento.  
@@ -32,7 +31,7 @@ ms.locfileid: "66079709"
   
 |Grupo|Descripción|  
 |-----------|-----------------|  
-|[Memoria caché](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
+|[Caché](#bkmk_Cache)|Estadísticas relacionadas con la memoria caché de agregaciones de Analysis Services.|  
 |[Connection](#bkmk_Connection)|Estadísticas relacionadas con las conexiones de Microsoft Analysis Services.|  
 |[Predicción de minería de datos](#bkmk_DataMiningPrediction)|Estadísticas relacionadas con el procesamiento de los modelos de minería de datos.|  
 |[Procesamiento del modelo de minería de datos](#bkmk_DataMiningModelProcessing)|Estadísticas relacionadas con la creación de predicciones a partir de los modelos de minería de datos.|  
@@ -318,7 +317,7 @@ ms.locfileid: "66079709"
 |Búsquedas de agregación/s|Frecuencia de búsquedas de agregación.|  
 |Aciertos de agregación/s|Frecuencia de aciertos de agregación.|  
   
-###  <a name="threads"></a><a name="bkmk_Threads"></a>ThreadPool  
+###  <a name="threads"></a><a name="bkmk_Threads"></a> Subprocesos  
  Estadísticas relacionadas con los subprocesos de Microsoft Analysis Services.  
   
 |Contador|Descripción|  

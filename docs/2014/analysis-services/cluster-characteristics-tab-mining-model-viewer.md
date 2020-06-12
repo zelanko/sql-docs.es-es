@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8e33ed1d-1ce4-405d-895b-7e995b2c910d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c0b4a798f9a395741ae831d3b22fc06a71f55607
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f753564c3be308f986a48e8a40203b7d338292f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087990"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527471"
 ---
 # <a name="cluster-characteristics-tab-mining-model-viewer"></a>Pestaña Características del clúster (Visor de modelos de minería de datos)
   La pestaña **Características del clúster** le permite explorar las características de un clúster en un modelo de agrupación en clústeres o el conjunto de todos los casos del modelo. El gráfico muestra la importancia de cada par de atributo-valor como una característica que define el clúster, comparado con otros clústeres.  
@@ -37,7 +36,7 @@ ms.locfileid: "66087990"
  **Clúster**  
  Elija el clúster que quiere ver, o elija **Población (Todo)** para ver la distribución de atributos del modelo en su conjunto.  
   
- **Características de \<>de clúster**  
+ **Características de\<cluster>**  
  El gráfico contiene las columnas siguientes, que describen las características del clúster seleccionado.  
   
 |Value|Descripción|  

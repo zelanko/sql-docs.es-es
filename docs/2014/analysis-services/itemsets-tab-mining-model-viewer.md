@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 800e14fb360feef3f03804f5d57ed36c57142744
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079559"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543697"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Pestaña Conjuntos de elementos (Visor de modelos de minería de datos)
   Puede utilizar el panel **Conjuntos de elementos** para ver los conjuntos de elementos frecuentes que contiene un modelo de minería de datos de reglas de asociación. Dado que un modelo de asociación puede contener muchos conjuntos de elementos, el visor dispone de controles para ayudarle a filtrar los conjuntos de elementos que se muestran en el visor.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b283286edb07bbf4028fb32f86991cd72e2688a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 723f48aadd1681583946f357479e7cf0e1c88513
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175324"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543277"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ocultar y deshabilitar jerarquías de atributo
   De forma predeterminada, se crea una jerarquía de atributo para cada uno de los atributos de una dimensión, y cada jerarquía está disponible para los datos de hechos de dimensionamiento. Esta jerarquía consta de un nivel "Todos" y un nivel de detalle que contiene todos los miembros de la jerarquía. Como ha aprendido, puede organizar los atributos en jerarquías definidas por el usuario para proporcionar rutas de navegación en un cubo. En determinadas circunstancias, le interesará deshabilitar u ocultar algunos atributos y sus jerarquías. Por ejemplo, determinados atributos, como los números de seguridad social o números de identificación nacional, sueldos, las fechas de nacimiento e información sobre el inicio de sesión, no son atributos que los usuarios vayan a utilizar para dimensionar la información del cubo. En lugar de ello, generalmente esta información solo se visualiza como detalles de un miembro de atributo en concreto. Puede ocultar estas jerarquías de atributo, dejando los atributos visibles solo como propiedades de miembro de un atributo específico. También puede hacer que los miembros de otros atributos, como los nombres de cliente o los códigos postales, solo estén visibles cuando se visualizan a través de una jerarquía de usuario en lugar de visualizarse de forma independiente a través de una jerarquía de atributo. Un motivo para hacerlo puede ser el número total de miembros distintos de la jerarquía de atributo. Por último, para mejorar el rendimiento del procesamiento, debe deshabilitar las jerarquías de atributos que los usuarios no utilizarán para examinar.

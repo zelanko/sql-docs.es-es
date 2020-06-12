@@ -1,5 +1,6 @@
 ---
 title: Reglas de conversión de tipos en XQuery | Microsoft Docs
+description: Obtenga información sobre las reglas que se aplican cuando se convierte de forma explícita o implícita de un tipo de datos a otro en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9dcae8facc642d43620bde77ab7f01467a8a54d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946217"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520132"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Reglas de conversión de tipos en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "67946217"
   
  Este tema describe las reglas de conversión de tipos que se aplican al realizar conversiones de un tipo a otro utilizando uno de los métodos siguientes:  
   
--   Conversión explícita que se realiza mediante el uso de las funciones **Cast as** o constructor de tipo ( `xs:integer("5")`por ejemplo,).  
+-   Conversión explícita que se realiza mediante el uso de las funciones **Cast as** o constructor de tipo (por ejemplo, `xs:integer("5")` ).  
   
 -   Conversión implícita que se produce durante la promoción de tipo.  
   
@@ -105,7 +106,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Al especificar una <`root` singleton> elemento en la expresión, la consulta se realiza correctamente. La consulta devuelve una secuencia de un valor de tipo simple escrito en forma de xs:string.  
+ Al especificar una <singleton `root`> elemento en la expresión, la consulta se realiza correctamente. La consulta devuelve una secuencia de un valor de tipo simple escrito en forma de xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -167,7 +168,7 @@ min(xs:integer("1"), xs:double("1.1"))
  Cuando se convierte a tipos binarios como s:base64Binary o xs:hexBinary desde un tipo de cadena o untypedAtomic, los valores de entrada tienen que ser de codificación base64 o hexadecimal, respectivamente.  
   
 ##### <a name="casting-a-value-to-a-string-or-untypedatomic-type"></a>Convertir un valor a un tipo de cadena o untypedAtomic  
- La conversión al tipo de cadena o untypedAtomic transforma el valor a su representación léxica canónica de XQuery. Concretamente, esto puede suponer que un valor que se haya ajustado a un patrón determinado o a alguna otra restricción durante la entrada de datos no se represente conforme a dicha limitación.  Para informar a los usuarios sobre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] esto, marca los tipos en los que la restricción de tipo puede ser un problema al proporcionar una advertencia cuando esos tipos se cargan en la colección de esquemas.  
+ La conversión al tipo de cadena o untypedAtomic transforma el valor a su representación léxica canónica de XQuery. Concretamente, esto puede suponer que un valor que se haya ajustado a un patrón determinado o a alguna otra restricción durante la entrada de datos no se represente conforme a dicha limitación.  Para informar a los usuarios sobre esto, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] marca los tipos en los que la restricción de tipo puede ser un problema al proporcionar una advertencia cuando esos tipos se cargan en la colección de esquemas.  
   
  Cuando se convierte un valor del tipo xs:float o xs:double, o alguno de sus subtipos, al tipo de cadena o untypedAtomic, el valor se representa en forma de notación científica. Esto solo sucede cuando el valor absoluto es menor que 1.0E-6 o mayor o igual que 1.0E6, lo que significa que 0 se serializa en notación científica a 0.0E0.  
   

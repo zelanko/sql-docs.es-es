@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f32d0adb196fbe23e90ae2bc28d8f65ad1326c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 682987b276a850104b6c4e10811423666eb4ffb0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081928"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528731"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Implementar y ampliar modelos de minería de datos (Complementos de minería de datos para Excel)
   Las herramientas del grupo **uso del modelo** y **Administración** se proporcionan para ayudarle a administrar y examinar modelos de minería de datos existentes. Puede utilizar estas herramientas para ver cualquier modelo que esté almacenado en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], no solo los creados mediante los complementos.  

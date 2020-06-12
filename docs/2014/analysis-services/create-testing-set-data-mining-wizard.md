@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d0a44b59-ffbd-45fc-baa8-6b8046b1a2f5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84dd9e307279c83b955d6569571772414123f0f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086790"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526491"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Crear conjunto de pruebas (Asistente para minería de datos)
   Utilice la página **Crear conjunto de pruebas** para especificar qué cantidad de datos se va a utilizar para el entrenamiento y cuánta se va a reservar para utilizarla en un conjunto de pruebas. Al separar los datos en un conjunto de aprendizaje y de pruebas cuando se crea una estructura de minería de datos, resulta más fácil evaluar la exactitud de los modelos de minería que se crean después.  
@@ -28,7 +27,7 @@ ms.locfileid: "66086790"
   
  Si posteriormente desea cambiar la cantidad de datos de prueba o de entrenamiento, puede modificar las `HoldoutMaxCases` propiedades y `HoldoutMaxPercent` en la estructura de minería de datos mediante la ventana **propiedades** . Sin embargo, después de realizar la modificación debe volver a procesar la estructura de minería de datos y todos los modelos de minería asociados. También se aplican las siguientes limitaciones:  
   
--   El particionamiento de una estructura de minería de datos solamente se admite cuando la estructura está almacenada en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Las versiones anteriores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de no admiten el almacenamiento en caché de la información de particiones para estructuras de minería de datos.  
+-   El particionamiento de una estructura de minería de datos solamente se admite cuando la estructura está almacenada en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Las versiones anteriores de no [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] admiten el almacenamiento en caché de la información de particiones para estructuras de minería de datos.  
   
 -   No se puede dividir una estructura de minería de datos si ésta contiene una columna de clave temporal, que se requiere para los modelos de minería de datos de serie temporal.  
   

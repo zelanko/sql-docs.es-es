@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a6ed550c-9fae-453d-948a-b3a1f4dbdffa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 801dbaaa8f267c2936f86644cc4a7ad3de6549a2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 607eb9cf7f42c1118c1e9fd3dfd2a20b3bbfd6e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086959"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526731"
 ---
 # <a name="create-data-mining-dimension-dialog"></a>Crear dimensión de minería de datos (cuadro de diálogo)
   Utilice el cuadro de diálogo **Crear dimensión de minería de datos** para crear una nueva dimensión de minería de datos basada en un modelo de minería de datos OLAP.  

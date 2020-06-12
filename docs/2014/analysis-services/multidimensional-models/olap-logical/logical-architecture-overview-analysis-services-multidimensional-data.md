@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8dc9c46cf4ddcc7ff04f0c9002bff59cdb3ba370
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175724"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546002"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
   Analysis Services funciona en un modo de implementación de servidor que determina la arquitectura de memoria y el entorno en tiempo de ejecución utilizados por diferentes tipos de modelos de Analysis Services. Determina el modo de servidor durante la instalación. El **modo multidimensional y de minería de datos** admite OLAP tradicional y minería de datos. El **modo tabular** admite modelos tabulares. El **modo integrado de SharePoint** hace referencia a una instancia de Analysis Services que se instaló como PowerPivot para SharePoint, que se usa para cargar y consultar modelos de datos de Excel o PowerPivot dentro de un libro de.
@@ -26,7 +25,7 @@ ms.locfileid: "78175724"
  En este tema se explica la arquitectura básica de Analysis Services cuando se usa en modo Multidimensional y Minería de datos. Para obtener más información sobre otros modos, vea [modelado tabular &#40;&#41;tabular de SSAS](../../tabular-models/tabular-models-ssas.md) y [comparar soluciones tabulares y multidimensionales &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas).
 
 ## <a name="basic-architecture"></a>Arquitectura básica
- Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Las instancias [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de se denominan\<"ServerName \\><\>InstanceName". En la ilustración siguiente se muestran todas las [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] relaciones mencionadas entre objetos.
+ Una instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] puede contener varias bases de datos y una base de datos puede tener al mismo tiempo objetos OLAP y objetos de minería de datos. Las aplicaciones conectan una instancia especificada de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] y una base de datos especificada. Un equipo servidor puede hospedar varias instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Las instancias de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se denominan " \<ServerName> \\<InstanceName \> ". En la ilustración siguiente se muestran todas las relaciones mencionadas entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objetos.
 
  ![Relaciones de objetos de ejecución de AMO](../../dev-guide/media/amo-runningobjects.gif "Relaciones de objetos de ejecución de AMO")
 
@@ -36,14 +35,14 @@ ms.locfileid: "78175724"
 
  Los cubos se crean a partir de dimensiones y grupos de medida. Las dimensiones de la colección de dimensiones de un cubo pertenecen a la colección de dimensiones de la base de datos. Los grupos de medida son colecciones de medidas que tienen la misma vista del origen de datos y el mismo subconjunto de dimensiones del cubo. Un grupo de medida incluye una o más particiones para administrar los datos físicos. El grupo de medida puede tener un diseño de agregaciones predeterminado. Todas las particiones del grupo de medida pueden usar el diseño de agregaciones predeterminado; asimismo, cada partición puede tener su propio diseño de agregaciones.
 
- Objetos de servidor cada instancia [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] de se considera un objeto de servidor diferente en amo; cada instancia diferente está conectada a un <xref:Microsoft.AnalysisServices.Server> objeto mediante una conexión diferente. Cada objeto de servidor contiene uno o más orígenes de datos, vistas del origen de datos y objetos de base de datos, así como ensamblados y roles de seguridad.
+ Objetos de servidor cada instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] se considera un objeto de servidor diferente en amo; cada instancia diferente se conecta a un <xref:Microsoft.AnalysisServices.Server> objeto mediante una conexión diferente. Cada objeto de servidor contiene uno o más orígenes de datos, vistas del origen de datos y objetos de base de datos, así como ensamblados y roles de seguridad.
 
  Objetos de dimensión cada objeto de base de datos contiene varios objetos de dimensión. Cada objeto de dimensión contiene uno o más atributos, que se organizan en jerarquías.
 
  Objetos de cubo cada objeto de base de datos contiene uno o varios objetos de cubo. Un cubo se define por medio de sus medidas y dimensiones. Las medidas y dimensiones de un cubo se derivan de las tablas y vistas de la vista del origen de datos en la que se basa el cubo, o que se genera a partir de las definiciones de medidas y dimensiones.
 
 ## <a name="object-inheritance"></a>Herencia de objetos
- El modelo de objetos ASSL contiene varios grupos de elementos repetidos. Por ejemplo, el grupo de elementos "`Dimensions` contención `Hierarchies`" define la jerarquía de dimensión de un elemento. Tanto los objetos `Cubes` como `MeasureGroups` contienen el grupo de elementos "`Dimensions` contain `Hierarchies`".
+ El modelo de objetos ASSL contiene varios grupos de elementos repetidos. Por ejemplo, el grupo de elementos " `Dimensions` contención `Hierarchies` " define la jerarquía de dimensión de un elemento. Tanto los objetos `Cubes` como `MeasureGroups` contienen el grupo de elementos "`Dimensions` contain `Hierarchies`".
 
  A menos que se invalide explícitamente, un elemento hereda los detalles de estos grupos de elementos repetidos del nivel superior. Por ejemplo, el valor de `Translations` de un objeto `CubeDimension` es el mismo que el valor de `Translations` de su elemento antecesor, `Cube`.
 
@@ -62,7 +61,7 @@ ms.locfileid: "78175724"
 
  Los valores alfanuméricos más pequeños que están alrededor del cubo son los miembros de las dimensiones. Los miembros de ejemplo son ground (miembro de la dimensión Route), Africa (miembro de la dimensión Source) y 1st quarter (miembro de la dimensión Time).
 
-### <a name="measures"></a>medidas
+### <a name="measures"></a>Medidas
  Los valores de las celdas del cubo representan las dos medidas, Packages y Last. La medida Packages representa el número de paquetes importados y la función `Sum` se utiliza para agregar los hechos. La medida Last representa la fecha de recepción y la función `Max` se utiliza para agregar los hechos.
 
 ### <a name="dimensions"></a>Dimensions
@@ -91,12 +90,12 @@ ms.locfileid: "78175724"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Asignar medidas, atributos y jerarquías
  Las medidas, los atributos y las jerarquías del cubo del ejemplo se derivan de las siguientes columnas de las tablas de dimensiones y de hechos del cubo.
 
-|Medida o atributo (nivel)|Members|Tabla de origen|Columna de origen|Valor de la columna de ejemplo|
+|Medida o atributo (nivel)|Miembros|Tabla de origen|Columna de origen|Valor de la columna de ejemplo|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
 |Medida de paquetes|No aplicable|ImportsFactTable|Paquetes|12|
 |Última medida|No aplicable|ImportsFactTable|Último|May-03-99|
 |Nivel Route Category en la dimensión Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|
-|Atributo Route en la dimensión Route|air,sea,road,rail|RouteDimensionTable|Enrutar|Sea|
+|Atributo Route en la dimensión Route|air,sea,road,rail|RouteDimensionTable|Ruta|Sea|
 |Atributo Hemisphere en la dimensión Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
 |Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEuropa,N. America,S. America|SourceDimensionTable|Continent|Europa|
 |Atributo Half en la dimensión Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|

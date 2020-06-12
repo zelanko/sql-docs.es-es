@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 00554c9e56bebe12a5e63c9d50e4a2fa59149599
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289143"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543827"
 ---
 # <a name="log-operations-in-analysis-services"></a>Operaciones de registro en Analysis Services
   Una instancia de Analysis Services registrará las notificaciones, los errores y las advertencias del servidor en el archivo msmdsrv. log, uno para cada instancia que instale. Los administradores consultan este registro para obtener información sobre eventos, tanto rutinarios como extraordinarios. En las versiones recientes, los registros se han mejorado para incluir más información. Las entradas de registro ahora incluyen información de la versión y la edición, así como del procesador, la memoria, la conectividad y los eventos de bloqueo. Puede revisar la lista completa de cambios en [Mejoras de los registros](https://support.microsoft.com/kb/2965035).  
@@ -42,11 +41,11 @@ ms.locfileid: "79289143"
 ##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Ubicación y tipos de registros  
  Analysis Services proporciona los registros que se describen a continuación.  
   
-|Nombre de archivo o ubicación|Tipo|Se usa para|Activado de forma predeterminada|  
+|Nombre de archivo o ubicación|Tipo|Usada para|Activado de forma predeterminada|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Registro de errores|Supervisión rutinaria y solución de problemas básicos|Sí|  
 |Tabla OlapQueryLog en una base de datos relacional|Registro de consultas|Recopilación de entradas para el Asistente de optimización de uso|No|  
-|Archivos sqldmp\<guid>. MDMP|Errores y excepciones|Solución de problemas a fondo|No|  
+|\<guid>Archivos archivos sqldmp. MDMP|Errores y excepciones|Solución de problemas a fondo|No|  
   
  Se recomienda encarecidamente consultar el siguiente vínculo para obtener recursos de información adicionales que no se tratan en este tema: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Consejos para la recolección de datos inicial de Soporte técnico de Microsoft).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "79289143"
   
 2.  Conceda los permisos necesarios de la cuenta de servicio de Analysis Services en la base de datos. La cuenta necesita permisos para crear una tabla, escribir en ella y leer sus datos.  
   
-3.  En SQL Server Management Studio, haga clic con el botón secundario en **Analysis Services** | **propiedades** | **General**, establezca **CreateQueryLogTable** en true.  
+3.  En SQL Server Management Studio, haga clic con el botón secundario en **Analysis Services**  |  **propiedades**  |  **General**, establezca **CreateQueryLogTable** en true.  
   
 4.  De manera opcional, cambie **QueryLogSampling** o **QueryLogTableName** si quiere tomar muestras de consultas a una tasa diferente o usar un nombre diferente para la tabla.  
   

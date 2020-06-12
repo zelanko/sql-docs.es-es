@@ -12,12 +12,12 @@ ms.assetid: 6c4fafe0-e02e-47d1-b8bc-e70e872690af
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 82fcf08a84a06d33c33a520ce351f6c685092a15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ee72d4347e85851388b4a4ab1f4d29b33a89134
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069279"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858130"
 ---
 # <a name="select-tables-and-views-data-feeds-ssas"></a>Seleccionar tablas y vistas (fuentes de distribución de datos) (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite seleccionar las tablas y vistas de las que desea importar los datos. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -26,7 +26,7 @@ ms.locfileid: "66069279"
   
  Para los orígenes de datos que usan la autenticación de Windows, se utilizan las credenciales del usuario actual para capturar las tablas y vistas del cuadro de diálogo en Seleccionar tablas y vistas. Para capturar los datos de los demás orígenes de datos se usan las credenciales proporcionadas en la cadena de conexión.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **URL de fuente de distribución de datos**  
  Muestra la dirección URL para la fuente de distribución de datos que seleccionó.  
   

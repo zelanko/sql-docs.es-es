@@ -4,18 +4,18 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d8e3b85f3d18b25f9dda1ef4f442ec0822257fae
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68887725"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670031"
 ---
-# <a name="ltsource-data-querygt---openquery"></a>&lt;consulta&gt; de datos de origen: OPENQUERY
+# <a name="ltsource-data-querygt---openquery"></a>&lt;consulta de datos &gt; de origen: OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Reemplaza la consulta de datos de origen por una consulta a un origen de datos existente. Las instrucciones INSERT, SELECT FROM predicción JOIN y SELECT FROM NATURAL PREDICT JOIN admiten **OPENQUERY**.  
@@ -29,7 +29,7 @@ OPENQUERY(<named datasource>, <query syntax>)
   
 ## <a name="arguments"></a>Argumentos  
  *DataSource con nombre*  
- Origen de datos que existe en la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos.  
+ Origen de datos que existe en la base de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  *Sintaxis de consulta*  
  Sintaxis de consulta que devuelve un conjunto de filas.  
@@ -44,7 +44,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  `SELECT * FROM $system.MDSCHEMA_INPUT_DATASOURCES`  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se usa el origen de datos MyDS ya [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] definido en la base de datos para [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] crear una conexión a la base de datos y consultar la vista **vTargetMail** .  
+ En el ejemplo siguiente se usa el origen de datos MyDS ya definido en la base de datos [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] para crear una conexión a la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] y consultar la vista **vTargetMail** .  
   
 ```  
 OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')  

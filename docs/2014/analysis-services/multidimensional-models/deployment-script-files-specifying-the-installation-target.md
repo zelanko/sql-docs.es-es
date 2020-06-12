@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb706817-6f63-4771-92c3-b70030bbce3d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e830fc353898e3ec835b338e84765a0cad0de43f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66075218"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546833"
 ---
 # <a name="specifying-the-installation-target"></a>Especificar el destino de instalación
-  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para la implementación de Lee la información de \<destino de la instalación del *nombre del proyecto*> archivo. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea este archivo al compilar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] el proyecto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa la base de datos y el servidor especificados en la página **implementación** del * \<nombre del proyecto>* cuadro de diálogo páginas de **propiedades** para crear el \< *nombre del proyecto*> archivo. targets.  
+  El [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Asistente para la implementación de Lee la información de destino de la instalación del \<*project name*> archivo. deploymenttargets. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]crea este archivo al compilar el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proyecto. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]usa la base de datos y el servidor especificados en la página **implementación** del *\<project name>* cuadro de diálogo páginas de **propiedades** para crear el \<*project name*> archivo. targets.  
   
 ## <a name="modifying-the-installation-target-for-deployment"></a>Modificar el destino de instalación para la implementación  
  En algunas situaciones, puede que necesite implementar un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una base de datos o en una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que sea diferente a la especificada en la página **Implementación** . Por ejemplo, puede que desee implementar el proyecto en un servidor para realizar pruebas antes de la implementación y, a continuación, implementarlo en un servidor de producción. Puede que también desee implementar un proyecto finalizado y probado en varios servidores de producción de un clúster de equilibrio de carga de red (NLB), o en un servidor de ensayo y un servidor de producción.  
@@ -42,7 +41,7 @@ ms.locfileid: "66075218"
   
      o bien  
   
--   Modifique el \< *nombre del proyecto*> archivo. deploymenttargets con cualquier editor de texto.  
+-   Modifique el \<*project name*> archivo. deploymenttargets con cualquier editor de texto.  
   
 ## <a name="see-also"></a>Consulte también  
  [Especificar las opciones de implementación de roles y particiones](deployment-script-files-partition-and-role-deployment-options.md)   

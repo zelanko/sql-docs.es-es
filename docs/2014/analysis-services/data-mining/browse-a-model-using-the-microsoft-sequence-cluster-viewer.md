@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: 3ada00aa-da9e-488a-9f53-c3e188f81f84
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ad07559c6b380f8fba11f00789f68f9e2c850840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e7262beef3e9d64a488e255fe5fd9f1b79a8837
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086132"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525285"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Examinar un modelo usando el Visor de clústeres de Microsoft
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor de clústeres [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de secuencia de en muestra los modelos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] minería de datos que se generan con el algoritmo de clústeres de secuencia de. El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clústeres de secuencia que se utiliza para explorar datos que contienen eventos que se pueden vincular siguiendo rutas o *secuencias*. Para más información sobre este algoritmo, vea [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md).  
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] visor de clústeres de secuencia de en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] muestra los modelos de minería de datos que se generan con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de clústeres de secuencia de. El algoritmo de clústeres de secuencia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de clústeres de secuencia que se utiliza para explorar datos que contienen eventos que se pueden vincular siguiendo rutas o *secuencias*. Para más información sobre este algoritmo, vea [Algoritmo de clústeres de secuencia de Microsoft](microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  Para ver información detallada sobre las ecuaciones utilizadas en el modelo y los modelos que se detectaron, utilice el Visor de árbol de contenido genérico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener más información, vea [Examinar un modelo usando el Visor de árbol de contenido genérico de Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) o [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
@@ -61,7 +60,7 @@ ms.locfileid: "66086132"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Perfiles del clúster  
- La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. El \<atributo> fila. samples representa diferentes secuencias de datos que existen en el clúster y el \<atributo> fila describe todos los elementos que contiene el clúster y su distribución general.  
+ La pestaña **Perfiles del clúster** proporciona una vista general de los clústeres que crea el algoritmo del modelo. Cada columna que sigue a la columna **Llenado** en la cuadrícula representa un clúster que el modelo ha descubierto. La \<attribute> fila. samples representa diferentes secuencias de datos que existen en el clúster y la \<attribute> fila describe todos los elementos que contiene el clúster y su distribución general.  
   
  La opción **Barras de histograma** controla el número de barras que están visibles en el histograma. Si hay más barras de las que elige que se muestren, se retienen las de mayor importancia y las restantes se agrupan en un depósito gris.  
   

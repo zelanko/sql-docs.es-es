@@ -1,5 +1,6 @@
 ---
 title: 'SQL: Overflow-Field (SQLXML)'
+description: 'Obtenga información sobre cómo usar la anotación sql: Overflow-Field para identificar una columna como una columna de desbordamiento que recibirá todos los datos no consumidos del documento XML.'
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5757ce66dd0905f6c381d05caa99c6bb664021e9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246810"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689240"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretación de anotaciones: sql:overflow-field
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +32,7 @@ ms.locfileid: "75246810"
   
  Cuando almacena datos en la columna de desbordamiento, la carga masiva XML también almacena las etiquetas de apertura y cierre del elemento primario para el que se ha definido **SQL: Overflow-Field** .  
   
- Por ejemplo, en el esquema siguiente se describen los ** \<** ** \<elementos>** y>de los clientes de CustOrder. Cada uno de estos elementos identifica una columna de desbordamiento:  
+ Por ejemplo, en el esquema siguiente se describen los elementos>y>de ** \< los clientes** de ** \< CustOrder** . Cada uno de estos elementos identifica una columna de desbordamiento:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -75,9 +76,9 @@ ms.locfileid: "75246810"
 </xsd:schema>  
 ```  
   
- En el esquema, el ** \<elemento Customer>** se asigna a la tabla Cust y el ** \<elemento Order>** se asigna a la tabla CustOrder.  
+ En el esquema, el elemento ** \< Customer>** se asigna a la tabla Cust y el elemento ** \< Order>** se asigna a la tabla CustOrder.  
   
- Los ** \<elementos>cliente** y ** \<pedido>** identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los elementos secundarios y atributos no consumidos del elemento ** \<Customer>** en la columna Overflow de la tabla Cust, y todos los elementos secundarios y atributos no consumidos del elemento ** \<Order>** de la columna Overflow de la tabla CustOrder.  
+ Los elementos ** \<>cliente** y ** \< pedido>** identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los elementos secundarios y atributos no consumidos del elemento ** \< Customer>** en la columna Overflow de la tabla Cust, y todos los elementos secundarios y atributos no consumidos del elemento ** \< Order>** de la columna Overflow de la tabla CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6185d3d9aeb3221b1ae194790b89265787e4621
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "69530820"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544122"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Instalar los datos y proyectos de ejemplo para el tutorial de modelado multidimensional de Analysis Services
   Use las instrucciones y los vínculos proporcionados en este tema para instalar todos los archivos de datos y de proyecto empleados en los tutoriales de Analysis Services.  
@@ -98,7 +97,7 @@ ms.locfileid: "69530820"
   
      Los tutoriales de 2012 son válidos para la versión [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-     El archivo "Tutorial de Analysis Services SQL Server 2012. zip" se guardará en la carpeta descargas del equipo.  
+     El archivo "Analysis Services tutorial SQL Server 2012.zip" se guardará en la carpeta descargas del equipo.  
   
 2.  Mueva el archivo de .zip a una carpeta que esté debajo de la unidad raíz (por ejemplo, C:\Tutorial). Este paso mitiga el error "ruta de acceso demasiado larga" que se produce a veces si intenta descomprimir los archivos en la carpeta descargas.  
   
@@ -150,6 +149,6 @@ ms.locfileid: "69530820"
 ## <a name="see-also"></a>Consulte también  
  [Instale SQL Server 2014 desde el Asistente para la instalación &#40;el programa de instalación&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Configurar el Firewall de Windows para permitir el acceso a Analysis Services](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configurar el Firewall de Windows para permitir el acceso a SQL Server](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

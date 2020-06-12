@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 761bef6a-37d4-4b19-944e-f2aadc75a242
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 578b5b8e55fd3ae660db985eed2e608667dc768b
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087910"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527491"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama del clúster (Complementos de minería de datos)
   Después de crear un modelo de agrupación en clústeres, puede importarlo en Visio con la forma **agrupar** y, a continuación, seguir personalizando y mejorando el diseño. Las **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de minería de datos:  
@@ -43,13 +42,13 @@ ms.locfileid: "66087910"
   
 1.  Si no ve formas de **minería de datos de Microsoft** en la lista **formas** , haga clic en **más formas**, seleccione **Abrir Galería de símbolos**y abra la plantilla desde la ubicación de instalación predeterminada.  
   
-     \<> de unidad: \Archivos de Programa\microsoft SQL Server 2012 DM-ins  
+     \<drive>: \Archivos de Programa\microsoft SQL Server 2012 DM-ins  
   
 2.  Arrastre la forma **clúster** hasta la página.  
   
 3.  En la página de bienvenida del **Asistente para crear formas clúster de Visio**, haga clic en **siguiente**.  
   
-4.  En la página **seleccionar un origen de datos** del **Asistente para clúster**, elija una conexión a [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] un servidor que contenga los modelos de minería de datos que desea visualizar.  
+4.  En la página **seleccionar un origen de datos** del **Asistente para clúster**, elija una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que contenga los modelos de minería de datos que desea visualizar.  
   
 5.  Seleccione un modelo de minería de datos adecuado y haga clic en **siguiente**.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66087910"
   
      Sin embargo, la opción actúa como filtro en los datos del gráfico, por lo que no puede aumentar el número de elementos más adelante.  
   
-8.  Haga clic en **Avanzada**.  
+8.  Haga clic en **Avanzado**.  
   
      El cuadro de diálogo **Opciones de clúster** es donde se personaliza la apariencia visual de las formas utilizadas en el diagrama. Puede cambiar los colores que se usan en el gráfico, así como las formas de los clústeres.  
   

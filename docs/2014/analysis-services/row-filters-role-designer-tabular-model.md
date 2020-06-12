@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fdc5f0326152eaa62bd41364ace48d7e02fbd0f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2cc232f6c861a3b7dbde44b342deaa831de6c99c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070132"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547397"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtros de fila (Diseñador de roles) (Modelo tabular)
   Use la página **Filtros de fila** del Diseñador de roles para definir filtros de nivel de fila para el rol asociado. Los filtros de fila solo se pueden definir para los roles con permisos de lectura y lectura y proceso.  
@@ -26,13 +25,13 @@ ms.locfileid: "66070132"
 >  Todas las opciones de esta página estarán deshabilitadas si **Control total (Administrador)** está seleccionado en la página **General** del Diseñador de roles o si el rol permiso se establece en **Procesar**.  
   
 ## <a name="options"></a>Opciones  
- **Cuadro**  
+ **Tabla**  
  La tabla del modelo cuyo filtro está definido.  
   
  **Filtro DAX**  
  Una fórmula DAX que se evalúa como una condición booleana.  
   
- **Filtro DAX: \<>TableName**  
+ **Filtro DAX-\<tablename>**  
  Escriba una fórmula DAX que se evalúe como una condición booleana.  
   
 ## <a name="see-also"></a>Consulte también  

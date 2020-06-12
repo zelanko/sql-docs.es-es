@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81401eac-c619-4fad-ad3e-599e7a6f8493
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7f373dfa85e80de6bfd3a0bb33e9b28ab33a697
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087422"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527251"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)
   La cuenta de actualización de datos de PowerPoint desatendida es una cuenta designada para ejecutar trabajos de actualización de datos PowerPivot en una granja de SharePoint. Al configurarlo, se habilita la opción **usar la cuenta de actualización de datos configurada por el administrador** en una página de programación de actualización de datos (vea a continuación). Los autores de libros que programan la actualización de datos pueden elegir esta opción si desean utilizar la cuenta de actualización de datos desatendida de PowerPivot para ejecutar un trabajo de actualización de datos. Para obtener más información sobre cómo ver las opciones de credenciales en una programación de actualización de datos, vea [programar una actualización de datos &#40;PowerPivot para SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -92,21 +91,21 @@ ms.locfileid: "66087422"
   
 8.  Omita la dirección URL de la página de la aplicación de destino. La actualización de datos PowerPivot no la utiliza.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página **especificar los campos de credenciales para la aplicación de destino de almacenamiento seguro** , acepte los valores predeterminados. Los nombres de campo y los tipos deben ser Nombre de usuario Windows y Contraseña de Windows.  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En Administradores de la aplicación de destino, especifique la identidad del grupo de aplicaciones de la aplicación de servicio PowerPivot. El servicio requiere permisos de **control total** para que pueda recuperar información de la cuenta de actualización de datos desatendida en tiempo de ejecución. Además, especifique las cuentas de usuario de dominio de Windows de cualquier otro usuario de SharePoint que deba tener acceso administrativo a las opciones de configuración de la aplicación.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
 14. Seleccione la aplicación de destino que acaba de crear, haga clic en la flecha abajo y seleccione **establecer credenciales.**  
   
 15. En **propietarios de credenciales**, escriba una cuenta de usuario de dominio de Windows que desee que tenga permisos para actualizar las credenciales. Las credenciales se utilizan para las acciones de actualización de datos y los **propietarios de credenciales** tienen permisos para modificar las credenciales.  
   
-16. Haga clic en **Aceptar**.  
+16. Haga clic en **OK**.  
   
 ###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>Paso 2: especificar la cuenta desatendida en las páginas de configuración del servidor de PowerPivot  
   
@@ -120,7 +119,7 @@ ms.locfileid: "66087422"
   
 5.  En actualización de datos, en cuenta de actualización de datos desatendida de PowerPivot, escriba el identificador de la aplicación de destino que creó en un paso anterior: **PowerPivotDataRefresh**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Paso 3: conceder permisos de contribución a la cuenta  
  Antes de poder usar la cuenta de actualización de datos desatendida de PowerPivot, se le deben asignar permisos de contribución en cualquier libro PowerPivot para el que se use. Este nivel de permisos es necesario para abrir el libro desde una biblioteca y, a continuación, volver a guardarlo en la biblioteca antes de que se actualicen los datos.  
@@ -184,7 +183,7 @@ ms.locfileid: "66087422"
   
 7.  En Contraseña, escriba la contraseña de la cuenta y, a continuación, vuelva a escribirla para confirmarla.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
  Si desea cambiar no solo la contraseña, sino también el nombre de usuario de la cuenta, probablemente tendrá que realizar pasos de configuración adicionales, como conceder permisos de lectura a orígenes de datos externos y permisos de SharePoint para actualizar el libro PowerPivot. Para obtener instrucciones, vaya a este paso en configuración de la cuenta de actualización de datos desatendida de PowerPivot: [paso 3: conceda permisos de contribución a la cuenta](#bkmk_grant)y, a continuación, continúe con todos los pasos restantes, y concluya con la comprobación de que la cuenta está configurada correctamente.  
   

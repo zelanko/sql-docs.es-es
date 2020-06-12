@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c0355c8f0286fe894b7c723177c4146b1e460758
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889077"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669472"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Nombre de un algoritmo de minería de datos definido por el proveedor actual.  
   
 > [!NOTE]  
->  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de, vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Se puede recuperar una lista de los algoritmos admitidos por el proveedor actual mediante [DMSCHEMA_MINING_SERVICES conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Para ver los algoritmos admitidos en la instancia actual de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vea [propiedades de minería de datos](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *lista de parámetros*  
  Opcional. Lista delimitada por comas de parámetros definidos por el proveedor para el algoritmo.  
@@ -102,7 +102,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
 -   [Marcas de modelado &#40;Minería de datos&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \<cláusula de relación de columna>.  
+ Puede agregar una cláusula a la instrucción para describir la relación existente entre dos columnas. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]admite el uso de la siguiente \< cláusula de relación de columna>.  
   
  **RELACIONADO CON**  
  Este formulario indica una jerarquía de valores. El destino de una columna RELATED TO puede ser una columna de clave de una tabla anidada, una columna de valores discretos en la fila de caso u otra columna con una cláusula RELATED TO, que indica una jerarquía de más niveles.  
@@ -174,7 +174,7 @@ USING Microsoft_Sequence_Clustering
  En el siguiente ejemplo se usa el algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)] para crear un nuevo modelo de minería de datos mediante el algoritmo ARTxp. ReportingDate es la columna de clave de la serie temporal y ModelRegion es la columna de clave de la serie de datos. En este ejemplo, se supone que la periodicidad de los datos es cada 12 meses. Por lo tanto, el parámetro *PERIODICITY_HINT* se establece en 12.  
   
 > [!NOTE]  
->  Debe especificar el parámetro *PERIODICITY_HINT* mediante el uso de caracteres de llave. Además, dado que el valor es una cadena, se debe incluir entre comillas simples: "{\<numeric Value>}".  
+>  Debe especificar el parámetro *PERIODICITY_HINT* mediante el uso de caracteres de llave. Además, dado que el valor es una cadena, se debe incluir entre comillas simples: "{ \< Numeric value>}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  

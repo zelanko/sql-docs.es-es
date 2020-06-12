@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c1fc4ab5d778535fdc4e2186c5bc88741b4367f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b5761e36bc98319665eaa779262502fd224aec8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535927"
 ---
 # <a name="create-named-sets"></a>Crear conjuntos con nombre
   Un conjunto con nombre es un conjunto de miembros de dimensión o una expresión de conjunto que se crea para volver a usarse en, por ejemplo, consultas de expresiones multidimensionales (MDX). Puede crear conjuntos con nombre combinando datos del cubo, operadores aritméticos, números y funciones. Por ejemplo, puede crear un conjunto con nombre llamado Top Ten Factories, que contenga los diez miembros de la dimensión Factories con los valores superiores de la medida Production. Acto seguido, puede utilizar Top Ten Factories en las consultas de los usuarios finales. Por ejemplo, un usuario final puede colocar Top Ten Factories en un eje y la dimensión Measures, incluyendo a Production, en otro. Para más información, vea [Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md) y [Crear conjuntos con nombre en MDX &#40;MDX&#41;](mdx/mdx-named-sets-building-named-sets.md).  
@@ -43,7 +42,7 @@ ms.locfileid: "66076142"
  Puede copiar o arrastrar los componentes del cubo desde la pestaña **Metadatos** del panel **Herramientas de cálculo** hasta el cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** . Puede copiar o arrastrar funciones desde la pestaña **Funciones** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel **Editor de Formulario de conjuntos con nombres** .  
   
 > [!IMPORTANT]  
->  Si crea la expresión de conjunto mediante el nombre explícito de los miembros del conjunto, incluya la lista de miembros en un par de llaves ({}).  
+>  Si crea la expresión de conjunto mediante el nombre explícito de los miembros del conjunto, incluya la lista de miembros en un par de llaves ( {} ).  
   
 ## <a name="see-also"></a>Consulte también  
  [Cálculos en modelos multidimensionales](calculations-in-multidimensional-models.md)  

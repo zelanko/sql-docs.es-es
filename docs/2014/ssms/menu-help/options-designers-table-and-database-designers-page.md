@@ -12,17 +12,17 @@ ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2cabbd38f05ffd45976eac6d18c8ea5f6615816
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283662"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859827"
 ---
 # <a name="options-designers-table-and-database-designers-page"></a>Opciones (diseñadores-página diseñadores de tablas y bases de datos)
   Utilice esta página para determinar el comportamiento predeterminado del diseñador. Para tener acceso a esta configuración, en el menú **Herramientas** , haga clic en **Opciones**, expanda la carpeta **Diseñadores** y haga clic en **Diseñador de tablas**.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Sobrescribir el valor de tiempo de espera de la cadena de conexión para actualizaciones del diseñador de tabla**  
  Permite establecer un nuevo valor de tiempo de espera para las acciones del diseñador de tablas. Esto puede resultar útil si el diseñador de tablas afecta a una tabla grande y requiere más tiempo para completar la modificación.  
   

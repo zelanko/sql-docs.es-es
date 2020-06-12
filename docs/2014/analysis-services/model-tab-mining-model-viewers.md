@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50570bb4-fcac-411e-b530-0398437efda7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05c0a25ceded07264e4dbe10467e9dc6f093f6c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42285f94057441d01259c5fd54ce896dd0316b94
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84537367"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Pestaña Modelo (Visores de modelos de minería de datos)
   La pestaña **Modelo** del Visor de series temporales de Microsoft muestra una representación de una serie temporal como un nodo en un gráfico, similar a la utilizada en los modelos de árboles de decisión.  
@@ -60,7 +59,7 @@ ms.locfileid: "66077621"
   
  Si el árbol mostrado en la lista desplegable tiene una barra coloreada más larga, significa que el modelo tiene muchas bifurcaciones en el árbol. La bifurcación significa que la regresión es más compleja y el modelo se tiene que dividir en varios segmentos, con una ecuación diferente (o par de ecuaciones) en cada nodo.  
   
- **Información preliminar**  
+ **Fondo**  
  Utilice este control para seleccionar el estado que se representa mediante el color de fondo en cada nodo.  
   
  **Expansión predeterminada**  

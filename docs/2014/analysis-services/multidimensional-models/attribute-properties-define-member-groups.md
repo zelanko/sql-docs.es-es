@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 006cc915-c499-4781-b9a7-01ad31bebf6a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2da7f19fa9626792a117ffa0108a28c50f32c5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95f9516c7a0077e97af348afa863fe15c8d4528b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077298"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544757"
 ---
 # <a name="define-member-groups"></a>Definir grupos de miembros
   Si un atributo contiene muchos miembros, puede elegir agruparlos en cubos, reduciendo así el número de miembros que los usuarios ven cuando exploran los datos en una jerarquía. También puede determinar el número de cubos en los que se agrupan los miembros y establecer un esquema de nomenclatura para los cubos. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](attribute-properties-group-attribute-members.md).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 777f2c23-1c1c-4b72-9d19-48a4866551f8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 579af162998ffaa7c9483a6e6d29a87f98e96fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c29ed96b46660808ff54d6997ca438eb0f5a60b8
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077879"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541737"
 ---
 # <a name="mdx-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas MDX (Analysis Services - Datos multidimensionales)
   Use el Editor de consultas MDX para diseñar y ejecutar instrucciones y scripts escritos en lenguaje de expresiones multidimensionales (MDX).  
@@ -43,7 +42,7 @@ ms.locfileid: "66077879"
 |Término|Definición|  
 |----------|----------------|  
 |**Conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Conecto**|Desconecta el Editor de consultas MDX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Desconectar**|Desconecta el Editor de consultas MDX de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambiar conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Consulta con conexión actual**|Abre una nueva ventana del Editor de consultas MDX y usa la información de conexión de la ventana actual del Editor de consultas MDX.|  
 |**Bases de datos disponibles**|Cambie la conexión a una base de datos distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la misma instancia.|  

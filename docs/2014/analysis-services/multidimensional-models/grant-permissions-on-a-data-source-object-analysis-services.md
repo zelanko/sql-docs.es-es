@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4e302d3-c93b-4383-aa4a-37d15c129830
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d0a7de676f5863187c2c137e056392a605af474f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074998"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546677"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Otorgar permisos para un objeto de origen de datos (Analysis Services)
   Normalmente, la mayoría de los usuarios de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no necesitan acceso a los orígenes de datos subyacentes de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Los usuarios normalmente solo consultan los datos en una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . No obstante, en el contexto de minería de datos, como en el de realizar predicciones basadas en un modelo de minería de datos, un usuario tiene que combinar los datos obtenidos de un modelo de minería de datos con los datos proporcionados por el usuario. Para conectar con el origen de datos que contiene los datos proporcionados por el usuario, el usuario emplea una consulta de Extensiones de minería de datos (DMX) que contiene la cláusula [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) y [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  

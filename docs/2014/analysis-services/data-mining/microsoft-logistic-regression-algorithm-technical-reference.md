@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 11991c4658514ecf7b596a039bf5c4668a302cd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a9b2613c4ca9c706e549aca9ed577a6defacd0e0
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174529"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521871"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Referencia técnica del algoritmo de regresión logística de Microsoft
   El algoritmo de regresión logística de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una variación del algoritmo de red neuronal de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , donde el parámetro *HIDDEN_NODE_RATIO* se establece en 0. Este valor creará un modelo de red neuronal que no contenga un nivel oculto y que, por consiguiente, sea equivalente a la regresión logística.
@@ -84,7 +83,7 @@ WHERE NODE_TYPE = 23
 
  Para cada valor de salida, esta consulta devuelve los coeficientes y un identificador que señala al nodo de entrada relacionado. También devuelve una fila que contiene el valor de la salida y la intersección. Cada X de entrada tiene su propio coeficiente (CI), pero la tabla anidada también contiene un coeficiente "libre" (Co), calculado según la fórmula siguiente:
 
- F (X) = X1 * C1 + x2\*C2 +... + xn\*CN + x0
+ F (X) = X1 * C1 + x2 \* C2 +... + xn \* CN + x0
 
  Activación: exp(F(X)) / (1 + exp(F(X)) )
 
@@ -102,7 +101,7 @@ WHERE NODE_TYPE = 23
 
  HOLDOUT_SEED especifica un número que se va a usar para inicializar el generador pseudoaleatorio cuando se determinan aleatoriamente los datos de exclusión. Si HOLDOUT_SEED se establece en 0, el algoritmo genera la inicialización basada en el nombre del modelo de minería de datos, para garantizar que el contenido del modelo sigue siendo el mismo durante el nuevo procesamiento.
 
- El valor predeterminado es 0.
+ El valor predeterminado es 0.
 
  MAXIMUM_INPUT_ATTRIBUTES define el número de atributos de entrada que el algoritmo puede controlar antes de invocar la selección de características. Establezca este valor en 0 para desactivar la selección de características.
 
@@ -129,7 +128,7 @@ WHERE NODE_TYPE = 23
 
  Se aplica a las columnas de la estructura de minería de datos.
 
- MODEL_EXISTENCE_ONLY significa que la columna se tratará como si tuviera dos Estados posibles `Missing` : `Existing`y. Un valor NULL es un valor ausente.
+ MODEL_EXISTENCE_ONLY significa que la columna se tratará como si tuviera dos Estados posibles: `Missing` y `Existing` . Un valor NULL es un valor ausente.
 
  Se aplica a la columna del modelo de minería de datos.
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ac551a708433e973ada499f0e7504bc75516e756
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f558ce6aaf9e57576d5773322352d33b81a3392
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074769"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546587"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Administrar los cambios de las vistas del origen de datos y los orígenes de datos
   Si se vuelve a ejecutar el Asistente para generar esquemas, éste volverá a utilizar el mismo origen de datos y vista del origen de datos que en la generación original. Si se agrega un origen de datos o una vista de origen de datos, el asistente no los utilizará. Si se elimina el origen de datos o la vista de origen de datos originales tras la generación inicial, debe ejecutarse el asistente desde el principio. También se eliminará la configuración anterior del asistente. Los objetos existentes en una base de datos subyacente enlazados a un origen de datos o vista de origen de datos eliminados se tratarán como objetos creados por el usuario la próxima vez que se ejecute el Asistente para generar esquemas.  

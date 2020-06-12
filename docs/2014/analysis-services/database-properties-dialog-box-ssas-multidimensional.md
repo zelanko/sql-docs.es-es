@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 70f000b7-917f-4699-b142-7a0d13ff767c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be4133aa143ecf0e1fb9b50c40a38a73b4207f30
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 281dc08a4674949758e4abbc8142f78eb97700f6
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082319"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528941"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Propiedades de la base de datos (cuadro de diálogo) (SSAS: multidimensional)
   Use el cuadro de diálogo **Propiedades de la base de datos** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de una base de datos en una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar el cuadro de diálogo **Propiedades de la base de datos** , haga clic con el botón derecho en una base de datos del Explorador de objetos y seleccione **Propiedades**.  

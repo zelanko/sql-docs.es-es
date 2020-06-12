@@ -1,5 +1,6 @@
 ---
 title: Comandos de menú y otras teclas de método abreviado (Oracle a SQL) | Microsoft Docs
+description: Obtenga información sobre los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado usadas en varios cuadros de diálogo de la aplicación SSMA for Oracle.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,12 +11,12 @@ ms.assetid: fc00e683-189e-4765-b280-84927d635126
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 723f9c644d0e327919134baee5267197bb0f71b9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b9534020525ace1df2976ee732d9016c02d5ed2e
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68264563"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293932"
 ---
 # <a name="menu-commands-and-other-shortcut-keysoracle-to-sql"></a>Comandos de menú y otras teclas de acceso directo (OracleToSQL)
 En las secciones siguientes se describen los métodos abreviados de teclado para tener acceso a los comandos de menú y otras teclas de método abreviado utilizadas en varios cuadros de diálogo de la aplicación SSMA for Oracle.  

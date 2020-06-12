@@ -1,5 +1,6 @@
 ---
 title: 'SQL: Relationship y la regla de ordenación de claves (SQLXML)'
+description: 'Obtenga información sobre cómo usar el elemento SQL: Relationship y las reglas de ordenación de claves en SQLXML.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,18 +16,18 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c04b14f474e2afc0e6feb18eaa0bd321fdbb5e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9963058caa3c027a294fac5828b39990bb344f5f
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246772"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215724"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretación de anotaciones: sql:relationship y regla de ordenación de claves
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Dado que la carga masiva XML genera registros cuando sus nodos entran en el ámbito y envía esos registros a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuando sus nodos salen del ámbito, los datos del registro deben estar presentes en el ámbito del nodo.  
   
- Considere el siguiente esquema XSD, en el que la relación de uno a varios entre ** \<los elementos>cliente** y ** \<>de pedido** (un cliente puede realizar muchos pedidos) se especifica mediante el ** \<elemento SQL: Relationship>** :  
+ Considere el siguiente esquema XSD, en el que la relación uno a varios entre **\<Customer>** **\<Order>** los elementos y (un cliente puede realizar muchos pedidos) se especifica mediante el **\<sql:relationship>** elemento:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"<>   
@@ -60,7 +61,7 @@ ms.locfileid: "75246772"
 </xsd:schema>  
 ```  
   
- Cuando el ** \<cliente>** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que la carga masiva XML Lee ** \</Customer>**. Al procesar el ** \<orden de>** nodo de elemento, la carga masiva XML usa ** \<SQL: Relationship>** para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder del elemento primario ** \<Customer>** , porque el ** \<elemento Order>** no especifica el atributo **CustomerID** . Esto significa que, al definir el ** \<elemento Customer>** , debe especificar el atributo **CustomerID** en el esquema antes de especificar ** \<SQL: Relationship>**. De lo contrario, cuando un ** \<pedido>** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder y, cuando la carga masiva XML alcanza la etiqueta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** \<finalización/Order>** , envía el registro a sin el valor de columna de clave externa CustomerID.  
+ A medida que el **\<Customer>** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que se lee la carga masiva XML **\</Customer>** . Al procesar el **\<Order>** nodo de elemento, la carga masiva XML utiliza **\<sql:relationship>** para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder del **\<Customer>** elemento primario, porque el **\<Order>** elemento no especifica el atributo **CustomerID** . Esto significa que, al definir el **\<Customer>** elemento, debe especificar el atributo **CustomerID** en el esquema antes de especificar **\<sql:relationship>** . De lo contrario, cuando un **\<Order>** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder y, cuando la carga masiva XML alcanza la **\</Order>** etiqueta de cierre, envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin el valor de la columna de clave externa CustomerID.  
   
  Guarde el esquema que se proporciona en este ejemplo como SampleSchema.xml.  
   
@@ -117,7 +118,7 @@ ms.locfileid: "75246772"
     set objBL=Nothing  
     ```  
   
-     Como resultado, la carga masiva XML inserta un valor NULL en la columna de clave externa CustomerID de la tabla CustOrder. Si revisa los datos de ejemplo XML para que el ** \<elemento secundario CustomerID>** aparezca antes que el ** \<elemento secundario Order>** , obtendrá el resultado esperado: la carga masiva XML inserta el valor de clave externa especificado en la columna.  
+     Como resultado, la carga masiva XML inserta un valor NULL en la columna de clave externa CustomerID de la tabla CustOrder. Si revisa los datos de ejemplo XML para que el **\<CustomerID>** elemento secundario aparezca antes que el **\<Order>** elemento secundario, obtendrá el resultado esperado: la carga masiva XML inserta el valor de clave externa especificado en la columna.  
   
  Éste es el esquema XDR equivalente:  
   

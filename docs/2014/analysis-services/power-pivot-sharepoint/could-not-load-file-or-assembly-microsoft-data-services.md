@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 42c7b7e876f244831920be390d97c88412eed63f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9baec97f8d1e779a84f25e7ddbf437e0a40ef4b3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071664"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547497"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftanalysisservicessharepointintegration39"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft. AnalysisServices. SharePoint. Integration&#39;
   En entornos de SharePoint 2010 que tienen PowerPivot para SharePoint, este error se producirá si la solución del nivel de aplicación para PowerPivot no se implementó correctamente.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071664"
   
 |||  
 |-|-|  
-|Aplicable a|PowerPivot para SharePoint|  
+|Se aplica a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|La solución Powerpivotwebapp no está implementada o no se implementó correctamente.|  
 |Texto del mensaje|No se pudo cargar el archivo o ensamblado 'Microsoft.AnalysisServices.SharePoint.Integration'|  
@@ -43,7 +42,7 @@ ms.locfileid: "66071664"
   
 4.  Elija la aplicación web con la que se está produciendo este error. Si hay más de una, implemente de nuevo la solución para todas.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar las soluciones de PowerPivot en SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  

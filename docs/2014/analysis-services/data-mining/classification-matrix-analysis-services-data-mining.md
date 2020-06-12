@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c12f202-2ed9-41fa-bee2-0f7ab3ff058a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 22f8733c816014bbdd29b44c4ed85d5fc3d2127d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1067bf817051f28c939ce5f438dd617e4a9495
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085790"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524838"
 ---
 # <a name="classification-matrix-analysis-services---data-mining"></a>Matriz de clasificación (Analysis Services - Minería de datos)
   Una *matriz de clasificación* ordena todos los casos del modelo en categorías, determinando si el valor de predicción coincide con el valor real. A continuación, se cuentan todos los casos de cada categoría y los totales se muestran en la matriz. La matriz de clasificación es una herramienta estándar de evaluación de modelos estadísticos a la que a veces se denomina *matriz de confusión*.  

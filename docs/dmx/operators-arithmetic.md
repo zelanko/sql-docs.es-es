@@ -4,25 +4,25 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149cd67594cac64fc8ad315b2fca9bb1cda373d5
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68008215"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669317"
 ---
 # <a name="operators---arithmetic"></a>Operadores: aritméticos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Puede utilizar operadores aritméticos en extensiones de minería de datos (DMX) para cálculos aritméticos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], incluidas la suma, la resta, la multiplicación y la división.  
+  Puede utilizar operadores aritméticos en extensiones de minería de datos (DMX) para cálculos aritméticos en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , incluidas la suma, la resta, la multiplicación y la división.  
   
  En la tabla siguiente se describen los operadores aritméticos que admite DMX.  
   
-|Operator|Descripción|  
+|Operador|Descripción|  
 |--------------|-----------------|  
 |[+ &#40;agregar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Suma dos números.|  
 |[-&#40;resta&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Resta un número de otro.|  

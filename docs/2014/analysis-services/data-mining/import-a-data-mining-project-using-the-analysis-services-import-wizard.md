@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 62bc9fc5-c6ff-4517-b598-d92df76743a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63034ac9d8ba601070f716830b3b9173575a8775
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084367"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522339"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Cantidad un proyecto de minería de datos mediante el Asistente para la importación de Analysis Services
   En este tema se describe cómo crear un nuevo proyecto de minería de datos mediante la importación de los metadatos de un proyecto de minería de datos existente en otro servidor, usando para ello la plantilla de proyecto **Importar del servidor (multidimensional y minería de datos)**, en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "66084367"
     > [!WARNING]  
     >  No puede especificar los objetos que desea importar; al elegir una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , se importan todos los objetos multidimensionales y de minería de datos.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 5.  La página **Finalización del asistente**muestra el progreso de la operación de importación. No puede cancelar la operación ni cambiar los objetos que se están importando. Haga clic **Finalizar** cuando haya terminado.  
   

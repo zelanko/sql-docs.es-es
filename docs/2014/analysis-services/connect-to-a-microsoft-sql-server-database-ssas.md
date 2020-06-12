@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cc3530c7bc316c0dbdc3271d456d4f7adf05038a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c291dbc9903fddfa714f9b1665d7ba9d4265a0f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087217"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527181"
 ---
 # <a name="connect-to-a-microsoft-sql-server-database-ssas"></a>Conectarse a una base de datos de Microsoft SQL Server (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar los valores para conectarse con una base de datos de Microsoft SQL Server. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087217"
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "66087217"
   
  Puede utilizar un punto (.), (local) o localhost para indicar el servidor local.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Especifique si la autenticación de Windows se usa para conectarse a una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  El modo de autenticación de Windows permite que un usuario pueda conectarse a través de una cuenta de usuario de Windows. Siempre que sea posible, utilice la autenticación de Windows.  

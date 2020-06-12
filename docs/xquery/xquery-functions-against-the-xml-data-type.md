@@ -1,5 +1,6 @@
 ---
 title: Funciones de XQuery con el tipo de datos XML | Microsoft Docs
+description: Obtenga información sobre las funciones de XQuery que se admiten para el tipo de datos XML.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,23 +17,23 @@ helpviewer_keywords:
 ms.assetid: 8df0877d-a03f-4ca9-b84e-908c4bb42b5e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e885b537fbc86f3b70a8142c5513dbf16cb1c158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d35db27e171c8cc31a463ad9ae91613d1c0708c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67945995"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305746"
 ---
 # <a name="xquery-functions-against-the-xml-data-type"></a>Funciones de XQuery con el tipo de datos xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  En este tema y sus temas secundarios se describen las funciones que se pueden utilizar al especificar XQuery con el tipo de datos **XML** . Para conocer las especificaciones del W3C [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873), vea.  
+  En este tema y sus temas secundarios se describen las funciones que se pueden utilizar al especificar XQuery con el tipo de datos **XML** . Para conocer las especificaciones del W3C, vea [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873) .  
   
- Las funciones XQuery pertenecen al espacio http://www.w3.org/2004/07/xpath-functions de nombres. Las especificaciones de W3C utilizan el prefijo de espacio de nombres "fn": para describir estas funciones. No es necesario especificar explícitamente el prefijo de espacio de nombres "fn": cuando se utilicen estas funciones. Debido a esto y para facilitar la lectura, los prefijos de espacio de nombres no se suelen usar en esta documentación.  
+ Las funciones XQuery pertenecen al http://www.w3.org/2004/07/xpath-functions espacio de nombres. Las especificaciones de W3C utilizan el prefijo de espacio de nombres "fn": para describir estas funciones. No es necesario especificar explícitamente el prefijo de espacio de nombres "fn": cuando se utilicen estas funciones. Debido a esto y para facilitar la lectura, los prefijos de espacio de nombres no se suelen usar en esta documentación.  
   
  En la tabla siguiente se enumeran las funciones de XQuery que se admiten con el tipo de datos **XML**.  
   
-|Category|Nombre de la función|  
+|Categoría|Nombre de la función|  
 |--------------|-------------------|  
 |[Funciones en valores numéricos](https://msdn.microsoft.com/library/d5740a32-b174-43b9-b64d-1cc6edc50cff)|[umbral](../xquery/numeric-values-functions-ceiling.md)|  
 ||[palabra](../xquery/numeric-values-functions-floor.md)|  
@@ -48,7 +49,7 @@ ms.locfileid: "67945995"
 ||[local-name (función de XQuery)](../xquery/functions-on-nodes-local-name.md)|  
 ||[namespace-uri (función de XQuery)](../xquery/functions-on-nodes-namespace-uri.md)|  
 |[Funciones de contexto](https://msdn.microsoft.com/library/f7d8af33-9de9-450c-a667-23dee3129b5f)|[last](../xquery/context-functions-last-xquery.md)|  
-||[localización](../xquery/context-functions-position-xquery.md)|  
+||[position](../xquery/context-functions-position-xquery.md)|  
 |[Funciones utilizadas en secuencias](https://msdn.microsoft.com/library/672d2795-53ab-49c2-bf24-bc81a47ecd3f)|[empty](../xquery/functions-on-sequences-empty.md)|  
 ||[distinct-values](../xquery/functions-on-sequences-distinct-values.md)|  
 ||[id. (función de XQuery)](../xquery/functions-on-sequences-id.md)|  
@@ -56,7 +57,7 @@ ms.locfileid: "67945995"
 ||[latencia](../xquery/aggregate-functions-avg.md)|  
 ||[min](../xquery/aggregate-functions-min.md)|  
 ||[max](../xquery/aggregate-functions-max.md)|  
-||[Sume](../xquery/aggregate-functions-sum.md)|  
+||[sum](../xquery/aggregate-functions-sum.md)|  
 |[Funciones de constructor &#40;XQuery&#41;](../xquery/constructor-functions-xquery.md)|[Funciones de constructor](../xquery/constructor-functions-xquery.md)|  
 |[Funciones del descriptor de acceso a datos](../xquery/data-accessor-functions.md)|[string](../xquery/data-accessor-functions-string-xquery.md)|  
 ||[datos](../xquery/data-accessor-functions-data-xquery.md)|  
@@ -69,7 +70,7 @@ ms.locfileid: "67945995"
 ||[sql:variable() (función de XQuery)](../xquery/xquery-extension-functions-sql-variable.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [&#40;de referencia del lenguaje XQuery SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)   
  [Datos XML &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -25,16 +25,15 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e3400d904bc857bc282bb1ad9220c1e01fe5a4d
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085661"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524041"
 ---
 # <a name="content-types-data-mining"></a>Tipos de contenido (minería de datos)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], puede definir tanto el tipo de datos físico de una columna en una estructura de minería de datos como un tipo de contenido lógico para la columna cuando se usa en un modelo.  
+  En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puede definir tanto el tipo de datos físico de una columna en una estructura de minería de datos como un tipo de contenido lógico para la columna cuando se usa en un modelo.  
   
  El *tipo de datos* determina el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería. La definición del tipo de datos de una columna proporciona al algoritmo información sobre el tipo de datos de las columnas y el modo de procesar los datos. Cada tipo de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite uno o varios tipos de contenido para la minería de datos.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66085661"
   
  El tipo de contenido `Discretized` es compatible con los siguientes tipos de datos: `Date`, `Double`, `Long` y `Text`.  
   
-## <a name="key"></a>Key  
+## <a name="key"></a>Clave  
  El tipo de contenido *clave* indica que la columna identifica una fila de forma inequívoca. Normalmente, en una tabla de casos, la columna de clave es un identificador numérico o de texto. Establezca el tipo de contenido en `key` para indicar que la columna no debe utilizarse para el análisis, sino para realizar el seguimiento de los registros.  
   
  Las tablas anidadas también tienen claves, pero el uso de la clave de tabla anidada es ligeramente diferente. En una tabla anidada debe establecer el tipo de contenido en `key` si la columna es el atributo que desea analizar. Los valores de la clave de tabla anidada deben ser únicos para cada caso, pero puede haber duplicados en todo el conjunto de casos.  

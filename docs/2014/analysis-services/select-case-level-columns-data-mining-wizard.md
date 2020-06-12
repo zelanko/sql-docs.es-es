@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b110af78-8eee-4817-93da-d63c1603f6c8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e36019b36426dd596edc616a739aba6730cf62b0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069662"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84538347"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Seleccionar columnas de nivel de caso (Asistente para minería de datos)
   Utilice la página **Seleccionar columnas de nivel de caso** para seleccionar los atributos y medidas de la dimensión de cubo de origen subyacente que serán las columnas de nivel de caso de la estructura de minería de datos.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 128f6dde-409d-4c12-9820-3305bab57b75
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 16e691ab6c6a6fcff4cb59fe54884fbb1b52268e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a48316bb89f92ba8b44e3160a6b38e77762f3be
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66080099"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543987"
 ---
 # <a name="data-providers-used-for-analysis-services-connections"></a>Proveedores de datos usados para las conexiones de Analysis Services
   Analysis Services proporciona tres proveedores de datos para el acceso al servidor y a datos. Todas las aplicaciones que se conectan a Analysis Services lo hacen mediante uno de estos proveedores. Dos de los proveedores, ADOMD.NET y Objetos de administración de Analysis Services (AMO), son proveedores de datos administrados. El proveedor OLE DB de Analysis Services (MSOLAP DLL) es un proveedor de datos nativo.  
@@ -54,7 +53,7 @@ ms.locfileid: "66080099"
   
 1.  Vaya a \Archivos de programa\Microsoft Analysis Services\AS OLEDB\120.  
   
-2.  Haga clic con el botón secundario en msolap120. dll y haga clic en **propiedades**.  
+2.  Haga clic con el botón derecho en msolap120.dll y haga clic en **propiedades**.  
   
  Si no encuentra el archivo en esta ubicación, o si la ruta de acceso de la carpeta incluye AS OLEDB\110 or AS OLEDB\90, está usando una biblioteca antigua y debe instalar una versión más reciente (AS OLEDB\11) para conectarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66080099"
   
  MSOLAP130.dll es la versión del proveedor OLE DB para Analysis Services que se incluye en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Otras versiones anteriores recientes incluyen MSOLAP10.dll (para SQL Server 2008 y SQL Server 2008 R2) y MSOLAP90.dll (para SQL Server 2005).  
   
- Los proveedores OLE DB suelen especificarse en las cadenas de conexión. Una cadena de conexión de Analysis Services usa una nomenclatura diferente para hacer referencia al proveedor de OLE DB: MSOLAP. \<versión>. dll  
+ Los proveedores OLE DB suelen especificarse en las cadenas de conexión. Una cadena de conexión de Analysis Services usa una nomenclatura diferente para hacer referencia al proveedor de OLE DB: MSOLAP. \<version> . dll  
   
  MSOLAP.5.dll es el proveedor OLE DB para Analysis Services que se instala con Excel 2013. Las versiones anteriores, como MSOLAP.4.dll o MSOLAP.3.dll, se encuentran a menudo en estaciones de trabajo que ejecutan versiones anteriores de Excel. Algunas características de Analysis Services, como el complemento PowerPivot, necesitan versiones específicas del proveedor OLE DB. Para más información, vea [Propiedades de cadena de conexión &#40;Analysis Services&#41;](connection-string-properties-analysis-services.md).  
   
@@ -106,7 +105,7 @@ ms.locfileid: "66080099"
   
  El programa de instalación de SQL Server instala AMO y lo usan las aplicaciones cliente de SQL Server para conectarse a Analysis Services. También puede descargarlo e instalarlo de forma manual con AMO en código personalizado (vea [Cómo determinar la versión de los proveedores de datos de Analysis Services](#bkmk_LibUpdate) en este tema). AMO puede encontrarse en la memoria caché global de ensamblados global, como `Microsoft.AnalysisServices`.  
   
- Una conexión que usa AMO suele ser mínima y consta de "Data Source =\<ServerName>". Una vez establecida una conexión, use la API para trabajar con las colecciones de base de datos y los objetos principales. Tanto SSDT como SSMS usan AMO para conectarse a una instancia de Analysis Services.  
+ Una conexión que usa AMO suele ser mínima y consta de "Data Source = \<servername> ". Una vez establecida una conexión, use la API para trabajar con las colecciones de base de datos y los objetos principales. Tanto SSDT como SSMS usan AMO para conectarse a una instancia de Analysis Services.  
   
  Para obtener más información sobre la conexión mediante programación, vea [Programming AMO Fundamental Objects](https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects).  
   

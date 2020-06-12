@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: bdc7dad8-2f22-4265-aba4-a3a451527840
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9da8ddb223ed03c0208fe524ea5cd7195a039c97
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62702668"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545376"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Acceder al contexto de la consulta en los procedimientos almacenados
   El contexto de ejecución de un procedimiento almacenado se encuentra disponible dentro del código del procedimiento almacenado como el objeto `Context` del modelo de objeto del servidor ADOMD.NET. Éste es un contexto de solo lectura y no puede ser modificado por el procedimiento almacenado. Las propiedades siguientes están disponibles en este objeto.  
   
-|Propiedad|Tipo|Descripción|  
+|Propiedad.|Tipo|Descripción|  
 |--------------|----------|-----------------|  
 |**CurrentCube**|Cube|El cubo del contexto de consulta actual.|  
 |**CurrentDatabaseName**|String|El identificador de la base de datos actual.|  

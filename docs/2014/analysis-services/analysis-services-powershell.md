@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 60bb9610-7229-42eb-a95f-a377268a8720
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f75298a4701f15a1fc0f3f471bf7628f4a7030c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a6bbeab13d3a29c9dd7cf769dd28d776d3ae229
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782649"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528031"
 ---
 # <a name="analysis-services-powershell"></a>Analysis Services PowerShell
   [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)] incluye cmdlets y un proveedor de Analysis Services PowerShell (SQLAS) que permite usar Windows PowerShell para navegar, administrar y consultar objetos de Analysis Services.  
@@ -46,7 +45,7 @@ Para obtener más información sobre la sintaxis y los ejemplos, vea [Analysis S
   
  Debe instalar una característica de SQL Server que incluya el módulo SQL Server PowerShell (SQLPS) y las bibliotecas de cliente. La manera más fácil de hacerlo es instalar SQL Server Management Studio, que incluye automáticamente la característica PowerShell y las bibliotecas de cliente. El módulo SQL Server PowerShell (SQLPS) contiene los proveedores y cmdlets de PowerShell para todas las características de SQL Server, incluido el módulo SQLASCmdlets y el proveedor SQLAS utilizados para navegar por la jerarquía de objetos de Analysis Services.  
   
- Debe importar el módulo **SQLPS** antes de poder usar el proveedor `SQLAS` y los cmdlets. El proveedor SQLAS es una extensión del `SQLServer` proveedor. Hay varias maneras de importar el módulo SQLPS. Para más información, vea [Importar el módulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
+ Debe importar el módulo **SQLPS** antes de poder usar el `SQLAS` proveedor y los cmdlets. El proveedor SQLAS es una extensión del `SQLServer` proveedor. Hay varias maneras de importar el módulo SQLPS. Para más información, vea [Importar el módulo SQLPS](../../2014/database-engine/import-the-sqlps-module.md).  
   
  El acceso remoto a una instancia de Analysis Services requiere que habilite la administración remota y el uso compartido de archivos. Para obtener más información, consulte [Habilitar la administración remota](#bkmk_remote) en este tema.  
   
@@ -61,7 +60,7 @@ Para obtener más información sobre la sintaxis y los ejemplos, vea [Analysis S
 |Bases de datos e instancias tabulares|Se admite para la administración remota y local.<br /><br /> Para obtener más información, consulte un blog de agosto de 2011 sobre la [Administración de modelos tabulares con PowerShell](https://go.microsoft.com/fwlink/?linkID=227685).|  
 |Bases de datos e instancias de PowerPivot para SharePoint|Compatibilidad limitada. Puede utilizar las conexiones HTTP y el proveedor SQLAS para ver información de las bases de datos y las instancias.<br /><br /> Sin embargo, no se admite el uso de los cmdlets. No debe utilizar Analysis Services PowerShell para las copias de seguridad y restauración de bases de datos PowerPivot en memoria, ni debe agregar o quitar roles, procesar datos o ejecutar script XMLA arbitrario.<br /><br /> Para la configuración, PowerPivot para SharePoint tiene una compatibilidad integrada con PowerShell que se proporciona por separado. Para obtener más información, vea [referencia de PowerShell para PowerPivot para SharePoint](/sql/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint).|  
 |Conexiones nativas a cubos locales<br /><br /> "Data Source = c:\backup\test.Cub"|No compatible.|  
-|Conexiones HTTP a archivos de conexión de modelos semánticos BI (.bism) en SharePoint<br /><br /> "Data Source =http://server/shared_docs/name.bism"|No compatible.|  
+|Conexiones HTTP a archivos de conexión de modelos semánticos BI (.bism) en SharePoint<br /><br /> "Data Source = http://server/shared_docs/name.bism "|No compatible.|  
 |Conexiones incrustadas a bases de datos PowerPivot<br /><br /> "Data Source = $Embedded $"|No compatible.|  
 |Contexto del servidor local en los procedimientos almacenados de Analysis Services<br /><br /> "Data Source = *"|No compatible.|  
   
@@ -82,7 +81,7 @@ Para obtener más información sobre la sintaxis y los ejemplos, vea [Analysis S
   
 3.  El nombre de usuario y la contraseña proporcionados por el objeto de credencial se resuelve como una identidad de usuario de Windows. Analysis Services utiliza esta identidad como usuario actual. Si el usuario no es un usuario de Windows, o carece de los permisos suficientes para realizar la operación solicitada, la solicitud dará un error.  
   
- Para crear un objeto de credencial, puede utilizar el cmdlet Get-Credential para recopilar las credenciales del operador. A continuación, puede utilizar el objeto de credencial en un comando que realiza la conexión a Analysis Services. En el ejemplo siguiente se muestra un enfoque. En este ejemplo, la conexión es a una instancia local (`SQLSERVER:\SQLAS\HTTP_DS`) configurada para el acceso http.  
+ Para crear un objeto de credencial, puede utilizar el cmdlet Get-Credential para recopilar las credenciales del operador. A continuación, puede utilizar el objeto de credencial en un comando que realiza la conexión a Analysis Services. En el ejemplo siguiente se muestra un enfoque. En este ejemplo, la conexión es a una instancia local ( `SQLSERVER:\SQLAS\HTTP_DS` ) configurada para el acceso http.  
   
 ```powershell
 $cred = Get-Credential adventureworks\dbadmin  
@@ -201,7 +200,7 @@ PS SQLSERVER\sqlas\localhost\default:> dir
   
  Las conexiones HTTP son útiles si ha configurado el servidor para el acceso HTTP siguiendo las instrucciones de este tema: [configurar el acceso http a Analysis Services en Internet Information Services &#40;IIS&#41; 8,0](instances/configure-http-access-to-analysis-services-on-iis-8-0.md)  
   
- Suponiendo que la dirección URL http://localhost/olap/msmdpump.dlldel servidor es, una conexión podría ser similar a la siguiente:  
+ Suponiendo que la dirección URL del servidor http://localhost/olap/msmdpump.dll es, una conexión podría ser similar a la siguiente:  
   
 ```  
 PS SQLSERVER\sqlas:> cd http_ds  

@@ -12,12 +12,12 @@ ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 4188a76609df3829455da05365d60776b8f6b815
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000905"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858650"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propiedades del índice de texto completo (página Programaciones)
   Utilice esta página con el fin de ver y crear calendarios para ejecutar un trabajo del Agente SQL Server que inicia un rellenado incremental de actualizaciones en la tabla base del índice de texto completo. Si la tabla base o la vista no contienen ninguna columna del tipo de datos `timestamp`, se realiza un rellenado completo.  
@@ -26,7 +26,7 @@ ms.locfileid: "83000905"
   
 -   [Administrar índices de texto completo](../relational-databases/indexes/indexes.md)  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Programaciones**  
  Enumera cada rellenado incremental programado, si lo hay, en la tabla base para el índice de texto completo.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "83000905"
  **Tipo de rellenado**  
  Muestra el tipo de cada rellenado programado.  
   
- **Habilitado**  
+ **Enabled**  
  Indica si el rellenado programado está habilitado o deshabilitado actualmente.  
   
  **Descripción**  

@@ -19,12 +19,12 @@ ms.assetid: deb20037-6a51-47ae-9f49-7601698fafaf
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3cfc7b44672554fc810b54ef0c554d2a570b8325
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ffb09ed830b0f90756d9d9c04fa44f953241d4f
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67950860"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83668713"
 ---
 # <a name="column_domain_usage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67950860"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene el tipo de datos de alias.<br /><br /> **&#42;&#42; importante &#42;&#42;** No use vistas de INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**DOMAIN_NAME**|**sysname**|Tipo de datos de alias.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Propietario de la tabla.<br /><br /> **&#42;&#42; importante &#42;&#42;** No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
+|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Propietario de la tabla.<br /><br /> **&#42;&#42; importante &#42;&#42;** No use vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. INFORMATION_SCHEMA vistas solo representan un subconjunto de los metadatos de un objeto. La única manera confiable de encontrar el esquema de un objeto es consultar la vista de catálogo sys. Objects.|  
 |**TABLE_NAME**|**sysname**|Tabla en la que se utiliza el tipo de datos de alias.|  
 |**COLUMN_NAME**|**sysname**|Columna que utiliza el tipo de datos de alias.|  
   

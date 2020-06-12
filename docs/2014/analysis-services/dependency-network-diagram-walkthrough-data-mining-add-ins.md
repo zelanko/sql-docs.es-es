@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aac732a8-5262-4649-b7d7-3ccf6f9cfa8b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8138cef980e7b040a99a6e1db21f1b67fd84aeb5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081969"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528781"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Tutorial del diagrama de red de dependencias (Complementos de minería de datos)
   Existen diversos tipos de modelos de minería de datos que usan gráficos de red como una forma para explorar las relaciones entre los datos. Puede importar estos modelos en Visio con la forma **red de dependencias** y, a continuación, seguir personalizando y mejorando el diseño. Las **formas de minería de datos para Visio** incluyen los siguientes controles personalizados para trabajar con diagramas de red de dependencias:  
@@ -43,13 +42,13 @@ ms.locfileid: "66081969"
   
 1.  Si no ve formas de **minería de datos de Microsoft** en la lista **formas** , haga clic en **más formas**, seleccione **Abrir Galería de símbolos**y abra la plantilla desde la ubicación de instalación predeterminada.  
   
-     \<> de unidad: \Archivos de programa (x85) \Microsoft SQL Server 2012 DM-ins  
+     \<drive>: \Archivos de programa (x85) \Microsoft SQL Server 2012 DM-ins  
   
-2.  Arrastre la forma **red de dependencias** hasta la página para iniciar el asistente. Haga clic en **Siguiente**.  
+2.  Arrastre la forma **red de dependencias** hasta la página para iniciar el asistente. Haga clic en **Next**.  
   
 3.  En la página de bienvenida del **Asistente para crear formas red de dependencias de Visio**, haga clic en **siguiente**.  
   
-4.  En la página **seleccionar un origen de datos** del **Asistente para crear formas red de dependencias de Visio**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] elija una conexión a un servidor que tenga el modelo que desea visualizar.  
+4.  En la página **seleccionar un origen de datos** del **Asistente para crear formas red de dependencias de Visio**, elija una conexión a un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] servidor que tenga el modelo que desea visualizar.  
   
 5.  Seleccione un modelo de minería de datos adecuado y haga clic en **siguiente**.  
   

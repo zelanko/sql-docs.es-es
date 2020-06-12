@@ -1,5 +1,6 @@
 ---
 title: Valor booleano efectivo (XQuery) | Microsoft Docs
+description: Obtenga información sobre los valores booleanos efectivos en XQuery.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 506682b1-b6c9-45e2-aa54-7abd5844c3f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4eb94e51896e08f60389edde0c2a6cd0461e8538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 282f88f92d8ed5e0bb811783363e05b456bc37c8
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67929959"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84305854"
 ---
 # <a name="effective-boolean-value-xquery"></a>Valor booleano efectivo (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +67,7 @@ go
   
  Al consultar las variables o columnas **XML** con tipo, puede tener nodos de tipo booleano. Los **datos ()** en este caso devuelven un valor booleano. Si la expresión de consulta devuelve un valor booleano true, el valor booleano efectivo será true, tal y como se muestra en el siguiente ejemplo. En el ejemplo también se ilustra lo siguiente:  
   
--   Se crea una colección de esquemas XML. El elemento \<b> en la colección es de tipo booleano.  
+-   Se crea una colección de esquemas XML. El elemento \<b> de la colección es de tipo booleano.  
   
 -   Se crea y se consulta una variable **XML** con tipo.  
   

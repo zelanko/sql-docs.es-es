@@ -14,17 +14,17 @@ ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 70531800a43b0c8680dac3b0c5bd2633e5c09bce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1d0efb6669a5b001793712bfe6f6e5990e0c5b
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809156"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858720"
 ---
 # <a name="sql-server-properties-filestream-page"></a>Propiedades de SQL Server (página FILESTREAM)
   Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Habilitar FILESTREAM para acceso Transact-SQL**  
  Seleccione esta opción para habilitar FILESTREAM para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este control debe comprobarse para que las otras opciones de control estén disponibles.  
   

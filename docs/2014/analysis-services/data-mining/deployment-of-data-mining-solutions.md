@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7dc221f6a81281970a9ad62ba7b16397e40e0648
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9cf77bf6c583a2f286c2b02d392314e9a2dad2e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084720"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522571"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Implementación de soluciones de minería de datos
   El último paso del proceso de minería de datos consiste en implementar los modelos en un entorno de producción. La implementación es importante porque hace que los modelos estén a disposición de los usuarios para que pueda realizar cualquiera de las siguientes tareas:  

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2d4d08795351b93615954ad64e004482745f768d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d64d1ac46e2571aa6f8065a8ea42e4cc43aa589e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62725959"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546727"
 ---
 # <a name="extending-olap-functionality"></a>Extender la funcionalidad de OLAP
   Como programador, puede ampliar Analysis Services escribiendo ensamblados, extensiones personalizadas y procedimientos almacenados que proporcionen la funcionalidad que desea usar y cambiar la finalidad en aplicaciones de base de datos. Los ensamblados se usan para ampliar la funcionalidad de los modelos multidimensionales mediante la adición de nuevos procedimientos y funciones al lenguaje MDX o mediante el complemento de personalización.  

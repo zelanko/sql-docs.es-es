@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 10015ac40948c95f8c912ba6fdb71147e50bb880
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94b9935f5ab13431033accf7431c1a9b6394569a
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082890"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520515"
 ---
 # <a name="sql-server-data-mining-add-ins-for-office"></a>Complementos de minería de datos de SQL Server para Office
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Complementos de minería de datos para Office es un conjunto ligero de herramientas para análisis predictivos que permite utilizar datos de Excel para generar modelos analíticos para la predicción, recomendación o exploración.  
@@ -46,7 +45,7 @@ ms.locfileid: "66082890"
   
 -   **Explorar y visualizar.** La minería de datos no es una actividad que se puede automatizar completamente: debe explorar y comprender los resultados para realizar acciones significativas. Los complementos le ayudan con la exploración al proporcionar visores interactivos de Excel, plantillas de Visio que le permiten personalizar los diagramas de modelos y la capacidad de exportar los gráficos y las tablas de Excel para filtrarlas o modificarlas más.  
   
--   **Implementar e integrar.** Cuando haya creado un modelo útil, coloque el modelo en producción, usando las herramientas de administración para exportar el modelo del servidor experimental a otra instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
+-   **Implementar e integrar.** Cuando haya creado un modelo útil, coloque el modelo en producción, usando las herramientas de administración para exportar el modelo del servidor experimental a otra instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
      También puede dejar el modelo en el servidor donde lo creó, pero actualizar los datos de aprendizaje y ejecutar predicciones con Integration Services o scripts DMX.  
   
@@ -75,11 +74,11 @@ ms.locfileid: "66082890"
   
  Los Complementos de minería de datos necesitan una conexión con una de las siguientes ediciones de SQL Server Analysis Services:  
   
--   Enterprise  
+-   Empresa  
   
 -   Inteligencia empresarial  
   
--   Standard  
+-   Estándar  
   
  Dependiendo de la edición de SQL Server Analysis Services a la que se conecte, es posible que algunos algoritmos avanzados no estén disponibles. Para obtener información, vea [Características compatibles con las ediciones de SQL Server 2014](https://msdn.microsoft.com/library/cc645993.aspx).  
   

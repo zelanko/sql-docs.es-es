@@ -1,21 +1,21 @@
 ---
-title: SELECCIONAR una &lt;combinación&gt; de predicción de modelo (DMX) | Microsoft Docs
+title: SELECCIONAR &lt; &gt; una combinación de predicción de modelo (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0156d12fe2d3d3f62105dccf05f99c2eebab8833
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928330"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83670128"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>Seleccionar de &lt;la&gt; combinación de predicción de modelo (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>Seleccionar de &lt; la &gt; combinación de predicción de modelo (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Usa un modelo de minería de datos para predecir los estados de las columnas de un origen de datos externo. La instrucción de **combinación de predicción** coincide con cada caso de la consulta de origen con el modelo.  
@@ -57,7 +57,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Observaciones  
- La cláusula ON define la asignación entre las columnas de la consulta de origen y las columnas del modelo de minería. Esta asignación sirve para unir columnas de la consulta de origen con columnas del modelo de minería de datos de forma que las columnas se puedan usar como entradas para crear las predicciones. Las columnas de \<la *lista de asignación de combinación*> están relacionadas mediante el uso de un signo igual (=), como se muestra en el ejemplo siguiente:  
+ La cláusula ON define la asignación entre las columnas de la consulta de origen y las columnas del modelo de minería. Esta asignación sirve para unir columnas de la consulta de origen con columnas del modelo de minería de datos de forma que las columnas se puedan usar como entradas para crear las predicciones. Las columnas de la \< *lista de asignación de combinación*> están relacionadas mediante el uso de un signo igual (=), como se muestra en el ejemplo siguiente:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,7 +69,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La columna de origen de la combinación de predicción puede ser una tabla o una consulta singleton.  
   
- Puede especificar funciones de predicción que no devuelven una expresión de tabla \<en la *lista de expresiones SELECT*> y la \< *expresión de condición*>.  
+ Puede especificar funciones de predicción que no devuelven una expresión de tabla en la \< *lista de expresiones SELECT*> y la \< *expresión de condición*>.  
   
  La **combinación de predicción natural** asigna automáticamente nombres de columna de la consulta de origen que coinciden con los nombres de columna del modelo. Si usa la **predicción natural**, puede omitir la cláusula ON.  
   
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Ejemplo 2: usar OPENQUERY  
- En el ejemplo siguiente se muestra cómo crear una consulta de predicción por lotes mediante una lista de clientes potenciales almacenados en un conjunto de elementos externo. Dado que la tabla forma parte de una vista del origen de datos que se ha definido en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]una instancia de, la consulta puede utilizar [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar los datos. Dado que los nombres de las columnas de la tabla son distintos de los del modelo de minería de datos, se debe usar la cláusula **on** para asignar las columnas de la tabla a las columnas del modelo.  
+ En el ejemplo siguiente se muestra cómo crear una consulta de predicción por lotes mediante una lista de clientes potenciales almacenados en un conjunto de elementos externo. Dado que la tabla forma parte de una vista del origen de datos que se ha definido en una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , la consulta puede utilizar [OPENQUERY](../dmx/source-data-query-openquery.md) para recuperar los datos. Dado que los nombres de las columnas de la tabla son distintos de los del modelo de minería de datos, se debe usar la cláusula **on** para asignar las columnas de la tabla a las columnas del modelo.  
   
  La consulta devuelve nombre y el apellido de cada persona de la tabla, junto con una columna booleana que indica si es probable que cada persona compre una bicicleta, donde 0 significa que "probablemente no comprará una bicicleta" y 1 significa que "probablemente comprará una bicicleta". La última columna contiene la probabilidad del resultado predicho.  
   

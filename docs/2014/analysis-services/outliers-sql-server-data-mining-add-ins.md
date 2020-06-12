@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3043c8f63433396f059f5c456512ad4ba2bffd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ecc7cba81a394664b2bdb6a60b6c5f8110760f44
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072135"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547282"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Valores atípicos (Complementos de minería de datos de SQL Server)
   ![Asistente para quitar valores atípicos, cinta de opciones Minería de datos](media/dmc-outliers.gif "Asistente para quitar valores atípicos, cinta de opciones Minería de datos")  
@@ -69,7 +68,7 @@ ms.locfileid: "66072135"
   
 3.  En el cuadro de diálogo **Seleccionar columna** , seleccione una **sola** columna.  
   
-     Haga clic en **Siguiente**.  
+     Haga clic en **Next**.  
   
 4.  En el cuadro de diálogo **especificar umbrales** , revise la distribución de los datos.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "66072135"
   
     -   Si la columna contiene datos numéricos, puede hacer clic en el botón **ver como discreto** o en el botón **ver como numérico** para alternar entre ver los valores en un gráfico de barras o en un gráfico de líneas.  
   
-5.  En el cuadro de diálogo **especificar umbrales** , elija el intervalo de datos que desea mantener escribiendo un valor mínimo y máximo, o arrastrando las barras deslizantes. Haga clic en **Siguiente**.  
+5.  En el cuadro de diálogo **especificar umbrales** , elija el intervalo de datos que desea mantener escribiendo un valor mínimo y máximo, o arrastrando las barras deslizantes. Haga clic en **Next**.  
   
 6.  En el cuadro de diálogo **control de valores atípicos** , especifique si desea eliminar o reemplazar los valores y haga clic en **siguiente**.  
   

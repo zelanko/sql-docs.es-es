@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a6b158a42c9ca90bf2cfd2e9b981a1e2a735ccc
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084757"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522732"
 ---
 # <a name="decision-trees-model-query-examples"></a>Ejemplos de consultas de modelos de árboles de decisión
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles de los patrones detectados durante el análisis, o de una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones de los nuevos datos. Por ejemplo, una consulta de contenido para un modelo de árboles de decisión puede proporcionar estadísticas sobre el número de casos en cada nivel del árbol, o de las reglas que diferencian los casos. O bien, una consulta de predicción asigna el modelo a los datos nuevos para generar recomendaciones, clasificaciones, etc. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  
@@ -79,7 +78,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|All|12939|5|  
+|TM_DecisionTree|000000001|Todo|12939|5|  
   
  ¿Qué indican estos resultados? En un modelo de árboles de decisión, la cardinalidad de un nodo determinado indica cuántos elementos secundarios inmediatos tiene el nodo. La cardinalidad de este nodo es 5. Es decir, el modelo dividió la población de destino de posibles compradores de bicicletas en 5 subgrupos.  
   

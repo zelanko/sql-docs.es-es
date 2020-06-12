@@ -19,12 +19,12 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a42fe0c5bf58dfb1214897d87cdde3126b924a75
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
+ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833254"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84423189"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  Una vez que se ha adquirido un bloqueo de aplicación, solo los primeros 32 caracteres pueden recuperarse como texto simple; al resto se le aplicará el algoritmo hash.  
   
  [ @LockMode =] '*Lock_Mode*'  
- Es el modo de bloqueo que se va a obtener para un recurso determinado. *lock_mode* es **nvarchar(32)** y carece de valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
+ Es el modo de bloqueo que se va a obtener para un recurso determinado. *Lock_Mode* es **VARCHAR (32)** y no tiene ningún valor predeterminado. El valor puede ser cualquiera de los siguientes: **Shared**, **Update**, **IntentShared**, **IntentExclusive**o **Exclusive**. Para obtener más información, vea [modos de bloqueo](../sql-server-transaction-locking-and-row-versioning-guide.md#lock_modes).
   
  [ @LockOwner =] '*lock_owner*'  
- Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **nvarchar(32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
+ Es el propietario del bloqueo, que es el valor de *lock_owner* cuando se solicitó el bloqueo. *lock_owner* es **VARCHAR (32)**. El valor puede ser **Transaction** (predeterminado) o **Session**. Cuando el valor de *lock_owner* es **Transaction**, de forma predeterminada o se especifica explícitamente, sp_getapplock debe ejecutarse desde una transacción.  
   
  [ @LockTimeout =] '*valor*'  
  Es un valor de tiempo de espera de los bloqueos, en milisegundos. El valor predeterminado es el mismo que el valor devuelto por @ @LOCK_TIMEOUT . Para indicar que una solicitud de bloqueo debe devolver un código de retorno de-1 en lugar de esperar el bloqueo cuando no se puede conceder la solicitud inmediatamente, especifique 0.  
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Valor|Resultado|  
+|Value|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  

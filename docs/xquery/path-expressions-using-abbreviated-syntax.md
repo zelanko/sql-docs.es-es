@@ -1,5 +1,6 @@
 ---
 title: Usar la sintaxis abreviada en una expresión de ruta de acceso | Microsoft Docs
+description: Aprenda a usar la sintaxis abreviada en expresiones de ruta de acceso XQuery.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eeb7026f341af60f289a1d3854e24656073add61
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946413"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306016"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expresiones de ruta de acceso: Usar una sintaxis abreviada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +38,11 @@ child::ProductDescription[attribute::ProductModelID=19]
   
 -   El eje **secundario** es el eje predeterminado. Por lo tanto, se puede omitir el eje **Child::** en un paso de una expresión. Por ejemplo, `/child::ProductDescription/child::Summary` puede escribirse como `/ProductDescription/Summary`.  
   
--   Un eje de **atributos** se puede abreviar @como. Por ejemplo, `/child::ProductDescription[attribute::ProductModelID=10]` puede escribirse como `/ProudctDescription[@ProductModelID=10]`.  
+-   Un eje de **atributos** se puede abreviar como @ . Por ejemplo, `/child::ProductDescription[attribute::ProductModelID=10]` puede escribirse como `/ProudctDescription[@ProductModelID=10]`.  
   
 -   Un **/descendant-or-self:: node ()/** se puede abreviar como//. Por ejemplo, `/descendant-or-self::node()/child::act:telephoneNumber` puede escribirse como `//act:telephoneNumber`.  
   
-     La consulta anterior recupera todos los números de teléfono almacenados en la columna AdditionalContactInfo de la tabla Contact. El esquema de AdditionalContactInfo se define de forma que un \<elemento telephoneNumber> pueda aparecer en cualquier parte del documento. Por tanto, para recuperar todos los números de teléfono, debe buscar cada nodo del documento. Esta búsqueda se inicia en la raíz del documento y continúa en todos los nodos descendientes.  
+     La consulta anterior recupera todos los números de teléfono almacenados en la columna AdditionalContactInfo de la tabla Contact. El esquema de AdditionalContactInfo se define de forma que un \<telephoneNumber> elemento puede aparecer en cualquier parte del documento. Por tanto, para recuperar todos los números de teléfono, debe buscar cada nodo del documento. Esta búsqueda se inicia en la raíz del documento y continúa en todos los nodos descendientes.  
   
      La consulta siguiente recupera todos los números de teléfono para un contacto de cliente específico:  
   

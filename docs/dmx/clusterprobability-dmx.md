@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 9beac713ec9a8b5a549602809d3612e4e29e67c6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e06563d9b6a69bc8903a55ee1e67cda962f246ba
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68071952"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669348"
 ---
 # <a name="clusterprobability-dmx"></a>ClusterProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ SELECT NODE_CAPTION FROM <model>.CONTENT
   
  Para obtener más información sobre el uso de esta sintaxis, vea [SELECT FROM &#60;model&#62;. CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md). Para obtener más información sobre el conjunto de filas de esquema de contenido del modelo de minería de datos, vea [DMSCHEMA_MINING_MODEL_CONTENT conjunto de filas](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
- Si no \<se especifica un título de nodo>, la función devuelve la probabilidad de que los casos de entrada pertenezcan al clúster más probable. Use la función **cluster** para devolver el clúster más probable.  
+ Si \< no se especifica un título de nodo>, la función devuelve la probabilidad de que los casos de entrada pertenezcan al clúster más probable. Use la función **cluster** para devolver el clúster más probable.  
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve la probabilidad de que el caso especificado exista en el clúster que presenta la etiqueta Cluster 2.  

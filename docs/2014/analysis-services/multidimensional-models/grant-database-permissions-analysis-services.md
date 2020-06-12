@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be7e5f64-af43-47d6-84a5-c5c1c277d644
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9b4e5ac88a81728d6e29d32b0d330ba8fd408633
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546687"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Otorgar permisos de base de datos (Analysis Services)
   Si va a empezar a usar Analysis Services y tiene conocimientos sobre bases de datos relacionales, lo primero que necesita saber es que, en lo que respecta al acceso a datos, la base de datos no es el objeto protegible principal en Analysis Services.
@@ -72,10 +71,10 @@ ms.locfileid: "78175738"
 5.  Haga clic en **Aceptar** para completar la creación del rol.
 
 ## <a name="process-database"></a>Process Database
- Al definir un rol que conceda permisos de base de datos `Full Control` , puede omitir y elegir solo `Process Database`. Este permiso, que se establece en el nivel de la base de datos, permite el procesamiento en todos los objetos de la base de datos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
+ Al definir un rol que conceda permisos de base de datos, puede omitir `Full Control` y elegir solo `Process Database` . Este permiso, que se establece en el nivel de la base de datos, permite el procesamiento en todos los objetos de la base de datos. Vea [Otorgar permisos de procesamiento &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)
 
 ## <a name="read-definition"></a>Read Definition
- Al `Process Database`igual que `Read Definition` , el establecimiento de permisos en el nivel de base de datos tiene un efecto en cascada en otros objetos de la base de datos. Si quiere establecer permisos de Leer definición a un nivel más granular, debe desactivar Leer definición como propiedad de base de datos en el panel General. Para más información, vea [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
+ Al igual que `Process Database` , el establecimiento de `Read Definition` permisos en el nivel de base de datos tiene un efecto en cascada en otros objetos de la base de datos. Si quiere establecer permisos de Leer definición a un nivel más granular, debe desactivar Leer definición como propiedad de base de datos en el panel General. Para más información, vea [Otorgar permisos Leer definición en metadatos de objetos &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).
 
 ## <a name="see-also"></a>Consulte también
  [Conceder permisos de administrador de servidor &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) [conceder permisos de proceso &#40;Analysis Services](grant-process-permissions-analysis-services.md)&#41;

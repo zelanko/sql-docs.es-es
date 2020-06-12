@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6973256746d668569d977cedbc2500ee007cd6ff
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081560"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528518"
 ---
 # <a name="dmx-templates"></a>Plantillas DMX
   Las plantillas de minería de datos ayudan a crear rápidamente consultas sofisticadas. Aunque la sintaxis general de las consultas DMX está bien documentada, el uso de plantillas facilita la creación de consultas haciendo clic y apuntando a los argumentos y orígenes de datos.  
@@ -72,9 +71,9 @@ ms.locfileid: "66081560"
   
 -   Consulta de predicción TOP en tabla anidada  
   
- **Crear**  
+ **Creación**  
   
- Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes: puede usar cualquier algoritmo de minería de datos admitido por la instancia [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] de a la que está conectado, incluidos los algoritmos de complemento.  
+ Use estas plantillas para crear modelos o estructuras de datos personalizados. No está limitado a los modelos que admiten los asistentes: puede usar cualquier algoritmo de minería de datos admitido por la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado, incluidos los algoritmos de complemento.  
   
 -   Modelo de minería de datos  
   

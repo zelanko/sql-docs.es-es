@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0a0f168dabd237fe685eb90d2caeeba0db4eed97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25eb4d4424223449052ab1f65b41cf270da81fb0
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070719"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540077"
 ---
 # <a name="preview-selected-table-ssas"></a>Vista previa de la tabla seleccionada (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite obtener una vista previa de los datos de la tabla seleccionada, seleccionar las columnas que se van a incluir en la importación de datos y filtrar los datos de las columnas seleccionadas. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -28,7 +27,7 @@ ms.locfileid: "66070719"
   
  El hecho de que aparezcan datos en esta página no garantiza que la importación se realizará correctamente. Si el nombre de usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada, la importación no se realizará correctamente.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Casilla en el encabezado de columna**  
  Active la casilla para incluir la columna en la importación de datos. Desactive la casilla para quitar la columna de la importación de datos.  
   

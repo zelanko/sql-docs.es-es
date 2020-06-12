@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 95ffe66f-c261-4dc5-ad57-14d2d73205ff
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 809cbf259f9eddbb684170fd320c44972e56c90f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd55af5914bcc6409a3e5d6c899cbfd8b7f939f5
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78174722"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522168"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algoritmo de árboles de decisión de Microsoft
-  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árboles de decisión de es un algoritmo de clasificación y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] regresión proporcionado por para su uso en el modelado de predicción de atributos discretos y continuos.
+  El [!INCLUDE[msCoName](../../includes/msconame-md.md)] algoritmo de árboles de decisión de es un algoritmo de clasificación y regresión proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para su uso en el modelado de predicción de atributos discretos y continuos.
 
  Para los atributos discretos, el algoritmo hace predicciones basándose en las relaciones entre las columnas de entrada de un conjunto de datos. Utiliza los valores, conocidos como estados, de estas columnas para predecir los estados de una columna que se designa como elemento de predicción. Específicamente, el algoritmo identifica las columnas de entrada que se correlacionan con la columna de predicción. Por ejemplo, en un escenario para predecir qué clientes van a adquirir probablemente una bicicleta, si nueve de diez clientes jóvenes compran una bicicleta, pero solo lo hacen dos de diez clientes de edad mayor, el algoritmo infiere que la edad es un buen elemento de predicción en la compra de bicicletas. El árbol de decisión realiza predicciones basándose en la tendencia hacia un resultado concreto.
 

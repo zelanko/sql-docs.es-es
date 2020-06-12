@@ -1,5 +1,6 @@
 ---
 title: Ejecutar un DiffGram mediante ADO (SQLXML)
+description: Obtenga información sobre cómo ejecutar un archivo DiffGram en una aplicación de Microsoft Visual Basic mediante ADO (SQLXML 4,0) para establecer una conexión a una instancia de Microsoft SQL Server.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b7ca55bdea021127d73bcef8bb2e695a5fe45123
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64835df5e298f85af2cf4560273a1ece16683b0c
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246651"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306222"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>Ejecutar un DiffGram utilizando ADO (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "75246651"
   
 -   El flujo de salida del comando se establece en el objeto **StrmOut** (**ADODB. Stream**) para recibir los datos devueltos.  
   
--   Si está utilizando el proveedor SQLOLEDB, obtendrá de forma predeterminada la funcionalidad de Microsoft SQLXML que proporciona Sqlxmlx.dll. Para utilizar Sqlxml4. dll con el proveedor SQLOLEDB, la propiedad **versión de SQLXML** debe establecerse en **SQLXML. 4.0** en el objeto de **conexión** del proveedor SQLOLEDB.  
+-   Si está utilizando el proveedor SQLOLEDB, obtendrá de forma predeterminada la funcionalidad de Microsoft SQLXML que proporciona Sqlxmlx.dll. Para utilizar Sqlxml4.dll con el proveedor SQLOLEDB, la propiedad **versión de SQLXML** debe establecerse en **SQLXML. 4.0** en el objeto de **conexión** del proveedor SQLOLEDB.  
   
 -   Se ejecuta el comando (DiffGram).  
   

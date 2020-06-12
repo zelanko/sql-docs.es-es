@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 15fdaec7-f3e4-44d9-9b78-1a1d78c484e0
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fdcfd54f447a363f4de12f1883455d9f0bf93c54
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66073149"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545775"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Cambie el nombre de una base de datos multidimensional (Analysis Services)
-  La manera en la que se cambia el nombre de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] una base de datos depende de cómo se [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Conecte a la base de datos. Para cambiar el nombre de una base de datos existente, debe conectarse en el modo en línea. Para cambiar el nombre de la base de datos a la que se conectan los objetos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe conectarse en el modo de proyecto.  
+  La manera en la que se cambia el nombre de una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos depende de cómo se conecte a la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos. Para cambiar el nombre de una base de datos existente, debe conectarse en el modo en línea. Para cambiar el nombre de la base de datos a la que se conectan los objetos de un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , debe conectarse en el modo de proyecto.  
   
 ### <a name="to-change-the-database-name-in-online-mode"></a>Para cambiar el nombre de la base de datos en el modo en línea  
   

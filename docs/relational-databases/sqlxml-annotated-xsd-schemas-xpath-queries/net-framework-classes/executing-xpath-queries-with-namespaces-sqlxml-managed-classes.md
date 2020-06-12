@@ -1,5 +1,6 @@
 ---
 title: Ejecutar consultas XPath con espacios de nombres (SQLXML)
+description: Obtenga información sobre cómo incluir espacios de nombres en consultas SQLXML XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfe1885c9162e4feee3e9620dd7168f1736c114e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ee37e30506eb9b41d3b94b2f76f1cf6a5149e6a2
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75243577"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83688736"
 ---
 # <a name="executing-xpath-queries-with-namespaces-sqlxml-managed-classes"></a>Ejecutar consultas XPath con espacios de nombres (clases administradas de SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.locfileid: "75243577"
   
  Dado que no se admite el uso del carácter comodín (*) en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0, debe especificar la consulta XPath mediante un prefijo de espacio de nombres. Para resolver el prefijo, use la propiedad namespaces para especificar el enlace del espacio de nombres.  
   
- En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín (\*) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos en los que el nombre local es **Employee** y el URI de espacio de nombres es **urn: @ Schema: Contacts**:  
+ En el ejemplo siguiente, la consulta XPath especifica espacios de nombres mediante el carácter comodín ( \* ) y las funciones XPath de nombre local () y espacio de nombres-URI (). Esta consulta XPath devuelve todos los elementos en los que el nombre local es **Employee** y el URI de espacio de nombres es **urn: @ Schema: Contacts**:  
   
 ```  
 /*[local-name() = 'Contact' and namespace-uri() = 'urn:myschema:Contacts']  

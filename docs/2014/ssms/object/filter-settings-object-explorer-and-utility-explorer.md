@@ -13,17 +13,17 @@ ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78573a21a5aa6a719a9bb55d0ee17bf9837258f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd040bbf0f6e3f5e150d45df41ea676a71c6e03a
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63277082"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83859227"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Configuración de filtro (Explorador de objetos y Explorador de la utilidad)
   Utilice este cuadro de diálogo para especificar un filtro. Un filtro permite configurar el Explorador de objetos y el Explorador de la utilidad para mostrar únicamente los elementos que cumplen criterios específicos. Por ejemplo, puede utilizar un filtro para mostrar solo los trabajos con nombres que contienen la palabra "Mantenimiento". El encabezado del cuadro de diálogo **Configuración del filtro** contiene el nombre del servidor y puede contener el nombre de la base de datos.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Propiedad**  
  Muestra la propiedad que se va filtrar.  
   
@@ -74,6 +74,6 @@ ms.locfileid: "63277082"
   
 ## <a name="see-also"></a>Consulte también  
  [Usar SQL Server Management Studio](../sql-server-management-studio-ssms.md)   
- [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
+ [Utilidad de SQL Server características y tareas](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

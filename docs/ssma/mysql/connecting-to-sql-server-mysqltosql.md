@@ -1,5 +1,6 @@
 ---
 title: Conexión a SQL Server (MySQLToSQL) | Microsoft Docs
+description: Obtenga información sobre cómo conectarse a una instancia de destino de SQL Server para migrar bases de datos de MySQL. SSMA obtiene metadatos acerca de las bases de datos en SQL Server.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 08233267-693e-46e6-9ca3-3a3dfd3d2be7
 author: Shamikg
 ms.author: Shamikg
-ms.openlocfilehash: 0ec33e462f1b68d70a86a0fbf4f7cf0214d25770
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0bed8dee876546cf418f3f547b0ddce092d3cfce
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68103129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84293962"
 ---
 # <a name="connecting-to-sql-server-mysqltosql"></a>Conexión a SQL Server (MySQLToSQL)
 Para migrar las bases de datos de MySQL a SQL Server, debe conectarse a la instancia de destino de SQL Server. Cuando se conecta, SSMA obtiene los metadatos de todas las bases de datos de la instancia de SQL Server y muestra los metadatos de la base de datos en el explorador de metadatos de SQL Server. SSMA almacena información de la instancia de SQL Server a la que está conectado, pero no almacena contraseñas.  
@@ -67,13 +68,13 @@ Al definir las propiedades de conexión, también se especifica la base de datos
   
 Puede conectarse o volver a conectarse a versiones posteriores de SQL Server.  
   
-1.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 o 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+1.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-2.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 pero no se le permita conectarse a las versiones anteriores, es decir, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
+2.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 pero no se le permita conectarse a las versiones anteriores, es decir, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
-3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Podrá conectarse a 2012 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
+3.  Podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012.  
   
-4.  Solo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrá conectarse a 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
+4.  Solo podrá conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 cuando el proyecto creado sea [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.  
   
 5.  La compatibilidad con versiones posteriores no es válida para "SQL Azure".  
   
@@ -88,7 +89,7 @@ Puede conectarse o volver a conectarse a versiones posteriores de SQL Server.
 |SQL Azure||||||Sí|  
   
 > [!IMPORTANT]  
-> La conversión de los objetos de base de datos se realiza según el tipo de proyecto, pero no según la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión de conectada a. En el caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del proyecto 2005, la conversión se realiza según [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, aunque esté conectado a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
+> La conversión de los objetos de base de datos se realiza según el tipo de proyecto, pero no según la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conectada a. En el caso del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proyecto 2005, la conversión se realiza según [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005, aunque esté conectado a una versión posterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQL Server 2008/SQL Server 2012/SQL Server 2014/SQL Server 2016).  
   
 ## <a name="synchronizing-sql-server-metadata"></a>Sincronizar metadatos de SQL Server  
 Los metadatos acerca de SQL Server bases de datos no se actualizan automáticamente. Los metadatos de SQL Server explorador de metadatos es una instantánea de los metadatos cuando se conectó por primera vez a SQL Server, o la última vez que se actualizaron los metadatos manualmente. Puede actualizar manualmente los metadatos de todas las bases de datos o de cualquier base de datos o objeto de base de datos.  

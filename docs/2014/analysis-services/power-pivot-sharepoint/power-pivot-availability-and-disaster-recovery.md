@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bf560d489a1631e31f470134d497d3d897f6f35e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c98b677aab756d4fd2b35c6751e925c463665441
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175684"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540477"
 ---
 # <a name="powerpivot-availability-and-disaster-recovery-sql-server-2014"></a>Disponibilidad y recuperación ante desastres de PowerPivot (SQL Server 2014)
-  Los planes de disponibilidad y de recuperación ante desastres de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes, y las herramientas y las prácticas recomendadas que se implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que se deben tener en cuenta [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] al planear la disponibilidad y la recuperación ante desastres para una implementación.
+  Los planes de disponibilidad y de recuperación ante desastres de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] dependen principalmente del diseño de la granja de servidores de SharePoint, el tiempo de inactividad aceptable para los diferentes componentes, y las herramientas y las prácticas recomendadas que se implementan para la disponibilidad de SharePoint. En este tema se resumen las tecnologías y se incluyen diagramas de topología de ejemplo que se deben tener en cuenta al planear la disponibilidad y la recuperación ante desastres para una [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] implementación.
 
 ||
 |-|
@@ -80,9 +79,9 @@ ms.locfileid: "78175684"
 ||Comentarios|
 |-|--------------|
 |[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] en una granja de servidores para disponibilidad.|Compatible pero no se recomienda. La recomendación es usar AlwaysOn en modo de confirmación sincrónica.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] en modo de confirmación sincrónica|Compatible y se recomienda.|
-|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Creación de reflejo asincrónico o trasvase de registros a otra granja de servidores para la recuperación ante desastres.|Se admite.|
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] con confirmación asincrónica para recuperación ante desastres|Compatible|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]en modo de confirmación sincrónica|Compatible y se recomienda.|
+|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Creación de reflejo asincrónico o trasvase de registros a otra granja de servidores para la recuperación ante desastres.|Compatible.|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)]con confirmación asincrónica para recuperación ante desastres|Compatible|
 
 -   [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]
 

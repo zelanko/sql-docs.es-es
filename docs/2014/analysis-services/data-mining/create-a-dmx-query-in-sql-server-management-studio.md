@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d20fc7a618f4977058203d8f35d235b543609dd9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085470"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524031"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Crear una consulta DMX en SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en los modelos y estructuras de minería de datos.  

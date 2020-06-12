@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f99a2dc218543faa4d862fa7520c1618ec307ba7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f936f3f4e0b8f65326e9a6e84f75e6f4e82657f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083706"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521612"
 ---
 # <a name="mining-model-columns"></a>Columnas del modelo de minería de datos
   Un modelo de minería de datos aplica un algoritmo de modelo de minería a los datos que se representan en una estructura de minería de datos. Al igual que la estructura, el modelo de minería de datos contiene columnas. La estructura de minería contiene el modelo de minería de datos y éste hereda todos los valores de las propiedades que define la estructura. El modelo puede utilizar todas las columnas que contiene la estructura de minería de datos o un subconjunto de las columnas.  

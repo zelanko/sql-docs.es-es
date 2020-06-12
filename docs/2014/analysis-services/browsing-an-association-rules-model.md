@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: faffe208-7a64-4ec6-825f-ecbaa79caff7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69002d17205a5631d555e1022b8adeb9e51d3db2
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088468"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527741"
 ---
 # <a name="browsing-an-association-rules-model"></a>Examinar un modelo de reglas de asociación
-  Al abrir un modelo de asociación mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de reglas de asociación [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de.  El visor le permite comprobar de un vistazo qué elementos estaban en correlación entre sí y muestra las reglas que puede utilizar para la predicción o para realizar recomendaciones.  
+  Al abrir un modelo de asociación mediante **examinar**, el modelo se muestra en un visor interactivo, similar al visor de reglas de Asociación de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  El visor le permite comprobar de un vistazo qué elementos estaban en correlación entre sí y muestra las reglas que puede utilizar para la predicción o para realizar recomendaciones.  
   
 ##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Explorar el modelo  
- Al abrir un modelo de minería de datos que se creó [!INCLUDE[msCoName](../includes/msconame-md.md)] mediante el algoritmo reglas de Asociación de, la ventana **examinar** incluye las siguientes vistas, cada una diseñada para que pueda explorar un aspecto diferente del modelo:  
+ Al abrir un modelo de minería de datos que se creó mediante el [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmo reglas de Asociación de, la ventana **examinar** incluye las siguientes vistas, cada una diseñada para que pueda explorar un aspecto diferente del modelo:  
   
 -   [Conjuntos de elementos](#BKMK_Itemsets)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66088468"
   
  Puede filtrar el número de conjuntos que se muestran en la pestaña cambiando los valores de **compatibilidad mínima** y **máximo de filas** . Si aumenta el valor de **compatibilidad mínima** , la lista mostrará menos conjuntos, pero conjuntos serán las más comunes en los datos de entrada. Tanto si es común como importante, es otra pregunta que puede explorar mediante la pestaña **reglas** .  
   
- Tenga en cuenta que al cambiar el valor de compatibilidad u otros controles en la pestaña **conjuntos** solo se cambian los elementos que se muestran y no se ve afectado el modelo subyacente. Si desea generar menos o más conjuntos, o limitar su tamaño, debe utilizar los parámetros `MINIMUM_SUPPORT` y `MAXIMUM_SUPPORT`, disponibles en el cuadro de diálogo parámetros de **algoritmo** .  
+ Tenga en cuenta que al cambiar el valor de compatibilidad u otros controles en la pestaña **conjuntos** solo se cambian los elementos que se muestran y no se ve afectado el modelo subyacente. Si desea generar menos o más conjuntos, o limitar su tamaño, debe utilizar los parámetros `MINIMUM_SUPPORT` y `MAXIMUM_SUPPORT` , disponibles en el cuadro de diálogo **parámetros de algoritmo** .  
   
 ##### <a name="explore-the-itemsets-list"></a>Explorar la lista de conjuntos de elementos  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66088468"
   
 2.  Para centrarse en un conjunto de elementos de interés determinado, a partir de los muchos miles de combinaciones posibles, escriba algún texto en el cuadro **filtrar** conjunto de elementos.  
   
-     Aquí hemos escrito `Gloves`. Al aplicar el filtro, la lista se actualiza para mostrar solo los conjuntos de elementos que contienen guantes. Esto le permite centrarse en las transacciones en las que los clientes compraron guantes y otros artículos.  
+     Aquí hemos escrito `Gloves` . Al aplicar el filtro, la lista se actualiza para mostrar solo los conjuntos de elementos que contienen guantes. Esto le permite centrarse en las transacciones en las que los clientes compraron guantes y otros artículos.  
   
      La opción **Filtrar conjunto de elementos** también muestra una lista de los filtros que ha usado anteriormente.  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66088468"
  [Volver al principio](#BKMK_ViewerTabs)  
   
 ## <a name="more-about-association-models"></a>Más información sobre los modelos de asociación  
- Puede usar la característica **examinar** para abrir y explorar cualquier modelo creado mediante el algoritmo de reglas de Asociación de Microsoft. Esto incluye los modelos creados con el análisis de la [cesta de compras &#40;tabla análisis para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) Tool, en la cinta de opciones [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]herramientas de análisis de **tabla** o en.  
+ Puede usar la característica **examinar** para abrir y explorar cualquier modelo creado mediante el algoritmo de reglas de Asociación de Microsoft. Esto incluye los modelos creados con el análisis de la [cesta de compras &#40;tabla análisis para Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md) Tool, en la cinta de opciones **herramientas de análisis de tabla** o en [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Si crea un modelo de reglas de asociación con la herramienta de análisis de cesta de la compra, muchas de las opciones avanzadas se configuran automáticamente.  
   

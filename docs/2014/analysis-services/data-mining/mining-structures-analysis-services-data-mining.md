@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 39748290-c32a-48e6-92a6-0c3a9223773a
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4bca58767285718b733dd820970cc48a99d0ea14
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083377"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521247"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Estructuras de minería de datos (Analysis Services - Minería de datos)
   La estructura de minería de datos define los datos a partir de los cuales se generan los modelos de minería de datos: especifica la vista de datos de origen, el número y el tipo de columnas, y una partición opcional en conjuntos de entrenamiento y de pruebas. Una misma estructura de minería de datos puede admitir varios modelos de minería de datos que comparten el mismo dominio. En el diagrama siguiente, se muestra la relación de la estructura de minería de datos con el origen de datos y con los modelos de minería de datos que la componen.  

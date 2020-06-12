@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 006f1090faed746737a89041593222d95637d387
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072378"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541207"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Trabajar con diagramas en el Diseñador de vistas del origen de datos (Analysis Services)
   Un diagrama de vista del origen de datos (DSV) es una representación visual de los objetos de una DSV. Puede trabajar con el diagrama de forma interactiva para agregar, ocultar, eliminar o modificar objetos específicos. También puede crear varios diagramas en la misma DSV para resaltar un subconjunto de los objetos.  
@@ -46,11 +45,11 @@ ms.locfileid: "66072378"
   
  Para crear un diagrama, haga clic con el botón derecho en cualquier lugar del panel **Organizador de diagramas** y haga clic en **Nuevo diagrama**.  
   
- Al definir inicialmente una vista del origen de datos (DSV) en un proyecto de Analysis Services, todas las tablas y vistas agregadas a la vista del origen \<de datos se agregan al diagrama de todas las tablas>. Este diagrama se muestra en el panel Organizador de diagramas del Diseñador de vistas del origen de datos. Las tablas de este diagrama (así como sus columnas y relaciones) se enumeran en el panel Tablas. Las tablas de este diagrama (así como sus columnas y relaciones) se muestran gráficamente en el panel Esquema. Sin embargo, a medida que se agregan tablas, vistas y \<consultas con nombre al diagrama de todas las tablas>, el gran número de objetos de este diagrama dificulta la visualización de las relaciones, especialmente cuando se agregan varias tablas de hechos al diagrama y las tablas de dimensiones se relacionan con varias tablas de hechos.  
+ Al definir inicialmente una vista del origen de datos (DSV) en un proyecto de Analysis Services, todas las tablas y vistas agregadas a la vista del origen de datos se agregan al \<All Tables> diagrama. Este diagrama se muestra en el panel Organizador de diagramas del Diseñador de vistas del origen de datos. Las tablas de este diagrama (así como sus columnas y relaciones) se enumeran en el panel Tablas. Las tablas de este diagrama (así como sus columnas y relaciones) se muestran gráficamente en el panel Esquema. Sin embargo, a medida que se agregan tablas, vistas y consultas con nombre al \<All Tables> diagrama, el gran número de objetos de este diagrama dificulta la visualización de las relaciones, especialmente cuando se agregan varias tablas de hechos al diagrama y las tablas de dimensiones se relacionan con varias tablas de hechos.  
   
  Para que la visualización resulte más fácil si solo desea ver un subconjunto de las tablas de la vista del origen de datos, puede definir subdiagramas (que se denominan simplemente diagramas), formados por subconjuntos seleccionados de tablas, vistas y consultas con nombre de la vista del origen de datos. Puede utilizar los diagramas para agrupar elementos en la vista del origen de datos en función de sus necesidades empresariales o de soluciones.  
   
- Puede agrupar las tablas y consultas con nombre relacionadas en diagramas separados para fines empresariales y para facilitar la comprensión de una vista del origen de datos que contenga muchas tablas, vistas y consultas con nombre. Se puede incluir la misma tabla o consulta con nombre en varios diagramas, excepto \<en el diagrama de todas las tablas>. En el \<diagrama de todas las tablas>, todos los objetos contenidos en la vista del origen de datos se muestran exactamente una vez.  
+ Puede agrupar las tablas y consultas con nombre relacionadas en diagramas separados para fines empresariales y para facilitar la comprensión de una vista del origen de datos que contenga muchas tablas, vistas y consultas con nombre. Se puede incluir la misma tabla o consulta con nombre en varios diagramas, excepto en el \<All Tables> diagrama. En el \<All Tables> diagrama, todos los objetos contenidos en la vista del origen de datos se muestran exactamente una vez.  
   
 ##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Editar o eliminar un diagrama  
  Cuando trabaje con un diagrama, preste especial atención a los comandos usados para agregar y quitar objetos. Por ejemplo, si elimina un objeto de un diagrama, dicho objeto también se eliminará de la DSV. Si solo desea eliminarlo del diagrama, use **Ocultar tabla** en su lugar.  

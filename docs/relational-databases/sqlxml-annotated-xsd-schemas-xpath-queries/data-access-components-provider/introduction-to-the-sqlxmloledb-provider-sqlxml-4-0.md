@@ -1,5 +1,6 @@
 ---
 title: Introducción al proveedor SQLXMLOLEDB (SQLXML)
+description: Obtenga información acerca del proveedor de SQLXMLOLEDB, un proveedor de OLE DB que expone la funcionalidad SQLXML a través de Objetos de datos ActiveX (ADO).
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -15,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f94cf5002f0f587332df9ccc9a77e24010b8824
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 15375e7aaf860c5419e68cc64bb8e6e2cac125c1
+ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246676"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84215895"
 ---
 # <a name="introduction-to-the-sqlxmloledb-provider-sqlxml-40"></a>Introducción al proveedor SQLXMLOLEDB (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,13 +40,13 @@ oTestCommand.Execute , , adExecuteStream
 ## <a name="sqlxmloledb-provider-specific-properties"></a>Propiedades específicas del proveedor SQLXMLOLEDB  
  El proveedor SQLXMLOLEDB expone la siguiente propiedad de conexión específica del proveedor.  
   
-|Conexión<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
+|Conexión<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
 |-----------------------------|----------------------------|-----------------|  
 |Proveedor de datos||Proporciona el PROGID del proveedor OLE DB a través del que SQLXMLOLEDB ejecuta los comandos. A partir de SQLXML 4.0 y [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], este proveedor se incluye con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client; por lo tanto, este valor de propiedad se restringe a "SQLNCLI11". Para obtener más información, consulte [Programación de SQL Server Native Client](../../../relational-databases/native-client/sql-server-native-client-programming.md).|  
   
  El proveedor SQLXMLOLEDB expone las siguientes propiedades de comando específicas del proveedor.  
   
-|Get-Help<br /><br /> propiedad|Valor predeterminado<br /><br /> (si existe)|Descripción|  
+|Get-Help<br /><br /> propiedad|Default<br /><br /> (si existe)|Descripción|  
 |--------------------------|----------------------------|-----------------|  
 |Ruta de base|""|Especifica la ruta de acceso del archivo base. La ruta de acceso del archivo base se usa para especificar la ubicación del lenguaje de hojas de estilo XML (XSL) o de los archivos de esquema de asignación. La ruta de acceso del archivo base también se utiliza para resolver las rutas de acceso relativas de XSL o archivos de esquema de asignación que se han especificado en las propiedades de esquema XSL o de asignación.<br /><br /> Para obtener un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas XPath &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-xpath-queries-sqlxmloledb-provider.md).|  
 |Clientsidexml,|False|Establezca esta propiedad en True si desea que el proceso de conversión del conjunto de filas a XML se produzca en el cliente en lugar de en el servidor. Esto resulta de gran utilidad si desea mover la carga de rendimiento al nivel intermedio.<br /><br /> Para ver un ejemplo en el que se usa esta propiedad, vea [ejecutar consultas sql &#40;proveedor de SQLXMLOLEDB&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-sql-queries-sqlxmloledb-provider.md) o [Ejecutar plantillas que contienen consultas SQL &#40;&#41;proveedor de SQLXMLOLEDB ](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/executing-templates-that-contain-sql-queries-sqlxmloledb-provider.md).|  

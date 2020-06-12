@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 17b3a2765781813c832b0b654e4a02475b3ab623
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a4f41e548746d443ff9cbed5eca17e557127240
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064668"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527751"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Examinar un modelo de árboles de decisión
-  Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar [!INCLUDE[msCoName](../includes/msconame-md.md)] al visor de árboles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de decisión de. El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
+  Al abrir un modelo de clasificación con **examinar**, el modelo se muestra en un visor de árbol de decisión interactivo, similar al [!INCLUDE[msCoName](../includes/msconame-md.md)] visor de árboles de decisión de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . El visor muestra los resultados de clasificación en forma de gráfico, que se ha diseñado para resaltar los criterios que distinguen un grupo de datos de otro. También puede explorar en profundidad los subconjuntos individuales del árbol y recuperar los datos subyacentes.  
   
 ##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Explorar el modelo  
  Los modelos basados en el algoritmo de árboles de decisión tienen gran cantidad de información interesante que se puede explorar. La ventana **examinar** incluye las pestañas y los paneles siguientes para ayudarle a conocer los patrones y predecir los resultados con el gráfico:  
@@ -87,13 +86,13 @@ ms.locfileid: "66064668"
   
      Basta con ver la intensidad del sombreado para centrarse en los grupos que le interesan y obtener información más detallada para compararlos. Por ejemplo, estos grupos muestran bastantes posibilidades de comprar bicicletas:  
   
-    -   Age >= 32 y \< 53 e ingresos anuales >= 26000 e hijos = 0  
+    -   Age >= 32 y \< 53 and Yearly Income > = 26000 y secundarios = 0  
   
          Total de casos: 1150  
   
          Probabilidad de comprador de bicicletas: 18%  
   
-    -   Age >= 32 y \< 53 y yearly income >= 26000 y Children not = 0 and civil status = ' single '  
+    -   Age >= 32 y \< 53 and Yearly Income > = 26000 y secundarios no = 0 y estado civil = ' single '  
   
          Total de casos: 402  
   

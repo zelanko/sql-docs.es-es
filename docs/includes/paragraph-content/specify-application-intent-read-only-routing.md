@@ -8,12 +8,12 @@ ms.topic: include
 ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
-ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
-ms.translationtype: HT
+ms.openlocfilehash: eafad9ac648994c1a8ce24746401728caa4b1500
+ms.sourcegitcommit: 5be63bf337f765dfe04972c034dbd9e93c834dc5
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68213533"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721609"
 ---
 ## <a name="specifying-application-intent"></a>Especificar el intento de la aplicación
 
@@ -54,5 +54,5 @@ El enrutamiento de solo lectura es una característica que puede asegurar la dis
 
 Es posible que varias conexiones, cada una con enrutamiento de solo lectura, no se conecten todas a la misma réplica de solo lectura. Los cambios en la sincronización de la base de datos o los cambios en la configuración de enrutamiento del servidor pueden producir conexiones de cliente para réplicas de solo lectura diferentes. Puede asegurarse de que todas las solicitudes de solo lectura se conecten a la misma réplica de solo lectura. Para ello, *no* pase un cliente de escucha del grupo de disponibilidad a la palabra clave **Server** de la cadena de conexión. En su lugar, especifique el nombre de la instancia de solo lectura.
 
-El enrutamiento de solo lectura puede tardar más que la conexión a la principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos múltiples pasos, debe aumentar el tiempo de espera de inicio de sesión a 30 segundos como mínimo.
+El enrutamiento de solo lectura puede tardar más que la conexión a la principal. La espera más larga se debe a que el enrutamiento de solo lectura se conecta primero a la principal y, luego, busca la mejor instancia secundaria legible que esté disponible. Debido a estos varios pasos, debe aumentar el tiempo de espera de inicio de sesión a 30 segundos como mínimo.
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8d98d2a45ff50c60a37ee04e576567db7f96e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2018c557b8fd7dffdceb14c0a872595a3ce21da
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874416"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544359"
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Sugerencias de globalización y procedimientos recomendados (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
@@ -102,7 +101,7 @@ ms.locfileid: "70874416"
   
 -   Agregue `Locale Identifier=1036` a la cadena de conexión. Guarde y cierre el archivo.  
   
--   Abrir Excel | **Data** | **Conexiones existentes**de datos. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abrir la conexión.  
+-   Abrir Excel | **Datos**  |  de **Conexiones existentes**. Filtre la lista para que solo aparezcan los archivos de las conexiones de este equipo. Busque la conexión de Adventure Works (observe el nombre con atención: puede que haya más de una). Abrir la conexión.  
   
      Debería ver las traducciones al francés de la base de datos de muestra de Adventure Works.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "70874416"
   
  En Management Studio, puede especificar el identificador de configuración regional en una conexión de servidor.  
   
--   En Explorador de objetos | **Conectar** | **Analysis Services**Analysis Services | **Opciones**, haga clic en la pestaña **parámetros de conexión adicionales** .  
+-   En Explorador de objetos | **Conectar**  |  **Analysis Services**  |  **Opciones**, haga clic en la pestaña **parámetros de conexión adicionales** .  
   
 -   Escriba `Local Identifier=1036` y, después, haga clic en **Conectar**.  
   

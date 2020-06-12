@@ -4,21 +4,21 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: fda2eb169985eb670614f611764fbf149c71a42d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 535d1caff3729b552ef0982b056eb516b8f23048
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68892788"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83669773"
 ---
 # <a name="distributions-dmx"></a>Distribuciones (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] En [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], puede definir el contenido de las columnas de una estructura de minería de datos para influir en el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
+  En [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , puede definir el contenido de las columnas de una estructura de minería de datos para influir en el modo en que los algoritmos procesan los datos de esas columnas cuando se crean modelos de minería de datos. Para algunos algoritmos, resulta útil definir la distribución de las columnas continuas antes de procesar el modelo, si se sabe que las columnas contienen distribuciones de valores comunes. Si no define las distribuciones, los modelos de minería de datos resultantes podrían generar predicciones menos precisas que si se definieran las distribuciones porque los algoritmos disponen de menos información con la que interpretar los datos.  
   
  Los algoritmos de minería de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] admiten los siguientes tipos de distribución:  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68892788"
  **PRINCIPIOS**  
  Los valores de la columna continua forman una curva plana, en la que todos los valores tienen la misma probabilidad.  
   
- Para obtener más información [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de los algoritmos de minería de datos, vea [algoritmos de minería de datos &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Los proveedores de algoritmos de terceros podrían admitir tipos de distribución adicionales. Para determinar qué tipos de distribución admite un algoritmo, use el conjunto de filas de esquema **SUPPORTED_DISTRIBUTION_FLAGS** .  
+ Para obtener más información acerca de los [!INCLUDE[msCoName](../includes/msconame-md.md)] algoritmos de minería de datos, vea [algoritmos de minería de datos &#40;Analysis Services-data mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining). Los proveedores de algoritmos de terceros podrían admitir tipos de distribución adicionales. Para determinar qué tipos de distribución admite un algoritmo, use el conjunto de filas de esquema **SUPPORTED_DISTRIBUTION_FLAGS** .  
   
  Para obtener más información acerca de los tipos de distribución, vea [distribuciones de columnas &#40;&#41;de minería de datos ](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining).  
   

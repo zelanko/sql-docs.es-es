@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 05654d9206f09d151abd5557d0aa6aae90b1b9ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d69c7efb919a01e6e9d704c4f0fe2ef3d7c25799
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072319"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541177"
 ---
 # <a name="neural-network-mining-model-viewer"></a>Red neuronal (Visor de modelos de minería de datos)
   Utilice el **Visor de redes neuronales** para explorar modelos de minería de datos basados en el algoritmo de red neuronal de [!INCLUDE[msCoName](../includes/msconame-md.md)] o en el algoritmo de regresión logística de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -39,7 +38,7 @@ ms.locfileid: "66072319"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Atributo**|Elija un atributo de entrada en la lista. Si deja la selección como predeterminada, ** \<todos los>**, el gráfico muestra una lista de todos los atributos de entrada, clasificados por su impacto en el atributo de predicción.|  
+|**Attribute**|Elija un atributo de entrada en la lista. Si deja la selección como predeterminada, **\<All>** el gráfico muestra una lista de todos los atributos de entrada, clasificados por su impacto en el atributo de predicción.|  
 |**Valor**|Elija un valor para el atributo de entrada.|  
   
  **Salida**  
@@ -56,10 +55,10 @@ ms.locfileid: "66072319"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Atributo**|Muestra el nombre del atributo de entrada seleccionado en **Atributo**.|  
+|**Attribute**|Muestra el nombre del atributo de entrada seleccionado en **Atributo**.|  
 |**Valor**|Muestra el valor del atributo de entrada seleccionado.|  
-|**Favorece el \<valor 1>**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 1**.|  
-|**Favorece el \<valor 2>**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 2**.|  
+|**Favorece\<Value 1>**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 1**.|  
+|**Favorece\<Value 2>**|Muestra una barra que indica en qué medida esta combinación de atributo-valor afecta al resultado del destino elegido en **Valor 2**.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

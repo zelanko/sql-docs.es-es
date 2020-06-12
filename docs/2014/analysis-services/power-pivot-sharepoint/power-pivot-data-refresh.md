@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4ab42604fabaa188a74858038e35a8b90a105df8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f7d5ed5c2f8882cbc0c47a1c711748d26e0193c
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84535077"
 ---
 # <a name="powerpivot-data-refresh"></a>Actualización de datos PowerPivot
   Después de crear un libro que contiene datos PowerPivot, puede que desee actualizar los datos volviendo a ejecutar una consulta o comando periódicamente para conseguir información actualizada de los orígenes que se usaron originalmente para crear el libro. Este proceso se denomina `data refresh` y permite actualizar datos a petición en [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] o como una operación programada que se ejecuta como un proceso de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un servidor de aplicaciones de una granja de servidores de SharePoint. Para obtener más información, consulte:  

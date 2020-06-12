@@ -1,5 +1,6 @@
 ---
 title: Función local-name (XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar la función de XQuery local-name () para devolver la parte del nombre local de un nodo.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3a10ab445bfcf9f61b7eb6c952100af9b6fadbb
+ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038873"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83689565"
 ---
 # <a name="functions-on-nodes---local-name"></a>Funciones usadas en nodos: local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +82,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7  
 ```  
   
- La consulta devuelve todos los elementos `Location` secundarios del elemento <> del `root` elemento <>.  
+ La consulta devuelve todos los `Location` elementos secundarios del elemento <> del `root` elemento <>.  
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones en nodos](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   

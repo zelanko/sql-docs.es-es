@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa763516511f3d2fd68ca5275cdeb6fe0af7d57b
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66070859"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547677"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Cálculo de predicción (Herramientas de análisis de tabla para Excel)
   ![Herramienta Cálculo de predicción](media/tat-predcal.gif "Herramienta Cálculo de predicción")  
@@ -48,7 +47,7 @@ ms.locfileid: "66070859"
   
 5.  Haga clic en **elegir columnas para su uso**en el análisis.  
   
-6.  En el cuadro de diálogo **selección avanzada de columnas** , seleccione las columnas que tengan información útil. Quite las columnas que no sean relevantes para el análisis. Haga clic en **Aceptar**.  
+6.  En el cuadro de diálogo **selección avanzada de columnas** , seleccione las columnas que tengan información útil. Quite las columnas que no sean relevantes para el análisis. Haga clic en **OK**.  
   
      Para evitar sesgar los resultados, también conviene que quite las columnas con información duplicada. Por ejemplo, si tiene una columna de ingresos que contiene datos numéricos, y una columna de grupo de ingresos que contiene las etiquetas Alto, Medio y Bajo, no debe incluir ambas columnas en el mismo modelo. En su lugar, puede crear un modelo independiente para cada columna.  
   
@@ -73,12 +72,12 @@ ms.locfileid: "66070859"
 -   En esta sección se describe la información incluida en cada informe y cómo usar las distintas opciones de informe.  
   
 ### <a name="prediction-report-with-graphs"></a>Informe de predicción con gráficos  
- El primer informe de predicción se titula **cálculo de predicción informe para \<la> de estado \<de destino del>de atributo de destino **. Contiene una tabla de factores derivados del análisis, junto con herramientas que le permiten evaluar el impacto financiero de un análisis determinado.  
+ El primer informe de predicción se titula **cálculo de predicción informe para \<target state> el \<target attribute> de **. Contiene una tabla de factores derivados del análisis, junto con herramientas que le permiten evaluar el impacto financiero de un análisis determinado.  
   
 #### <a name="table-for-specifying-costs-and-profits"></a>Tabla para especificar costos y beneficios  
  La primera herramienta de este informe, situada en el lado superior izquierdo del informe, es una tabla donde puede especificar los costos y beneficios asociados al predecir correcta o incorrectamente un valor.  Estos costos y beneficios son necesarios para calcular el umbral de puntuación óptimo del cálculo de predicción.  
   
-|Elemento|Descripción y ejemplo|  
+|Artículo|Descripción y ejemplo|  
 |----------|-----------------------------|  
 |Costo de falso positivo|El costo de asumir que el modelo predijo un resultado positivo correctamente cuando realmente la predicción está equivocada.<br /><br /> Por ejemplo, el modelo predice que un cliente comprará algo, y basándose en ello crea una campaña dirigida a ese cliente. Aquí podría escribir el costo de darse a conocer al cliente.|  
 |Costo de falso negativo|El costo de asumir que el modelo predijo un resultado negativo correctamente cuando realmente la predicción está equivocada.<br /><br /> Por ejemplo, el modelo podría predecir que es improbable que los clientes de mayor edad compren una bicicleta, pero descubre que el modelo estaba sesgado y que, en consecuencia, ha perdido una oportunidad para dirigirse a dichos clientes. Aquí podría asignar un costo de oportunidad perdida.|  
@@ -120,7 +119,7 @@ ms.locfileid: "66070859"
  Por ejemplo, aunque el primer gráfico sugiere que dirigirse a los 500 clientes superiores predichos por el modelo es la manera de conseguir el máximo beneficio, después de examinar este segundo gráfico podría decidir que los costos de dirigirse a los clientes equivocados son demasiado grandes, y optar por reducir la campaña de marketing a los primeros 400 clientes.  
   
 ### <a name="interactive-prediction-calculator"></a>Cálculo de predicción interactivo  
- La segunda hoja de cálculo creada por la herramienta de Cálculo de predicción se titula **cálculo de predicción para el \<estado \<de destino> de>de atributo de destino **. Es una hoja de cálculo interactiva que puede usar para calcular puntuaciones individuales. Dado que esta hoja de cálculo utiliza los patrones y las estadísticas almacenadas en el modelo, puede experimentar con valores diferentes y ver cómo afectan a la puntuación predicha. Este informe también incluye dos secciones: una es interactiva y la otra se proporciona como referencia.  
+ La segunda hoja de cálculo creada por la herramienta de Cálculo de predicción se titula **cálculo de predicción para el \<target state> de \<target attribute> **. Es una hoja de cálculo interactiva que puede usar para calcular puntuaciones individuales. Dado que esta hoja de cálculo utiliza los patrones y las estadísticas almacenadas en el modelo, puede experimentar con valores diferentes y ver cómo afectan a la puntuación predicha. Este informe también incluye dos secciones: una es interactiva y la otra se proporciona como referencia.  
   
 #### <a name="first-table"></a>Primera tabla  
  Puede seleccionar o escribir un nuevo valor en la columna **valor** de la tabla para ver cómo afecta a la puntuación el cambio de valor.  
@@ -133,7 +132,7 @@ ms.locfileid: "66070859"
 |Sexo|Male|0|  
 |Income|39050-71062|117|  
 |Children|0|157|  
-|Educación|Bachelors|22|  
+|Education|Bachelors|22|  
 |Occupation|Skilled Manual|33|  
 |Home Owner|Sí|8|  
 |Cars|2|50|  
@@ -141,7 +140,7 @@ ms.locfileid: "66070859"
 |Region|Norteamérica|0|  
 |Age|37-46|5|  
 |Total||491|  
-|Prediction for 'Yes'||FALSE|  
+|Prediction for 'Yes'||FALSO|  
   
  Al escribir el nuevo valor, se actualiza también la puntuación mostrada en la celda, la predicción de sí, los cambios en TRUE y las puntuaciones de **impacto relativo** de los distintos atributos.  
   
@@ -152,11 +151,11 @@ ms.locfileid: "66070859"
  En esta tabla se muestran las puntuaciones individuales para cada posible estado de las columnas de entrada, así como el impacto relativo que dichas puntuaciones tienen en los resultados. Esta tabla es estática y solo se usa como referencia.  
   
 ### <a name="printable-prediction-calculator"></a>Cálculo de predicción imprimible  
- La tercera hoja de cálculo creada por la herramienta de Cálculo de predicción se titula **PrintablePrediction \<Calculator para el estado \<de destino> de>de atributo de destino **. Esta tarjeta de puntuación está concebida para su impresión, de tal forma que pueda calcular manualmente las puntuaciones cuando no esté cerca de su equipo.  
+ La tercera hoja de cálculo creada por la herramienta de Cálculo de predicción se titula **PrintablePrediction Calculator para el \<target state> de \<target attribute> **. Esta tarjeta de puntuación está concebida para su impresión, de tal forma que pueda calcular manualmente las puntuaciones cuando no esté cerca de su equipo.  
   
 ##### <a name="to-print-and-use-the-scoring-report-generated-by-the-prediction-calculator"></a>Para imprimir y usar el informe de puntuación generado por la herramienta Cálculo de predicción  
   
-1.  Haga clic en la pestaña que se denomina **cálculo de predicción imprimible \<para el atributo>**.  
+1.  Haga clic en la pestaña que se denomina **cálculo de predicción imprimible para \<attribute> **.  
   
 2.  En el menú Archivo de Excel, seleccione **vista previa de impresión**.  
   
@@ -175,7 +174,7 @@ ms.locfileid: "66070859"
 8.  Convierta la puntuación en un resultado de predicción utilizando los criterios impresos en la hoja inmediatamente después de la fila de **totales** .  
   
 ## <a name="related-tools"></a>Herramientas relacionadas  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente modelos de regresión logística mediante la opción **avanzadas** del cliente de minería de datos para Excel. Para obtener más información, vea [modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información acerca de las opciones y los parámetros de los modelos de regresión logística, vea el tema "algoritmo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] regresión logística de Microsoft" en los libros en pantalla de.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona el algoritmo de regresión logística de Microsoft para su uso en este tipo de análisis. Si ya está familiarizado con la regresión logística, puede crear fácilmente modelos de regresión logística mediante la opción **avanzadas** del cliente de minería de datos para Excel. Para obtener más información, vea [modelado avanzado &#40;complementos de minería de datos para Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Para obtener más información acerca de las opciones y los parámetros de los modelos de regresión logística, vea el tema "algoritmo de regresión logística de Microsoft" en los [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] libros en pantalla de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Herramientas de análisis de tabla para Excel](table-analysis-tools-for-excel.md)  

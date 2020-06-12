@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bfce63f3686f06c0289c818daac82f336fb2b17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab6725ddd86d18132de9c408125fa9084161a187
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084970"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523117"
 ---
 # <a name="data-mining-queries"></a>Consultas de minería de datos
   Las consultas de minería de datos son útiles para muchos propósitos. Puede:  
@@ -164,7 +163,7 @@ ms.locfileid: "66084970"
 |Usar las plantillas de consultas DMX y XMLA proporcionadas en Management Studio|[Crear una consulta de predicción singleton desde una plantilla](create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [Crear una consulta de minería de datos utilizando XMLA](create-a-data-mining-query-by-using-xmla.md)<br /><br /> [Uso de las plantillas de Analysis Services en SQL Server Management Studio](../instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |Obtener más información acerca de las consultas de contenido y ver ejemplos|[Crear una consulta de contenido en un modelo de minería de datos](create-a-content-query-on-a-mining-model.md)<br /><br /> [Consultar los parámetros usados para crear un modelo de minería de datos](query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [Consultas de contenido &#40;minería de datos&#41;](content-queries-data-mining.md)|  
 |Establecer opciones de consulta y solucionar problemas relacionados con los permisos y otros problemas de las consultas|[Cambiar el valor del tiempo de espera para las consultas de minería de datos](data-mining-queries.md)|  
-|Usar los componentes de minería de datos en Integration Services|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Consulta de minería de datos, transformación](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Usar los componentes de minería de datos en Integration Services|[Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Consulta de minería de datos, transformación](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
 ## <a name="see-also"></a>Consulte también  
  [Algoritmos de minería de datos &#40;Analysis Services:&#41;de minería de datos](data-mining-algorithms-analysis-services-data-mining.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc6ff0af-9fe6-44d6-bc3c-801d71ea41a9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 611e7636f9a5cd6393da4a8412b6c02bcc9ddaf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 357194b9f789fdeacfb65ce3c894d4747867eafb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66074677"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84546577"
 ---
 # <a name="error-handling-mdx"></a>Control de errores (MDX)
   Todos los cubos pueden controlar la forma en que se administran los errores de los scripts de expresiones multidimensionales (MDX). El control de errores se realiza mediante el enumerador `ScriptErrorHandlingMode`. Los valores posibles que admite este enumerador son los siguientes:  

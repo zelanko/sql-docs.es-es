@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 97e367f9-f95a-4163-add1-c74fd22db249
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: adeb16a91ef4d7b540e09b5e1f8b5b004be472e4
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086597"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526261"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Propiedades del cubo o Propiedades del modelo (cuadro de diálogo) (SSAS)
   Utilice el cuadro de diálogo **Propiedades de la base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para establecer las propiedades de un cubo o una base de datos de modelos. Para mostrar este cuadro de diálogo, haga clic con el botón derecho en un cubo o en un modelo del **Explorador de objetos** y seleccione **Propiedades**.  

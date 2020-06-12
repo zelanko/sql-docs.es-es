@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 5521f8ef-b10a-4861-9df7-1e43e0a1fb3f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d01aeb00c7cf96bf993867388d6a2cbbede82d90
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072742"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547317"
 ---
 # <a name="translations-in-multidimensional-models"></a>Traducciones en modelos multidimensionales
-  La compatibilidad multilingüe [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en se logra mediante el uso de traducciones. Una traducción contiene un identificador de idioma y enlaces para las propiedades de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se pueden presentar en varios idiomas. Por ejemplo, puede definir una traducción para una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que presente el título y la descripción de la base de datos en un idioma concreto. Para obtener más información acerca de las traducciones, consulte [traducciones de cubos](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
+  La compatibilidad multilingüe en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se logra mediante el uso de traducciones. Una traducción contiene un identificador de idioma y enlaces para las propiedades de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se pueden presentar en varios idiomas. Por ejemplo, puede definir una traducción para una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que presente el título y la descripción de la base de datos en un idioma concreto. Para obtener más información acerca de las traducciones, consulte [traducciones de cubos](../multidimensional-models-olap-logical-cube-objects/cube-translations.md).  
   
 ## <a name="defining-translations"></a>Definir traducciones  
  Puede definir traducciones en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilizando el diseñador adecuado para el objeto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se vaya a traducir. Al definir una traducción se crea un objeto `Translation` asociado con el objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] adecuado que tiene los valores literales explícitos especificados, en el idioma especificado, para las propiedades del objeto [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] asociado.  
@@ -40,7 +39,7 @@ ms.locfileid: "66072742"
 |Conjunto con nombre|`Caption`|[Traducciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |miembro calculado|`Caption`|[Traducciones &#40;diseñador de cubos&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Dimensión de base de datos|`Caption`, `AttributeAllMember`|[Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|Atributo|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Atributo|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder` , `NamingTemplate` ,`MembersWithDataCaption`|[Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hierarchy|`Caption`, `AllMemberName`|[Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Nivel|`Caption`|[Traducciones &#40;diseñador de dimensiones&#41; &#40;Analysis Services de datos multidimensionales&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66072742"
   
 -   Se puede utilizar una intercalación de Windows diferente a la intercalación especificada para la instancia para que los miembros del atributo se puedan ordenar adecuadamente según el idioma especificado en la traducción.  
   
- Puede usar el cuadro de diálogo **traducción de datos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] atributos de para definir traducciones de atributos en dimensiones de base de datos. Para obtener más información sobre el cuadro de diálogo **traducción de datos de atributos** , vea el cuadro de [diálogo traducción de datos de atributos &#40;Analysis Services-&#41;de datos multidimensionales ](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
+ Puede usar el cuadro de diálogo **traducción de datos de atributos** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] para definir traducciones de atributos en dimensiones de base de datos. Para obtener más información sobre el cuadro de diálogo **traducción de datos de atributos** , vea el cuadro de [diálogo traducción de datos de atributos &#40;Analysis Services-&#41;de datos multidimensionales ](../attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
 ## <a name="resolving-translations"></a>Resolver traducciones  
  Si una aplicación cliente solicita información en un identificador de idioma concreto, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta resolver los datos y los metadatos  de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el identificador de idioma más cercano posible. Si la aplicación cliente no especifica un idioma predeterminado, especifica el identificador de configuración regional neutro (0) o procesa el identificador de idioma predeterminado (1024), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] usará el idioma predeterminado para que la instancia devuelva los datos y los metadatos de los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

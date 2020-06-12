@@ -19,17 +19,17 @@ ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
+ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789115"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83858707"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
   Utilice este cuadro de diálogo para ver el progreso del asistente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que esté ejecutando en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barra de progreso indica el progreso relativo de los pasos que el asistente realiza.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Más detalles**  
  Haga clic en la flecha abajo para mostrar una cuadrícula de progreso que enumera los pasos completados, en orden, seguida de la operación en curso actual. La cuadrícula contiene las columnas siguientes:  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62789115"
 |------------|-----------------|  
 |**Error**|Indica que la operación para este paso ha experimentado un error. Haga clic en el vínculo para mostrar un cuadro de diálogo de mensaje que describe el error.|  
 |**En curso (** *porcentaje completado* **)**|Indica que la operación se está produciendo ahora y calcula el porcentaje completado de este paso.|  
-|**Correcto**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
+|**Realizado**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
   
  **Menos detalles**  
  Haga clic para ocultar la cuadrícula de progreso.  

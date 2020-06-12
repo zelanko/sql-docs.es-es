@@ -1,5 +1,6 @@
 ---
 title: Objeto SqlXmlCommand (SQLXML)
+description: Obtenga información sobre los métodos y las propiedades del objeto SqlXmlCommand.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -31,12 +32,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eb307599c48c72697f696e78eb7ed988dc03ca37
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afebd1c659015e3daf4a357b12871687207b607e
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75252652"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306165"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Clases administradas de SQLXML: objeto SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "75252652"
 public SqlXmlCommand(string cnString)  
 ```  
   
- Donde `cnString` es la cadena de conexión ADO u OleDb que identifica el servidor, la base de datos y la información de inicio `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"`de sesión (por ejemplo,).  
+ Donde `cnString` es la cadena de conexión ADO u OleDb que identifica el servidor, la base de datos y la información de inicio de sesión (por ejemplo,) `Provider=SQLOLEDB; Server=(local); database=AdventureWorks; Integrated Security=SSPI"` .  
   
  En la cadena de conexión, `Provider` debe ser SQLOLEDB y `Data Provider` no debería incluirse en la cadena del proveedor.  
   
@@ -65,7 +66,7 @@ public SqlXmlCommand(string cnString)
  Escribe los resultados de la consulta en un flujo existente. Este método es útil cuando se tiene un flujo al que se necesitan los resultados anexados (por ejemplo, para que los resultados de la consulta se escriban en System. Web. HttpResponse. OutputStream). Para obtener un ejemplo funcional, vea [ejecutar consultas SQL &#40;clases administradas de SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  XmlReader ExecuteXmlReader ()  
- Devuelve un objeto XmlReader. Puede usar este método para manipular directamente los datos en el objeto XmlReader o conectar la arquitectura encadenada de System. Xml. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obtener un ejemplo funcional, vea [ejecutar consultas SQL mediante el método ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Devuelve un objeto XmlReader. Puede usar este método para manipular directamente los datos en el objeto XmlReader o conectar la arquitectura encadenada de System.Xml. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obtener un ejemplo funcional, vea [ejecutar consultas SQL mediante el método ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  El objeto TheSqlXmlCommand también admite estos métodos adicionales:  
   

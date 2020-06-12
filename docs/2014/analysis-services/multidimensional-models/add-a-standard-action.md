@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9d8293cd61ef105352e6c6e1aaccb7f44494b2d5
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84544867"
 ---
 # <a name="add-a-standard-action"></a>Agregar una acción estándar
   Para agregar una acción a una base de datos, use la vista de acciones del Diseñador de cubos. Se puede tener acceso a esta vista desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Una vez creada la acción, estará disponible para los usuarios después de volver a procesar el cubo correspondiente. Para más información, consulte [Processing Analysis Services Objects](processing-analysis-services-objects.md).  
@@ -47,13 +46,13 @@ ms.locfileid: "66077465"
   
     -   En la lista desplegable **Tipo** , seleccione el tipo de acción que quiere crear. En la tabla siguiente se enumeran los tipos de acciones disponibles.  
   
-        |Tipo|Descripción|  
+        |Tipo|Description|  
         |----------|-----------------|  
         |Dataset|Recupera un conjunto de datos.|  
         |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
         |Conjunto de filas|Recupera un conjunto de filas.|  
         |.|Ejecuta un comando OLE DB.|  
-        |URL|Muestra una página web en un explorador de Internet.|  
+        |Resolución|Muestra una página web en un explorador de Internet.|  
   
     -   En **Expresión de acción**, cree una expresión que defina la acción. La expresión debe evaluarse como una cadena. Puede escribir la expresión manualmente, o puede arrastrar elementos desde las pestañas **Metadatos** y **Funciones** .  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66077465"
   
         |Opción|Descripción|  
         |------------|-----------------|  
-        |Interactive (Interactivo)|La acción la desencadena la interacción del usuario.|  
+        |Interactive|La acción la desencadena la interacción del usuario.|  
         |Batch|La acción se ejecuta como una operación por lotes.|  
         |Al abrir|La acción se ejecuta cuando un usuario abre el cubo.|  
   
@@ -72,7 +71,7 @@ ms.locfileid: "66077465"
         > [!NOTE]  
         >   Las acciones de propietario no se devuelven al servidor a menos que la aplicación cliente limite explícitamente el conjunto de filas de esquema para que devuelva únicamente las acciones que coinciden con el nombre especificado en **Aplicación**.  
   
-    -   En **contenido**de la acción, si usa el tipo de dirección URL, incluya la dirección de Internet entre comillas,http://www.adventure-works.compor ejemplo, "".  
+    -   En **contenido**de la acción, si usa el tipo de dirección URL, incluya la dirección de Internet entre comillas, por ejemplo, " http://www.adventure-works.com ".  
   
     -   En **Descripción**, escriba una descripción de la acción.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a5d8d0591c99e52071270689941adc45af7a835
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66083671"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84521602"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para obtener una explicación general sobre el contenido del modelo de minería de datos para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md). Es importante recordar que el algoritmo de árboles de decisión de Microsoft es un algoritmo híbrido que puede crear modelos con funciones muy diferentes: un árbol de decisión puede representar asociaciones, reglas o incluso una regresión lineal. La estructura del árbol es básicamente la misma, pero la forma en la que se interpretará la información dependerá del propósito para el que creó el modelo.  
@@ -189,7 +188,7 @@ ms.locfileid: "66083671"
   
 |||  
 |-|-|  
-|**NODE_CAPTION**|Muestra el atributo que distingue ese nodo concreto respecto al nodo primario. El título del nodo define un subsegmento del rellenado en función de la condición de división. Por ejemplo, si la división se realizó en [Age] y fue una división de tres vías, los títulos de nodo para los tres nodos secundarios podrían ser "[Age] < 40", "40 <= [Age] \< 50", "[age] >= 50".|  
+|**NODE_CAPTION**|Muestra el atributo que distingue ese nodo concreto respecto al nodo primario. El título del nodo define un subsegmento del rellenado en función de la condición de división. Por ejemplo, si la división se realizó en [Age] y fue una división tridireccionales, los títulos de nodo para los tres nodos secundarios podrían ser "[Age] < 40", "40 <= [Age] \< 50", "[Age] > = 50".|  
 |**NODE_DESCRIPTION**|Contiene una lista completa de los atributos que distinguen ese nodo de otros nodos, empezando por el nodo primario del modelo. Por ejemplo, Nombre de producto = Manzana y Color = Rojo.|  
   
 ###  <a name="node-rule-and-marginal-rule"></a><a name="NodeRule"></a> Regla de nodo y regla marginal  
@@ -198,7 +197,7 @@ ms.locfileid: "66083671"
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la versión 2,0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]admite la versión 2,0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
 ###  <a name="node-distribution-for-discrete-attributes"></a><a name="bkmk_NodeDist_Discrete"></a>Distribución de nodos para los atributos discretos  
  En un modelo de árboles de decisión, la tabla NODE_DISTRIBUTION contiene estadísticas útiles. Sin embargo, el tipo de estadísticas depende de si el árbol predice un atributo discreto o un atributo continuo. En esta sección se describe el significado de las estadísticas de distribución de nodos para los atributos discretos.  
@@ -225,7 +224,7 @@ ms.locfileid: "66083671"
 |Age < 30|40|Age < 30 y Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 y Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. En el caso de los atributos continuos, cada valor o intervalo de valores se representa como un estado \<(por ejemplo, Age 30, Age = 30 y Age >30) y las probabilidades se calculan de la siguiente manera: el estado existe (valor = 1), existe otro Estado ( `Missing`valor = 0), el estado es. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
+ Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. En el caso de los atributos continuos, cada valor o intervalo de valores se representa como un estado (por ejemplo, \<30, Age = 30, and Age > 30 años) y las probabilidades se calculan de la siguiente manera: el estado existe (valor = 1), existe otro Estado (valor = 0), el estado es `Missing` . Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](missing-values-analysis-services-data-mining.md).  
   
  Las probabilidades para cada nodo se calculan casi directamente a partir de la distribución, de la siguiente manera:  
   

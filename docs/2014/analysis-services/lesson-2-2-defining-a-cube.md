@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa4ac2d-857f-4048-baa0-0f314e207cf6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4b69cf276335267e283db35dce37a6192cc7f866
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543517"
 ---
 # <a name="defining-a-cube"></a>Definir un cubo
   El Asistente para cubos le ayuda a definir los grupos de medida y las dimensiones de un cubo. En la tarea siguiente, usará el Asistente para cubos para generar un cubo.  
@@ -34,7 +33,7 @@ ms.locfileid: "66079060"
   
      El asistente examinará las tablas y sugerirá **InternetSales** como tabla de grupos de medida. Las tablas de grupos de medida, también denominadas tablas de hechos, contienen las medidas que son de su interés, como el número de unidades vendidas.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Seleccionar medidas** , revise las medidas seleccionadas en el grupo de medida **Internet Sales** y luego desactive las casillas de las medidas siguientes:  
   
@@ -48,15 +47,15 @@ ms.locfileid: "66079060"
   
      De forma predeterminada, el asistente selecciona como medidas todas las columnas numéricas de la tabla de hechos que no están vinculadas a dimensiones. No obstante, estas cuatro columnas no son miembros reales. Las tres primeras son valores clave que vinculan la tabla de hechos con tablas de dimensiones que no se utilizan en la versión inicial de este cubo.  
   
-8.  Haga clic en **Siguiente**.  
+8.  Haga clic en **Next**.  
   
 9. En la página **Seleccionar dimensiones existentes** , asegúrese de que la dimensión **Date** que ha creado anteriormente está seleccionada y haga clic en **Siguiente**.  
   
 10. En la página **Seleccionar nuevas dimensiones** , seleccione las nuevas dimensiones que se van a crear. Para ello, compruebe que las casillas **Customer**, **Geography**y **Product** están activadas y, después, desactive la casilla **InternetSales** .  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
-12. En la página **finalización del asistente** , cambie el nombre del cubo a `Analysis Services Tutorial`. En el panel de vista previa, puede ver el grupo de medida **InternetSales** y sus medidas. También puede ver las dimensiones **Date**, **Customer** y **Product** .  
+12. En la página **finalización del asistente** , cambie el nombre del cubo a `Analysis Services Tutorial` . En el panel de vista previa, puede ver el grupo de medida **InternetSales** y sus medidas. También puede ver las dimensiones **Date**, **Customer** y **Product** .  
   
 13. Haga clic en **Finalizar** para completar el asistente.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "66079060"
   
 14. En la barra de herramientas de la pestaña Estructura de cubo, cambie el nivel de **Zoom** al 50 por ciento, de modo que pueda ver mejor las tablas de dimensiones y hechos del cubo. Observe que la tabla de hechos es amarilla y las tablas de dimensiones son azules.  
   
-15. En el menú **Archivo** , haga clic en **Guardar todo**.  
+15. En el menú **Archivo**, haga clic en **Guardar todo**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Agregar atributos a dimensiones](lesson-2-3-adding-attributes-to-dimensions.md)  

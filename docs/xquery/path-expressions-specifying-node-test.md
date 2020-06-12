@@ -1,5 +1,6 @@
 ---
 title: Especificar la prueba de nodo en un paso de expresión de ruta de acceso | Microsoft Docs
+description: Obtenga información sobre cómo especificar una prueba de nodo en el paso de eje de una expresión de ruta de acceso XQuery.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dba7904f4e28b6bea50c802fd83b9c24c147defb
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946429"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84524563"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Expresiones de ruta de acceso: Especificar prueba de nodo
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ child::ProductDescription
   
  La expresión de ruta de acceso `/child::PD:ProductDescription/child::PD:Features/descendant::*,` incluye tres pasos. Estos pasos especifican ejes child y descendant. En cada paso, el nombre de nodo se especifica como la prueba de nodo. El carácter comodín (`*`) del tercer paso señala todos los nodos que pertenecen a la clase de nodo principal para el eje descendant. La clase de nodo principal del eje determina el tipo de nodo seleccionado. El nombre de nodo filtra los nodos seleccionados.  
   
- Como resultado, cuando esta expresión se ejecuta en documentos XML de catálogo de productos en la tabla **ProductModel** , recupera todos los elementos secundarios del nodo de elemento \<de las características> nodo de elemento \<secundario del elemento ProductDescription>.  
+ Como resultado, cuando esta expresión se ejecuta en documentos XML de catálogo de productos en la tabla **ProductModel** , recupera todos los nodos de elemento secundarios del \<Features> nodo de elemento secundario del \<ProductDescription> elemento.  
   
- La expresión de ruta `/child::PD:ProductDescription/attribute::ProductModelID`de acceso,, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la **ProductModelID** expresión devuelve el nodo de \<atributo ProductModelID del nodo de elemento ProductDescription>.  
+ La expresión de ruta `/child::PD:ProductDescription/attribute::ProductModelID` de acceso,, se compone de dos pasos. Ambos pasos especifican un nombre de nodo como la prueba de nodo. Además, el segundo paso utiliza el eje attribute. Por tanto, cada paso selecciona nodos de la clase de nodo principal de su eje que tenga especificado el nombre como la prueba de nodo. Por lo tanto, la expresión devuelve el nodo de atributo **ProductModelID** del \<ProductDescription> nodo de elemento.  
   
  Al especificar nombres de nodo para pruebas de nodo, puede utilizar el carácter comodín (*) para especificar el nombre local de un nodo o para su prefijo de espacio de nombres, tal y como muestra el ejemplo siguiente:  
   
@@ -92,7 +93,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>Tipo de nodo como prueba de nodo  
  Para consultar tipos de nodo que no sean nodos de elemento, utilice una prueba de tipo de nodo. Existen cuatro pruebas de tipo de nodo disponibles, tal y como muestra la tabla siguiente.  
   
-|Tipo de nodo|Devuelve|Ejemplo|  
+|Tipo de nodo|Devoluciones|Ejemplo|  
 |---------------|-------------|-------------|  
 |`comment()`|True para un nodo de comentario.|`following::comment()` selecciona todos los nodos de comentario que aparecen después del nodo de contexto.|  
 |`node()`|True para un nodo de cualquier clase.|`preceding::node()` selecciona todos los nodos que aparecen antes del nodo de contexto.|  
@@ -105,7 +106,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 child::comment()  
 ```  
   
- De forma `/child::ProductDescription/child::Features/child::comment()` similar, recupera los elementos secundarios del \<nodo de comentario de las características> \<nodo de elemento secundario del nodo de elemento> de ProductDescription.  
+ Del mismo modo, `/child::ProductDescription/child::Features/child::comment()` recupera nodos de comentario secundarios del nodo de \<Features> elemento secundario del \<ProductDescription> nodo de elemento.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes comparan el nombre de nodo y la clase de nodo.  
@@ -201,7 +202,7 @@ text3
 ### <a name="b-specifying-a-node-name-in-the-node-test"></a>B. Especificar un nombre de nodo en la prueba de nodo  
  El ejemplo siguiente especifica un nombre de nodo como la prueba de nodo en todas las expresiones de ruta de acceso. Como resultado, todas las expresiones devuelven nodos de la clase de nodo principal del eje que especifica el nombre de nodo en la prueba de nodo.  
   
- La siguiente expresión de consulta devuelve el `Warranty` elemento <> del documento XML del catálogo de productos almacenado `Production.ProductModel` en la tabla:  
+ La siguiente expresión de consulta devuelve el `Warranty` elemento <> del documento XML del catálogo de productos almacenado en la `Production.ProductModel` tabla:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -221,7 +222,7 @@ WHERE ProductModelID=19
   
 -   La parte del calificador de paso opcional del paso de eje no se especifica en ningún paso de la expresión.  
   
- La consulta devuelve los elementos `Warranty` secundarios del elemento <> del `Features` elemento secundario <> del `ProductDescription` elemento <>.  
+ La consulta devuelve los elementos secundarios del elemento <`Warranty`> del elemento `Features` secundario <> del elemento <> `ProductDescription` .  
   
  El resultado es el siguiente:  
   
@@ -244,9 +245,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- El carácter comodín se especifica para el nombre de nodo. Por lo tanto, la consulta devuelve todos los nodos de elemento secundarios `Features` del nodo de elemento secundario <> `ProductDescription` del nodo del elemento de> <.  
+ El carácter comodín se especifica para el nombre de nodo. Por lo tanto, la consulta devuelve todos los nodos de elemento secundarios del nodo de `Features` elemento secundario <> del `ProductDescription` nodo del elemento de> <.  
   
- La siguiente consulta es similar a la consulta anterior, salvo que además del carácter comodín se especifica un espacio de nombres. Como resultado, se devuelven todos los nodos de elemento secundarios en ese espacio de nombres. Tenga en cuenta que `Features` el elemento> de <puede contener elementos de distintos espacios de nombres.  
+ La siguiente consulta es similar a la consulta anterior, salvo que además del carácter comodín se especifica un espacio de nombres. Como resultado, se devuelven todos los nodos de elemento secundarios en ese espacio de nombres. Tenga en cuenta que el `Features` elemento> de <puede contener elementos de distintos espacios de nombres.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -270,7 +271,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Esta consulta devuelve los elementos `Maintenance` secundarios del nodo de elemento <> en todos los espacios de nombres del documento XML del catálogo de productos.  
+ Esta consulta devuelve los `Maintenance` elementos secundarios del nodo de elemento <> en todos los espacios de nombres del documento XML del catálogo de productos.  
   
 ### <a name="c-specifying-node-kind-in-the-node-test"></a>C. Especificar la clase de nodo en la prueba de nodo  
  El ejemplo siguiente especifica la clase de nodo como la prueba de nodo en todas las expresiones de ruta de acceso. Como resultado, todas las expresiones devuelven nodos de la clase especificada en la prueba de nodo.  
@@ -295,7 +296,7 @@ WHERE ProductModelID=19
   
 -   Los dos primeros pasos especifican un nombre de nodo como la prueba de nodo; el tercero especifica una clase de nodo como la prueba de nodo.  
   
--   La expresión devuelve nodos de texto secundarios del elemento `Features` secundario <> del nodo del `ProductDescription` elemento de> <.  
+-   La expresión devuelve nodos de texto secundarios del `Features` elemento secundario <> del nodo del `ProductDescription` elemento de> <.  
   
  Solo se devuelve un nodo de texto. El resultado es el siguiente:  
   
@@ -303,7 +304,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- La consulta siguiente devuelve los elementos secundarios del nodo de comentario `ProductDescription` del elemento <>:  
+ La consulta siguiente devuelve los elementos secundarios del nodo de comentario del `ProductDescription` elemento <>:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -319,7 +320,7 @@ WHERE ProductModelID=19
   
 -   El segundo paso especifica una clase de nodo como la prueba de nodo.  
   
--   Como resultado, la expresión devuelve los elementos secundarios del nodo de comentario de `ProductDescription` los nodos de elemento de <>.  
+-   Como resultado, la expresión devuelve los elementos secundarios del nodo de comentario de los nodos de elemento de <`ProductDescription`>.  
   
  El resultado es el siguiente:  
   

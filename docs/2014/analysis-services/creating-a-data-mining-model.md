@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 804b7db3-1f6a-4f73-a81d-bbe02520d7c6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1a8893960b5177563ccf98dbd21cb528ce399ea3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cce03fab2757b366fbe67dc6c68cb3be1c075e3c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086726"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526481"
 ---
 # <a name="creating-a-data-mining-model"></a>Crear un modelo de minería de datos
   El modelado de datos es el paso de la minería de datos donde se generan patrones y tendencias aplicando *algoritmos* a los datos. Después, puede utilizar esos patrones para el análisis, o para realizar predicciones.  
   
  Los Complementos de minería de datos para Office admiten la minería de datos a través de asistentes que facilitan la creación de modelos. Los asistentes analizan los datos, identifican las correlaciones, calculan la importancia estadística de todas las variables y seleccionan automáticamente el mejor modelo.  
   
- Aunque esta funcionalidad es tan eficaz como las herramientas de minería de datos que proporciona [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], la combinación de asistentes y la conocida interfaz de Excel facilita la creación, la modificación y el uso de la minería de datos.  
+ Aunque esta funcionalidad es tan eficaz como las herramientas de minería de datos que proporciona [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , la combinación de asistentes y la conocida interfaz de Excel facilita la creación, la modificación y el uso de la minería de datos.  
   
 ## <a name="advanced-data-mining"></a>Avanzados (Minería de datos)  
- Los asistentes avanzados permiten crear nuevos modelos de minería de datos, basados en los datos almacenados en Excel, mediante el uso de uno de los algoritmos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de minería de datos en.  
+ Los asistentes avanzados permiten crear nuevos modelos de minería de datos, basados en los datos almacenados en Excel, mediante el uso de uno de los algoritmos de minería de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="create-mining-structure"></a>Crear estructura de minería de datos  
  El Asistente para crear estructuras de minería de datos le permite generar una nueva estructura de minería de datos que podrá usar como base para varios modelos de minería de datos. El asistente le da la opción de reservar una parte de los datos y usarla como conjunto de prueba; de este modo, podrá evaluar todos los modelos que usan los mismos datos de acuerdo con un estándar de pruebas coherente.  

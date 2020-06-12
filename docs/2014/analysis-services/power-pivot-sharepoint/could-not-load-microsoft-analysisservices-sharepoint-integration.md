@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81ed0f44-8782-462d-af8f-0ba5b975df27
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b33e09d4dc7471f6447f1205f5c39746bc247ae7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9bcfdde8b3536bbbf8b2429d51a9ee9aecf0d437
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66071628"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547507"
 ---
 # <a name="could-not-load-file-or-assembly-39microsoftdataservices-version3500-cultureneutral-publickeytokenb77a5c561934e08939-or-one-of-its-dependencies-the-system-cannot-find-the-file-specified"></a>No se pudo cargar el archivo o ensamblado &#39;Microsoft. Data. Services, version = 3.5.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089&#39; o una de sus dependencias. El sistema no encuentra el archivo especificado.
   En entornos de SharePoint 2010 que tienen PowerPivot para SharePoint, este error se producirá si intenta realizar la exportación de una fuente de distribución de datos y el sistema no tiene la versión necesaria de Microsoft ADO.NET Data Services.  
@@ -24,7 +23,7 @@ ms.locfileid: "66071628"
   
 |||  
 |-|-|  
-|Aplicable a|PowerPivot para SharePoint|  
+|Se aplica a|PowerPivot para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|No se encontró ADO.NET Data Services 3.5 SP1.|  
 |Texto del mensaje|No se puede cargar el archivo o ensamblado 'Microsoft.Data.Services, Version=3.5.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' ni una de sus dependencias. El sistema no encuentra el archivo especificado.|  
@@ -36,7 +35,7 @@ ms.locfileid: "66071628"
   
 ## <a name="user-action"></a>Acción del usuario  
   
-1.  Vaya a la documentación sobre los requisitos de hardware y software para SharePoint 2010, [determinar los requisitos de hardware y software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) (https://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Vaya a la documentación sobre los requisitos de hardware y software para SharePoint 2010, [determinar los requisitos de hardware y software (SharePoint 2010)](https://go.microsoft.com/fwlink/?LinkId=169734) ( https://go.microsoft.com/fwlink/?LinkId=169734) .  
   
 2.  En **Instalar requisitos previos de software**, busque el vínculo de ADO.NET Data Services 3.5 correspondiente al sistema operativo que está usando.  
   

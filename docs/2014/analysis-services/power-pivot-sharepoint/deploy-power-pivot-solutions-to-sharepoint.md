@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f202a2b7-34e0-43aa-90d5-c9a085a37c32
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7345ae056c97bb0d84433e9cf15b8ca3d8cffd5e
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782829"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84540317"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
   Use las instrucciones siguientes para implementar manualmente dos paquetes de soluciones que agregan características de PowerPivot a un entorno de SharePoint Server 2010. La implementación de soluciones es un paso necesario para configurar PowerPivot para SharePoint en un servidor SharePoint 2010. Para ver la lista completa de los pasos necesarios, consulte [Administración y configuración de servidores de PowerPivot en administración central](power-pivot-server-administration-and-configuration-in-central-administration.md).  
@@ -39,7 +38,7 @@ ms.locfileid: "72782829"
  [Acerca de las soluciones de PowerPivot](#intro)  
   
 ##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> Requisitos previos: compruebe que la aplicación web usa el Modo clásico de autenticación  
- PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde el shell de administración de `http://<top-level site name>` **SharePoint 2010**, reemplazando por el nombre de su sitio de SharePoint:  
+ PowerPivot para SharePoint solo se admite en las aplicaciones Web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde el **Shell de administración de sharepoint 2010**, reemplazando `http://<top-level site name>` por el nombre de su sitio de SharePoint:  
   
 ```powershell
 Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthentication  

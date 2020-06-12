@@ -4,16 +4,16 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d0888082380c7380e5fb025bb70d4bd3c2e518b
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893882"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666696"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- >de referencia de columna de tabla,>de referencia de * \< * * \<columna escalar*  
+ * \<>de referencia de columna de tabla *,>de referencia de * \< columna escalar*  
  Especifica el nombre de la columna que se va a predecir. La columna puede contener datos escalares o tabulares.  
   
  *n*  
@@ -65,7 +65,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
  Estos argumentos solo se pueden utilizar cuando se agregan datos nuevos mediante una instrucción PREDICTION JOIN. Si usa una consulta PREDICTION JOIN y no especifica un argumento, el valor predeterminado es EXTEND_MODEL_CASES.  
   
 ## <a name="return-type"></a>Tipo de valor devuelto  
- > \<una *expresión de tabla* .  
+ > una \< *expresión de tabla* .  
   
 ## <a name="remarks"></a>Observaciones  
  El algoritmo de serie temporal [!INCLUDE[msCoName](../includes/msconame-md.md)] no admite la predicción histórica cuando se utiliza la instrucción PREDICTION JOIN para agregar datos.  
@@ -90,7 +90,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
 >  Podría obtener resultados diferentes en un modelo; los resultados de los ejemplos siguientes solo se proporcionan para mostrar el formato del resultado.  
   
 ### <a name="example-1-predicting-a-number-of-time-slices"></a>Ejemplo 1: predecir un número de intervalos de tiempo  
- En el ejemplo siguiente se usa la función **PredictTimeSeries** para devolver una predicción para los tres pasos de tiempo siguientes y se restringen los resultados a la serie M200 en las regiones de Europa y Pacífico. En este modelo concreto, el atributo de predicción es Quantity, por lo que `[Quantity]` debe utilizar como primer argumento para la función PredictTimeSeries.  
+ En el ejemplo siguiente se usa la función **PredictTimeSeries** para devolver una predicción para los tres pasos de tiempo siguientes y se restringen los resultados a la serie M200 en las regiones de Europa y Pacífico. En este modelo concreto, el atributo de predicción es Quantity, por lo que debe utilizar `[Quantity]` como primer argumento para la función PredictTimeSeries.  
   
 ```  
 SELECT FLATTENED  
@@ -185,7 +185,7 @@ WHERE ([Model Region] = 'M200 Europe'
  OR [Model Region] = 'M200 Pacific')  
 ```  
   
- Dado que la consulta usa *EXTEND_MODEL_CASES* la opción EXTEND_MODEL_CASES [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , realiza las siguientes acciones para sus predicciones:  
+ Dado que la consulta usa la opción *EXTEND_MODEL_CASES* , [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] realiza las siguientes acciones para sus predicciones:  
   
 -   Aumenta el tamaño total de los casos de entrenamiento agregando al modelo los dos meses de datos nuevos.  
   
@@ -220,7 +220,7 @@ WHERE ([Model Region] = 'M200 Europe'
 ## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Ejemplo 4: devolver estadísticas en una predicción de serie temporal  
  La función **PredictTimeSeries** no admite *INCLUDE_STATISTICS* como parámetro. Sin embargo, se puede utilizar la consulta siguiente para devolver las estadísticas de predicción para una consulta de serie temporal. Este enfoque también se puede utilizar con modelos que tienen columnas de tabla anidadas.  
   
- En este modelo concreto, el atributo de predicción es Quantity, por lo que `[Quantity]` debe utilizar como primer argumento para la función PredictTimeSeries. Si el modelo usa un atributo de predicción diferente, puede sustituir un nombre de columna distinto.  
+ En este modelo concreto, el atributo de predicción es Quantity, por lo que debe utilizar `[Quantity]` como primer argumento para la función PredictTimeSeries. Si el modelo usa un atributo de predicción diferente, puede sustituir un nombre de columna distinto.  
   
 ```  
 SELECT FLATTENED [Model Region],  

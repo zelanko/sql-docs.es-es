@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 444bbf9c-cec8-460e-881d-38784fb146fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3b1e504b7e027e888458b8cc2eaee169ca272f
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088092"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527541"
 ---
 # <a name="choosing-a-model"></a>Elegir un modelo
   **Algoritmo de minería de datos:** El *algoritmo* de minería de datos es el mecanismo que crea patrones a partir de los datos. El algoritmo define cómo se cuentan los datos, cómo se derivan las relaciones, y cómo se guardan los patrones. La selección de un algoritmo depende en parte del tipo de datos que se desea analizar. Por ejemplo, algunos algoritmos solo funcionan con números continuos, mientras que otros funcionan mejor con un número limitado de valores diferentes.  
@@ -75,7 +74,7 @@ ms.locfileid: "66088092"
   
      Resuma secuencias o episodios frecuentes en los datos, como las rutas que siguen los usuarios al navegar por un sitio web.  
   
- Los algoritmos utilizados por los Complementos de minería de datos de SQL Server para Office están basados en los algoritmos proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. También puede usar algoritmos de terceros que cumplan con los OLE DB para la especificación de minería de datos, si la [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instancia de a la que está conectado se ha configurado para permitir algoritmos de terceros.  
+ Los algoritmos utilizados por los Complementos de minería de datos de SQL Server para Office están basados en los algoritmos proporcionados por [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. También puede usar algoritmos de terceros que cumplan con los OLE DB para la especificación de minería de datos, si la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] a la que está conectado se ha configurado para permitir algoritmos de terceros.  
   
 ## <a name="requirements"></a>Requisitos  
  Los algoritmos se diferencian entre sí en el tipo de datos con los que pueden funcionar.  

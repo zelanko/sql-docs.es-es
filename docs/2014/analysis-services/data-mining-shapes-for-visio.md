@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d30456ac3685aa3dc40af6f1c79f92796fc1404
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66086394"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84525781"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Formas de minería de datos para Visio
   Las Formas de minería de datos para Visio proporcionan plantillas personalizadas para mostrar modelos de minería de datos. Mediante estas plantillas, puede conectarse a un modelo que ha creado y crear presentaciones interactivas para ilustrar los resultados de la minería de datos.  
@@ -38,7 +37,7 @@ ms.locfileid: "66086394"
 -   **Diagrama del clúster:** Use este asistente para crear gráficos multicolor para los modelos de segmentación. Se puede alternar entre las vistas como distinción del atributo, perfiles del clúster y dependencias, y personalizar la apariencia de los clústeres.  
   
 ## <a name="installation"></a>Instalación  
- Al instalar las plantillas de minería de datos para Visio, los siguientes archivos se instalan de \<forma predeterminada en la unidad> \Archivos de programa\microsoft SQL Server 2012 DM \<Add-Ins (o la unidad> \ o archivos de programa (x86) \Microsoft SQL Server 2012 DM-ins):  
+ Al instalar las plantillas de minería de datos para Visio, los siguientes archivos se instalan de forma predeterminada en la carpeta \<drive> \Archivos de programa\microsoft SQL Server 2012 DM Add-Ins (o \<drive> en los archivos de programa (x86) \microsoft SQL Server 2012 DM-ins):  
   
 -   **Minería de datos de Microsoft. VST** Esta plantilla contiene formato, diseño y asistentes prediseñados para ayudarle a trabajar con las formas de minería de datos.  
   

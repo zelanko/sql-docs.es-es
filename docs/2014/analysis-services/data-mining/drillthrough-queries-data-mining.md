@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ca74fe9ec36262130e01a58280f9d966c35c3485
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 21e8c6f7cb6938e629be9d252c208c61c04d17d8
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66084552"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84522522"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de obtención de detalles (minería de datos)
   Una *consulta de obtención de detalles* permite recuperar los detalles de los casos o de los datos de estructura subyacentes mediante el envío de una consulta al modelo de minería de datos. La obtención de detalles resulta útil para ver los casos usados para entrenar el modelo frente a los casos que se usaron para probarlo, o si desea revisar detalles adicionales de los datos de los casos.  
@@ -69,7 +68,7 @@ ms.locfileid: "66084552"
 -   Si la estructura de minería de datos no permite la obtención de detalles pero sí lo hace el modelo de minería de datos, solo puede ver la información de los casos de modelos y no de la estructura de minería de datos.  
   
 ###  <a name="security-issues-for-drillthrough"></a><a name="bkmk_Security"></a>Problemas de seguridad para la obtención de detalles  
- Si desea obtener detalles de los casos de estructura del modelo, debe comprobar que la estructura de minería de datos y el modelo de minería de [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) datos tienen la propiedad `True`AllowDrillThrough establecida en. Es más, debe ser miembro de un rol con los permisos de obtención de detalles para la estructura y el modelo. Para obtener información sobre cómo crear roles, vea [Diseñador de funciones &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). vea.  
+ Si desea obtener detalles de los casos de estructura del modelo, debe comprobar que la estructura de minería de datos y el modelo de minería de datos tienen la propiedad [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) establecida en `True` . Es más, debe ser miembro de un rol con los permisos de obtención de detalles para la estructura y el modelo. Para obtener información sobre cómo crear roles, vea [Diseñador de funciones &#40;Analysis Services - Datos multidimensionales&#41;](https://msdn.microsoft.com/library/ms189696(v=sql.120).aspx). vea.  
   
  Los permisos de obtención de detalles se establecen por separado en la estructura y en el modelo. El permiso del modelo le permite obtener detalles del modelo, aunque no tenga permisos en la estructura. Los permisos de obtención de detalles en la estructura ofrecen la posibilidad adicional de incluir columnas de la estructura en las consultas de obtención de detalles del modelo, mediante la función [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66084552"
   
 -   Las siguientes limitaciones se aplican a las operaciones de obtención de detalles en un modelo, dependiendo del algoritmo utilizado para crearlo:  
   
-|Nombre del algoritmo|Problema|  
+|Nombre del algoritmo|Incidencia|  
 |--------------------|-----------|  
 |Algoritmo Bayes Naïve de Microsoft|No compatible. Estos algoritmos no asignan casos a nodos específicos del contenido.|  
 |Algoritmo de red neuronal de Microsoft|No compatible. Estos algoritmos no asignan casos a nodos específicos del contenido.|  
@@ -91,7 +90,7 @@ ms.locfileid: "66084552"
 ##  <a name="related-tasks"></a><a name="bkmk_Tasks"></a> Tareas relacionadas  
  Use los vínculos siguientes para trabajar con la obtención de detalles en escenarios concretos.  
   
-|Tarea|Vínculo|  
+|Tarea|Link|  
 |----------|----------|  
 |Procedimiento que describe el uso de la obtención de detalles en el Diseñador de minería de datos|[Obtener detalles de datos de caso a partir de un modelo de minería de datos](drill-through-to-case-data-from-a-mining-model.md)|  
 |Para modificar un modelo de minería de datos existente de tal forma que permita la obtención de detalles|[Habilitar la obtención de detalles para un modelo de minería](enable-drillthrough-for-a-mining-model.md)|  

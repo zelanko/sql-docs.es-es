@@ -1,21 +1,21 @@
 ---
-title: SELECT FROM &lt;Model&gt; (DMX) | Microsoft Docs
+title: SELECT FROM &lt; Model &gt; (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6f6371df8d1ab987bf1f49d149ff7856ba2d111c
+ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67928327"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83666661"
 ---
-# <a name="select-from-ltmodelgt-dmx"></a>SELECCIONAR del &lt;modelo&gt; (DMX)
+# <a name="select-from-ltmodelgt-dmx"></a>SELECCIONAR del &lt; modelo &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Realiza una combinación de predicción vacía que devuelve el valor o valores más probables para las columnas especificadas. Para crear la predicción, solo se emplea el contenido del modelo de minería de datos.  

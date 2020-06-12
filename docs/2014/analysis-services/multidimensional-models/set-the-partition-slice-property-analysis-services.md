@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f42c4536b99ba3fecf9b947942b881a3be72784f
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66072936"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84547367"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Establecer la propiedad Slice de particiones (Analysis Services)
   Un segmento de datos es una característica de optimización importante que ayuda a dirigir consultas a los datos de las particiones adecuadas. Establecer explícitamente la propiedad Slice puede mejorar el rendimiento de las consultas invalidando los sectores predeterminados generados para las particiones MOLAP y ROLAP. Además, la propiedad Slice proporciona una comprobación de validación adicional al procesar la partición.  

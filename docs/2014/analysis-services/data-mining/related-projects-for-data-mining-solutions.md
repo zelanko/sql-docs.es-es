@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dc26489a-4c27-4b89-8215-6d245427c350
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fc0f235871607363b436867d44affd561876bf1e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66082988"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84520611"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Proyectos relacionados en las soluciones de minería de datos
   Lo mínimo que se requiere para una solución de minería de datos es el proyecto de minería de datos, que define los orígenes de datos, las vistas del origen de datos, las estructuras y los modelos de minería de datos. Sin embargo, cuando los modelos de minería de datos se utilizan en la toma de decisiones diaria, es importante que la minería de datos se integre con otra parte de una solución de predicción de análisis, que puede incluir estos procesos y componentes:  
@@ -59,13 +58,13 @@ ms.locfileid: "66082988"
   
 -   [Tarea Ejecutar DDL de Analysis Services](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
--   [Procesamiento de Analysis Services, tarea](../../integration-services/control-flow/analysis-services-processing-task.md)  
+-   [Tarea de procesamiento de Analysis Services](../../integration-services/control-flow/analysis-services-processing-task.md)  
   
 -   [Tarea Control CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
 -   [Data Cleansing](../../data-quality-services/data-cleansing.md)  
   
--   [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)  
+-   [Tarea Consulta de minería de datos](../../integration-services/control-flow/data-mining-query-task.md)  
   
 -   [Tarea de generación de perfiles de datos](../../integration-services/control-flow/data-profiling-task.md)  
   
@@ -75,15 +74,15 @@ ms.locfileid: "66082988"
   
 -   [Transformación División condicional](../../integration-services/data-flow/transformations/conditional-split-transformation.md)  
   
--   [Conversión de datos, transformación](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
+-   [Transformación Conversión de datos](../../integration-services/data-flow/transformations/data-conversion-transformation.md)  
   
 -   [entrenamiento del modelo de minería de datos, destino](../../integration-services/data-flow/data-mining-model-training-destination.md)  
   
 -   [Consulta de minería de datos, transformación](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)  
   
--   [Transformación columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
+-   [Transformación Columna derivada](../../integration-services/data-flow/transformations/derived-column-transformation.md)  
   
--   [Muestreo de porcentaje, transformación](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
+-   [Transformación Muestreo de porcentaje](../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)  
   
 -   [Extracción de términos, transformación](../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 717eabb3db136f048f7a39f2fc40f61ee60c253c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66088250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527651"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Cambiar configuración (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Cambiar configuración** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para cambiar la configuración que controla el procesamiento de los objetos enumerados en el cuadro de diálogo **Procesar** . Para mostrar el cuadro de diálogo **Cambiar configuración** , haga clic en **Cambiar configuración** en el cuadro de diálogo **Proceso** .  
@@ -29,7 +28,7 @@ ms.locfileid: "66088250"
  **Opciones de procesamiento**  
  Utilice esta pestaña para modificar la configuración relacionada con el orden de procesamiento, la tabla de reescritura y los objetos afectados por la operación de procesamiento. Esta pestaña contiene las siguientes opciones:  
   
- **Poner**  
+ **Parallel**  
  Haga clic en esta opción para procesar los objetos en paralelo.  
   
  **Tareas paralelas máximas**  

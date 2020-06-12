@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24863a8a-9017-415a-a97b-fbac76ed0675
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 96ffa6445d46f1e68efa907330d0945a499bf3b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b930734fa70578d10e107bc3d1e8d865f9e7e2d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079138"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543537"
 ---
 # <a name="lesson-14-deploy"></a>Lección 14: Implementar
   En esta lección, configurará propiedades de implementación, especificará una instancia del servidor de implementación de Analysis Services que se ejecute en modo tabular y asignará un nombre al modelo que va a implementar. A continuación, implementará el modelo en esa instancia. Una vez implementado, los usuarios podrán conectarse al modelo mediante una aplicación cliente de informes. Para obtener más información, vea [Implementación de soluciones de modelos tabulares &#40;SSAS tabular&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
@@ -41,9 +40,9 @@ ms.locfileid: "66079138"
     > [!NOTE]  
     >  El modelo creado mediante este tutorial no admite el modo DirectQuery.  
   
-4.  En la propiedad **Database** , escriba `Adventure Works Internet Sales Model`.  
+4.  En la propiedad **Database** , escriba `Adventure Works Internet Sales Model` .  
   
-5.  En la propiedad nombre del **cubo** , `Adventure Works Internet Sales Model`escriba.  
+5.  En la propiedad nombre del **cubo** , escriba `Adventure Works Internet Sales Model` .  
   
 6.  Compruebe sus selecciones y, a continuación, haga clic en **Aceptar**.  
   

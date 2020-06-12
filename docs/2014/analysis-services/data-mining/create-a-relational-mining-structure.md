@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2342cde485968bb40c523b9c7c3ae68d889f6fa
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66085380"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84523711"
 ---
 # <a name="create-a-relational-mining-structure"></a>Crear una estructura de minería de datos relacional
   La mayoría de los modelos de minería de datos se basan en orígenes de datos relacionales. Las ventajas de crear un modelo de minería de datos relacional son que puede reunir datos ad hoc y entrenar y actualizar un modelo sin la complejidad que supone crear un cubo.  

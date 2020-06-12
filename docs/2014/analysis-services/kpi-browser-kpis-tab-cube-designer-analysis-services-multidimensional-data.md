@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 2f61bde6-e6ec-4511-8645-c272374014ad
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b6d15cbb75f3528546c566a72f8b23323df8772
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66079500"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84543733"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Explorador de KPI (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
-  Use el panel **Explorador de KPI** de la pestaña **KPI** del Diseñador de cubos para ver y comprobar el resultado de los indicadores clave de rendimiento (KPI). Los KPI deben implementarse primero en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] una instancia de antes de la exploración.  
+  Use el panel **Explorador de KPI** de la pestaña **KPI** del Diseñador de cubos para ver y comprobar el resultado de los indicadores clave de rendimiento (KPI). Los KPI deben implementarse primero en una instancia de antes de la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] exploración.  
   
 > [!NOTE]  
 >  Este panel solo se muestra en vista de explorador.  
@@ -41,10 +40,10 @@ ms.locfileid: "66079500"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Igual**|Los resultados están restringidos al conjunto definido en **Expresión de filtro**.|  
-|**No igual**|Los resultados están restringidos a los miembros excluidos por el conjunto definido en **Expresión de filtro**.|  
-|**De**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
+|**No es igual**|Los resultados están restringidos a los miembros excluidos por el conjunto definido en **Expresión de filtro**.|  
+|**En**|Los resultados están restringidos al conjunto con nombre seleccionado en **Expresión de filtro**.|  
 |**No en el**|Los resultados están restringidos a los miembros excluidos por el conjunto con nombre seleccionado en **Expresión de filtro**.|  
-|**Contains**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
+|**Contiene**|El resultado se restringe a los miembros cuyos nombres contienen la cadena de **Expresión de filtro**.|  
 |**Comienza por**|El resultado se restringe a los miembros cuyos nombres comienzan con la cadena de **Expresión de filtro**.|  
 |**Intervalo (Inclusivo)**|El resultado se restringe al intervalo elegido en **Expresión de filtro**.|  
 |**Intervalo (Exclusivo)**|El resultado se restringe a los miembros excluidos por el intervalo elegido en **Expresión de filtro**.|  

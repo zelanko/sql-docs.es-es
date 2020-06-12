@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 850a68aa-1d70-4f0f-ba39-aeca834596c1
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2c534fc23e2bc4938349d7874c1ce1fbd9b374dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d114e9aa025f3c3967372e8cb026a278b45f492e
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064477"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527859"
 ---
 # <a name="attributes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Diseñador de Relación de los atributos, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la lista **Atributos** para buscar un atributo concreto en el diagrama de la relación de los atributos o para definir una nueva relación de atributo. Este panel aparece inmediatamente debajo del panel que contiene el diagrama de la relación de los atributos.  

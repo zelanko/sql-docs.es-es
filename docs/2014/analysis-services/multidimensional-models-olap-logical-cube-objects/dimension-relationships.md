@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c56cd6ee0e2a52ca523a9273e3c705eab2540191
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2334c1a97bb4172fff70550dbece5376eb1cb9d7
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797621"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545304"
 ---
 # <a name="dimension-relationships"></a>Relaciones de dimensión
-  El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega una dimensión de base de datos o un grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] medida a un cubo, intenta determinar el uso de la dimensión mediante el examen de las relaciones entre las tablas de dimensiones y las tablas de hechos en la vista del origen de datos del cubo, y mediante el examen de las relaciones entre los atributos de las dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
+  El uso de la dimensión define las relaciones entre una dimensión de cubo y los grupos de medida de un cubo. Una dimensión de cubo es una instancia de una dimensión de base de datos que se utiliza en un cubo específico. Un cubo puede y suele tener dimensiones de cubo que no están directamente relacionadas con un grupo de medida, pero que podrían estar indirectamente relacionadas con el grupo de medida a través de otra dimensión o grupo de medida. Cuando se agrega una dimensión de base de datos o un grupo de medida a un cubo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] intenta determinar el uso de la dimensión mediante el examen de las relaciones entre las tablas de dimensiones y las tablas de hechos en la vista del origen de datos del cubo, y mediante el examen de las relaciones entre los atributos de las dimensiones. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] establece automáticamente la configuración del uso de la dimensión para las relaciones que puede detectar.  
   
  Una relación entre una dimensión y un grupo de medida consta de las tablas de dimensiones y hechos que participan en la relación y un atributo de granularidad que especifica la granularidad de la dimensión del grupo de medida concreto.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "72797621"
  Para obtener más información sobre las relaciones referenciadas, vea [definir una relación referenciada y propiedades de la relación referenciadas](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="fact-dimension-relationships"></a>Relaciones de dimensión de hechos  
- Las dimensiones de hechos, más conocidas como dimensiones degeneradas, son dimensiones estándar que se crean a partir de columnas de atributos de tablas de hechos en lugar de columnas de atributos de tablas de dimensiones. Los datos útiles de dimensiones algunas veces se almacenan en una tabla de hechos para reducir la duplicación. Por ejemplo, en el diagrama siguiente se **FactResellerSales** muestra la tabla de hechos FactResellerSales [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de la base de datos de ejemplo.  
+ Las dimensiones de hechos, más conocidas como dimensiones degeneradas, son dimensiones estándar que se crean a partir de columnas de atributos de tablas de hechos en lugar de columnas de atributos de tablas de dimensiones. Los datos útiles de dimensiones algunas veces se almacenan en una tabla de hechos para reducir la duplicación. Por ejemplo, en el diagrama siguiente se muestra la tabla de hechos **FactResellerSales** de la [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] base de datos de ejemplo.  
   
  ![Las columnas de la tabla de hechos son compatibles con las dimensiones](../../analysis-services/dev-guide/media/as-factdim.gif "Las columnas de la tabla de hechos son compatibles con las dimensiones")  
   
@@ -76,7 +75,7 @@ ms.locfileid: "72797621"
   
  ![Esquema lógico: relación de dimensiones varios a varios](../../analysis-services/dev-guide/media/as-many-dimension1.gif "Esquema lógico: relación de dimensiones varios a varios")  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] permite definir una relación de varios a varios entre una dimensión y una tabla de hechos.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]permite definir una relación de varios a varios entre una dimensión y una tabla de hechos.  
   
 > [!NOTE]  
 >  Para admitir una relación de dimensión de varios a varios, la vista del origen de datos debe haber establecido una relación de clave externa entre todas las tablas implicadas, tal y como se muestra en el diagrama anterior. De lo contrario, no podrá seleccionar el grupo de medida intermedio correcto cuando establezca la relación en la pestaña **uso de dimensiones** del diseñador de dimensiones.  

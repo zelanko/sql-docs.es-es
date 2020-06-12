@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9040e213-a6fd-420e-be3e-37cc3a17c111
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb621d6adc4729785e551a985d349ebf5650f3a3
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077765"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84545467"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Cuadro de diálogo Leyenda de minería de datos (Visor de modelos de minería de datos)
   Utilice el cuadro de diálogo **Leyenda de minería de datos** para obtener información más detallada sobre el nodo o elemento seleccionado en un visor de modelos de minería de datos.  

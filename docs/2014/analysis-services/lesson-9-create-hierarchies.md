@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2561d3-4890-4495-a9cd-84eb88508938
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6b57669eed30abf010b9d2775950bf0cd6c6e67
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66078189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84542157"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lección 10: Crear jerarquías
   En esta lección, creará jerarquías. Las jerarquías son grupos de columnas dispuestas en niveles; por ejemplo, una jerarquía Geografía puede tener subniveles para País, Provincia y Ciudad. Las jerarquías pueden aparecer separadas de otras columnas en una lista de campos de aplicación cliente de generación de informes, lo que facilita que los usuarios puedan navegar por ellas e incluirlas en un informe. Para obtener más información, vea [Jerarquías &#40;SSAS tabular&#41;](tabular-models/hierarchies-ssas-tabular.md).  
@@ -31,27 +30,27 @@ ms.locfileid: "66078189"
   
 #### <a name="to-create-a-category-hierarchy-in-the-product-table"></a>Para crear una jerarquía Categoría en la tabla Product  
   
-1.  En el diseñador de modelos, haga clic `Model` en el menú, elija **vista de modelo**y, a continuación, haga clic en **vista de diagrama**.  
+1.  En el diseñador de modelos, haga clic en el `Model` menú, elija **vista de modelo**y, a continuación, haga clic en **vista de diagrama**.  
   
     > [!TIP]  
     >  Utilice los controles de Minimapa situados en la parte superior derecha del diseñador de modelos para cambiar el modo en que se muestran los objetos en la vista de diagrama. Si cambia la posición de los objetos en la vista de diagrama, esa vista se conservará cuando guarde el proyecto.  
   
-2.  En el diseñador de modelos, haga clic con `Product` el botón secundario en la tabla y, a continuación, haga clic en **crear jerarquía**. Aparece una nueva jerarquía en la parte inferior de la ventana de tabla.  
+2.  En el diseñador de modelos, haga clic con el botón secundario en la `Product` tabla y, a continuación, haga clic en **crear jerarquía**. Aparece una nueva jerarquía en la parte inferior de la ventana de tabla.  
   
-3.  En el nombre de la jerarquía, cambie el nombre de `Category`la jerarquía; para ello, escriba y, a continuación, presione Entrar.  
+3.  En el nombre de la jerarquía, cambie el nombre de la jerarquía; para ello, escriba y, `Category` a continuación, presione Entrar.  
   
-4.  En la `Product` tabla, haga clic en la columna **Product Category Name** , arrástrela a `Category` la jerarquía y suelte el `Category` nombre.  
+4.  En la `Product` tabla, haga clic en la columna **Product Category Name** , arrástrela a la `Category` jerarquía y suelte el `Category` nombre.  
   
-5.  En la `Category` jerarquía, haga clic con el botón secundario en la columna **Product Category Name** , haga clic en `Category`cambiar **nombre**y, a continuación, escriba.  
+5.  En la `Category` jerarquía, haga clic con el botón secundario en la columna **Product Category Name** , haga clic en cambiar **nombre**y, a continuación, escriba `Category` .  
   
     > [!NOTE]  
     >  Al cambiar el nombre de una columna de la jerarquía no se cambia el nombre de esa columna en la tabla. Una columna de una jerarquía es simplemente una representación de la columna de la tabla.  
   
-6.  En la `Product` tabla, haga clic con el botón secundario en la columna **Product subcategory Name** , en el menú contextual, seleccione **Agregar a jerarquía**y, a continuación, haga clic en `Category`.  
+6.  En la `Product` tabla, haga clic con el botón secundario en la columna **Product subcategory Name** , en el menú contextual, seleccione **Agregar a jerarquía**y, a continuación, haga clic en `Category` .  
   
-7.  Cambie el nombre de la subcategoría `Subcategory`de **producto** a.  
+7.  Cambie el nombre de la **subcategoría de producto** a `Subcategory` .  
   
-8.  Con hacer clic y arrastrar, o mediante el comando **Agregar a la jerarquía** en el menú contextual, agregue las columnas **nombre del modelo** y **nombre del producto** (en orden) y colóquelas debajo de la columna Nombre de **subcategoría del producto** . Cambie el nombre de `Model` estas `Product`columnas y, respectivamente.  
+8.  Con hacer clic y arrastrar, o mediante el comando **Agregar a la jerarquía** en el menú contextual, agregue las columnas **nombre del modelo** y **nombre del producto** (en orden) y colóquelas debajo de la columna Nombre de **subcategoría del producto** . Cambie el nombre de estas columnas `Model` y `Product` , respectivamente.  
   
 #### <a name="to-create-hierarchies-in-the-date-table"></a>Para crear jerarquías en la tabla Date  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66078189"
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año del calendario|Año|  
+    |Año del calendario|Year|  
     |Semestre del calendario|Semestre|  
     |Trimestre del calendario|Trimestre|  
     |Month Calendar|Mes|  
@@ -73,7 +72,7 @@ ms.locfileid: "66078189"
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año fiscal|Año|  
+    |Año fiscal|Year|  
     |Semestre fiscal|Semestre|  
     |Trimestre fiscal|Trimestre|  
     |Month Calendar|Mes|  
@@ -83,11 +82,11 @@ ms.locfileid: "66078189"
   
     |Columna|Cambiar el nombre a:|  
     |------------|----------------|  
-    |Año del calendario|Año|  
+    |Año del calendario|Year|  
     |Week Number Of Year|Semana|  
     |Day Of Week|Día|  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Para continuar este tutorial, vaya a la lección siguiente: [Lección 11: Crear particiones](lesson-10-create-partitions.md).  
   
   

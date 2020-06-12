@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a663e11-e40c-4708-ad18-fabb6c976fa4
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 92ed5c43fa2b7484485b915d42946121487386d9
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66081587"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84528491"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Documentar modelos de minería de datos (Complementos de minería de datos para Excel)
   ![Botón Documentar modelo, cinta de opciones Minería de datos](media/dmc-docmodel.gif "Botón Documentar modelo, cinta de opciones Minería de datos")  

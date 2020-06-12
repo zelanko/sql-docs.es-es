@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9d009b6cae346fd2b16d0651b0e905a0fb9e7eb
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66076340"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84536267"
 ---
 # <a name="create-a-report-data-source"></a>Crear un origen de datos de informe
   Para que Power View se conecte con un modelo multidimensional, es necesario crear una definición de origen de datos de informe compartido, también conocida como un archivo .rsds, en una biblioteca de SharePoint. El archivo .rsds especifica el nombre de una instancia de servidor de Analysis Services, el tipo de conexión, la cadena de conexión y las credenciales utilizadas para conectarse con el modelo multidimensional. Cuando un usuario hace clic en el archivo .rsds, se abre un nuevo informe de Power View vacío (un archivo .rdlx) en el explorador.  
@@ -39,7 +38,7 @@ ms.locfileid: "66076340"
   
 1.  Haga clic en la pestaña **Documentos** de la cinta de bibliotecas.  
   
-2.  Haga clic en **nuevo documento** > **origen de datos de informe**.  
+2.  Haga clic en **nuevo documento**  >  **origen de datos de informe**.  
   
     > [!NOTE]  
     >  Si no ve el elemento **Origen de datos de informe** en el menú, significa que no se ha habilitado el tipo de contenido del origen de datos de informe para esta biblioteca. Para obtener más información, vea [agregar tipos de contenido del servidor de informes a una biblioteca &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  

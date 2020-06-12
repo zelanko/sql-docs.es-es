@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7f3244ee-b690-471c-893d-68e361c2d416
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fe8eee02d019b5cf68e257b3fac4266a18ead795
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 558f9936b7a8e78b3ef75f3bb525185ae497959c
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66087026"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84526971"
 ---
 # <a name="connect-to-microsoft-sql-server-analysis-services-ssas"></a>Conectarse a Microsoft SQL Server Analysis Services (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar valores para importar datos de un cubo de Microsoft SQL Server Analysis Services o un libro PowerPivot que se hospeda en SharePoint. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  
@@ -27,7 +26,7 @@ ms.locfileid: "66087026"
 > [!NOTE]  
 >  Las credenciales del usuario actual se utilizan al seleccionar una base de datos en esta página. Sin embargo, la importación no se realizará correctamente si el usuario especificado en la página Información de suplantación no tiene privilegios suficientes para leer la base de datos seleccionada.  
   
-## <a name="uielement-list"></a>Lista de UIElement  
+## <a name="ui-element-list"></a>Lista de elementos de la interfaz de usuario  
  **Nombre descriptivo de la conexión**  
  Escriba un nombre único para esta conexión de origen de datos. Este campo es obligatorio.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "66087026"
   
 -   Escriba la dirección URL de un libro PowerPivot publicado en SharePoint.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Especifique si se utiliza la autenticación de Windows para conectarse a un servidor de SQL Server Analysis Services.  
   
  El modo de autenticación de Windows permite que un usuario pueda conectarse a través de una cuenta de usuario de Windows. Siempre que sea posible, utilice la autenticación de Windows.  

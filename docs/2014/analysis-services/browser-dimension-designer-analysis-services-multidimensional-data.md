@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7772d73-31c9-4b22-a899-bac424d603bb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1b3448891baed6fe91bb0339030f74569a096377
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2925542236adfc7e79ea1dccd0ca3ca1008e7de1
+ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064627"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84527771"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Explorador (Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Explorador** del Diseñador de dimensiones para explorar datos y metadatos de dimensiones para una dimensión. Si la dimensión seleccionada permite la reescritura, utilice esta vista para cambiar los datos de miembros de dimensión.  

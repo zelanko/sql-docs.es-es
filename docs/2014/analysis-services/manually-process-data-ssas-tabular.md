@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a861225414ec5bb63f77a0c4ce6c76a9c58c153d
+ms.sourcegitcommit: f0772f614482e0b3cde3609e178689ce62ca3a19
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66077972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84541847"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Procesar manualmente los datos (SSAS tabular)
   En este tema se describe cómo procesar manualmente los datos del área de trabajo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

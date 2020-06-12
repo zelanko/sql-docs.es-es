@@ -1,5 +1,6 @@
 ---
 title: Instalación de SSMA para Oracle (OracleToSQL) | Microsoft Docs
+description: Use estos artículos para instalar, actualizar y desinstalar SQL Server Migration Assistant (SSMA) para Oracle, que incluye una aplicación cliente y un paquete de extensión.
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,17 +11,17 @@ ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b97da15fb97c348afa694eb399d2a0c9a2f08928
+ms.sourcegitcommit: 59cda5a481cfdb4268b2744edc341172e53dede4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68263019"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292917"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Instalación de SSMA para Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle se compone de una aplicación cliente que se utiliza para realizar una migración desde Oracle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta y Azure SQL dB. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de Oracle en las bases de datos migradas.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Migration Assistant (SSMA) para Oracle se compone de una aplicación cliente que se utiliza para realizar una migración desde Oracle hasta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Azure SQL dB. También contiene un paquete de extensión que admite la migración de datos y el uso de las funciones del sistema de Oracle en las bases de datos migradas.  
   
-Instale la aplicación cliente en el equipo desde el que llevará a cabo los pasos de migración. Debe instalar los archivos del paquete de extensión en el equipo donde se hospedarán las bases de datos migradas. Dicho equipo debe estar ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Instale la aplicación cliente en el equipo desde el que llevará a cabo los pasos de migración. Debe instalar los archivos del paquete de extensión en el equipo donde se hospedarán las bases de datos migradas. Dicho equipo debe estar ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="upgrading-ssma-for-oracle"></a>Actualización de SSMA para Oracle  
 Si desea actualizar a una versión posterior de SSMA para Oracle, primero debe desinstalar el cliente y el paquete de extensiones de servidor y, a continuación, instalar la versión más reciente.  
@@ -30,7 +31,7 @@ Si desea actualizar a una versión posterior de SSMA para Oracle, primero debe d
 |Tema|Descripción|  
 |---------|---------------|  
 |[Instalación de SSMA para el cliente de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|Proporciona información e instrucciones para instalar el cliente de SSMA.|  
-|[Instalación de componentes de SSMA en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.|  
+|[Instalación de componentes de SSMA en SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|Proporciona información e instrucciones para instalar el paquete de extensión en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[Quitar SSMA para los componentes de Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/removing-ssma-for-oracle-components-oracletosql.md)|Proporciona instrucciones para desinstalar el programa cliente y el paquete de extensión.|  
   
 ## <a name="see-also"></a>Consulte también  

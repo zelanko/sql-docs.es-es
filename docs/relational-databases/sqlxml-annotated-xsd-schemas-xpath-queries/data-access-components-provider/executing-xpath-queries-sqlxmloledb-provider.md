@@ -1,5 +1,6 @@
 ---
 title: Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
+description: Obtenga información sobre cómo usar las propiedades específicas del proveedor de SQLXMLOLEDB al ejecutar consultas XPath.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -16,12 +17,12 @@ ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cbed0ee01fbe2f2a632f81265e0722eb1ad32727
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 175c2e82b29c9c7c3895b8764e835db11295ebdb
+ms.sourcegitcommit: 6593b3b6365283bb76c31102743cdccc175622fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246630"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84306241"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +34,7 @@ ms.locfileid: "75246630"
   
 -   **Esquema de asignación**  
   
- En esta aplicación ADO de ejemplo, se especifica una consulta XPath (raíz) en un esquema de asignación XSD (MySchema.xml). El esquema tiene un ** \<elemento Contacts>** con los atributos **ContactID**, **FirstName**y **LastName** . En el esquema, tiene lugar la asignación predeterminada: un nombre de elemento se asigna a la tabla con el mismo nombre y los atributos de tipo simple se asignan a las columnas con los mismos nombres.  
+ En esta aplicación ADO de ejemplo, se especifica una consulta XPath (raíz) en un esquema de asignación XSD (MySchema.xml). El esquema tiene un **\<Contacts>** elemento con los atributos **ContactID**, **FirstName**y **LastName** . En el esquema, tiene lugar la asignación predeterminada: un nombre de elemento se asigna a la tabla con el mismo nombre y los atributos de tipo simple se asignan a las columnas con los mismos nombres.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

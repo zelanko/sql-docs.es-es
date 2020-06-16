@@ -1,5 +1,6 @@
 ---
 title: Inicios de sesión, usuarios y roles en bases de datos
+description: Master Data Services incluye inicios de sesión, usuarios y roles instalados en el SQL Server Motor de base de datos instancia que hospeda la base de datos de Master Data Services.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 72ee383e-a619-461b-9f9d-1cac162ab0c5
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 7200d919975a644321e596f66349a2a8aae26f99
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54d0d7db0f76407836b266c3534198d0e177c679
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729485"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796386"
 ---
 # <a name="database-logins-users-and-roles-master-data-services"></a>Inicios de sesión, usuarios y roles en bases de datos (Master Data Services)
 
@@ -32,7 +33,7 @@ ms.locfileid: "73729485"
   
 ## <a name="logins"></a>Inicios de sesión  
   
-|Inicio de sesión|Descripción|  
+|Iniciar sesión|Descripción|  
 |-----------|-----------------|  
 |**mds_dlp_login**|Permite la creación de ensamblados de UNSAFE. Para más información, consulte [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).<br /><br /> -Inicio de sesión deshabilitado con contraseña generada de forma aleatoria.<br /><br /> -Asigna dbo para la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .<br /><br /> -Para msdb, mds_clr_user asigna este inicio de sesión.|  
 |**mds_email_login**|Inicio de sesión habilitado usado para las notificaciones.<br /><br /> Para msdb y la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , mds_email_user asigna este inicio de sesión.|  

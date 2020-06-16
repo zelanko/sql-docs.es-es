@@ -1,5 +1,6 @@
 ---
 title: Ejemplos de reglas de negocios
+description: Revise estos ejemplos de reglas de negocios para Master Data Services. Estos ejemplos se encuentran en los modelos de ejemplo que se incluyen con la instalación de Master Data Services.
 ms.custom: ''
 ms.date: 01/05/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 774dd01985a5a5f2a952c1002a804481a2f5497d
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728698"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796556"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Ejemplos de reglas de negocios (Master Data Services)
 
@@ -27,7 +28,7 @@ Para obtener instrucciones sobre cómo implementar los modelos de ejemplo, vea [
   
   
 ## <a name="business-rule-examples"></a>Ejemplos de reglas de negocios  
-Modelo de ejemplo |Entity  |Nombre de la regla de negocio| Descripción  
+Modelo de ejemplo |Entidad  |Nombre de la regla de negocio| Descripción  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt terms| Especifica las condiciones de pago predeterminadas para los clientes.          
 En la siguiente regla de negocio, si el valor del atributo CustomerType cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. De lo contrario, no se realiza ninguna acción.  
@@ -42,7 +43,7 @@ Else
   
 **--------------------------------------------------**  
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt terms | Especifica las condiciones de pago predeterminadas para las organizaciones.         
 En la siguiente regla de negocio, si el valor del atributo CustomerType cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. De lo contrario, no se realiza ninguna acción.  
@@ -58,7 +59,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio| Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio| Descripción    
 ---------|---------|---------|-----------  
 Producto     |  Producto       | DaysToManufacture |Especifica el intervalo de días de fabricación para la fabricación interna.          
 En la siguiente regla de negocio, si el valor del atributo InHouseManufacture cumple la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. De lo contrario, no se realiza ninguna acción.  
@@ -74,7 +75,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-------------  
 Producto     |Producto         |Campos obligatorios| Especifica los atributos necesarios para los miembros de la entidad de producto.           
 En la siguiente regla de negocio, en todas las condiciones se realiza la `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Los valores de atributo no pueden ser NULL ni estar en blanco.  
@@ -99,7 +100,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|-----------  
 Producto     | Producto        |  Std Cost| Requiere que el costo estándar sea mayor que 0.        
 En la siguiente regla de negocio, en todas las condiciones se aplica la `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
@@ -115,7 +116,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
 Producto     | Producto        | FG MSRP Cost|Especifica que, si el producto es un producto terminado, el MSRP (precio minorista sugerido por el fabricante) y los costos del distribuidor deben ser mayores que 0.           
   
@@ -133,7 +134,7 @@ Else
 **--------------------------------------------------**  
   
   
-Modelo de ejemplo  |Entity  |Nombre de la regla de negocio|Descripción    
+Modelo de ejemplo  |Entidad  |Nombre de la regla de negocio|Descripción    
 ---------|---------|---------|------------  
 Producto     | Producto        |  Default Name| Especifica el nombre predeterminado del producto según los valores de los atributos Color y Class. Cuando el valor del atributo Color no es YLO y el atributo Class no es NA, el nombre predeterminado es Yellow NA.         
 En la siguiente regla de negocio, si los atributos Color y Class no cumplen la condición de regla `is equal` , la `defaults to` [](../master-data-services/business-rule-actions-master-data-services.md) se aplica al atributo Name.  

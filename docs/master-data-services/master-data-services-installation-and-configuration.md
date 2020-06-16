@@ -1,5 +1,6 @@
 ---
 title: Instalación y configuración
+description: Obtenga información acerca de cómo instalar Master Data Services en un equipo con Windows Server 2012 R2, configurar la base de datos y el sitio web de MDS e implementar los modelos y datos de ejemplo.
 ms.custom: ''
 ms.date: 05/22/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 60ee313b41a3882c07c98dce08382a98fec9c962
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f9a0a43bb913437e4818c46fc81c0794019639c7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289783"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796286"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -34,7 +35,7 @@ Para obtener información general sobre cómo organizar los datos en [!INCLUDE[s
 Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], consulte [Información sobre SQL Server Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
 > **Descargar**  
-> -    Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)**.  
+> -   Para descargar [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-ctp/)** .  
 > -   ¿Tiene una cuenta de Azure?  Si es así, vaya **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** para poner en marcha una máquina virtual con SQL Server ya instalado.  
 > 
 > **¿No puede crear un sitio web de MDS?**
@@ -46,7 +47,7 @@ Para obtener vínculos a los vídeos y a otros recursos de aprendizaje de [!INCL
 - Para trabajar en la aplicación web, Silverlight 5 debe estar instalado en el equipo cliente. Si no tiene la versión necesaria de Silverlight, se le pedirá que la instale cuando navegue a un área de la aplicación web que la necesite. Puede instalar Silverlight 5 **[aquí](https://www.microsoft.com/silverlight/)**.
 
 ## <a name="ssmdsshort_md-on-an-azure-virtual-machine"></a>[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure
-De forma predeterminada, cuando se pone en marcha una máquina virtual [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de Azure con [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] ya instalado, también se instala. 
+De forma predeterminada, cuando se pone en marcha una máquina virtual de Azure con [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] ya instalado, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] también se instala. 
 
 El siguiente paso consiste en instalar Internet Information Services (IIS). Vea la sección [Instalación y configuración de IIS](#InstallIIS). 
 
@@ -133,12 +134,12 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
 4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **conexión de prueba** para confirmar que puede conectarse a la base de datos con las credenciales del tipo de autenticación que ha seleccionado. Haga clic en **Next**.
 
-    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]conectarse a Azure SQL Database instancia administrada, use uno de los siguientes tipos de autenticación:
+    >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] conectarse a Azure SQL Database instancia administrada, use uno de los siguientes tipos de autenticación:
     >
     >- Autenticación integrada de Azure Active Directory: **usuario actual: Active Directory integrada**
     >- Autenticación SQL Server: **SQL Server cuenta**.
     >
-    >En Azure SQL Database instancia administrada, el usuario debe ser miembro del rol `sysadmin` fijo de servidor.
+    >En Azure SQL Database instancia administrada, el usuario debe ser miembro del `sysadmin` rol fijo de servidor.
 
     > [!NOTE]  
     >  Al seleccionar **Usuario actual: Seguridad integrada** como el tipo de autenticación, el cuadro **Nombre de usuario** es de solo lectura y muestra el nombre de la cuenta de usuario de Windows con la que se ha iniciado sesión en el equipo. Si ejecuta [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] en una máquina virtual de Azure, el cuadro **Nombre de usuario** mostrará el nombre de la máquina virtual y el nombre de usuario de la cuenta de administrador local de la máquina virtual. 
@@ -203,7 +204,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
      ![mds_2016ConfigManager_WebConfig_Completed](../master-data-services/media/mds-2016configmanager-webconfig-completed.png)  
  
      
-15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es https://*nombre*/del servidor*web aplicación*/. 
+15. Haga clic en **Aplicar**. Aparecerá el cuadro de mensaje **Configuración completada**. Haga clic en **Aceptar** en el cuadro de mensaje para iniciar la aplicación web. La dirección del sitio web es https://*nombre del servidor* / *web aplicación*/. 
 
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
@@ -281,7 +282,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
     1.  Vaya al sitio web de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que ha configurado. Consulte la sección [Configurar la base de datos y el sitio web](#SetUpWeb) .  
   
-         La dirección del sitio web es https://*nombre*/del servidor*web aplicación*/.  
+         La dirección del sitio web es https://*nombre del servidor* / *web aplicación*/.  
   
     2.  Seleccione un modelo del cuadro de lista **Modelo** y haga clic en **Explorador**.  
   

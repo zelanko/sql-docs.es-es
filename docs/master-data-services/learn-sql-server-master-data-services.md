@@ -1,5 +1,6 @@
 ---
 title: Información sobre SQL Server Master Data Services
+description: Explore las características y capacidades de SQL Server 2019 Master Data Services a través del aprendizaje autoguiado, los vídeos, los ejemplos y la certificación SQL Server.
 ms.custom: ''
 ms.date: 02/14/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ keywords:
 ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: a98dd5e9ac6c3f343e0d91edbb3137e5d1c01c5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1143636402af33512a65d7057f7acccdf455b034
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487894"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796626"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Información sobre SQL Server Master Data Services
 
@@ -26,8 +27,8 @@ ms.locfileid: "81487894"
   
   
 ## <a name="training"></a>Cursos  
-* Para explorar las nuevas características y capacidades introducidas [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]en, pruebe un [laboratorio autoguiado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (es necesario iniciar sesión con su cuenta de Microsoft).  
-* Para desarrollar una [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solución para almacenar y administrar listas maestras de datos geográficos, con el complemento para Excel y [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]el, pruebe un [laboratorio autoguiado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Creará entidades y jerarquías y usará [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para rellenar una tabla de dimensiones.  
+* Para explorar las nuevas características y capacidades introducidas en [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] , pruebe un [laboratorio autoguiado](https://www.microsoft.com/handsonlabs/selfpacedlabs) (es necesario iniciar sesión con su cuenta de Microsoft).  
+* Para desarrollar una [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solución para almacenar y administrar listas maestras de datos geográficos, con el complemento para Excel y el [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)] , pruebe un [laboratorio autoguiado](https://www.microsoft.com/handsonlabs/selfpacedlabs). Creará entidades y jerarquías y usará [!INCLUDE[ssIS_md](../includes/ssis-md.md)] para rellenar una tabla de dimensiones.  
   
 ## <a name="videos"></a>Vídeos  
 * Para obtener información sobre las nuevas capacidades de la versión [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**vea este vídeo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

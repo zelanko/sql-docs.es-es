@@ -1,5 +1,6 @@
 ---
 title: Importar datos desde tablas
+description: Importe los datos de las tablas y realice cambios en los datos en un modelo de forma masiva. Utilice este procedimiento para agregar, actualizar y eliminar datos en la base de datos de Master Data Services.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ad5b83b1-8e40-4ef8-9ba8-4ea17a58b672
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 08cb402143cd5290d0f228d2dcab242c3139408a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e10a3facdec9b5b412b1c9b93396d2d0a94886e
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729245"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796348"
 ---
 # <a name="import-data-from-tables-master-data-services"></a>Importar datos de tablas (Master Data Services)
 
@@ -25,21 +26,21 @@ ms.locfileid: "73729245"
   
  **Requisitos previos**  
   
--   Debe tener permiso para insertar datos en las tablas stg.\<nombre>_Leaf, stg.\<nombre>_Consolidated y stg.\<nombre>_Relationship de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Debe tener permiso para insertar datos en STG. \<name> _Leaf, Stg. \<name> _Consolidated STG. \<name> _Relationship tabla en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
--   Debe tener permisos para ejecutar el procedimiento almacenado stg.udp_\<nombre>_Leaf, stg.udp\_\<nombre>_Consolidated o stg.udp\_\<nombre>_Relationship en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
+-   Debe tener permisos para ejecutar STG. udp_ \<name> _Leaf, Stg. udp \_ \<name> _Consolidated o el procedimiento almacenado stg. UDP \_ \<name> _Relationship en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos.  
   
 -   El modelo no debe tener un estado de **Confirmado**.  
   
- **Para agregar, actualizar y eliminar datos en la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos**  
+ **Para agregar, actualizar y eliminar datos en la base de datos [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]**  
   
 1.  Prepare los miembros para importarlos en la tabla de almacenamiento provisional apropiada de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] y proporcione valores para los campos obligatorios. Para obtener más información sobre las tablas de almacenamiento provisional, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-    -   Para los miembros hoja, la tabla es stg.\<nombre>_Leaf, donde \<nombre> hace referencia a la entidad correspondiente. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
+    -   En el caso de los miembros hoja, la tabla es STG. \<name> _Leaf, donde \<name> hace referencia a la entidad correspondiente. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros hoja &#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
-    -   Para los miembros consolidados, la tabla es stg.\<nombre>_Consolidated. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
+    -   En el caso de los miembros consolidados, la tabla es STG. \<name> _Consolidated. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de miembros consolidados &#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md).  
   
-    -   Para mover la ubicación de los miembros de jerarquías explícitas, la tabla es stg.\<nombre>_Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
+    -   Para mover la ubicación de los miembros de las jerarquías explícitas, la tabla es STG. \<name> _Relationship. Para obtener información sobre los campos obligatorios, consulte [Tabla de almacenamiento provisional de relaciones &#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md).  
   
          Para obtener información general sobre cómo mover miembros en jerarquías explícitas, consulte [Información general: importación de datos de tablas &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   

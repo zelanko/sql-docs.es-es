@@ -1,5 +1,6 @@
 ---
 title: Atributos basados en dominios
+description: Obtenga información sobre los atributos basados en dominio en Master Data Services, que tienen valores que se rellenan desde otra entidad. Los usuarios deben elegir un valor de una lista.
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df6f33ff-97f6-466c-af74-9780b2247473
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 966112716bfb484a9615c973ee397de04787862c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60cfdaed3e62cddba5d4351a6a0ec11920f174b7
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728271"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796343"
 ---
 # <a name="domain-based-attributes-master-data-services"></a>Atributos basados en dominios (Master Data Services)
 

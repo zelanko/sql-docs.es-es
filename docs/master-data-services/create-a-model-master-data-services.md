@@ -1,5 +1,6 @@
 ---
 title: Creación de un modelo
+description: Aprenda a crear un modelo en Master Data Services para contener objetos de modelo. Debe tener permisos para el área de administración del sistema.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 730e18fca866891d62b68d321ec13e4be5da59bf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 55a0ff697fd9f20f34c2ddc878016ba75f5fa673
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728482"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796432"
 ---
 # <a name="create-a-model-master-data-services"></a>Crear un modelo (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73728482"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un modelo para contener los objetos de modelo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -71,7 +72,7 @@ ms.locfileid: "73728482"
   
 -   **Fecha y hora de actualización**: la fecha y hora de la última actualización del modelo.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Crear una entidad &#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   

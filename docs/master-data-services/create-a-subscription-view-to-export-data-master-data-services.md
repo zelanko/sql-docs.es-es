@@ -1,5 +1,6 @@
 ---
 title: Crear una vista de suscripciones para exportar datos
+description: Obtenga información sobre cómo crear una vista de suscripciones para exportar Master Data Services datos a sistemas de suscripción, lo que crea una vista de los datos.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 524ff4934adf2317daceff64f70ce4ae0afb7424
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e46961fa67492667a697c34f727ae068744e5e63
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728471"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796434"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Crear una vista de suscripciones para exportar datos (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73728471"
 
   Cree una vista de suscripciones para exportar datos de Master Data Services a sistemas de suscripción. Va a crear una vista de los datos en la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer del permiso para tener acceso al área funcional de **Administración de integraciones** . Para obtener más información, consulte [Permisos del área funcional &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -70,10 +71,10 @@ ms.locfileid: "73728471"
 |Estado|El estado de la vista.<br /><br /> Al hacer clic en **Guardar**, se muestra la imagen ![icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización") , que indica que la vista se está actualizando.<br /><br /> Si hay errores al crear o editar una vista, se muestra la imagen ![icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error") .<br /><br /> De lo contrario, el estado es correcto y se muestra la imagen ![icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto") .|  
 |Nombre|El nombre de la vista de suscripciones.|  
 |Modelo|Nombre del modelo.|  
-|Version|El nombre de la versión.|  
+|Versión|El nombre de la versión.|  
 |Marca de versión|El nombre de la marca de la versión.|  
 |Jerarquía derivada|El nombre de la jerarquía derivada.|  
-|Entity|El nombre de la entidad.|  
+|Entidad|El nombre de la entidad.|  
 |Formato|Especifica el tipo de los datos en la vista.|  
 |Nivel|Especifica el número de niveles de la vista, que solo se usa para formatos de vista con niveles Explícito o Derivado.|  
 |Incluir miembros eliminados|Indica si los miembros eliminados temporalmente están incluidos en la vista.|  

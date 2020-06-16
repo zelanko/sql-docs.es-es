@@ -1,5 +1,6 @@
 ---
 title: Administradores
+description: 'Obtenga información sobre los tipos de administradores en Master Data Services: administradores de modelos, administradores de entidad y superusuarios.'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1a4393881b05c21a690c06bfa39fd2114da0b18
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729794"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796611"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
 
@@ -28,7 +29,7 @@ ms.locfileid: "73729794"
   En este artículo se describen los tipos de administradores de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]: administradores de modelos, administradores de entidad y superusuario.  
   
 ## <a name="model-administrators"></a>Administradores de modelos  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelo es un usuario que tiene permiso de **Administrador** asignado al objeto de modelo de nivel superior en la pestaña **objetos de modelo** . Cuando un usuario tiene permiso de administrador en un modelo determinado, cualquier otro permiso en los objetos secundarios del modelo (tanto los permisos de objeto de modelo como de miembro) es superado por el permiso de **Administrador** del modelo y se pasa por alto de forma efectiva.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , un administrador de modelo es un usuario que tiene permiso de **Administrador** asignado al objeto de modelo de nivel superior en la pestaña **objetos de modelo** . Cuando un usuario tiene permiso de administrador en un modelo determinado, cualquier otro permiso en los objetos secundarios del modelo (tanto los permisos de objeto de modelo como de miembro) es superado por el permiso de **Administrador** del modelo y se pasa por alto de forma efectiva.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "73729794"
  Un usuario se puede configurar como administrador de modelo en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o mediante programación. Para obtener más información, consulte [Crear un administrador de modelo &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Administradores de entidad  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de entidad es un usuario que tiene permisos de administrador asignados al objeto entidad en la pestaña objetos de modelo. Cuando un usuario tiene permisos de administrador para una entidad, cualquier otro permiso en los objetos secundarios de la entidad (tanto los permisos de objeto de modelo como de miembro) es reemplazado por los permisos de administrador y se omite.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , un administrador de entidad es un usuario que tiene permisos de administrador asignados al objeto entidad en la pestaña objetos de modelo. Cuando un usuario tiene permisos de administrador para una entidad, cualquier otro permiso en los objetos secundarios de la entidad (tanto los permisos de objeto de modelo como de miembro) es reemplazado por los permisos de administrador y se omite.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   

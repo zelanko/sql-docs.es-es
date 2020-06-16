@@ -1,5 +1,6 @@
 ---
 title: Crear y publicar una regla de negocios
+description: Obtenga información sobre cómo crear una regla de negocios en Master Data Services para garantizar la precisión de los datos maestros. Después de crear una regla, publíquela para aplicar la regla.
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e8deee97bd80404df5851f0845aa02b51bfe0cfc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2dfc03bc292d7c39024116eca9cf49a5179a5b7c
+ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73729444"
+ms.lasthandoff: 06/16/2020
+ms.locfileid: "84796407"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Crear y publicar una regla de negocios (Master Data Services)
 
@@ -26,7 +27,7 @@ ms.locfileid: "73729444"
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una regla de negocios para asegurarse de la exactitud de los datos maestros. Después de crear una regla, debe publicarla antes de poder aplicarla a los datos.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para realizar este procedimiento:  
   
 -   Debe disponer de permiso para tener acceso al área funcional de **Administración del sistema** .  
@@ -109,9 +110,9 @@ ms.locfileid: "73729444"
 |Descripción|La descripción de la regla de negocio.|  
 |Business Rule State|Uno de los siguientes estados de la regla de negocio: Regla no definida, Activa, Excluida, Cambios pendientes, Exclusión pendiente y Eliminación pendiente.|  
 |Excluido|Especifica si la regla de negocios está excluida.|  
-|Notification|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
+|notificación|Especifica el usuario o grupo seleccionado al que enviar la notificación por correo electrónico.|  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

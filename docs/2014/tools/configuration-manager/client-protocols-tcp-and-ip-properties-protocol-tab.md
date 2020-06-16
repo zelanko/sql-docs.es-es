@@ -1,5 +1,6 @@
 ---
 title: 'Protocolos de cliente: propiedades de TCP y IP (pestaña protocolo) | Microsoft Docs'
+description: Obtenga información acerca de cómo especificar las opciones de TCP/IP en Microsoft SQL Server Configuration Manager, como el parámetro Keep Alive y el número de puerto predeterminado.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +14,12 @@ ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3e543e10ab00981419ca02f527867bd91839fb07
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 32e1546af52fb411564c2b6d1635971b9f73fc60
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001055"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716682"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Protocolos de cliente y Propiedades de TCP/IP (pestaña Protocolo)
   En el Administrador de configuración de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use la pestaña **Protocolo** del cuadro de diálogo **Propiedades de TCP/IP** para ver o especificar las siguientes opciones. Para conectar a un puerto diferente, escriba el número de puerto en el cuadro **Puerto predeterminado** . Para obtener más información sobre cadenas de conexión, vea [Crear una cadena de conexión válida con TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
@@ -31,7 +32,7 @@ ms.locfileid: "83001055"
   
  Al conectar a una instancia con nombre del [!INCLUDE[ssDE](../../includes/ssde-md.md)], el cliente intentará obtener el número de puerto desde el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta en el servidor. Si el servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, se debe proporcionar el número de puerto mediante esta configuración o como parte de la cadena de conexión.  
   
- **Habilitado**  
+ **Enabled**  
  Los valores posibles son **sí** y **no**.  
   
  **Mantener activo**  

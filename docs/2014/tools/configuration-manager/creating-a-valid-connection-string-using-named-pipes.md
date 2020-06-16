@@ -1,5 +1,6 @@
 ---
 title: Crear una cadena de conexión válida con canalizaciones con nombre | Microsoft Docs
+description: Obtenga información sobre cómo crear una cadena de conexión válida al usar el protocolo canalizaciones con nombre para conectarse a una instancia de SQL Server. Ver ejemplos de nombres de canalización válidos.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,12 +17,12 @@ ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 1c22ee167318fb6e37194a3558637d9afc642111
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001035"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716712"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Crear una cadena de conexión válida con canalizaciones con nombre
   A menos que el usuario lo cambie, cuando la instancia predeterminada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en el protocolo canalizaciones con nombre, usa `\\.\pipe\sql\query` como nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre y `sql\query` es el nombre de la canalización. Para conectarse a la canalización predeterminada, debe tener el alias `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa `\\.\pipe\unit\app` como canalización, el alias debe usar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  
@@ -116,7 +117,7 @@ Server             .
 ```  
   
 > [!NOTE]  
->  Para especificar el protocolo de red como un parámetro **sqlcmd** , vea "Cómo conectar con el motor de base de datos mediante sqlcmd. exe" en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
+>  Para especificar el protocolo de red como un parámetro **sqlcmd** , vea "Cómo conectar con el Motor de base de datos mediante sqlcmd.exe" en los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla de.  
   
 ## <a name="see-also"></a>Consulte también  
  [Crear una cadena de conexión válida con el protocolo de memoria compartida](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   

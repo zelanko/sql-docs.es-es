@@ -1,7 +1,7 @@
 ---
 title: Función SQLGetCursorName | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 06/12/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6e92199-7bb6-447c-8987-049a4c6ce05d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d3ac65dc07897ddc789ee03b06b1bc1f71d37c3c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 413b1a6982a5411d9af204a54536c4778b5593b9
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81285553"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779067"
 ---
 # <a name="sqlgetcursorname-function"></a>Función SQLGetCursorName
 **Conformidad**  
@@ -54,12 +54,12 @@ SQLRETURN SQLGetCursorName(
  Si *CursorName* es null, *NameLengthPtr* seguirá devolviendo el número total de caracteres (excepto el carácter de terminación null para los datos de caracteres) disponible para devolver en el búfer señalado por *CursorName*.  
   
  *BufferLength*  
- Entradas Longitud de \* *CursorName*, en caracteres. Si el valor de * \*CursorName* es una cadena Unicode (al llamar a **SQLGetCursorNameW**), el argumento *BufferLength* debe ser un número par.  
+ Entradas Longitud de \* *CursorName*, en caracteres. 
   
  *NameLengthPtr*  
- Genere Puntero a la memoria en la que se va a devolver el número total de caracteres (excepto el carácter de terminación null) \*disponible para devolver en *CursorName*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, el nombre del cursor en \* *CursorName* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
+ Genere Puntero a la memoria en la que se va a devolver el número total de caracteres (excepto el carácter de terminación null) disponible para devolver en \* *CursorName*. Si el número de caracteres disponibles para devolver es mayor o igual que *BufferLength*, el nombre del cursor en \* *CursorName* se trunca a *BufferLength* menos la longitud de un carácter de terminación null.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
@@ -69,7 +69,7 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
 |01004|Datos de cadena, truncados a la derecha|El búfer \* *CursorName* no era lo suficientemente grande como para devolver el nombre completo del cursor, por lo que se truncó el nombre del cursor. La longitud del nombre de cursor sin truncar se devuelve en **NameLengthPtr*. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el * \*búfer MessageText* describe el error y su causa.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el búfer * \* MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
 |HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función **SQLGetCursorName** .<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**o **SQLMoreResults** para *StatementHandle* y se devolvió SQL_PARAM_DATA_AVAILABLE. Se llamó a esta función antes de recuperar los datos de todos los parámetros transmitidos por secuencias.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSetPos** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.|  
 |HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  

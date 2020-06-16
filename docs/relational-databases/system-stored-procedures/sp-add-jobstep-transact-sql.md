@@ -8,7 +8,6 @@ ms.topic: language-reference
 f1_keywords:
 - sp_add_jobstep_TSQL
 - sp_add_jobstep
-dev_langs: TSQL
 helpviewer_keywords:
 - sp_add_jobstep
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
@@ -16,12 +15,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 03/15/2017
-ms.openlocfilehash: 3c6b3ab849836bb4252e4b672c4304de0baeeacd
-ms.sourcegitcommit: 66a0672e47415dbd5cfd8d19075102c8c3973e70
+ms.openlocfilehash: db755e9587c88b224a7eb14c5259202fbce978f0
+ms.sourcegitcommit: e572f1642f588b8c4c75bc9ea6adf4ccd48a353b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83767142"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84779477"
 ---
 # <a name="sp_add_jobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -152,7 +151,7 @@ Para obtener más información sobre estos tokens y la actualización de los pas
 |**2**|Anexar al archivo de salida|  
 |**4**|Escribir la salida del paso de trabajo [!INCLUDE[tsql](../../includes/tsql-md.md)] en el historial de pasos|  
 |**8**|Escribir el registro en la tabla (sobrescribir el historial existente)|  
-|**dieciséi**|Escribir el registro en la tabla (anexar al historial existente)|  
+|**16**|Escribir el registro en la tabla (anexar al historial existente)|  
 |**32**|Escribir todo el resultado en el historial de trabajos|  
 |**64**|Crear un evento Windows para usarlo como señal y que se anule el paso de trabajo de Cmd|  
 

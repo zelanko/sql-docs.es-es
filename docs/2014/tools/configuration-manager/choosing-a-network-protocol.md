@@ -1,5 +1,6 @@
 ---
 title: Elección de un protocolo de red | Microsoft Docs
+description: Comparar y contrastar los protocolos de red que están disponibles para conectarse a SQL Server Motor de base de datos, como la memoria compartida, TCP/IP y las canalizaciones con nombre.
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,12 +24,12 @@ ms.assetid: 6565fb7d-b076-4447-be90-e10d0dec359a
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 9046541411d472c7fe557cfad78ca903107513ab
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 0b1212117f5428da0a2b1a8e01232a2b97e5cc12
+ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83001095"
+ms.lasthandoff: 06/11/2020
+ms.locfileid: "84716702"
 ---
 # <a name="choosing-a-network-protocol"></a>Elegir un protocolo de red
   Para conectarse a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , debe tener habilitado un protocolo de red. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puede atender solicitudes en varios protocolos al mismo tiempo. Los clientes se conectan a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con un único protocolo. Si el programa cliente no sabe en qué protocolo escucha [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , configure el cliente para intentar secuencialmente varios protocolos. Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para habilitar, deshabilitar y configurar protocolos de red.  

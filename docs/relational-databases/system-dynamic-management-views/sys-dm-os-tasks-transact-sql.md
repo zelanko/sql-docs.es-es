@@ -20,12 +20,12 @@ ms.assetid: 180a3c41-e71b-4670-819d-85ea7ef98bac
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2bea6efbfe3f3703df80325a08ccbcf617aea54f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5a81eff384622a31df5bba8bb0c1fbc51932f95d
+ms.sourcegitcommit: 05fdc50006a9abdda79c3a4685b075796068c4fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829312"
+ms.lasthandoff: 06/12/2020
+ms.locfileid: "84748734"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,12 +59,12 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requier
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-monitoring-parallel-requests"></a>A. Supervisar solicitudes paralelas  
- En el caso de las solicitudes que se ejecutan en paralelo, verá varias filas para la misma combinación de ( \< **session_id**>, \< **request_id**>). Utilice la siguiente consulta para encontrar la [opción de configuración del servidor grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para todas las solicitudes activas.  
+ En el caso de las solicitudes que se ejecutan en paralelo, verá varias filas para la misma combinación de ( \<**session_id**> , \<**request_id**> ). Utilice la siguiente consulta para encontrar la [opción de configuración del servidor grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) para todas las solicitudes activas.  
   
 > [!NOTE]  
 >  Un **request_id** es único dentro de una sesión.  
   
-```  
+```sql  
 SELECT  
     task_address,  
     task_state,  
@@ -85,7 +85,7 @@ SELECT
 ### <a name="b-associating-session-ids-with-windows-threads"></a>B. Asociar identificadores de sesión con subprocesos de Windows  
  Puede utilizar la siguiente consulta para asociar un valor de identificador de sesión a un identificador de subproceso de Windows. A continuación, puede supervisar el rendimiento del subproceso en el Monitor de rendimiento de Windows. La siguiente consulta no devuelve información para sesiones en espera.  
   
-```  
+```sql  
 SELECT STasks.session_id, SThreads.os_thread_id  
   FROM sys.dm_os_tasks AS STasks  
   INNER JOIN sys.dm_os_threads AS SThreads  
@@ -94,7 +94,7 @@ SELECT STasks.session_id, SThreads.os_thread_id
   ORDER BY STasks.session_id;  
 GO  
 ```  
-  
+
 ## <a name="see-also"></a>Consulte también  
 [SQL Server vistas de administración dinámica relacionadas con el sistema operativo &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)    
 [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md)     

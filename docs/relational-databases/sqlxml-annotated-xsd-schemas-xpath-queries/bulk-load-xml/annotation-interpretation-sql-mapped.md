@@ -1,5 +1,6 @@
 ---
 title: 'SQL: asignado (SQLXML)'
+description: 'Obtenga información sobre cómo se interpreta la anotación SQLXML SQL: allocated durante el proceso de carga masiva XML.'
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +19,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 055b4d25b6c501e9cf3afdf99460cd54ca7e720c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20fec5c2625c87b2add23738b5b9d22ccfc77c4f
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75246776"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84884889"
 ---
 # <a name="annotation-interpretation---sqlmapped"></a>Interpretación de anotaciones: sql:mapped
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -1,5 +1,6 @@
 ---
 title: Asignaciones XSD personalizadas a tablas y columnas (SQLXML)
+description: Obtenga información sobre cómo crear una asignación personalizada en una consulta XPath de SQLXML entre los elementos y atributos de un esquema XSD y las tablas y columnas de una base de datos relacional.
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -29,12 +30,12 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5fafcd918dda0001c316fd68cae3b19e6cd805a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8e4d7e4c58234ff5db68cdf51265100b88df5cef
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885601"
 ---
 # <a name="custom-xsd-mappings-to-tablescolumns-sqlxml"></a>Asignaciones XSD personalizadas a tablas y columnas (SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +48,7 @@ ms.locfileid: "75257427"
   
  Cuando **SQL: relation** se especifica en un elemento, el ámbito de esta anotación se aplica a todos los atributos y elementos secundarios que se describen en la definición de tipo complejo de ese elemento, lo que proporciona un acceso directo para escribir anotaciones.  
   
- La anotación **SQL: relation** también es útil cuando los identificadores que son [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] válidos en no son válidos en XML. Por ejemplo, "Order Details" es un nombre de tabla válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero no en XML. En tales casos, la anotación **SQL: relation** se puede usar para especificar la asignación, por ejemplo:  
+ La anotación **SQL: relation** también es útil cuando los identificadores que son válidos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no son válidos en XML. Por ejemplo, "Order Details" es un nombre de tabla válido en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero no en XML. En tales casos, la anotación **SQL: relation** se puede usar para especificar la asignación, por ejemplo:  
   
 ```  
 <xsd:element name="OD" sql:relation="[Order Details]">  
@@ -60,9 +61,9 @@ ms.locfileid: "75257427"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificar las anotaciones sql:relation y sql:field  
- En este ejemplo, el esquema XSD está **ContactID** compuesto de un ** \<elemento de contacto>** del tipo complejo con ** \<fname>** y ** \<LName>** elementos secundarios y el atributo ContactID.  
+ En este ejemplo, el esquema XSD está compuesto de un **\<Contact>** elemento de tipo complejo con los **\<FName>** **\<LName>** elementos secundarios y y el atributo **ContactID** .  
   
- La anotación **SQL: relation** asigna el ** \<** elemento de>de contacto a la tabla person. contact de la base de datos AdventureWorks. La anotación **SQL: Field** asigna el ** \<elemento fname>** a la columna FirstName y el ** \<elemento LName>** a la columna LastName.  
+ La anotación **SQL: relation** asigna el **\<Contact>** elemento a la tabla person. contact de la base de datos AdventureWorks. La anotación **SQL: Field** asigna el **\<FName>** elemento a la columna FirstName y el **\<LName>** elemento a la columna LastName.  
   
  No se especifica ninguna anotación para el atributo **ContactID** . Esto produce una asignación predeterminada del atributo a la columna del mismo nombre.  
   

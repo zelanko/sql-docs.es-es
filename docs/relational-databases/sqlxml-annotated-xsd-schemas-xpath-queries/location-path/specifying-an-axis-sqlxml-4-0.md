@@ -1,5 +1,6 @@
 ---
 title: Especificar un eje (SQLXML)
+description: Obtenga información sobre cómo especificar un eje en una consulta XPath de SQLXML 4,0 especifica la relación de árbol entre los nodos seleccionados por la fase de ubicación y el nodo de contexto.
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a219c2093832b979171584d5559da359b574552e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 43daf972eacd67dcd7e75eabd1aca87bb3f67932
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75253065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882183"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificar un eje (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "75253065"
   
      Contiene el elemento secundario del nodo de contexto.  
   
-     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los ** \<clientes>** secundarios:  
+     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los **\<Customer>** elementos secundarios:  
   
     ```  
     child::Customer  
@@ -43,11 +44,11 @@ ms.locfileid: "75253065"
   
      En la consulta XPath siguiente, `child` es el eje. `Customer` es la prueba de nodo.  
   
--   **primario**  
+-   **aérea**  
   
      Contiene el elemento primario del nodo de contexto.  
   
-     La expresión XPath siguiente selecciona todos los ** \<** elementos primarios del cliente>del ** \<pedido>** elementos secundarios:  
+     La expresión XPath siguiente selecciona todos los **\<Customer>** elementos primarios de los **\<Order>** elementos secundarios:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -69,7 +70,7 @@ ms.locfileid: "75253065"
   
      Contiene el propio nodo de contexto.  
   
-     La expresión XPath siguiente selecciona el nodo actual si es el ** \<orden>** nodo:  
+     La expresión XPath siguiente selecciona el nodo actual si es el **\<Order>** nodo:  
   
     ```  
     self::Order  

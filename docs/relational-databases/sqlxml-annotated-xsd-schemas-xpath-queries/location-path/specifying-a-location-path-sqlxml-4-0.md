@@ -1,5 +1,6 @@
 ---
 title: Especificar una ruta de acceso de ubicación (SQLXML)
+description: Obtenga información acerca de cómo especificar una ruta de acceso de ubicación en una consulta XPath de SQLXML 4,0 para seleccionar un conjunto de nodos en relación con el nodo de contexto y generar un conjunto de nodos.
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -17,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e2668da10e41e997cc4d37760d79e4b66dae215
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e0af5fb77538a0942a913c8f0e441affb84af93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245590"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882255"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.locfileid: "75245590"
   
 -   **Ruta de acceso de ubicación relativa**  
   
-     Una ruta de acceso de ubicación relativa comienza en el nodo de contexto del documento. Una ruta de acceso de ubicación consta de un flujo de uno o más pasos de ubicación separados por una barra diagonal (/). Cada paso selecciona un conjunto de nodos relativos al nodo de contexto. La secuencia inicial de pasos selecciona un conjunto de nodos relativo a un nodo de contexto. Cada uno de los nodos de este conjunto se utiliza como un nodo de contexto en el paso siguiente. Los conjuntos de nodos identificados por este paso se unen. Por ejemplo, **Child:: order/Child:: OrderDetail** selecciona el ** \<elemento de OrderDetail>** elementos secundarios del elemento ** \<Order>** elementos secundarios del nodo de contexto.  
+     Una ruta de acceso de ubicación relativa comienza en el nodo de contexto del documento. Una ruta de acceso de ubicación consta de un flujo de uno o más pasos de ubicación separados por una barra diagonal (/). Cada paso selecciona un conjunto de nodos relativos al nodo de contexto. La secuencia inicial de pasos selecciona un conjunto de nodos relativo a un nodo de contexto. Cada uno de los nodos de este conjunto se utiliza como un nodo de contexto en el paso siguiente. Los conjuntos de nodos identificados por este paso se unen. Por ejemplo, **Child:: order/Child:: OrderDetail** selecciona los elementos **\<OrderDetail>** secundarios del elemento secundario **\<Order>** del nodo de contexto.  
   
     > [!NOTE]  
     >  En la implementación SQLXML 4.0 de XPath, cada consulta XPath comienza en el contexto raíz, aunque la consulta XPath no sea explícitamente absoluta. Por ejemplo, una consulta XPath que comienza por "Customer" se trata como "/Customer". En el cliente de consulta XPath **[order]**, Customer comienza en el contexto raíz, pero el orden comienza en el contexto del cliente. Para obtener más información, vea [Introducción al uso de consultas XPath &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
@@ -51,15 +52,15 @@ ms.locfileid: "75245590"
   
 -   **Prueba de nodo**  
   
-     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundario**, **primario**, **atributo**y **propio**) tiene un tipo de nodo principal. En el eje de **atributo** , el tipo de nodo principal es ** \<>de atributo **. En el caso de los ejes **primario**, **secundario**y **propio** , el tipo de nodo principal es ** \<>del elemento **.  
+     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundario**, **primario**, **atributo**y **propio**) tiene un tipo de nodo principal. Para el eje de **atributo** , el tipo de nodo principal es **\<attribute>** . En el caso de los ejes **primario**, **secundario**y **propio** , el tipo de nodo principal es **\<element>** .  
   
-     Por ejemplo, si la ruta de acceso de ubicación especifica **Child:: Customer**, se seleccionan los ** \<** elementos secundarios del cliente>del nodo de contexto. Dado que el eje **secundario** tiene ** \<el elemento>** como su tipo de nodo principal, la prueba de nodo, Customer, es true si Customer es un ** \<elemento>** nodo.  
+     Por ejemplo, si la ruta de acceso de ubicación especifica **Child:: Customer**, **\<Customer>** se seleccionan los elementos secundarios del nodo de contexto. Dado que el eje **secundario** tiene **\<element>** como su tipo de nodo principal, la prueba de nodo, Customer, es true si Customer es un **\<element>** nodo.  
   
 -   **Predicados de selección (cero o más)**  
   
      Un predicado filtra un conjunto de nodos con respecto a un eje. La especificación de predicados de selección en una expresión XPath es similar a especificar una cláusula WHERE en una instrucción SELECT. El predicado se especifica entre corchetes. Al aplicar la prueba especificada en los predicados de selección, se filtran los nodos devueltos por la prueba de nodo. Para cada nodo del conjunto de nodos que se va a filtrar, la expresión de predicado se evalúa con ese nodo como el nodo de contexto, con el número de nodos del conjunto de nodos como tamaño de contexto. Si la expresión de predicado se evalúa como TRUE para ese nodo, el nodo se incluye en el conjunto de nodos resultante.  
   
-     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión XPath (ruta de acceso de ubicación) **Child:@CustomerID: Customer [= ' ALFKI ']** selecciona todos los ** \<elementos del cliente>** elemento secundario del nodo de contexto. A continuación, la prueba del predicado se aplica al conjunto de nodos, que solo devuelve ** \<** los nodos de elemento de>de cliente con el valor de atributo ' ALFKI ' para su atributo **CustomerID** .  
+     La sintaxis de un paso de ubicación es el nombre de eje y la prueba de nodo separados por dos signos de dos puntos (::), seguidos de cero o más expresiones, cada una de ellas entre corchetes. Por ejemplo, la expresión XPath (ruta de acceso de ubicación) **Child:: Customer [ @CustomerID = ' ALFKI ']** selecciona todos los **\<Customer>** elementos secundarios del nodo de contexto. A continuación, la prueba del predicado se aplica al conjunto de nodos, que solo devuelve los **\<Customer>** nodos de elemento con el valor de atributo ' ALFKI ' para su atributo **CustomerID** .  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Especificar un eje &#40;SQLXML 4,0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/location-path/specifying-an-axis-sqlxml-4-0.md)  

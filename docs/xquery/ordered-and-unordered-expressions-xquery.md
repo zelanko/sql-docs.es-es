@@ -1,5 +1,6 @@
 ---
 title: Expresiones ordenadas y no ordenadas (XQuery) | Microsoft Docs
+description: Obtenga información sobre expresiones ordenadas y no ordenadas en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 6e7b3631-38d5-4375-b565-21d2e3f36ae0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4538b78cb64a5017230f0a879f5bf20a02df0341
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 995e2072be85128ab58b85213c255ee35c042d5b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886854"
 ---
 # <a name="ordered-and-unordered-expressions-xquery"></a>Expresiones ordenadas y no ordenadas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  De forma predeterminada, se [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **ordena**el modo de ordenación para todas las operaciones de. Por lo tanto, las secuencias de nodo devueltas por las expresiones de ruta de acceso y las expresiones FLWOR, sin la cláusula **order by** , están en el orden del documento.  
+  De forma predeterminada, se ordena el modo de ordenación para todas las operaciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . **ordered** Por lo tanto, las secuencias de nodo devueltas por las expresiones de ruta de acceso y las expresiones FLWOR, sin la cláusula **order by** , están en el orden del documento.  
   
  No se admite la sintaxis **ordenada** y sin **ordenar** adicional que se describe en la especificación de XQuery.  
   

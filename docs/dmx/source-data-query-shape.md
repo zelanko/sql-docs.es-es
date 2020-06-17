@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c16a1b25542e38bfc434fbe994ad6bb462069796
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: c6bdacd512dce26d423980cb5af3c91d5947cb24
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881804"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;consulta de datos &gt; de origen-forma
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -26,35 +26,35 @@ ms.locfileid: "83670002"
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *consulta maestra*  
+ *consulta principal*  
  Consulta que devuelve la tabla primaria.  
   
  *consulta de tabla secundaria*  
  Consulta que devuelve la tabla anidada.  
   
- *columna maestra*  
+ *columna principal*  
  Columna de la tabla primaria que sirve para identificar filas secundarias a partir del resultado de una consulta de tabla secundaria.  
   
  *columna secundaria*  
- Columna de la tabla secundaria que sirve para identificar la fila primaria a partir del resultado de una consulta de la base de datos maestra.  
+ Columna de la tabla secundaria que identifica la fila primaria del resultado de una consulta primaria.  
   
  *nombre de la tabla de columnas*  
  Nombre de columna que se acaba de anexar en la tabla primaria para la tabla anidada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ordenar las consultas por la columna que relaciona la tabla primaria con la tabla secundaria.  
   
 ## <a name="examples"></a>Ejemplos  

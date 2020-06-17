@@ -1,5 +1,6 @@
 ---
 title: Consultas XQuery que implica jerarquía | Microsoft Docs
+description: Vea ejemplos de consultas XQuery que implican jerarquías.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c4ab17b99dc1d90d867689c5f79425fde0775a4b
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880638"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Consultas XQuery con jerarquía
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "67946101"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. A partir de los documentos de instrucciones de fabricación, recupere ubicaciones de los centros de trabajo junto con el primer paso del proceso de fabricación en esas ubicaciones  
- En el modelo de producto 7, la consulta crea XML que incluye el `ManuInstr` elemento <>, con los atributos **ProductModelID** y **ProductModelName** , y uno o `Location` varios <> elementos secundarios.  
+ En el modelo de producto 7, la consulta crea XML que incluye el `ManuInstr` elemento <>, con los atributos **ProductModelID** y **ProductModelName** , y uno o varios <`Location`> elementos secundarios.  
   
  Cada <`Location` elemento> tiene su propio conjunto de atributos y un <`step`> elemento secundario. Esta <`step`> elemento secundario es el primer paso de fabricación en la ubicación del centro de trabajo.  
   
@@ -61,9 +62,9 @@ WHERE ProductModelID=7
   
 -   **SQL: column ()** se usa para incluir un valor relacional en el XML que se está construyendo.  
   
--   Al construir el elemento> `Location` de <, $WC/@ * recupera todos los atributos de ubicación del centro de trabajo.  
+-   Al construir el `Location` elemento> de <, $WC/@ * recupera todos los atributos de ubicación del centro de trabajo.  
   
--   La función **String ()** devuelve el valor de cadena del elemento `step` <>.  
+-   La función **String ()** devuelve el valor de cadena del `step` elemento <>.  
   
  Éste es un resultado parcial:  
   
@@ -84,7 +85,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Buscar todos los números de teléfono de la columna AdditionalContactInfo  
- La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando en toda la jerarquía el elemento `telephoneNumber` de> de <. Dado que el `telephoneNumber` elemento de> de <puede aparecer en cualquier parte de la jerarquía, la consulta utiliza el operador descendiente y self (//) en la búsqueda.  
+ La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando en toda la jerarquía el elemento de> de <`telephoneNumber` . Dado que el `telephoneNumber` elemento de> de <puede aparecer en cualquier parte de la jerarquía, la consulta utiliza el operador descendiente y self (//) en la búsqueda.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -111,7 +112,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Para recuperar solo los números de teléfono de nivel superior, específicamente el `telephoneNumber` <> elementos secundarios de `AdditionalContactInfo` <>, la expresión for de la consulta cambia a  
+ Para recuperar solo los números de teléfono de nivel superior, específicamente el <`telephoneNumber`> elementos secundarios de <`AdditionalContactInfo`>, la expresión for de la consulta cambia a  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   

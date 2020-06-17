@@ -1,5 +1,6 @@
 ---
 title: Data (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar los datos de la función XQuery () para devolver el valor con tipo de cada elemento de una secuencia especificada de elementos.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac340466d1d816139249e4b007c7b2bc733dd390
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881875"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funciones del descriptor de acceso a datos: data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Secuencia de elementos cuyos valores con tipo van a devolverse.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La siguiente información se aplica a los valores con tipo:  
   
 -   El valor con tipo de un valor atómico es el propio valor atómico.  
@@ -125,7 +126,7 @@ WHERE ProductModelID = 19
   
  En los siguientes ejemplos se muestran instancias en las que se requiere la función **Data ()** .  
   
- En la consulta siguiente, **$PD/P1: Specifications/material** devuelve el `Material` elemento> <. Además, los **datos ($PD/P1: Specifications/material)** devuelven datos de caracteres con el tipo XDT `Material` : untypedAtomic, porque <> no tiene tipo. Cuando la entrada no tiene tipo, el resultado de **Data ()** se escribe como **XDT: untypedAtomic**.  
+ En la consulta siguiente, **$PD/P1: Specifications/material** devuelve el `Material` elemento> <. Además, los **datos ($PD/P1: Specifications/material)** devuelven datos de caracteres con el tipo XDT: untypedAtomic, porque <`Material`> no tiene tipo. Cuando la entrada no tiene tipo, el resultado de **Data ()** se escribe como **XDT: untypedAtomic**.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +150,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- En la consulta siguiente, **Data ($PD/P1: Features/WM: garantía)** devuelve un error estático, porque `Warranty` <> es un elemento de tipo complejo.  
+ En la consulta siguiente, **Data ($PD/P1: Features/WM: garantía)** devuelve un error estático, porque <`Warranty`> es un elemento de tipo complejo.  
   
 ```  
 WITH XMLNAMESPACES (  

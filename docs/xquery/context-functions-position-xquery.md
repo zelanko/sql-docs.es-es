@@ -1,5 +1,6 @@
 ---
 title: Función Position (XQuery) | Microsoft Docs
+description: Obtenga información sobre la posición de la función XQuery () que devuelve un valor entero que indica la posición de un elemento de contexto dentro de una secuencia de elementos.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45dffc809f223f9b18cd1dae1c5b951d5a8f1463
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881931"
 ---
 # <a name="context-functions---position-xquery"></a>Funciones de contexto: position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +35,14 @@ ms.locfileid: "68038981"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Observaciones  
- En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **FN: Position ()** solo se puede usar en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
+## <a name="remarks"></a>Comentarios  
+ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , **FN: Position ()** solo se puede usar en el contexto de un predicado dependiente del contexto. Concretamente, solo se puede utilizar entre corchetes ([ ]). Las comparaciones con esta función no reducen la cardinalidad durante una inferencia de tipo estático.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **xml** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Usar la función position() de XQuery para recuperar las dos primeras características de producto  
- La consulta siguiente recupera las dos primeras características, los dos primeros elementos secundarios del elemento <`Features`>, de la descripción del catálogo de modelos de producto. Si hay más características, agrega un <`there-is-more/` elemento> al resultado.  
+ La consulta siguiente recupera las dos primeras características, los dos primeros elementos secundarios del `Features` elemento <>, de la descripción del catálogo de modelos de producto. Si hay más características, agrega un <`there-is-more/` elemento> al resultado.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -69,11 +70,11 @@ WHERE CatalogDescription is not null
   
 -   La palabra clave **namespace** del [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md) define un prefijo de espacio de nombres que se utiliza en el cuerpo de la consulta.  
   
--   El cuerpo de la consulta construye XML que tiene \<un elemento de> de producto con los atributos **ProductModelID** y **ProductModelName** , y tiene características de producto devueltas como elementos secundarios.  
+-   El cuerpo de la consulta construye XML que tiene un \<Product> elemento con los atributos **ProductModelID** y **ProductModelName** , y tiene características de producto devueltas como elementos secundarios.  
   
--   La función **Position ()** se utiliza en el predicado para determinar la posición de \<las características> elemento secundario en el contexto. Si es la primera o segunda característica, se devuelve.  
+-   La función **Position ()** se utiliza en el predicado para determinar la posición del \<Features> elemento secundario en el contexto. Si es la primera o segunda característica, se devuelve.  
   
--   La instrucción IF agrega un \<elemento inexistente-is-more/> al resultado si hay más de dos características en el catálogo de productos.  
+-   La instrucción IF agrega un \<there-is-more/> elemento al resultado si hay más de dos características en el catálogo de productos.  
   
 -   Dado que no todos los modelos de producto tienen sus descripciones de catálogo almacenadas en la tabla, la cláusula WHERE descarta las filas para las que CatalogDescriptions es NULL.  
   

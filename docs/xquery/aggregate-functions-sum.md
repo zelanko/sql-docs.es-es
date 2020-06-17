@@ -1,5 +1,6 @@
 ---
 title: Función SUM (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función XQuery SUM () que devuelve la suma de una secuencia de números.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b6efd2cc3d5793d4524c4ab3d058a6375d23892
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67985742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886934"
 ---
 # <a name="aggregate-functions---sum"></a>Funciones de agregado: sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  Secuencia de valores atómicos cuya suma se va a calcular.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los tipos de valores atomizados que se pasan a **SUM ()** deben ser subtipos del mismo tipo base. Los tipos base aceptados son los tres tipos numéricos base integrados o xdt:untypedAtomic. Los valores del tipo xdt:untypedAtomic se convierten a xs:double. Si hay una combinación de estos tipos, o si se pasan otros valores de otros tipos, se genera un error estático.  
   
  El resultado de **SUM ()** recibe el tipo base de los tipos pasados, como XS: Double en el caso de XDT: untypedAtomic, incluso si la entrada es opcionalmente la secuencia vacía. Si se trata de una entrada vacía estática, el resultado es 0 con el tipo estático y dinámico xs:integer.  
@@ -48,7 +49,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  La función devuelve un error en tiempo de ejecución cuando se produce una excepción por desbordamiento o por valores fuera del intervalo.  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas **xml** en varias columnas de tipo [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Utilizar la función sum() de XQuery para calcular el número total de horas de trabajo de todos los centros de trabajo del proceso de fabricación  
  La consulta siguiente averigua el número total de horas de trabajo para todos los centros de trabajo del proceso de fabricación de todos los modelos de producto para los que se almacenan instrucciones de fabricación.  

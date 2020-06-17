@@ -1,5 +1,6 @@
 ---
 title: Expresiones SequenceType (XQuery) | Microsoft Docs
+description: Obtenga información sobre la instancia de las expresiones SequenceType de XQuery y la conversión de como.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,19 +18,19 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946284"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886076"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   En XQuery, un valor siempre es una secuencia. Se hace referencia a los tipos de valor como tipos de secuencia. El tipo de secuencia se puede utilizar en una **instancia de** expresión XQuery. La sintaxis SequenceType descrita en la especificación de XQuery se utiliza cuando se debe hacer referencia a un tipo de una expresión XQuery.  
   
- El nombre de tipo atómico también se puede usar en la **conversión como** expresión XQuery. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la **instancia de** y **convertir como** expresiones XQuery en SequenceTypes se admiten parcialmente.  
+ El nombre de tipo atómico también se puede usar en la **conversión como** expresión XQuery. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , la **instancia de** y **convertir como** expresiones XQuery en SequenceTypes se admiten parcialmente.  
   
 ## <a name="instance-of-operator"></a>Operador instance of  
  La **instancia del** operador se puede utilizar para determinar el tipo dinámico, o en tiempo de ejecución, del valor de la expresión especificada. Por ejemplo:  
@@ -39,11 +40,11 @@ ms.locfileid: "67946284"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Tenga en cuenta `instance of` que el operador `Occurrence indicator`,, especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo se admite el indicador de repetición de signo de interrogación (**?)** . El **?** el indicador de repetición `Expression` indica que puede devolver cero o un elemento. Si el **?** se especifica el indicador de `instance of` repetición, devuelve true `Expression` cuando el tipo coincide `SequenceType`con el especificado, `Expression` independientemente de si devuelve un singleton o una secuencia vacía.  
+ Tenga en cuenta que el `instance of` operador, `Occurrence indicator` , especifica la cardinalidad, el número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se admite el indicador de repetición de signo de interrogación (**?)** . El **?** el indicador de repetición indica que `Expression` puede devolver cero o un elemento. Si el **?** se especifica el indicador de repetición, `instance of` devuelve true cuando el `Expression` tipo coincide con el especificado `SequenceType` , independientemente de si `Expression` devuelve un singleton o una secuencia vacía.  
   
- Si el **?** no se especifica el indicador de `sequence of` repetición, solo devuelve true `Expression` cuando el tipo `Type` coincide con `Expression` el especificado y devuelve un singleton.  
+ Si el **?** no se especifica el indicador de repetición, `sequence of` solo devuelve true cuando el `Expression` tipo coincide con el `Type` especificado y `Expression` devuelve un singleton.  
   
- **Nota:** Los indicadores de signo**+** más () y asterisco (**&#42;**) no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Nota:** Los indicadores de signo más ( **+** ) y asterisco (**&#42;**) no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  En los siguientes ejemplos se muestra el uso de la**instancia del** operador XQuery.  
   
@@ -77,7 +78,7 @@ select @x.query('/a[1]/@attr1 instance of attribute()')
 go  
 ```  
   
- En el ejemplo siguiente, la expresión, `data(/a[1]`, devuelve un valor atómico con el tipo xdt:untypedAtomic. Por lo tanto `instance of` , devuelve true.  
+ En el ejemplo siguiente, la expresión, `data(/a[1]`, devuelve un valor atómico con el tipo xdt:untypedAtomic. Por lo tanto, `instance of` devuelve true.  
   
 ```  
 declare @x xml  
@@ -86,7 +87,7 @@ select @x.query('data(/a[1]) instance of xdt:untypedAtomic')
 go  
 ```  
   
- En la consulta siguiente, la expresión, `data(/a[1]/@attrA`, devuelve un valor atómico sin tipo. Por lo tanto `instance of` , devuelve true.  
+ En la consulta siguiente, la expresión, `data(/a[1]/@attrA`, devuelve un valor atómico sin tipo. Por lo tanto, `instance of` devuelve true.  
   
 ```  
 declare @x xml  
@@ -98,7 +99,7 @@ go
 ### <a name="example-b"></a>Ejemplo B  
  En este ejemplo, se consulta una columna con el tipo XML de la base de datos de ejemplo AdventureWorks. La colección de esquemas XML asociada con la columna que se consulta proporciona la información de escritura.  
   
- En la expresión, **Data ()** devuelve el valor con tipo del atributo ProductModelID cuyo tipo es XS: String según el esquema asociado a la columna. Por lo tanto `instance of` , devuelve true.  
+ En la expresión, **Data ()** devuelve el valor con tipo del atributo ProductModelID cuyo tipo es XS: String según el esquema asociado a la columna. Por lo tanto, `instance of` devuelve true.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -188,9 +189,9 @@ go
 ```  
   
 ### <a name="example-d"></a>Ejemplo D  
- En este ejemplo, primero se crea una colección de esquemas XML y se usa para escribir una variable **XML** . A continuación, se consulta la variable **XML** con tipo para `instance of` ilustrar la funcionalidad.  
+ En este ejemplo, primero se crea una colección de esquemas XML y se usa para escribir una variable **XML** . A continuación, se consulta la variable **XML** con tipo para ilustrar la `instance of` funcionalidad.  
   
- La siguiente colección de esquemas XML define un tipo simple, el tipo y un elemento, `root` <>, del tipo de:  
+ La siguiente colección de esquemas XML define un tipo simple, el tipo y un elemento, <`root`>, del tipo de:  
   
 ```  
 drop xml schema collection SC  
@@ -234,11 +235,11 @@ go
 ### <a name="example-e"></a>Ejemplo E  
  En el ejemplo siguiente, la expresión recupera uno de los valores del atributo IDREFS y utiliza `instance of` para determinar si el valor es del tipo IDREF. En el ejemplo, se realizan las tareas siguientes:  
   
--   Crea una colección de esquemas XML en la `Customer` que el elemento <> tiene un atributo de tipo IDREFS **OrderList** y el elemento <`Order`> tiene un atributo de tipo ID. de **OrderID** .  
+-   Crea una colección de esquemas XML en la que el `Customer` elemento <> tiene un atributo de tipo IDREFS **OrderList** y el `Order` elemento <> tiene un atributo de tipo ID. de **OrderID** .  
   
 -   Crea una variable **XML** con tipo y le asigna una instancia XML de ejemplo.  
   
--   Se especifica una consulta con la variable. La expresión de consulta recupera el primer valor de ID. de orden del atributo de tipo OrderList IDRERS del `Customer` primer <>. El valor recuperado es de tipo IDREF. Por lo `instance of` tanto, devuelve true.  
+-   Se especifica una consulta con la variable. La expresión de consulta recupera el primer valor de ID. de orden del atributo de tipo OrderList IDRERS del primer <`Customer`>. El valor recuperado es de tipo IDREF. Por lo tanto, `instance of` devuelve true.  
   
 ```  
 create xml schema collection SC as  
@@ -308,13 +309,13 @@ select @x.query(' declare namespace CustOrders="Customers";
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  
   
--   Los tipos de secuencia **Schema-Element ()** y **Schema-Attribute ()** no se admiten para la `instance of` comparación con el operador.  
+-   Los tipos de secuencia **Schema-Element ()** y **Schema-Attribute ()** no se admiten para la comparación con el `instance of` operador.  
   
 -   No se admiten las secuencias completas, como `(1,2) instance of xs:integer*`.  
   
--   Cuando se usa un formulario del tipo de secuencia **Element ()** que especifica un nombre de tipo, como `element(ElementName, TypeName)`, el tipo se debe calificar con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no admite la detección en tiempo de ejecución de la propiedad **xsi: nil** mediante `instance of`el uso de.  
+-   Cuando se usa un formulario del tipo de secuencia **Element ()** que especifica un nombre de tipo, como `element(ElementName, TypeName)` , el tipo se debe calificar con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]no admite la detección en tiempo de ejecución de la propiedad **xsi: nil** mediante el uso de `instance of` .  
   
--   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si se `e1` define <> para que tenga un tipo estático de (XS: Integer | XS: String), lo siguiente devolverá FALSE.  
+-   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si `e1` se define <> para que tenga un tipo estático de (XS: Integer | XS: String), lo siguiente devolverá FALSE.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  
@@ -332,7 +333,7 @@ select @x.query(' declare namespace CustOrders="Customers";
 Expression cast as  AtomicType?  
 ```  
   
- En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se requiere el signo de interrogación (?) después de `AtomicType`. Por ejemplo, como se muestra en la consulta siguiente `"2" cast as xs:integer?` , convierte el valor de cadena en un entero:  
+ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], se requiere el signo de interrogación (?) después de `AtomicType`. Por ejemplo, como se muestra en la consulta siguiente, `"2" cast as xs:integer?` convierte el valor de cadena en un entero:  
   
 ```  
 declare @x xml  
@@ -340,7 +341,7 @@ set @x=''
 select @x.query('"2" cast as xs:integer?')  
 ```  
   
- En la consulta siguiente, **Data ()** devuelve el valor con tipo del atributo ProductModelID, un tipo de cadena. El `cast as`operador convierte el valor en XS: Integer.  
+ En la consulta siguiente, **Data ()** devuelve el valor con tipo del atributo ProductModelID, un tipo de cadena. El `cast as` operador convierte el valor en XS: Integer.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -354,7 +355,7 @@ WHERE ProductModelID = 19
  El uso explícito de los **datos ()** no es necesario en esta consulta. La expresión `cast as` realiza una atomización implícita en la expresión de entrada.  
   
 ### <a name="constructor-functions"></a>Funciones de constructor  
- Se pueden utilizar las funciones de constructor de tipo atómico. Por ejemplo, en lugar de usar el `cast as` operador, `"2" cast as xs:integer?`, puede utilizar la función constructora **xs: Integer ()** , como en el ejemplo siguiente:  
+ Se pueden utilizar las funciones de constructor de tipo atómico. Por ejemplo, en lugar de usar el `cast as` operador, `"2" cast as xs:integer?` , puede utilizar la función constructora **xs: Integer ()** , como en el ejemplo siguiente:  
   
 ```  
 declare @x xml  

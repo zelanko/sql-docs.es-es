@@ -1,5 +1,6 @@
 ---
 title: Función Contains (XQuery) | Microsoft Docs
+description: Obtenga información sobre cómo usar la función Contains en una expresión XQuery para determinar si un valor de cadena especificado contiene el valor de subcadena especificado.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67899025"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881864"
 ---
 # <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg 2*  
  Subcadena que se va a buscar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el valor de *$arg 2* es una cadena de longitud cero, la función devuelve **true**. Si el valor de *$ARG 1* es una cadena de longitud cero y el valor de *$arg 2* no es una cadena de longitud cero, la función devuelve **false**.  
   
  Si el valor de *$ARG 1* o *$arg 2* es la secuencia vacía, el argumento se trata como la cadena de longitud cero.  

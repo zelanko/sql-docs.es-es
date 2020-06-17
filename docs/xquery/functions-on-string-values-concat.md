@@ -1,5 +1,6 @@
 ---
 title: concat (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre la función XQuery concat () que devuelve una cadena creada mediante la concatenación de cero o más cadenas especificadas como argumentos.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d3762f419789732406564606ad7a3b990e30fd
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68099827"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881818"
 ---
 # <a name="functions-on-string-values---concat"></a>Funciones usadas en valores de cadena: concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +41,7 @@ fn:concat ($string as xs:string?
  *$string*  
  Cadena opcional que se concatenará.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función requiere al menos dos argumentos. Si un argumento es una secuencia vacía, se tratará como una cadena de longitud cero.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
@@ -50,7 +51,7 @@ fn:concat ($string as xs:string?
  En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** en la base de datos de ejemplo AdventureWorks.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Usar la función de XQuery concat() para concatenar cadenas  
- Para un modelo de producto determinado, esta consulta devuelve una cadena creada mediante la concatenación del período de garantía y la descripción de la misma. En el documento de Descripción del catálogo, `Warranty` el elemento <> se compone de `WarrantyPeriod` <> y `Description` <los elementos secundarios.  
+ Para un modelo de producto determinado, esta consulta devuelve una cadena creada mediante la concatenación del período de garantía y la descripción de la misma. En el documento de Descripción del catálogo, el `Warranty` elemento <> se compone de <`WarrantyPeriod`> y <`Description` los elementos secundarios.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -83,7 +84,7 @@ WHERE  PD.ProductModelID=28
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  
 ```  
   
- La consulta anterior recupera información para un producto determinado. La consulta siguiente recupera la misma información para todos los productos para los que se almacenan descripciones del catálogo XML. El método **exist ()** del tipo de datos **XML** de la cláusula WHERE devuelve true si el documento XML de las filas tiene un elemento `ProductDescription` <>.  
+ La consulta anterior recupera información para un producto determinado. La consulta siguiente recupera la misma información para todos los productos para los que se almacenan descripciones del catálogo XML. El método **exist ()** del tipo de datos **XML** de la cláusula WHERE devuelve true si el documento XML de las filas tiene un `ProductDescription` elemento <>.  
   
 ```  
 WITH XMLNAMESPACES (  

@@ -1,5 +1,6 @@
 ---
 title: Función true (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función XQuery true () que devuelve el valor booleano true.
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb3625b1377d11907ca118faee8d81c06b8d6af6
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68039045"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886574"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Funciones de constructor booleano: true (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ go
   
  En el ejemplo siguiente, la consulta se especifica en una columna **XML** con tipo. La `if` expresión comprueba el valor booleano con tipo del elemento <`ROOT`> y devuelve el XML construido, según corresponda. En el ejemplo, se realizan las tareas siguientes:  
   
--   Crea una colección de esquemas XML que define `ROOT` el elemento <> del tipo XS: Boolean.  
+-   Crea una colección de esquemas XML que define el `ROOT` elemento <> del tipo XS: Boolean.  
   
 -   Crea una tabla con una columna **XML** con tipo utilizando la colección de esquemas XML.  
   

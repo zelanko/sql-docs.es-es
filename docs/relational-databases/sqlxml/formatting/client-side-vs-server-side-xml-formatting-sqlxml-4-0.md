@@ -1,5 +1,6 @@
 ---
 title: Formato XML del lado cliente y de servidor (SQLXML)
+description: Obtenga información sobre las diferencias generales entre el formato XML del lado cliente y el servidor en SQLXML 4,0.
 ms.date: 03/16/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -19,19 +20,19 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 421c48590098f9dbf4ce075c213fcd1cda720649
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 34eb3a31a9b2affc473338cb730dddeee2f87904
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75247011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84882899"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado cliente y Aplicación de formato XML en el servidor (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En este tema se describen las diferencias generales que existen entre la aplicación de formato XML del lado cliente y del lado servidor en SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>En el formato del cliente, no se admiten consultas de varios conjuntos de filas  
- Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere esta plantilla de ejemplo, que tiene dos instrucciones SELECT en un ** \<bloque SQL: query>** :  
+ Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere esta plantilla de ejemplo, que tiene dos instrucciones SELECT en un **\<sql:query>** bloque:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -42,12 +43,12 @@ ms.locfileid: "75247011"
 </ROOT>  
 ```  
   
- Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos bloques ** \<SQL: query>** independientes, obtendrá los resultados deseados.  
+ Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos bloques independientes **\<sql:query>** , obtendrá los resultados deseados.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp se asigna de distinto modo cuando la aplicación de formato se realiza en el cliente o en el servidor  
  En el formato XML del servidor, la columna de base de datos de tipo **timestamp** se asigna al tipo XDR de i8 (cuando se especifica la opción XMLDATA en la consulta).  
   
- En el formato XML del lado cliente, la columna de base de datos de tipo **timestamp** se asigna al **URI** o al tipo XDR **bin. base64** (dependiendo de si se especifica la opción Binary Base64 en la consulta). El tipo XDR **bin. base64** es útil si usa las características diagrama y de carga masiva, ya que este tipo se convierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el tipo de **marca** de tiempo. De esta forma, las operaciones de inserción, actualización o eliminación se realizan correctamente.  
+ En el formato XML del lado cliente, la columna de base de datos de tipo **timestamp** se asigna al **URI** o al tipo XDR **bin. base64** (dependiendo de si se especifica la opción Binary Base64 en la consulta). El tipo XDR **bin. base64** es útil si usa las características diagrama y de carga masiva, ya que este tipo se convierte en el tipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **marca** de tiempo. De esta forma, las operaciones de inserción, actualización o eliminación se realizan correctamente.  
   
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>En el formato del servidor se usan tipos VARIANT profundos  
  En la aplicación de formato XML en el servidor, se usan los tipos profundos de un tipo VARIANT. Si aplica el formato XML del lado cliente, los datos VARIANT se convierten en una cadena Unicode y no se usan los subtipos de VARIANT.  

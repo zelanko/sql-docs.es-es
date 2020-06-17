@@ -1,5 +1,6 @@
 ---
 title: Controlar espacios de nombres en XQuery | Microsoft Docs
+description: Vea ejemplos de control de espacios de nombres en una expresión XQuery que incluye cómo declarar espacios de nombres nuevos y predeterminados.
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d7b427dfa3756b83eb3d0a73f6ff5dd0be23b0c7
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880713"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Controlar espacios de nombres en XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +116,7 @@ where ProductModelID=19
 ```  
   
 ### <a name="d-construction-using-default-namespaces"></a>D. Construcción mediante espacios de nombres predeterminados  
- También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI:\\SomeNamespace", que se usará como valor predeterminado para los elementos con nombre local que se construyen, como el `<Result>` elemento.  
+ También puede definir un espacio de nombres predeterminado para utilizarlo en XML generado. Por ejemplo, la consulta siguiente muestra cómo se puede especificar un espacio de nombres predeterminado, "URI: SomeNamespace" \\ , que se usará como valor predeterminado para los elementos con nombre local que se construyen, como el `<Result>` elemento.  
   
 ```  
 SELECT CatalogDescription.query('  

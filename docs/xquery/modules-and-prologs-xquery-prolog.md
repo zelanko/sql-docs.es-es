@@ -1,5 +1,6 @@
 ---
 title: Prólogo de XQuery | Microsoft Docs
+description: Obtenga información acerca del prólogo de XQuery que contiene una serie de declaraciones y definiciones que crean el entorno necesario para el procesamiento de consultas.
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946606"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881662"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos y prólogos: prólogo de XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ WHERE ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   El prólogo de XQuery incluye una declaración de prefijo de espacio `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`de nombres (AWMI),.  
+-   El prólogo de XQuery incluye una declaración de prefijo de espacio de nombres (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";` .  
   
 -   La palabra clave `declare namespace` define un prefijo de espacio de nombres que se utiliza posteriormente en el cuerpo de la consulta.  
   

@@ -1,5 +1,6 @@
 ---
 title: substring (función de XQuery) | Microsoft Docs
+description: Obtenga información sobre la subcadena de la función XQuery () que devuelve la parte especificada de una cadena de origen.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 694fb912675a15055688956a18714185e25995c4
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68004645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881925"
 ---
 # <a name="functions-on-string-values---substring"></a>Funciones usadas en valores de cadena: substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +50,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  [opcional] Número de caracteres que se va a recuperar. Si no se especifica, devuelve todos los caracteres de la ubicación especificada en *$startingLoc* hasta el final de la cadena.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La versión de la función con tres argumentos devuelve los caracteres de `$sourceString` cuya posición `$p` sea:  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -69,7 +70,7 @@ fn:substring($sourceString as xs:string?,
  SQL Server permite que *$startingLoc* y *$length* sean una secuencia vacía, porque la secuencia vacía es un valor posible como resultado de la asignación de errores dinámicos a ().  
   
 ## <a name="examples"></a>Ejemplos  
- En este tema se proporcionan ejemplos de XQuery con instancias XML **xml** almacenadas en varias columnas [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de tipo XML de la base de datos.  
+ En este tema se proporcionan ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo **XML** de la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de datos.  
   
 ### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. Utilizar la función substring() de XQuery para recuperar descripciones resumidas parciales de modelos de productos  
  La consulta recupera los primeros 50 caracteres del texto que describe el modelo de producto, el elemento <`Summary`> del documento.  
@@ -85,7 +86,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  Observe lo siguiente en la consulta anterior:  
   
--   La función **String ()** devuelve el valor de cadena del elemento `Summary`<>. Esta función se usa, porque el elemento `Summary` <> contiene el texto y los subelementos (elementos de formato HTML), y dado que se omitirán estos elementos y se recuperará todo el texto.  
+-   La función **String ()** devuelve el valor de cadena del `Summary` elemento<>. Esta función se usa, porque el `Summary` elemento <> contiene el texto y los subelementos (elementos de formato HTML), y dado que se omitirán estos elementos y se recuperará todo el texto.  
   
 -   La función **substring ()** recupera los primeros 50 caracteres del valor de cadena recuperado por la **cadena ()**.  
   

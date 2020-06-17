@@ -1,5 +1,6 @@
 ---
 title: Instrucción e iteración de FLWOR (XQuery) | Microsoft Docs
+description: Obtenga información sobre las cláusulas for, Let, Where, order by y Return que componen la sintaxis de iteración del flujo en XQuery.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c03c6c2faa156aff513cfcc44fc99dcf461a62f5
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880969"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR (instrucción e iteración de XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ ms.locfileid: "68038904"
   
 -   Una expresión `return`. La expresión de la cláusula `return` construye el resultado de la instrucción FLWOR.  
   
- Por ejemplo, la consulta siguiente recorre en iteración `Step` el <> elementos en la primera ubicación de fabricación y devuelve el valor de `Step` cadena de los nodos de> <:  
+ Por ejemplo, la consulta siguiente recorre en iteración el <`Step`> elementos en la primera ubicación de fabricación y devuelve el valor de cadena de los `Step` nodos de> <:  
   
 ```sql
 declare @x xml  
@@ -79,7 +80,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- La consulta siguiente es parecida a la anterior, a diferencia de que se especifica en la columna Instructions, una columna xml con tipo, de la tabla ProductModel. La consulta recorre en iteración todos los pasos de `step` fabricación, <> elementos, en la primera ubicación del centro de trabajo de un producto específico.  
+ La consulta siguiente es parecida a la anterior, a diferencia de que se especifica en la columna Instructions, una columna xml con tipo, de la tabla ProductModel. La consulta recorre en iteración todos los pasos de fabricación, <`step`> elementos, en la primera ubicación del centro de trabajo de un producto específico.  
   
 ```sql
 SELECT Instructions.query('  
@@ -96,13 +97,13 @@ where ProductModelID=7
   
 -   `$Step` es la variable de iteración.  
   
--   La [expresión](../xquery/path-expressions-xquery.md)de ruta `//AWMI:root/AWMI:Location[1]/AWMI:step`de acceso,, genera la secuencia de entrada. Esta secuencia es la secuencia de los elementos `step` secundarios del nodo de elemento <> del `Location` primer nodo de elemento de> <.  
+-   La [expresión de ruta de acceso](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step` , genera la secuencia de entrada. Esta secuencia es la secuencia de los `step` elementos secundarios del nodo de elemento <> del primer `Location` nodo de elemento de> <.  
   
 -   La cláusula de predicado opcional, `where`, no se utiliza.  
   
--   La `return` expresión devuelve un valor de cadena del elemento `step` <>.  
+-   La `return` expresión devuelve un valor de cadena del `step` elemento <>.  
   
- La [función String (XQuery)](../xquery/data-accessor-functions-string-xquery.md) se utiliza para recuperar el valor de cadena del nodo `step` <>.  
+ La [función String (XQuery)](../xquery/data-accessor-functions-string-xquery.md) se utiliza para recuperar el valor de cadena del `step` nodo <>.  
   
  Éste es el resultado parcial:  
   
@@ -155,7 +156,7 @@ SELECT @x.query('
 ...  
 ```  
   
- La siguiente consulta crea un nuevo XML que tiene los elementos `Location` <> con los atributos de ubicación del centro de trabajo devueltos como elementos secundarios:  
+ La siguiente consulta crea un nuevo XML que tiene los `Location` elementos <> con los atributos de ubicación del centro de trabajo devueltos como elementos secundarios:  
   
 ```xml
 <Location>  
@@ -246,7 +247,7 @@ where ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   La `where` palabra clave utiliza la función **Count ()** para contar el número de `step` <> elementos secundarios en cada ubicación del centro de trabajo.  
+-   La `where` palabra clave utiliza la función **Count ()** para contar el número de <`step`> elementos secundarios en cada ubicación del centro de trabajo.  
   
 -   La expresión `return` construye el XML deseado a partir de los resultados de la iteración.  
   
@@ -267,7 +268,7 @@ where ProductModelID=7
 4.  De lo contrario, provocará un error estático.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Enlace de diversas variables en FLWOR  
- Puede tener una sola expresión FLWOR que enlace diversas variables a secuencias de entrada. En el ejemplo siguiente, la consulta se especifica con una variable xml sin tipo. La expresión de FLOWr devuelve el primer `Step` <elemento secundario de> en `Location` cada <> elemento.  
+ Puede tener una sola expresión FLWOR que enlace diversas variables a secuencias de entrada. En el ejemplo siguiente, la consulta se especifica con una variable xml sin tipo. La expresión de FLOWr devuelve el primer <`Step` elemento secundario de> en cada <`Location`> elemento.  
   
 ```sql
 declare @x xml  
@@ -293,11 +294,11 @@ SELECT @x.query('
   
  Observe lo siguiente en la consulta anterior:  
   
--   La `for` expresión define `$Loc` las variables`FirstStep` y $.  
+-   La `for` expresión define las `$Loc` variables y $ `FirstStep` .  
   
 -   Las expresiones `two`, `/ManuInstructions/Location` y `$FirstStep in $Loc/Step[1]`, están correlacionadas: los valores de `$FirstStep` dependen de los valores de `$Loc`.  
   
--   La expresión asociada a `$Loc` genera una secuencia de <`Location`> elementos. Para cada <`Location` elemento>, `$FirstStep` genera una secuencia de un elemento `Step` <>, un singleton.  
+-   La expresión asociada a `$Loc` genera una secuencia de <`Location`> elementos. Para cada <`Location` elemento>, `$FirstStep` genera una secuencia de un `Step` elemento <>, un singleton.  
   
 -   `$Loc` se especifica en la expresión asociada con la variable `$FirstStep`.  
   
@@ -328,7 +329,7 @@ WHERE ProductModelID=7
   
 -   La cláusula `for` define dos variables, `$WC` y `$S`. La expresión asociada con `$WC` genera una secuencia de ubicaciones de centro de trabajo para la fabricación de un modelo de bicicleta. La expresión de ruta de acceso asignada a la variable `$S` genera una secuencia de pasos para cada secuencia de ubicaciones de centro de trabajo de `$WC`.  
   
--   La instrucción return crea XML que tiene un elemento `Step` <> que contiene el paso de fabricación y **LocationID** como su atributo.  
+-   La instrucción return crea XML que tiene un `Step` elemento <> que contiene el paso de fabricación y **LocationID** como su atributo.  
   
 -   El **espacio de nombres declare default Element** se usa en el prólogo de XQuery para que todas las declaraciones de espacio de nombres en el XML resultante aparezcan en el elemento de nivel superior. Esto facilita la lectura del resultado. Para obtener más información sobre los espacios de nombres predeterminados, vea [administrar espacios de nombres en XQuery](../xquery/handling-namespaces-in-xquery.md).  
   
@@ -352,7 +353,7 @@ WHERE ProductModelID=7
 ```  
   
 ## <a name="using-the-order-by-clause"></a>Usar la cláusula order by  
- La ordenación en XQuery se realiza usando la cláusula `order by` en la expresión FLWOR. Las expresiones de ordenación que se `order by` pasan a la cláusula deben devolver valores cuyos tipos sean válidos para el operador **gt** . Cada expresión de ordenación debe dar como resultado una secuencia de singleton con un elemento. De forma predeterminada, la ordenación se realiza en orden ascendente. Podrá especificar opcionalmente un orden ascendente o descendente para cada expresión de ordenación.  
+ La ordenación en XQuery se realiza usando la cláusula `order by` en la expresión FLWOR. Las expresiones de ordenación que se pasan a la `order by` cláusula deben devolver valores cuyos tipos sean válidos para el operador **gt** . Cada expresión de ordenación debe dar como resultado una secuencia de singleton con un elemento. De forma predeterminada, la ordenación se realiza en orden ascendente. Podrá especificar opcionalmente un orden ascendente o descendente para cada expresión de ordenación.  
   
 > [!NOTE]  
 >  Las comparaciones de ordenación en valores de cadena realizadas mediante la implementación de XQuery en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se realizan siempre con la intercalación de puntos de código Unicode binarios.  
@@ -373,7 +374,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- Tenga en cuenta que el proceso de [atomización (XQuery)](../xquery/atomization-xquery.md) recupera el valor atómico del `number` <> elementos antes de pasarlo a `order by`. Puede escribir la expresión mediante la función **Data ()** , pero no es obligatorio.  
+ Tenga en cuenta que el proceso de [atomización (XQuery)](../xquery/atomization-xquery.md) recupera el valor atómico del <`number`> elementos antes de pasarlo a `order by` . Puede escribir la expresión mediante la función **Data ()** , pero no es obligatorio.  
   
 ```  
 order by data($a/act:number[1]) descending  
@@ -406,7 +407,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- También puede ordenar por valor de atributo. Por ejemplo, la consulta siguiente recupera el <`Location` recién creado> elementos que tienen los atributos LocationID y LaborHours ordenados por el atributo LaborHours en orden descendente. Como resultado, se devolverán primero las ubicaciones de centro de trabajo que tengan el máximo de horas de trabajo (LaborHours).  
+ También puede ordenar por valor de atributo. Por ejemplo, la consulta siguiente recupera el <recién creado `Location`> elementos que tienen los atributos LocationID y LaborHours ordenados por el atributo LaborHours en orden descendente. Como resultado, se devolverán primero las ubicaciones de centro de trabajo que tengan el máximo de horas de trabajo (LaborHours).  
   
 ```sql
 SELECT Instructions.query('  
@@ -434,7 +435,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- En la consulta siguiente, se ordenan los resultados por nombre de elemento. La consulta recupera las especificaciones de un producto determinado del catálogo de productos. Las especificaciones son los elementos secundarios del elemento `Specifications` <>.  
+ En la consulta siguiente, se ordenan los resultados por nombre de elemento. La consulta recupera las especificaciones de un producto determinado del catálogo de productos. Las especificaciones son los elementos secundarios del `Specifications` elemento <>.  
   
 ```sql
 SELECT CatalogDescription.query('  

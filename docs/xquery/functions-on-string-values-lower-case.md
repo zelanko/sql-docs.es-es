@@ -1,5 +1,6 @@
 ---
 title: Función en minúsculas (XQuery) | Microsoft Docs
+description: Obtenga información sobre la función XQuery en minúsculas () que convierte cada carácter de una cadena especificada en su equivalente en minúsculas.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68077670"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84886591"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funciones usadas en valores de cadena: lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +42,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |Término|Definición|  
 |*$arg*|Valor de cadena que se va a convertir a letra minúscula.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el valor de *$arg* está vacío, se devuelve una cadena de longitud cero.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Cambiar una cadena a letra mayúscula  
- En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4' a minúsculas.  
+ En el ejemplo siguiente se cambia la cadena de entrada ' abcDEF! @4 ' en minúsculas.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  

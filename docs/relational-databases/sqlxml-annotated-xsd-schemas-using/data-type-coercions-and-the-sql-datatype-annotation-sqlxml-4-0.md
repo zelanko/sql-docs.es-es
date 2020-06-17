@@ -1,5 +1,6 @@
 ---
 title: 'Convertir tipos de datos con SQL: DataType (SQLXML)'
+description: 'Aprenda a usar los atributos xsd: Type y SQL: DataType en SQLXML 4,0 para controlar la asignación entre los tipos de datos XSD y los tipos de datos SQL Server.'
 ms.date: 03/17/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -22,18 +23,18 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98f2ee047bccf7cd3843fe34aaf8f5caec0dc11a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7d2a4789dfc29cdd581ab50f9f0a0f3d5d69ff0f
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75257474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84885608"
 ---
 # <a name="data-type-conversions-and-the-sqldatatype-annotation-sqlxml-40"></a>Conversiones de tipos de datos y la anotación sql: DataType (SQLXML 4,0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   En un esquema XSD, el atributo **xsd: Type** especifica el tipo de datos XSD de un elemento o atributo. Cuando se usa un esquema XSD para extraer datos de la base de datos, el tipo de datos especificado se usa para dar formato a los datos.  
   
- Además de especificar un tipo XSD en un esquema, también puede especificar un tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft mediante la anotación **SQL: DataType** . Los atributos **xsd: Type** y **SQL: DataType** controlan la asignación entre los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] XSD y los tipos de datos.  
+ Además de especificar un tipo XSD en un esquema, también puede especificar un tipo de datos de Microsoft mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la anotación **SQL: DataType** . Los atributos **xsd: Type** y **SQL: DataType** controlan la asignación entre los tipos de datos XSD y los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
   
 ## <a name="xsdtype-attribute"></a>Atributo xsd:type  
  Puede usar el atributo **xsd: Type** para especificar el tipo de datos XML de un atributo o elemento que se asigna a una columna. El **xsd: Type** afecta al documento que se devuelve desde el servidor y también a la consulta XPath que se ejecuta. Cuando se ejecuta una consulta XPath en un esquema de asignación que contiene **xsd: Type**, XPath usa el tipo de datos especificado al procesar la consulta. Para obtener más información sobre cómo XPath utiliza **xsd: Type**, vea [asignar tipos de datos XSD a tipos de datos de xpath &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md).  
@@ -42,16 +43,16 @@ ms.locfileid: "75257474"
   
 |Tipo de datos XSD|Conversión de SQL Server|  
 |-------------------|---------------------------|  
-|Booleano|CONVERT(bit, COLUMN)|  
+|Boolean|CONVERT(bit, COLUMN)|  
 |Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Tiempo|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Todos los demás|Ninguna conversión adicional|  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Algunos de los valores devueltos por podrían no ser compatibles con los tipos de datos XML que se especifican mediante **xsd: Type**, ya sea porque la conversión no es posible (por ejemplo, al convertir "XYZ" en un tipo de datos **decimal** ) o porque el valor supera el intervalo de ese tipo de datos (por ejemplo,-100000 convertido en un tipo XSD **UnsignedShort** ). Las conversiones de tipos incompatibles pueden dar lugar a documentos XML no válidos o a errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Algunos de los valores devueltos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podrían no ser compatibles con los tipos de datos XML que se especifican mediante **xsd: Type**, ya sea porque la conversión no es posible (por ejemplo, al convertir "XYZ" en un tipo de datos **decimal** ) o porque el valor supera el intervalo de ese tipo de datos (por ejemplo,-100000 convertido en un tipo XSD **UnsignedShort** ). Las conversiones de tipos incompatibles pueden dar lugar a documentos XML no válidos o a errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="mapping-from-sql-server-data-types-to-xsd-data-types"></a>Asignar tipos de datos SQL Server a tipos de datos XSD  
  En la tabla siguiente se muestra una asignación obvia de tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a tipos de datos XSD. Si se conoce el tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta tabla proporciona el tipo XSD correspondiente que puede especificarse en el esquema XSD.  
@@ -65,7 +66,7 @@ ms.locfileid: "75257474"
 |**datetime**|**dateTime**|  
 |**decimal**|**decimal**|  
 |**float**|**double**|  
-|**image**|**base64Binary**|  
+|**imagen**|**base64Binary**|  
 |**int**|**int**|  
 |**money**|**decimal**|  
 |**nchar**|**string**|  
@@ -88,11 +89,11 @@ ms.locfileid: "75257474"
 ## <a name="sqldatatype-annotation"></a>Anotación sql:datatype  
  La anotación **SQL: DataType** se utiliza para especificar el tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos; esta anotación debe especificarse cuando:  
   
--   La carga masiva se realiza en una columna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir de un tipo de **fecha**y **hora** **de XSD.** En este caso, debe identificar el tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos de la columna mediante **SQL: DataType = "DateTime"**. Esta regla también se aplica a los diagramas de actualización.  
+-   La carga masiva se realiza en una columna **DateTime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a partir **dateTime**de un tipo de **fecha**y **hora** de XSD. En este caso, debe identificar el tipo de datos de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columna mediante **SQL: DataType = "DateTime"**. Esta regla también se aplica a los diagramas de actualización.  
   
--   Está cargando de forma masiva en una columna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tipo **uniqueidentifier** y el valor XSD es un GUID que incluye llaves ({y}). Cuando se especifica **SQL: DataType = "uniqueidentifier"**, las llaves se quitan del valor antes de insertarse en la columna. Si no se especifica **SQL: DataType** , el valor se envía con las llaves y se produce un error en la inserción o la actualización.  
+-   Está cargando de forma masiva en una columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo **uniqueidentifier** y el valor XSD es un GUID que incluye llaves ({y}). Cuando se especifica **SQL: DataType = "uniqueidentifier"**, las llaves se quitan del valor antes de insertarse en la columna. Si no se especifica **SQL: DataType** , el valor se envía con las llaves y se produce un error en la inserción o la actualización.  
   
--   El tipo de datos **XML base64Binary** se asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a varios tipos de datos (**Binary**, **Image**o **varbinary**). Para asignar el tipo de datos XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos específico, use la anotación **SQL: DataType** . Esta anotación especifica el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explícito de la columna a la que asigna el atributo. Esto resulta de gran utilidad cuando los datos se almacenan en las bases de datos. Al especificar la anotación **SQL: DataType** , puede identificar el tipo de datos explícito [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+-   El tipo de datos XML **base64Binary** se asigna a varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos (**Binary**, **Image**o **varbinary**). Para asignar el tipo de datos XML **base64Binary** a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos específico, use la anotación **SQL: DataType** . Esta anotación especifica el tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] explícito de la columna a la que asigna el atributo. Esto resulta de gran utilidad cuando los datos se almacenan en las bases de datos. Al especificar la anotación **SQL: DataType** , puede identificar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos explícito.  
   
  Por lo general, se recomienda especificar **SQL: DataType** en el esquema.  
   
@@ -119,7 +120,7 @@ ms.locfileid: "75257474"
   
  En este esquema XSD, hay tres atributos que devuelven un valor de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando el esquema:  
   
--   Especifica **xsd: Type = Date** en el atributo **OrderDate** , se muestra la parte de fecha del valor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelto por para el atributo **OrderDate** .  
+-   Especifica **xsd: Type = Date** en el atributo **OrderDate** , se muestra la parte de fecha del valor devuelto por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el atributo **OrderDate** .  
   
 -   Especifica **xsd: Type = Time** en el atributo **ShipDate** , donde se muestra la parte de hora del valor devuelto por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el atributo **ShipDate** .  
   

@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 71e2d7f2bce555cca469a46a95a1fc3e000eea76
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 7609ecdf63f1bec0a344c9c6c8456a009ca3bbfa
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84528041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880662"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Escenario de Tutorial de Analysis Services
   Este tutorial se basa en [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], una compañía ficticia. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] es una multinacional dedicada a la fabricación y distribución de bicicletas de metal y de metal compuesto en mercados de Norteamérica, Europa y Asia. Las oficinas centrales de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] se encuentran en Bothell, Washington, donde la compañía tiene 500 trabajadores. Además, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] tiene contratados a varios equipos de ventas regionales en toda su base de mercado.  
@@ -26,7 +26,7 @@ ms.locfileid: "84528041"
 ## <a name="current-analysis-environment"></a>Entorno de análisis actual  
  Para dar respuesta a las necesidades de análisis de datos de los equipos de ventas y de marketing, la compañía obtiene actualmente los datos transaccionales de la base de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] y la información que no corresponde a las transacciones, como las cuotas de venta, la obtiene de hojas de cálculo y consolida toda esta información en el almacenamiento de datos relacionales **AdventureWorksDW2012** . No obstante, el almacenamiento de datos relacional presenta los siguientes problemas:  
   
--   Los informes son estáticos. Los usuarios no pueden explorar de forma interactiva los datos de los informes para obtener información más detallada, como podían hacer con una tabla dinámica de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Aunque el conjunto existente de informes predefinidos es suficiente para muchos usuarios, los usuarios más avanzados necesitan un acceso de consulta directo a la base de datos para realizar consultas interactivas y obtener informes especializados. No obstante, debido a la complejidad de la base de datos **AdventureWorksDW2012** , se necesita demasiado tiempo para que estos usuarios puedan aprender a crear consultas eficaces.  
+-   Los informes son estáticos. Los usuarios no pueden explorar de forma interactiva los datos de los informes para obtener información más detallada, como podían hacer con una tabla dinámica de [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel. Aunque el conjunto existente de informes predefinidos es suficiente para muchos usuarios, los usuarios más avanzados necesitan un acceso de consulta directo a la base de datos para realizar consultas interactivas y obtener informes especializados. Sin embargo, debido a la complejidad de la base de datos **AdventureWorksDW2012** , se necesita demasiado tiempo para que estos usuarios obtengan información sobre cómo crear consultas eficaces.  
   
 -   El rendimiento de las consultas es muy variable. Por ejemplo, algunas consultas devuelven resultados con gran rapidez, en pocos segundos, mientras que otras tardan varios minutos en devolverlos.  
   

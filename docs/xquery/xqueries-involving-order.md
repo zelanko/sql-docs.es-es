@@ -1,5 +1,6 @@
 ---
 title: Consultas XQuery que requiere el orden | Microsoft Docs
+description: Ver ejemplos de consultas XQuery basados en la secuencia en la que aparecen los nodos en un documento.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36c7e512c1e691d0341cb802a61e57d46d4b076a
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946113"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84880510"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Las bases de datos relacionales no reconocen el concepto de secuencia. Por ejemplo, no se puede realizar una solicitud similar a "Obtener el primer cliente de la base de datos". Sin embargo, puede consultar un documento XML y recuperar el primer \<elemento> el cliente. A partir de ahí, siempre se recuperará el mismo cliente.  
+  Las bases de datos relacionales no reconocen el concepto de secuencia. Por ejemplo, no se puede realizar una solicitud similar a "Obtener el primer cliente de la base de datos". Sin embargo, puede consultar un documento XML y recuperar el primer \<Customer> elemento. A partir de ahí, siempre se recuperará el mismo cliente.  
   
  En este tema se describen las consultas que se basan en el orden en que aparecen los nodos en el documento.  
   
@@ -81,7 +82,7 @@ WHERE ProductModelID=7
 </ManuStep>    
 ```  
   
- La consulta anterior recupera solamente los nodos de texto. Si desea que se devuelva `step` el elemento <> completo en su lugar, quite la función **String ()** de la consulta:  
+ La consulta anterior recupera solamente los nodos de texto. Si desea que se `step` devuelva el elemento <> completo en su lugar, quite la función **String ()** de la consulta:  
   
 ### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Encontrar todas las herramientas y todo el material utilizados en el segundo centro de trabajo en la fabricación de un producto  
  Para un modelo de producto específico, la consulta siguiente recupera las herramientas y el material utilizados en el segundo centro de trabajo de una serie de centros de trabajo del proceso de fabricación.  
@@ -115,7 +116,7 @@ where ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   La consulta construye el elemento <loca`tion`> y recupera sus valores de atributo de la base de datos.  
+-   La consulta construye el elemento <loca `tion`> y recupera sus valores de atributo de la base de datos.  
   
 -   Utiliza dos iteraciones FLWOR (for...return): una para recuperar las herramientas y otra para recuperar el material.  
   
@@ -137,7 +138,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar las dos primeras descripciones de las características de un producto del catálogo de productos  
- Para un modelo de producto específico, la consulta recupera las dos primeras descripciones de características `Features` del elemento <> del catálogo de modelos de producto.  
+ Para un modelo de producto específico, la consulta recupera las dos primeras descripciones de características del `Features` elemento <> del catálogo de modelos de producto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -157,7 +158,7 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
- El cuerpo de la consulta crea XML que incluye el `ProductModel` <> elemento que tiene los atributos ProductModelID y ProductModelName.  
+ El cuerpo de la consulta crea XML que incluye el <`ProductModel`> elemento que tiene los atributos ProductModelID y ProductModelName.  
   
 -   La consulta utiliza un... Devuelva el bucle para recuperar las descripciones de las características del modelo de producto. La función **Position ()** se usa para recuperar las dos primeras características.  
   

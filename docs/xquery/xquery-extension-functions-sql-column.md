@@ -1,5 +1,6 @@
 ---
 title: 'Función SQL: column () (XQuery) | Microsoft Docs'
+description: 'Obtenga información sobre cómo se puede usar la función SQL: column () de XQuery para enlazar datos relacionales no XML dentro de XML y reunir datos relacionales y XML.'
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb52e949b706f7e1af51f1c067d38ce23bb777f2
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67946019"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881505"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Funciones de extensión de XQuery: sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +39,10 @@ ms.locfileid: "67946019"
 sql:column("columnName")  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Tenga en cuenta que la referencia a una columna especificada en la función **SQL: column ()** dentro de una expresión XQuery hace referencia a una columna de la fila que se está procesando.  
   
- En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo puede hacer referencia a una instancia **XML** en el contexto de la expresión de origen de una instrucción INSERT de XML-DML. de lo contrario, no puede hacer referencia a columnas que son de tipo **XML** o un tipo definido por el usuario CLR.  
+ En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , solo se puede hacer referencia a una instancia **XML** en el contexto de la expresión de origen de una instrucción INSERT de XML-DML; de lo contrario, no se puede hacer referencia a columnas que son de tipo **XML** o un tipo definido por el usuario CLR.  
   
  La función **SQL: column ()** no se admite en las operaciones de combinación. En su lugar, se puede utilizar la operación APPLY.  
   
@@ -105,7 +106,7 @@ ProductID               Result
 ...  
 ```  
   
- La consulta siguiente crea XML que contiene información específica del producto. Esta información incluye ProductID, ProductName, ProductPrice y, si está disponible, ProductModelName para todos los productos que pertenecen a un modelo específico, ProductModelID=19. A continuación, el XML se asigna @x a la variable de tipo **XML** .  
+ La consulta siguiente crea XML que contiene información específica del producto. Esta información incluye ProductID, ProductName, ProductPrice y, si está disponible, ProductModelName para todos los productos que pertenecen a un modelo específico, ProductModelID=19. A continuación, el XML se asigna a la @x variable de tipo **XML** .  
   
 ```sql
 declare @x xml  
@@ -134,7 +135,7 @@ select @x
  [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

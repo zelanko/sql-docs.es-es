@@ -1,5 +1,6 @@
 ---
 title: Función String (XQuery) | Microsoft Docs
+description: Obtenga información sobre la cadena de función de XQuery () que devuelve el valor de su argumento representado como una cadena.
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 59c90ce7e0bdbe46fa1ca577e2b16e6576650751
+ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68038942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84881894"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>Funciones del descriptor de acceso a datos: string (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +40,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  Es un nodo o un valor atómico.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 -   Si *$arg* es la secuencia vacía, se devuelve la cadena de longitud cero.  
   

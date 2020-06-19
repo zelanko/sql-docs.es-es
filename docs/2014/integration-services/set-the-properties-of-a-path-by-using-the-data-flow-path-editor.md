@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 512249a4-83a6-4087-980d-a4344da48371
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07af1256f4935467d1230bf2987fde4cd02c5de7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055732"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963158"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Establecer las propiedades de una ruta con el Editor de rutas de flujo de datos
   Las rutas conectan dos componentes de flujo de datos. Para poder establecer propiedades de ruta, el flujo de datos debe contener por lo menos dos componentes de flujo de datos conectados. Para más información, vea [Agregar o eliminar un componente en un flujo de datos](data-flow/add-or-delete-a-component-in-a-data-flow.md) y [Conectar componentes de un flujo de datos](data-flow/connect-components-in-a-data-flow.md).  
@@ -32,7 +31,7 @@ ms.locfileid: "66055732"
   
 4.  En el **Editor de rutas de flujo de datos**, haga clic en **General**. A partir de este momento puede editar el nombre predeterminado de la ruta y proporcionar una descripción de la ruta. También puede modificar la propiedad PathAnnotation.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 6.  Para guardar el paquete actualizado, haga clic en **Guardar los elementos seleccionados**, en el menú **Archivo**.  
   

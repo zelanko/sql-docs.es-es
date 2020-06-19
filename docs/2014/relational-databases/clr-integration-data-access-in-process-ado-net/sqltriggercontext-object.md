@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 472a2d0b-64ae-4877-8f11-a5620aa698b7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df384324ba16aac03a4c889cf4f3959c23374510
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7eae3d290a70bedee0ed9badf9e6d0503caa2bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955015"
 ---
 # <a name="sqltriggercontext-object"></a>Objeto SqlTriggerContext
   La clase `SqlTriggerContext` proporciona información de contexto acerca del desencadenador. Esto incluye el tipo de acción que ha provocado la activación del desencadenador, las columnas que se modificaron en una operación UPDATE y, en el caso de un desencadenador de lenguaje de definición de datos (DDL), una estructura de XML `EventData` que describe la operación de desencadenamiento. Para obtener más información y ejemplos de cómo usar la `SqlTriggerContext` clase, vea [desencadenadores CLR](../../database-engine/dev-guide/clr-triggers.md).  
   
- Para obtener más información, vea `Microsoft.SqlServer.Server.SqlTriggerContext` la documentación de referencia de la clase en la documentación del SDK de .NET Framework.  
+ Para obtener más información, vea la `Microsoft.SqlServer.Server.SqlTriggerContext` documentación de referencia de la clase en la documentación del SDK de .NET Framework.  
   
 ## <a name="see-also"></a>Consulte también  
  [Desencadenadores CLR](../../database-engine/dev-guide/clr-triggers.md)   

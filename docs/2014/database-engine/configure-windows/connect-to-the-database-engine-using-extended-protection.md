@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 894cb2beb52684ececb4d9aadb171e283fad5a55
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935460"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada para la autenticación** es una característica de los componentes de red que implementa el sistema operativo. La**protección ampliada** se admite en Windows 7 y Windows Server 2008 R2. **Protección ampliada** se incluye en Service packs para [!INCLUDE[msCoName](../../includes/msconame-md.md)] sistemas operativos antiguos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es más seguro cuando las conexiones se realizan con **Extended Protection**.  
@@ -85,7 +84,7 @@ ms.locfileid: "62811289"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **SQL Server configuración de red**y, a continuación, haga clic con el botón secundario en **protocolos de** *\<*InstanceName*>* y, a continuación, haga clic en **propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   

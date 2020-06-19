@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c5db358-2a16-49d9-aac5-a74e86813932
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 182a0f4b7e74490f9600b7ef43cd2baa511080f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f18fd2485c9b2e62586d9f3e81f76f6cf680dbfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176645"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063008"
 ---
 # <a name="multipolygon"></a>MultiPolygon
   Una instancia de `MultiPolygon` es una colección de cero o más instancias de `Polygon`.
@@ -59,7 +58,7 @@ DECLARE @g geometry = 'MULTIPOLYGON(((1 1, 1 -1, -1 -1, -1 1, 1 1)),((1 1, 3 1, 
 ### <a name="valid-instances"></a>Instancias válidas
  Una instancia `MultiPolygon` es válida si es una instancia `MultiPolygon` vacía o si cumple los siguientes criterios.
 
-1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para las `Polygon` instancias válidas, vea [Polygon](../spatial/polygon.md).
+1.  Todas las instancias que comprenden la instancia `MultiPolygon` son instancias `Polygon` válidas. Para `Polygon` las instancias válidas, vea [Polygon](../spatial/polygon.md).
 
 2.  Ninguna de las instancias `Polygon` que comprenden la instancia `MultiPolygon` se superponen.
 

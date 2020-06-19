@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c233a5e9755e910a53a53fa1366faef733370474
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5c58abd60ecc6236e52e302f6e11daaaa244ff21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487164"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063176"
 ---
 # <a name="permissions-database-engine"></a>Permisos (motor de base de datos)
   Todos los elementos protegibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen permisos asociados que se pueden conceder a una entidad de seguridad. Este tema proporciona la siguiente información:  
@@ -32,7 +31,7 @@ ms.locfileid: "81487164"
   
 -   [Permisos relacionados con elementos protegibles específicos](#_securables)  
   
--   [SQL Server permisos](#_permissions)  
+-   [Permisos de SQL Server](#_permissions)  
   
 -   [Algoritmo de comprobación de permiso](#_algorithm)  
   
@@ -49,11 +48,11 @@ ms.locfileid: "81487164"
   
      Confiere la posibilidad de cambiar las propiedades, excepto la propiedad, de un elemento protegible determinado. Cuando se concede para un ámbito, ALTER también confiere la posibilidad de modificar, crear o quitar cualquier elemento protegible que esté contenido en ese ámbito. Por ejemplo, el permiso ALTER en un esquema incluye la posibilidad de crear, modificar y quitar objetos del esquema.  
   
--   Modifique cualquier \<> *protegible del servidor* , donde el *servidor protegible* puede ser cualquier elemento protegible del servidor.  
+-   ALTER ANY \<*Server Securable*> , donde el elemento *protegible del servidor* puede ser cualquier elemento protegible del servidor.  
   
      Confiere la posibilidad de crear, modificar o quitar instancias individuales del *Protegible del servidor*. Por ejemplo, ALTER ANY LOGIN confiere la posibilidad de crear, modificar o quitar cualquier inicio de sesión en la instancia.  
   
--   Modifique cualquier \<> *protegible de base de datos* , donde la base de *datos protegible* puede ser cualquier elemento protegible en el nivel de base de datos.  
+-   ALTER ANY \<*Database Securable*> , donde *protegible de base de datos* puede ser cualquier elemento protegible en el nivel de base de datos.  
   
      Confiere la posibilidad de crear (CREATE), modificar (ALTER) o quitar (DROP) instancias individuales del *Protegible de la base de datos*. Por ejemplo, ALTER ANY SCHEMA confiere la posibilidad de crear, modificar o quitar cualquier esquema en la base de datos.  
   
@@ -61,23 +60,23 @@ ms.locfileid: "81487164"
   
      Permite al receptor del permiso tomar propiedad del elemento protegible para el que se concede este permiso.  
   
--   \<Suplantar inicio de *sesión*>  
+-   SUPLANTAR\<*Login*>  
   
      Permite al receptor suplantar el inicio de sesión.  
   
--   \<Suplantar *usuario*>  
+-   SUPLANTAR\<*User*>  
   
      Permite al receptor suplantar al usuario.  
   
--   Crear \<elemento *protegible del servidor*>  
+-   A\<*Server Securable*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible del servidor*.  
   
--   Crear \<elemento *protegible de base de datos*>  
+-   A\<*Database Securable*>  
   
      Confiere al receptor la posibilidad de crear el *Protegible de la base de datos*.  
   
--   Crear \<elemento *protegible contenido en el esquema*>  
+-   A\<*Schema-contained Securable*>  
   
      Confiere la posibilidad de crear el elemento protegible contenido en el esquema. No obstante, para crear el elemento protegible en un esquema concreto se requiere el permiso ALTER en el esquema.  
   
@@ -92,12 +91,12 @@ ms.locfileid: "81487164"
      El permiso de REFERENCES es necesario en un objeto para crear FUNCTION o VIEW con la cláusula `WITH SCHEMABINDING` que hace referencia a ese objeto.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server  
- Para obtener un gráfico con el tamaño [!INCLUDE[ssDE](../../includes/ssde-md.md)] de un póster de todos los [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)permisos en formato PDF, vea.  
+ Para obtener un gráfico con el tamaño de un póster de todos los [!INCLUDE[ssDE](../../includes/ssde-md.md)] permisos en formato PDF, vea [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .  
   
 ##  <a name="permissions-applicable-to-specific-securables"></a><a name="_securables"></a>Permisos aplicables a elementos protegibles específicos  
  En la siguiente tabla se enumeran los principales tipos de permisos y los tipos de elementos protegibles a los que se pueden aplicar.  
   
-|Permiso|Aplicable a|  
+|Permiso|Se aplica a|  
 |----------------|----------------|  
 |SELECT|Sinónimos<br /><br /> Tablas y columnas<br /><br /> Funciones con valores de tabla, [!INCLUDE[tsql](../../includes/tsql-md.md)] y Common Language Runtime (CLR), y columnas<br /><br /> Vistas y columnas|  
 |VIEW CHANGE TRACKING|Tablas<br /><br /> Esquemas|  
@@ -157,7 +156,7 @@ ms.locfileid: "81487164"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Nota: solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +164,7 @@ ms.locfileid: "81487164"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Nota: solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] .|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -204,7 +203,7 @@ ms.locfileid: "81487164"
 |DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Ejecute|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: solo se aplica [!INCLUDE[ssSDS](../../includes/sssds-md.md)]a. Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Nota: solo se aplica a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] . Use ALTER ANY CONNECTION en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  

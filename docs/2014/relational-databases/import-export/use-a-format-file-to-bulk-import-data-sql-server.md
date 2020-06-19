@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6d9779209b3ffb317658243c168d74740f6731b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026449"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Usar un archivo de formato para importar datos de forma masiva (SQL Server)
-  En este tema se describe cómo usar un archivo de formato en operaciones de importación masiva. El archivo de formato asigna los campos del archivo de datos a las columnas de la tabla.  Puede usar un archivo de formato XML o no XML para importar datos de forma masiva al usar un comando **BCP** o un Bulk Insert o INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+  En este tema se describe cómo usar un archivo de formato en operaciones de importación masiva. El archivo de formato asigna los campos del archivo de datos a las columnas de la tabla.  Puede usar un archivo de formato XML o no XML para importar datos de forma masiva al usar un comando **BCP** o un Bulk Insert o INSERT... SELECT * FROM OPENROWSET (BULK...) [!INCLUDE[tsql](../../includes/tsql-md.md)] Command.  
   
 > [!IMPORTANT]  
 >  Para que un archivo de formato trabaje con un archivo de datos de caracteres Unicode, todos los campos de entrada deben ser cadenas de texto Unicode (es decir, de tamaño fijo o cadenas Unicode terminadas en caracteres).  

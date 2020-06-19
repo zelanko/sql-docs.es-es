@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7115a4f8953ade5fc91e4be3197772f4bc3784c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62811329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935756"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permisos del sistema de archivos para el acceso al motor de base de datos
   En este tema se describe cómo conceder a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]acceso al sistema de archivos de la ubicación donde se almacenan los archivos de base de datos. El servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe tener permiso del sistema de archivos de Windows para obtener acceso a la carpeta de archivos donde se almacenan los archivos de base de datos. El permiso para tener acceso a la ubicación predeterminada se configura durante la instalación. Si coloca los archivos de base de datos en una ubicación diferente, es posible que tenga que seguir estos pasos para conceder a [!INCLUDE[ssDE](../../includes/ssde-md.md)] permisos de control total a dicha ubicación.  
@@ -42,7 +41,7 @@ ms.locfileid: "62811329"
   
 7.  Haga clic en **Aceptar** de nuevo para regresar al cuadro de diálogo **Permisos** .  
   
-8.  En el cuadro nombres de **grupos o usuarios** , seleccione el SID por servicio y, a continuación, en el cuadro **permisos de** \<nombre>, active la casilla **permitir** para **control total**.  
+8.  En el cuadro nombres de **grupos o usuarios** , seleccione el SID por servicio y, a continuación, en el cuadro **permisos para** \<name> , active la casilla **permitir** para **control total**.  
   
 9. Haga clic en **Aplicar**y, a continuación, haga clic dos veces en **Aceptar** para salir.  
   

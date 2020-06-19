@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a54a067ed9da68e25f9394a463fa352ccc165f21
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: edf390d5f127065b23c6ae479af1145209774332
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781928"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063073"
 ---
 # <a name="scripting"></a>Scripting
-  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación fuera de las relaciones de dependencia para los objetos en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]una instancia de.  
+  El objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios o el método `Script` en objetos individuales controlan el scripting en SMO. El <xref:Microsoft.SqlServer.Management.Smo.Scripter> objeto controla la asignación fuera de las relaciones de dependencia para los objetos en una instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
  La generación avanzada de script utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Scripter> y sus objetos secundarios es un proceso de tres fases:  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e991accfd0e6fdd4fa25746499308455eff85ce3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62870907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969925"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Referencia de errores y eventos del motor de base de datos
 
@@ -35,7 +34,7 @@ Esta sección contiene los mensajes de error seleccionados Motor de base de dato
   
  En la tabla siguiente se proporcionan vínculos y descripciones de estos recursos.  
   
-|Resource|Descripción|  
+|Recurso|Descripción|  
 |--------------|-----------------|  
 |[Comunidad de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Este sitio contiene vínculos a grupos de noticias y foros supervisados por la comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También muestra orígenes de información de las comunidades, como blogs y sitios web. La comunidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es de gran utilidad para obtener respuesta a algunas preguntas, aunque la respuesta no se puede garantizar.|  
 |[Comunidad del Centro para programadores de SQL Server](https://go.microsoft.com/fwlink/?LinkId=42456)|El sitio se centra en los grupos de noticias, foros y otros recursos de la comunidad útiles para los programadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

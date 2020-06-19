@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a589eff5-6ec6-4f6e-94b8-831658257f14
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2828316739e53a94b248a8fffcf020ed16692241
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c4ed409286e531413be74a487f5baa2d3a7a878
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089779"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928676"
 ---
 # <a name="sql-server-profiler---edit-filter"></a>SQL Server Profiler (Editar filtro)
   Utilice el cuadro de diálogo **Editar filtro** para crear y modificar filtros de columna de datos en un seguimiento. Haga clic en un nombre de columna de datos de la lista; en el panel adyacente se muestran los criterios de filtro disponibles para dicha columna de datos. Escriba los criterios de filtro y haga clic en **Aceptar** para aplicarlos a la columna de datos seleccionada. Si aparece un icono de filtro a la izquierda del nombre de la columna de datos en la lista, indica que esta columna ya dispone de un filtro configurado.  

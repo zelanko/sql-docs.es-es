@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c0e2316d8222709b3b276f3206bf82b4343d24c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb85e25e9a194f71ca96bce244b9c8425bb1e77f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916520"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969916"
 ---
 # <a name="database-engine-events-and-errors"></a>Eventos y errores del motor de base de datos
   En este tema se proporciona información acerca de los errores y eventos de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

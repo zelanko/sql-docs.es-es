@@ -22,20 +22,19 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c5dc6e2452ea538f30e9ac10fa27b051aba13a1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4a7566e62fbaaca9645409792e104491fadd30c2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707105"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055891"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Crear una aplicación de controlador ODBC de SQL Server Native Client
   La arquitectura de ODBC tiene cuatro componentes que se encargan de realizar las funciones siguientes.  
   
 |Componente|Función|  
 |---------------|--------------|  
-|Application|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
+|Aplicación|Llama a las funciones ODBC para comunicarse con un origen de datos ODBC, envía instrucciones SQL y procesa los conjuntos de resultados.|  
 |Administrador de controladores|Administra la comunicación entre una aplicación y todos los controladores ODBC usados por la aplicación.|  
 |Controlador|Procesa todas las llamadas de función ODBC desde la aplicación, se conecta a un origen de datos, pasa instrucciones SQL de la aplicación al origen de datos y devuelve resultados a la aplicación. Si es necesario, el controlador traduce el SQL de ODBC de la aplicación al SQL nativo usado por el origen de datos.|  
 |Origen de datos|Contiene toda la información que un controlador necesita para obtener acceso a una determinada instancia de datos en un DBMS.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f41b3f85-2f6c-4c3e-9776-8c73d2cc7a53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd75fdae7fc871101aa07785561c8277783a424f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62724796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063056"
 ---
 # <a name="tracing-and-replaying-events"></a>Seguimiento y reproducción de eventos
   En SMO, los objetos `Trace` y `Replay` del espacio de nombres <xref:Microsoft.SqlServer.Management.Trace> proporcionan acceso mediante programación a la funcionalidad de [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], que se utiliza para supervisar una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Puede capturar y guardar datos acerca de cada evento en un archivo o en una tabla para analizarlos posteriormente. Por ejemplo, puede supervisar un entorno de producción para ver qué procedimientos almacenados afectan negativamente al rendimiento al ejecutarse demasiado lentamente.  
@@ -51,7 +50,7 @@ ms.locfileid: "62724796"
   
 -   Reproducir archivos o tablas de seguimiento.  
   
- La aplicación SMO puede utilizar `Trace` los `Replay` datos de seguimiento de los objetos y, o bien se puede examinar manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Los datos de seguimiento también son compatibles con los procedimientos almacenados de [SQL Trace](../../sql-trace/sql-trace.md) que también proporcionan funciones de seguimiento.  
+ La aplicación SMO puede utilizar los datos de seguimiento de los `Trace` `Replay` objetos y, o bien se puede examinar manualmente mediante [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Los datos de seguimiento también son compatibles con los procedimientos almacenados de [SQL Trace](../../sql-trace/sql-trace.md) que también proporcionan funciones de seguimiento.  
   
  Los objetos de seguimiento de SMO residen en el espacio de nombres <xref:Microsoft.SqlServer.Management.Trace>, que requiere una referencia al archivo Microsoft.SQLServer.ConnectionInfo.dll.  
   

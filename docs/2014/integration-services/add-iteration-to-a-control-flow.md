@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b96f5f900e8c1a3adf136c7bdaf1b89f297e4921
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 671073193853d35f1d66f815b5952ab69e978bf9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061982"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926066"
 ---
 # <a name="add-iteration-to-a-control-flow"></a>Agregar iteración a un flujo de control
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para, un elemento de flujo de control que simplifica la inclusión de bucles que repiten condicionalmente un flujo de control en un paquete. Para más información, vea [Contenedor de bucles For](control-flow/for-loop-container.md).  
@@ -38,7 +37,7 @@ ms.locfileid: "66061982"
   
  Las expresiones pueden incluir variables. La ventaja de usar variables es que se pueden actualizar en tiempo de ejecución, lo que hace que los paquetes sean más flexibles y fáciles de administrar. La longitud máxima de una expresión es 4000 caracteres.  
   
- Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, para una variable denominada `Counter`, escriba @Counter en la expresión que usa el contenedor de bucles for. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, para una `Counter` variable del `MyNamespace` espacio de nombres, escriba@MyNamespace::Counter[].  
+ Al especificar una variable en una expresión, el nombre de la variable debe venir precedido por el signo (@). Por ejemplo, para una variable denominada `Counter` , escriba @Counter en la expresión que usa el contenedor de bucles for. Si se incluye la propiedad de espacio de nombres en la variable, debe escribir la variable y el espacio de nombres entre paréntesis. Por ejemplo, para una `Counter` variable del `MyNamespace` espacio de nombres, escriba [ @MyNamespace::Counter ].  
   
  Las variables que usa el contenedor de bucles For se deben definir en el ámbito del contenedor de bucles For o en el ámbito de cualquier contenedor que se encuentre más arriba en la jerarquía de contenedores de paquetes. Por ejemplo, un contenedor de bucles For puede usar variables definidas en su ámbito y también variables definidas en el ámbito de paquetes. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md) y [Usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md).  
   

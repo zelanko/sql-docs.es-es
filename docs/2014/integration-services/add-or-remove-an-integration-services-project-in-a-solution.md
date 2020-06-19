@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f01f6475-b63c-41dc-82ac-b62162b3adf7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9986384801788f907f42588ee298ba531fd13f95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d338cac89b7b6c8f2588817cfd6718d4f415589
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061838"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925971"
 ---
 # <a name="add-or-remove-an-integration-services-project-in-a-solution"></a>Agregar o quitar un proyecto de Integration Services en una solución
   Los procedimientos siguientes describen cómo agregar o quitar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en una solución.  
   
- Solo se puede agregar un proyecto a una solución existente, o quitar un proyecto de una solución, mientras esta está visible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si ha seleccionado la opción **Mostrar solución siempre** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] mostrará una solución aunque esa solución contenga solo un proyecto. En caso contrario, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] solo mostrará una solución cuando esta contenga varios proyectos. Los proyectos adicionales pueden ser proyectos de [!INCLUDE[ssIS](../includes/ssis-md.md)] o de otros tipos.  
+ Solo se puede agregar un proyecto a una solución existente, o quitar un proyecto de una solución, mientras esta está visible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Si ha seleccionado la opción **Mostrar solución siempre** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , mostrará [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] una solución aunque esa solución contenga solo un proyecto. En caso contrario, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] solo mostrará una solución cuando esta contenga varios proyectos. Los proyectos adicionales pueden ser proyectos de [!INCLUDE[ssIS](../includes/ssis-md.md)] o de otros tipos.  
   
 ## <a name="adding-an-integration-services-project"></a>Agregar un proyecto de Integration Services  
  Cuando agregue un proyecto, puede crear uno en blanco con [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o agregar uno creado anteriormente para otra solución. Solo puede agregar un proyecto a una solución existente mientras la solución está visible en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "66061838"
   
 3.  Opcionalmente, modifique el nombre y ubicación del proyecto.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 #### <a name="to-add-an-existing-integration-services-project-to-a-solution"></a>Para agregar un proyecto de Integration Services existente a una solución  
   

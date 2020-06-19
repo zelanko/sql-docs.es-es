@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f98ddbec-f668-4dba-a768-44ac3ae0536f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aadfb7b53d22a00bf14699f611f20ce508a7ab5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53eeb46b5ce23a8976c9de1aaace7959bc708a84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963088"
 ---
 # <a name="set-the-properties-of-a-user-defined-variable"></a>Establecer las propiedades de una variable definida por el usuario
   Para establecer las propiedades de una variable definida por el usuario en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede utilizar una de las características siguientes:  
@@ -34,21 +33,21 @@ ms.locfileid: "66055650"
   
  Cuando se usa la ventana **Propiedades** para establecer expresiones en una variable definida por el usuario:  
   
--   El valor de una variable se puede establecer por las propiedades Value o Expression. De forma predeterminada, la propiedad EvaluateAsExpression se establece `False` en y el valor de la variable se establece mediante la propiedad Value. Para usar una expresión para establecer el valor, primero debe establecer EvaluateAsExpression en `True`y, a continuación, proporcionar una expresión en la propiedad Expression. La propiedad Value se establece automáticamente en el resultado de la evaluación de la expresión.  
+-   El valor de una variable se puede establecer por las propiedades Value o Expression. De forma predeterminada, la propiedad EvaluateAsExpression se establece en `False` y el valor de la variable se establece mediante la propiedad Value. Para usar una expresión para establecer el valor, primero debe establecer EvaluateAsExpression en `True` y, a continuación, proporcionar una expresión en la propiedad Expression. La propiedad Value se establece automáticamente en el resultado de la evaluación de la expresión.  
   
--   La propiedad ValueType contiene el tipo de datos del valor de la propiedad Value. Si Value se establece con una expresión, ValueType se actualiza automáticamente a un tipo de datos compatible con el resultado de la evaluación de la expresión. Por ejemplo, si valor contiene 0 y la propiedad ValueType contiene **Int32** y después establece Expression en getDate (), Value contiene la fecha y hora actuales y ValueType está establecido en `DateTime`.  
+-   La propiedad ValueType contiene el tipo de datos del valor de la propiedad Value. Si Value se establece con una expresión, ValueType se actualiza automáticamente a un tipo de datos compatible con el resultado de la evaluación de la expresión. Por ejemplo, si valor contiene 0 y la propiedad ValueType contiene **Int32** y después establece Expression en getDate (), Value contiene la fecha y hora actuales y ValueType está establecido en `DateTime` .  
   
 -   La ventana **Propiedades** de la variable proporciona acceso al cuadro de diálogo **Generador de expresiones** . Esta herramienta se puede usar para generar, validar y evaluar expresiones. Para más información, vea [Generador de expresiones](expressions/expression-builder.md) y [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
  Cuando se usa la ventana **Variables** para establecer expresiones en una variable definida por el usuario:  
   
--   Para usar una expresión para establecer el valor de la variable, primero confirme que el tipo de datos de la variable es compatible con el resultado de la evaluación de la expresión `Expression` y, a continuación, proporcione una expresión en la columna de la ventana **variables** . La propiedad EvaluateAsExpression de la ventana **propiedades** se establece automáticamente en `True`.  
+-   Para usar una expresión para establecer el valor de la variable, primero confirme que el tipo de datos de la variable es compatible con el resultado de la evaluación de la expresión y, a continuación, proporcione una expresión en la `Expression` columna de la ventana **variables** . La propiedad EvaluateAsExpression de la ventana **propiedades** se establece automáticamente en `True` .  
   
 -   Cuando asigne una expresión a una variable, un marcador especial de icono se muestra junto a la variable. Este marcador de icono especial también aparece junto a los administradores de conexiones y las tareas con expresiones establecidas.  
   
 -   La ventana **Variables** de la variable proporciona acceso al cuadro de diálogo **Generador de expresiones** . Esta herramienta se puede usar para generar, validar y evaluar expresiones. Para más información, vea [Generador de expresiones](expressions/expression-builder.md) y [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).  
   
- En la ventana **variables** y **propiedades** , si asigna una expresión a la variable y `EvaluateAsExpression` está establecida en `True`, no puede cambiar el tipo de datos de la variable.  
+ En la ventana **variables** y **propiedades** , si asigna una expresión a la variable y `EvaluateAsExpression` está establecida en `True` , no puede cambiar el tipo de datos de la variable.  
   
  **Establecer las propiedades Espacio de nombres y Nombre**  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66055650"
   
 4.  Opcionalmente, haga clic en **Opciones de cuadrícula** de la ventana **Variables**, seleccione las columnas que aparecen en la ventana **Variables** y seleccione filtros para aplicarlos a la lista de variables.  
   
-5.  Seleccione la variable en la lista y, a continuación, actualice los `Name`valores de los tipos `Value` `Namespace`de **datos**,,,, **generar evento**de `Expression` cambio, **Descripción** y columnas.  
+5.  Seleccione la variable en la lista y, a continuación, actualice los valores de los `Name` **tipos de datos**,,,, `Value` `Namespace` **generar evento de cambio**, **Descripción** y `Expression` columnas.  
   
 6.  Seleccione la variable en la lista y haga clic en **Mover variable** para cambiar el ámbito.  
   

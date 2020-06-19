@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e6a5d83c-5809-4c56-907a-73d0c7ccdd7a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a615e26ac966fcf0c2af580825019c344889a5d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936056"
 ---
 # <a name="change-source-control"></a>Cambiar el control de código fuente
   Crea y administra las conexiones y los enlaces que vinculan una solución o un proyecto guardados localmente con una carpeta de la base de datos de control de código fuente.  
@@ -46,10 +45,10 @@ ms.locfileid: "62812761"
  **Conectado**  
  Muestra el estado de conexión de una solución o un proyecto seleccionados.  
   
- **Conecto**  
+ **Desconectar**  
  Desconecte la copia local de una solución o un proyecto del equipo de su copia maestra en la base de datos. Utilice este comando antes de dejar sin conexión el equipo del servidor de control de código fuente, por ejemplo, al trabajar sin conexión en su equipo portátil.  
   
- **Aceptar**  
+ **OK (CORRECTO)**  
  Acepta los cambios realizados en el cuadro de diálogo.  
   
  **Proveedor**  
@@ -77,10 +76,10 @@ ms.locfileid: "62812761"
 |----------------|---------------------|  
 |Válido|El elemento está correctamente enlazado y conectado con la carpeta de servidor a la que pertenece.|  
 |No válida|El elemento no está correctamente enlazado o está desconectado de la carpeta a la que pertenece. Utilice el comando **Agregar a control de código fuente** en lugar de **Enlazar** para este elemento.|  
-|Unknown|El estado del elemento en el control de código fuente no se ha determinado todavía.|  
+|Desconocido|El estado del elemento en el control de código fuente no se ha determinado todavía.|  
 |No controlado|El elemento no se ha colocado en el control de código fuente.|  
   
- **Desenlazar**  
+ **Desenlace**  
  Muestra el cuadro de diálogo **Control de código fuente** para permitirle eliminar los elementos seleccionados del control de código fuente y anular definitivamente la asociación de los elementos con sus carpetas actuales.  
   
 ## <a name="see-also"></a>Consulte también  

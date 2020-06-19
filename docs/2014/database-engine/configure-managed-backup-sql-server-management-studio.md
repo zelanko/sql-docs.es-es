@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 79397cf6-0611-450a-b0d8-e784a76e3091
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8e7e02f844df026c597e93e43ebee7f8e786a72
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: e952ef1102ac67bd0ed9f72d0c201d54b320b5ca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849443"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935996"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configurar la copia de seguridad administrada (SQL Server Management Studio)
   El cuadro de diálogo **Copia de seguridad administrada** permite configurar los valores predeterminados de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para la instancia. En este tema se describe cómo usar este cuadro de diálogo para configurar los valores predeterminados de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de la instancia y las opciones que debe tener en cuenta al hacerlo. Cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] está configurado para la instancia, la configuración se aplica a cualquier base de datos nueva creada posteriormente.  
@@ -69,7 +68,7 @@ ms.locfileid: "82849443"
   
  Especifique la **dirección URL de almacenamiento** de la cuenta de almacenamiento de Azure, la credencial de SQL que almacena la información de autenticación para la cuenta de almacenamiento y el período de retención de los archivos de copia de seguridad.  
   
- El formato de la dirección URL de almacenamiento es: https:// \< StorageAccount>. BLOB.Core.Windows.net/  
+ El formato de la dirección URL de almacenamiento es: https:// \<StorageAccount> . BLOB.Core.Windows.net/  
   
  Para establecer la configuración de cifrado en el nivel de instancia, active la opción **Cifrar copia de seguridad** y especifique el algoritmo y un certificado o clave asimétrica que se usará para el cifrado.  Esto se establece en el nivel de instancia y se usa para todas las bases de datos creadas después de la aplicación de esta configuración.  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f1323f9-9dc3-4378-9c70-bbc65bfeabfd
 author: yualan
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c835f42fdbcc43309a0235f8ad862bee9c230e33
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db1db5b066e5540d64121993e6126edefa3b8124
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66462700"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925416"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Administrador de conexiones de Azure Data Lake Store
   El **administrador de conexiones de Azure Data Lake Store** habilita un paquete SSIS para conectarse a un servicio de Azure Data Lake Store mediante dos tipos de autenticación: la identidad de usuario de Azure AD y la identidad de servicio de Azure AD.  
@@ -27,7 +26,7 @@ ms.locfileid: "66462700"
   
 1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **AzureDataLake**y haga clic en **Agregar**.   
   
-2.  En el cuadro de diálogo Editor de administrador de conexiones de AzureDataLake, escriba la dirección URL de Azure Data Lake Store en el campo **Host ADLS** . Por ejemplo: https:\//test.azuredatalakestore.net o test.azuredatalakestore.net.
+2.  En el cuadro de diálogo Editor de administrador de conexiones de AzureDataLake, escriba la dirección URL de Azure Data Lake Store en el campo **Host ADLS** . Por ejemplo: https: \/ /Test.azuredatalakestore.net o test.azuredatalakestore.net.
   
 3.  Elija el tipo de autenticación correspondiente para tener acceso a datos de Azure Data Lake Store.
 

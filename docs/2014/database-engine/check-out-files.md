@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cc033727-51bb-4b58-a12b-8977ce61ff56
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10c076f7bee35e0e466fc22aec9ad9f6984bac6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786750"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936036"
 ---
 # <a name="check-out-files"></a>Desproteger archivos
   A menos que se haya configurado el entorno de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que se permita modificar los archivos protegidos, es necesario desproteger un archivo antes de poder modificarlo. Al desproteger un archivo, una copia de la versión de ese archivo se copia en el disco local y se quita el atributo de solo lectura del mismo.  

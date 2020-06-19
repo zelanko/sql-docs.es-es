@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 419f1cd22e0a7aa314f6a1036793091bb7b385fc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788328"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936306"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad (SQL Server Management Studio)
   En este tema se describe cómo se usa el panel **Detalles del Explorador de objetos** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para supervisar y administrar grupos de disponibilidad AlwaysOn, réplicas de disponibilidad y bases de datos de disponibilidad existentes.  
@@ -79,7 +78,7 @@ ms.locfileid: "62788328"
  **Instancia del servidor**  
  Muestra el nombre de la instancia de servidor que hospeda la réplica de disponibilidad, junto con un icono que indica el estado actual de la conexión de la instancia de servidor a la instancia de servidor local.  
   
- **Rol**  
+ **Role**  
  Indica el rol actual de la réplica de disponibilidad, **Principal** o **Secundaria**. Para más información sobre los roles de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
  **Modo de conexión en rol secundario**  
@@ -100,7 +99,7 @@ ms.locfileid: "62788328"
 |-----------|-----------------|  
 |**Escenario desconectado**|En el caso de una réplica de disponibilidad remota, indica que está desconectada de la réplica de disponibilidad local. La respuesta de la réplica local al estado Desconectado depende de su rol, del siguiente modo:<br /><br /> En la réplica principal, si una réplica secundaria está desconectada, las bases de datos secundarias se marcan como **No sincronizadas** en la réplica principal y la réplica principal espera a que la réplica secundaria vuelva a conectarse.<br /><br /> En la réplica secundaria, cuando detecta que está desconectada, intenta volver a conectarse a la réplica principal.|  
 |**Conectado**|Una réplica de disponibilidad remota que está conectada actualmente a la réplica local.|  
-|**ACEPTA**|Si la réplica local es una réplica secundaria, este valor es NULL para las demás réplicas secundarias.|  
+|**NULL**|Si la réplica local es una réplica secundaria, este valor es NULL para las demás réplicas secundarias.|  
   
  **Estado de sincronización**  
  Indica si una réplica secundaria está sincronizada actualmente con la réplica principal. Los valores posibles son los siguientes:  
@@ -109,7 +108,7 @@ ms.locfileid: "62788328"
 |-----------|-----------------|  
 |**No sincronizado**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
 |**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
-|**ACEPTA**|Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).|  
+|**NULL**|Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).|  
   
 > [!NOTE]  
 >  Para obtener más información sobre los contadores de rendimiento para réplicas de disponibilidad, vea [SQL Server, réplica de disponibilidad](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
@@ -136,7 +135,7 @@ ms.locfileid: "62788328"
 |-----------|-----------------|  
 |**Suspendido**|Este estado indica que la base de datos está suspendida localmente y necesita ser reanudada manualmente.<br /><br /> En la réplica principal, el valor no es confiable para una base de datos secundaria. Para determinar de forma confiable si una base de datos secundaria está suspendida, consúltela en la réplica secundaria que hospeda la base de datos.|  
 |**Sin unir**|Indica que la base de datos secundaria no se ha unido al grupo de disponibilidad o se ha quitado del grupo.|  
-|**Pantalla**|Indica que la base de datos no está suspendida en la réplica de disponibilidad local y que la base de datos está conectada.|  
+|**En línea**|Indica que la base de datos no está suspendida en la réplica de disponibilidad local y que la base de datos está conectada.|  
 |**No conectado**|Indica que la réplica secundaria no se puede conectar actualmente a la réplica principal.|  
   
 > [!NOTE]  

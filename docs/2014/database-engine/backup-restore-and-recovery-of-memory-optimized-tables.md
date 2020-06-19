@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3f083347-0fbb-4b19-a6fb-1818d545e281
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b710812bdc0ca8992b6eb865be8fac7787acff0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 902ed324a4823267e49331b75dbc78f51f63937d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936120"
 ---
 # <a name="backup-restore-and-recovery-of-memory-optimized-tables"></a>Hacer copia de seguridad, restaurar y recuperar tablas con optimización para memoria
   Temas de esta sección:  

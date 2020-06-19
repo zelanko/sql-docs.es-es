@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 68455f23f5d05895af8f0cfb4d7b1e12e3d65b16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061900"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926116"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
   Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  
@@ -46,10 +45,10 @@ ms.locfileid: "66061900"
   
 |Operación de evaluación|La restricción se evalúa como|La expresión se evalúa como|El ejecutable restringido se ejecuta|  
 |--------------------------|-----------------------------|-----------------------------|---------------------------------|  
-|Restricción|True|N/A|True|  
-|Restricción|False|N/A|False|  
-|Expression|N/A|True|True|  
-|Expression|N/A|False|False|  
+|Restricción|True|N/D|True|  
+|Restricción|False|N/D|False|  
+|Expresión|N/D|True|True|  
+|Expresión|N/D|False|False|  
 |Restricción y expresión|True|True|True|  
 |Restricción y expresión|True|False|False|  
 |Restricción y expresión|False|True|False|  

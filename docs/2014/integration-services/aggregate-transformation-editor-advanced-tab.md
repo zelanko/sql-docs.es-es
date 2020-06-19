@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 419a63f9a98e51b9601d7d38f70528ff4ae05970
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a94ba92b44c00442f97f9e11bbd72d06556d8fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925616"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Editor de transformación Agregado (pestaña Avanzadas)
   Utilice la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Agregado** para establecer las propiedades del componente, especificar agregaciones y establecer las propiedades de las columnas de entrada y salida.  
@@ -38,8 +37,8 @@ ms.locfileid: "66061592"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Sin especificar|No se utiliza la propiedad **Escala de claves** .|  
-|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
-|Medio|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
+|Bajo|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
 |Alto|La agregación podrá escribir más de 25.000.000 claves.|  
   
  **Número de claves**  
@@ -51,8 +50,8 @@ ms.locfileid: "66061592"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Sin especificar|No se utiliza la propiedad CountDistinctScale.|  
-|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
-|Medio|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
+|Bajo|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
 |Alto|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
   
  **Claves Count Distinct**  

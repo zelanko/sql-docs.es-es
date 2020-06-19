@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830ec9a5-68fd-4454-a935-4957abf8a052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 274ff0379ea7b745949d3e45dcc000db61bfc58d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936138"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Cambios de comportamiento de las características de las herramientas de administración en SQL Server 2014
   En este tema se describen los cambios de comportamiento de las características de las herramientas de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bc83e1b636aa03e37717ac62de1a44e9c6f1cfd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 679e61c37df7d31b80f47fff186589ce0081f838
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963136"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Establecer las propiedades de una restricción de precedencia
   Para establecer las propiedades en restricciones de precedencia, puede utilizar una de estas herramientas:  
@@ -45,12 +44,12 @@ ms.locfileid: "66055740"
   
 6.  En la `Value` lista desplegable, seleccione el resultado de la ejecución del ejecutable de precedencia.  
   
-7.  Si la operación de evaluación usa una expresión, escriba `Expression` una expresión en el cuadro y haga clic en **probar** para evaluar la expresión.  
+7.  Si la operación de evaluación usa una expresión, `Expression` Escriba una expresión en el cuadro y haga clic en **probar** para evaluar la expresión.  
   
     > [!NOTE]  
     >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
-8.  Si hay varias tareas o contenedores conectados al ejecutable restringido, seleccione **y lógico** para especificar que los resultados de la ejecución de todos los ejecutables anteriores deben evaluarse como `true`. Seleccione **or lógico** para especificar que solo un resultado de la ejecución debe `true`evaluarse como.  
+8.  Si hay varias tareas o contenedores conectados al ejecutable restringido, seleccione **y lógico** para especificar que los resultados de la ejecución de todos los ejecutables anteriores deben evaluarse como `true` . Seleccione **or lógico** para especificar que solo un resultado de la ejecución debe evaluarse como `true` .  
   
 9. Haga clic en **Aceptar** para cerrar el **Editor de restricciones de precedencia**.  
   
@@ -69,10 +68,10 @@ ms.locfileid: "66055740"
     |Propiedad de lectura/escritura|Acción de configuración|  
     |--------------------------|--------------------------|  
     |Descripción|Escribir una descripción.|  
-    |EvalOp|Seleccionar una operación de evaluación. Si se `Expression`selecciona la operación, **ExpressionAndConstant**o **ExpressionOrConstant** , puede especificar una expresión.|  
-    |Expression|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
-    |AND lógico|Se `LogicalAnd` establece para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
-    |NOMBRE|Actualizar el nombre de la restricción de precedencia.|  
+    |EvalOp|Seleccionar una operación de evaluación. Si `Expression` se selecciona la operación, **ExpressionAndConstant**o **ExpressionOrConstant** , puede especificar una expresión.|  
+    |Expresión|Si la operación de evaluación contiene una expresión, se debe proporcionar una expresión. La expresión debe evaluarse como un valor booleano. Para más información sobre el lenguaje de expresiones, vea [Expresiones de Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
+    |AND lógico|Se establece `LogicalAnd` para especificar si la restricción de precedencia se evalúa en conjunto con otras restricciones de precedencia, cuando preceden varios ejecutables y están vinculados al ejecutable restringido.|  
+    |Nombre|Actualizar el nombre de la restricción de precedencia.|  
     |ShowAnnotation|Especificar el tipo de anotación que se va a usar. Elija **Never** para deshabilitar anotaciones, **AsNeeded** para habilitar anotaciones a petición, **ConstraintName** para realizar anotaciones automáticamente usando el valor de la propiedad Name, **ConstraintDescription** para realizar anotaciones automáticamente usando el valor de la propiedad Description y **ConstraintOptions** para realizar anotaciones automáticamente al usar el valor de las propiedades Value y Expression.|  
     |Value|Si la operación de evaluación especificada en la propiedad EvalOP contiene una restricción, seleccione el resultado de la ejecución del ejecutable de restricción.|  
   

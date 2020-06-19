@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 50b051cf2780fc1a94830c461d9ae30674bb7dad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 327217aee7f3e7abf8e09de30542b488a2be5108
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481154"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938056"
 ---
 # <a name="backing-up-and-restoring-dqs-databases"></a>Realizar copias de seguridad de bases de datos de DQS y restaurarlas
   En este tema se describe cómo realizar copias de seguridad de las bases de datos de DQS y cómo restaurarlas.  
@@ -60,7 +59,7 @@ ms.locfileid: "65481154"
   
 10. En el Explorador de objetos, haga clic con el botón secundario en el servidor y, a continuación, haga clic en **Nueva consulta**.  
   
-11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace * \<>de contraseña* por la contraseña que proporcionó durante la instalación de DQS para la clave maestra de base de datos:  
+11. En la ventana Editor de consultas, copie las instrucciones SQL siguientes y reemplace *\<PASSWORD>* por la contraseña que proporcionó durante la instalación de DQS para la clave maestra de base de datos:  
   
     ```  
     USE [DQS_MAIN]  

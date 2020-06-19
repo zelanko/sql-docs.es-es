@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6c3d2b96-6646-42ef-b219-fea2e0cd3459
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54128ccbeab2a40a8e9f65da138b52602f45a86c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065329"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938096"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Qué&#39;s se incluyen en los complementos de minería de datos para Office
   Al instalar los Complementos de minería de datos para Office 2013 y seleccionar todas las opciones de instalación, se agregarán las barras de herramientas y las plantillas siguientes:  
@@ -56,9 +55,9 @@ ms.locfileid: "66065329"
   
      La ubicación predeterminada del libro de ejemplo depende de la versión instalada:  
   
-    -   \<> de unidad: \Archivos de Programa\microsoft SQL Server 2014 DM-ins  
+    -   \<drive>: \Archivos de Programa\microsoft SQL Server 2014 DM-ins  
   
-    -   \<> de unidad: \Archivos de programa (x86) \Microsoft SQL Server 2014 DM-ins  
+    -   \<drive>: \Archivos de programa (x86) \Microsoft SQL Server 2014 DM-ins  
   
 ## <a name="see-also"></a>Consulte también  
  [Introducción con los complementos de minería de datos &#40;para Excel&#41;](getting-started-with-data-mining-data-mining-add-ins-for-excel.md)  

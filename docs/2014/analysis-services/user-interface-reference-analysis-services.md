@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: c3e6ac4b-1435-459e-8678-ee2c8abdfad9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b751e2dfd9950ba7a25bc3cde36f3625ab473131
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065541"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938237"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Referencia de la interfaz de usuario (Analysis Services)
-  En esta sección se incluyen temas [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]de ayuda de. Estos temas también están disponibles desde la interfaz de usuario, al presionar F1 o al hacer clic en **Ayuda** en las páginas del asistente, en los diseñadores y en los cuadros de diálogo.  
+  En esta sección se incluyen temas de ayuda de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Estos temas también están disponibles desde la interfaz de usuario, al presionar F1 o al hacer clic en **Ayuda** en las páginas del asistente, en los diseñadores y en los cuadros de diálogo.  
   
 ## <a name="topic-list"></a>Lista de temas  
   

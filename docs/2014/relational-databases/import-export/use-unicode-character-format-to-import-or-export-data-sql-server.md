@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 34e8f4a5b49c9e023c224e62c23326864ef26f65
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 520ce1b4eed8dc11d6d3fe038969257aea1e90fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026361"
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres Unicode para importar o exportar datos (SQL Server)
   El formato de caracteres Unicode se recomienda para las transferencias masivas de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante un archivo de datos que contenga caracteres DBCS o extendidos. El formato de datos de caracteres Unicode permite exportar datos desde un servidor mediante una página de códigos utilizada por el cliente que está realizando la operación. En esos casos, el uso del formato de caracteres Unicode tiene las siguientes ventajas:  
@@ -41,7 +40,7 @@ ms.locfileid: "66011649"
   
  El formato de caracteres Unicode puede usarse con las siguientes opciones de la línea de comandos:  
   
-|Get-Help|Opción|Descripción|  
+|Get-Help|Opción|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-w**|Usa el formato de caracteres Unicode.|  
 |BULK INSERT|DATAFILETYPE **= '** WideChar **'**|Utiliza el formato de caracteres Unicode al importar datos masivamente.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de238c1012a255ceb59086e542d5529b8b907915
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5da68a6379c0d65c4d5a83af2b359f96784d4ae2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950925"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de varios archivos planos (página Avanzadas)
   Use la página **Avanzadas** del cuadro de diálogo **Editor del Administrador de conexiones de varios archivos planos** para establecer propiedades como el tipo de datos y los delimitadores de cada columna en los archivos de texto a los que se conecta el administrador de conexiones de archivos planos.  
@@ -46,7 +45,7 @@ ms.locfileid: "66057547"
 |**TextQualified**|Indica si los datos de texto se han calificado mediante un carácter calificador de texto. Los valores válidos son:<br /><br /> **True**: se califican los datos de texto del archivo plano.<br /><br /> **False**: no se califican los datos de texto del archivo plano.|  
 |**Nombre**|Proporcione un nombre de columna. Una lista numerada de columnas es el valor predeterminado; sin embargo, puede elegir un nombre único y descriptivo.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**: las columnas se delimitan con una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}** : las columnas se delimitan mediante un retorno de carro<br /><br /> **{LF}** : las columnas se delimitan mediante un avance de línea<br /><br /> **Punto y coma {;}** -las columnas se delimitan mediante un punto y coma<br /><br /> **Dos puntos {:}** -las columnas se delimitan mediante dos puntos<br /><br /> Las columnas con **comas {,} ** se delimitan mediante una coma<br /><br /> **Pestaña {t}**: las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**: las columnas se delimitan con una barra vertical.|  
+|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**: las columnas se delimitan con una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}** : las columnas se delimitan mediante un retorno de carro<br /><br /> **{LF}** : las columnas se delimitan mediante un avance de línea<br /><br /> **Punto y coma {;}** -las columnas se delimitan mediante un punto y coma<br /><br /> **Dos puntos {:}** -las columnas se delimitan mediante dos puntos<br /><br /> **Coma {,} ** -las columnas se delimitan mediante una coma<br /><br /> **Pestaña {t}**: las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**: las columnas se delimitan con una barra vertical.|  
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para obtener más información, vea [Integration Services tipos de datos](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6f4db5fd-215a-461c-95e4-17697852733e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0af2ec4471dc24af0fdb02576adad312ed35069f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9930810e5f8253fb3ba3fdddb8fd16875bbcd9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62740705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026983"
 ---
 # <a name="srv_willconvert-extended-stored-procedure-api"></a>srv_willconvert (API de procedimiento almacenado extendido)
     
@@ -55,10 +54,10 @@ desttype
  *desttype*  
  Indica el tipo de datos al que se convierten los datos de origen. Este parámetro puede ser cualquiera de los tipos de datos de la API Procedimiento almacenado extendido.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  TRUE si se admite la conversión del tipo de datos; FALSE si no se admite la conversión del tipo de datos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener una descripción de cada tipo de datos, vea [Data Types &#40;Extended Stored Procedure API&#41;](data-types-extended-stored-procedure-api.md) (Tipos de datos &#40;API de procedimiento almacenado extendido&#41;).  
   
 > [!IMPORTANT]  

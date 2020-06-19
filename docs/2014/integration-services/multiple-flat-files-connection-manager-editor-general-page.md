@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6d4b926d08096087735458ed309e5bc4189a87df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057481"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965145"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para seleccionar un grupo de archivos que tengan el mismo formato de datos y para especificar su formato de datos. Una conexión de varios archivos planos permite que un paquete se conecte a un grupo de archivos de texto que tengan el mismo formato.  
@@ -39,7 +38,7 @@ ms.locfileid: "66057481"
  **Examinar**  
  Busque los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede seleccionar varios archivos. Todos los archivos deben tener el mismo formato de datos.  
   
- **Configuración regional**  
+ **Locale**  
  Especifique la ubicación para proporcionar información de ordenación y de conversión de fecha y hora.  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66057481"
  **Página de códigos**  
  Especifique la página de códigos para el texto no Unicode.  
   
- **Aplique**  
+ **Format**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular. Todos los archivos deben tener el mismo formato de datos.  
   
 |Value|Descripción|  

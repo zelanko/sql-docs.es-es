@@ -17,17 +17,16 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d72c84a7ed84503e0c88d2a46c808196903900b4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026739"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Ejemplos de importación y exportación de forma masiva documentos XML (SQL Server)
     
-##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Puede realizar una importación masiva de documentos XML [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una base de datos de o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exportarlos de forma masiva desde una base de datos de. Este tema proporciona ejemplos de ambos casos.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Puede realizar una importación masiva de documentos XML en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de o exportarlos de forma masiva desde una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos de. Este tema proporciona ejemplos de ambos casos.  
   
  Para importar datos de forma masiva de un archivo de datos a una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede utilizar lo siguiente:  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0e7c8cb2230a7b6923514f0928b844f72c216d58
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b598d661fb79548ad3ee632455d4a718be60ee73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253569"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995612"
 ---
 # <a name="configure-sql-server-agent"></a>Configure SQL Server Agent
   En este tema se describe cómo especificar algunas opciones de configuración para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El conjunto completo de opciones de configuración del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo está disponible dentro de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SMO) o los procedimientos almacenados del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "63253569"
   
 -   Ajustar las cuotas de memoria de un proceso (SeIncreaseQuotaPrivilege)  
   
- Para obtener más información acerca de los permisos de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesarios para la cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio de Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Para obtener más información acerca de los permisos de Windows necesarios para la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de servicio del agente, consulte [seleccionar una cuenta para el servicio de Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md) y [configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   

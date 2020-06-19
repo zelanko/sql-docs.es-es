@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 67dde3fe-ba43-41f3-b56c-c656029ee93f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1690e2772de50258a69a4a33b048f16f7da2caca
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939730"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implementar con SQL Server Data Tools (SSAS tabular)
   Utilice las tareas de este tema para implementar una solución de modelo tabular mediante el comando Implementar en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -37,7 +36,7 @@ ms.locfileid: "66067298"
   
 1.  En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y, después, haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo ** \<nombre del proyecto> propiedades** , en **Opciones de implementación**, especifique la configuración de las propiedades si difiere de la predeterminada.  
+2.  En el cuadro de diálogo ** \<project name> propiedades** , en **Opciones de implementación**, especifique la configuración de propiedades si es diferente de la predeterminada.  
   
     > [!NOTE]  
     >  Para los modelos en modo de almacenamiento en caché, el **Modo de consulta** siempre es **In-Memory**.  
@@ -54,7 +53,7 @@ ms.locfileid: "66067298"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implementar una solución de modelo tabular  
   
--   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el menú **compilar** , haga clic en ** \<implementar nombre de proyecto>**.  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , en el menú **compilar** , haga clic en **implementar \<project name> **.  
   
      Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo, o use una aplicación cliente de informes para conectarse al modelo implementado.  
   

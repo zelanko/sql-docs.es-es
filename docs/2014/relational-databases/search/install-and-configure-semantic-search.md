@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2cdd0568-7799-474b-82fb-65d79df3057c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 164ae15bdd93034ebcca109a01142b3106a78592
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d95e0bb2adf3bacf7057b881ab2e85afd50feef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637916"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063235"
 ---
 # <a name="install-and-configure-semantic-search"></a>Instalar y configurar la búsqueda semántica
   Describe los requisitos previos de la búsqueda semántica estadística y cómo instalarlos o comprobarlos.  
@@ -61,9 +60,9 @@ GO
   
     -   Busque el paquete de Windows installer denominado **SemanticLanguageDatabase.msi** en el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Busque la versión de 32 o 64 bits del paquete del instalador según el sistema de destino. El nombre de la carpeta contenedora identifica la versión de 32 o 64 bits del archivo. El nombre de archivo es el mismo para ambas versiones.  
   
-    -   Descargar el paquete del instalador de [Microsoft?? ¿¿SQL Server?? 2014 Estadísticas de lenguaje semántico](https://go.microsoft.com/fwlink/?LinkID=296743) página del centro [!INCLUDE[msCoName](../../../includes/msconame-md.md)] de descarga.  
+    -   Descargar el paquete del instalador de [Microsoft?? ¿¿SQL Server?? 2014 Estadísticas de lenguaje semántico](https://go.microsoft.com/fwlink/?LinkID=296743) página del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] centro de descarga.  
   
-2.  Ejecute el paquete de Windows Installer **SemanticLanguageDatabase. msi** para extraer la base de datos y el archivo de registro.  
+2.  Ejecute el paquete de **SemanticLanguageDatabase.msi** Windows Installer para extraer la base de datos y el archivo de registro.  
   
      También puede cambiar el directorio de destino. De forma predeterminada, el instalador extrae los archivos en una carpeta denominada **Base de datos de lenguaje semántico de Microsoft** en la carpeta Archivos de programa de 32 o de 64 bits. El archivo contiene MSI un archivo de base de datos y un archivo de registro comprimidos.  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 53deeb99-c088-4fde-844b-b2d91d6de1eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4349c0b36d925adc105cf8024e280affe9d58b56
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a425ec6269040c72836571b8fa8b51bba4ed8c32
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055976"
 ---
 # <a name="using-the-output-clause-with-ole-db-in-sql-server-native-client"></a>Usar la cláusula OUTPUT con OLE DB en SQL Server Native Client
   Si utiliza una cláusula OUTPUT en un comando INSERT, UPDATE, DELETE o MERGE, no estará disponible el recuento de filas afectadas. La aplicación debe contar el número de filas del conjunto de filas que devuelve la cláusula OUTPUT.  

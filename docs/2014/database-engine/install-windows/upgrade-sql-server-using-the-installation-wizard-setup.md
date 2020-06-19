@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8330702d8c886cc9197dcd944878c3f794780205
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fac51c7916e6fda90d4f04d5e6f3603709e48dd0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775425"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931836"
 ---
 # <a name="upgrade-to-sql-server-2014-using-the-installation-wizard-setup"></a>Actualizar a SQL Server 2014 mediante el Asistente para la instalación (programa de instalación)
   El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la actualización de los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en paralelo con una versión anterior, o migrar los valores de configuración y las bases de datos existentes de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y aplicarlos a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -54,7 +53,7 @@ ms.locfileid: "62775425"
 -   [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../sql-server-database-engine-backward-compatibility.md)  
   
 > [!WARNING]  
->  Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para obtener más información sobre cómo agregar características a una instancia actualizada de una vez [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2014 &#40;&#41;de instalación ](add-features-to-an-instance-of-sql-server-setup.md).  
+>  Tenga en cuenta que no puede cambiar las características que se van a actualizar, y no puede agregar características durante la operación de actualización. Para obtener más información sobre cómo agregar características a una instancia actualizada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una vez completada la operación de actualización, vea [Agregar características a una instancia de SQL Server 2014 &#40;&#41;de instalación ](add-features-to-an-instance-of-sql-server-setup.md).  
   
 ## <a name="procedure"></a>Procedimiento  
   
@@ -62,7 +61,7 @@ ms.locfileid: "62775425"
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, vaya a la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
-2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], haga clic en **instalación** en el área de navegación de la izquierda y, a continuación, haga clic en **actualizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)],, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
+2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para actualizar una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **instalación** en el área de navegación de la izquierda y, a continuación, haga clic en **actualizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **.  
   
 3.  En la página Clave del producto, haga clic en una opción para indicar si va a actualizar a una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o si tiene una clave de PID para una versión de producción del producto. Para obtener más información, vea las [ediciones y los componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y las actualizaciones de ediciones [y versiones admitidas](supported-version-and-edition-upgrades.md).  
   
@@ -85,7 +84,7 @@ ms.locfileid: "62775425"
      Los requisitos previos para las características seleccionadas se muestran en el recuadro del lado derecho. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
     > [!NOTE]  
-    >  Si ha optado por actualizar las características compartidas seleccionando ** \<actualizar solo características compartidas>** en la página **seleccionar instancia** , todas las características compartidas están preseleccionadas en la página selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
+    >  Si ha optado por actualizar las características compartidas seleccionando **\<Upgrade shared features only>** en la página **seleccionar instancia** , todas las características compartidas están preseleccionadas en la página selección de características. Todos los componentes compartidos se actualizan al mismo tiempo.  
   
 12. En la página Configuración de instancia, especifique el identificador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -119,7 +118,7 @@ ms.locfileid: "62775425"
   
 20. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información sobre los archivos de registro de instalación, vea [Ver y leer los archivos de registro de instalación de SQL Server](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Después de actualizar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], complete las tareas siguientes:  
   
 -   **Registrar los servidores**: la actualización quita la configuración del Registro de la instancia anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Tras la actualización, debe volver a registrar los servidores.  

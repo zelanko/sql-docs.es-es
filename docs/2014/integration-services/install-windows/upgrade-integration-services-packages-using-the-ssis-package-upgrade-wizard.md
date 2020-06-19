@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9359275a-48f5-4d1e-8ae7-e797759e3ccf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e44b755748dcbda6af30e0570b667f9ba3ee75a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0f31c514b8fbb68be7a326f3fd94ac67f0805ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965495"
 ---
 # <a name="upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard"></a>Actualizar paquetes de Integration Services mediante el Asistente para actualizar paquetes SSIS
   Puede actualizar los paquetes que se crearon en versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al formato de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utiliza. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el Asistente para actualización del paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] para ayudar en este proceso. Como puede configurar el asistente para realizar una copia de seguridad de los paquetes originales, puede continuar utilizando los paquetes originales si experimenta dificultades en la actualización.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767897"
   
 #### <a name="to-run-the-wizard-at-the-command-prompt"></a>Para ejecutar el asistente en el símbolo del sistema  
   
--   En el símbolo del sistema, ejecute el archivo archivo ssisupgrade. exe de la carpeta **c:\Archivos de programa\Microsoft SQL Server\120\DTS\Binn**  
+-   En el símbolo del sistema, ejecute el archivo de SSISUpgrade.exe de la carpeta **c:\Archivos de programa\Microsoft SQL Server\120\DTS\Binn**  
   
 ## <a name="backing-up-the-original-packages"></a>Hacer una copia de seguridad de los paquetes originales  
  Para hacer una copia de seguridad de los paquetes originales, tanto estos como los paquetes actualizados deben estar almacenados en la misma carpeta del sistema de archivos. En función de cómo ejecute el asistente, esta ubicación de almacenamiento podría seleccionarse automáticamente.  

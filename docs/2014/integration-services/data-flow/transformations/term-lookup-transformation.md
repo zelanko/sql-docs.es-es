@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 01b6388dbec5ed563dd8e7fa4476335a3ace998d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cc4ec27de159735b43f88dd978e7070cb0f0983
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939283"
 ---
 # <a name="term-lookup-transformation"></a>Búsqueda de términos, transformación
   La transformación Búsqueda de términos compara los términos extraídos del texto en una columna de entrada de transformación con los términos de una tabla de referencia. A continuación, cuenta la cantidad de veces que un término aparece en la tabla de búsqueda en el conjunto de datos de entrada y escribe el recuento junto con el término de la tabla de referencia en columnas en la salida de transformación. Esta transformación resulta útil para crear una lista personalizada de palabras basada en el texto de entrada, que incluye estadísticas de frecuencia de aparición de palabras.  
@@ -62,7 +61,7 @@ ms.locfileid: "62770321"
 |Términos de referencia|Windows, Windows 7 Professional|  
 |Output|Windows|  
   
- La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
+ La transformación Búsqueda de términos puede obtener coincidencias de nombres y frases que contienen caracteres especiales, y los datos en la tabla de referencia pueden incluir estos caracteres. Los caracteres especiales son los siguientes:%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "y".  
   
 ## <a name="data-types"></a>Tipo de datos  
  La transformación Búsqueda de términos solo puede usar una columna que tenga el tipo de datos DT_WSTR o DT_NTEXT. Si una columna contiene texto, pero no tiene uno de estos tipos de datos, la transformación Conversión de datos puede agregar una columna con el tipo de datos DT_WSTR o DT_NTEXT al flujo de datos y copiar los valores de columnas en la nueva columna. La salida de transformación Conversión de datos posteriormente se puede usar como la entrada para la transformación Búsqueda de términos. Para más información, consulte [Data Conversion Transformation](data-conversion-transformation.md).  

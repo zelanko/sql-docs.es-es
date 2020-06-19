@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d85fc4c21f200bcdc5a489cfcee6b50bc9f4b98e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50cf10a9a745b3a111deb5db6be356d10d204d4a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479912"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971725"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree una entidad para contener los miembros y sus atributos.  
@@ -59,7 +58,7 @@ ms.locfileid: "65479912"
   
 9. Haga clic en **Guardar entidad**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Crear un atributo de texto &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)  
   

@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f3266bbbc100af3eac03bc18805c82b753d7aa7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893046"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965638"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Asignaciones de columnas (Asistente para importación y exportación de SQL Server)
   Utilice el cuadro de diálogo **asignaciones de columnas** para modificar los parámetros de transformación.  
   
 > [!NOTE]  
->  No es necesario copiar todas las columnas en una tabla al seleccionar la opción de copia de tabla. Seleccione ** \<omitir>** en la columna **destino** de este cuadro de diálogo para las columnas que desea omitir.  
+>  No es necesario copiar todas las columnas en una tabla al seleccionar la opción de copia de tabla. Seleccione **\<ignore>** en la columna **destino** de este cuadro de diálogo para las columnas que desea omitir.  
   
  Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente, así como los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -63,9 +62,9 @@ ms.locfileid: "62893046"
  Muestre cada columna de origen para la que pueda definir parámetros de transformación.  
   
  **Destino**  
- Especifique si desea omitir una columna durante la operación de copia. Puede copiar solo un subconjunto de columnas si selecciona ** \<omitir>** en esta columna para las columnas que desea omitir. Antes de asignar columnas, debe omitir todas las columnas que no se asignarán.  
+ Especifique si desea omitir una columna durante la operación de copia. Puede copiar solo un subconjunto de columnas si selecciona **\<ignore>** en esta columna para las columnas que desea omitir. Antes de asignar columnas, debe omitir todas las columnas que no se asignarán.  
   
- **Type**  
+ **Tipo**  
  Seleccione un tipo de datos para la columna.  
   
  **Admisión de valores NULL**  

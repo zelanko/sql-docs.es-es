@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d7c1592058776246ad3df657c3340303a60df296
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 987548418e78999e0c247c65aac5e67912b5385f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771751"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924796"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Seleccionar mediante programación las columnas de entrada
   Después de haber conectado los componentes mediante programación, seleccione las columnas de los componentes de nivel superior que transformará en componentes de nivel inferior o por los que pasará a los componentes de nivel inferior. Si no selecciona las columnas de entrada para el componente, el componente no recibe ninguna fila de la tarea de flujo de datos.  

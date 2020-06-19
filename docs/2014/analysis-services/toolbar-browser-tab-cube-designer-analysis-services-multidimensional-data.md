@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a1c6272d-e514-456b-9995-b73fec0112a2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4d1135be55065ab62e649d84c00cec4eebf60b58
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba90d60a9ec3b3651c4889be423a5c1311fc9c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175584"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938487"
 ---
 # <a name="toolbar-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Utilice las características de la **Barra de herramientas** del Diseñador de cubos para realizar operaciones comunes al diseñar o examinar un cubo o su objeto, o al crear una consulta MDX. Entre las operaciones comunes en tiempo de diseño y a la vista de consulta se halla la configuración del contexto de usuario, el procesamiento de objetos y la configuración del idioma predeterminado.
@@ -55,7 +54,7 @@ ms.locfileid: "78175584"
 
 |Opción|Descripción|
 |------------|-----------------|
-|**Proceso**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo. Para obtener más información sobre el cuadro de diálogo **Proceso**, vea [Cuadro de diálogo Proceso &#40;Analysis Services - Datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|
+|**Process**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo. Para obtener más información sobre el cuadro de diálogo **Proceso**, vea [Cuadro de diálogo Proceso &#40;Analysis Services - Datos multidimensionales&#41;](process-dialog-box-analysis-services-multidimensional-data.md).|
 |**Cambiar usuario**|Haga clic para mostrar el cuadro de diálogo **contexto de seguridad** y cambiar el usuario y el rol usados en la pestaña **Explorador** . Para obtener más información sobre el cuadro de diálogo **contexto de seguridad** , vea [cuadro de diálogo contexto de seguridad &#40;Analysis Services-&#41;de datos multidimensionales ](security-context-dialog-box-analysis-services-multidimensional-data.md).|
 |**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Explorador** por pérdida de conexión o exceso de tiempo de espera.|
 |**Actualizar**|Haga clic para actualizar los paneles **Metadatos** e **Informes** .|

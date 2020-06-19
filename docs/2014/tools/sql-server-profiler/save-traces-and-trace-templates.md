@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 957e6bf8-e7a3-4a59-a1cd-0a41538a8158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4baca63080a3f67c1f9e54a8a0aa955a27029df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36db7ccfd8b185d60eb39c20a58842f469e7878d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63267430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048310"
 ---
 # <a name="save-traces-and-trace-templates"></a>Guardar seguimientos y plantillas de seguimiento
   Es importante distinguir entre guardar archivos de seguimiento y guardar plantillas de seguimiento. Guardar un archivo de seguimiento implica guardar los datos de eventos capturados en un lugar especificado. Guardar una plantilla de seguimiento implica guardar la definición del seguimiento, como las columnas de datos, las clases de eventos o los filtros especificados.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbb1e0fa-5bfc-4b1b-a6ed-f7d5cfad4d73
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 89cdfa63bff88c4f4bb5954402034b31ad7f77ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c916be21b62e2e3b920f14da6fb88722e60e1501
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63060992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002207"
 ---
 # <a name="errorcontrol-property-sqlservice-class"></a>Propiedad ErrorControl (clase SqlService)
   Obtiene o establece la gravedad del error si el servicio no se puede iniciar durante el inicio.  
@@ -52,13 +51,13 @@ object
  Grave  
  El sistema se reinicia con la última configuración válida conocida.  
   
- Crítico  
+ Crítica  
  El sistema intenta reiniciarse con una configuración válida.  
   
- Unknown  
+ Desconocido  
  Se desconoce la gravedad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El valor indica la acción realizada por el programa de inicio si se produce un error. El sistema registra todos los errores.  
   
 ## <a name="see-also"></a>Consulte también  

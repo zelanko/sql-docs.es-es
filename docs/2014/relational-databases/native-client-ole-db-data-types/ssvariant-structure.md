@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: d13c6aa6-bd49-467a-9093-495df8f1e2d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3877e7b8c6ccd0d5364b3aea291facb1799bff7d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b2859c9d124382892949b32cb6efb65821663c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048081"
 ---
 # <a name="ssvariant-structure"></a>Estructura SSVARIANT
   La estructura `SSVARIANT`, que se define en sqlncli.h, corresponde a un valor DBTYPE_SQLVARIANT en el proveedor OLEDB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  `SSVARIANT` es una unión de discriminación. Según el valor del miembro vt, el consumidor puede determinar qué miembro tiene que leerse. Los valores de vt se corresponden con tipos de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, la estructura `SSVARIANT` puede contener cualquier tipo de SQL Server. Para más información sobre la estructura de datos de los tipos de OLE DB estándar, consulte [Indicadores de tipo](https://go.microsoft.com/fwlink/?LinkId=122171).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando DataTypeCompat==80, varios subtipos `SSVARIANT` se convierten en cadenas. Por ejemplo, los siguientes valores de vt se mostrarán en `SSVARIANT` como VT_SS_WVARSTRING:  
   
 -   VT_SS_DATETIMEOFFSET  
@@ -52,7 +51,7 @@ V_SS_DATETIMEOFFSET(pssVar).bScale = bScale;
   
  En la siguiente tabla se describen los miembros de la estructura `SSVARIANT`:  
   
-|Miembro|Indicador de tipo OLE DB|Tipo de datos de OLE DB C|Valor de vt|Comentarios|  
+|Member|Indicador de tipo OLE DB|Tipo de datos de OLE DB C|Valor de vt|Comentarios|  
 |------------|---------------------------|------------------------|--------------|--------------|  
 |vt|SSVARTYPE|||Especifica el tipo de valor incluido en la estructura `SSVARIANT`.|  
 |bTinyIntVal|DBTYPE_UI1|`BYTE`|`VT_SS_UI1`|Admite el tipo de datos `tinyint`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

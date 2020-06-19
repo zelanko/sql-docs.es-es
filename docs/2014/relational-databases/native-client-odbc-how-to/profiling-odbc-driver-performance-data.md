@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 957e99d67360d72e1d8920d3bad2611c67f747de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 303de22f2eb5ec40c76266116ada843fbf3905c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048223"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Crear perfiles de datos de rendimiento del controlador (ODBC)
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar estadísticas de rendimiento. En el ejemplo se crea un archivo: odbcperf.log. En este ejemplo se muestra la creación de un registro de datos de rendimiento y se muestran estos datos directamente a partir de la estructura de datos SQLPERF (la estructura de datos SQLPERF se define en Odbcss.h). Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cdb842e3-2e59-4ede-b127-be4fde46875c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95c4a27a6ef20ac52521c707ae4a83329a81716d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054736"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972665"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Actualizar los paquetes (Asistente para actualización del paquete SSIS)
   Utilice la página **Actualizando los paquetes** para ver e interrumpir el progreso de la actualización de paquetes. El Asistente para actualización del paquete [!INCLUDE[ssIS](../includes/ssis-md.md)] actualiza los paquetes seleccionados uno a uno.  
@@ -46,7 +45,7 @@ ms.locfileid: "66054736"
  **Detención**  
  Detenga la actualización del paquete.  
   
- **Informe**  
+ **Report**  
  Seleccione lo que desea hacer con el informe que contiene los resultados de la actualización del paquete:  
   
 -   Ver el informe en línea.  

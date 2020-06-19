@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef18ec11-b536-47d9-abd1-794099f43486
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce04befcb4c8558216cecded6cb1892c3106295f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058152"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965685"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar y exportar paquetes (servicio SSIS)
     
@@ -50,7 +49,7 @@ ms.locfileid: "66058152"
   
  Puede importar o exportar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de las ubicaciones siguientes o a dichas ubicaciones:  
   
--   Puede importar un paquete que esté almacenado en una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en el sistema de archivos o en el [!INCLUDE[ssIS](../includes/ssis-md.md)] almacén de paquetes. El paquete importado se guarda en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en una carpeta del almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+-   Puede importar un paquete que esté almacenado en una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , en el sistema de archivos o en el [!INCLUDE[ssIS](../includes/ssis-md.md)] almacén de paquetes. El paquete importado se guarda en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o en una carpeta del almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 -   Puede exportar un paquete que esté almacenado en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], en el sistema de archivos, o en el almacén de paquetes de [!INCLUDE[ssIS](../includes/ssis-md.md)] a una ubicación y un formato de almacenamiento diferentes.  
   
@@ -70,11 +69,11 @@ ms.locfileid: "66058152"
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
+    -   En el cuadro **nombre del servidor** , proporcione un nombre de servidor o haga clic en **\<Browse for more...>** y busque el servidor que se va a usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
-4.  En el Explorador de objetos, expanda la carpeta **Paquetes almacenados** .  
+4.  En Explorador de objetos, expanda la carpeta **paquetes almacenados** .  
   
 5.  Expanda las subcarpetas para encontrar la carpeta en la que desea importar un paquete.  
   
@@ -106,11 +105,11 @@ ms.locfileid: "66058152"
   
     -   En el cuadro **Tipo de servidor** , seleccione **Integration Services**.  
   
-    -   En el cuadro **Nombre del servidor**, escriba un nombre de servidor o haga clic en **\<Buscar más…>** y busque el servidor que quiera usar.  
+    -   En el cuadro **nombre del servidor** , proporcione un nombre de servidor o haga clic en **\<Browse for more...>** y busque el servidor que se va a usar.  
   
 3.  Si el Explorador de objetos no está abierto, en el menú **Ver** , haga clic en **Explorador de objetos**.  
   
-4.  En Explorador de objetos, expanda la carpeta **paquetes almacenados** .  
+4.  En el Explorador de objetos, expanda la carpeta **Paquetes almacenados** .  
   
 5.  Expanda las subcarpetas para buscar el paquete que desea exportar.  
   

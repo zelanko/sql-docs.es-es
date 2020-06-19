@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57f649b8-190c-4304-abd7-7ca5297deab7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d0d731d25c20597be3ac84adfacd8973e4a51cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245519"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001707"
 ---
 # <a name="view-or-modify-jobs"></a>Ver o modificar trabajos
   Puede ver cualquier trabajo que haya creado. Asimismo, después de ejecutar un trabajo, puede ver su historial. El historial de un trabajo le permite ver cuándo se ejecutó el trabajo, el estado del trabajo en conjunto y el estado de cada paso del trabajo. Puede ver si el trabajo ha tenido algún error en el pasado, cuándo finalizó correctamente por última vez y qué salida ha creado el trabajo cada vez que se ha ejecutado. Los miembros del rol fijo de servidor **sysadmin** pueden ver o modificar cualquier trabajo, con independencia de quién sea el propietario.  
@@ -61,12 +60,12 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |-|-|  
 |**Descripción**|**Tema**|  
 |Describe cómo ver trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[View a Job](view-a-job.md)|  
-|Describe cómo ver el registro del historial de trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[View the Job History](view-the-job-history.md)|  
+|Describe cómo ver el registro del historial de trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Ver el historial de trabajos](view-the-job-history.md)|  
 |Describe cómo eliminar el contenido del registro del historial de trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Clear the Job History Log](clear-the-job-history-log.md)|  
 |Describe cómo establecer límites de tamaño para los registros de historial de trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Resize the Job History Log](resize-the-job-history-log.md)|  
 |Describe cómo cambiar las propiedades de los trabajos del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Modify a Job](modify-a-job.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [DBO. sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+ [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

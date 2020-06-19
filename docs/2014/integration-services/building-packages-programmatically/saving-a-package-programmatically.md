@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4204f817-d5df-475a-9338-d7f01305d566
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0304d4ba3388874fbd2c19001b12094f1df4d351
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc20c579a4d08d11dc53f1d39b90c4888c652dc1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924881"
 ---
 # <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación
   Después de generar un nuevo paquete o modificar uno existente mediante programación, por lo general desea guardar los cambios.  
   
- Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado `Microsoft.SqlServer.ManagedDTS`. Después de agregar la referencia en un proyecto nuevo, importe el <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres `using` con `Imports` una instrucción o.  
+ Todos los métodos utilizados en este tema para guardar paquetes requieren una referencia al ensamblado `Microsoft.SqlServer.ManagedDTS`. Después de agregar la referencia en un proyecto nuevo, importe el <xref:Microsoft.SqlServer.Dts.Runtime> espacio de nombres con una `using` `Imports` instrucción o.  
   
 ## <a name="saving-a-package-programmatically"></a>Guardar un paquete mediante programación  
  Para guardar un paquete mediante programación, llame a uno de los métodos siguientes de la clase de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] <xref:Microsoft.SqlServer.Dts.Runtime.Application>:  

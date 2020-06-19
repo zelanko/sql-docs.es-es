@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 00d0311f-8b71-4ad6-824d-0e89119347a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 10165ed57c12b06fc1317bb440dd1635849582f6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3c6e0323a38fb6af9d242cca9c4aa9135ee99f37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695247"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047960"
 ---
 # <a name="ibcpsession-ole-db"></a>IBCPSession (OLE DB)
   La interfaz **IBCPSession** expone compatibilidad con las operaciones de copia masiva basadas en archivos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La interfaz **IBCPSession** se expone en el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, bajo el mismo nivel que Sessions. En el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, los objetos de origen de datos son los generadores de los objetos Session y las operaciones de copia masiva se especifican en la propiedad de conexión SSPROP_ENABLEBULKCOPY. Además, la propiedad SSPROP_ENABLEFASTLOAD debe establecerse en True.  

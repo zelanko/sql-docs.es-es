@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: 3e3c42fe-5b61-45e5-8e46-9807bdec5389
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b94819974c53e9bd73aa085580018bad22a3bb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62650226"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064397"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Propiedades de cuenta de proxy y Nueva cuenta de proxy (pestaña Entidades de seguridad)
-  Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una cuenta de proxy del agente en los pasos de trabajo.  
+  Use esta página para ver o cambiar las entidades de seguridad que pueden utilizar una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuenta de proxy del agente en los pasos de trabajo.  
   
 ## <a name="options"></a>Opciones  
  **Entidades de seguridad de la cuenta de proxy**  
@@ -29,7 +28,7 @@ ms.locfileid: "62650226"
  **Add (Agregar)**  
  Agrega una entidad de seguridad a la lista.  
   
- **Remove**  
+ **Quitar**  
  Quita la entidad de seguridad seleccionada de la lista.  
   
 ## <a name="see-also"></a>Consulte también  

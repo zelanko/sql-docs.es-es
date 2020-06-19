@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c785ce482a1fd631a2775b7cc224ab0f737ea6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939426"
 ---
 # <a name="merge-transformation"></a>Mezclar, transformación
   La transformación Mezclar combina dos conjuntos de datos ordenados en un solo conjunto de datos. Las filas de cada conjunto de datos se insertan en la salida en función de los valores de sus columnas de clave.  

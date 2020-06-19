@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a6503caec3f153878e360ee29ce09a5c099ade5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064532"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Crear un trabajo maestro del Agente SQL Server
-  En este tema se describe cómo crear un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] principal en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  En este tema se describe cómo crear un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente principal en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
@@ -35,7 +34,7 @@ ms.locfileid: "68211454"
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
  Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan bajo el contexto de la cuenta de proxy en el servidor de destino. Para que se descarguen del servidor maestro al de destino los pasos de trabajo asociados con un proxy, asegúrese de que se cumplen las condiciones siguientes:  
   
--   La subclave del registro **\ HKEY_LOCAL_MACHINE\\<\software\microsoft\microsoft SQL Server*instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
+-   La subclave del registro **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
   
 -   Existe una cuenta de proxy en el servidor de destino que tiene el mismo nombre que la cuenta de proxy del servidor maestro bajo el que se ejecuta el paso de trabajo.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "68211454"
     GO  
     ```  
   
- Para obtener más información, consulte:  
+ Para más información, consulte:  
   
 -   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bff8df8004c4553d5fa07ebb5ca46863a998bd85
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4eb09433e2b2db77e6a2f40c1acf204513585a9f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924930"
 ---
 # <a name="enabling-logging-programmatically"></a>Habilitar el registro mediante programación
   El motor en tiempo de ejecución proporciona una colección de objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> que permiten capturar información específica del evento durante la validación y ejecución de paquetes. Los objetos <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> están disponibles para los objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, incluidos los objetos <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> y <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. El registro se habilita en contenedores individuales o en el paquete completo.

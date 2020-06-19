@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 403210fd8a60cdfb7e92b18f9bb66ccb0a6f1f4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061077"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924626"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor del administrador de conexiones de caché
   El administrador de conexiones de caché lee un conjunto de datos de referencia a partir de la transformación de caché o de un archivo caché (.caw) y puede guardar los datos en un archivo caché. Los datos siempre se almacenan en memoria.  
@@ -83,7 +82,7 @@ ms.locfileid: "66061077"
 > [!NOTE]  
 >  Cuando la transformación Búsqueda se configura para utilizar un administrador de conexiones de caché, a las columnas de entrada solo se les puede asignar las columnas de índice del conjunto de datos de referencia. Asimismo, todas las columnas de índice deben estar asignadas.  
   
- **Type**  
+ **Tipo**  
  Especifica el tipo de datos de la columna.  
   
  `Length`  
@@ -99,6 +98,6 @@ ms.locfileid: "66061077"
  Especifica la página de códigos para el tipo de columna. Si procede en el caso del tipo de datos, puede actualizar la `Code Page`.  
   
 ## <a name="see-also"></a>Consulte también  
- [Transformación búsqueda](data-flow/transformations/lookup-transformation.md)  
+ [Transformación Búsqueda](data-flow/transformations/lookup-transformation.md)  
   
   

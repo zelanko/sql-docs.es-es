@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b85d267cd56fdf64b6235f551b84f32e4353b2d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67792933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063787"
 ---
 # <a name="create-the-off-by-default-policy"></a>Crear la directiva Desactivado de forma predeterminada
   Esta tarea crea una condición denominada Correo desactivado que se basa en la faceta Configuración de área expuesta. A continuación, crea una directiva denominada Desactivado de forma predeterminada.  

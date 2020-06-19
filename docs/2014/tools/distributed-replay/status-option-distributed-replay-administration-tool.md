@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: ea89386e-1598-4412-8b37-680d14b2a5b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e56a5229f0f26dfe701a425653b3d7f5a4ece842
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ce3d07bc357c5f3788fb6f995a43399021b3553
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78171964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048446"
 ---
 # <a name="status-option-distributed-replay-administration-tool"></a>Opción Status (herramienta de administración de Distributed Replay)
-  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de `DReplay.exe`Distributed Replay,, es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción del símbolo del sistema **status** y la sintaxis correspondiente.
+  La [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de administración de Distributed Replay, `DReplay.exe` , es una herramienta de línea de comandos que puede usar para comunicarse con el controlador de reproducción distribuida. En este tema se describe la opción del símbolo del sistema **status** y la sintaxis correspondiente.
 
  La opción **status** consulta el controlador y muestra el estado actual.
 

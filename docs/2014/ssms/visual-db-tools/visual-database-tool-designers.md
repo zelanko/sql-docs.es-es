@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 773ceb4aedddd6a39df6487bd36b47b83f7fa9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9dd7dff57d9413d5a06262a8c185b0cd61f0b2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63227041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064229"
 ---
 # <a name="visual-database-tool-designers"></a>Diseñadores de Visual Database Tools
   Visual Database Tools es una combinación de herramientas de diseño que se pueden utilizar para trabajar con un origen de datos. Puede utilizar estas herramientas para crear consultas, diseñar o modificar la estructura de una base de datos o actualizar datos. Estas herramientas son: Diseñador de diagramas de base de datos, Diseñador de tablas y Diseñador de consultas y vistas.  

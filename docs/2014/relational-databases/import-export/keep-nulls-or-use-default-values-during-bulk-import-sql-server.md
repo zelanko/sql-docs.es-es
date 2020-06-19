@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6b91d762-337b-4345-a159-88abb3e64a81
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 856aa12f6ad5e5094324e0df65941bc63d611451
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026689"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
   De manera predeterminada, cuando se importan datos en una tabla, el comando **BCP** y la instrucción BULK INSERT aplican los valores predeterminados definidos para las columnas de la tabla. Por ejemplo, si un archivo de datos contiene un campo NULL, en su lugar, se cargará el valor predeterminado para la columna. El comando **BCP** y la instrucción BULK INSERT permiten especificar que se mantengan los valores NULL.  
@@ -39,7 +38,7 @@ ms.locfileid: "66011901"
  Para ejecutar los ejemplos de este tema, es necesario crear una tabla y un archivo de datos de ejemplo.  
   
 ### <a name="sample-table"></a>Tabla de ejemplo  
- Los ejemplos requieren la creación de una tabla denominada **MyTestDefaultCol2** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Para crear esta tabla, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] el editor de consultas, ejecute:  
+ Los ejemplos requieren la creación de una tabla denominada **MyTestDefaultCol2** en la base de datos de ejemplo **AdventureWorks** , bajo el esquema **dbo** . Para crear esta tabla, en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Editor de consultas, ejecute:  
   
 ```  
 USE AdventureWorks;  
@@ -99,7 +98,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 |`1`|`Default value of Col2`|`DataField3`|  
 |`2`|`Default value of Col2`|`DataField3`|  
   
- Para insertar "`NULL`" en lugar de "`Default value of Col2`", debe usar la `-k` opción switch o KEEPNULL, tal y como se muestra en los siguientes ejemplos de **BCP** y Bulk Insert.  
+ Para insertar " `NULL` " en lugar de " `Default value of Col2` ", debe usar la `-k` opción switch o KEEPNULL, tal y como se muestra en los siguientes ejemplos de **BCP** y Bulk Insert.  
   
 #### <a name="using-bcp-and-keeping-null-values"></a>Usar bcp y mantener valores NULL  
  En el siguiente ejemplo se muestra cómo mantener valores NULL en un comando **bcp** . El comando **BCP** contiene los siguientes modificadores:  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 773426ed91039ee4c0c6fd224547e44102f9846b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80330d03853c984cfd26100b02918eb218705085
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175424"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931146"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Actualizar el trasvase de registros a SQL Server 2014 (Transact-SQL)
   Es posible conservar las configuraciones de trasvase de registros al actualizar de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En este tema se describen escenarios alternativos y prácticas recomendadas para actualizar la configuración de trasvase de registros.
@@ -181,7 +180,7 @@ ms.locfileid: "78175424"
 5.  Realice la conmutación por error de la base de datos redirigiendo a los clientes del servidor principal original (servidor A) al servidor secundario (servidor B) en línea.
 
     > [!IMPORTANT]
-    >  Cuando realice la conmutación por error a una nueva base de datos primaria, debe asegurarse de que sus metadatos sean coherentes con los de la base de datos principal original. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
+    >  Cuando realice la conmutación por error a una nueva base de datos primaria, debe asegurarse de que sus metadatos sean coherentes con los de la base de datos principal original. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).
 
 ##  <a name="upgrading-multiple-secondary-server-instances"></a><a name="MultipleSecondaries"></a>Actualización de varias instancias del servidor secundario
  Esta configuración se representa en la ilustración siguiente, que muestra una instancia del servidor principal, A, y dos instancias de servidores secundarios, B y C.

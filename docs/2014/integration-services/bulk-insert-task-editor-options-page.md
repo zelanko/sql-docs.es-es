@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061189"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924676"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
   Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea inserción masiva copia grandes cantidades de datos en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabla o vista.  
@@ -27,7 +26,7 @@ ms.locfileid: "66061189"
  Para más información sobre las inserciones masivas, vea [Tarea Inserción masiva](control-flow/bulk-insert-task.md) y [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ## <a name="options"></a>Opciones  
- **737**  
+ **CodePage**  
  Especifique la página de códigos de los datos incluidos en el archivo de datos.  
   
  **DataFileType**  

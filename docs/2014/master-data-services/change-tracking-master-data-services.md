@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7b4b7d9d9d153456ca471196c6480465d057e412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4092257bb593439ef4851eca8b554f0f5ae7ade
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483521"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972005"
 ---
 # <a name="change-tracking-master-data-services"></a>Seguimiento de cambios [Master Data Services]
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede usar grupos de seguimiento de cambios para realizar una acción cuando cambie un valor de atributo. Use el seguimiento de cambios cuando no conozca cuál será el nuevo valor, pero quiera saber si se produjo algún cambio.  

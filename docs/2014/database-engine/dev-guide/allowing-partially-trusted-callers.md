@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bed854ba13bec4206f3ee869795af91c4da4f525
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e76005b6314f074d4f54f64d42a03b4b79dcef3a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754203"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933776"
 ---
 # <a name="allowing-partially-trusted-callers"></a>Permitir llamadores de confianza parcial
   Compartir bibliotecas de código es un escenario común con la integración con Common Language Runtime (CLR), donde a menudo un ensamblado o una aplicación obtienen acceso a un ensamblado que contiene un tipo definido por el usuario, un procedimiento almacenado, una función definida por el usuario, un agregado definido por el usuario, un desencadenador o una clase de utilidad. Las bibliotecas de código que se van a compartir entre varias aplicaciones se deben firmar con un nombre seguro.  

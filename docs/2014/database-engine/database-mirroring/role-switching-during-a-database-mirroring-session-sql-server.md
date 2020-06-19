@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5e16adbad2106d623279edf9d443eae3755c7be5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934026"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
   En el contexto de una sesión de creación de reflejo de la base de datos, los roles principal y reflejado suelen ser intercambiables en un proceso conocido como *conmutación de roles*. En la conmutación de roles, el servidor reflejado actúa como el *asociado de conmutación por error* para el servidor principal al asumir el rol principal, y al recuperar su copia de la base de datos y ponerla en línea como la nueva base de datos principal. El servidor principal anterior, cuando esté disponible, asumirá el rol reflejado y su base de datos se convertirá en la nueva base de datos reflejada. Potencialmente, los roles pueden conmutarse como respuesta a varios errores o con fines administrativos.  
@@ -50,7 +49,7 @@ ms.locfileid: "62754496"
   
      La conmutación por error manual se proporciona con fines administrativos. Para obtener más información, vea [Conmutación por error manual](#ManualFailover), más adelante en este tema.  
   
--   **Conmutación automática por error**  
+-   **Conmutación por error automática**  
   
      En presencia de un testigo, el modo de alta seguridad admite la conmutación automática por error. La conmutación automática por error solo se produce con la pérdida del servidor principal cuando el testigo y el servidor reflejado siguen conectados entre sí y la base de datos ya está sincronizada. Para obtener más información, vea [Conmutación automática por error](#AutomaticFailover), más adelante en este tema.  
   
@@ -166,7 +165,7 @@ ms.locfileid: "62754496"
   
  En la siguiente ilustración se muestra una sola instancia de conmutación automática por error.  
   
- ![Conmutación automática por error](../media/dbm-failovauto1round.gif "Conmutación por error automática")  
+ ![Conmutación por error automática](../media/dbm-failovauto1round.gif "Conmutación por error automática")  
   
  Inicialmente, los tres servidores están conectados (es decir, la sesión tiene un quórum completo). **Partner_A** es el servidor principal y **Partner_B** , el servidor reflejado. **Partner_A** (o la base de datos principal en **Partner_A**) pasa a no estar disponible. El testigo y **Partner_B** reconocen que el servidor principal ya no está disponible y la sesión conserva el cuórum. **Partner_B** se convierte en el servidor principal y hace que su copia de la base de datos esté disponible como la nueva base de datos principal. Finalmente, **Partner_A** se vuelve a conectar a la sesión y descubre que **Partner_B** posee ahora el rol principal. Por tanto,**Partner_A** asume el rol reflejado.  
   
@@ -292,7 +291,7 @@ ms.locfileid: "62754496"
  [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md)   
- [Restauraciones de bases de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
+ [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Modos de funcionamiento de la creación de reflejo de base de datos](database-mirroring-operating-modes.md)   
  [Estados de creación de reflejo &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

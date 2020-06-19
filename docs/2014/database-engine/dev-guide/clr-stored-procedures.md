@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7e79307e2c913841ae1e017e6a5c180dfd55b6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4998058d55cd49c0eecfdecce2edc609a4d62c1f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77213969"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933738"
 ---
 # <a name="clr-stored-procedures"></a>Procedimientos almacenados de CLR
-  Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información sobre las ventajas de la integración CLR y la elección entre [!INCLUDE[tsql](../../includes/tsql-md.md)]código administrado y, consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+  Los procedimientos almacenados son rutinas que no pueden usarse en expresiones escalares. A diferencia de las funciones escalares, pueden devolver mensajes y resultados tabulares al cliente, invocar instrucciones del lenguaje de definición de datos (DDL) e instrucciones del lenguaje de manipulación de datos (DML), así como devolver parámetros de salida. Para obtener información sobre las ventajas de la integración CLR y la elección entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-stored-procedures"></a>Requisitos de los procedimientos almacenados CLR  
- En el Common Language Runtime (CLR), los procedimientos almacenados se implementan como métodos estáticos públicos en una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] clase de un ensamblado. El método estático puede declararse como void o devolver un valor entero. Si devuelve un valor entero, el entero devuelto se trata como el código de retorno del procedimiento. Por ejemplo:  
+ En el Common Language Runtime (CLR), los procedimientos almacenados se implementan como métodos estáticos públicos en una clase de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ensamblado. El método estático puede declararse como void o devolver un valor entero. Si devuelve un valor entero, el entero devuelto se trata como el código de retorno del procedimiento. Por ejemplo:  
   
  `EXECUTE @return_status = procedure_name`  
   
@@ -48,7 +47,7 @@ ms.locfileid: "77213969"
  La información puede devolverse de varios modos de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], entre los que se incluyen parámetros de salida, resultados tabulares y mensajes.  
   
 ### <a name="output-parameters-and-clr-stored-procedures"></a>Parámetros OUTPUT y procedimientos almacenados CLR  
- Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida de la misma forma que en C#. Debe especificar el parámetro por referencia y aplicar el \<atributo out () > para representar un parámetro de salida, como se muestra a continuación:  
+ Al igual que ocurre con los procedimientos almacenados de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede devolverse información de los procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mediante el uso de parámetros OUTPUT. La sintaxis DML de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se utiliza para crear procedimientos almacenados de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] es igual que la que se utiliza para crear procedimientos almacenados escritos en [!INCLUDE[tsql](../../includes/tsql-md.md)]. El parámetro correspondiente en el código de implementación de la clase [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida de la misma forma que en C#. Debe especificar el parámetro por referencia y aplicar el \<Out()> atributo para representar un parámetro de salida, como se muestra a continuación:  
   
 ```vb
 Imports System.Runtime.InteropServices  
@@ -132,7 +131,7 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 -- AS EXTERNAL NAME TestStoredProc.[MyNS.StoredProcedures].PriceSum  
 ```  
   
- Tenga en cuenta que *SUM* se declara `int` como un tipo de datos SQL Server y que el parámetro *Value* definido en el procedimiento almacenado CLR se especifica `SqlInt32` como un tipo de datos CLR. Cuando un programa que realiza la llamada ejecuta el procedimiento almacenado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR, convierte automáticamente `SqlInt32` el tipo de datos CLR `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un tipo de datos.  Para obtener más información acerca de los tipos de datos CLR que se pueden y no se pueden convertir, vea [asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ Tenga en cuenta que *SUM* se declara como un `int` tipo de datos SQL Server y que el parámetro *Value* definido en el procedimiento almacenado CLR se especifica como un `SqlInt32` tipo de datos CLR. Cuando un programa que realiza la llamada ejecuta el procedimiento almacenado CLR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte automáticamente el `SqlInt32` tipo de datos CLR a un `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos.  Para obtener más información acerca de los tipos de datos CLR que se pueden y no se pueden convertir, vea [asignar datos de parámetros CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
 ### <a name="returning-tabular-results-and-messages"></a>Devolver mensajes y resultados tabulares  
  La devolución de mensajes y resultados tabulares al cliente se realiza a través del objeto `SqlPipe`, que se obtiene utilizando la propiedad `Pipe` de la clase `SqlContext`. El objeto `SqlPipe` tiene un método `Send`. Al llamar al método `Send`, puede transmitir datos a la aplicación que realiza la llamada a través de la canalización.  
@@ -366,7 +365,7 @@ END;
 ```  
   
 > [!NOTE]  
->  Los mensajes y los conjuntos de resultados se recuperan de manera diferente en la aplicación cliente. Por ejemplo, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] los conjuntos de resultados aparecen en la vista **resultados** y los mensajes aparecen en el panel **mensajes** .  
+>  Los mensajes y los conjuntos de resultados se recuperan de manera diferente en la aplicación cliente. Por ejemplo, los [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] conjuntos de resultados aparecen en la vista **resultados** y los mensajes aparecen en el panel **mensajes** .  
   
  Si el código de Visual C# anterior se guarda en un archivo MyFirstUdp.cs y se compila con:  
   

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ba40cf43-f286-49ad-8316-70f5b11f1dae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3dadc054a3f9927c09e9e236044dd5ddee7f3a9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f5d571d1a3f88f20600947d3093bf1e37feeee2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068681"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940526"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Análisis de la cesta de compras (Herramientas de análisis de tabla para Excel)
   ![Herramienta Cesta de la compra](media/tat-shopbskt.gif "Herramienta Cesta de la compra")  
   
- La herramienta de análisis de la **cesta** de `associations` compras le ayuda a encontrar en los datos. Una asociación podría indicarle cuáles son los artículos que se suelen comprar al mismo tiempo. En la minería de datos, esta técnica es un método conocido conocido como *análisis*de la cesta de la compra, que se usa para analizar el comportamiento de compra de los clientes en conjuntos de datos de gran tamaño. Los vendedores pueden usar la información para realizar recomendaciones a los clientes sobre productos relacionados y promocionar estos colocándolos muy cerca unos de otros en páginas Web, catálogos o en la misma estantería.  
+ La herramienta de análisis de la **cesta de compras** le ayuda a encontrar `associations` en los datos. Una asociación podría indicarle cuáles son los artículos que se suelen comprar al mismo tiempo. En la minería de datos, esta técnica es un método conocido conocido como *análisis*de la cesta de la compra, que se usa para analizar el comportamiento de compra de los clientes en conjuntos de datos de gran tamaño. Los vendedores pueden usar la información para realizar recomendaciones a los clientes sobre productos relacionados y promocionar estos colocándolos muy cerca unos de otros en páginas Web, catálogos o en la misma estantería.  
   
  Para usar el análisis de la cesta de compras, los artículos que desea analizar deben estar relacionados por un identificador de transacción. Por ejemplo, si está analizando todos los pedidos recibidos a través de un sitio Web, cada uno de ellos tendrá un identificador de pedido o de transacción que estará relacionado con uno o más de los productos adquiridos.  
   

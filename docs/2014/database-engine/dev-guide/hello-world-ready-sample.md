@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 1cb94266-f702-4a57-a1ae-689a89c98757
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8303c387ff38ab5448d15e478534df165e05bddf
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64a693738df444e91fa4c9277b8a7dbc3eaca1a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637654"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933574"
 ---
 # <a name="hello-world-ready-sample"></a>Ejemplo de Hola a todos preparado
   El ejemplo Hello World Ready muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado de integración con CLR (Common Language Runtime) simple internacionalizado. Un componente internacionalizado se puede localizar fácilmente a distintos idiomas para diferentes mercados del mundo entero sin cambiar el código fuente del componente. Este ejemplo también muestra cómo devolver datos al cliente a través de un parámetro de salida y a través de un registro que el procedimiento almacenado crea dinámicamente. Este ejemplo es casi idéntico al descrito en Hello World, salvo que es mucho más fácil y seguro localizar esta aplicación. Para cambiar el texto localizado se requiere lo siguiente:  
@@ -30,7 +29,7 @@ ms.locfileid: "73637654"
   
  El código fuente y el ensamblado para el procedimiento almacenado de CLR en sí no cambian. Se proporciona un script `build.cmd` que muestra cómo compilar y vincular los ensamblados de recursos. Aunque el código fuente de la aplicación crea un administrador de recursos basado en el ensamblado que se ejecuta en el momento, no es necesario incrustar los recursos que no dependen de la referencia cultural en el archivo DLL que contiene el procedimiento almacenado. El `System.Resources.NeutralResourcesLanguage attribute` permite que los recursos que no dependen de una referencia cultural existan en un archivo DLL satélite. Es mucho mejor usar un archivo DLL independiente con este fin, de modo que, cuando deba agregarse o cambiarse un texto localizado, no sea necesario cambiar el archivo DLL principal que contiene el procedimiento almacenado CLR. Esto resulta especialmente útil para tipos CLR definidos por el usuario que podrían tener columnas y otras dependencias que dificultarían la acción de quitar y volver a agregar el tipo. Normalmente, las versiones de archivo DLL satélite deben ser idénticas a la versión del ensamblado principal. Sin embargo, se puede usar el atributo `SatelliteContractVersion` para permitir la actualización del ensamblado principal sin actualizar también los ensamblados satélite. Para obtener más información, vea la clase `ResourceManager` en la documentación de Microsoft .NET.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Este ejemplo solo funciona con SQL Server 2005 y versiones posteriores.  
   
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
@@ -64,7 +63,7 @@ ms.locfileid: "73637654"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

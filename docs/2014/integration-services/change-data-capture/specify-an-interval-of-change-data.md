@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80126a2f1955356ae451e2f1092869e962674689
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771223"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922496"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Especificar un intervalo de datos modificados
   En el flujo de control de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la primera tarea consiste en calcular los extremos del intervalo de cambios. Estos extremos son valores `datetime` y se almacenarán en variables de paquete para su uso posterior en el paquete.  
@@ -73,7 +72,7 @@ ms.locfileid: "62771223"
   
 -   **Calcular la fecha y hora de inicio**. Utilice la fecha y hora de finalización de la carga anterior como los valores actuales. Si utiliza un intervalo fijo para las cargas incrementales, puede calcular este valor mediante las funciones de `datetime` de Transact-SQL o del lenguaje de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. De lo contrario, es posible que tenga que conservar los extremos entre las ejecuciones y utilizar una tarea Ejecutar SQL o una tarea Script para cargar el extremo anterior.  
   
--   **Calcular la fecha y hora de finalización**. Si utiliza un intervalo fijo para las cargas incrementales, calcule la fecha y hora de finalización actuales como un desplazamiento de la fecha y hora de inicio. De nuevo, puede calcular este valor mediante las `datetime` funciones de TRANSACT-SQL o del lenguaje de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expresiones.  
+-   **Calcular la fecha y hora de finalización**. Si utiliza un intervalo fijo para las cargas incrementales, calcule la fecha y hora de finalización actuales como un desplazamiento de la fecha y hora de inicio. De nuevo, puede calcular este valor mediante las `datetime` funciones de Transact-SQL o del lenguaje de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expresiones.  
   
  En el procedimiento siguiente, el intervalo de cambios utiliza un intervalo fijo y da por supuesto que el paquete de la carga incremental se ejecuta diariamente sin excepciones. De lo contrario, se perderían los datos modificados para los intervalos que faltan. El punto inicial del intervalo es la medianoche de anteayer, es decir, hace unas 24 a 48 horas. El punto final del intervalo es la medianoche de ayer, es decir, la noche anterior, hace unas 0 a 24 horas.  
   

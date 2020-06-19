@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a02fa726d7fef74c4baf3ba44a24519a5cbb680
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65805157"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933926"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
   Utilice este cuadro de diálogo para habilitar y configurar uno o varios umbrales de advertencia para la base de datos seleccionada en el árbol de navegación del cuadro de diálogo **Monitor de creación de reflejo de la base de datos** .  
@@ -30,7 +29,7 @@ ms.locfileid: "65805157"
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato _sistema_**\\**_INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato _sistema_ **\\** _INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
@@ -72,10 +71,10 @@ ms.locfileid: "65805157"
 |**Advertir si la transacción sin enviar más antigua sobrepasa el umbral**|El umbral indica el número de minutos de transacciones que no se han enviado desde la cola de envío a la instancia del servidor reflejado. Este valor ayuda a medir la posibilidad de pérdida de datos con respecto a la hora.|  
 |**Advertir si la sobrecarga de confirmación del servidor reflejado sobrepasa el umbral**|El umbral indica el número de milisegundos de retraso por transacción (solo relevante en el modo de seguridad alta). Este retardo es la cantidad de sobrecarga en la que se incurre mientras la instancia del servidor principal espera a la instancia del servidor reflejado para escribir la entrada de registro de la transacción en la cola de puesta al día.|  
   
- **Habilitado en "** *\<instancia de servidor>* **"**  
+ **Habilitado en '** *\<server instance>* **'**  
  Una casilla en blanco indica que la advertencia está deshabilitada actualmente en la instancia del servidor. Para habilitar una advertencia, haga clic en su casilla.  
   
- **Umbral en "** *\<instancia de servidor* **"**  
+ **Umbral en '** *\<server instance>* **'**  
  Al habilitar una advertencia, establezca el umbral en la parte izquierda de esta columna. Se produce un evento si se ha alcanzado el umbral especificado al actualizarse la tabla de estado. Si deshabilita un umbral tras la configuración de un valor, su valor permanece en este campo y se usará si vuelve a habilitar la advertencia.  
   
  Cuando no se habilita una advertencia, este campo está inactivo.  

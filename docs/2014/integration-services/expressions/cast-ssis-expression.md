@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b2e960aa2383568d3977d19368576f4178949
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d94df6a59043bee136b0dc42ad8fb013c6c77456
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967485"
 ---
 # <a name="cast-ssis-expression"></a>Conversión (expresión de SSIS)
   Convierte explícitamente una expresión de un tipo de datos a otro. El operador de conversión también puede funcionar como un operador de truncamiento.
@@ -35,14 +34,14 @@ ms.locfileid: "78176445"
 ```
 
 ## <a name="arguments"></a>Argumentos
- *type_spec* Es un tipo [!INCLUDE[ssIS](../../includes/ssis-md.md)] de datos válido.
+ *type_spec* Es un [!INCLUDE[ssIS](../../includes/ssis-md.md)] tipo de datos válido.
 
  *expresión* de Es una expresión válida.
 
 ## <a name="result-types"></a>Tipos de resultado
  El tipo de datos de *type_spec*. Para obtener más información, vea [Integration Services tipos de datos](../data-flow/integration-services-data-types.md).
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
  El siguiente diagrama muestra operaciones de conversión válidas.
 
  ![Conversiones válidas y no válidas entre tipos de datos](../media/data-conversion.gif "Conversiones válidas y no válidas entre tipos de datos")

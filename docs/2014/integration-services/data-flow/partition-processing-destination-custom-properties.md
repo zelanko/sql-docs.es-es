@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3eac4413-0c90-4b06-8f7e-d0d72f4d869d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dbab24f756498d7427f9961e4176249daac8dfb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b159eaf782724466906110ae8f3ed42d2eb6f9c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914888"
 ---
 # <a name="partition-processing-destination-custom-properties"></a>Propiedades personalizadas del destino de procesamiento de particiones
   El destino Procesamiento de particiones tiene propiedades personalizadas y propiedades comunes a todos los componentes de flujo de datos.  
@@ -25,16 +24,16 @@ ms.locfileid: "62770951"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |ASConnectionString|String|Cadena de conexión a un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
-|KeyDuplicate|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica cómo controlar los errores de clave duplicada. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `IgnoreError` (0).|  
-|KeyErrorAction|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica cómo controlar los errores de clave. Los valores posibles son `ConvertToUnknown` (0) y `DiscardRecord` (1). El valor predeterminado de esta propiedad es `ConvertToUnknown` (0).|  
-|KeyErrorLimit|Entero|Cuando UseDefaultConfiguration es `False`, se permite el límite superior de errores de clave.|  
-|KeyErrorLimitAction|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica la acción que se realizará `KeyErrorLimit` cuando se alcance. Los valores posibles son `StopLogging` (1) y `StopProcessing` (0). El valor predeterminado de esta propiedad es `StopProcessing` (0).|  
-|KeyErrorLogFile|String|Cuando UseDefaultConfiguration es `False`, la ruta de acceso y el nombre de archivo del archivo de registro de errores.|  
-|KeyNotFound|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica cómo controlar los errores de clave que faltan. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `ReportAndContinue` (1).|  
-|NullKeyConvertedToUnknown|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica cómo controlar las claves null convertidas en el valor desconocido. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `IgnoreError` (0).|  
-|NullKeyNotAllowed|Integer (enumeración)|Cuando UseDefaultConfiguration es `False`, valor que indica cómo controlar los valores NULL no permitidos. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `ReportAndContinue` (1).|  
+|KeyDuplicate|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica cómo controlar los errores de clave duplicada. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `IgnoreError` (0).|  
+|KeyErrorAction|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica cómo controlar los errores de clave. Los valores posibles son `ConvertToUnknown` (0) y `DiscardRecord` (1). El valor predeterminado de esta propiedad es `ConvertToUnknown` (0).|  
+|KeyErrorLimit|Entero|Cuando UseDefaultConfiguration es `False` , se permite el límite superior de errores de clave.|  
+|KeyErrorLimitAction|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica la acción que se realizará cuando `KeyErrorLimit` se alcance. Los valores posibles son `StopLogging` (1) y `StopProcessing` (0). El valor predeterminado de esta propiedad es `StopProcessing` (0).|  
+|KeyErrorLogFile|String|Cuando UseDefaultConfiguration es `False` , la ruta de acceso y el nombre de archivo del archivo de registro de errores.|  
+|KeyNotFound|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica cómo controlar los errores de clave que faltan. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `ReportAndContinue` (1).|  
+|NullKeyConvertedToUnknown|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica cómo controlar las claves null convertidas en el valor desconocido. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `IgnoreError` (0).|  
+|NullKeyNotAllowed|Integer (enumeración)|Cuando UseDefaultConfiguration es `False` , valor que indica cómo controlar los valores NULL no permitidos. Los valores posibles son `IgnoreError` (0), `ReportAndContinue` (1) y `ReportAndStop` (2). El valor predeterminado de esta propiedad es `ReportAndContinue` (1).|  
 |ProcessType|Integer (enumeración)|Tipo de procesamiento de particiones utilizado por la transformación. Los valores posibles son `ProcessAdd` (1) (incremental), `ProcessFull` (0) y `ProcessUpdate` (2).|  
-|UseDefaultConfiguration|Boolean|Valor que especifica si la transformación usa la configuración de errores predeterminada. Si esta propiedad es `False`, la transformación utiliza los valores de las propiedades personalizadas de control de errores que se muestran en esta tabla, como KeyDuplicate, KeyErrorAction, etc.|  
+|UseDefaultConfiguration|Boolean|Valor que especifica si la transformación usa la configuración de errores predeterminada. Si esta propiedad es `False` , la transformación utiliza los valores de las propiedades personalizadas de control de errores que se muestran en esta tabla, como KeyDuplicate, KeyErrorAction, etc.|  
   
  La entrada y las columnas de entrada de destino de procesamiento de particiones no tienen ninguna propiedad personalizada.  
   

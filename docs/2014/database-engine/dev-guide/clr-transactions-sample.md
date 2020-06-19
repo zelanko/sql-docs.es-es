@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00a5db60a0bccdd3deec1d1ac845e926b6af5fb9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e73e11c582a2a8fc310423551e6e618718e375a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637753"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933706"
 ---
 # <a name="clr-transactions-sample"></a>Ejemplo de transacciones de CLR
   En este ejemplo, se muestra el control de transacciones con las API administradas que se encuentran en el espacio de nombres `System.Transactions` . En especial, se usa la clase `System.Transactions.TransactionScope` para establecer un límite de transacciones con el fin de asegurar que las cifras del inventario no están ajustadas a menos que haya inventario suficiente para cubrir la solicitud y, si lo hay, que la transferencia del inventario de una ubicación a otra se produce de forma indivisible. El registro automático de una transacción distribuida se demuestra registrando los cambios en el inventario en una base de datos de auditoría que está almacenada en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]independiente.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

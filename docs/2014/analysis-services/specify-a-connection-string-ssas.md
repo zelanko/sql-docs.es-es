@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3f89b55b-2659-4e9f-a3ad-ab9a23b6942d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: fc1080c2e75c58dfe732a2b0238f1d46f292816d
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 9333c239504a79184e08776acb3f1d845f06cc4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940486"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Especificar una cadena de conexión (SSAS)
   Esta página del **Asistente para la importación de tablas** le permite especificar una cadena de conexión para conectar con un origen de datos OLE DB u ODBC. Para tener acceso al asistente desde [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Importar desde el origen de datos**.  

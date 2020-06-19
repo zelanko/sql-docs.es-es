@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 302a4e4a-3172-42b6-9cc0-4a971ab49c1c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 91f12b0d97d2e2065c5bb08d175253c22dffb032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755258"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933703"
 ---
 # <a name="clr-triggers"></a>Desencadenadores de CLR
   Debido a la integración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR), es posible usar cualquier lenguaje [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para crear desencadenadores CLR. En esta sección se incluye información específica acerca de los desencadenadores implementados con la integración CLR. Para obtener una descripción completa de los desencadenadores, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md).  
@@ -49,7 +48,7 @@ ms.locfileid: "62755258"
   
 -   Obtener acceso a información acerca de los objetos de base de datos afectados por la ejecución de instrucciones DDL.  
   
- Estas capacidades se proporcionan de forma inherente en el lenguaje de consulta o por medio de la clase `SqlTriggerContext`. Para obtener información sobre las ventajas de la integración CLR y la elección entre [!INCLUDE[tsql](../../includes/tsql-md.md)]código administrado y, consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Estas capacidades se proporcionan de forma inherente en el lenguaje de consulta o por medio de la clase `SqlTriggerContext`. Para obtener información sobre las ventajas de la integración CLR y la elección entre código administrado y [!INCLUDE[tsql](../../includes/tsql-md.md)] , consulte [información general sobre la integración CLR](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Usar la clase SqlTriggerContext  
  La clase `SqlTriggerContext` no puede construirse públicamente y solo puede obtenerse mediante el acceso a la propiedad `SqlContext.TriggerContext` dentro del cuerpo de un desencadenador CLR. La clase `SqlTriggerContext` puede obtenerse a partir del contexto `SqlContext` activo mediante una llamada a la propiedad `SqlContext.TriggerContext`:  
@@ -480,7 +479,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción que crea el desencadenador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en es la siguiente y asume que el ensamblado **SQLCLRTest** ya está registrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos actual.  
+ La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción que crea el desencadenador en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es la siguiente y asume que el ensamblado **SQLCLRTest** ya está registrado en la base de datos actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ```  
 CREATE TRIGGER EmailAudit  

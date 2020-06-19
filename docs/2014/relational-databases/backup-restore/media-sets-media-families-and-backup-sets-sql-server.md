@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2b8f19a2-ee9d-4120-b194-fbcd2076a489
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d22511424ff9a7b72edba8c8e3987a8a3185217
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 853451ea5a7c43cd073fdf75703b3c4651b442d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958075"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
   En este tema se presenta la terminología básica de medios de copias de seguridad y restauración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y está pensada para lectores noveles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este tema describe el formato que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los medios de copia de seguridad, la correspondencia entre los medios y los dispositivos de copia de seguridad, la organización de las copias de seguridad en los medios y varias consideraciones para los conjuntos y las familias de medios. El tema también describe los pasos inicializar o dar formato a los medios de copia de seguridad antes de usarlos por primera vez o reemplazar un conjunto de medios anterior por otro nuevo, cómo sobrescribir los conjuntos de copia de seguridad anteriores en un conjunto de medios y cómo agregar nuevos conjuntos de copia de seguridad a un conjunto de medios.
@@ -86,7 +85,7 @@ ms.locfileid: "78175981"
 -   Si la descripción del medio contiene una etiqueta de medios MTF o una descripción del medio.
 
     > [!NOTE]
-    >  Todos los medios que se usan para una operación de copia de seguridad o de restauración utilizan [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] un formato de copia de seguridad estándar denominado conserva cualquier etiqueta de medios MTF escrita por otra aplicación, pero no escribe etiquetas de medios MTF.
+    >  Todos los medios que se usan para una operación de copia de seguridad o de restauración utilizan un formato de copia de seguridad estándar denominado [!INCLUDE[msCoName](../../includes/ssnoversion-md.md)] conserva cualquier etiqueta de medios MTF escrita por otra aplicación, pero no escribe etiquetas de medios MTF.
 
 -   Etiqueta de medios en formato de cinta de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] o descripción del medio (en texto sin formato).
 
@@ -137,7 +136,7 @@ WITH
 
  ![Distribución del segundo conjunto de copia de seguridad entre 3 cintas del conjunto de medios](../../database-engine/media/bnr-mediaset-appendedto.gif "Distribución del segundo conjunto de copia de seguridad entre 3 cintas del conjunto de medios")
 
- Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el ejemplo siguiente se muestra el uso **=** de las cláusulas de _backup_set_file_number_ de archivo al restaurar una copia [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de seguridad completa de la base de datos seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.
+ Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=** _backup_set_file_number_ al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.
 
 ```
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'
@@ -244,7 +243,7 @@ GO
 
      Un número de secuencia de medios indica el orden de los medios físicos de una familia de medios. El número de secuencia 1 se utiliza para el medio inicial de copia de seguridad. Éste se etiqueta con 1, el segundo (la primera cinta de continuación) se etiqueta con 2, y así sucesivamente. Cuando restaure el conjunto de copia de seguridad, los números de secuencia de medios garantizan que el operador que restaura la copia de seguridad monta los medios correctos en el orden correcto.
 
-###  <a name="multiple-devices"></a><a name="MultipleDevices"></a>Varios dispositivos
+###  <a name="multiple-devices"></a><a name="MultipleDevices"></a> Varios dispositivos
  Cuando use varias unidades de cinta o archivos de disco, tenga en cuenta las consideraciones siguientes:
 
 -   Para las copias de seguridad:

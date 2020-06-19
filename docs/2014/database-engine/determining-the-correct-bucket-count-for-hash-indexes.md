@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e0579a98e3302b6944f68ca449d3e7cda0ecc01d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754247"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933786"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Determinar el número correcto de depósitos para los índices hash
   Debe especificar un valor para el parámetro `BUCKET_COUNT` al crear la tabla optimizada para memoria. En este tema se hacen recomendaciones para determinar el valor adecuado para el parámetro `BUCKET_COUNT`. Si no puede determinar el número de cubos correcto, utilice un índice no clúster en su lugar.  Un valor incorrecto de `BUCKET_COUNT`, especialmente si es demasiado bajo, puede afectar significativamente el rendimiento de la carga de trabajo, así como afectar el tiempo de recuperación de la base de datos. Es mejor sobrestimar el número de cubos.  
@@ -24,7 +23,7 @@ ms.locfileid: "62754247"
   
  Para obtener más información sobre índices de hash no clúster, vea [Hash Indexes](hash-indexes.md) y [Guidelines for Using Indexes on Memory-Optimized Tables](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
- Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice se especifica mediante `BUCKET_COUNT` el parámetro en [CREATE TABLE &#40;&#41;de Transact-SQL](/sql/t-sql/statements/create-table-transact-sql) o el [tipo CREATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
+ Se asigna una tabla hash para cada índice de hash de una tabla optimizada para memoria. El tamaño de la tabla hash asignada para un índice se especifica mediante el `BUCKET_COUNT` parámetro en [CREATE TABLE &#40;&#41;de TRANSACT-SQL](/sql/t-sql/statements/create-table-transact-sql) o el [tipo Create &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql). El número de cubos se redondeará internamente hasta la siguiente potencia de dos. Por ejemplo, especificar un número de cubos de 300.000 producirá un número real de cubos de 524.288.  
   
  Para ver vínculos a un artículo y vídeo en el número de cubos, consulte [Cómo determinar el número de cubos adecuado para índices de hash (OLTP en memoria)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
@@ -177,7 +176,7 @@ GO
 -   Si las exploraciones completas de índice son las predominantes de rendimiento crítico, use un número de cubos cercano al número real de valores de clave de índice.  
   
 ### <a name="big-tables"></a>Tablas grandes  
- Para las tablas grandes, el uso de memoria podría llegar a ser un problema. Por ejemplo, con una tabla de filas 250 millones con 4 índices de hash, cada uno con un número de depósitos de 1 mil millones, la sobrecarga de las tablas hash es 4 índices * 1 mil millones depósitos \* 8 bytes = 32 gigabytes de uso de memoria. Al elegir un número de cubos de 250 millones para cada uno de los índices, la sobrecarga total de las tablas hash será de 8 gigabytes. Tenga en cuenta que esto se suma a los 8 bytes de uso de memoria que cada índice agrega a cada fila individual, que es 8 gigabytes en este escenario ( \* 4 índices 8 \* bytes 250 millones filas).  
+ Para las tablas grandes, el uso de memoria podría llegar a ser un problema. Por ejemplo, con una tabla de filas 250 millones con 4 índices de hash, cada uno con un número de depósitos de 1 mil millones, la sobrecarga de las tablas hash es 4 índices * 1 mil millones depósitos \* 8 bytes = 32 gigabytes de uso de memoria. Al elegir un número de cubos de 250 millones para cada uno de los índices, la sobrecarga total de las tablas hash será de 8 gigabytes. Tenga en cuenta que esto se suma a los 8 bytes de uso de memoria que cada índice agrega a cada fila individual, que es 8 gigabytes en este escenario (4 índices \* 8 bytes \* 250 millones filas).  
   
  Las exploraciones de tabla completas no están generalmente en la ruta de acceso de rendimiento crítico para las cargas de trabajo de OLTP. Por consiguiente, la elección está entre el uso de memoria frente al rendimiento de operaciones de búsqueda de puntos e inserción:  
   

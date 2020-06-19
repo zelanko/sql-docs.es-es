@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0d814404-21e4-4a68-894c-96fa47ab25ae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4f0c7a9c9b78455059550d4b75ad5f4da8c68d7a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176255"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968556"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Crear una transformación asincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas puede esperar hasta haber recibido todas las filas de entrada para completar su procesamiento o puede generar algunas filas antes de haber recibido todas las filas de entrada. En este tema se describe una transformación asincrónica. Si el procesamiento requiere una transformación sincrónica, vea [Crear una transformación sincrónica con el componente de script](../data-flow/transformations/script-component.md). Para obtener más información acerca de las diferencias que existen entre los componentes sincrónicos y asincrónicos, vea [Understanding Synchronous and Asynchronous Transformations](../understanding-synchronous-and-asynchronous-transformations.md) (Descripción de las transformaciones sincrónicas y asincrónicas).
@@ -70,7 +69,7 @@ ms.locfileid: "78176255"
 ### <a name="adding-variables"></a>Agregar variables
  Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los campos de propiedades ReadOnlyVariables y ReadWriteVariables de la página **Script** del **Editor de transformación Script**.
 
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables haciendo clic en el botón de puntos suspensivos (**...**) situado `ReadOnlyVariables` junto `ReadWriteVariables` a los campos de propiedades y y, a continuación, seleccionando las variables en el cuadro de diálogo **seleccionar variables** .
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables haciendo clic en el botón de puntos suspensivos (**...**) situado junto a los `ReadOnlyVariables` campos de propiedades y y `ReadWriteVariables` , a continuación, seleccionando las variables en el cuadro de diálogo **seleccionar variables** .
 
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).
 
@@ -82,11 +81,11 @@ ms.locfileid: "78176255"
  Para obtener información importante aplicable a todos los tipos de componentes creados mediante el componente de script, vea [Coding and Debugging the Script Component](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md) (Programación y depuración del componente de script).
 
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente
- Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, `ScriptMain` la clase modificable aparece en el editor de código con códigos auxiliares para los métodos ProcessInputRow y CreateNewOutputRows. En la clase ScriptMain escribirá el código personalizado; ProcessInputRow es el método más importante de un componente de transformación. El método `CreateNewOutputRows` se utiliza con más frecuencia en un componente de origen, que es la forma en que una transformación asincrónica en los dos componentes mencionados debe crear sus propias filas de salida.
+ Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, la clase modificable `ScriptMain` aparece en el editor de código con códigos auxiliares para los métodos ProcessInputRow y CreateNewOutputRows. En la clase ScriptMain escribirá el código personalizado; ProcessInputRow es el método más importante de un componente de transformación. El método `CreateNewOutputRows` se utiliza con más frecuencia en un componente de origen, que es la forma en que una transformación asincrónica en los dos componentes mencionados debe crear sus propias filas de salida.
 
- Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de `BufferWrapper` proyecto `ComponentWrapper` y de solo lectura. La clase ScriptMain hereda de la clase UserComponent en el `ComponentWrapper` elemento de proyecto.
+ Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de `BufferWrapper` proyecto y de solo lectura `ComponentWrapper` . La clase ScriptMain hereda de la clase UserComponent en el `ComponentWrapper` elemento de proyecto.
 
- En tiempo de ejecución, el motor de flujo de datos llama al método `UserComponent` PrimeOutput de la clase, que invalida <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> el método de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> la clase primaria. A su vez, el método PrimeOutput llama al método CreateNewOutputRows.
+ En tiempo de ejecución, el motor de flujo de datos llama al método PrimeOutput de la `UserComponent` clase, que invalida el <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> método de la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> clase primaria. A su vez, el método PrimeOutput llama al método CreateNewOutputRows.
 
  A continuación, el motor de flujo de datos invoca el método ProcessInput de la clase UserComponent, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método ProcessInput usa un bucle para recorrer las filas del búfer de entrada y llama al método ProcessInputRow una vez por cada fila.
 
@@ -95,7 +94,7 @@ ms.locfileid: "78176255"
 
  En una transformación asincrónica, puede usar el método AddRow para agregar filas a la salida, según corresponda, desde los métodos ProcessInputRow o ProcessInput. No es necesario utilizar el método CreateNewOutputRows. Si escribe una sola fila de resultados (como resultados de agregación) para una salida determinada, puede crear la fila de salida de antemano con el método CreateNewOutputRows y rellenar sus valores más adelante, después de procesar todas las filas de entrada. Sin embargo, no resulta útil crear varias filas en el método CreateNewOutputRows, ya que el componente de script solamente permite usar la fila actual en una entrada o salida. El método CreateNewOutputRows es más importante en un componente de origen donde no hay filas de entrada que procesar.
 
- Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código de este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta como ProcessInputRow bucles a través de`.` filas. en el ejemplo se escribe el valor de resumen en la segunda salida una vez procesadas todas las filas. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.
+ Puede que también desee invalidar el propio método ProcessInput para poder realizar un procesamiento adicional preliminar o final, antes o después de usar un bucle para recorrer el búfer de entrada y llamar a ProcessInputRow para cada fila. Por ejemplo, uno de los ejemplos de código de este tema invalida ProcessInput para contar el número de direcciones de una ciudad concreta como ProcessInputRow bucles a través `.` de filas. en el ejemplo se escribe el valor de resumen en la segunda salida una vez procesadas todas las filas. El ejemplo completa la salida de ProcessInput porque los búferes de salida ya no están disponibles al llamar a PostExecute.
 
  En función de sus requisitos, puede que también desee escribir script en los métodos PreExecute y PostExecute, disponibles en la clase ScriptMain, para realizar un procesamiento preliminar o final.
 

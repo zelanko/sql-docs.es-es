@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6dc42752-1fcd-4ab9-8194-c3001ea342e7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a005ab43ff33023827ea57fc6dbd9584c8da1f2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93282199db986ab8bcf18b05f9ae8b61a5a45b9a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706913"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926746"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introducción a la nube híbrida de SQL Server 2014
  La mayoría de las aplicaciones presentan algunos desafíos importantes, como alta eficacia, valor empresarial, configuraciones de hardware complejas, picos masivos a petición, y cumplimiento con las normativas del sector y corporativas. Tener en cuenta todos estos factores y generar una tecnología de clase empresarial puede resultar muy complicado. La estrategia de nube híbrida de Microsoft proporciona compatibilidad con los entornos tradicional, de nube privada, de nube pública y de nube híbrida para superar estos desafíos. 
@@ -107,7 +106,7 @@ ms.locfileid: "82706913"
  
  Si tiene previsto trasladar las capas de aplicación (como el nivel de presentación, el nivel empresarial y el nivel de base de datos) a Azure Virtual Machines, se recomienda que revise las recomendaciones proporcionadas en el artículo [patrones de aplicaciones y estrategias de desarrollo para SQL Server en azure virtual machines](https://msdn.microsoft.com/library/dn574746.aspx) . El objetivo de este artículo es proporcionar a los desarrolladores y arquitectos de soluciones una base para la buena arquitectura y diseño de aplicaciones, que pueden seguir al migrar las aplicaciones existentes a Azure, así como al desarrollar nuevas aplicaciones en Azure. Para cada patrón de aplicación, el artículo describe un escenario local, su solución habilitada para la nube correspondiente y las recomendaciones técnicas relacionadas. Además, el artículo describe estrategias de desarrollo específicas de Azure para que pueda diseñar sus aplicaciones correctamente. 
  
-## <a name="see-also"></a>Consulte también: 
+## <a name="see-also"></a>Consulte también 
  [Guía del producto SQL Server 2014 CTP2](https://www.microsoft.com/download/details.aspx?id=39269)  
  [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)  
  [Series de blogs de nube híbrida de Microsoft SQL Server](https://azure.microsoft.com/blog/microsoft-sql-server-hybrid-cloud-blog-series/)  

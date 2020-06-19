@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa1bee1a-ab06-44d8-9944-4bff03d73016
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2599fc6f5373b7bf048ab173bccd9c44be6ae58e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a1e40603dc9cbe86e32c59037350b25f31bddf14
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968574"
 ---
 # <a name="creating-a-synchronous-transformation-with-the-script-component"></a>Crear una transformación sincrónica con el componente de script
   Un componente de transformación se utiliza en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para modificar y analizar los datos cuando pasan del origen al destino. Una transformación con salidas sincrónicas procesa cada fila de entrada a medida que pasa por el componente. Una transformación con salidas asincrónicas espera hasta que haya recibido todas las filas de entrada para completar su procesamiento. En este tema se describe una transformación sincrónica. Para obtener información sobre transformaciones asincrónicas, vea [Crear una transformación asincrónica con el componente de script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md). Para obtener más información acerca de la diferencia entre los componentes sincrónicos y asincrónicos, vea [Descripción de las transformaciones sincrónicas y asincrónicas](../understanding-synchronous-and-asynchronous-transformations.md).
@@ -58,7 +57,7 @@ ms.locfileid: "78176265"
 -   Cree una o varias salidas adicionales, como una salida de error simulada para las filas que contienen valores inesperados. Utilice los botones **Agregar salida** y **Quitar salida** para administrar las salidas del componente de transformación sincrónica. Todas las filas de entrada se dirigen a todas las salidas disponibles a menos que indique que desea redirigir cada fila a una salida u otra. Para indicar que desea redirigir las filas debe especificar un valor entero distinto de cero para la propiedad `ExclusionGroup` en las salidas. El valor entero concreto escrito en `ExclusionGroup` para identificar las salidas no es significativo, pero debe utilizar el mismo entero de forma coherente para el grupo de salidas especificado.
 
     > [!NOTE]
-    >  También puede utilizar un valor de la propiedad `ExclusionGroup` distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que desee enviar a la salida.
+    >  También puede utilizar un valor de la propiedad `ExclusionGroup` distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo \<outputbuffer> ** para cada fila que desee enviar a la salida.
 
 -   Asigne un nombre más descriptivo a la entrada y las salidas. El componente de script utiliza estos nombres para generar las propiedades de descriptor de acceso con tipo que se usarán para hacer referencia a la entrada y las salidas en el script.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176265"
  Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).
 
 ### <a name="adding-variables"></a>Agregar variables
- Si desea usar variables existentes en el script, puede agregarlas en `ReadOnlyVariables` los campos de propiedades y `ReadWriteVariables` en la página **script** del editor de **transformación script**.
+ Si desea usar variables existentes en el script, puede agregarlas en los `ReadOnlyVariables` campos de propiedades y `ReadWriteVariables` en la página **script** del **Editor de transformación script**.
 
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables haciendo clic en el botón de puntos suspensivos (**...**) situado `ReadOnlyVariables` junto `ReadWriteVariables` a los campos de propiedades y y, a continuación, seleccionando las variables en el cuadro de diálogo **seleccionar variables** .
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables haciendo clic en el botón de puntos suspensivos (**...**) situado junto a los `ReadOnlyVariables` campos de propiedades y y `ReadWriteVariables` , a continuación, seleccionando las variables en el cuadro de diálogo **seleccionar variables** .
 
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).
 
@@ -85,7 +84,7 @@ ms.locfileid: "78176265"
 ### <a name="understanding-the-auto-generated-code"></a>Descripción del código generado automáticamente
  Al abrir el IDE de VSTA después de crear y configurar un componente de transformación, la clase `ScriptMain` modificable aparece en el editor de código con un código auxiliar para el método `ProcessInputRow`. En la clase `ScriptMain` se escribirá el código personalizado y `ProcessInputRow` es el método más importante de un componente de transformación.
 
- Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de proyecto `BufferWrapper` y `ComponentWrapper` de solo lectura. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.
+ Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de proyecto y de solo lectura `BufferWrapper` `ComponentWrapper` . La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.
 
  En tiempo de ejecución, el motor de flujo de datos invoca el método `ProcessInput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. A su vez, el método `ProcessInput` recorre las filas del búfer de entrada y llama al método `ProcessInputRow` una vez por cada fila.
 
@@ -130,7 +129,7 @@ else
 }
 ```
 
- En este ejemplo, el componente de script genera los métodos **DirectRowTo\<OutputBufferX>** automáticamente, basándose en los nombres de las salidas configuradas. Puede utilizar un código similar para dirigir las filas de errores a una salida de error simulada.
+ En este ejemplo, el componente de script genera los métodos **DirectRowTo \<OutputBufferX> ** automáticamente, en función de los nombres de las salidas configuradas. Puede utilizar un código similar para dirigir las filas de errores a una salida de error simulada.
 
 ## <a name="examples"></a>Ejemplos
  En los ejemplos que figuran aquí se muestra el código personalizado requerido en la clase `ScriptMain` para crear un componente de transformación sincrónica.
@@ -145,7 +144,7 @@ else
 
 1.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como una transformación.
 
-2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la tabla **Person. Address** de la `AdventureWorks` base de datos de ejemplo que contiene las columnas **AddressID** y **City** .
+2.  Conecte la salida de un origen o de otra transformación al nuevo componente de transformación en el diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Esta salida debe proporcionar datos de la tabla **Person. Address** de la base de datos de `AdventureWorks` ejemplo que contiene las columnas **AddressID** y **City** .
 
 3.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**. Marque la columna **City** como de lectura y escritura.
 

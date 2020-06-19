@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fceed0b4bcfb8d5c41046cd4faf555ca2847899c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72c119ab3188321be97b2c51ddc0a77f8a585aee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706375"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023034"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
   **SQLBrowseConnect** utiliza palabras clave que se pueden clasificar en tres niveles de información de conexión. Para cada palabra clave, la tabla siguiente indica si se devuelve una lista de valores válidos y si la palabra clave es opcional.  
   
 ## <a name="level-1"></a>Nivel 1  
   
-|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
+|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|N/D|No|Nombre del origen de datos devuelto por **SQLDataSources**. No se puede utilizar la palabra clave DSN si se utiliza la palabra clave DRIVER.|  
 |DRIVER|N/D|No|¿Microsoft?? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]El nombre del controlador ODBC de Native Client es { [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. No se puede utilizar la palabra clave DRIVER si se utiliza la palabra clave DSN.|  
   
 ## <a name="level-2"></a>Nivel 2  
   
-|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
+|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Sí|No|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
 |UID|No|Sí|Id. de inicio de sesión de usuario.|  
@@ -43,7 +42,7 @@ ms.locfileid: "82706375"
   
 ## <a name="level-3"></a>Nivel 3  
   
-|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
+|Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Description|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Yes|Yes|Nombre de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |LANGUAGE|Yes|Yes|Lenguaje nacional utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

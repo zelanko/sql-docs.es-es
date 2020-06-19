@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a6bf22c7649646506b65628f556b52fead23375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3624aed38a7a5bf75e0c0807aa8d3657156264f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022297"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068602"
 ---
 # <a name="manage-oracle-tablespaces"></a>Administrar espacios de tabla de Oracle
   Un espacio de tabla es una unidad de almacenamiento de base de datos que equivale aproximadamente a un grupo de archivos de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Los espacios de tabla permiten el almacenamiento y la administración de objetos de base de datos en grupos individuales. Para obtener más información, vea la documentación de Oracle.  
@@ -31,15 +30,15 @@ ms.locfileid: "63022297"
   
 -   Use [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql). Para utilizar **sp_changearticle**, especifique lo siguiente:  
   
-    -   Nombre del publicador de Oracle para el parámetro **@publisher**.  
+    -   Nombre del publicador de Oracle para el parámetro **@publisher** .  
   
-    -   El nombre de la publicación de Oracle para el **@publication**parámetro.  
+    -   El nombre de la publicación de Oracle para el parámetro **@publication** .  
   
-    -   Nombre del artículo para el parámetro **@article**.  
+    -   Nombre del artículo para el parámetro **@article** .  
   
-    -   Un valor de ' Tablespaces ' para el parámetro **@property**.  
+    -   Un valor de ' Tablespaces ' para el parámetro **@property** .  
   
-    -   Nombre del espacio de tablas para el parámetro **@value**.  
+    -   Nombre del espacio de tablas para el parámetro **@value** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](configure-an-oracle-publisher.md)   

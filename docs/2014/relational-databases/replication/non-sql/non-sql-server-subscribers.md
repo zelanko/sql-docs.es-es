@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b1f285243e2b925cca9d263a53c9b70087ea5d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63022246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068589"
 ---
 # <a name="non-sql-server-subscribers"></a>suscriptores que no son de SQL Server
   Los siguientes suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden suscribirse a publicaciones de instantáneas y transaccionales mediante suscripciones de inserción. Las suscripciones se admiten en las dos versiones más recientes de cada base de datos enumerada utilizando la versión más reciente del proveedor OLE DB indicado.  
@@ -49,7 +48,7 @@ ms.locfileid: "63022246"
   
 -   La replicación es compatible con la publicación de tablas y vistas indizadas como tablas en suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (las vistas indizadas no se pueden replicar como vistas indizadas).  
   
--   Al crear una publicación en el Asistente para nueva publicación y habilitarla para suscriptores que no son de SQL Server mediante el cuadro de diálogo Propiedades de la publicación, el propietario de todos los objetos de la base de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] datos de suscripciones [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no se especifica para los suscriptores que no son de, mientras que para los suscriptores se establece en el propietario del objeto correspondiente de la base de datos de publicación  
+-   Al crear una publicación en el Asistente para nueva publicación y habilitarla para suscriptores que no son de SQL Server mediante el cuadro de diálogo Propiedades de la publicación, el propietario de todos los objetos de la base de datos de suscripciones no se especifica para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mientras que para los [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suscriptores se establece en el propietario del objeto correspondiente de la base de datos de publicación  
   
 -   Si una publicación va a tener suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se debe habilitar la publicación para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antes de crear cualquier suscripción a suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   

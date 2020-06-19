@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c477ab89-a1cd-4f2c-aa7c-40525041100f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5cf83aa10e758479d3bd7b2dff6a829515e8c39d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fddaf9b23f5a67548a47ffc8cccc30baa7df5478
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718550"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068460"
 ---
 # <a name="toggle-a-breakpoint"></a>Alternar un punto de interrupción
   El hecho de establecer un punto de interrupción en una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] se denomina alternar un punto de interrupción.  

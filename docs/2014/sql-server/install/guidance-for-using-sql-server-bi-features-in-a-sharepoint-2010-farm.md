@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5f9a94c4-854b-4577-a8b1-7142f19904e3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 02aaab5056d5e2b095d9440f696edcc77475323e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cba400e1030bb18b3370a023f88d069711a44c7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172564"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054837"
 ---
 # <a name="guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm"></a>Instrucciones para usar las características de SQL Server BI en una granja de servidores de SharePoint 2010
   En este tema se resume la disponibilidad de las características según las versiones y las ediciones del software que utiliza. También se explican los requisitos de instalación de SharePoint 2010 para usar determinadas características de SQL Server. Para obtener información relacionada con SharePoint 2013, vea [topologías de implementación para las características de SQL Server BI en SharePoint](deployment-topologies-for-sql-server-bi-features-in-sharepoint.md).
@@ -43,7 +42,7 @@ ms.locfileid: "78172564"
 ##  <a name="sharepoint-editions-and-bi-feature-support"></a><a name="bkmk_vers"></a>Ediciones de SharePoint y compatibilidad con las características de BI
  Algunas características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence solo se admiten en ediciones concretas de los Productos de SharePoint.
 
-|Características admitidas|Producto de SharePoint|
+|Funciones admitidas|Producto de SharePoint|
 |------------------------|------------------------|
 |[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], una característica del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complemento para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.<br /><br /> Alertas de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Enterprise Edition.|
 |Presentación general de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] e integración de características con SharePoint.|[!INCLUDE[SPS2010](../../includes/sps2010-md.md)] Standard y Enterprise Edition.<br /><br /> [!INCLUDE[SPF2010](../../includes/spf2010-md.md)].|
@@ -57,7 +56,7 @@ ms.locfileid: "78172564"
 
 -   Desea usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].
 
- Una de las principales razones por las que se requiere SP1 para las [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instalaciones de SharePoint que se ejecutan con es la característica del motor de base de datos **sp_dboption**, que quedó en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] desuso en una versión anterior, no se ha suspendido en la versión. Para obtener más información, vea [funcionalidad de motor de base de datos no incluida en SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
+ Una de las principales razones por las que se requiere SP1 para las instalaciones de SharePoint que se ejecutan con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] es la característica del motor de base de datos **sp_dboption**, que quedó en desuso en una versión anterior, no se ha suspendido en la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] versión. Para obtener más información, vea [funcionalidad de motor de base de datos no incluida en SQL Server 2014](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)
 
 ### <a name="sharepoint-2010-sp1-installation-guidance"></a>Orientación de instalación de SharePoint 2010 SP1
  [Descargue SharePoint Server 2010 SP1](https://go.microsoft.com/fwlink/?LinkID=219697) y aplíquelo en todos los servidores de la granja.

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 64dc9129373a57de2924b2983e14266a67d4915e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1888d1045e43e0a9839fd76a21c51500af63539a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62873519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953335"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
   Las bases de datos y las aplicaciones de bases de datos que utilizan instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] obtendrán una mayor portabilidad de un idioma a otro, o admitirán varios idiomas, si se siguen estas directrices:  
@@ -36,7 +35,7 @@ ms.locfileid: "62873519"
   
     -   Las aplicaciones ADO, OLE DB y ODBC deben utilizar la siguiente marca de tiempo, fecha y cláusulas de escape de hora ODBC:  
   
-         **{ts '** AAAA**-**_mm_**-**_DDHH_**:**_mm_**:**_SS_[**.** _FFF_] **'}** por ejemplo: **{ts '** 1998**-** 09**-** 24 10 **:** 02 **:** 20 **'}**  
+         **{ts '** AAAA **-** _mm_ **-** _DDHH_**:**_mm_**:**_SS_[**.** _FFF_] **'}** por ejemplo: **{ts '** 1998 **-** 09 **-** 24 10 **:** 02 **:** 20 **'}**  
   
          **{ d'** _aaaa_ **-** _mm_ **-** _dd_ **'}** , como: **{ d'** 1998**-** 09**-** 24 **'}**  
   
@@ -44,7 +43,7 @@ ms.locfileid: "62873519"
   
     -   Las aplicaciones que utilizan otras API o desencadenadores, procedimientos almacenados y scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] deben utilizar las cadenas numéricas sin separar. Por ejemplo, *yyyymmdd* como en 19980924.  
   
-    -   Las aplicaciones que usan otras API o [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, procedimientos almacenados y desencadenadores deben usar la instrucción Convert con un parámetro de estilo explícito para todas las conversiones entre `time`los `date`tipos `smalldate`de `datetime`datos,,, `datetimeoffset` , **datetime2**y tipos de datos y cadenas de caracteres. Por ejemplo, la siguiente instrucción se interpreta igual en todas las configuraciones de conexión de formato de fecha o de idioma:  
+    -   Las aplicaciones que usan otras API o [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts, procedimientos almacenados y desencadenadores deben usar la instrucción Convert con un parámetro de estilo explícito para todas las conversiones entre los tipos de datos `time` , `date` , `smalldate` , `datetime` , **datetime2**y tipos de datos `datetimeoffset` y cadenas de caracteres. Por ejemplo, la siguiente instrucción se interpreta igual en todas las configuraciones de conexión de formato de fecha o de idioma:  
   
         ```  
         SELECT *  

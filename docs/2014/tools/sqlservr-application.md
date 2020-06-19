@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48dcf9d22686aa87f267304fe844a1989fe4e24c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007041"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
   La aplicación **sqlservr** se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde un símbolo del sistema.  
@@ -61,13 +60,13 @@ ms.locfileid: "68211019"
  Inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la configuración mínima. Esta opción resulta útil si el valor de una opción de configuración (por ejemplo, la confirmación excesiva de memoria) ha impedido el inicio del servidor.  
   
  **-e** _error_log_path_  
- Indica la ruta de acceso con autorización completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada es * \<unidad>*: \Archivos de programa\Microsoft SQL Server\MSSQL\Log\Errorlog para la instancia predeterminada y * \<la unidad>*: \Archivos de programa\Microsoft SQL Server\Mssql $*instance_name*\Log\Errorlog para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.  
+ Indica la ruta de acceso con autorización completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada es *\<Drive>* : \Archivos de programa\Microsoft SQL Server\MSSQL\Log\Errorlog para la instancia predeterminada y *\<Drive>* : \Archivos de Programa\microsoft SQL Server\MSSQL $*instance_name*\Log\Errorlog para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.  
   
  **-l** _master_log_path_  
  Indica la ruta de acceso con autorización completa para el archivo de registro de transacciones de la base de datos **maestra** . No hay espacios entre **-l** y *master_log_path*.  
   
  **-m**  
- Indica que se inicie una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en modo de usuario único. Solo un usuario puede conectar cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia en modo de usuario único. No se inicia el mecanismo CHECKPOINT, que garantiza que se escriben con regularidad transacciones completadas desde la memoria caché del disco al dispositivo de base de datos. (Normalmente, esta opción se utiliza si se existen problemas en las bases de datos del sistema y necesitan repararse.) Habilita la opción **sp_configure allow updates** . De forma predeterminada, la opción **allow updates** está deshabilitada.  
+ Indica que se inicie una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en modo de usuario único. Solo un usuario puede conectar cuando [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se inicia en modo de usuario único. No se inicia el mecanismo CHECKPOINT, que garantiza que se escriben con regularidad transacciones completadas desde la memoria caché del disco al dispositivo de base de datos. (Normalmente, esta opción se utiliza si se existen problemas en las bases de datos del sistema y necesitan repararse.) Habilita la opción **sp_configure allow updates**. De forma predeterminada, la opción **allow updates** está deshabilitada.  
   
  **-n**  
  Permite iniciar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin el parámetro **-s** establecido, la instancia predeterminada intenta iniciarse. Debe cambiar al directorio BINN apropiado para la instancia en una ventana del símbolo del sistema antes de iniciar **sqlservr.exe**. Por ejemplo, si Instance1 usara \mssql$Instance1 para sus archivos binarios, el usuario debería estar en el directorio \mssql$Instance1\binn para poder iniciar **sqlservr.exe -s instance1**. Si inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la opción **-n** , es recomendable que use también la opción **-e** ; de lo contrario los eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se registrarán.  
@@ -76,7 +75,7 @@ ms.locfileid: "68211019"
  Indica que se debe iniciar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una marca de seguimiento específica (*trace#*) vigente. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. **acepta una t minúscula (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. **acepta una t minúscula (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Muestra el número de versión del servidor.  
@@ -91,9 +90,9 @@ ms.locfileid: "68211019"
   
  Use el valor predeterminado del parámetro **-g** , a menos que vea alguna de las siguientes advertencias en el registro de errores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<tamaño>"  
+-   "Failed virtual allocate bytes: FAIL_VIRTUAL_RESERVE \<size> "  
   
--   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<tamaño>"  
+-   "Failed virtual allocate bytes: FAIL_VIRTUAL_COMMIT \<size> "  
   
  Estos mensajes podrían indicar que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está intentando liberar partes del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a fin de buscar espacio para elementos como los archivos .DLL de procedimientos almacenados extendidos u objetos de automatización. En este caso, considere la posibilidad de aumentar la cantidad de memoria reservada mediante el modificador **-g**.  
   

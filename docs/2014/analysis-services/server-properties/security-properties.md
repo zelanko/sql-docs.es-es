@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2fc7fe10-0cbb-49ac-aa8c-8ec3f7a7705f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9316827245adfbcf64bd798869f570dc5f0af14c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a6b5880a67afde3efaf34eb9050dc9c95b472bf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940617"
 ---
 # <a name="security-properties"></a>Propiedades de seguridad
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor de seguridad que aparecen en la tabla siguiente. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

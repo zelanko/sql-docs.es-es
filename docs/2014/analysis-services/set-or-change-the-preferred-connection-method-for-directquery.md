@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f10d5678-d678-4251-8cce-4e30cfe15751
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9737b829a5ccab1ddc0362f2d8ac81285f0f6e1c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0513b300939b935dbf138d2bd8484e86740f31c9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940536"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Establecer o cambiar el método de conexión preferido para DirectQuery
   Al crear un modelo para utilizarlo en el modo DirectQuery, primero debe configurar el entorno de diseño para que admita el uso de DirectQuery. Para ello, vea [Habilitar el modo de diseño de DirectQuery &#40;&#41;tabular de SSAS ](tabular-models/enable-directquery-mode-in-ssdt.md).  

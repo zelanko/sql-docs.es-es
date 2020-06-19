@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0e4bbc4f0c371c927988e6b91fdbf47307ad9d3f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289453"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068375"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
-  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que el cifrado aproveche el servicio de Azure Key Vault como un proveedor de [Administración extensible de claves &#40;EKM&#41;](extensible-key-management-ekm.md) para proteger sus claves de cifrado.
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que el cifrado aproveche el servicio de Azure Key Vault como un proveedor de [administración extensible de claves &#40;EKM&#41;](extensible-key-management-ekm.md) para proteger sus claves de cifrado.
 
  Este tema incluye:
 
@@ -79,7 +78,7 @@ ms.locfileid: "79289453"
 
     -   Otra **entidad de servicio** será necesaria para que [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] acceda al almacén y pueda desempaquetar las claves utilizadas en el cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
-     Para más información sobre cómo registrar una aplicación y generar una entidad de servicio, consulte la sección sobre **cómo registrar una aplicación con Azure Active Directory** en la [introducción a Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). El proceso de registro devuelve un **Id. de aplicación** (también llamado **Id. de cliente**) y una **clave de autenticación** (también llamada **secreto**) para cada **entidad de servicio**de Azure Active Directory. Cuando se usa en `CREATE CREDENTIAL` la instrucción, se debe quitar el guión del **ID**. de cliente. Regístrelos para usarlos en los siguientes scripts:
+     Para más información sobre cómo registrar una aplicación y generar una entidad de servicio, consulte la sección sobre **cómo registrar una aplicación con Azure Active Directory** en la [introducción a Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). El proceso de registro devuelve un **Id. de aplicación** (también llamado **Id. de cliente**) y una **clave de autenticación** (también llamada **secreto**) para cada **entidad de servicio**de Azure Active Directory. Cuando se usa en la `CREATE CREDENTIAL` instrucción, se debe quitar el guión del **ID**. de cliente. Regístrelos para usarlos en los siguientes scripts:
 
     -   **Entidad de servicio** para un inicio de sesión de **sysadmin** : **CLIENTID_sysadmin_login** y **SECRET_sysadmin_login**
 
@@ -159,9 +158,9 @@ ms.locfileid: "79289453"
 2.  Configure una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para un inicio de sesión de administrador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , para utilizar el Almacén de claves con el fin de configurar y administrar escenarios de cifrado de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .
 
     > [!IMPORTANT]
-    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el identificador de * \<cliente>* (sin guiones) y * \<>secreto* se pasen juntos sin un espacio entre ellos.
+    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere *\<Client ID>* (sin guiones) y *\<Secret>* se puede pasar juntos sin un espacio entre ellos.
 
-     En el ejemplo siguiente, el **identificador** de cliente`EF5C8E09-4D2A-4A76-9998-D93440D8115D`() se elimina de los guiones y se escribe como la `EF5C8E094D2A4A769998D93440D8115D` cadena y el **secreto** se representa con la cadena *SECRET_sysadmin_login*.
+     En el ejemplo siguiente, el **identificador de cliente** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) se elimina de los guiones y se escribe como la cadena `EF5C8E094D2A4A769998D93440D8115D` y el **secreto** se representa con la cadena *SECRET_sysadmin_login*.
 
     ```sql
     USE master;
@@ -175,7 +174,7 @@ ms.locfileid: "79289453"
     ADD CREDENTIAL sysadmin_ekm_cred;
     ```
 
-     Para obtener un ejemplo del uso de variables `CREATE CREDENTIAL` para los argumentos y de cómo quitar mediante programación los guiones del identificador de cliente, consulte [Create Credential &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
+     Para obtener un ejemplo del uso de variables para los `CREATE CREDENTIAL` argumentos y de cómo quitar mediante programación los guiones del identificador de cliente, consulte [CREATE Credential &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql).
 
 3.  Si importó una clave asimétrica como se describió anteriormente en el paso 1, sección 3, abra la clave proporcionando el nombre de la clave en el ejemplo siguiente.
 
@@ -224,9 +223,9 @@ ms.locfileid: "79289453"
 1.  Cree una credencial de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que la use [!INCLUDE[ssDE](../../../includes/ssde-md.md)] al acceder al Almacén de claves EKM mientras se carga la base de datos.
 
     > [!IMPORTANT]
-    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere que el identificador de * \<cliente>* (sin guiones) y * \<>secreto* se pasen juntos sin un espacio entre ellos.
+    >  El argumento **Identity** de `CREATE CREDENTIAL` requiere el nombre del almacén de claves. El argumento **Secret** de `CREATE CREDENTIAL` requiere *\<Client ID>* (sin guiones) y *\<Secret>* se puede pasar juntos sin un espacio entre ellos.
 
-     En el ejemplo siguiente, el **identificador** de cliente`EF5C8E09-4D2A-4A76-9998-D93440D8115D`() se elimina de los guiones y se escribe como la `EF5C8E094D2A4A769998D93440D8115D` cadena y el **secreto** se representa con la cadena *SECRET_DBEngine*.
+     En el ejemplo siguiente, el **identificador de cliente** ( `EF5C8E09-4D2A-4A76-9998-D93440D8115D` ) se elimina de los guiones y se escribe como la cadena `EF5C8E094D2A4A769998D93440D8115D` y el **secreto** se representa con la cadena *SECRET_DBEngine*.
 
     ```sql
     USE master;

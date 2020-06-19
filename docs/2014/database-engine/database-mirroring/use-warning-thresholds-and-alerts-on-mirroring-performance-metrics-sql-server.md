@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 908b234143bc7e2140fe1c98d85ba150ea69b28d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754038"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933856"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Usar alertas y umbrales de advertencia de las métricas de rendimiento de la creación de reflejo (SQL Server)
   Este tema contiene información acerca de los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los que se pueden configurar y administrar umbrales de advertencia para la creación de reflejo de la base de datos. Puede usar el Monitor de creación de reflejo de la base de datos o los procedimientos almacenados **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**y **sp_dbmmonitordropalert** . Este tema también contiene información acerca de cómo configurar alertas en los eventos de creación de reflejo de la base de datos.  
@@ -73,7 +72,7 @@ ms.locfileid: "62754038"
     |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Quita la advertencia de una métrica de rendimiento especificada.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Eventos de umbral de rendimiento enviados al Registro de eventos de Windows  
- Si se define un umbral de advertencia para una métrica de rendimiento, cuando se actualiza la tabla de estado, el último valor se evalúa con el umbral. Si se alcanza el umbral, el procedimiento de actualización, **sp_dbmmonitorupdate**, genera un evento informativo, un *evento de umbral de rendimiento*, para la métrica y escribe el evento [!INCLUDE[msCoName](../../includes/msconame-md.md)] en el registro de eventos de Windows. En la siguiente tabla se presenta una lista de los Id. de eventos de los eventos de umbral de rendimiento.  
+ Si se define un umbral de advertencia para una métrica de rendimiento, cuando se actualiza la tabla de estado, el último valor se evalúa con el umbral. Si se alcanza el umbral, el procedimiento de actualización, **sp_dbmmonitorupdate**, genera un evento informativo, un *evento de umbral de rendimiento*, para la métrica y escribe el evento en el registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. En la siguiente tabla se presenta una lista de los Id. de eventos de los eventos de umbral de rendimiento.  
   
 |Métrica de rendimiento|Id. de evento|  
 |------------------------|--------------|  

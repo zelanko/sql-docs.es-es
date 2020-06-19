@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 26420df466860677f22d39d57133568a2f02bc68
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3394181111267c01e9baaa13bd1b6d64339dd5eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054653"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>El directorio virtual tiene un método de autenticación no admitido (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado un método de autenticación no compatible en el directorio virtual del Administrador de informes o del servidor de informes. Entre los métodos de autenticación no admitidos por la actualización se incluyen: Anónimo, Implícito y .NET Passport.  
@@ -34,7 +33,7 @@ ms.locfileid: "71952008"
   
 -   Anónimas  
   
--   Resumen  
+-   Digest  
   
 -   .NET Passport  
   

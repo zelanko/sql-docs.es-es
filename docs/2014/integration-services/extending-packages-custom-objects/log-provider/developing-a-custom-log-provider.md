@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af3478e254f01f7cf53d5a09b6febab3b1e85e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 257fec0f1d7ce59ce84cc3c54b9b5d105440a6f1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176311"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968725"
 ---
 # <a name="developing-a-custom-log-provider"></a>Desarrollar un proveedor de registro personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye completas capacidades de registro que permiten capturar eventos que se producen durante la ejecución del paquete. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye varios proveedores de registro que permiten crear registros y almacenarlos en formatos como XML, texto, base de datos o en el registro de eventos de Windows. Si los proveedores de registro y los formatos de salida que se proporcionan no cumplen completamente sus requisitos, puede crear un proveedor de registro personalizado.
@@ -36,14 +35,14 @@ ms.locfileid: "78176311"
 
  [Codificar un proveedor de registro personalizado](coding-a-custom-log-provider.md) Describe cómo implementar un proveedor de registro personalizado invalidando los métodos y las propiedades de la clase base.
 
- [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](developing-a-user-interface-for-a-custom-log-provider.md) Las interfaces de usuario personalizadas para los proveedores de registro personalizados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]no se admiten en.
+ [Desarrollar una interfaz de usuario para un proveedor de registro personalizado](developing-a-user-interface-for-a-custom-log-provider.md) Las interfaces de usuario personalizadas para los proveedores de registro personalizados no se admiten en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
 ## <a name="related-topics"></a>Temas relacionados
 
 ### <a name="information-common-to-all-custom-objects"></a>Información común a todos los objetos personalizados
  Para obtener información común a todos los tipos de objetos personalizados que puede crear en [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], vea los temas siguientes:
 
- [Desarrollar objetos personalizados para Integration Services](../developing-custom-objects-for-integration-services.md) Describe los pasos básicos para implementar todos los tipos de objetos personalizados [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]para.
+ [Desarrollar objetos personalizados para Integration Services](../developing-custom-objects-for-integration-services.md) Describe los pasos básicos para implementar todos los tipos de objetos personalizados para [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
  [Conservar objetos personalizados](../persisting-custom-objects.md) Describe la persistencia personalizada y explica cuándo es necesario.
 

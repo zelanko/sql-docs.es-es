@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 61347757-f5a3-481d-8b05-1fed086629b6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 441ed50984ef6bbfcdaec47be0fb29aa37cf69c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062004"
 ---
 # <a name="save-as"></a>Guardar como
-  Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **Guardar** * \<archivo>* **como** en el menú **archivo** (donde * \<archivo>* es el nombre del elemento actual), o presione Alt + F, A en el editor de código.  
+  Utilice este cuadro de diálogo para guardar una instancia del elemento actual en una ubicación especificada y en un formato de archivo determinado. Para mostrar este cuadro de diálogo, haga clic en **Guardar** *\<file>* **como** en el menú **archivo** (donde *\<file>* es el nombre del elemento actual), o presione Alt + F, A en el editor de código.  
   
 ## <a name="central-panel"></a>Panel central  
  **Guardar en**  

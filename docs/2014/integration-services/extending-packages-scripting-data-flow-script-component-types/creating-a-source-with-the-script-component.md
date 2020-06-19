@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 547c4179-ea82-4265-8c6f-04a2aa77a3c0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8b82b7776bf9a56e5c72b5ffabdf6d8398b5d183
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176275"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968592"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Crear un origen con el componente de script
   Los componentes de origen del flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se usan para cargar datos de un origen de datos y pasarlos a transformaciones y destinos de nivel inferior. Normalmente la conexión al origen de datos se realiza a través de un administrador de conexiones existente.
@@ -60,7 +59,7 @@ ms.locfileid: "78176275"
 -   Puede crear una o varias salidas adicionales, como una salida de error simulada para las filas que contienen valores inesperados. Utilice los botones **Agregar salida** y **Quitar salida** para administrar las salidas del componente de origen. Todas las filas de entrada se dirigen a todas las salidas disponibles a menos que también especifique un valor distinto de cero idéntico para la propiedad `ExclusionGroup` de las salidas si desea dirigir cada fila a solo una de las salidas que comparten el mismo valor de `ExclusionGroup`. El valor entero determinado seleccionado para identificar el elemento `ExclusionGroup` no es significativo.
 
     > [!NOTE]
-    >  También puede utilizar un valor de la propiedad `ExclusionGroup` distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo\<outputbuffer>** para cada fila que desee enviar a la salida.
+    >  También puede utilizar un valor de la propiedad `ExclusionGroup` distinto de cero con una salida única si no desea generar la salida de todas las filas. Sin embargo, en este caso, debe llamar explícitamente al método **DirectRowTo \<outputbuffer> ** para cada fila que desee enviar a la salida.
 
 -   Puede asignar un nombre descriptivo a las salidas. Después, hará referencia a las salidas en el script por sus nombres, mediante las propiedades de descriptor de acceso con tipo creadas en el código generado automáticamente.
 
@@ -69,9 +68,9 @@ ms.locfileid: "78176275"
  Para obtener más información acerca de la página **Entradas y salidas** del **Editor de transformación Script**, vea [Script Transformation Editor &#40;Inputs and Outputs Page&#41;](../script-transformation-editor-inputs-and-outputs-page.md) (Editor de transformación Script [página Entradas y salidas]).
 
 ### <a name="adding-variables"></a>Agregar variables
- Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en `ReadOnlyVariables` los campos de propiedades y `ReadWriteVariables` en la página **script** del editor de **transformación script**.
+ Si hay variables existentes cuyos valores quiere usar en el script, puede agregarlas en los `ReadOnlyVariables` `ReadWriteVariables` campos de propiedades y en la página **script** del **Editor de transformación script**.
 
- Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables si hace clic en el botón de puntos suspensivos (**...**) `ReadOnlyVariables` situado `ReadWriteVariables` junto a los campos de propiedades y y selecciona variables en el cuadro de diálogo **seleccionar variables** .
+ Al introducir diversas variables en los campos de propiedades, separe los nombres de éstas por comas. También puede especificar varias variables si hace clic en el botón de puntos suspensivos (**...**) situado junto a los `ReadOnlyVariables` campos de `ReadWriteVariables` propiedades y y selecciona variables en el cuadro de diálogo **seleccionar variables** .
 
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).
 
@@ -87,7 +86,7 @@ ms.locfileid: "78176275"
 
  La clase `ScriptMain` incluye un código auxiliar para el método `CreateNewOutputRows`. `CreateNewOutputRows` es el método más importante en un componente de origen.
 
- Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de proyecto `BufferWrapper` y `ComponentWrapper` de solo lectura. La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.
+ Si abre la ventana **Explorador de proyectos** de VSTA, puede ver que el componente de script también ha generado elementos de proyecto y de solo lectura `BufferWrapper` `ComponentWrapper` . La clase `ScriptMain` hereda de la clase `UserComponent` en el elemento de proyecto `ComponentWrapper`.
 
  En tiempo de ejecución, el motor de flujo de datos invoca el método `PrimeOutput` de la clase `UserComponent`, lo que invalida el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> de la clase primaria <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. El método `PrimeOutput` a su vez llama a los métodos siguientes:
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3cc4c44e00e4c16a6211086b16861f3e9233357
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62661857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061910"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Ventanas de herramientas de SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] proporciona un gran número de eficaces ventanas de herramientas para todas las fases del desarrollo y la administración. Algunas herramientas se pueden utilizar en cualquier componente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , mientras que otras son solo para ciertos componentes. En la tabla siguiente se identifican las herramientas que se pueden utilizar con todos los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

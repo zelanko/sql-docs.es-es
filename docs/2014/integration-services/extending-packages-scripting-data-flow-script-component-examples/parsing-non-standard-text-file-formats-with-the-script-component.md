@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fda034d-09e4-4647-9a9f-e8d508c2cc8f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40139962f6c5fd77611ccd486785cd6afadeff69
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968625"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analizar formatos de archivo de texto no estándar con el componente de script
   Cuando los datos de origen están organizados en un formato no estándar, puede resultar más cómodo consolidar toda la lógica de análisis en un único script que encadenar varias transformaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para lograr el mismo resultado.  
@@ -94,7 +93,7 @@ ms.locfileid: "62769021"
   
 11. En la página **Columnas de entrada** del **Editor de transformación Script**, seleccione la única columna de entrada disponible.  
   
-12. En la página **entradas y salidas** del **Editor de script de transformación**, seleccione salida 0 y establezca `SynchronousInputID` su en ninguno. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
+12. En la página **entradas y salidas** del **Editor de script de transformación**, seleccione salida 0 y establezca su `SynchronousInputID` en ninguno. Cree 5 columnas de salida, todas del tipo cadena [DT_STR] con una longitud de 32:  
   
     -   Nombre  
   
@@ -106,7 +105,7 @@ ms.locfileid: "62769021"
   
     -   StateProvince  
   
-13. En la página **script** del **Editor de script de transformación**, haga clic en **Editar script** y escriba el código `ScriptMain` que se muestra en la clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
+13. En la página **script** del **Editor de script de transformación**, haga clic en **Editar script** y escriba el código que se muestra en la `ScriptMain` clase del ejemplo. Cierre el entorno de desarrollo de script y el **Editor de transformación Script**.  
   
 14. Agregue un destino de SQL Server al flujo de datos. Configúrelo para utilizar el administrador de conexiones OLE DB y la tabla RowDelimitedData. Conecte la salida del componente de script a este destino.  
   

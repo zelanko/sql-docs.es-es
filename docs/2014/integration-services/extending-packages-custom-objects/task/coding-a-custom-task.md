@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dc224f4f-b339-4eb6-a008-1b4fe0ea4fd2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0cc4026c8eae44ab8dacff62a72cfa66470c07fb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2ac0429b744f9ba14798ca1f402261f16aae34a8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176286"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968685"
 ---
 # <a name="coding-a-custom-task"></a>Codificar una tarea personalizada
   Una vez que haya creado una clase que herede de la clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task> y haya aplicado el atributo <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute> a la clase, debe invalidar la implementación de las propiedades y los métodos de la clase base para proporcionar su funcionalidad personalizada.
@@ -157,7 +156,7 @@ End Class
  En esta sección se describe cómo usar el método `Execute` que las tareas heredan e invalidan. En esta sección también se explican varias maneras de proporcionar información sobre los resultados de la ejecución de la tarea.
 
 ### <a name="execute-method"></a>Método Execute
- Las tareas que están incluidas en un paquete se ejecutan cuando el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] llama a su método `Execute`. Las tareas implementan su lógica de negocios y funcionalidad principales en este método, y proporcionan los resultados de la ejecución mediante la publicación de mensajes <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> , la devolución de un valor de `get` la enumeración y la invalidación de la propiedad de la `ExecutionValue` propiedad.
+ Las tareas que están incluidas en un paquete se ejecutan cuando el tiempo de ejecución de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] llama a su método `Execute`. Las tareas implementan su lógica de negocios y funcionalidad principales en este método, y proporcionan los resultados de la ejecución mediante la publicación de mensajes, la devolución de un valor de la <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> enumeración y la invalidación de la propiedad `get` de la `ExecutionValue` propiedad.
 
  La clase base <xref:Microsoft.SqlServer.Dts.Runtime.Task> proporciona una implementación predeterminada del método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Las tareas personalizadas invalidan este método para definir su funcionalidad en tiempo de ejecución. El objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> ajusta la tarea, aislándola del motor en tiempo de ejecución y de los demás objetos del paquete. Debido a este aislamiento, la tarea no es consciente de su ubicación en el paquete con respecto a su orden de ejecución, y se ejecuta únicamente cuando se llama por el tiempo de ejecución. Esta arquitectura evita los problemas que se pueden producir cuando las tareas modifican el paquete durante la ejecución. La tarea proporciona acceso a los demás objetos del paquete únicamente a través de los objetos que se le suministran como parámetros en el método <xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>. Estos parámetros permiten que las tareas produzcan eventos, escriban las entradas en el registro de eventos, tengan acceso a la colección de variables y den de alta las conexiones a los orígenes de datos en transacciones, a la vez que se mantiene todavía el aislamiento necesario para garantizar la estabilidad y confiabilidad del paquete.
 

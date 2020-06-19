@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 161afa9d-74a1-40f5-af17-162e355e7a46
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ccbf276057e5fb67cea9a0520f39e8b002eb4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5bb0555485927076a2f0b845d4fd06b194ea60ce
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933758"
 ---
 # <a name="accessing-native-code-from-a-clr-udf"></a>Acceso a código nativo desde una UDF de CLR
   Este ejemplo muestra cómo invocar una función en código C++ nativo (no administrado) desde una función definida por el usuario en un ensamblado, en la base de datos.  
   
- En este ejemplo, el directorio de trabajo debe `c:\test`ser.  
+ En este ejemplo, el directorio de trabajo debe ser `c:\test` .  
   
  Primero compile el código C++:  
   

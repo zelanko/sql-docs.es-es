@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49751128273fd052dd0ecd9423238f6c71a15925
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176845"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063322"
 ---
 # <a name="full-text-search"></a>Búsqueda de texto completo
   La búsqueda de texto completo en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] permite a los usuarios y aplicaciones ejecutar consultas de texto completo en datos basados en caracteres en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para que las consultas de texto completo se puedan ejecutar en una tabla determinada, el administrador de bases de datos debe crear un índice de texto completo en la tabla. El índice de texto completo incluye una o varias columnas de caracteres en la tabla. Estas columnas pueden tener cualquiera de los siguientes tipos de datos: `char`, `varchar`, `nchar`, `nvarchar`, `text`, `ntext`, `image`, `xml` o `varbinary(max)`, y FILESTREAM. Cada índice de texto completo indiza una o varias columnas de la tabla base y cada columna puede usar un idioma concreto.
@@ -134,7 +133,7 @@ ms.locfileid: "78176845"
 ###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Proceso de indización de texto completo
  Cuando se inicia un rellenado de texto completo (también conocido como rastreo), el motor de texto completo inserta lotes grandes de datos en la memoria y lo notifica al host de demonio de filtro. El host filtra y establece separaciones de palabras en los datos, y convierte los datos convertidos en las listas de palabras invertidas. A continuación, la búsqueda de texto completo extrae los datos convertidos de las listas de palabras, procesa los datos para quitar las palabras irrelevantes y conserva las listas de palabras para un lote en uno o varios índices invertidos.
 
- Al indizar los datos almacenados en `varbinary(max)` una `image` columna o, el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] por ejemplo, Word). En algunos casos, los componentes de filtro requieren `varbinary(max)`que los `image` datos de, o se escriban en la carpeta filterdata, en lugar de insertarse en la memoria.
+ Al indizar los datos almacenados en `varbinary(max)` una `image` columna o, el filtro, que implementa la interfaz **IFilter** , extrae texto basándose en el formato de archivo especificado para los datos (por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). En algunos casos, los componentes de filtro requieren que los `varbinary(max)` datos de, o `image` se escriban en la carpeta filterdata, en lugar de insertarse en la memoria.
 
  Como parte del procesamiento, los datos de texto recopilados se pasan a través de un separador de palabras para dividir el texto en tokens o palabras clave individuales. El idioma que se utiliza para la conversión en símbolos (tokens) se especifica en el nivel de columna o bien se identifica en los `varbinary(max)`, `image` o `xml` mediante el componente de filtro.
 
@@ -200,7 +199,7 @@ ms.locfileid: "78176845"
 
     -   [Solucionar problemas de indización de texto completo](troubleshoot-full-text-indexing.md)
 
-    -   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](back-up-and-restore-full-text-catalogs-and-indexes.md)
+    -   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](back-up-and-restore-full-text-catalogs-and-indexes.md)
 
 -   Administrar los componentes lingüísticos
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 33f2f2d0-79e0-4107-9902-d67019b826aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e809d84071089ce57c66bc8f9a388203923fe66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0dc9fc81fb02f004eb86c1bfef5662460aa4005f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936806"
 ---
 # <a name="getting-started-with-alwayson-availability-groups-sql-server"></a>Introducción a los grupos de disponibilidad de AlwaysOn (SQL Server)
   En este tema se describen los pasos para las instancias de configuración de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] para admitir [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y crear, administrar, y supervisar la disponibilidad de grupo.  
@@ -48,7 +47,7 @@ ms.locfileid: "75228762"
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Une las réplicas secundarias al grupo de disponibilidad.** Conectarse a cada instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que hospeda una replicación secundaria y combinar la replicación secundaria local al grupo de disponibilidad.|[Unir una réplica secundaria a un grupo de disponibilidad](join-a-secondary-replica-to-an-availability-group-sql-server.md)<br /><br /> Sugerencia: Si usa el Asistente para nuevo grupo de disponibilidad, este paso se automatiza.|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Prepare las bases de datos secundarias.** En cada instancia de servidor que está hospedando una replicación secundaria, restaure las copias de seguridad de las bases de datos principales utilizando RESTORE WITH NORECOVERY.|[Preparar una base de datos secundaria manualmente](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)<br /><br /> Sugerencia: El Asistente para nuevo grupo de disponibilidad puede preparar las bases de datos secundarias automáticamente. Para más información, vea "Requisitos previos para usar la sincronización de datos inicial completa" en [Página Seleccionar sincronización de datos iniciales &#40;asistentes para grupos de disponibilidad AlwaysOn&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Una las bases de datos secundarias al grupo de disponibilidad.** En cada instancia del servidor que hospede la réplica secundaria, una cada base de datos secundaria local al grupo de disponibilidad. Al combinar el grupo de la disponibilidad, una base de datos secundaria dada inicia la sincronización de datos con la base de datos principal correspondiente.|[Combinar una base de datos secundaria con un grupo de disponibilidad](join-a-secondary-database-to-an-availability-group-sql-server.md)<br /><br /> Sugerencia: El Asistente para nuevo grupo de disponibilidad puede realizar este paso si todas las bases de datos secundarias existen en cada réplica secundaria.|  
-||**Crea un agente de escucha del grupo de disponibilidad.**  Este paso es necesario a menos que ya haya creado el agente de escucha de grupo de disponibilidad mientras creó el grupo de disponibilidad.|[Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
+||**Crea un agente de escucha del grupo de disponibilidad.**  Este paso es necesario a menos que ya haya creado el agente de escucha de grupo de disponibilidad mientras creó el grupo de disponibilidad.|[Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Dé el nombre de host DNS de la escucha a los desarrolladores de aplicaciones.**  Los desarrolladores tienen que especificar este nombre DNS en las cadenas de conexión para dirigir las solicitudes de conexión a la escucha del grupo de disponibilidad. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).|"Seguimiento: después de crear un agente de escucha de grupo de disponibilidad" en [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)|  
 |![Casilla](../../media/checkboxemptycenterxtraspacetopandright.gif "Casilla de verificación")|**Configure dónde se debe hacer la copia de seguridad de los trabajos.**  Si desea realizar copias de seguridad de las bases de datos secundarias, debe crear un script de trabajo de copia de seguridad que tenga en cuenta la preferencia de copia de seguridad automatizada. Cree un script para cada base de datos del grupo de disponibilidad en cada instancia de servidor que hospede una réplica de disponibilidad para el grupo de disponibilidad.|"Seguimiento: después de configurar la copia de seguridad en las réplicas secundarias" en [Configurar la copia de seguridad en réplicas de disponibilidad &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)|  
   
@@ -59,7 +58,7 @@ ms.locfileid: "75228762"
   
  La administración de un grupo de disponibilidad implica una o varias de las siguientes tareas:  
   
-|Tarea|Link|  
+|Tarea|Vínculo|  
 |----------|----------|  
 |Modificar la [directiva de conmutación por error flexible](flexible-automatic-failover-policy-availability-group.md) del grupo de disponibilidad para controlar las condiciones que producen una conmutación por error automática. Esta directiva es pertinente cuando la conmutación automática por error es posible.|[Configurar la directiva flexible de conmutación por error de un grupo de disponibilidad](configure-flexible-automatic-failover-policy.md)|  
 |Realizar una conmutación por error manual planeada o una conmutación por error manual forzada (con posible pérdida de datos), denominada normalmente *conmutación por error forzada*. Para más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).|[Realizar una conmutación manual por error planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)<br /><br /> [Realizar una conmutación manual por error forzada](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)|  

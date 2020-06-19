@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51b5913e9c3ce65faa5a1fddc5846cc7c94d149f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063249"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
   El rendimiento de la indización y las búsquedas de texto completo se ve afectado por los recursos de hardware; por ejemplo, la memoria, la velocidad de disco y de CPU, y la arquitectura del equipo.  
@@ -58,7 +57,7 @@ ms.locfileid: "66011260"
 ##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Optimizar el rendimiento de los índices de texto completo  
  Para obtener el máximo rendimiento de los índices de texto completo, implemente las prácticas recomendadas siguientes:  
   
--   Para usar todos los procesadores o núcleos hasta el máximo, [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)establezca sp_configure`max full-text crawl ranges`' ' en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
+-   Para usar todos los procesadores o núcleos hasta el máximo, establezca [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)' `max full-text crawl ranges` ' en el número de CPU del sistema. Para obtener más información sobre esta opción de configuración, vea [max full-text crawl range (opción de configuración del servidor)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
   
 -   Asegúrese de que la tabla base tiene un índice clúster. Use un tipo de datos entero para la primera columna del índice clúster. No use GUID en la primera columna del índice clúster. Un rellenado de varios intervalos en un índice clúster puede conseguir que el rellenado se realice a la mayor velocidad. Recomendamos que la columna que actúa como clave de texto completo sea de un tipo de datos entero.  
   
@@ -105,7 +104,7 @@ ms.locfileid: "66011260"
   
  La cantidad de memoria (en bytes) consumida por el host de demonio de filtro puede calcularse de forma aproximada utilizando esta fórmula:  
   
- *number_of_crawl_ranges* \`ism_size '*max_outstanding_isms* \* 2  
+ *number_of_crawl_ranges* \` ism_size '*max_outstanding_isms* \* 2  
   
  Los valores predeterminados de las variables de la fórmula anterior son los siguientes:  
   
@@ -121,17 +120,17 @@ ms.locfileid: "66011260"
   
 -   *T*, que es la memoria física total disponible en el sistema (en MB).  
   
--   *M*, que es el valor `max server memory` óptimo.  
+-   *M*, que es el `max server memory` valor óptimo.  
   
 > [!IMPORTANT]  
 >  Para obtener información esencial sobre las fórmulas, vea <sup>1</sup>, <sup>2</sup>y <sup>3</sup>, a continuación.  
   
-|Plataforma|Estimación de los requisitos de memoria de fdhost. exe en MB-*F*<sup>1</sup>|Fórmula para calcular la memoria de servidor máxima:*M*<sup>2</sup>|  
+|Plataforma|Estimación de los requisitos de memoria de fdhost.exe en MB-*F*<sup>1</sup>|Fórmula para calcular la memoria de servidor máxima:*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _número de intervalos de rastreo_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_F_ **=** _número de intervalos de rastreo_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
+|x86|_F_ **=** _número de intervalos de rastreo_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)- *`F`* - ** 500|  
+|x64|_F_ **=** _número de intervalos de rastreo_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> si hay varios rellenados completos en curso, calcule los requisitos de memoria de fdhost. exe de cada uno por separado, como *F1*, *F2*, etc. Después calcule *M* como _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> si hay varios rellenados completos en curso, calcule los fdhost.exe requisitos de memoria de cada uno por separado, como *F1*, *F2*, etc. Después calcule *M* como _T_**-** sigma **(**_F_i **)**.  
   
  <sup>2</sup> 500 MB es un cálculo de la memoria requerida por otros procesos del sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
   
@@ -143,13 +142,13 @@ ms.locfileid: "66011260"
   
  `F = 8*10*8=640`  
   
- El siguiente cálculo obtiene el valor óptimo para `max server memory` - *M*. *T*la memoria física total disponible en este sistema en MB-*T*-is `8192`.  
+ El siguiente cálculo obtiene el valor óptimo para `max server memory` - *M*. *T*la memoria física total disponible en este sistema en MB-*T*-is `8192` .  
   
  `M = 8192-640-500=7052`  
   
  **Ejemplo: establecer max server memory**  
   
- En este ejemplo se usan las instrucciones [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) y [reconfigure](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] para establecer `max server memory` en el valor calculado para *M* en `7052`el ejemplo anterior,:  
+ En este ejemplo se usan las instrucciones [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) y [reconfigure](/sql/t-sql/language-elements/reconfigure-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] para establecer `max server memory` en el valor calculado para *M* en el ejemplo anterior, `7052` :  
   
 ```  
 USE master;  
@@ -179,7 +178,7 @@ GO
   
      En la tabla siguiente se describen los tipos de espera de interés aquí.  
   
-    |Tipo de espera|Descripción|Solución posible:|  
+    |Tipo de espera|Description|Solución posible:|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX o _UP)|Esto podría indicar un cuello de botella de la E/S, en cuyo caso normalmente vería también una longitud promedio de la cola del disco alta.|Al mover el índice de texto completo a un grupo de archivos diferente de un disco diferente, podría ayudar a reducir el cuello de botella de la E/S.|  
     |PAGELATCH_EX (o _UP)|Podría indicar una gran contención entre los subprocesos que están intentando escribir en el mismo archivo de base de datos.|Al agregar los archivos al grupo de archivos en el que el índice de texto completo reside podría ayudar a aliviar tal contención.|  
@@ -203,7 +202,7 @@ GO
   
  Por razones de seguridad, los procesos de host de demonio de filtro cargan los filtros. Una instancia del servidor utiliza un proceso multiproceso para todos los filtros multiproceso y un proceso de un solo subproceso para todos los filtros de un solo subproceso. Cuando un documento que utiliza un filtro multiproceso contiene un documento incrustado que utiliza un filtro de un solo subproceso, el motor de texto completo inicia un proceso de un solo subproceso para el documento incrustado. Por ejemplo, al encontrar un documento de Word que contiene un documento PDF, el motor de texto completo usa el proceso multiproceso para el contenido de Word e inicia un proceso de un solo subproceso para el contenido PDF. Sin embargo, un filtro de un solo subproceso podría no funcionar bien en este entorno y desestabilizar el proceso de filtrado. En ciertas circunstancias en las que tal incrustación es común, la desestabilización podría provocar el bloqueo del proceso de filtrado. Cuando esto ocurre, el motor de texto completo vuelve a enrutar cualquier documento con error (por ejemplo, un documento de Word que incluya contenido PDF incrustado) al proceso del filtrado de un solo subproceso. Si esto sucede con frecuencia, se produce una disminución del rendimiento del proceso de indización de texto completo.  
   
- Para solucionar este problema, marque el filtro para el documento contenedor (Word en este caso) como filtro de un solo subproceso. Puede cambiar el valor del Registro del filtro para marcar un determinado filtro como de un solo subproceso. Para marcar un filtro como filtro de un solo subproceso, debe establecer el valor del registro **ThreadingModel** del filtro en `Apartment Threaded`. Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
+ Para solucionar este problema, marque el filtro para el documento contenedor (Word en este caso) como filtro de un solo subproceso. Puede cambiar el valor del Registro del filtro para marcar un determinado filtro como de un solo subproceso. Para marcar un filtro como filtro de un solo subproceso, debe establecer el valor del registro **ThreadingModel** del filtro en `Apartment Threaded` . Para obtener más información sobre los contenedores uniproceso, vea las notas del producto [Understanding and Using COM Threading Models](https://go.microsoft.com/fwlink/?LinkId=209159)(Descripción y uso de modelos de subprocesos COM).  
   
   
   

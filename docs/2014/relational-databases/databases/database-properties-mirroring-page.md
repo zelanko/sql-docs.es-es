@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cf17ecc4219ed0ee0b917bdecb94f936246f225
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47ec51a82b1369210447b7d853d39a5a61e055ba
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871950"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970155"
 ---
 # <a name="database-properties-mirroring-page"></a>Propiedades de la base de datos (página Creación de reflejo)
   Acceda a esta página desde la base de datos principal y utilícela para configurar y modificar las propiedades de la creación de reflejo de una base de datos. Utilícela también para iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos, ver el estado de una sesión de creación de reflejo y pausar o quitar la sesión de creación de reflejo de la base de datos.  
@@ -49,7 +48,7 @@ ms.locfileid: "62871950"
   
  TCP **://**_fully_qualified_domain_name_**:**_port_  
   
- where  
+ , donde  
   
 -   *fully_qualified_domain_name* es el servidor en el que existe la instancia del servidor.  
   
@@ -145,7 +144,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Actualizar**  
  Haga clic para actualizar el cuadro **Estado** .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si no está familiarizado con la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Agregar un testigo a una sesión existente  

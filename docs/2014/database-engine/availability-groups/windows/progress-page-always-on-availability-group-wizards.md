@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: bd3b0306-8384-4120-a1c9-03825f0ae26a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 25b16d4380157b49031cd05fb1ecbe5dac1ba811
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 4722e844e527f04ccde62c699d46b0fbc955a416
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858707"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936626"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Página Progreso (asistentes para grupos de disponibilidad AlwaysOn)
   Utilice este cuadro de diálogo para ver el progreso del asistente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que esté ejecutando en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barra de progreso indica el progreso relativo de los pasos que el asistente realiza.  
@@ -43,7 +42,7 @@ ms.locfileid: "83858707"
 |------------|-----------------|  
 |**Error**|Indica que la operación para este paso ha experimentado un error. Haga clic en el vínculo para mostrar un cuadro de diálogo de mensaje que describe el error.|  
 |**En curso (** *porcentaje completado* **)**|Indica que la operación se está produciendo ahora y calcula el porcentaje completado de este paso.|  
-|**Realizado**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
+|**Correcto**|Indica que la operación correspondiente a este paso se ha completado correctamente.|  
   
  **Menos detalles**  
  Haga clic para ocultar la cuadrícula de progreso.  

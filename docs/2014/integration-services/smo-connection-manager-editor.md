@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff18b4aac5a97e7bfa12daed107662790fa854a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055595"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962965"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
   Utilice el **Editor del administrador de conexiones SMO** para configurar una conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para las diferentes tareas que transfieren objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -33,7 +32,7 @@ ms.locfileid: "66055595"
  **Actualizar**  
  Actualiza la lista de sesiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles que se pueden detectar en la red.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Utiliza la autenticación de Windows para conectarse a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] seleccionada.  
   
  **Usar autenticación SQL Server**  

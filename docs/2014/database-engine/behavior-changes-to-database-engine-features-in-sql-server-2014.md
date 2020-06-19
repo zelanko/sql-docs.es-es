@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65eaafa1-9e06-4264-b547-cbee8013c995
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9d174bb43388af9ea3fe02d839c7a3fcfec202c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9072b851f3512113b23dedc91f8c9b7151136a57
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "77646321"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936183"
 ---
 # <a name="behavior-changes-to-database-engine-features-in-sql-server-2014"></a>Cambios de comportamiento en las características del Motor de base de datos en SQL Server 2014
   En este tema se describen los cambios de comportamiento en [!INCLUDE[ssDE](../includes/ssde-md.md)]. Los cambios de comportamiento afectan al modo en que las características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] funcionan o interactúan en comparación con las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -30,15 +29,15 @@ ms.locfileid: "77646321"
 ## <a name="behavior-changes-in-sssql11"></a><a name="Denali"></a>Cambios de comportamiento en[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="metadata-discovery"></a>Detección de metadatos  
- Las [!INCLUDE[ssDE](../includes/ssde-md.md)] mejoras en a partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] de permiten a SQLDescribeCol obtener descripciones más precisas de los resultados esperados que los devueltos por SQLDescribeCol en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información, vea [Detección de metadatos](../relational-databases/native-client/features/metadata-discovery.md).  
+ Las mejoras en [!INCLUDE[ssDE](../includes/ssde-md.md)] a partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] permiten a SQLDescribeCol obtener descripciones más precisas de los resultados esperados que los devueltos por SQLDescribeCol en versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información, vea [Detección de metadatos](../relational-databases/native-client/features/metadata-discovery.md).  
   
  La opción [set FMTONLY](/sql/t-sql/statements/set-fmtonly-transact-sql) para determinar el formato de una respuesta sin ejecutar realmente la consulta se reemplaza por [sp_describe_first_result_set &#40;&#41;de Transact-sql ](/sql/relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql), [sp_describe_undeclared_parameters &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql), [sys. dm_exec_describe_first_result_set &#40;transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql)y [Sys. dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql).  
   
 ### <a name="changes-to-behavior-in-scripting-a-sql-server-agent-task"></a>Cambios de comportamiento de scripting en una tarea del Agente SQL Server  
-A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]de, si crea un nuevo trabajo mediante la copia del script de un trabajo existente, el nuevo trabajo podría afectar involuntariamente al trabajo existente. Para crear un nuevo trabajo mediante el script de un trabajo existente, elimine manualmente el parámetro * \@schedule_uid* que suele ser el último parámetro de la sección que crea la programación del trabajo en el trabajo existente. De esta forma se crea una nueva programación independiente del nuevo trabajo sin que se vean afectados los trabajos existentes.  
+A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , si crea un nuevo trabajo mediante la copia del script de un trabajo existente, el nuevo trabajo podría afectar involuntariamente al trabajo existente. Para crear un nuevo trabajo mediante el script de un trabajo existente, elimine manualmente el parámetro * \@ schedule_uid* que suele ser el último parámetro de la sección que crea la programación del trabajo en el trabajo existente. De esta forma se crea una nueva programación independiente del nuevo trabajo sin que se vean afectados los trabajos existentes.  
   
 ### <a name="constant-folding-for-clr-user-defined-functions-and-methods"></a>Doblado constante para las funciones y métodos CLR definidos por el usuario  
-A partir [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]de, los siguientes objetos CLR definidos por el usuario son ahora doblado:  
+A partir de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , los siguientes objetos CLR definidos por el usuario son ahora doblado:  
 
 -   Funciones CLR definidas por el usuario con valores escalares deterministas.  
 -   Métodos deterministas de tipos CLR definidos por el usuario.  
@@ -97,12 +96,12 @@ El comportamiento interno del método `value` del tipo de datos `xml` ha cambiad
  `Arithmetic overflow error converting expression to data type smallint.`  
   
 ### <a name="sqlcmdexe-behavior-change-in-xml-mode"></a>Cambio de comportamiento de sqlcmd.exe en modo XML  
- Hay cambios de comportamiento si usa sqlcmd. exe con el modo XML (: XML ON Command) al ejecutar una instrucción SELECT * FROM T FOR XML....  
+ Hay cambios de comportamiento si usa sqlcmd.exe con el modo XML (: XML ON Command) al ejecutar una instrucción SELECT * FROM T FOR XML....  
   
 ### <a name="dbcc-checkident-revised-message"></a>Mensaje revisado de CHECKIDENT DBCC  
- En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], el mensaje devuelto por el comando DBCC CHECKIDENT ha cambiado solo cuando se usa con reinicialización *new_reseed_value* para cambiar el valor de identidad actual. El nuevo mensaje es *"comprobando información de identidad: valor de\<identidad actual del valor de identidad actual>" "*. Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."  
+ En [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , el mensaje devuelto por el comando DBCC CHECKIDENT ha cambiado solo cuando se usa con REinicialización *new_reseed_value* para cambiar el valor de identidad actual. El nuevo mensaje es *"comprobando información de identidad: valor de \<current identity value> identidad actual*" "". Ejecución de DBCC completada. Si DBCC imprime algún mensaje de error, póngase en contacto con su administrador del sistema."  
   
- En versiones anteriores, el mensaje es *"comprobando información de identidad: valor de\<identidad actual ' valor de identidad actual> ',\<valor de columna actual ' valor de columna actual> '. Ejecución de DBCC completada. Si DBCC imprime mensajes de error, póngase en contacto con el administrador del sistema ".* El mensaje no se modifica cuando `DBCC CHECKIDENT` se especifica con `NORESEED`, sin un segundo parámetro o sin un valor de reinicialización. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
+ En versiones anteriores, el mensaje es *"comprobando información de identidad: valor de identidad actual ' \<current identity value> ', valor de columna actual ' \<current column value> '. Ejecución de DBCC completada. Si DBCC imprime mensajes de error, póngase en contacto con el administrador del sistema ".* El mensaje no se modifica cuando `DBCC CHECKIDENT` se especifica con `NORESEED` , sin un segundo parámetro o sin un valor de reinicialización. Para obtener más información, vea [DBCC CHECKIDENT &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql).  
   
 ### <a name="behavior-of-exist-function-on-xml-datatype-has-changed"></a>El comportamiento de la función exist() del tipo de datos XML ha cambiado  
  El comportamiento de la `exist()` función ha cambiado al comparar un tipo de datos XML con un valor null en 0 (cero). Considere el ejemplo siguiente:  

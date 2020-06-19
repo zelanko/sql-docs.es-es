@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103dd8eef782dfa7a4d13929b0b832dba9bc46e0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789824"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936728"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
   Para supervisar réplicas y grupos de disponibilidad y las bases de datos asociado utilizando [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de vistas de administración dinámica y de catálogo y propiedades del servidor. Mediante instrucciones SELECT de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , puede utilizar las vistas para supervisar los grupos de disponibilidad y sus réplicas y bases de datos. La información devuelta para un grupo de disponibilidad determinado depende de si está conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal o una réplica secundaria.  
@@ -80,7 +79,7 @@ ms.locfileid: "62789824"
 > [!NOTE]  
 >  Vea también **sys.dm_hadr_availability_replica_cluster_nodes** y **sys.dm_hadr_availability_replica_cluster_states** en la sección [Supervisar réplicas de disponibilidad](#AvReplicas) y **sys.availability_databases_cluster** y **sys.dm_hadr_database_replica_cluster_states** en la sección [Supervisar las bases de datos de disponibilidad](#AvDbs) más adelante en este tema.  
   
- Para obtener información acerca de los clústeres de WSFC y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) y [clústeres de conmutación por error y grupos de disponibilidad AlwaysOn ](failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server&#41;.  
+ Para obtener información acerca de los clústeres de WSFC y [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea [clústeres de conmutación por error de Windows Server &#40;WSFC&#41; con SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) y [clústeres de conmutación por error y grupos de disponibilidad AlwaysOn ](failover-clustering-and-always-on-availability-groups-sql-server.md)&#40;SQL Server&#41;.  
   
 ##  <a name="monitoring-availability-groups"></a><a name="AvGroups"></a>Supervisión de grupos de disponibilidad  
  Para supervisar los grupos de disponibilidad para los que la instancia de servidor hospeda una réplica de disponibilidad, utilice las vistas siguientes:  
@@ -148,7 +147,7 @@ ms.locfileid: "62789824"
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Contiene una fila por cada base de datos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si una base de datos pertenece a una réplica de disponibilidad, la fila de esa base de datos muestra el GUID de la réplica y el identificador único de la base de datos dentro de su grupo de disponibilidad.  
   
- nombres de columna: replica_id, group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
+ ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nombres de columna:** replica_id, group_database_id  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Devuelve una fila por cada intento de reparación de página automática en cualquier base de datos de disponibilidad en una réplica de disponibilidad hospedada para cualquier grupo de disponibilidad por la instancia de servidor. Esta vista contiene las filas para los últimos intentos de reparación de página automática en una base de datos principal o secundaria determinada, con un máximo de 100 filas por base de datos. En cuanto una base de datos alcanza el máximo, la fila del siguiente intento de reparación de página automática reemplazará una de las entradas existentes.  
@@ -275,6 +274,6 @@ ms.locfileid: "62789824"
 ## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [Supervisión de grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

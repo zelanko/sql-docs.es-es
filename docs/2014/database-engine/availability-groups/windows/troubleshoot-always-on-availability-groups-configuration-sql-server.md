@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5041882c3eadb4e7f6f28a118e45c6e42f13cea6
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: 165036ba539c3392b1944282bd9d6126eb471a97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82924920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936356"
 ---
 # <a name="troubleshoot-alwayson-availability-groups-configuration-sql-server"></a>Solucionar problemas de configuración de grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se proporciona información para ayudarle a solucionar los problemas más habituales relacionados con la configuración de las instancias de servidor para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Entre los problemas de configuración más habituales se incluyen los siguientes: [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] está deshabilitado, las cuentas no están configuradas correctamente, el extremo de creación de reflejo de la base de datos no existe, el extremo no es accesible (error 1418 de SQL Server), el acceso de red no existe y un comando de unión genera el error 35250 de SQL Server.
@@ -33,7 +32,7 @@ ms.locfileid: "82924920"
 |-------------|-----------------|
 |[Los grupos de disponibilidad AlwaysOn no están habilitados](#IsHadrEnabled)|Si una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no está habilitada para [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], la instancia no admite la creación de grupos de disponibilidad y no puede hospedar réplicas de disponibilidad.|
 |[Cuentas](#Accounts)|Analiza los requisitos para configurar correctamente las cuentas en que se ejecuta [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|
-|[Puntos de conexión](#Endpoints)|Analiza cómo diagnosticar problemas relativos al extremo de creación de reflejo de la base de datos de una instancia de servidor.|
+|[Extremos](#Endpoints)|Analiza cómo diagnosticar problemas relativos al extremo de creación de reflejo de la base de datos de una instancia de servidor.|
 |[Nombre del sistema](#SystemName)|Resume las alternativas para especificar el nombre del sistema de una instancia de servidor en una dirección URL del extremo.|
 |[Acceso de red](#NetworkAccess)|Documenta el requisito de que cada instancia de servidor que hospeda una réplica de disponibilidad debe tener acceso al puerto de cada una de las demás instancias de servidor en TCP.|
 |[Acceso al extremo (error 1418 de SQL Server)](#Msg1418)|Contiene información sobre este mensaje de error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|

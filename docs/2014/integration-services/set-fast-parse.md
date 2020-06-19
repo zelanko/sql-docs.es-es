@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb0fefd2f9c06d6bcff44c211904a951ebe01937
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055818"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963355"
 ---
 # <a name="set-fast-parse"></a>Configurar el análisis rápido
   La propiedad de análisis rápido debe configurarse para cada columna del origen o la transformación que utilice el análisis rápido. Para configurar la propiedad, utilice el Editor avanzado del origen de archivo plano y la transformación Conversión de datos.  
@@ -28,7 +27,7 @@ ms.locfileid: "66055818"
   
 3.  En el panel **Entradas y salidas** , haga clic en la columna para la cual desee habilitar el análisis rápido.  
   
-4.  En el ventana Propiedades, expanda el nodo **propiedades personalizadas** y, a continuación `FastParse` , establezca `True`la propiedad en.  
+4.  En el ventana Propiedades, expanda el nodo **propiedades personalizadas** y, a continuación, establezca la `FastParse` propiedad en `True` .  
   
 5.  Haga clic en **OK**.  
   

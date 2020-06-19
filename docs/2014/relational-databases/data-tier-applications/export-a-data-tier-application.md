@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d73724cd1aebd1d06048f634da3a1ad32ff8e49c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970265"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
   Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear una copia de seguridad lógica o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -105,7 +104,7 @@ ms.locfileid: "70175974"
 ##  <a name="summary-page"></a><a name="Summary"></a> Página Resumen  
  Esta página se utiliza para revisar los valores de origen y de destino especificados de la operación. Para completar la operación de exportación mediante los valores especificados, haga clic en **Finalizar**. Para cancelar la operación de exportación y salir del asistente, haga clic en **Cancelar**.  
   
-##  <a name="progress-page"></a><a name="Progress"></a>Página progreso  
+##  <a name="progress-page"></a><a name="Progress"></a> Página Progreso  
  En esta página se muestra una barra de progreso que indica el estado de la operación. Para ver el estado detallado, haga clic en la opción **Ver detalles** .  
   
 ##  <a name="results-page"></a><a name="Results"></a>Página resultados  

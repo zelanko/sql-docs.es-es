@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cfacb7f7c75875d4f5d0b0b435d282b3f537cc7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874471"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936656"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Posibles errores durante sesiones entre las réplicas de disponibilidad (SQL Server)
   Los problemas físicos, del sistema operativo o de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden producir un error en una sesión entre dos réplicas de disponibilidad. Una réplica de disponibilidad no comprueba con regularidad los componentes de los que depende Sqlservr.exe para comprobar si están funcionando de forma correcta o si se ha producido un error. Sin embargo, en algunos tipos de errores, el componente afectado informa a Sqlservr.exe. Cuando otro componente informa del error, éste se denomina *error de hardware*. Para detectar otros errores que podrían pasar desapercibidos, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implementa su propio mecanismo de tiempo de espera de la sesión. Especifica el período de espera de la sesión en segundos. El período de espera es el tiempo máximo durante el que una instancia de servidor espera hasta recibir un mensaje PING de otra instancia, antes de considerar que la otra instancia está desconectada. Cuando se agota el tiempo de espera de sesión entre dos réplicas de disponibilidad, las réplicas de disponibilidad suponen que se ha producido un error y declaran *un error de software*.  

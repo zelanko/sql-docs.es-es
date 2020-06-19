@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 9808e00c-c8f6-45cc-896e-192b8420f747
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cc15a7f6002675c4e81b3ae8169a78648b210f44
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1d490f4355f1dac4c337002e22f2d4dae82a7e9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718374"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063304"
 ---
-# <a name="output-window"></a>Ventana de salida
+# <a name="output-window"></a>Resultados (Ventana)
   Esta ventana muestra mensajes de estado de varias características de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los resultados se muestran en paneles especiales de la ventana **Resultados** del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] , características de herramientas externas o comandos que se ejecutan en el depurador de **Ventana de comandos**. También están disponibles los resultados que suelen mostrarse en la ventana Símbolo del sistema de herramientas externas, como los archivos .bat o .com.  
   
  **Para tener acceso a la ventana Resultados**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 524f9d4b3173a70d3491f2efc0f00f4061c4d6b4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da1eb2bacd4d5a2f7d0b2a623343f62b5e89597d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797968"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936404"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Especificar la dirección URL del extremo al agregar o modificar una réplica de disponibilidad (SQL Server)
   Para hospedar una réplica de disponibilidad de un grupo de disponibilidad, una instancia de servidor debe poseer un extremo de creación de reflejo de la base de datos. La instancia de servidor utiliza este extremo para escuchar los mensajes de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] procedentes de las réplicas de disponibilidad hospedadas por otras instancias del servidor. Para definir una réplica de disponibilidad para un grupo de disponibilidad, debe especificar la dirección URL del extremo de la instancia del servidor que hospedará la réplica. La *dirección URL del extremo* identifica el protocolo de transporte del punto de conexión de creación de reflejo de la base de datos: TCP, la dirección del sistema de la instancia del servidor y el número de puerto asociado con el extremo.  
@@ -39,11 +38,11 @@ ms.locfileid: "72797968"
 ##  <a name="syntax-for-an-endpoint-url"></a><a name="SyntaxOfURL"></a>Sintaxis para una dirección URL de extremo  
  La sintaxis de una dirección URL del extremo tiene el siguiente formato:  
   
- TCP<strong>://</strong>*\<dirección del sistema>* <strong>:</strong>*\<puerto>*  
+ TCP<strong>://</strong> *\<system-address>* <strong>:</strong>*\<port>*  
   
  , donde  
   
--   *la>de dirección del sistema es una cadena que identifica de forma inequívoca el sistema del equipo de destino. \<* Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
+-   *\<system-address>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino. Generalmente, la dirección del servidor es un nombre del sistema (si los sistemas están en el mismo dominio), un nombre de dominio completo o una dirección IP:  
   
     -   Dado que todos los nodos del clúster de conmutación por error de Windows Server (WSFC) están en el mismo dominio, puede usar el nombre del equipo; por ejemplo, `SYSTEM46`.  
   
@@ -59,7 +58,7 @@ ms.locfileid: "72797968"
   
          El contenido y el número de segmentos de dominio se determinan en la empresa u organización. Para obtener más información, vea [Buscar el nombre de dominio completo](#Finding_FQDN), más adelante en este tema.  
   
--   Puerto>es el número de puerto utilizado por el extremo de la creación de reflejo de la instancia del servidor asociado. * \<*  
+-   *\<port>* es el número de puerto utilizado por el extremo de creación de reflejo de la instancia del servidor asociado.  
   
      Un extremo de creación de reflejo de la base de datos puede utilizar cualquier puerto disponible en el equipo. Cada número de puerto debe estar asociado con un único extremo y cada extremo está asociado con una sola instancia de servidor; en consecuencia, diferentes instancias del mismo servidor escuchan en diferentes extremos con distintos puertos. Por consiguiente, el puerto que especifique en la dirección URL del extremo al especificar una réplica de disponibilidad siempre dirigirá los mensajes entrantes a la instancia de servidor cuyo extremo esté asociado con dicho puerto.  
   

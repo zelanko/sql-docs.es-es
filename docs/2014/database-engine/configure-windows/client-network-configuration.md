@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c382eacd-0a0c-40a4-958f-9b774eb2d734
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cde8ec1fabdc4c52d5f13c78fd8befb56d603847
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62787122"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935859"
 ---
 # <a name="client-network-configuration"></a>Configuración de red de cliente
   El software cliente permite que los equipos cliente se conecten a una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una red. Un "cliente" es una aplicación front-end que utiliza los servicios que proporciona un servidor, por ejemplo, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. El equipo que hospeda esta aplicación recibe el nombre de *equipo cliente*.  

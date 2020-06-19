@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1954a997-7585-4713-81fd-76d429b8d095
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ebf3f066dec03ba9e9f74dfdf551ccaababf032
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927995"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Solucionar problemas habituales de rendimiento con los índices hash con optimización para memoria
   Este tema se centrará en la solución de problemas y soluciones alternativas a los problemas comunes con índices de hash.  
@@ -25,7 +24,7 @@ ms.locfileid: "62842540"
   
  En cambio, los índices ordenados como los índices no clúster basados en disco y los índices no clúster optimizados para memoria admiten INDEX SEEK en un subconjunto de las columnas de clave de índice, siempre y cuando sean las columnas iniciales del índice.  
   
- **Síntoma:** Esto produce una degradación del rendimiento, ya [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que es necesario ejecutar recorridos de tabla completos en lugar de una búsqueda de índice, lo que suele ser una operación más rápida.  
+ **Síntoma:** Esto produce una degradación del rendimiento, ya que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es necesario ejecutar recorridos de tabla completos en lugar de una búsqueda de índice, lo que suele ser una operación más rápida.  
   
  **Cómo solucionar problemas:** Además de la degradación del rendimiento, la inspección de los planes de consulta mostrará un examen en lugar de un índice de búsqueda. Si la consulta es bastante simple, la inspección del texto de la consulta y de la definición de índice también mostrará si la búsqueda requiere un subconjunto de las columnas de clave de índice.  
   

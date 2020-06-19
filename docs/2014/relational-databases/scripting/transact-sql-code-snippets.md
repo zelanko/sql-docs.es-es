@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 03e4182cee09771ac3667b57a69f64cee3cf1ecc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e161f219340120198a76957a63d3176280754ab5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718515"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068442"
 ---
 # <a name="transact-sql-code-snippets"></a>Fragmentos de código de Transact-SQL
   Un fragmento de código [!INCLUDE[tsql](../../includes/tsql-md.md)]es una plantilla que contiene la estructura básica de una instrucción o bloque de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede usar los fragmentos como punto de partida para agregar instrucciones en el editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Puede insertar los fragmentos de código predefinidos proporcionados con SQL Server o crear los suyos.  

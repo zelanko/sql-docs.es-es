@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1cf21d9e-831d-41a1-a5a0-83ff6d22fa86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9e8f03d12d3ac1695d4f6d000c8eab89a42004fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a7699c555086d627e4c3a52ea70acf931ea1af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667393"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068649"
 ---
 # <a name="allow-non-administrators-to-use-replication-monitor"></a>Permitir el uso del Monitor de replicación a los usuarios que no son administradores
   En este tema se describe cómo permitir a los usuarios que no son administradores que usen el Monitor de replicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El Monitor de replicación solamente pueden utilizarlo usuarios que son miembros de los siguientes roles:  
@@ -47,7 +46,7 @@ ms.locfileid: "62667393"
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
- Para permitir el uso del monitor de replicación a los usuarios que no son administradores, un miembro del rol fijo de servidor **sysadmin** debe agregar el usuario a la base de datos `replmonitor` de distribución y asignar ese usuario al rol.  
+ Para permitir el uso del monitor de replicación a los usuarios que no son administradores, un miembro del rol fijo de servidor **sysadmin** debe agregar el usuario a la base de datos de distribución y asignar ese usuario al `replmonitor` rol.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
@@ -61,7 +60,7 @@ ms.locfileid: "62667393"
   
 4.  Escriba un nombre de usuario e inicie la sesión del usuario.  
   
-5.  Seleccione un esquema predeterminado de `replmonitor`.  
+5.  Seleccione un esquema predeterminado de `replmonitor` .  
   
 6.  Active la `replmonitor` casilla de la cuadrícula **pertenencia al rol** de la base de datos.  
   
@@ -71,16 +70,16 @@ ms.locfileid: "62667393"
   
 #### <a name="to-add-a-user-to-the-replmonitor-fixed-database-role"></a>Para agregar un usuario al rol fijo de base de datos replmonitor  
   
-1.  En cualquier base de datos de distribución, ejecute [sp_helpuser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpuser-transact-sql). Si el usuario no aparece en `UserName` el conjunto de resultados, se debe conceder al usuario acceso a la base de datos de distribución mediante la instrucción [Create User &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql) .  
+1.  En cualquier base de datos de distribución, ejecute [sp_helpuser &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpuser-transact-sql). Si el usuario no aparece en `UserName` el conjunto de resultados, se debe conceder al usuario acceso a la base de datos de distribución mediante la instrucción [CREATE USER &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql) .  
   
 2.  En el distribuidor de la base de datos de distribución, ejecute [sp_helprolemember &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql), especificando un valor de `replmonitor` para el **@rolename** parámetro. Si el usuario aparece en `MemberName` el conjunto de resultados, el usuario ya pertenece a este rol.  
   
-3.  Si el usuario no pertenece al `replmonitor` rol, ejecute [sp_addrolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) en el distribuidor de la base de datos de distribución. Especifique un valor de `replmonitor` para **@rolename** y el nombre del usuario de la base de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] datos o el inicio de **@membername**sesión de Windows que se va a agregar para.  
+3.  Si el usuario no pertenece al `replmonitor` rol, ejecute [sp_addrolemember &#40;&#41;de TRANSACT-SQL](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql) en el distribuidor de la base de datos de distribución. Especifique un valor de `replmonitor` para **@rolename** y el nombre del usuario de la base de datos o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Inicio de sesión de Windows que se va a agregar para **@membername** .  
   
 #### <a name="to-remove-a-user-from-the-replmonitor-fixed-database-role"></a>Para quitar un usuario desde el rol fijo de base de datos replmonitor  
   
-1.  Para comprobar que el usuario `replmonitor` pertenece al rol, ejecute [sp_helprolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) en el distribuidor de la base de datos de distribución y especifique un `replmonitor` valor **@rolename**de para. Si el usuario no aparece en `MemberName` en el conjunto de resultados, el usuario no pertenece actualmente a este rol.  
+1.  Para comprobar que el usuario pertenece al `replmonitor` rol, ejecute [sp_helprolemember &#40;&#41;de TRANSACT-SQL](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql) en el distribuidor de la base de datos de distribución y especifique un valor de `replmonitor` para **@rolename** . Si el usuario no aparece en `MemberName` en el conjunto de resultados, el usuario no pertenece actualmente a este rol.  
   
-2.  Si el usuario pertenece al `replmonitor` rol, ejecute [sp_droprolemember &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) en la base de datos de distribución del distribuidor. Especifique un valor de `replmonitor` para **@rolename** y el nombre del usuario de la base de datos o el inicio de **@membername**sesión de Windows que se va a quitar para.  
+2.  Si el usuario pertenece al `replmonitor` rol, ejecute [sp_droprolemember &#40;&#41;de TRANSACT-SQL](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql) en la base de datos de distribución del distribuidor. Especifique un valor de `replmonitor` para **@rolename** y el nombre del usuario de la base de datos o el inicio de sesión de Windows que se va a quitar para **@membername** .  
   
   

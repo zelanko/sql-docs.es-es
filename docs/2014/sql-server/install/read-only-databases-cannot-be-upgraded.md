@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 27964211-ea30-4390-b791-dcf225fb9ae7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 414b26cf860ab32bb11beaa1ccbef3316c68f557
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba48ed2bd80961a4949dc13f04fed0637ecc27ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093370"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054674"
 ---
 # <a name="read-only-databases-cannot-be-upgraded"></a>No se pueden actualizar bases de datos de solo lectura
   El Asesor de actualizaciones ha determinado que no se pueden actualizar algunas bases de datos de esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,7 +28,7 @@ ms.locfileid: "66093370"
  Se ha detectado una base de datos de solo lectura. Para actualizarla, el programa de instalación debe poder escribir en ella.  
   
 ## <a name="corrective-action"></a>Acción correctora  
- Cuando nadie esté usando la base de datos, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el Administrador corporativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], o la instrucción ALTER DATABASE para cambiar la base de datos a lectura y escritura. La instrucción siguiente cambia la base de datos al modo de lectura y escritura.  
+ Cuando nadie esté usando la base de datos, use el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador corporativo, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] o la instrucción ALTER DATABASE para cambiar la base de datos a lectura y escritura. La instrucción siguiente cambia la base de datos al modo de lectura y escritura.  
   
 ```  
 USE master;  

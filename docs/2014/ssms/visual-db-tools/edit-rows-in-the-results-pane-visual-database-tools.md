@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: de36f636-cfe9-4ae6-a474-06e9c51f9f0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ff20051f5486fc8e9550c961f838ab5dc5c738
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6afca189318d4c004c4d9bfeb1bf29b0a9b3284
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054615"
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>Editar filas del panel Resultados (Visual Database Tools)
   En muchos casos, se pueden editar los datos del [panel Resultados](visual-database-tools.md). Para información más detallada sobre cómo cambiar los datos, consulte [Reglas para actualizar resultados &#40;Visual Database Tools&#41;](rules-for-updating-results-visual-database-tools.md) y [Trabajar con datos en el panel Resultados &#40;Visual Database Tools&#41;](work-with-data-in-the-results-pane-visual-database-tools.md).  

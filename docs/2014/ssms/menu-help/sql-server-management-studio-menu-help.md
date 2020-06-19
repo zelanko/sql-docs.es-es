@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5b8b2e45-bee6-42c8-93d6-31432f4d5699
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1405c26761b41ab0ecbccfc4e2479b89a01a1f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b654ffa2cba5066a750055243ab358c76a7946d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510354"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062066"
 ---
 # <a name="sql-server-management-studio-menu-help"></a>Ayuda del menú de SQL Server Management Studio
   Esta sección contiene la Ayuda F1 de los cuadros de diálogo y páginas disponibles desde la barra de menús de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

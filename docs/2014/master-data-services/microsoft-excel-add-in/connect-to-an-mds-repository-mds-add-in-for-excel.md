@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8f427312-4c09-4c8b-b9f9-8b235557a74b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b040198b4ed152f8fa4ea00571375de911822687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f29cdaad3f362c190372ec510f24cb67efe15f7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482616"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961395"
 ---
 # <a name="connect-to-an-mds-repository-mds-add-in-for-excel"></a>Conectarse a un repositorio MDS (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], debe conectarse a un repositorio MDS para poder cargar o publicar datos.  
@@ -40,13 +39,13 @@ ms.locfileid: "65482616"
     > [!NOTE]  
     >  Asegúrese de usar el nombre del equipo; no utilice "localhost".  
   
-6.  Haga clic en **Aceptar**. El nombre se muestra en la sección **Conexiones existentes** .  
+6.  Haga clic en **OK**. El nombre se muestra en la sección **Conexiones existentes** .  
   
 7.  Opcionalmente, haga clic en **Probar** para probar la conexión. Se muestra un cuadro de diálogo de confirmación o de error. Haga clic en **Aceptar** para cerrarlo.  
   
 8.  Haga clic en **Conectar**. Se muestra el panel **Master Data Services** .  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Cargar datos de MDS en Excel](export-data-to-excel-from-master-data-services.md)  
   

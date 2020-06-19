@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b6343f26e6aa54fa6206c739d3d7b52b632e1519
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85433710db04cfd5184ab8b374fea32cfcd8735d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068525"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940464"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Especificar un operador unario (Asistente de Business Intelligence)
   Use la página **Especificar un operador unario** para identificar la relación de elementos primarios y secundarios de la columna que contiene un operador unario (para agregaciones normales) o un valor que representa un factor de ponderación (para agregaciones ponderadas). Para más información sobre las agregaciones normales y ponderadas, vea [Agregaciones y diseños de agregaciones](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 022dd1b7-08be-4a42-9b3a-c3bd09703e27
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fabb6cd5d089ba39c413ee12427b18f1bbee8bf6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31f123adda9a49a490855bcae4a3a08fcf9bf561
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62688586"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007232"
 ---
 # <a name="run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler"></a>Ejecutar un seguimiento después de haberlo pausado o detenido (SQL Server Profiler)
   En este tema se describe cómo ejecutar un seguimiento después de haberla pausado o detenido mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

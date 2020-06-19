@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79d15b47-6759-4f48-b9ac-2c86a3cd9980
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b893480036b607dc1e6639ed9f50232520663879
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c194e8fc17e3ae896fbe48cb62b3dfc960171b08
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054570"
 ---
 # <a name="visual-database-tools-f1-help"></a>Ayuda de F1 de Visual Database Tools
   En estos temas se tratan los comandos y las opciones de los cuadros de diálogo y las ventanas de propiedades de los elementos de Visual Database Tools, como la ventana Propiedades de la tabla y la pestaña Propiedades de columna.  

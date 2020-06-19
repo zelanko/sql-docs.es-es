@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 33fedf2957203b1a750aba8fd086087c03ffc934
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 695848c8633d310f5e8ee21e9e738749d1550e4a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704194"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055857"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Llamar a un procedimiento almacenado (OLE DB)
   Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  

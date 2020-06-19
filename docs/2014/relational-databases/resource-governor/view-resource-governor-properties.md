@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cd7af8f4f8eb3cd0531bc907011846f73f94f6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063518"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
   Puede crear o configurar entidades del regulador de recursos, por ejemplo grupos de recursos de servidor y grupos de cargas de trabajo, utilizando la página Propiedades del regulador de recursos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -35,7 +34,7 @@ ms.locfileid: "63209683"
   
 -   [Deshabilitar el regulador de recursos](disable-resource-governor.md)  
   
--   [Crear un grupo de recursos](create-a-resource-pool.md)  
+-   [Crear un grupo de recursos de servidor](create-a-resource-pool.md)  
   
 -   [Crear un grupo de cargas de trabajo](create-a-workload-group.md)  
   
@@ -98,7 +97,7 @@ ms.locfileid: "63209683"
  **Nombre**  
  Especifique el nombre del grupo de cargas de trabajo  
   
- **Importance**  
+ **Importancia**  
  Especifique la importancia relativa de una solicitud en el grupo de cargas de trabajo. Las opciones disponibles son Baja, Media, y Alta.  
   
  **Solicitudes máximas**  
@@ -126,10 +125,10 @@ ms.locfileid: "63209683"
 2.  Para ver la configuración actual de las entidades del regulador de recursos, use las [Vistas de administración dinámica relacionadas con el regulador de recursos &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql).  
   
 ## <a name="see-also"></a>Consulte también  
- [Resource Governor](resource-governor.md)   
- [Habilitar Resource Governor](enable-resource-governor.md)   
- [Grupo de recursos de Resource Governor](resource-governor-resource-pool.md)   
- [Grupo de cargas de trabajo Resource Governor](resource-governor-workload-group.md)   
+ [Regulador de recursos](resource-governor.md)   
+ [Habilitar el regulador de recursos](enable-resource-governor.md)   
+ [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
+ [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
  [Función clasificadora del regulador de recursos](resource-governor-classifier-function.md)  
   
   

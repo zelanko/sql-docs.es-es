@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93691dccde430e7f636f956229b5305b211449f8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 45c452300c008d486bd1f4ab4c92b5f76b96ecd8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82719179"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027381"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
   Un paquete es un contenedor para objetos de eventos extendidos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Hay tres tipos de paquetes de eventos extendidos, que son los siguientes:  
@@ -77,9 +76,9 @@ ms.locfileid: "82719179"
 |Término|Definición|  
 |----------|----------------|  
 |Administración|Los eventos de administración se destinan principalmente a usuarios finales, administradores y soporte técnico. Los eventos que se encuentran en los canales de administración indican un problema con una solución bien determinada ante la que un administrador puede emprender una acción. Un ejemplo de un evento de administración es cuando una aplicación no conecta a una impresora. Estos eventos están bien documentados o tienen un mensaje asociado que indica al lector qué hacer para rectificar el problema.|  
-|Operativo|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
+|Operativos|Los eventos operativos se utilizan para analizar y diagnosticar un problema o situación concreta. Se pueden utilizar para activar herramientas o tareas basadas en el problema o situación concreta. Un ejemplo de evento operativo se produce cuando una impresora se agrega o quita de un sistema.|  
 |Analíticos|Los eventos analíticos se publican en grandes cantidades. Describen el funcionamiento del programa y se utilizan normalmente en investigaciones sobre rendimiento.|  
-|Depuración|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: los eventos del canal de depuración devuelven datos internos de estado específicos de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
+|Depurar|Únicamente los programadores utilizan los eventos de depuración para diagnosticar un problema y depurarlo.<br /><br /> Nota: los eventos del canal de depuración devuelven datos internos de estado específicos de la implementación. Los esquemas y los datos que devuelven los eventos pueden cambiar o dejar de ser válidos en versiones futuras de SQL Server. Por lo tanto, los eventos del canal Depurar pueden cambiar o quitarse en versiones futuras de SQL Server sin previo aviso.|  
   
  **Palabra clave**  
   

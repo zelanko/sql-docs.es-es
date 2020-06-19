@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3ae6815-f32d-4913-a1a2-2ba2f20cfd88
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 36416967a76631e59d5d122105b74be357e654de
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: dd8ef192fb17a5b2719481fa43fd06b370868c62
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056038"
 ---
 # <a name="creating-a-sql-server-native-client-ole-db-provider-application"></a>Crear una aplicación de proveedor OLE DB de SQL Server Native Client
   La creación de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicación de proveedor de OLE DB de Native Client implica estos pasos:  

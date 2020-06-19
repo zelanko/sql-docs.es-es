@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c4aa26ea-5465-40cc-8b83-f50603cb9db1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 698af283d24598c7ccd669b7e1d14ebcfd26d8d6
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: c2ef4a0546dfced643fb50900e6b56002b617e09
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849819"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928806"
 ---
 # <a name="sql-server-managed-backup-to-azure---retention-and-storage-settings"></a>Copia de seguridad administrada de SQL Server en Azure: configuración de la retención y el almacenamiento
   En este tema se describen los pasos básicos para configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para una base de datos y configurar las opciones predeterminadas de la instancia. En el tema también se describen los pasos necesarios para pausar y reanudar los servicios de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] de la instancia.  

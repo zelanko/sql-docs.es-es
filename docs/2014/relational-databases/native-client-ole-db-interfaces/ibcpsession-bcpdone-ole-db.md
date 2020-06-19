@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5e00455f165bb11514bbcf3345c77248716e007f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c90e9214830060e37e8d3427a2e4f8797a943003
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048021"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Confirma las filas restantes que van a enviarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -33,7 +32,7 @@ ms.locfileid: "82695637"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

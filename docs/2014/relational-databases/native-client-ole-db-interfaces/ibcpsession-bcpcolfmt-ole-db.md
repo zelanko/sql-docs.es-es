@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 68cb7c9d0a4fdc96f181281d78f7011231752375
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4f8cbd2789fbf4f941642439545f7c8fa349cf66
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695689"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048044"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
   Crea un enlace entre las variables de programa y las columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -40,7 +39,7 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **BCPColFmt** se usa para crear un enlace entre los campos de archivo de datos BCP y las columnas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toma como parámetros la longitud, el tipo, el terminador y la longitud de prefijo de una columna y establece cada una de estas propiedades para campos individuales.  
   
  Si el usuario elige el modo interactivo, se llama a este método dos veces; una para establecer el formato de columna en función de los valores predeterminados (según el tipo de columna de servidor) y otra para establecer el formato en función del tipo de columna elegido por el cliente durante el modo interactivo para cada columna.  

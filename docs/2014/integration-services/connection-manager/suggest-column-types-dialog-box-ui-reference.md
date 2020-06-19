@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1c0946d766ed273de9dd8b0a1215208aab5722c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920206"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Sugerir tipos de columna
   Utilice el cuadro de diálogo **Sugerir tipos de columna** para identificar el tipo de datos y la longitud de las columnas de un Administrador de conexiones de archivos planos basándose en un muestreo del contenido del archivo.  

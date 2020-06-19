@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f0df2930d17d8d99fd52aef3fcca7e9e92ca6638
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 57f7c2af512821c89dabf45e60e0754a6373c62c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704837"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056109"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
   Devuelve el estado de una operación de ejecución asincrónica.  
@@ -106,7 +105,7 @@ HRESULT GetStatus(
  E_FAIL  
  Se produjo un error específico del proveedor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **ISSAsynchStatus::GetStatus** se comporta exactamente igual que el método **IDBAsynchStatus::GetStatus**, excepto que, si se anula la inicialización de un objeto de origen de datos, se devuelve E_UNEXPECTED en lugar de DB_E_CANCELED (aunque [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) devolverá DB_E_CANCELED). Esto se debe a que el objeto de origen de datos no queda en el estado inerte habitual que sigue a una interrupción para que puedan intentarse otras operaciones de inicialización.  
   
  Si el conjunto de filas se inicializa o rellena de forma asincrónica, debe admitir este método.  

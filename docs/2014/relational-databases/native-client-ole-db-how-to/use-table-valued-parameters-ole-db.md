@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18927234a3a8a985a15c645cfc931bc907feb557
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d6eefce898f249f784e1822f306cda84272cb57e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695986"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048088"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
   En este ejemplo se utiliza [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior. En este ejemplo se realizan lo siguientes pasos:  

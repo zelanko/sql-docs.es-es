@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a57b629c-e9ed-48fd-9a48-ed3787d80c8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2eec829c3c8909bd318a86ecf35eedb9ac0f222
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67599d64429666c718c9a59f514d39e3657ced1f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010081"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955255"
 ---
 # <a name="filetables-sql-server"></a>FileTables (SQL Server)
   La característica FileTable proporciona compatibilidad con el espacio de nombres de archivo de Windows y con las aplicaciones Windows para los datos de archivo almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. FileTable permite que una aplicación pueda integrar sus componentes de administración de datos y almacenamiento, así como proporcionar servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrados (incluidas la búsqueda de texto completo y la búsqueda semántica) en datos y metadatos no estructurados.  
@@ -112,7 +111,7 @@ ms.locfileid: "66010081"
  [Cargar archivos en FileTables](load-files-into-filetables.md)  
  Describe cómo se cargan o migran archivos en las FileTables.  
   
- [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)  
+ [Trabajar con directorios y rutas de acceso de FileTables](work-with-directories-and-paths-in-filetables.md)  
  Describe la estructura de directorios en la que los archivos se almacenan en FileTables.  
   
  [Obtener acceso a FileTables con Transact-SQL](access-filetables-with-transact-sql.md)  

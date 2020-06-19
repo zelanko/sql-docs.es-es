@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 573c8d13b9a7431c33d8c3b104712a2bf31b3fbf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 84a80b4690597f9274bb7ff334b5879ef465c6e6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089532"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928307"
 ---
 # <a name="trace-properties-general-tab"></a>Propiedades de seguimiento (pestaña General)
   Utilice la pestaña **General** del cuadro de diálogo **Propiedades de seguimiento** para ver o especificar las propiedades de un seguimiento.  
@@ -37,7 +36,7 @@ ms.locfileid: "66089532"
  **version**  
  Muestra la versión del servidor que proporciona el seguimiento. El archivo de definición de seguimiento rellena el campo **Versión** automáticamente. No se puede modificar este campo.  
   
- **Usar la plantilla**  
+ **Uso de la plantilla**  
  Selecciona una plantilla del directorio de plantillas. El directorio se rellena con las plantillas predeterminadas y con cualquier tipo de plantilla definida por el usuario que se haya creado para el tipo de proveedor de seguimiento actual.  
   
  **Guardar en el archivo**  
@@ -46,7 +45,7 @@ ms.locfileid: "66089532"
  **Establecer el tamaño máximo de archivo (MB)**  
  Si elige la opción de guardar los datos de seguimiento en un archivo, deberá especificar el tamaño máximo del mismo. El valor predeterminado es 5 megabytes (MB). El tamaño máximo está limitado únicamente por el sistema de archivos (NTFS, FAT) donde se guarde el archivo.  
   
- \<Gráfico> **Guardar como**  
+ \<Graphic>**Guardar como**  
  Después de seleccionar guardar, puede seleccionar este icono para cambiar el nombre de archivo.  
   
  **Habilitar sustitución incremental de archivos**  
@@ -58,7 +57,7 @@ ms.locfileid: "66089532"
  **Guardar en la tabla**  
  Captura los datos del seguimiento en una tabla de base de datos. Guardar los datos del seguimiento es útil para su posterior revisión y análisis. Sin embargo, guardar los datos de un seguimiento en una tabla también puede aumentar de forma significativa la sobrecarga en el servidor en el que se guarda el seguimiento. Si es posible, no guarde la tabla de seguimiento en el mismo servidor del que se realiza un seguimiento.  
   
- \<Tabla de **destino**> gráfico  
+ \<Graphic>**Tabla de destino**  
  Después de seleccionar que los datos de seguimiento se guarden en una tabla de base de datos, puede seleccionar este icono para cambiar el nombre de la tabla.  
   
  **Establecer número máximo de filas (en miles)**  

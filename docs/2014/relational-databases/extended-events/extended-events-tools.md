@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2521810771713833a10f7e01f1e83480c3050369
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a74080352beeda4f92ad6afa7b8266a8ebee5a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706771"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027628"
 ---
 # <a name="extended-events-tools"></a>Herramientas de eventos extendidos
   Puede utilizar las siguientes herramientas para crear y administrar sesiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events:  

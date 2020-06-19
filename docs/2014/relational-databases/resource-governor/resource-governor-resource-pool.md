@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4177d7e8ebc96e40e831a6558c7d8b5073c86bc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f6d724d5dc6a9859674f8ae64c9e08486b3ea7cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063564"
 ---
 # <a name="resource-governor-resource-pool"></a>Grupo de recursos de servidor del regulador de recursos
   En el regulador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un grupo de recursos de servidor representa un subconjunto de los recursos físicos de una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. El regulador de recursos permite especificar los límites en cuanto a la cantidad de CPU, E/S física y memoria del grupo de recursos de servidor que pueden usar las solicitudes entrantes procedentes de las aplicaciones. Cada grupo de recursos de servidor puede contener uno o más grupos de cargas de trabajo. Cuando se inicia una sesión, el clasificador del regulador de recursos asigna la sesión a un grupo de cargas de trabajo concreto y la sesión se debe ejecutar utilizando los recursos asignados al grupo de cargas de trabajo.  
@@ -112,15 +111,15 @@ ms.locfileid: "63209874"
   
 |Descripción de la tarea|Tema|  
 |----------------------|-----------|  
-|Describe cómo crear un grupo de recursos de servidor.|[Crear un grupo de recursos](create-a-resource-pool.md)|  
+|Describe cómo crear un grupo de recursos de servidor.|[Crear un grupo de recursos de servidor](create-a-resource-pool.md)|  
 |Describe cómo cambiar la configuración del grupo de recursos de servidor.|[Cambiar la configuración del grupo de recursos de servidor](change-resource-pool-settings.md)|  
 |Describe cómo eliminar un grupo de recursos de servidor.|[Eliminar un grupo de recursos de servidor](delete-a-resource-pool.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [Resource Governor](resource-governor.md)   
- [Grupo de cargas de trabajo Resource Governor](resource-governor-workload-group.md)   
+ [Regulador de recursos](resource-governor.md)   
+ [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
  [Resource Governor función clasificadora](resource-governor-classifier-function.md)   
- [Configuración de Resource Governor mediante una plantilla](configure-resource-governor-using-a-template.md)   
+ [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
  [Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 594bdc64ac926388a327c4ec57bf47330d820565
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 879836ec6628f70ace9a0168e9db77910e7a32f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695770"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048032"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
   Establece las opciones de una operación de copia masiva.  
@@ -35,7 +34,7 @@ inteOption,
 void *iValue);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El método **BCPControl** establece varios parámetros de control para operaciones de copia masiva, incluidos el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y última filas que se copian de un archivo de datos y el tamaño del lote.  
   
  Este método se utiliza también para especificar la instrucción SELECT que se utiliza en la copia masiva de datos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede establecer el `eOption` argumento en BCP_OPTION_HINTS y `iValue` en el argumento para que tenga un puntero a una cadena de caracteres anchos que contenga la instrucción SELECT.  

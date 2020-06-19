@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 42a8873f4046a307e3b8ec1ce703a34bf8cb0df2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175444"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935896"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
   A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la extensión del grupo de búferes proporciona una perfecta integración de una extensión de la memoria de acceso aleatorio no volátil (es decir, una unidad de estado sólido) con el grupo de búferes del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para mejorar considerablemente el rendimiento de E/S. La extensión del grupo de búferes no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
@@ -46,11 +45,11 @@ ms.locfileid: "78175444"
 
  Las unidades de estado sólido (SSD) de unidad de estado sólido almacenan los datos en memoria (RAM) de manera persistente. Para obtener más información, vea [esta definición](http://en.wikipedia.org/wiki/Solid-state_drive).
 
- Búfer en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un búfer es una página de 8 KB en memoria, con el mismo tamaño que una página de datos o de índice. Por tanto, la memoria caché del búfer está dividida en páginas de 8 kB. Una página permanece en la memoria caché del búfer hasta que el administrador de búfer necesita el área del búfer para leer en ella más datos. Los datos solo vuelven a escribirse en el disco si se han modificado. Estas páginas modificadas en memoria se conocen como páginas desfasadas. Una página está limpia cuando es equivalente a su imagen de la base de datos en el disco. Los datos de la memoria caché del búfer se pueden modificar varias veces antes de que se vuelvan a escribir en el disco.
+ Búfer en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , un búfer es una página de 8 KB en memoria, con el mismo tamaño que una página de datos o de índice. Por tanto, la memoria caché del búfer está dividida en páginas de 8 kB. Una página permanece en la memoria caché del búfer hasta que el administrador de búfer necesita el área del búfer para leer en ella más datos. Los datos solo vuelven a escribirse en el disco si se han modificado. Estas páginas modificadas en memoria se conocen como páginas desfasadas. Una página está limpia cuando es equivalente a su imagen de la base de datos en el disco. Los datos de la memoria caché del búfer se pueden modificar varias veces antes de que se vuelvan a escribir en el disco.
 
  El grupo de búferes también se denomina caché del búfer. El grupo de búferes es un recurso global compartido por todas las bases de datos para sus páginas de datos en caché. El tamaño máximo y mínimo de la memoria caché del grupo de búferes se determina durante el inicio o cuando la instancia de SQL Server se reconfigura dinámicamente mediante sp_configure. Este tamaño determina el número máximo de páginas que se pueden almacenar en memoria caché en el grupo de búferes en cualquier momento en la instancia en ejecución.
 
- Punto de comprobación un punto de control crea un buen punto [!INCLUDE[ssDE](../../includes/ssde-md.md)] conocido desde el que puede empezar a aplicar los cambios incluidos en el registro de transacciones durante la recuperación después de un cierre inesperado o un bloqueo. Un punto de comprobación escribe las páginas desfasadas y la información del registro de transacciones de la memoria al disco y, además, registra información acerca del registro de transacciones. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
+ Punto de comprobación un punto de control crea un buen punto conocido desde el que [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede empezar a aplicar los cambios incluidos en el registro de transacciones durante la recuperación después de un cierre inesperado o un bloqueo. Un punto de comprobación escribe las páginas desfasadas y la información del registro de transacciones de la memoria al disco y, además, registra información acerca del registro de transacciones. Para obtener más información, vea [Puntos de comprobación de base de datos &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).
 
 ## <a name="buffer-pool-extension-details"></a>Detalles de la extensión del grupo de búferes
  El almacenamiento SSD se utiliza como extensión del subsistema de memoria en lugar del subsistema de almacenamiento en disco. Es decir, el archivo de la extensión del grupo de búferes permite que el administrador del grupo de búferes utilice tanto memoria DRAM como NAND-Flash para mantener un grupo de búferes mucho mayor de páginas normales en memoria de acceso aleatorio no volátil respaldada por SSD. Esto crea una jerarquía de almacenamiento en memoria caché de varios niveles, siendo el nivel 1 (L1) la DRAM y el nivel 2 (L2) el archivo de extensión del grupo de búferes en la SSD. Solo las páginas limpias se escriben en la memoria caché L2, lo que ayuda a mantener la seguridad de los datos. El administrador de búfer controla el movimiento de páginas limpias entre las memorias caché L1 y L2.
@@ -61,7 +60,7 @@ ms.locfileid: "78175444"
 
  Cuando está habilitada, la extensión del grupo de búferes especifica el tamaño y la ruta de acceso del archivo de almacenamiento en caché del grupo de búferes en la SSD. Este archivo es una extensión contigua del almacenamiento en la SSD y se configura de forma estática durante el inicio de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las modificaciones de los parámetros de configuración del archivo solo se pueden hacer cuando la característica de extensión del grupo de búferes está deshabilitada. Cuando la extensión del grupo de búferes está deshabilitada, toda la configuración relacionada se quita del Registro. El archivo de la extensión del grupo de búferes se elimina tras el cierre de la instancia de SQL Server.
 
-## <a name="best-practices"></a>Procedimientos recomendados
+## <a name="best-practices"></a>Prácticas recomendadas
  Se aconseja seguir estas prácticas recomendadas.
 
 -   Tras habilitar la extensión del grupo de búferes por primera vez, se recomienda reiniciar la instancia de SQL Server para aprovechar las ventajas derivadas de un rendimiento máximo.

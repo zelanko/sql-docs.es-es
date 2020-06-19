@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0093b43c-c6b5-4574-9b30-3a0e91e1a1f9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c0e2da7ef135a5e2a631c05b6815154188a99fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62812307"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935810"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Configurar Firewall de Windows para el acceso al motor de base de datos
   En este tema se describe cómo configurar un firewall de Windows para el acceso al motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el Administrador de configuración de SQL Server. Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para obtener acceso a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] a través de un firewall, debe configurar el firewall en el equipo en el que se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que permita el acceso.  
@@ -68,7 +67,7 @@ ms.locfileid: "62812307"
   
 3.  En el cuadro de diálogo **Tipo de regla** , seleccione **Puerto**y, a continuación, haga clic en **Siguiente**.  
   
-4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]instancia de, `1433` por ejemplo, para la instancia predeterminada. Haga clic en **Next**.  
+4.  En el cuadro de diálogo **Protocolo y puertos** , seleccione **TCP**. Seleccione **puertos locales específicos**y, a continuación, escriba el número de puerto de la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , por ejemplo, `1433` para la instancia predeterminada. Haga clic en **Next**.  
   
 5.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   

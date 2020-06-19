@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a229b02f60c56b9979d2d31788910b3faa63cb2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b2db0f80599be6f4437636d978532f640af3cdd9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706649"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027570"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Administrar sesiones de eventos en el Explorador de objetos
   En este tema se describen las acciones que se pueden llevar a cabo en el **Explorador de objetos** que afectan a una sesión de eventos extendidos:  
@@ -96,7 +95,7 @@ STATE = STOP
   
 4.  Expanda la lista desplegable **Plantilla** .  
   
-5.  Haga clic en ** \< archivo de... >abra** y busque la sesión (archivo XML) que desee importar.  
+5.  Haga clic en ** \<File From ...> abrir** y busque la sesión (archivo XML) que quiere importar.  
   
  La sesión aparecen bajo el nodo **Sesiones** . De forma predeterminada, no se inicia la sesión.  
   

@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: cb325f5d-10ee-4a56-ba28-db0074ab3926
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 881c332e2f9c7d2958e001c04b1b6281adc23999
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131489"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027534"
 ---
 # <a name="localdbstartinstance-function"></a>Función LocalDBStartInstance
   Inicia la instancia de SQL Server Express LocalDB especificada.  
@@ -52,7 +51,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Entrada/Salida] En la entrada contiene el tamaño de búfer de *wszSqlConnection* en caracteres, incluidos los valores NULL finales. En la salida, si el tamaño de búfer proporcionado es demasiado pequeño, contiene el tamaño de búfer necesario en caracteres, lo cual incluye los valores NULL finales.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   

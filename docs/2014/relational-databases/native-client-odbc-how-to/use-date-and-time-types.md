@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a2aa5644-1e39-4d78-b149-0599d3502cda
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9373aeec2086e330da95eba343645c0c0d68ab6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a3fe6c753fa432084edd90e820d859263be7c498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712069"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048153"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de fecha y hora
   En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información sobre el uso de estos tipos, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e567ebf9-0793-451b-92c7-26193a02d9da
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a7f8e72831e333323621279a0403e95e6a134860
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1313ff25791c285e1bd1f8ccb69a75700ae62be1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718414"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063371"
 ---
 # <a name="command-window"></a>Ventana de comandos
   Use la **ventana Comandos** para ejecutar comandos, como debug y edit, con el código de la ventana Editor de consultas de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] que se está depurando. Debe estar en modo de depuración para utilizar el **Ventana de comandos**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] admite muchos de los comandos que también se admiten en la ventana [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **Comando**. Para obtener más información, vea [Ventana de comandos de Visual Studio](https://go.microsoft.com/fwlink/?LinkId=112007).  
@@ -29,7 +28,7 @@ ms.locfileid: "82718414"
   
  **Para imprimir el valor de una variable**  
   
--   En la **ventana Comandos**, escriba **Debug.Print \<nombreDeVariable>** y pulse ENTRAR.  
+-   En el tipo de **CommandWindow**, escriba **Debug \<VariableName> . Print **y presione Entrar.  
   
  **Para mostrar información sobre el subproceso actual**  
   
@@ -37,7 +36,7 @@ ms.locfileid: "82718414"
   
  **Para agregar una variable a la ventana Inspección rápida**  
   
--   En la **ventana Comandos**, escriba **Debug.QuickWatch \<nombreDeVariable** y pulse ENTRAR.  
+-   En el tipo de **CommandWindow**, escriba **Debug \<VariableName> . Inspección rápida **y, a continuación, presione Entrar.  
   
 ## <a name="see-also"></a>Consulte también  
  [Depurador de Transact-SQL](transact-sql-debugger.md)  

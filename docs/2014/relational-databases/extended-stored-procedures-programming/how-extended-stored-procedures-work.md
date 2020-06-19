@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9b52e8fd5cda7d0b05ebbddbb422f74bd81b1993
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75082fed6b70c214b4f55b85034ffa371824d24f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027127"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Cómo funcionan los procedimientos almacenados extendidos
     
@@ -26,7 +25,7 @@ ms.locfileid: "62512997"
   
  El procedimiento almacenado extendido funciona del siguiente modo:  
   
-1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en formato de flujo de datos tabular (TDS) o de Protocolo simple de acceso a objetos (SOAP) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]desde la aplicación cliente a.  
+1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en formato de flujo de datos tabular (TDS) o de Protocolo simple de acceso a objetos (SOAP) desde la aplicación cliente a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] busca la DLL asociada al procedimiento almacenado extendido y la carga si no lo está ya.  
   

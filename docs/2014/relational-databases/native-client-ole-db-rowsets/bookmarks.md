@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d9076f2-bf9c-452e-b816-70371a0c1644
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 436cbd68ae60446df94b63283cd3291c9fc63fee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: be8e5486e5a442ddafa133a9cbd3f408d30a50d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055966"
 ---
 # <a name="bookmarks"></a>Marcadores
   Los marcadores permiten a los consumidores volver rápidamente a una fila. Gracias a los marcadores, los consumidores pueden tener acceso de forma aleatoria a las filas en función del valor de marcador. La columna de marcador es la columna 0 en el conjunto de filas. El consumidor establece el valor de campo dwFlag de la estructura de enlace en DBCOLUMNSINFO_ISBOOKMARK para indicar que la columna se utiliza de marcador. El consumidor establece también la propiedad de conjunto de filas DBPROP_BOOKMARKS en VARIANT_TRUE. Esto permite que la columna 0 esté presente en el conjunto de filas. Después, se usa el método **IRowsetLocate::GetRowsAt** para capturar las filas, empezando por la fila especificada como desplazamiento desde un marcador.  

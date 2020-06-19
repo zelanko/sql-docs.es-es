@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4359a546c350c666190331ab6a8484ca9a99a83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b80f07393b9c66a5e2c7ec72840fc58fd096a022
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704092"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063486"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
   La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  
@@ -56,7 +55,7 @@ ms.locfileid: "82704092"
   
 -   Etiquetas de inicio y de cierre coincidentes.  
   
--   Cualquier par de corchetes angulares "\<" y ">".  
+-   Cualquier par de \<" and "> corchetes angulares "".  
   
 -   Principio y final de los comentarios.  
   

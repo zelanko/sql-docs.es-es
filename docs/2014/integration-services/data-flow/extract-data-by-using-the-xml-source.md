@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3c7a9b107a05b0645f2286f534f457d46a1b6f11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fcf27faf2678aa89c0fa646c0a1b3f7b4d9401c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915665"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>Extraer datos mediante el origen de XML
   Para agregar y configurar un origen XML, el paquete ya debe incluir por lo menos una tarea Flujo de datos.  

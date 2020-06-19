@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950935"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para asignar un nombre y describir la tarea Cola de mensajes, especificar el formato del mensaje e indicar si la tarea envía o recibe o mensajes.  
@@ -40,7 +39,7 @@ ms.locfileid: "66057628"
  Indica si se va a utilizar el formato 2000 de Message Queue Server (que también recibe el nombre de MSMQ). De manera predeterminada, es `False`.  
   
  **MSMQConnection**  
- Seleccione un administrador de conexiones MSMQ existente o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados**: [Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

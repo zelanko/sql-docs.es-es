@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b85704b8110eb84ea6f4c33dfa79694112c2328
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937266"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: réplicas secundarias legibles (grupos de disponibilidad AlwaysOn)
   Las funcionalidades secundarias activas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluyen compatibilidad con el acceso de solo lectura a una o varias réplicas secundarias (*réplicas secundarias legibles*). Una réplica secundaria legible permite el acceso de solo lectura a todas las bases de datos secundarias. Sin embargo, las bases de datos secundarias legibles no se establecen como de solo lectura. Son dinámicas. Una base de datos secundaria dada cambia a medida que se aplican los cambios en la base de datos principal correspondiente. En lo que respecta a las réplicas secundarias típicas, los datos, lo cual incluye las tablas con optimización para memoria durables, las bases de datos secundarias están en tiempo prácticamente real. Además, los índices de texto completo se sincronizan con las bases de datos secundarias. En muchas circunstancias, la latencia de datos entre una base de datos principal y la base de datos secundaria correspondiente suele ser de solo unos pocos segundos.  
@@ -36,7 +35,7 @@ ms.locfileid: "62789857"
   
  
   
-##  <a name="benefits"></a><a name="bkmk_Benefits"></a>Privilegios  
+##  <a name="benefits"></a><a name="bkmk_Benefits"></a> Ventajas  
  La dirección de conexiones de solo lectura a las réplicas secundarias legibles proporciona las siguientes ventajas:  
   
 -   Alivia las cargas de trabajo de solo lectura secundarias de la réplica primaria, que conserva los recursos para las cargas de trabajo esenciales de la misión. Si tiene una carga de trabajo de lectura de gran importancia o si la carga de trabajo no puede tolerar la latencia, debe ejecutarla en el servidor principal.  
@@ -53,7 +52,7 @@ ms.locfileid: "62789857"
   
 -   Las operaciones DML se permiten en variables de tabla tanto para los tipos de tabla basadas en disco como para los tipos de tabla optimizada para memoria en la réplica secundaria.  
   
-##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a>Requisitos previos para el grupo de disponibilidad  
+##  <a name="prerequisites-for-the-availability-group"></a><a name="bkmk_Prerequisites"></a> Requisitos previos del grupo de disponibilidad  
   
 -   **Réplicas secundarias legibles (requeridas)**  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62789857"
   
      Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
--   **Agente de escucha del grupo de disponibilidad**  
+-   **Agente de escucha de grupo de disponibilidad**  
   
      Para admitir el enrutamiento de solo lectura, un grupo de disponibilidad debe poseer un [agente de escucha de grupo de disponibilidad](../../listeners-client-connectivity-application-failover.md). El cliente de solo lectura debe dirigir sus solicitudes de conexión a dicho agente y la cadena de conexión del cliente debe especificar la intención de la aplicación como de "solo lectura". Es decir, deben ser *solicitudes de conexión de intento de lectura*.  
   
@@ -109,12 +108,12 @@ ms.locfileid: "62789857"
 > [!NOTE]  
 >  Si consulta la vista de administración dinámica [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) en una instancia del servidor que está hospedando una réplica secundaria legible, puede producirse un problema de bloqueo de REDO. Esto se debe a que esta vista de administración dinámica adquiere un bloqueo IS en la tabla de usuario especificada o la vista que puede bloquear las solicitudes de un subproceso de REDO durante un bloqueo X en esa tabla o vista de usuario.  
   
-##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a>Consideraciones de rendimiento  
+##  <a name="performance-considerations"></a><a name="bkmk_Performance"></a> Consideraciones de rendimiento  
  En esta sección se describen las consideraciones de rendimiento para las bases de datos secundarias legibles  
   
  
   
-###  <a name="data-latency"></a><a name="DataLatency"></a>Latencia de datos  
+###  <a name="data-latency"></a><a name="DataLatency"></a> Latencia de datos  
  La implementación del acceso de solo lectura en las réplicas secundarias resulta útil si las cargas de trabajo de solo lectura pueden tolerar cierta latencia de datos. En las situaciones en las que la latencia de datos no es aceptable, considere la posibilidad de ejecutar cargas de trabajo de solo lectura en la réplica principal.  
   
  La réplica principal envía las entradas de registro de los cambios en la base de datos principal a las réplicas secundarias. En cada base de datos secundaria, un subproceso de rehacer dedicado aplica las entradas de registro. En una base de datos secundaria de acceso de lectura, un cambio determinado de datos no aparece en los resultados de la consulta hasta que la entrada del registro que contiene el cambio se haya aplicado a la base de datos secundaria y la transacción se haya confirmado en la base de datos principal.  
@@ -154,7 +153,7 @@ GO
   
 ```  
   
-###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a>Impacto de la carga de trabajo de solo lectura  
+###  <a name="read-only-workload-impact"></a><a name="ReadOnlyWorkloadImpact"></a> Repercusión de la carga de trabajo de solo lectura  
  Al configurar una réplica secundaria para el acceso de solo lectura, las cargas de trabajo de solo lectura en las bases de datos secundarias utilizan los recursos del sistema, como la CPU y E/S (para tablas basadas en disco) de los subprocesos REDO, especialmente si las cargas de trabajo de solo lectura en tablas basadas en disco realizan un uso intensivo de E/S. No hay ningún impacto en la E/S cuando se tiene acceso a tablas con optimización para memoria porque todas las filas residen en memoria.  
   
  Además, las cargas de trabajo de solo lectura en las réplicas secundarias pueden bloquear los cambios de lenguaje de definición de datos (DDL) que se aplican a través de las entradas de registro.  
@@ -168,7 +167,7 @@ GO
 > [!NOTE]  
 >  Cuando las consultas en la réplica secundaria bloquean un subproceso de puesta al día, se genera el evento XEvent **sqlserver.lock_redo_blocked** .  
   
-###  <a name="indexing"></a><a name="bkmk_Indexing"></a>Indización  
+###  <a name="indexing"></a><a name="bkmk_Indexing"></a> Indización  
  Para optimizar las cargas de trabajo de solo lectura en réplicas secundarias legibles, tal vez desee crear índices en las tablas de las bases de datos secundarias. Debido a que no se pueden realizar cambios de esquema o de datos en las bases de datos secundarias, cree los índices en las bases de datos principales y permita que los cambios se transfieran a la base de datos secundaria mediante el proceso de puesta al día.  
   
  Para supervisar la actividad de uso de índices en una réplica secundaria, consulte las columnas **user_seeks**, **user_scans**y **user_lookups** de la vista de administración dinámica [sys.dm_db_index_usage_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql) .  
@@ -180,7 +179,7 @@ GO
   
  Solo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puede crear y actualizar las estadísticas temporales. No obstante, puede eliminar las estadísticas temporales y supervisar sus propiedades mediante las mismas herramientas que se usan para las estadísticas permanentes:  
   
--   Elimine las estadísticas temporales mediante la instrucción [Drop Statistics](/sql/t-sql/statements/drop-statistics-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
+-   Elimine las estadísticas temporales mediante la instrucción [DROP STATISTICS](/sql/t-sql/statements/drop-statistics-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 -   Supervise las estadísticas con las vistas de catálogo **sys.stats** y **sys.stats_columns** . **sys_stats** incluye una columna, **is_temporary**, para indicar las estadísticas que son permanentes y las que son temporales.  
   
@@ -201,7 +200,7 @@ GO
   
 -   Debido a que las estadísticas temporales se almacenan en **tempdb**, el reinicio del servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provoca que desaparezcan todas las estadísticas temporales.  
   
--   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para obtener más información, vea [Statistics](../../../relational-databases/statistics/statistics.md).  
+-   El sufijo _readonly_database_statistic está reservado para las estadísticas que genera [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Este sufijo no se puede usar al crear estadísticas en una base de datos principal. Para más información, consulte [Estadísticas](../../../relational-databases/statistics/statistics.md).  
   
 ##  <a name="accessing-memory-optimized-tables-on-a-secondary-replica"></a><a name="bkmk_AccessInMemTables"></a> Obtener acceso a tablas optimizadas para memoria en una réplica secundaria  
  Los niveles de aislamiento de la carga de trabajo de lectura en la réplica secundaria son únicamente aquellos que se permiten en la réplica principal. En la réplica secundaria no se realizan asignaciones de niveles de aislamiento. De esta forma se garantiza que cualquier carga de trabajo de informes que se puede ejecutar en una réplica principal podrá ejecutarse en una réplica secundaria sin necesidad de realizar cambios. Esto facilita la migración de una carga de trabajo de informes desde la réplica primaria a una secundaria o viceversa cuando la réplica secundaria no está disponible.  
@@ -255,7 +254,7 @@ GO
     Memory optimized tables and natively compiled stored procedures cannot be accessed or created when the session TRANSACTION ISOLATION LEVEL is set to SNAPSHOT.  
     ```  
   
-##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a>Consideraciones de planeamiento de capacidad  
+##  <a name="capacity-planning-considerations"></a><a name="bkmk_CapacityPlanning"></a> Consideraciones de planeamiento de capacidad  
   
 -   En el caso de las tablas basadas en disco, las réplicas secundarias legibles pueden requerir espacio en **tempdb** por dos motivos:  
   
@@ -282,7 +281,7 @@ GO
   
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
@@ -297,7 +296,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)   
- [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   

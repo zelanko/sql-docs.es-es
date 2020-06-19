@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f85627e-e9d0-4b17-896a-218c9f31d339
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8f3786ac7f031510d8985cb97634cbfc92024c4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bc4a3e976fb504839215e48096d5b6c024324dd2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927288"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accesibilidad para personas con discapacidades
   [!INCLUDE[msCoName](../includes/msconame-md.md)] se compromete a que sus productos y servicios sean más fáciles de usar para todos. En este tema se proporciona información acerca de las siguientes características, productos y servicios que hacen que los productos de la familia de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server sean más fáciles de usar para las personas con discapacidades.  

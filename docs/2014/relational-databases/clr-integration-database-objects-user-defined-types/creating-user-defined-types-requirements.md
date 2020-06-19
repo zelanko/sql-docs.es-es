@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8cf45c7c108f522f894f97c25ed51bd4dd3c4fbf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970728"
 ---
 # <a name="user-defined-type-requirements"></a>Requisitos de tipos definidos por el usuario
-  Debe tomar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se va [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a instalar en. Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Debe tomar varias decisiones de diseño importantes al crear un tipo definido por el usuario (UDT) que se va a instalar en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para la mayoría de los UDT, se recomienda la creación del UDT como una estructura, aunque también puede crearse como una clase. La definición del UDT debe cumplir las especificaciones de creación de los UDT a fin de registrarse con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="requirements-for-implementing-udts"></a>Requisitos para implementar un UDT  
  El UDT, para poder ejecutarse en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe implementar los requisitos siguientes en la definición del UDT:  
@@ -51,7 +50,7 @@ ms.locfileid: "62919662"
   
 -   El UDT debe exponer elementos de datos como procedimientos de propiedad o campos públicos.  
   
--   Los nombres públicos no pueden tener más de 128 caracteres y deben ajustarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a las reglas de nomenclatura para los identificadores tal y como se definen en los [identificadores de base de datos](../databases/database-identifiers.md).  
+-   Los nombres públicos no pueden tener más de 128 caracteres y deben ajustarse a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reglas de nomenclatura para los identificadores tal y como se definen en los [identificadores de base de datos](../databases/database-identifiers.md).  
   
 -   Las columnas `sql_variant` no pueden contener instancias de un UDT.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62919662"
   
  **bool**, **byte**, **SByte**, **Short**, **ushort**, **int**, **uint**, **Long**, **ULong**, **float**, **Double**, **SqlByte**, **SqlInt16**, **SqlInt32**, **SqlInt64**, **SqlDateTime**, **SqlSingle**, **SqlDouble**, **SqlMoney**, **SqlBoolean**  
   
- Los tipos de valor que se componen de los campos de los tipos `Native` anteriores son buenos candidatos `structs` para el formato, como en `Structures` Visual C#, (o tal como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el formato de serialización `Native` puede contener un campo de otro UDT también especificado con el formato `Native`. Si la definición UDT es más compleja y contiene tipos de datos que no figuran en la lista anterior, debe especificar en su lugar el formato de serialización `UserDefined`.  
+ Los tipos de valor que se componen de los campos de los tipos anteriores son buenos candidatos para el `Native` formato, como `structs` en Visual C#, (o `Structures` tal como se conocen en Visual Basic). Por ejemplo, un UDT especificado con el formato de serialización `Native` puede contener un campo de otro UDT también especificado con el formato `Native`. Si la definición UDT es más compleja y contiene tipos de datos que no figuran en la lista anterior, debe especificar en su lugar el formato de serialización `UserDefined`.  
   
  El formato `Native` tiene los siguientes requisitos:  
   
@@ -81,7 +80,7 @@ ms.locfileid: "62919662"
   
 -   Debe especificarse `System.Runtime.InteropServices.StructLayoutAttribute` como `StructLayout.LayoutKindSequential` si el UDT se define en una clase y no en una estructura. Este atributo controla el diseño físico de los campos de datos y se usa para imponer a los miembros que se coloquen en el orden en que aparecen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa este atributo para determinar el orden de los campos para los UDT con varios valores.  
   
- Para obtener un ejemplo de un UDT definido `Native` con serialización, vea el UDT Point en [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
+ Para obtener un ejemplo de un UDT definido con `Native` serialización, vea el UDT Point en [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>Serialización UserDefined  
  La configuración de formato `UserDefined` del atributo `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` otorga al desarrollador un control total sobre el formato binario. Al especificar la propiedad de atributo `Format` como `UserDefined`, debe hacer lo siguiente en el código:  
@@ -92,7 +91,7 @@ ms.locfileid: "62919662"
   
 -   Escribir código para implementar los métodos `Read` y `Write` del UDT implementando la interfaz `System.Data.Sql.IBinarySerialize`.  
   
- Para obtener un ejemplo de un UDT definido `UserDefined` con serialización, vea el UDT Currency en [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
+ Para obtener un ejemplo de un UDT definido con `UserDefined` serialización, vea el UDT Currency en [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
 > [!NOTE]  
 >  Los campos UDT deben usar la serialización nativa o conservarse para indizarse.  
@@ -148,7 +147,7 @@ ms.locfileid: "62919662"
  Además de especificar correctamente los atributos de los ensamblados, la clase también debe admitir la nulabilidad. Se tiene en cuenta el valor NULL de los UDT cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], pero para que el UDT reconozca un valor NULL, es necesario que la clase implemente la interfaz `INullable`. Para obtener más información y un ejemplo de cómo implementar la nulabilidad en un UDT, vea [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
 ### <a name="string-conversions"></a>Conversiones de cadenas  
- Para admitir la conversión de cadenas al UDT y desde el UDT, debe proporcionar un método `Parse` y un método `ToString` en la clase. El método `Parse` permite convertir una cadena en un UDT. Debe declararse como `static` (o `Shared` en Visual Basic) y tomar un parámetro de tipo `System.Data.SqlTypes.SqlString`. Para obtener más información y un ejemplo de cómo implementar los `Parse` métodos `ToString` y, vea [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
+ Para admitir la conversión de cadenas al UDT y desde el UDT, debe proporcionar un método `Parse` y un método `ToString` en la clase. El método `Parse` permite convertir una cadena en un UDT. Debe declararse como `static` (o `Shared` en Visual Basic) y tomar un parámetro de tipo `System.Data.SqlTypes.SqlString`. Para obtener más información y un ejemplo de cómo implementar los `Parse` `ToString` métodos y, vea [codificar tipos definidos por el usuario](creating-user-defined-types-coding.md).  
   
 ## <a name="xml-serialization"></a>Serialización XML  
  Los UDT deben admitir la conversión al tipo de datos `xml` y desde el mismo, ajustándose al contrato de la serialización XML. El espacio de nombres `System.Xml.Serialization` contiene clases que se usan para serializar objetos en flujos o documentos con formato XML. Puede decidir implementar la serialización `xml` mediante la interfaz `IXmlSerializable`, que proporciona un formato personalizado para la serialización y deserialización XML.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c751f6d7b56cc43c6a8548d4776ce4c2b4f390cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f36908102a09eb1ef1f7a485898da715deb4253b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782882"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936736"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Realizar una conmutación por error manual forzada de un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo realizar una conmutación por error forzada (con posible pérdida de datos) en un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una conmutación por error forzada es una forma de conmutación por error manual pensada estrictamente para la recuperación ante desastres, cuando no es posible realizar una [conmutación por error manual planeada](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Si se fuerza la conmutación por error a una réplica secundaria no sincronizada, es posible que se pierdan datos. Por tanto, se recomienda encarecidamente que solo fuerce la conmutación por error si debe restaurar el servicio al grupo de disponibilidad inmediatamente y asume el riesgo de perder datos.  
@@ -151,7 +150,7 @@ ms.locfileid: "72782882"
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para forzar la conmutación por error (con posible pérdida de datos)**  
   
-1.  Cambie el directorio`cd`() a una instancia del servidor que hospede una réplica cuyo rol esté en el estado secundario o en resolución en el grupo de disponibilidad que debe conmutarse por error.  
+1.  Cambie el directorio ( `cd` ) a una instancia del servidor que hospede una réplica cuyo rol esté en el estado secundario o en resolución en el grupo de disponibilidad que debe conmutarse por error.  
   
 2.  Use el cmdlet `Switch-SqlAvailabilityGroup` con el parámetro `AllowDataLoss` de una de las formas siguientes:  
   

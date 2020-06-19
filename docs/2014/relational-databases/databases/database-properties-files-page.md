@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b43cc124ff6f5147a3255cbdf164679bae55d18
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 955a17857ce0d847fb712473dddd581a072ab83d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858547"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970175"
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
   Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)** .  
@@ -46,7 +45,7 @@ ms.locfileid: "83858547"
  Para agregar archivos (contenedores) a un grupo de archivos de datos FILESTREAM, debe haber habilitado FILESTREAM. Puede habilitar FILESTREAM mediante el cuadro de diálogo [Propiedades del servidor (página Opciones avanzadas)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Grupo de archivos**  
- Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un nuevo grupo de archivos si selecciona **\<nuevo grupo de archivos>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **Grupo de archivos nuevo**. También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
+ Seleccione el grupo de archivos en la lista. El grupo de archivos es PRIMARY de forma predeterminada. Puede crear un nuevo grupo de archivos si selecciona **\<new filegroup>** y escribe información sobre el grupo de archivos en el cuadro de diálogo **nuevo grupo de archivos** . También se puede crear un nuevo grupo de archivos en la página **Grupo de archivos** . No se puede modificar el grupo de archivos de un archivo existente.  
   
  Al agregar archivos (contenedores) a un grupo de archivos optimizados para memoria, el campo **Grupo de archivos** se rellenará con el nombre del grupo de archivos optimizados para memoria de la base de datos.  
   

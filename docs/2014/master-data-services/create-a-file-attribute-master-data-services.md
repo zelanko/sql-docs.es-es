@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 387613e12af3435a2a8eb9e3f630f61acaf28a8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1af7ba28b217612a37a0649cd69892bff6f272b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971855"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Crear un atributo de archivo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de archivo para rellenar los valores de atributo con archivos.  
@@ -58,7 +57,7 @@ ms.locfileid: "65479989"
   
 9. En el cuadro **Ancho de píxel de la pantalla** , escriba el ancho de la columna de atributo que se va a mostrar en la cuadrícula del **Explorador** .  
   
-10. En la lista **extensión de archivo** , seleccione uno o más tipos de archivo que un usuario puede cargar o deje el valor predeterminado (\**.) para permitir todos los tipos de archivo.  
+10. En la lista **extensión de archivo** , seleccione uno o más tipos de archivo que un usuario puede cargar o deje el valor predeterminado (*. \* ) para permitir todos los tipos de archivo.  
   
 11. Si lo desea, seleccione **Habilitar seguimiento de cambios** para realizar el seguimiento de los cambios en los grupos de atributos. Para obtener más información, consulte [Agregar atributos a un grupo de seguimiento de cambios &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md).  
   

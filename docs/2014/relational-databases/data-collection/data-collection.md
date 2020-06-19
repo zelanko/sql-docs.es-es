@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 70a7b7c959283f934ed94f654293d1de2ef8cd9d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970510"
 ---
 # <a name="data-collection"></a>Recopilación de datos
   El recopilador de datos es un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que recopila diferentes conjuntos de datos. La recopilación de datos se ejecuta de forma constante o según una programación definida por el usuario. El recopilador de datos almacena los datos recopilados en una base de datos relacional conocida como almacén de administración de datos.
@@ -59,7 +58,7 @@ ms.locfileid: "78175989"
  Para obtener más información, vea [Paquetes de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).
 
 ## <a name="data-collector-terminology"></a>Terminología del recopilador de datos
- se dirige a una instancia [!INCLUDE[ssDE](../../includes/ssde-md.md)] de en una edición [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de que admite la recopilación de datos. Para obtener más información sobre las ediciones admitidas, vea la sección "facilidad de administración" de [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
+ se dirige a una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admite la recopilación de datos. Para obtener más información sobre las ediciones admitidas, vea la sección "facilidad de administración" de [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).
 
  Una *raíz de destino* define un subárbol en la jerarquía de destino. Un *conjunto de destinos* es el grupo de destinos resultante de aplicar un filtro a un subárbol definido por una raíz de destino. Una raíz de destino puede ser una base de datos, una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o una instancia del equipo.
 
@@ -67,7 +66,7 @@ ms.locfileid: "78175989"
 
  proveedor de datos un origen de datos conocido, específico de un tipo de destino, que proporciona datos a un tipo de recopilador.
 
- tipo de recopilador: un contenedor [!INCLUDE[ssIS](../../includes/ssis-md.md)] lógico alrededor de los paquetes que proporcionan el mecanismo real para recopilar datos y cargarlos en el almacén de administración de datos.
+ tipo de recopilador: un contenedor lógico alrededor de los [!INCLUDE[ssIS](../../includes/ssis-md.md)] paquetes que proporcionan el mecanismo real para recopilar datos y cargarlos en el almacén de administración de datos.
 
  elemento de recopilación instancia de un tipo de recopilador. Un elemento de recopilación se crea con un conjunto específico de propiedades de entrada y una frecuencia de recopilación.
 

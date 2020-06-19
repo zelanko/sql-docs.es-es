@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c4beea2-6cbc-4352-9db6-49ea8130bb64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d93e6cfa3ce6e958b31c1156cd4fc5fa046ad5ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe42e394482e3abf4d87c00c6e79ee84db6ba278
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952045"
 ---
 # <a name="create-a-database"></a>Crear una base de datos
   En este tema se describe cómo crear una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -69,7 +68,7 @@ ms.locfileid: "62872340"
   
 #### <a name="to-create-a-database"></a>Para crear una base de datos  
   
-1.  En **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y, a continuación, expándala.  
+1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
   
 2.  Haga clic con el botón secundario en **bases**de datos y, a continuación, haga clic en **nueva base de datos**.  
   
@@ -133,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Archivos de base de datos y grupos de archivos](database-files-and-filegroups.md)   
- [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Agregar archivos de datos o de registro a una base de datos](add-data-or-log-files-to-a-database.md)  
   

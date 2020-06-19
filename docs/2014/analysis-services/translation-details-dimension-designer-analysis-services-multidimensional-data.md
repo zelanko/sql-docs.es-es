@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0aa61df3-f2b0-4703-a63b-124da672dcc3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a3d7934cb3bff570a2060becde6715bec88f02f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938316"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Detalles de la traducción (pestaña Traducciones, Diseñador de dimensiones) (Analysis Services – Datos multidimensionales)
   Use el panel de **Detalles de la traducción** de la pestaña **Traducciones** del Diseñador de dimensiones para definir y administrar traducciones para la dimensión seleccionada actualmente.  
@@ -54,7 +53,7 @@ ms.locfileid: "66065851"
   
      Propiedad `Caption`  
   
- **\<>de idioma**  
+ **\<Language>**  
  Escriba o seleccione el valor de la propiedad del objeto de la dimensión en el idioma seleccionado. Si hace clic en el botón de puntos suspensivos (**…**), se abrirán otros cuadros de diálogo, según la propiedad que edite:  
   
 -   Propiedad `NamingTemplate`  

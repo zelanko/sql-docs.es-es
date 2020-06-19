@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 51d130a1-2b48-439e-9447-783e1fc3f4fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75be591f1910f5a55f6b7a019dad366a49ea921a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 14a2ddb95c3e36076b02901e5fb6f431c1dfb12e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927346"
 ---
 # <a name="about-the-sql-server-license-terms"></a>Acerca de los términos de licencia de SQL Server
   Los términos de licencia de software de [!INCLUDE[msCoName](../includes/msconame-md.md)] se copian en el equipo local cuando se instala [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma. Los archivos se escriben en:% programfiles% \\ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] \120\License términos \ o% ProgramFiles (x86)% \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Términos de \120\License \\ .  
   
  En el caso de que se instalen en el mismo equipo varias instancias de la misma edición e idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , se aplicará una única copia de los términos de licencia a todas las instancias de esa edición e idioma.  
   
- El nombre de archivo de los términos de licencia indica la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], así como la edición de idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. El nombre de archivo de los términos de licencia tiene el formato siguiente: SQLServer2014_License_Edition_ \< tipo>_ \< LCID>. rtf. Por ejemplo:  
+ El nombre de archivo de los términos de licencia indica la edición de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], así como la edición de idioma de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instalada. El nombre de archivo de los términos de licencia tiene el formato siguiente: SQLServer2014_License_Edition_ \<TYPE> _ \<LCID> . rtf. Por ejemplo:  
   
 -   SQLServer2014_License_DEV_1033.rtf para la edición [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer en inglés.  
   

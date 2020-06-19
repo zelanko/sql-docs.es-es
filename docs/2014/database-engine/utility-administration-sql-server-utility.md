@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3e5a00c3-8905-40f0-9ddc-d924df9c2f0d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e67ee4d0ff2dba6edb8b9f485dc5efd903b100cf
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: fca4ea655ffdcf8471d1340016d16f2c5b9c352a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927697"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administración de la utilidad (utilidad de SQL Server)
   Utilice las pestañas Administración de la utilidad para administrar la configuración de directivas, la seguridad y el almacenamiento de datos de una utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información sobre conceptos de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -89,11 +88,11 @@ ms.locfileid: "83857857"
  Información de configuración de almacenamiento de datos de utilidad  
  Los siguientes valores de configuración no se pueden establecer en esta versión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
--   Nombre de UMDW: Sysutility_mdw_\<GUID>_DATA.  
+-   Nombre de UMDW: Sysutility_mdw_ \<GUID> _DATA.  
   
 -   Frecuencia de la carga del conjunto de recopilación: cada 15 minutos.  
   
- El directorio de UMDW se puede configurar: \<Unidad del sistema:>:Archivos de programa\Microsoft SQL Server\MSSQL10_50.<Nombre_UCP\MSSQL\Data\\,donde \<Unidad del sistema> normalmente es la unidad C:\. El archivo de registro, UMDW_\<GUID>_LOG, se encuentra en el mismo directorio.  
+ El directorio UMDW es configurable: \<System drive> : \Archivos de programa\microsoft SQL Server \ MSSQL10_50. <UCP_Name> \mssql\data \\ , donde \<System drive> es normalmente C:\ dispositivo. El archivo de registro, UMDW_ \<GUID> _LOG, se encuentra en el mismo directorio.  
   
 > [!NOTE]  
 >  La ubicación del archivo del almacén de administración de datos de utilidad se puede cambiar mediante detach/attach o ALTER DATABASE. Recomendamos el uso de ALTER DATABASE. Para obtener más información, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

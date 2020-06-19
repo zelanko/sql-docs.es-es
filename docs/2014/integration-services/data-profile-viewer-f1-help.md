@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88ad528bfe581639dfa7e5dde35a7b53278b44b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951839"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
   Utilice el Visor de perfil de datos para ver la salida de la Tarea de generación de perfiles de datos.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-length-distribution-profile"></a>Tipo de perfil = Perfil de distribución de longitud de columnas  
   
-#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas - panel \<columna>  
+#### <a name="column-length-distribution-profile---column-pane"></a>Perfil de distribución de longitud de columnas: \<column> Panel  
  **Longitud mínima**  
  Muestra la longitud mínima de los valores de esta columna.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-null-ratio-profile"></a>Tipo de perfil = Perfil de proporción de columnas nulas  
   
-#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas nulas - panel \<columna>  
+#### <a name="column-null-ratio-profile---column-pane"></a>Perfil de proporción de columnas nulas- \<column> Panel  
  **Recuento nulo**  
  Muestra el número de filas en las que la columna de perfiles tiene el valor null.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-pattern-profile"></a>Tipo de perfil = Perfil de patrón de columnas  
   
-#### <a name="column-pattern-profile---column-pane"></a>Perfil de patrón de columnas - panel \<columna>  
+#### <a name="column-pattern-profile---column-pane"></a>Panel de Perfil de patrón de columnas \<column>  
  **Recuento de filas**  
  Muestra el número de filas de la tabla o vista.  
   
@@ -99,11 +98,11 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-statistics-profile"></a>Tipo de perfil = Perfil de estadísticas de columnas  
   
-#### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas - panel \<columna>  
- **Cantidad**  
+#### <a name="column-statistics-profile---column-pane"></a>Perfil de estadísticas de columnas- \<column> Panel  
+ **Mínimo**  
  Muestra el valor mínimo situado en la columna de perfiles.  
   
- **Máxima**  
+ **Máximo**  
  Muestra el valor máximo situado en la columna de perfiles.  
   
  **Media**  
@@ -114,7 +113,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--column-value-distribution-profile"></a>Tipo de perfil = Perfil de distribución de valores de columna  
   
-#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna - panel \<columna>  
+#### <a name="column-value-distribution-profile---column-pane"></a>Perfil de distribución de valores de columna- \<column> Panel  
  **Número de valores distintos**  
  Muestra el recuento de valores distintos que se encuentran en la columna de perfiles.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "66059719"
   
 ### <a name="profile-type--candidate-key-profile"></a>Tipo de perfil = Perfil de claves candidatas  
   
-#### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas - panel \<tabla>  
+#### <a name="candidate-key-profile---table-pane"></a>Perfil de claves candidatas: \<table> Panel  
  **Columnas de clave**  
  Muestra las columnas que se seleccionaron para los perfiles como clave candidata.  
   
@@ -141,7 +140,7 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la columna de clave candidata o de una combinación de columnas. Un nivel de clave menor del 100% indica que hay valores duplicados.  
   
 #### <a name="key-violations-pane"></a>Panel Infracciones de clave  
- **\<column1>, \<columna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Muestra los valores duplicados que se encontraron en la columna de perfiles.  
   
  **Recuento**  
@@ -164,17 +163,17 @@ ms.locfileid: "66059719"
 > [!NOTE]  
 >  Un porcentaje alto de valores erróneos en los datos podría provocar resultados inesperados en un perfil Dependencia funcional. Por ejemplo, el 90% de las filas tienen el valor "WI" como estado para el valor "98052" de código postal. El perfil notifica filas que contienen valor de estado correcto de "WA" como infracciones.  
   
- **\<nombre de columna determinante>**  
+ **\<determinant column name>**  
  Muestra el valor de la columna determinante o la combinación de columnas en esta infracción de la dependencia funcional.  
   
- **\<nombre de columna dependiente>**  
+ **\<dependent column name>**  
  Muestra el valor de la columna dependiente en esta infracción de la dependencia funcional.  
   
  **Recuento de soporte**  
  Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
   
  **Recuento de infracciones**  
- Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el valor que se muestra en el nombre de la ** \<columna dependiente>** columna).  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el valor que se muestra en la **\<dependent column name>** columna).  
   
  **Porcentaje admitido**  
  Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  
@@ -192,7 +191,7 @@ ms.locfileid: "66059719"
  Muestra el nivel (como porcentaje) de la superposición entre las columnas. Un nivel de clave menor que 100% indica que hay casos en los que el valor de subconjunto no se encuentra entre los valores del superconjunto.  
   
 #### <a name="inclusion-violations-pane"></a>Panel Infracciones de inclusión  
- **\<column1>, \<columna2>, etc.**  
+ **\<column1>, \<column2> , etc.**  
  Muestra los valores en la columna o columnas del subconjunto que no se encontraban en la columna o columnas del superconjunto.  
   
  **Recuento**  

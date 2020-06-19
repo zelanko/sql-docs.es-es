@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44fce4aba87968a9b7e6acc3e18ae5d966f70d07
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936026"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptador para la nube de SQL Server
   El servicio Adaptador para la nube se crea como parte del [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] aprovisionamiento en una máquina virtual de Azure. El servicio Adaptador para la nube genera un certificado SSL autofirmado la primera vez que se ejecuta y, después, se ejecuta como una cuenta de **sistema local** . Genera un archivo de configuración que utiliza para configurarse a sí mismo. El adaptador para la nube también crea una regla de Firewall de Windows para permitir las conexiones TCP entrantes en el puerto predeterminado 11435.  
@@ -49,21 +48,21 @@ ms.locfileid: "70176021"
   
     -   \<configuration>  
   
-        -   \<> appSettings  
+        -   \<appSettings>  
   
-            -   \<Add key = "WebServicePort" Value = ""/>  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Add key = "WebServiceCertificate" Value = "GUID"/>  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Add key = "ExposeExceptionDetails" Value = "true"/>  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \<>/appSettings  
+        -   \</appSettings>  
   
-    -   \<>/configuración  
+    -   \</configuration>  
   
 -   **Detalles del certificado** : el certificado tiene los siguientes valores:  
   
-    -   Asunto: "CN = CloudAdapter\<VMName>, dc = SQL Server, DC = Microsoft"  
+    -   Asunto: "CN = CloudAdapter \<VMName> , DC = SQL Server, DC = Microsoft"  
   
     -   El certificado solo debe tener un EKU de autenticación de servidor habilitado.  
   
@@ -74,8 +73,8 @@ ms.locfileid: "70176021"
 |Configuración|Valores|Valor predeterminado|Comentarios|  
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Cuando no se especifique, se utilizará 11435.|  
-|WebServiceCertificate|Thumbprint|Vacío|Si está vacío, se genera un nuevo certificado autofirmado.|  
-|ExposeExceptionDetails|True/False|False||  
+|WebServiceCertificate|Huella digital|Empty|Si está vacío, se genera un nuevo certificado autofirmado.|  
+|ExposeExceptionDetails|Verdadero/Falso|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Solución de problemas del adaptador para la nube  
  Use la información siguiente para solucionar problemas del adaptador para la nube de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -84,7 +83,7 @@ ms.locfileid: "70176021"
   
 -   **Seguimiento, eventos** : todos los eventos se escriben en el registro de eventos de la aplicación.  
   
--   **Control, configuración** : Use el archivo de configuración ubicado en: C:\Archivos de Programa\microsoft\\SQL Server\120\Tools\CloudAdapter.  
+-   **Control, configuración** : Use el archivo de configuración ubicado en: C:\Archivos de Programa\microsoft SQL Server\120\Tools\CloudAdapter \\ .  
   
 |Error|Id. de error|Causa|Solución|  
 |-----------|--------------|-----------|----------------|  
@@ -93,7 +92,7 @@ ms.locfileid: "70176021"
 |No se encontró el certificado SSL [{huella digital}] en el almacén de certificados.|45564|La huella digital del certificado está en el archivo de configuración, pero el almacén de certificados personal para el servicio no contiene el certificado.<br /><br /> Permisos insuficientes.|Asegúrese de que el certificado está en el almacén de certificados personal para el servicio.<br /><br /> Asegúrese de que el servicio tiene los permisos correctos para el almacén.|  
 |No se pudo iniciar el servicio web. {Texto de la excepción}.|45570|Descrito en la excepción.|Habilite ExposeExceptionDetails y utilice la información ampliada de la excepción.|  
 |El certificado [{huella digital}] ha expirado.|45565|El archivo de configuración hace referencia a un certificado expirado.|Agregue un certificado válido y actualice el archivo de configuración con su huella digital.|  
-|Error del servicio Web {0}:.|45571|Descrito en la excepción.|Habilite ExposeExceptionDetails y utilice la información ampliada de la excepción.|  
+|Error del servicio Web: {0} .|45571|Descrito en la excepción.|Habilite ExposeExceptionDetails y utilice la información ampliada de la excepción.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 9a14059e72dfb7ba2c2e0740969ee3ea30618e35
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ffb403c82ebff3cd7715595714504831a127090
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484102"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937396"
 ---
 # <a name="use-the-dqs-speller"></a>Utilizar el corrector ortográfico de DQS
   El corrector ortográfico de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) comprueba la sintaxis, la ortografía y la estructura de las frases de los valores de cadena de un dominio. El corrector ortográfico es una característica independiente, del lado cliente, que no se integra con los motores del servidor y no tiene ninguna implicación en los flujos o estados actuales. El corrector ortográfico identifica los valores de cadena que considera posibles errores, y los marca con un carácter de subrayado rojo en la misma ubicación en la que se realizan otros cambios manuales en los valores de dominio. Entre estas ubicaciones se incluyen:  

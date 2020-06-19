@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 82ac3490f80cf8683a6aebcea75004503a4d5ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5f0642644632c40f7f95e731c61e0a968cd83b7
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919645"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970755"
 ---
 # <a name="updating-udt-columns-with-dataadapters"></a>Actualizar columnas de UDT con DataAdapters
   Los tipos definidos por el usuario (UDT) se admiten utilizando `System.Data.DataSet` y `System.Data.SqlClient.SqlDataAdapter` para recuperar y modificar los datos.  
@@ -46,7 +45,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- El siguiente fragmento de código de ADO.NET recupera una cadena de conexión válida, crea `SqlDataAdapter`un nuevo y rellena un `System.Data.DataTable` con las filas de datos de la tabla **Points** .  
+ El siguiente fragmento de código de ADO.NET recupera una cadena de conexión válida, crea un nuevo `SqlDataAdapter` y rellena un `System.Data.DataTable` con las filas de datos de la tabla **Points** .  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -85,7 +84,7 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  El siguiente ejemplo de ADO.NET incluye dos métodos:  
   
--   `UserProvidedCommands`, que muestra cómo proporcionar `InsertCommand`los objetos `UpdateCommand`, y `DeleteCommand` para actualizar el `Point` UDT en la tabla **Points** (que no contiene una `timestamp` columna).  
+-   `UserProvidedCommands`, que muestra cómo proporcionar los `InsertCommand` `UpdateCommand` objetos, y `DeleteCommand` para actualizar el `Point` UDT en la tabla **Points** (que no contiene una `timestamp` columna).  
   
 -   `CommandBuilder`, que muestra cómo utilizar `SqlCommandBuilder` en la tabla **Points_ts** que contiene la `timestamp` columna.  
   

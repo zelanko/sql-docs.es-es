@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb904cd0f0649c43553b5d6c8b031c5f284901f4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814546"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936826"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
   Dentro del contexto de un grupo de disponibilidad, el rol principal y el rol secundario de las réplicas de disponibilidad suelen ser intercambiables en un proceso denominado *conmutación por error*. Hay tres formas de conmutación por error: conmutación por error automática (sin pérdida de datos), conmutación por error manual planeada (sin pérdida de datos) y conmutación por error manual forzada (con posible pérdida de datos), normalmente denominada *conmutación por error forzada*. Las conmutaciones por error automáticas o manuales planeadas mantienen todos los datos. Un grupo de disponibilidad realiza la conmutación por error en el nivel de la réplica de disponibilidad. Es decir, un grupo de disponibilidad conmuta por error a una de sus réplicas secundarias (el *destino de conmutación por error*actual).  
@@ -78,11 +77,11 @@ ms.locfileid: "62814546"
 ### <a name="failover-sets"></a>Conjuntos de conmutación por error  
  Las formas de conmutación por error posibles para un grupo de disponibilidad determinado se pueden considerar como conjuntos de conmutación por error. Un conjunto de conmutación por error consta de una réplica principal y varias réplicas secundarias que admiten una determinada forma de conmutación, de la manera siguiente:  
   
--   (opcional): ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] **  Dentro de un grupo de disponibilidad determinado, un par de réplicas de disponibilidad (incluida la réplica principal actual) configuradas para el modo de confirmación sincrónica con conmutación automática por error, si existe. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   ** [!INCLUDE[ssFosAutoC](../../../includes/ssfosautoc-md.md)] (opcional):** dentro de un grupo de disponibilidad determinado, un par de réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica con conmutación automática por error, si existe. Un conjunto de conmutación automática por error solo tiene efecto si la réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   (opcional): ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] **  Dentro de un grupo de disponibilidad determinado, conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si existe. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
+-   ** [!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (opcional):** dentro de un grupo de disponibilidad determinado, un conjunto de dos o tres réplicas de disponibilidad (incluida la réplica principal actual) que están configuradas para el modo de confirmación sincrónica, si existe. Un conjunto de confirmación sincrónica de conmutación automática por error solo tiene efecto si las réplicas secundarias están configuradas para el modo de conmutación por error manual y al menos una réplica secundaria está actualmente en estado SYNCHRONIZED con la réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dentro de un grupo de disponibilidad determinado, conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente ONLINE, independientemente del modo de disponibilidad y del modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
+-   ** [!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :** Dentro de un grupo de disponibilidad determinado, el conjunto de todas las réplicas de disponibilidad cuyo estado operativo es actualmente online, independientemente del modo de disponibilidad y del modo de conmutación por error. El conjunto completo de conmutación por error es importante cuando no hay actualmente ninguna réplica secundaria en estado SYNCHRONIZED con la réplica principal.  
   
  Al configurar una réplica de disponibilidad como confirmación sincrónica con conmutación por error automática, la réplica de disponibilidad forma parte de [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Sin embargo, que el conjunto tenga efecto dependerá de la réplica principal actual. Las formas de conmutación por error que son actualmente posibles en un momento determinado dependen de qué conjuntos de conmutación estén actualmente activos.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "62814546"
   
 |Réplica|Configuración de disponibilidad y modo de conmutación por error|  
 |-------------|--------------------------------------------------|  
-|Un|Confirmación sincrónica con conmutación por error automática|  
+|A|Confirmación sincrónica con conmutación por error automática|  
 |B|Confirmación sincrónica con conmutación por error automática|  
 |C|Confirmación sincrónica con solo conmutación por error manual planeada|  
 |D|Confirmación asincrónica (con solo conmutación por error forzada)|  

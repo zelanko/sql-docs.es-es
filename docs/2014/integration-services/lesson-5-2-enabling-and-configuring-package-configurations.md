@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06d31a4244da2a751bc501080cdf501d540fbc92
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951546"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitación y configuración de configuraciones de paquete
   En esta tarea, convertirá el proyecto al modelo de implementación de paquetes y habilitará las configuraciones de paquetes mediante el Asistente para configuración de paquetes. Utilizará este asistente para generar un archivo de configuración XML que contiene parámetros de configuración para la propiedad `Directory` del contenedor de bucles Foreach. El valor de la propiedad Directory se proporciona a través de una variable nueva de nivel de paquete que puede actualizarse durante la ejecución. Además, rellenará una carpeta nueva de datos de ejemplo que utilizará durante las pruebas.  
@@ -41,7 +40,7 @@ ms.locfileid: "62891074"
   
 8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones** y, después, haga clic en el botón de puntos suspensivos **(…)**.  
   
-9. En el **Editor de expresiones de propiedad**, haga clic en la lista de `Directory` **propiedades** y seleccione.  
+9. En el **Editor de expresiones de propiedad**, haga clic en la lista de **propiedades** y seleccione `Directory` .  
   
 10. En el cuadro **expresión** , haga clic en el botón de puntos suspensivos **(...)**.  
   
@@ -83,22 +82,22 @@ ms.locfileid: "62891074"
   
 14. En la página **Finalización del asistente** , escriba un nombre para la configuración, por ejemplo, **Configuración del directorio del Tutorial de SSIS**. Este es el nombre de configuración que se muestra en el cuadro de diálogo **Organizador de configuraciones de paquetes** .  
   
-15. Haga clic en **Finalizar**  
+15. Haga clic en **Finalizar**.  
   
 16. Haga clic en **Cerrar**.  
   
-17. El asistente crea un archivo de configuración denominado SSISTutorial. dtsConfig, que contiene los valores de configuración `value` para el de la variable que, a `Directory` su vez, establece la propiedad del enumerador.  
+17. El asistente crea un archivo de configuración denominado SSISTutorial. dtsConfig, que contiene los valores de configuración para el `value` de la variable que, a su vez, establece la `Directory` propiedad del enumerador.  
   
     > [!NOTE]  
     >  Generalmente, un archivo de configuración contiene información compleja sobre las propiedades de un paquete, pero en este tutorial la única información de configuración debería ser  
     > <Configuration ConfiguredType="Property"  
     > Path = "\Package.Variables [usuario:: varFolderName]. Properties [valor] "ValueType =" cadena "\>  
     >  \<ConfiguredValue>\</ConfiguredValue>  
-    > \<>/configuración.  
+    > \</Configuration>.  
   
 ### <a name="to-create-and-populate-a-new-sample-data-folder"></a>Para crear y rellenar una carpeta nueva de datos de ejemplo  
   
-1.  En el explorador de Windows, en el nivel raíz de la unidad (por ejemplo,\\C:), cree una nueva `New Sample Data`carpeta denominada.  
+1.  En el explorador de Windows, en el nivel raíz de la unidad (por ejemplo, C: \\ ), cree una nueva carpeta denominada `New Sample Data` .  
   
 2.  Busque los archivos de ejemplo en su equipo y copie tres de los archivos de la carpeta.  
   

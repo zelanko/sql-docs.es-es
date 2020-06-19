@@ -1,5 +1,6 @@
 ---
 title: Crear transacciones distribuidas | Microsoft Docs
+description: Las aplicaciones pueden usar MSDTC para extender o distribuir una transacción en varias instancias de SQL Server. Una clase .NET también puede distribuir una transacción.
 ms.custom: ''
 ms.date: 05/13/2019
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f21ea9b7146b2907a09688f5189d6d9ae4f3f26a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f7a98b35483103059600086c37294c5acb56ad0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303714"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950480"
 ---
 # <a name="create-a-distributed-transaction"></a>Crear una transacción distribuida
 
@@ -38,7 +39,7 @@ Se puede crear una transacción distribuida para diferentes sistemas de Microsof
 
 ## <a name="odbc-driver-calls-the-msdtc-for-sql-server-on-premises"></a>El controlador ODBC llama a MSDTC para SQL Server local
 
-Microsoft Coordinador de transacciones distribuidas (MSDTC) permite a las aplicaciones extender o _distribuir_ una transacción en dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La transacción distribuida funciona incluso cuando las dos instancias se hospedan en equipos independientes.
+Microsoft Coordinador de transacciones distribuidas (MSDTC) permite a las aplicaciones extender o _distribuir_ una transacción en dos o más instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . La transacción distribuida funciona incluso cuando las dos instancias se hospedan en equipos independientes.
 
 MSDTC se instala para Microsoft SQL Server local, pero no está disponible para el servicio en la nube Azure SQL Database de Microsoft.
 

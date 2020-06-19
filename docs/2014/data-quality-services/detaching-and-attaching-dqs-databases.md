@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aca595e33a831e472f06a349e12920aced6dd71f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87af29b64e7185148ead0f089d539bc0519911a5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937776"
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Separar y adjuntar bases de datos de DQS
   En este tema se describe cómo adjuntar y separar las bases de datos de DQS.  
@@ -71,7 +70,7 @@ ms.locfileid: "65480697"
     C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\DQS_MAIN.mdf  
     ```  
   
-5.  El panel inferior, **Detalles de la base de datos** , muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar la ruta de acceso de un archivo, haga clic en el botón **examinar** (...).  
+5.  El panel inferior, **Detalles de la base de datos** , muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** ( ... ).  
   
 6.  Para adjuntar la base de datos DQS_MAIN, haga clic en **Aceptar** .  
   

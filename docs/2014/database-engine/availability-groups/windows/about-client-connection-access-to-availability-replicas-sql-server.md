@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13a863603353ee47639cd327c8c5eebd6df8e12a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bc978cd0280c9885fe7d4d4b499d01adc8f540cb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937276"
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Acerca del acceso de conexión de cliente a réplicas de disponibilidad (SQL Server)
   En un grupo de disponibilidad AlwaysOn, puede configurar una o varias réplicas de disponibilidad para permitir conexiones de solo lectura cuando se ejecutan en el rol secundario (es decir, cuando se ejecutan como réplica secundaria). También puede configurar cada réplica de disponibilidad para permitir o excluir conexiones de solo lectura cuando se ejecutan bajo el rol principal (es decir, cuando se ejecutan como réplica principal).  
@@ -53,7 +52,7 @@ ms.locfileid: "62789847"
  No se permiten conexiones de usuario. Las bases de datos secundarias no están disponibles para acceso de lectura. este es el comportamiento predeterminado del rol secundario.  
   
  Solo conexiones de intención de lectura  
- Las bases de datos secundarias solo están disponibles para la conexión en la `Application Intent` que la propiedad de conexión `ReadOnly` está establecida en (*conexiones de intención de lectura*).  
+ Las bases de datos secundarias solo están disponibles para la conexión en la que la `Application Intent` propiedad de conexión está establecida en `ReadOnly` (*conexiones de intención de lectura*).  
   
  Para obtener información acerca de esta conexión, vea [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62789847"
  Se permiten conexiones de lectura/escritura y de solo lectura a las bases de datos principales. Este es el comportamiento predeterminado para el rol principal.  
   
  Permitir solo conexiones de lectura/escritura  
- Cuando la `Application Intent` propiedad de conexión se establece en **ReadWrite** o no se establece, se permite la conexión. No se permiten las `Application Intent` conexiones para las que la palabra `ReadOnly` clave de cadena de conexión está establecida en. La acción de permitir conexiones de lectura/escritura puede impedir que los clientes conecten una carga de trabajo de intención de lectura a la réplica principal por error.  
+ Cuando la `Application Intent` propiedad de conexión se establece en **ReadWrite** o no se establece, se permite la conexión. No se permiten las conexiones para las que la `Application Intent` palabra clave de cadena de conexión está establecida en `ReadOnly` . La acción de permitir conexiones de lectura/escritura puede impedir que los clientes conecten una carga de trabajo de intención de lectura a la réplica principal por error.  
   
  Para obtener información acerca de esta conexión, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62789847"
   
 |Rol de réplica|Acceso de conexión admitido en la réplica|Intento de conexión|Resultado del intento de conexión|  
 |------------------|--------------------------------------------|-----------------------|--------------------------------|  
-|Secundario|All|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Correcto|  
+|Secundario|Todo|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Correcto|  
 |Secundario|Ninguno (este es el comportamiento secundario predeterminado).|Se ha especificado una intención de lectura, una intención de lectura/escritura o ninguna intención de conexión|Error|  
 |Secundario|Solo intento de lectura|Intención de lectura|Correcto|  
 |Secundario|Solo intento de lectura|Se ha especificado una intención de lectura/escritura o ninguna intención de conexión|Error|  
@@ -124,7 +123,7 @@ ms.locfileid: "62789847"
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [estadísticas](../../../relational-databases/statistics/statistics.md)  
   
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 658d47908929720e51f7c87418f6892ce8148df0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac81f846f3f85f2ed8ea91592aea28942d557857
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066080"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938441"
 ---
 # <a name="toolbar-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Cálculos, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar operaciones comunes en la pestaña **Cálculos** del Diseñador de cubos.  
@@ -25,7 +24,7 @@ ms.locfileid: "66066080"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.|  
-|**Proceso**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
+|**Process**|Haga clic en esta opción para mostrar el cuadro de diálogo **Procesar** y procesar el cubo.|  
 |**Volver a conectar**|Haga clic para volver a conectar la pestaña **Cálculos** a la instancia y base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene el cubo si se desconecta la sesión de la pestaña **Cálculos** por pérdida de conexión o exceso de tiempo de espera.|  
 |**Nuevo miembro calculado**|Haga clic para mostrar el **Editor de Formulario de miembro calculado** y crear un nuevo miembro calculado. Esta opción solamente se habilita en la vista de formulario.|  
 |**Nuevo conjunto con nombre**|Haga clic para mostrar el **Editor de Formulario de conjuntos con nombres** y crear un nuevo conjunto con nombre. Esta opción solamente se habilita en la vista de formulario.|  

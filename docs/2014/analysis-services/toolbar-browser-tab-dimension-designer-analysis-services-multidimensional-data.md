@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2d7f48728921b997fc408ce224bd7bf8c9959b34
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938446"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para realizar operaciones habituales en la pestaña **Explorador** del **Diseñador de dimensiones**.  
   
 ## <a name="options"></a>Opciones  
- **Proceso**  
+ **Process**  
  Haga clic para abrir el cuadro de diálogo **Procesar** y procese la dimensión seleccionada.  
   
  **Volver a conectar**  

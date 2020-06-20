@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 678b14b224f994c834630a398767fee1ea360870
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd3c15610065c4c26da0476d50cac9bd4bd1dacc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768241"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966285"
 ---
 # <a name="install-integration-services"></a>Instalar Integration Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único programa de instalación para instalar alguno de sus componentes o todos, incluido [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Mediante el programa de instalación puede instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con o sin otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un único equipo.  
   
  En este tema se destacan consideraciones importantes que se deberían conocer antes de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. La información de este tema le ayudará a evaluar las opciones de instalación para que pueda realizar selecciones que deriven en una instalación correcta.  
   
- En este tema no se incluyen instrucciones para iniciar el programa de instalación, usar el Asistente para la instalación o ejecutarlo desde la línea de comandos. Para obtener instrucciones paso a paso sobre cómo iniciar el programa de instalación y seleccionar los componentes que se van a instalar, consulte [instalación de inicio rápido de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obtener información acerca de las opciones de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]línea de comandos para instalar, consulte [install SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ En este tema no se incluyen instrucciones para iniciar el programa de instalación, usar el Asistente para la instalación o ejecutarlo desde la línea de comandos. Para obtener instrucciones paso a paso sobre cómo iniciar el programa de instalación y seleccionar los componentes que se van a instalar, consulte [instalación de inicio rápido de SQL Server 2014](../../getting-started/quick-start-installation-of-sql-server-2014.md). Para obtener información acerca de las opciones de la línea de comandos para instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , consulte [Install SQL Server 2014 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="preparing-to-install-integration-services"></a>Preparar la instalación de Integration Services  
- Antes de instalar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], revise los siguientes requisitos:  
+ Antes de instalar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , revise los siguientes requisitos:  
   
 -   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
@@ -56,11 +55,11 @@ ms.locfileid: "62768241"
  Después de revisar los requisitos de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y asegurarse de que el equipo los cumple, puede comenzar a instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 > [!NOTE]  
->  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando se instalaba [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todos los usuarios del grupo Usuarios tenía acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma predeterminada. Cuando instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los usuarios no tienen acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servicio es seguro de forma predeterminada. Una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vez instalado, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador debe ejecutar la herramienta de configuración de DCOM (DCOMCNFG. exe) para conceder acceso a usuarios específicos a **SQL Server Integration Services 12,0**.  
+>  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cuando se instalaba [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] todos los usuarios del grupo Usuarios tenía acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de forma predeterminada. Cuando instala [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los usuarios no tienen acceso al servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . El servicio es seguro de forma predeterminada. Una vez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalado, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador debe ejecutar la herramienta de configuración de DCOM (Dcomcnfg.exe) para conceder a los usuarios específicos acceso a **SQL Server Integration Services 12,0**.  
 >   
 >  Para obtener instrucciones acerca de cómo conceder permisos, vea [Grant Permissions to Integration Services Service](../grant-permissions-to-integration-services-service.md).  
   
- Si está usando el Asistente para la instalación con el fin de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usará una serie de páginas para especificar los componentes y las opciones. A continuación se muestran páginas del Asistente para la instalación en las que las opciones que seleccione afectan [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a la instalación de con recomendaciones de selección:  
+ Si está usando el Asistente para la instalación con el fin de instalar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], usará una serie de páginas para especificar los componentes y las opciones. A continuación se muestran páginas del Asistente para la instalación en las que las opciones que seleccione afectan a la instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con recomendaciones de selección:  
   
 -   **Selección de características**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "62768241"
   
     -   **SDK de las herramientas de cliente** para instalar ensamblados administrados para la programación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
-     Muchas soluciones de almacenamiento de datos también requieren la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]componentes adicionales, como, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+     Muchas soluciones de almacenamiento de datos también requieren la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes adicionales, como [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
     > [!NOTE]  
     >  Algunos componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede seleccionar para instalarlos en la página **Selección de características** del Asistente para la instalación instalan un subconjunto parcial de componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Estos componentes resultan útiles para tareas específicas, pero la funcionalidad de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] estará limitada. Por ejemplo, la opción **Servicios de motor de base de datos** instala los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necesarios para el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La opción **Herramientas de datos de SQL Server** instala los componentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] necesarios para diseñar un paquete, pero no se instala el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y no es posible ejecutar paquetes fuera de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Para asegurarse de que la instalación de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]es completa, debe seleccionar **Integration Services** en la página **Selección de características** .  

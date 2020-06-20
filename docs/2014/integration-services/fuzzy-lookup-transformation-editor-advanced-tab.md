@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a2919be-2ea7-4c06-82b8-0ffad5f0dd83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26a7efa42215f1bc456cf4a4c47b3a71c62b94e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24c35eb9b1df9f250d21e95b591ec2cc40026038
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058352"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966305"
 ---
 # <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Avanzadas)
   Utilice la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Búsqueda aproximada** para establecer los parámetros de la búsqueda aproximada.  

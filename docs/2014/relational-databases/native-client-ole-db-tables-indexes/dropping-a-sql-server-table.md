@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6d6c4de-43c6-473e-92aa-34ffddd58cbe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6f005b9ab1c3d334242b2a20d47f6e4646d6cef8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4d7bea98a3afcd0022f66117b6bde2d968a866b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017990"
 ---
 # <a name="dropping-a-sql-server-table"></a>Quitar una tabla de SQL Server
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone la función **ITableDefinition::D roptable** . Esto permite a los consumidores quitar una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de una base de datos.  

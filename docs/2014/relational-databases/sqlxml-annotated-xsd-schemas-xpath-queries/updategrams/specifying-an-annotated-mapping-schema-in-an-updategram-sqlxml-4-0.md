@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 084e73bad33cfa52877ef5e0d46a543d68394cc9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4594940cd2db9eabaf5011d10e56dcab1ac39159
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015036"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
   En este tema se explica el modo de usar el esquema de asignación (XSD o XDR) especificado en un diagrama de actualización para procesar las actualizaciones. En una diagrama, puede proporcionar el nombre de un esquema de asignación anotado para usarlo en la asignación de los elementos y atributos de diagrama a tablas y columnas en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Al especificar un esquema de asignación en un diagrama de actualización, los nombres de elementos y atributos especificados en el diagrama de actualización deben asignarse a los elementos y atributos del esquema de asignación.  
   
- Para especificar un esquema de asignación, use el `mapping-schema` atributo del elemento ** \<>de sincronización** . En los ejemplos siguientes se muestran dos diagramas de actualización: uno que usa un esquema de asignación simple y otro que usa un esquema más complejo.  
+ Para especificar un esquema de asignación, se usa el `mapping-schema` atributo del **\<sync>** elemento. En los ejemplos siguientes se muestran dos diagramas de actualización: uno que usa un esquema de asignación simple y otro que usa un esquema más complejo.  
   
 > [!NOTE]  
 >  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Introducción a los esquemas XSD anotados &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). En el caso de las aplicaciones heredadas que usan XDR, consulte [esquemas XDR anotados &#40;en desuso en SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
@@ -46,7 +45,7 @@ ms.locfileid: "82703029"
  Para crear ejemplos funcionales mediante los ejemplos siguientes, debe cumplir los requisitos especificados en [requisitos para ejecutar ejemplos de SQLXML](../../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Crear un diagrama de actualización con un esquema de asignación simple  
- El siguiente esquema XSD (SampleSchema. xml) es un esquema de asignación que asigna el elemento ** \< Customer>** a la tabla sales. Customer:  
+ El siguiente esquema XSD (SampleSchema.xml) es un esquema de asignación que asigna el **\<Customer>** elemento a la tabla sales. Customer:  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -64,7 +63,7 @@ ms.locfileid: "82703029"
 </xsd:schema>  
 ```  
   
- El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Observe que diagrama usa el mismo nombre de elemento, ** \< Customer>**, tal y como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
+ El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Observe que diagrama usa el mismo nombre de elemento, **\<Customer>** , tal y como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
@@ -113,9 +112,9 @@ ms.locfileid: "82703029"
 ```  
   
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertar un registro mediante la relación de elementos primarios y secundarios especificada en el esquema de asignación  
- Los elementos de esquema pueden estar relacionados. El elemento ** \< SQL: Relationship>** especifica la relación de elementos primarios y secundarios entre los elementos del esquema. Esta información se usa para actualizar las tablas correspondientes que tienen una relación de clave principal y clave externa.  
+ Los elementos de esquema pueden estar relacionados. El **\<sql:relationship>** elemento especifica la relación primario-secundario entre los elementos del esquema. Esta información se usa para actualizar las tablas correspondientes que tienen una relación de clave principal y clave externa.  
   
- El siguiente esquema de asignación (SampleSchema. xml) consta de dos elementos, ** \< Order>** y ** \< OD>**:  
+ El siguiente esquema de asignación (SampleSchema.xml) consta de dos elementos, **\<Order>** y **\<OD>** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -154,7 +153,7 @@ ms.locfileid: "82703029"
 </xsd:schema>  
 ```  
   
- En el siguiente diagrama se usa este esquema XSD para agregar un nuevo registro de detalle de pedido (un elemento ** \<>OD** en el bloque ** \< After>** ) para el pedido 43860. El atributo `mapping-schema` se usa para especificar el esquema de asignación en el diagrama de actualización.  
+ El siguiente diagrama usa este esquema XSD para agregar un nuevo registro de detalle de pedido (un **\<OD>** elemento en el **\<after>** bloque) para el pedido 43860. El atributo `mapping-schema` se usa para especificar el esquema de asignación en el diagrama de actualización.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  
@@ -273,11 +272,11 @@ ms.locfileid: "82703029"
 </xsd:schema>  
 ```  
   
- El esquema XSD de este ejemplo tiene los elementos ** \< Customer>** y ** \< Order>** , y especifica una relación de elementos primarios y secundarios entre los dos elementos. Identifica el ** \< orden>** como el elemento primario y el ** \<>del cliente** como el elemento secundario.  
+ El esquema XSD de este ejemplo tiene **\<Customer>** **\<Order>** elementos y, y especifica una relación de elementos primarios y secundarios entre los dos elementos. Identifica **\<Order>** como el elemento primario y **\<Customer>** como el elemento secundario.  
   
- La lógica de procesamiento del diagrama de actualización usa la información de la relación de elementos primarios y secundarios para determinar el orden en que los registros se insertan en las tablas. En este ejemplo, la lógica diagrama primero intenta insertar un registro en la tabla Ord (dado que ** \< Order>** es el elemento primario) y, a continuación, intenta insertar un registro en la tabla Cust (porque ** \< Customer>** es el elemento secundario). Sin embargo, debido a la información de clave principal y clave externa incluida en el esquema de tabla de base de datos, esta operación de inserción provoca una infracción de clave externa en la base de datos y se produce un error en la operación de inserción.  
+ La lógica de procesamiento del diagrama de actualización usa la información de la relación de elementos primarios y secundarios para determinar el orden en que los registros se insertan en las tablas. En este ejemplo, la lógica de diagrama primero intenta insertar un registro en la tabla Ord (porque **\<Order>** es el elemento primario) y, a continuación, intenta insertar un registro en la tabla Cust (porque **\<Customer>** es el elemento secundario). Sin embargo, debido a la información de clave principal y clave externa incluida en el esquema de tabla de base de datos, esta operación de inserción provoca una infracción de clave externa en la base de datos y se produce un error en la operación de inserción.  
   
- Para indicar a la lógica de diagrama que invierta la relación de elementos primarios y secundarios durante la operación de actualización, la `inverse` anotación se especifica en el elemento de>de la ** \< relación** . Como resultado, los registros se agregan primero en la tabla Cust y después en la tabla Ord, y la operación se realiza correctamente.  
+ Para indicar a la lógica de diagrama que invierta la relación de elementos primarios y secundarios durante la operación de actualización, la `inverse` anotación se especifica en el **\<relationship>** elemento. Como resultado, los registros se agregan primero en la tabla Cust y después en la tabla Ord, y la operación se realiza correctamente.  
   
  El diagrama de actualización siguiente inserta un pedido (OrderID=2) en la tabla Ord y un cliente (CustomerID='AAAAA) en la tabla Cust mediante el esquema XSD especificado:  
   

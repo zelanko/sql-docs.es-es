@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e72b48a-fc5a-4656-8cf5-39f57d8c1565
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14d1836483373c82c17f1d4db34bb01769f376aa
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 915f449a11278f3ef7503caf0a588cc48d6cf23e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82700915"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018717"
 ---
 # <a name="set-cursor-options-odbc"></a>Establecer las opciones del cursor (ODBC)
   Para establecer las opciones de cursor, llame a [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) para establecer o [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) para obtener las opciones de la instrucción que controlan el comportamiento del cursor.  

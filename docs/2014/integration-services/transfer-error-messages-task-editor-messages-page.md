@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: cb2226a0-3037-4fdf-966f-81eabc0da9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f753aaddbd2647b1d8874b0d34db415f75aa99b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b21476bb6b696b51cc1932c171bdd8dfa1d0e6d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972842"
 ---
 # <a name="transfer-error-messages-task-editor-messages-page"></a>Editor de la tarea Transferir mensajes de error (página Mensajes)
   Use la página **Mensajes** del cuadro de diálogo **Editor de la tarea Transferir mensajes de error** para especificar propiedades para copiar uno o varios mensajes de error definidos por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Error Messages Task](control-flow/transfer-error-messages-task.md).  
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione si la tarea debe sobrescribir mensajes de error definidos por el usuario existentes, omitir mensajes existentes o generar un error si existen ya mensajes de error con el mismo nombre en el servidor de destino.  
@@ -41,7 +40,7 @@ ms.locfileid: "66055039"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|Copiar todos los mensajes definidos por el usuario.|  
+|**True**|Copiar todos los mensajes definidos por el usuario.|  
 |**Es**|Copiar solo los mensajes definidos por el usuario especificados.|  
   
  **ErrorMessagesList**  
@@ -62,6 +61,6 @@ ms.locfileid: "66055039"
  [Editor de la tarea transferir mensajes de error &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)   
  [Editor de la tarea transferir mensajes de error &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
- [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
+ [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
   
   

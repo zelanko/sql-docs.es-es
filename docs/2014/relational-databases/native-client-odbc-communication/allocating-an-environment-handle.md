@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15c1b428-ea6d-4672-894c-f0e289e2da3f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 173211cfa6c1e70d979f908c88433857fccd0201
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1c655b5e9a406c3e1881c9dd199a92666377918f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021115"
 ---
 # <a name="allocating-an-environment-handle"></a>Asignar un identificador de entorno
   Para que una aplicación pueda llamar a cualquier función ODBC, debe inicializar el entorno ODBC y asignar un identificador de entorno. Se trata del identificador de contexto global y marcador de posición del resto de los identificadores de ODBC. Para ello, debe llamar a **SQLAllocHandle** con el parámetro *HandleType* establecido en SQL_HANDLE_ENV y *InputHandle* establecido en SQL_NULL_HANDLE.  

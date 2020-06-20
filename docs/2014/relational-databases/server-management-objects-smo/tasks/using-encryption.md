@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ea79d34a5c0e8f8d51ce38db799f88c8aa981dd0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781851"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003584"
 ---
 # <a name="using-encryption"></a>Utilizar el cifrado
   En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> representa la clave maestra de servicio. La propiedad <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Server> hace referencia a esto. Se puede regenerar utilizando el método <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A>.  

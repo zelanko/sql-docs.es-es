@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a33f12bd-15c4-42a8-b343-de44c3e87729
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c1668c2b4c96f23283f0eca87fdbac591f52b75f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d6e857e0ccaad9b6f34bbdc9b88aea2e6d7291d8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211602"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048842"
 ---
 # <a name="wmi-error-0x8007052f"></a>Error de WMI 0x8007052f
     
@@ -29,7 +28,7 @@ ms.locfileid: "68211602"
 |Id. de evento|0x8007052f|  
 |Origen de eventos|Error de proveedor WMI|  
 |Componente|Administrador de configuración de SQL Server|  
-|Nombre simbólico|NA|  
+|Nombre simbólico|N/D|  
 |Texto del mensaje|Error de inicio de sesión: restricción de cuenta de usuario. Razones posibles: no se admiten contraseñas en blanco, restricciones en las horas de inicio de sesión, o se ha aplicado una restricción de directiva.|  
   
 ## <a name="explanation"></a>Explicación  

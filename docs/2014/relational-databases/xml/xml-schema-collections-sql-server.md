@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 939f0d85233f5efe7ddc010169fd0922000083f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3ee4757f1353278447ee55e97c8d4ba23aa2d649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702263"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046499"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
   Tal y como se describe en el tema [xml &#40;Transact-SQL&#41;](/sql/t-sql/xml/xml-transact-sql), SQL Server proporciona almacenamiento nativo de datos XML a través del `xml` tipo de datos. Opcionalmente, puede asociar esquemas XSD a una variable o una columna de `xml` tipo a través de una colección de esquemas XML. Esta colección almacena los esquemas XML importados y luego se usa para lo siguiente:  
@@ -119,7 +118,7 @@ ms.locfileid: "82702263"
   
 -   **Customer** es un componente ELEMENT.  
   
- Cuando se importa un esquema a la base de datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no almacena el propio esquema. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena sus distintos componentes individuales. En otras palabras, no se almacena la etiqueta \<Schema>, sino que solo se conservan los componentes definidos en ella. No se conservan todos los elementos del esquema. Si la etiqueta \<Schema> contiene atributos que especifican el comportamiento predeterminado de sus componentes, estos atributos se trasladan a esos componentes de esquema durante el proceso de importación, como se muestra en la siguiente tabla.  
+ Cuando se importa un esquema a la base de datos, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no almacena el propio esquema. En su lugar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena sus distintos componentes individuales. Es decir, la \<Schema> etiqueta no se almacena, solo se conservan los componentes definidos en ella. No se conservan todos los elementos del esquema. Si la \<Schema> etiqueta contiene atributos que especifican el comportamiento predeterminado de sus componentes, estos atributos se mueven a los componentes de esquema que contiene durante el proceso de importación, como se muestra en la tabla siguiente.  
   
 |Nombre del atributo|Comportamiento|  
 |--------------------|--------------|  

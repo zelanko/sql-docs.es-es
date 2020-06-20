@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b7ba8c40979873cc2c3f2358b57dc0e491a1795e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a7dda500486c39a66f871d5934f957028fc51e9d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718836"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025744"
 ---
 # <a name="supported-data-types"></a>Tipos de datos admitidos
   Los siguientes tipos de datos se **admiten** en las tablas optimizadas para memoria y los procedimientos almacenados compilados de forma nativa:  
@@ -53,7 +52,7 @@ ms.locfileid: "82718836"
   
 |Tipo de datos|Para obtener más información|  
 |---------------|--------------------------|  
-|fecha|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
+|date|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|  
 |time|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)|  
 |datetime|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql)|  
 |datetime2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|  

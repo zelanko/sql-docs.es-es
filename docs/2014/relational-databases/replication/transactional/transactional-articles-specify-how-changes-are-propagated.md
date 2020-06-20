@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eb07987bfdca341a01a523c13db3e346ab5085f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655680"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016566"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar cómo se propagan los cambios para los artículos transaccionales
   La replicación transaccional permite especificar cómo se propagan los cambios de datos del publicador a los suscriptores. Para cada tabla publicada, puede especificar uno de los cuatro métodos siguientes para propagar cada operación (INSERT, UPDATE o DELETE) al suscriptor:  
@@ -37,13 +36,13 @@ ms.locfileid: "62655680"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimientos almacenados predeterminados y personalizados  
  Los tres procedimientos que crea la replicación de forma predeterminada en cada artículo de la tabla son:  
   
--   **sp_MSins_\<** *nombreDeTabla* **>**, que controla las inserciones.  
+-   **sp_MSins_ \<** *tablename* **> **, que controla las inserciones.  
   
--   **sp_MSupd_\<** *nombreDeTabla* **>**, que controla las actualizaciones.  
+-   **sp_MSupd_ \<** *tablename* **> **, que controla las actualizaciones.  
   
--   **sp_MSdel_\<** *nombreDeTabla* **>**, que controla las eliminaciones.  
+-   **sp_MSdel_ \<** *tablename* **> **, que controla las eliminaciones.  
   
- El ** \< ***tablename*** TableName> ** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario diferente.  
+ El **\<***tablename***>** utilizado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario diferente.  
   
  Cualquiera de estos procedimientos se puede sustituir por un procedimiento personalizado que se especifica al agregar un artículo a una publicación. Los procedimientos personalizados se utilizan si una aplicación requiere lógica personalizada, por ejemplo al insertar datos en una tabla de auditoría cuando se actualiza una fila en el suscriptor. Para obtener más información acerca de cómo especificar procedimientos almacenados personalizados, vea los temas de procedimientos indicados anteriormente.  
   

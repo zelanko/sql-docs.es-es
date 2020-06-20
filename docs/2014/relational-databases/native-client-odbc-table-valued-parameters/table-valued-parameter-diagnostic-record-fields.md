@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 281482ba-f9f7-4548-b5c4-96c9fd7b0286
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d93138d3069e9e7205f610bb4bdc9a2090d07137
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d0241170243fbd8d5bc36832249d5473e972ade7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705184"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998943"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>Campos de registros de diagnóstico para parámetros con valores de tabla
   Dos nuevos campos de diagnóstico, SQL_DIAG_SS_TABLE_COLUMN_NUMBER y SQL_DIAG_SS_TABLE_ROW_NUMBER, se han agregado a los registros de diagnóstico. Estos campos sirven de ayuda para determinar qué valores de columna de parámetro con valores de tabla están asociados a errores y advertencias.  

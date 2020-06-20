@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2f8b16b07919c1157abe417fa0e92aff4f198f48
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 70ef3dc9bcaf3a839d6164be143e3a90f6d2dd73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703521"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003076"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
   Al escribir esquemas XSD, puede usar el atributo **targetNamespace** de XSD para especificar un espacio de nombres de destino. En este tema se describe cómo funcionan los atributos XSD **targetNamespace**, **elementFormDefault**y **attributeFormDefault** , cómo afectan a la instancia XML que se genera y cómo se especifican las consultas XPath con espacios de nombres.  
   
- Puede usar el atributo **xsd: targetNamespace** para colocar elementos y atributos del espacio de nombres predeterminado en un espacio de nombres diferente. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar los atributos **elementFormDefault** y **attributeFormDefault** en el elemento ** \< xsd: Schema>** para especificar globalmente la calificación de elementos y atributos locales, o puede usar el atributo **Form** para especificar elementos y atributos individuales por separado.  
+ Puede usar el atributo **xsd: targetNamespace** para colocar elementos y atributos del espacio de nombres predeterminado en un espacio de nombres diferente. También puede especificar si los elementos y los atributos del esquema declarados localmente deben estar certificados por un espacio de nombres, ya sea explícitamente mediante un prefijo o implícitamente de forma predeterminada. Puede usar los atributos **elementFormDefault** y **attributeFormDefault** en el **\<xsd:schema>** elemento para especificar globalmente la calificación de elementos y atributos locales, o puede usar el atributo **Form** para especificar elementos y atributos individuales por separado.  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Especificar un espacio de nombres de destino  
- El siguiente esquema XSD especifica un espacio de nombres de destino mediante el atributo **xsd: targetNamespace** . El esquema también establece los valores de atributo **elementFormDefault** y **attributeFormDefault** en **"Unqualified"** (el valor predeterminado de estos atributos). Se trata de una declaración global que afecta a todos los elementos locales (** \< Order>** del esquema) y atributos (**CustomerID**, **ContactName**y **OrderID** en el esquema).  
+ El siguiente esquema XSD especifica un espacio de nombres de destino mediante el atributo **xsd: targetNamespace** . El esquema también establece los valores de atributo **elementFormDefault** y **attributeFormDefault** en **"Unqualified"** (el valor predeterminado de estos atributos). Se trata de una declaración global que afecta a todos los elementos locales ( **\<Order>** en el esquema) y atributos (**CustomerID**, **ContactName**y **OrderID** en el esquema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -75,9 +74,9 @@ ms.locfileid: "82703521"
   
  En el esquema:  
   
--   Las declaraciones de tipos **CustomerType** y **OrderType** son globales y, por lo tanto, se incluyen en el espacio de nombres de destino del esquema. Como resultado, cuando se hace referencia a estos tipos en la declaración del elemento ** \< Customer>** y su ** \< orden>** elemento secundario, se especifica un prefijo que está asociado al espacio de nombres de destino.  
+-   Las declaraciones de tipos **CustomerType** y **OrderType** son globales y, por lo tanto, se incluyen en el espacio de nombres de destino del esquema. Como resultado, cuando se hace referencia a estos tipos en la declaración del **\<Customer>** elemento y en su **\<Order>** elemento secundario, se especifica un prefijo que está asociado con el espacio de nombres de destino.  
   
--   El elemento ** \< Customer>** también se incluye en el espacio de nombres de destino del esquema porque es un elemento global del esquema.  
+-   El **\<Customer>** elemento también se incluye en el espacio de nombres de destino del esquema porque es un elemento global del esquema.  
   
  Ejecute la siguiente consulta XPath en el esquema:  
   
@@ -98,9 +97,9 @@ ms.locfileid: "82703521"
   </ROOT>  
 ```  
   
- Este documento de instancia define el espacio de nombres urn: myNameSpace y le asocia un prefijo (Y0). El prefijo solo se aplica al elemento global ** \< Customer>** . (El elemento es global porque se declara como un elemento secundario del elemento ** \< xsd: Schema>** en el esquema).  
+ Este documento de instancia define el espacio de nombres urn: myNameSpace y le asocia un prefijo (Y0). El prefijo solo se aplica al **\<Customer>** elemento global. (El elemento es global porque se declara como elemento secundario del **\<xsd:schema>** elemento en el esquema).  
   
- El prefijo no se aplica a los elementos y atributos locales porque el valor de los atributos **elementFormDefault** y **attributeFormDefault** se establece en **"Unqualified"** en el esquema. Tenga en cuenta que el elemento ** \< Order>** es local porque su declaración aparece como un elemento secundario del elemento ** \<>complexType** que define el elemento de ** \<>CustomerType** . Del mismo modo, los atributos (**CustomerID**, **OrderID**y **ContactName**) son locales, no globales.  
+ El prefijo no se aplica a los elementos y atributos locales porque el valor de los atributos **elementFormDefault** y **attributeFormDefault** se establece en **"Unqualified"** en el esquema. Tenga en cuenta que el **\<Order>** elemento es local porque su declaración aparece como un elemento secundario del **\<complexType>** elemento que define el **\<CustomerType>** elemento. Del mismo modo, los atributos (**CustomerID**, **OrderID**y **ContactName**) son locales, no globales.  
   
 ##### <a name="to-create-a-working-sample-of-this-schema"></a>Para crear un ejemplo funcional de este esquema  
   
@@ -117,7 +116,7 @@ ms.locfileid: "82703521"
     </ROOT>  
     ```  
   
-     La consulta XPath de la plantilla devuelve el elemento ** \< Customer>** del cliente con un CustomerID de 1. Observe que la consulta XPath especifica el prefijo de espacio de nombres del elemento en la consulta y no del atributo. (Los atributos locales, tal y como se especifican en el esquema, no se certifican).  
+     La consulta XPath de la plantilla devuelve el **\<Customer>** elemento para el cliente con un CustomerID de 1. Observe que la consulta XPath especifica el prefijo de espacio de nombres del elemento en la consulta y no del atributo. (Los atributos locales, tal y como se especifican en el esquema, no se certifican).  
   
      La ruta de acceso al directorio especificada para el esquema de asignación (targetNamespace.xml) es una ubicación relativa con respecto al directorio donde se guarda la plantilla. También puede especificarse una ruta de acceso absoluta como, por ejemplo:  
   
@@ -129,7 +128,7 @@ ms.locfileid: "82703521"
   
      Para obtener más información, vea [usar ado para ejecutar consultas SQLXML](../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Si el esquema especifica atributos **elementFormDefault** y **attributeFormDefault** con el valor **"Qualified"**, el documento de instancia tendrá todos los elementos y atributos locales calificados. Puede cambiar el esquema anterior para incluir estos atributos en el elemento ** \< xsd: Schema>** y volver a ejecutar la plantilla. Como los atributos están ahora certificados en la instancia, la consulta XPath cambiará e incluirá el prefijo de espacio de nombres.  
+ Si el esquema especifica atributos **elementFormDefault** y **attributeFormDefault** con el valor **"Qualified"**, el documento de instancia tendrá todos los elementos y atributos locales calificados. Puede cambiar el esquema anterior para incluir estos atributos en el **\<xsd:schema>** elemento y volver a ejecutar la plantilla. Como los atributos están ahora certificados en la instancia, la consulta XPath cambiará e incluirá el prefijo de espacio de nombres.  
   
  Esta es la consulta XPath modificada:  
   

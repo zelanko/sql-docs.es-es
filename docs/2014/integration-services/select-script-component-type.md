@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 281a36c6-c2c2-4a25-8f48-5f372ed8b63f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e07e29c8b200984d5803007f3612f9a43824e261
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0017111b0c5c0ab3e6414d801395eba99ececc82
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055975"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963665"
 ---
 # <a name="select-script-component-type"></a>Seleccionar el tipo de componente de script
   Use el cuadro de diálogo **Seleccionar el tipo de componente de script** para especificar si se creará una transformación Script que está configurada previamente para utilizarse como origen, transformación o destino.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60586083e8bdfe7f0227db605d9f36d50a59ef0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667142"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049355"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Visualización de información y realización de tareas mediante el Monitor de replicación
 El Monitor de replicación proporciona una serie de pestañas y opciones para ver información y realizar diversas tareas. En este artículo se describe todo lo que se puede ver y realizar con el Monitor de replicación.
@@ -64,7 +63,7 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
   
 -   **Publicaciones** : esta ficha muestra información acerca de todas las publicaciones en el publicador seleccionado.  
   
--   **Lista de supervisión de suscripciones** : esta pestaña está diseñada para mostrar información acerca de las suscripciones de todas las publicaciones disponibles en el publicador seleccionado que tienen errores, advertencias o el rendimiento más bajo. Esta pestaña no se muestra para los distribuidores que ejecutan [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]versiones anteriores a.  
+-   **Lista de supervisión de suscripciones** : esta pestaña está diseñada para mostrar información acerca de las suscripciones de todas las publicaciones disponibles en el publicador seleccionado que tienen errores, advertencias o el rendimiento más bajo. Esta pestaña no se muestra para los distribuidores que ejecutan versiones anteriores a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] .  
   
 -   Pestaña **agentes** : en esta pestaña se muestra información detallada sobre los agentes y trabajos utilizados por todos los tipos de replicación. La pestaña también le permite iniciar y detener cada agente y trabajo.  
   
@@ -106,7 +105,7 @@ El Monitor de replicación proporciona una serie de pestañas y opciones para ve
   
 1.  Expanda un grupo de publicador en el panel izquierdo y, a continuación, haga clic en un publicador.   
 2.  Para ver información acerca de las suscripciones, haga clic en la pestaña **Lista de supervisión de suscripciones** .  
-3.  Seleccione el tipo de suscripción que quiere mostrar en la lista desplegable **Mostrar suscripciones \<TipoDeSuscripción>** . Para ver solamente aquellas suscripciones que se encuentren en un estado determinado, por ejemplo sincronizando, seleccione una opción de la lista desplegable **Mostrar** .    
+3.  Seleccione el tipo de suscripción que se va a mostrar en la lista desplegable **Mostrar \<SubscriptionType> suscripciones** . Para ver solamente aquellas suscripciones que se encuentren en un estado determinado, por ejemplo sincronizando, seleccione una opción de la lista desplegable **Mostrar** .    
 4.  Para ver y modificar las propiedades de una suscripción, haga clic con el botón secundario en la suscripción y, a continuación, haga clic en **Propiedades**. También puede tener acceso a información más detallada y realizar tareas en esta pestaña. Para obtener más información, vea [ver información y realizar tareas mediante el monitor de replicación](view-information-and-perform-tasks-replication-monitor.md).  
 
 ## <a name="for-publication-agents"></a>Para los agentes de publicación

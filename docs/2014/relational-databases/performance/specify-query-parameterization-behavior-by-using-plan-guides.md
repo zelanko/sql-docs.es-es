@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f0f738ff-2819-4675-a8c8-1eb6c210a7e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f595b9f0e0a6d7bceffc5cb283c60b6f40e025b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150604"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047816"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Especificar el comportamiento de parametrización de consultas por medio de guías de plan
   Cuando la opción de base de datos PARAMETERIZATION se establece en SIMPLE, el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede optar por parametrizar las consultas. Esto quiere decir que todos los valores literales incluidos en una consulta se sustituirán por parámetros. Este proceso se conoce como parametrización simple. Cuando la parametrización SIMPLE está habilitada, no se pueden controlar las consultas que se parametrizarán y las que no. No obstante, puede especificar que todas las consultas de una base de datos se parametricen estableciendo la opción PARAMETERIZATION de base de datos en FORCED. Este proceso se conoce como parametrización forzada.  
@@ -53,7 +52,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Cree la guía de plan en la consulta con parámetros, especificando la sugerencia de consulta PARAMETERIZATION FORCED.  
   
     > [!IMPORTANT]  
-    >  Como parte de la parametrización de una consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo de datos a los parámetros que reemplazan a los valores literales, dependiendo del valor y el tamaño del literal. El mismo proceso se produce en el valor de los literales de constante pasados **@stmt** al parámetro de salida de **sp_get_query_template**. Dado que el tipo de datos especificado **@params** en el argumento de **sp_create_plan_guide** debe coincidir con el de la consulta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es posible que tenga que crear más de una guía de plan para cubrir el intervalo completo de posibles valores de parámetro de la consulta.  
+    >  Como parte de la parametrización de una consulta, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un tipo de datos a los parámetros que reemplazan a los valores literales, dependiendo del valor y el tamaño del literal. El mismo proceso se produce en el valor de los literales de constante pasados al **@stmt** parámetro de salida de **sp_get_query_template**. Dado que el tipo de datos especificado en el **@params** argumento de **sp_create_plan_guide** debe coincidir con el de la consulta, es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] posible que tenga que crear más de una guía de plan para cubrir el intervalo completo de posibles valores de parámetro de la consulta.  
   
  El siguiente script puede utilizarse para obtener la consulta con parámetros y, a continuación, crear una guía de plan en ella.  
   

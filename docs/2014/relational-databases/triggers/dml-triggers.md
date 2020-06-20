@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fb2e5e85c9479726fe38e02721186a0723a2ec8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196506"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014597"
 ---
 # <a name="dml-triggers"></a>Desencadenadores DML
   Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se inicia automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
@@ -61,8 +60,8 @@ ms.locfileid: "68196506"
 |Referencias en cascada|No se aplica ninguna restricción|No se permiten los desencadenadores INSTEAD OF UPDATE y DELETE en tablas que son destino de las restricciones de integridad referencial en cascada|  
 |Ejecución|Después:<br /><br /> Procesamiento de restricciones<br />Acciones de integridad referencial declarativa<br />Creación de tablas**inserted** y **deleted**<br />La acción de desencadenamiento|Antes: Procesamiento de restricciones<br /><br /> En lugar de: La acción de desencadenamiento<br /><br /> Después: Creación de tablas  **inserted** y **deleted**|  
 |Orden de la ejecución|Se puede especificar la primera y la última ejecución|No aplicable|  
-|`varchar(max)`referencias `nvarchar(max)`de columna `varbinary(max)` , y en tablas **insertadas** y **eliminadas**|Permitida|Permitida|  
-|`text`referencias `ntext`de columna `image` , y en tablas **insertadas** y **eliminadas**|No permitida|Permitida|  
+|`varchar(max)``nvarchar(max)` `varbinary(max)` referencias de columna, y en tablas **insertadas** y **eliminadas**|Permitida|Permitida|  
+|`text``ntext` `image` referencias de columna, y en tablas **insertadas** y **eliminadas**|No permitida|Permitida|  
   
  Desencadenadores CLR  
  Un desencadenador CLR puede ser un desencadenador AFTER o INSTEAD OF. Un desencadenador CLR también puede ser un desencadenador DDL. En lugar de ejecutar un procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)] , un desencadenador CLR ejecuta uno o más métodos escritos en código administrado que son miembros de un ensamblado creado en .NET Framework y cargado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

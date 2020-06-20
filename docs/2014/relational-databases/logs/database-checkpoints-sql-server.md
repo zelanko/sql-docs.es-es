@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5776d4a23223637c50ac40098fa44342d5cd94a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289403"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024834"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
   En este tema se proporciona información general de los puntos de comprobación de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
@@ -42,10 +41,10 @@ ms.locfileid: "79289403"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite varios tipos de puntos de comprobación: automáticos, indirectos, manuales e internos. En la tabla siguiente se resumen los tipos de puntos de control.  
   
-|Nombre|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Descripción|  
+|Name|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Description|  
 |----------|----------------------------------|-----------------|  
-|Automático|EXEC sp_configure **'`recovery interval`', '*`seconds`*'**|Se emite automáticamente en segundo plano para cumplir el límite de tiempo superior que `recovery interval` sugiere la opción de configuración del servidor. Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 20 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirecto|ALTER DATABASE... Establecer TARGET_RECOVERY_TIME **=** _target_recovery_time_ {seconds &#124; minutos}|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automático|EXEC sp_configure **' `recovery interval` ', ' *`seconds`* '**|Se emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la `recovery interval` opción de configuración del servidor. Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 20 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indirecto|ALTER DATABASE... ESTABLECER TARGET_RECOVERY_TIME **=** _target_recovery_time_ {seconds &#124; minutos}|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Se emite cuando se ejecuta un comando CHECKPOINT de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El punto de comprobación manual se produce en la base de datos actual para la conexión. De forma predeterminada, los puntos de comprobación manuales se ejecutan hasta completarse. La limitación funciona de la misma forma que para los puntos de comprobación automáticos.  Opcionalmente, el parámetro *checkpoint_duration* especifica un periodo de tiempo solicitado, en segundos, para que se complete el punto de comprobación.<br /><br /> Para más información, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Interno|Ninguno.|Se emite por varias operaciones de servidor, como la copia de seguridad y la creación de instantánea de base de datos, para garantizar que las imágenes de disco coinciden con el estado actual del registro.|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "79289403"
   
   
 ###  <a name="interaction-of-the-target_recovery_time-and-recovery-interval-options"></a><a name="InteractionBwnSettings"></a> Interacción de las opciones TARGET_RECOVERY_TIME y "recovery interval"  
- En la tabla siguiente se resume la interacción entre la configuración de **sp_configure`recovery interval`del servidor ' '** y la instrucción ALTER DATABASE específica de la base de datos... TARGET_RECOVERY_TIME configuración.  
+ En la tabla siguiente se resume la interacción entre la configuración de sp_configure del servidor **' `recovery interval` '** y la instrucción ALTER DATABASE específica de la base de datos... TARGET_RECOVERY_TIME configuración.  
   
 |target_recovery_time|"recovery interval"|Tipo de punto de comprobación usado|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -69,7 +68,7 @@ ms.locfileid: "79289403"
 |>0|No aplicable.|Puntos de comprobación indirectos cuyo tiempo de recuperación de destino lo determina la configuración TARGET_RECOVERY_TIME, expresado en segundos.|  
   
 ###  <a name="automatic-checkpoints"></a><a name="AutomaticChkpt"></a>Puntos de comprobación automáticos  
- Un punto de comprobación automático se produce cada vez que el número de entradas de registro [!INCLUDE[ssDE](../../includes/ssde-md.md)] alcanza el número que estima que puede procesar durante el `recovery interval` tiempo especificado en la opción de configuración del servidor. En cada base de datos sin un tiempo de recuperación de destino definido por el usuario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera puntos de comprobación automáticos. La frecuencia de los puntos de comprobación automáticos `recovery interval` depende de la opción de configuración avanzada del servidor, que especifica el tiempo máximo que una determinada instancia de servidor debe usar para recuperar una base de datos durante el reinicio del sistema. [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el número máximo de entradas de registro que puede procesar durante el intervalo de recuperación. Cuando una base de datos que usa puntos de comprobación automáticos alcanza el número máximo de entradas de registro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un punto de comprobación en la base de datos. El intervalo de tiempo entre puntos de comprobación puede ser muy variable. Una base de datos con una carga de trabajo de transacciones considerable tendrá más puntos de comprobación frecuentes que otra que se usa principalmente para operaciones de solo lectura.  
+ Un punto de comprobación automático se produce cada vez que el número de entradas de registro alcanza el número que [!INCLUDE[ssDE](../../includes/ssde-md.md)] estima que puede procesar durante el tiempo especificado en la `recovery interval` opción de configuración del servidor. En cada base de datos sin un tiempo de recuperación de destino definido por el usuario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera puntos de comprobación automáticos. La frecuencia de los puntos de comprobación automáticos depende de la `recovery interval` opción de configuración avanzada del servidor, que especifica el tiempo máximo que una determinada instancia de servidor debe usar para recuperar una base de datos durante el reinicio del sistema. [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el número máximo de entradas de registro que puede procesar durante el intervalo de recuperación. Cuando una base de datos que usa puntos de comprobación automáticos alcanza el número máximo de entradas de registro, [!INCLUDE[ssDE](../../includes/ssde-md.md)] emite un punto de comprobación en la base de datos. El intervalo de tiempo entre puntos de comprobación puede ser muy variable. Una base de datos con una carga de trabajo de transacciones considerable tendrá más puntos de comprobación frecuentes que otra que se usa principalmente para operaciones de solo lectura.  
   
  Además, según el modelo de recuperación simple, un punto de comprobación automático también se pone en cola si el registro se llena al 70%.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "79289403"
   
   
 ####  <a name="impact-of-recovery-interval-on-recovery-performance"></a><a name="PerformanceImpact"></a>Impacto del intervalo de recuperación en el rendimiento de la recuperación  
- En el caso de un sistema de procesamiento de transacciones en línea ( `recovery interval` OLTP) que usa transacciones cortas, es el factor principal que determina el tiempo de recuperación. Sin embargo, `recovery interval` la opción no afecta al tiempo necesario para deshacer una transacción de ejecución prolongada. La recuperación de una base de datos con una transacción de ejecución prolongada puede tardar mucho más `recovery interval` que la especificada en la opción. Por ejemplo, si una transacción de ejecución prolongada tardó dos horas en realizar actualizaciones antes de que se deshabilitara la instancia del servidor, la recuperación `recovery interval` real tarda bastante más tiempo que el valor para recuperar la transacción larga. Para obtener más información sobre la repercusión de una transacción de ejecución prolongada en el tiempo de recuperación, vea [El registro de transacciones &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
+ En el caso de un sistema de procesamiento de transacciones en línea (OLTP) que usa transacciones cortas, `recovery interval` es el factor principal que determina el tiempo de recuperación. Sin embargo, la `recovery interval` opción no afecta al tiempo necesario para deshacer una transacción de ejecución prolongada. La recuperación de una base de datos con una transacción de ejecución prolongada puede tardar mucho más que la especificada en la `recovery interval` opción. Por ejemplo, si una transacción de ejecución prolongada tardó dos horas en realizar actualizaciones antes de que se deshabilitara la instancia del servidor, la recuperación real tarda bastante más tiempo que el `recovery interval` valor para recuperar la transacción larga. Para obtener más información sobre la repercusión de una transacción de ejecución prolongada en el tiempo de recuperación, vea [El registro de transacciones &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
  Normalmente, los valores predeterminados proporciona un rendimiento de recuperación óptimo. No obstante, el cambio del intervalo de recuperación podría mejorar el rendimiento en las siguientes circunstancias:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "79289403"
   
 -   Si observa que los puntos de comprobación frecuentes afectan negativamente al rendimiento de una base de datos.  
   
- Si decide aumentar la configuración `recovery interval`, es recomendable que lo haga gradualmente en pequeños incrementos y evaluando el efecto de cada aumento incremental en el rendimiento de recuperación. Este enfoque es importante porque, a `recovery interval` medida que aumenta la configuración, la recuperación de la base de datos tarda mucho más tiempo en completarse. Por ejemplo, si cambia `recovery interval` 10, la recuperación tarda aproximadamente 10 veces más en completarse que `recovery interval` cuando se establece en cero.  
+ Si decide aumentar la configuración `recovery interval`, es recomendable que lo haga gradualmente en pequeños incrementos y evaluando el efecto de cada aumento incremental en el rendimiento de recuperación. Este enfoque es importante porque `recovery interval` , a medida que aumenta la configuración, la recuperación de la base de datos tarda mucho más tiempo en completarse. Por ejemplo, si cambia `recovery interval` 10, la recuperación tarda aproximadamente 10 veces más en completarse que cuando `recovery interval` se establece en cero.  
   
   
 ###  <a name="indirect-checkpoints"></a><a name="IndirectChkpt"></a>Puntos de comprobación indirectos  

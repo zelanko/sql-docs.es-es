@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fed14f30b7580f94d2ac93224b84fdc02d254fd8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7eaec77ef068efd28c4da65833afa5047b222f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016082"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Ejemplos de carga masiva XML (SQLXML 4.0)
   En los ejemplos siguientes se muestra la funcionalidad de la carga masiva XML en Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cada ejemplo se proporcionan un esquema XSD y su esquema XDR equivalente.  
@@ -111,7 +110,7 @@ End Function
 ```  
   
 ## <a name="a-bulk-loading-xml-in-a-table"></a>A. Cargar XML de forma masiva en una tabla  
- En este ejemplo se establece una conexión con la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se especifica en la propiedad ConnectionString (mi Server). En el ejemplo también se especifica la propiedad ErrorLogFile. Por lo tanto, la salida de error se guarda en el archivo especificado ("C:\error.log"), aunque es posible cambiar esta ubicación por otra distinta. Observe también que el método Execute tiene como parámetros el archivo de esquema de asignación (SampleSchema. xml) y el archivo de datos XML (SampleXMLData. xml). Cuando se ejecuta la carga masiva, la tabla Cust que ha creado en la base de datos **tempdb** contendrá nuevos registros basados en el contenido del archivo de datos XML.  
+ En este ejemplo se establece una conexión con la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que se especifica en la propiedad ConnectionString (mi Server). En el ejemplo también se especifica la propiedad ErrorLogFile. Por lo tanto, la salida de error se guarda en el archivo especificado ("C:\error.log"), aunque es posible cambiar esta ubicación por otra distinta. Observe también que el método Execute tiene como parámetros el archivo de esquema de asignación (SampleSchema.xml) y el archivo de datos XML (SampleXMLData.xml). Cuando se ejecuta la carga masiva, la tabla Cust que ha creado en la base de datos **tempdb** contendrá nuevos registros basados en el contenido del archivo de datos XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para probar una carga masiva del ejemplo  
   
@@ -199,7 +198,7 @@ End Function
 ```  
   
 ## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Cargar datos XML de forma masiva en varias tablas  
- En este ejemplo, el documento XML consta de los elementos ** \< Customer>** y ** \< Order>** .  
+ En este ejemplo, el documento XML está compuesto de **\<Customer>** los **\<Order>** elementos y.  
   
 ```  
 <ROOT>  
@@ -231,7 +230,7 @@ Cust(CustomerID, CompanyName, City)
 CustOrder(OrderID, CustomerID)  
 ```  
   
- El esquema XSD siguiente define la vista XML de estas tablas. El esquema especifica la relación de elementos primarios y secundarios entre los elementos ** \< Customer>** y ** \< Order>** .  
+ El esquema XSD siguiente define la vista XML de estas tablas. El esquema especifica la relación primario-secundario entre los **\<Customer>** **\<Order>** elementos y.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -270,7 +269,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- La carga masiva XML usa la relación de clave principal y clave externa especificada anteriormente entre los elementos ** \< Cust>** y ** \< CustOrder>** para realizar una carga masiva de los datos en ambas tablas.  
+ La carga masiva XML usa la relación de clave principal y clave externa especificada anteriormente entre los **\<Cust>** **\<CustOrder>** elementos y para cargar de forma masiva los datos en ambas tablas.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Para probar una carga masiva del ejemplo  
   
@@ -383,7 +382,7 @@ CustOrder(OrderID, CustomerID)
 </xsd:schema>  
 ```  
   
- El esquema especifica un ** \< pedido>** elemento con un elemento secundario ** \< Product>** . El elemento ** \< Order>** se asigna a la tabla Ord y el elemento ** \<>Product** se asigna a la tabla Product de la base de datos. La relación de cadena especificada en el elemento ** \<>del producto** identifica una relación de M:N representada por la tabla OrderDetail. (Un pedido puede incluir muchos productos y un producto puede estar incluido en muchos pedidos.)  
+ El esquema especifica un **\<Order>** elemento con un **\<Product>** elemento secundario. El **\<Order>** elemento se asigna a la tabla Ord y el **\<Product>** elemento se asigna a la tabla Product de la base de datos. La relación de cadena especificada en el **\<Product>** elemento identifica una relación M:N representada por la tabla OrderDetail. (Un pedido puede incluir muchos productos y un producto puede estar incluido en muchos pedidos.)  
   
  Al cargar un documento XML de forma masiva con este esquema, los registros se agregan a las tablas Ord, Product y OrderDetail.  
   
@@ -587,7 +586,7 @@ Set objBL = Nothing
   
 1.  Cree un archivo en su editor de texto o editor XML preferido y guárdelo como SampleSchema.xml. Agregue al archivo el esquema XSD proporcionado en el ejemplo anterior, "Usar las relaciones de cadena del esquema para cargar XML de forma masiva".  
   
-2.  Cree un archivo en su editor de texto o editor XML preferido y guárdelo como SampleXMLData.xml. Agregue al archivo el documento XML proporcionado en el ejemplo anterior, "Usar las relaciones de cadena del esquema para cargar XML de forma masiva". Quite el \< elemento> raíz del documento (para convertirlo en un fragmento).  
+2.  Cree un archivo en su editor de texto o editor XML preferido y guárdelo como SampleXMLData.xml. Agregue al archivo el documento XML proporcionado en el ejemplo anterior, "Usar las relaciones de cadena del esquema para cargar XML de forma masiva". Quite el \<ROOT> elemento del documento (para convertirlo en un fragmento).  
   
 3.  Cree un archivo en su editor de texto o editor XML preferido y guárdelo como ValidateAndBulkload.vbs. En este archivo, agregue el código VBScript de este ejemplo. Modifique la cadena de conexión para especificar el nombre de servidor y de base de datos adecuado. Especifique la ruta de acceso adecuada para los archivos que se especifican como parámetros para el método Execute.  
   
@@ -845,7 +844,7 @@ End Sub
 </xsd:schema>  
 ```  
   
- El esquema identifica una columna de desbordamiento (OverflowColumn) para la tabla Cust. Como resultado, todos los datos XML no consumidos de cada ** \< cliente>** elemento se agregan a esta columna.  
+ El esquema identifica una columna de desbordamiento (OverflowColumn) para la tabla Cust. Como resultado, todos los datos XML no consumidos de cada **\<Customer>** elemento se agregan a esta columna.  
   
 > [!NOTE]  
 >  Todos los elementos abstractos (elementos para los que se especifica **abstract = "true"** ) y todos los atributos prohibidos (atributos para los que se especifica **Prohibited = "true"** ) se consideran desbordamiento mediante la carga masiva XML y se agregan a la columna de desbordamiento, si se especifica. (De lo contrario, se omiten.)  
@@ -1245,7 +1244,7 @@ End Sub
 ## <a name="j-bulk-loading-in-xml-data-type-columns"></a>J. Cargar datos de forma masiva en columnas de tipo de datos xml  
  Si el esquema de asignación especifica una columna de [tipo de datos XML](/sql/t-sql/xml/xml-transact-sql) mediante la `sql:datatype="xml"` anotación, la carga masiva XML puede copiar los elementos secundarios XML del campo asignado del documento de origen en esta columna.  
   
- Fíjese en el esquema XSD siguiente, que asigna una vista de la tabla Production.ProductModel de la base de datos de ejemplo AdventureWorks. En esta tabla, el campo CatalogDescription del `xml` tipo de datos se asigna a un elemento ** \< DESC>** mediante `sql:field` las `sql:datatype="xml"` anotaciones y.  
+ Fíjese en el esquema XSD siguiente, que asigna una vista de la tabla Production.ProductModel de la base de datos de ejemplo AdventureWorks. En esta tabla, el campo CatalogDescription del `xml` tipo de datos se asigna a un **\<Desc>** elemento mediante `sql:field` las `sql:datatype="xml"` anotaciones y.  
   
 ```  
 <?xml version="1.0" encoding="utf-8" ?>  

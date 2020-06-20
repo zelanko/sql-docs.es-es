@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7a32b00ec6ad34095a17816406eb5516207fafa1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62714772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013020"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   En este tema se describen los límites de la capacidad de cálculo para diferentes ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] y sus diferencias en entornos físicos y virtualizados con los procesadores hyperthreaded.  
@@ -28,7 +27,7 @@ ms.locfileid: "62714772"
   
  En la tabla siguiente se describen las notaciones que se usan en el diagrama anterior:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |0..1|Cero o uno|  
 |1|Exactamente uno|  
@@ -86,13 +85,13 @@ ms.locfileid: "62714772"
 |Desarrollador|Sistema operativo máximo|Sistema operativo máximo|  
 |Evaluación|Sistema operativo máximo|Sistema operativo máximo|  
 |Inteligencia empresarial|Limitada a menos de 4 sockets o 16 núcleos|Sistema operativo máximo|  
-|Standard|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
+|Estándar|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Web|Limitada a menos de 4 sockets o 16 núcleos|Limitada a menos de 4 sockets o 16 núcleos|  
 |Express|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con herramientas|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
 |Express con Advanced Services|Limitada a menos de 1 socket o 4 núcleos|Limitada a menos de 1 socket o 4 núcleos|  
   
- <sup>1</sup> la licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (cal) (no disponible para nuevos contratos) está limitada a un máximo de 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] núcleos por instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
+ <sup>1</sup> la licencia basada en Enterprise Edition con licencia de servidor y acceso de cliente (cal) (no disponible para nuevos contratos) está limitada a un máximo de 20 núcleos por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia. No hay ningún límite en el modelo de licencias de servidor basado en núcleos.  
   
  En un entorno virtualizado, el límite de la capacidad de cálculo se basa en el número de procesadores lógicos, no en el de núcleos, porque la arquitectura de procesador no está visible para las aplicaciones invitadas.  Por ejemplo, un servidor con cuatro sockets poblados con procesadores de cuatro núcleos y la capacidad de habilitar dos hyperthreads por núcleo contiene 32 procesadores lógicos el hyperthreading habilitado, pero solo 16 procesadores lógicos con el hyperthreading deshabilitado. Estos procesadores lógicos se pueden asignar a máquinas virtuales en el servidor con la carga de proceso de las máquinas virtuales en ese procesador lógico asignada a un subproceso de ejecución en el procesador físico del servidor host.  
   

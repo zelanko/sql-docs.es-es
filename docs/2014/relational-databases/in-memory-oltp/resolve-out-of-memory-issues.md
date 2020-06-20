@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11f0ba7a901a3e55644b3129ebbd9d9e2d3e2944
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67624408"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025834"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] usa más memoria y de maneras diferentes que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es posible que la cantidad de memoria que instaló y asignó para [!INCLUDE[hek_2](../../includes/hek-2-md.md)] no sea suficiente para sus necesidades en crecimiento. En ese caso, podría quedarse sin memoria. En este tema se describe cómo recuperarse de una situación de OOM (memoria insuficiente). Vea [Supervisar y solucionar problemas del uso de la memoria](monitor-and-troubleshoot-memory-usage.md) para obtener instrucciones específicas que pueden ayudarle a evitar muchas situaciones de memoria insuficiente.  
@@ -24,12 +23,12 @@ ms.locfileid: "67624408"
   
 |Tema|Información general|  
 |-----------|--------------|  
-| [Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#resolve-database-restore-failures-due-to-oom) |Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<nombreDeGrupoDeRecursos>* "".|  
+| [Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#resolve-database-restore-failures-due-to-oom) |Qué hacer si recibe el mensaje de error "error en la operación de restauración para la base de datos ' *\<databaseName>* ' debido a memoria insuficiente en el grupo de recursos ' *\<resourcePoolName>* '".|  
 | [Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-| [Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos " *\<nombreDeGrupoDeRecursos>* ". ..." cuando hay suficiente memoria disponible para la operación.|  
+| [Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Qué hacer si recibe el mensaje de error "no se permiten asignaciones de páginas para la base de datos ' *\<databaseName>* ' debido a memoria insuficiente en el grupo de recursos de sitio ' *\<resourcePoolName>* '. ..." cuando hay suficiente memoria disponible para la operación.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Al intentar restaurar una base de datos, puede obtener el mensaje de error: "error en la operación de restauración de la base de datos '*\<DatabaseName>*' debido a que no hay memoria suficiente en el grupo de recursos '*\<nombredegrupoderecursos>*'". Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente al hacer que haya más memoria disponible.  
+ Al intentar restaurar una base de datos, puede obtener el mensaje de error: "error en la operación de restauración de la base de datos ' *\<databaseName>* ' debido a memoria insuficiente en el grupo de recursos ' *\<resourcePoolName>* '". Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente al hacer que haya más memoria disponible.  
   
  Para resolver el error de recuperación debido a memoria insuficiente, aumente la memoria disponible mediante alguno de estos medios (o todos ellos) para incrementar temporalmente la memoria disponible para la operación de recuperación.  
   
@@ -128,14 +127,14 @@ GO
  Para obtener información sobre los valores máximos para MAX_MEMORY_PERCENT, vea la sección del tema [Porcentaje de memoria disponible para tablas e índices optimizados para memoria](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Instale memoria adicional  
- En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que probablemente también podrá aumentar el valor de MAX_MEMORY_PERCENT (vea el subtema [cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), ya [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no es probable que necesite más memoria, lo que le permite obtener la mayoría de las memorias recién instaladas disponibles para el grupo de recursos.  
+ En última instancia, si es posible, la mejor solución es instalar memoria física adicional. Si lo hace, recuerde que probablemente también podrá aumentar el valor de MAX_MEMORY_PERCENT (vea el subtema [cambiar MIN_MEMORY_PERCENT y MAX_MEMORY_PERCENT en un grupo existente](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), ya que no es probable que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] necesite más memoria, lo que le permite obtener la mayoría de las memorias recién instaladas disponibles para el grupo de recursos.  
   
 > [!IMPORTANT]  
 >  Si el servidor se está ejecutando en una máquina virtual y no está dedicado, establezca el valor de MIN_MEMORY_PERCENT en el mismo valor que MAX_MEMORY_PERCENT.   
 > Vea el tema [Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
- Si aparece el mensaje de error "no se permiten asignaciones de páginas para la base de datos '*\<DatabaseName>*' debido a memoria insuficiente en el grupo de recursos '*\<nombredegrupoderecursos>*'. Vea '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obtener más información ". en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
+ Si aparece el mensaje de error "no se permiten asignaciones de páginas para la base de datos ' *\<databaseName>* ' debido a memoria insuficiente en el grupo de recursos de sitio ' *\<resourcePoolName>* '. Vea ' <https://go.microsoft.com/fwlink/?LinkId=330673> ' para obtener más información ". en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
   
  Para resolver este problema necesita habilitar el Regulador de recursos.  
   

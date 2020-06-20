@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f72b7f40c6733c48bb2d7fa2867799d7ad99d4f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952363"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065079"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Dirección URL del servicio web (Modo nativo de SSRS)
   Utilice la página Dirección URL del servicio web para configurar o modificar la dirección URL que se usa para tener acceso al servidor de informes. Se creará una *reserva de direcciones URL* dependiendo de la dirección URL que especifique. La reserva de direcciones URL define la sintaxis y las reglas de todas las direcciones URL que se pueden utilizar posteriormente para tener acceso al servicio web del servidor de informes. Especifica el prefijo, host, puerto y directorio virtual para el servicio web del servidor de informes. Según cómo especifique el host, podría haber varias direcciones URL posibles para una única reserva. El valor predeterminado para el host especifica un carácter comodín seguro. Un carácter comodín seguro permite especificar en una dirección URL cualquier nombre de host que se pueda resolver como el equipo que hospeda el servidor de informes. Para obtener más información sobre la configuración y las reservas de direcciones URL, vea [configurar una dirección url &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) y [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y haga clic en **Dirección URL del servicio web** en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -47,7 +46,7 @@ ms.locfileid: "71952363"
   
 -   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado>:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<header> :*nnnn: nnnn: nnnn: nnnn*  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "71952363"
  Especifica el puerto en el que el servidor de informes supervisa las solicitudes HTTP de las direcciones URL que incluyen el nombre de directorio virtual del servidor de informes.  
   
  **Certificado SSL**  
- Enlaza un certificado a la dirección IP que especificó. El certificado debe estar instalado y configurado en el equipo. Reporting Services no proporciona características para administrar certificados. El certificado se debe emitir para un nombre de host o un nombre de equipo que se resuelva como la dirección IP. Por ejemplo, para usar un certificado emitido para http://salesreports, la dirección IP que especificó debe resolverse en un servidor denominado "salesreports".  
+ Enlaza un certificado a la dirección IP que especificó. El certificado debe estar instalado y configurado en el equipo. Reporting Services no proporciona características para administrar certificados. El certificado se debe emitir para un nombre de host o un nombre de equipo que se resuelva como la dirección IP. Por ejemplo, para usar un certificado emitido para http://salesreports , la dirección IP que especificó debe resolverse en un servidor denominado "salesreports".  
   
  Si usa un certificado, debe modificar el valor de configuración `UrlRoot` del archivo RSReportServer.config de manera que especifique el nombre completo del equipo para el que se ha registrado el certificado. Para obtener más información, vea [Configurar conexiones SSL en un servidor de informes en modo nativo](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

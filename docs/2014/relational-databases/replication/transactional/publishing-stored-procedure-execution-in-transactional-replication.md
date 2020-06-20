@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0fb5c40db46772cabcb5d1df19e03aced749e1c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63272808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997851"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Publicar la ejecución de procedimientos almacenados en la replicación transaccional
   Si tiene uno o más procedimientos almacenados que se ejecutan en el publicador y afectan a las tablas publicadas, considere la posibilidad de incluir esos procedimientos en la publicación como artículos de ejecución de procedimientos almacenados. La definición del procedimiento (la instrucción CREATE PROCEDURE) se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede proporcionar un rendimiento significativamente mejor en los casos en los que se llevan a cabo grandes operaciones por lotes, debido a que únicamente se replica la ejecución del procedimiento, evitando la necesidad de replicar los cambios individuales de cada fila. Por ejemplo, supongamos que crea el siguiente procedimiento almacenado en la base de datos de publicaciones:  
@@ -52,7 +51,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Publicar la ejecución de un procedimiento almacenado en una publicación transaccional &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) y especifique un valor de ' serializable proc exec ' (recomendado) o ' proc exec **@type**' para el parámetro. Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../publish/define-an-article.md).  
+-   Programación de la replicación con Transact-SQL: ejecute [sp_addarticle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) y especifique un valor de ' serializable proc exec ' (recomendado) o ' proc exec ' para el parámetro **@type** . Para obtener más información sobre la definición de artículos, vea [Definir un artículo](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Modificar el procedimiento en el suscriptor  
  De forma predeterminada, la definición del procedimiento almacenado del publicador se propaga a todos los suscriptores. No obstante, también puede modificar el procedimiento almacenado en el suscriptor. Esto es útil si desea ejecutar una lógica diferente en el publicador y en el suscriptor. Por ejemplo, observe **sp_big_delete**, un procedimiento almacenado en el publicador que tiene dos funciones: elimina 1.000.000 de filas de la tabla replicada **big_table1** y actualiza la tabla no replicada **big_table2**. Para reducir la demanda de recursos de red, debe propagar la eliminación del millón de filas como un procedimiento almacenado mediante la publicación de **sp_big_delete**. En el suscriptor, puede modificar **sp_big_delete** de forma que solamente elimine el millón de filas y no haga la posterior actualización de la tabla **big_table2**.  

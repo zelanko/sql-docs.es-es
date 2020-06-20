@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b8d48b9a21d810f60b071c17dd89ad51c9e489a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62666968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049387"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Ver el estado de la suscripción y la publicación en el Monitor de replicación
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El monitor de replicación muestra información de estado de las publicaciones y las suscripciones:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] monitor de replicación muestra información de estado de las publicaciones y las suscripciones:  
   
 -   El estado de una publicación está determinado por el estado de prioridad más alto de sus suscripciones. Por ejemplo, si una suscripción a una publicación tiene un error y otra tiene un problema de rendimiento se muestra un estado de error para la publicación.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "62666968"
 |Error|![Icono de la IU: error](../media/repl-icon-error.gif "Icono de la IU: error")|  
 |Rendimiento crítico|![Icono de la IU: advertencia](../media/repl-icon-warn.gif "Icono de la IU: advertencia")|  
 |Reintentando comando con errores|![Icono de la interfaz de usuario: reintento del agente de replicación](../media/repl-icon-retry.gif "Icono de la interfaz de usuario: reintento del agente de replicación")|  
-|Aceptar|None|  
+|Aceptar|ninguno|  
   
 ## <a name="subscription-status-values"></a>Valores de estado de la suscripción  
  En las siguientes tablas se muestran los valores de estado de la suscripción y sus iconos correspondientes en orden de prioridad. Es posible que una suscripción tenga dos estados simultáneamente, por ejemplo **Con expiración en breve/Expirada** y **Reintentando comando con errores**, en cuyo caso se muestra el estado de prioridad más alta.  

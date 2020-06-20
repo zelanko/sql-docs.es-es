@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7bcc2ddcb8c8fbf33c51fb82d1b1c2fd8308bd28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064838"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarea 1: Definición de una directiva de coincidencia
   En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **ID. de proveedor**, lo que significa que los identificadores de proveedor deben coincidir antes de usar los demás dominios de la regla. La regla usa otros dos dominios: el **nombre del proveedor con el** valor de **similitud** establecido en **70%** y el **correo electrónico de contacto** con el valor de **similitud** establecido en **30%**.  
@@ -26,7 +25,7 @@ ms.locfileid: "65481314"
   
 2.  En la página **asignación** , seleccione **archivo de Excel** como **origen de datos**.  
   
-3.  Haga clic en **examinar**, asegúrese de que filtro está establecido en **libro de Excel**y seleccione archivo **. xls de lista de proveedores limpiados** que exportó después de realizar la actividad de limpieza.  
+3.  Haga clic en **examinar**, asegúrese de que filtro está establecido en **libro de Excel**y, a continuación, seleccione **proveedor limpiado List.xls** archivo que exportó después de realizar la actividad de limpieza.  
   
     > [!NOTE]  
     >  Al final de esta actividad, no puede exportar los resultados porque esta actividad se centra principalmente en la definición de una directiva de coincidencia. En la próxima lección creará un proyecto de calidad de datos para la actividad de coincidencia y lo ejecutará para quitar duplicados de la lista de proveedores usando esta directiva de coincidencia.  

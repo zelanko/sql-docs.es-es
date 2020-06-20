@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f88a5f4ef2b49b8216ed59ea984d7afb16fbcabe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a4a3bd0b100dd935b5cea0d9ee4565633a9cb80e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703549"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003200"
 ---
 # <a name="mapping-xsd-data-types-to-xpath-data-types-sqlxml-40"></a>Asignar tipos de datos de XSD a tipos de datos de XPath (SQLXML 4.0)
   Cuando se ejecuta una consulta XPath con un esquema XSD y se especifica el tipo XSD en el atributo `xsd:type`, XPath usa el tipo de datos especificado al procesar la consulta.  

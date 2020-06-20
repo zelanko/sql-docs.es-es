@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: aeeb38eb-229a-4c8b-ad66-57e9ce45fb6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c53c039d6194edbc37438ef30ac4fef0113ae87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2b75519631269a1213077a4e295ac73fca1b950
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040118"
 ---
 # <a name="start-a-trace"></a>Iniciar un seguimiento
   Una vez definida un nuevo seguimiento o creada una plantilla mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede iniciar, pausar o detener la captura de datos con la nueva definición de seguimiento o plantilla.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 594eec78-677c-4500-ae9b-e400abf6f39c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8dd06c632a20278f88403a0ec21d9a8b672c8b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8d3154a3385d152e97295bd2eee0864f28d39f51
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62961132"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053285"
 ---
 # <a name="audit-database-principal-management-event-class"></a>Audit Database Principal Management, clase de eventos
   La clase de eventos **Audit Database Principal Management** tiene lugar cuando se crean, modifican o quitan principales, por ejemplo los usuarios, en una base de datos.  

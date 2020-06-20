@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a96a7a7fcf6e4642ee9bd2d577e35dcbfb705fe4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066808"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
   El objetivo de supervisar bases de datos es evaluar el rendimiento de un servidor. Una supervisión eficaz implica tomar instantáneas periódicas del rendimiento actual para aislar procesos que causan problemas y recopilar datos de forma continua a lo largo del tiempo para realizar el seguimiento de las tendencias de rendimiento.  
@@ -41,7 +40,7 @@ ms.locfileid: "63150715"
  La evaluación continua del rendimiento de la base de datos ayuda a minimizar los tiempos de respuesta y a maximizar el rendimiento, obteniendo como resultado un rendimiento óptimo. El tráfico de red, la E/S de disco y el uso de la CPU eficientes son factores clave para obtener un buen rendimiento. Es necesario analizar a fondo los requisitos de las aplicaciones, comprender la estructura lógica y física de los datos, evaluar el uso de la base de datos y negociar contrapartidas, como el procesamiento de transacciones en línea (OLTP) frente a los sistemas de ayuda para la toma de decisiones.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Ventajas de las bases de datos de supervisión y optimización del rendimiento  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo Microsoft Windows proporcionan herramientas que le permiten ver las condiciones actuales de la base de datos y realizar un seguimiento del rendimiento a medida que estas cambian. Existen diversas herramientas y técnicas que se pueden utilizar para supervisar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Conocer el modo de supervisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ayudarle a:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el sistema operativo Microsoft Windows proporcionan herramientas que le permiten ver las condiciones actuales de la base de datos y realizar un seguimiento del rendimiento a medida que estas cambian. Existen diversas herramientas y técnicas que se pueden utilizar para supervisar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Conocer el modo de supervisar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ayudarle a:  
   
 -   Determinar si el rendimiento se puede mejorar. Por ejemplo, al supervisar los tiempos de respuesta a las consultas usadas con frecuencia, puede determinar si es necesario cambiar la consulta o los índices de las tablas.  
   

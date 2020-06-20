@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7fbb9e9-85c1-475b-8e49-7c82fb3740aa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 54a1bed6d43deb132dc4acc125e2948852bf7574
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 352085843e77587bfa2afb620a4238628c248e1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63242731"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060063"
 ---
 # <a name="expirationdate-property-securitycertificate-class"></a>Propiedad ExpirationDate (clase SecurityCertificate)
   Obtiene la fecha en la que certificado de seguridad deja de estar en vigor.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que especifica la fecha de expiración del certificado de seguridad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

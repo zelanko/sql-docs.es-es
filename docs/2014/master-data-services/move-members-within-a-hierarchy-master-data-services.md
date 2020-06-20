@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58b39d2dc660fd51d1ba21308ff056874a239731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ac35aa87c25e11b81a536297b893481c667363d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054092"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971155"
 ---
 # <a name="move-members-within-a-hierarchy-master-data-services"></a>Mover miembros dentro de una jerarquía (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], mueva los miembros de una jerarquía para cambiar su ubicación o su asignación principal.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c7f36929d8e4d5d16b5cb8467d2f8e950a0c396
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62711829"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053350"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Audit Database Mirroring Login** para informar de los mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de bases de datos.  

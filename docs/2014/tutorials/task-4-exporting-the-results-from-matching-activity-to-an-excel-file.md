@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 644454c4-3c5a-469a-90ec-e51dc7fb99fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4ed1d29af328a162eafadb1ce7a160c262bdcba3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fd85a523804232deff14f2e1da5485229f943dd2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999664"
 ---
 # <a name="task-4-exporting-the-results-from-matching-activity-to-an-excel-file"></a>Tarea 4: Exportación de los resultados de la actividad de coincidencia a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de coincidencia a un archivo de Excel.
@@ -26,7 +25,7 @@ ms.locfileid: "78177253"
 
 3.  Haga clic en **examinar** y navegue hasta la carpeta en la que desea almacenar el archivo de salida.
 
-4.  Escriba **cleaned and matched Suppliers. xls** como nombre y haga clic en **abrir**.
+4.  Escriba **limpiar y coincidir Suppliers.xls** para el nombre y haga clic en **abrir**.
 
 5.  Confirme que se ha seleccionado **registro dinámico** para la **regla de permanencia**. Al seleccionar esta opción, se elige el registro dinámico de cada clúster para la salida de un clúster. Las demás opciones de la regla de supervivencia son las siguientes:
 
@@ -44,7 +43,7 @@ ms.locfileid: "78177253"
 
 8.  Haga clic en **Finalizar** para finalizar la actividad de búsqueda de coincidencias.
 
-9. Abra el archivo **cleaned and matched Suppliers. xlsx** y confirme que no ve ningún duplicado (SupplierID).
+9. Abra el archivo **limpio y el Suppliers.xlsxde coincidencia** y confirme que no ve ningún duplicado (IdProveedor).
 
  Ahora, tiene datos de proveedor que se han limpiado y en el que se han buscado coincidencias para quitar valores duplicados.
 

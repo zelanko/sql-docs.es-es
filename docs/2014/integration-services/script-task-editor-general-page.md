@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d153dce-6661-4c99-b1db-2bd3b5038b4f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f48fddf99a39db36a872d892c768b3df287a521
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056179"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964112"
 ---
 # <a name="script-task-editor-general-page"></a>Editor de la tarea Script (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Script** para asignar un nombre a la tarea Script y describirla.  

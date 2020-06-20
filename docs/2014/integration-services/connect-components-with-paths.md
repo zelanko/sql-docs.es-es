@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 05633e4c-1370-4b05-802b-f36b07dd71c8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6cc08adc2682b65b1e2de9a2c3fd1d483a33c92
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d6cc5a5fb14fff5fd92d5120f56c06d57ddcbaf
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921396"
 ---
 # <a name="connect-components-with-paths"></a>Conectar componentes con rutas de acceso
   El flujo de datos de un paquete se genera en la superficie de diseño de la pestaña **Flujo de datos** en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] . Si un flujo de datos contiene dos componentes de flujo de datos, puede conectar ambos conectando la salida de un origen o transformación con la entrada de una transformación o destino. El conector entre dos componentes de flujo de datos se denomina ruta.
 
  El siguiente diagrama muestra un flujo de datos simple con un componente de origen, dos transformaciones, un componente de destino y las rutas que los conectan.
 
- ![Flujo de datos](media/mw-dts-08.gif "flujo de datos")
+ ![Flujo de datos](media/mw-dts-08.gif "Flujo de datos")
 
  Una vez conectados dos componentes, puede ver los metadatos de los datos que se mueven por la ruta y las propiedades de la ruta en el **Editor de rutas de flujo de datos**. Para más información, consulte [Integration Services Paths](data-flow/integration-services-paths.md).
 

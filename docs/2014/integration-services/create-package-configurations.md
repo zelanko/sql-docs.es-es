@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 287ac1a5631cf2e3925e5895db7f04bb7b89bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917353"
 ---
 # <a name="create-package-configurations"></a>Crear configuraciones de paquetes
   Puede crear configuraciones de paquetes con el cuadro de diálogo **Organizador de configuraciones de paquetes** y el Asistente para la configuración de paquetes. Para tener acceso a estas herramientas, haga clic en **Configuraciones de paquetes** en el menú **SSI** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -75,7 +74,7 @@ ms.locfileid: "66060166"
   
 |Columna|Descripción|  
 |------------|-----------------|  
-|**Nombre de la configuración**|Nombre de la configuración.|  
+|**Nombre de configuración**|Nombre de la configuración.|  
 |**Tipo de configuración**|Tipo de configuración.|  
 |**Cadena de configuración**|Ubicación de la configuración. La ubicación puede ser una ruta de acceso, una variable de entorno, una clave del Registro, un nombre de variable de paquete primario o una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |**Objeto de destino**|Nombre del objeto que tiene una propiedad con una configuración. Si la configuración es un archivo de configuración XML, la columna aparece en blanco, ya que la configuración puede actualizar varios objetos.|  

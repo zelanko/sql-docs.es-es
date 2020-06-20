@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51d115aaeebcedd102709b0e1f3fab81e439a521
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 978f50d5b12088271d5cf89ba4513b95f175fdc2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060836"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921826"
 ---
 # <a name="configure-adonet-connection-manager"></a>Configurar el administrador de conexiones ADO.NET
   Utilice el cuadro de diálogo **Configurar el administrador de conexiones ADO.NET** para agregar una conexión a un origen de datos al que se puede tener acceso mediante un proveedor de datos de .NET Framework, como el proveedor SqlClient. El administrador de conexiones puede utilizar una conexión existente o puede crear una nueva.  

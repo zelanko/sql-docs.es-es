@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97a0690775b7b6d95a257bc5f5ed0a6483e1c24a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 850c8f0f54339594b19debd48ebf4ac7021873d3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833867"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921252"
 ---
 # <a name="adonet-connection-manager"></a>Administrador de conexiones ADO.NET
-  Un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite a un paquete tener acceso a orígenes de datos mediante un proveedor .NET. Este administrador de conexiones se usa normalmente para tener acceso a orígenes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de datos como, y también a orígenes de datos expuestos a través de OLE DB y XML en tareas personalizadas escritas en código administrado mediante un lenguaje como C#.  
+  Un administrador de conexiones [!INCLUDE[vstecado](../../includes/vstecado-md.md)] permite a un paquete tener acceso a orígenes de datos mediante un proveedor .NET. Este administrador de conexiones se usa normalmente para tener acceso a orígenes de datos como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y también a orígenes de datos expuestos a través de OLE DB y XML en tareas personalizadas escritas en código administrado mediante un lenguaje como C#.  
   
- Cuando se agrega un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] administrador de conexiones a un paquete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones que se resuelve [!INCLUDE[vstecado](../../includes/vstecado-md.md)] como una conexión en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el `Connections` administrador de conexiones a la colección del paquete.  
+ Cuando se agrega un [!INCLUDE[vstecado](../../includes/vstecado-md.md)] Administrador de conexiones a un paquete, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve como una [!INCLUDE[vstecado](../../includes/vstecado-md.md)] conexión en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ADO.NET`. El valor de `ConnectionManagerType` se califica para incluir el nombre del proveedor .NET que usa el administrador de conexiones.  
   

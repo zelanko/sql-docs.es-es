@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98eb49e7-b190-4a21-8316-08c07cde14ed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 78433a93f4b9ce60393f6cdf9c8c128ec5011387
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 012138750e68d2b57d9fa1cdbd1231292245e66a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970975"
 ---
 # <a name="validation-master-data-services"></a>Validación (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], los datos se validan para asegurarse de su precisión. Cierta validación se realiza automáticamente, mientras que otra se basa en las reglas de negocios creadas por los administradores.  

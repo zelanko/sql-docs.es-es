@@ -1,5 +1,6 @@
 ---
 title: Características
+description: Además de exponer las características de los componentes de Windows Data Access, SQL Server Native Client implementa otras características para exponer SQL Server funcionalidad.
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ ms.assetid: 7bb32865-5afb-41ab-98b4-3fa545ee8953
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e10bc2259c8e283a97db89a85940377e50aef3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c5e598cedaf4a1cd846caf143094840e9ed8427
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949342"
 ---
 # <a name="sql-server-native-client-features"></a>Características de SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +72,7 @@ ms.locfileid: "81388446"
  Explica la compatibilidad con los tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
  [Compatibilidad con FILESTREAM](../../../relational-databases/native-client/features/filestream-support.md)  
- Describe la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad de Native Client con la característica mejorada FileStream.  
+ Describe [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la compatibilidad de Native Client con la característica mejorada FileStream.  
   
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
  Explica cómo se ha ampliado la compatibilidad con los nombres principales de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos.  
@@ -86,7 +87,7 @@ ms.locfileid: "81388446"
  Describe las mejoras en la detección de metadatos realizadas en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Compatibilidad con UTF-16 en SQL Server Native Client 11.0](../../../relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md)  
- Describe un cambio de comportamiento presentado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si proporciona un búfer de longitud fija al enlazar un parámetro de salida o resultado de columna y si el carácter **WCHAR** escrito en el búfer antes del carácter de terminación es un punto de código suplente alto de un par suplente, y si el siguiente carácter **WCHAR** es un punto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de código suplente bajo, Native Client no agregará el punto de código suplente alto al búfer.  
+ Describe un cambio de comportamiento presentado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si proporciona un búfer de longitud fija al enlazar un parámetro de salida o resultado de columna y si el carácter **WCHAR** escrito en el búfer antes del carácter de terminación es un punto de código suplente alto de un par suplente, y si el siguiente carácter **WCHAR** es un punto de código suplente bajo, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no agregará el punto de código suplente alto al búfer.  
   
  [Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Describe cómo se puede configurar una aplicación para aprovechar las características de alta disponibilidad con recuperación ante desastres que se han agregado en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  

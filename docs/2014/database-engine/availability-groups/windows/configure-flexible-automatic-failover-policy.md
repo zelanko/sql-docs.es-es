@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 452d3ac4dae2164fa0fa172528ae398ea91fed31
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c938624a3ed39fe2d41f21a21af5231aa76a8c17
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936986"
 ---
 # <a name="configure-the-flexible-failover-policy-to-control-conditions-for-automatic-failover-always-on-availability-groups"></a>Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)
   En este tema se describe cómo configurar la directiva de conmutación por error flexible para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Una directiva de conmutación por error flexible proporciona mayor control sobre las condiciones que produce una conmutación automática por error para un grupo de disponibilidad. Al cambiar las condiciones de error que activan una conmutación automática por error y la frecuencia de comprobaciones de estado, se puede aumentar o reducir la probabilidad de una conmutación automática por error que sea compatible con su SLA por tener alta disponibilidad.  
@@ -93,7 +92,7 @@ ms.locfileid: "72797754"
   
 2.  Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityGroup`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityGroup`.  
   
-    -   Para establecer el nivel de la condición de conmutación `FailureConditionLevel`por error, use el parámetro *LEVEL* , donde *LEVEL* es uno de los siguientes valores:  
+    -   Para establecer el nivel de la condición de conmutación por error, use el `FailureConditionLevel` parámetro *LEVEL* , donde *LEVEL* es uno de los siguientes valores:  
   
         |Value|Nivel|La conmutación por error iniciada es automática cuando se produce...|  
         |-----------|-----------|-------------------------------------------|  
@@ -113,7 +112,7 @@ ms.locfileid: "72797754"
          -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Para establecer el umbral de tiempo de espera de comprobación `HealthCheckTimeout`de estado, use el parámetro *n* , donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
+    -   Para establecer el umbral de tiempo de espera de comprobación de estado, use el `HealthCheckTimeout` parámetro *n* , donde *n* es un entero de 15000 milisegundos (15 segundos) a 4294967295 milisegundos. El valor predeterminado es 30000 milisegundos (30 segundos).  
   
          Por ejemplo, el siguiente comando cambia el umbral de tiempo de espera de comprobación de estado de un grupo de disponibilidad disponible, `AG1`, a 120.000 milisegundos (dos minutos).  
   

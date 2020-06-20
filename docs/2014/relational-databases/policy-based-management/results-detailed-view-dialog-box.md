@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6cc5cf457b453cf2da6010af455b4f1d778f8be0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066717"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Cuadro de diálogo Vista detallada de resultados
   Este cuadro de diálogo muestra los resultados de la evaluación de una directiva cuando se ejecuta una mediante el cuadro de diálogo **Evaluar directivas** y se hace hacer clic en **Ver**. Este cuadro de diálogo es de solo lectura y le ayuda a entender qué parte de una expresión de propiedad podría no ser correcta.  

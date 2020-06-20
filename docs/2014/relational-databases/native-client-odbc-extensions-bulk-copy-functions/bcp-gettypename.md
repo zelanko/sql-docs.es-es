@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 52ab4d4b3cbb0e4418886517c9ffd9c70315851a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0341d9ba11cd66fdbfb72a05521028098c56c400
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701942"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019444"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
   Devuelve el nombre del tipo SQL para un token del tipo BCP especificado.  
@@ -52,7 +51,7 @@ fIsMaxType
 ## <a name="returns"></a>Devoluciones  
  Una cadena que contiene el nombre del tipo SQL que corresponde al tipo BCP. Si se especifica un tipo BCP no válido, se devuelve una cadena vacía.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los tokens de tipo BCP se definen en el archivo de encabezado sqlncli.h y en la biblioteca sqlncli11.lib.  
   
  La tabla siguiente especifica los posibles tipos BCP, tanto si son o no tipos max, y la salida esperada.  

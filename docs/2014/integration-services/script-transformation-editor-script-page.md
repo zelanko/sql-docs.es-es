@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1628acc984433b1def07c63387b1630c902885aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056056"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964055"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor de transformación Script (página Script)
   Use la pestaña **Script** del cuadro de diálogo **Editor de transformación Script** para especificar un script y las propiedades relacionadas.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056056"
 |**UserComponentTypeName**|Especifica la clase <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> y el ensamblado `Microsoft.SqlServer.TxScript` compatibles con la infraestructura de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **Editar script**  
- Use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] tools for Applications (VSTA) para crear o modificar un script.  
+ Use [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) para crear o modificar un script.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 929c5e15-d087-438d-b1f2-aa97c5f8bff8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab395a55e0734fcdf33bdf736dc2920584a8dab1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62788496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936486"
 ---
 # <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Página seleccionar bases de datos (Asistente para nuevo grupo de disponibilidad-Asistente para agregar bases de datos)
    En este tema de Ayuda se describen las opciones de la página **Especificar bases de datos**. Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

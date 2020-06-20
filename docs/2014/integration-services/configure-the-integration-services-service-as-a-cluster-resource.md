@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921706"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar el servicio Integration Services como recurso de clúster
   Para los clientes que decidan que las ventajas de configurar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como un recurso de clúster son más que los inconvenientes, esta sección contiene las instrucciones de configuración necesarias. Sin embargo, [!INCLUDE[msCoName](../includes/msconame-md.md)] no recomienda que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configure como un recurso de clúster.  
@@ -86,7 +85,7 @@ ms.locfileid: "66060569"
   
      Para más información, consulte [Add Dependencies to a SQL Server Resource](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  En la página **Generic Service Parameters** (Parámetros de servicio genéricos), especifique **MsDtsServer** como nombre del servicio. Haga clic en **Siguiente**.  
+8.  En la página **Generic Service Parameters** (Parámetros de servicio genéricos), especifique **MsDtsServer** como nombre del servicio. Haga clic en **Next**.  
   
 9. En la página **Replicación de Registro** , haga clic en **Agregar** para agregar la clave del Registro que identifica la ubicación del archivo de configuración para el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Este archivo debe estar ubicado en un disco compartido que esté en el mismo grupo de recursos que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   

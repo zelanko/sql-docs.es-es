@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e1225327-c308-4c50-8f44-c411f52ef378
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 31a24acb49abf4965e18443ef4c46ffd9a16f15c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c311f79f8495288f918ac57cda009d2a64f12b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176522"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921076"
 ---
 # <a name="azure-subscription-connection-manager"></a>Azure Subscription Connection Manager (Administrador de conexiones de suscripciones de Azure)
   El administrador de conexiones de HDInsight de Azure permite que un paquete de SSIS se conecte con una suscripción de Azure a través de los valores que especifica para las propiedades: id. de suscripción de Azure y certificado de administración.

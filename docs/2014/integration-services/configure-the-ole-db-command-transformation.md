@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f6f14d93e840b9a206e0b5261eb9efade0f0e28
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921512"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Configurar la transformación Comando de OLE DB
   Para agregar y configurar una transformación Comando de OLE DB, el paquete ya debe incluir por lo menos una tarea Flujo de datos y un origen tal como origen de archivo plano y un origen de OLE DB. Esta transformación normalmente se usa para ejecutar consultas con parámetros.  
@@ -67,7 +66,7 @@ ms.locfileid: "66060556"
   
     -   Haga clic en **Asignaciones de columnas** y asigne las columnas de la lista **Columnas de entrada disponibles** a parámetros de la lista **Columnas de destino disponibles** .  
   
-14. Haga clic en **Aceptar**.  
+14. Haga clic en **OK**.  
   
 15. Para guardar el paquete actualizado, haga clic en **Guardar** en el menú **Archivo** .  
   
@@ -75,6 +74,6 @@ ms.locfileid: "66060556"
  [OLE DB la transformación de comandos](data-flow/transformations/ole-db-command-transformation.md)   
  [Integration Services transformaciones](data-flow/transformations/integration-services-transformations.md)   
  [Integration Services trazados](data-flow/integration-services-paths.md)   
- [tarea Flujo de datos](control-flow/data-flow-task.md)  
+ [Tarea Flujo de datos](control-flow/data-flow-task.md)  
   
   

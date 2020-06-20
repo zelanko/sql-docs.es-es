@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f9eb6860a40f6c47e65beb3fe109255d333d628
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7390434b1565c64b63e62c89d1e61b13f18cd6a6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058188"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965715"
 ---
 # <a name="implementation-of-child-packages"></a>Implementación de paquetes secundarios
   Cuando implementa el equilibrio de carga mediante [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], los paquetes secundarios se instalan en otros servidores para aprovechar el tiempo de servidor o CPU disponible. Para crear y ejecutar los paquetes secundarios, es necesario realizar los pasos siguientes:  
@@ -51,7 +50,7 @@ ms.locfileid: "66058188"
 ## <a name="debugging-the-sql-server-agent-jobs-and-child-packages"></a>Depurar los trabajos del Agente SQL Server y los paquetes secundarios  
  Puede probar los trabajos del Agente SQL Server y sus paquetes secundarios a través de uno de los métodos siguientes:  
   
--   Ejecutar cada paquete secundario en el diseñador SSIS haciendo clic en **depurar** / **iniciar sin depurar**.  
+-   Ejecutar cada paquete secundario en el diseñador SSIS haciendo clic en **depurar**  /  **iniciar sin depurar**.  
   
 -   Ejecutar el trabajo individual del Agente SQL Server en el equipo remoto a través de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], para asegurarse de que el paquete se ejecuta.  
   

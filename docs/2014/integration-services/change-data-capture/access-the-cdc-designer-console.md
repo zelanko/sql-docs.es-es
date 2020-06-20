@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c552ef16cc2f9502a365ba09c7f8868eccd53396
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 58f712111dfa93bbac03bb984c30b87521b5be14
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62836087"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923936"
 ---
 # <a name="access-the-cdc-designer-console"></a>Obtener acceso a la Consola del diseñador CDC
   Puede obtener acceso a la Consola del diseñador CDC desde el equipo en el que instaló la consola. Para obtener más información acerca de la instalación, vea Instalación.  

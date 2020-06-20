@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 96773f6ed74282cfd1610fc0b297b7e78e892c42
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9bcf209096b1929938affcec6a12ce608e54f799
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019731"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
   Especifica el formato de origen o destino de los datos de un archivo de usuario. Cuando se utiliza como formato de origen, **bcp_colfmt** especifica el formato de un archivo de datos existente utilizado como origen de datos de una copia masiva en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se utiliza como formato de destino, se crea el archivo de datos utilizando los formatos de columna especificados con **bcp_colfmt**.  
@@ -126,7 +125,7 @@ idxServerCol
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **bcp_colfmt** permite especificar el formato de archivo de usuario para las copias masivas. Para la copia masiva, un formato contiene los componentes siguientes:  
   
 -   Una asignación de las columnas de archivo de usuario a las columnas de base de datos.  

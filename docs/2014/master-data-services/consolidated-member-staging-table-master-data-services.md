@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b0ade33df500a35f8319a2eb0bc412e16b2d1cf8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b2af1f783a6daa0b232e5e6970c72e4f5813435
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971935"
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Tabla de ensayo de miembros consolidados (Master Data Services)
   Use la tabla de almacenamiento provisional de miembros consolidados (stg.name_Consolidated) de la base de datos de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] para crear, actualizar, desactivar y eliminar miembros consolidados. También puede usarla para actualizar valores de atributos de miembros consolidados.  
@@ -36,9 +35,9 @@ ms.locfileid: "65480041"
 |**HierarchyName**<br /><br /> Requerido|Nombre de jerarquía explícita. Cada miembro consolidado solo puede pertenecer a una jerarquía.|  
 |**ErrorCode**|Muestra un código de error. Para todos los registros con un **ImportStatus_ID** de **2**, consulte [Errores del proceso de almacenamiento provisional &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
 |**Código**<br /><br /> Obligatorio, excepto cuando los códigos se generan de forma automática para **ImportType1** o **2**; consulte [Creación automática de código &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md) para obtener más información|Código único del miembro.|  
-|**Nombre**<br /><br /> Optional|Nombre del miembro.|  
+|**Nombre**<br /><br /> Opcional|Nombre del miembro.|  
 |**NewCode**|Úselo solo si va a cambiar el código de miembro.|  
-|\<nombre_atributo>|Existe una columna para cada atributo de la entidad. Úsela con un **ImportType** de **0** o **2**. Para los atributos de forma libre, especifique el nuevo texto o valor de cadena para el atributo. Para los atributos basados en dominio, especifique el código del miembro que será el atributo. Para los atributos de enlace, la dirección URL debe comenzar con **http://**.<br /><br /> Nota: No puede almacenar de forma provisional los atributos de archivo.|  
+|\<Attribute name>|Existe una columna para cada atributo de la entidad. Úsela con un **ImportType** de **0** o **2**. Para los atributos de forma libre, especifique el nuevo texto o valor de cadena para el atributo. Para los atributos basados en dominio, especifique el código del miembro que será el atributo. Para los atributos de enlace, la dirección URL debe comenzar con **http://**.<br /><br /> Nota: No puede almacenar de forma provisional los atributos de archivo.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Cargar o actualizar miembros en Master Data Services mediante el proceso de almacenamiento provisional](add-update-and-delete-data-master-data-services.md)   

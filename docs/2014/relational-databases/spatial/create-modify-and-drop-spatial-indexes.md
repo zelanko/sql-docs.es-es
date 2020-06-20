@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88de17e8c487d9a965f2e236edac064dc2fe4c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996522"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
   Un índice espacial puede realizar determinadas operaciones de manera más eficaz en una columna `geometry` de `geography` tipo de datos o (una *columna espacial*). Se puede especificar más de un índice espacial en una columna espacial. Por ejemplo, esto es útil para indizar diferentes parámetros de teselación en una columna única.  
@@ -54,7 +53,7 @@ ms.locfileid: "66014266"
   
 7.  Para especificar la columna espacial que desee indizar, haga clic en **Agregar**.  
   
-8.  En el cuadro de diálogo **seleccionar columnas de nombre de** * \<tabla>* , seleccione una columna `geometry` de `geography` tipo o Active la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
+8.  En el cuadro de diálogo **seleccionar columnas de** *\<table name>* , seleccione una columna de tipo `geometry` o Active `geography` la casilla correspondiente. Las demás columnas espaciales se convierten en no editables. Si desea seleccionar una columna espacial diferente, primero debe borrar la columna actualmente seleccionada. Cuando termine, haga clic en **Aceptar**.  
   
 9. Compruebe su selección de columna en la cuadrícula **Columnas de clave de índice** .  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66014266"
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una `geometry` columna de tipo, debe especificar las **coordenadas*`X-min`*(*`Y-min`*,)** y ***`X-max`*(*`Y-max`*,)** del cuadro de límite. En el caso de un `geography` índice en una columna de tipo, los campos de cuadro de límite pasan a ser de solo lectura después de especificar el esquema de teselación de **cuadrícula de geografía** , ya que la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una `geometry` columna de tipo, debe especificar las coordenadas **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** del cuadro de límite. En el caso de un índice en una `geography` columna de tipo, los campos de cuadro de límite pasan a ser de solo lectura después de especificar el esquema de teselación de **cuadrícula de geografía** , ya que la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

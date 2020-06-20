@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b563160c9cd41a449b4669bb6b17ca43d427ff6e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62889817"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964725"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye proveedores de registro que se pueden usar para implementar registros en paquetes, contenedores y tareas. Con los registros, se puede capturar información de tiempo de ejecución sobre un paquete, lo que le ayuda a auditar y solucionar los problemas de un paquete cada vez que se ejecuta. Por ejemplo, un registro puede capturar el nombre del operador que ejecutó el paquete y la hora en que el paquete empezó y terminó.  
@@ -52,7 +51,7 @@ ms.locfileid: "62889817"
     > [!NOTE]  
     >  No se puede usar el proveedor de registro de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] en un paquete que se ejecute en modo de 64 bits.  
   
--   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro `sysssislog` en la tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una base de datos.  
+-   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de registro, que escribe entradas de registro en la `sysssislog` tabla de una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos.  
   
 -   El proveedor de registro de eventos de Windows, que escribe entradas en el registro de aplicación del registro de eventos de Windows en el equipo local.  
   

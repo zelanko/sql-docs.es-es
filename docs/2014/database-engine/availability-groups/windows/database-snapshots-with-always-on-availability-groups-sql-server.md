@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7432da1c-ce2f-4cd9-af41-54c97744166b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cba02aa87e800391ffba3c791c1ee4341462c3f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e1e4307653b5b8150d71019a373ee073d15123f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936824"
 ---
 # <a name="database-snapshots-with-alwayson-availability-groups-sql-server"></a>Instantáneas de bases de datos con grupos de disponibilidad AlwaysOn (SQL Server)
   Puede crear una instantánea de base de datos en una base de datos primaria o secundaria en un grupo de disponibilidad. El rol de réplica debe ser PRIMARY o SECONDARY y no debe encontrarse en el estado RESOLVING.  

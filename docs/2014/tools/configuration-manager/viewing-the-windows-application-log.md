@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 654d4adbd2e4baa97b16e83261089d8d78289af6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22f900a0b203e652bbc9cc6e9638711d138756c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007921"
 ---
 # <a name="viewing-the-windows-application-log"></a>Ver el registro de la aplicación Windows
   Cuando se configura [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para utilizar el registro de la aplicación de Microsoft Windows, cada sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escribe eventos nuevos en dicho registro. A diferencia del registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , no se crea un nuevo registro de aplicación cada vez que se inicia una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

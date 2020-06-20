@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2aee8939ed2bba9ffc6f96344a5c4ac1a95fbaab
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: ab13081396aff46d193c1b0449d6b93042ee60d6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936967"
 ---
 # <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>Configurar el acceso de solo lectura en una réplica de disponibilidad (SQL Server)
   De forma predeterminada, tanto el acceso de lectura y escritura como de intento de lectura se permiten en la réplica principal. No se permiten conexiones en las réplicas secundarias de un grupo de disponibilidad AlwaysOn. En este tema se describe cómo se configura el acceso de conexión de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell.  
@@ -76,7 +75,7 @@ ms.locfileid: "82922041"
          Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  
   
          **Permitir conexiones de lectura o escritura**  
-         Cuando la propiedad Application Intent se establece en **ReadWrite** o no se establece la propiedad de conexión Application Intent, se permite la conexión. No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Esto puede ayudar a evitar que los clientes conecten por equivocación una carga de trabajo de intención de lectura a la réplica principal. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+         Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** . Esto puede ayudar a evitar que los clientes conecten por equivocación una carga de trabajo de intención de lectura a la réplica principal. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -111,7 +110,7 @@ ms.locfileid: "82922041"
      donde,  
   
      READ_WRITE  
-     No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** .  Cuando la propiedad Application Intent se establece en **ReadWrite** o no se establece la propiedad de conexión Application Intent, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+     No se permiten las conexiones en las que la propiedad de conexión Application Intent esté establecida en **ReadOnly** .  Cuando la propiedad Application Intent está establecida en **ReadWrite** o no tiene ningún valor, se permite la conexión. Para obtener más información sobre propiedad de conexión Application Intent, vea [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
      ALL  
      Se permiten todas las conexiones con las bases de datos de la réplica principal. Esta es la configuración predeterminada.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 83a03b85-ea7f-4b4a-b19b-f7eca534ffae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 72d0d319c8ac512be55ef93a9d0e55802da2de22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c109eebb4bf06bf7605ca3b7b5930ce18951e41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970995"
 ---
 # <a name="test-a-user39s-permissions-master-data-services"></a>Probar los permisos de un usuario (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede crear un usuario y un registro de pruebas en la aplicación web para probar los permisos. Cuando un usuario intenta tener acceso a la dirección URL de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , se autentican las credenciales del usuario. En Internet Explorer, la configuración de seguridad controla si esto ocurre automáticamente o si el usuario debe escribir un nombre de usuario y una contraseña. Para cambiar estos valores, complete los siguientes pasos:  

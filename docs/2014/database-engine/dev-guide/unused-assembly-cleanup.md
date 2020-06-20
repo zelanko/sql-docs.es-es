@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: e03c2b6f-8f39-4382-9cf3-7f766a1bd929
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c7966d9d4a517902cf857856fd9bdeac7684de2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3edb481894bdf9c4b9ff6228abb27c51b1affc75
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637697"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933233"
 ---
 # <a name="unused-assembly-cleanup"></a>Limpieza del ensamblado sin usar
   El ejemplo `AssemblyCleanup` contiene un procedimiento almacenado de .NET que limpia los ensamblados no usados en la base de datos actual mediante consultas en los catálogos de metadatos. Su único parámetro, `visible_assemblies`, se utiliza para especificar si se deben quitar los ensamblados visibles no usados o no. Un valor de 'false' significa de forma predeterminada que solo se quitarán los ensamblados no visibles no usados; en los demás casos se quitarán todos los ensamblados no usados. El conjunto de ensamblados no usados está formado por aquellos que no tienen ningún punto de entrada definido (rutinas, tipos y agregados) y que no tienen ningún ensamblado utilizado que haga referencia a ellos directa o indirectamente.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637697"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

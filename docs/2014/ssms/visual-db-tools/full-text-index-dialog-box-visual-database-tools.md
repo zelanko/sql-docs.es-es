@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ef45b585-2567-4abe-b421-9fd0994e0146
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f98d3bf43707caedd8c9d0a01349f36d5a5bfbcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028422"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001470"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Índice de texto completo (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo permite crear un índice de texto completo para realizar búsquedas de texto completo en columnas basadas en texto de las tablas de base de datos. Un índice de texto completo se basa en un índice normal, por lo que deberá crear primero este último. El índice normal debe crearse en una sola columna sin valores NULL, y es conveniente elegir una columna con valores más pequeños que una con valores más grandes.  

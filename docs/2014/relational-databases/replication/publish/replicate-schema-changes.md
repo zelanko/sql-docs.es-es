@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c09007f0-9374-4f60-956b-8a87670cd043
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84918dd3f50d129485911fc880e67c0152fa905c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bec2f363cd8c4f7dea45935568a88722b19323fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060423"
 ---
 # <a name="replicate-schema-changes"></a>Replicar cambios de esquema
   En este tema se describe cómo replicar cambios de esquema en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -54,11 +53,11 @@ ms.locfileid: "73882245"
 -   La instrucción ALTER TABLE … DROP COLUMN siempre se replica en todos los suscriptores cuya suscripción contenga las columnas que se van a quitar, aunque deshabilite la replicación de cambios de esquema.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Si no quiere replicar los cambios de esquema para una publicación, deshabilite la replicación de cambios de esquema en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Si no desea replicar los cambios de esquema para una publicación, deshabilite la replicación de cambios de esquema en el cuadro de diálogo **propiedades de la publicación: \<Publication> ** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-disable-replication-of-schema-changes"></a>Para deshabilitar la replicación de los cambios de esquema  
   
-1.  En la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , establezca el valor de la propiedad **Replicar cambios de esquema** en **False**.  
+1.  En la **Página opciones de suscripción** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** , establezca el valor de la propiedad **replicar cambios de esquema** en **false**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -69,27 +68,27 @@ ms.locfileid: "73882245"
   
 #### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>Para crear una instantánea o una publicación transaccional que no replique cambios de esquema  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addpublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)y especifique un valor de **0** para ** \@replicate_ddl**. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addpublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)y especifique un valor de **0** para ** \@ replicate_ddl**. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
   
 #### <a name="to-create-a-merge-publication-that-does-not-replicate-schema-changes"></a>Para crear una publicación de combinación que no replique cambios de esquema  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)y especifique un valor de **0** para ** \@replicate_ddl**. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)y especifique un valor de **0** para ** \@ replicate_ddl**. Para obtener más información, vea [Crear una suscripción](create-a-publication.md).  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>Para deshabilitar temporalmente la replicación de cambios de esquema para una instantánea o una publicación transaccional  
   
-1.  Para una publicación con replicación de cambios de esquema, ejecute [sp_changepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando un valor de ** \@** **replicate_ddl** para la propiedad y un valor de **0** para ** \@el valor**.  
+1.  Para una publicación con replicación de cambios de esquema, ejecute [sp_changepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando un valor de **replicate_ddl** para la ** \@ propiedad** y un valor de **0** para el ** \@ valor**.  
   
 2.  Ejecute el comando DDL en el objeto publicado.  
   
-3.  Opta Vuelva a habilitar la replicación de los cambios de esquema mediante la ejecución de [sp_changepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando ** \@** un valor de **replicate_ddl** para la propiedad y un valor de **1** para ** \@el valor**.  
+3.  Opta Vuelva a habilitar la replicación de los cambios de esquema mediante la ejecución de [sp_changepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando un valor de **replicate_ddl** para la ** \@ propiedad** y un valor de **1** para el ** \@ valor**.  
   
 #### <a name="to-temporarily-disable-replicating-schema-changes-for-a-merge-publication"></a>Para deshabilitar temporalmente la replicación de cambios de esquema para una publicación de combinación  
   
-1.  Para una publicación con replicación de cambios de esquema, ejecute [sp_changemergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando un valor de ** \@** **replicate_ddl** para la propiedad y un valor de **0** para ** \@el valor**.  
+1.  Para una publicación con replicación de cambios de esquema, ejecute [sp_changemergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando un valor de **replicate_ddl** para la ** \@ propiedad** y un valor de **0** para el ** \@ valor**.  
   
 2.  Ejecute el comando DDL en el objeto publicado.  
   
-3.  Opta Vuelva a habilitar la replicación de los cambios de esquema mediante la ejecución de [sp_changemergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando ** \@** un valor de **replicate_ddl** para la propiedad y un valor de **1** para ** \@el valor**.  
+3.  Opta Vuelva a habilitar la replicación de los cambios de esquema mediante la ejecución de [sp_changemergepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando un valor de **replicate_ddl** para la ** \@ propiedad** y un valor de **1** para el ** \@ valor**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar cambios de esquema en bases de datos de publicaciones](make-schema-changes-on-publication-databases.md)   

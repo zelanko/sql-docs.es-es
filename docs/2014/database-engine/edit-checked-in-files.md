@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 560cd19f-ab22-4273-b00c-149993a630e6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 97d6ab997a1ece36919a49243e0f1dc3cc6f3593
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2dbe1aad203dfdc83e438d5b7f4ed19c15038c1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779609"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933116"
 ---
 # <a name="edit-checked-in-files"></a>Modificar archivos protegidos
   Normalmente, es necesario desproteger los archivos controlados por código fuente antes de poder modificarlos. Sin embargo, puede configurar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para que pueda modificar los archivos que no ha desprotegido. Al hacerlo, los cambios se conservan en la memoria hasta que se guardan los archivos. En ese momento se le pedirá que desproteja el archivo del control de código fuente.  

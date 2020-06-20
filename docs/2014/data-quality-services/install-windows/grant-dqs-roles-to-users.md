@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: afb445b5-bdbe-4bfe-844f-344766cdc2b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be74494f3cf06732ff49bcfd7c268df723fd957b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937606"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Conceder roles de DQS a los usuarios
   En este tema se describe cómo crear los inicios de sesión de SQL según una entidad de seguridad de Windows y cómo conceder roles de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) en la base de datos DQS_MAIN.  
@@ -45,7 +44,7 @@ ms.locfileid: "65480566"
     > [!NOTE]  
     >  Si concede el rol **dqs_administrator** a un usuario, aplica los cambios y, tras ello, vuelve a revisar los permisos de usuario, las otras dos casillas de roles de DQS (**dq_kb_editor** y **dqs_kb_operator**) también se activan.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Intente iniciar sesión en el [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] con la cuenta de usuario de Windows para la que ha creado un inicio de sesión de SQL y a la que ha concedido un rol de DQS.  
   
 ## <a name="see-also"></a>Consulte también  

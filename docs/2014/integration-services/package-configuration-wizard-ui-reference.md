@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056936"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964922"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
   Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  
@@ -88,7 +87,7 @@ ms.locfileid: "66056936"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Entrada del registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<clave del Registro>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si quiere usar una clave del Registro que no esté en la raíz de HKEY_CURRENT_USER, use el formato \<clave del Registro\clave del Registro\\…> para identificarla.|  
+|**Entrada del registro**|Escriba la clave del Registro que contiene la información de configuración. El formato es \<registry key>.<br /><br /> La clave del Registro ya debe existir en HKEY_CURRENT_USER y tener un valor con el nombre Value. El valor puede ser un valor de tipo DWORD o una cadena.<br /><br /> Si desea usar una clave del registro que no está en la raíz de HKEY_CURRENT_USER, use el formato \<Registry key\registry key\\...> para identificar la clave.|  
   
  **La ubicación de configuración se almacena en una variable de entorno**  
  Se utiliza para especificar la variable de entorno donde debe almacenarse la configuración.  
@@ -133,7 +132,7 @@ ms.locfileid: "66056936"
  Use la página **Seleccionar propiedad de destino o Seleccionar propiedades para la exportación** para especificar las propiedades de objetos contenidas en la configuración. La posibilidad de seleccionar varias propiedades solo está disponible si se selecciona el tipo de configuración XML.  
   
 ### <a name="options"></a>Opciones  
- **de la empresa**  
+ **Objects**  
  Expanda la jerarquía de paquetes y seleccione las propiedades que desea exportar.  
   
  **Atributos de propiedad**  
@@ -146,10 +145,10 @@ ms.locfileid: "66056936"
  Utilice la página **Finalización del asistente** para asignar un nombre a la configuración y ver los valores utilizados por el asistente para crear la configuración. Una vez que finaliza el asistente, se muestra el **Organizador de configuraciones de paquetes** , que enumera todas las configuraciones para el paquete.  
   
 ### <a name="options"></a>Opciones  
- **Nombre de configuración**  
+ **Nombre de la configuración**  
  Escriba el nombre de la configuración.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra los valores utilizados por el asistente para crear la configuración.  
   
  **Finalizar**  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 87d9d3e5-477f-4117-a37f-bff53ea3e14d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f06e60f052dad10b0e69ef0aa6a879e3d29d1f86
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768057"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965645"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir tipos sin comprobar conversión (Asistente para importación y exportación de SQL Server)
   Use la página **convertir tipos sin comprobar conversión** para revisar las asignaciones que el asistente realiza cuando el asistente no puede encontrar uno o varios archivos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] asignación y conversión de tipos de datos. Esta página incluye información que le ayuda a identificar el archivo o archivos que no se encuentran.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bebeec974bff46333662708952d0a8b6fa841a87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 474212ceeeae896612064ac359c36c2296b3ef5a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835226"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922436"
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Conexión de SQL Server para la creación de instancias
   Uno de los primeros pasos para crear una instancia CDC de Oracle es la creación de una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino. Esta base de datos CDC está habilitada para CDC de SQL Server y esta habilitación necesita un inicio de sesión que sea miembro del rol fijo de servidor `sysadmin` .  

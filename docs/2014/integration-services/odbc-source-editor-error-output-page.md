@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4653b963bd5e8f997832f153a09d87aaeef9c39c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057128"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965005"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Editor de origen de ODBC (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen de ODBC** para seleccionar las opciones de control de errores.  

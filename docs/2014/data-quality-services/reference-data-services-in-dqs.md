@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f4f7c1003db22721d9140c166b1ed03e72b9ab0f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7bd22c713f0ec877c5abf12a72ab08056ab71971
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937416"
 ---
 # <a name="reference-data-services-in-dqs"></a>Servicios de datos de referencia en DQS
   Los datos de referencia hacen referencia a un conjunto completo y preciso de datos globales relacionados o clasificados (más allá de los límites de una empresa) que está disponible en dominios públicos de confianza o en proveedores de contenido comercial premium.  
@@ -35,7 +34,7 @@ ms.locfileid: "70154427"
   
  La perfecta integración entre Marketplace y DQS simplifica los pasos asociados con la detección, búsqueda y adquisición de información para los proyectos de calidad de datos desde DQS. Los datos se utilizan desde DQS, y los usuarios de DQS pueden conseguir datos de alta calidad aunando las características de DQS, Marketplace y los proveedores de servicios de datos de referencia de una manera innovadora.  
   
- Para utilizar los datos de referencia de Marketplace en DQS para la actividad de limpieza, es necesario disponer de una clave de cuenta de Marketplace. La creación de una clave de cuenta de Marketplace es gratuita, y solo deberá pagar si se suscribe a conjuntos de datos de pago. La suscripción a conjuntos de datos gratuitos, así como su uso, no supone ningún cargo. Para obtener información detallada sobre cómo crear una clave de cuenta de Marketplace, veahttps://go.microsoft.com/fwlink/?LinkId=212936) [crear su cuenta](https://go.microsoft.com/fwlink/?LinkId=212936) (.  
+ Para utilizar los datos de referencia de Marketplace en DQS para la actividad de limpieza, es necesario disponer de una clave de cuenta de Marketplace. La creación de una clave de cuenta de Marketplace es gratuita, y solo deberá pagar si se suscribe a conjuntos de datos de pago. La suscripción a conjuntos de datos gratuitos, así como su uso, no supone ningún cargo. Para obtener información detallada sobre cómo crear una clave de cuenta de Marketplace, vea [crear su cuenta](https://go.microsoft.com/fwlink/?LinkId=212936) ( https://go.microsoft.com/fwlink/?LinkId=212936) .  
   
  Además, puede realizar las siguientes actividades de Marketplace desde DQS:  
   

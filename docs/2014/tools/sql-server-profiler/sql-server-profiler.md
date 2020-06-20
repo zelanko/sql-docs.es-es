@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: abc9560ae39f94380a6adde48ceb4ae10788db5b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211046"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040243"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz enriquecida para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema.  

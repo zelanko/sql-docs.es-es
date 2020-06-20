@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc13943df93acf2227b089b177cdca6c86ee1831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdd4c6f134af120b70546f6d27f0f8fc8aac672d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056662"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964747"
 ---
 # <a name="path-properties"></a>Propiedades de la ruta de acceso
-  Los objetos de flujo de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] del modelo de objetos de tienen propiedades comunes y propiedades personalizadas en el nivel del componente, entradas y salidas, y columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
+  Los objetos de flujo de datos del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objetos de tienen propiedades comunes y propiedades personalizadas en el nivel del componente, entradas y salidas, y columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
   
  En este tema se enumeran y describen las propiedades personalizadas de las rutas de acceso que conectan los objetos del flujo de datos.  
   

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: b5231859-14e2-4276-bc17-db2817b6f235
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c525b22c68313fb47bd7db4fc5e547735435839
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2e28f4258aef27403c107158dd13efe5ada02c03
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996239"
 ---
 # <a name="guidelines-and-limitations-of-xml-updategrams-sqlxml-40"></a>Instrucciones y limitaciones de los diagramas de actualización XML (SQLXML 4.0)
   Recuerde lo siguiente al utilizar los diagramas de actualización XML:  
   
--   Si usa un diagrama para una operación de inserción con un solo par de ** \<>** y ** \< después de>** bloques, el bloque ** \< Before>** se puede omitir. Por el contrario, en el caso de una operación de eliminación, el bloque ** \< After>** se puede omitir.  
+-   Si usa un diagrama para una operación de inserción con un solo par de **\<before>** **\<after>** bloques y, **\<before>** se puede omitir el bloque. Por el contrario, en el caso de una operación de eliminación, el **\<after>** bloque se puede omitir.  
   
--   Si usa un diagrama con varios de ** \< antes>** y ** \< después de>** bloques en la etiqueta de ** \<>de sincronización** , antes de ** \<>** los bloques y después de ** \<>** bloques deben especificarse para formar antes de ** \<>** y ** \< después** de>pares.  
+-   Si usa un diagrama con varios **\<before>** **\<after>** bloques y en la **\<sync>** etiqueta, **\<before>** **\<after>** se deben especificar bloques y bloques para formar **\<before>** y **\<after>** pares.  
   
 -   Las actualizaciones de un diagrama de actualización se aplican a la vista XML proporcionada por el esquema XML. Por consiguiente, para que la asignación predeterminada sea correcta debe especificar el nombre de archivo del esquema del diagrama de actualización o, si no se proporciona el nombre de archivo, los nombres de atributo y elemento deben coincidir con los nombres de columna y tabla de la base de datos.  
   
@@ -44,9 +43,9 @@ ms.locfileid: "82717501"
   
 -   Los diagramas de actualización no permiten el paso de datos del tipo `image` como parámetros durante las actualizaciones.  
   
--   Los tipos de objetos binarios grandes (BLOB) como `text/ntext` y las imágenes no se deben usar en el bloque ** \< Before>** en cuando se trabaja con diagramas, porque se incluirán para su uso en el control de simultaneidad. Esto puede producir problemas con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debido a las limitaciones en la comparación para los tipos BLOB. Por ejemplo, la palabra clave LIKE se usa en la cláusula WHERE para comparar entre las columnas del tipo de datos `text`; sin embargo, se producirá un error en las comparaciones en el caso de los tipos BLOB donde el tamaño de los datos supere los 8 K.  
+-   Los tipos de objetos binarios grandes (BLOB) como `text/ntext` y las imágenes no se deben usar en el **\<before>** bloque de cuando se trabaja con diagramas, porque se incluirán para su uso en el control de simultaneidad. Esto puede producir problemas con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debido a las limitaciones en la comparación para los tipos BLOB. Por ejemplo, la palabra clave LIKE se usa en la cláusula WHERE para comparar entre las columnas del tipo de datos `text`; sin embargo, se producirá un error en las comparaciones en el caso de los tipos BLOB donde el tamaño de los datos supere los 8 K.  
   
--   Los caracteres especiales en los datos `ntext` pueden producir problemas con SQLXML 4.0 debido a las limitaciones en la comparación para los tipos BLOB. Por ejemplo, el uso de "[Serializable]" en el bloque ** \< before>** de diagramas cuando se usa en la comprobación de simultaneidad de una columna de tipo producirá `ntext` un error con la siguiente descripción del error SQLOLEDB:  
+-   Los caracteres especiales en los datos `ntext` pueden producir problemas con SQLXML 4.0 debido a las limitaciones en la comparación para los tipos BLOB. Por ejemplo, el uso de "[Serializable]" en el **\<before>** bloque de un diagramas cuando se usa en la comprobación de simultaneidad de una columna de tipo producirá `ntext` un error con la siguiente descripción del error SQLOLEDB:  
   
     ```  
     Empty update, no updatable rows found   Transaction aborted  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4e4ee03f-5bca-42ed-a37c-db1c82e3aad2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01d98e827121a0c47111dd601c6e1772f796849d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064786"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932909"
 ---
 # <a name="get-the-fields-for-all-events"></a>Obtener los campos de todos los eventos
   Esta tarea se lleva a cabo con el Editor de consultas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45091ba2-ea3d-4399-9814-489d812b42cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 25700bfb9e2cd28fd18efe59a2df4e68f468d39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767661"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965367"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Paso 1: Creación de las carpetas de trabajo y las variables de entorno
   En esta tarea, creará la carpeta de trabajo (C:\DeploymentTutorial) y las nuevas variables de entorno del sistema (`DataTransfer` y `LoadXMLData`) que usará en posteriores tareas del tutorial.  
@@ -36,7 +35,7 @@ ms.locfileid: "62767661"
   
 3.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Carpeta**.  
   
-4.  Cambie el nombre de la `DeploymentTutorial`nueva carpeta a.  
+4.  Cambie el nombre de la nueva carpeta a `DeploymentTutorial` .  
   
 ### <a name="to-create-local-environment-variables"></a>Para crear variables del entorno local  
   
@@ -48,11 +47,11 @@ ms.locfileid: "62767661"
   
 4.  En el cuadro de diálogo **Variables de entorno** , en el marco **Variables del sistema** , haga clic en **Nueva**.  
   
-5.  En el cuadro de diálogo **nueva variable del sistema** , escriba `DataTransfer` en el cuadro Nombre de `C:\DeploymentTutorial\datatransferconfig.dtsconfig` **variable** y, en el cuadro valor de **variable** .  
+5.  En el cuadro de diálogo **nueva variable del sistema** , escriba `DataTransfer` en el cuadro **nombre de variable** y, `C:\DeploymentTutorial\datatransferconfig.dtsconfig` en el cuadro **valor de variable** .  
   
 6.  Haga clic en **OK**.  
   
-7.  Vuelva **New** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
+7.  Vuelva a hacer clic en **nuevo** y escriba `LoadXMLData` en el cuadro **nombre de variable** y `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` en el cuadro **valor de variable** .  
   
 8.  Haga clic en **Aceptar** para salir del cuadro de diálogo **Variables de entorno** .  
   
@@ -70,11 +69,11 @@ ms.locfileid: "62767661"
   
 4.  En el cuadro de diálogo **Variables de entorno** , en el marco **Variables del sistema** , haga clic en **Nueva**.  
   
-5.  En el cuadro de diálogo **nuevas variables del sistema** , escriba `DataTransfer` en el cuadro Nombre de `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` **variable** y, en el cuadro valor de **variable** .  
+5.  En el cuadro de diálogo **nuevas variables del sistema** , escriba `DataTransfer` en el cuadro **nombre de variable** y, `C:\DeploymentTutorialInstall\datatransferconfig.dtsconfig` en el cuadro **valor de variable** .  
   
 6.  Haga clic en **OK**.  
   
-7.  Vuelva **New** a hacer clic en nuevo `LoadXMLData` y escriba en el cuadro **nombre** de `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` variable y en el cuadro **valor de variable** .  
+7.  Vuelva a hacer clic en **nuevo** y escriba `LoadXMLData` en el cuadro **nombre de variable** y `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` en el cuadro **valor de variable** .  
   
 8.  Haga clic en **Aceptar** para salir del cuadro de diálogo **Variables de entorno** .  
   

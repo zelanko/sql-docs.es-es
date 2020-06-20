@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: d772da67-e04e-4499-9f80-7a5e94829b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f5d0ddc957cfca8e122920321acc7ccebb70ef72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66168258fb795f8d35b7aa7ac4dcadcf33fed46c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270768"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060032"
 ---
 # <a name="securitycertificate-class"></a>Clase SecurityCertificate
-  La [clase SecurityCertificate] SecurityCertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  
+  La [clase SecurityCertificate] SecurityCertificate-class.md) representa un certificado de seguridad. Un certificado es una instrucción firmada digitalmente que enlaza el valor de una clave pública con la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , que contiene la clave privada correspondiente. El certificado lo emite una entidad de certificación.  
   
  Con [clase SecurityCertificate] SecurityCertificate-class.md), puede realizar las siguientes tareas:  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cac924e926d03dffb9116e5ce7194bb784d45fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26082eaf429aae38012c7da31cfebff7434edd57
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186144"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999804"
 ---
 # <a name="sql-server-profiler-templates"></a>Plantillas de SQL Server Profiler
   Puede utilizar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear plantillas que definan las clases de eventos y columnas de datos que desea incluir en los seguimientos. Después de definir y guardar la plantilla, ejecute un seguimiento que registre los datos de cada clase de evento que ha seleccionado. Una sola plantilla puede utilizarse en varios seguimientos puesto que la plantilla no se ejecuta como tal.  

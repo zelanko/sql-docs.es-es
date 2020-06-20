@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e3eee1449ec42285d5a95ac33d91f439dcd131ac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176115"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002489"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
   Este es el Introducción con SQL Server tutorial de copia de seguridad y restauración con Azure Blob Storage Service. Este tutorial le ayudará a entender cómo escribir copias de seguridad en el servicio Azure Blob Storage y cómo restaurar desde este.  
@@ -23,7 +22,7 @@ ms.locfileid: "70176115"
 ## <a name="what-you-will-learn"></a>Aprendizaje  
  Este tutorial muestra cómo crear una cuenta de almacenamiento de Windows, un contenedor de blobs, crear credenciales para tener acceso a la cuenta de almacenamiento, escribir una copia de seguridad en el servicio de blob y realizar una restauración simple. El tutorial está compuesto por cuatro lecciones:  
   
- [Lección 1: Crear objetos de Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
+ [Lección 1: crear objetos de Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  En esta lección, creará una cuenta de Azure Storage y un contenedor de blobs.  
   
  [Lección 2: Crear una credencial de SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
@@ -51,6 +50,6 @@ ms.locfileid: "70176115"
   
 1.  [Copia de seguridad y restauración de SQL Server con el servicio Azure Blob Storage](backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
-2.  [Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+2.  [Procedimientos recomendados y solución de problemas de Copia de seguridad en URL de SQL Server](backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

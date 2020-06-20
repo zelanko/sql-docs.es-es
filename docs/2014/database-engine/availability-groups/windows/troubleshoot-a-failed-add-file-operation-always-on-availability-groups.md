@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6940e9e40a09e5bd0c7afc591b34c17129350d74
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f44caf9a9968c35c8beeff9c218de6fb05f333a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813445"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936336"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-alwayson-availability-groups"></a>Solucionar problemas relativos a una operación de agregar archivos con error (grupos de disponibilidad AlwaysOn)
   En algunas implementaciones de grupos de disponibilidad AlwaysOn, las rutas de acceso difieren entre el sistema que hospeda la réplica principal y los sistemas que hospedan una réplica secundaria. Si la ruta de acceso a un archivo de una operación add-file no existe en una replicación secundaria, la operación add-file se realizará correctamente en la base de datos principal. Pero la operación add-file ocasionará la suspensión de la base de datos secundaria. Esto, a su vez, hace que la réplica secundaria entre en el estado NOT SYNCHRONIZING.  

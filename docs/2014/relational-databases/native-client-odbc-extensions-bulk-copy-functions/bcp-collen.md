@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaf1f7a-81f2-4852-a178-56602c33673a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e46f3c241d44033194c484b8955389fba972fd22
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3fe50863656db9faf60613c0ff9f4de7a9d18875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705323"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019720"
 ---
 # <a name="bcp_collen"></a>bcp_collen
   Establece la longitud de los datos de la variable del programa para la copia masiva actual en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,7 +57,7 @@ idxServerCol
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **bcp_collen** permite cambiar la longitud de los datos en la variable del programa para una determinada columna al copiar los datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con [bcp_sendrow](bcp-sendrow.md).  
   
  La longitud de los datos se determina inicialmente cuando se llama a [bcp_bind](bcp-bind.md) . Si la longitud de los datos cambia entre las llamadas a **bcp_sendrow** y no se utiliza ningún prefijo o terminador de longitud, puede llamar a **bcp_collen** para restablecer la longitud. La llamada siguiente a **bcp_sendrow** utiliza la longitud establecida por la llamada a **bcp_collen**.  

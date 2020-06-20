@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 92e5fd32-4944-4f7c-a448-b458df93d0d5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3da112ff268e824792bdd29160ec97331e5b0f7e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6d72b7f8cbb4aead7dfb87eb44fb5d943672433
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056144"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964135"
 ---
 # <a name="schema-restrictions-dialog-box"></a>Restricciones de esquema, cuadro de diálogo
   Utilice el cuadro de diálogo **Restricciones de esquema** para establecer las restricciones de esquema que se van a aplicar a Foreach ADO.NET Schema Rowset Enumerator.  

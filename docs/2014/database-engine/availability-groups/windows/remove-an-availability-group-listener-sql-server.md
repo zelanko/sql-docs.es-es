@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 049296ff601296edbd990fe9ea70aef3efa8c44b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 057b9c137cb4d8bbbdd03be61df600f7e59b264c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936578"
 ---
 # <a name="remove-an-availability-group-listener-sql-server"></a>Quitar un agente de escucha del grupo de disponibilidad (SQL Server)
   En este tema se describe cómo se quita un agente de escucha de un grupo de disponibilidad AlwaysOn utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -81,7 +80,7 @@ ms.locfileid: "72782855"
   
 2.  Use la instrucción [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) del siguiente modo:  
   
-     ALTER AVAILABILITY GROUP *group_name* quitar el agente de escucha **'*`dns_name`*'**  
+     ALTER AVAILABILITY GROUP *group_name* quitar el agente de escucha **' *`dns_name`* '**  
   
      donde *nombre_grupo* es el nombre del grupo de disponibilidad y *nombre_DNS* es el nombre DNS del agente de escucha de grupo de disponibilidad.  
   
@@ -107,7 +106,7 @@ ms.locfileid: "72782855"
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Ver las propiedades del agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   

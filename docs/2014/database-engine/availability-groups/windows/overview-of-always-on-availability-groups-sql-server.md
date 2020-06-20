@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c13b66a5ffe594589c325bc7d8001451161f054
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ed55a83d0458687a887f70dd5eb4c3acb915c910
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175504"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936720"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Información general de los grupos de disponibilidad AlwaysOn (SQL Server)
   En este tema se presentan los conceptos centrales de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para configurar y administrar uno o varios grupos de disponibilidad en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Para obtener un resumen de las ventajas proporcionadas por los grupos de disponibilidad e información general de la terminología de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], vea [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).
@@ -68,9 +67,9 @@ ms.locfileid: "78175504"
 >  Cuando el rol de una réplica de disponibilidad es indeterminado, como durante una conmutación por error, sus bases de datos están temporalmente en estado NOT SYNCHRONIZING. Su rol se establece en RESOLVING hasta que el rol de la réplica de disponibilidad se resuelve. Si una réplica de disponibilidad se resuelve en el rol principal, sus bases de datos se convierten en las bases de datos principales. Si una réplica de disponibilidad se resuelve en el rol secundario, sus bases de datos se convierten en bases de datos secundarias.
 
 ##  <a name="availability-modes"></a><a name="AvailabilityModes"></a>Modos de disponibilidad
- El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]admite dos modos de disponibilidad:*modo de confirmación asincrónica* y *modo de confirmación sincrónica*.
+ El modo de disponibilidad es una propiedad de cada réplica de disponibilidad. El modo de disponibilidad determina si la réplica principal espera la confirmación de transacciones en una base de datos hasta que una réplica secundaria haya escrito las entradas del registro de transacciones en el disco (protegido el registro). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite dos modos de disponibilidad: *modo de confirmación asincrónica* y *modo de confirmación sincrónica*.
 
--   **Modo de confirmación asincrónica**
+-   **Asynchronous-commit mode**
 
      Una réplica de disponibilidad que usa este modo de disponibilidad se denomina*réplica de confirmación asincrónica*. En modo de confirmación asincrónica, la réplica principal confirma las transacciones sin esperar la notificación de que una réplica secundaria de confirmación asincrónica ha protegido el registro. El modo de confirmación asincrónica minimiza la latencia de las transacciones en las bases de datos secundarias pero permite que se retrasen detrás de las bases de datos principales, haciendo posible alguna pérdida de datos.
 
@@ -105,7 +104,7 @@ ms.locfileid: "78175504"
 
  Para más información, vea [Conmutación por error y modos de conmutación por error &#40;Grupos de disponibilidad AlwaysOn&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-##  <a name="client-connections"></a><a name="ClientConnections"></a>Conexiones de cliente
+##  <a name="client-connections"></a><a name="ClientConnections"></a> Conexiones de cliente
  Puede proporcionar conectividad de cliente a la réplica principal de un grupo de disponibilidad determinado mediante la creación de un agente de escucha del grupo de disponibilidad. Un *agente de escucha del grupo de disponibilidad* proporciona un conjunto de recursos que se adjunta a un grupo de disponibilidad determinado para dirigir las conexiones de cliente a la réplica de disponibilidad adecuada.
 
  Un agente de escucha del grupo de disponibilidad está asociada a un nombre DNS único que actúa como un nombre de red virtual (VNN), una o más direcciones IP virtuales (VIP) y un número de puerto TCP. Para obtener más información, vea [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).
@@ -129,7 +128,7 @@ ms.locfileid: "78175504"
 ##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a>Tiempo de espera de la sesión
  El tiempo de espera de la sesión es una propiedad de la réplica de disponibilidad que determina cuánto tiempo puede permanecer inactiva la conexión con otra réplica de disponibilidad antes de que se cierre la conexión. Las réplicas principales y secundarias hacen ping entre sí para indicar que siguen estando activas. Si se recibe un ping de otra réplica durante el tiempo de espera, significa que la conexión todavía está abierta y que las instancias del servidor se están comunicando. Al recibir un ping, una réplica de disponibilidad restablece el contador de tiempo de espera de la sesión de esa conexión.
 
- El tiempo de espera de la sesión impide que una réplica espere indefinidamente a recibir un ping de la otra réplica. Si no se recibe ningún ping de la otra réplica dentro del período de tiempo de espera de la sesión, se agota el tiempo de espera de la réplica. La conexión se cierra y la réplica que agotó el tiempo de espera entra en el estado desconectado. Aunque una replicación desconectada esté configurada en modo de confirmación sincrónica, las transacciones no esperarán a que la réplica vuelva a conectarse y sincronizarse.
+ El tiempo de espera de la sesión impide que una réplica espere indefinidamente a recibir un ping de la otra réplica. Si no se recibe ningún ping de otra réplica durante el tiempo de espera de la sesión, el tiempo de espera de la réplica se agota. La conexión se cierra y la réplica con el tiempo de espera agotado entra en el estado DISCONNECTED. Aunque una replicación desconectada esté configurada en modo de confirmación sincrónica, las transacciones no esperarán a que la réplica vuelva a conectarse y sincronizarse.
 
  El tiempo de espera predeterminado de la sesión de cada réplica de disponibilidad es de 10 segundos. Este valor puede configurarlo el usuario, con un mínimo de 5 segundos. Normalmente, es recomendable mantener el período de espera en 10 segundos o más. Si establece el valor en menos de 10 segundos, existe la posibilidad de que un sistema sobrecargado declare un error falso.
 
@@ -155,7 +154,7 @@ ms.locfileid: "78175504"
 
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)
 
--   **Vídeos**
+-   **Vídeos:**
 
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)
 

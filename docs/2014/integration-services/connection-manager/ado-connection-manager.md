@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 490418bc-5ef1-41b8-a9c8-de38aa96e0f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fda014196d933ef9d5391ab4db798d821e43610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 85c76037c44f6260bbfc436823d844abdf74355d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833820"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921256"
 ---
 # <a name="ado-connection-manager"></a>Administrador de conexiones ADO
   Un administrador de conexiones ADO permite a un paquete conectarse con Objetos de datos ActiveX (ADO), como un conjunto de registros. Este administrador de conexiones se usa normalmente en tareas personalizadas escritas en una versión anterior de un lenguaje, como por ejemplo, Microsoft Visual Basic 6.0 o en tareas personalizadas que forman parte de una aplicación existente que usa ADO para conectarse a un origen de datos.  
   
- Cuando se agrega un administrador de conexiones ADO a un paquete [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones que se resuelve en una conexión ADO en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el `Connections` administrador de conexiones a la colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ADO`.  
+ Cuando se agrega un administrador de conexiones ADO a un paquete, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve en una conexión ADO en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ADO`.  
   
 ## <a name="troubleshooting-the-ado-connection-manager"></a>Solución de problemas del administrador de conexiones ADO  
  Al ser leídos por un administrador de conexiones ADO, los datos de determinados tipos de datos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generarán los resultados que se muestran en la tabla siguiente.  

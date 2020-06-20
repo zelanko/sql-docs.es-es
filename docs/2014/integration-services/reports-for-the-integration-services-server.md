@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964595"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
@@ -71,7 +70,7 @@ ms.locfileid: "66056442"
  El informe **Todas las validaciones** muestra un resumen de todas las validaciones de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] realizadas en el servidor. El resumen muestra información para cada validación, como el estado, la hora de inicio y la hora de finalización. Cada entrada de resumen incluye un vínculo a los mensajes generados durante la validación. Al igual que con el Panel de Integration Services, puede aplicar un filtro a la tabla para reducir la información mostrada.  
   
 ## <a name="custom-reports"></a>informes personalizados  
- Puede agregar un informe personalizado (archivo .rdl) al nodo del catálogo de **SSISDB** en el nodo **Catálogos de Integration Services** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de agregar el informe, confirme que usa una convención de nomenclatura de tres partes para calificar completamente los objetos a los que hace referencia como una tabla de origen. De lo contrario, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mostrará un error. La convención de nomenclatura es \<base de datos>.\<propietario>.\<objeto>. Un ejemplo sería SSISDB.internal.executions.  
+ Puede agregar un informe personalizado (archivo .rdl) al nodo del catálogo de **SSISDB** en el nodo **Catálogos de Integration Services** en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Antes de agregar el informe, confirme que usa una convención de nomenclatura de tres partes para calificar completamente los objetos a los que hace referencia como una tabla de origen. De lo contrario, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mostrará un error. La Convención de nomenclatura es \<database> . \<owner> . \<object> . Un ejemplo sería SSISDB.internal.executions.  
   
 > [!NOTE]  
 >  Al agregar informes personalizados al nodo **SSISDB** en el nodo **Bases de datos** , el prefijo de SSISDB no es necesario.  

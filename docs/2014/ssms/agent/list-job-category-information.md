@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 0fc668d4-6244-4fef-b90e-62d2c776cd7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dae8f1d98fb1758e9a9802883def1574bda68a78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 924e2b064980b2ea7068230610414262995da1a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798210"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008717"
 ---
 # <a name="list-job-category-information"></a>Mostrar información de categorías de trabajo
-  Cómo Mostrar información de categorías de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o objetos de administración de SQL Server.  
+  Cómo Mostrar información de categorías de trabajo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] o objetos de administración de SQL Server.  
 
   
 ##  <a name="security"></a><a name="Security"></a> Seguridad  

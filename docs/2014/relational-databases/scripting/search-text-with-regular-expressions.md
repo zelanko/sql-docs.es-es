@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34d97e58469469b929e0b7a2e25d52a9c7c3e3fe
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7a63035355cafdbb08c469a093407b7ce2c12e6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718678"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060315"
 ---
 # <a name="search-text-with-regular-expressions"></a>Buscar texto mediante expresiones regulares
   Las expresiones regulares son una notación concisa y flexible para buscar y reemplazar patrones de texto. Se puede utilizar un conjunto específico de expresiones regulares en el campo **Buscar** del cuadro de diálogo [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Buscar y reemplazar**.  
@@ -106,7 +105,7 @@ ms.locfileid: "82718678"
 |Marca de no-espaciado|:Mn|Devuelve marcas de no-espaciado.|  
 |Marca de combinación|:Mc|Devuelve marcas de combinación.|  
 |Marca contenedora|:Me|Devuelve marcas contenedoras.|  
-|Símbolo matemático|:Sm|Devuelve +, =, ~, &#124;, \<, y >.|  
+|Símbolo matemático|:Sm|Coincide con +, =, ~, &#124;, \<, and > .|  
 |Símbolo de moneda|:Sc|Devuelve $ y otros símbolos de moneda.|  
 |Símbolo de modificador|:Sk|Devuelve símbolos de modificador, como acentos circunflejos, acentos graves y acentos largos.|  
 |Otro símbolo|:So|Devuelve otros símbolos, como el signo de Copyright, el signo de antígrafo y el signo de grado.|  

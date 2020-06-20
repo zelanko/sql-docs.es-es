@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 9831b194-9ad5-47b0-8009-59c7aef4319b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2c48ef876dbe3843715496751205f24fcf26f12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774748"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929698"
 ---
 # <a name="password-expired"></a>Contraseña expirada
-  Aparece cuando se conecta a un servidor con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la autenticación de y la contraseña que proporcionó es correcta pero ha expirado. También aparece cuando se conecta a un servidor utilizando una cuenta nueva, creada con la opción **El usuario debe cambiar la contraseña en el siguiente inicio de sesión** . Utilice el cuadro de diálogo **Contraseña expirada** para cambiar la contraseña de este inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+  Aparece cuando se conecta a un servidor con [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] autenticación de y la contraseña que proporcionó es correcta pero ha expirado. También aparece cuando se conecta a un servidor utilizando una cuenta nueva, creada con la opción **El usuario debe cambiar la contraseña en el siguiente inicio de sesión** . Utilice el cuadro de diálogo **Contraseña expirada** para cambiar la contraseña de este inicio de sesión de autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Inicio de sesión**  

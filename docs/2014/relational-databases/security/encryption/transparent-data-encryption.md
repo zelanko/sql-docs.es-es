@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 018cc6fa8b85c4a1b09ab53a6a1a94d8a7670bae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a8118f0781d7c9e3d839c029c6bdaf8b01e074b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060246"
 ---
 # <a name="transparent-data-encryption-tde"></a>Cifrado de datos transparente (TDE)
   El*Cifrado de datos transparente* (TDE) cifra los archivos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] , conocido como el cifrado de datos en reposo. Puede tomar varias precauciones para ayudar a proteger la base de datos, como diseñar un sistema seguro, cifrar los recursos confidenciales e instalar un firewall alrededor de los servidores de base de datos. Pero en un escenario en que se roban medios físicos (como unidades o cintas de copias de seguridad), un tercero malintencionado puede restaurar o asociar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.
@@ -36,7 +35,7 @@ ms.locfileid: "78176765"
 >  **Temas relacionados:**
 > 
 >  -   [Cifrado de datos transparente con Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)
-> -   [Traslado de una base de datos protegida por TDE a otra SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
+> -   [Mover una base de datos protegida por TDE a otra instancia de SQL Server](move-a-tde-protected-database-to-another-sql-server.md)
 > -   [Habilitar TDE con EKM](enable-tde-on-sql-server-using-ekm.md)
 
 ## <a name="about-tde"></a>Acerca de TDE
@@ -48,7 +47,7 @@ ms.locfileid: "78176765"
 
  La vista previa del estado de TDE se aplica incluso en el subconjunto de las regiones geográficas donde la familia de la versión V12 de [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] se anuncia como con estado de disponibilidad general. TDE para [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no está diseñado para su uso en bases de datos de producción hasta que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] anuncie que TDE se promueve de vista previa a disponibilidad general. Para más información sobre [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12, consulte [Novedades de Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).
 
- **Información aplicable a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
+ **Información aplicable a[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**
 
  Una vez protegida, la base de datos puede restaurarse utilizando el certificado correcto. Para obtener más información acerca de los certificados, vea [SQL Server Certificates and Asymmetric Keys](../sql-server-certificates-and-asymmetric-keys.md).
 
@@ -215,7 +214,7 @@ GO
  Cuando una clave de cifrado de base de datos se modifica dos veces, debe realizarse una copia de seguridad de registros para que la clave de cifrado de base de datos pueda volver a modificarse.
 
 ### <a name="transparent-data-encryption-and-the-tempdb-system-database"></a>El cifrado de datos transparente y la base de datos del sistema tempdb
- La base de datos del sistema tempdb se cifrará si alguna otra base de datos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se cifra mediante TDE. Esto podría tener un efecto en el rendimiento de las bases de datos no cifradas de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre la base de datos del sistema tempdb, vea [Bade de datos tempdb](../../databases/tempdb-database.md).
+ La base de datos del sistema tempdb se cifrará si alguna otra base de datos de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se cifra mediante TDE. Esto podría tener un efecto en el rendimiento de las bases de datos no cifradas de la misma instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre la base de datos del sistema tempdb, vea [Base de datos tempdb](../../databases/tempdb-database.md).
 
 ### <a name="transparent-data-encryption-and-replication"></a>Cifrado de datos transparente y replicación
  La replicación no replica automáticamente los datos de una base de datos habilitada para TDE en un formato cifrado. Debe habilitar por separado TDE si desea proteger las bases de datos de suscriptor y de distribución. La replicación de instantáneas, así como la distribución inicial de datos para la replicación transaccional y de mezcla, puede almacenar los datos en archivos intermedios sin cifrar; por ejemplo, los archivos bcp.  Durante la replicación transaccional o de mezcla, el cifrado puede habilitarse para proteger el canal de comunicaciones. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).

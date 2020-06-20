@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e04c7af85592d71d70abf8ea5f61518690599342
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938886"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
   Este tema proporciona a los autores de modelos tabulares una descripción de cómo usa Analysis Services las credenciales de inicio de sesión al conectarse a un origen de datos para importar y procesar (actualizar) datos.  
   
- Este artículo contiene las secciones siguientes:  
+ Este artículo contiene las siguientes secciones:  
   
 -   [Ventajas](#bkmk_how_imper)  
   
@@ -32,7 +31,7 @@ ms.locfileid: "66067058"
   
 -   [Configuración de la suplantación](#bkmk_conf_imp_info)  
   
-##  <a name="benefits"></a><a name="bkmk_how_imper"></a>Privilegios  
+##  <a name="benefits"></a><a name="bkmk_how_imper"></a> Ventajas  
  La*suplantación* es la capacidad de una aplicación de servidor, como Analysis Services, de asumir la identidad de una aplicación cliente. Analysis Services se ejecuta con una cuenta de servicio; sin embargo, cuando el servidor establece conexión con un origen de datos, usa la suplantación, de modo que puedan realizarse las comprobaciones de acceso para la importación y el procesamiento de datos.  
   
  Las credenciales usadas para la suplantación son diferentes de las credenciales del usuario que ha iniciado sesión actualmente. Las credenciales del usuario que tiene abierta una sesión se usan para determinadas operaciones del lado cliente mientras se crea un modelo.  
@@ -67,7 +66,7 @@ ms.locfileid: "66067058"
   
 |Opción|ImpersonationMode<sup>1</sup>|Descripción|  
 |------------|-----------------------------------|-----------------|  
-|**Nombre de usuario y contraseña específicos de Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario usan el siguiente formato:**\<nombre \\ de dominio><\>nombre**de la cuenta de usuario. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
+|**Nombre de usuario y contraseña específicos de Windows** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario usan el siguiente formato:** \<Domain name> \\<nombre \> **de la cuenta de usuario. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  
   
  <sup>1</sup> ImpersonationMode especifica el valor para el [elemento DataSourceImpersonationInfo &#40;propiedad ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) en el origen de datos.  
@@ -90,7 +89,7 @@ ms.locfileid: "66067058"
 ##  <a name="configuring-impersonation"></a><a name="bkmk_conf_imp_info"></a> Configurar la suplantación  
  El lugar y el contexto en el que existe un modelo determinarán cómo se configura la información de suplantación. Para los proyectos que se crean en el [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], puede configurar la información de suplantación en la página **Información de suplantación** del Asistente para la importación de tablas o modificando una conexión a un origen de datos en el cuadro de diálogo **Conexiones existentes** . Para ver las conexiones existentes, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el menú **Modelo** , haga clic en **Conexiones existentes**.  
   
- En el caso de los modelos que se implementan en un servidor de Analysis Services, la información de suplantación puede configurarse haciendo clic en los puntos suspensivos (...) de la propiedad **información de suplantación de origen de datos** del cuadro de diálogo Propiedades de la **base** de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+ En el caso de los modelos que se implementan en un servidor de Analysis Services, la información de suplantación puede configurarse haciendo clic en los puntos suspensivos (...) de la propiedad **información de suplantación de origen de datos** del cuadro de diálogo Propiedades de la **base** de datos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
 ## <a name="see-also"></a>Consulte también  
  [Modo DirectQuery &#40;&#41;tabular de SSAS](directquery-mode-ssas-tabular.md)   

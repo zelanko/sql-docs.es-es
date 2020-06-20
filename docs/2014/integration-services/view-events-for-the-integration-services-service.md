@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37e23946-10d1-4116-8568-8fd24067102e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4be91309e4feb34bd8dfd85aee8e3e0cd1f82ffd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d79e68ddd375a0e61a07a48dec413034a822419
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972575"
 ---
 # <a name="view-events-for-the-integration-services-service"></a>Ver los eventos para el servicio Integration Services
   Hay dos herramientas en las que puede ver los eventos para el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] :  
@@ -58,7 +57,7 @@ ms.locfileid: "66054671"
   
 7.  Elija si desea ver los datos del evento en bytes o en palabras.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el menú **Archivo** , haga clic en **Salir** para salir del cuadro de diálogo **Visor de eventos** .  
   

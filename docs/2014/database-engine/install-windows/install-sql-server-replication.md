@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c50ad078-060b-4a8d-ad45-9e31a8d85729
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3fd70d208960af1f121795bfdf8a657ceaf59f21
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba941fda1d463e7bb4a26bd2fbb45d2a82ca27b3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775298"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932500"
 ---
 # <a name="install-sql-server-replication"></a>Instalar la replicación de SQL Server
   Los componentes de replicación se pueden instalar mediante el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en un símbolo del sistema. Instale la replicación al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o al modificar una instancia existente.  
@@ -44,6 +43,6 @@ ms.locfileid: "62775298"
 ## <a name="see-also"></a>Consulte también  
  [Instalación de SQL Server 2014](install-sql-server.md)   
  [Instalación de SQL Server 2014 desde el símbolo del sistema](install-sql-server-from-the-command-prompt.md)   
- [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
   

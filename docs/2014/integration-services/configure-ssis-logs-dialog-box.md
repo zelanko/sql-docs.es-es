@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4b980275-cd9a-4943-8c36-727d51f9a484
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fab2f2e8fad2cd77e5bc27a78e66940fc40544b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060592"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921676"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurar registros de SSIS, cuadro de diálogo
   Use el cuadro de diálogo **Configurar registros de SSIS** para definir las opciones de registro de un paquete.  
@@ -45,7 +44,7 @@ ms.locfileid: "66060592"
  Utilice el panel **Contenedores** del cuadro de diálogo **Configurar registros de SSIS** para habilitar el paquete y sus contenedores para registro.  
   
 ### <a name="options"></a>Opciones  
- **Containers**  
+ **Contenedores**  
  Active las casillas en la vista jerárquica para habilitar el paquete y sus contenedores para registro:  
   
 -   Si no se activan, el contenedor no está habilitado para el registro. Seleccione esta opción para habilitar el registro.  
@@ -73,7 +72,7 @@ ms.locfileid: "66060592"
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
- Seleccione un administrador de conexiones existente de la lista o haga \<clic en **nueva conexión...**> para crear un nuevo administrador de conexiones. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
+ Seleccione un administrador de conexiones existente de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
   
  Temas relacionados: [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md) , [File Connection Manager](connection-manager/file-connection-manager.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f233f0730286a1623ee54c38084d07a2aba903e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054860"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972785"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor de la tarea Transferir procedimientos almacenados principales (página Procedimientos almacenados)
   Use la página **Procedimientos almacenados** del cuadro de diálogo **Editor de la tarea Transferir procedimientos almacenados principales** a fin de especificar las propiedades para copiar uno o más procedimientos definidos por el usuario desde la base de datos **maestra** en una instancia de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a una base de datos **maestra** de otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información acerca de esta tarea, vea [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md).  
@@ -29,10 +28,10 @@ ms.locfileid: "66054860"
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de destino.  
   
  **IfObjectExists**  
  Seleccione el modo en que la tarea debe controlar los procedimientos almacenados definidos por el usuario que tengan el mismo nombre que los que ya existen en la base de datos **maestra** del servidor de destino.  
@@ -50,7 +49,7 @@ ms.locfileid: "66054860"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
+|**True**|Copie todos los procedimientos almacenados definidos por el usuario de la base de datos **maestra** .|  
 |**Es**|Copie solamente los procedimientos almacenados especificados.|  
   
  **StoredProceduresList**  
@@ -61,6 +60,6 @@ ms.locfileid: "66054860"
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor de la tarea transferir procedimientos almacenados principales &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página expresiones](expressions/expressions-page.md)   
- [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
+ [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
   
   

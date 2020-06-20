@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: af6fe2f3-37d0-4413-ab27-b3a0fb95eb50
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33384f1e764cbc60bbd8e836aceffe6db3610c57
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480098"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972235"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Asignar permisos del área funcional (Master Data Services)
   Asigne el permiso de área funcional para conceder a los usuarios o grupos acceso a las áreas funcionales de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "65480098"
   
 7.  Cuando termine, haga clic en **Guardar**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Asignar permisos de objeto de modelo &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: eceb0d8df8b929a22393c1471e7833954b787a02
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4fe8f68c87c1d1ce83ccc1dc8b12f0cc80956e3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175484"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937496"
 ---
 # <a name="monitor-dqs-activities"></a>Supervisar las actividades de DQS
   En este tema se describe cómo supervisar de forma centralizada las actividades siguientes en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): detección de conocimiento, administración de dominios, directiva de coincidencia, limpieza de datos, coincidencia de datos y limpieza SSIS.
@@ -48,16 +47,16 @@ ms.locfileid: "78175484"
 
 3.  La pantalla de supervisión de actividades muestra información sobre cada actividad en una cuadrícula de actividades. La cuadrícula de actividades muestra la información siguiente sobre cada actividad de DQS:
 
-    |Information|Descripción|
+    |Información|Descripción|
     |-----------------|-----------------|
     |**Id**|Valor entero. Número de actividad único generado por el sistema para la supervisión de la actividad.|
     |**Nombre**|El nombre de la base de conocimiento o del proyecto de calidad de datos que se utiliza para esta actividad.|
     |**Está activo**|Indica si la actividad está activa o no. Puede presentar los siguientes valores:<br /><br /> **Activa**: la actividad se está ejecutando actualmente.<br /><br /> **Finalizada**: la actividad ha finalizado.<br /><br /> **Terminada**: la actividad la ha dado por terminada el administrador de DQS mediante la pantalla de supervisión de actividades o la ha cancelado el usuario mientras se ejecutaba en el área de características correspondiente en [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)].|
-    |**Type**|Indica el tipo de actividad. Se supervisan los tipos de actividades siguientes: **Administración del conocimiento**, **Proyecto DQ**y **Limpieza SSIS**.|
+    |**Tipo**|Indica el tipo de actividad. Se supervisan los tipos de actividades siguientes: **Administración del conocimiento**, **Proyecto DQ**y **Limpieza SSIS**.|
     |**Subtipo**|Indica el flujo de trabajo específico que se ejecuta para un tipo de actividad.<br /><br /> Una actividad de tipo **Administración del conocimiento** puede tener los flujos de trabajo o subtipos siguientes: **Detección de conocimiento**, **Administración de dominios**y **Directiva de coincidencia**.<br /><br /> Una actividad de tipo **Proyecto DQ** puede tener los flujos de trabajo o subtipos siguientes: **Limpieza** y **Coincidencia**.<br /><br /> Una actividad de tipo **Limpieza SSIS** solo puede tener el flujo de trabajo o subtipo **Limpieza** .|
     |**Estado actual**|Indica el estado actual de una actividad. El último proceso de cálculo determina el estado de la actividad. Puede presentar los siguientes valores:<br /><br /> **En ejecución**: el proceso de cálculo se está ejecutando.<br /><br /> **Correcto**: antes de que se ejecute cualquier proceso de cálculo, el estado se establece en **Correcto**. Además, después de que finalice correctamente el proceso de cálculo, el estado se establece en **Correcto**.<br /><br /> **Error**: el proceso de cálculo no se ha realizado correctamente.<br /><br /> **Detenido**: el proceso de cálculo se detuvo.<br /><br /> <br /><br /> Nota: puede haber varios procesos de cálculo en una actividad, como ejecutar el proceso de detección varias veces (dentro de la actividad de detección de conocimiento). Por consiguiente, el estado puede cambiar varias veces durante la duración de la actividad.|
     |**DQKB**|Nombre de la base de conocimiento que se usa para la actividad.|
-    |**Usuario**|El nombre del usuario que inició actividad, o el último usuario que trabajó en la actividad (en caso de que no coincidan).|
+    |**User**|El nombre del usuario que inició actividad, o el último usuario que trabajó en la actividad (en caso de que no coincidan).|
     |**Hora de inicio de la actividad**|La fecha y hora en que se inició la actividad.|
     |**Tiempo transcurrido**|El tiempo transcurrido desde que se inició la actividad. Se muestra con el formato HH:MM:SS.|
     |**Hora de finalización de actividad**|La fecha y hora en que finalizó la actividad.|

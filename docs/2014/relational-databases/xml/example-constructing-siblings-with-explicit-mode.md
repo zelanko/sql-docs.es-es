@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1404b0ab91c4812b5b08576818bfa8e74dcb664c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 740e132845a738101a38248da41fc0b53d1acecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716920"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067868"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Ejemplo: Construir elementos del mismo nivel con el modo EXPLICIT
   Suponga que desea crear XML para obtener información sobre pedidos. Observe que los elementos <`SalesPerson`> y <`OrderDetail`> son del mismo nivel. Cada pedido tiene un elemento <`OrderHeader`>, un elemento <`SalesPerson`> y uno o más elementos <`OrderDetail`>.  

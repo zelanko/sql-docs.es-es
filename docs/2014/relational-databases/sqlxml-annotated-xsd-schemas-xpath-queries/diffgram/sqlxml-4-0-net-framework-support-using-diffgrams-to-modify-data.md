@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 48b8a8f9-f3af-404f-8c84-f4c3703364d9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 451b79659ff0909baf7d373dcca37ae509a94079
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cc2e24304679a7648f18148eb45f33b9bf719a9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015456"
 ---
 # <a name="using-diffgrams-to-modify-data-in-sqlxml-40"></a>Usar DiffGrams para modificar datos en SQLXML 4.0
   El formato DiffGram se introduce en el componente **DataSet** del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. En .NET Framework, puede crear DiffGrams y utilizarlos para modificar datos en tablas de una base de datos de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

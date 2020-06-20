@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 985352cacc5aff741b469e4e8422d6ab9493b0b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781405"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935176"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir el Administrador de orígenes de datos ODBC
   En este tema se describe cómo abrir el Administrador de orígenes de datos ODBC. El Administrador de orígenes de datos ODBC es un componente de Windows. Use el Administrador de orígenes de datos ODBC para crear y administrar los orígenes de datos ODBC.  

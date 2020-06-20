@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58a542c8cbe72c420797f34280c2fb7422b82207
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 63f8be6f47ef4a6abd20c42757648ca03a5701b3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479553"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962067"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Crear un flujo de trabajo personalizado (Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] utiliza reglas de negocio para crear soluciones básicas de flujo de trabajo, como actualizar y validar datos automáticamente, y enviar notificaciones por correo electrónico en función de las condiciones que especifique. Cuando requiera un procesamiento más complejo que el que proporcionan las acciones de flujo de trabajo integradas, puede usar un flujo de trabajo personalizado. Un flujo de trabajo personalizado es un ensamblado de .NET creado por usted. Cuando se llama a su ensamblado de flujo de trabajo, el código puede realizar cualquier acción que requiera la situación. Por ejemplo, si su flujo de trabajo requiere un procesamiento de eventos más complejos, como aprobaciones de varios niveles o árboles de decisiones complejos, puede configurar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para que inicie un flujo de trabajo personalizado que analice los datos y determine dónde enviarlos para su aprobación.  
@@ -56,7 +55,7 @@ ms.locfileid: "65479553"
   
 1.  En Visual Studio 2010, cree un proyecto **Biblioteca de clases** que use el idioma que quiera. Para crear una biblioteca de clases de C#, seleccione los tipos de proyecto **Visual C#\Windows** y la plantilla **Biblioteca de clases**. Escriba un nombre para el proyecto (por ejemplo, **MDSWorkflowTest**) y haga clic en **Aceptar**.  
   
-2.  Agregue una referencia a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Este ensamblado se encuentra en \<Carpeta de instalación>\Master Data Services\WebApplication\bin.  
+2.  Agregue una referencia a Microsoft.MasterDataServices.WorkflowTypeExtender.dll. Este ensamblado se puede encontrar en \<Your installation folder> \Master Data Services\WebApplication\bin.  
   
 3.  Agregue "using Microsoft.MasterDataServices.Core.Workflow;" al archivo de código de C#.  
   
@@ -64,12 +63,12 @@ ms.locfileid: "65479553"
   
 5.  Implemente la interfaz <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. El servicio de integración de flujos de trabajo MDS de SQL Server llama al método <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> para iniciar el flujo de trabajo.  
   
-6.  Copie el ensamblado en la ubicación del archivo ejecutable del servicio de integración de flujos de trabajo MDS de SQL Server, denominado Microsoft.MasterDataServices.Workflow.exe, en \<Carpeta de instalación>\Master Data Services\WebApplication\bin.  
+6.  Copie el ensamblado en la ubicación del SQL Server archivo ejecutable del servicio de integración de flujos de trabajo MDS, denominado Microsoft.MasterDataServices.Workflow.exe, en \<Your installation folder> \Master Data Services\WebApplication\bin.  
   
 ### <a name="configure-sql-server-mds-workflow-integration-service"></a>Configurar el servicio de integración de flujos de trabajo MDS de SQL Server  
  Edite el archivo de configuración de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para incluir la información de conexión de su base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] y asociar una etiqueta al ensamblado controlador del flujo de trabajo siguiendo estos pasos:  
   
-1.  Busque Microsoft.MasterDataServices.Workflow.exe.config en \<Carpeta de instalación>\Master Data Services\WebApplication\bin.  
+1.  Busque Microsoft.MasterDataServices.Workflow.exe.config en \<Your installation folder> \Master Data Services\WebApplication\bin.  
   
 2.  Agregue la información de conexión de la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] al valor "ConnectionString". Si su instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa la intercalación con distinción de mayúsculas y minúsculas, el nombre de la base de datos debe especificarse con el mismo uso de mayúsculas y minúsculas que el de la base de datos. Por ejemplo, la etiqueta de configuración completa debe ser similar a la siguiente:  
   
@@ -87,7 +86,7 @@ ms.locfileid: "65479553"
     </setting>  
     ```  
   
-     El texto interno de la etiqueta \<value> tiene el formato \<Etiqueta del flujo de trabajo>=\<nombre del tipo de flujo de trabajo calificado del ensamblado>. \<Etiqueta del flujo de trabajo> es el nombre que se usa para identificar el ensamblado controlador del flujo de trabajo al crear una regla de negocio en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]. \<nombre del tipo de flujo de trabajo calificado del ensamblado> es el nombre de la clase de flujo de trabajo calificado para el espacio de nombres, seguido de una coma y del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias etiquetas \<setting> si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
+     El texto interno de la \<value> etiqueta tiene el formato \<Workflow tag> = \<assembly-qualified workflow type name> . \<Workflow tag>es un nombre que se usa para identificar el ensamblado del controlador de flujo de trabajo cuando se crea una regla de negocios en [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] . \<assembly-qualified workflow type name>es el nombre completo del espacio de nombres de la clase de flujo de trabajo, seguido de una coma, seguido del nombre para mostrar del ensamblado. Si su ensamblado tiene un nombre seguro, tendrá que incluir también la información de versión y su PublicKeyToken. Puede incluir varias \<setting> etiquetas si ha creado varios controladores de flujo de trabajo para distintos tipos de flujos de trabajo.  
   
 > [!NOTE]  
 >  En función de la configuración del servidor, puede que aparezca un error "Acceso denegado" al intentar guardar el archivo Microsoft.MasterDataServices.Workflow.exe.config. En tal caso, deshabilite temporalmente Control de cuentas de usuario (UAC) en el servidor. Para ello, abra el Panel de control y haga clic en **Sistema y seguridad**. En **Centro de actividades**, haga clic en **Cambiar configuración de Control de cuentas de usuario**. En el cuadro de diálogo **Configuración del Control de cuentas de usuario**, desplace la barra hasta abajo para no recibir nunca ninguna notificación. Reinicie su equipo y repita el procedimiento anterior para editar el archivo de configuración. Después de guardar el archivo, restaure la configuración de UAC al nivel predeterminado.  
@@ -101,7 +100,7 @@ ms.locfileid: "65479553"
   
 3.  Conceda al usuario mds_workflow_service permiso para ejecutar el ensamblado controlador del flujo de trabajo. Para ello, agregue el usuario mds_workflow_service a la pestaña **Seguridad** de las **propiedades** del ensamblado controlador del flujo de trabajo y conceda al usuario mds_workflow_service los permisos READ y EXECUTE.  
   
-4.  Conceda al usuario mds_workflow_service permiso para ejecutar el archivo ejecutable del servicio de integración de flujos de trabajos MDS de SQL Server. Para ello, en la pestaña **Seguridad**, agregue el usuario mds_workflow_service a las **propiedades** de Microsoft.MasterDataServices.Workflow.exe, que se encuentra en \<Carpeta de instalación>\Master Data Services\WebApplication\bin, y conceda al usuario mds_workflow_service los permisos READ y EXECUTE.  
+4.  Conceda al usuario mds_workflow_service permiso para ejecutar el archivo ejecutable del servicio de integración de flujos de trabajos MDS de SQL Server. Para ello, agregue el usuario mds_workflow_service a la pestaña **seguridad** de las **propiedades** de Microsoft.MasterDataServices.Workflow.exe, en \<Your installation folder> \Master Data Services\WebApplication\bin y conceda el permiso de lectura y ejecución del usuario mds_workflow_service.  
   
 5.  Instale el servicio de integración de flujos de trabajo MDS de SQL Server mediante la utilidad de instalación de .NET, denominada InstallUtil.exe. InstallUtil.exe se encuentra en la carpeta de instalación de .NET (por ejemplo, C:\Windows\Microsoft.NET\Framework\v4.0.30319\\). Instale el servicio de integración de flujos de trabajo MDS de SQL escribiendo lo siguiente en el símbolo del sistema con permisos elevados:  
   

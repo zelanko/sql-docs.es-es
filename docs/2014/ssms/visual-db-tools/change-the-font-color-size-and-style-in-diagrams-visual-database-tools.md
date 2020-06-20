@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 14de9c19-8bbf-4347-bef5-156499640052
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0945dd4bd2897cd0dba7425f98700b05237c6b96
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8a50e450e009a9d584adc54b4c52cd8b7da457e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066262"
 ---
 # <a name="change-the-font-color-size-and-style-in-diagrams-visual-database-tools"></a>Cambiar el color, el tamaño y el estilo de la fuente en los diagramas (Visual Database Tools)
   Puede personalizar la forma en que aparece el texto en los diagramas de bases de datos modificando el color, el tamaño y el estilo de la fuente. Los cambios se aplican a los nuevos diagramas y a los diagramas existentes cuando se modifican.  

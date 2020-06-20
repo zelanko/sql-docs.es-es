@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9f527883-031b-442f-8e95-24bc0151ecbf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b2e30534fb5e0232ff2046e30e2e14075dfb807
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b11493b5b04fa9308e3afbe56176251225248338
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004182"
 ---
 # <a name="find-similar-and-related-documents-with-semantic-search"></a>buscar documentos similares y relacionados con la búsqueda semántica
   Describe cómo buscar documentos o valores de texto similares e información acerca de su similitud o relación en columnas configuradas para la indización semántica estadística.  
@@ -37,7 +36,7 @@ ms.locfileid: "66011319"
 >  Las columnas de destino deben tener habilitada la indización de texto completo y semántica.  
   
 ###  <a name="example-find-the-top-documents-that-are-similar-to-another-document"></a><a name="HowToIdentifySimilar"></a>Ejemplo: buscar los documentos principales que son similares a otro documento  
- En el ejemplo siguiente se recuperan los 10 candidatos principales que son similares al candidato especificado *@CandidateID* por de la tabla humanresources. JobCandidate de la base de datos de ejemplo AdventureWorks2012.  
+ En el ejemplo siguiente se recuperan los 10 candidatos principales que son similares al candidato especificado por *@CandidateID* de la tabla humanresources. JobCandidate de la base de datos de ejemplo AdventureWorks2012.  
   
 ```scr  
 SELECT TOP(10) KEY_TBL.matched_document_key AS Candidate_ID  

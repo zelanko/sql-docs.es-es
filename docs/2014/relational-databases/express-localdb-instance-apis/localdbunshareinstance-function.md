@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 54012ccb-eded-43f7-8ea5-da5ce79224c6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d140eccd547de3be0a62db331416fc9b6bfc8300
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45972029fdb06f447492ec75e1ab64a54f4adce5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128672"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050957"
 ---
 # <a name="localdbunshareinstance-function"></a>Función LocalDBUnshareInstance
   Detiene el uso compartido de la instancia de SQL Server Express LocalDB especificada.  
@@ -44,7 +43,7 @@ HRESULT LocalDBUnShareInstance(
  *dwFlags*  
  [Entrada] Reservado para uso futuro. En estos momentos, se debe establecer en 0.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -66,7 +65,7 @@ HRESULT LocalDBUnShareInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte también  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b053719-8500-4300-a169-fffca5801dd0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f500eb460cab8734a062ddf6561cbdf01d0f773
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62773436"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927576"
 ---
 # <a name="view-a-list-of-modified-files"></a>Ver una lista de archivos modificados
   Puede usar la ventana **protecciones pendientes** para mostrar en todo momento una lista de los archivos desprotegidos de la solución actual y para proteger estos archivos con un solo clic de botón.  
@@ -32,7 +31,7 @@ ms.locfileid: "62773436"
   
 2.  Para proteger los archivos seleccionados, haga clic en **proteger**. También puede acoplar la ventana **protecciones pendientes** en el lado derecho del [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] entorno para que pueda proteger los archivos cuando termine de trabajar.  
   
-     **Proteger**  
+     **Check-in**  
      Protege la solución.  
   
      **Comentarios**  

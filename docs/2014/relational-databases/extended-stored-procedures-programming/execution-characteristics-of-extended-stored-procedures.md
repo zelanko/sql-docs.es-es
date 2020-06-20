@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6fe1f7e8-cc02-49df-8a2a-d47a96ec3567
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d21f002ca6b7ea185df2e01f66abf0e1ef5cfd1b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62c95f0cb6c8239fee86b27b231e3e1830fb5009
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62512225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050904"
 ---
 # <a name="execution-characteristics-of-extended-stored-procedures"></a>Características de ejecución de los procedimientos almacenados extendidos
     
@@ -27,7 +26,7 @@ ms.locfileid: "62512225"
   
  La ejecución de un procedimiento almacenado extendido tiene estas características:  
   
--   La función de procedimiento almacenado extendido se ejecuta en el contexto de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]seguridad de.  
+-   La función de procedimiento almacenado extendido se ejecuta en el contexto de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   La función de procedimiento almacenado extendido se ejecuta en el espacio de procesos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62512225"
   
 -  
   
- Una vez cargado el archivo DLL de procedimiento almacenado extendido, el archivo DLL permanece cargado en el espacio de direcciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del servidor hasta que se detiene o el administrador descarga explícitamente el archivo DLL mediante DBCC *DLL_name* (Free).  
+ Una vez cargado el archivo DLL de procedimiento almacenado extendido, el archivo DLL permanece cargado en el espacio de direcciones del servidor hasta que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene o el administrador descarga explícitamente el archivo DLL mediante DBCC *DLL_name* (Free).  
   
  El procedimiento almacenado extendido se puede ejecutar desde [!INCLUDE[tsql](../../includes/tsql-md.md)] como un procedimiento almacenado utilizando la instrucción EXECUTE:  
   

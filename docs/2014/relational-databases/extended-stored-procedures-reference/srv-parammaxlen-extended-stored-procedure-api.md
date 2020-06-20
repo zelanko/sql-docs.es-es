@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7fadcfbc6249ca15ecd9581cc50d58d0e3a09a5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 890d87b22e4d91fd50793b5f3cf5ac697fdf8b89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050754"
 ---
 # <a name="srv_parammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procedimiento almacenado extendido)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Indica el número del parámetro. El primer parámetro es 1.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La longitud máxima, en bytes, de los datos del parámetro. Si no existe ningún parámetro *n* o no hay ningún procedimiento almacenado remoto, devuelve -1.  
   
  Esta función devuelve los valores siguientes, si el parámetro es uno de los siguientes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos.  
@@ -69,9 +68,9 @@ n
 |`BIGVARBINARY`|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NCHAR`|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
 |`NVARCHAR`|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>= 255:** 255<br /><br /> **<255:** 255|  
-|`NTEXT`|**Null:** -1<br /><br /> **CERO:** -1<br /><br /> **>= 255:** -1<br /><br /> 255:-1 ** \<**|  
+|`NTEXT`|**Null:** -1<br /><br /> **CERO:** -1<br /><br /> **>= 255:** -1<br /><br /> ** \< 255:** -1|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada parámetro de procedimiento almacenado remoto tiene una longitud de datos real y una longitud máxima. En los tipos de datos de longitud fija estándar que no permiten valores NULL, las longitudes real y máxima son las mismas. En los tipos de datos de longitud variable, las longitudes pueden variar. Por ejemplo, un parámetro declarado como **varchar(30)** puede tener datos con una longitud de solo 10 bytes. La longitud real del parámetro es 10 y su longitud máxima es 30. La función **srv_parammaxlen** obtiene la longitud máxima de los datos de un procedimiento almacenado remoto. Para obtener la longitud real de un parámetro, use **srv_paramlen**.  
   
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Sigue llamándose al controlador SRV_RPC, pero parece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  

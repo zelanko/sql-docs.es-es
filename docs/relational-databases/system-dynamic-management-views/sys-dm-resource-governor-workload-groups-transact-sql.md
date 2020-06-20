@@ -1,7 +1,7 @@
 ---
 title: Sys. dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/24/2018
+ms.date: 06/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dcd93a0c74d8fc12af14809c8ca66bf59275dee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32858f6e508ef0a7de2b981dc17379d7be7fa4c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821065"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84941040"
 ---
 # <a name="sysdm_resource_governor_workload_groups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "82821065"
 |group_id|**int**|Id. del grupo de cargas de trabajo No admite valores NULL.|  
 |name|**sysname**|Nombre del grupo de cargas de trabajo No admite valores NULL.|  
 |pool_id|**int**|Id. del grupo de recursos de servidor. No admite valores NULL.|  
-|external_pool_id|**int**|**Válido para** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
+|external_pool_id|**int**|**Se aplica a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br /> IDENTIFICADOR del grupo de recursos externos. No admite valores NULL.|  
 |statistics_start_time|**datetime**|Tiempo en que se restableció la colección de estadísticas para el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_request_count|**bigint**|El recuento acumulado de solicitudes completadas en el grupo de cargas de trabajo. No admite valores NULL.|  
 |total_queued_request_count|**bigint**|El recuento acumulado de solicitudes en cola una vez alcanzado el límite de GROUP_MAX_REQUESTS. No admite valores NULL.|  
@@ -62,16 +62,19 @@ ms.locfileid: "82821065"
 |request_max_cpu_time_sec|**int**|Valor actual máximo de uso de CPU, en segundos, para una única solicitud. No admite valores NULL.|  
 |request_memory_grant_timeout_sec|**int**|Valor actual del tiempo de espera de concesiones de memoria, en segundos, para una única solicitud. No admite valores NULL.|  
 |group_max_requests|**int**|Valor actual del número máximo de solicitudes simultáneas. No admite valores NULL.|  
-|max_dop|**int**|Grado máximo de paralelismo para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.|  
+|max_dop|**int**|Grado máximo de paralelismo configurado para el grupo de cargas de trabajo. El valor predeterminado, 0, utiliza la configuración global. No admite valores NULL.| 
+|effective_max_dop|**int**|**Se aplica a: a**partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] .<br /><br />Grado máximo efectivo de paralelismo para el grupo de cargas de trabajo. No admite valores NULL.| 
+|total_cpu_usage_preemptive_ms|**bigint**|**Se aplica a: a**partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .<br /><br />Tiempo total de CPU usado durante la programación de modo preferente para el grupo de cargas de trabajo, medido en MS. No admite valores NULL.<br /><br />Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente.| 
+|request_max_memory_grant_percent_numeric|**float**|**Se aplica a: a**partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] .<br /><br />Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.| 
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ,[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Identificador del nodo en el que se encuentra esta distribución.|  
   
-## <a name="remarks"></a>Observaciones  
- Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos almacenados de la configuración, utilice la vista de catálogo sys.resource_governor_workload_groups.  
+## <a name="remarks"></a>Comentarios  
+ Esta vista de administración dinámica muestra la configuración en memoria. Para ver los metadatos de configuración almacenados, utilice la vista de catálogo [Sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md) .  
   
- Cuando ALTER RESOURCE GOVERNOR RESET STATISTICs se ejecuta correctamente, se restablecen los contadores siguientes: statistics_start_time, total_request_count, total_queued_request_count, total_cpu_limit_violation_count, total_cpu_usage_ms, max_request_cpu_time_ms, total_lock_wait_count, total_lock_wait_time_ms, total_query_optimization_count, total_suboptimal_plan_generation_count, total_reduced_memgrant_count y max_request_grant_memory_kb. statistics_start_time se establece en la fecha y hora actuales del sistema, los otros contadores se establecen en cero (0).  
+ Cuando `ALTER RESOURCE GOVERNOR RESET STATISTICS` se ejecuta correctamente, se restablecen los contadores siguientes `statistics_start_time` : `total_request_count` , `total_queued_request_count` ,, `total_cpu_limit_violation_count` , `total_cpu_usage_ms` , `max_request_cpu_time_ms` ,,,,, `total_lock_wait_count` `total_lock_wait_time_ms` `total_query_optimization_count` `total_suboptimal_plan_generation_count` `total_reduced_memgrant_count` y `max_request_grant_memory_kb` . El contador `statistics_start_time` se establece en la fecha y hora actuales del sistema, y los otros contadores se establecen en cero (0).  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW SERVER STATE.  
+ Requiere el permiso `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Consulte también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
@@ -79,7 +82,3 @@ ms.locfileid: "82821065"
  [Sys. resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-workload-groups-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
-  
-
-
-

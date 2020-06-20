@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898f16c0b0588fe61ae76e1e86e85713ba3f898a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8f0b4c00b8a30260e92b2b870535dc04030534f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137490"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011603"
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Propiedades de Agente SQL Server (pestaña Avanzadas)
   De forma predeterminada, aparecen cinco propiedades en la pestaña **Avanzadas** . Si se han definido propiedades personalizadas, aparecen también en esta pestaña junto con los valores correspondientes.  

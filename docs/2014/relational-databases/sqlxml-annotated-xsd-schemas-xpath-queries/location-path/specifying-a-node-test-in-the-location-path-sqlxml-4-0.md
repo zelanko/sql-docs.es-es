@@ -14,32 +14,31 @@ helpviewer_keywords:
 ms.assetid: f46c30bf-1e24-4435-9ac2-f8ba43a8ff94
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e4ff55980c7ca4cae45d568f03fef32ba1ea5155
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 02f78577eab391f1774251ad2c6ca7b9a4bd2dab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703097"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015216"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Especificar una prueba de nodo en la ruta de acceso de ubicación (SQLXML 4.0)
-  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (`child`, `parent`, `attribute` o `self`) tiene un tipo de nodo principal. Para el `attribute` eje, el tipo de nodo principal es ** \<>de atributo **. En el caso de los `parent` `child` ejes, y `self` , el tipo de nodo principal es ** \<>del elemento **.  
+  Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (`child`, `parent`, `attribute` o `self`) tiene un tipo de nodo principal. Para el `attribute` eje, el tipo de nodo principal es **\<attribute>** . En el caso de los `parent` `child` ejes, y `self` , el tipo de nodo principal es **\<element>** .  
   
 > [!NOTE]  
 >  La prueba de nodo de carácter comodín * (por ejemplo, `child::*`) no se admite.  
   
 ## <a name="node-test-example-1"></a>Prueba de nodo: ejemplo 1  
- La ruta de acceso de la ubicación `child::Customer` selecciona ** \< Customer>** elemento secundario del nodo de contexto.  
+ La ruta de acceso `child::Customer` de ubicación selecciona elementos **\<Customer>** secundarios del nodo de contexto.  
   
- En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo. El tipo de nodo principal del `child` eje es ** \<>del elemento **. Por lo tanto, la prueba de nodo es TRUE si el>el nodo del ** \< cliente** es un ** \< elemento>** nodo. Si el nodo de contexto no tiene ningún ** \< cliente>** los elementos secundarios, se devuelve un conjunto vacío de nodos.  
+ En este ejemplo, `child` es el eje y `Customer` es la prueba de nodo. El tipo de nodo principal para el `child` eje es **\<element>** . Por lo tanto, la prueba de nodo es TRUE si el **\<Customer>** nodo es un **\<element>** nodo. Si el nodo de contexto no tiene ningún **\<Customer>** elemento secundario, se devuelve un conjunto de nodos vacío.  
   
 ## <a name="node-test-example-2"></a>Prueba de nodo: Ejemplo 2  
  La ruta `attribute::CustomerID` de acceso de ubicación selecciona el atributo **CustomerID** del nodo de contexto.  
   
- En el ejemplo, `attribute` es el eje y `CustomerID` es la prueba de nodo. El tipo de nodo principal del `attribute` eje es ** \<>de atributo **. Por lo tanto, la prueba de nodo es TRUE si **CustomerID** es un ** \< atributo>** nodo. Si el nodo de contexto no tiene **CustomerID**, se devuelve un conjunto vacío de nodos.  
+ En el ejemplo, `attribute` es el eje y `CustomerID` es la prueba de nodo. El tipo de nodo principal del `attribute` eje es **\<attribute>** . Por lo tanto, la prueba de nodo es TRUE si **CustomerID** es un **\<attribute>** nodo. Si el nodo de contexto no tiene **CustomerID**, se devuelve un conjunto vacío de nodos.  
   
 > [!NOTE]  
->  En esta implementación de XPath, si un paso de ubicación hace referencia a un ** \< elemento>** o un ** \< atributo>** tipo que no está declarado en el esquema, se genera un error. Este comportamiento es diferente al de la implementación de XPath en MSXML, que devuelve un conjunto de nodos vacío.  
+>  En esta implementación de XPath, si un paso de ubicación hace referencia a un **\<element>** **\<attribute>** tipo o que no está declarado en el esquema, se genera un error. Este comportamiento es diferente al de la implementación de XPath en MSXML, que devuelve un conjunto de nodos vacío.  
   
 ## <a name="abbreviated-syntax-for-the-axes"></a>Sintaxis abreviada para los ejes  
  Se admite la sintaxis abreviada siguiente para la ruta de acceso de ubicación:  

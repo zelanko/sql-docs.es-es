@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2f65976d2f517137e23bd9e5e1c98cc76324bc49
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698751"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014531"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtener información acerca de los desencadenadores DML
   En este tema se describe cómo obtener información acerca de los desencadenadores DML en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Esta información puede incluir los tipos de desencadenadores de una tabla, el nombre de un desencadenador, su propietario y la fecha en que se creó o modificó. Si el desencadenador no se cifró cuando se creó, se obtiene la definición del desencadenador. Puede usar la definición para entender cómo un desencadenador afecta a la tabla en la que se define. También puede averiguar los objetos que usa un desencadenador específico. Con esta información, puede identificar los objetos que afectan al desencadenador, en el caso de que se modifiquen o se eliminen de la base de datos.  
@@ -71,9 +70,9 @@ ms.locfileid: "62698751"
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiere y, luego, haga clic en **Ver dependencias**.  
   
-4.  En la ventana **Dependencias del objeto**, para ver los objetos que dependen del desencadenador DML, seleccione **Objetos que dependen de \<nombre del desencadenador DML>** . Los objetos aparecerán en el área **Dependencias** .  
+4.  En la ventana **dependencias del objeto** , para ver los objetos que dependen del desencadenador DML, seleccione **objetos que dependen \<DML trigger name> de **. Los objetos aparecerán en el área **Dependencias** .  
   
-     Para ver los objetos de los que depende el DML, seleccione **Objetos de los que depende \<nombre del desencadenador DML>** . Los objetos aparecerán en el área **Dependencias** . Expanda cada nodo para ver todos los objetos.  
+     Para ver los objetos de los que depende el DML, seleccione **objetos de los que \<DML trigger name> depende**. Los objetos aparecerán en el área **Dependencias** . Expanda cada nodo para ver todos los objetos.  
   
 5.  Para obtener información sobre un objeto que aparece en el área **Dependencias** , haga clic en el objeto. En el campo **Objeto seleccionado** , la información se proporciona en los cuadros **Nombre**, **Tipo**y **Tipo de dependencia** .  
   

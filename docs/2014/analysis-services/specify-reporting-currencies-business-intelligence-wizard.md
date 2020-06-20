@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 41bbc3c4-92e0-4b2d-b303-ce62ff9d4348
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1f395000888cccb52356b4e89e1331e1c86ea7e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068209"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940336"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Especificar monedas del informe (Asistente de Business Intelligence)
   Use la página **Define Reporting Currencies (Definir monedas del informe)** para definir las monedas del informe para la funcionalidad de conversión de moneda que cubre el tipo de conversión de varios a varios o de uno a varios especificado en la página **Seleccionar el tipo de conversión**. (Una moneda de informe es la moneda en que se convierten los valores de medida seleccionados en la página **Seleccionar medidas** ). Los miembros seleccionados de la dimensión de moneda definen una dimensión de moneda del informe para la conversión generada por el Asistente de Business Intelligence.  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fe1221b1ff86b96490fb09a5785978dcc16ac40b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934296"
 ---
 # <a name="database-mirroring-sql-server"></a>Creación de reflejo de la base de datos (SQL Server)
     
@@ -170,7 +169,7 @@ ms.locfileid: "62807938"
   
  Hay tres formas de intercambiar roles.  
   
--   *Conmutación automática por error*  
+-   *Conmutación por error automática*  
   
      Esta función requiere el modo de alta seguridad y la presencia del servidor reflejado y de un testigo. La base de datos ya debe estar sincronizada y el testigo debe estar conectado al servidor reflejado.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "62807938"
 > [!NOTE]  
 >  Dado que las bases de datos reflejadas son independientes entre sí, no pueden realizar la conmutación por error en grupo.  
   
-###  <a name="client-connections"></a><a name="ClientConnections"></a>Conexiones de cliente  
+###  <a name="client-connections"></a><a name="ClientConnections"></a> Conexiones de cliente  
  El proveedor de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona compatibilidad con la conexión de cliente en sesiones de creación de reflejo de la base de datos. Para más información, consulte [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Impacto de pausar una sesión en el registro de transacciones de la entidad de seguridad  
@@ -233,7 +232,7 @@ ms.locfileid: "62807938"
   
 -   [Replicación](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="in-this-section"></a><a name="InThisSection"></a>En esta sección  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> En esta sección  
  [Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Describe los requisitos previos y las recomendaciones para configurar la creación de reflejo de la base de datos.  
   
@@ -270,13 +269,13 @@ ms.locfileid: "62807938"
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
 ### <a name="configuration-tasks"></a>Tareas de configuración  
- **Usar SQL Server Management Studio**  
+ **Uso de SQL Server Management Studio**  
   
 -   [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
- **Usar Transact-SQL**  
+ **Uso de Transact-SQL**  
   
 -   [Permitir el acceso de red a un extremo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   

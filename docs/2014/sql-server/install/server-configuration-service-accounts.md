@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: c283702d-ab20-4bfa-9272-f0c53c31cb9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 405e1f8509e67518711eb2330c5f58961a3be77b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a894475f9dbdc95396f27b32f25f56bc409f0348
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76921133"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036717"
 ---
 # <a name="server-configuration---service-accounts"></a>Configuración del servidor - Cuentas de servicio
   Use la página Configuración del servidor del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de asignar cuentas de inicio de sesión a los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los servicios reales configurados en esta página dependen de las características que haya seleccionado para instalarse.  
   
-Las cuentas de inicio utilizadas para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y ejecutar pueden ser cuentas de usuario de dominio, cuentas de usuario local, cuentas de servicio administradas, cuentas virtuales o cuentas del sistema integradas.  
+Las cuentas de inicio utilizadas para iniciar y ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden ser cuentas de usuario de dominio, cuentas de usuario local, cuentas de servicio administradas, cuentas virtuales o cuentas del sistema integradas.  
   
 ## <a name="options"></a>Opciones  
  Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. Se recomienda la cuenta predeterminada para la mayoría de las instalaciones.  

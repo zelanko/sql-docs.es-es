@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf6fd1f328366333e5464cb226a8a8ab8e275395
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62782283"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935311"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Habilitar la opción Bloquear páginas en la memoria (Windows)
   Esta directiva de Windows determina qué cuentas pueden usar un proceso para mantener los datos en la memoria física, impidiendo que el sistema realice la paginación de los datos en la memoria virtual del disco.  
@@ -29,7 +28,7 @@ ms.locfileid: "62782283"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>Para habilitar la opción de bloqueo de páginas en memoria  
   
-1.  En el menú **Inicio** , haga clic en **Ejecutar**. En el cuadro **abrir** , escriba `gpedit.msc`.  
+1.  En el menú **Inicio** , haga clic en **Ejecutar**. En el cuadro **abrir** , escriba `gpedit.msc` .  
   
 2.  En la consola **Editor de directivas de grupo local** , expanda **Configuración del equipo**y, a continuación, expanda **Configuración de Windows**.  
   

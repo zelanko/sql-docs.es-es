@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bd879db30b3f787f513c1d657ebf6509cf59b37d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 498407598f691649024a027c5a441cd8ca74754d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702541"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065502"
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Hacer referencia a la colección de esquemas XML integrada (sys)
   Cada base de datos que se crea posee una colección de esquemas XML **sys** predefinida en el esquema relacional **sys** . Estos esquemas predefinidos se reservan, y son accesibles desde cualquier otra colección de esquemas XML creada por el usuario. Los prefijos utilizados en estos esquemas predefinidos son significativos en XQuery. El único prefijo reservado es **xml** .  

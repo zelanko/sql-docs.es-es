@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf8045ff45e7467a626bee85857ae8319f5d2649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211749"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048968"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
   La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
@@ -36,7 +35,7 @@ ms.locfileid: "68211749"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Descripción de la captura de datos modificados y la instancia de captura  
  Para que se pueda realizar el seguimiento de los cambios de cualquier tabla individual dentro de una base de datos, la captura de datos modificados debe habilitarse explícitamente en la base de datos. Para ello, se usa el procedimiento almacenado [sys.sp_cdc_enable_db](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql). Cuando se habilita la base de datos, las tablas de origen se pueden identificar como tablas sometidas a seguimiento mediante el procedimiento almacenado [sys.sp_cdc_enable_table](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql). Cuando una tabla se habilita para la captura de datos modificados, se crea una instancia de la captura asociada para admitir la diseminación de los datos modificados en la tabla de origen. La instancia de captura está compuesta de una tabla de cambios y de dos funciones de consulta, como máximo. Los metadatos que describen los detalles de configuración de la instancia de captura se conservan en las siguientes tablas de metadatos de captura de datos modificados: `cdc.change_tables`, `cdc.index_columns` y `cdc.captured_columns`. Esta información se puede recuperar al usar el procedimiento almacenado [sys.sp_cdc_help_change_data_capture](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql).  
   
- Todos los objetos que están asociados a una instancia de captura se crean en el esquema de captura de datos modificados de la base de datos habilitada. El nombre de la instancia de captura tiene que ser un nombre de objeto válido y único en todas las instancias de captura de base de datos. De forma predeterminada, el nombre \<es *Schema Name*_ nombre de*tabla*> de la tabla de origen. Para denominar su tabla de cambios asociada, se anexa `_CT` al nombre de la instancia de captura. Para denominar la función que se utiliza para consultar todos los cambios se antepone `fn_cdc_get_all_changes_` al nombre de la instancia de captura. Si la instancia de captura está configurada `net changes`para `net_changes` admitir, la función de consulta también se crea y se denomina con **fn_cdc_get_net_changes\_ ** del nombre de la instancia de captura.  
+ Todos los objetos que están asociados a una instancia de captura se crean en el esquema de captura de datos modificados de la base de datos habilitada. El nombre de la instancia de captura tiene que ser un nombre de objeto válido y único en todas las instancias de captura de base de datos. De forma predeterminada, el nombre es \<*schema name*_*table name*> de la tabla de origen. Para denominar su tabla de cambios asociada, se anexa `_CT` al nombre de la instancia de captura. Para denominar la función que se utiliza para consultar todos los cambios se antepone `fn_cdc_get_all_changes_` al nombre de la instancia de captura. Si la instancia de captura está configurada para admitir `net changes` , la `net_changes` función de consulta también se crea y se denomina con **fn_cdc_get_net_changes \_ ** del nombre de la instancia de captura.  
   
 ## <a name="change-table"></a>Tabla de cambios  
  Las primeras cinco columnas de una tabla de cambios de captura de datos modificados son las columnas de metadatos. Proporcionan información adicional correspondiente al cambio registrado. Las columnas restantes reflejan el nombre y, normalmente, también el tipo de las columnas capturadas identificadas de la tabla de origen. Estas columnas contienen los datos de columnas capturadas que se recopilan en la tabla de origen.  

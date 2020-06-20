@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6526b892-1d58-4f55-8335-f09887f6ea02
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41677f84b3d689cee12d1bdbf38a8bcdc0b7c995
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 216b8e1965e43598bcb6a6d60101de7fbb2bfcb6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705260"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019207"
 ---
 # <a name="bulk-copy-functions"></a>Bulk Copy Functions
   La extensión de la API de copia masiva específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite que las aplicaciones cliente agreguen filas de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rápidamente o las extraigan de ella.  

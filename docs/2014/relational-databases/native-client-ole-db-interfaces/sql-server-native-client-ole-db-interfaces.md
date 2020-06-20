@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c462c92-ad5b-4dd5-817d-2b89c83d8fe4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b1da49254d82822ec5ef462d85217744ee40d2f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4483ea4b43e0ab65deca1e81f873ed82de22f8a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704779"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056059"
 ---
 # <a name="sql-server-native-client-ole-db-reference"></a>Referencia de SQL Server Native Client (OLE DB)
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone interfaces a los consumidores que desean tener acceso a los datos de uno o más equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client es un proveedor compatible con la versión 2,0 de OLE DB.  

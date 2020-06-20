@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 85654bf4-e25f-4f04-8e34-bbbd738d60fa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ad0a33f0a5951256ff94bc78e7f09a88c05f227
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010416"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimizar el rendimiento de los filtros con parámetros con particiones calculadas previamente
   Las particiones precalculadas son una optimización del rendimiento que se puede utilizar con publicaciones de combinación filtradas. Las particiones precalculadas son también un requisito para utilizar registros locales en publicaciones filtradas. Para obtener más información sobre los registros lógicos, vea [Agrupar cambios en filas relacionadas con registros lógicos](group-changes-to-related-rows-with-logical-records.md).  
   
  Cuando un suscriptor se sincroniza con un publicador, el publicador debe evaluar los filtros del suscriptor para determinar qué filas pertenecen a la partición, o conjunto de datos, de ese suscriptor. Este proceso de determinar la pertenencia a particiones de los cambios en el publicador para cada suscriptor que recibe un conjunto de datos filtrados se denomina *evaluación de particiones*. Sin las particiones precalculadas, la evaluación de particiones debe realizarse para cada cambio efectuado en una columna filtrada del publicador desde la última vez que se ejecutó el Agente de mezcla para un suscriptor concreto, y este proceso tiene que repetirse para cada suscriptor que se sincroniza con el publicador.  
   
- Sin embargo, si el publicador y el suscriptor [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] se están ejecutando en o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios en el publicador se calcula previamente y se conserva en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
+ Sin embargo, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios en el publicador se calcula previamente y se conserva en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
  Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   

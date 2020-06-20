@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15953706-f0d1-45f5-a2eb-a8bd36e1a5fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5b29121aa91dc6d237c0d5809d04e557fb766084
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 860d188f7a934e707766b157d4c089a88207ce02
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056333"
 ---
 # <a name="data-types-ole-db"></a>Tipos de datos (OLE DB)
   Para ejecutar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones y procesar los resultados mediante el proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB de Native Client, debe saber cómo el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client asigna los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos a OLE DB tipos de datos al enlazar parámetros o columnas en un conjunto de filas, y cuando usa la interfaz **ITableDefinition** para crear una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

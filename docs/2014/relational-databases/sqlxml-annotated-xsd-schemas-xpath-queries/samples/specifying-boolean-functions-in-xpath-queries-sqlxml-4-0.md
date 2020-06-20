@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d43cf4449bfb4acbad32d297bc81be48f38244ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2318694767ceedfc3deffa925c90d235d115f1ca
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062840"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Especificar funciones booleanas en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo se especifican funciones booleanas en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "82717808"
 ## <a name="examples"></a>Ejemplos  
   
 ## <a name="a-specify-the-not-boolean-function"></a>A. Especificar la función booleana not()  
- Esta consulta devuelve todos los elementos secundarios ** \<>del cliente** del nodo de contexto que no tienen los elementos secundarios ** \< Order>** :  
+ Esta consulta devuelve todos los **\<Customer>** elementos secundarios del nodo de contexto que no tienen **\<Order>** elementos secundarios:  
   
 ```  
 /child::Customer[not(child::Order)]  
@@ -77,7 +76,7 @@ ms.locfileid: "82717808"
 ```  
   
 ## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Especificar las funciones booleanas true () y false ()  
- Esta consulta devuelve todos los elementos secundarios del elemento ** \<>Customer** del nodo de contexto que no tienen los elementos secundarios ** \< Order>** . En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
+ Esta consulta devuelve todos los elementos **\<Customer>** secundarios del nodo de contexto que no tienen **\<Order>** elementos secundarios. En términos relacionales, esta consulta devuelve todos los clientes que no han realizado ningún pedido.  
   
 ```  
 /child::Customer[child::Order=false()]  

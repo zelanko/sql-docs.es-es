@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8ca0717a63c9660c225ec238e1e4d2423f7d01ba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721360"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010792"
 ---
 # <a name="distributor-information-dialog-box"></a>Información del distribuidor (cuadro de diálogo) 
 En este tema se proporciona información sobre el cuadro de diálogo **distribuidor** 
@@ -59,7 +58,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintento    
+-   Volver a intentar    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
@@ -73,13 +72,13 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Suscripción**  
  Nombre de la suscripción, con el formato: [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Tipo**  
  Tipo de replicación: inserción, extracción o anónima.  
   
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duration**  
+ **Duración**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  
@@ -88,7 +87,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Tasa de entrega**  
  La tasa, en comandos por segundo, a la que se confirman los comandos de inicialización en la base de datos de distribución durante la última ejecución del agente.  
   
- **Latencia**  
+ **Latency**  
  El tiempo, en segundos, que ha transcurrido entre el último cambio confirmado en la base de datos de publicación y el comando correspondiente que se confirma en la base de datos de distribución.  
   
  **#Trans**  
@@ -105,7 +104,7 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  Estado del agente. En la lista siguiente se muestran los valores de estado posibles:  
   
 -   Error    
--   Reintento    
+-   Volver a intentar    
 -   En ejecución    
 -   No está en ejecución    
 -   No se ha iniciado nunca  
@@ -119,13 +118,13 @@ En este tema se proporciona información sobre el cuadro de diálogo **distribui
  **Suscripción**  
  Nombre de la suscripción, con el formato: [*SubscriberName*].[*Database*].  
   
- **Type**  
+ **Tipo**  
  Tipo de replicación: inserción, extracción o anónima.  
   
  **Última hora de inicio**  
  Última hora en que se inició el agente.  
   
- **Duration**  
+ **Duración**  
  Intervalo de tiempo que se ejecutó el agente. Este tiempo representa el tiempo transcurrido si el agente se está ejecutando actualmente o el tiempo total de ejecución si ya finalizó la ejecución.  
   
  **Última acción**  

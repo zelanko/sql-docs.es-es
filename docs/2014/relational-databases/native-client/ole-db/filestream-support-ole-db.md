@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f50f002514977f60fb07358293ecbdd524884e58
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cde3c2cd1b72773cfcf17eacedeb3276dd2f63da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011055"
 ---
 # <a name="filestream-support-ole-db"></a>Compatibilidad con FILESTREAM (OLE DB)
   A partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10,0, OLE DB admite la característica FileStream mejorada. Para obtener más información acerca de esta característica, vea [compatibilidad de FileStream](../features/filestream-support.md). Para ver ejemplos, consulte [FileStream y OLE DB](../../native-client-ole-db-how-to/filestream/filestream-and-ole-db.md).  

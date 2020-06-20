@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 429f146e-edb4-4401-a225-f2c8468971c5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1ba348d3a47945bf9bb4f375310c5c92e6be7705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90cb7110a6b4e9372fe5397ba050f91535a58f94
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055940"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963705"
 ---
 # <a name="select-source-location-ssis-package-upgrade-wizard"></a>Seleccionar ubicación de origen (Asistente para actualización del paquete SSIS)
   Utilice la página **Seleccionar ubicación de origen** para especificar el origen desde el que se actualizan los paquetes.  
@@ -55,7 +54,7 @@ ms.locfileid: "66055940"
  **Server**  
  Escriba el nombre del servidor que tiene los paquetes que se van a actualizar o seleccione este servidor en la lista.  
   
- **Usar la autenticación de Windows**  
+ **Usar autenticación de Windows**  
  Seleccione esta opción para utilizar la autenticación de Windows para conectarse al servidor.  
   
  **Utilizar autenticación de SQL Server**  

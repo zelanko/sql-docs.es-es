@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: 855860ae-528f-48ab-80e3-f53e7cb8c33f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c9b0a978d3ab5612fc92bc2e87f1477249a9875
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048622"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Columnas de índice (Visual Database Tools, cuadro de diálogo)
   Utilice este cuadro de diálogo para seleccionar las columnas para un índice y establecer el orden de éstas. Un índice puede utilizar una o más columnas y cada columna se puede ordenar de forma ascendente o descendente. Para obtener acceso a este cuadro de diálogo, en el cuadro de diálogo **Índices o claves** , haga clic en el botón de puntos suspensivos de la fila **Columnas** en la sección **General** .  
   
 ## <a name="options"></a>Opciones  
  **Nombre de la columna**  
- Elija las columnas que participan en el índice. Seleccione ** \<ninguno>** para quitar esa columna del índice.  
+ Elija las columnas que participan en el índice. Seleccione **\<None>** para quitar esa columna del índice.  
   
  **Criterio de ordenación**  
  Seleccione un criterio de ordenación para la columna especificada. Las opciones disponibles son **Ascendente** o **Descendente**.  

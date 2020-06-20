@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 406175533b92d13dce8c14b91b654fbb6099dc22
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721660"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010992"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
   La opción de sincronización web para la replicación de mezcla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] habilita la replicación de datos con el protocolo HTTPS a través de Internet. Para utilizar la sincronización web, primero debe realizar las siguientes acciones de configuración:  
@@ -124,7 +123,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante los parámetros-`DownloadGenerationsPerBatch` y-`UploadGenerationsPerBatch` del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica mediante los parámetros- `DownloadGenerationsPerBatch` y- `UploadGenerationsPerBatch` del agente de mezcla. Para más información, consulte [Replication Merge Agent](agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   

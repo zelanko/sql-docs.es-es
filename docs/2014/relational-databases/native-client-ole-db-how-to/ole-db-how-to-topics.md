@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fbfab1b0-433d-497e-ae07-9b21a5c6903c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4152f1594593de572514929e6a448071145c18c6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8ed0c66981075fd88b066deac05aa14184ff41c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82696983"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056251"
 ---
 # <a name="ole-db-how-to-topics"></a>Temas de procedimientos de OLE DB
   Para usar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, debe saber cómo establecer una conexión con el servidor, ejecutar el comando y procesar los resultados.  

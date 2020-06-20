@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6fee1a15-325a-4f09-a95d-deecf8af1b9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: decf18a42bc2f3f80d5c6099adc58a42869eec64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19d7e332605f2b2f0f746d5d149451dd2646627d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030937"
 ---
 # <a name="audit-server-principal-impersonation-event-class"></a>Audit Server Principal Impersonation, clase de eventos
-  La clase de eventos **Audit Server Principal Impersonation** se produce cuando hay una suplantación en el ámbito del servidor, como EXECUTE AS \<*login*>.  
+  La clase de eventos **Audit Server principal Impersonation** se produce cuando hay una suplantación en el ámbito del servidor, como Execute as \<*login*> .  
   
 ## <a name="audit-server-principal-impersonation-event-class-data-columns"></a>Columnas de datos de la clase de eventos Audit Server Principal Impersonation  
   

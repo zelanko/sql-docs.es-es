@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 37769b1c-c480-419a-8c54-5cc420bf73db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2d1c1e70e704c50b619a34b28a899ce10316d446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 993cfb67d4e6b72eec7cc0537e9b47371e94af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704709"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011190"
 ---
 # <a name="updating-data-in-rowsets"></a>Actualizar datos en conjuntos de filas
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client actualiza los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos cuando un consumidor actualiza un conjunto de filas modificable que contiene los datos. Se crea un conjunto de filas modificable cuando el consumidor solicita compatibilidad para las interfaces **IRowsetUpdate** o **IRowsetChange**.  

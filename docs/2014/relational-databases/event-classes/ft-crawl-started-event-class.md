@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2535b856-97e8-4fb2-8ba0-5d5446355fa6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a3dbaa76fcc54bf35b72d0a81efce479be51974
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63023891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85029648"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started (clase de eventos)
   La clase de eventos **FT:Crawl Started** indica que se ha iniciado un rastreo de texto completo (llenado). Utilice esta clase de eventos para comprobar si las tareas de trabajo están recogiendo una solicitud de rastreo.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e26f6cf1a61e4df9db79bc5fd90429f86d70a99f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210773"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055736"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
@@ -205,15 +204,15 @@ ms.locfileid: "68210773"
   
     1.  Vuelva a crear la publicación en la base de datos **B**. Continúe en el paso b.  
   
-    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base **de**datos a, especificando que la suscripción debe inicializarse con una copia de seguridad (el **@sync_type** valor **initialize with backup** para el parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso c.  
+    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base **de**datos a, especificando que la suscripción debe inicializarse con una copia de seguridad (el valor **Initialize with backup** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso c.  
   
-    3.  Vuelva a crear la suscripción de la base **de** datos a a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos (un valor **@sync_type** de **Replication support Only** para el parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vaya al paso 8.  
+    3.  Vuelva a crear la suscripción de la base **de** datos a a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos (un valor de **Replication support only** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Vaya al paso 8.  
   
 8.  Ejecute los agentes de distribución para sincronizar las suscripciones de las bases de datos **A** y **B**. Si hay columnas de identidad en las tablas publicadas, vaya al paso 9. En caso contrario, continúe en el paso 10.  
   
 9. Después de la restauración, el intervalo de identidad asignado a cada tabla en la base de datos **A** también se utilizará en la base de datos **B**. Asegúrese de que la base de datos restaurada **B** haya recibido todos los cambios de la base de datos **B** que se propagaron a las bases de datos **A** y **C** y luego reinicie el intervalo de identidad para cada tabla.  
   
-    1.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro **@request_id**de salida. Continúe en el paso b.  
+    1.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso b.  
   
     2.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Para más información, vea [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md) o [Iniciar y detener un Agente de replicación &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Continúe en el paso c.  
   
@@ -229,7 +228,7 @@ ms.locfileid: "68210773"
   
     1.  Detenga toda la actividad en las tablas publicadas de la topología punto a punto. Continúe en el paso b.  
   
-    2.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro **@request_id**de salida. Continúe en el paso c.  
+    2.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso c.  
   
     3.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Continúe en el paso d.  
   
@@ -243,7 +242,7 @@ ms.locfileid: "68210773"
   
     1.  En la base de datos **B**, consulte la tabla [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) para recuperar el número de secuencia de registro (LSN) de la más reciente transacción que ha recibido la base de datos **B** de la base de datos **C**.  
   
-    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base de datos **C**, especificando que la suscripción debe inicializarse basándose en LSN (el valor **@sync_type** **initialize from LSN** para el parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso b.  
+    2.  Vuelva a crear la suscripción de la base de datos **B** a la publicación de la base de datos **C**, especificando que la suscripción debe inicializarse basándose en LSN (el valor **Initialize from lsn** para el **@sync_type** parámetro de [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Continúe en el paso b.  
   
     3.  Vuelva a crear la suscripción en la base de datos **C** a la publicación de la base de datos **B**, especificando que el suscriptor ya tiene los datos. Vaya al paso 13.  
   

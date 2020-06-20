@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 556c7dfe-7bc8-4cab-a36f-2b753a05d3f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01383ffade91cde641018b90be30dc92e644b151
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 03abb1dc601c7b329742f290b9ce62aefd08e7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056888"
 ---
 # <a name="code-outlining"></a>Esquematización de código
   Puede usar la característica de esquematización de los editores de consultas de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para ocultar selectivamente el código mientras modifica las consultas. Esto permite ver más fácilmente el código en el que se está trabajando, sobre todo en archivos de consulta de gran tamaño.
@@ -36,7 +35,7 @@ ms.locfileid: "82704067"
 
  ![Código XML que muestra la esquematización](../../database-engine/media/editoutlinexmlfull.gif "Código XML que muestra la esquematización")
 
- Al hacer clic en el signo menos de la línea \<InnerTag>, solo se contrae InnerTag, como se muestra en la ilustración siguiente.
+ Al hacer clic en el signo menos de la \<InnerTag> línea, solo se contrae el InnerTag, tal y como se muestra en la siguiente ilustración.
 
  ![Código XML con el nodo interno oculto](../../database-engine/media/editoutlinexmlinnercol.gif "Código XML con el nodo interno oculto")
 
@@ -44,11 +43,11 @@ ms.locfileid: "82704067"
 
  ![Código XML con información sobre herramientas que muestra el código oculto](../../database-engine/media/editoutlinexmlmouse.gif "Código XML con información sobre herramientas que muestra el código oculto")
 
- Al hacer clic en el signo menos de la línea \<MiddleTag>, se contraen MiddleTag e InnerTag, como se muestra en la ilustración siguiente.
+ Al hacer clic en el signo menos de la \<MiddleTag> línea, MiddleTag y InnerTag están contraídos, tal como se muestra en la siguiente ilustración.
 
  ![Código XML con las etiquetas internas y centrales ocultas](../../database-engine/media/editoutlinexmlmiddlecol.gif "Código XML con las etiquetas internas y centrales ocultas")
 
- Al hacer clic en el signo menos de la línea \<OuterTag>, se contraen las tres líneas, como se muestra en la ilustración siguiente.
+ Al hacer clic en el signo menos de la \<OuterTag> línea, se contraen las tres líneas, como se muestra en la siguiente ilustración.
 
  ![Código XML con todas las tres etiquetas ocultas](../../database-engine/media/editoutlinexmloutercol.gif "Código XML con todas las tres etiquetas ocultas")
 

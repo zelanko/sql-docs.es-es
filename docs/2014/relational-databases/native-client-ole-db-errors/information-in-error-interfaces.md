@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 460a0a2cf58d5980b1265db91d053e3088b55a99
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8f6718692e07fb6037d7ffcea7b21d94fdca3181
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056282"
 ---
 # <a name="information-in-error-interfaces"></a>Información en interfaces de error
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client notifica información de error y de estado en las interfaces de error definidas por el OLE DB **IErrorInfo**, **IErrorRecords**y **ISQLErrorInfo**.  
@@ -33,7 +32,7 @@ ms.locfileid: "82704985"
 |---------------------|-----------------|  
 |**GetDescription**|Cadena de mensaje de error descriptiva.|  
 |**GetGUID**|GUID de la interfaz que definió el error.|  
-|**GetHelpContext**|No se admite. Siempre devuelve cero.|  
+|**GetHelpContext**|No compatible. Siempre devuelve cero.|  
 |**GetHelpFile**|No compatible. Siempre devuelve NULL.|  
 |**GetSource**|Cadena "Microsoft SQL Server Native Client".|  
   

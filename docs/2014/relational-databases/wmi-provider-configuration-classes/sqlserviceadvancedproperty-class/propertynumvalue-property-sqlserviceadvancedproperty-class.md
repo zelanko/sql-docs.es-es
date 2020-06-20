@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2c740dee-8911-443c-981f-7f224598ad21
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c7ac997caa099136c5b03bcb48bfcd5ecfd0b8f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 366dde67536163ca408d9a2f5eeeb73903c5b929
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911597"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048832"
 ---
 # <a name="propertynumvalue-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyNumValue (clase SqlServiceAdvancedProperty)
   Obtiene el valor numérico de la propiedad avanzada.  
@@ -39,7 +38,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit32 que especifica el valor numérico de la propiedad avanzada.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

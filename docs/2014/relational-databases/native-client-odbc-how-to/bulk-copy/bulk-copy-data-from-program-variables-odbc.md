@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c3f2d7c-4ff2-4887-adfd-1f488a27c21c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5f85df61f612cb91d39b15e6c91e2fb8495c2347
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fe1d4e6989984ef96d525adafc6518cb55b8576b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019131"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copiar datos de forma masiva desde variables de programa (ODBC)
   En este ejemplo se muestra cómo usar las funciones de copia masiva para copiar datos de forma masiva de variables de programa a SQL Server utilizando `bcp_bind` y `bcp_sendrow`. (Se ha quitado el código de comprobación de errores para simplificar el ejemplo).  

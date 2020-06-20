@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee19dbb2-6fd7-4b9b-9ea6-36c6faeedf10
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49d9fd67033b16085553b77cfc51ddbe60bf3d4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4dc7b70d24eae9e098c3b05cbb284c7961b4751
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093434"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011959"
 ---
 # <a name="progress-uninstall"></a>Progreso (Desinstalar)
   Use la página Progreso (Desinstalar) para supervisar el progreso de la instalación.  

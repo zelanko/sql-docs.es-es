@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551b8e8-3668-4ed4-852f-bae826254f4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0d3f2412114e50292c91908b3a20c433d022b239
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68185811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057609"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implementar directivas programadas en varias instancias
   Mediante el uso de servidores registrados puede implementar directivas programadas en servidores administrados desde una ubicación central. Puede implementar directivas programadas desde un grupo de servidores locales o desde un Servidor de administración central.  
@@ -92,10 +91,10 @@ ms.locfileid: "68185811"
 ## <a name="summary"></a>Resumen  
  Este tutorial le ha mostrado la forma de realizar evaluaciones tanto programadas como a petición de las directivas de prácticas recomendadas en una o varias instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="next"></a>Siguiente  
+## <a name="next"></a>Siguientes  
  Este tutorial ha finalizado. Para volver al inicio, vea [Tutorial: evaluar las prácticas recomendadas mediante la administración basada en directivas](../../2014/tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md).  
   
- Para ver una lista de [!INCLUDE[ssDE](../includes/ssde-md.md)] los tutoriales, haga clic en [motor de base de datos tutoriales](../relational-databases/database-engine-tutorials.md).  
+ Para ver una lista de los [!INCLUDE[ssDE](../includes/ssde-md.md)] tutoriales, haga clic en [motor de base de datos tutoriales](../relational-databases/database-engine-tutorials.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

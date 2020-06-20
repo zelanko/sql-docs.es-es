@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7069a82b-905b-47a5-aee4-6fba24204979
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e166be7ee2100945cc430a78e725630b1e8f6d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b86ec76d75f58db7f8e2978764e8ce9c5ace2279
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055914"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963548"
 ---
 # <a name="select-variables"></a>Seleccionar variables
   Utilice el cuadro de diálogo **Seleccionar variables** para especificar las variables que se van a utilizar en una operación de envío de mensaje en la tarea Cola de mensajes. La lista **Variables disponibles** incluye las variables definidas por el usuario y de sistema que se encuentran en el ámbito de la tarea Cola de mensaje o en su contenedor principal. La tarea utiliza las variables de la lista **Variables seleccionadas** .  
@@ -43,6 +42,6 @@ ms.locfileid: "66055914"
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Tarea Cola de mensajes](control-flow/message-queue-task.md)  
   
   

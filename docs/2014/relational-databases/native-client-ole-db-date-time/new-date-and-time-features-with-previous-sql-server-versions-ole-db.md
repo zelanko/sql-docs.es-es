@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: df9e157431a8330aed8357231c3b28d12cb4fbc1
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 39f22fe37138fab22d79acc5bd667257f392737a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705012"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056294"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Nuevas características de fecha y hora con versiones de SQL Server anteriores (OLE DB)
   En este tema se describe el comportamiento esperado cuando una aplicación cliente que usa las características mejoradas de fecha y hora se comunica con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , y cuando un cliente compilado con una versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client anterior a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] envía comandos a un servidor que admite características mejoradas de fecha y hora.  
@@ -31,7 +30,7 @@ ms.locfileid: "82705012"
   
 |Tipo de cliente OLE DB|Tipo de SQL Server 2005|SQL Server tipo 2008 (o posterior)|Conversión del resultado (servidor a cliente)|Conversión de parámetros (cliente a servidor)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Fecha|Aceptar|Aceptar|  
+|DBTYPE_DBDATE|Datetime|Date|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
@@ -39,7 +38,7 @@ ms.locfileid: "82705012"
 |DBTYPE_DBTIMESTAMP|||Error: literal de hora no válido.|Aceptar|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|Aceptar|Aceptar|  
-|DBTYPE_DBDATE|Smalldatetime|Fecha|Aceptar|Aceptar|  
+|DBTYPE_DBDATE|Smalldatetime|Date|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de hora se establecen en cero.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si el campo de hora es distinto de cero.|  
 |DBTYPE_DBTIME||Time(0)|Aceptar|Aceptar|  
 |DBTYPE_DBTIMESTAMP|||Los campos de fecha se establecen en la fecha actual.|Se producirá un error en IRowsetChange debido al truncamiento de la cadena si las fracciones de segundo son distintas de cero.<br /><br /> Se omite la fecha.|  
@@ -65,7 +64,7 @@ ms.locfileid: "82705012"
   
 |Tipo de parámetro|wType|ulParamSize|bPrecision|bScale|  
 |--------------------|-----------|-----------------|----------------|------------|  
-|fecha|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -79,7 +78,7 @@ ms.locfileid: "82705012"
   
 |Tipo de columna|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|  
 |-----------------|--------------------|--------------------------|-------------------------|--------------------------------------------------|  
-|fecha|DBTYPE_WSTR|10|NULL|NULL|  
+|date|DBTYPE_WSTR|10|NULL|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|NULL|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -91,7 +90,7 @@ ms.locfileid: "82705012"
   
 |Tipo de parámetro|wType|ulColumnSize|bPrecision|bScale|  
 |--------------------|-----------|------------------|----------------|------------|  
-|fecha|DBTYPE_WSTR|10|~0|~0|  
+|date|DBTYPE_WSTR|10|~0|~0|  
 |time(1..7)|DBTYPE_WSTR|8, 10..16|~0|~0|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|16|16|0|  
 |datetime|DBTYPE_DBTIMESTAMP|16|23|3|  
@@ -106,7 +105,7 @@ ms.locfileid: "82705012"
   
 |Tipo de columna|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|DATETIME_PRECISION|  
 |-----------------|----------------|--------------------------------|------------------------------|-------------------------|  
-|fecha|DBTYPE_WSTR|10|20|NULL|  
+|date|DBTYPE_WSTR|10|20|NULL|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|NULL|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|0|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|3|  
@@ -118,7 +117,7 @@ ms.locfileid: "82705012"
   
 |Tipo de columna|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
 |-----------------|----------------|--------------------------------|------------------------------|--------------------------------------|  
-|fecha|DBTYPE_WSTR|10|20|date|  
+|date|DBTYPE_WSTR|10|20|date|  
 |time|DBTYPE_WSTR|8, 10..16|16, 20.. 32|time|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|NULL|NULL|smalldatetime|  
 |datetime|DBTYPE_DBTIMESTAMP|NULL|NULL|datetime|  

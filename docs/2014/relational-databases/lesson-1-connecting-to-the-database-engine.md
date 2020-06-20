@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d296aae78434bcfff1c69770878705ef5f4bd0ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63145492"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025345"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al motor de base de datos
   Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
@@ -85,7 +84,7 @@ ms.locfileid: "63145492"
   
      Aparece el cuadro de diálogo **Inicio de sesión - Nuevo** .  
   
-2.  En la página **General** , en el cuadro **nombre de inicio de sesión** , escriba un inicio de sesión de Windows con el formato * \<dominio>\\<inicio de sesión\>*.  
+2.  En la página **General** , en el cuadro **nombre de inicio de sesión** , escriba un inicio de sesión de Windows con el formato * \<domain> \\<Inicio \> *de sesión.  
   
 3.  En el cuadro **Base de datos predeterminada** , seleccione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , si está disponible. Si no lo está, seleccione **master**.  
   

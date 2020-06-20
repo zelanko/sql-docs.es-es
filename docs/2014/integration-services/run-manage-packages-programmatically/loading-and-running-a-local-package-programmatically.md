@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2f9fc1a8-a001-4c54-8c64-63b443725422
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d213bf8ca554b60edc8dc3de3f1290cd00f538
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08a644f9de2f406ecb0abfaa30bf1c9e646213f0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766897"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964515"
 ---
 # <a name="loading-and-running-a-local-package-programmatically"></a>Cargar y ejecutar un paquete local mediante programación
   Puede ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] según sea necesario o en momentos predeterminados mediante los métodos descritos en [Ejecución de paquetes](../packages/run-integration-services-ssis-packages.md). Sin embargo, con solo unas líneas de código, también puede ejecutar un paquete desde una aplicación personalizada como una aplicación Windows Forms, una aplicación de consola, un formulario Web Forms o servicio web ASP.NET o un servicio de Windows.  
@@ -59,7 +58,7 @@ ms.locfileid: "62766897"
   
 2.  En el menú **Proyecto**, haga clic en **Agregar referencia** y agregue una referencia a **Microsoft.SqlServer.ManagedDTS.dll**. Haga clic en **OK**.  
   
-3.  Use la instrucción `Imports` Visual Basic o la instrucción `using` de C# para importar el espacio de nombres **Microsoft. SqlServer. DTS. Runtime** .  
+3.  Use la `Imports` instrucción Visual Basic o la instrucción de C# `using` para importar el espacio de nombres **Microsoft. SqlServer. DTS. Runtime** .  
   
 4.  Agregue el código siguiente en la rutina principal. La aplicación de consola completada se debe parecer al ejemplo siguiente.  
   

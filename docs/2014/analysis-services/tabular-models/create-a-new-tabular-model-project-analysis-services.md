@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 001bed84-f50f-4961-bc25-9906728d99ec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: ccb53d47b44ce70b8a84baa784decef74c8367fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f449eb21e53a22a1a8d8f2eaa1aa39cf58c99
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067628"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939856"
 ---
 # <a name="create-a-newtabular-model-project-ssas-tabular"></a>Crear un proyecto de modelos de tabulares nuevo (SSAS tabular)
   En este tema se describe cómo crear un proyecto de modelos tabulares en blanco en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Después de crear un nuevo proyecto de modelos, puede empezar importando datos de orígenes de datos.  

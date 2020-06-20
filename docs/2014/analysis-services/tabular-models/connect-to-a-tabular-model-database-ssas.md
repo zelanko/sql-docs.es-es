@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 983d0c8a-77da-4c6e-8638-283bcb14f143
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4685dc65c860776143f25f4299a62427adfcb31f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939896"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Conectar a una base de datos de modelo tabular (SSAS)
   Después de generar un modelo tabular e implementarlo en un servidor de modo tabular de Analysis Services, debe establecer los permisos que permiten que esté disponible para las aplicaciones cliente. Este tema explica cómo establecer permisos y cómo conectarse a una base de datos de aplicaciones cliente.  
@@ -81,7 +80,7 @@ ms.locfileid: "66067656"
   
 2.  Seleccione **Desde Analysis Services**.  
   
-3.  En **Nombre del servidor**, especifique la instancia de Analysis Services que hospeda la base de datos. El nombre de servidor suele ser el del equipo que ejecuta el software del servidor. Si el servidor se instaló como una instancia con nombre, debe especificar el nombre en este formato: \<servername>\\<InstanceName\>.  
+3.  En **Nombre del servidor**, especifique la instancia de Analysis Services que hospeda la base de datos. El nombre de servidor suele ser el del equipo que ejecuta el software del servidor. Si el servidor se instaló como una instancia con nombre, debe especificar el nombre en este formato: \<servername> \\<InstanceName \> .  
   
      La instancia de servidor debe configurarse para la implementación tabular independiente y la instancia de servidor debe tener una regla de entrada que permita el acceso a ella. Para obtener más información, vea [Determinar el modo de servidor de una instancia de Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) y [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -101,7 +100,7 @@ ms.locfileid: "66067656"
   
  Al importar datos, este error de Microsoft Excel tiene lugar cuando intenta utilizar el asistente para conectarse a una base de datos de modelo tabular en un servidor de Analysis Services remoto y no tiene suficientes permisos. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   
- **Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones \<: nombre del modelo> espacio aislado**  
+ **Error al intentar establecer una conexión con el origen de datos externo. No se pudieron actualizar las siguientes conexiones: \<model name> espacio aislado**  
   
  En SharePoint, este error de Microsoft Excel tiene lugar cuando se intenta llevar a cabo una interacción con los datos, por ejemplo filtrar los datos, en una tabla dinámica que utilice datos del modelo. El error se produce porque no tiene los permisos necesarios en el servidor de Analysis Services remoto. Para resolver este error, debe tener derechos de acceso de usuario en la base de datos. Consulte las instrucciones proporcionadas anteriormente en este tema para conceder al usuario acceso a los datos.  
   

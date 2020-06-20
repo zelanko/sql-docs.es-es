@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 75667beed815ef93cd071935ce7e5a24cf5b7166
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7c7338500b68c157d5b555e29cf3a88bea3513c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702813"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009288"
 ---
 # <a name="xml-data-type-support-in-sqlxml-40"></a>Compatibilidad con tipos de datos xml en SQLXML 4.0
   A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite datos con tipo XML mediante el `xml` tipo de datos. En este tema se proporciona información sobre la forma en que SQLXML 4.0 reconoce instancias del tipo de datos `xml` y la forma en que implementa la compatibilidad con estas instancias.  
@@ -34,7 +33,7 @@ ms.locfileid: "82702813"
   
 ## <a name="guidelines-and-limitations"></a>Instrucciones y limitaciones  
   
--   ** \< xsd: los>** no se pueden asignar a una columna que incluya un `xml` tipo de datos. En SQLXML, se proporciona compatibilidad para este escenario a través de la anotación `sql:overflow-field`. Otra solución es asignar un campo de tipo de datos `xml` como un elemento de `xsd:anyType`. Esta solución alternativa se muestra en el ejemplo "Asignar un elemento XML a una columna de tipo de datos XML", al que se hacía referencia en la tabla anterior.  
+-   **\<xsd:any>** no se puede asignar a una columna que incluye un `xml` tipo de datos. En SQLXML, se proporciona compatibilidad para este escenario a través de la anotación `sql:overflow-field`. Otra solución es asignar un campo de tipo de datos `xml` como un elemento de `xsd:anyType`. Esta solución alternativa se muestra en el ejemplo "Asignar un elemento XML a una columna de tipo de datos XML", al que se hacía referencia en la tabla anterior.  
   
 -   No se admiten consultas XPath en el contenido de las columnas de tipo de datos `xml`.  
   

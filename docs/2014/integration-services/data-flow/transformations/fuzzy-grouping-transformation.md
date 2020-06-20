@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 989e4b1b538144a1ead50cc3e28c64e0ae6e32c0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939566"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Agrupación aproximada, transformación
   La transformación Agrupación aproximada realiza tareas de limpieza de datos, identificando filas de datos que probablemente se van a duplicar y seleccionando una fila de datos canónica para utilizarla en la normalización de los datos.  
@@ -69,7 +68,7 @@ ms.locfileid: "62900574"
  Esta transformación tiene una entrada y una salida. No admite una salida de error.  
   
 ## <a name="row-comparison"></a>Comparar filas  
- Al configurar la transformación Agrupación aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para comparar las filas de la entrada de la transformación. Si establece la propiedad exhaustiva en `true`, la transformación compara cada fila de la entrada con todas las demás filas de la entrada. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que el número de filas de la entrada sea pequeño. Para evitar problemas de rendimiento, se recomienda establecer la propiedad exhaustiva en `true` solo durante el desarrollo de paquetes.  
+ Al configurar la transformación Agrupación aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para comparar las filas de la entrada de la transformación. Si establece la propiedad exhaustiva en `true` , la transformación compara cada fila de la entrada con todas las demás filas de la entrada. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que el número de filas de la entrada sea pequeño. Para evitar problemas de rendimiento, se recomienda establecer la propiedad exhaustiva en `true` solo durante el desarrollo de paquetes.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  Durante la ejecución, la transformación Agrupación aproximada crea objetos temporales, como tablas e índices, que pueden tener un tamaño considerable, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de las tablas y los índices es proporcional al número de filas de la entrada de la transformación y al número de tokens creados por la transformación Agrupación aproximada.  

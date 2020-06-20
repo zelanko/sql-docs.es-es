@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1d5a749c61a3bc97de841e1149dd1539cbc990f2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 627c21a9c2220bcaea76f771624f79618dcf56fb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70153474"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054300"
 ---
 # <a name="lesson-3-write-a-full-database-backup-to-the-azure-blob-storage-service"></a>Lección 3: Escribir una copia de seguridad completa de la base de datos en el servicio Azure Blob Storage
   En esta lección se muestra el uso de la instrucción TSQL para realizar una copia de seguridad completa de la base de datos en el servicio Azure BLOB Storage.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c54dd8b57dc0b1e13b622110d3f4cf9f796610a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811084"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067629"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Seleccionar una cuenta para el servicio Agente SQL Server
   La cuenta de inicio del servicio define la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows en la que se ejecuta el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y sus permisos de red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta como una cuenta de usuario especificada. Se puede seleccionar una cuenta para el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , donde se pueden elegir las opciones siguientes:  
@@ -78,10 +77,10 @@ ms.locfileid: "68811084"
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Cuenta de dominio de Windows (miembro del grupo de administradores de Windows)|Compatible|Compatible|Compatible|  
 |Cuenta de dominio de Windows (no administrativa)|Compatible<sup>1</sup>|Compatible<sup>1</sup>|Compatible<sup>1</sup>|  
-|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<sup>1, 3, 4</sup>|No compatible|No compatible|  
-|Cuenta de usuario local (no administrativa)|Compatible<sup>1</sup>|Incompatible|No aplicable|  
-|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<sup>2</sup>|Incompatible|Compatible<sup>2</sup>|  
-|Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatible|No compatible|  
+|Cuenta de servicio de red (NT AUTHORITY\NetworkService)|Compatible<sup>1, 3, 4</sup>|No compatibles|No compatibles|  
+|Cuenta de usuario local (no administrativa)|Compatible<sup>1</sup>|No compatibles|No aplicable|  
+|Cuenta del sistema local (NT AUTHORITY\System)|Compatible<sup>2</sup>|No compatibles|Compatible<sup>2</sup>|  
+|Cuenta del servicio local (NT AUTHORITY\LocalService)|No compatible|No compatibles|No compatibles|  
   
  <sup>1</sup> consulte la limitación 1 a continuación.  
   

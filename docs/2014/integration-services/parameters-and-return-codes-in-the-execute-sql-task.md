@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 49ac4661e533b4c4e56a750f208c3ded09f72d27
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056790"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964775"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parámetros y códigos de retorno en la tarea Ejecutar SQL
   Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de `input`, parámetros de `output` entrada y códigos de retorno. En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la tarea Ejecutar SQL admite los tipos de parámetros `Input`, `Output` y `ReturnValue`. Utilice el tipo `Input` para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
@@ -45,7 +44,7 @@ ms.locfileid: "66056790"
 -   [Configurar parámetros y códigos de retorno en el Editor de la tarea Ejecutar SQL](#Configure_parameters_and_return_codes)  
   
 ##  <a name="using-parameter-names-and-markers"></a><a name="Parameter_names_and_markers"></a>Usar nombres de parámetros y marcadores  
- En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de administrador de conexiones requiere que el comando SQL utilice un marcador de parámetro con el formato ** \@varParameter**, mientras que el tipo de conexión OLE DB requiere el marcador de parámetro de signo de interrogación (?).  
+ En función del tipo de conexión que utiliza la tarea Ejecutar SQL, la sintaxis del comando SQL usa marcadores de parámetros diferentes. Por ejemplo, el [!INCLUDE[vstecado](../includes/vstecado-md.md)] tipo de administrador de conexiones requiere que el comando SQL utilice un marcador de parámetro con el formato ** \@ varParameter**, mientras que el tipo de conexión OLE DB requiere el marcador de parámetro de signo de interrogación (?).  
   
  Los nombres que puede utilizar como nombres de parámetros en las asignaciones entre variables y parámetros también varían según el tipo de Administrador de conexiones. Por ejemplo, el tipo de Administrador de conexiones de [!INCLUDE[vstecado](../includes/vstecado-md.md)] utiliza un nombre definido por el usuario con el prefijo \@, mientras que el tipo de Administrador de conexiones OLE DB requiere que se utilice el valor numérico de un ordinal basado en 0 como nombre de parámetro.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66056790"
 |Tipo de conexión|Marcador de parámetro|Nombre de parámetro|Comando SQL (ejemplo)|  
 |---------------------|----------------------|--------------------|-------------------------|  
 |ADO|?|Param1, Param2…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<nombre de parámetro>|\@\<nombre de parámetro>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|\@\<parameter name>|\@\<parameter name>|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = \@parmContactID|  
 |ODBC|?|1, 2, 3…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
 |EXCEL y OLE DB|?|0, 1, 2, 3…|SELECT FirstName, LastName, Title FROM Person.Contact WHERE ContactID = ?|  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66056790"
 ### <a name="using-date-and-time-parameters-with-adonet-and-ado-connection-managers"></a>Usar parámetros de fecha y hora con administradores de conexión ADO y ADO.NET  
  Al leer datos de los tipos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], `time` y `datetimeoffset`, una tarea Ejecutar SQL que utiliza el Administrador de conexiones ADO o [!INCLUDE[vstecado](../includes/vstecado-md.md)] tiene los requisitos adicionales siguientes:  
   
--   En `time` el caso de [!INCLUDE[vstecado](../includes/vstecado-md.md)] los datos, un administrador de conexiones requiere que estos datos se almacenen en `Input` un `Output`parámetro cuyo tipo de parámetro sea `string`o, y cuyo tipo de datos sea.  
+-   En el caso de los `time` datos, un [!INCLUDE[vstecado](../includes/vstecado-md.md)] Administrador de conexiones requiere que estos datos se almacenen en un parámetro cuyo tipo de parámetro sea `Input` o `Output` , y cuyo tipo de datos sea `string` .  
   
 -   Con los datos `datetimeoffset`, un Administrador de conexiones [!INCLUDE[vstecado](../includes/vstecado-md.md)] requiere que estos datos estén almacenados en uno de los parámetros siguientes:  
   
@@ -123,7 +122,7 @@ ms.locfileid: "66056790"
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> o bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> O bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  
@@ -152,14 +151,14 @@ ms.locfileid: "66056790"
 ##  <a name="using-parameters-with-stored-procedures"></a><a name="Stored_procedures"></a>Usar parámetros con procedimientos almacenados  
  Los comandos SQL que ejecutan procedimientos almacenados también pueden usar la asignación de parámetros. Las reglas sobre el uso de marcadores y nombres de parámetros dependen del tipo de Administrador de conexiones que utiliza la tarea Ejecutar SQL, del mismo modo que sucede con las consultas con parámetros.  
   
- La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los `@StartProductID` parámetros `@CheckDate` `input` y.  
+ La tabla siguiente enumera ejemplos del comando EXEC por tipo de Administrador de conexiones. Los ejemplos ejecutan el procedimiento almacenado **uspGetBillOfMaterials** en [!INCLUDE[ssSampleDBUserInputNonLocal](../includes/sssampledbuserinputnonlocal-md.md)]. El procedimiento almacenado usa los `@StartProductID` `@CheckDate` `input` parámetros y.  
   
 |Tipo de conexión|Sintaxis de EXEC|  
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC uspGetBillOfMaterials ?, ?`|  
 |ODBC|`{call uspGetBillOfMaterials(?, ?)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
-|ADO|Si IsQueryStoredProcedure se establece en `False`,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure se establece en `True`,`uspGetBillOfMaterials`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Si IsQueryStoredProcedure se establece en `False`,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure se establece en `True`,`uspGetBillOfMaterials`|  
+|ADO|Si IsQueryStoredProcedure se establece en `False` ,`EXEC uspGetBillOfMaterials ?, ?`<br /><br /> Si IsQueryStoredProcedure se establece en `True` ,`uspGetBillOfMaterials`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Si IsQueryStoredProcedure se establece en `False` ,`EXEC uspGetBillOfMaterials @StartProductID, @CheckDate`<br /><br /> Si IsQueryStoredProcedure se establece en `True` ,`uspGetBillOfMaterials`|  
   
  Para utilizar parámetros de salida, la sintaxis requiere que la palabra clave OUTPUT siga a cada marcador de parámetro. Por ejemplo, la sintaxis del parámetro de salida siguiente es correcta: `EXEC myStoredProcedure ? OUTPUT`.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66056790"
 ##  <a name="getting-values-of-return-codes"></a><a name="Return_codes"></a>Obtener valores de códigos de retorno  
  Un procedimiento almacenado puede devolver un valor entero, denominado código de retorno, para indicar el estado de ejecución de un procedimiento. Para implementar códigos de retorno en la tarea Ejecutar SQL, debe utilizar los parámetros del tipo `ReturnValue`.  
   
- La tabla siguiente enumera, por tipo de conexión, algunos ejemplos de comandos EXEC que implementan códigos de retorno. Todos los ejemplos utilizan un parámetro de `input`. Las reglas para usar marcadores de parámetros y nombres de parámetros son las mismas para todos los tipos de`Input`parámetros `Output`:, `ReturnValue`y.  
+ La tabla siguiente enumera, por tipo de conexión, algunos ejemplos de comandos EXEC que implementan códigos de retorno. Todos los ejemplos utilizan un parámetro de `input`. Las reglas para usar marcadores de parámetros y nombres de parámetros son las mismas para todos los tipos de parámetros: `Input` , `Output` y `ReturnValue` .  
   
  Algunas sintaxis no admiten literales en los parámetros. En tal caso, debe proporcionar el valor del parámetro mediante una variable.  
   
@@ -176,10 +175,10 @@ ms.locfileid: "66056790"
 |---------------------|-----------------|  
 |EXCEL y OLE DB|`EXEC ? = myStoredProcedure 1`|  
 |ODBC|`{? = call myStoredProcedure(1)}`<br /><br /> Para obtener más información sobre la sintaxis de la llamada ODBC, consulte el tema sobre [Parámetros de procedimientos](https://go.microsoft.com/fwlink/?LinkId=89462), en la Referencia del programador de ODBC de MSDN Library.|  
-|ADO|Si IsQueryStoreProcedure se establece en `False`,`EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure se establece en `True`,`myStoredProcedure`|  
-|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure se establece en `True`.<br /><br /> `myStoredProcedure`|  
+|ADO|Si IsQueryStoreProcedure se establece en `False` ,`EXEC ? = myStoredProcedure 1`<br /><br /> Si IsQueryStoreProcedure se establece en `True` ,`myStoredProcedure`|  
+|[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Set IsQueryStoreProcedure se establece en `True` .<br /><br /> `myStoredProcedure`|  
   
- En la sintaxis mostrada en la tabla anterior, la tarea Ejecutar SQL utiliza el tipo de origen **Entrada directa** para ejecutar el procedimiento almacenado. La tarea Ejecutar SQL también puede utilizar el tipo de origen **Conexión de archivos** para ejecutar un procedimiento almacenado. Con independencia de si la tarea ejecutar SQL utiliza el tipo de origen de **entrada directa** o de **conexión de archivos** , `ReturnValue` use un parámetro del tipo para implementar el código de retorno. Para más información sobre cómo configurar el tipo de origen de la instrucción SQL que ejecuta la tarea Ejecutar SQL, vea [Editor de la tarea Ejecutar SQL &#40;página General&#41;](general-page-of-integration-services-designers-options.md).  
+ En la sintaxis mostrada en la tabla anterior, la tarea Ejecutar SQL utiliza el tipo de origen **Entrada directa** para ejecutar el procedimiento almacenado. La tarea Ejecutar SQL también puede utilizar el tipo de origen **Conexión de archivos** para ejecutar un procedimiento almacenado. Con independencia de si la tarea ejecutar SQL utiliza el tipo de origen de **entrada directa** o de **conexión de archivos** , use un parámetro del `ReturnValue` tipo para implementar el código de retorno. Para más información sobre cómo configurar el tipo de origen de la instrucción SQL que ejecuta la tarea Ejecutar SQL, vea [Editor de la tarea Ejecutar SQL &#40;página General&#41;](general-page-of-integration-services-designers-options.md).  
   
  Para más información sobre el uso de códigos de retorno con procedimientos almacenados de Transact-SQL, vea [RETURN &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/return-transact-sql).  
   

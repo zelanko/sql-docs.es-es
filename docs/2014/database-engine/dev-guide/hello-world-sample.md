@@ -9,20 +9,19 @@ ms.topic: reference
 ms.assetid: fed6c358-f5ee-4d4c-9ad6-089778383ba7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac48f47b7455fd68245cec23c68132e4070835f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4b6b8c303f056686efb5ba13b2924c9697fbd6e4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637763"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933576"
 ---
 # <a name="hello-world-sample"></a>Ejemplo de Hola a todos
   El ejemplo Hola a todos muestra las operaciones básicas relacionadas con la creación, implementación y prueba de un procedimiento almacenado simple basado en la integración de Common Language Runtime (CLR). En este ejemplo se muestra también cómo se devuelven datos a través de un registro, que el procedimiento almacenado construye y devuelve dinámicamente al autor de la llamada.  
   
  El `HelloWorld` procedimiento almacenado devuelve la cadena "Hello World!" en un conjunto de resultados que consta de una fila. En este ejemplo se muestran algunos usos de las clases [Microsoft. SqlServer. Server. SqlMetaData](https://go.microsoft.com/fwlink/?LinkID=193572), [Microsoft. SqlServer. Server. SqlDataRecord](https://go.microsoft.com/fwlink/?LinkID=193573) y [Microsoft. SqlServer. Server. Pipe](https://go.microsoft.com/fwlink/?LinkID=193571).  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  

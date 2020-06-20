@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96f7f6ca45483fcfeb4e403659399972d81cda54
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890761"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951445"
 ---
 # <a name="step-1-copying-the-lesson-5-package"></a>Paso 1: Copia del paquete de la lección 5
   En esta tarea, creará una copia del paquete que ha creado en la lección 5, denominado Lesson 5.dtsx. También puede agregar al proyecto el paquete completado de la lección 5 que se incluye con el tutorial y, a continuación, copiar dicho paquete. Utilizará esta nueva copia en toda la lección 6.  
@@ -38,7 +37,7 @@ ms.locfileid: "62890761"
   
 7.  En la ventana Propiedades, actualice la propiedad Nombre a Lesson 6.  
   
-8.  Haga clic en el cuadro de la propiedad ID., haga clic en la flecha desplegable y, a continuación, haga clic en \<generar nuevo ID>.  
+8.  Haga clic en el cuadro de la propiedad Id., haga clic en la flecha desplegable y luego haga clic en \<Generate New ID>.  
   
 ### <a name="to-add-the-completed-lesson-5-package"></a>Para agregar el paquete de la lección 5 completada  
   

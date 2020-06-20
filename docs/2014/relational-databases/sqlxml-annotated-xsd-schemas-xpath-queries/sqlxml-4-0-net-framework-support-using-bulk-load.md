@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c84e6c6d9e35526f51f010ab27bbc9d46f83d508
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 1ef1bec93a1e0ce04c40f4333fa3450118da08df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060113"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Usar la carga masiva SQLXML en el entorno .NET
   En este tema se explica cómo se puede usar la funcionalidad de carga masiva XML en el entorno .NET. Para obtener información detallada acerca de la carga masiva XML, vea [realizar la carga masiva de datos xml &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
@@ -113,7 +112,7 @@ ms.locfileid: "82717559"
   
 6.  En el menú **proyecto** , seleccione **Agregar referencia**.  
   
-7.  En la pestaña **com** , seleccione **biblioteca de tipos de carga masiva de Microsoft SQLXML 4,0** (xblkld4. dll) y haga clic en **Aceptar**. Verá el ensamblado **Interop. SQLXMLBULKLOADLib** creado en el proyecto.  
+7.  En la pestaña **com** , seleccione **biblioteca de tipos de carga masiva de Microsoft SQLXML 4,0** (xblkld4.dll) y haga clic en **Aceptar**. Verá el ensamblado **Interop. SQLXMLBULKLOADLib** creado en el proyecto.  
   
 8.  Reemplace el método Main() por el código siguiente. Actualice la propiedad **ConnectionString** y la ruta de acceso del archivo para el esquema y los archivos de datos.  
   

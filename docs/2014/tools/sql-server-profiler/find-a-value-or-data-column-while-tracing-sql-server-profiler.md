@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cc5088fdb0bc78a2befff241854e4a2bc354a22
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ddd96d178ebec3d69de184ab06829616b0198f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035040"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000040"
 ---
 # <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>Buscar un valor o una columna de datos durante la ejecución de un seguimiento (SQL Server Profiler)
   En este tema se describe cómo buscar un valor o una columna de datos específicos en la salida del seguimiento mientras se ejecuta el seguimiento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

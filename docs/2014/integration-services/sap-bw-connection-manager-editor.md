@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf7788e58b24d45966b67e417d35f4b58927a39b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056277"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964402"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>Editor del administrador de conexiones SAP BW
   Use el **Editor del administrador de conexiones de SAP BW** para especificar las propiedades que se van a usar para establecer una conexión con la versión 7 del sistema SAP Netweaver BW.  
@@ -33,7 +32,7 @@ ms.locfileid: "66056277"
   
     -   Haga doble clic en administrador de conexiones de SAP BW.  
   
-         o bien  
+         O bien  
   
     -   Haga clic con el botón derecho en el administrador de conexiones de SAP BW y, después, seleccione **Editar**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66056277"
 > [!NOTE]  
 >   Esta opción solo está disponible si ha seleccionado la opción **Usar equilibrio de carga** .  
   
- **Agrupamiento**  
+ **Agrupar**  
  Si se conecta a un grupo de servidores con equilibrio de carga, especifique el nombre del grupo de servidores.  
   
 > [!NOTE]  

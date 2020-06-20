@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ecf5c097-0972-48e2-a9c0-b695b7dd2820
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 43db9f034a759e9c041f5cc6ab95baa5af4d7353
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933466"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Información general de los atributos personalizados de la integración CLR
   El Common Language Runtime (CLR) de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] permite el uso de palabras clave descriptivas, llamadas atributos. Estos atributos proporcionan información adicional para muchos elementos, tales como métodos y clases. Los atributos se guardan en el ensamblado con los metadatos del objeto y se pueden utilizar para describir el código a otras herramientas de desarrollo, o para alterar el comportamiento en tiempo de ejecución dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Al registrar una rutina CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un conjunto de propiedades sobre la rutina. Estas propiedades rutinarias determinan las capacidades de la rutina, incluido si se puede indizar la rutina. Por ejemplo, establecer la propiedad `DataAccess` en `DataAccessKind.Read` permite tener acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una función CLR. En el ejemplo siguiente se muestra un caso simple en `DataAccess` el que la propiedad se establece para facilitar el acceso a datos desde una tabla de usuario **Table1**.  
+ Al registrar una rutina CLR con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deriva un conjunto de propiedades sobre la rutina. Estas propiedades rutinarias determinan las capacidades de la rutina, incluido si se puede indizar la rutina. Por ejemplo, establecer la propiedad `DataAccess` en `DataAccessKind.Read` permite tener acceso a datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dentro de una función CLR. En el ejemplo siguiente se muestra un caso simple en el que la `DataAccess` propiedad se establece para facilitar el acceso a datos desde una tabla de usuario **Table1**.  
   
 ```csharp  
 using System;  

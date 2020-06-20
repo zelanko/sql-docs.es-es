@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f79e824b-1525-45de-8ede-513563af41b6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d9b4a0e07f32e074ff7e8875c263615bcebc12d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ffd1d2529dd13e42689bcf168c972d757fb5499
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956545"
 ---
 # <a name="select-backup-destination"></a>Seleccionar destino de la copia de seguridad
   Utilice el cuadro de diálogo **Seleccionar destino de la copia de seguridad** para seleccionar un dispositivo como destino de la copia de seguridad. Un destino de la copia de seguridad puede ser un disco o un dispositivo lógico de copia de seguridad.  
@@ -40,7 +39,7 @@ ms.locfileid: "62874880"
   
 |||  
 |-|-|  
-|**Nombre de archivo**|Elija esta opción para especificar un archivo local o remoto como destino de la copia de seguridad en el cuadro de texto.<br /><br /> Para especificar un archivo local, haga clic en el botón examinar a la derecha del cuadro de texto y navegue hasta un archivo de las unidades fijas del equipo que ejecuta el servidor, o bien escriba la ruta de acceso completa y el nombre de archivo directamente. por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak`.<br /><br /> Para especificar un archivo remoto como destino de copia de seguridad, escriba su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Importante \*\*** La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
+|**Nombre de archivo**|Elija esta opción para especificar un archivo local o remoto como destino de la copia de seguridad en el cuadro de texto.<br /><br /> Para especificar un archivo local, haga clic en el botón examinar a la derecha del cuadro de texto y navegue hasta un archivo de las unidades fijas del equipo que ejecuta el servidor, o bien escriba la ruta de acceso completa y el nombre de archivo directamente. por ejemplo, `C:\Program Files\Microsoft SQL Server\MSSQL\Backup\AdventureWorksBackup.bak` .<br /><br /> Para especificar un archivo remoto como destino de copia de seguridad, escriba su nombre UNC (convención de nomenclatura universal) completo. Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).<br /><br /> **\*\* Importante \*\*** La realización de copias de seguridad de datos a través de una red está expuesta a errores; una vez completada, es recomendable comprobar la operación de copia de seguridad. Para obtener más información, vea [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-verifyonly-transact-sql).|  
 |**Dispositivo de copia de seguridad**|Elija esta opción para seleccionar un dispositivo lógico de copia de seguridad.<br /><br /> Nota: Para obtener más información sobre cómo crear un dispositivo de copia de seguridad de disco, vea [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md).|  
   
  **Destinos en cinta**  

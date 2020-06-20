@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1611f35e4004383c4da9949d4162051caf7b61e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767317"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951255"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
 
@@ -81,7 +80,7 @@ Escriba la ruta de acceso y el nombre de archivo con el siguiente formato:
 
 -   En el caso de un archivo ubicado en el equipo local, **C:\\TestData.xlsx**.
 
--   Para un archivo en un recurso compartido de red, ** \\ \\sales\\Data\\TestData. xlsx**.
+-   Para un archivo en un recurso compartido de red, ** \\ \\ \\ \\TestData.xlsxdatos de ventas **.
 
 También puede hacer clic en **Examinar** para buscar la hoja de cálculo usando el cuadro de diálogo **Abrir**.  
   
@@ -242,12 +241,12 @@ Para poder guardar correctamente cadenas de más de 255 caracteres en una column
 
 -   Si se crea una tabla de destino durante el diseño del paquete o en tiempo de ejecución (o el Asistente para importación y exportación crea una), la instrucción `CREATE TABLE` deberá usar LONGTEXT (o uno de sus sinónimos) como tipo de datos de la columna de memorando de destino. En el asistente, compruebe la instrucción `CREATE TABLE` y revísela si es necesario. Para ello, haga clic en **Editar SQL** junto a la opción **Crear tabla de destino** de la página **Asignaciones de columnas**.
 
-## <a name="related-content"></a>Contenidos relacionados
+## <a name="related-content"></a>Contenido relacionado
 
 Para obtener más información sobre los componentes y procedimientos descritos en este artículo, vea los siguientes artículos:
 
 ### <a name="about-ssis"></a>Acerca de SSIS
-[Administrador de conexiones con Excel](connection-manager/excel-connection-manager.md)  
+[Administrador de conexiones de Excel](connection-manager/excel-connection-manager.md)  
 [Origen de Excel](data-flow/excel-source.md)  
 [Destino de Excel](data-flow/excel-destination.md)  
 [Crear bucles entre archivos y tablas de Excel usando un contenedor de bucles Foreach](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  

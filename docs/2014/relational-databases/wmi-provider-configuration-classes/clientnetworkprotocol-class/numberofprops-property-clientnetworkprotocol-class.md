@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e0d2245dbba51d69d6dd31fd91044d3efd5b07b0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba39d21df3ab77f32f1c15fbe9e55316a25089
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192024"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060085"
 ---
 # <a name="numberofprops-property-clientnetworkprotocol-class"></a>Propiedad NumberOfProps (clase ClientNetworkProtocol)
   Obtiene el número de propiedades del Protocolo de red del cliente especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](clientnetworkprotocol-class.md).  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor uint32 que especifica el número de propiedades del protocolo de red del cliente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

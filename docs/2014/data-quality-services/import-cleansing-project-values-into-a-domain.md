@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c5661d490f4669968b6d8198a7565fb5e5c8c218
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8f0b964c1b509e1a54f3dd202ba922c81a59ef4b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937666"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importar valores de un proyecto de limpieza en un dominio
   En [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), puede importar el conocimiento de calidad de los datos durante el proceso de limpieza en un proyecto de limpieza de calidad de datos o un paquete de Integration Services que contenga el componente Limpieza de DQS en un dominio. De este modo, se garantiza la conservación del conocimiento de confianza y la continua mejora de la base de conocimiento.  
@@ -56,7 +55,7 @@ ms.locfileid: "65484303"
   
     -   Seleccione **Agregar valores de la pestaña Nuevo** para importar los valores de la pestaña Nuevo, además de los valores de las pestañas **Correcto** y **Corregido** .  
   
-    -   Haga clic en **Aceptar**.  
+    -   Haga clic en **OK**.  
   
 6.  Vuelve a la pestaña **Valores del dominio** y aparece un mensaje que indica que la importación de los valores fue correcta. Los valores que se han importado y que, por lo tanto, son nuevos en el dominio, se mostrarán en la tabla **Valores** .  
   
@@ -66,7 +65,7 @@ ms.locfileid: "65484303"
   
 9. Para buscar una cadena específica, escríbala en el cuadro de texto **Buscar** . Haga clic en la flecha arriba o abajo para recorrer los valores que cumplen los criterios de búsqueda. Aparecerán resaltados en amarillo.  
   
-10. Haga clic en **Finalizar**  
+10. Haga clic en **Finalizar**.  
   
     > [!NOTE]  
     >   Para obtener más información sobre cómo trabajar con valores de la pestaña **Valores del dominio** , vea [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  

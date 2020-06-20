@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: da9ff870-9cfd-42fe-994b-7b9292681f7d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2bc763d621d15f982a2670483683d3862e678c98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d569373f80a2f5488e8612cc30da264d283cd7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63283675"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007645"
 ---
 # <a name="server-element-for-configuration-dta"></a>Server (DTA, elemento de Configuration)
   Contiene la información de identificación del servidor en el que desea que el Asistente para la optimización de motor de base de datos evalúe la configuración hipotética (especificada por el elemento `Configuration`).  

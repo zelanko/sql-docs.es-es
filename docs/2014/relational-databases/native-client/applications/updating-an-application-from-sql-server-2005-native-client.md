@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1e1e570c-7f14-4e16-beab-c328e3fbdaa8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e73e200fb47c1ad54066f66396c887c1604a09c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b8a70b014f0813bb8364509207922b3f2a84329
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704412"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017409"
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Actualizar una aplicación desde SQL Server 2005 Native Client
   En este tema se describen los cambios importantes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client con respecto a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
@@ -26,7 +25,7 @@ ms.locfileid: "82704412"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 9.0 se incluyó en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0 se incluyó en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.5 se incluyó en [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 11.0 se incluyó en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] y [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)].  
   
-|Cambios de comportamiento en SQL Server Native Client desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Descripción|  
+|Cambios de comportamiento en SQL Server Native Client desde [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]|Description|  
 |------------------------------------------------------------------------------------|-----------------|  
 |OLE DB solamente rellena los datos hasta la escala definida.|Para las conversiones en las que los datos convertidos se envían al servidor, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) solamente rellena los datos con ceros a la derecha hasta la longitud máxima de los valores `datetime`. En SQL Server Native Client 9.0 los datos se rellenaban hasta 9 dígitos.|  
 |Valide DBTYPE_DBTIMESTAMP para ICommandWithParameter::SetParameterInfo.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client (a partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ) implementa el requisito OLE DB de *BScale* en ICommandWithParameter:: SetParameterInfo para establecerse en la precisión de fracciones de segundo para DBTYPE_DBTIMESTAMP.|  

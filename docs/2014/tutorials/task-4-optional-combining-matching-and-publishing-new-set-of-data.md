@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13a13f03-b307-4555-8e33-6d98c459d994
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d2f67c88be66be069a48d008ba6889a81dfda8ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061106"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): Combinación, búsqueda de coincidencias y publicación de un conjunto de datos nuevo
   Con el tiempo, le interesará agregar más datos al repositorio MDS. Antes de agregar datos, puede ser útil comparar los nuevos datos con los datos que ya se administran en MDS, para asegurarse de que no se agregan datos duplicados o inexactos. En el complemento Master Data Services para Excel, puede combinar datos de dos hojas de cálculo y comparar los datos para identificar y quitar duplicados antes de publicar los datos en MDS. La característica de búsqueda de coincidencias del complemento MDS para Excel emplea la funcionalidad de coincidencia de DQS para identificar coincidencias en los datos. En esta tarea, combinará datos de dos hojas de cálculo en una y después buscará coincidencias para identificar y quitar duplicados antes de publicar los datos en MDS. Vea [coincidencia de calidad de datos en los temas complemento MDS para Excel](https://msdn.microsoft.com/library/hh548681.aspx) y [combinar datos](https://msdn.microsoft.com/library/hh548680.aspx) para obtener más detalles.  
@@ -38,7 +37,7 @@ ms.locfileid: "65489271"
   
 7.  Haga clic en **Sheet2** en la parte inferior para cambiar a la pestaña **hoja2** . Si no ve **Sheet2**, agregue una nueva hoja de cálculo.  
   
-8.  Abra el archivo **Suppliers. xls** (el archivo de entrada original incluido en los archivos del tutorial) y copie todas las filas (tres) de la hoja de cálculo **CombineAndCleanse** en **Sheet2**.  
+8.  Abra **Suppliers.xls** archivo (el archivo de entrada original incluido en los archivos del tutorial) y copie todas (tres) filas de la hoja de cálculo **CombineAndCleanse** a **Sheet2**.  
   
 9. Vuelva a la hoja de **proveedores** en el **libro 1: Microsoft Excel** (no la **lista de proveedores limpiados y coincidentes** ) que está conectado a **MDS**.  
   
@@ -88,7 +87,7 @@ ms.locfileid: "65489271"
   
 24. Escriba **70%** como el **peso** del **nombre del proveedor** y el **30%** como el **peso** del **correo electrónico de contacto** , tal como se muestra en la imagen.  
   
-25. Haga clic en **Aceptar**.  
+25. Haga clic en **OK**.  
   
 26. El proceso de coincidencia debe identificar un duplicado para el proveedor con **código: S1**.  
   

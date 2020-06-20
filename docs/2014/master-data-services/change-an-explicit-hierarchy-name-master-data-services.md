@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e08f11f924cb74743c1317f4fa1548af62ddb5d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93257a2b5ab14e285d804a61a59178b8fec0dcaf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972028"
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>Cambiar el nombre de una jerarquía explícita (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], puede cambiar el nombre de una jerarquía explícita.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e831a830-49a3-49c5-8a31-9731fc4fd12e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0b6694741388e649e8a216efad18f48a66de6d61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f5fa616116b4a6842143b6950905de4b8db0063
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058258"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968345"
 ---
 # <a name="http-connection-manager-editor-proxy-page"></a>Editor del administrador de conexiones HTTP (página Proxy)
   Utilice la pestaña **Proxy** del cuadro de diálogo **Editor del administrador de conexiones HTTP** para configurar el Administrador de conexiones HTTP para que utilice un servidor proxy. Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos.  
@@ -54,7 +53,7 @@ ms.locfileid: "66058258"
  **Add (Agregar)**  
  Escriba una dirección para la que no desee utilizar el servidor proxy.  
   
- **Remove**  
+ **Quitar**  
  Seleccione una dirección y quítela haciendo clic en **Quitar**.  
   
 ## <a name="see-also"></a>Consulte también  

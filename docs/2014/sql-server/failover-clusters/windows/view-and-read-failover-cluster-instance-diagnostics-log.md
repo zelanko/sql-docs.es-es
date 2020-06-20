@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 774dc4ec4a02c72420d004909cb7e6ee1b31f3a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049341"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046074"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Ver y leer el registro de diagnósticos de la instancia de clúster de conmutación por error
   Todos los errores críticos y eventos de advertencia de la DLL de recursos de SQL Server se escriben en el registro de eventos de Windows. El procedimiento almacenado del sistema [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) captura un registro en ejecución de la información de diagnóstico específica de SQL Server y lo escribe en los archivos de registro de diagnósticos de clústeres de conmutación por error de SQL Server (también conocidos como registros *SQLDIAG*).  
@@ -29,7 +28,7 @@ ms.locfileid: "63049341"
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Recomendaciones  
- De forma predeterminada, el SQLDIAG se almacena en una carpeta de registro local del directorio de la instancia de SQL Server, por ejemplo, ' C\archivos de Programa\microsoft SQL Server\MSSQL12. \<InstanceName> \mssql\log. ' del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
+ De forma predeterminada, el SQLDIAG se almacena en una carpeta de registro local del directorio de la instancia de SQL Server, por ejemplo, ' C\archivos de Programa\microsoft SQL Server\MSSQL12. \<InstanceName> \MSSQL\LOG. ' del nodo propietario de la instancia de clúster de conmutación por error (FCI) AlwaysOn. El tamaño de cada archivo de registro de SQLDIAG se fija en 100 MB. Diez archivos de registro se almacenan en el equipo antes de que se reciclen para los nuevos registros.  
   
  Los registros usan el formato de archivo extendido de eventos. La función del sistema **sys.fn_xe_file_target_read_file** se puede usar para leer los archivos creados por eventos extendidos. Se devuelve un evento, en formato XML, por cada fila. Consulte la vista del sistema para analizar los datos XML como conjunto de resultados. Para obtener más información, vea [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
@@ -93,9 +92,9 @@ ORDER BY Time;
 > [!NOTE]  
 >  Para ver un ejemplo de este procedimiento, vea [Ejemplo (Transact-SQL)](#TsqlExample)más adelante en esta sección.  
   
- Con la instrucción de lenguaje de definición de datos ( `ALTER SERVER CONFIGURATION`DDL), puede iniciar o detener el registro de datos de diagnóstico capturados por la [sp_server_diagnostics &#40;procedimiento de&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) y establecer parámetros de configuración del registro sqldiag como el recuento de sustitución de archivos de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
+ Con la instrucción de lenguaje de definición de datos (DDL), `ALTER SERVER CONFIGURATION` puede iniciar o detener el registro de datos de diagnóstico capturados por la [sp_server_diagnostics &#40;procedimiento de&#41;de TRANSACT-SQL](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) y establecer parámetros de configuración del registro sqldiag como el recuento de sustitución de archivos de registro, el tamaño del archivo de registro y la ubicación del archivo. Para obtener información detallada sobre la sintaxis, vea [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
-###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a>Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a> Ejemplos (Transact-SQL)  
   
 ####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a>Establecer opciones de registro de diagnóstico  
  En los ejemplos de esta sección se muestra cómo establecer los valores para la opción de registro de diagnóstico.  

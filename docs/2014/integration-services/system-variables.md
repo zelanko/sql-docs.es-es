@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d13feb3a13cb96ec3cf0a3006b807740944434b8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62927237"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962395"
 ---
 # <a name="system-variables"></a>Variables del sistema
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona un conjunto de variables del sistema que almacenan información sobre el paquete en ejecución y sus objetos. Estas variables se pueden usar en expresiones y expresiones de propiedad para personalizar paquetes, contenedores, tareas y controladores de eventos.  
@@ -41,7 +40,7 @@ ms.locfileid: "62927237"
 |`ExecutionInstanceGUID`|String|Identificador exclusivo de la instancia de ejecución de un paquete.|  
 |`FailedConfigurations`|String|Nombres de las configuraciones de paquete que no se pudieron realizar.|  
 |`IgnoreConfigurationsOnLoad`|Boolean|Indica si las configuraciones de paquete se omiten al cargar el paquete.|  
-|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si un paquete se ejecuta mediante la utilidad del símbolo del sistema **DTExec** , la propiedad se `False`establece en.|  
+|**InteractiveMode**|Boolean|Indica si el paquete se ejecuta en modo interactivo. Si un paquete se ejecuta en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)], esta propiedad se establece en `True`. Si un paquete se ejecuta mediante la utilidad del símbolo del sistema **DTExec** , la propiedad se establece en `False` .|  
 |`LocaleId`|Int32|Configuración regional que usa el paquete.|  
 |**MachineName**|String|Nombre del equipo en el que se está ejecutando el paquete.|  
 |**OfflineMode**|Boolean|Indica si el paquete está en el modo sin conexión. El modo sin conexión no adquiere conexiones a orígenes de datos.|  
@@ -71,7 +70,7 @@ ms.locfileid: "62927237"
 |**CreationName**|String|El nombre del servidor.|  
 |`LocaleId`|Int32|Configuración regional que usa la tarea.|  
 |**TaskID**|String|Identificador único de una instancia de tarea.|  
-|**TaskName**|String|Nombre de la instancia de tarea.|  
+|**Tarea**|String|Nombre de la instancia de tarea.|  
 |`TaskTransactionOption`|Int32|Opción de transacción que usa la tarea.|  
   
 ## <a name="system-variables-for-event-handlers"></a>Variables del sistema para los controladores de eventos  

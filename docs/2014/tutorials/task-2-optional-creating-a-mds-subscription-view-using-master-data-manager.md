@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: f3da8219-e0cb-4848-95ca-285a76ec1ba9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc923792adc3fefb5ebaab9e225169648394c71f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 598b7bab60cad5d0c391e5e8aeec9fa3b7b9b97f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484715"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006527"
 ---
 # <a name="task-2-optional-creating-a-mds-subscription-view-using-master-data-manager"></a>Tarea 2 (opcional): Creación de una vista de suscripciones de MDS con Master Data Manager
   En esta tarea, creará una vista de suscripciones para exponer la entidad **proveedor** del modelo **proveedores** a otras aplicaciones. No use esta vista en la versión actual del tutorial.  
   
-1.  Cambie a la Página principal de **Master Data Manager** (`http://localhost/MDS`) haciendo clic en **SQL Server 2012 Master Data Services** en la parte superior.  
+1.  Cambie a la Página principal de **Master Data Manager** ( `http://localhost/MDS` ) haciendo clic en **SQL Server 2012 Master Data Services** en la parte superior.  
   
 2.  Haga clic en **Administración de integraciones**.  
   

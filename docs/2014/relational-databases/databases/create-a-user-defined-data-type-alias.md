@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35db332c23e2df5a8e67c3677cd2411768816765
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970245"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Crear un alias de tipo de datos definido por el usuario
   En este tema se describe cómo crear un alias de tipo de datos definido por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917462"
      La longitud no se muestra para los tipos de datos `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   
      **Nombre**  
-     Si va a crear un nuevo alias de tipo de datos definido por el usuario, escriba un nombre único que se usará en la base de datos para representar el tipo de datos definido por el usuario. El número máximo de caracteres debe coincidir con `sysname` el tipo de datos del sistema. El nombre de un alias existente de tipo de datos definido por el usuario no puede modificarse.  
+     Si va a crear un nuevo alias de tipo de datos definido por el usuario, escriba un nombre único que se usará en la base de datos para representar el tipo de datos definido por el usuario. El número máximo de caracteres debe coincidir con el tipo de datos del sistema `sysname` . El nombre de un alias existente de tipo de datos definido por el usuario no puede modificarse.  
   
      **Regla**  
      Opcionalmente, seleccione una regla para enlazarla al alias de tipo de datos definido por el usuario.  
@@ -92,7 +91,7 @@ ms.locfileid: "62917462"
     |20 - 28|13|  
     |29 - 38|17|  
   
-     En `nchar` el `nvarchar` caso de los tipos de datos y, el valor de almacenamiento siempre es dos veces el valor de **length**.  
+     `nchar` `nvarchar` En el caso de los tipos de datos y, el valor de almacenamiento siempre es dos veces el valor de **length**.  
   
      El almacenamiento no se muestra para los tipos de datos `nvarchar(max)`, `varchar(max)` o `varbinary(max)`.  
   

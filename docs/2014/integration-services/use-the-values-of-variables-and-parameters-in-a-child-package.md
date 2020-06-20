@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054729"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972615"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  

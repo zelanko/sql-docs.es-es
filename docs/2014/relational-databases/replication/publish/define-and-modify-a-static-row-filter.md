@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6ebb026-026f-4c39-b6a9-b9998c3babab
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bb7aebed25c571108e4b0d7e7366fc52c45e3c1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d13fd93b6afdcce6b55e9b181f52087fd620913c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882308"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060608"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Definir y modificar un filtro de fila estático
   En este tema se describe cómo definir y modificar un filtro de fila estático en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,11 +50,11 @@ ms.locfileid: "73882308"
 -   Dado que estos filtros son estáticos, todos los suscriptores recibirán el mismo subconjunto de los datos. Si necesita filtrar dinámicamente las filas en un artículo de la tabla que pertenece a una publicación de combinación para que cada suscriptor reciba una partición diferente de los datos, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). La replicación de mezcla también permite filtrar filas relacionadas con un filtro de filas existente. Para obtener más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Defina, modifique y elimine filtros de filas estáticas en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+ Defina, modifique y elimine filtros de fila estáticos en la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>Para definir un filtro de fila estático  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , la acción que realice depende del tipo de publicación:  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo **propiedades \<Publication> ** de la publicación:, la acción que realice depende del tipo de publicación:  
   
     -   Para una publicación de instantáneas o transaccional, haga clic en **Agregar**.  
   
@@ -88,11 +87,11 @@ ms.locfileid: "73882308"
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+5.  Si está en el cuadro de diálogo **propiedades \<Publication> de la publicación:** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 #### <a name="to-modify-a-static-row-filter"></a>Para modificar un filtro de fila estático  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel**Tablas filtradas** y, después, haga clic en **Editar**.  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo **propiedades de la publicación: \<Publication> ** , seleccione un filtro en el panel **tablas filtradas** y, a continuación, haga clic en **Editar**.  
   
 2.  Modifique el filtro en el cuadro de diálogo **Editar filtro** .  
   
@@ -100,7 +99,7 @@ ms.locfileid: "73882308"
   
 #### <a name="to-delete-a-static-row-filter"></a>Para eliminar un filtro de fila estático  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione un filtro en el panel **Tablas filtradas** y, después, haga clic en **Eliminar**.  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo **propiedades de la publicación: \<Publication> ** , seleccione un filtro en el panel **tablas filtradas** y, a continuación, haga clic en **eliminar**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
  Al crear los artículos de la tabla, puede definir una cláusula WHERE para filtrar las filas de un artículo. También puede cambiar un filtro de fila una vez definido. Los filtros de fila estáticos se pueden crear y modificar mediante programación con los procedimientos almacenados de la replicación.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f7491f1-9a46-4146-ae09-056248634de2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba7a4a983ec0cb36ef0fd79df44491f7f23f7648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874491"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970775"
 ---
 # <a name="clr-user-defined-functions"></a>Funciones definidas por el usuario de CLR
   Las funciones definidas por el usuario son rutinas que pueden tomar parámetros, realizar cálculos u otras acciones y devolver un resultado. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], las funciones definidas por el usuario se pueden escribir en cualquier lenguaje de programación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET o [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  

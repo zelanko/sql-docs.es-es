@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6663c6f9-def1-4d9e-845b-2085e5efc401
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 19c0c3b044943e51c6d791e962fa830f0b6d0144
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: aa63445b81ec89b87523fa29c50817e128d48515
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704931"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043564"
 ---
 # <a name="sql-server-message-results"></a>Resultados de los mensajes de SQL Server
   Las [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones siguientes no generan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de filas de proveedor de OLE DB de cliente nativo ni un recuento de las filas afectadas cuando se ejecutan:  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7042741e-ce4d-4912-9c4a-d77194a028fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0b0fda8000105573a11c1ca6a460e47a100bc885
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec8be3253811018dac345abdefda8f560e9dc2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703427"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068233"
 ---
 # <a name="sqlmapped-sqlxml-40"></a>sql:mapped (SQLXML 4.0)
   La carga masiva XML procesa la `sql:mapped` anotación en el esquema XSD según lo esperado, es decir, si el esquema de asignación especifica `sql:mapped="false"` para cualquier elemento o atributo, la carga masiva XML no intenta almacenar los datos asociados en la columna correspondiente.  

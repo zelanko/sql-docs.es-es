@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e41ab-dd20-4873-af20-f417bd1bbf6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 016ea0dd6e5352a0b45147a5ea4cea3764abb305
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fd5686299751d6ae10b9407deee36b8aeea31468
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703272"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015773"
 ---
 # <a name="applying-an-xsl-transformation-sqlxmloledb-provider"></a>Aplicar una transformación XSL (proveedor SQLXMLOLEDB)
   En esta aplicación ADO de ejemplo, se ejecuta una consulta SQL y se aplica una transformación XSL al resultado. Al establecer la propiedad Clientsidexml, en true, se exige el procesamiento del conjunto de filas en el lado cliente. El lenguaje de comandos se establece en {5d531cb2-e6ed-11d2-b252-00c04f681b71}, porque la consulta SQL se especifica en una plantilla y se debe especificar este lenguaje al ejecutar una plantilla. La propiedad XSL especifica el archivo XSL que se va a utilizar para aplicar la transformación. El valor de la propiedad ruta de acceso base se utiliza para buscar el archivo XSL. Si especifica una ruta de acceso en el valor de la propiedad XSL, la ruta de acceso es relativa a la ruta de acceso especificada en la propiedad ruta de acceso base.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d93a9f9a75bd869fd8ecc9bc17ec42750c4a94f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62936700"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067232"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Color (cuadro de diálogo, Visual Database Tools)
   El cuadro de diálogo **Color** devuelve el valor RGB de un color seleccionado por el usuario. El usuario puede seleccionarlo desde un conjunto de colores básicos determinados por el controlador de pantalla o desde un conjunto de colores personalizados. Seleccione desde los colores básicos o cree colores personalizados. Puede definir colores haciendo clic en la matriz de color o escribiendo en los cuadros **Matiz**, **Sat.** , **Lum.** , **Rojo**, **Verde**y **Azul** .  

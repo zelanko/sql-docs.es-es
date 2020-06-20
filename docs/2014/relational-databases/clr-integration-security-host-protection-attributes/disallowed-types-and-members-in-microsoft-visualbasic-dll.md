@@ -1,5 +1,5 @@
 ---
-title: Tipos y miembros no permitidos en Microsoft. VisualBasic. dll | Microsoft Docs
+title: Tipos y miembros no permitidos en Microsoft.VisualBasic.dll | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9756c67e3cdfe1ff9e30127b3f8b5bf6ddcda436
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919656"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954395"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Miembros y tipos no permitidos en Microsoft.VisualBasic.dll
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programación de Common Language Integration (CLR) no permite el uso de un tipo o miembro que `HostProtectionAttribute` tenga un que `System.Security.Permissions.HostProtectionResource` especifique una enumeración con `ExternalProcessMgmt`un `ExternalThreading`valor `MayLeakOnAbort`de `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`,,, `Synchronization`, **SharedState**, o `UI`. En la tabla siguiente se enumeran los miembros y tipos del ensamblado `Microsoft.VisualBasic.dll` cuyos valores de atributo de protección de host (HPA) no están permitidos.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la programación de Common Language Integration (CLR) no permite el uso de un tipo o miembro que tenga un `HostProtectionAttribute` que especifique una `System.Security.Permissions.HostProtectionResource` enumeración con un valor de `ExternalProcessMgmt` , `ExternalThreading` , `MayLeakOnAbort` , `SecurityInfrastructure` , `SelfAffectingProcessMgmnt` , `SelfAffectingThreading` , **SharedState**, `Synchronization` o `UI` . En la tabla siguiente se enumeran los miembros y tipos del ensamblado `Microsoft.VisualBasic.dll` cuyos valores de atributo de protección de host (HPA) no están permitidos.  
   
 > [!NOTE]  
 >  Esta lista se generó a partir de los ensamblados admitidos. Para obtener más información, consulte [supported .NET Framework Libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).  
@@ -60,18 +59,18 @@ ms.locfileid: "62919656"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
+|Microsoft.VisualBasic.Interaction.InputBox()|IU|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|IU|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Sincronización|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Sincronización|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  
@@ -80,9 +79,9 @@ ms.locfileid: "62919656"
   
 ## <a name="see-also"></a>Consulte también  
  [Atributos de protección del host y programación de la integración CLR](host-protection-attributes-and-clr-integration-programming.md)   
- [Tipos y miembros no permitidos en mscorlib. dll](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Tipos y miembros no permitidos en System. dll](disallowed-types-and-members-in-system-dll.md)   
- [Tipos y miembros no permitidos en System. Data. dll](disallowed-types-and-members-in-system-data-dll.md)   
+ [Tipos y miembros no permitidos en mscorlib.dll](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Tipos y miembros no permitidos en System.dll](disallowed-types-and-members-in-system-dll.md)   
+ [Tipos y miembros no permitidos en System.Data.dll](disallowed-types-and-members-in-system-data-dll.md)   
  [Tipos y miembros no permitidos en System.Core.dll](disallowed-types-and-members-in-system-core-dll.md)  
   
   

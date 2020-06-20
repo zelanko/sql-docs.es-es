@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 921a24d1-ea09-4a3c-980a-4dcbd0a43d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65a3c9c87a0551050ba95bdc247afdcfaa421da8
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e25a33c3d0bb5511f3dcae72442f2f3a9ed4eb93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82697047"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998686"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ejecutar un procedimiento almacenado (mediante la sintaxis ODBC CALL) y procesar códigos de retorno y parámetros de salida (OLE DB)
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos del parámetro de salida están disponibles cuando `IMultipleResults::GetResult` devuelve DB_S_NORESULT o se lanza al mercado completamente la interfaz `IMultipleResults`, lo que se produzca en primer lugar.  

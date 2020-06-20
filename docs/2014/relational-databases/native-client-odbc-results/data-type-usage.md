@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c95beaa10331e916f7eae54a9e8c78e796d77f59
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8333f45fd9e3b742b3765efaee5ae7a865161bc2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039581"
 ---
 # <a name="data-type-usage"></a>Uso de tipos de datos
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] imponen el siguiente uso de los tipos de datos.  

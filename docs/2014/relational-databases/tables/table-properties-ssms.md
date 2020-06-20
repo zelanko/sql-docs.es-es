@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 037e56649d3473e3fe09b9533bcc96b4729870d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055063"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
   En este tema se describen las propiedades de la tabla que se muestran en el cuadro de diálogo Propiedades de tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo mostrar estas propiedades, vea [Ver la definición de tabla](view-the-table-definition.md).  
@@ -128,7 +127,7 @@ ms.locfileid: "68196714"
  **Grupo de archivos de texto**  
  Nombre del grupo de archivos que contiene los datos de texto de la tabla.  
   
- **Prima**  
+ **Grupo de archivos**  
  El nombre del grupo de archivos que contiene la tabla.  
   
  **La tabla tiene particiones**  
@@ -141,7 +140,7 @@ ms.locfileid: "68196714"
   
 ### <a name="general"></a>General  
  **El formato de almacenamiento Vardecimal está habilitado**  
- Cuando `True`es, este valor de solo lectura indica `decimal` que `numeric` los tipos de datos y se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice la `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
+ Cuando `True` es, este valor de solo lectura indica `decimal` que `numeric` los tipos de datos y se almacenan con el formato de almacenamiento vardecimal. Para cambiar esta opción, utilice la `vardecimal storage format` opción de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). El formato de almacenamiento Vardecimal está en desuso. En su lugar, use la compresión de fila.  
   
  **Espacio de índice**  
  La cantidad de espacio en megabytes que ocupan los índices en la tabla. Este valor no incluye el uso del espacio del índice XML en la tabla. Si los índices XML pertenecen a la tabla, use [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) en su lugar.  

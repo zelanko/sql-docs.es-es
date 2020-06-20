@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a45dfab5-6384-4311-b935-2e23a70c5c10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5248f75540b72b489a7605b2cca34144dfcfedbf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211683"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054981"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
   Puede obtener información sobre la definición o las propiedades de una función definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Es posible que necesite ver la definición de la función para entender cómo se derivan sus datos de las tablas de origen o para ver los datos que ella misma define.  

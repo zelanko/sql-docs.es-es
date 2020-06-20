@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4785967ceafd105e8d7b56e24223edd40d08850
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 016144ec2df56d7c620b3e16f275e97882eb6137
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898454"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966685"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND bit a bit) (Expresión de SSIS)
   Lleva a cabo una operación AND bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si ambos bits son 1, el bit de resultado correspondiente se establece en 1. De lo contrario, se establece en 0.  

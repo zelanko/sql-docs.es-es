@@ -13,23 +13,22 @@ helpviewer_keywords:
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8d93d2e95f6a18174a6d9b2f05e434a5443701ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 398e3f3d8496d26c2672ad6d11557c0058a594ee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055110"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962095"
 ---
 # <a name="transfer-database-task-editor-databases-page"></a>Editor de la tarea Transferir bases de datos (página Bases de datos)
   Utilice la página **Bases de datos** del cuadro de diálogo **Editor de la tarea Transferir bases de datos** para especificar propiedades para las bases de datos de origen y destino implicadas en la tarea Transferir bases de datos. La tarea Transferir bases de datos copia o mueve una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor. Para obtener más información sobre esta tarea, vea [Tarea Transferir bases de datos](control-flow/transfer-database-task.md).  
   
 ## <a name="options"></a>Opciones  
  **SourceConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de origen.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de origen.  
   
  **DestinationConnection**  
- Seleccione un administrador de conexiones SMO de la lista o haga clic en ** \<nueva conexión... >** para crear una nueva conexión al servidor de destino.  
+ Seleccione un administrador de conexiones SMO de la lista o haga clic en **\<New connection...>** para crear una nueva conexión al servidor de destino.  
   
  **DestinationDatabaseName**  
  Especifique el nombre de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el servidor de destino.  
@@ -55,7 +54,7 @@ ms.locfileid: "66055110"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|Sobrescribir la base de datos del servidor de destino.|  
+|**True**|Sobrescribir la base de datos del servidor de destino.|  
 |**Es**|No sobrescribir la base de datos del servidor de destino.|  
   
 > [!CAUTION]  
@@ -84,7 +83,7 @@ ms.locfileid: "66055110"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|Volver a adjuntar la base de datos de origen.|  
+|**True**|Volver a adjuntar la base de datos de origen.|  
 |**Es**|No volver a adjuntar la base de datos de origen.|  
   
 ## <a name="see-also"></a>Consulte también  
@@ -92,6 +91,6 @@ ms.locfileid: "66055110"
  [Tareas de Integration Services](control-flow/integration-services-tasks.md)   
  [Editor de la tarea transferir bases de datos &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Página expresiones](expressions/expressions-page.md)   
- [SMO, administrador de conexiones](connection-manager/smo-connection-manager.md)  
+ [Administrador de conexiones SMO](connection-manager/smo-connection-manager.md)  
   
   

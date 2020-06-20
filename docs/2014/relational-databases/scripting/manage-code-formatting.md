@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ad7eed88b831a74eaf4ae83d1949df25744159d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6c4c1402b37de750fae26cbc811235efa6b32ea3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703844"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009704"
 ---
 # <a name="manage-code-formatting"></a>Administrar formato de código
   Con el editor, puede aplicar formato al código mediante sangrías, texto oculto, direcciones URL, etc. También se puede aplicar formato al código automáticamente a medida que se escribe mediante sangrías automáticas.  

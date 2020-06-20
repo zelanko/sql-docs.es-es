@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e476880103a69ae016c6720f36e26ef884db6f5d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63012027"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055403"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
   En este tema se describe cómo crear un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un inicio de sesión es la identidad de la persona o proceso que se está conectando a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "63012027"
   
 -   **Antes de empezar:**  
   
-     [Información preliminar](#Background)  
+     [Fondo](#Background)  
   
      [Seguridad](#Security)  
   
@@ -81,7 +80,7 @@ ms.locfileid: "63012027"
   
     4.  Haga clic en **Avanzadas...** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo) - Página Avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
-    5.  Haga clic en **Aceptar**.  
+    5.  Haga clic en **OK**.  
   
 4.  Para crear un inicio de sesión basado en una entidad de seguridad de Windows, seleccione **Autenticación de Windows**. Esta es la selección predeterminada.  
   
@@ -154,7 +153,7 @@ ms.locfileid: "63012027"
  **Base de datos**  
  Muestra las bases de datos disponibles en el servidor.  
   
- **Usuario**  
+ **User**  
  Especifica el usuario de base de datos que se va a asignar al inicio de sesión. De forma predeterminada, el nombre del usuario de base de datos coincide con el inicio de sesión.  
   
  **Esquema predeterminado**  
@@ -198,7 +197,7 @@ ms.locfileid: "63012027"
  **Nombre**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  
   
- **Type**  
+ **Tipo**  
  Describe el tipo de cada elemento.  
   
  **Pestaña Explícito**  
@@ -210,7 +209,7 @@ ms.locfileid: "63012027"
  **Otorgante**  
  La entidad de seguridad que concedió el permiso.  
   
- **Garantizar**  
+ **Conceder**  
  Active esta casilla para conceder el permiso al inicio de sesión. Desactívela para revocar el permiso.  
   
  **WITH GRANT**  
@@ -237,7 +236,7 @@ ms.locfileid: "63012027"
  Seleccione esta opción para habilitar o deshabilitar este inicio de sesión. Esta opción utiliza la instrucción ALTER LOGIN con las opciones ENABLE o DISABLE.  
   
  **Autenticación de SQL Server**  
- La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión seleccionado se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conecta mediante la autenticación de y el inicio de sesión se ha bloqueado. Esta configuración es de solo lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
+ La casilla **Inicio de sesión bloqueado** solo está disponible si el inicio de sesión seleccionado se conecta mediante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la autenticación de y el inicio de sesión se ha bloqueado. Esta configuración es de solo lectura. Para desbloquear un inicio de sesión fuera el que se bloquea, ejecute ALTER LOGIN con la opción de UNLOCK.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

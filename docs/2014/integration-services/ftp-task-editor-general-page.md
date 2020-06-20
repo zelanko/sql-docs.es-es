@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02ffd6309ae31f538fecdf6af2cb8475608d6cf5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966342"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor de la tarea FTP (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea FTP** para especificar el administrador de conexiones FTP que se conecta al servidor FTP con el que se comunica la tarea. También puede asignar un nombre a la tarea FTP y describirla.  
@@ -28,7 +27,7 @@ ms.locfileid: "66058432"
   
 ## <a name="options"></a>Opciones  
  **FtpConnection**  
- Seleccione un administrador de conexiones FTP existente o haga \<clic en **nueva conexión...**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**New connection...**> para crear un administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones FTP solo admite la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  

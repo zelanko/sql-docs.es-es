@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2addc9be-67d0-423d-a457-192fe9d7d058
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac190d6099bca1a38ca2f286e6ce048fe5322e2a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211199"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054538"
 ---
 # <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Escribir instrucciones Transact-SQL
   Éste es el tutorial Escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . Este tutorial está pensado para usuarios que no tienen experiencia en escribir instrucciones SQL. Ayudará a los nuevos usuarios a empezar revisando algunas instrucciones básicas para crear tablas e insertar datos. Este tutorial usa [!INCLUDE[tsql](../includes/tsql-md.md)], la implementación de [!INCLUDE[msCoName](../includes/msconame-md.md)] del estándar SQL. Este tutorial está pensado como una breve introducción al lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] y no como una sustitución de una clase de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las instrucciones de este tutorial son sencillas de forma intencionada y no pretenden representar la complejidad que se encuentra en una base de datos de producción típica.  

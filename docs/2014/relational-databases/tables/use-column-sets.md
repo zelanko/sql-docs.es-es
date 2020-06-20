@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9cb496137c3986b78a55862e434c153d354a42ea
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63298637"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055016"
 ---
 # <a name="use-column-sets"></a>Usar conjuntos de columnas
   Las tablas que utilizan columnas dispersas pueden designar un conjunto de columnas que devuelva todas las columnas dispersas de la tabla. Un conjunto de columnas es una representación XML sin tipo que combina todas las columnas dispersas de una tabla en una salida estructurada. Un conjunto de columnas se asemeja a una columna calculada en que el conjunto no se almacena físicamente en la tabla. Un conjunto de columnas difiere de una columna calculada en que el conjunto de columnas se puede actualizar directamente.  

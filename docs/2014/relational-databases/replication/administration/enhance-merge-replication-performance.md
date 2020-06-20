@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 443ce7c1da881edfe2c3b40d27e352498d416cc0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62805899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061612"
 ---
 # <a name="enhance-merge-replication-performance"></a>Aumentar el rendimiento de la replicación de mezcla
   Tras considerar las sugerencias generales de rendimiento que se describen en [Aumentar el rendimiento general de la replicación](enhance-general-replication-performance.md), tenga en cuenta estas otras áreas específicas de la replicación de mezcla.  

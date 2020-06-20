@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f59ed0eee86f17fdda568caa5c1a1dc7252c6d9c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055350"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962475"
 ---
 # <a name="ssis-package-format"></a>Formato de paquetes SSIS
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], se han realizado cambios significativos en el formato de paquetes (archivo .dtsx) para que sea más fácil leer el formato y comparar paquetes. También puede combinar de forma más confiable paquetes que no contienen cambios en conflicto o cambios almacenados en formato binario.  
   
- Para ver el formato de archivo de paquete DTSX actual, vea [ \[MS\]-DTSX: especificaciones de formato de archivo XML de paquete de servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=233251).  
+ Para ver el formato de archivo de paquete DTSX actual, vea [ \[ MS-DTSX \] : especificaciones de formato de archivo XML de paquete de servicios de transformación de datos](https://go.microsoft.com/fwlink/?LinkId=233251).  
   
  En la lista siguiente se mencionan los cambios de formato de archivo. Para ver ejemplos de código de estos cambios, vea [Cambios de formato de paquetes en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=233255)  
   

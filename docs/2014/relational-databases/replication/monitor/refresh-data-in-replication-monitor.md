@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03dae95f44b4166947da4ef7bd88b532db00dd03
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d632da029905c4ce914c843a2ea1319e780ac735
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667241"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060766"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Actualizar datos en el Monitor de replicación
   En el Monitor de replicación, la ventana principal y las ventanas de detalles (las ventanas que se inician desde la ventana principal) se pueden actualizar automática o manualmente. Para actualizar una ventana manualmente, presione F5. De manera predeterminada, la ventana principal se actualiza automáticamente cada cinco segundos; este valor se puede personalizar para cada publicador.  
@@ -42,7 +41,7 @@ ms.locfileid: "62667241"
   
     3.  Haga clic con el botón secundario en una suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-2.  En la ventana de detalles **Suscripción \<<nombreDeSuscripción>** , haga clic en **Acción** y, a continuación, en **Actualizar automáticamente**. La frecuencia de actualización es establece con el valor que se especifique en **Frecuencia de actualización** en el cuadro de diálogo **Configuración del publicador** .  
+2.  En la ventana de detalles de la **suscripción \<SubscriptionName> ** , haga clic en **acción**y, a continuación, en **actualización automática**. La frecuencia de actualización es establece con el valor que se especifique en **Frecuencia de actualización** en el cuadro de diálogo **Configuración del publicador** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../monitoring-replication.md)  

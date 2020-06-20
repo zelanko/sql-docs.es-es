@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c6b15235f74ba2765a34f028aba39379fd6beb
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eaf7017d2cf3d831f300180f002c004487a317e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015675"
 ---
 # <a name="executing-xpath-queries-sqlxmloledb-provider"></a>Ejecutar consultas XPath (proveedor SQLXMLOLEDB)
   En este ejemplo se muestra el uso de las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
@@ -32,7 +31,7 @@ ms.locfileid: "82703238"
   
 -   `Mapping Schema`  
   
- En esta aplicación ADO de ejemplo, se especifica una consulta XPath (raíz) en un esquema de asignación XSD (MySchema.xml). El esquema tiene un elemento ** \< contacts>** con los atributos **ContactID**, **FirstName**y **LastName** . En el esquema, tiene lugar la asignación predeterminada: un nombre de elemento se asigna a la tabla con el mismo nombre y los atributos de tipo simple se asignan a las columnas con los mismos nombres.  
+ En esta aplicación ADO de ejemplo, se especifica una consulta XPath (raíz) en un esquema de asignación XSD (MySchema.xml). El esquema tiene un **\<Contacts>** elemento con los atributos **ContactID**, **FirstName**y **LastName** . En el esquema, tiene lugar la asignación predeterminada: un nombre de elemento se asigna a la tabla con el mismo nombre y los atributos de tipo simple se asignan a las columnas con los mismos nombres.  
   
 ```  
 <xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  

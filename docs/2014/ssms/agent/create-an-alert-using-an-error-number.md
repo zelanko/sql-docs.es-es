@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 03dd7fac-5073-4f86-babd-37e45a86023c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a98f64bc5b9dffc3e2494a0c36c8fc04cdfb6fa2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135371"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041188"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Create an Alert Using an Error Number
-  En este tema se describe cómo crear [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una alerta del agente [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en que se generará cuando se produzca un error de un número específico [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  En este tema se describe cómo crear una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta del agente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se generará cuando se produzca un error de un número específico mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   
@@ -73,7 +72,7 @@ ms.locfileid: "63135371"
   
 9. Active la casilla correspondiente a **Mostrar alerta cuando el mensaje contenga** para restringir la alerta a una secuencia de caracteres en particular y, a continuación, escriba una palabra clave o una cadena de caracteres en el **Texto del mensaje**. El número máximo de caracteres es 100.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f54be594-f290-4db2-bf18-fd2521728a4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f56d5ea637adc2ce8fc5490c44408bdd1de7f3f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6e1dea1ba2a3370d18d22d0c23f1561d3d454254
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999527"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054517"
 ---
 # <a name="report-server-properties-log-on-tab"></a>Propiedades de Servidor de informes (pestaña Iniciar sesión)
   Utilice la pestaña **Iniciar sesión** del cuadro de diálogo **Propiedades de Servidor de informes** para especificar la cuenta que utiliza el servicio Servidor de informes así como para iniciar y detener el servicio.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 06b9b092-fceb-4be5-b712-5aff89b5ba92
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40ce89f518dfdbf4d1c782121dc5ec0e935752ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d5cd144cf02dcfacf0cfca3a3e4623809266250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676846"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038345"
 ---
 # <a name="view-policies-dialog-box"></a>Cuadro de diálogo Ver directivas
   Utilice este cuadro de diálogo para ver las directivas que están vigentes para este destino. Este cuadro de diálogo muestra directivas relevantes, sus categorías de directiva e información sobre las directivas.  

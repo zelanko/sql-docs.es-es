@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 11144714addb50dc4c481512399228802390f2f3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 267f9044505126cbe7f865e6577da3cbe2f26bcf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055149"
 ---
 # <a name="explicit-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación explícita de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
   Cuando se utiliza un esquema XSD para proporcionar una vista XML de la base de datos relacional, los elementos y atributos del esquema se deben asignar a tablas y columnas de la base de datos. Las filas de la tabla o vista de la base de datos se asignarán a elementos del documento XML. Los valores de columna de la base de datos se asignan a atributos o elementos.  
@@ -58,9 +57,9 @@ ms.locfileid: "82703611"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. Especificar las anotaciones sql:relation y sql:field  
- En este ejemplo, el esquema XSD está compuesto de un elemento de ** \< contacto>** del tipo complejo con ** \< fname>** y ** \< LName>** elementos secundarios y el atributo **ContactID** .  
+ En este ejemplo, el esquema XSD está compuesto de un **\<Contact>** elemento de tipo complejo con los **\<FName>** **\<LName>** elementos secundarios y y el atributo **ContactID** .  
   
- La `sql:relation` anotación asigna el elemento de ** \<>de contacto** a la tabla person. contact de la base de datos AdventureWorks. La `sql:field` anotación asigna el elemento ** \< fname>** a la columna FirstName y el elemento ** \< LName>** a la columna LastName.  
+ La `sql:relation` anotación asigna el **\<Contact>** elemento a la tabla person. contact de la base de datos AdventureWorks. La `sql:field` anotación asigna el **\<FName>** elemento a la columna FirstName y el **\<LName>** elemento a la columna LastName.  
   
  No se especifica ninguna anotación para el atributo **ContactID** . Esto produce una asignación predeterminada del atributo a la columna del mismo nombre.  
   

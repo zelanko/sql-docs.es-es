@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 192c38bc189928cf980ab0141e53ab12f37d805c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e5d74b9c4def9c0314569a8d0bd87939cdcb11b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038707"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Supervisar el rendimiento mediante el almacén de consultas
   La característica del almacén de consultas ofrece a los DBA conocimientos sobre el rendimiento y la elección del plan de consultas. Esta característica simplifica la solución de problemas de rendimiento al permitirle encontrar rápidamente diferencias de rendimiento provocadas por cambios en los planes de consulta. Captura automáticamente un historial de consultas, planes y estadísticas en tiempo de ejecución, y los conserva para su revisión. Separa los datos por ventanas de tiempo, lo que permite ver patrones de uso la base de datos y comprender cuándo se produjeron cambios del plan de consultas en el servidor. El almacén de consultas se puede configurar mediante la opción [ALTER DATABASE Set](/sql/t-sql/statements/alter-database-transact-sql-set-options) .
@@ -90,7 +89,7 @@ JOIN sys.query_store_query_text AS Txt
 
  ![QueryStore](../../database-engine/media/querystore.PNG "QueryStore")
 
- Al seleccionar **consultas con regresión**, se abre el panel de **consultas** devueltas en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]. En el panel Consultas devueltas se muestran las consultas y los planes del almacén de consultas. Los cuadros desplegables de la parte superior le permiten seleccionar consultas en función de varios criterios. Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.
+ Al seleccionar **consultas con regresión**, se abre el panel de **consultas** devueltas en [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] . En el panel Consultas devueltas se muestran las consultas y los planes del almacén de consultas. Los cuadros desplegables de la parte superior le permiten seleccionar consultas en función de varios criterios. Seleccione un plan para ver el plan de consulta gráfica. Los botones están disponibles para ver la consulta de origen, aplicar y eliminar la aplicación de un plan de consulta, y actualizar la pantalla.
 
  ![RegressedQueries](../../database-engine/media/regressedqueries.PNG "RegressedQueries")
 
@@ -506,7 +505,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
  Al usar `sp_query_store_force_plan` solo puede forzar los planes que se grabaron por el Almacén de consultas como un plan para esa consulta. Es decir, los únicos planes disponibles para una consulta son aquellos que ya se usaron para ejecutar la Q1 mientras el Almacén de consultas estaba activo.
 
- **Quitar el forzado de un plan para una consulta.** Para confiar de nuevo en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el optimizador de consultas para calcular el plan de `sp_query_store_unforce_plan` consulta óptimo, use para no aplicar el plan seleccionado para la consulta.
+ **Quitar el forzado de un plan para una consulta.** Para confiar de nuevo en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] optimizador de consultas para calcular el plan de consulta óptimo, use `sp_query_store_unforce_plan` para no aplicar el plan seleccionado para la consulta.
 
 ```
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;

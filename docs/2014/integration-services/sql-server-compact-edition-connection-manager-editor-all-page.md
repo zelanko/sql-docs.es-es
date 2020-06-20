@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8a26587f9dd426cdf53a3a53a36d0e81e95ebf77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e6b326e86e1a9e21a740c3bf1bd1fedb6919e98
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055467"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962763"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>Editor del administrador de conexiones con SQL Server Compact Edition (página Todo)
   Use el cuadro de diálogo **Administrador de conexiones con SQL Server Compact Edition** para especificar las propiedades de conexiones a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
@@ -45,7 +44,7 @@ ms.locfileid: "66055467"
  **Max Buffer Size**  
  Especifique la cantidad máxima de memoria, en kilobytes, que usará [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact antes del vaciado de datos en el disco.  
   
- **Max Database Size**  
+ **Tamaño máximo de la base de datos**  
  Especifique el tamaño máximo, en megabytes, de la base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact.  
   
  **Modo**  

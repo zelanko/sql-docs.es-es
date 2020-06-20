@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 588295d0705ec9c556c85eb5bef1d96d8128b580
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c41673f6f3bf1f4de2a831ecd659321b273b6af9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176074"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971895"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Crear un miembro consolidado (Master Data Services)
   En [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], cree un miembro consolidado si desea un nodo primario para una jerarquía explícita. Los miembros consolidados pueden tener sus propios atributos. Se utilizan para la agrupación. Tal y como se muestra en el ejemplo siguiente, los miembros consolidados pueden usarse para grupos de cuentas que tienen cuentas en ellos.
 
  ![Miembros consolidados de MDS](../../2014/master-data-services/media/mds-consolidated-members.png "Miembros consolidados de MDS")
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
  Para realizar este procedimiento:
 
 -   Debe disponer de permiso de acceso al área funcional **Explorador** .
@@ -53,7 +52,7 @@ ms.locfileid: "78176074"
 
 9. Haga clic en **OK**.
 
-## <a name="next-steps"></a>Pasos a seguir
+## <a name="next-steps"></a>Pasos siguientes
 
 -   [Movimiento de miembros dentro de una jerarquía &#40;Master Data Services&#41;](move-members-within-a-hierarchy-master-data-services.md)
 

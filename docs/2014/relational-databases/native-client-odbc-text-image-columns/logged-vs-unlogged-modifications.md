@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3635fee71c92196cbc9408db1487e95da2b489ea
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8768acc75d18ea2236f0e9280e5d0c805e688107
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039367"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>Modificaciones registradas frente a modificaciones no registradas
   Una aplicación puede solicitar que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no registre las modificaciones de **Text**, **ntext**e **Image** . Sin embargo, se debe tener cautela con esta opción. Solo se debe usar para aquellas situaciones en las que los datos **Text**, **ntext**o **Image** no son críticos y los propietarios de datos están dispuestos a deshacer la capacidad de recuperar datos para un mayor rendimiento.  

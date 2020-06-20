@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c0dbb6d8-ba78-485a-a40d-6d5cb7e75d0a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 484774165ea1997b98fc9dc0919f5be7450dd4c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e56d68cc46da72de21f07559b7ccb2aa9ac6fda
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483365"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971785"
 ---
 # <a name="create-a-numeric-attribute-master-data-services"></a>Crear un atributo numérico (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo numérico cuando desee que los usuarios escriban un número como valor de un atributo.  

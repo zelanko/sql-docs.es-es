@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74628f9e-2d39-496a-a443-0a3887db223d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48f0ada8740735e64fe57c35bc17553f59aa444c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b7ccb13828235b690bad83e3791b945d8584d5e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184293"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054384"
 ---
 # <a name="filter-events-based-on-the-event-end-time-sql-server-profiler"></a>Filtrar eventos basándose en la hora de finalización del evento (SQL Server Profiler)
   En este tema se describe el modo de filtrar eventos de seguimiento basándose en la hora de finalización del evento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -42,7 +41,7 @@ ms.locfileid: "63184293"
   
 5.  En el menú **Selección de eventos**, haga clic en la columna de datos **Hora de finalización** para iniciar el cuadro de diálogo **Editar filtro** . También puede hacer clic con el botón derecho en el encabezado de la columna y seleccionar **Editar filtro de columna**.  
   
-6.  Expanda **mayor que** o **menor que**y escriba un `datetime`valor en el campo que aparece debajo del operador de comparación.  
+6.  Expanda **mayor que** o **menor que**y escriba un `datetime` valor en el campo que aparece debajo del operador de comparación.  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](sql-server-profiler.md)   

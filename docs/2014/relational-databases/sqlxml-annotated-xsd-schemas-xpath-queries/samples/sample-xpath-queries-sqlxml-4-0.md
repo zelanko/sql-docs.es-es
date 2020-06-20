@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1595c2d4-0e9c-4969-84c8-a793a32df57d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 260102f14919708836131e263c7ad687441ed987
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 96cc8bb406af4ce18eed8f078296fa1dcf69299e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717881"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014996"
 ---
 # <a name="sample-xpath-queries-sqlxml-40"></a>Consultas XPath de ejemplo (SQLXML 4.0)
   En esta sección se proporcionan ejemplos de consultas XPath para SQLXML 4.0. Con fines meramente ilustrativos, estas consultas XPath de ejemplo se especifican en una plantilla ejecutada con ADO. Por lo tanto, deberá usar un archivo de esquema de asignación, SampleSchema1.xml, que también se proporciona en esta sección. Guarde este archivo en el directorio donde estén almacenadas sus plantillas.  

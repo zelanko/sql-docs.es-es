@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d1ab00c7-0331-437a-84fe-bae53b82feec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5d39cfd6ca3eba8222dda09a83fdd809bb7d00e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bd6044c08ecd5a73f539bfbc1139d6257c2db9d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915055"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054197"
 ---
 # <a name="mssqlserver_207"></a>MSSQLSERVER_207
     
@@ -119,7 +118,7 @@ ms.locfileid: "62915055"
   
 ## <a name="see-also"></a>Consulte también  
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)   
- [DESDE &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
+ [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [UPDATE &#40;Transact-SQL&#41;](/sql/t-sql/queries/update-transact-sql)  
   

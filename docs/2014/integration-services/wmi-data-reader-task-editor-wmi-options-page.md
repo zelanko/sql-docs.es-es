@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8d4716-882d-41b0-b77e-e0e2741a2cd5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8367f0ae57df5333808e4dfde25c5676a3bcf1d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 08418775cc0b1f865d75cb07536a60956ea4ff0a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972405"
 ---
 # <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Editor de la tarea Lector de datos WMI (página Opciones WMI)
   Use la página **Opciones WMI** del cuadro de diálogo **Editor de la tarea Lector de datos WMI** para especificar el origen de la consulta WQL (Lenguaje de consulta de Instrumental de administración de Windows) y el destino del resultado de la consulta.  
@@ -28,7 +27,7 @@ ms.locfileid: "66054356"
   
 ## <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  
- Seleccione un administrador de conexiones WMI de la lista o haga \<clic en **nueva conexión WMI...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones WMI de la lista o haga clic en \<**New WMI Connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados** [Administrador de conexiones WMI](connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -63,13 +62,13 @@ ms.locfileid: "66054356"
   
 ### <a name="wqlquerysourcetype--file-connection"></a>WQLQuerySourceType = Conexión de archivos  
  **WQLQuerySource**  
- Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysourcetype--variable"></a>WQLQuerySourceType = Variable  
  **WQLQuerySource**  
- Seleccione una variable de la lista o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable de la lista o haga clic \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -77,13 +76,13 @@ ms.locfileid: "66054356"
   
 ### <a name="destinationtype--file-connection"></a>DestinationType = Conexión de archivos  
  **Destino**  
- Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="destinationtype--variable"></a>DestinationType = Variable  
  **Destino**  
- Seleccione una variable de la lista o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable de la lista o haga clic \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

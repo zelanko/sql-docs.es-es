@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7bab4ee8f03eb666e1a8396fbf8957b1e42f2c7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fea70d6b1230b67b2eedcdf1c7d2e82d2324a0b3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010899"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016318"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
   El Asistente para indización de texto completo le guía por una serie de pasos diseñados para ayudarle a crear un índice de texto completo.  
@@ -49,7 +48,7 @@ ms.locfileid: "66010899"
      **Columna de tipo**  
      Seleccione el nombre de la columna que incluye el tipo de documento de la columna que se va a incluir en el índice de texto completo.  
   
-     La **columna tipo** solo se habilita cuando la columna mencionada en la columna **columnas disponibles** es del `varbinary(max)` tipo `image`o.  
+     La **columna tipo** solo se habilita cuando la columna mencionada en la columna **columnas disponibles** es del tipo `varbinary(max)` o `image` .  
   
      **Semántica estadística**  
      Seleccione si desea habilitar la indización semántica para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](semantic-search-sql-server.md).  
@@ -93,9 +92,9 @@ ms.locfileid: "66010899"
   
      Seleccione uno de los siguientes valores:  
   
-    |Value|Descripción|  
+    |Valor|Descripción|  
     |-----------|-----------------|  
-    |**\<>predeterminada**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
+    |**\<default>**|Si la tabla o la vista no tienen particiones, seleccione este valor para usar el mismo grupo de archivos que la tabla o vista subyacente. Si la tabla o la vista tienen particiones, se usa el grupo de archivos principal.|  
     |**PRINCIPAL**|Seleccione este valor para usar el grupo de archivos principal para el nuevo índice de texto completo.|  
     |*grupo de archivos predeterminado especificado por el usuario*|Si existe una lista de palabras irrelevantes predeterminada definida por el usuario, seleccione su nombre en la lista con el fin de utilizar ese grupo de archivos para el nuevo índice de texto completo.|  
   
@@ -106,10 +105,10 @@ ms.locfileid: "66010899"
   
      Seleccione uno de los siguientes valores:  
   
-    |Value|Descripción|  
+    |Valor|Descripción|  
     |-----------|-----------------|  
-    |**\<>del sistema**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
-    |**\<desactivado>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
+    |**\<system>**|Seleccione este valor para utilizar la lista de palabras irrelevantes del sistema en el nuevo índice de texto completo. Este es el valor predeterminado.|  
+    |**\<off>**|Seleccione este valor para deshabilitar las listas de palabras irrelevantes para el nuevo índice de texto completo.|  
     |*user-defined-stoplist-name*|La lista muestra el nombre de cada lista de palabras irrelevantes definida por el usuario, si hay alguna, que se haya creado en la base de datos. Seleccione la lista de palabras irrelevantes definida por el usuario que desee para utilizarla para el nuevo índice de texto completo.|  
   
 4.  Opcionalmente, defina la programación de rellenado. Las operaciones de indización comenzarán inmediatamente, a menos que se hayan programado para que se ejecuten posteriormente. Las programaciones se crearán inmediatamente, aunque no se ejecuten hasta la hora programada.  
@@ -131,7 +130,7 @@ ms.locfileid: "66010899"
      **Detención**  
      Interrumpe la operación actual e impide que el asistente lleve a cabo operaciones de texto completo posteriores durante esta sesión.  
   
-     **Informe**  
+     **Report**  
      Cuando finalice la ejecución de todas las operaciones, haga clic en este botón para obtener acceso a un informe sobre las operaciones efectuadas. Puede ver el informe, imprimirlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
   

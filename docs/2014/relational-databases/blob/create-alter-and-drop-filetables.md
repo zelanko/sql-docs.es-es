@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a10e6333f6dd38a850a832b82a7cb7a0e0bf698
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76934797"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955585"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
   Describe cómo crear una nueva FileTable. O bien, modificar o quitar una FileTable existente.  
@@ -35,7 +34,7 @@ ms.locfileid: "76934797"
   
 -   Los nombres que se van a utilizar para la clave principal 3 y las restricciones únicas que se crean automáticamente.  
   
-###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Crear una FileTable  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Procedimientos para: crear una FileTable  
  **Crear una FileTable con Transact-SQL**  
  Cree una FileTable llamando a la instrucción [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) con la opción **AS FileTable**. Puesto que una FileTable tiene un esquema fijo, no tiene que especificar ninguna lista de columnas. Puede especificar los siguientes valores para la nueva FileTable:  
   
@@ -107,7 +106,7 @@ GO
   
  Para obtener información sobre el uso de la instrucción ALTER TABLE para habilitar o deshabilitar el espacio de nombres de FileTable, incluidas las restricciones definidas por el sistema, vea [Administrar FileTables](manage-filetables.md).  
   
-###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Cambiar el directorio de un objeto FileTable  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Procedimientos para: cambiar el directorio de un objeto FileTable  
  **Cambiar el directorio de un objeto FileTable mediante Transact-SQL**  
  Llame a la instrucción ALTER TABLE y proporcione un nuevo valor válido para la opción **FILETABLE_DIRECTORY** SET.  
   
@@ -175,7 +174,7 @@ GO
 |Restricciones CHECK|Las restricciones CHECK definidas por el sistema se aplican a los siguientes requisitos:<br /><br /> Nombres de archivo válidos.<br /><br /> Atributos de archivo válidos.<br /><br /> El objeto primario debe ser un directorio.<br /><br /> La jerarquía del espacio de nombres se bloquea durante la manipulación de archivos.|  
   
  **Convención de nomenclatura para las restricciones definidas por el sistema**  
- Las restricciones definidas por el sistema descritas arriba reciben su nombre en el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
+ Las restricciones definidas por el sistema descritas anteriormente se denominan con el formato ** \<constraintType> _ \<tablename> [ \_ \<columnname> ] \_ \<uniquifier> ** , donde:  
   
 -   *<constraint_type>* es CK (restricción CHECK), DF (restricción DEFAULT), FK (clave externa), PK (clave principal) o UQ (restricción UNIQUE).  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 310e32b2804664c4189e8e677227018d853f934a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62989079"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060545"
 ---
 # <a name="filter-published-data"></a>Filtrar datos publicados
   Filtrar artículos de tabla permite crear particiones de los datos que se van a publicar. Si filtra los datos publicados, podrá:  
@@ -100,7 +99,7 @@ ms.locfileid: "62989079"
 |Todas las columnas en una publicación de combinación de SQL Server 7.0|Las columnas no se pueden filtrar en las publicaciones de combinación de SQL Server 7.0.|  
 |Timestamp|Publicaciones de instantáneas o transaccionales de SQL Server 7.0 que permiten suscripciones actualizables|  
   
- <sup>1</sup> si va a publicar una tabla en una publicación de combinación y dicha tabla ya contiene una columna de tipo `uniqueidentifier` de datos `ROWGUIDCOL` con el conjunto de propiedades, la replicación puede utilizar esta columna en lugar de crear una columna adicional denominada **ROWGUID**. En este caso, se debe publicar la columna existente.  
+ <sup>1</sup> si va a publicar una tabla en una publicación de combinación y dicha tabla ya contiene una columna de tipo de datos `uniqueidentifier` con el `ROWGUIDCOL` conjunto de propiedades, la replicación puede utilizar esta columna en lugar de crear una columna adicional denominada **ROWGUID**. En este caso, se debe publicar la columna existente.  
   
  Para definir o modificar un filtro de columna, vea [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,7 +128,7 @@ ms.locfileid: "62989079"
   
 -   La replicación transaccional le permite replicar una vista indizada como vista o como tabla. Si replica la vista como tabla, no podrá filtrar columnas de la tabla.  
   
- Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , restringe la ejecución de esta lógica para que un `dbo` malintencionada no pueda asaltar la ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
+ Los filtros de fila no están diseñados para funcionar entre bases de datos. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] limita intencionadamente la ejecución de `sp_replcmds` (que filtra la ejecución debajo) al propietario de la base de datos (`dbo`). El `dbo` no tiene privilegios entre bases de datos. Con la incorporación de CDC (Captura de datos modificados) a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], la lógica de `sp_replcmds` rellena las tablas de seguimiento de cambios con información a la que el usuario puede volver y que puede consultar. Por motivos de seguridad, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] restringe la ejecución de esta lógica para que un malintencionada `dbo` no pueda asaltar la ruta de acceso de ejecución. Por ejemplo, un `dbo` malintencionado podría agregar desencadenadores a las tablas de CDC que se ejecutarían en el contexto del usuario que llama a `sp_replcmds`, en este caso el agente del lector de registros.  Si la cuenta bajo la que se está ejecutando el agente tiene privilegios mayores, el `dbo` malintencionado podría escalar sus privilegios.  
   
 ## <a name="see-also"></a>Consulte también  
  [Publicar datos y objetos de base de datos](publish-data-and-database-objects.md)  

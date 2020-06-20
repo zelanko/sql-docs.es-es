@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 380e77e5-ad60-43d4-9605-34a84525f5dd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66b4ffa868c6e488c4a4c008609a2c36cdb47104
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054148"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961765"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Habilitar una entidad para jerarquías explícitas y colecciones (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], habilite una entidad para las jerarquías y colecciones explícitas de modo que pueda crearlas para la entidad.  
@@ -52,7 +51,7 @@ ms.locfileid: "66054148"
   
 9. Haga clic en **Guardar entidad**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Crear una jerarquía explícita &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   

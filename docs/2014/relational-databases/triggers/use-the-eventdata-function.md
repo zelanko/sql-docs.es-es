@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 57fb59a3954fb00ab943944c58cccd352c7270d2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85014347"
 ---
 # <a name="use-the-eventdata-function"></a>Usar la función EVENTDATA
   La información acerca de un evento que activa un desencadenador DDL se captura mediante la función EVENTDATA. Esta función devuelve un valor `xml`. El esquema XML incluye información acerca de lo siguiente:  
@@ -49,7 +48,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se logra mediante el uso de una instrucción XQuery `xml` en los datos generados por EVENTDATA y la recuperación \<del elemento> CommandText. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ La instrucción `EVENTDATA()` del desencadenador DDL captura el texto de la instrucción `CREATE TABLE` que no se admite. Esto se logra mediante el uso de una instrucción XQuery en los `xml` datos generados por EVENTDATA y la recuperación del \<CommandText> elemento. Para obtener más información, vea [Referencia del lenguaje XQuery &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA captura los datos de los eventos CREATE_SCHEMA, así como el >schema_element< de la definición CREATE SCHEMA correspondiente, si existe. Además, EVENTDATA reconoce la definición <schema_element> como un evento aparte. Por lo tanto, un desencadenador DDL creado en un evento CREATE_SCHEMA y en un evento representado por el <schema_element> de la definición CREATE SCHEMA, puede devolver los mismos datos de evento dos veces, por ejemplo, datos `TSQLCommand`. Por ejemplo, considere un desencadenador DDL creado en los eventos CREATE_SCHEMA y CREATE_TABLE, y que se ejecute el siguiente lote:  

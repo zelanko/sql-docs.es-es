@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b7f94269-d28a-4f30-9e50-2ee1a6e82178
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d3ee86b85a2eadf990caddc6c92499cf0e706d4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c07f0fa1937887f2f685d235232385dd216eb393
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63306214"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040784"
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Ubicación (cuadro de diálogo, Visual Database Tools)
   Utilice este cuadro de diálogo para ubicar y seleccionar la carpeta que contiene los archivos de interés. Este cuadro de diálogo devuelve la ruta de acceso de la carpeta seleccionada al cuadro de diálogo que realiza la llamada. Puede tener acceso a este cuadro de diálogo de esta forma:  

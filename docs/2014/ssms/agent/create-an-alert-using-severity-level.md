@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: a1fd71bf-5bf9-4ce2-9a1d-032576a4a6e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e94b24634eedf68afcb25c8c1ef957ce063cdc4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6ee353129d60fe7fc8bed0eff279920d8d4ba640
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63136738"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041320"
 ---
 # <a name="create-an-alert-using-severity-level"></a>Create an Alert Using Severity Level
-  En este tema se describe cómo crear [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] una alerta del agente que se genera cuando se produce un evento con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] un nivel de gravedad específico [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante o.  
+  En este tema se describe cómo crear una [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alerta del agente que se genera cuando se produce un evento con un nivel de gravedad específico en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "63136738"
   
 8.  Active la casilla correspondiente a **Mostrar alerta cuando el mensaje contenga** para restringir la alerta a una secuencia de caracteres en particular y, a continuación, escriba una palabra clave o una cadena de caracteres en el **Texto del mensaje**. El número máximo de caracteres es 100.  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

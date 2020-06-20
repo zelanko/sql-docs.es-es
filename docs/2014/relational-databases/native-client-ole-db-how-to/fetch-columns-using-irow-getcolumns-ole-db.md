@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a4f79906-da0e-42f2-b0e9-812c29f39e48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a91faaa534c35e7affcdf11cb5174d8cb9e62fc6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb08c4640265e311a36723af9985af006ec96c38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039219"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
   La interfaz `IRow` permite el acceso directo a las columnas de una fila única del conjunto de resultados. Así, `IRow` supone una manera eficaz de recuperar las columnas de un conjunto de resultados con una fila.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: dc664d80-fbe3-4586-aba8-a71fa62d14f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7fc39541915b43abd024e1b02022f8a9e61580b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721877"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016652"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Ubicación del agente &lt;NombreAgente&gt;
   El Agente de mezcla (para las suscripciones de mezcla) y el Agente de distribución (para las suscripciones transaccionales y de instantáneas) se ejecutan en el distribuidor o en el suscriptor. Si el agente se ejecuta en el distribuidor, la suscripción se denomina suscripción de inserción; si el agente se ejecuta en el suscriptor, se denomina suscripción de extracción. Para más información sobre las suscripciones de inserción y de extracción, vea [Suscribirse a publicaciones](subscribe-to-publications.md). Todas las suscripciones creadas en este paso a través del asistente serán del tipo seleccionado. Para crear suscripciones de ambos tipos es preciso ejecutar el asistente dos veces.  

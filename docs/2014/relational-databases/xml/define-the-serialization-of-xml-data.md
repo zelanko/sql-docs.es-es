@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eec4a1b93be27ca49122e576107f2856dda9f7ca
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: df87dddd9fd4cf067125314c9d798eaa42523576
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046755"
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Definir la serialización de datos XML
   Cuando el tipo de datos xml se convierte de manera explícita o implícita a un tipo SQL binario o de cadena, el contenido del tipo de datos xml se serializa de acuerdo con las reglas que se describen en este tema.  
@@ -75,7 +74,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
 ## <a name="entitization-of-xml-characters-during-serialization"></a>Creación de entidades para caracteres XML durante la serialización  
  Todas las estructuras XML serializadas deberían poder analizarse de nuevo. Por tanto, algunos caracteres deben serializarse como entidades para que conserven su funcionalidad de ida y vuelta durante la fase de normalización del analizador XML. Sin embargo, deben crearse entidades para algunos caracteres con el fin de que el formato del documento sea correcto, y, por tanto, se pueda analizar. A continuación se exponen las reglas de creación de entidades que se aplican durante la serialización:  
   
--   Para los caracteres &, \< y > siempre se crean las entidades &amp;, &lt; y &gt;, respectivamente, si aparecen en valores de atributos o en el contenido de elementos.  
+-   Los caracteres &, \<, and > siempre se entidades a &amp; , &lt; y, &gt; respectivamente, si aparecen dentro de un valor de atributo o contenido de elemento.  
   
 -   Dado que SQL Server usa comillas (U+0022) para incluir los valores de los atributos, para las comillas de los valores de atributo se crea la entidad &quot;.  
   

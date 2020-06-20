@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f57c706a13e57bc716bcb02725a1b1985a9c4c6f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62854971"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047328"
 ---
 # <a name="create-synonyms"></a>Crear sinónimos
   En este tema se describe cómo crear un sinónimo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  

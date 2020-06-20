@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 6725bfb9-5f10-4115-be09-fd9c9f5779ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c9ba511746375a902a1643631c86ec8c72dbd02
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f37bee770c40235817b2b492ee34f89082012309
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698853"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018266"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>Tipo SQL de ODBC para parámetros con valores de tabla
   Un nuevo tipo de SQL de ODBC, SQL_SS_TABLE, proporciona compatibilidad con parámetros con valores de tabla.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  SQL_SS_TABLE no se puede convertir en ningún otro tipo de datos ODBC o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Si se usa SQL_SS_TABLE como un tipo de datos de C en el parámetro *ValueType* de SQLBindParameter, o se intenta establecer SQL_DESC_TYPE en un registro de descriptor de parámetros de la aplicación (APD) en SQL_SS_TABLE, se devuelve SQL_ERROR y se genera un registro de diagnóstico con SQLSTATE = HY003, "tipo de búfer de aplicación no válido".  

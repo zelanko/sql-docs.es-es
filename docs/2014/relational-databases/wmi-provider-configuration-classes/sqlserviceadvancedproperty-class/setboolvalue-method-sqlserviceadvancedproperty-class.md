@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 876e61b7-875c-43f4-bbce-d7eeb90f6730
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0c2c543343bd602be75d600a489edfd84663790b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 911e40506891894213040a02cb439daa6997701a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62911407"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059678"
 ---
 # <a name="set-breakpoints"></a>Establecer puntos de interrupción
   Utilice el cuadro de diálogo **Establecer puntos de interrupción** para especificar los eventos en los que se deben habilitar puntos de interrupción y para controlar el comportamiento del punto de interrupción.  
   
 ## <a name="options"></a>Opciones  
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción para habilitar un punto de interrupción en un evento.  
   
  **Break Condition**  
@@ -34,7 +33,7 @@ ms.locfileid: "62911407"
  **Tipo de número de llamadas**  
  Especifique el momento en el que el punto de interrupción surte efecto.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Deben**|La ejecución se suspende siempre cuando se alcanza el punto de interrupción.|  
 |**Número de llamadas igual a**|La ejecución se suspende cuando el número de veces que ha ocurrido el punto de interrupción es igual al número de llamadas.|  

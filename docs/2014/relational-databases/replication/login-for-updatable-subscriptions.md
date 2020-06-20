@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a5cc9190c77f506b13ba8b5fba0e32d5a925570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63058101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065864"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
   Si ha seleccionado **Replicar** en la página **Suscripciones actualizables** de este asistente, debe especificar una cuenta en el suscriptor bajo la que se realizan las conexiones al publicador para las suscripciones de actualización inmediata. Las conexiones las utilizan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Esta cuenta es necesaria aunque se haya seleccionado **Poner en cola cambios y confirmar cuando sea posible** en la página **Suscripciones actualizables** , porque, de forma predeterminada, el Asistente para nueva suscripción configura la actualización en cola con la capacidad para cambiar a actualización inmediata si es necesario.  
   
 > [!IMPORTANT]  
->  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación cuyo nombre tenga el formato **syncobj_**_\<númerohexadecimal>_ a la cuenta que configuró en cada suscriptor.  
+>  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación que tengan un nombre con el formato **syncobj_** _\<HexadecimalNumber>_ a la cuenta que configuró en cada suscriptor.  
   
  Hay tres opciones disponibles para el tipo de conexión:  
   
@@ -33,14 +32,14 @@ ms.locfileid: "63058101"
   
 -   Un servidor vinculado que crea la replicación; la conexión se establece con las credenciales del usuario que realiza el cambio en el suscriptor.  
   
- Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar mediante [sp_link_publication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Especifique un valor de **1** para el parámetro **@security_mode**.  
+ Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar mediante [sp_link_publication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql); Especifique un valor de **1** para el parámetro **@security_mode** .  
   
 ## <a name="options"></a>Opciones  
  **Crear un servidor vinculado que se conecte mediante el siguiente inicio de sesión para la Autenticación de SQL Server:**  
  La replicación crea un servidor vinculado utilizando las credenciales especificadas en los campos **Inicio de sesión** y **Contraseña** .  
   
  **Inicio de sesión**  
- Escriba un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que tenga solo los permisos descritos en este tema.  
+ Escriba un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que tenga solo los permisos descritos en este tema.  
   
  **Contraseña**  
  Escriba una contraseña segura para el inicio de sesión especificado en **Inicio de sesión**.  

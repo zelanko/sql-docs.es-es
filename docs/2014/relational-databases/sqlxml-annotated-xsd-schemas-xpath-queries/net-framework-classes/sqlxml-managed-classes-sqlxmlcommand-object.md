@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e7ee45c8d725e233541f4db34796e89327bc11e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8d33448c7e17897fd1b5fb7f3aa22c302cdcfdc7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015137"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objeto SqlXmlCommand (clases administradas SQLXML)
   Este es el constructor del objeto SqlXmlCommand:  
@@ -63,7 +62,7 @@ public SqlXmlCommand(string cnString)
  Escribe los resultados de la consulta en un flujo existente. Este método es útil cuando se tiene un flujo al que se necesitan los resultados anexados (por ejemplo, para que los resultados de la consulta se escriban en System. Web. HttpResponse. OutputStream). Para obtener un ejemplo funcional, vea [ejecutar consultas SQL &#40;clases administradas de SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  XmlReader ExecuteXmlReader ()  
- Devuelve un objeto XmlReader. Puede usar este método para manipular directamente los datos en el objeto XmlReader o conectar la arquitectura encadenada de System. Xml. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obtener un ejemplo funcional, vea [ejecutar consultas SQL mediante el método ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
+ Devuelve un objeto XmlReader. Puede usar este método para manipular directamente los datos en el objeto XmlReader o conectar la arquitectura encadenada de System.Xml. Para obtener más información, vea la documentación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Para obtener un ejemplo funcional, vea [ejecutar consultas SQL mediante el método ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  El objeto TheSqlXmlCommand también admite estos métodos adicionales:  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e90d6b69-5a26-43c5-8433-5c3c9588e08c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7985f713093e839d258a0c9b80bb5d4e6e58f37f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ace9abbbb16f7b2d048dc5ddc41b217c1dafaaee
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057948"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966035"
 ---
 # <a name="lookup-transformation-editor-connection-page"></a>Editor de transformación Búsqueda (página Conexión)
   Utilice la página **Conexión** del cuadro de diálogo **Editor de transformación Búsqueda** para seleccionar un administrador de conexiones. Si selecciona un administrador de conexiones OLE DB, también selecciona una consulta, tabla o vista para generar el conjunto de datos de referencia.  
@@ -64,7 +63,7 @@ ms.locfileid: "66057948"
  **Analizar consulta**  
  Compruebe la sintaxis de la consulta.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Obtenga una vista previa de los resultados mediante el cuadro de diálogo **Vista previa de los resultados de la consulta** . Esta opción muestra hasta 200 filas.  
   
 ## <a name="external-resources"></a>Recursos externos  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: df393f13-d538-4d94-8155-9c2fdf5f755d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23cc38bbec77b01a1e8a7d09dddfe70b46844920
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150629"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047870"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Guardar de forma separada eventos Showplan XML Statistics Profile (SQL Server Profiler)
   En este tema se describe el modo de guardar eventos **Showplan XML Statistics Profile** capturados en seguimientos en archivos .SQLPlan diferentes mediante el uso del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Puede abrir los archivos de eventos **Showplan XML Statistics Profile** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], que le permite ver el plan de ejecución gráfico de cada evento.  
@@ -31,7 +30,7 @@ ms.locfileid: "63150629"
      Aparecerá el cuadro de diálogo **Propiedades de seguimiento** .  
   
     > [!NOTE]  
-    >  Si activa **Iniciar el seguimiento inmediatamente tras realizar la conexión**, no aparecerá el cuadro de diálogo **Propiedades de seguimiento**y, en su lugar, comenzará el seguimiento. Para desactivar esta configuración, en el menú **herramientas**, haga clic en **Opciones**y desactive la casilla **iniciar el seguimiento inmediatamente después de establecer la conexión** .  
+    >  Si activa **Iniciar el seguimiento inmediatamente tras realizar la conexión**, no aparecerá el cuadro de diálogo **Propiedades de seguimiento**y, en su lugar, comenzará el seguimiento. Para desactivar esta configuración, en el menú **Herramientas**, haga clic en **Opciones**y desactive la casilla **Iniciar el seguimiento inmediatamente tras realizar la conexión** .  
   
 2.  En el cuadro de diálogo **Propiedades de seguimiento** , en el cuadro **Nombre de seguimiento** , escriba un nombre para el seguimiento.  
   

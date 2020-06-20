@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 94e6c3e5-1f09-4616-9da2-4e44d066d494
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ed99e6ee3ef6385e6041044e9b2cb829b1b3ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fedf315703e64ea162f668494bd9929a06d6085
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151140"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066063"
 ---
 # <a name="considerations-for-using-test-servers"></a>Consideraciones acerca del uso de servidores de prueba
   El uso de un servidor de prueba para optimizar una base de datos en un servidor de producción es una ventaja importante del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Mediante esta característica se puede descargar la sobrecarga de optimización en un servidor de prueba sin copiar los datos reales del servidor de producción a ese servidor de prueba.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: acafd5ba49bec92fd4c6b93c4163affaa42ab7f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62672074"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037358"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server
   En este tema se describe cómo interactúan las características siguientes con la captura de datos modificados:  
@@ -33,7 +32,7 @@ ms.locfileid: "62672074"
 ##  <a name="change-tracking"></a><a name="ChangeTracking"></a>Change Tracking  
  La captura de datos modificados y el [seguimiento de cambios](about-change-tracking-sql-server.md) pueden habilitarse en la misma base de datos. No se requiere ninguna consideración especial. Para obtener más información, vea [Trabajar con el seguimiento de cambios &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Creación de reflejo de la base de datos  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Creación de reflejo de base de datos  
  Se puede reflejar una base de datos que está habilitada para la captura de datos modificados. Para asegurarse de que la captura y la limpieza se producen automáticamente tras una conmutación por error, siga estos pasos:  
   
 1.  Asegúrese de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecute en la nueva instancia del servidor principal.  
@@ -47,9 +46,9 @@ ms.locfileid: "62672074"
  Para obtener más información sobre la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ##  <a name="transactional-replication"></a><a name="TransReplication"></a>Replicación transaccional  
- La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita por sí [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sola, un `sp_replcmds`trabajo del agente llama a. Cuando ambas características están habilitadas en la misma base de datos, `sp_replcmds`el agente de registro del log llama a. Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para más información, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita por sí sola, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente llama a `sp_replcmds` . Cuando ambas características están habilitadas en la misma base de datos, el Agente de registro del LOG llama a `sp_replcmds` . Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para más información, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
- Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el `sp_replcmds`trabajo de captura llama a. La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
+ Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el trabajo de captura llama a `sp_replcmds` . La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
   
 > [!NOTE]  
 >  Cuando el Agente de registro del LOG se utiliza para la captura de datos modificados y la replicación transaccional, los cambios replicados se escriben primero en la base de datos de distribución. A continuación, los cambios capturados se escriben en las tablas de cambios. Ambas operaciones se confirman conjuntamente. Si hay alguna latencia al escribir en la base de datos de distribución, habrá una latencia correspondiente antes de que los cambios aparezcan en las tablas de cambios.  

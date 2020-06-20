@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 4b705397-9af4-4678-9eda-149bc5d762fa
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a3e27ccc67858edd8e1f95bb910300a93a3e0db8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940756"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Pestaña Diagrama de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña **Diagrama del clúster** del **Visor de agrupación en clústeres de secuencia de Microsoft** proporciona una vista gráfica de todos los clústeres que contiene el modelo de agrupación en clústeres de secuencia.  
@@ -69,7 +68,7 @@ ms.locfileid: "66069112"
  **Variable de sombreado**  
  Seleccione un atributo del modelo de minería de datos para utilizar para sombrear el diagrama del clúster.  
   
- **State**  
+ **Estado**  
  Seleccione un estado que se corresponda con la **Variable de sombreado**. Por ejemplo, si quiere ver las secuencias en las que se incluye un producto determinado, seleccione la columna [Product] como el atributo de **Variable de sombreado**y seleccione el nombre del producto concreto como el valor de **Estado** .  
   
  **Vínculos**  

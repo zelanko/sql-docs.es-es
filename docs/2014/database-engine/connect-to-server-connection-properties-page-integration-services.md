@@ -12,22 +12,21 @@ f1_keywords:
 ms.assetid: c2513dab-8415-4e0c-9475-6d4ab97fea7c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4f46eb5206e666caeb928c3718c75f093beb6bf4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755245"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934666"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Conectar al servidor (página Propiedades de conexión de Integration Services)
-  Use esta pestaña para ver o especificar opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] **servidores registrados**o [!INCLUDE[ssIS](../includes/ssis-md.md)] registrarlos en ellos. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+  Use esta pestaña para ver o especificar opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] [!INCLUDE[ssIS](../includes/ssis-md.md)] **servidores registrados**o registrarlos en ellos. **Conectar** y **Opciones** solo aparecen en este cuadro de diálogo al conectar. **Probar** y **Guardar** solo aparecen en este cuadro de diálogo al registrar [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Número de puerto**  
  Especifique el número de puerto que utiliza [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
- **Tiempo de espera de conexión agotado**  
+ **Tiempo de espera de la conexión**  
  Escriba el número de segundos que se debe esperar para que se establezca una conexión antes de que se agote el tiempo de espera. El valor predeterminado es 15 segundos.  
   
  **Tiempo de espera de ejecución**  

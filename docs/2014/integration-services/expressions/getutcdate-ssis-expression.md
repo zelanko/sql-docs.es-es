@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2282339c-c24f-493e-8e66-181ea8af5ad0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 946d728d57210149b84850ca640edb4cafa57195
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a124f6149a56240b62f72e06281ebbc1405d9e3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898070"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966605"
 ---
 # <a name="getutcdate-ssis-expression"></a>GETUTCDATE (expresión de SSIS)
   Devuelve la fecha actual del sistema en hora UTC (horario universal coordinado u hora del meridiano de Greenwich) usando un formato DT_DBTIMESTAMP. La función GETUTCDATE no tiene argumentos.  

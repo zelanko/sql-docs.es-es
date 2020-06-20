@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: faec46da-0536-4de3-96f3-83e607c8a8b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: adfddc5de02f13b592b1f03107a67c4a3c449d0c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42b71df860f82fe470cbd01dbd9e1c0f6c07e2a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63128638"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050944"
 ---
 # <a name="sql-server-express-localdb-instance-api-reference"></a>Referencia de la API de instancia de SQL Server Express LocalDB
   En el mundo tradicional de SQL Server basado en servicios, las instancias de SQL Server individuales que están instaladas en un equipo único se encuentran físicamente separadas; es decir, cada instancia debe instalarse y quitarse de forma individual, tener un conjunto independiente de archivos binarios y ejecutarse en un proceso individual del servicio. El nombre de la instancia de SQL Server se utiliza para especificar a qué instancia de SQL Server se desea conectar el usuario.  
@@ -64,7 +63,7 @@ ms.locfileid: "63128638"
 ### <a name="named-instance-naming-rules"></a>Normas de nomenclatura para instancias con nombre  
  Los nombres de instancia de LocalDB pueden tener un total de hasta 128 caracteres (el límite queda establecido según el tipo de datos de `sysname`). Se trata de una importante diferencia si se compara con los nombres tradicionales de instancia de SQL Server, las cuales están limitadas a los nombres de NetBIOS de 16 caracteres ASCII. La razón de esta diferencia es que LocalDB trata las bases de datos como archivos y, por tanto, implica la semántica basada en archivos, por lo que es intuitivo que los usuarios tengan más libertad para elegir los nombres de instancia.  
   
- Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Los caracteres no válidos en un componente de nombre de archivo suelen incluir los siguientes caracteres: caracteres ASCII/Unicode 1 a 31, así como comillas (\<"), menor que (), mayor que (>), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*), signo\\de interrogación (?), barra diagonal inversa () y barra diagonal (/). Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
+ Los nombres de instancia de LocalDB pueden contener cualquier tipo de caracteres Unicode que sean válidos en el componente de nombre de archivo. Los caracteres no válidos en un componente FILENAME suelen incluir los siguientes caracteres: caracteres ASCII/Unicode 1 a 31, así como comillas ("), menor que ( \<), greater than (> ), barra vertical (|), retroceso (\b), tabulación (\t), dos puntos (:), asterisco (*), signo de interrogación (?), barra diagonal inversa ( \\ ) Tenga en cuenta que el carácter NULL (\0) está permitido porque se utiliza para la terminación de cadenas; se ignorará todo aquello que esté tras el carácter NULL.  
   
 > [!NOTE]  
 >  La lista de caracteres no válidos puede depender del sistema operativo y podría cambiar en versiones futuras.  

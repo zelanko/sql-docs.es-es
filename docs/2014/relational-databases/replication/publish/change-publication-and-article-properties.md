@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c43c81612ffd851d7ea0e0679f79f3c8fec91037
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 185e5d0beb9df2ec8a3dcf263632c1d260a3bcd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038057"
 ---
 # <a name="change-publication-and-article-properties"></a>Cambiar las propiedades de la publicación y de los artículos
   Una vez creada una publicación, la mayoría de las propiedades de la publicación y de los artículos se pueden cambiar, aunque algunas requieren la regeneración de la instantánea o la reinicialización de las suscripciones. En este tema se ofrece información sobre todas las propiedades que requieren una de estas acciones o las dos si se cambian.  
@@ -60,7 +59,7 @@ ms.locfileid: "73882346"
   
 ## <a name="publication-properties-for-merge-replication"></a>Propiedades de la publicación para replicación de mezcla  
   
-|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
+|Description|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Cambiar el formato de la instantánea|**sp_changemergepublication**|**sync_mode**|Nueva instantánea.|  
 |Cambiar la ubicación de la instantánea|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Nueva instantánea.|  
@@ -73,13 +72,13 @@ ms.locfileid: "73882346"
 |Cambiar un filtro de combinación o un registro lógico|**sp_changemergefilter**|**\@propiedad**<br /><br /> **\@valor**|Nueva instantánea<br /><br /> Reinicialice las suscripciones.|  
 |Deshabilitar el uso de filtros con parámetros (habilitar los filtros con parámetros no requiere ninguna acción especial)|**sp_changemergepublication**|Un valor de **false** para **dynamic_filters**|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Habilitar o deshabilitar el uso de particiones precalculadas|**sp_changemergepublication**|**use_partition_groups**|Nueva instantánea.|  
-|Habilitar o deshabilitar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] la optimización de particiones.|**sp_changemergepublication**|**keep_partition_changes**|Reinicialice las suscripciones.|  
+|Habilitar o deshabilitar la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] optimización de particiones.|**sp_changemergepublication**|**keep_partition_changes**|Reinicialice las suscripciones.|  
 |Habilitar o deshabilitar la validación de particiones del suscriptor|**sp_changemergepublication**|**validate_subscriber_info**|Reinicialice las suscripciones.|  
 |Cambiar el nivel de compatibilidad de la publicación a 80sp3 o inferior|**sp_changemergepublication**|**publication_compatibility_level**|Nueva instantánea.|  
   
 ## <a name="article-properties-for-merge-replication"></a>Propiedades de los artículos para replicación de mezcla  
   
-|Descripción|Procedimiento almacenado|Propiedades|Requisitos|  
+|Description|Procedimiento almacenado|Propiedades|Requisitos|  
 |-----------------|----------------------|----------------|------------------|  
 |Quitar un artículo que tiene el último filtro con parámetros de la publicación|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  
 |Quitar un artículo que es primario en un filtro de combinación o registro lógico (esto tiene como efecto secundario la desaparición de la combinación)|**sp_dropmergearticle**|Todos los parámetros|Nueva instantánea.<br /><br /> Reinicialice las suscripciones.|  

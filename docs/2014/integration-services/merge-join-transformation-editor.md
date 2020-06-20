@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 118d68d1cacd5035535c6f1ac578542909356c7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057709"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951085"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
   Use el cuadro de diálogo **Editor de transformación Combinación de mezcla** para especificar el tipo de combinación, las columnas de combinación y las columnas de salida para mezclar dos entradas fusionadas por combinación.  
@@ -52,6 +51,6 @@ ms.locfileid: "66057709"
  [Ordenar datos para las transformaciones mezclar y combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Extender un conjunto de objetos mediante la transformación combinación de mezcla](data-flow/transformations/extend-a-dataset-by-using-the-merge-join-transformation.md)   
  [Transformación mezclar](data-flow/transformations/merge-transformation.md)   
- [Unión de todo, transformación](data-flow/transformations/union-all-transformation.md)  
+ [Transformación Unión de todo](data-flow/transformations/union-all-transformation.md)  
   
   

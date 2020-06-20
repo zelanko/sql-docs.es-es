@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c8c0cc7df39c8b5bac3ff216aa3d61975c707207
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767587"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966095"
 ---
 # <a name="step-1-building-the-deployment-utility"></a>Paso 1: Compilación de la utilidad de implementación
   En esta tarea, configurará y generará una utilidad de implementación para el proyecto Deployment Tutorial.  
@@ -34,7 +33,7 @@ ms.locfileid: "62767587"
   
 4.  En el cuadro de diálogo **Deployment Tutorial Property Pages** (Páginas de propiedades de Deployment Tutorial), expanda Propiedades de configuración y haga clic en Utilidad de implementación.  
   
-5.  En el panel derecho del cuadro de diálogo **páginas de propiedades del tutorial** de implementación `AllowConfigurationChanges` , compruebe que `true`está establecido `CreateDeploymentUtility` en `true`, establecido en y, opcionalmente, actualice `DeploymentOutputPath`el valor predeterminado de.  
+5.  En el panel derecho del cuadro de diálogo **páginas de propiedades del tutorial de implementación** , compruebe que `AllowConfigurationChanges` está establecido en `true` , establecido `CreateDeploymentUtility` en y `true` , opcionalmente, actualice el valor predeterminado de `DeploymentOutputPath` .  
   
 6.  Haga clic en **OK**.  
   

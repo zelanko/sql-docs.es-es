@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f77b866d-c330-47c9-9e74-0b8d8dff4b31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 365a20848416e73e96731722abecfd6d94ebbfc5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: afcf38e662b152a5039043017624a46b214e263f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703947"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065763"
 ---
 # <a name="edit-sqlcmd-scripts-with-query-editor"></a>Modificar scripts SQLCMD con el Editor de consultas
   Con el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , es posible escribir y modificar consultas como scripts SQLCMD. Los scripts SQLCMD se usan cuando es necesario procesar comandos del sistema de Windows e instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] en el mismo script.  
@@ -76,7 +75,7 @@ ms.locfileid: "82703947"
   
     -   (6 filas afectadas)  
   
-    -   \<La información del directorio>  
+    -   \<The directory information>  
   
     -   (4 filas afectadas)  
   
@@ -138,7 +137,7 @@ ms.locfileid: "82703947"
 > [!NOTE]  
 >  Tanto para `:error` como para `:out`, `stderr` y `stdout` envían los resultados a la pestaña de mensajes.  
   
- Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave SQLCMD no compatibles, el Editor de consultas enviará un mensaje al destino, por cada palabra clave no compatible, que indica que se omite el comando *\<comando omitido*>. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
+ Los comandos SQLCMD que no aparecen en la lista anterior no son compatibles con el Editor de consultas. Cuando se ejecuta un script que contiene palabras clave SQLCMD que no son compatibles, el editor de consultas enviará un mensaje "omitiendo el comando * \<ignored command*> " al destino para cada palabra clave no admitida. El script se ejecutará correctamente, aunque los comandos no compatibles se omitirán.  
   
 > [!CAUTION]  
 >  Puesto que no se está iniciando SQLCMD desde la línea de comandos, existen algunas limitaciones al ejecutar el Editor de consultas en modo SQLCMD. No es posible enviar parámetros de línea de comandos como variables y, dado que el Editor de consultas no puede responder a las solicitudes del sistema operativo, hay que tener cuidado de no ejecutar instrucciones interactivas.  

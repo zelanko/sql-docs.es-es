@@ -15,22 +15,21 @@ helpviewer_keywords:
 ms.assetid: d5a3e536-62d2-4473-a178-877ba52f7d7f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3301be2f0af9960a48602a1b540fa2cac2f39914
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7af1cac1f3ee8ecc9cb79632f8a4ef1e66ec82f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63021364"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038178"
 ---
 # <a name="add-articles-to-and-drop-articles-from-a-publication-sql-server-management-studio"></a>Agregar y quitar artículos de una publicación (SQL Server Management Studio)
   Agregue artículos a una publicación al principio, cuando la cree en el Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Crear una publicación](create-a-publication.md).  
   
- Después de crear una publicación, agregue y elimine artículos en la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). Para obtener información sobre las consideraciones para agregar y quitar artículos, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Una vez creada una publicación, agregue y elimine artículos en la página **artículos** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). Para obtener información sobre las consideraciones para agregar y quitar artículos, vea [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="to-add-an-article-after-a-publication-is-created"></a>Para agregar un artículo una vez creada la publicación  
   
-1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, desactive la casilla **Mostrar solo los objetos seleccionados en la lista**. De este modo podrá ver los objetos no publicados en la base de datos de publicaciones.  
+1.  En la página **artículos** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** , desactive la casilla **Mostrar solo los objetos seleccionados en la lista** . De este modo podrá ver los objetos no publicados en la base de datos de publicaciones.  
   
 2.  Active la casilla situada junto a cada artículo que desee agregar.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63021364"
   
 ### <a name="to-delete-an-article"></a>Para eliminar un artículo  
   
-1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, desactive la casilla situada junto a cada artículo que desee eliminar.  
+1.  En la página **artículos** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** , desactive la casilla situada junto a cada artículo que desee eliminar.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   

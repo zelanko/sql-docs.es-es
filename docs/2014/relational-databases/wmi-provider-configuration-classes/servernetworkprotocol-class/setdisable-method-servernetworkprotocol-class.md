@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ebbe0c5-07ad-4a76-a918-e379930adf71
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 37a68a1dbc3a35ba4e72b173b1785efd1108241b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3176227aba4de1e5aca1be35ec1f071a15caa49e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63143477"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059856"
 ---
 # <a name="setdisable-method-servernetworkprotocol-class"></a>Método SetDisable (clase ServerNetworkProtocol)
   Deshabilita el protocolo de red del servidor.  
@@ -39,12 +38,12 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- Objeto [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md) que representa el protocolo de red utilizado por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Objeto [ServerNetworkProtocol Class] ServerNetworkProtocol-class.md) que representa el protocolo de red utilizado por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit 32 que es igual a 0 si se modificó el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3494f4f5b13c422efb8e2a39597e131c10d81ed1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736245"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047224"
 ---
 # <a name="synonyms-database-engine"></a>Usar sinónimos (motor de base de datos)
   Un sinónimo es un objeto de base de datos que sirve para los siguientes objetivos:  
@@ -112,7 +111,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Para obtener más información sobre las funciones enlazadas a esquema, vea [Crear funciones definidas por el usuario &#40;motor de base de datos&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Obtener información acerca de sinónimos  
- La vista de catálogo sys.synonyms contiene una entrada para cada sinónimo de una base de datos determinada. Esta vista de catálogo expone metadatos de sinónimos, como el nombre del sinónimo y el nombre del objeto base. Para obtener más información acerca `sys.synonyms` de la vista de catálogo, vea [sys. sinónimos &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ La vista de catálogo sys.synonyms contiene una entrada para cada sinónimo de una base de datos determinada. Esta vista de catálogo expone metadatos de sinónimos, como el nombre del sinónimo y el nombre del objeto base. Para obtener más información acerca de la `sys.synonyms` vista de catálogo, vea [Sys. sinónimos &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Mediante las propiedades extendidas, puede agregar texto descriptivo o instrucciones, máscaras de entrada y reglas de formato como propiedades de un sinónimo. Puesto que la propiedad se almacena en la base de datos, todas las aplicaciones que leen la propiedad pueden evaluar el objeto de la misma manera. Para obtener más información, vea [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

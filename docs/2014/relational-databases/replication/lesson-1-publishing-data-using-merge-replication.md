@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 63df76a4e136a7d0a581d613829482b7eb430ea6
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 30d7c1e04c305a74f99d5d2818b344bfd8f83bd1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065991"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lección 1: Publicar datos con la replicación de mezcla
   En esta lección, creará una publicación de combinación con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto de las tablas **Employee**, **SalesOrderHeader**y **SalesOrderDetail** en la base de datos de ejemplo [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Estas tablas están filtradas con filtros de fila con parámetros para que cada suscripción contenga una partición única de los datos. También agregará el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usa el Agente de mezcla a la lista de acceso a la publicación (PAL). Para realizar este tutorial, es preciso que haya finalizado el anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
@@ -83,7 +82,7 @@ ms.locfileid: "83000485"
   
 21. Seleccione **Crear una instantánea inmediatamente**, desactive **Programar el Agente de instantáneas para ejecutarse**y, a continuación, haga clic en **Siguiente**.  
   
-22. En la página seguridad del agente, haga clic en **configuración de seguridad**, escriba \< _Machine_Name>_ **\ Repl_snapshot** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta y, a continuación, haga clic en **Aceptar**. Haga clic en **Finalizar**.  
+22. En la página seguridad del agente, haga clic en **configuración de seguridad**, escriba \<_Machine_Name> _**\ repl_snapshot** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta y, a continuación, haga clic en **Aceptar**. Haga clic en **Finalizar**.  
   
 23. En la página Finalización del asistente, escriba **AdvWorksSalesOrdersMerge** en el cuadro **Nombre de publicación** y, a continuación, haga clic en **Finalizar**.  
   

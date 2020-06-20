@@ -10,19 +10,18 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: = azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: 6e77239d019cb51e66a34a3a5b909e01c28a7faa
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 01d735e07a7c44c84c0087865e4f488318d65a75
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73633439"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066171"
 ---
 # <a name="sysdm_workload_management_workload_groups_stats-transact-sql"></a>Sys. dm_workload_management_workload_groups_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Devuelve las estadísticas del grupo de cargas de trabajo y los valores efectivos del grupo de cargas de trabajo en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+Devuelve las estadísticas del grupo de cargas de trabajo y los valores efectivos del grupo de cargas de trabajo en [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] .  
   
 |Nombre de columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
@@ -39,6 +38,6 @@ Devuelve las estadísticas del grupo de cargas de trabajo y los valores efectivo
 |effective_request_max_resource_grant_percent|**decimal (5, 2)**|El valor efectivo en tiempo de ejecución de request_max_resource_grant_percent del grupo de cargas de trabajo teniendo en cuenta la configuración de todos los grupos de cargas de trabajo.||
 |||||
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Consulte también:
 
  [Vistas de administración dinámica de SQL Data Warehouse y almacenamiento de datos paralelos &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  

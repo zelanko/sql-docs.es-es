@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5d2a6ee2-d975-4fd6-adb5-ed43d0cc7fdd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b9dd83baa9139af4ea46940852e0b357f51e5a12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6d74eb71e5a339dd99675262f39b491e35afeef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63209333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059936"
 ---
 # <a name="systemstore-property-securitycertificate-class"></a>Propiedad SystemStore (clase SecurityCertificate)
   Obtiene el almacén del sistema para el certificado de seguridad.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el almacén del sistema para el certificado de seguridad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

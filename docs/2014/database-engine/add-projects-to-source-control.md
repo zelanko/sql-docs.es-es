@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fd4616b2-a564-4a66-ac53-d1f5cba213c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0936af9b97d08c6bcd5033e61d9fa1c9153272e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: de32cbecdf132f1c881ab9fe5637af3a5c6cd400
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62791808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937366"
 ---
 # <a name="add-projects-to-source-control"></a>Agregar proyectos al control de código fuente
   Las soluciones de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pueden contener varios proyectos de script. El modo en que se agregue un proyecto al control de código fuente depende de si la solución a la que pertenece el proyecto está bajo control de código fuente. Si la solución está bajo control de código fuente, al protegerla, se agrega automáticamente el proyecto al control de código fuente. Para obtener más información acerca de la protección de soluciones, consulte [proteger archivos](../../2014/database-engine/check-in-files.md).  

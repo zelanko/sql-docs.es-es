@@ -1,5 +1,6 @@
 ---
 title: Alta disponibilidad, recuperación
+description: Obtenga información sobre la compatibilidad de SQL Server Native Client con Grupos de disponibilidad Always On, que se agregó en SQL Server 2012.
 ms.custom: ''
 ms.date: 04/04/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f940302db497dd02b3fc5ef89056aef29a6b64a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5fb3d64842c1204706b9bb89f6f1a99bfb8ae6a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388431"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949385"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>Compatibilidad de SQL Server Native Client para la alta disponibilidad con recuperación de desastres
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +47,7 @@ ms.locfileid: "81388431"
   
 -   La conexión a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] configurada con más de 64 direcciones IP producirá un error en la conexión.  
   
--   El comportamiento de una aplicación que usa la propiedad de conexión **MultiSubnetFailover** no se ve afectado en función del tipo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de autenticación: autenticación de, autenticación Kerberos o autenticación de Windows.  
+-   El comportamiento de una aplicación que usa la propiedad de conexión **MultiSubnetFailover** no se ve afectado en función del tipo de autenticación: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autenticación de, autenticación Kerberos o autenticación de Windows.  
   
 -   Puede aumentar el valor de **loginTimeout** para tener en cuenta el tiempo de conmutación por error y reducir los reintentos de conexión de la aplicación.  
   
@@ -134,7 +135,7 @@ ms.locfileid: "81388431"
  Cuando se establezcan conexiones implícitas, estas usarán la configuración de la intención de aplicaciones de la conexión primaria. De forma similar, cuando se creen varias sesiones con el mismo origen de datos estas heredarán la configuración de la intención de aplicaciones del origen de datos.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bc69a7df-20fa-41e1-9301-11317c5270d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8085fa23357c5901ed350e81410ae4d38a3005dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: be84fd9d747ac2b6699c2e1008836c49ead1b059
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228799"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936936"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Crear un grupo de disponibilidad (SQL Server PowerShell)
   En este tema se describe cómo usar los cmdlets de PowerShell para crear y configurar un grupo de disponibilidad de AlwaysOn mediante PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *grupo de disponibilidad* define un conjunto de bases de datos de usuario que realizarán la conmutación por error como una sola unidad y un conjunto de asociados de conmutación por error, conocido como *réplicas de disponibilidad*, que admiten la conmutación por error.  
@@ -51,7 +50,7 @@ ms.locfileid: "75228799"
 |Preparar la base de datos secundaria|`Backup-SqlDatabase` y `Restore-SqlDatabase`|Se crean las copias de seguridad de la instancia del servidor que hospeda la réplica principal.<br /><br /> Se restauran las copias de seguridad de cada una de las instancias del servidor que hospedan una réplica de secundaria mediante el parámetro de restauración `NoRecovery`. Si las rutas de acceso de archivo difieren entre equipos que hospedan la réplica principal y la réplica secundaria de destino, utilice también el parámetro de restauración `RelocateFile`.|  
 |Iniciar la sincronización de datos uniendo cada base de datos secundaria al grupo de disponibilidad|`Add-SqlAvailabilityDatabase`|Se ejecuta en cada una de las instancias del servidor que hospedan una réplica secundaria.|  
   
- **<sup>*</sup>** Para realizar una tarea determinada, cambie el directorio`cd`() a la instancia o instancias del servidor indicadas.  
+ **<sup>*</sup>** Para realizar una tarea determinada, cambie el directorio ( `cd` ) a la instancia o instancias del servidor indicadas.  
   
 ###  <a name="to-set-up-and-use-the-sql-server-powershell-provider"></a><a name="PsProviderLinks"></a>Para configurar y usar el proveedor de SQL Server PowerShell  
   
@@ -175,7 +174,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Cambiar el modo de conmutación por error de una réplica de disponibilidad &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
@@ -197,7 +196,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
  **Maneras alternativas de crear un grupo de disponibilidad**  
   
@@ -225,7 +224,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

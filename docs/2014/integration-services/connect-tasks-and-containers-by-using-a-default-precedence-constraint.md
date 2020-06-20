@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e5c0ad2405c0d62b703dcb7fa668837e7e47386
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b41330bcb2fe007b1f666382719f98d39ec67438
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060432"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921370"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Conectar tareas y contenedores mediante una restricción de precedencia predeterminada
   Las restricciones de precedencia conectan dos ejecutables. Un ejecutable puede ser cualquier tarea en un contenedor de bucles For, bucles Foreach o de secuencia. Este procedimiento describe cómo se configura el comportamiento predeterminado para las restricciones de precedencia y cómo se conectan los ejecutables mediante las restricciones de precedencia predeterminadas.  
@@ -40,7 +39,7 @@ ms.locfileid: "66060432"
   
 5.  En la lista desplegable, elija **Usar una restricción de error en la operación para la nueva forma** o **Usar una restricción de operación completada para la nueva forma**.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="to-create-a-default-precedence-constraint"></a>Para crear una restricción de precedencia predeterminada.  
   

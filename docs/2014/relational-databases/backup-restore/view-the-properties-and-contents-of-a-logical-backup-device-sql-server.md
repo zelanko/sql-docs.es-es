@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a309074-e816-454d-b6c3-fcfdde0cbf74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e593a5d64b6a1b009a68c434fe9ce1a32cb2de20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f2bdf41e3dbda079e3627ff7a7c1c3c78103b728
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921069"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956111"
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>Ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad (SQL Server)
   En este tema se describe cómo ver las propiedades y el contenido de un dispositivo lógico de copia de seguridad de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -56,7 +55,7 @@ ms.locfileid: "62921069"
   
 1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **Objetos de servidor** y expanda **Dispositivos de copia de seguridad**.  
+2.  Expanda **Objetos de servidor**y expanda **Dispositivos de copia de seguridad**.  
   
 3.  Haga clic en el dispositivo y, luego, con el botón derecho, haga clic en **Propiedades**para abrir el cuadro de diálogo **Dispositivo de copia de seguridad** .  
   

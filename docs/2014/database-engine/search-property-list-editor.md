@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0f3ced6e-0dfd-49fc-b175-82378c3d668e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97061590525a7e644319d7c8ff407d4905e59418
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 6c68ec986e2c6f4f53dfec7f188ba2a120532ae4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000555"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929306"
 ---
 # <a name="search-property-list-editor"></a>Editor de lista de propiedades de búsqueda
   Use este cuadro de diálogo para agregar o eliminar propiedades de búsqueda en una lista de propiedades de búsqueda.  
@@ -43,7 +42,7 @@ ms.locfileid: "83000555"
  **Descripción de la propiedad**  
  Si lo desea, especifique una descripción de la propiedad. Se trata de una cadena de hasta 512 caracteres. Por ejemplo, una descripción podría contener información sobre el conjunto de propiedades o sobre una propiedad que no sea evidente a partir de su nombre.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para agregar una propiedad de búsqueda a una lista de propiedades de búsqueda, debe especificar el identificador único global (GUID) del conjunto de propiedades al que pertenezca la propiedad y el identificador entero de propiedad. Una combinación dada de estos debe ser única en una lista de propiedades de búsqueda determinada. Si intenta agregar una combinación existente, se produce un error en la operación y se emite un error. Es decir, puede configurar solo un nombre para una propiedad dada.  
   
  La descripción de la propiedad es opcional.  

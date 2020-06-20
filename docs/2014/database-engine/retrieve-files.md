@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37b74426-e262-43b2-a81f-79b1fd1a36ec
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4176ee1dff35a0f9eaeaddf1b35155f76de526ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929476"
 ---
 # <a name="retrieve-files"></a>Recuperar archivos
   Después de haber abierto un proyecto controlado por código fuente, puede utilizar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para recuperar copias locales de los archivos del proyecto desde el almacén de control de código fuente en el directorio local en el que reside el proyecto.  

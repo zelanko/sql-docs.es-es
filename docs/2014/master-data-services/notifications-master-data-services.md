@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: d7ad32d5-9fe5-48fd-8c61-0b00c0aff082
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 54f8cdc55322144414be11dd837bd723b4ed3c10
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6891bba64da82a1a83f5ea4a44bf3fa1f52ddd67
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478970"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971166"
 ---
 # <a name="notifications-master-data-services"></a>Notificaciones (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]se puede configurar para enviar una notificación por correo electrónico cuando se produce un error en la validación de la regla de negocios o cuando el estado de una versión del modelo cambia.  
   
 ## <a name="how-notifications-are-sent"></a>Cómo se envían las notificaciones  
- Las notificaciones se configuran en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Las notificaciones envían mensajes de correo electrónico mediante correo electrónico de base de datos en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] instancia de que [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] hospeda la base de datos. Para obtener más información sobre el correo electrónico de base de datos, consulte [Objetos de configuración de Correo electrónico de base de datos](../relational-databases/database-mail/database-mail-configuration-objects.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+ Las notificaciones se configuran en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Las notificaciones envían mensajes de correo electrónico mediante Correo electrónico de base de datos en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] que hospeda la [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] base de datos. Para obtener más información sobre el correo electrónico de base de datos, consulte [Objetos de configuración de Correo electrónico de base de datos](../relational-databases/database-mail/database-mail-configuration-objects.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ## <a name="when-notifications-are-sent"></a>Cuándo se envían notificaciones  
  Una vez configuradas las notificaciones, se pueden enviar notificaciones por correo electrónico automatizadas en los casos siguientes.  

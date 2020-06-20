@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f89fab8-6ee2-4273-9de0-e594bfb9407f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c9858638287876d31733035d1a6bb6d95705708f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3202344a6507fbf23bc71511c598a42a8858ada2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75228720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936896"
 ---
 # <a name="creation-and-configuration-of-availability-groups-sql-server"></a>Creación y configuración de grupos de disponibilidad (SQL Server)
   Los temas de esta sección explican la forma de implementar una implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en instancias de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] que residen en nodos diferentes de clústeres de conmutación por error de Windows Server (WSFC) dentro de un único clúster de conmutación por error de WSFC.  
@@ -61,7 +60,7 @@ ms.locfileid: "75228720"
   
 -   [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Configurar la directiva de conmutación por error flexible para controlar las condiciones de la conmutación automática por error (grupos de disponibilidad AlwaysOn)](configure-flexible-automatic-failover-policy.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "75228720"
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
      [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de siguiente generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   

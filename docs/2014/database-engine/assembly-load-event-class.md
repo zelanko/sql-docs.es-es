@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfb0b69d-4ce0-4067-a3df-d82775e57886
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a2c847e906616c4555d37e641f76eeb73391ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1a628035fa7469441c670e20dbbf98cdbf8f8a7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065257"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937316"
 ---
 # <a name="assembly-load-event-class"></a>Assembly Load (clase de eventos)
   La clase de evento **Assembly Load** se produce cuando se ejecuta una solicitud de carga de un ensamblado.  
@@ -38,7 +37,7 @@ ms.locfileid: "66065257"
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
-|**LoginSID**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
+|**LoginSID**|**imagen**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede encontrar esta información en la vista de catálogo **sys.server_principals** . Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectID**|**int**|Id. de ensamblado|22|Sí|  

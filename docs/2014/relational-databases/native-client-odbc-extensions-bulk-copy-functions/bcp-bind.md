@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 07a7bb9026984ed830d0b146438d958739463109
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 87f06021e5a2f9e10f6b60836fe3889aab3e9f65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019805"
 ---
 # <a name="bcp_bind"></a>bcp_bind
   Enlaza los datos de una variable de programa a una columna de tabla para la copia masiva en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -143,7 +142,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Llame a [bcp_init](bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al llamar a **bcp_init** se establece la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
@@ -168,7 +167,7 @@ bcp_bind(hdbc, szName, 0,
   
 -   0xFFFFFFFFFFFFFFFE se trata como un valor de prefijo especial que se utiliza para enviar los datos en fragmentos al servidor de forma eficaz. El formato de los datos con este prefijo especial es el siguiente:  
   
--   <SPECIAL_PREFIX> \< 0 o más fragmentos de datos> <ZERO_CHUNK> donde:  
+-   <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> donde:  
   
 -   PREFIJO_ESPECIAL es 0xFFFFFFFFFFFFFFFE  
   

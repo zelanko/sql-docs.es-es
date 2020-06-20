@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dafa6037682610d7011cdfc9f378ead6f95774fe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1636f3ea86e083e47276423b120dbc8d3744d387
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782891"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937072"
 ---
 # <a name="change-the-availability-mode-of-an-availability-replica-sql-server"></a>Cambiar el modo de disponibilidad de una réplica de disponibilidad (SQL Server)
   En este tema se describe cómo cambiar el modo de disponibilidad de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. El modo de disponibilidad es una propiedad de réplica que controla si la réplica se confirma asincrónica o sincrónicamente. El*modo confirmación asincrónica* maximiza el rendimiento a costa de la alta disponibilidad y solo admite la conmutación por error manual forzada (con posible pérdida de datos), que suele denominarse *conmutación por error forzada*. El*modo confirmación sincrónica* da prioridad a la alta disponibilidad sobre el rendimiento y, una vez sincronizada la réplica secundaria, admite la conmutación por error manual y, opcionalmente, la conmutación automática por error.  

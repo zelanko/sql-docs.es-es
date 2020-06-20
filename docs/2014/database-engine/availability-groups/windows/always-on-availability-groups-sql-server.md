@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2c05dc72e99d5b897412bdcf8afdd85370dd06b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75229010"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937236"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Grupos de disponibilidad AlwaysOn (SQL Server)
   La característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] es una solución de alta disponibilidad y de recuperación ante desastres que proporciona una alternativa empresarial a la creación de reflejo de la base de datos. Incorporada en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximiza la disponibilidad de un conjunto de bases de datos de usuario para una empresa. Un *grupo de disponibilidad* admite un entorno de conmutación por error para un conjunto discreto de bases de datos de usuario, conocido como *bases de datos de disponibilidad*, que realizan la conmutación por error conjuntamente. Un grupo de disponibilidad admite un conjunto de bases de datos principales de lectura y escritura y de uno a ocho conjuntos de bases de datos secundarias correspondientes. Opcionalmente, las bases de datos secundarias pueden estar disponibles para el acceso de solo lectura o para algunas operaciones de copia de seguridad.  
@@ -29,7 +28,7 @@ ms.locfileid: "75229010"
  Un grupo de disponibilidad realiza la conmutación por error en el nivel de réplica de disponibilidad. Las conmutaciones por error no se deben a problemas de bases de datos como que una base de datos pase a ser sospechosa debido a la pérdida de un archivo de datos, la eliminación de una base de datos o los daños de un registro de transacciones.  
   
   
-##  <a name="benefits"></a><a name="Benefits"></a>Privilegios  
+##  <a name="benefits"></a><a name="Benefits"></a> Ventajas  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un amplio conjunto de opciones que mejoran la disponibilidad de las bases de datos y que permiten el uso de recursos mejorado. Los componentes clave son los siguientes:  
   
 -   Admite hasta nueve réplicas de disponibilidad. Una *réplica de disponibilidad* es una instancia de un grupo de disponibilidad hospedado en una instancia específica de SQL Server y que mantiene una copia local de cada base de datos de disponibilidad perteneciente al grupo de disponibilidad. Cada grupo de disponibilidad admite una réplica principal y hasta ocho réplicas secundarias. Para obtener más información, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
@@ -141,7 +140,7 @@ ms.locfileid: "75229010"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Para obtener información sobre las restricciones y limitaciones del uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]otras características con, vea [Always on grupos de disponibilidad: interoperabilidad; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
+>  Para obtener información sobre las restricciones y limitaciones del uso de otras características con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea [Always on grupos de disponibilidad: interoperabilidad; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   
@@ -155,9 +154,9 @@ ms.locfileid: "75229010"
   
      [Blogs de los ingenieros de SQL Server de CSS](https://blogs.msdn.com/b/psssql/)  
   
--   **Vídeos**  
+-   **Vídeos:**  
   
-     [Microsoft SQL Server Code-Named "Denali", Serie AlwaysOn, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali", Serie Always On, parte 1: Introducción a la solución de alta disponibilidad de próxima generación](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server la serie de Always On de código "Denali", parte 2: creación de una solución crítica de alta disponibilidad mediante AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

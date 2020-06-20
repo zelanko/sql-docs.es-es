@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 667419f2-74fb-4b50-b963-9197d1368cda
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 432d48bbe848d6f66e9f3dae5365abe10d8deb62
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68e44e7047f80584eca399d58b3b85cffcfc7104
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833855"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920951"
 ---
 # <a name="excel-connection-manager"></a>Administrador de conexiones con Excel
-  Un Administrador de conexiones con Excel permite a un paquete conectarse con un archivo de libro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel existente. El origen de Excel y el destino de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Excel que incluye usan el administrador de conexiones con Excel.  
+  Un Administrador de conexiones con Excel permite a un paquete conectarse con un archivo de libro de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel existente. El origen de Excel y el destino de Excel que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye usan el administrador de conexiones con Excel.  
   
  Cuando agrega un Administrador de conexiones con Excel a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un Administrador de conexiones que se resuelve como una conexión Excel en el tiempo de ejecución, establece las propiedades del Administrador de conexiones y agrega el Administrador de conexiones a la colección `Connections` del paquete.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "62833855"
   
  Si un origen de Excel utiliza el Administrador de conexiones con Excel, los nombres de las columnas se incluyen con los datos extraídos. Si un destino de Excel utiliza el Administrador de conexiones con Excel, los nombres de las columnas se incluyen con los datos escritos.  
   
- El administrador de conexiones con Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] usa el proveedor de OLE DB para Jet 4,0 y el controlador ISAM (método de acceso secuencial indizado) de Excel compatible para conectar y leer y escribir datos en orígenes de datos de Excel. Para obtener más información sobre el comportamiento de este proveedor y controlador cuando se usa con orígenes de Excel y destinos de Excel, vea [Excel Source](../data-flow/excel-source.md) y [Excel Destination](../data-flow/excel-destination.md).  
+ El administrador de conexiones con Excel usa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] proveedor de OLE DB para Jet 4,0 y el controlador ISAM (método de acceso secuencial indizado) de Excel compatible para conectar y leer y escribir datos en orígenes de datos de Excel. Para obtener más información sobre el comportamiento de este proveedor y controlador cuando se usa con orígenes de Excel y destinos de Excel, vea [Excel Source](../data-flow/excel-source.md) y [Excel Destination](../data-flow/excel-destination.md).  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   

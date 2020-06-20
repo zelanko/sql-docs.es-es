@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ff96b99ee7982be89126e79687dbc8a2215f42f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bcce5bcbab747e9febb1ab3ac8de662a8d3974a4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798135"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006920"
 ---
 # <a name="sqlps-utility"></a>sqlps, utilidad
   La utilidad `sqlps` inicia una sesión de Windows PowerShell 2.0 con el proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell y los cmdlets cargados y registrados. Puede escribir scripts o comandos de PowerShell que usen los componentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell para trabajar con instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y sus objetos.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] En su lugar, use el módulo `sqlps` de PowerShell. Para obtener más información sobre `sqlps` el módulo, consulte [importar el módulo SQLPS](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] En su lugar, use el módulo `sqlps` de PowerShell. Para obtener más información sobre el `sqlps` módulo, consulte [importar el módulo SQLPS](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -54,10 +53,10 @@ ms.locfileid: "72798135"
  Especifica que la utilidad `sqlps` no debe cargar un perfil de usuario. Los perfiles de usuario registran los alias, funciones y variables de uso frecuente para usarlos en las sesiones de PowerShell.  
   
  **-OutPutFormat** { **Text** | **XML** }  
- Especifica que se `sqlps` dé formato a la salida de la utilidad como cadenas de texto (**Text**) o en un formato CLIXML serializado (**XML**).  
+ Especifica que `sqlps` se dé formato a la salida de la utilidad como cadenas de texto (**Text**) o en un formato CLIXML serializado (**XML**).  
   
  **-InPutFormat** { **Text** | **XML** }  
- Especifica que se dé formato `sqlps` a la entrada de la utilidad como cadenas de texto (**Text**) o en un formato CLIXML serializado (**XML**).  
+ Especifica que se dé formato a la entrada de la `sqlps` utilidad como cadenas de texto (**Text**) o en un formato CLIXML serializado (**XML**).  
   
  **-Command**  
  Especifica el comando que debe ejecutar la utilidad `sqlps`. La `sqlps` utilidad ejecuta el comando y, a continuación, se cierra, a menos que también se especifique **-NoExit** . No especifique ningún otro modificador después de **-Command**; se leerían como parámetros del comando.  
@@ -66,16 +65,16 @@ ms.locfileid: "72798135"
  **-Command:** especifica que la `sqlps` utilidad lee la entrada de la entrada estándar.  
   
  *script_block* [ **-args**_argument_array_ ]  
- Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se puede especificar cuando se `sqlps` llama a la utilidad desde **PowerShell** o desde `sqlps` otra sesión de la utilidad. *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
+ Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se puede especificar cuando `sqlps` se llama a la utilidad desde **PowerShell** o desde otra sesión de la `sqlps` utilidad. *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
   
  *string* [ *command_parameters* ]  
- Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"& {*`command`*}"**. Las comillas indican una cadena y el operador de invocación (&) hace `sqlps` que la utilidad ejecute el comando.  
+ Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"& { *`command`* }"**. Las comillas indican una cadena y el operador de invocación (&) hace que la `sqlps` utilidad ejecute el comando.  
   
  [ **-?** |  **-Help** ]  
  Muestra el resumen de la sintaxis de las opciones de la utilidad `sqlps`.  
   
-## <a name="remarks"></a>Observaciones  
- La `sqlps` utilidad inicia el entorno de PowerShell (PowerShell. exe) y carga [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] el módulo de PowerShell. El módulo, también denominado `sqlps`, carga y registra estos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] complementos de PowerShell:  
+## <a name="remarks"></a>Comentarios  
+ La `sqlps` utilidad inicia el entorno de PowerShell (PowerShell.exe) y carga el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] módulo de PowerShell. El módulo, también denominado `sqlps` , carga y registra estos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Complementos de PowerShell:  
   
 -   Microsoft.SqlServer.Management.PSProvider.dll  
   
@@ -95,7 +94,7 @@ ms.locfileid: "72798135"
   
 -   Usar las rutas de acceso del proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para navegar por la jerarquía de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- De forma predeterminada, `sqlps` la utilidad se ejecuta con la Directiva de ejecución de scripting establecida en **Restricted**. Esto evita la ejecución de cualquier script de PowerShell. Puede usar el cmdlet **Set-ExecutionPolicy** para habilitar la ejecución de scripts firmados o de cualquier script. Ejecute solo scripts de orígenes de confianza y proteja todos los archivos de entrada y salida con los permisos NTFS adecuados. Para obtener más información sobre cómo habilitar los scripts de PowerShell, vea [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
+ De forma predeterminada, la `sqlps` utilidad se ejecuta con la Directiva de ejecución de scripting establecida en **Restricted**. Esto evita la ejecución de cualquier script de PowerShell. Puede usar el cmdlet **Set-ExecutionPolicy** para habilitar la ejecución de scripts firmados o de cualquier script. Ejecute solo scripts de orígenes de confianza y proteja todos los archivos de entrada y salida con los permisos NTFS adecuados. Para obtener más información sobre cómo habilitar los scripts de PowerShell, vea [Running Windows PowerShell Scripts](https://www.tech-recipes.com/rx/2513/powershell_enable_script_support/).  
   
  La versión de la utilidad `sqlps` en [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] y en [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] se implementó como un shell mínimo de Windows PowerShell 1.0. Los shells mínimos tienen ciertas restricciones, como no permitir que los usuarios carguen complementos distintos de los que ha cargado el shell mínimo. Estas restricciones no se aplican a la versión [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] y posteriores de la utilidad, que se han cambiado para usar el módulo `sqlps`.  
   

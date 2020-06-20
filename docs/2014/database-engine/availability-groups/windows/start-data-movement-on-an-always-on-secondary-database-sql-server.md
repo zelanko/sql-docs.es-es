@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b1ab796d9e48292dfa3426cd102faadecdabb2f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936376"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server)
   Este tema contiene información sobre cómo iniciar la sincronización de datos después de agregar una base de datos a un grupo de disponibilidad AlwaysOn. Para cada nueva réplica principal, las bases de datos secundarias deben estar preparadas en las instancias de servidor que hospedan las réplicas secundarias. Después, cada una de estas bases de datos secundarias se debe unir manualmente al grupo de disponibilidad.  

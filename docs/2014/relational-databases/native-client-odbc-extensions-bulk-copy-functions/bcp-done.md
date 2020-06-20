@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca26e8e8f3bdb17afe9908b99bfe5cf09ff3b563
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cb9b0cbcc927fcd10c2d81b3c5c3d39bb80a8e9b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701985"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019580"
 ---
 # <a name="bcp_done"></a>bcp_done
   Finaliza una copia masiva de las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realizada con [bcp_sendrow](bcp-sendrow.md).  
@@ -46,7 +45,7 @@ hdbc
 ## <a name="returns"></a>Devoluciones  
  El número de filas guardado permanentemente después de la última llamada a [bcp_batch](bcp-batch.md) , o-1 en caso de error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Llame a **bcp_done** después de la última llamada a [bcp_sendrow](bcp-sendrow.md) o [bcp_moretext](bcp-moretext.md). Si no se llama a **a bcp_done** después de copiar todos los datos se producen errores.  
   
 ## <a name="see-also"></a>Consulte también  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b0090534872f0c2ae73e4047d30a6bcc0729b9d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 11884b2bb52c2c38fcae708346afa54151502ffc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964075"
 ---
 # <a name="script-transformation-editor-connection-managers-page"></a>Editor de transformación Script (página Administradores de conexión)
   Use la página **Administradores de conexión** del **Editor de transformación Script** para seleccionar las conexiones que usará el script.  
@@ -34,7 +33,7 @@ ms.locfileid: "66056202"
  Escriba un nombre único y descriptivo para la conexión.  
   
  **Connection Manager**  
- Seleccione en la lista de administradores de conexiones disponibles o seleccione ** \<nueva conexión>** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** .  
+ Seleccione en la lista de administradores de conexiones disponibles o seleccione **\<New connection>** esta casilla para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** .  
   
  **Descripción**  
  Escriba la descripción de la conexión.  
@@ -42,7 +41,7 @@ ms.locfileid: "66056202"
  **Add (Agregar)**  
  Agregue otra conexión a la lista **Administradores de conexiones** .  
   
- **Remove**  
+ **Quitar**  
  Quite la conexión seleccionada de la lista **Administradores de conexiones** .  
   
 ## <a name="see-also"></a>Consulte también  

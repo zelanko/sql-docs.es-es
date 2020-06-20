@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b23ea2cc-8545-4873-b0c1-57e76b0a3a7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f86c33fb96ddddcefd31227ac904157f3bd8c388
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8671ab15bc913917a558c9e1f90c15c0168e6cfc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019506"
 ---
 # <a name="bcp_exec"></a>bcp_exec
   Ejecuta una copia masiva completa de los datos entre una tabla de base de datos y un archivo de usuario.  
@@ -52,7 +51,7 @@ pnRowsProcessed
 ## <a name="returns"></a>Devoluciones  
  SUCCEED, SUCCEED_ASYNC o FAIL. La función **bcp_exce** devuleve SUCCEED si se se copian todas las filas. **bcp_exec** devuelve SUCCEED_ASYNC si la copia masiva asincrónica no se ha completado todavía. **bcp_exce** devuelve FAIL si se produce un error total o si el número de filas que generan errores alcanza el valor que se ha especificado para BCPMAXERRS con [bcp_control](bcp-control.md). BCPMAXERRS toma como valor predeterminado 10. La opción BCPMAXERRS afecta solo a los errores de sintaxis detectados por el proveedor al leer las filas del archivo de datos (y no las filas enviadas al servidor). El servidor anula el lote cuando detecta un error con una fila. Compruebe en el parámetro *pnRowsProcessed* el número de filas copiadas correctamente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función copia los datos de un archivo de usuario en una tabla de base de datos o viceversa, dependiendo del valor del parámetro *eDirection* de [bcp_init](bcp-init.md).  
   
  Antes de llamar a **bcp_exec**, llame a **bcp_init** con un nombre de archivo de usuario válido. Si no lo hace, se producirá un error.  

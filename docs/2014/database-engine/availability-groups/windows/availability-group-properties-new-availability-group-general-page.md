@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 31976f23109e7e8e64684618b88dfcc4177e2860
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 2159f5eaecd88425fa856e760af412f869186588
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937106"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>Propiedades de grupo de disponibilidad y nuevo grupo de disponibilidad (página General)
    Este tema se aplica a la pestaña **General** del cuadro de diálogo **Nuevo grupo de disponibilidad** y el cuadro de diálogo **Propiedades de grupo de disponibilidad**.  El cuadro de diálogo **Nuevo grupo de disponibilidad** permite crear un nuevo grupo de disponibilidad sin utilizar [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]. El cuadro de diálogo **Propiedades de grupo de disponibilidad** permite ver y modificar la configuración de un grupo de disponibilidad existente.  
@@ -36,7 +35,7 @@ ms.locfileid: "83858929"
  **Nombre de la base de datos**  
  Nombre de una base de datos que se ha agregado al grupo de disponibilidad.  
   
- **Add**  
+ **Add (Agregar)**  
  Haga clic para agregar una base de datos al grupo de disponibilidad.  
   
  **Quitar**  
@@ -103,7 +102,7 @@ ms.locfileid: "83858929"
  **Dirección URL del extremo**  
  La dirección URL del extremo. Para obtener más información sobre el formato de estas direcciones URL, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **Add**  
+ **Add (Agregar)**  
  Haga clic para agregar una réplica secundaria al grupo de disponibilidad.  
   
  **Quitar**  

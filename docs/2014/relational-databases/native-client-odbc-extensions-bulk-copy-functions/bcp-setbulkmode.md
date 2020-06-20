@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: de56f206-1f7e-4c03-bf22-da9c7f9f4433
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 53a89baa1fc13759bd24d6c12190bce509f6dfce
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a71f4e646f91636c42e4bbe7b72e5050e4d87c04
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705271"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019334"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
   bcp_setbulkmode permite especificar el formato de columna en una operación de copia masiva, estableciendo todos los atributos de columna en una única llamada de función.  
@@ -70,7 +69,7 @@ cbRow
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  bcp_setbulkmode puede usarse para realizar una copia masiva de una consulta o una tabla. Cuando bcp_setbulkmode se utiliza para realizar una copia masiva de una instrucción de consulta, se debe llamar antes de llamar a bcp_control con BCP_HINT.  
   
  bcp_setbulkmode es una alternativa al uso de [bcp_setcolfmt](bcp-setcolfmt.md) y [bcp_columns](bcp-columns.md), que solo permiten especificar el formato de una columna por cada llamada de función.  
@@ -79,10 +78,10 @@ cbRow
   
 |Propiedad|Descripción|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción-c en BCP. EXE y para bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLCHARACTER` .|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción-w en BCP. EXE y bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLNCHAR` .|  
-|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Corresponde a la opción-N en BCP. EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en `SQLNCHAR` si el tipo de columna es una cadena (valor predeterminado si no es una cadena).|  
-|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Corresponde a la opción-n en BCP. EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en el valor predeterminado.|  
+|BCP_OUT_CHARACTER_MODE|Especifica el modo de salida de caracteres.<br /><br /> Corresponde a la opción-c en BCP.EXE y a bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLCHARACTER` .|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Especifica el modo de salida de Unicode.<br /><br /> Corresponde a la opción-w de BCP.EXE y bcp_setcolfmt con la `BCP_FMT_TYPE` propiedad establecida en `SQLNCHAR` .|  
+|BCP_OUT_NATIVE_TEXT_MODE|Especifica los tipos nativos para los tipos no de caracteres y Unicode para los tipos de caracteres.<br /><br /> Corresponde a la opción-N de BCP.EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en `SQLNCHAR` si el tipo de columna es una cadena (valor predeterminado si no es una cadena).|  
+|BCP_OUT_NATIVE_MODE|Especifica los tipos de base de datos nativos.<br /><br /> Corresponde a la opción-n de BCP.EXE y bcp_setcolfmt con `BCP_FMT_TYPE` la propiedad establecida en el valor predeterminado.|  
   
  No debe utilizar bcp_setbulkmode con una secuencia de llamadas de función que incluya bcp_setcolfmt, bcp_control y bcp_readfmt. Por ejemplo, no debe llamar a bcp_control (BCPTEXTFILE) y bcp_setbulkmode.  
   

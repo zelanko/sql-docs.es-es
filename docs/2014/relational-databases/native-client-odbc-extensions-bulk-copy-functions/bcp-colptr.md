@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02ece13e-1da3-4f9d-b860-3177e43d2471
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 38e4b2590bebd09da764e6249e59d32b0c28d356
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 90170f586fb51794697308b09e46dbe5ff3a65f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019648"
 ---
 # <a name="bcp_colptr"></a>bcp_colptr
   Establece la dirección de datos de la variable de programa para la copia actual en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -62,7 +61,7 @@ idxServerCol
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **bcp_colptr** permite cambiar la dirección de los datos de origen de una columna determinada al copiar los datos en SQL Server con [bcp_sendrow](bcp-sendrow.md).  
   
  Inicialmente, el puntero a los datos de usuario se establece mediante una llamada a **bcp_bind**. Si la dirección de datos de la variable de programa cambia entre las llamadas a **bcp_sendrow**, puede llamar a **bcp_colptr** para restablecer el puntero a los datos. La siguiente llamada a **bcp_sendrow** envía los datos direccionados por la llamada a **bcp_colptr**.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec21ff98d49cff26bde48452a30fd347c23782fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b3d74dcc6be62ae8a01d911a8404c7bc32fd651
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63216000"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066617"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
   El Agente de mezcla de replicación es una utilidad ejecutable que aplica la instantánea inicial contenida en las tablas de base de datos a los Suscriptores. También mezcla los cambios incrementales de los datos que tienen lugar en el publicador después de la creación de la instantánea inicial y reconcilia los conflictos según las reglas configuradas por el usuario o mediante un solucionador personalizado creado por el usuario.  
@@ -317,7 +316,7 @@ ms.locfileid: "63216000"
  Especifica el número de subprocesos de origen que el Agente de mezcla utiliza para enumerar los cambios desde el origen. El origen es el Suscriptor durante la carga y el Publicador durante la descarga. El valor predeterminado es **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos que se están ejecutando es el límite establecido **@max_concurrent_merge** por la propiedad de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
+ Es el número máximo de segundos que el Agente de mezcla espera cuando el número de procesos de mezcla simultáneos que se están ejecutando es el límite establecido por la **@max_concurrent_merge** propiedad de **sp_addmergepublication**. Si se alcanza el número máximo de segundos y el Agente de mezcla todavía está esperando, se cerrará. Un valor de 0 significa que el agente espera indefinidamente, aunque puede cancelarse.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Es la ruta de acceso a la base de datos Jet (archivo .mdb) si **SubscriberType** es **2** (permite una conexión a una base de datos Jet sin un nombre del origen de datos ODBC (DSN)).  

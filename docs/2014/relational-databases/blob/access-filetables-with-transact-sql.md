@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b56bba0567a96b7bdd7b75ad191d553ffa019930
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c47751ef34747e1b3742accf5040846ecde074f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010426"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955875"
 ---
 # <a name="access-filetables-with-transact-sql"></a>Obtener acceso a FileTables con Transact-SQL
   Describe el funcionamiento de los comandos del lenguaje de manipulación de datos (DML) de [!INCLUDE[tsql](../../includes/tsql-md.md)] con FileTables.  

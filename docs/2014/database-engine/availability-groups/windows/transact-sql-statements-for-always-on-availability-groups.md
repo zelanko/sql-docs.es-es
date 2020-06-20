@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 184d0a81-2259-4db9-9d0d-01aac0b502c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f635faa05d7d77a50d31491b1bab9b16875e728c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff25fecf54cfdd1d9c03d1586f0272896542bfa7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813828"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936366"
 ---
 # <a name="overview-of-transact-sql-statements-for-alwayson-availability-groups-sql-server"></a>Información general sobre instrucciones Transact-SQL para grupos de disponibilidad de AlwaysOn (SQL Server)
   En este tema se presentan las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] que admiten la implementación de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la creación y administración de un grupo de disponibilidad, réplica de disponibilidad y base de datos de disponibilidad dados.  
@@ -34,7 +33,7 @@ ms.locfileid: "62813828"
   
  Ejecute CREATE AVAILABILITY GROUP en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que desea hospedar la réplica principal inicial del nuevo grupo de disponibilidad. Esta instancia de servidor debe residir en un nodo de un clúster de conmutación por error de Windows Server (WSFC) (para obtener más información, vea [requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="alter-availability-group"></a><a name="AlterAG"></a> ALTER AVAILABILITY GROUP  
+##  <a name="alter-availability-group"></a><a name="AlterAG"></a>ALTER AVAILABILITY GROUP  
  [ALTER AVAILABILITY GROUP](/sql/t-sql/statements/alter-availability-group-transact-sql) admite el cambio de un grupo de disponibilidad existente o una escucha de grupo de disponibilidad y la conmutación por error en un grupo de disponibilidad.  
   
  Ejecute ALTER AVAILABILITY GROUP en la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospeda la réplica principal actual.  

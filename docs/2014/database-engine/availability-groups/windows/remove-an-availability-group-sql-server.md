@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b7f7f62-43a3-49db-a72e-22d4d7c2ddbb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e4227b0af8453a40e9dd63b4aef170d52f8115b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c17b7d5b362d8b4030d66ebf7ba0e425495410e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782928"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936566"
 ---
 # <a name="remove-an-availability-group-sql-server"></a>Quitar un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo eliminar (quitar) un grupo de disponibilidad de AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Si una instancia del servidor que hospeda una de las réplicas de disponibilidad está sin conexión al eliminar un grupo de disponibilidad, después de ponerse en línea, la instancia del servidor quitará la réplica de disponibilidad local. Quitar una disponibilidad del grupo elimina cualquier escucha de grupo de disponibilidad asociada.  

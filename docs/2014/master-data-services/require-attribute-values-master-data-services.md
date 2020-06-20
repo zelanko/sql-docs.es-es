@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 03f868d679f1d51dbb672cfdab5dbeaa2b4fc8a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 17fe28bc0c6e8e1b38b938996787b39c5690e159
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478864"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971115"
 ---
 # <a name="require-attribute-values-master-data-services"></a>Requerir valores de atributo (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], requiera valores de atributo cuando desee asegurarse de que los datos maestros están completos.  
@@ -67,7 +66,7 @@ ms.locfileid: "65478864"
   
 16. En el cuadro de diálogo de confirmación, haga clic en **Aceptar**. El estado de la regla cambia a **Activo**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Aplique las reglas de negocios a los datos siguiendo uno de estos procedimientos:  
   

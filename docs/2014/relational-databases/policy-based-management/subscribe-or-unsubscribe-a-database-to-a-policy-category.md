@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4ca6f804352b57b30b42012da93e0d031be8d4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212134"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066638"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Suscribir una base de datos a una categoría de directiva o anular la suscripción
   En este tema se describe cómo se suscribe una base de datos a una categoría de directiva o se cancela la suscripción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ ms.locfileid: "68212134"
      **Directiva**  
      Cuando se expanden los grupos de directivas, muestra las directivas de la categoría de directiva.  
   
-     **Habilitado**  
+     **Enabled**  
      Indica si las directivas están habilitadas o deshabilitadas.  
   
      **Modo de ejecución**  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 62edb23cf55a953cb0fef54f002f8eaaa16f58ec
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198933"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066538"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
   Puede configurar el regulador de recursos utilizando una plantilla que se proporciona en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

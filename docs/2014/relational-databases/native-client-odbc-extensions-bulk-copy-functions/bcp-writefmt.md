@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4c1d37-667d-4bcd-b13c-eb638bcc9b69
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec7c5f8db1d8d1f3c675b267adb8345d086d0b80
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22904e2e0dd7ed025dcf6ad3871969e2be6b2dfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705279"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019247"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
   Crea un archivo de formato que contiene una descripción del formato del archivo de datos de la copia masiva actual.  
@@ -52,7 +51,7 @@ szFormatFile
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  El archivo de formato especifica el formato de los datos de un archivo de datos creado mediante copia masiva. Las llamadas a [bcp_columns](bcp-columns.md) y [bcp_colfmt](bcp-colfmt.md) definen el formato del archivo de datos. **bcp_writefmt** guarda esta definición en el archivo al que se hace referencia en *szFormatFile*. Para obtener más información, vea [bcp_init](bcp-init.md).  
   
  Para obtener más información acerca de la estructura de los archivos de formato de datos **BCP** , vea [importar y exportar datos en bloque con la utilidad bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  

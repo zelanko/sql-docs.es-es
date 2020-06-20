@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 04b1a76a-932d-4824-8506-e346afe7554e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 32af70857eac43a99257444081c1bcbdc842a2e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a38c151663dc76921e791b614922a8b52ecfadab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270641"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059993"
 ---
 # <a name="setcurrentcertificate-method-securitycertificate-class"></a>Método SetCurrentCertificate (clase SecurityCertificate)
   Establece el certificado de seguridad actual.  
@@ -53,7 +52,7 @@ SHA , SQLInstance
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit 32 que es igual a 0 si se modificó el servicio correctamente, igual a 1 si no se admite la solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

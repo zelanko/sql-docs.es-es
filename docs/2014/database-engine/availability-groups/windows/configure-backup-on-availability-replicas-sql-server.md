@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95f1e2cec530ee65dce60ceea1679281a9d3ba5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 91a781d957eb2f5a81d323fc3c65c93e34945c12
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782995"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936996"
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Configurar la copia de seguridad en réplicas de disponibilidad (SQL Server)
   En este tema se describe cómo configurar la copia de seguridad en réplicas secundarias para un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -116,7 +115,7 @@ ms.locfileid: "72782995"
   
 2.  Opcionalmente, configure la prioridad de copia de seguridad de cada réplica de disponibilidad que está agregando o modificando. La instancia del servidor que hospeda la réplica principal usa esta prioridad para decidir qué réplica debe atender una solicitud de copia de seguridad automatizada en una base de datos del grupo de disponibilidad (se elige la réplica con mayor prioridad). Esta prioridad puede ser cualquier número comprendido entre 0 y 100, ambos incluidos. Si la prioridad es 0, indica que la réplica no debe considerarse candidata para atender solicitudes de copia de seguridad.  El valor predeterminado es 50.  
   
-     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityReplica`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityReplica`. En cualquier caso, especifique el `BackupPriority`parámetro *n* , donde *n* es un valor comprendido entre 0 y 100.  
+     Para agregar una réplica de disponibilidad a un grupo de disponibilidad, use el cmdlet `New-SqlAvailabilityReplica`. Para modificar una réplica de disponibilidad existente, use el cmdlet `Set-SqlAvailabilityReplica`. En cualquier caso, especifique el `BackupPriority` parámetro *n* , donde *n* es un valor comprendido entre 0 y 100.  
   
      Por ejemplo, el comando siguiente establece la prioridad de copia de seguridad de la réplica de disponibilidad `MyReplica` en `60`.  
   
@@ -181,7 +180,7 @@ BACKUP DATABASE @DBNAME TO DISK=<disk>
 ##  <a name="to-obtain-information-about-backup-preference-settings"></a><a name="ForInfoAboutBuPref"></a>Para obtener información acerca de la configuración de preferencias de copia de seguridad  
  Los siguientes apartados son útiles para obtener la información que es importante para la copia de seguridad en réplicas secundarias.  
   
-|Ver|Information|Columnas relevantes|  
+|Ver|Información|Columnas relevantes|  
 |----------|-----------------|----------------------|  
 |[sys.fn_hadr_backup_is_preferred_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)|¿Es la réplica actual la réplica de copia de seguridad preferida?|No aplicable.|  
 |[sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)|preferencia de copia de seguridad automatizada|**automated_backup_preference**<br /><br /> **automated_backup_preference_desc**|  

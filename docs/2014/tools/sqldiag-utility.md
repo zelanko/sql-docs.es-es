@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bea9948691adc57ab6498f88687946400cb6548
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035424"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007163"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
   La utilidad **SQLdiag** es una herramienta de recopilación de diagnósticos de uso general que se puede ejecutar como una aplicación de consola o como un servicio. Puede usar **SQLdiag** para recopilar los archivos de datos y de registro de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y otros tipos de servidores, y para supervisar los servidores a lo largo del tiempo o solucionar problemas específicos de los mismos. **SQLdiag** se ha diseñado para acelerar y simplificar la recopilación de información de diagnóstico para los Servicios de soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -114,7 +113,7 @@ ms.locfileid: "63035424"
  **/M** _machine1_ [ *machine2 * * machinen*] |*@machinelistfile*  
  Invalida los equipos especificados en el archivo de configuración. De forma predeterminada, el archivo de configuración es SQLDiag.Xml, o se establece con el parámetro **/I** . Al especificar más de un equipo, separe cada nombre de equipo con un espacio.  
   
- El *@machinelistfile* uso de especifica un nombre de archivo de la lista de máquinas que se almacenará en el archivo de configuración.  
+ *@machinelistfile*El uso de especifica un nombre de archivo de la lista de máquinas que se almacenará en el archivo de configuración.  
   
  **/C** _file_compression_type_  
  Establece el tipo de compresión de archivo que se usa en los archivos de la carpeta de salida de **SQLdiag** . Opciones disponibles:  
@@ -358,9 +357,9 @@ SQLDIAG START /A Instance1
  Ejecute varias instancias de **SQLdiag** en el mismo equipo especificando **/a**_SQLdiag_application_name_ en la línea de comandos. Resulta útil para recopilar distintos conjuntos de diagnósticos de la misma instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma simultánea. Por ejemplo, puede configurar una instancia con nombre de **SQLdiag** para que ejecute una recopilación de datos ligera de forma constante. De este modo, si se produce un problema específico en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede ejecutar la instancia predeterminada de **SQLdiag** para recopilar los diagnósticos relativos a ese problema o para recopilar un conjunto de diagnósticos que los servicios de soporte al cliente de [!INCLUDE[msCoName](../includes/msconame-md.md)] le hayan solicitado para diagnosticar un problema.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Recopilar datos de diagnóstico de instancias de SQL Server en clúster  
- **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar diagnósticos de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] agrupadas, asegúrese de que se especifica **"."** para el atributo **name** del elemento **\<Machine>** en el archivo de configuración SQLDiag.Xml y no especifique el argumento **/G** en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
+ **SQLdiag** permite recopilar datos de diagnóstico de instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster. Para recopilar diagnósticos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias en clúster, asegúrese de que se especifica **"."** para el atributo **Name** del **\<Machine>** elemento en el archivo de configuración SQLDiag.Xml y no especifique el argumento **/g** en la línea de comandos. De forma predeterminada, se especifica **"."** para el atributo **name** del archivo de configuración y se desactiva el argumento **/G** . Normalmente, cuando se realiza la recopilación desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en clúster, no es necesario editar el archivo de configuración ni cambiar los argumentos de la línea de comandos.  
   
- Si se especifica **"."** como nombre de equipo, **SQLdiag** detecta que se está ejecutando en un clúster y recupera simultáneamente la información de diagnóstico de todas las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el clúster. Si quiere recopilar información de diagnóstico solo de una de las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se ejecutan en el equipo, especifique ese [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] virtual para el atributo **name** del elemento **\<Machine>** de SQLDiag.Xml.  
+ Si se especifica **"."** como nombre de equipo, **SQLdiag** detecta que se está ejecutando en un clúster y recupera simultáneamente la información de diagnóstico de todas las instancias virtuales de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instaladas en el clúster. Si desea recopilar información de diagnóstico solo de una instancia virtual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se está ejecutando en un equipo, especifique ese virtual [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el atributo **Name** del **\<Machine>** elemento en SQLDiag.Xml.  
   
 > [!NOTE]  
 >  Para recopilar información de seguimiento de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] desde instancias agrupadas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , deben habilitarse los recursos compartidos con fines administrativos (ADMIN$) en el clúster.  

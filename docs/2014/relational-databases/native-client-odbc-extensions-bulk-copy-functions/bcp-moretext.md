@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfa6968d4bb4254b52efd3e09d7f04e3c7fa9268
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ec121d057183bb1076a5c540976bd234bc46fecb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019551"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
   Envía parte de un valor de tipo de datos largo, de longitud variable a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -58,7 +57,7 @@ pData
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función se puede usar junto con [bcp_bind](bcp-bind.md) y [bcp_sendrow](bcp-sendrow.md) para copiar valores de datos largos y de longitud variable en SQL Server en varios fragmentos más pequeños. **bcp_moretext** se puede utilizar con columnas que tienen los siguientes tipos de datos SQL Server: `text` , `ntext` , `image` , `varchar(max)` , `nvarchar(max)` , `varbinary(max)` , tipo definido por el usuario (UDT) y XML. **bcp_moretext** no admite conversiones de datos, los datos proporcionados deben coincidir con el tipo de datos de la columna de destino.  
   
  Si se llama a **bcp_bind** con un parámetro *pdata* no NULL para los tipos de datos admitidos por **bcp_moretext**, `bcp_sendrow` envía todo el valor de datos, independientemente de su longitud. Sin embargo, si **bcp_bind** tiene un parámetro *pdata* null para los tipos de datos admitidos, **bcp_moretext** se puede usar para copiar los datos inmediatamente después de que se devuelva correctamente, `bcp_sendrow` lo que indica que se han procesado todas las columnas enlazadas con datos presentes.  

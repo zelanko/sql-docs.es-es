@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe92bf5f783bb1b71c1020d0ff808aafa0594b8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937166"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
   El grupo de disponibilidad AlwaysOn es una colección predefinida de bases de datos relacionales de SQL Server que conmuta por error conjuntamente cuando las condiciones desencadenan una conmutación por error en una base de datos, redirigiendo las solicitudes a una base de datos reflejada en otra instancia del mismo grupo de disponibilidad. Si utiliza grupos de disponibilidad como solución de alta disponibilidad, puede usar una base de datos de ese grupo como origen de datos en una solución tabular o multidimensional de Analysis Services. Todas las operaciones de Analysis Services siguientes funcionan de la manera esperada cuando se utiliza una base de datos de disponibilidad: procesando o importando datos, consultando datos relacionales directamente (utilizando el modo DirectQuery o almacenamiento ROLAP) y con reescritura.  
@@ -217,7 +216,7 @@ ms.locfileid: "68889224"
  Para ello, cree un origen de datos adicional en un modelo de Analysis Services para admitir la conexión de lectura/escritura. Al crear el origen de datos adicional, use la misma base de datos y nombre de agente de escucha especificados en la conexión de solo lectura pero, en lugar de modificar **Intención de aplicaciones**, mantenga el valor predeterminado que admite las conexiones READWRITE. Ahora puede agregar nuevas tablas de dimensiones o hechos a la vista del origen de datos que se basen en el origen de datos de lectura/escritura y luego habilitar la reescritura en las nuevas tablas.  
   
 ## <a name="see-also"></a>Consulte también  
- [Agentes de escucha del grupo de disponibilidad, conectividad de cliente y &#40;de conmutación por error de aplicación SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Secundarias activas: réplicas secundarias legibles &#40;Grupos de disponibilidad AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Directivas de AlwaysOn para problemas operativos con Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Crear un origen de datos &#40;&#41;de SSAS multidimensional](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   

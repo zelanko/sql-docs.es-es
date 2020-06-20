@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 83fde7d8d43086114b2aae4350ce374b713ff4ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bea67df36c5c522484a166927378b7746d62561f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63204663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040629"
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Advertencias de validación (cuadro de diálogo, Visual Database Tools)
   Este cuadro de diálogo aparece si intenta guardar modificaciones que pueden producir efectos secundarios malintencionados o si es probable que se produzca un error en la operación de confirmación de la base de datos. Este cuadro de diálogo indica en qué pueden consistir estos efectos secundarios o por qué podría producirse un error en la operación de confirmación. Proporciona la opción de seguir con la modificación o cancelar la operación.  

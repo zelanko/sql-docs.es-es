@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1641a38a-ef24-46ce-b2f4-bf732858c771
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a109468616cb414fa2a4b3769af37626ff42ca85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d11fc83612e8a21a574b3639d912eb93b732042
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62938954"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053278"
 ---
 # <a name="audit-database-scope-gdr-event-class"></a>Audit Database Scope GDR, clase de eventos
   La clase de eventos **Audit Database Scope GDR** se produce cuando un usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] emite GRANT, REVOKE o DENY para un permiso de instrucción para acciones de solo base de datos, como conceder permisos en una base de datos.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a9074c49b3e8c9d80666d3bb586ffeba225e88b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4d75372cd2388e88fcb3d3ce95975bdefa54c5c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62813382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936286"
 ---
 # <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para agregar una réplica al grupo de disponibilidad (SQL Server Management Studio)
   Use el Asistente para agregar una réplica al grupo de disponibilidad como ayuda para agregar una nueva réplica secundaria a un grupo de disponibilidad AlwaysOn existente.  
@@ -87,7 +86,7 @@ ms.locfileid: "62813382"
   
 6.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las siguientes opciones:  
   
-    -   **Completo**  
+    -   **Completa**  
   
          Seleccione esta opción si el entorno cumple los requisitos para iniciar automáticamente la sincronización de datos iniciales (para obtener más información, vea [Requisitos previos, restricciones y recomendaciones](#Prerequisites), anteriormente en este tema).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: de783ffdb5480a9cdebec2380f81e50a9cba11ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbc29fa2ebaaf2bbc9e577b5bd303e8a0dd0ec4c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62815408"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937026"
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Cambiar el contexto de clúster de HADR de la instancia de servidor (SQL Server)
   En este tema se describe cómo cambiar el contexto de clúster de HADR de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] y versiones posteriores. El *contexto de clúster de HADR* determina qué clúster de Clústeres de conmutación por error de Windows Server (WSFC) administra los metadatos para las réplicas de disponibilidad hospedadas por la instancia de servidor.  
@@ -75,7 +74,7 @@ ms.locfileid: "62815408"
   
      Requiere el permiso CONTROL SERVER.  
   
--   **SQL Server cuenta de servicio**  
+-   **Cuenta de servicio de SQL Server**  
   
      La cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de la instancia de servidor debe tener:  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62815408"
   
 2.  Use la cláusula SET HADR CLUSTER CONTEXT de la instrucción [ALTER SERVER CONFIGURATION](/sql/t-sql/statements/alter-server-configuration-transact-sql) , de la manera siguiente:  
   
-     ALTER SERVER CONFIGURATION SET HADR CLUSTER context **=** { **'*`windows_cluster`*'** | LOCALIZAR  
+     ALTER SERVER CONFIGURATION SET HADR CLUSTER context **=** { **' *`windows_cluster`* '** | LOCALIZAR  
   
      donde,  
   
@@ -146,7 +145,7 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [Quitar una réplica secundaria de un grupo de disponibilidad &#40;SQL Server&#41;](remove-a-secondary-replica-from-an-availability-group-sql-server.md)  
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   

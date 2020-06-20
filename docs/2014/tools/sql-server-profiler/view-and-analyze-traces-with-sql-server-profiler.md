@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e821ca-a12e-4192-acc1-96765d9ae266
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd9b95821ee673e259273f880aefe8606fe81d71
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b3e848fe9a07d838631eef1737c2a7679b67e649
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211026"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040016"
 ---
 # <a name="view-and-analyze-traces-with-sql-server-profiler"></a>Ver y analizar seguimientos con SQL Server Profiler
   Utilice [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para ver los datos de eventos capturados en un seguimiento. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra datos basados en propiedades de seguimiento definidas. Una manera de analizar datos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en copiarlos a otro programa, como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . [!INCLUDE[ssDE](../../includes/ssde-md.md)] El Asistente para la optimización puede usar un archivo de seguimiento que contenga lotes SQL y eventos RPC (llamada a procedimiento remoto) si el seguimiento incluye la columna de datos **Text** . Para asegurarse de que se capturan las columnas y los eventos correctos para su utilización con el Asistente para la optimización del [!INCLUDE[ssDE](../../includes/ssde-md.md)] , utilice la plantilla predefinida Tuning que se proporciona con el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

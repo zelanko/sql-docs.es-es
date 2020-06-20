@@ -11,28 +11,27 @@ f1_keywords:
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 478dea9095fe22a437aecf138c22374b5a70885b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d359084d1db778029046f925c630b001bb820f6b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971095"
 ---
 # <a name="set-up-the-database-and-website-for-master-data-services"></a>Configurar la base de datos y el sitio web para Master Data Services
   Use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] para configurar la base de datos y el sitio web para [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS)  
   
  Para configurar la base de datos y el sitio web, realice las tareas siguientes.  
   
-1.  Cree una base de datos mediante la página configuración [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]de base de **datos** en.  
+1.  Cree una base de datos mediante la página **configuración de base de datos** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] .  
   
      Para obtener más información, vea [página Configuración de base de datos &#40;administrador de configuración de Master Data Services](../../2014/master-data-services/database-configuration-page-master-data-services-configuration-manager.md) [Asistente para&#41;y crear base de datos &#40;administrador de configuración de Master Data Services ](../../2014/master-data-services/create-database-wizard-master-data-services-configuration-manager.md)&#41;.  
   
-2.  Cree un nuevo sitio web, seleccione el sitio web predeterminado o seleccione otro sitio web existente mediante la página **configuración Web** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]. Luego, asocie la base de datos de MDS a la aplicación web que seleccione o cree.  
+2.  Cree un nuevo sitio web, seleccione el sitio web predeterminado o seleccione otro sitio web existente mediante la página **configuración Web** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] . Luego, asocie la base de datos de MDS a la aplicación web que seleccione o cree.  
   
      Para obtener más información, vea [página Configuración Web &#40;administrador de configuración de Master Data Services](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) cuadro de diálogo&#41;y [crear sitio web &#40;administrador de configuración de Master Data Services ](../../2014/master-data-services/create-website-dialog-box-master-data-services-configuration-manager.md)&#41;.  
   
-3.  Opta Habilite la integración con Data Quality Services mediante la página **configuración Web** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)].  
+3.  Opta Habilite la integración con Data Quality Services mediante la página **configuración Web** en [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] .  
   
      Para obtener más información, vea la [página Configuración Web &#40;Administrador de configuración de Master Data Services&#41;](../../2014/master-data-services/web-configuration-page-master-data-services-configuration-manager.md) y [Habilitar la integración de Data Quality Services con Master Data Services](install-windows/enable-data-quality-services-integration-with-master-data-services.md).  
   

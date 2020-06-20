@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c428d9141acfaca3e8ec7876e62b733c30ec161
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 49afe868a509f84160fc1ad154135e8e67f6900a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797964"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936406"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
   Puede suspender una base de datos de disponibilidad en [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Observe que un comando de suspender tiene que emitirse en la instancia de servidor que hospeda la base de datos que se va a suspender o a reanudar.  
@@ -31,7 +30,7 @@ ms.locfileid: "72797964"
   
 |Base de datos suspendida|Efecto del comando de suspensión|  
 |------------------------|-------------------------------|  
-|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> ** \* Importante \* \* ** Mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará las entradas del registro de transacciones sin enviar. Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
+|Base de datos secundaria|Solo la base de datos secundaria local se suspende y su estado de sincronización se pasa a NOT SYNCHRONIZED. Otras bases de datos secundarias no se ven afectadas. La base de datos suspendida deja de recibir y aplicar datos (registros) y comienza a quedar rezagada respecto de la principal base de datos principal. Las conexiones existentes en la secundaria legible siguen estando utilizables. Las nuevas conexiones a la base de datos suspendida en la secundaria legible no se permiten hasta que se reanude el movimiento de datos.<br /><br /> La base de datos principal sigue estando disponible. Si suspende cada una de las bases de datos secundarias correspondientes, la base de datos principal se queda expuesta.<br /><br /> Importante mientras se suspende una base de datos secundaria, la cola de envío de la base de datos principal correspondiente acumulará las entradas del registro de transacciones sin enviar. ** \* \* \* \* ** Las conexiones a la réplica secundaria devuelven los datos que estaban disponibles en el momento en que suspendió el movimiento de datos.|  
 |Base de datos principal|La base de datos principal detiene el movimiento de datos a cada base de datos secundaria conectada. La base de datos principal continúa ejecutándose en un modo expuesto. La base de datos principal sigue disponible para los clientes y las conexiones existentes en una base de datos secundaria legible permanecen utilizables y se pueden establecer nuevas conexiones.|  
   
 > [!NOTE]  

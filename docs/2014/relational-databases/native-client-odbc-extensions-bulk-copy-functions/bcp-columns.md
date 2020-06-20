@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5376f6fe-9508-439a-8c66-778d77f19ac3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0c48fa00e8bf3eadfa955876840bebf5b6816f5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d634f393b18124e6ae0db753def2c31860f91a74
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019637"
 ---
 # <a name="bcp_columns"></a>bcp_columns
   Establece el número total de columnas del archivo de usuario para su uso con una copia masiva a o de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [bcp_setbulkmode](bcp-setbulkmode.md) se puede utilizar en lugar de bcp_columns y [bcp_colfmt](bcp-colfmt.md).  
@@ -52,7 +51,7 @@ nColumns
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo se puede llamar a esta función después de que se haya llamado a [bcp_init](bcp-init.md) con un nombre de archivo válido.  
   
  Solo debe llamar a esta función si piensa utilizar un formato de archivo de usuario que difiere del valor predeterminado. Para obtener más información sobre una descripción del formato de archivo de usuario predeterminado, vea **bcp_init**.  

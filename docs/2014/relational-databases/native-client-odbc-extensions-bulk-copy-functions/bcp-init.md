@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c77414aac2b6b25d8b0c2ca774cac07c269f328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 72d48b2a07e425e0863084c700c4de93d2776739
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701955"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019564"
 ---
 # <a name="bcp_init"></a>bcp_init
   Inicializa la operación de copia masiva.  
@@ -74,7 +73,7 @@ eDirection
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Llame a **bcp_init** antes de llamar a cualquier otra función de copia masiva. **bcp_init** realiza las inicializaciones necesarias para una copia masiva de datos entre la estación de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Se debe proporcionar la función **bcp_init** con un identificador de conexión ODBC habilitado para su uso con funciones de copia masiva. Para habilitar el identificador, use [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_BCP establecido en SQL_BCP_ON en un identificador de conexión asignado, pero no conectado. Intentar asignar el atributo en un identificador conectado produce un error.  

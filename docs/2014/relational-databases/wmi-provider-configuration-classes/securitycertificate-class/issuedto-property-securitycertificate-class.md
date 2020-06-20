@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47a4fcc7-6e8c-4ea2-a68a-f2789151c25f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ff7916969608889a0c7b3a0e7e93cf65fff5b6af
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 37a38f3072a4a64d8be5bd81cc9cb659bc433922
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63278865"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060007"
 ---
 # <a name="issuedto-property-securitycertificate-class"></a>Propiedad IssuedTo (clase SecurityCertificate)
   Obtiene el objeto al que se emite el certificado de seguridad.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el objeto al que se emite el certificado de seguridad.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

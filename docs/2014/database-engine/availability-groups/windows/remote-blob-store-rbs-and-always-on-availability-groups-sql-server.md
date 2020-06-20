@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 01a70258-d4fd-40bc-bc44-c490b5d6c420
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcc51e3fc8269ef0035e52b040ca38eef0f23e84
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814556"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936616"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>Almacén remoto de blobs (RBS) y grupos de disponibilidad AlwaysOn (SQL Server)
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]puede proporcionar una solución de alta disponibilidad y recuperación ante desastres [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]para los objetos BLOB (blobs) del [almacén remoto de blobs (RBS](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) ). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protege los metadatos y esquema de RBS almacenados en una base de datos de disponibilidad replicándolos en las réplicas secundarias. Se trata de la base de datos de contenido de SharePoint. En general, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena estos metadatos de RBS independientemente del blob.  
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]puede proporcionar una solución de alta disponibilidad y recuperación ante desastres para los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objetos BLOB (blobs) del [almacén remoto de blobs (RBS](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) ). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protege los metadatos y esquema de RBS almacenados en una base de datos de disponibilidad replicándolos en las réplicas secundarias. Se trata de la base de datos de contenido de SharePoint. En general, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] almacena estos metadatos de RBS independientemente del blob.  
   
  La protección de los datos BLOB de RBS depende de la ubicación del almacén de BLOB, de la manera siguiente:  
   

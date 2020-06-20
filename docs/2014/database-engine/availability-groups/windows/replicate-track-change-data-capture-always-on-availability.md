@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e8ea6257cb906177b9eb224d718eecf54fb94119
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62814061"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936556"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT). [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ayuda a proporcionar alta disponibilidad y capacidades adicionales de recuperación de base de datos.  
@@ -109,7 +108,7 @@ ms.locfileid: "62814061"
     ```  
   
     > [!NOTE]  
-    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use *@enabled* la opción de [sp_update_job &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
+    >  Se deben crear los trabajos en todos los destinos posibles de conmutación por error antes de la conmutación por error y marcarlos como deshabilitados hasta que la réplica de disponibilidad de un host se convierta en la nueva réplica principal. Los trabajos de CDC que se ejecutan en la base de datos principal anterior también deben estar deshabilitados cuando la base de datos local se convierte en una base de datos secundaria. Para deshabilitar y habilitar trabajos, use la *@enabled* opción de [sp_update_job &#40;&#41;de TRANSACT-SQL ](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql). Para obtener más información sobre cómo crear trabajos de CDC, vea [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql)se admiten la replicación, la captura de datos modificados (CDC) y el seguimiento de cambios (CT).  
   
 -   **Agregar roles de CDC a una réplica de la base de datos principal de AlwaysOn**  
   
@@ -156,7 +155,7 @@ ms.locfileid: "62814061"
   
      Se puede usar el nombre de agente de escucha del grupo de disponibilidad o el nombre de nodo explícito para buscar la réplica secundaria. Si se emplea el nombre de agente de escucha del grupo de disponibilidad, el acceso se dirigirá a cualquier réplica secundaria adecuada.  
   
-     Cuando `sp_addlinkedserver` se usa para crear un servidor vinculado para tener acceso al secundario *@datasrc* , el parámetro se usa para el nombre del agente de escucha del grupo de disponibilidad o el *@provstr* nombre de servidor explícito, y el parámetro se usa para especificar la intención de solo lectura.  
+     Cuando `sp_addlinkedserver` se usa para crear un servidor vinculado para tener acceso al secundario, el *@datasrc* parámetro se usa para el nombre del agente de escucha del grupo de disponibilidad o el nombre de servidor explícito, y el *@provstr* parámetro se usa para especificar la intención de solo lectura.  
   
     ```  
     EXEC sp_addlinkedserver   
@@ -214,7 +213,7 @@ ms.locfileid: "62814061"
   
  <sup>2</sup> la conmutación por error a la base de datos de réplica es un procedimiento manual. No se proporciona la conmutación por error automática.  
   
- <sup>3</sup> la base de datos del distribuidor no se admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para su uso con o la creación de reflejo de la base de datos.  
+ <sup>3</sup> la base de datos del distribuidor no se admite para su uso con o la creación de reflejo de la [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] base de datos.  
   
 ### <a name="considerations"></a>Consideraciones  
   

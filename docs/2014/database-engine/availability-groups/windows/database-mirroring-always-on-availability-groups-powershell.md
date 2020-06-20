@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5fb67c488da5f01ac572ec78a369790fc9014513
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56058ff8aa72d2471381dd87fb25a3b68356ed36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936886"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Crear un extremo de creación de reflejo de la base de datos para grupos de disponibilidad AlwaysOn (SQL Server PowerShell)
   En este tema se describe cómo crear un extremo de creación de reflejo de la base de datos para uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante PowerShell.  
@@ -48,7 +47,7 @@ ms.locfileid: "72782990"
 2.  Utilice el cmdlet `New-SqlHadrEndpoint` para crear el extremo y utilice después `Set-SqlHadrEndpoint` para iniciar el extremo.  
   
 ###  <a name="example-powershell"></a><a name="PShellExample"></a> Ejemplo (PowerShell)  
- Los siguientes comandos de PowerShell crean un extremo de creación de reflejo de la base de datos en una instancia de SQL Server (*instancia*de*equipo*\\). El extremo utiliza el puerto 5022.  
+ Los siguientes comandos de PowerShell crean un extremo de creación de reflejo de la base de datos en una instancia de SQL Server (instancia de*equipo* \\ *Instance*). El extremo utiliza el puerto 5022.  
   
 > [!IMPORTANT]  
 >  Este ejemplo solamente funciona en una instancia de servidor que no disponga actualmente de un extremo de creación de reflejo de la base de datos.  

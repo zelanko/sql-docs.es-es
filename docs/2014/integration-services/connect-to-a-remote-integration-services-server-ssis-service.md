@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9487aff1-44d8-42c1-8176-bb9891d4632d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0b9fa3f54b7b16b1fd397bfe80c95d08e39289eb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060420"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921376"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Conectarse a un servidor remoto de Integration Services (servicio SSIS)
     

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: adadafc3a7dcf23de9bceefaee6f5622e0f86705
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9006d6810d03cce7cb996b500449a7a4f864bb96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82701997"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019709"
 ---
 # <a name="bcp_control"></a>bcp_control
   Cambia la configuración predeterminada de varios parámetros de control para una copia masiva entre un archivo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -137,7 +136,7 @@ iValue
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función establece varios parámetros de control para operaciones de copia masiva, incluido el número de errores permitidos antes de cancelar una copia masiva, los números de la primera y la última fila que van a copiarse de un archivo de datos y el tamaño del lote.  
   
  Esta función también se utiliza para especificar la instrucción SELECT cuando la copia masiva del conjunto de resultados de una instrucción SELECT no se realiza desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Establezca *eOption* en BCPHINTS y *iValue* para que tenga un puntero a una cadena SQLTCHAR que contenga la instrucción SELECT.  

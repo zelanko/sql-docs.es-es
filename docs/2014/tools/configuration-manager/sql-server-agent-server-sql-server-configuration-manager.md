@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ed7ee22d-c7c1-4a1e-a225-ec37a1ecfdaa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f93b2c40ca07f29a1751df5a79b8edd6da1b542d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0ea6c3f7d02c0e359914ff6316616d1df3d21225
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040618"
 ---
 # <a name="sql-server-agent-ltservergt-sql-server-configuration-manager"></a>Agente SQL Server &lt;servidor&gt; (Administrador de configuración de SQL Server)
   Éste es el servicio que admite el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ver las propiedades del servicio, en el panel de detalles, haga clic con el botón derecho en el servicio y, después, haga clic en **Propiedades**.  

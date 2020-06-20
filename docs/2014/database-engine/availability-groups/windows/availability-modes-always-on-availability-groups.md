@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9c05fe87c5121427fb2ad96bd8b912be308968a7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a3ede790cd024234fe92449546264466355f387
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175474"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937096"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Modos de disponibilidad (grupos de disponibilidad AlwaysOn)
   En [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], el *modo de disponibilidad* es una propiedad de réplica que determina si una réplica de disponibilidad determinada puede ejecutarse en modo de confirmación sincrónica. Para cada replicación de disponibilidad, el modo de disponibilidad debe estar configurado como modo de confirmación sincrónica o modo de confirmación asincrónica.  Si la réplica principal se configura para el *modo de confirmación asincrónica*, no espera a que ninguna réplica secundaria escriba las entradas del registro de transacciones entrantes en el disco ( *se fortalece el registro*). Si una réplica secundaria dada se configura para el modo de confirmación asincrónica, la réplica principal no espera a que esa réplica secundaria proteja el registro. Si la réplica principal y una réplica secundaria determinada se configuran ambas para el *modo de confirmación sincrónica*, la réplica principal espera a que la réplica secundaria confirme que ha reforzado el registro (a menos que la réplica secundaria no pueda hacer ping a la réplica principal en el *período de tiempo de espera de sesión*de la principal).

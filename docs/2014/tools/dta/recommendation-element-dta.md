@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 679ea535-865a-4633-a4d3-5b3090515158
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bcc0a95028b1f107f15752692d3dcad090fbe8b1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebb2d9fc4e6c060aaee348297ab1732ffb2eb2a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62659588"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040294"
 ---
 # <a name="recommendation-element-dta"></a>Recommendation (DTA, elemento)
   Contiene información sobre los índices hipotéticos que forman parte de una configuración especificada por el usuario.  
@@ -53,7 +52,7 @@ ms.locfileid: "62659588"
 |**Elementos secundarios**|[Create &#40;DTA, elemento&#41;](create-element-dta.md)<br /><br /> Elemento `Drop`. Para obtener más información, vea el [esquema XML del Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).|  
   
 ## <a name="remarks"></a>Observaciones  
- Este elemento tiene el nombre **RecommendationTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. Se utiliza para especificar índices para una configuración hipotética. No confunda este elemento `Recommendation` con los otros tipos que se pueden utilizar para especificar particiones (`RecommendationPType`) o vistas (`RecommendationViewType`). Para obtener información sobre estos `Recommendation` otros tipos de elementos, vea el [esquema XML de Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).  
+ Este elemento tiene el nombre **RecommendationTypecomplexType** en el esquema XML del Asistente para la optimización de motor de base de datos. Se utiliza para especificar índices para una configuración hipotética. No confunda este elemento `Recommendation` con los otros tipos que se pueden utilizar para especificar particiones (`RecommendationPType`) o vistas (`RecommendationViewType`). Para obtener información sobre estos otros `Recommendation` tipos de elementos, vea el [esquema XML de Asistente para la optimización de motor de base de datos](https://go.microsoft.com/fwlink/?linkid=43100).  
   
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de uso de este elemento, vea [Ejemplo de archivo de entrada XML con configuración especificada por el usuario &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  

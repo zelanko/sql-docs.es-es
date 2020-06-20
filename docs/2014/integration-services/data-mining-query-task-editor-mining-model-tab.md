@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 41a5d4530be6250795e083726df59acbd2f7f7aa
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68890775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939146"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Editor de la tarea Consulta de minería de datos (pestaña Modelo de minería de datos)
   Utilice la pestaña **Modelo de minería de datos** del cuadro de diálogo **Tarea Consulta de minería de datos** para especificar la estructura y el modelo de minería de datos que se van a utilizar.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4858e4c35263ab3dd1d9fdcf55a2b136dd8eeaf2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63071790"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050183"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
   En este ejemplo se muestran las mejoras de rendimiento al usar OLTP en memoria al hacer una comparación de las diferencias en la respuesta el tiempo de espera cuando se ejecuta una consulta de Transact-SQL idéntica en tablas optimizadas en memoria y basadas en disco tradicionales. Además, también se crea un procedimiento almacenado compilado de forma nativa (basado en la misma consulta) y luego se ejecuta para demostrar que se suelen obtener los mejores tiempos de respuesta al consultar una tabla optimizada en memoria con un procedimiento almacenado compilado de forma nativa. En este ejemplo solo se muestra un aspecto de las mejoras de rendimiento al acceder a los datos en tablas optimizadas en memoria; la eficacia del acceso a datos al realizar inserciones. Este ejemplo es de un solo subproceso y no aprovecha las ventajas de simultaneidad de OLTP en memoria. Una carga de trabajo que utiliza simultaneidad verá mayor mejora de rendimiento.  
@@ -188,7 +187,7 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)   
  [Requisitos para usar tablas optimizadas para memoria](requirements-for-using-memory-optimized-tables.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [Opciones File y filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [CREAR procedimientos y tablas optimizadas para memoria](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 53d7eeea-927d-4b45-8ea9-084e65ad5390
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: dc318c3278f7f86aa4946380daffa0652882c0fb
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921944"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Configurar una salida de error en un componente de flujo de datos
   Un gran número de componentes de flujo de datos admiten salidas de errores y, dependiendo del componente, el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] proporciona diferentes maneras de configurar una salida de error. Además de configurar una salida de error, también puede configurar sus columnas correspondientes. Esto incluye configurar las columnas **ErrorCode** y **ErrorColumn** agregadas por el componente.  
@@ -65,7 +64,7 @@ ms.locfileid: "66060816"
   
 6.  Establezca la opción **Truncamiento** para cada columna.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 8.  Para guardar el paquete actualizado, en el menú **Archivo** , haga clic en **Guardar los elementos seleccionados**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66060816"
   
 4.  Haga clic con el botón derecho en el componente cuyas columnas de salida de error quiere configurar y haga clic en **Mostrar editor avanzado**.  
   
-5.  Haga clic en la pestaña **propiedades de entrada y salida** y expanda ** \<nombre de componente> salida de error** y, a continuación, expanda **columnas de salida**.  
+5.  Haga clic en la pestaña **propiedades de entrada y salida** y expanda ** \<component name> salida de error** y, a continuación, expanda columnas de **salida**.  
   
 6.  Haga clic en una columna y actualice sus propiedades.  
   

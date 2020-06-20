@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 46de12faa52fae61e1f11758f40e1ec8242faca1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092759"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011857"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Reemplazar el uso del procedimiento almacenado extendido xp_sqlagent_proxy_account con nuevos procedimientos almacenados
   El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios servidores proxy. Puede definir estos servidores proxy utilizando un nuevo conjunto de procedimientos almacenados. Para obtener más información sobre los nuevos procedimientos almacenados del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los temas siguientes en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -45,7 +44,7 @@ ms.locfileid: "66092759"
 -   "sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
   
 > [!NOTE]  
->  Después de actualizar a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], no funcionarán las instrucciones que utilicen el **xp_sqlagent_proxy_account** procedimiento almacenado extendido. Use **sp_xp_cmdshell_proxy_account** en lugar de **xp_sqlagent_proxy_account** para establecer el proxy para **xp_cmdshell**.  
+>  Después de actualizar a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] , no funcionarán las instrucciones que utilicen el **xp_sqlagent_proxy_account** procedimiento almacenado extendido. Use **sp_xp_cmdshell_proxy_account** en lugar de **xp_sqlagent_proxy_account** para establecer el proxy para **xp_cmdshell**.  
   
 ## <a name="component"></a>Componente  
  e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

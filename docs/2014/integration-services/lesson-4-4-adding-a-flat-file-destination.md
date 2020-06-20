@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3a1dd63030601ad05e0e2f3ccce09425c5aa829c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 66533fb63a76bc92bcb45e7cb8feb058467e6583
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767377"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968191"
 ---
 # <a name="step-4-adding-a-flat-file-destination"></a>Paso 4: Adición de un destino de archivo plano
   La salida de errores de la transformación Lookup Currency Key redirige a la transformación Script cualquier fila de datos que haya generado un error durante la operación de búsqueda. Para mejorar la información acerca de los errores producidos, la transformación Script ejecuta un script que obtiene una descripción de los errores.  
@@ -36,11 +35,11 @@ ms.locfileid: "62767377"
   
 6.  En el cuadro de diálogo **Formato de archivo plano** , compruebe que esté seleccionado **Delimitado** y haga clic en **Aceptar**.  
   
-7.  En el **Editor del administrador de conexiones de archivos planos**, en el cuadro nombre `Error Data`del administrador de **conexiones** , escriba.  
+7.  En el **Editor del administrador de conexiones de archivos planos**, en el cuadro **nombre del administrador de conexiones** , escriba `Error Data` .  
   
 8.  En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , haga clic en **Examinar**y busque la carpeta en la que se almacenará el archivo.  
   
-9. En el cuadro de diálogo **abrir** , en **nombre**de archivo `ErrorOutput.txt`, escriba y, a continuación, haga clic en **abrir**.  
+9. En el cuadro de diálogo **abrir** , en **nombre de archivo**, escriba y, `ErrorOutput.txt` a continuación, haga clic en **abrir**.  
   
 10. En el cuadro de diálogo **Editor del administrador de conexiones de archivos planos** , compruebe que el cuadro **Configuración regional** contiene Inglés (Estados Unidos) y la **Página de códigos** contiene 1252 (ANSI -Latin I).  
   
@@ -48,7 +47,7 @@ ms.locfileid: "62767377"
   
      Observe que, además de las columnas del archivo de datos de origen, existen tres columnas nuevas: ErrorCode, ErrorColumn y ErrorDescription. Estas columnas las generan la salida de errores de la transformación Lookup Currency Key y el script de la transformación Get Error Description y pueden utilizarse para solucionar el problema de la fila que genera el error.  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 13. En el **Editor de destino de archivos planos**, desactive la casilla **Sobrescribir los datos del archivo** .  
   
@@ -56,9 +55,9 @@ ms.locfileid: "62767377"
   
 14. En el **Editor de destino de archivos planos**, haga clic **Asignaciones** para comprobar que todas las columnas son correctas. Si lo desea, puede cambiar el nombre de las columnas en el destino.  
   
-15. Haga clic en **Aceptar**.  
+15. Haga clic en **OK**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Paso 5: Prueba del paquete del tutorial de la lección 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

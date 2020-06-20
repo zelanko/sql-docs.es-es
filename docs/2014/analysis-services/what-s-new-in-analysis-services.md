@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1458dcf473ffbf7fc9bab13c2c688a4e01954c56
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9d66589dd4094614d195757a8dcc7c59175c9540
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175544"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938138"
 ---
 # <a name="what39s-new-in-sql-server-2014-analysis-services"></a>Novedades de&#39;s en SQL Server 2014 Analysis Services
-  Con la excepción de la funcionalidad agregada que admite Power View informes en modelos [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] multidimensionales, no ha cambiado respecto a la versión anterior.
+  Con la excepción de la funcionalidad agregada que admite Power View informes en modelos multidimensionales, [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] no ha cambiado respecto a la versión anterior.
 
- Para obtener información sobre [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] otros productos y tecnologías que son diferentes en esta versión, consulte [novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).
+ Para obtener información sobre otros [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] productos y tecnologías que son diferentes en esta versión, consulte [novedades de SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md).
 
 ## <a name="updates-to-design-tool-installation"></a>Actualizaciones a la instalación de las herramientas de diseño
  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para Business Intelligence (SSDT-BI), conocido anteriormente como Business Intelligence Development Studio (BIDS), se emplea para crear modelos de Analysis Services, informes de Reporting Services y paquetes de Integration Services. Puede descargar SSDT-BI desde las ubicaciones siguientes:

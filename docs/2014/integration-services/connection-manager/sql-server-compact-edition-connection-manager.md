@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 752c825cb34fbf2afe5d2306afbd562a49f74b7f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1a61dedbbdbcdcd08651407ac1be4a2a35df883b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833150"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920337"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Administrador de conexiones con SQL Server Compact Edition
   Un administrador de conexiones con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact habilita un paquete para establecer conexión con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye usa este administrador de conexiones para cargar datos en una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  
@@ -28,7 +27,7 @@ ms.locfileid: "62833150"
 >  En un equipo de 64 bits, necesita ejecutar paquetes que se conecten a los orígenes de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact en modo de 32 bits. El proveedor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que usa [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para establecer conexión con orígenes de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact solo está disponible en una versión de 32 bits.  
   
 ## <a name="configuration-the-sql-server-compact-edition-connection-manager"></a>Configuración del administrador de conexiones con SQL Server Compact Edition  
- Cuando se agrega un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administrador de conexiones de Compact a un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete, crea un administrador de conexiones que se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resuelve en una conexión de Compact en tiempo de ejecución, establece las propiedades del administrador de conexiones y `Connections` agrega el administrador de conexiones a la colección del paquete.  
+ Cuando se agrega un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administrador de conexiones de Compact a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conexión de Compact en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `SQLMOBILE`.  
   

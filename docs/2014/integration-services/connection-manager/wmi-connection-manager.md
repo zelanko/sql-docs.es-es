@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d57a0783c8af0121169f09622b8e5bd8547d1ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29ddc30f89621e9b4875a57c191a81ef3f10784d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833095"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920276"
 ---
 # <a name="wmi-connection-manager"></a>Administrador de conexiones WMI
   Un administrador de conexiones WMI habilita un paquete para que use Instrumental de administración de Windows (WMI) para administrar información en un entorno de empresa. La tarea Servicio web que incluye [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa un administrador de conexiones WMI.  
   
- Cuando se agrega un administrador de conexiones WMI a un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones que se resuelve en una conexión WMI en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el `Connections` administrador de conexiones a la colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `WMI`.  
+ Cuando se agrega un administrador de conexiones WMI a un paquete, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones que se resuelve en una conexión WMI en tiempo de ejecución, establece las propiedades del administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete. La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `WMI`.  
   
 ## <a name="configuration-of-the-wmi-connection-manager"></a>Configuración del administrador de conexiones WMI  
  Puede configurar el administrador de conexiones WMI de las maneras siguientes:  

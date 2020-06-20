@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4382d00093187cc4dd3f71a2db0c4488c27aa629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067127"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938906"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrar los datos de una tabla (SSAS tabular)
   Puede aplicar filtros al importar datos para controlar las filas que se cargan en una tabla. Después de haber importado los datos, no podrá eliminar filas individuales. Sin embargo, puede aplicar filtros personalizados para controlar la manera en que se muestran las filas. Las filas que no cumplen los criterios de filtrado se ocultan. Puede filtrar por una o más columnas. Los filtros son aditivos, lo que significa que cada filtro adicional se basa en el actual y reduce aún más el subconjunto de datos.  
@@ -43,7 +42,7 @@ ms.locfileid: "66067127"
   
 1.  Haga clic en la flecha del encabezado de la columna en la que desea borrar un filtro.  
   
-2.  Haga clic en **Borrar \<filtro de nombre de columna>**.  
+2.  Haga clic en **Borrar \<Column Name> filtro de **.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Para borrar todos los filtros de una tabla  
   

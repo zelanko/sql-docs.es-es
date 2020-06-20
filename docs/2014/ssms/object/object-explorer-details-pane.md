@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69e7c14ae42586b801b2956c224cc8350ac611c3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058602"
 ---
 # <a name="object-explorer-details-pane"></a>Panel de detalles del Explorador de objetos
   Detalles del Explorador de objetos, un componente de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], proporciona una vista tabular de todos los objetos del servidor y presenta una interfaz de usuario para administrarlos. Las funciones del Explorador de objetos varían ligeramente según el tipo de servidor, aunque, por lo general, incluyen características de desarrollo de bases de datos y características de administración de todo tipo de servidores.  

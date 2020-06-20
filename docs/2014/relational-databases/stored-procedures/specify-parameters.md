@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d93a04281839c4db26cbab16ac166af3cdb7c9a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62736368"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065657"
 ---
 # <a name="specify-parameters"></a>Especificar parámetros
   Al especificar parámetros de procedimiento, los programas de llamada pueden pasar valores en el cuerpo del procedimiento. Estos valores se pueden usar para distintos fines durante la ejecución del procedimiento. Los parámetros de procedimiento también pueden devolver valores al programa de llamada si el parámetro se marca como OUTPUT.  
@@ -126,7 +125,7 @@ EXEC Sales.usp_GetSalesYTD N'Blythe';
 GO  
 ```  
   
- Aunque los parámetros para los que se hayan especificado valores predeterminados se pueden omitir, solo se puede truncar la lista de parámetros. Por ejemplo, si un procedimiento tiene cinco parámetros, los parámetros cuarto y quinto se pueden omitir. Sin embargo, el cuarto parámetro no se puede omitir si se incluye el quinto parámetro, a menos que los parámetros se proporcionen con el formato ** \@Parameter =**_Value_.  
+ Aunque los parámetros para los que se hayan especificado valores predeterminados se pueden omitir, solo se puede truncar la lista de parámetros. Por ejemplo, si un procedimiento tiene cinco parámetros, los parámetros cuarto y quinto se pueden omitir. Sin embargo, el cuarto parámetro no se puede omitir si se incluye el quinto parámetro, a menos que los parámetros se proporcionen con el formato ** \@ Parameter =**_Value_.  
   
 ## <a name="specifying-parameter-direction"></a>Especificar la dirección de parámetro  
  La dirección de un parámetro es de entrada, el valor se pasa al cuerpo del procedimiento, o de salida, el procedimiento devuelve un valor al programa de llamada. El valor predeterminado es un parámetro de entrada.  
@@ -164,10 +163,10 @@ GO
   
 ```  
   
- Ejecute `usp_GetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (Bicicletas) que cuestan menos de 700 USD. Los parámetros ** \@** de salida cost y ** \@compareprices** se usan con el lenguaje de control de flujo para devolver un mensaje en la ventana **mensajes** .  
+ Ejecute `usp_GetList` para obtener una lista de los productos de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] (Bicicletas) que cuestan menos de 700 USD. Los parámetros de salida ** \@ cost** y ** \@ compareprices** se usan con el lenguaje de control de flujo para devolver un mensaje en la ventana **mensajes** .  
   
 > [!NOTE]  
->  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Sin embargo, el tipo de datos y la posición de los parámetros deben coincidir (a menos que _variable_ ** \@se use ListPrice =** variable).  
+>  La variable OUTPUT debe definirse durante la creación del procedimiento y también durante el uso de la variable. El nombre del parámetro y de la variable no tienen por qué coincidir. Sin embargo, el tipo de datos y la posición de los parámetros deben coincidir (a menos que se use ** \@ ListPrice =** _variable_ ).  
   
 ```  
 DECLARE @ComparePrice money, @Cost money ;  

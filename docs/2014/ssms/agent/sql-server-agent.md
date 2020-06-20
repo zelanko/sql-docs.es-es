@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ccfca5d9c46bbd63f0d9a8084881c51896b4fe7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289633"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058703"
 ---
 # <a name="sql-server-agent"></a>Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un servicio de Microsoft Windows que ejecuta tareas administrativas programadas, denominadas *trabajos* en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -111,22 +110,22 @@ ms.locfileid: "79289633"
   
  Para enviar a los operadores notificaciones por correo electrónico o buscapersonas, deberá configurar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para usar Correo electrónico de base de datos. Para obtener más información, consulte [Correo electrónico de base de datos](../../relational-databases/database-mail/database-mail.md).  
   
- Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, consulte [Operadores](operators.md).  
+ Puede definir un operador como alias de un grupo de personas. De esta manera, todos los miembros de este alias pueden recibir notificaciones al mismo tiempo. Para obtener más información, vea [Operadores (Guía de programación de C#)](operators.md).  
   
 ##  <a name="security-for-sql-server-agent-administration"></a><a name="Security"></a>Seguridad para la administración de Agente SQL Server  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** en la base de datos **msdb** para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlar el acceso al agente para los usuarios que `sysadmin` no son miembros del rol fijo de servidor. Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Usa los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** en la base de datos **msdb** para controlar el acceso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente para los usuarios que no son miembros del `sysadmin` rol fijo de servidor. Además de estos roles fijos de base de datos, los subsistemas y los servidores proxy ayudan a los administradores de bases de datos a garantizar que cada paso de trabajo se ejecuta con los permisos mínimos necesarios para realizar la tarea.  
   
 ### <a name="roles"></a>Roles  
- Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** de **msdb**y los `sysadmin` miembros del rol fijo de servidor [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tienen acceso al agente. Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
+ Los miembros de los roles fijos de base de datos **SQLAgentUserRole**, **SQLAgentReaderRole**y **SQLAgentOperatorRole** de **msdb**y los miembros del `sysadmin` rol fijo de servidor tienen acceso al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. Un usuario que no pertenezca a ninguno de estos roles no puede utilizar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los roles que usa el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Implementar la seguridad del Agente SQL Server](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsistemas  
  Un subsistema es un objeto predefinido que representa las funciones disponibles para un paso de trabajo. Cada proxy tiene acceso a uno o varios subsistemas. Los subsistemas proporcionan seguridad, ya que delimitan el acceso a las que funciones que están disponibles para el proxy. Cada paso de trabajo se ejecuta en el contexto de un proxy, con la excepción de los pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizan el comando EXECUTE AS para establecer el contexto de seguridad.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] define los subsistemas incluidos en la tabla siguiente:  
   
-|Nombre del subsistema|Descripción|  
+|Nombre del subsistema|Description|  
 |--------------------|-----------------|  
-|Scripts Microsoft ActiveX|Ejecuta un paso de trabajo de scripts ActiveX.<br /><br /> ** \* Importante \* \* ** El subsistema de scripts ActiveX se quitará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del agente en una versión futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|Scripts Microsoft ActiveX|Ejecuta un paso de trabajo de scripts ActiveX.<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |Sistema operativo (**CmdExec**)|Ejecuta un programa ejecutable.|  
 |PowerShell|Ejecuta un paso de trabajo de scripts de PowerShell.|  
 |Distribuidor de replicación|Ejecuta un paso de trabajo que activa el Agente de distribución de replicación.|  
@@ -167,7 +166,7 @@ ms.locfileid: "79289633"
 |||  
 |-|-|  
 |**Descripción**|**Tema**|  
-|Describe cómo configurar el Agente SQL Server.|[Configure SQL Server Agent](configure-sql-server-agent.md)|  
+|Describe cómo configurar el Agente SQL Server.|[Configurar el Agente SQL Server](configure-sql-server-agent.md)|  
 |Describe cómo iniciar, detener y pausar el servicio del Agente SQL Server.|[Start, Stop, or Pause the SQL Server Agent Service](start-stop-or-pause-the-sql-server-agent-service.md)|  
 |Describe las consideraciones para especificar una cuenta para el servicio del Agente SQL Server.|[Seleccionar una cuenta para el servicio Agente SQL Server](select-an-account-for-the-sql-server-agent-service.md)|  
 |Describe cómo usar el registro de errores del Agente SQL Server.|[Registro de errores del Agente SQL Server](sql-server-agent-error-log.md)|  

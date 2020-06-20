@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cb3055780186c34f6ead494f702874fbc6329f5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f4a2a7e56dc0f5b0b2c71361a4b47fb58c64c782
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63044185"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011676"
 ---
 # <a name="client-protocols-properties-order-tab"></a>Propiedades de los protocolos de cliente (pestaña Ordenar)
   Utilice la página **Ordenar**del cuadro de diálogo **Propiedades de los protocolos de cliente** para ver y habilitar los protocolos de cliente.  
@@ -34,7 +33,7 @@ ms.locfileid: "63044185"
  Muestra una lista de los protocolos que están instalados pero no se utilizan actualmente.  
   
  **Protocolos habilitados**  
- Enumera los protocolos que están disponibles [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para los clientes de en este equipo.  
+ Enumera los protocolos que están disponibles para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los clientes de en este equipo.  
   
  **>**  
  Habilita el protocolo que se encuentre resaltado en el cuadro **Protocolos deshabilitados** y lo mueve al cuadro **Protocolos habilitados** .  

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 54eeeec995e390b71ce8871b680c26138fc88783
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951965"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
   Los archivos de registro de datos y transacciones de una base de datos se pueden desasociar y volverse a adjuntar posteriormente a la misma instancia u otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Separar y adjuntar una base de datos es útil si desea cambiar la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo o si desea mover la base de datos.  
@@ -85,14 +84,14 @@ ms.locfileid: "62762422"
 3.  Vuelva a separar la base de datos.  
   
 ##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Adjuntar una base de datos  
- Puede adjuntar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiada o separada. Al adjuntar [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] una instancia de servidor, los archivos de catálogo se adjuntan desde su ubicación anterior junto con los demás archivos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]base de datos, igual que en. Para obtener más información, vea [Actualizar la búsqueda de texto completo](../search/upgrade-full-text-search.md).  
+ Puede adjuntar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copiada o separada. Al adjuntar una [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] instancia de servidor, los archivos de catálogo se adjuntan desde su ubicación anterior junto con los demás archivos de base de datos, igual que en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para obtener más información, vea [Actualizar la búsqueda de texto completo](../search/upgrade-full-text-search.md).  
   
  Al adjuntar una base de datos, todos los archivos de datos deben estar disponibles (archivos MDF y NDF). Si algún archivo de datos tiene una ruta de acceso diferente a la que tenía cuando se creó la base de datos o cuando ésta se adjuntó por última vez, debe especificar la ruta actual.  
   
 > [!NOTE]  
 >  Si el archivo de datos principal que se va a adjuntar es de solo lectura, [!INCLUDE[ssDE](../../includes/ssde-md.md)] considera que la base de datos es de solo lectura.  
   
- Cuando una base de datos cifrada se adjunta por primera [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vez a una instancia de, el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: abrir el descifrado de la clave maestra mediante la contraseña = **'*`password`*'**. Se recomienda habilitar el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando una base de datos cifrada se adjunta por primera vez a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: abrir el DEScifrado de la clave maestra mediante la contraseña = **' *`password`* '**. Se recomienda habilitar el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Las condiciones para adjuntar archivos de registro dependen, en parte, de si la base de datos es de lectura y escritura o de solo lectura. Vea a continuación:  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62762422"
   
      Si una base de datos de lectura y escritura contiene solo un archivo de registro y no se especifica una ubicación nueva para el mismo, al adjuntar la base de datos se buscará el archivo en la ubicación antigua. Si se encuentra, se usará el archivo de registro antiguo, sin tener en cuenta si la base de datos se cerró correctamente. No obstante, si el archivo de registro antiguo no se encuentra, la base de datos se cerró correctamente y no hay ninguna cadena de registros activa, al adjuntar se intentará crear un archivo de registro nuevo para la base de datos.  
   
--   Si el archivo de datos principal que se va a adjuntar [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] es de solo lectura, no puede actualizar la ubicación del registro almacenada en el archivo principal.  
+-   Si el archivo de datos principal que se va a adjuntar es de solo lectura, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] no puede actualizar la ubicación del registro almacenada en el archivo principal.  
   
   
   
@@ -117,7 +116,7 @@ ms.locfileid: "62762422"
 > [!IMPORTANT]  
 >  Una base de datos creada por una versión más reciente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no puede adjuntarse en versiones anteriores.  
   
- Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Al adjuntar una base de datos a otra instancia de servidor, es posible que tenga que volver a crear una parte o la totalidad de los metadatos de la base de datos, por ejemplo los inicios de sesión y los trabajos, en la otra instancia de servidor; de este modo se proporciona una experiencia coherente a usuarios y aplicaciones. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para separar una base de datos**  

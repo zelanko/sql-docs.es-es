@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 97373178-d288-4127-af37-d9f5fe1b8607
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e0d36c5a92dba9f3f92943b65107e7eedb178554
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 4ba863207c367e15f72e68885c6011ef485f6201
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000637"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929624"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Opciones (Editor de texto - XML - Página Formato)
 
@@ -60,7 +59,7 @@ Este cuadro de diálogo permite especificar la configuración de formato del Edi
   <file readOnly="false">test2.txt</file>  
 ```  
   
- \</DIR>  
+ \</dir>  
   
 ## <a name="see-also"></a>Consulte también  
  [Editor XML &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

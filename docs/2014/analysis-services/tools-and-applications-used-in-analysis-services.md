@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ddb3b7a-7464-4d04-8659-11cb2e4cf3c3
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 13da2ecc244c1596789a1d816bac81a13bcd4c62
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938336"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Herramientas y aplicaciones utilizadas en Analysis Services
   Encuentre las herramientas y las aplicaciones que necesitará para crear los modelos de Analysis Services y para administrar las bases de datos asociadas en una instancia de Analysis Services.
@@ -37,7 +36,7 @@ ms.locfileid: "78175564"
 
  ![Nuevas plantillas de proyecto de SSDT](media/ssdt-biprojects.png "Nuevas plantillas de proyecto de SSDT")
 
-## <a name="administrative-tools"></a>Herramientas administrativas
+## <a name="administrative-tools"></a>Tareas administrativas
 
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio
  Management Studio es la herramienta de administración principal para todas las características de SQL Server, incluida Analysis Services. SQL Server Management Studio es un componente opcional. Si no lo ve con otras aplicaciones de SQL Server en la página de aplicaciones de Windows Server 2012, ejecute el programa de instalación de SQL Server para añadirlo a su instalación.

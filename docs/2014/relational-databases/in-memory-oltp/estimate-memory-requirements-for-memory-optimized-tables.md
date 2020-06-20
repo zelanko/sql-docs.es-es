@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cbd8a79bf9d881d2d4c9055531bac2e290f202a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 12fdb1a41ec764a0fee0817940f95a3d303777e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811007"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050199"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimar los requisitos de memoria para las tablas con optimización para memoria
   Si va a crear una nueva [!INCLUDE[hek_2](../../includes/hek-2-md.md)] tabla optimizada para memoria o migrar una tabla basada en disco existente a una tabla optimizada para memoria, es importante tener una estimación razonable de las necesidades de memoria de cada tabla para poder aprovisionar el servidor con memoria suficiente. En esta sección se describe cómo calcular la cantidad de memoria necesaria para almacenar los datos de una tabla optimizada para memoria.  
@@ -119,7 +118,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  **Establecer el tamaño de la matriz de índices hash**  
   
- El tamaño de la matriz hash se `(bucket_count= <value>)` establece \<mediante donde Value> es un valor entero mayor que cero. Si \<el valor> no es una potencia de 2, el bucket_count real se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo, (bucket_count = 5 millones), dado que 5 millones no es una potencia de 2, el número de depósitos real se redondea hasta 8.388.608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
+ El tamaño de la matriz hash se establece mediante `(bucket_count= <value>)` donde \<value> es un valor entero mayor que cero. Si \<value> no es una potencia de 2, el valor real de bucket_count se redondea a la siguiente potencia más cercana de 2.  En la tabla de ejemplo, (bucket_count = 5 millones), dado que 5 millones no es una potencia de 2, el número de depósitos real se redondea hasta 8.388.608 (2<sup>23</sup>).  Debe usar este número, no 5.000.000, al calcular la memoria necesaria para la matriz hash.  
   
  Así, en nuestro ejemplo, la memoria necesaria para cada matriz hash es:  
   

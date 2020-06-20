@@ -8,16 +8,15 @@ f1_keywords:
 ms.assetid: 661595ce-99b9-4316-ad80-ed04002d04d5
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b6ab8cc3c788e27946ddb68a3c926e8f926ebd7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71199324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85034924"
 ---
 # <a name="query-options-execution-advanced-page"></a>Opciones de ejecución de consulta (página Avanzadas)
 
@@ -29,9 +28,9 @@ ms.locfileid: "71199324"
 
 **establecer PARSEONLY** Comprueba la sintaxis de cada consulta, pero no ejecuta las consultas. Esta opción está desactivada de forma predeterminada.  
 
-**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL`, siempre devuelven `NULL` como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está seleccionada de forma predeterminada.
+**establecer CONCAT_NULL_YIELDS_NULL** Cuando se activa esta casilla, las consultas que concatenan un valor existente con un `NULL` , siempre devuelven `NULL` como resultado. Cuando se desactiva esta casilla, un valor existente concatenado con un valor `NULL`, devuelve el valor existente. Esta opción está seleccionada de forma predeterminada.
 
-**establecer ARITHABORT** Cuando se activa esta casilla, cuando una `INSERT`instrucción, `DELETE` o `UPDATE` encuentra un error aritmético (desbordamiento, división por cero o error de dominio) durante la evaluación de la expresión, se finaliza la consulta o el lote. Cuando se desactiva esta casilla, se proporciona un valor `NULL` para ese valor si es posible, la consulta continúa y se incluye un mensaje con el resultado. Vea los Libros en pantalla para una descripción más detallada de este comportamiento. Esta opción está seleccionada de forma predeterminada.
+**establecer ARITHABORT** Cuando se activa esta casilla, cuando una `INSERT` instrucción, `DELETE` o encuentra `UPDATE` un error aritmético (desbordamiento, división por cero o error de dominio) durante la evaluación de la expresión, se finaliza la consulta o el lote. Cuando se desactiva esta casilla, se proporciona un valor `NULL` para ese valor si es posible, la consulta continúa y se incluye un mensaje con el resultado. Vea los Libros en pantalla para una descripción más detallada de este comportamiento. Esta opción está seleccionada de forma predeterminada.
   
 **establecer SHOWPLAN_TEXT** Cuando se activa esta casilla, el plan de consulta se devuelve en formato de texto con cada consulta. Esta opción está desactivada de forma predeterminada.
   

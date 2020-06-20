@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c1e0a9435fd974044b71ac64c1e7762fc709ca9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284887"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938616"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Columnas calculadas (SSAS tabular)
   En los modelos tabulares, las columnas calculadas le permiten agregar nuevos datos al modelo. En lugar de pegar o importar valores en la columna, se crea una fórmula DAX que define los valores de nivel de fila de la columna. A continuación, la columna calculada se puede utilizar en un informe, una tabla dinámica o un gráfico dinámico como cualquier otra columna.  
@@ -33,7 +32,7 @@ ms.locfileid: "67284887"
   
 -   [Tareas relacionadas](#bkmk_rel_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_understanding"></a>Privilegios  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a> Ventajas  
  Las fórmulas en las columnas calculadas son muy similares a las fórmulas en Excel. A diferencia de Excel, sin embargo, no se pueden crear fórmulas diferentes para las distintas filas de una tabla; la fórmula de DAX se aplica automáticamente a toda la columna.  
   
  Cuando una columna contiene una fórmula, el valor se calcula para cada fila. Los resultados se calculan para la columna cuando se escribe una fórmula válida. A continuación, los valores de columna se actualizan según convenga, por ejemplo cuando los datos subyacentes se actualizan.  

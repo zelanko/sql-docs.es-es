@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 14dce43963b0a531c3c71a1bf0c956fc4f10d5af
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481034"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937926"
 ---
 # <a name="create-a-domain-rule"></a>Cree una regla de dominio
   En este tema se describe cómo crear una regla de dominio en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Una regla de dominio es una condición que se utiliza para validar, corregir y normalizar valores de dominio. Una regla de dominio debe cumplirse en todo el dominio para que los valores de dominio se consideren precisos y compatibles con los requisitos empresariales. Las reglas de dominio pueden incluir reglas de validación que se utilizan para validar valores de dominio, pero no para corregir datos en los proyectos de calidad de datos. Las reglas también incluyen reglas de normalización que se aplican a los datos válidos y se utilizan en la corrección de datos.  

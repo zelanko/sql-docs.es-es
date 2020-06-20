@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 860a80dc-bac0-4ef0-bf7f-7a9b430d7aa3
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c5aa031804d2c5f4ad3a3679a6fe1cac96c63b1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66089435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930666"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar la vista de resultados del seguimiento
   En este tema se describe cómo modificar la vista de resultados de seguimiento de una sesión de eventos extendidos en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] realizando las siguientes tareas.  
@@ -54,7 +53,7 @@ ms.locfileid: "66089435"
   
 4.  En la sección **Columnas seleccionadas** , para cambiar la presentación del orden de columnas, haga clic en **Subir** o **Bajar** respectivamente. No puede mover varias filas.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
 ##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>Crear, editar o eliminar columnas combinadas  
   
@@ -76,7 +75,7 @@ ms.locfileid: "66089435"
     > [!NOTE]  
     >  Los eventos extendidos solo permiten combinar hasta cinco columnas.  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 #### <a name="to-edit-merged-columns"></a>Para editar columnas combinadas  
   
@@ -143,7 +142,7 @@ ms.locfileid: "66089435"
   
      Para quitar las columnas de la agrupación, en el cuadro **Columnas agrupadas en** , seleccione las columnas que desea quitar y, a continuación, haga clic en la flecha izquierda.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ##  <a name="aggregate-results"></a><a name="AggregateResults"></a>Resultados agregados  
  Los eventos extendidos admiten cinco funciones de agregación:  
@@ -182,7 +181,7 @@ ms.locfileid: "66089435"
   
 6.  Seleccione la opción **En orden descendente** para clasificar el resultado de la agregación en orden descendente.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ##  <a name="filter-results"></a><a name="Filter"></a>Filtrar resultados  
  Puede aplicar filtros para reducir los resultados de seguimiento que se muestran en la ventana de seguimiento. El filtro de visualización incluye un filtro horario y un filtro avanzado. Puede utilizar el filtro horario para filtrar el resultado de seguimiento por la marca de tiempo del evento y utilizar el filtro avanzado para crear condiciones de filtro mediante los campos de evento y las acciones. Hay una relación de AND lógico entre el filtro horario y el filtro avanzado.  
@@ -229,7 +228,7 @@ ms.locfileid: "66089435"
   
     -   **Detalles**. Utilice esta opción para buscar en todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el cuadro **de diálogo Buscar en eventos extendidos** .  
   
-    -   **Nombre de columna de evento>. \< ** Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
+    -   **\<Event column name>**. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
 5.  Utilice las siguientes opciones para especificar cómo desea definir la búsqueda:  
   

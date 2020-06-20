@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 221b46c2-c27e-4df8-bd8c-8b990d6d5e98
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0f65d379076eb213971bba97b970b8aa866ca3a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 526181bc4bf7ab81df2eaa25f19e7627c9b7af10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428874"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059158"
 ---
 # <a name="remove-statements-that-modify-system-objects"></a>Eliminar instrucciones que modifican objetos del sistema
   El Asesor de actualizaciones ha detectado la existencia de instrucciones que actualizan el catálogo del sistema. No se permite realizar actualizaciones directas del catálogo del sistema. Modifique los scripts de SQL para que utilicen API documentadas y oficiales.  

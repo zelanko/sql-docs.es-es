@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6e9402f4-4d50-49ff-820d-65a77829c4a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a41158c6ab83491c10c702619a9da46f096a4bfa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951690"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Implementación de paquetes en el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], puede implementar los proyectos en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] permite administrar paquetes, ejecutar paquetes y configurar valores de tiempo de ejecución para paquetes usando entornos.  
@@ -58,7 +57,7 @@ ms.locfileid: "66059578"
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el Explorador de soluciones, haga clic con el botón derecho en el proyecto y seleccione **Convertir al modelo de implementación de proyectos**.  
   
-     o bien  
+     O bien  
   
      En el Explorador de objetos de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], haga clic con el botón derecho en el nodo **Proyectos** y seleccione **Importar paquetes**.  
   
@@ -68,11 +67,11 @@ ms.locfileid: "66059578"
   
 1.  Abra el proyecto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]y, en el menú **Proyecto** , seleccione **Implementar** para iniciar el **Asistente para implementación de Integration Services**.  
   
-     o bien  
+     O bien  
   
-     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > el nodo **SSISDB** en explorador de objetos y busque la carpeta proyectos del proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
+     En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , expanda el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  >  nodo **SSISDB** en explorador de objetos y busque la carpeta proyectos del proyecto que desea implementar. Haga clic con el botón derecho en la carpeta **Proyectos** y, después, haga clic en **Implementar proyecto**.  
   
-     o bien  
+     O bien  
   
      En el símbolo del sistema, ejecute **isdeploymentwizard.exe** desde **%Archivos de programa%\Microsoft SQL Server\110\DTS\Binn**. En equipos de 64 bits, también hay una versión de 32 bits de la herramienta en **%Archivos de programa (x86)%\Microsoft SQL Server\100\DTS\Binn**.  
   

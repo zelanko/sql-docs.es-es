@@ -24,19 +24,18 @@ helpviewer_keywords:
 ms.assetid: c73e628a-f54a-411a-bfe3-6dae519316cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: db3a72facf1676360e7c338663facac66840a113
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d48e3c9a2c25dda9dae893cc8e61ff30be4314
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874120"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970625"
 ---
 # <a name="getting-started-with-clr-integration"></a>Introducción a la integración CLR
   En este tema se proporciona información general sobre los espacios de nombres y las bibliotecas necesarios para compilar objetos de base de datos mediante la [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] integración de con el Common Language Runtime de .NET Framework (CLR). En este tema también se muestra cómo escribir, compilar y ejecutar un procedimiento almacenado CLR simple escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#.  
   
 ## <a name="required-namespaces"></a>Espacios de nombres necesarios  
- A partir [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)]de. La funcionalidad de la integración CLR se expone en un ensamblado denominado system.data.dll, que forma parte de .NET Framework. Este ensamblado puede encontrarse en la caché de ensamblados global (GAC) o en el directorio de .NET Framework. Normalmente, se agrega una referencia a este ensamblado mediante las herramientas de la línea de comandos y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por lo que no es necesario agregarla manualmente.  
+ A partir de [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] . La funcionalidad de la integración CLR se expone en un ensamblado denominado system.data.dll, que forma parte de .NET Framework. Este ensamblado puede encontrarse en la caché de ensamblados global (GAC) o en el directorio de .NET Framework. Normalmente, se agrega una referencia a este ensamblado mediante las herramientas de la línea de comandos y [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio, por lo que no es necesario agregarla manualmente.  
   
  El ensamblado system.data.dll contiene los espacios de nombres siguientes, que son necesarios para compilar objetos de base de datos CLR:  
   
@@ -85,7 +84,7 @@ End Class
   
 ```  
   
- Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas, `SqlContext` y `SqlPipe`, para crear los objetos de base de datos administrados a fin de generar un mensaje de texto simple. El método también asigna la cadena "Hello World!" como el valor de un parámetro de salida. Este método se puede declarar como un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] un procedimiento almacenado.  
+ Este programa simple contiene un solo método estático en una clase pública. Este método usa dos clases nuevas, `SqlContext` y `SqlPipe`, para crear los objetos de base de datos administrados a fin de generar un mensaje de texto simple. El método también asigna la cadena "Hello World!" como el valor de un parámetro de salida. Este método se puede declarar como un procedimiento almacenado en un [!INCLUDE[ssNoVersion](../../../includes/tsql-md.md)] procedimiento almacenado.  
   
  Ahora, procederemos a compilar este programa como una biblioteca, lo cargaremos en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y lo ejecutaremos como un procedimiento almacenado.  
   
@@ -119,7 +118,7 @@ vbc /target:library helloworld.vb
  Estos comandos inician el compilador de Visual C# o Visual Basic mediante la opción /target para especificar la creación de un archivo DLL de biblioteca.  
   
 ## <a name="loading-and-running-the-hello-world-stored-procedure-in-sql-server"></a>Cargar y ejecutar el procedimiento almacenado "Hello World" en SQL Server  
- Una vez que el procedimiento de ejemplo se haya compilado correctamente, puede [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] probarlo en y crear una nueva consulta, conectándose a una base de datos de prueba adecuada (por ejemplo, la base de datos de ejemplo AdventureWorks).  
+ Una vez que el procedimiento de ejemplo se haya compilado correctamente, puede probarlo en [!INCLUDE[ssNoVersion](../../../includes/ssmanstudiofull-md.md)] y crear una nueva consulta, conectándose a una base de datos de prueba adecuada (por ejemplo, la base de datos de ejemplo AdventureWorks).  
   
  La capacidad de ejecutar el código de Common Language Runtime (CLR) está establecida de forma predeterminada en OFF en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El código CLR se puede habilitar mediante el **sp_configure** procedimiento almacenado del sistema. Para más información, consulte [Enabling CLR Integration](../clr-integration-enabling.md).  
   
@@ -142,7 +141,7 @@ EXTERNAL NAME helloworld.HelloWorldProc.HelloWorld
 -- EXTERNAL NAME helloworld.[MyNS.HelloWorldProc].HelloWorld  
 ```  
   
- Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el comando siguiente:  
+ Una vez creado el procedimiento, podrá ejecutarse como un procedimiento almacenado normal escrito en [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Ejecute el siguiente comando:  
   
 ```  
 DECLARE @J nchar(25)  

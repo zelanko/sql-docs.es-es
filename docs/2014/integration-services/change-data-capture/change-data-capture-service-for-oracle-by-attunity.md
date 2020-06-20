@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 22ec8a5c-9550-4d38-8a4a-485ec3e53ea8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3d15836fb551f5c7c0b04712dbcb0b783cc317a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771531"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923606"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Servicio de captura de datos modificados para Oracle de Attunity
   El servicio CDC para Oracle es un servicio de Windows que examina los registros de transacciones de Oracle y captura los cambios a las tablas de Oracle deseadas en tablas de cambios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Las tablas de cambios de SQL donde se almacenan los cambios capturados de Oracle son el mismo tipo de tablas de cambios empleadas en la característica de captura de datos modificados nativa de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que el uso de estos cambios sea tan sencillo como el de los cambios realizados a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -25,7 +24,7 @@ ms.locfileid: "62771531"
   
  La instalación del servicio CDC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para Oracle coloca la interfaz de usuario de configuración del servicio y el programa de servicio en la ubicación seleccionada. El servicio CDC para Oracle se configura de forma independiente mediante la Consola de configuración del servicio CDC de Oracle. Para obtener más información acerca de cómo configurar el servicio CDC de Oracle, vea [Servicio de captura de datos modificados para Oracle de Attunity (Ayuda de F1)](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- Para instalar el servicio CDC para Oracle, ejecute manualmente **AttunityOracleCdcService. msi** desde los medios de instalación de SQL Server. Los paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\ ** en los medios de instalación de SQL Server.  
+ Para instalar el servicio CDC para Oracle, ejecute manualmente **AttunityOracleCdcService.msi** desde los medios de instalación de SQL Server. Los paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle \\ ** en los medios de instalación de SQL Server.  
   
  El servicio CDC para Oracle se puede instalar en cualquier equipo compatible con Windows donde esté instalado [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client; no es necesario instalarlo en el mismo equipo donde está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
   

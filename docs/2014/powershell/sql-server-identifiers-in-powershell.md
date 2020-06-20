@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 651099b0-33b4-453a-a864-b067f21eb8b9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6193c9962c0e7402e041f9359966cc9ebb736995
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922854"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960132"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Identificadores de SQL Server en PowerShell
   El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell usa identificadores [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en las rutas de acceso de Windows PowerShell. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pueden contener caracteres que Windows PowerShell no admite en las rutas de acceso. Debe definir estos caracteres como caracteres de escape o usar una codificación especial para ellos al usar los identificadores en las rutas de acceso de Windows PowerShell.  

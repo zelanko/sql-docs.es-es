@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2a509206-a1b8-4b20-b0a2-ef680cef7bd8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76b651b3d9e5274c199b4c3aec43d90abcb8edbc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127157"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050665"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API de procedimiento almacenado extendido)
     
@@ -67,12 +66,12 @@ len
  *terminado*  
  Especifica la longitud real de los datos que se devolverán. Si el tipo de datos del parámetro es de una longitud constante y no permite valores null (por ejemplo, *srvbit* o *srvint1*), se omite *len*.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED si el valor del parámetro se ha establecido correctamente; de lo contrario, FAIL. Se devuelve FAIL cuando no hay ningún procedimiento almacenado remoto actual, cuando no hay ningún parámetro *n* de procedimiento almacenado remoto, cuando el parámetro no es un parámetro de devolución y cuando el argumento *len* no es legal.  
   
  Si *len* es 0, devuelve NULL. La única manera de devolver NULL al cliente es establecer *len* en 0.  
   
- Esta función devuelve los valores siguientes, si el parámetro es uno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] los tipos de datos de.  
+ Esta función devuelve los valores siguientes, si el parámetro es uno de los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] tipos de datos de.  
   
 |Nuevos tipos de datos|Devuelve la longitud de datos|  
 |--------------------|------------------------|  
@@ -83,12 +82,12 @@ len
 |`BIGVARBINARY`|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **CERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
 |NCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **CERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
 |NVARCHAR|**NULL:** *len* = 0, data = IG, RET = 1<br /><br /> **CERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
-|`NTEXT`|**NULL:** *len* = IG, data = IG, RET = 0<br /><br /> **CERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> 255: *Len* = IG, Data = IG, RET = 0 ** \<**|  
+|`NTEXT`|**NULL:** *len* = IG, data = IG, RET = 0<br /><br /> **CERO:** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> ** \< 255:** *Len* = IG, Data = IG, RET = 0|  
 |RET = valor devuelto de srv_paramset||  
 |IG = El valor se omitirá||  
 |válido = Cualquier puntero válido a datos||  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los parámetros contienen datos que se pasan entre los clientes y la aplicación con procedimientos almacenados remotos. El cliente puede especificar ciertos parámetros como parámetros de retorno. Estos parámetros de retorno pueden contener valores que la aplicación de servidor Servicios abiertos de datos devuelve al cliente. Usar parámetros de retorno es equivalente a pasar parámetros por referencia.  
   
  No puede establecer el valor devuelto para un parámetro que no se invocó como un parámetro de retorno. Puede usar **srv_paramstatus** para determinar cómo se ha invocado al parámetro.  

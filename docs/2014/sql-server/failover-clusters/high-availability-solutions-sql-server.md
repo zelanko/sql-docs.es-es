@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab592ba35ebc0b012a41aea2f05e27a76c0a7e0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63193045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065413"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Soluciones de alta disponibilidad (SQL Server)
   En este tema se presentan varias soluciones de alta disponibilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que mejoran la disponibilidad de los servidores o las bases de datos. Una solución de alta disponibilidad enmascara los efectos de un error de hardware o software y mantiene la disponibilidad de las aplicaciones a fin de minimizar el tiempo de inactividad que perciben los usuarios.  

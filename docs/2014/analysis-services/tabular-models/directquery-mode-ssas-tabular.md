@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceb58c211b52c1fbd184aafe316e5ea77d364529
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284873"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938936"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   El *modo DirectQuery*de Analysis Services le permite recuperar datos y crear informes de un modelo tabular recuperando los datos y agregándolos directamente desde un sistema de base de datos relacional. En este tema se presentan las diferencias entre los modelos tabulares estándar que residen únicamente en la memoria y los modelos tabulares que pueden realizar consultas en un origen de datos relacional, y se explica cómo crear e implementar un modelo para utilizar en el modo DirectQuery.  

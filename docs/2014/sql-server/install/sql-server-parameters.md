@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44a18bfe-e593-47a5-995f-382c01d3f618
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96d06ac85b37ef5d91a49381f97f81ee7a2d87e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091878"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011828"
 ---
 # <a name="sql-server-parameters"></a>Parámetros de SQL Server
   En esta página, establezca los parámetros que utilizará el analizador para el análisis de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Puede analizar una, varias o todas las bases de datos, analizar archivos de seguimiento que se crearon con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] y analizar archivos por lotes de SQL.  
@@ -43,7 +42,7 @@ ms.locfileid: "66091878"
  **Analizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivos por lotes**  
  Active esta casilla para analizar los archivos por lotes de [!INCLUDE[tsql](../../includes/tsql-md.md)] del sistema de archivos.  
   
- **Ruta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceso a los archivos por lotes**  
+ **Ruta de acceso a los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivos por lotes**  
  Puede analizar uno o más archivos por lotes. Puede ir a una ubicación y seleccionar varios archivos, o puede escribir varios nombres de archivo. Utilice la ruta completa de cada archivo, incluya el nombre de éstos y separe las entradas utilizando el carácter de canalización (|).  
   
  Si habilita **analizar archivos por lotes de SQL**, el botón **siguiente** estará deshabilitado hasta que escriba un nombre de ruta de acceso y un nombre de archivo.  

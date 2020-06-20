@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d2b40ae9c5eda9288f86527c2cbf973a4106e09
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bb6567924747d9325610c23d1f11de8ced1bc017
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716696"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059488"
 ---
 # <a name="examples-using-auto-mode"></a>Ejemplos: Usar el modo AUTO
   Los siguientes ejemplos ilustran el uso del modo AUTO. Muchas de estas consultas se especifican utilizando los documentos XML de instrucciones de fabricación de bicicletas almacenados en la columna Instructions de la tabla ProductModel en la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
@@ -265,7 +264,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   En el de resultado de la consulta, los caracteres especiales XML y URL de los nombres del elemento y atributo devueltos se codifican mediante el valor hexadecimal del carácter Unicode correspondiente. En el resultado anterior, el nombre de elemento <`Special Chars`> se devuelve como <`Special_x0020_Chars`>. El nombre del atributo <`Col#&2`> se devuelve como <`Col_x0023__x0026_2`>. Los caracteres especiales XML y URL están codificados.  
   
--   Si los valores de los elementos o atributos contienen alguna de las cinco entidades de carácter XML estándar (', "", \<, > y &), estos caracteres XML especiales se codifican siempre mediante la codificación de caracteres XML. En el resultado anterior, el valor `&` del valor de atributo <`Col1`> está codificado como `&`. Sin embargo, el carácter # permanece como #, porque es un carácter XML válido y no un carácter XML especial.  
+-   Si los valores de los elementos o atributos contienen alguna de las cinco entidades de carácter XML estándar (', "", \<, > y &), estos caracteres XML especiales se codifican siempre utilizando la codificación de caracteres XML. En el resultado anterior, el valor `&` del valor de atributo <`Col1`> está codificado como `&`. Sin embargo, el carácter # permanece como #, porque es un carácter XML válido y no un carácter XML especial.  
   
 -   Si los valores de los elementos o atributos contienen caracteres especiales de dirección URL que tienen un significado especial en la dirección URL, solo se codifican en el valor DBOBJECT de la dirección URL y únicamente cuando el carácter especial forma parte de un nombre de columna o tabla. En el resultado, el carácter `#` que forma parte del nombre de la tabla `Col#&2` se codifica como `_x0023_ in the DBOJBECT URL`.  
   

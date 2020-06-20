@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5bb2fbd3129475c5d712cd4d1fce8bbe29ea096f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07f6714f27f60afda91134034509ff439d92f071
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011908"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050480"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Mantener valores de identidad al importar datos de forma masiva (SQL Server)
-  Los archivos de datos que contienen valores de identidad pueden importarse de forma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]masiva en una instancia de. De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
+  Los archivos de datos que contienen valores de identidad pueden importarse de forma masiva en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, los valores de la columna de identidad del archivo de datos que se importa se omiten y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna automáticamente valores únicos. Los valores únicos se basan en los valores de inicialización y de incremento especificados durante la creación de la tabla.  
   
  Si el archivo de datos no contiene valores para la columna de identificadores de la tabla, use el archivo de formato para especificar que se debe omitir esta columna al importar los datos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignará automáticamente valores exclusivos para la columna.  
   
@@ -79,7 +78,7 @@ bcp AdventureWorks.HumanResources.Department format nul -n -x -f myDepartment-f-
 |Calificadores|Descripción|  
 |----------------|-----------------|  
 |**-E**|Especifica el valor o valores de identidad del archivo de datos que se van a usar en la columna de identidad.|  
-|**-T**|Especifica que la `bcp` utilidad se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a con una conexión de confianza.|  
+|**-T**|Especifica que la `bcp` utilidad se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza.|  
   
  En el símbolo del sistema de Windows, escriba:  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 01721e60e2f70462d606586225ab98329dad7daa
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 43f97832e4afc7565c472d3da58127ea679d85c3
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000611"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929610"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Opciones (Editor de texto: XML: página Pestañas)
   Este cuadro de diálogo permite cambiar el comportamiento del tabulador del Editor XML, que se usa para editar documentos XML. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Editor de texto** , expanda la subcarpeta **XML** y, a continuación, haga clic en **Tabulaciones**.  
@@ -26,7 +25,7 @@ ms.locfileid: "83000611"
  Las opciones del Editor XML también se pueden establecer en el cuadro de diálogo **Todos los idiomas** de la página General. Si usa los cuadros de diálogo **todos los lenguajes** para establecer diferentes opciones para los demás [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] editores, como los editores de DMX o MDX, debe restablecer las opciones del editor XML mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
- **Ninguno**  
+ **None**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
  **Bloquear**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a5bf48818e6e1d0b5d92fbd04602d09a72276593
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b3d34fc79dd7817e64b34b61083415477860ce97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997926"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Sintaxis de Transact-SQL compatible con IntelliSense
   En este tema se describen las instrucciones y los elementos de sintaxis de [!INCLUDE[tsql](../../includes/tsql-md.md)] que IntelliSense admite en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

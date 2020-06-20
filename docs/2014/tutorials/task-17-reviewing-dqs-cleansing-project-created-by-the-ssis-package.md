@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fc6cc258-72f5-4593-8edb-9f5bc66de9db
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60355e28327d7953d0782782e3ec55950314fe5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067093"
 ---
 # <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Tarea 17: Revisión del proyecto de limpieza de DQS creado por el paquete SSIS
   En esta tarea, abrirá el proyecto de DQS creado por el paquete SSIS en el Cliente DQS, revisará los resultados del proceso de limpieza y, opcionalmente, realizará una limpieza interactiva y exportará los resultados.  

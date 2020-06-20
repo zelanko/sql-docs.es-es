@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c2aa59b0806cc0ede01fa728636ab9d90479f14b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 141e2694b8f753129e809c615c8efd7f1adffa61
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898853"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969375"
 ---
 # <a name="expression-builder"></a>Generador de expresiones
   Use el cuadro de diálogo **Generador de expresiones** para crear y editar una expresión de propiedad, o bien para escribir la expresión que establece el valor de una variable con una interfaz gráfica de usuario que incluye variables y proporciona una referencia integrada para las funciones, conversiones de tipo y operadores del lenguaje de expresiones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  

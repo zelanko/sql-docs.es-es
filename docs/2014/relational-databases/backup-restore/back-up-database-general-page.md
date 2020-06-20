@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c315c827e1c8b206b2098009510bf6468bd7d74
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70155076"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959645"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
   Utilice la página **General** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar la configuración de una operación de copia de seguridad de la base de datos.  
@@ -25,7 +24,7 @@ ms.locfileid: "70155076"
  Para obtener más información sobre los conceptos básicos de copias de seguridad, vea [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) correspondiente si hace clic en el botón **Script** y luego selecciona un destino para el script.  
+>  Cuando especifica una tarea de copia de seguridad con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede generar el script [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) script by clicking the **Script** button and then selecting a destination for the script.  
   
  **Para utilizar SQL Server Management Studio a fin de crear una copia de seguridad**  
   
@@ -113,17 +112,17 @@ ms.locfileid: "70155076"
 > [!IMPORTANT]  
 >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo en el en el tema [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) para crear una credencial mediante TRANSACT-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
- **Contenedor de Azure Storage**  
+ **Contenedor de almacenamiento de Windows Azure**  
  Especifique el nombre del contenedor de Azure Storage.  
   
  **Prefijo URL:**  
- Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<la cuenta de almacenamiento>. BLOB.Core.Windows.net**.  
+ Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<storage account> . BLOB.Core.Windows.net**.  
   
 ## <a name="see-also"></a>Consulte también  
- [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Definir un dispositivo lógico de copia de seguridad para un archivo de disco &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definir un dispositivo lógico de copia de seguridad para una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

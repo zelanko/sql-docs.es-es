@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd715d6b-f873-41d4-aa10-57b7098b61cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56dee0d04c713163f74c391fe5a482092c6c30e7
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: e383b5a33cc27b1f2e8a6cf7ec02938a7c5f8902
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929976"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Opciones (Editor de texto - Todos los idiomas - Página Pestañas)
   Utilice este cuadro de diálogo para establecer el comportamiento de tabulación en los cinco editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para mostrar estas opciones, haga clic en **Opciones** en el menú **Herramientas** . Seleccione la carpeta **Editor de texto**, expanda la carpeta **Todos los lenguajes** y haga clic en **Tabulaciones**.  
@@ -29,7 +28,7 @@ ms.locfileid: "83000742"
  El mensaje "Los valores de la sangría (o del tabulador) para formatos de texto individuales están en conflicto entre sí" aparece si se han seleccionado diferentes valores para determinados editores. Por ejemplo, este mensaje aparece si la opción **Bloque** está seleccionada en **Texto simple**, pero se ha seleccionado **Ninguna** en **XML**.  
   
 ## <a name="indenting"></a>Sangrías  
- **Ninguno**  
+ **None**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
  **Bloquear**  

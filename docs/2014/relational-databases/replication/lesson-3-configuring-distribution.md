@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f248984a-0b59-4c2f-a56d-31f8dafe72b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0a648902b97a8224b9032c24ee8c7715a4030777
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 28df67dad52bcd11a18fc5deb42a6725700dde5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000434"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065951"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
   En esta lección configurará la distribución en el publicador y establecerá los permisos requeridos en las bases de datos de publicación y distribución. Si ya ha configurado el distribuidor, debe deshabilitar la publicación y distribución antes de iniciar esta lección. No lo haga si debe mantener una topología de replicación existente.  
@@ -35,11 +34,11 @@ ms.locfileid: "83000434"
   
      Se iniciará el Asistente para configurar la distribución.  
   
-3.  En la página **distribuidor** , seleccione **'**_ \< ServerName>_ **' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**y, a continuación, haga clic en **siguiente**.  
+3.  En la página **distribuidor** , seleccione **'** _\<ServerName>_ **' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**y, a continuación, haga clic en **siguiente**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Escriba **\\\\** \< _Machine_Name>_ **\repldata** en el cuadro de texto **carpeta de instantáneas** , donde \< *Machine_Name>* es el nombre del publicador y, a continuación, haga clic en **siguiente**.  
+5.  Escriba **\\\\** \<_Machine_Name> _**\repldata** en el cuadro de texto **carpeta de instantáneas** , donde \<*Machine_Name> * es el nombre del publicador y, a continuación, haga clic en **siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "83000434"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , expanda **seguridad**, haga clic con el botón secundario en **inicios de sesión**y seleccione **nuevo inicio de sesión**.  
   
-2.  En la página **General** , haga clic en **buscar**, escriba \< _Machine_Name>_ **\ repl_snapshot** en el cuadro **escriba el nombre del objeto que desea seleccionar** , donde \< *Machine_Name>* es el nombre del servidor del publicador local, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
+2.  En la página **General** , haga clic en **Buscar**, escriba \<_Machine_Name> _**\ repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar** , donde \<*Machine_Name> * es el nombre del servidor del publicador local, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la página **asignación de usuarios** , en la lista **usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

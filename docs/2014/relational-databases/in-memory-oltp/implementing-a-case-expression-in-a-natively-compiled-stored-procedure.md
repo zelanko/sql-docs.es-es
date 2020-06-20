@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2f82db01-da7e-4a7d-8bc0-48b245e6f768
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c76aef87e8d9ed968552b7a46e496472dfaf32a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b8bcd68c0a1b3b754319cc73988790c6d63edb9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050173"
 ---
 # <a name="implementing-a-case-statement"></a>Implementar una instrucción CASE
   No se admiten instrucciones CASE en procedimientos almacenados compilados de forma nativa. En el ejemplo siguiente se muestra una forma de implementar la funcionalidad de una instrucción CASE en un procedimiento almacenado compilado de forma nativa.  
@@ -75,6 +74,6 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Problemas de migración para los procedimientos almacenados compilados de forma nativa](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+ [Construcciones de Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

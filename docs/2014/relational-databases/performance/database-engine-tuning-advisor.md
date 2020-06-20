@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0145f973a2290d6fbe0c93139d42cd2298fa3cbb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151201"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066912"
 ---
 # <a name="database-engine-tuning-advisor"></a>Database Engine Tuning Advisor
   El Asistente para la optimización de motor de base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (DTA) analiza las bases de datos y hace recomendaciones que puede usar para optimizar el rendimiento de las consultas. Puede usar el Asistente para la optimización de motor de base de datos a fin de seleccionar y crear un conjunto óptimo de índices, vistas indizadas o particiones de tabla sin necesidad de conocer detalladamente la estructura de la base de datos ni el funcionamiento interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Con DTA, puede realizar las siguientes tareas.  

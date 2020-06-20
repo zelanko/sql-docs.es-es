@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 721953c31a44a2ea02f480c9830e6347adfd4eb3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058009"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968315"
 ---
 # <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
   El Asistente para la implementación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] implementa proyectos en el catálogo de SSISDB en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el modelo de implementación de proyectos.  
   
- Para iniciar el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Asistente para la implementación desde un proyecto [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]abierto en, seleccione **implementar** en el menú **proyecto** . Para iniciar el asistente en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], expanda el nodo **catálogos** > de Integration Services**SSISDB** en explorador de objetos, haga clic con el botón secundario en la carpeta **proyectos** y, a continuación, haga clic en **implementar proyecto**.  
+ Para iniciar el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Asistente para la implementación desde un proyecto abierto en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] , seleccione **implementar** en el menú **proyecto** . Para iniciar el asistente en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , expanda el nodo **catálogos de Integration Services**  >  **SSISDB** en explorador de objetos, haga clic con el botón secundario en la carpeta **proyectos** y, a continuación, haga clic en **implementar proyecto**.  
   
  El asistente continua con los siguientes cuatro pasos. Haga clic en **siguiente** para ir al paso siguiente o **anterior** para volver al paso anterior.  
   
@@ -35,7 +34,7 @@ ms.locfileid: "66058009"
 4.  **Deploy/Results** : implementa el proyecto y muestra los resultados.  
   
 ## <a name="select-source"></a>Selección del origen  
- Para implementar un archivo de implementación de proyecto que ha creado, seleccione **archivo de implementación de proyecto** y escriba la ruta de acceso al archivo. ISPAC o haga clic en **examinar** para buscarlo en la carpeta del [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] proyecto. Para implementar un proyecto que resida en el catálogo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Catálogo de Integration Services**y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo.  
+ Para implementar un archivo de implementación de proyecto que ha creado, seleccione **archivo de implementación de proyecto** y escriba la ruta de acceso al archivo. ISPAC o haga clic en **examinar** para buscarlo en la [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] carpeta del proyecto. Para implementar un proyecto que resida en el catálogo de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Catálogo de Integration Services**y especifique el nombre del servidor y la ruta de acceso al proyecto en el catálogo.  
   
  Si inicia el asistente en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], posteriormente, de forma predeterminada el asistente selecciona el proyecto abierto como origen y omite este paso. Para volver a este paso y seleccionar un origen diferente, haga clic en **anterior** o en **Seleccionar origen** en el panel izquierdo.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66058009"
 ## <a name="deployresults"></a>Implementar/Resultados  
  Al hacer clic en **implementar** en la página **revisar** , el proyecto se implementa y la página **resultados** muestra si cada acción se ha realizado correctamente o no. Si la acción no se realiza correctamente, haga clic en **Error** en la columna **Resultado** para que aparezca una explicación del error. Haga clic en **Guardar Informe** para guardar los resultados en un archivo XML.  
   
- Haz clic en **Cerrar** para salir del asistente.  
+ Haga clic en **Cerrar** para salir del asistente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Implementación de proyectos en Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md)   

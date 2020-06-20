@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3104514d-b404-47c9-b6d7-928106384874
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0825b86cabf57df552063335a0870461cb8a5658
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 36246adc49870e9418765e37511e6d94cafe5c67
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127413"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050762"
 ---
 # <a name="srv_paramdata-extended-stored-procedure-api"></a>srv_paramdata (API de procedimiento almacenado extendido)
     
@@ -55,7 +54,7 @@ n
  *n*  
  Es el número del parámetro. El primer parámetro es número 1.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  Un puntero al valor del parámetro. Si el parámetro *n* es NULL, no hay ningún parámetro de *n* o no hay ningún procedimiento almacenado remoto, devuelve NULL. Si el valor del parámetro es una cadena, no podría terminar en NULL. Use **srv_paramlen** para determinar la longitud de la cadena.  
   
  Esta función devuelve los valores siguientes, si el parámetro es uno de los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de. Los datos de puntero incluyen si el puntero para el tipo de datos es válido (VP), NULL o no aplicable (N/A) y el contenido al que señalan los datos.  
@@ -69,11 +68,11 @@ n
 |BIGVARBINARY|**NULL:** NULL, N/A<br /><br /> **ZERO:** VP, 0x00<br /><br /> **>=255:** VP, 255 bytes<br /><br /> **<255:** VP, datos reales|  
 |NCHAR|**NULL:** NULL, N/A<br /><br /> **CERO:** VP, 255 espacios<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, datos reales + relleno (hasta 255)|  
 |NVARCHAR|**NULL:** NULL, N/A<br /><br /> **CERO:** VP, NULL<br /><br /> **>=255:** VP, 255 caracteres<br /><br /> **<255:** VP, datos reales|  
-|NTEXT|**NULL:** N/A<br /><br /> **CERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \<255:** N/A|  
+|NTEXT|**NULL:** N/A<br /><br /> **CERO:** N/A<br /><br /> **>= 255:** N/A<br /><br /> ** \< 255:** N/A|  
   
  \*   los datos no terminan en NULL; no se produce ninguna advertencia de truncamiento en los datos >255 caracteres.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si conoce el nombre de parámetro, puede usar **srv_paramnumber** para obtener el número de parámetro. Para determinar si un parámetro es NULL, use **srv_paramlen**.  
   
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Si se produce un error, se sigue llamando al controlador SRV_RPC, pero aparece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  

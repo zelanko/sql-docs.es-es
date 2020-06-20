@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: e9ddec585f530cf57481c56477d5be4aeaedb44a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f846e74e0afd89c6bb10a4aa9a23a6420b6a613a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957129"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060243"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] usa claves de cifrado para proteger los datos, las credenciales y la información de conexión que se almacena en una base de datos servidor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos tipos de claves: *simétricas* y *asimétricas*. Las claves simétricas utilizan la misma contraseña para cifrar y descifrar los datos. Las claves asimétricas usan una contraseña para cifrar los datos (denominada clave *pública* ) y otra para descifrar los datos (denominada clave *privada* ).  

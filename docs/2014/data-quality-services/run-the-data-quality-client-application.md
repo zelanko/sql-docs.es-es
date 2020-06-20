@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbb790fc5067d1544cd4b3d9d6e90b34be8e2b77
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18054a5e6a2393a2a16baf81caa44a72489e7fc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937436"
 ---
 # <a name="run-the-data-quality-client-application"></a>Ejecutar la aplicación Data Quality Client
   Puede utilizar [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ejecutando [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] e iniciando sesión en un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
@@ -40,7 +39,7 @@ ms.locfileid: "65484140"
   
 2.  En el cuadro de diálogo **Conectar al servidor** :  
   
-    1.  Especifique el servidor al que desea conectar la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Seleccione **(LOCAL)** para conectarse con [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] en el equipo local. También puede hacer clic en la flecha hacia abajo y seleccionar ** \<buscar más servidores en la red>** para conectarse a un servidor diferente (o conectarse al servidor local por nombre). Se mostrará el cuadro de diálogo **Buscar servidores** . Puede seleccionar un servidor en la pestaña **Servidores locales** o en la pestaña **Servidores de redes** .  
+    1.  Especifique el servidor al que desea conectar la aplicación [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Seleccione **(LOCAL)** para conectarse con [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] en el equipo local. También puede hacer clic en la flecha abajo y seleccionar **\<Browse network for more servers>** para conectarse a un servidor diferente (o para conectarse al servidor local por nombre). Se mostrará el cuadro de diálogo **Buscar servidores** . Puede seleccionar un servidor en la pestaña **Servidores locales** o en la pestaña **Servidores de redes** .  
   
     2.  Si quiere cifrar la transferencia de datos entre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], haga clic en **Opciones** y, después, active la casilla **Cifrar conexión**.  
   

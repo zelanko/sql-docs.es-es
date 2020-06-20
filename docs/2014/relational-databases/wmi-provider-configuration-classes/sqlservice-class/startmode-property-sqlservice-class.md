@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1986e21af8d9c6334d8ff9b5a374d46d6c25dda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013683"
 ---
 # <a name="startmode-property-sqlservice-class"></a>Propiedad StartMode (clase SqlService)
   Obtiene el modo de inicio del servicio.  
@@ -48,7 +47,7 @@ object
  Arranque  
  Valor = 0. Servicio iniciado por el cargador del sistema operativo. Esta opción solo es válida para los servicios del controlador.  
   
- System  
+ Sistema  
  Valor = 1. Servicio iniciado por el método `IoInitSystem`. Esta opción solo es válida para los servicios del controlador.  
   
  Automático  
@@ -57,10 +56,10 @@ object
  Manual  
  Valor = 3. Servicio que Computer Manager iniciará cuando un proceso llame al método `StartService`.  
   
- Deshabilitada  
+ Disabled  
  Valor = 4. El servicio no se puede iniciar.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

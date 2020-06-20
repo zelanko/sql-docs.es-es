@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 663de184c811291c4b583ddbaf2fb6862097c54f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc0ecb449af64b88cf3ded032c78c2e399dd4234
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882180"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060369"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Establecer el período de expiración para las suscripciones
   En este tema se describe cómo establecer el período de expiración para las suscripciones en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El período de expiración de las suscripciones determina el tiempo que debe transcurrir antes de que una suscripción expire y se quite. Para más información, consulte [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md).  
@@ -50,11 +49,11 @@ ms.locfileid: "73882180"
     -   Es posible especificar que las suscripciones no expiren nunca, pero se recomienda encarecidamente no utilizar ese valor, ya que los metadatos no se podrían limpiar.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Establezca el período de expiración de las suscripciones en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Establezca el período de expiración para las suscripciones en la página **General** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Para establecer el período de expiración para las suscripciones  
   
-1.  En la sección **Expiración de la suscripción** de la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , especifique si las suscripciones deben caducar.  
+1.  En la sección **expiración** de la suscripción de la página **General** del cuadro de diálogo Propiedades de la **publicación \<Publication> :** , especifique si las suscripciones deben expirar.  
   
 2.  Si deben expirar, especifique un período de expiración.  
   

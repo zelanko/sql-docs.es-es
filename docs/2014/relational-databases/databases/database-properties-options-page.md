@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4420aaf7b11eccecf0b04bb67a55386215f1fc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e856e820719054ad1f01fe0e0306aa278d62ec2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917093"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970145"
 ---
 # <a name="database-properties-options-page"></a>Propiedades de la base de datos (página Opciones)
   Utilice esta página para ver o modificar opciones de la base de datos seleccionada. Para obtener más información acerca de las opciones disponibles en esta página, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
@@ -55,11 +54,11 @@ ms.locfileid: "62917093"
  Especifique si la base de datos actualiza automáticamente las estadísticas de optimización no actualizadas. Los valores posibles son `True` y `False`. Cuando es `True`, las estadísticas desusadas que precise una consulta para su optimización se generan automáticamente durante la optimización. Para obtener más información, vea [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
  **Actualizar estadísticas automática y asincrónicamente**  
- Cuando `True`es, las consultas que inician una actualización automática de estadísticas no actualizadas no esperarán a que las estadísticas se actualicen antes de la compilación. Las consultas posteriores utilizan las estadísticas actualizadas si están disponibles.  
+ Cuando `True` es, las consultas que inician una actualización automática de estadísticas no actualizadas no esperarán a que las estadísticas se actualicen antes de la compilación. Las consultas posteriores utilizan las estadísticas actualizadas si están disponibles.  
   
- Cuando `False`es, las consultas que inician una actualización automática de las estadísticas no actualizadas, esperan hasta que se puedan usar las estadísticas actualizadas en el plan de optimización de consultas.  
+ Cuando `False` es, las consultas que inician una actualización automática de las estadísticas no actualizadas, esperan hasta que se puedan usar las estadísticas actualizadas en el plan de optimización de consultas.  
   
- Establecer esta opción en `True` no tiene ningún efecto a menos que **actualizar estadísticas automáticamente** también `True`se establezca en.  
+ Establecer esta opción en `True` no tiene ningún efecto a menos que **actualizar estadísticas automáticamente** también se establezca en `True` .  
   
 ## <a name="containment"></a>Containment  
  En las bases de datos independientes, algunos valores que se suelen configurar en el nivel de servidor se pueden configurar en el nivel de base de datos.  
@@ -86,7 +85,7 @@ ms.locfileid: "62917093"
  Especifique si los cursores se cierran tras confirmar la transacción que abre el cursor. Los valores posibles son `True` y `False`. Cuando es `True`, se cierran los cursores que estuvieran abiertos al confirmar o revertir una transacción. Cuando es `False`, estos cursores se mantienen abiertos al confirmarse una transacción. Cuando es `False`, si se revierte una transacción, se cierran todos los cursores, excepto los definidos como INSENSITIVE o STATIC. Para obtener más información, vea [SET CURSOR_CLOSE_ON_COMMIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-cursor-close-on-commit-transact-sql).  
   
  **Cursor predeterminado**  
- Especifica el comportamiento predeterminado del cursor. Cuando es `True`, el valor predeterminado de las declaraciones de cursor es LOCAL. Cuando `False`es [!INCLUDE[tsql](../../includes/tsql-md.md)] , el valor predeterminado de los cursores es global.  
+ Especifica el comportamiento predeterminado del cursor. Cuando es `True`, el valor predeterminado de las declaraciones de cursor es LOCAL. Cuando `False` es, el [!INCLUDE[tsql](../../includes/tsql-md.md)] valor predeterminado de los cursores es global.  
   
 ## <a name="filestream"></a>FILESTREAM  
  **Nombre de directorio de FILESTREAM**  
@@ -100,48 +99,48 @@ ms.locfileid: "62917093"
  Permite valores NULL para todas las columnas o los tipos de datos definidos por el usuario que no se definan explícitamente como `NOT NULL` durante una instrucción `CREATE TABLE` o `ALTER TABLE` (el estado predeterminado). Para obtener más información, vea [SET ANSI_NULL_DFLT_ON &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-on-transact-sql) y [SET ANSI_NULL_DFLT_OFF &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-null-dflt-off-transact-sql).  
   
  **Valores NULL ANSI habilitados**  
- Especifica el comportamiento de los operadores de comparación Es igual a (`=`) y No es igual a (`<>`) cuando se usan con valores NULL. Los valores posibles `True` son (ON) `False` y (OFF). Cuando es `True`, todas las comparaciones con un valor NULL se evalúan como UNKNOWN. Cuando `False`es, las comparaciones de valores no Unicode con un valor null `True` se evalúan como si ambos valores son NULL. Para obtener más información, vea [SET ANSI_NULLS &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
+ Especifica el comportamiento de los operadores de comparación Es igual a (`=`) y No es igual a (`<>`) cuando se usan con valores NULL. Los valores posibles son `True` (ON) y `False` (OFF). Cuando es `True`, todas las comparaciones con un valor NULL se evalúan como UNKNOWN. Cuando es `False` , las comparaciones de valores no Unicode con un valor NULL se evalúan como `True` si ambos valores son NULL. Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).  
   
  **Relleno ANSI habilitado**  
- Especifique si el relleno ANSI está activado o desactivado. Los valores permitidos son `True` (on `False` ) y (OFF). Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
+ Especifique si el relleno ANSI está activado o desactivado. Los valores permitidos son `True` (ON) y `False` (OFF). Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Advertencias ANSI habilitadas**  
- Especifique el comportamiento estándar de ISO para diversas condiciones de error. Cuando `True`es, se genera un mensaje de advertencia si aparecen valores NULL en funciones de agregado (como SUM, AVG, Max, min, StDev, STDEVP, var, VarP o Count). Cuando `False`es, no se emite ninguna advertencia. Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
+ Especifique el comportamiento estándar de ISO para diversas condiciones de error. Cuando `True` es, se genera un mensaje de advertencia si aparecen valores NULL en funciones de agregado (como SUM, AVG, Max, min, StDev, STDEVP, var, VarP o Count). Cuando `False` es, no se emite ninguna advertencia. Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).  
   
  **Anulación aritmética habilitada**  
  Especifique si la opción de base de datos para la anulación aritmética está habilitada o deshabilitada. Los valores posibles son `True` y `False`. Cuando es `True`, un error de desbordamiento o de división por cero detendrá la consulta o el proceso por lotes. Si el error se produce en una transacción, esta se revierte. Cuando es `False`, aparece un mensaje de advertencia, pero la consulta, el proceso por lotes o la transacción continúa como si no se hubiera producido ningún error. Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).  
   
  **Concatenar valores NULL produce NULL**  
- Especifique el comportamiento cuando se concatenan valores NULL. Cuando el valor de la `True`propiedad `string` es, + null devuelve NULL. Cuando `False`es, el resultado `string`es. Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
+ Especifique el comportamiento cuando se concatenan valores NULL. Cuando el valor de la propiedad es `True` , `string` + NULL devuelve NULL. Cuando `False` es, el resultado es `string` . Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).  
   
  **Encadenamiento de propiedad entre bases de datos habilitado**  
- Este valor de solo lectura indica si se ha habilitado el encadenamiento de propiedad entre bases de datos. Cuando `True`es, la base de datos puede ser el origen o el destino de una cadena de propiedad entre bases de datos. Utilice la instrucción ALTER DATABASE para establecer esta propiedad.  
+ Este valor de solo lectura indica si se ha habilitado el encadenamiento de propiedad entre bases de datos. Cuando `True` es, la base de datos puede ser el origen o el destino de una cadena de propiedad entre bases de datos. Utilice la instrucción ALTER DATABASE para establecer esta propiedad.  
   
  **Optimización de correlación de fechas habilitada**  
- Cuando `True`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene las estadísticas de correlación entre dos tablas cualesquiera de la base de datos que están vinculadas mediante una `datetime` restricción FOREIGN KEY y tienen columnas.  
+ Cuando `True` , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mantiene las estadísticas de correlación entre dos tablas cualesquiera de la base de datos que están vinculadas mediante una restricción FOREIGN KEY y tienen `datetime` columnas.  
   
- Cuando `False`es, no se mantienen las estadísticas de correlación.  
+ Cuando `False` es, no se mantienen las estadísticas de correlación.  
   
  **Anulación exacta numérica**  
- Especifique cómo controla la base de datos los errores de redondeo. Los valores posibles son `True` y `False`. Cuando es `True`, se genera un error si se produce una pérdida de precisión en una expresión. Cuando `False`es, las pérdidas de precisión no generan mensajes de error y el resultado se redondea a la precisión de la columna o variable que almacena el resultado. Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
+ Especifique cómo controla la base de datos los errores de redondeo. Los valores posibles son `True` y `False`. Cuando es `True`, se genera un error si se produce una pérdida de precisión en una expresión. Cuando `False` es, las pérdidas de precisión no generan mensajes de error y el resultado se redondea a la precisión de la columna o variable que almacena el resultado. Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).  
   
  **Parametrización**  
- Cuando es **SIMPLE**, las consultas se parametrizan en función del comportamiento predeterminado de la base de datos. Cuando **FORCED**se fuerza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , parametriza todas las consultas de la base de datos.  
+ Cuando es **SIMPLE**, las consultas se parametrizan en función del comportamiento predeterminado de la base de datos. Cuando se **fuerza**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametriza todas las consultas de la base de datos.  
   
  **Identificadores entre comillas habilitados**  
  Especifique si se pueden usar palabras clave de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como identificadores (un nombre de objeto o variable) si están delimitadas por comillas. Los valores posibles son `True` y `False`. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Desencadenadores recursivos habilitados**  
- Especifique si los desencadenadores pueden activar otros desencadenadores. Los valores posibles son `True` y `False`. Cuando se establece `True`en, se habilita la activación recursiva de desencadenadores. Cuando se establece `False`en, solo se impide la recursividad directa. Para deshabilitar la repetición indirecta, establezca la opción nested triggers del servidor en 0 con sp_configure. Para obtener más información, vea [Crear desencadenadores anidado](../triggers/create-nested-triggers.md).  
+ Especifique si los desencadenadores pueden activar otros desencadenadores. Los valores posibles son `True` y `False`. Cuando se establece en `True` , se habilita la activación recursiva de desencadenadores. Cuando se establece en `False` , solo se impide la recursividad directa. Para deshabilitar la repetición indirecta, establezca la opción nested triggers del servidor en 0 con sp_configure. Para obtener más información, vea [Crear desencadenadores anidado](../triggers/create-nested-triggers.md).  
   
  `Trustworthy`  
- Cuando se `True`muestra, esta opción de solo lectura indica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite el acceso a los recursos fuera de la base de datos en un contexto de suplantación establecido en la base de datos. Se pueden establecer contextos de suplantación dentro de la base de datos mediante la instrucción de usuario EXECUTE AS o la cláusula EXECUTE AS en módulos de base de datos.  
+ Cuando `True` se muestra, esta opción de solo lectura indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite el acceso a los recursos fuera de la base de datos en un contexto de suplantación establecido en la base de datos. Se pueden establecer contextos de suplantación dentro de la base de datos mediante la instrucción de usuario EXECUTE AS o la cláusula EXECUTE AS en módulos de base de datos.  
   
  Para obtener acceso, el propietario de la base de datos también debe disponer del permiso AUTHENTICATE SERVER en el nivel de servidor.  
   
  Esta propiedad también permite la creación y ejecución de ensamblados con acceso externo y no seguros dentro de la base de datos. Además de establecer esta propiedad en `True`, el propietario de la base de datos debe tener los permisos EXTERNAL ACCESS ASSEMBLY o UNSAFE ASSEMBLY en el nivel de servidor.  
   
- De forma predeterminada, todas las bases de datos de usuario y todas las bases de datos del sistema (con la excepción de **msdb**) `False`tienen esta propiedad establecida en. No se puede cambiar el valor de las bases de datos **Model** y **tempdb** .  
+ De forma predeterminada, todas las bases de datos de usuario y todas las bases de datos del sistema (con la excepción de **msdb**) tienen esta propiedad establecida en `False` . No se puede cambiar el valor de las bases de datos **Model** y **tempdb** .  
   
  TRUSTWORTHY se establece en `False` siempre que la base de datos se conecte al servidor.  
   
@@ -150,7 +149,7 @@ ms.locfileid: "62917093"
  Para establecer esta propiedad, utilice la instrucción ALTER DATABASE.  
   
  **Formato de almacenamiento VarDecimal habilitado**  
- Esta opción es de solo lectura a partir [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de y versiones posteriores, todas las bases de datos están habilitadas para el formato de almacenamiento vardecimal. Esta opción usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
+ Esta opción es de solo lectura a partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, todas las bases de datos están habilitadas para el formato de almacenamiento vardecimal. Esta opción usa [sp_db_vardecimal_storage_format](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
 ## <a name="recovery"></a>Recuperación  
  **Comprobación de páginas**  
@@ -182,7 +181,7 @@ ms.locfileid: "62917093"
      Solo los miembros de los roles db_owner, dbcreator o sysadmin pueden utilizar la base de datos.  
   
  **Cifrado habilitado**  
- Cuando `True`es, esta base de datos está habilitada para el cifrado de base de datos. Se requiere el uso de una Clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
+ Cuando `True` es, esta base de datos está habilitada para el cifrado de base de datos. Se requiere el uso de una Clave de cifrado de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   

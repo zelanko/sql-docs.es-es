@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: eaa80c71dcc58cbd780a664d2466a3bf3cec2a4c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22cb7371a0215989d2759ddfb2c84f51ba5c3c31
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011539"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997583"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Configurar y administrar separadores de palabras y lematizadores para la búsqueda
   Los separadores de palabras y lematizadores realizan un análisis lingüístico de todos los datos indizados de texto completo. El análisis lingüístico incluye la búsqueda de los límites de las palabras (separación de palabras) y la conjugación de los verbos (lematización). Los separadores de palabras y lematizadores son específicos del idioma, y las reglas para el análisis lingüístico difieren en los diferentes idiomas. Para un idioma determinado, un *separador de palabras* identifica las palabras individuales determinando los límites de palabras en función de las reglas léxicas de ese idioma. Cada palabra (también conocida como *token*) se inserta en el índice de texto completo usando una representación comprimida para reducir su tamaño. El *lematizador* genera las formas de inflexión de una palabra determinada en función de las reglas de ese idioma (por ejemplo, "corriendo", "corrió" y "corredor" son varias formas de la palabra "carrera").  
@@ -40,7 +39,7 @@ ms.locfileid: "66011539"
  Si agrega, quita o modifica un separador de palabras, necesita actualizar la lista de identificadores de configuración regional (LCID) de Microsoft Windows que se admiten para la indización y las consultas de texto completo. Para obtener más información, consulte [ver o cambiar los filtros registrados y separadores de palabras](view-or-change-registered-filters-and-word-breakers.md).  
   
 ##  <a name="setting-the-default-full-text-language-option"></a><a name="default"></a>Establecer la opción de idioma de texto completo predeterminado  
- En el caso de una versión [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , `default full-text language` el programa de instalación de establece la opción en el idioma del servidor si existe una coincidencia adecuada. En las versiones no traducidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción `default full-text language` es el inglés.  
+ En el caso de una versión localizada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el programa de instalación de establece la `default full-text language` opción en el idioma del servidor si existe una coincidencia adecuada. En las versiones no traducidas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la opción `default full-text language` es el inglés.  
   
  Al crear o modificar un índice de texto completo, puede especificar un idioma diferente para cada columna indizada de texto completo. Si no se especifica ningún idioma para una columna, el valor predeterminado es el de la opción de configuración `default full-text language`.  
   

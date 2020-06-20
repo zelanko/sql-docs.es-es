@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8fc0f770d8763ccb330b3c7588a97604d876e8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04d332e2c71e69b9a3e7d1d1b0c60eb9aabaf2e5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960156"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
   El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para Windows PowerShell expone la jerarquía de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en rutas de acceso similares a las rutas de acceso al sistema de archivos. Puede usar las rutas de acceso con el fin de buscar un objeto y, luego, usar los métodos de los modelos de Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) para realizar acciones en los objetos.  
@@ -35,7 +34,7 @@ ms.locfileid: "62762847"
   
  Cada proveedor de Windows PowerShell implementa una o varias unidades. Cada unidad es el nodo raíz de una jerarquía de objetos relacionados. El proveedor de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementa un SQLSERVER: unidad de disco. El proveedor también define un conjunto de carpetas principales para el SQLSERVER: unidad de disco. Cada carpeta y sus subcarpetas representan el conjunto de objetos a los que se puede tener acceso usando un modelo de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cuando se centra en una subcarpeta de una ruta de acceso que se inicia con una de estas carpetas principales, se pueden usar los métodos del modelo de objetos asociado para realizar las acciones en el objeto representado por el nodo. En la tabla siguiente se muestran las carpetas de Windows PowerShell que implementa el proveedor [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] .  
   
-|Carpeta|Espacio de nombres del modelo de objetos de SQL Server|de la empresa|  
+|Carpeta|Espacio de nombres del modelo de objetos de SQL Server|Objetos|  
 |------------|---------------------------------------|-------------|  
 |SQLSERVER:\SQL|<xref:Microsoft.SqlServer.Management.Smo><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Agent><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Broker><br /><br /> <xref:Microsoft.SqlServer.Management.Smo.Mail>|Objetos de base de datos, como tablas, vistas y procedimientos almacenados.|  
 |SQLSERVER:\SQLPolicy|<xref:Microsoft.SqlServer.Management.Dmf><br /><br /> <xref:Microsoft.SqlServer.Management.Facets>|Objetos de administración basada en directivas, como directivas y facetas.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62762847"
 |SQLSERVER:\IntegrationServices|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como proyectos, paquetes, y entornos.|  
 |SQLSERVER: \ SQLAS|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objetos como cubos, agregaciones, y dimensiones.|  
   
- Por ejemplo, puede usar la carpeta SQLSERVER:\SQL para iniciar rutas de acceso que puedan representar cualquier objeto admitido por el modelo de objetos SMO. La parte inicial de una ruta de acceso de SQLServer: \ SQL es SQLServer\\: \ SQL*NombreDeEquipo*\\*nombreDeInstancia*. Los nodos que siguen al nombre de instancia alternan entre colecciones de objetos (como *Bases de datos* o *Vistas*) y nombres de objeto (como AdventureWorks2012). Los esquemas no se representan como clases de objeto. Cuando se especifica el nodo para un objeto de nivel superior en un esquema, como una tabla o una vista, se debe especificar el nombre de objeto en el formato *nombreDeEsquema.nombreDeObjeto*.  
+ Por ejemplo, puede usar la carpeta SQLSERVER:\SQL para iniciar rutas de acceso que puedan representar cualquier objeto admitido por el modelo de objetos SMO. La parte inicial de una ruta de acceso de SQLServer: \ SQL es SQLServer: \ SQL \\ *NombreDeEquipo* \\ *nombreDeInstancia*. Los nodos que siguen al nombre de instancia alternan entre colecciones de objetos (como *Bases de datos* o *Vistas*) y nombres de objeto (como AdventureWorks2012). Los esquemas no se representan como clases de objeto. Cuando se especifica el nodo para un objeto de nivel superior en un esquema, como una tabla o una vista, se debe especificar el nombre de objeto en el formato *nombreDeEsquema.nombreDeObjeto*.  
   
  Esta es la ruta de acceso de la tabla Vendor en el esquema Purchasing de la base de datos AdventureWorks2012 en una instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo local:  
   
@@ -58,7 +57,7 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
   
  Los nodos de colección de una ruta de acceso se asocian con una clase de colecciones del modelo de objetos asociado. Los nodos de nombre de objeto se asocian con una clase de objetos del modelo de objetos asociado, como en la tabla siguiente.  
   
-|Path|Clase SMO|  
+|Ruta|Clase SMO|  
 |----------|---------------|  
 |SQLSERVER:\SQL\MiPC\DEFAULT\Databases|<xref:Microsoft.SqlServer.Management.Smo.DatabaseCollection>|  
 |SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012|<xref:Microsoft.SqlServer.Management.Smo.Database>|  

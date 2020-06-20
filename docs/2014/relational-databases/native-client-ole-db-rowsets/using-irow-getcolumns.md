@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1f5d2e03-e6fe-4ea1-b71d-55d02b5d59ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80647fc0091d2d2c632b164737abe89d7203b4b3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f323dda790946565bc0dbd63c9e1f9d17ac7494b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704657"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039092"
 ---
 # <a name="using-irowgetcolumns"></a>Usar IRow::GetColumns
   La implementación de **IRow** permite el acceso secuencial a las columnas de solo avance. Puede tener acceso a todas las columnas de la fila con una sola llamada a **IRow::GetColumns** o llamar a **IRow::GetColumns** varias veces, cada vez que tenga acceso a varias columnas de la fila.  

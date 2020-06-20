@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b075bb2830ab911e92ecd7efbd76e7b089e89629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833737"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920513"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB, administrador de conexiones
   Un administrador de conexiones OLE DB permite a un paquete conectarse a un origen de datos mediante un proveedor OLE DB. Por ejemplo, un administrador de conexiones OLE DB que se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar el proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

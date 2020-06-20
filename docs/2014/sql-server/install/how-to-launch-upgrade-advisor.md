@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 0a067cb0-ed83-4a29-bb14-06b24254f3dd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42fc062ce36687b15cc649b1527fdb7710644ac2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094905"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059262"
 ---
 # <a name="how-to-launch-upgrade-advisor"></a>Procedimientos: Iniciar el Asesor de actualizaciones
   El Asesor de actualizaciones proporciona una consola central que puede utilizar para iniciar el Asistente para análisis del Asesor de actualizaciones y el Visor de informes del Asesor de actualizaciones. En este tema se describe cómo iniciar el Asesor de actualizaciones.  
   
 ### <a name="to-launch-upgrade-advisor"></a>Para iniciar el Asesor de actualizaciones  
   
--   Para iniciar el asesor de actualizaciones, haga clic en **Inicio**, **todos los programas**, y **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, a continuación, haga clic en ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
+-   Para iniciar el asesor de actualizaciones, haga clic en **Inicio**, **todos los programas**, **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** y, a continuación, haga clic en ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Ejecutar el asesor de actualizaciones &#40;interfaz de usuario&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   

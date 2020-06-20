@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7417efef16ae16ef11b955af12ba8dbbd549939c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065883"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938326"
 ---
 # <a name="translations-analysis-services"></a>Traducciones (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Solo multidimensional  
@@ -45,7 +44,7 @@ ms.locfileid: "66065883"
   
 1.  Abra el modelo multidimensional de Adventure Works en el diseñador.  
   
-2.  En Explorador de soluciones, abra vistas del origen de datos y haga doble clic en\<Adventure Works DW version>. DSV.  
+2.  En Explorador de soluciones, abra vistas del origen de datos y haga doble clic en Adventure Works DW \<version> . DSV.  
   
 3.  Busque dimDate, dimProduct, dimProductCategory o dimProductSubcategory. Todas estas dimensiones contienen atributos de miembros traducidos de mes, día de la semana, nombre de producto, nombre de categoría, etc.  
   

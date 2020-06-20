@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f7a18a44a0f71254342f8fc29c38f0993fc05bfb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 53c08d3a2f86c7e412fbdb1caa6d55d7d23bf407
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637894"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004333"
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda
   En este tema se explica cómo obtener los valores necesarios para poder agregar una propiedad a una lista de propiedades de búsqueda y hacer que se pueda buscar en ella mediante la búsqueda de texto completo. Estos valores incluyen el GUID de conjunto de propiedades y el identificador entero de propiedad de una propiedad de documento.  
   
- Las propiedades de documento extraídas por IFilters desde datos binarios, es decir, de datos `varbinary`almacenados `varbinary(max)` en una `FILESTREAM`columna de tipo `image` de datos, (incluido) o, pueden estar disponibles para la búsqueda de texto completo. Para que se pueda buscar una propiedad extraída, la propiedad se debe agregar manualmente una lista de propiedades de búsqueda. La lista de propiedades de búsqueda también debe estar asociada a uno o más índices de texto completo. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](search-document-properties-with-search-property-lists.md).  
+ Las propiedades de documento extraídas por IFilters desde datos binarios, es decir, de datos almacenados en una `varbinary` `varbinary(max)` columna de tipo de datos, (incluido `FILESTREAM` ) o, `image` pueden estar disponibles para la búsqueda de texto completo. Para que se pueda buscar una propiedad extraída, la propiedad se debe agregar manualmente una lista de propiedades de búsqueda. La lista de propiedades de búsqueda también debe estar asociada a uno o más índices de texto completo. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](search-document-properties-with-search-property-lists.md).  
   
  Para poder agregar una propiedad disponible a una lista de propiedades, tiene que buscar 2 elementos de información acerca de la propiedad:  
   
@@ -43,7 +42,7 @@ ms.locfileid: "73637894"
 |Authors|`System.Author`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|4|Autor o autores de un elemento determinado.|  
 |Etiquetas|`System.Keywords`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|5|Conjunto de palabras clave (también conocido como etiquetas) asignado al elemento.|  
 |Tipo|`System.PerceivedType`|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|Tipo de archivo percibido basado en su tipo canónico.|  
-|Title|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
+|Título|`System.Title`|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|Título del elemento. Por ejemplo, el título de un documento, el asunto de un mensaje, la leyenda de una foto o el nombre de una pista de música.|  
   
  Para fomentar la coherencia entre los formatos de archivo, Microsoft ha identificado subconjuntos de las propiedades de documento de alta prioridad usadas con frecuencia para diversas categorías de documentos. Esto incluye comunicaciones, contactos, documentos, archivos de música, imágenes y vídeos. Para obtener más información sobre las principales propiedades para cada categoría, vea la sección sobre las [propiedades definidas por el sistema para formatos de archivo personalizados](https://go.microsoft.com/fwlink/?LinkId=144336) en la documentación de Windows Search.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "73637894"
   
 -   Propiedades personalizadas específicas de la aplicación definidas por el proveedor de software.  
   
-##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>Buscar información sobre las propiedades disponibles mediante FILTDUMP. EJECUTABLE  
+##  <a name="finding-information-about-available-properties-by-using-filtdumpexe"></a><a name="filtdump"></a>Buscar información sobre las propiedades disponibles mediante FILTDUMP.EXE  
  Para saber qué propiedades detecta y extrae un IFilter instalado, puede instalar y ejecutar la utilidad **filtdump.exe** , que forma parte del SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  Ejecute **filtdump.exe** desde el símbolo del sistema y proporcione un único argumento. Este argumento es el nombre de un archivo individual que tiene un tipo de archivo para el que está instalado un IFilter. La utilidad muestra una lista de todas las propiedades detectadas por el IFilter en el documento, con sus GUID de conjunto de propiedades, identificadores enteros e información adicional.  

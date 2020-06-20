@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 86a7bb85-7f83-412a-b775-d2c379702fe9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c0ae127bb1be69e2b584e370687a969ecaecfae5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f3c6488a7a0c22fe2dfc91ac3d5760e8032e5b5f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067725"
 ---
 # <a name="use-the-binary-base64-option"></a>Usar la opción BINARY BASE64
   Si en la consulta se especifica la opción BINARY BASE64, los datos binarios se devuelven en formato de codificación en base64. De manera predeterminada, si no se especifica la opción BINARY BASE64, el modo AUTO admite la codificación URL de datos binarios. Es decir, en lugar de datos binarios, se devuelve una referencia a una dirección URL relativa a la raíz virtual de la base de datos donde se ejecutó la consulta. Esta referencia se puede utilizar para obtener acceso a los datos binarios reales en operaciones posteriores mediante la consulta dbobject SQLXML ISAPI. La consulta debe proporcionar suficiente información, como las columnas de clave principal, para identificar la imagen.  

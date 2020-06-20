@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d502e7c7fdd6716f42a18f745ab71aa27954e99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63020978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037979"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla (SQL Server Management Studio)
-  Genere automáticamente un conjunto de filtros de combinación en la página **Filtrar filas de tabla** del Asistente para nueva publicación o en la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+  Genere automáticamente un conjunto de filtros de combinación en la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
->  Si genera automáticamente un conjunto de filtros de combinación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** después de haber inicializado las suscripciones para la publicación, deberá generar una nueva instantánea y volver a inicializar todas las suscripciones una vez realizado el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+>  Si genera automáticamente un conjunto de filtros de combinación en el cuadro de diálogo **propiedades de la publicación: \<Publication> ** después de que se hayan inicializado las suscripciones a la publicación, debe generar una nueva instantánea y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Cambiar las propiedades de la publicación y de los artículos](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
  Es posible crear filtros de combinación para un conjunto de tablas de forma manual, o bien la replicación puede generar los filtros de forma automática en función de las relaciones de clave clave externa a clave principal definidas en las tablas. Para obtener más información sobre cómo crear filtros de combinación manualmente, consulte [Define and Modify a Join Filter Between Merge Articles](define-and-modify-a-join-filter-between-merge-articles.md) (Definir y modificar un filtro de combinación entre artículos de mezcla).  
   
 ### <a name="to-automatically-generate-a-set-of-join-filters-between-merge-articles"></a>Para generar automáticamente un conjunto de filtros de combinación entre artículos de mezcla  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Agregar** y luego en **Generar filtros automáticamente**.  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o en la página **filtrar filas** de las propiedades de la **publicación: \<Publication> **, haga clic en **Agregar**y, a continuación, haga clic en **generar filtros automáticamente**.  
   
     > [!NOTE]  
     >  Al generar filtros automáticamente, se eliminan los filtros de fila o los filtros de combinación existentes en la publicación. Es posible agregar filtros después de haber generado automáticamente un conjunto de filtros.  
@@ -65,11 +64,11 @@ ms.locfileid: "63020978"
   
      Una vez analizada la instrucción, la replicación crea los filtros de combinación necesarios y los muestra en el panel **Tablas filtradas** de la página **Filtrar filas de tabla** o **Filtrar filas** . Si genera filtros desde el Asistente para nueva publicación y aún no ha configurado el distribuidor para el publicador en el que se ejecuta este asistente, se le pedirá que lo haga.  
   
-4.  Si se encuentra en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
+4.  Si está en el cuadro de diálogo **propiedades \<Publication> de la publicación:** , haga clic en **Aceptar** para guardar y cerrar el cuadro de diálogo.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Para modificar un filtro generado automáticamente  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Editar**.  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o la página **filtrar filas** de las propiedades de la **publicación: \<Publication> **, seleccione un filtro en el panel **tablas filtradas** y, a continuación, haga clic en **Editar**.  
   
 2.  En el cuadro de diálogo **Editar filtro** o **Editar combinación** , modifique el filtro.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "63020978"
   
 ### <a name="to-delete-a-filter-that-was-automatically-generated"></a>Para eliminar un filtro generado automáticamente  
   
-1.  En la página **Filtrar filas de tabla** del Asistente para nueva publicación o la página **Filtrar filas** de **Propiedades de la publicación: \<publicación>**, seleccione un filtro en el panel **Tablas filtradas** y luego haga clic en **Eliminar**.  
+1.  En la página **filtrar filas de tabla** del Asistente para nueva publicación o la página **filtrar filas** de las propiedades de la **publicación: \<Publication> **, seleccione un filtro en el panel **tablas filtradas** y, a continuación, haga clic en **eliminar**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Filtros de combinación](../merge/join-filters.md)   

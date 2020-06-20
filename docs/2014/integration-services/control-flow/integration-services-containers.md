@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b725922-ec59-4a47-9d55-e079463058f3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0afb0e4307b4bc2205e92700f6fc0ca580caa801
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831393"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918725"
 ---
 # <a name="integration-services-containers"></a>Contenedores de Integration Services
   Los contenedores son objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que proporcionan estructura a los paquetes y servicios a las tareas. Permiten repetir flujos de control en paquetes y agrupan tareas y contenedores en unidades de trabajo significativas. Los contenedores pueden incluir otros contenedores, además de tareas.  
@@ -67,7 +66,7 @@ ms.locfileid: "62831393"
 |`LoggingMode`|Valor que especifica el comportamiento de registro del contenedor. Los valores son `Disabled`, `Enabled` y `UseParentSetting`. El valor predeterminado de esta propiedad es `UseParentSetting`. Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>.|  
 |`MaximumErrorCount`|Cantidad máxima de errores que se pueden producir antes de que un contenedor deje de ejecutarse. El valor predeterminado de esta propiedad es **1**.<br /><br /> Para obtener más información, vea <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.MaximumErrorCount%2A>.|  
 |`Name`|nombre del contenedor.<br /><br /> Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.Name%2A>.|  
-|`TransactionOption`|Participación transaccional del contenedor. Los valores son `NotSupported`, `Supported`, `Required`. El valor predeterminado de esta propiedad es `Supported`. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
+|`TransactionOption`|Participación transaccional del contenedor. Los valores son `NotSupported` , `Supported` , `Required` . El valor predeterminado de esta propiedad es `Supported`. Para más información, consulte <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
  Para obtener información sobre todas las propiedades disponibles para los contenedores de bucles Foreach, bucles For, secuencias y host de la tarea cuando se configuran mediante programación, vea los siguientes temas de la API de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] :  
   

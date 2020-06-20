@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd8e26099ec7152aac08a11b6f7e38550834d248
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b01965313a02bf22126afa058247a80eb053b7e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184244"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040808"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Crear autocombinaciones manualmente (Visual Database Tools)
   Puede combinar una tabla consigo misma aunque no tenga una relación reflexiva en la base de datos. Por ejemplo, puede utilizar una autocombinación para buscar pares de autores que residan en la misma ciudad.  

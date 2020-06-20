@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e4cafd4d9f9ec1579eacc2eca2f1381cec13ae6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: efa6c05db03bdfe17d5b1a68b04403e5649ccee0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013362"
 ---
 # <a name="example-retrieving-employee-information"></a>Ejemplo: Recuperar información de los empleados
   En este ejemplo, se recupera el identificador y el nombre de cada empleado. En la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , el identificador de empleado se puede obtener de la columna BusinessEntityID de la tabla Employee. Los nombres de los empleados se pueden obtener de la tabla Person. Para combinar las tablas, se puede usar la columna BusinessEntityID.  

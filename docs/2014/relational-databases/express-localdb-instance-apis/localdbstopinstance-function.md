@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 4bd73187-0aac-4f03-ac54-2b78e41917e5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f28abbf9871d5f4e512e9c9ee0cfb5c7ad9db59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d4c19943bc79567a5e3abee0c19597247eb31bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63135283"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050980"
 ---
 # <a name="localdbstopinstance-function"></a>Función LocalDBStopInstance
   Detiene la ejecución de la instancia de SQL Server Express LocalDB especificada.  
@@ -58,7 +57,7 @@ HRESULT LocalDBStopInstance(
  *ulTimeout*  
  [Entrada] Tiempo en segundos que transcurrirá para que se complete esta operación. Si este valor es 0, esta función devolverá resultados inmediatamente sin esperar a que se detenga la instancia de LocalDB.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -101,7 +100,7 @@ HRESULT LocalDBStopInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Se ha producido un error inesperado. Vea el registro de eventos para obtener detalles.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte también  

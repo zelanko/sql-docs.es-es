@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 64f6966f-2292-401f-acb1-2ccb5aee484a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 776a8319750721f3b489df1a3a4466c7dc36f15e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058215"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968325"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementar una directiva de firma estableciendo un valor del Registro
   Se puede usar un valor opcional del Registro para administrar la directiva de una organización para la carga de paquetes firmados o sin firmar. Si utiliza este valor del Registro, debe crearlo en cada equipo en el que se ejecutarán los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y en el que desea exigir el cumplimiento de la directiva. Una vez establecido el valor del Registro, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprobará las firmas antes de cargar los paquetes.  
@@ -48,7 +47,7 @@ ms.locfileid: "66058215"
   
 1.  En el menú **Inicio**, haga clic en **Ejecutar**.  
   
-2.  En el cuadro de diálogo Ejecutar, `Regedit`escriba y, a continuación, haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo Ejecutar, escriba `Regedit` y, a continuación, haga clic en **Aceptar**.  
   
 3.  Busque la clave del Registro HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS.  
   
@@ -56,11 +55,11 @@ ms.locfileid: "66058215"
   
 5.  Actualice el nombre del nuevo valor a `BlockedSignatureStates`.  
   
-6.  Haga clic `BlockedSignatureStates` con el botón secundario y haga clic en **modificar**.  
+6.  Haga clic con el botón secundario `BlockedSignatureStates` y haga clic en **modificar**.  
   
 7.  En el cuadro de diálogo **Editar valor DWORD** , escriba el valor 0, 1, 2 o 3.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el menú **Archivo** , haga clic en **Salir**.  
   

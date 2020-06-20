@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d54673d-ea9d-4ac6-825a-f216ad8b0e34
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a58c8eca585bbbe2c935c524840bc465992d45c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 82984440f96416189eb18f900764ee7bdaf05a01
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62511850"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050856"
 ---
 # <a name="sending-result-sets-to-the-server-extended-stored-procedure-api"></a>Enviar conjuntos de resultados al servidor (API de procedimiento almacenado extendido)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR.  
   
- Al enviar un conjunto de resultados [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a, el procedimiento almacenado extendido debe llamar a la API adecuada de la siguiente manera:  
+ Al enviar un conjunto de resultados a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el procedimiento almacenado extendido debe llamar a la API adecuada de la siguiente manera:  
   
 -   Se puede llamar a la función **srv_sendmsg** en cualquier orden antes o después de que todas las filas (si las hubiera) se hayan enviado con **srv_sendrow**. Todos los mensajes se deben enviar al cliente antes de que el estado de finalización se envíe con **srv_senddone**.  
   

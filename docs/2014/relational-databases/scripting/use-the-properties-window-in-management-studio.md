@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 903d4aca-f57c-43d9-a893-702eceaa7004
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c9c5b4f6b7c54b7bde76d61dc55b1b10f805dd87
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 208aadd4f082e92987a5f7dfce4668a7b1cf51c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997809"
 ---
 # <a name="use-the-properties-window-in-management-studio"></a>Utilizar la ventana Propiedades en Management Studio
   La ventana Propiedades describe el estado de un elemento de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], como una conexión o un operador de plan de presentación, además de proporcionar información acerca de objetos de la base de datos, como tablas, vistas y diseñadores.  

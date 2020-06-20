@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 920ec41ae30d53853cfb757fb7fc33610953dc86
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa63a9f16507df8f0966d19323b2e110b7c84fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060885"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921996"
 ---
 # <a name="conditional-split-transformation-editor"></a>División condicional, editor de transformación
   Use el cuadro de diálogo **Editor de transformación División condicional** para crear expresiones, establecer el orden de evaluación de expresiones y asignar un nombre a los resultados de una división condicional. Este cuadro de diálogo incluye operadores y funciones matemáticas, de cadenas y de fecha y hora que puede utilizar para generar expresiones. La primera condición evaluada como True determinará la salida a la que se dirigirá una fila.  
@@ -33,7 +32,7 @@ ms.locfileid: "66060885"
  **Pedido**  
  Seleccione una fila y utilice las teclas de dirección de la derecha para cambiar el orden de evaluación de las expresiones.  
   
- **Nombre de salida**  
+ **Nombre de archivo de salida**  
  Escriba un nombre de salida. El valor predeterminado es una lista numerada de casos, pero puede elegir cualquier nombre descriptivo único.  
   
  **Condition**  

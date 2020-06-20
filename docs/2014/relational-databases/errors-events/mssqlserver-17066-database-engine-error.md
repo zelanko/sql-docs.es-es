@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d650bbf-c583-4af8-9e22-993ee2880d95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1b8600d83f09504d43778ad0b349ae71b653374e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8c2bc421fb969e4f24e49871ff97047be9040ae0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915400"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967915"
 ---
 # <a name="mssqlserver_17066"></a>MSSQLSERVER_17066
     
@@ -30,7 +29,7 @@ ms.locfileid: "62915400"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLASSERT_ONLY|  
-|Texto del mensaje|Aserción de SQL Server: archivo: \<%s>, línea =%d error de aserción = '%s'. Puede que este error esté relacionado con el tiempo de espera. Si el error persiste después de volver a ejecutar la instrucción, utilice DBCC CHECKDB para comprobar la integridad estructural de la base de datos, o bien reinicie el servidor para asegurarse de que las estructuras de datos en memoria no están dañadas.|  
+|Texto del mensaje|SQL Server Assertion: archivo: \<%s> , línea =% d error de aserción = '% s '. Puede que este error esté relacionado con el tiempo de espera. Si el error persiste después de volver a ejecutar la instrucción, utilice DBCC CHECKDB para comprobar la integridad estructural de la base de datos, o bien reinicie el servidor para asegurarse de que las estructuras de datos en memoria no están dañadas.|  
   
 ## <a name="explanation"></a>Explicación  
  Este error puede deberse a errores transitorios relacionados con el control de tiempo, o a que los datos en memoria o en disco estén dañados.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19357f30914ab490d7890f267200b461ffe48cc6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206967"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998095"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>Cursor Manager by Type (objeto de SQL Server)
   El objeto **SQLServer:Cursor Manager by Type** proporciona contadores para supervisar cursores agrupados por tipo.  

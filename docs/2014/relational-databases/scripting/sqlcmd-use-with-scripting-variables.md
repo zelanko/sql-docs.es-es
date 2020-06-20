@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793495ca-cfc9-498d-8276-c44a5d09a92c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a1255a810c5d41dfe7c69dee781c670965f0756c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2408399c0c04338312f2076e42d3ac7de167f7aa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703664"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037799"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Usar sqlcmd con variables de script
   Las variables que se usan en scripts se denominan variables de scripting. Las variables de scripting posibilitan el uso de un script en varias situaciones. Por ejemplo, si desea ejecutar un script en varios servidores, en lugar de modificar el script para cada servidor, puede usar una variable de scripting para el nombre del servidor. Al cambiar el nombre del servidor proporcionado a la variable de scripting, el mismo script puede ejecutarse en diferentes servidores.  
@@ -341,7 +340,7 @@ ms.locfileid: "82703664"
  `>2 GO`  
   
 ## <a name="see-also"></a>Consulte también  
- [Usar la utilidad SQLCMD](sqlcmd-use-the-utility.md)   
+ [Usar la utilidad sqlcmd](sqlcmd-use-the-utility.md)   
  [Sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   
  [Referencia de la utilidad del símbolo del sistema &#40;motor de base de datos&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   

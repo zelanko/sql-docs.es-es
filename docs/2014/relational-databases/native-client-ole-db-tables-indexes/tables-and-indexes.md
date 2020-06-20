@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4217c6d8-8cd2-43dc-b36f-3cfd8a58fabc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 72cd2aa4afab66a91351013f9c9141f2d94bff79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: abc7c314e433eb9f107bd191738d951706f1b50d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704502"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017803"
 ---
 # <a name="tables-and-indexes"></a>Tablas e índices
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client expone las interfaces **IIndexDefinition** y **ITableDefinition** , lo que permite a los consumidores crear, modificar y quitar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas e índices. Las definiciones de tabla e índice válidas dependen de la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

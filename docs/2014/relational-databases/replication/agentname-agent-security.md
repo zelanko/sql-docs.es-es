@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: d34c7ef8-cf77-4ffd-887f-3c4214dfd71e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d77f8d6acb449bc9aa2298dbcba9782fd7bc07e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 75d4cccdb867716cf16490b4662edec4d5856fe6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62722127"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016782"
 ---
 # <a name="ltagentnamegt-agent-security"></a>Seguridad del agente &lt;NombreAgente&gt;
-  La página **Seguridad del Agente \<NombreAgente>** permite especificar las cuentas con las que el Agente de distribución (para replicación transaccional y de instantáneas) o el Agente de mezcla (para replicación de mezcla) ejecuta y realiza conexiones con los equipos de una topología de replicación. Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md) y [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md).  
+  La página ** \<AgentName> seguridad del agente** permite especificar las cuentas con las que se ejecutan las agente de distribución (para la replicación transaccional y de instantáneas) o agente de mezcla (para la replicación de mezcla) y establecer conexiones con los equipos de una topología de replicación. Para obtener información sobre los permisos requeridos por los agentes y las prácticas recomendadas que se aplican a la seguridad de replicación, vea [Modelo de seguridad del Agente de replicación](security/replication-agent-security-model.md) y [Prácticas recomendadas de seguridad de replicación](security/replication-security-best-practices.md).  
   
 ## <a name="options"></a>Opciones  
  Haga clic en el botón de propiedades ( **...** ) de la fila de cada suscriptor para obtener acceso al cuadro de diálogo **Seguridad del Agente de distribución** o **Seguridad del Agente de mezcla** . Haga clic en **Ayuda** en el cuadro de diálogo que se muestra para obtener más información sobre los permisos requeridos para las cuentas utilizadas por los agentes.  
@@ -33,23 +32,23 @@ ms.locfileid: "62722127"
  **Conexión al distribuidor**  
  Se muestra para la replicación transaccional y de instantáneas. Contexto en el que se realiza la conexión al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con la que se ejecuta el agente:  
   
--   Para suscripciones de inserción, la conexión local es la conexión con el distribuidor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
+-   En el caso de las suscripciones de extracción, la conexión local es la conexión con el distribuidor, por lo que este campo muestra siempre: **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '** para suscripciones de extracción.  
   
--   En las suscripciones de extracción, la conexión se puede realizar también en el contexto de un inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   En las suscripciones de extracción, la conexión se puede realizar también en el contexto de un inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El campo muestra uno de los siguientes: **Usar inicio de sesión ' \<Login> '**, **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
  **Conexión con el publicador y distribuidor**  
  Se muestra para la replicación de mezcla. Contexto en el que se realizan las conexiones al publicador y al distribuidor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente:  
   
--   Para suscripciones de inserción, la conexión local es la conexión con el publicador y el distribuidor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
+-   Para las suscripciones de extracción, la conexión local es la conexión con el publicador y el distribuidor, por lo que este campo muestra siempre: **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '** para suscripciones de extracción.  
   
--   Para las suscripciones de extracción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   Para las suscripciones de extracción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El campo muestra uno de los siguientes: **Usar inicio de sesión ' \<Login> '**, **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
  **Conexión al suscriptor**  
  Contexto en el que se realiza la conexión al suscriptor. Las conexiones locales se realizan siempre utilizando el contexto de la cuenta de Windows con la que se ejecuta el agente:  
   
--   Para suscripciones de extracción, la conexión local es la conexión con el suscriptor, por lo que este campo muestra siempre: **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<Equipo>\\<inicioDeSesión\>'** para suscripciones de inserción.  
+-   En el caso de las suscripciones de extracción, la conexión local es la conexión con el suscriptor, por lo que este campo muestra siempre: **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '** para suscripciones de inserción.  
   
--   Para las suscripciones de inserción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En el campo se muestra una de las siguientes opciones: **Usar inicio de sesión '\<inicioDeSesión>'** , **Suplantar '\<Dominio>\\<inicioDeSesión\>'** o **Suplantar '\<equipo>\\<inicioDeSesión>\>'** . [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
+-   Para las suscripciones de inserción, la conexión se puede realizar también bajo el contexto de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El campo muestra uno de los siguientes: **Usar inicio de sesión ' \<Login> '**, **Suplantar ' \<Domain> \\<inicio de sesión \> '** o **Suplantar ' \<Computer> \\<inicio de sesión \> '**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda que todas las conexiones se realicen utilizando el contexto de la cuenta de Windows.  
   
 ## <a name="see-also"></a>Consulte también  
  [View and Modify Pull Subscription Properties](view-and-modify-pull-subscription-properties.md)  (Ver y modificar las propiedades de una suscripción de extracción)  

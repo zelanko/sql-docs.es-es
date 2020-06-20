@@ -2,7 +2,6 @@
 title: Novedades
 description: Vea las novedades de Microsoft Analytics Platform System, un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: faf3bd1f487fb5c850759fdde3ddecd32bdd3b1f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e609beb77b92a6dbaf95f39bf5a2a6971a7ae5c4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "80625540"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039825"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacenamiento de datos MPP de escalabilidad horizontal
 Vea las novedades de las últimas actualizaciones del dispositivo para Microsoft Analytics Platform System (AP). APS es un dispositivo local de escalado horizontal que hospeda MPP SQL Server almacenamiento de datos paralelos. 
@@ -136,10 +135,10 @@ APS admite un subconjunto de [comandos DBCC](https://docs.microsoft.com/sql/t-sq
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos por objetos de catálogo
 El uso de objetos de catálogo para llamadas de metadatos en lugar de usar SMO ha mostrado la mejora del rendimiento en APS. A partir de CU 7.1, algunas de estas llamadas de metadatos ahora usan objetos de catálogo de forma predeterminada. Este comportamiento se puede desactivar por el [modificador de características](appliance-feature-switch.md) si los clientes que usan consultas de metadatos se ejecutan en cualquier problema.
 
-### <a name="bug-fixes"></a>Corrección de errores
+### <a name="bug-fixes"></a>Correcciones de errores
 Hemos actualizado a SQL Server 2016 SP2 CU2 con APS CU 7.1. La actualización corrige algunos problemas que se describen a continuación.
 
-| Title | Descripción |
+| Título | Descripción |
 |:---|:---|
 | **Posible interbloqueo del Movedor de tupla** |La actualización corrige una posibilidad prolongada de un interbloqueo en una transacción distribuida y un subproceso en segundo plano de tupla. Después de instalar CU 7.1, los clientes que usaban TF634 para detener el motor de tupla como SQL Server parámetro de inicio o marca de seguimiento global pueden quitarlo de forma segura. | 
 | **Se produce un error en una consulta de intervalo o de adelanto** |Algunas consultas en tablas de CCI con funciones de retardo o de inicialización anidadas que generarían un error ahora se corrigen con esta actualización. | 
@@ -155,7 +154,7 @@ APS 2016 es un requisito previo para actualizar a AU7. A continuación se muestr
 APS AU7 crea y actualiza automáticamente las estadísticas de forma predeterminada. Para actualizar la configuración de las estadísticas, los administradores pueden usar un nuevo elemento de menú de modificador de características en el [Configuration Manager](appliance-configuration.md#CMTasks). El [modificador de características](appliance-feature-switch.md) controla el comportamiento de la creación automática, la actualización automática y la actualización asincrónica de las estadísticas. También puede actualizar la configuración de las estadísticas con la instrucción [ALTER DATABASE (almacenamiento de datos paralelos)](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw) .
 
 ### <a name="t-sql"></a>T-SQL
-Ahora @var se admite Select. Para obtener más información, vea [seleccionar variable local](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
+@varAhora se admite Select. Para obtener más información, vea [seleccionar variable local](/sql/t-sql/language-elements/select-local-variable-transact-sql) . 
 
 Ahora se admiten las sugerencias de consulta HASH y el grupo de pedidos. Para obtener más información, vea [sugerencias (Transact-SQL)-Query](/sql/t-sql/queries/hints-transact-sql-query)
 

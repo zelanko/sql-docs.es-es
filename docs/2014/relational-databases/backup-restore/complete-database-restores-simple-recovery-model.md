@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49828927-1727-4d1d-9ef5-3de43f68c026
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e64bf4d4642d8091cd0892283a996e7dccc56e26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67eee8d7d6f44c9ff83795bf2a8bd612309bf0a5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877149"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959005"
 ---
 # <a name="complete-database-restores-simple-recovery-model"></a>Restauraciones de base de datos completas (modelo de recuperación simple)
   El objetivo de una restauración completa de la base de datos es restaurar toda la base de datos. Durante el proceso de restauración, la base de datos completa se encuentra sin conexión. Antes de que ninguna parte de la base de datos esté en línea, se recuperan todos los datos a un punto coherente en el que todas las partes de la base de datos se encuentran en el mismo momento y en el que no existe ninguna transacción sin confirmar.  
@@ -60,7 +59,7 @@ ms.locfileid: "62877149"
   
  RESTORE DATABASE *database_name* FROM *backup_device* WITH RECOVERY  
   
-###  <a name="example-transact-sql"></a><a name="Example"></a>Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="Example"></a> Ejemplo (Transact-SQL)  
  En el siguiente ejemplo se muestra primero cómo usar la instrucción [BACKUP](/sql/t-sql/statements/backup-transact-sql) para crear una copia de seguridad completa y diferencial de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . A continuación, se restauran estas copias de seguridad una después de la otra. La base de datos se restaura a su estado en el momento en que finalizó la copia de seguridad diferencial.  
   
  En el ejemplo se muestran las opciones críticas de una secuencia de restauración en un escenario de restauración de base de datos completa. Una *secuencia de restauración* consta de dos o más operaciones de restauración que mueven datos en una o varias fases de restauración. La sintaxis y los detalles no pertinentes para este propósito se omiten. Al recuperar una base de datos, se recomienda especificar explícitamente la opción RECOVERY por motivos de claridad, aunque es la opción predeterminada.  
@@ -116,7 +115,7 @@ GO
 ## <a name="see-also"></a>Consulte también  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [sp_addumpdevice &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](full-database-backups-sql-server.md)   
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   

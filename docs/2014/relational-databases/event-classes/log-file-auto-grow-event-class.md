@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9b023db-6944-4035-9a83-300f34a58454
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49590cafe124410e74c150d228fbc621db93f779
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7e2df6f0c16ce747617af7db180398042fbb30b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63023415"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85052894"
 ---
 # <a name="log-file-auto-grow-event-class"></a>Log File Auto Grow, clase de eventos
   La clase de eventos **Log File Auto Grow** indica que el archivo de registro creció automáticamente. Este evento no se desencadena si el archivo de registro se aumentó explícitamente mediante ALTER DATABASE.  

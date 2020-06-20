@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: f347cc92-950f-4021-b7af-393640dfe821
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29d45e06dcd3e67af3abbc6b356d44877e40f46b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 646204e2c40c09ac0fac9259f5acc43c7f422894
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006650"
 ---
 # <a name="task-2-mapping-excel-columns-to-dqs-domains"></a>Tarea 2: Asignación de columnas de Excel a dominios de DQS
     
 1.  En la página **Asignación** , seleccione **Archivo de Excel** en **Origen de datos**.  
   
-2.  Haga clic en **examinar**, seleccione **Suppliers. xlsx**y haga clic en **abrir**.  
+2.  Haga clic en **examinar**, seleccione **Suppliers.xlsx**y haga clic en **abrir**.  
   
 3.  Seleccione **IncomingSuppliers $** en la **hoja de cálculo**.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "65484702"
     |Address Line|Address Line|  
     |City|City|  
     |State|State|  
-    |País (haga clic en **+ (agregar una asignación de columnas)** barra de herramientas para agregar una fila|Country|  
+    |País (haga clic en **+ (agregar una asignación de columnas)** barra de herramientas para agregar una fila|País|  
     |Zip Code|Zip|  
   
      ![Asignaciones de columnas de Excel a dominios](../../2014/tutorials/media/et-mappingexcelcolumnstodqsdomains-01.jpg "Asignaciones de columnas de Excel a dominios")  

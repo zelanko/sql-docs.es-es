@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f068d4db-2d56-41b1-bed2-0cffa3ca411d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ec6f347cdbc6d14e8f621466a1708b8ee9fe7d36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f967b2446e11a27f5a87803bb71d6e1ec53557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489753"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039837"
 ---
 # <a name="lesson-5-automating-the-cleansing-and-matching-using-ssis"></a>Lección 5: Automatización de la limpieza y la búsqueda de coincidencias con SSIS
   En la lección 1, ha creado la base de conocimiento proveedores y la ha usado para limpiar los datos de la lección 2 y buscar los datos coincidentes en la lección 3 mediante el **cliente DQS**de la herramienta. En un escenario real, puede que tenga que extraer datos de un origen que DQS no admita o que desee automatizar el proceso de limpieza y búsqueda de coincidencias sin tener que usar la herramienta **cliente DQS** . SQL Server Integration Services (SSIS) tiene componentes que puede usar para integrar datos de varios orígenes heterogéneos y un componente de **[transformación limpieza de DQS](https://msdn.microsoft.com/library/ee677619.aspx)** para invocar la funcionalidad de limpieza expuesta por DQS. Actualmente, DQS no expone la funcionalidad de búsqueda de coincidencias que debe usar SSIS, pero puede usar la **[transformación agrupación aproximada](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)** para identificar duplicados en los datos.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 14d8b3f1a998b18ae0153c1771fa11afd925da9c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882324"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038074"
 ---
 # <a name="create-a-publication"></a>Create a Publication
   En este tema se describe cómo crear una publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -45,13 +44,13 @@ ms.locfileid: "73882324"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ', \,/, \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>** , que está disponible en la página **Artículos**.  
+-   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y desea replicarlos, debe especificar un nombre de artículo diferente del nombre de objeto en el cuadro de diálogo **propiedades \<Article> del artículo:** , que está disponible en la página **artículos** del asistente.  
   
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md).  
+ Cree publicaciones y defina artículos con el Asistente para nueva publicación. Una vez creada una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **propiedades de la publicación: \<Publication> ** . Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -110,7 +109,7 @@ ms.locfileid: "73882324"
   
     -   Si el conjunto de resultados está vacío, cree un trabajo de Agente de registro del LOG. En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique las credenciales de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows con las que se ejecuta el agente para **\@job_name** y **\@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **\@publisher_security_mode** y la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **\@publisher_login** y **\@publisher_password**. Continúe en el paso 3.  
   
-3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación ** \@** para la publicación y, para ** \@** el parámetro repl_freq, especifique un valor `snapshot` de para una publicación de instantáneas o `continuous` un valor de para una publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
+3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación para la ** \@ publicación**y, para el parámetro ** \@ repl_freq** , especifique un valor de `snapshot` para una publicación de instantáneas o un valor de `continuous` para una publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
   
     > [!NOTE]  
     >  Los nombres de publicación no pueden incluir los caracteres siguientes:  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c750f4230cc83467cc5993d2a6ab571a06d2f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f406464680a1669133dc87bdfb231c644d33fbdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798032"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958922"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Crear una copia de seguridad completa de base de datos (SQL Server)
   En este tema se describe cómo crear una copia de seguridad completa de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o PowerShell.  
@@ -83,11 +82,11 @@ ms.locfileid: "72798032"
   
 #### <a name="to-back-up-a-database"></a>Para realizar una copia de seguridad de una base de datos  
   
-1.  Después de conectarse a la instancia adecuada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en explorador de objetos, haga clic en el nombre del servidor para expandir el árbol de servidores.  
+1.  Después de conectarse a la instancia apropiada de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], en el Explorador de objetos, haga clic en el nombre del servidor para expandir el árbol correspondiente.  
   
-2.  Expanda **bases**de datos y, según la base de datos, seleccione una base de datos de usuario o expanda bases de datos **del sistema** y seleccione una base de datos del sistema.  
+2.  Expanda **Bases de datos**y, dependiendo de la base de datos, seleccione una base de datos de usuario o expanda **Bases de datos del sistema** y seleccione una base de datos del sistema.  
   
-3.  Haga clic con el botón secundario en la base de datos, seleccione **Tareas** y, a continuación, haga clic en **Hacer una copia de seguridad**. Aparecerá el cuadro de diálogo **Copia de seguridad de base de datos**.  
+3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 4.  En el `Database` cuadro de lista, compruebe el nombre de la base de datos. También puede seleccionar otra base de datos en la lista.  
   
@@ -97,24 +96,24 @@ ms.locfileid: "72798032"
   
      Tenga en cuenta que después de crear una copia de seguridad completa de la base de datos, puede crear una copia de seguridad diferencial; para obtener más información, vea [Crear una copia de seguridad diferencial de una base de datos &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).  
   
-7.  También puede seleccionar **Copia de seguridad de solo copia** para crear un copia de seguridad de solo copia.  Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+7.  También puede seleccionar **Copia de seguridad de solo copia** para crear un copia de seguridad de solo copia. Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Copias de seguridad de solo copia &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
     > [!NOTE]  
     >  Cuando la opción **Diferencial** está seleccionada, no puede crear una copia de seguridad de solo copia.  
   
-8.  En **componente de copia**de `Database`seguridad, haga clic en.  
+8.  En **componente de copia de seguridad**, haga clic en `Database` .  
   
-9. Acepte el nombre del conjunto de copia de seguridad predeterminado sugerido en el cuadro de texto **Nombre** o escriba un nombre diferente para el conjunto de copia de seguridad.  
+9. Acepte el nombre del conjunto de copia de seguridad predeterminado sugerido en el cuadro de texto **Nombre** o especifique otro nombre.  
   
-10. Opcionalmente, en el cuadro de texto **Descripción**, escriba una descripción del conjunto de copia de seguridad.  
+10. Opcionalmente, en el cuadro de texto **Descripción** , escriba una descripción del conjunto de copia de seguridad.  
   
-11. Elija el tipo de destino de la copia de seguridad haciendo clic en **Disco**, **Cinta** o **Dirección URL**. Para seleccionar las rutas de acceso de hasta 64 unidades de disco o cinta que contienen un solo conjunto de medios, haga clic en **Agregar**. Las rutas seleccionadas se muestran en el cuadro de lista **Copia de seguridad en**.  
+11. Elija el tipo de destino de la copia de seguridad haciendo clic en **Disco**, **Cinta** o **Dirección URL**. Para seleccionar las rutas de acceso de hasta 64 unidades de disco o cinta que contienen un solo conjunto de medios, haga clic en **Agregar**. Las rutas seleccionadas se muestran en el cuadro de lista **Copia de seguridad en** .  
   
      Para eliminar un destino de copia de seguridad, selecciónelo y haga clic en **Quitar**. Para ver el contenido de un destino de copia de seguridad, selecciónelo y haga clic en **Contenido**.  
   
 12. Para ver o seleccionar las opciones multimedia, haga clic en **Opciones multimedia** en el panel **Seleccionar una página** .  
   
-13. Seleccione una opción de **Sobrescribir medios** haciendo clic en una de las siguientes:  
+13. Seleccione una opción de **Sobrescribir medios** ; para ello, haga clic en una de las opciones siguientes:  
   
     -   **Hacer copia de seguridad en el conjunto de medios existente**  
   
@@ -131,7 +130,7 @@ ms.locfileid: "72798032"
   
     -   **Hacer copia de seguridad en un nuevo conjunto de medios y borrar todos los conjuntos de copia de seguridad existentes**  
   
-         Para esta opción, escriba un nombre en el cuadro de texto **Nuevo nombre del conjunto de medios** y, opcionalmente, describa el conjunto de medios en el cuadro de texto **Nueva descripción del conjunto de medios**.  
+         Para esta opción, especifique un nombre en el cuadro de texto **Nuevo nombre del conjunto de medios** y, si lo desea, describa el conjunto de medios en el cuadro de texto **Nueva descripción del conjunto de medios** .  
   
         > [!IMPORTANT]  
         >  Esta opción está deshabilitada si seleccionó **Dirección URL** en la página **General** . Estas acciones no se admiten cuando se realiza una copia de seguridad en Azure Storage.  
@@ -140,26 +139,26 @@ ms.locfileid: "72798032"
   
     -   **Comprobar copia de seguridad al finalizar**.  
   
-    -   **Realizar suma de comprobación antes de escribir en los medios** y, opcionalmente, en **Continuar después de un error de suma de comprobación**. Para obtener más información sobre las sumas de comprobación, vea [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
+    -   **Realizar suma de comprobación antes de escribir en los medios**y, si lo desea, **Continuar después de un error de suma de comprobación**. Para obtener más información sobre las sumas de comprobación, vea [Errores posibles de medios durante copia de seguridad y restauración &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
 15. Si va a realizar copias de seguridad en una unidad de cinta (según se haya especificado en la sección **Destino** de la página **General** ), la opción **Descargar la cinta después de realizar la copia de seguridad** está activa. Al hacer clic en esta opción se activa la opción **Rebobinar la cinta antes de descargar** .  
   
     > [!NOTE]  
-    >  Las opciones de la sección **Registro de transacciones** se encuentran inactivas salvo que vaya a realizar una copia de seguridad de un registro de transacciones (según se haya especificado en la sección **Tipo de copia de seguridad** de la página **General**).  
+    >  Las opciones de la sección **Registro de transacciones** se encuentran inactivas salvo que vaya a realizar una copia de seguridad de un registro de transacciones (según se haya especificado en la sección **Tipo de copia de seguridad** de la página **General** ).  
   
 16. Para ver o seleccionar las opciones de copia de seguridad, haga clic en **Opciones de copia de seguridad** en el panel **Seleccionar una página**.  
   
 17. Especifique cuándo expirará el conjunto de copia de seguridad y se podrá sobrescribir sin omitir explícitamente la comprobación de los datos de expiración:  
   
-    -   Para hacer que el conjunto de copia de seguridad expire después de un número concreto de días, haga clic en **Después** (la opción predeterminada) y escriba el número de días tras los que expirará el conjunto después de la creación establecida. Este valor puede estar entre 0 y 99999 días; el valor 0 significa que el conjunto de copia de seguridad no expirará nunca.  
+    -   Para que el conjunto de copia de seguridad expire al cabo de un número de días específico, haga clic en **Después de** (opción predeterminada) y escriba el número de días tras la creación del conjunto en que este expirará. Este valor puede estar entre 0 y 99999 días; el valor 0 significa que el conjunto de copia de seguridad no expirará nunca.  
   
          El valor predeterminado se establece en la opción **Tiempo predeterminado de retención de medios de copia de seguridad (días)** del cuadro de diálogo **Propiedades del servidor** (página Configuración de base de datos). Para acceder a esta opción, en el Explorador de objetos, haga clic con el botón derecho en el nombre del servidor y seleccione Propiedades; después, seleccione la página **Configuración de base de datos** .  
   
-    -   Para hacer que el conjunto de copia de seguridad expire en una fecha concreta, haga clic en **El día** y escriba la fecha en la que expirará el conjunto.  
+    -   Para que el conjunto de copia de seguridad expire en una determinada fecha, haga clic en **El**y escriba la fecha en la que expirará.  
   
          Para obtener más información sobre las fechas de expiración de la copia de seguridad, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
-18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)]y versiones posteriores admiten la [compresión de copia de seguridad](backup-compression-sql-server.md). De manera predeterminada, el hecho de que se comprima una copia de seguridad depende de la opción de configuración que tenga el servidor para el **valor predeterminado de la compresión de la copia de seguridad**. Sin embargo, independientemente del nivel predeterminado del servidor actual, puede comprimir una copia de seguridad activando **Comprimir copia de seguridad** y puede evitar la compresión activando **No comprimir copia de seguridad**.  
+18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] y las versiones posteriores admiten la [compresión de copia de seguridad](backup-compression-sql-server.md). De forma predeterminada, el hecho de que se comprima una copia de seguridad depende del valor de la opción de configuración del servidor **backup-compression default** . Pero, independientemente del valor predeterminado actual de nivel de servidor, puede comprimir una copia de seguridad si activa **Comprimir copia de seguridad**e impedir la compresión si activa **No comprimir copia de seguridad**.  
   
      **Para ver o cambiar el valor predeterminado actual de la compresión de copia de seguridad**  
   
@@ -184,15 +183,15 @@ ms.locfileid: "72798032"
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |Opción|Descripción|  
     |------------|-----------------|  
     |*database*|Es la base de datos cuya copia de seguridad se desea hacer.|  
-    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> {DISK &#124; TAPE} **=** _physical_backup_device_name_<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *with_options* [ **,**...*o* ]|De forma opcional, puede especificar una o varias opciones, *o*. Para obtener información sobre algunas de las opciones de WITH básicas, vea el paso 2.|  
+    |*backup_device* [ **,** ...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } **=** _physical_backup_device_name_<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *with_options* [ **,** ...*o* ]|De forma opcional, puede especificar una o varias opciones, *o*. Para obtener información sobre algunas de las opciones de WITH básicas, vea el paso 2.|  
   
 2.  Opcionalmente, especifique una o varias opciones de WITH. A continuación se describen algunas de las opciones de WITH básicas. Para obtener información sobre todas las opciones de WITH, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
@@ -204,10 +203,10 @@ ms.locfileid: "72798032"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          En SQL Server 2014 o versiones posteriores únicamente, especifica el algoritmo de cifrado que se va a utilizar y el certificado o la clave asimétrica que se va a usar para proteger el cifrado.  
   
-         Descripción **=** { **'*`text`*'** | **@**_text_variable_ }  
+         Descripción **=** { **' *`text`* '**  |  **@** _text_variable_ }  
          Especifica el texto sin formato que describe el conjunto de copia de seguridad. La cadena puede tener un máximo de 255 caracteres.  
   
-         Nombre **=** { *backup_set_name* | **@**_backup_set_name_var_ }  
+         Nombre **=** { *backup_set_name*  |  **@** _backup_set_name_var_ }  
          Especifica el nombre del conjunto de copia de seguridad. Los nombres pueden tener un máximo de 128 caracteres. Si no se especifica NAME, está en blanco.  
   
     -   Opciones de WITH básicas del conjunto de copia de seguridad:  
@@ -216,13 +215,13 @@ ms.locfileid: "72798032"
   
          Opcionalmente, para dar formato a los medios de copia de seguridad, utilice la opción FORMAT:  
   
-         Format [ **,** **=** MEDIANAME *{media_name* | **@**_media_name_variable_ }] [ **,** MEDIADESCRIPTION **=** { *Text* | **@**_text_variable_ }]  
+         Format [ **,** MEDIANAME **=** { *media_name*  |  **@** _media_name_variable_ }] [ **,** MEDIADESCRIPTION **=** { *Text*  |  **@** _text_variable_ }]  
          Utilice la cláusula FORMAT cuando emplee los medios por primera vez o cuando desee sobrescribir todos los datos existentes. De manera opcional, puede asignar a los nuevos medios un nombre y una descripción.  
   
         > [!IMPORTANT]  
         >  Tenga mucho cuidado cuando utilice la cláusula FORMAT de la instrucción BACKUP, ya que destruye cualquier copia de seguridad existente en el medio de copia de seguridad.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   
 #### <a name="a-backing-up-to-a-disk-device"></a>A. Realizar la copia de seguridad en un dispositivo de disco  
  En el ejemplo siguiente se realiza una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en el disco y se usa `FORMAT` para crear un conjunto de medios nuevo.  
@@ -272,7 +271,7 @@ GO
   
 ##  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
   
-1.  Utilice el cmdlet `Backup-SqlDatabase`. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique el `Database`parámetro **-BackupAction** con su valor predeterminado,. Este parámetro es opcional para las copias de seguridad de base de datos completas.  
+1.  Utilice el cmdlet `Backup-SqlDatabase`. Para indicar explícitamente que se trata de una copia de seguridad completa de la base de datos, especifique el parámetro **-BackupAction** con su valor predeterminado, `Database` . Este parámetro es opcional para las copias de seguridad de base de datos completas.  
   
      En el ejemplo siguiente se crea una copia de seguridad completa de la base de datos `MyDB` en la ubicación de copia de seguridad predeterminada de la instancia de servidor `Computer\Instance`. Opcionalmente, en este ejemplo se especifica `-BackupAction Database`.  
   
@@ -302,11 +301,11 @@ GO
   
 ## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Copias de seguridad de registros de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
- [Conjuntos de medios, familias de medios y conjuntos de copia de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
- [sp_addumpdevice &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
+ [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
+ [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)   
+ [sp_addumpdevice &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Copia de seguridad de base de datos &#40;página general&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
- [Copia de seguridad de base de datos &#40;página Opciones de copia de seguridad&#41;](back-up-database-backup-options-page.md)   
+ [Copia de seguridad de base de datos &#40;página General&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)   
+ [Copia de seguridad de la base de datos &#40;página Opciones de copia de seguridad&#41;](back-up-database-backup-options-page.md)   
  [Copias de seguridad diferenciales &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Copias de seguridad completas de bases de datos &#40;SQL Server&#41;](full-database-backups-sql-server.md)  

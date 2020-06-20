@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b87c66eab08243a6339f1eb2bc1912e469f2b80
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5087a925ac163281f4326a5f952c11ce2953c6dd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965975"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia de servidor (SQL Server)
   Este tema es pertinente en las siguientes situaciones:  
@@ -124,7 +123,7 @@ ms.locfileid: "76929904"
 ##  <a name="database-ownership"></a><a name="database_ownership"></a>Propiedad de la base de datos  
  Cuando se restaura una base de datos en otro equipo, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el usuario de Windows que inicia la operación de restauración se convierte automáticamente en el propietario de la nueva base de datos. Una vez restaurada la base de datos, el administrador del sistema o el nuevo propietario de la base de datos pueden cambiar la propiedad de la base de datos.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a>Consultas distribuidas y servidores vinculados  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distributed_queries_and_linked_servers"></a> Consultas distribuidas y servidores vinculados  
  Las aplicaciones OLE DB admiten las consultas distribuidas y los servidores vinculados. Las consultas distribuidas obtienen acceso a datos desde varios orígenes de datos heterogéneos del mismo equipo o diferentes equipos. Una configuración con servidores vinculados permite a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecutar comandos en orígenes de datos OLE DB situados en servidores remotos. Para obtener más información sobre estas características, vea [Servidores vinculados &#40;motor de base de datos&#41;](../linked-servers/linked-servers-database-engine.md).  
   
  [&#91;Principio&#93;](#information_entities_and_objects)  
@@ -209,7 +208,7 @@ ms.locfileid: "76929904"
   
  Para obtener más información, vea también:  
   
--   [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+-   [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
 -   [Creación de reflejo de la base de datos y catálogos de texto completo &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
@@ -355,7 +354,7 @@ ms.locfileid: "76929904"
 ## <a name="see-also"></a>Consulte también  
  [Bases de datos independientes](contained-databases.md)   
  [Copiar bases de datos en otros servidores](copy-databases-to-other-servers.md)   
- [Desasociar y adjuntar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
+ [Adjuntar y separar bases de datos &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)   
  [Conmutar por error a una &#40;secundaria de trasvase de registros SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)   
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Configurar una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   

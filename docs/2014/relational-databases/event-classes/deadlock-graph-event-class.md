@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 20f92233-c912-4382-8993-8e2e23d03fbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 078e125136643958a1cd9203d07f632c3023a9de
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62662923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053075"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph, clase de eventos
   La clase de eventos **Deadlock Graph** proporciona la descripción en formato XML de un interbloqueo. Esta clase de eventos se produce al mismo tiempo que la clase de eventos **Lock:Deadlock** .  

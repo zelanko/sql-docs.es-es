@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f86dd29f-52dd-44a9-91ac-1eb305c1ca8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d33ff37caca04f46edd6ad92d0686713829bb270
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196428"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061519"
 ---
 # <a name="create-indexed-views"></a>Crear vistas indizadas
   En este tema se describe cómo crear una vista indizada en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. El primer índice creado en una vista debe ser un índice clúster único. Después de haber creado el índice clúster único, puede crear más índices no clúster. La creación de un índice clúster único en una vista mejora el rendimiento de la consulta porque la vista se almacena en la base de datos de la misma manera que se almacena una tabla con un índice clúster. El optimizador de consultas puede utilizar vistas indizadas para acelerar la ejecución de las consultas. No es necesario hacer referencia a la vista en la consulta para que el optimizador tenga en cuenta esa vista al hacer una sustitución.  
@@ -55,7 +54,7 @@ ms.locfileid: "68196428"
   
 -   El optimizador de consultas utiliza la vista indizada para producir el plan de consulta.  
   
-    |Opciones de Set|Valor requerido|Valor de servidor predeterminado|Default<br /><br /> Valor de OLE DB y ODBC|Default<br /><br /> predeterminado|  
+    |Opciones de Set|Valor obligatorio|Valor de servidor predeterminado|Valor predeterminado<br /><br /> Valor de OLE DB y ODBC|Valor predeterminado<br /><br /> predeterminado|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
     |ANSI_PADDING|ACTIVAR|ACTIVAR|ACTIVAR|Apagado|  
@@ -116,7 +115,7 @@ ms.locfileid: "68196428"
     |COUNT|Funciones ROWSET (OPENDATASOURCE, OPENQUERY, OPENROWSET y OPENXML)|Combinaciones externas (LEFT, RIGHT o FULL)|  
     |Tabla derivada (definida mediante una instrucción SELECT en la cláusula FROM)|Autocombinaciones|Especificar columnas mediante SELECT \* o SELECT *nombre_tabla*.*|  
     |DISTINCT|STDEV, STDEVP, VAR, VARP o AVG|Expresión de tabla común (CTE)|  
-    |`float`\*columnas `text`, `ntext`, `image`, `XML`, o `filestream`|Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
+    |`float`\*columnas,, `text` `ntext` , `image` , `XML` o `filestream`|Subconsulta|Cláusula OVER, que incluye funciones de categoría o de agregado|  
     |Predicados de texto completo (CONTAIN, FREETEXT)|Función SUM que hace referencia a una expresión que acepta valores NULL|ORDER BY|  
     |Función de agregado definida por el usuario CLR|TOP|Operadores CUBE, ROLLUP o GROUPING SETS|  
     |MIN, MAX|Operadores UNION, EXCEPT o INTERSECT|TABLESAMPLE|  
@@ -124,7 +123,7 @@ ms.locfileid: "68196428"
     |Conjuntos de columnas dispersas|Funciones insertadas o con valores de tabla de múltiples instrucciones|OFFSET|  
     |CHECKSUM_AGG|||  
   
-     \*La vista indizada puede `float` contener columnas; sin embargo, estas columnas no se pueden incluir en la clave de índice clúster.  
+     \*La vista indizada puede contener `float` columnas; sin embargo, estas columnas no se pueden incluir en la clave de índice clúster.  
   
 -   Si GROUP BY está presente, la definición de VIEW debe contener COUNT_BIG(*) y no debe contener HAVING. Estas restricciones GROUP BY solo se pueden aplicar a la definición de vista indizada. Una consulta puede utilizar una vista indizada en su plan de ejecución aun cuando no satisfaga estas restricciones GROUP BY.  
   

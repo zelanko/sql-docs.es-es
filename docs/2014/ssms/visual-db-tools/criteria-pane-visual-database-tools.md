@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6291affe-580e-482f-a7ff-45ce3837956a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bbfd7e02b11a9f2a5cc0213c31b453eaa28e446
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51d9f20436bb7009c8439d1b53b9757e044002a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63270603"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061832"
 ---
 # <a name="criteria-pane-visual-database-tools"></a>Panel Criterios (Visual Database Tools)
   El panel Criterios permite definir las opciones de consulta (como qué columnas de datos se van a mostrar, cómo se van a ordenar los resultados y qué filas se van a seleccionar); para ello, las opciones se deben escribir en una cuadrícula con forma de hoja de cálculo. En el panel Criterios, puede especificar:  

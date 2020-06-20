@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1e7a2e87-c356-40a6-a6d9-e492467629f9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d28ec166f8954b874f98b7f9f441280ab9064f1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fd06ad0921dbb113a89af77e46733a28c2226c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061405"
 ---
 # <a name="supportalias-property-clientnetworkprotocol-class"></a>Propiedad SupportAlias (clase ClientNetworkProtocol)
   Obtiene la propiedad booleana que especifica si el protocolo de red actual especificado por el [método SetOrderValue (clase ClientNetworkProtocol)](clientnetworkprotocol-class.md) admite alias.  
@@ -47,7 +46,7 @@ object
   
  Si es False, el protocolo de red del cliente no admite alias.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

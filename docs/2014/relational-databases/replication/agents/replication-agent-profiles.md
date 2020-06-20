@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e980725-e42f-4283-94cb-d8a6dba5df62
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfa1c9265af255c3dc901bf931e7b70528f2ec64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721757"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038286"
 ---
 # <a name="replication-agent-profiles"></a>Perfiles del Agente de replicación
   Cuando se configura la replicación, se instala un conjunto de perfiles de agente en el distribuidor. Un perfil de agente contiene un conjunto de parámetros que se usan cada vez que se ejecuta un agente: cada agente inicia una sesión en el distribuidor durante su proceso de inicio y consulta los parámetros de su perfil. En las suscripciones de mezcla que utilizan la sincronización web, los perfiles se descargan y almacenan en el suscriptor. Si se cambia el perfil, éste se actualiza en el suscriptor la próxima vez que se ejecuta el Agente de mezcla. Para obtener más información acerca de la sincronización web, vea [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

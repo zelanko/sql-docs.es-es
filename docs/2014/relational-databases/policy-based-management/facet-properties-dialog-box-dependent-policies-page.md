@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3a4cd6d60037e83b1ba6c7a83f349a994c9be3f9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061674"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Cuadro de diálogo Propiedades de faceta, página Directivas dependientes
   Use este cuadro de diálogo para mostrar una lista de las directivas que hacen referencia actualmente a esta faceta de administración basada en directivas.  
@@ -26,7 +25,7 @@ ms.locfileid: "62704917"
  **Nombre**  
  Muestra el nombre de cada directiva que hace referencia a la faceta actual.  
   
- **Habilitado**  
+ **Enabled**  
  Una marca de verificación indica que la directiva está habilitada actualmente. Si la directiva no está habilitada, permanece en blanco.  
   
  **Historial**  

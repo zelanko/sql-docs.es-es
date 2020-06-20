@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1aad5b82-592e-4907-92f7-b90794175be5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b8d858e8b7ab62ac22902a15159163f8d6d01889
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c4c97e61191da4d51830b1bc8d44bfc98f698a9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630557"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997953"
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>Suscripción, Historial de Distribuidor a suscriptor (Suscripción transaccional)
   La pestaña **Historial de Distribuidor a suscriptor** muestra información detallada sobre el Agente de distribución, incluidos el estado, el historial, los mensajes informativos y cualquier mensaje de error.  
@@ -25,7 +24,7 @@ ms.locfileid: "62630557"
 ## <a name="options"></a>Opciones  
  Seleccione las sesiones del Agente de distribución que desee ver en el menú **Ver** y, a continuación, seleccione una sesión concreta en la cuadrícula etiquetada como **Sesiones del Agente de distribución**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
- **Ver**  
+ **Vista**  
  Seleccione las sesiones del Agente de distribución que desee ver. Normalmente, el Agente de distribución se ejecuta sin interrupción, por lo que es posible que solo haya una sesión para ver.  
   
  **Estado**  
@@ -33,7 +32,7 @@ ms.locfileid: "62630557"
   
 -   Error  
   
--   Completed  
+-   Completado  
   
 -   Intentando de nuevo  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62630557"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duration**  
+ **Duración**  
  Cantidad de tiempo que se ha ejecutado el Agente de distribución en esta sesión. El tiempo representa el tiempo transcurrido si el agente se está ejecutando, y el tiempo total de la sesión si la sesión del agente ha finalizado.  
   
  **Mensaje de error**  

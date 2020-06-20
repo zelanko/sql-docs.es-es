@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 451f4e7d-1c8e-4784-b540-df0806509bf1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3efdb863b0a067d3d52405c5caa5a78e85555c62
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058306"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966281"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Editor de transformación Búsqueda aproximada (pestaña Tabla de referencia)
   Use la pestaña **Tabla de referencia** del cuadro de diálogo **Editor de transformación Búsqueda aproximada** para especificar la tabla de origen y el índice que se van a usar para la búsqueda. El origen de los datos de referencia debe ser una tabla de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -28,7 +27,7 @@ ms.locfileid: "66058306"
 >  La transformación Búsqueda aproximada crea una copia de trabajo de la tabla de referencia. Los índices descritos a continuación se crean en esta tabla de trabajo mediante una tabla especial, no un índice normal de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La transformación no modifica las tablas de origen existentes a menos que se seleccione **Mantener el índice almacenado**. En este caso, se crea un desencadenador en la tabla de referencia que actualiza la tabla de trabajo y la tabla del índice de búsqueda basándose en los cambios en la tabla de referencia.  
   
 > [!NOTE]  
->  Las `Exhaustive` `MaxMemoryUsage` propiedades y de la transformación búsqueda aproximada no están disponibles en el **Editor de transformación búsqueda aproximada**, pero se pueden establecer mediante el **editor avanzado**. Además, solo se puede especificar un valor mayor `MaxOutputMatchesPerInput` que 100 para en el **editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Búsqueda aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Las `Exhaustive` propiedades y `MaxMemoryUsage` de la transformación búsqueda aproximada no están disponibles en el **Editor de transformación búsqueda aproximada**, pero se pueden establecer mediante el **editor avanzado**. Además, solo se puede especificar un valor mayor que 100 para `MaxOutputMatchesPerInput` en el **editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Búsqueda aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para obtener más información acerca de la transformación Búsqueda aproximada, vea [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   

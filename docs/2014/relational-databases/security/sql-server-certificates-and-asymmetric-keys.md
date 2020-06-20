@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ddb7e84f69f501a7857b0d55b1b8a14d11a85694
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e8af2d92b31fee4f220b4c950fb6b7bd9c519885
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244507"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037810"
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Certificados y claves asimétricas de SQL Server
    La criptografía de clave pública (PKI) es un método para mantener la confidencialidad de los mensajes en el que el usuario crea una clave *pública* y una clave *privada*. La clave privada se mantiene en secreto, mientras que la clave pública se puede distribuir a otras personas. Aunque existe una relación matemática entre las claves, no resulta sencillo deducir la clave privada partiendo de la clave pública. La clave pública se utiliza para cifrar los datos y la clave privada se utiliza para descifrarlos. Un mensaje que se cifra mediante la clave pública solo se puede descifrar con la clave privada correcta. Dado que existen dos claves diferentes, estas claves son *asimétricas*.  
@@ -67,8 +66,8 @@ ms.locfileid: "75244507"
 |||  
 |-|-|  
 |Herramienta|Propósito|  
-|[Makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crea certificados.|  
-|[NS](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crea nombres seguros para claves simétricas.|  
+|[makecert](https://msdn2.microsoft.com/library/bfsktky3\(VS.80\).aspx)|Crea certificados.|  
+|[sn](https://msdn2.microsoft.com/library/k5b5tt23\(VS.80\).aspx)|Crea nombres seguros para claves simétricas.|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Elegir un algoritmo de cifrado](encryption/choose-an-encryption-algorithm.md)  
@@ -78,6 +77,6 @@ ms.locfileid: "75244507"
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
 ## <a name="see-also"></a>Consulte también  
- [Sys. Certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
+ [sys.certificates &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-certificates-transact-sql)   
  [Cifrado de datos transparente &#40;TDE&#41;](encryption/transparent-data-encryption.md)  
   

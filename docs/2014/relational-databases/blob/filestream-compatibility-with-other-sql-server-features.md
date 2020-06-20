@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53bb99ea094261fd96f2a821dfaa5203e9796d8c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010194"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955495"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
   Dado que los datos FILESTREAM están en el sistema de archivos, este tema proporciona algunas consideraciones, directrices y limitaciones para usar FILESTREAM con las siguientes características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -39,7 +38,7 @@ ms.locfileid: "66010194"
   
 -   [Indización de texto completo](#FullText)  
   
--   [Clúster de conmutación por error](#FailoverClustering)  
+-   [Clústeres de conmutación por error](#FailoverClustering)  
   
 -   [SQL Server Express](#SQLServerExpress)  
   
@@ -50,14 +49,14 @@ ms.locfileid: "66010194"
   
  Puede utilizar la transformación Importar columna para cargar archivos del sistema de archivos en una columna FILESTREAM. También puede usar la transformación Exportar columna para extraer archivos de una columna FILESTREAM a otra ubicación en el sistema de archivos.  
   
-##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a>Consultas distribuidas y servidores vinculados  
- Puede trabajar con datos de FILESTREAM a través de consultas distribuidas y servidores vinculados `varbinary(max)` si los trata como datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()**.  
+##  <a name="distributed-queries-and-linked-servers"></a><a name="distqueries"></a> Consultas distribuidas y servidores vinculados  
+ Puede trabajar con datos de FILESTREAM a través de consultas distribuidas y servidores vinculados si los trata como `varbinary(max)` datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()** .  
   
-##  <a name="encryption"></a><a name="encryption"></a>Cifra  
+##  <a name="encryption"></a><a name="encryption"></a> Cifrado  
  Los datos FILESTREAM no se cifran ni siquiera cuando está habilitado el cifrado de datos transparente.  
   
-##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a>Instantáneas de base de datos  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]no admite [instantáneas de base de datos](../databases/database-snapshots-sql-server.md) para los grupos de archivos FileStream. Si se incluye un grupo de archivos FILESTREAM en una cláusula CREATE DATABASE ON, se producirá un error en la instrucción y se generará el mensaje correspondiente.  
+##  <a name="database-snapshots"></a><a name="DatabaseSnapshot"></a> Instantáneas de base de datos  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite [instantáneas de base de datos](../databases/database-snapshots-sql-server.md) para grupos de archivos FILESTREAM. Si se incluye un grupo de archivos FILESTREAM en una cláusula CREATE DATABASE ON, se producirá un error en la instrucción y se generará el mensaje correspondiente.  
   
  Cuando se utiliza FILESTREAM, pueden crearse instantáneas de la base de datos de grupos de archivos estándar (no FILESTREAM). Los grupos de archivos FILESTREAM se marcan como sin conexión para esas instantáneas de la base de datos.  
   
@@ -65,8 +64,8 @@ ms.locfileid: "66010194"
   
  `Could not continue scan with NOLOCK due to data movement.`  
   
-##  <a name="replication"></a><a name="Replication"></a> Replicación  
- Una columna `varbinary(max)` que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar cómo se replica la columna, utilice el cuadro de diálogo **Propiedades del artículo - \<Artículo>** o el parámetro @schema_option de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Los datos que se replican en una columna `varbinary(max)` que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda replicar el atributo FILESTREAM, a menos que no se admita la replicación [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] de datos en los suscriptores, independientemente de la opción de esquema especificada.  
+##  <a name="replication"></a><a name="Replication"></a> Replication  
+ Una columna `varbinary(max)` que tiene el atributo FILESTREAM habilitado en el publicador puede replicarse en un suscriptor con o sin el atributo FILESTREAM. Para especificar la forma en que se replica la columna, utilice el cuadro de diálogo **propiedades \<Article> del artículo:** o el @schema_option parámetro de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) o [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Los datos que se replican en una columna `varbinary(max)` que no tiene el atributo FILESTREAM no deben superar el límite de 2 GB para ese tipo de datos; de lo contrario, se genera un error en tiempo de ejecución. Se recomienda replicar el atributo FILESTREAM, a menos que no se admita la replicación de datos en los [!INCLUDE[ssVersion2005](../../includes/ssversion2000-md.md)] suscriptores, independientemente de la opción de esquema especificada.  
   
 > [!NOTE]  
 >  La replicación de valores de datos de gran tamaño de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] a suscriptores de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] está limitada a un máximo de 256 MB de valores de datos. Para obtener más información, vea [Especificaciones de capacidad máxima](https://go.microsoft.com/fwlink/?LinkId=103810).  
@@ -100,21 +99,21 @@ ms.locfileid: "66010194"
 ##  <a name="log-shipping"></a><a name="LogShipping"></a> Trasvase de registros  
  [El trasvase de registros](../../database-engine/log-shipping/about-log-shipping-sql-server.md) es compatible con FILESTREAM. Los servidores principal y secundario deben estar ejecutando [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]o una versión posterior y deben tener FILESTREAM habilitado.  
   
-##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Creación de reflejo de la base de datos  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a> Creación de reflejo de base de datos  
  La creación de reflejo de la base de datos no es compatible con FILESTREAM. No se puede crear un grupo de archivos FILESTREAM en el servidor principal. La creación de reflejo de la base de datos no puede configurarse para una base de datos que contiene grupos de archivos FILESTREAM.  
   
-##  <a name="full-text-indexing"></a><a name="FullText"></a>Indización de texto completo  
+##  <a name="full-text-indexing"></a><a name="FullText"></a> Indización de texto completo  
  La [indización de texto completo](../indexes/indexes.md) funciona con una columna FileStream del mismo modo que con una `varbinary(max)` columna. La tabla FILESTREAM debe tener una columna con la extensión de nombre de archivo para cada BLOB FILESTREAM. Para obtener más información, vea [Consultar con búsqueda de texto completo](../search/query-with-full-text-search.md), [Configurar y administrar filtros para búsquedas](../search/configure-and-manage-filters-for-search.md) y [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
  El motor de texto completo indiza el contenido de los BLOB FILESTREAM. Indizar archivos como las imágenes podría no ser útil. Cuando se actualiza un BLOB FILESTREAM, vuelve a indizarse.  
   
-##  <a name="failover-clustering"></a><a name="FailoverClustering"></a>Clústeres de conmutación por error  
+##  <a name="failover-clustering"></a><a name="FailoverClustering"></a> Agrupación en clústeres de conmutación por error  
  Para la agrupación en clústeres de conmutación por error, los grupos de archivos FILESTREAM deben situarse en un disco compartido. Es preciso habilitar FILESTREAM en cada nodo del clúster que hospedará la instancia de FILESTREAM. Para obtener más información, vea [Configurar FILESTREAM en un clúster de conmutación por error](set-up-filestream-on-a-failover-cluster.md).  
   
-##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a>SQL Server Express  
+##  <a name="sql-server-express"></a><a name="SQLServerExpress"></a> SQL Server Express  
  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] es compatible con FILESTREAM. El límite de tamaño de base de datos de 10 GB no incluye el contenedor de datos de FILESTREAM.  
   
-##  <a name="contained-databases"></a><a name="contained"></a>Bases de datos independientes  
+##  <a name="contained-databases"></a><a name="contained"></a> Bases de datos independientes  
  La característica FILESTREAM requiere cierta configuración fuera de la base de datos. Por consiguiente, una base de datos que utiliza FILESTREAM o FileTable no es totalmente contenida.  
   
  Puede establecer la contención de la base de datos en PARTIAL si desea utilizar algunas características de bases de datos contenidas, como usuarios contenidos. Sin embargo, en este caso, debe tener en cuenta que algunas de las opciones de base de datos no están contenidas en la base de datos y no se mueven automáticamente cuando lo hace la base de datos.  

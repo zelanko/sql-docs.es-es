@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa799404777f8f0ef0a8a07a81c8c7961c636004
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c6f072f8d748b24489ab68f971abd4872edffdf6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059029"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966795"
 ---
 # <a name="execute-process-task-editor-process-page"></a>Editor de la tarea Ejecutar proceso (página Procesar)
   Utilice la página **Proceso** del cuadro de diálogo **Editor de la tarea Ejecutar proceso** para configurar las opciones que permitirán ejecutar el proceso. Estas opciones incluyen el ejecutable que se debe instalar, su ubicación, los argumentos de línea de comandos y las variables que proporcionan información de entrada y capturan información de salida.  
@@ -40,15 +39,15 @@ ms.locfileid: "66059029"
  Escriba la ruta de acceso de la carpeta que contiene el archivo ejecutable o haga clic en el botón examinar **(...)** y busque la carpeta.  
   
  **StandardInputVariable**  
- Seleccione una variable para proporcionar la entrada al proceso o haga clic en \< **nueva variable...**> para crear una nueva variable:  
+ Seleccione una variable para proporcionar la entrada al proceso o haga clic \<**New variable...**> para crear una nueva variable:  
   
  **Temas relacionados:**  [Agregar variable](../../2014/integration-services/add-variable.md)  
   
  **StandardOutputVariable**  
- Seleccione una variable para capturar la salida del proceso o haga clic en \< **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable para capturar la salida del proceso o haga clic \<**New variable...**> para crear una nueva variable.  
   
  **StandardErrorVariable**  
- Seleccione una variable para capturar la salida de error del procesador o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable para capturar la salida de error del procesador o haga clic \<**New variable...**> para crear una nueva variable.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Esta opción indica si la tarea genera un error porque el código de salida del proceso es diferente del valor especificado en **SuccessValue**.  

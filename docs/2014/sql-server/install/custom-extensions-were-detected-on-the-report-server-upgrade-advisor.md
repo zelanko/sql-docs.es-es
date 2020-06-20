@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2149e0434c13ccc9e284385999cf94c98fb937fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059383"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Se han detectado extensiones personalizadas en el servidor de informes (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado valores de extensiones personalizadas en los archivos de configuración, lo que significa que la instalación incluye una o más extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad o la autenticación de datos. La actualización moverá la configuración de la extensión con el servidor de informes actualizado. Sin embargo, si las extensiones personalizadas se instalan en la carpeta de instalación de servidor de informes existente, los archivos de ensamblado para esas extensiones personalizadas no se moverán a la nueva carpeta de instalación durante el proceso de actualización. Una vez completada la actualización, debe mover los archivos de ensamblado a la nueva carpeta de instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -34,7 +33,7 @@ ms.locfileid: "71952596"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]proporciona una arquitectura extensible que permite a los desarrolladores crear extensiones personalizadas para el procesamiento, la entrega, la representación, la seguridad y la autenticación de los datos.  
   
  Si se utilizan extensiones personalizadas o ensamblados en la instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede utilizar la instalación para realizar una actualización, pero es posible que necesite mover las extensiones a la nueva ubicación de instalación una vez que se complete la actualización, o que necesite realizar algún paso antes de la actualización.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "71952596"
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Pasos de tras la actualización para procesamiento de datos personalizado o extensiones de entrega personalizadas  
   
-1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server \ MSRS10_50. \< *instance_name*> servidor \report.  
+1.  Mueva los archivos de extensión a la nueva carpeta de programas para el servidor de informes. De forma predeterminada, la carpeta de programas del servidor de informes se encuentra en \Archivos de Programa\microsoft SQL Server \ MSRS10_50. \<*instance_name*> servidor de \report.  
   
  Para obtener más información, vea "Implementar una extensión de procesamiento de datos" e "Implementar una extensión de entrega" en Libros en pantalla de SQL Server.  
   

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 748d781d6bbefb0dc710427a34ebd71ec7037fdb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62871542"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965850"
 ---
 # <a name="move-system-databases"></a>Mover bases de datos del sistema
   En este tema se describe cómo mover bases de datos del sistema en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Mover bases de datos del sistema puede resultar útil en las situaciones siguientes:  
@@ -50,7 +49,7 @@ ms.locfileid: "62871542"
 > [!IMPORTANT]  
 >  Si se mueve una base de datos del sistema y posteriormente se vuelve a generar la base de datos maestra, se debe mover de nuevo la base de datos del sistema porque la operación de regeneración instala todas las bases de datos del sistema en su ubicación predeterminada.  
   
-##  <a name="in-this-topic"></a><a name="Intro"></a> **En este tema**  
+##  <a name="in-this-topic"></a><a name="Intro"></a>**En este tema**  
   
 -   [Procedimiento de reubicación planeada y mantenimiento de disco programado](#Planned)  
   
@@ -194,7 +193,7 @@ ms.locfileid: "62871542"
     ```  
   
 ##  <a name="moving-the-resource-database"></a><a name="Resource"></a>Mover la base de datos Resource  
- La ubicación de la base de datos Resource es \<*unidad*>:\Archivos de programa\Microsoft SQL Server\MSSQL\<versión>.\<*nombreDeInstancia*>\MSSQL\Binn\\. No se puede mover la base de datos.  
+ La ubicación de la base de datos de recursos es \<*drive*> : \Archivos de programa\Microsoft SQL Server\Mssql \<version> . \<*instance_name*> \MSSQL\Binn \\ . No se puede mover la base de datos.  
   
 ##  <a name="follow-up-after-moving-all-system-databases"></a><a name="Follow"></a> Seguimiento: después de mover todas las bases de datos del sistema  
  Si ha movido todas las bases de datos del sistema a una nueva unidad o volumen o a otro servidor con una letra de unidad diferente, realice las actualizaciones siguientes.  
@@ -209,7 +208,7 @@ ms.locfileid: "62871542"
   
 2.  Haga clic con el botón derecho en **Registros de errores** y haga clic en **Configurar**.  
   
-3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de Programa\microsoft SQL Server\MSSQL12. <instance_name>\\\mssql\log..  
+3.  En el cuadro de diálogo **Configurar registros de errores del Agente SQL Server** , especifique la nueva ubicación del archivo SQLAGENT.OUT. La ubicación predeterminada es C:\Archivos de Programa\microsoft SQL Server\MSSQL12. <instance_name> \Mssql\log. \\ .  
   
 #### <a name="change-the-database-default-location"></a>Cambiar la ubicación predeterminada de la base de datos  
   
@@ -264,11 +263,11 @@ ms.locfileid: "62871542"
 5.  Elimine los archivos `tempdb.mdf` y `templog.ldf` de la ubicación original.  
   
 ## <a name="see-also"></a>Consulte también  
- [Base de datos de recursos](resource-database.md)   
+ [Base de datos Resource](resource-database.md)   
  [Base de datos Tempdb](tempdb-database.md)   
  [Base de datos maestra](master-database.md)   
  [Base de datos msdb](msdb-database.md)   
- [Base de datos modelo](model-database.md)   
+ [Base de datos model](model-database.md)   
  [Traslado de bases de datos de usuario](move-user-databases.md)   
  [Traslado de archivos de base de datos](move-database-files.md)   
  [Iniciar, detener, pausar, reanudar, reiniciar el servicio de Motor de base de datos, Agente SQL Server o SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dbb94fdf-c85b-477b-8e84-f830d259bade
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd69935dbfac020c4c75bb391e7932009fd4197
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63063126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054559"
 ---
 # <a name="deleting-database-objects"></a>Eliminar objetos de base de datos
   Para quitar todas los seguimientos de este tutorial, podría eliminar únicamente la base de datos. No obstante, en este tema, recorrerá los pasos para revertir cada una de las acciones llevadas a cabo en el tutorial.  

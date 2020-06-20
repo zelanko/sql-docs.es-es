@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cef1d05182edd02c9b0cdb0e6237c09473041dde
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058689"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966432"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de origen de archivos planos (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar el administrador de conexiones que utilizará el origen de archivos planos. El origen de archivos planos lee los datos de un archivo de texto, que pueden estar en formato delimitado, tener un ancho fijo o ser mixtos.  
@@ -42,7 +41,7 @@ ms.locfileid: "66058689"
  **Conservar los valores null del origen como valores null en el flujo de datos**  
  Especifica si deben mantenerse los valores NULL cuando se extraen los datos. El valor predeterminado de esta propiedad es **false**. Cuando este valor es f`alse`, el origen de archivos planos reemplaza los valores NULL del origen de datos por los valores predeterminados correspondientes para cada columna, como cadenas vacías para las columnas de cadenas o cero para las columnas numéricas.  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
 ## <a name="see-also"></a>Consulte también  

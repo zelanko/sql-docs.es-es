@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d69745b3316222f9ebabbad29fbc12e023351d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: caa9be1a61ed579aa8bfaaf1bc6c83282f52c42c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067531"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066210"
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Elegir tabla de destino para Insertar resultados (cuadro de diálogo, Visual Database Tools)
   Permite especificar la tabla en la que se van a agregar filas de datos como resultado de una consulta INSERT RESULTS. Este cuadro de diálogo aparece cuando se inicia una consulta INSERT RESULTS.  

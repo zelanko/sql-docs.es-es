@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c7867f9b-7acc-4fae-bde1-63808c403ebc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c41edcfc545e69e6e8174003ca765a4c2f1d551b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42e6b505c71abecce7b56b5cb2544b4e9f4e8f71
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66064430"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061103"
 ---
 # <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutorial: Evaluación de los procedimientos recomendados mediante administración basada en directivas
   Este es el tutorial Evaluar las prácticas recomendadas usando administración basada en directivas. Este tutorial está destinado a usuarios que están familiarizados con [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], pero que no conocen la administración basada en directivas. La administración basada en directivas es un sistema para definir directivas que se pueden usar para aplicar normas de administración de sitios. Incluye una serie de directivas de prácticas recomendadas que puede usar para analizar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y determinar si esa instancia cumple las indicaciones y recomendaciones de las prácticas recomendadas.  

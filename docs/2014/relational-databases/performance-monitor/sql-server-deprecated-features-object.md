@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 96abc6def3f4ab8cdb76b548e7717ae6c030c00f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68206961"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067018"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
   
  En la tabla siguiente se describen las instancias del contador Características desusadas de SQL Server.  
   
-|Instancias del contador Características desusadas de SQL Server|Descripción|  
+|Instancias del contador Características desusadas de SQL Server|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM` * \< function_name>* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM` *\< function_name>* `()` . Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use como identificador \@, \@\@ ni ningún nombre que empiece por \@\@. Se produce una vez por cada compilación.|  
-|ADDING TAPE DEVICE|Se encontró la característica desusada`tape`sp_addumpdevice ' '. Utilice sp_addumpdevice '`disk`' en su lugar. Se produce una vez en cada uso.|  
+|ADDING TAPE DEVICE|Se encontró la característica desusada sp_addumpdevice ' `tape` '. Utilice sp_addumpdevice ' `disk` ' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Número total de veces que la opción TORN_PAGE_DETECTION de ALTER DATABASE, una característica obsoleta, se ha usado desde que se inició la instancia del servidor. Utilice la sintaxis PAGE_VERIFY en su lugar. Se produce una vez por cada uso en una instrucción DDL.|  
 |ALTER LOGIN WITH SET CREDENTIAL|Se encontró la sintaxis de la característica obsoleta ALTER LOGIN WITH SET CREDENTIAL o ALTER LOGIN WITH NO CREDENTIAL. Utilice en su lugar la sintaxis ADD o DROP CREDENTIAL. Se produce una vez por cada compilación.|  

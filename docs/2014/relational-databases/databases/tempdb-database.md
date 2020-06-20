@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7150ca05e536214d43d4992ed1e7f79138ac2be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916895"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965698"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
   La base de datos del sistema **tempdb** es un recurso global disponible para todos los usuarios conectados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se utiliza para incluir lo siguiente:  
@@ -43,7 +42,7 @@ ms.locfileid: "62916895"
 |Datos principales|tempdev|tempdb.mdf|Crecimiento automático del 10 por ciento hasta llenar el disco|  
 |Log|templog|templog.ldf|Crecimiento automático del 10 por ciento hasta un máximo de 2 terabytes|  
   
- El tamaño de **tempdb** puede afectar al rendimiento de un sistema. Por ejemplo, si el tamaño de **tempdb** es demasiado pequeño, el procesamiento del sistema puede estar demasiado ocupado con el crecimiento automático de la base de datos para admitir los requisitos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de carga de trabajo cada vez que se inicia. Puede evitar esta sobrecarga si aumenta el tamaño de **tempdb**.  
+ El tamaño de **tempdb** puede afectar al rendimiento de un sistema. Por ejemplo, si el tamaño de **tempdb** es demasiado pequeño, el procesamiento del sistema puede estar demasiado ocupado con el crecimiento automático de la base de datos para admitir los requisitos de carga de trabajo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Puede evitar esta sobrecarga si aumenta el tamaño de **tempdb**.  
   
 ## <a name="performance-improvements-in-tempdb"></a>Mejoras en el rendimiento de tempdb  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el rendimiento de **tempdb** se mejora de las siguientes maneras:  
@@ -79,7 +78,7 @@ ms.locfileid: "62916895"
 |CONCAT_NULL_YIELDS_NULL|Apagado|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|Apagado|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sin<br /><br /> Sin|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
 |DATE_CORRELATION_OPTIMIZATION|Apagado|Sí|  
 |DB_CHAINING|ACTIVAR|No|  
 |ENCRYPTION|Apagado|No|  

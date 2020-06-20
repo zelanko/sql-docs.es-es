@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 948588ef8cfec8e3b3a5d689068bdff5d4396cc6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767907"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965573"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Operación en curso (Asistente para importación y exportación de SQL Server)
   Use la página **realizando operación** para ver el progreso y los resultados de la operación de importación y exportación, y para interrumpir la operación si es necesario.  
@@ -42,7 +41,7 @@ ms.locfileid: "62767907"
  **Detención**  
  Interrumpa la operación, si es necesario, mediante el botón **detener** .  
   
- **Informe**  
+ **Report**  
  Permite ver un informe de los resultados, guardarlo en un archivo, copiarlo al portapapeles o enviarlo por correo electrónico.  
   
   

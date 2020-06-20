@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 917abf00789cfca75ee6edb52ffef07832bfe981
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e6261e223513c4a33362ef41d6977c04bcfb430a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783039"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935326"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>Habilitar o deshabilitar un protocolo de red de servidor
   Todos los protocolos de red se instalan con el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , pero se pueden habilitar o deshabilitar. En este tema se describe cómo habilitar o deshabilitar un protocolo de red de servidor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o PowerShell. Es preciso detener y reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que el cambio surta efecto.  
@@ -44,19 +43,19 @@ ms.locfileid: "72783039"
   
      [PowerShell](#PowerShellProcedure)  
   
-##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
+##  <a name="using-sql-server-configuration-manager"></a><a name="SSMSProcedure"></a>Usar Administrador de configuración de SQL Server  
   
 #### <a name="to-enable-a-server-network-protocol"></a>Para habilitar un protocolo de red de servidor  
   
 1.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel de la consola, expanda **Configuración de red de SQL Server**.  
   
-2.  En el panel de la consola, haga clic en **protocolos de** * \<nombre de instancia>*.  
+2.  En el panel de la consola, haga clic en **protocolos para** *\<instance name>* .  
   
 3.  En el panel de detalles, haga clic con el botón derecho en el protocolo que quiera cambiar y, después, haga clic en **Habilitar** o **Deshabilitar**.  
   
 4.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
-5.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (***\<nombre de instancia>***)** y, después, haga clic en **Reiniciar** para detener y reiniciar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  En el panel de detalles, haga clic con el botón secundario en **SQL Server ( ***\<instance name>*** )** y, a continuación, haga clic en **reiniciar**para detener y reiniciar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio.  
   
 ##  <a name="using-sql-server-powershell"></a><a name="PowerShellProcedure"></a> Usar SQL Server PowerShell  
   

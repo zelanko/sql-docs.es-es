@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 481b0704-ce79-4543-b141-67306128aa2b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0de86b9690f0647803938218ce566508662da20e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac1488cd9a42a8f7e212fe533615dbb131fe7290
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094917"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059313"
 ---
 # <a name="how-to-install-upgrade-advisor"></a>Procedimientos: Instalar el Asesor de actualizaciones
   El Asesor de actualizaciones admite el análisis remoto de todos los componentes admitidos excepto [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si no está analizando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede instalar el Asesor de actualizaciones en cualquier equipo que pueda conectarse a sus instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El equipo también debe cumplir los requisitos previos del Asesor de actualizaciones. Si está examinando instancias de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe instalar el Asesor de actualizaciones en el servidor de informes.  
@@ -33,14 +32,14 @@ ms.locfileid: "66094917"
   
     -   Si va a instalar desde el [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio web de, haga clic en el vínculo **Descargar** y, a continuación, haga clic en el botón **Ejecutar** para iniciar la instalación.  
   
-    -   Si va a instalar desde el medio del producto, abra la carpeta **Redist** , abra la carpeta **Asesor de actualizaciones** y, a continuación, haga doble clic en **SQLUA. msi**.  
+    -   Si va a instalar desde el medio del producto, abra la carpeta **Redist** , abra la carpeta **Asesor de actualizaciones** y, a continuación, haga doble clic en **SQLUA.msi**.  
   
     > [!NOTE]  
     >  El Asesor de actualizaciones necesita [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 4. Si no está instalado o si tiene una versión preliminar, aparecerá un mensaje de error. Desinstale cualquier versión anterior de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] y, a continuación, instale la versión más reciente de .NET Framework 4.  
     >   
-    >  ScriptDom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] es un requisito previo para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el asesor de actualizaciones y el programa de instalación del Asesor de actualizaciones no lo instala. El programa de instalación requiere que descargue e instale [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
+    >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom es un requisito previo para instalar el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Asesor de actualizaciones y el programa de instalación del Asesor de actualizaciones no lo instala. El programa de instalación requiere que descargue e instale [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] ScriptDom desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Feature Pack.  
   
-2.  En la página **Bienvenido a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] la instalación del Asesor de actualizaciones** , haga clic en **siguiente**.  
+2.  En la página **Bienvenido a la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instalación del Asesor de actualizaciones** , haga clic en **siguiente**.  
   
 3.  En la página **contrato de licencia** , lea el contrato de licencia. Si está de acuerdo, seleccione Acepto **el contrato de licencia** y, a continuación, haga clic en **siguiente**.  
   

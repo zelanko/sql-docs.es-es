@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4298cfec7478560c2cef01e7d3c6df577a2a8f16
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966276"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Elegir un origen de datos (Asistente para importación y exportación de SQL Server)
   Use la página **elegir un origen de datos** para especificar el origen de los datos que desea copiar.  
@@ -28,7 +27,7 @@ ms.locfileid: "62893600"
   
 ## <a name="options"></a>Opciones  
  **Data Source** (Origen de datos)  
- Elija el proveedor de datos que se corresponda con el formato de almacenamiento de datos del origen. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
+ Elija el proveedor de datos que se corresponda con el formato de almacenamiento de datos del origen. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
   
  La propiedad **Origen de datos** tiene un número variable de opciones que depende de los proveedores instalados en el equipo. En las tablas siguientes se indican las opciones para algunos de los destinos utilizados con mayor frecuencia. Para otros proveedores, vea la documentación específica del proveedor.  
   
@@ -39,11 +38,11 @@ ms.locfileid: "62893600"
  **Nombre del servidor**  
  Escriba el nombre del servidor que contiene los datos o elija un servidor de la lista.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Especifique si el paquete debe utilizar la autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para iniciar sesión en la base de datos. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows.  
   
  **Usar autenticación SQL Server**  
- Especifique si el paquete debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
+ Especifique si el paquete debe usar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
  **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión de la base de datos cuando utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

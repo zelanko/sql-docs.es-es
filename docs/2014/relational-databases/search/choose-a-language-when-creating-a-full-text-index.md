@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5f045933735d2a26b1e9007868f96680bef4fc47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b514820ad64cbf17df209cbda552e4c5182b75fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012733"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997780"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Elegir un idioma al crear un índice de texto completo
   Al crear un índice de texto completo, tiene que especificar un idioma de columna para la columna indizada. Las consultas de texto completo usarán el [separador de palabras y los lematizadores](configure-and-manage-word-breakers-and-stemmers-for-search.md) del idioma especificado en la columna. Hay varios aspectos que deben tenerse en cuenta al elegir el idioma de columna cuando se crea un índice de texto completo. Estas consideraciones se refieren al modo en que se acorta el texto y se indiza a continuación mediante el motor de texto completo.  
@@ -36,7 +35,7 @@ ms.locfileid: "66012733"
  Esta sección proporciona una introducción a los separadores de palabras y lematizadores, y explica cómo usa la búsqueda de texto completo el LCID del idioma de columna.  
   
 ### <a name="introduction-to-word-breakers-and-stemmers"></a>Introducción a los separadores de palabras y lematizadores  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y las versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]estaban disponibles anteriormente en.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y las versiones posteriores incluyen una nueva familia completa de separadores de palabras y lematizadores que son significativamente mejores que los que estaban disponibles anteriormente en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
 >  El grupo de idiomas naturales de Microsoft, Microsoft Natural Language Group (MS NLG), implementó estos nuevos componentes lingüísticos y los admite.  
@@ -49,7 +48,7 @@ ms.locfileid: "66012733"
   
 -   Seguridad  
   
-     Los nuevos separadores de palabras están habilitados [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de forma predeterminada en gracias a las mejoras de seguridad de los componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
+     Los nuevos separadores de palabras están habilitados de forma predeterminada en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gracias a las mejoras de seguridad de los componentes lingüísticos. Recomendamos encarecidamente que se firmen los componentes externos, como son los separadores de palabras y los filtros, con el fin de mejorar la seguridad total y la solidez de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Puede configurar el texto completo para comprobar que estos componentes se firman de la forma siguiente:  
   
     ```  
     EXEC sp_fulltext_service 'verify_signature';  
@@ -61,7 +60,7 @@ ms.locfileid: "66012733"
   
 -   Cobertura de una amplia lista de idiomas. Los separadores de palabras se incluyen en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] directamente y se habilitan de forma predeterminada.  
   
- Para obtener una lista de los idiomas para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los que incluye un separador de palabras y lematizadores, vea [sys. fulltext_languages &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
+ Para obtener una lista de los idiomas para los que incluye un separador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] palabras y lematizadores, vea [sys. fulltext_languages &#40;&#41;de TRANSACT-SQL ](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql).  
   
 
   
@@ -108,7 +107,7 @@ ms.locfileid: "66012733"
 ##  <a name="effect-of-column-type-on-full-text-search"></a><a name="type"></a> Efecto del tipo de columna en la búsqueda de texto completo  
  Otra consideración en la elección del idioma se refiere al modo en que se representan los datos. En los datos que no se almacenan en la columna `varbinary(max)`, no se realiza ningún proceso de filtro especial, sino que el texto suele pasarse por el componente separador de palabras tal y como es.  
   
- Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En ese caso, tiene dos opciones: el método preferido es simplemente almacenar los datos de texto en `varbinary(max)` la columna e indicar su tipo de documento para que se pueda filtrar. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
+ Además, los separadores de palabras se han diseñado principalmente para procesar el texto escrito. Por ello, si el texto contiene algún tipo de marcado (por ejemplo, HTML), es posible que los procesos de indización y búsqueda no se realicen con gran precisión lingüística. En ese caso, tiene dos opciones: el método preferido es simplemente almacenar los datos de texto en la `varbinary(max)` columna e indicar su tipo de documento para que se pueda filtrar. o utilizar el separador de palabras neutral y, si es posible, agregar datos de marcado (como 'br' en HTML) a las listas de palabras irrelevantes.  
   
 > [!NOTE]  
 >  La lematización basada en el idioma no interviene cuando se especifica el idioma neutral.  

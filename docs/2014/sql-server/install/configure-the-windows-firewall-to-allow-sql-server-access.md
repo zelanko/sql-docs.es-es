@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5dcbf0aae9c96e788fdbf9544114d226fa8f0bfd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1a0bc32040fc90e5f73faa708f314722bc8f3b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637856"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037004"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
   Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Si un firewall está activado pero no está configurado correctamente, es posible que se bloqueen los intentos de conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -91,7 +90,7 @@ ms.locfileid: "73637856"
   
     -   Establecer algunas restricciones de ámbito  
   
-     El elemento **Firewall de Windows** del Panel de control es muy adecuado para los usuarios que tengan experiencia en la configuración de firewall y que estén configurando opciones de firewall básicas para equipos que no sean móviles. También puede abrir el elemento **firewall de Windows** en el panel de control `run` desde el comando mediante el procedimiento siguiente:  
+     El elemento **Firewall de Windows** del Panel de control es muy adecuado para los usuarios que tengan experiencia en la configuración de firewall y que estén configurando opciones de firewall básicas para equipos que no sean móviles. También puede abrir el elemento **firewall de Windows** en el panel de control desde el `run` comando mediante el procedimiento siguiente:  
   
     #### <a name="to-open-the-windows-firewall-item"></a>Para abrir el elemento Firewall de Windows  
   
@@ -159,7 +158,7 @@ ms.locfileid: "73637856"
   
 1.  En la pestaña **Excepciones** del elemento **Firewall de Windows** del Panel de control, haga clic en **Agregar un programa**.  
   
-2.  Vaya a la ubicación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea permitir a través del firewall, por ejemplo, **C:\Archivos de programa\microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**, seleccione **sqlservr. exe**y, a continuación, haga clic en **abrir**.  
+2.  Vaya a la ubicación de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea permitir a través del firewall, por ejemplo, **C:\Archivos de Programa\microsoft SQL Server\MSSQL12. <instance_name> \mssql\binn**, seleccione **sqlservr.exe**y, a continuación, haga clic en **abrir**.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -323,4 +322,4 @@ ms.locfileid: "73637856"
 -   La utilidad **PortQry** se puede usar para notificar el estado de los puertos TCP/IP para indicar que están escuchando, no escuchando o filtrados. (Con un estado de filtrado, el puerto puede o no estar escuchando; este estado indica que la utilidad no ha recibido una respuesta del puerto.) La utilidad **PortQry** se puede descargar desde el [Centro de descargas de Microsoft](https://www.microsoft.com/download/details.aspx?id=17148).  
   
 ## <a name="see-also"></a>Consulte también  
- [Introducción al servicio y requisitos del puerto de red para el sistema Windows Server](https://support.microsoft.com/kb/832017)  
+ [Introducción a los servicios y requisitos de puerto de red para el sistema Windows Server](https://support.microsoft.com/kb/832017)  

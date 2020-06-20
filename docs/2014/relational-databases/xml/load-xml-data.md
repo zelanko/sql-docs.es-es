@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b254ae62ff50b8f914901f4b28e130a0318f3309
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2150d4b65cdd4da67f495fda251f1913c411053a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013525"
 ---
 # <a name="load-xml-data"></a>Cargar datos XML
   Puede transferir los datos XML a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de varias maneras. Por ejemplo:  

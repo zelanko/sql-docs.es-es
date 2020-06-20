@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d50f31078389cad9fc1e687e67b515c61c89b1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4cacffbae4f2b31349b04d159c9756609d2d9c1c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783050"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997004"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Realizar copias de seguridad y restaurar bases de datos y registros de transacciones
-  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad específica que es necesaria en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lugar de un objeto en la instancia del servidor.  
+  En SMO, la clase <xref:Microsoft.SqlServer.Management.Smo.Backup> y la clase <xref:Microsoft.SqlServer.Management.Smo.Restore> son clases de utilidad que proporcionan las herramientas para realizar las tareas concretas de copias de seguridad y restauración. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objeto representa una tarea de copia de seguridad específica que es necesaria en lugar de un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objeto en la instancia del servidor.  
   
  Si se produce una pérdida de datos o se dañan, se debe restaurar la copia de seguridad, total o parcialmente. La restauración parcial utiliza la colección <xref:Microsoft.SqlServer.Management.Smo.FileGroupCollection> para segmentar los datos que se van a restaurar. Si la copia de seguridad es de un registro de transacciones, los datos se pueden desde un momento determinado utilizando la propiedad <xref:Microsoft.SqlServer.Management.Smo.Restore.ToPointInTime%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Restore>. Los datos también se pueden validar utilizando el método <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>. El procedimiento de copia de seguridad recomendado es comprobar la integridad de la copia de seguridad haciendo una operación de restauración y comprobando los datos en la base de datos periódicamente.  
   

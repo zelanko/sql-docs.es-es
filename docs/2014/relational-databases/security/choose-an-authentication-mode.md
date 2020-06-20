@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5e06e33048548baad245bee78b9989e9c4cc700b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6156d149cdd49b8dc80c6c349d5ce923696a835f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011340"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997518"
 ---
 # <a name="choose-an-authentication-mode"></a>Elegir un modo de autenticación
   Durante la instalación, debe seleccionar un modo de autenticación para [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Hay dos modos posibles: modo de autenticación de Windows y modo mixto. El modo de autenticación de Windows habilita la autenticación de Windows y deshabilita la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El modo mixto habilita tanto la autenticación de Windows como la de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La autenticación de Windows está disponible siempre y no se puede deshabilitar.  
@@ -67,7 +66,7 @@ ms.locfileid: "63011340"
   
 1.  En el menú **Inicio** , haga clic en **Ejecutar**.  
   
-2.  En el cuadro de diálogo **Ejecutar** , `secpol.msc`escriba y, a continuación, haga clic en **Aceptar**.  
+2.  En el cuadro de diálogo **Ejecutar** , escriba `secpol.msc` y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la aplicación **Configuración de seguridad local** , expanda **Configuración de seguridad**, expanda **Directivas de cuenta**y, a continuación, haga clic en **Directiva de contraseñas**.  
   

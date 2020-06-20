@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76c85de1e9e8c294ab9db1f887f2b417b321d663
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6c397a5e4361c1aca4edfc32807045e3da9cbed0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66062058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926406"
 ---
 # <a name="add-a-log-for-data-flow-performance-counters"></a>Agregar un registro para los contadores de rendimiento del flujo de datos
   Este procedimiento describe cómo agregar un registro para los contadores de rendimiento que proporciona el motor de flujo de datos.  
@@ -35,7 +34,7 @@ ms.locfileid: "66062058"
   
 3.  En el cuadro de diálogo **Rendimiento** , expanda **Registros y alertas de rendimiento**, haga clic con el botón derecho en **Registros de contador**y, después, haga clic en **Nueva configuración de registro**. Escriba el nombre del registro. Por ejemplo, escriba **miRegistro**.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 5.  En el cuadro de diálogo **miRegistro** , haga clic en **Agregar contadores**.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66062058"
   
 12. Para agregar más contadores, repita los pasos 5 a 10.  
   
-13. Haga clic en **Aceptar**.  
+13. Haga clic en **OK**.  
   
     > [!NOTE]  
     >  Debe iniciar el servicio Registros y alertas de rendimiento con una cuenta local o de dominio que sea miembro del grupo Administradores.  

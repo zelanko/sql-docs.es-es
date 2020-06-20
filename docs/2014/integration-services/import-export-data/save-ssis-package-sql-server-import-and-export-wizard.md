@@ -11,19 +11,18 @@ f1_keywords:
 ms.assetid: 7bf8ac6a-5599-43ab-bf5c-e072c11b85a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9f74d9089bf6c2a87edaeaee80c95757982f6c2a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966228"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>Guardar el paquete SSIS (Asistente para importación y exportación de SQL Server)
-  Use la **Página guardar el paquete SSIS** para asignar un nombre, describir y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] guardar un[!INCLUDE[ssIS](../../includes/ssis-md.md)]paquete de Integration Services ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` ) en la base de datos o en un archivo que tenga la extensión. DTSX.  
+  Use la página **guardar el paquete SSIS** para asignar un nombre, describir y guardar un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paquete de Integration Services ( [!INCLUDE[ssIS](../../includes/ssis-md.md)] ) en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` base de datos o en un archivo que tenga la extensión. DTSX.  
   
 > [!NOTE]  
->  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
+>  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , la opción para guardar el paquete creado por el asistente no está disponible.  
   
  Para obtener más información acerca de este asistente, vea [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Para obtener información sobre las opciones para iniciar el asistente y sobre los permisos necesarios para ejecutar el asistente correctamente, vea [ejecutar el Asistente para importación y exportación de SQL Server](start-the-sql-server-import-and-export-wizard.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62892773"
  **Descripción**  
  Escriba una descripción para el paquete. Como práctica recomendada, describa el paquete en función de su objetivo para que los paquetes se documenten por sí mismos y su mantenimiento resulte sencillo.  
   
- **Destino**  
+ **Target**  
  Vea el destino (de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un archivo) especificado previamente como archivo de destino.  
   
 ## <a name="target-dynamic-options"></a>Opciones dinámicas de destino  
@@ -45,7 +44,7 @@ ms.locfileid: "62892773"
  **Nombre del servidor**  
  Una vez que haya seleccionado un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], escriba o seleccione el nombre del servidor de destino.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Una vez que haya seleccionado un destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], especifique si desea conectarse al servidor a través de la autenticación de Windows integrada. Éste es el método de autenticación preferido.  
   
  **Usar autenticación SQL Server**  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d5d7114515179cda973b9685c57b26fa930521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197775"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996665"
 ---
 # <a name="event-notifications"></a>Notificaciones de eventos
   Las notificaciones de eventos envían información acerca de los eventos a un servicio [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las notificaciones de eventos se ejecutan como respuesta a una variedad de instrucciones del lenguaje de definición de datos (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] y eventos de Seguimiento de SQL enviando información acerca de esos eventos a un servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -67,7 +66,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Los nombres de desencadenador DML se encuentran en el ámbito de esquema. Los nombres de desencadenador DDL se encuentran en el ámbito de la base de datos o del servidor.|Los nombres de notificación de eventos se encuentran en el ámbito de la base de datos o del servidor. Las notificaciones de eventos en un evento QUEUE_ACTIVATION se encuentran en el ámbito de una cola específica.|  
 |El mismo propietario posee los desencadenadores DML y las tablas en que se aplican.|El propietario de una notificación de eventos en una cola puede tener un propietario diferente que el objeto en el que se aplica.|  
 |Los desencadenadores admiten la cláusula EXECUTE AS.|Las notificaciones de eventos no admiten la cláusula EXECUTE AS.|  
-|La información de eventos del desencadenador DDL se puede capturar mediante la función EVENTDATA `xml` , que devuelve un tipo de datos.|Las notificaciones de `xml` eventos envían información de eventos a un servicio Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
+|La información de eventos del desencadenador DDL se puede capturar mediante la función EVENTDATA, que devuelve un `xml` tipo de datos.|Las notificaciones de eventos envían `xml` información de eventos a un servicio Service Broker. El formato de la información usa el mismo esquema que la función EVENTDATA.|  
 |Los metadatos sobre los desencadenadores se encuentran en las vistas de catálogo **sys.triggers** y **sys.server_triggers** .|Los metadatos sobre las notificaciones de eventos se encuentran en las vistas de catálogo **sys.event_notifications** y **sys.server_event_notifications** .|  
   
 ### <a name="event-notifications-vs-sql-trace"></a>Notificaciones de eventos y Seguimiento de SQL  

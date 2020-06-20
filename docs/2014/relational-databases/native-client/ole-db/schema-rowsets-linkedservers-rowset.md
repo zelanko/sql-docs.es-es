@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cba1d6b4c9fb116d90bc68925c8f27d446c73c54
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 80eded31ebae744e272757a53a7fd1f4b56bf358
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704218"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84998478"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>Conjunto de filas LINKEDSERVERS (OLE DB)
   El conjunto de filas **LINKEDSERVERS** enumera los orígenes de datos de la organización que pueden participar en consultas distribuidas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  El conjunto de filas **LINKEDSERVERS** contiene las siguientes columnas.  
   
-|Nombre de la columna|Indicador de tipo|Descripción|  
+|Nombre de la columna|Indicador de tipo|Description|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Nombre de un servidor vinculado.|  
 |SVR_PRODUCT|DBTYPE_WSTR|Fabricante u otro nombre que identifica el tipo de almacén de datos representado por el nombre del servidor vinculado.|  

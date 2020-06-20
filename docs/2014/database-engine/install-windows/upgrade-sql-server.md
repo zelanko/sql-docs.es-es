@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: eed1d8d35f7b23fd93b7cfb8046e0d6115483ad5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 64dd036429a465f046fd98c1822aa81fa1310a96
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79217140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931736"
 ---
 # <a name="upgrade-to-sql-server-2014"></a>Actualizar a SQL Server 2014
   Puede actualizar instancias de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Antes de ejecutar la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte la [Guía técnica de actualización de SQL Server 2014](https://download.microsoft.com/download/7/1/5/715BDFA7-51B6-4D7B-AF17-61E78C7E538F/SQL_Server_2014_Upgrade_technical_guide.pdf) (descarga en PDF), revise los temas sobre el proceso de actualización incluidos en esta sección y lea las [notas de la versión SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445).  

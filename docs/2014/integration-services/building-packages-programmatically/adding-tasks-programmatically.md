@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: db7f6d541462348d464f69f6abf122aaa2acca7d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771851"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925096"
 ---
 # <a name="adding-tasks-programmatically"></a>Agregar tareas mediante programación
   Se pueden agregar tareas a los siguientes tipos de objetos en el motor en tiempo de ejecución:  

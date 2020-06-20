@@ -1,5 +1,6 @@
 ---
 title: Conjuntos de filas | Microsoft Docs
+description: Habilitar todos los proveedores de datos para exponer los datos del conjunto de resultados en formato tabular. En OLE DB, use la característica de conjunto de filas, un conjunto de filas que contiene columnas de datos.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ ms.assetid: 5e7b3cbe-3670-4e18-8172-2226e0b6b142
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da51990e310b7903ce90d0369e30ff098103e141
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18ebbe69102fae5042204c5e5d44024a4ff9f01d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81300265"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950153"
 ---
 # <a name="rowsets"></a>Conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51252c20-8865-4ede-a3fd-bd73a968f47d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 045c2b6ced6326b0667b798027cfe4c87ca7a362
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924646"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor de la tarea Inserción masiva (página Conexión)
   Use la página **Conexión** del cuadro de diálogo **Editor de la tarea Inserción masiva** para especificar el origen y el destino de la operación de inserción masiva y el formato que se debe utilizar.  
@@ -28,23 +27,23 @@ ms.locfileid: "66061221"
   
 ## <a name="options"></a>Opciones  
  **Connection**  
- Seleccione un administrador de conexiones de OLE DB de la lista o \<haga clic en **nueva conexión...**> para crear una nueva conexión.  
+ Seleccione un administrador de conexiones de OLE DB de la lista o haga clic en \<**New connection...**> para crear una nueva conexión.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar el administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **Tabla de destino**  
  Escriba el nombre de la tabla o la vista de destino, o seleccione una tabla o una vista de la lista.  
   
- **Aplique**  
+ **Format**  
  Seleccione el origen del formato de la inserción masiva. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Utilizar archivo**|Seleccione un archivo que contenga la especificación de formato. Si se selecciona esta opción, se muestra la opción dinámica **FormatFile**.|  
-|**Especificar**|Especifique el formato. Al seleccionar esta opción se muestran las opciones `RowDelimiter` dinámicas, y `ColumnDelimiter`.|  
+|**Especificar**|Especifique el formato. Al seleccionar esta opción se muestran las opciones dinámicas, `RowDelimiter` y `ColumnDelimiter` .|  
   
  **Archivo**  
- Seleccione un administrador de conexiones de archivos o archivos planos de la lista, \<o haga clic en **nueva conexión...**> para crear una nueva conexión.  
+ Seleccione un administrador de conexiones de archivos o archivos planos de la lista o haga clic en \<**New connection...**> para crear una nueva conexión.  
   
  La ubicación del archivo es relativa al motor de base de datos de SQL Server especificado en el administrador de conexiones para esta tarea. Es preciso que el motor de base de datos de SQL Server tenga acceso al archivo de texto en un disco duro local en el servidor o mediante una unidad compartida o asignada a SQL Server. El tiempo de ejecución de SSIS no tiene acceso al archivo.  
   

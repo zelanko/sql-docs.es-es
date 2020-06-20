@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9703628ff6fb6255bc73151bb9a39cb3ce8e43d7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76928022"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931516"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>cmdlet Invoke-Sqlcmd
   **Invoke-Sqlcmd** es un cmdlet de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que ejecuta scripts que contienen instrucciones de los lenguajes ([!INCLUDE[tsql](../includes/tsql-md.md)] y XQuery) y comandos admitidos por la utilidad **sqlcmd**.  
@@ -63,7 +62,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Contexto de la ruta de acceso en Invoke-Sqlcmd  
  Si no utiliza el parámetro -Database, el contexto de base de datos para Invoke-Sqlcmd se establece mediante la ruta de acceso que está activa cuando se llama al cmdlet.  
   
-|Ruta de acceso|Contexto de base de datos|  
+|Ruta|Contexto de base de datos|  
 |----------|----------------------|  
 |Empieza con una unidad diferente de SQLSERVER:|La base de datos predeterminada para el identificador de inicio de sesión en la instancia predeterminada del equipo local.|  
 |SQLSERVER:\SQL|La base de datos predeterminada para el identificador de inicio de sesión en la instancia predeterminada del equipo local.|  

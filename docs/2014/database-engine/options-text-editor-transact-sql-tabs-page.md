@@ -13,13 +13,12 @@ dev_langs:
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 761c84612c207397e33ae96dfcfb088b05bc24b8
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5a713b3c3f98d2510fa63ddd6a58e2f48f3b3495
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929706"
 ---
 # <a name="options-text-editor---transact-sql---tabs-page"></a>Opciones (editor de texto-Transact-SQL-página tabulaciones)
   Utilice este cuadro de diálogo para cambiar el comportamiento de tabulación del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] , que se utiliza para programar scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] . Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda la carpeta **Transact-SQL** , expanda la subcarpeta **SQL** y, a continuación, haga clic en **Tabulaciones**.  
@@ -28,7 +27,7 @@ ms.locfileid: "83000671"
  Las opciones del Editor de consultas de [!INCLUDE[ssDE](../includes/ssde-md.md)] también se pueden establecer en el cuadro de diálogo **Tabulaciones de Todos los lenguajes**. Si utiliza los cuadros de diálogo **Todos los lenguajes** para establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de consultas del [!INCLUDE[ssDE](../includes/ssde-md.md)] mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
- **Ninguno**  
+ **None**  
  Cuando se selecciona esta opción, no se aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
  **Bloquear**  

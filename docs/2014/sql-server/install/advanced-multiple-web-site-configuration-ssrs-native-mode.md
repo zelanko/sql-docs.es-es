@@ -11,18 +11,17 @@ f1_keywords:
 ms.assetid: af4ede43-2225-45b5-ae7e-9202411551ba
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b331015abd90fbff4c3810118666dbc9b356369b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c04b5cc4dd75d2f9f8305b7af00e389317a92537
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952671"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045775"
 ---
 # <a name="advanced-multiple-web-site-configuration-ssrs-native-mode"></a>Configuración avanzada de varios sitios web (Modo nativo de SSRS)
   Utilice este cuadro de diálogo para crear y administrar las direcciones URL que se usan para tener acceso a un servidor de informes o al Administrador de informes. El cuadro de diálogo **Configuración avanzada de varios sitios web** se utiliza para crear direcciones URL adicionales y direcciones URL personalizadas que incluyen un nombre de encabezado de host, o para especificar una dirección IP en el formato de IPv4 o IPv6.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  Crear varias direcciones URL resulta útil si desea configurar maneras diferentes de acceso a un servidor de informes. Por ejemplo, el acceso al servidor de informes a través de una conexión de una intranet o de una extranet suele requerir direcciones URL diferentes para cada tipo de conexión.  
   
@@ -40,12 +39,12 @@ ms.locfileid: "71952671"
   
 -   **127.0.0.1** se utilizan para tener acceso al host local. Admite la administración local en el equipo del servidor de informes. Si selecciona solo este valor, únicamente los usuarios que hayan iniciado sesión de forma local en el equipo servidor de informes tendrán acceso a la aplicación.  
   
--   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<encabezado>:*nnnn: nnnn: nnnn: nnnn*.  
+-   *Nnn.nnn.nnn.nnn* es la dirección IPv4 de una tarjeta adaptadora de red del equipo. Si la red usa el direccionamiento IPv6, la dirección IP será un valor de 128 bits de campos de 8 4 bytes similar al siguiente formato: \<header> :*nnnn: nnnn: nnnn: nnnn*.  
   
      Si tiene varias tarjetas, verá una dirección IP para cada una. Si selecciona solo este valor, limitará el acceso de la aplicación únicamente a la dirección IP (y a cualquier nombre de host que un servidor de nombres de dominio asigne a esa dirección). No puede utilizar el host local para tener acceso a un servidor de informes y no puede utilizar las direcciones IP de otras tarjetas de adaptadores de red que estén instalados en el equipo del servidor de informes.  
   
  **Puerto**  
- Especifica el puerto en el que el servidor de informes supervisa las solicitudes. El puerto predeterminado es 80. Si utiliza el puerto 80, no tiene que incluirlo en la dirección URL. Si utiliza cualquier otro número de puerto, siempre debe incluirlo en la dirección URL (por ejemplo, http://localhost:8181/reports).  
+ Especifica el puerto en el que el servidor de informes supervisa las solicitudes. El puerto predeterminado es 80. Si utiliza el puerto 80, no tiene que incluirlo en la dirección URL. Si utiliza cualquier otro número de puerto, siempre debe incluirlo en la dirección URL (por ejemplo, http://localhost:8181/reports) .  
   
  **Encabezado de host**  
  Si ya tiene definido un encabezado de host en un servidor de nombres de dominio que se resuelva como su equipo, puede especificar ese encabezado de host en una dirección URL que configure para el acceso al servidor de informes.  
@@ -71,7 +70,7 @@ ms.locfileid: "71952671"
  **Edición**  
  Modifique cualquier parte de la sintaxis de la dirección URL.  
   
- **Remove**  
+ **Quitar**  
  Borre una entrada de dirección URL de la lista.  
   
 ## <a name="see-also"></a>Consulte también  

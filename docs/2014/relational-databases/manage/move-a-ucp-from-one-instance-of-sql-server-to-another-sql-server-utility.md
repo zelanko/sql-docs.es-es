@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b402fd9e-0bea-4c38-a371-6ed7fea12e96
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b4518884b3fe17ea3a638ed21210775af7c4921c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 668fc8f9478c66ea7564d99c455ac43dc905de4b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62640344"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023432"
 ---
 # <a name="move-a-ucp-from-one-instance-of-sql-server-to-another-sql-server-utility"></a>Mover un UCP desde una instancia de SQL Server a otra (utilidad de SQL Server)
   En este tema se describe cómo mover un punto de control de la utilidad (UCP) de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a otra en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "62640344"
   
 3.  Quite todas las instancias administradas del UCP anterior. Para obtener más información, vea [Quitar una instancia de SQL Server de la Utilidad de SQL Server](remove-an-instance-of-sql-server-from-the-sql-server-utility.md).  
   
-4.  Haga una copia de seguridad del almacén de administración de datos de la utilidad (UMDW) del UCP anterior. El nombre de archivo es Sysutility_mdw_\<GUID>_DATA y la ubicación predeterminada de la base de datos es \<unidadDelSistema>:\Archivos de programa\Microsoft SQL Server\MSSQL10_50.<UCP_Name>\MSSQL\Data\\, donde \<unidadDelSistema> es, por lo general, la unidad C:\. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md).  
+4.  Haga una copia de seguridad del almacén de administración de datos de la utilidad (UMDW) del UCP anterior. El nombre de archivo es Sysutility_mdw_ \<GUID> _DATA y la ubicación predeterminada de la base de datos es \<System drive> : \Archivos de programa\Microsoft SQL Server \ MSSQL10_50. <UCP_Name> \mssql\data \\ , donde \<System drive> es normalmente C:\ dispositivo. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md).  
   
 5.  Restaure la copia de seguridad del UMDW en el nuevo UCP. Para obtener más información, vea [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md).  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5fb6f3e9-c511-419b-b0b6-173c057e3a54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef885898893de1c0c29ca3b963a30b46d71486f7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63226221"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045276"
 ---
 # <a name="about-dialog-box"></a>cuadro de diálogo Acerca de
   El cuadro de diálogo **Acerca de** proporciona información sobre el producto y permite obtener acceso a información acerca del equipo en el que se ejecuta dicho producto. En las copias de evaluación, la entrada [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] indica el número de días que restan hasta la expiración de la instalación. Este cuadro de diálogo está disponible en el menú **Ayuda** .  

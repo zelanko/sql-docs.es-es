@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fc6f41f4c9970ff0777d1624a5b18e136b06cb97
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 67702646a9b2781551c90e71f0dab75410dc0cbe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175496"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937576"
 ---
 # <a name="introduction-to-data-quality-services"></a>Introducción a Data Quality Services
   La solución de calidad de datos que aporta [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) permite al administrador de datos o al profesional de TI mantener la calidad de los datos y asegurarse de que los datos son apropiados para su uso empresarial. DQS es una solución controlada por conocimiento que proporciona métodos asistidos por PC e interactivos para administrar la integridad y la calidad de los orígenes de datos. DQS permite detectar, compilar y administrar conocimientos sobre sus datos. Puede utilizar ese conocimiento para limpiar datos, buscar coincidencias y generar perfiles de los datos. Asimismo, puede aprovechar los servicios basados en la nube de proveedores de datos de referencia en un proyecto de calidad de datos DQS.
@@ -86,6 +85,6 @@ ms.locfileid: "78175496"
  La funcionalidad de Data Quality Services se ha integrado en Master Data Services (MDS), de modo que puede realizar la desduplicación de los datos de origen y los datos maestros del complemento Master Data Services de Microsoft SQL Server 2014 para Microsoft Excel. Para efectuar la coincidencia y la carga de datos administrados por MDS en una hoja de cálculo de Excel, combínelos con los datos no administrados por MDS y después realice la coincidencia en Excel. Los componentes de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se deben instalar con MDS. Para obtener más información, consulte  [Coincidencia de calidad de datos en el Complemento MDS para Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).
 
 ## <a name="see-also"></a>Consulte también
- [Características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)
+ [Características admitidas por las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)
 
 

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 003e75b1-54e5-4b36-a6f7-11e1f14cf98f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44c6036de909ed8c18a120ec3de1108fb92cfb6e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 599480f9ee9f4d07dcdae30861aa0784e5f7203b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706321"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022740"
 ---
 # <a name="sqlconfigdatasource"></a>SQLConfigDataSource
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite varios [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pares de palabra clave y valor específicos de para las cadenas de atributos de configuración de orígenes de datos.  

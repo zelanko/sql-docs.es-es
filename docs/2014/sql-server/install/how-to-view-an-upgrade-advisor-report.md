@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0ae231e380530f11d4c97a917927ed62e99fb47
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0cbe8746faeba10fa023aa51e7d91a6fb074776e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042435"
 ---
 # <a name="how-to-view-an-upgrade-advisor-report"></a>Procedimientos: Ver un informe del Asesor de actualizaciones
   El Asesor de actualizaciones crea informes de cada componente que haya seleccionado para su análisis. En este tema se describe cómo ver un informe del Asesor de actualizaciones desde la página de inicio de este último.  
@@ -53,7 +52,7 @@ ms.locfileid: "66094795"
   
     -   **Importancia**, que indica la importancia de corregir el problema.  
   
-    -   **Cuándo solucionarlo**, que indica si se debe corregir el problema antes o después de actualizar a, antes o después [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de migrar la aplicación o los datos, o en cualquier momento.  
+    -   **Cuándo solucionarlo**, que indica si se debe corregir el problema antes o después de actualizar a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , antes o después de migrar la aplicación o los datos, o en cualquier momento.  
   
     -   Breve descripción del problema.  
   

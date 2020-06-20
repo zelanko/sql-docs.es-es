@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 92f7fbce5917826915186e9782f0f91d51ae8875
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8fe0a281be62f74a630bcb5be2e0fc3ce935b2d7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706336"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022758"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
   `SQLColumns`Devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
@@ -77,7 +76,7 @@ ms.locfileid: "82706336"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Se han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de la columna|Tipo de datos|Description|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|`Smallint`|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|`Smallint`|Si la columna es la columna `column_set`, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  

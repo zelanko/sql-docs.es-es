@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a482a4d615c12023cceb6995eb9f261b6dd86a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24bd24e4247fb739441f041c38907580ba157629
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060668"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921756"
 ---
 # <a name="configure-data-viewer-general-tab"></a>Configurar visor de datos (pestaña General)
   Un visor de datos muestra los datos como si se moviera por la ruta que conecta dos componentes de flujo de datos durante la ejecución de un paquete.  
@@ -30,7 +29,7 @@ ms.locfileid: "66060668"
  **Nombre**  
  Proporcione un nombre único para el visor de datos.  
   
- **Type**  
+ **Tipo**  
  Enumera los tipos de visores de datos. Haga clic en un tipo para mostrar un gráfico de ejemplo.  
   
  **Descripción**  

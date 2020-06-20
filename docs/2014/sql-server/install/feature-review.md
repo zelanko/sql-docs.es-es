@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1e2b22b8-5811-4f50-875b-685f3ddbd1ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5453bb0f67f670d20f239957ebc1e7bc799d0170
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8e258ac763d8c5e057f8dcdb6f740aacb4fef1c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83859582"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042642"
 ---
 # <a name="feature-review"></a>Revisión de características
   La página Revisión de características es una lista de solo lectura de las características que se han preparado y se configurarán y completarán al final del paso para completar la imagen. La lista de características está seleccionada durante el paso de preparación de la imagen y no se puede modificar durante el paso de compleción de imagen. Además de las características mostradas, una instancia preparada también incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Writer y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cdfbc4825908f409392f7dcca67749cbe08a407c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067002"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938838"
 ---
 # <a name="kpis-ssas-tabular"></a>KPI (SSAS tabular)
   Un *KPI* (indicador clave de rendimiento) de un modelo tabular se usa para medir el rendimiento de un valor, definido por una medida *base* , con respecto a un valor de *destino* , que también se define con una medida o un valor absoluto. Este tema proporciona a los creadores de modelos tabulares una descripción básica de los KPI en un modelo tabular.  
@@ -30,7 +29,7 @@ ms.locfileid: "66067002"
   
 -   [Tareas relacionadas](#bkmk_related_tasks)  
   
-##  <a name="benefits"></a><a name="bkmk_benefits"></a>Privilegios  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a> Ventajas  
  En la terminología empresarial, un indicador clave de rendimiento (KPI) es una medida cuantificable para valorar los objetivos empresariales. Un KPI se evalúa con frecuencia a lo largo del tiempo. Por ejemplo, el departamento de ventas de una organización puede usar un KPI para medir el beneficio bruto mensual frente al beneficio bruto previsto. El departamento de contabilidad puede medir los gastos mensuales frente a los ingresos para evaluar los costos y un departamento de recursos humanos puede medir la rotación trimestral de los empleados. Cada uno de ellos es un ejemplo de KPI. Los profesionales de una empresa suelen usar KPI agrupados en un cuadro de mandos empresarial para obtener un resumen histórico rápido y preciso de los éxitos empresariales o para identificar tendencias.  
   
  Un KPI de un modelo tabular incluye:  
@@ -44,7 +43,7 @@ ms.locfileid: "66067002"
  **Umbrales de estado**  
  Un umbral de estado se define mediante el intervalo entre un umbral inferior y uno superior o mediante un valor fijo. El umbral de estado muestra un gráfico que ayuda a los usuarios a determinar fácilmente el estado del valor base en comparación con el valor de destino.  
   
-##  <a name="example"></a><a name="bkmk_example"></a>Ejemplo  
+##  <a name="example"></a><a name="bkmk_example"></a> Ejemplo  
  La directora de ventas de Adventure Works desea crear una tabla dinámica que pueda usar para ver rápidamente si los empleados de ventas están cumpliendo o no sus cuotas de ventas durante un periodo determinado (un año). Para cada empleado de ventas, desea que la tabla dinámica muestre el importe de ventas real en dólares, el importe de la cuota de ventas en dólares y un gráfico sencillo que muestre el estado de si cada empleado de ventas está por debajo o por encima de su cuota de ventas. Desea poder segmentar los datos por año.  
   
  Para ello, el director de ventas da de alta la ayuda del desarrollador de soluciones de BI de su organización a agregar un KPI de ventas al modelo tabular AdventureWorks. La directora de ventas usará [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] para conectarse al modelo tabular de Adventure Works como origen de datos y crear una tabla dinámica con campos (medidas y KPI) y segmentaciones de datos para analizar si el personal de ventas cumple sus cuotas.  

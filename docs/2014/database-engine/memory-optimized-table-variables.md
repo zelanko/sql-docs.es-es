@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 48f78615e20ac194f6d11d4aa2f31610ff6bb963
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930850"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
   Además de las tablas optimizadas para memoria (para el acceso eficaz a los datos) y los procedimientos almacenados compilados de forma nativa (para el procesamiento de consultas y la ejecución de lógica de negocios de forma eficaz), [!INCLUDE[hek_2](../includes/hek-2-md.md)] presenta una tercera clase de objeto: el tipo de tabla optimizada para memoria. Una variable de tabla creada mediante un tipo de tabla optimizada para memoria es una variable de tabla optimizada para memoria.  

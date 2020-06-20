@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44aab631-d62d-4895-8fc7-7f1f3b1b68ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2259b19cec6674cdb1f5f4a0064334f78aa5300f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: deb6c1a4fb5095e387bed9ca2b88b66e62c0bd9a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059434"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966985"
 ---
 # <a name="dimension-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de dimensiones (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de procesamiento de dimensiones** para especificar una conexión a un proyecto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -42,8 +41,8 @@ ms.locfileid: "66059434"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Agregar (incremental)**|Realiza un procesamiento incremental de la dimensión.|  
-|**Completo**|Realiza un procesamiento completo de la dimensión.|  
-|**Actualizar**|Realiza un procesamiento actualizado de la dimensión.|  
+|**Completa**|Realiza un procesamiento completo de la dimensión.|  
+|**Update**|Realiza un procesamiento actualizado de la dimensión.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

@@ -1,5 +1,6 @@
 ---
 title: Eliminar un origen de datos (ODBC) | Microsoft Docs
+description: Obtenga información acerca de cómo eliminar un origen de datos mediante el administrador ODBC, mediante programación o mediante un archivo, antes de utilizar las aplicaciones ODBC con SQL Server 2005 o posterior.
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: 910e3e16-7b91-49d8-80bb-b4243926afaa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 93ea12968c92f7849876d29d31207b8028714482
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b1c8abf66fdd5a54b021008229b3218f1299ccf3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81294565"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967625"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---delete-a-data-source"></a>Configurar el controlador ODBC de SQL Server: eliminar un origen de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

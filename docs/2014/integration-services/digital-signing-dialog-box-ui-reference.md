@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d6137275-65d3-4fc9-bf31-d61dcd1228d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7f89d495aa8826250c04f3e0cfe5979d5f202ac8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059449"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966995"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Referencia de la interfaz de usuario del cuadro de diálogo Firma digital
   Utilice el cuadro de diálogo **Firma digital** para firmar un paquete con una firma digital o para quitar la firma. El cuadro de diálogo **Firma digital** está disponible en la opción de **Firma digital** del menú **SSIS** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -30,7 +29,7 @@ ms.locfileid: "66059449"
  **Sesión**  
  Haga clic para abrir el cuadro de diálogo **Seleccionar certificado** y seleccione el certificado que quiere usar.  
   
- **Remove**  
+ **Quitar**  
  Haga clic para quitar la firma digital.  
   
 ## <a name="see-also"></a>Consulte también  

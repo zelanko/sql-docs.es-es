@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60798bb7bd856dd131592e3c67eb155cf64a6ae7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62770743"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939261"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
   Además de las propiedades que son comunes a la mayoría de los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], muchos objetos de flujo de datos tienen propiedades personalizadas que son específicas del objeto. Estas propiedades personalizadas solo están disponibles en tiempo de ejecución y no se incluyen en la documentación de referencia de la programación administrada de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -128,7 +127,7 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |Connectionmanager|String|Especifica el nombre del administrador de conexiones.|  
-|ValidateExternalMetadata|Boolean|Indica si la Transformación de caché se valida con los orígenes de datos externos en tiempo de diseño. Si la propiedad está establecida en `False`, la validación en los orígenes de datos externos se produce en tiempo de ejecución.<br /><br /> El valor predeterminado es `True`.|  
+|ValidateExternalMetadata|Boolean|Indica si la Transformación de caché se valida con los orígenes de datos externos en tiempo de diseño. Si la propiedad está establecida en `False`, la validación en los orígenes de datos externos se produce en tiempo de ejecución.<br /><br /> El valor predeterminado es `True` .|  
 |AvailableInputColumns|String|Lista de columnas de entrada disponibles.|  
 |InputColumns|String|Lista de las columnas de entrada seleccionadas.|  
 |CacheColumnName|String|Especifica el nombre de la columna que está asignada a una columna de entrada seleccionada.<br /><br /> El nombre de la columna en la propiedad CacheColumnName debe coincidir con el nombre de la columna correspondiente que se muestra en la página **Columnas** del **Editor del administrador de conexiones de caché**.<br /><br /> Para obtener más información, vea [Editor del administrador de conexiones de caché](../../cache-connection-manager-editor.md).|  
@@ -232,7 +231,7 @@ ms.locfileid: "62770743"
 |--------------|---------------|-----------------|  
 |AllowAppend|Boolean|Valor que especifica si desea que la transformación anexe los datos a un archivo existente. El valor predeterminado de esta propiedad es `False`.|  
 |ForceTruncate|Boolean|Valor que especifica si la transformación trunca un archivo existente antes de escribir los datos. El valor predeterminado de esta propiedad es `False`.|  
-|FileDataColumnID|Entero|Valor que identifica la columna que contiene los datos que la transformación inserta en un archivo. En la columna extraer, esta propiedad tiene un valor de **0**; en la columna ruta de archivo, esta propiedad contiene `LineageID` el de la columna Extract.|  
+|FileDataColumnID|Entero|Valor que identifica la columna que contiene los datos que la transformación inserta en un archivo. En la columna extraer, esta propiedad tiene un valor de **0**; en la columna ruta de archivo, esta propiedad contiene el `LineageID` de la columna Extract.|  
 |WriteBOM|Boolean|Valor que especifica si se escribe una marca de orden de bytes (BOM) en el archivo.|  
   
  La entrada, la salida y las columnas de salida de transformación Exportar columna no tienen ninguna propiedad personalizada.  
@@ -260,7 +259,7 @@ ms.locfileid: "62770743"
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
-|Delimitadores|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimitadores|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas tipográficas dobles ("), comilla simple recta ('), y comercial (&), signo de exclamación (!), barra diagonal inversa ( \\ ).), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que ( \<), greater than (> ), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de almohadilla (#), asterisco (*), símbolo de intercalación (^)|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MaxMemoryUsage|Entero|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MinSimilarity|Double|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
@@ -294,7 +293,7 @@ ms.locfileid: "62770743"
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
 |CopyReferenceTable|Boolean|Especifica si se debería crear una copia de la tabla de referencia para la construcción del índice de búsqueda aproximada y las búsquedas subsiguientes. El valor predeterminado de esta propiedad es `True`.|  
-|Delimitadores|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
+|Delimitadores|String|Delimitadores que la transformación utilizará para dividir en tokens los valores de las columnas. Los delimitadores predeterminados incluyen los siguientes caracteres: espacio (), coma (,), punto (.) punto y coma (;), dos puntos (:) Guion (-), comillas dobles ("), comilla simple ('), y comercial (&), barra diagonal (/), barra diagonal inversa ( \\ ), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que ( \<), greater than (> ), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;). almohadilla (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |DropExistingMatchIndex|Boolean|Valor que especifica si el índice de coincidencia especificado en MatchIndexName se elimina cuando MatchIndexOptions no se establece en ReuseExistingIndex. El valor predeterminado de esta propiedad es `True`.|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en el **Editor de transformación Búsqueda aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MatchIndexName|String|Nombre del índice de coincidencia. El índice de coincidencia es la tabla en la que la transformación crea y guarda el índice que utiliza. Si se reutiliza el índice de coincidencia, MatchIndexName especifica el índice que se reutilizará. MatchIndexName debe ser un nombre de identificador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] válido. Por ejemplo, si el nombre contiene espacios, debe escribirse entre corchetes.|  
@@ -319,7 +318,7 @@ ms.locfileid: "62770743"
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Búsqueda aproximada. Todas las propiedades son de lectura y escritura.  
   
 > [!NOTE]  
->  En el caso de las columnas de salida que contienen valores de paso a través de las columnas de entrada `LineageID` correspondientes, CopyFromReferenceColumn está vacío y SourceInputColumnLineageID contiene el de la columna de entrada correspondiente. Para las columnas de salida que contienen los resultados de la búsqueda, CopyFromReferenceColumn contiene el nombre de la columna de búsqueda y SourceInputColumnLineageID está vacío.  
+>  En el caso de las columnas de salida que contienen valores de paso a través de las columnas de entrada correspondientes, CopyFromReferenceColumn está vacío y SourceInputColumnLineageID contiene el `LineageID` de la columna de entrada correspondiente. Para las columnas de salida que contienen los resultados de la búsqueda, CopyFromReferenceColumn contiene el nombre de la columna de búsqueda y SourceInputColumnLineageID está vacío.  
   
 |Propiedad|Tipo de datos|Descripción|  
 |--------------|---------------|-----------------|  
@@ -422,7 +421,7 @@ ms.locfileid: "62770743"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, seleccionado se establece en `True`y, en la salida no seleccionada, seleccionado está establecido en `False`.|  
+|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, seleccionado se establece en `True` y, en la salida no seleccionada, seleccionado está establecido en `False` .|  
   
  La entrada, las columnas de entrada y las columnas de salida de transformación Muestreo de porcentaje no tienen ninguna propiedad personalizada.  
   
@@ -477,7 +476,7 @@ ms.locfileid: "62770743"
   
 |Nombre de propiedad|Tipo de datos|Descripción|  
 |-------------------|---------------|-----------------|  
-|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, seleccionado se establece en `True`y, en la salida no seleccionada, seleccionado está establecido en `False`.|  
+|Seleccionado|Boolean|Designa la salida a la que se dirigen las filas del muestreo. En la salida seleccionada, seleccionado se establece en `True` y, en la salida no seleccionada, seleccionado está establecido en `False` .|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Muestreo de fila. Todas las propiedades son de lectura y escritura.  
   

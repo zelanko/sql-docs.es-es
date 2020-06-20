@@ -1,5 +1,6 @@
 ---
 title: SQLSetConnectAttr | Microsoft Docs
+description: Obtenga información sobre los atributos de conexión en SQLSetConnectAttr, incluso cuando se establecen y valores posibles en el controlador ODBC de SQL Server Native Client.
 ms.custom: ''
 ms.date: 01/09/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: d21b5cf1-3724-43f7-bc96-5097df0677b4
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17a63a481837894addbd8b626fac015025314099
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3008664916a8863a00dd36772e4b83cf27e845d5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301956"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967745"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
 
@@ -42,37 +43,37 @@ ms.locfileid: "81301956"
   
 |Atributo de SQL Server|Establecer antes o después de la conexión al servidor|  
 |--------------------------|----------------------------------------------|  
-|SQL_COPT_SS_ANSI_NPW|Antes del|  
-|SQL_COPT_SS_APPLICATION_INTENT|Antes del|  
-|SQL_COPT_SS_ATTACHDBFILENAME|Antes del|  
-|SQL_COPT_SS_BCP|Antes del|  
-|SQL_COPT_SS_BROWSE_CONNECT|Antes del|  
-|SQL_COPT_SS_BROWSE_SERVER|Antes del|  
-|SQL_COPT_SS_CONCAT_NULL|Antes del|  
+|SQL_COPT_SS_ANSI_NPW|Antes|  
+|SQL_COPT_SS_APPLICATION_INTENT|Antes|  
+|SQL_COPT_SS_ATTACHDBFILENAME|Antes|  
+|SQL_COPT_SS_BCP|Antes|  
+|SQL_COPT_SS_BROWSE_CONNECT|Antes|  
+|SQL_COPT_SS_BROWSE_SERVER|Antes|  
+|SQL_COPT_SS_CONCAT_NULL|Antes|  
 |SQL_COPT_SS_CONNECTION_DEAD|Después|  
-|SQL_COPT_SS_ENCRYPT|Antes del|  
+|SQL_COPT_SS_ENCRYPT|Antes|  
 |SQL_COPT_SS_ENLIST_IN_DTC|Después|  
 |SQL_COPT_SS_ENLIST_IN_XA|Después|  
-|SQL_COPT_SS_FALLBACK_CONNECT|Antes del|  
-|SQL_COPT_SS_FAILOVER_PARTNER|Antes del|  
-|SQL_COPT_SS_INTEGRATED_SECURITY|Antes del|  
-|SQL_COPT_SS_MARS_ENABLED|Antes del|  
-|SQL_COPT_SS_MULTISUBNET_FAILOVER|Antes del|  
-|SQL_COPT_SS_OLDPWD|Antes del|  
+|SQL_COPT_SS_FALLBACK_CONNECT|Antes|  
+|SQL_COPT_SS_FAILOVER_PARTNER|Antes|  
+|SQL_COPT_SS_INTEGRATED_SECURITY|Antes|  
+|SQL_COPT_SS_MARS_ENABLED|Antes|  
+|SQL_COPT_SS_MULTISUBNET_FAILOVER|Antes|  
+|SQL_COPT_SS_OLDPWD|Antes|  
 |SQL_COPT_SS_PERF_DATA|Después|  
 |SQL_COPT_SS_PERF_DATA_LOG|Después|  
 |SQL_COPT_SS_PERF_DATA_LOG_NOW|Después|  
 |SQL_COPT_SS_PERF_QUERY|Después|  
 |SQL_COPT_SS_PERF_QUERY_INTERVAL|Después|  
 |SQL_COPT_SS_PERF_QUERY_LOG|Después|  
-|SQL_COPT_SS_PRESERVE_CURSORS|Antes del|  
+|SQL_COPT_SS_PRESERVE_CURSORS|Antes|  
 |SQL_COPT_SS_QUOTED_IDENT|Es posible usar el|  
 |SQL_COPT_SS_TRANSLATE|Es posible usar el|  
-|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|Antes del|  
+|SQL_COPT_SS_TRUST_SERVER_CERTIFICATE|Antes|  
 |SQL_COPT_SS_TXN_ISOLATION|Es posible usar el|  
 |SQL_COPT_SS_USE_PROC_FOR_PREP|Es posible usar el|  
 |SQL_COPT_SS_USER_DATA|Es posible usar el|  
-|SQL_COPT_SS_WARN_ON_CP_ERROR|Antes del|  
+|SQL_COPT_SS_WARN_ON_CP_ERROR|Antes|  
   
  El uso de un atributo anterior a la conexión y el comando equivalente de [!INCLUDE[tsql](../../includes/tsql-md.md)] para la misma sesión, base de datos o estado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede producir un comportamiento inesperado. Por ejemplo,  
   
@@ -102,7 +103,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- El valor predeterminado es **ReadWrite**. Para obtener más información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre la compatibilidad de Native [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Client con AG, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ El valor predeterminado es **ReadWrite**. Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la compatibilidad de Native Client con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
 
 <a name="sqlcoptssattachdbfilename"></a>
 ## <a name="sql_copt_ss_attachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
@@ -136,7 +137,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|computername|**SQLBrowseConnect** devuelve una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. No se deben usar barras\\\\diagonales inversas dobles () para el nombre del servidor (por ejemplo, \\en lugar de \MyServer, se debe usar mi Server).|  
+|computername|**SQLBrowseConnect** devuelve una lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado. No se deben usar barras diagonales inversas dobles ( \\ \\ ) para el nombre del servidor (por ejemplo, en lugar de \\ \MyServer, se debe usar mi Server).|  
 |NULL|Predeterminada. **SQLBrowseConnect** devuelve información para todos los servidores del dominio.|  
 
 <a name="sqlcoptssconcatnull"></a>
@@ -211,7 +212,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTEGER)  
 ```  
   
- Para obtener más información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sobre la compatibilidad de Native [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] Client con AG, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la compatibilidad de Native Client con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] AG, consulte [SQL Server Native Client Support for High Availability, Disaster Recovery](../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 |Value|Descripción|  
 |-----------|-----------------|  
@@ -286,7 +287,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBNET_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 
 <a name="sqlcoptsstranslate"></a>
 ## <a name="sql_copt_ss_translate"></a>SQL_COPT_SS_TRANSLATE  
- SQL_COPT_SS_TRANSLATE hace que el controlador traduzca los caracteres entre las páginas de códigos del cliente y del servidor a medida que se intercambian datos MBCS. El atributo solo afecta a los datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]almacenados en columnas de tipo **Char**, **VARCHAR**y **Text** .  
+ SQL_COPT_SS_TRANSLATE hace que el controlador traduzca los caracteres entre las páginas de códigos del cliente y del servidor a medida que se intercambian datos MBCS. El atributo solo afecta a los datos almacenados en columnas de tipo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Char**, **VARCHAR**y **Text** .  
   
 |Value|Descripción|  
 |-----------|-----------------|  

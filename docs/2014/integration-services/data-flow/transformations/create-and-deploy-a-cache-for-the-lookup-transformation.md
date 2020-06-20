@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef5450bc9598f86909bbb032adcfa4bfc0fc9040
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ed4b8789de70a5a2ebba82779dfc5e7001fcf1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939666"
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Crear e implementar una memoria caché para la transformación Búsqueda
   Puede crear e implementar un archivo caché (.caw) para la transformación Búsqueda. El conjunto de datos de referencia está almacenado en el archivo caché.  
@@ -86,7 +85,7 @@ ms.locfileid: "62900650"
   
 4.  Configure el proyecto para crear una utilidad de implementación y, a continuación, genere el proyecto. Para más información, consulte [Create a Deployment Utility](../../create-a-deployment-utility.md).  
   
-     Se crea un archivo de manifiesto \<*nombre de proyecto*>.SSISDeploymentManifest.xml que enumera los diferentes archivos del proyecto, los paquetes y las configuraciones de los paquetes.  
+     Se crea un archivo de manifiesto, \<*project name*>.SSISDeploymentManifest.xml, que enumera los archivos varios del proyecto, los paquetes y las configuraciones de paquetes.  
   
 5.  Implemente el paquete en el sistema de archivos. Para más información, consulte [Deploy Packages by Using the Deployment Utility](../../deploy-packages-by-using-the-deployment-utility.md).  
   

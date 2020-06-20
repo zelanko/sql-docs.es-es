@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835658"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923276"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
   Una instancia CDC de Oracle realiza minería de datos en los cambios de una sola base de datos de origen de Oracle (un clúster de Oracle RAC se considera una sola base de datos) y escribe los cambios confirmados en las tablas de cambios en una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  
@@ -55,7 +54,7 @@ ms.locfileid: "62835658"
   
 -   La tabla MSXDBCDC.dbo.xdbcdc_trace, que el proceso principal del servicio CDC de Oracle emplea para el registro y el seguimiento generales.  
   
--   La tabla \<cdc-database>.cdc.xdbcdc_trace, que las instancias Oracle CDC usan para el registro y el seguimiento generales. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
+-   La \<cdc-database> tabla. cdc. xdbcdc_trace, que las instancias CDC de Oracle usan para el registro y el seguimiento generales. Esto significa que los errores relacionados con una instancia CDC de Oracle específica se registran en la tabla de seguimiento de esa instancia.  
   
  El servicio CDC de Oracle registra información cuando el servicio:  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e48e9fb50ae749bd75162bb458268ecbe9b79d64
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8a4834e8a32f5cb2cb512061777715f314f84299
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637822"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84916355"
 ---
 # <a name="data-flow-performance-features"></a>Características de rendimiento del flujo de datos
   En este tema se proporcionan sugerencias sobre cómo diseñar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para evitar problemas de rendimiento comunes. También proporciona información sobre las características y las herramientas que puede utilizar para solucionar problemas relacionados con el rendimiento de los paquetes.  
@@ -94,7 +93,7 @@ ms.locfileid: "73637822"
  Hay dos directrices generales que no dependen del componente de flujo de datos y que debería seguir para mejorar el rendimiento: optimizar las consultas y evitar las cadenas innecesarias.  
   
 #### <a name="optimize-queries"></a>Optimizar las consultas  
- Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<tableName>. Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
+ Varios componentes de flujo de datos utilizan consultas, ya sea al extraer datos de los orígenes o en operaciones de búsqueda para crear tablas de referencia. La consulta predeterminada usa la sintaxis SELECT * FROM \<tableName> . Este tipo de consulta devuelve todas las columnas de la tabla de origen. Disponer de todas las columnas en tiempo de diseño permite elegir cualquier columna como columna de búsqueda, de paso a través o de origen. Sin embargo, después de seleccionar las columnas que se deben utilizar, debe revisar la consulta para que incluya únicamente las columnas seleccionadas. El hecho de quitar las columnas superfluas aumenta la eficacia de flujo de datos de un paquete, ya que al haber menos columnas se crea una fila más pequeña. Una fila más pequeña significa que caben más filas en un búfer y que cuesta menos trabajo procesar todas las filas del conjunto de datos.  
   
  Para crear una consulta, puede escribirla o utilizar el Generador de consultas.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "73637822"
  Utilice las sugerencias de esta sección para mejorar el rendimiento de las transformaciones Agregado, Búsqueda aproximada, Agrupación aproximada, Búsqueda, Combinación de mezcla y Dimensión de variación lenta.  
   
 #### <a name="aggregate-transformation"></a>Transformación Agregado  
- La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , establezca `Keys` las `KeysScale` propiedades y, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación de **recuento distintiva** , `CountDistinctKeys` establezca `CountDistinctScale` las propiedades y, respectivamente.  
+ La transformación Agregado incluye las propiedades `Keys`, `KeysScale`, `CountDistinctKeys` y `CountDistinctScale`. Estas propiedades mejoran el rendimiento habilitando la transformación para asignar previamente la cantidad de memoria que necesita la transformación para los datos que almacena en caché. Si conoce el número exacto o aproximado de grupos que se esperan como resultado de una operación **Agrupar por** , establezca `Keys` las `KeysScale` propiedades y, respectivamente. Si conoce el número exacto o aproximado de valores distintos que se esperan como resultado de una operación de **recuento distintiva** , establezca las `CountDistinctKeys` `CountDistinctScale` propiedades y, respectivamente.  
   
  Si tiene que crear varias agregaciones en un flujo de datos, considere la posibilidad de crear varias agregaciones que utilicen una sola transformación Agregado, en lugar de crear varias transformaciones. Esto mejora el rendimiento cuando una agregación es un subconjunto de otra agregación, ya que la transformación puede optimizar el almacenamiento interno y examinar los datos entrantes una sola vez. Por ejemplo, si una agregación utiliza una cláusula GROUP BY y una agregación AVG, puede mejorar el rendimiento combinándolas en una transformación. No obstante, al realizar varias agregaciones dentro de una transformación Agregado se serializan las operaciones de agregación y, por consiguiente, el rendimiento podría no mejorar cuando haya que calcular varias agregaciones por separado.  
   

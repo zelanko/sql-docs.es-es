@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f30221e3afb898834fcc13476760499fd3a5f9e8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176465"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951847"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementación de paquetes
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona herramientas que permiten implementar paquetes en otro equipo. Las herramientas de implementación también administran las dependencias, como configuraciones y archivos que necesita el paquete. En este tutorial, aprenderá a usar estas herramientas para instalar paquetes y sus dependencias en un equipo de destino.
@@ -46,7 +45,7 @@ ms.locfileid: "78176465"
  La mejor manera de familiarizarse con las nuevas herramientas, los controles y las características disponibles en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es usarlos. Este tutorial le guía por los pasos para crear un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y, a continuación, agregar los paquetes y otros archivos necesarios al proyecto. Después de completar el proyecto, creará un paquete de implementación, copiará el paquete al equipo de destino e instalará los paquetes en él.
 
 ## <a name="requirements"></a>Requisitos
- Este tutorial está destinado a usuarios que ya están familiarizados con las operaciones fundamentales del sistema de archivos, pero que tienen una exposición limitada a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]las nuevas características disponibles en. Para comprender mejor los [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] conceptos básicos que va a usar en este tutorial, puede resultarle útil completar primero los siguientes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutoriales: [ejecutar el Asistente para importación y exportación de SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) y tutorial de [SSIS: crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).
+ Este tutorial está destinado a usuarios que ya están familiarizados con las operaciones fundamentales del sistema de archivos, pero que tienen una exposición limitada a las nuevas características disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Para comprender mejor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] los conceptos básicos que va a usar en este tutorial, puede resultarle útil completar primero los siguientes [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Tutoriales: [ejecutar el Asistente para importación y exportación de SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md) y [tutorial de SSIS: crear un paquete ETL sencillo](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Equipo de origen.** El equipo en el que creará el paquete de implementación debe tener instalados los siguientes componentes:
 
@@ -68,7 +67,7 @@ ms.locfileid: "78176465"
 
 -   Debe tener permiso para crear y quitar tablas en AdventureWorks y ejecutar paquetes en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
--   Debe tener el permiso de lectura y escritura en la tabla sysssispackages en la[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos del sistema msdb.
+-   Debe tener el permiso de lectura y escritura en la tabla sysssispackages en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos del sistema msdb.
 
  Si planea implementar paquetes en el mismo equipo en el que va a crear el paquete de implementación, ese equipo debe cumplir los requisitos de los equipos de origen y destino.
 

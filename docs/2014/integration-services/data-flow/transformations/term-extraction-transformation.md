@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1655b50f84fae99249b2170d92a49459a143d5b4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62899938"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939286"
 ---
 # <a name="term-extraction-transformation"></a>Extracción de términos, transformación
   La transformación Extracción de términos extrae términos del texto en una columna de entrada de transformación y luego escribe los términos en una columna de salida de transformación. La transformación funciona solo con texto en inglés y utiliza únicamente su propio diccionario en inglés e información lingüística sobre el idioma inglés.  
@@ -44,7 +43,7 @@ ms.locfileid: "62899938"
   
  La transformación Extracción de términos genera una puntuación para cada término que extrae. La puntuación puede ser un valor TFIDF o simplemente la frecuencia, que es la cantidad de veces en que aparece el término normalizado en la entrada. En cualquier caso, un número real mayor que cero representa la puntuación. Por ejemplo, la puntuación TFIDF podría tener el valor 0,5 y la frecuencia sería un valor como 1,0 o 2,0.  
   
- La salida de transformación Extracción de términos incluye solo dos columnas. Una columna contiene los términos extraídos y la otra columna contiene la puntuación. Los nombres predeterminados de las **Term** columnas son `Score`term y. Debido a que la columna de texto de la entrada puede contener varios términos, la salida de transformación Extracción de términos normalmente tiene más filas que la entrada.  
+ La salida de transformación Extracción de términos incluye solo dos columnas. Una columna contiene los términos extraídos y la otra columna contiene la puntuación. Los nombres predeterminados de las columnas son **term** y `Score` . Debido a que la columna de texto de la entrada puede contener varios términos, la salida de transformación Extracción de términos normalmente tiene más filas que la entrada.  
   
  Si los términos extraídos se escriben en una tabla, pueden ser usados por otra transformación de búsqueda, como las transformaciones Búsqueda de términos, Búsqueda aproximada y Búsqueda.  
   
@@ -146,7 +145,7 @@ ms.locfileid: "62899938"
   
 -   Combinaciones de números, signos de puntuación y caracteres alfabéticos. Por ejemplo, *A23B#99* devuelve el término *A23B*.  
   
--   Los caracteres %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, " y '.  
+-   Los caracteres,%, @, &, $, #, \* ,:,;,., **,** ,!,?, \<, > , +, =, ^, ~, |, \\ ,/, (,), [,], {,}, "y".  
   
     > [!NOTE]  
     >  Las siglas que incluyen uno o más puntos (.) no se separan en varias oraciones.  

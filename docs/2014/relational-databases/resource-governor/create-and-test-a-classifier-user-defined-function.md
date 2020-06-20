@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8e5371762e38cf2b3ac8c1d506b467dcfa7e3c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68212005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063641"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Crear y probar una función clasificadora definida por el usuario
   En este tema se muestra cómo crear y probar una función clasificadora definida por el usuario (UDF). Los pasos implican ejecutar instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] en el Editor de consultas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -263,15 +262,15 @@ ms.locfileid: "68212005"
         >  Se aconseja encarecidamente seguir estas prácticas recomendadas. Si hay problemas que impiden seguir las prácticas recomendadas, conviene ponerse en contacto con el servicio de soporte técnico de Microsoft para poder evitar de forma proactiva cualquier problema futuro.  
   
 ## <a name="see-also"></a>Consulte también  
- [Resource Governor](resource-governor.md)   
- [Habilitar Resource Governor](enable-resource-governor.md)   
- [Grupo de recursos de Resource Governor](resource-governor-resource-pool.md)   
- [Grupo de cargas de trabajo Resource Governor](resource-governor-workload-group.md)   
- [Configuración de Resource Governor mediante una plantilla](configure-resource-governor-using-a-template.md)   
- [Ver Resource Governor propiedades](view-resource-governor-properties.md)   
+ [Regulador de recursos](resource-governor.md)   
+ [Habilitar el regulador de recursos](enable-resource-governor.md)   
+ [Grupo de recursos de servidor del regulador de recursos](resource-governor-resource-pool.md)   
+ [Grupos de cargas de trabajo del regulador de recursos](resource-governor-workload-group.md)   
+ [Configurar el regulador de recursos utilizando una plantilla](configure-resource-governor-using-a-template.md)   
+ [Ver las propiedades del regulador de recursos](view-resource-governor-properties.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   
- [Crear grupo de recursos de &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Crear grupo de cargas de trabajo &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   

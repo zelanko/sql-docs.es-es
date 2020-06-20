@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4657bf58a7160f075759a265fef883c92fee0c9
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: f24ea0800107caf026105e306ae39e1461077de5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921713"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924327"
 ---
 # <a name="ssis-catalog"></a>Catálogo de SSIS
   El `SSISDB` Catálogo es el punto central para trabajar con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proyectos de (SSIS) que ha implementado en el [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] servidor de. Por ejemplo, establece los parámetros del proyecto y del paquete, configura entornos para especificar los valores en tiempo de ejecución para los paquetes, ejecuta paquetes y soluciona los problemas de los mismos, y administra las operaciones del servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -36,7 +35,7 @@ ms.locfileid: "82921713"
 >  No se puede cambiar el nombre de la `SSISDB` base de datos.  
   
 > [!NOTE]  
->  Si la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia a la que `SSISDB` está adjuntada la base de datos, se detiene o no responde, el proceso ISServerExec. exe finaliza. Se escribe un mensaje en un registro de eventos de Windows.  
+>  Si la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia a la que `SSISDB` está asociada la base de datos, se detiene o no responde, el proceso de ISServerExec.exe finaliza. Se escribe un mensaje en un registro de eventos de Windows.  
 >   
 >  Si los recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conmutan por error como parte de una conmutación por error de clúster, los paquetes en ejecución no se reinician. Puede usar los puntos de comprobación para reiniciar los paquetes. Para obtener más información, vea [Restart Packages by Using Checkpoints](../packages/restart-packages-by-using-checkpoints.md).  
   
@@ -56,7 +55,7 @@ ms.locfileid: "82921713"
 ### <a name="folder-project-environment"></a>Carpeta, proyecto, entorno  
  Tenga en cuenta las reglas siguientes al cambiar el nombre de una carpeta, un proyecto, o un entorno.  
   
--   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
+-   Los caracteres no válidos incluyen caracteres ASCII/Unicode de 1 a 31, comillas dobles ("), menor que ( \<), greater than (> ), barra vertical (|), retroceso (\b), null (\ 0) y tabulación (\t).  
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "82921713"
 ### <a name="environment-variable"></a>Variable de entorno  
  Tenga en cuenta las reglas siguientes cuando asigne un nombre a una variable de entorno.  
   
--   Entre los caracteres no válidos, se incluyen los caracteres ASCII/Unicode del 1 al 31, comillas dobles ("), menor que (\<), mayor que (>), barra vertical (|), retroceso (\b), NULL (\0) y tabulación (\t).  
+-   Los caracteres no válidos incluyen caracteres ASCII/Unicode de 1 a 31, comillas dobles ("), menor que ( \<), greater than (> ), barra vertical (|), retroceso (\b), null (\ 0) y tabulación (\t).  
   
 -   El nombre no puede contener espacios delante ni detrás.  
   
@@ -131,7 +130,7 @@ ms.locfileid: "82921713"
   
  Cambiar el algoritmo de cifrado es una operación que lleva mucho tiempo. En primer lugar, el servidor tiene que utilizar el algoritmo especificado previamente para descifrar todos los valores de configuración. A continuación, el servidor tiene que utilizar el nuevo algoritmo para volver a cifrar los valores. Durante este tiempo, no puede haber otras operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor. Así, para que las operaciones de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] continúen sin interrupción, el algoritmo de cifrado es un valor de solo lectura en el cuadro de diálogo de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
- Para cambiar la configuración de la propiedad **algoritmo de cifrado** , establezca la `SSISDB` base de datos en modo de usuario único y, a continuación, llame al procedimiento almacenado Catalog. configure_catalog. Use ENCRYPTION_ALGORITHM para el argumento *property_name* . Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Para cambiar la configuración de la propiedad **algoritmo de cifrado** , establezca la `SSISDB` base de datos en modo de usuario único y, a continuación, llame a la catalog.configure_catalog procedimiento almacenado. Use ENCRYPTION_ALGORITHM para el argumento *property_name* . Para más información sobre los valores de propiedad admitidos, vea [catalog.catalog_properties &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Para más información sobre el procedimiento almacenado, vea [catalog.configure_catalog &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Para más información sobre el modo de usuario único, vea [Establecer una base de datos en modo de usuario único](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Para más información sobre el cifrado y los algoritmos de cifrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los temas de la sección [Cifrado de SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md).  
   

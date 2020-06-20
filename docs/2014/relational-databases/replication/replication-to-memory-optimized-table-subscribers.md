@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: af064de0f89d515f2afb87eb2a6d683d7179e4dd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811228"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056912"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
   Las tablas que actúan como suscriptores de replicación transaccional, excluida la replicación transaccional punto a punto, pueden configurarse como tablas optimizadas para memoria. Otras configuraciones de replicación no son compatibles con las tablas optimizadas para memoria.  
@@ -59,7 +58,7 @@ ms.locfileid: "68811228"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  Navegue hasta la carpeta de la instantánea. La ubicación predeterminada es "C:\Archivos de Programa\microsoft SQL Server\MSSQL12. \<Instancia> \mssql\repldata\unc\xxx\yyyymmddhhmmss\\".  
+2.  Navegue hasta la carpeta de la instantánea. La ubicación predeterminada es "C:\Archivos de Programa\microsoft SQL Server\MSSQL12. \<INSTANCE> \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS \\ ".  
   
 3.  Busque el **. SCH** en la tabla y ábralo en Management Studio. Cambie el esquema de tabla y actualice el procedimiento almacenado como se describe a continuación.  
   

@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1d0ab03b5152b0fe3f12de5e31b091b49d86cd4d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110176"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048357"
 ---
 # <a name="viewing-tuning-recommendations"></a>Ver recomendaciones de optimización
-   En esta tarea, se utiliza la sesión de optimización que creó en [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md). Después [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de optimizar la base de datos mediante el script de script. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL, [!INCLUDE[ssDE](../../includes/ssde-md.md)] el Asistente para la optimización de muestra los resultados en la pestaña **recomendaciones** . La siguiente tarea presenta la pestaña **recomendaciones** de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] interfaz gráfica de usuario (GUI) del Asistente para la optimización de y le guía para explorar la información que proporciona sobre los resultados de la sesión de optimización.  
+   En esta tarea, se utiliza la sesión de optimización que creó en [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md). Después de optimizar la [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos mediante el script de script. SQL, el [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Asistente para la optimización de muestra los resultados en la pestaña **recomendaciones** . La siguiente tarea presenta la pestaña **recomendaciones** de la [!INCLUDE[ssDE](../../includes/ssde-md.md)] interfaz gráfica de usuario (GUI) del Asistente para la optimización de y le guía para explorar la información que proporciona sobre los resultados de la sesión de optimización.  
   
 ### <a name="view-tuning-recommendations"></a>Ver las recomendaciones de optimización  
   
 1.  Inicie el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Consulte [Iniciar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md). Asegúrese de conectarse a la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ha usado en la práctica [Optimizar una carga de trabajo](lesson-1-1-tuning-a-workload.md).  
   
-2.  Haga doble clic en **MySession** en el panel **Monitor de sesión** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Carga la información de sesión de la sesión de optimización anterior y muestra la **pestaña recomendaciones** . tenga en [!INCLUDE[ssDE](../../includes/ssde-md.md)] cuenta que el Asistente para la optimización de no realizó **recomendaciones de partición** porque aceptó todos los valores predeterminados de la opción de optimización y no se ha seleccionado **ninguna partición** en la pestaña **Opciones de optimización** .  
+2.  Haga doble clic en **MySession** en el panel **Monitor de sesión** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Carga la información de sesión de la sesión de optimización anterior y muestra la pestaña **recomendaciones** . tenga en cuenta que el Asistente para la [!INCLUDE[ssDE](../../includes/ssde-md.md)] optimización de no realizó recomendaciones de **partición** porque aceptó todos los valores predeterminados de la opción de optimización y no se ha seleccionado **ninguna partición** en la pestaña **Opciones de optimización** .  
   
 3.  En la pestaña **Recomendaciones** , utilice la barra de desplazamiento situada en la parte inferior de la página con pestañas para ver todas las columnas de **Recomendaciones de índices** . Cada fila representa un objeto de base de datos (índices o vistas indizadas) que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] recomienda quitar o crear. Desplácese hasta la columna situada más a la derecha y haga clic en **Definición**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra la ventana **Vista previa de script SQL** , donde se puede ver el script [!INCLUDE[tsql](../../includes/tsql-md.md)] que creará o quitará el objeto de base de datos de esa fila. Haga clic en **Cerrar** para cerrar la ventana de vista previa.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "66110176"
 ## <a name="summary"></a>Resumen  
  Ha visto el contenido de la pestaña **Recomendaciones** para la sesión de optimización MySession y ha evaluado un subconjunto de recomendaciones en la nueva sesión de optimización EvaluateMySession.  
   
- Evaluar un subconjunto de recomendaciones de optimización puede ser necesario si tiene que cambiar las opciones de optimización después de ejecutar una sesión. Por ejemplo, si solicita al Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que tenga en cuenta las vistas indizadas cuando especifique opciones de optimización para una sesión, pero, después de que la recomendación se genere, decide usar las vistas indizadas de nuevo, Después, puede usar la opción **evaluar recomendaciones** del menú **acciones** para que el [!INCLUDE[ssDE](../../includes/ssde-md.md)] Asistente para la optimización de vuelva a evaluar la sesión sin tener en cuenta las vistas indizadas. Cuando utilice la opción **Evaluar recomendaciones** , las recomendaciones generadas previamente se aplicarán hipotéticamente al diseño físico actual para lograr el diseño físico de la segunda sesión de optimización.  
+ Evaluar un subconjunto de recomendaciones de optimización puede ser necesario si tiene que cambiar las opciones de optimización después de ejecutar una sesión. Por ejemplo, si solicita al Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que tenga en cuenta las vistas indizadas cuando especifique opciones de optimización para una sesión, pero, después de que la recomendación se genere, decide usar las vistas indizadas de nuevo, Después, puede usar la opción **evaluar recomendaciones** del menú **acciones** para que [!INCLUDE[ssDE](../../includes/ssde-md.md)] el Asistente para la optimización de vuelva a evaluar la sesión sin tener en cuenta las vistas indizadas. Cuando utilice la opción **Evaluar recomendaciones** , las recomendaciones generadas previamente se aplicarán hipotéticamente al diseño físico actual para lograr el diseño físico de la segunda sesión de optimización.  
   
  La pestaña **Informes** , que se describe en la siguiente tarea de la lección, muestra más información sobre los resultados de optimización.  
   

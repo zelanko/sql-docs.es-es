@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdcf47e483c3a52879c66838a657b51d65bff8f8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284859"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938726"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Cada rol contiene miembros, por nombre de usuario de Windows o por grupo de Windows, y permisos (de lectura, de procesamiento, de administrador). Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila.  
@@ -40,7 +39,7 @@ ms.locfileid: "67284859"
 -   [Tareas relacionadas](#bkmk_rt)  
   
 ##  <a name="understanding-roles"></a><a name="bkmk_underst"></a>Descripción de los roles  
- Los roles se usan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en para administrar la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] seguridad de los datos de y. Hay dos tipos de roles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
+ Los roles se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para administrar la seguridad de los [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] datos de y. Hay dos tipos de roles en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:  
   
 -   El rol del servidor, que es un rol fijo que proporciona acceso de administrador a una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
@@ -87,7 +86,7 @@ ms.locfileid: "67284859"
   
  El efecto neto de estos permisos en la tabla Transactions es que los miembros podrán consultar las filas de datos en las que el cliente sea de los EE. UU., la categoría de producto sea bicycles y el año sea 2008. Los usuarios no podrán consultar ninguna de las transacciones que no cumplan las tres condiciones anteriores, a menos que sean miembros de otro rol que les conceda estos permisos.  
   
- Puede usar el filtro, *=FALSE()*, para denegar el acceso a todas las filas de una tabla completa.  
+ Puede usar el filtro, *=FALSE()* , para denegar el acceso a todas las filas de una tabla completa.  
   
 ### <a name="dynamic-security"></a>Seguridad dinámica  
  Seguridad dinámica proporciona una manera de definir la seguridad en el nivel de fila según el nombre del usuario que ha iniciado sesión actualmente o la propiedad CustomData devuelta por una cadena de conexión. Para implementar seguridad dinámica, debe incluir en el modelo una tabla con los valores de inicio de sesión (nombre de usuario de Windows) para los usuarios, así como un campo que se pueda utilizar para definir un permiso específico; por ejemplo, una tabla de los dimEmployees con un Id. de acceso (dominio \ nombredeusuario) junto con un valor de departamento para cada empleado.  
@@ -120,13 +119,13 @@ ms.locfileid: "67284859"
   
 |DepartmentId|DepartmentName|  
 |------------------|--------------------|  
-|1|Corporate|  
+|1|Corporativos|  
 |2|Executive General and Administration|  
 |3|Inventory Management|  
 |4|Fabricación|  
 |5|Control de calidad|  
 |6|Research and Development|  
-|7|Sales and Marketing|  
+|7|Ventas y marketing|  
   
 ##  <a name="testing-roles"></a><a name="bkmk_testroles"></a>Probar roles  
  Al crear un proyecto de modelos, puede usar la característica Analizar en Excel para probar la eficacia de los roles que ha definido. En el menú **Modelo** del diseñador de modelos, al hacer clic en **Analizar en Excel**, y antes de que se inicie Excel, aparecerá el cuadro de diálogo **Elegir credenciales y perspectivas** . En este cuadro de diálogo, puede especificar el nombre de usuario actual, otro nombre de usuario, un rol y una perspectiva que usará para conectar con el modelo del área de trabajo como un origen de datos. Para obtener más información, vea [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md).  

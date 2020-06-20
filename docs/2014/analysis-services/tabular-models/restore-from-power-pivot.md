@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 232ac8ed-77fe-47d8-acd3-59bc2fdfdf48
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b153dfbe9dfdbb5741304153bd7b3dfd1d0d1b3c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938676"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurar desde PowerPivot
   Puede utilizar la característica Restaurar desde PowerPivot en SQL Server Management Studio para crear una nueva base de datos de modelos tabulares en una instancia de Analysis Services (ejecutándose en modo tabular), o para llevar a cabo la restauración en una base de datos existente desde un libro PowerPivot (.xlsx).  

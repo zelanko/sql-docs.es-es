@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f7de3ea085b3e1d104f9d014317c52dce4585a2e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067382"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939776"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Orígenes de datos compatibles (SSAS tabular)
   En este tema se describen los tipos de orígenes de datos que se pueden usar con los modelos tabulares.  
   
- Este artículo contiene las secciones siguientes:  
+ Este artículo contiene las siguientes secciones:  
   
--   [Orígenes de datos compatibles](#bkmk_supported_ds)  
+-   [Orígenes de datos admitidos](#bkmk_supported_ds)  
   
 -   [Orígenes no admitidos](#bkmk_unsupported_ds)  
   

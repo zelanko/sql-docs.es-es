@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc959fa8406453230ee133bf6183fa3dc1ba51f1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b74de0c0ac044f3bdcadf3381976dcecc777e36c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190335"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037188"
 ---
 # <a name="before-installing-failover-clustering"></a>Antes de instalar los clústeres de conmutación por error
   Antes de instalar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], debe seleccionar el hardware y el sistema operativo en el que se ejecutará [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. También deberá configurar el servicio de clústeres de conmutación por error de Windows Server (WSFC), así como revisar la red, la seguridad y las consideraciones relativas al resto del software que se ejecutará en los clústeres de conmutación por error.  
@@ -45,9 +44,9 @@ ms.locfileid: "63190335"
   
     -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala Windows PowerShell. Windows PowerShell 2.0 es un requisito previo para instalar los componentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. Si Windows PowerShell 2.0 no está presente en su equipo, puede habilitarlo mediante las instrucciones de la página [Windows Management Framework](https://go.microsoft.com/fwlink/?LinkId=186214).  
   
-    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para obtener más información, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]consulte notas de la [versión](https://go.microsoft.com/fwlink/?LinkId=296445).  
+    -   El programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ya no instala .NET Framework 3.5 SP1 pero quizá se necesite al instalar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en los sistemas operativos Windows anteriores. Para obtener más información, consulte notas de la [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [versión](https://go.microsoft.com/fwlink/?LinkId=296445).  
   
-    -   Paquete de actualización: ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ** Para evitar el reinicio del equipo debido a la instalación de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] .NET Framework 4 durante [!INCLUDE[msCoName](../../../includes/msconame-md.md)] la instalación, el programa de instalación requiere que se instale una actualización en el equipo.  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
+    -   ** [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Paquete de actualización:** para evitar el reinicio del equipo debido a la instalación de .NET Framework 4 durante la instalación, [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] el programa de instalación requiere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] que se instale una actualización en el equipo.  Si va a instalar [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en Windows 7 SP1 o [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] SP2, esta actualización se incluye. Si instala en un sistema operativo Windows anterior, descárguelo desde [Microsoft Update para .NET Framework 4.0 en Windows Vista y Windows Server 2008](https://go.microsoft.com/fwlink/?LinkId=198093).  
   
     -   .NET Framework 4: el programa de instalación instala .NET Framework 4 en un sistema operativo en clúster. Para reducir el tiempo total de instalación, considere la instalación de .NET Framework 4 antes de ejecutar el programa de instalación principal.  
   
@@ -197,9 +196,9 @@ ms.locfileid: "63190335"
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (64 bits)|Sí|Sí|Sí|Sí|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Standard (32 bits)|Sí|Sí|||  
   
- <sup>1</sup> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los clústeres no se admiten en el modo wow. Eso incluye las actualizaciones desde versiones anteriores de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estaban instaladas originalmente en WOW. La única opción de actualización en estos casos es instalar la nueva versión en paralelo y migrar.  
+ <sup>1</sup> los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clústeres no se admiten en el modo wow. Eso incluye las actualizaciones desde versiones anteriores de clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que estaban instaladas originalmente en WOW. La única opción de actualización en estos casos es instalar la nueva versión en paralelo y migrar.  
   
- <sup>2</sup> compatible con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los clústeres de conmutación por error de múltiples subredes.  
+ <sup>2</sup> compatible con los [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] clústeres de conmutación por error de múltiples subredes.  
   
   
   
@@ -220,7 +219,7 @@ ms.locfileid: "63190335"
   
 1.  La dependencia de recursos de dirección IP se establece en OR en una configuración de varias subredes. Para obtener más información, vea [Create a New SQL Server failover Cluster &#40;Setup&#41;](create-a-new-sql-server-failover-cluster-setup.md)  
   
-2.  No se admiten las dependencias mixtas AND-OR de direcciones IP. Por ejemplo, no se admite \<IP1> AND \<IP2> OR \<IP3>.  
+2.  No se admiten las dependencias mixtas AND-OR de direcciones IP. Por ejemplo, \<IP1> y \<IP2> o \<IP3> no se admiten.  
   
 3.  No se admite más de una dirección IP por cada subred.  
   

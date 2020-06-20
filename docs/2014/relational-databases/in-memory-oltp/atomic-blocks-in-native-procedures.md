@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca8f5b4d767ef0fe836cd260f8d12dd5b40c75d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62467285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050374"
 ---
 # <a name="atomic-blocks"></a>Bloques atomic
   `BEGIN ATOMIC` es parte del estándar ANSI SQL. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los bloques atomic solo en el nivel superior de los procedimientos almacenados compilados de forma nativa.  
@@ -130,14 +129,14 @@ GO
   
  Se requieren las siguientes opciones con `BEGIN ATOMIC`:  
   
-|Configuración necesaria|Descripción|  
+|Configuración necesaria|Description|  
 |----------------------|-----------------|  
 |`TRANSACTION ISOLATION LEVEL`|Los valores admitidos son `SNAPSHOT`, `REPEATABLEREAD` y `SERIALIZABLE`.|  
 |`LANGUAGE`|Determina los formatos de fecha y hora y los mensajes del sistema. Se admiten todos los lenguajes y alias de [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql).|  
   
  Los siguientes parámetros de configuración son opcionales:  
   
-|Configuración opcional|Descripción|  
+|Configuración opcional|Description|  
 |----------------------|-----------------|  
 |`DATEFORMAT`|Se admiten todos los formatos de fecha de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando se especifica, `DATEFORMAT` reemplaza el formato de fecha predeterminado asociado a `LANGUAGE`.|  
 |`DATEFIRST`|Cuando se especifica, `DATEFIRST` reemplaza el valor predeterminado asociado a `LANGUAGE`.|  

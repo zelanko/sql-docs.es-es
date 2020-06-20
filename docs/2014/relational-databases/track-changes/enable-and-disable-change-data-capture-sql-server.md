@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b741894f-d267-4b10-adfe-cbc14aa6caeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df0a2fd4a2c6ffb2de58d6b52360d1730d0fa7df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037281"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
   Este tema describe cómo habilitar y deshabilitar la captura de datos modificados para una tabla y una base de datos.  
@@ -48,7 +47,7 @@ GO
 ```  
   
 ## <a name="disable-change-data-capture-for-a-database"></a>Deshabilitar la captura de datos modificados para una base de datos  
- Un miembro del rol `sysadmin` fijo de servidor puede ejecutar el procedimiento almacenado [sys. sp_cdc_disable_db &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de la base de datos para deshabilitar la captura de datos modificados en una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos, se quitan todos los metadatos de la captura de datos modificados asociados, incluidos el esquema y el usuario de `cdc` y los trabajos de captura de datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
+ Un miembro del `sysadmin` rol fijo de servidor puede ejecutar el procedimiento almacenado [sys. sp_cdc_disable_db &#40;&#41;de TRANSACT-SQL](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) en el contexto de la base de datos para deshabilitar la captura de datos modificados en una base de datos. No es necesario deshabilitar tablas individuales antes de deshabilitar la base de datos. Cuando se deshabilita la base de datos, se quitan todos los metadatos de la captura de datos modificados asociados, incluidos el esquema y el usuario de `cdc` y los trabajos de captura de datos modificados. Sin embargo, los roles de acceso creados por la captura de datos modificados no se quitarán automáticamente y se deben eliminar explícitamente. Para determinar si una base de datos está habilitada, consulte la columna `is_cdc_enabled` en la vista de catálogo sys.databases.  
   
  Si se quita una base de datos habilitada para la captura de datos modificados, se quitarán automáticamente los trabajos de captura de datos modificados.  
   
@@ -74,11 +73,11 @@ GO
   
  `Columns in the source table to be captured`.  
   
- De forma predeterminada, todas las columnas de la tabla de origen se identifican como columnas capturadas. Si solo es necesario realizar un seguimiento de un subconjunto de columnas, por ejemplo, por motivos de privacidad o *@captured_column_list* de rendimiento, use el parámetro para especificar el subconjunto de columnas.  
+ De forma predeterminada, todas las columnas de la tabla de origen se identifican como columnas capturadas. Si solo es necesario realizar un seguimiento de un subconjunto de columnas, por ejemplo, por motivos de privacidad o de rendimiento, use el *@captured_column_list* parámetro para especificar el subconjunto de columnas.  
   
  `A filegroup to contain the change table.`  
   
- De forma predeterminada, la tabla de cambios se encuentra en el grupo de archivos predeterminado de la base de datos. Los propietarios de bases de datos que quieran controlar la ubicación de las tablas *@filegroup_name* de cambios individuales pueden usar el parámetro para especificar un grupo de archivos determinado para la tabla de cambios asociada a la instancia de captura. El grupo de archivos con nombre debe existir previamente. Generalmente, se recomienda que las tablas de cambios se coloquen en un grupo de archivos independiente de las tablas de origen. Vea la `Enable a Table Specifying Filegroup Option` plantilla para obtener un ejemplo que muestra el *@filegroup_name* uso del parámetro.  
+ De forma predeterminada, la tabla de cambios se encuentra en el grupo de archivos predeterminado de la base de datos. Los propietarios de bases de datos que quieran controlar la ubicación de las tablas de cambios individuales pueden usar el *@filegroup_name* parámetro para especificar un grupo de archivos determinado para la tabla de cambios asociada a la instancia de captura. El grupo de archivos con nombre debe existir previamente. Generalmente, se recomienda que las tablas de cambios se coloquen en un grupo de archivos independiente de las tablas de origen. Vea la `Enable a Table Specifying Filegroup Option` plantilla para obtener un ejemplo que muestra el uso del *@filegroup_name* parámetro.  
   
 ```sql  
 -- =========  
@@ -142,7 +141,7 @@ GO
 ```  
   
 > [!NOTE]
->  Si la captura de datos modificados está habilitada en una tabla con una clave principal *@index_name* existente y el parámetro no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
+>  Si la captura de datos modificados está habilitada en una tabla con una clave principal existente y el *@index_name* parámetro no se usa para identificar un índice único alternativo, la característica de captura de datos modificados usará la clave principal. Los cambios subsiguientes en la clave principal no se permitirán sin deshabilitar primero la captura de datos modificados para la tabla. Esto es así independientemente de si se solicitó compatibilidad con las consultas net changes cuando se configuró la captura de datos modificados. Si no hay ninguna clave principal en una tabla en el momento en que se habilita para la captura de datos modificados, la captura de datos modificados omite la incorporación posterior de una clave principal. Dado que la captura de datos modificados no utilizará ninguna clave principal que se cree una vez habilitada la tabla, las columnas de clave y la clave se pueden quitar sin restricciones.  
   
 ## <a name="disable-change-data-capture-for-a-table"></a>Deshabilitar la captura de datos modificados para una tabla  
  Los miembros del rol fijo de base de datos `db_owner` pueden quitar una instancia de captura para las tablas de origen individuales utilizando el procedimiento almacenado `sys.sp_cdc_disable_table`. Para determinar si una tabla de origen está habilitada actualmente para la captura de datos modificados, examine la columna `is_tracked_by_cdc` en la vista de catálogo `sys.tables`. Si no hay ninguna tabla habilitada para la base de datos después de que tenga lugar la deshabilitación, también se quitarán los trabajos de captura de datos modificados.  

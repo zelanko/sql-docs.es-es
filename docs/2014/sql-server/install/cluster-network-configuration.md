@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 04b0d412cd577fb0869f2188d99c1ea6a5646d2b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037167"
 ---
 # <a name="cluster-network-configuration"></a>Configuración de red en clúster
   Utilice la página **Selección de red en clúster** para especificar los recursos de red para la instancia en clúster de conmutación por error.  
   
 ## <a name="options"></a>Opciones  
- **Nombre de red en clúster de conmutación por error: es el nombre que se usa para identificar la instancia de clúster de conmutación por error en la red. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
+ ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Nombre de red en clúster de conmutación por error** : es el nombre que se usa para identificar la instancia de clúster de conmutación por error en la red.  
   
  **Configuración de red** : especifique el tipo de IP y la dirección IP de la instancia de clúster de conmutación por error.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d3bee955-0344-4078-89f1-94a02e7f93c2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 322fa77d7d8620de87aaf862242da3c5c83126cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a62118da80af9f546c83f1fc0aca926069ea55e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096339"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037069"
 ---
 # <a name="complete-image-progress"></a>Progreso de compleción de la imagen
   Use la página **Progreso de compleción de la imagen** del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para supervisar el estado de la instalación de compleción de imagen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al completarse este paso, esta página enumera el estado de cada característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurada y completada.  

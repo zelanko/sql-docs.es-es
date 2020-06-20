@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b838f970-d11a-4239-b164-8d11f4581d83
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: c2e34258f10033c61f9966e62fa7c14025423613
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5f7d99c3459d7bf41a4b9b6552ad6dbb6fe2213c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952333"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036979"
 ---
 # <a name="configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager"></a>Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)
 
@@ -38,7 +37,7 @@ ms.locfileid: "71952333"
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo|  
+|[!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo|  
   
  
   
@@ -67,7 +66,7 @@ ms.locfileid: "71952333"
   
 -   Use el Administrador de configuración de Reporting Services si solo va a especificar un servidor SMTP y una cuenta de usuario que tenga permiso para enviar correo electrónico. Ésta es la configuración mínima necesaria para configurar la extensión de entrega por correo electrónico del servidor de informes. Para obtener más información, consulte [configuración de correo electrónico: Configuration Manager &#40;modo nativo de SSRS&#41;](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md) y [entrega por correo electrónico en Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md).  
   
--   (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, vea [modificar un archivo de configuración de Reporting Services &#40;el&#41;RSreportserver. config](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) en libros en pantalla de SQL Server.  
+-   (Opcionalmente) Utilice un procesador de texto para especificar valores adicionales en el archivo RSreportserver.config. Este archivo contiene toda la configuración para la distribución del correo electrónico del servidor de informes. Si utiliza un servidor SMTP adicional o limita la entrega de correo electrónico a hosts específicos, debe configurar opciones adicionales en estos archivos. Para obtener más información sobre cómo buscar y modificar archivos de configuración, vea [modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) en libros en pantalla de SQL Server.  
   
 > [!NOTE]  
 >  Las opciones de correo electrónico del servidor de informes se basan en CDO. Si desea obtener más detalles acerca de opciones específicas, puede consultar la documentación de producción de CDO.  
@@ -148,7 +147,7 @@ ms.locfileid: "71952333"
   
  La conexión entre el servidor de informes y un servidor o reenviador SMTP local viene determinada por las opciones de configuración siguientes:  
   
--   `SendUsing`está establecido en **1**.  
+-   `SendUsing` se establece en **1**.  
   
 -   **SMTPServerPickupDirectory** se establece en una carpeta de la unidad local.  
   
@@ -211,7 +210,7 @@ ms.locfileid: "71952333"
   
 7.  Compruebe que el servicio esté ejecutándose en la consola **Servicios** .  
   
-8.  Abra el archivo **Rsreportserver. config** en un editor de texto.  
+8.  Abra el archivo de **RSReportServer.config** en un editor de texto.  
   
 9. Compruebe que `<UrlRoot>` se haya establecido en la dirección URL del servidor de informes. Este valor se establece al configurar el servidor de informes y debe mostrar la dirección. Si no es así, escriba la dirección URL del servidor de informes.  
   

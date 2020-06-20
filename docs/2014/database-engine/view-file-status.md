@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 96601fc3-64b8-4dd8-9b73-cc6710293eb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7082304781a3feab0939b685b16321651b6fda91
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62773371"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927369"
 ---
 # <a name="view-file-status"></a>Ver el estado de archivo
   El control de código fuente conserva información detallada del estado de cada elemento controlado por código fuente. Puede utilizar esta información para identificar el estado actual del archivo, así como para crear un informe de estado del mismo.  

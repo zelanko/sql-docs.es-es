@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d380509-deed-4b4b-a9c1-a9134cc40641
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc6636946f7c94992fc831f814df57baf6397a1f
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 72b88bd1bd2a033683f83dd53cca8404eccb613f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059345"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
   Las notificaciones del servicio de token de Windows (c2WTS) de SharePoint son necesarias con el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modo de SharePoint si desea usar la autenticación de Windows para los orígenes de datos que están fuera de la granja de servidores de SharePoint. Esto es cierto incluso si el usuario accede a los orígenes de datos con la autenticación de Windows porque la comunicación entre el servicio front-end web (WFE) y el servicio compartido de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se realizará siempre con autenticación de notificaciones.  
@@ -69,7 +68,7 @@ ms.locfileid: "82922149"
   
 2.  Configurar c2WTS ' AllowedCallers '  
   
-     c2WTS requiere que las identidades de los "autores de llamadas" se muestren explícitamente en el archivo de configuración, **archivo c2wtshost. exe. config**. c2WTS no acepta solicitudes de todos los usuarios autenticados en el sistema a menos que esté configurado para ello. En este caso el "autor de la llamada" es el grupo de Windows WSS_WPG. El archivo c2wtshost.exe.confi se guarda en la ubicación siguiente:  
+     c2WTS requiere que las identidades de los "autores de llamadas" se muestren explícitamente en el archivo de configuración, **c2wtshost.exe.config**. c2WTS no acepta solicitudes de todos los usuarios autenticados en el sistema a menos que esté configurado para ello. En este caso el "autor de la llamada" es el grupo de Windows WSS_WPG. El archivo c2wtshost.exe.confi se guarda en la ubicación siguiente:  
   
      **\Archivos de Programa\windows Identity Foundation\v3.5\c2wtshost.exe.config**  
   

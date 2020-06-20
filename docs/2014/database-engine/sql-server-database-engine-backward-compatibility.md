@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10de5ec6-d3cf-42ef-aa62-1bdf3fbde841
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dc5681577b051ebb26959856a9eb775ae2ae409f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fee4d3370e64906a3705c28c893e9cec6a604978
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62842852"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928966"
 ---
 # <a name="sql-server-database-engine-backward-compatibility"></a>Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server
   Los temas de la sección de compatibilidad con versiones anteriores describen cambios de comportamiento entre las versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

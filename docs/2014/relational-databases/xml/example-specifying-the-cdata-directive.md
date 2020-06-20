@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 949071e6-787f-480d-bb86-3ac16a027af1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a08c37ae8fbd1b190e3a3cd4f846109d7e8fca2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 46a95265228c006e61448d16352a529f8232dd95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716776"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067842"
 ---
 # <a name="example-specifying-the-cdata-directive"></a>Ejemplo: Especificar la directiva CDATA
   Si se establece la directiva en **CDATA**, los datos contenidos no se codifican por entidad, pero se colocan en la sección CDATA. Los atributos **CDATA** no deben tener nombre.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: d57a1876-3fb3-4d82-8b5c-510b6e0d8a11
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 740353035b1bd53a8c99b6336b3a70532eb57b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fa2051020babf67d1dfe6c6a99720c491b398f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66110126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85068073"
 ---
 # <a name="summary-converting-a-table-to-a-hierarchical-structure"></a>Resumen: Conversión de una tabla en una estructura jerárquica
   El tipo de datos `hierarchyid` puede almacenar una relación jerárquica en un formato simple y compacto. Los índices apropiados pueden devolver eficazmente los datos por el nivel de la jerarquía, por subárboles de la jerarquía, o por búsquedas singleton tradicionales.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a828e284-097e-4854-8c49-931934eb73bf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9dda41e229e36c0c4b86c5bdb00782c3b5871bfa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 97ba002eafc02f445f3f7104811b2c347668e300
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858650"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932956"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propiedades del índice de texto completo (página Programaciones)
   Utilice esta página con el fin de ver y crear calendarios para ejecutar un trabajo del Agente SQL Server que inicia un rellenado incremental de actualizaciones en la tabla base del índice de texto completo. Si la tabla base o la vista no contienen ninguna columna del tipo de datos `timestamp`, se realiza un rellenado completo.  

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4aed312c01e47245d3b2c3d360652ab2b366cfd9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5c7595b163dbaa965ed5c71b039e76108a4b49a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702319"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013184"
 ---
 # <a name="use-xml-data-in-applications"></a>Usar datos XML en las aplicaciones
   En este tema se describen las opciones que están disponibles para trabajar con tipos de datos `xml` en una aplicación. El tema incluye información acerca de lo siguiente:  

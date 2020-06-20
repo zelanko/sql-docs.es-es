@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 619e437b-e00f-49a9-a94c-8feafc4af713
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 755f2955e7bcd12ac022b29e6e4d3c7cf3aa80be
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed1b5851868705000d5aa04eb885b8e188dd45ea
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925916"
 ---
 # <a name="add-new-source-dialog-box"></a>Agregar nuevo origen, cuadro de diálogo
   En la tabla siguiente se enumeran las opciones disponibles en el cuadro de diálogo Agregar nuevo origen.  
@@ -25,7 +24,7 @@ ms.locfileid: "66061846"
 |Opción|Descripción|  
 |------------|-----------------|  
 |Tipos|Seleccione el tipo de origen al que desea conectarse.|  
-|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en ** \<nuevo>** para crear un nuevo administrador de conexiones.|  
+|Administradores de conexión|Seleccione un administrador de conexiones existente o haga clic en **\<New>** para crear un nuevo administrador de conexiones.|  
 |Mostrar solo elementos instalados|Especifique si desea ver solo los orígenes instalados.|  
 |Aceptar|Haga clic para guardar los cambios y a abrir los cuadros de diálogo siguientes para configurar opciones adicionales.|  
   

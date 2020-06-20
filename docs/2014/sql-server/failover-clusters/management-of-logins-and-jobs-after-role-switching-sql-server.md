@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fc2fc949-746f-40c7-b5d4-3fd51ccfbd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 870243a5ee69f6058fdc34597ccd4a78b93859e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c099bf9ea271b5ea93fdebfe8f35c98864bca09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63252857"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062548"
 ---
 # <a name="management-of-logins-and-jobs-after-role-switching-sql-server"></a>Administración de inicios de sesión y trabajos tras la conmutación de roles (SQL Server)
    Al implementar una solución de alta disponibilidad o de recuperación ante desastres para una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], es importante reproducir información relevante que se almacena para dicha base de datos en las bases de datos **master** o **msdb**. Generalmente, la información relevante incluye los trabajos de la base de datos principal y los inicios de sesión de los usuarios o los procesos que necesitan conectarse con la base de datos. Debe duplicar esta información en las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeden una base de datos reflejada o secundaria. Si es posible, tras la conmutación de roles es mejor reproducir mediante programación la información en la nueva base de datos principal.  
@@ -46,7 +45,7 @@ ms.locfileid: "63252857"
 >  Las distintas instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden configurarse de forma diferente, con distintas letras de unidad, por ejemplo. Los trabajos para cada asociado deben permitir tales diferencias.  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](troubleshoot-orphaned-users-sql-server.md)  
   
   

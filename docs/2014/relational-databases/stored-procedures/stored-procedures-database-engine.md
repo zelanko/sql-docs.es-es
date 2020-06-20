@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1d8d7d0684d528276cc18adfdd3df837a79d551
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68197112"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047463"
 ---
 # <a name="stored-procedures-database-engine"></a>Procedimientos almacenados (motor de base de datos)
   Un procedimiento almacenado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un grupo de una o más instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] o una referencia a un método de Common Runtime Language (CLR) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Los procedimientos se asemejan a las construcciones de otros lenguajes de programación, porque pueden:  
@@ -64,7 +63,7 @@ ms.locfileid: "68197112"
  Temporales  
  Los procedimientos temporales son una forma de procedimientos definidos por el usuario. Los procedimientos temporales son iguales que los procedimientos permanentes salvo porque se almacenan en **tempdb**. Hay dos tipos de procedimientos temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Los procedimientos temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles en la conexión actual del usuario y se eliminan cuando se cierra la conexión. Los procedimientos temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan al final de la última sesión en la que se usa el procedimiento.  
   
- System  
+ Sistema  
  Los procedimientos del sistema se incluyen con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Están almacenados físicamente en la base de datos interna y oculta **Resource** y se muestran de forma lógica en el esquema **sys** de cada base de datos definida por el sistema y por el usuario. Además, la base de datos **msdb** también contiene procedimientos almacenados del sistema en el esquema **dbo** que se usan para programar alertas y trabajos. Dado que los procedimientos del sistema empiezan con el prefijo **sp_** , le recomendamos que no use este prefijo cuando asigne un nombre a los procedimientos definidos por el usuario. Para obtener una lista completa de los procedimientos del sistema, vea [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los procedimientos del sistema que proporcionan una interfaz de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a los programas externos para varias actividades de mantenimiento. Estos procedimientos extendidos usan el prefijo xp_. Para obtener una lista completa de los procedimientos extendidos, vea [Procedimientos almacenados extendidos generales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  

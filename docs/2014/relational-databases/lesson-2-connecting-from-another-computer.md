@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3fb5e3fa319259df5ba0da1d6234fedee9cb604
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025193"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
   Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
@@ -44,7 +43,7 @@ ms.locfileid: "63144803"
     > [!NOTE]  
     >  Es posible que estén disponibles las opciones de 32 y 64 bits.  
   
-2.  En **Administrador de configuración de SQL Server**, expanda **SQL Server configuración de red**y, a continuación, haga clic en **protocolos para** _ \<InstanceName>_.  
+2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** _\<InstanceName>_.  
   
      La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)]se instala como **sqlexpress**, a menos que haya cambiado el nombre durante la instalación.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "63144803"
  Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]y Windows 7 activan el Firewall de Windows. Si desea conectarse a esta instancia desde otro equipo, debe abrir un puerto de comunicaciones en el firewall. La instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] escucha en el puerto 1433; por tanto, no tiene que configurar un puerto fijo. No obstante, las instancias con nombre incluidas las de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escuchan en puertos dinámicos. Para poder abrir un puerto en el firewall, debe configurar primero [!INCLUDE[ssDE](../includes/ssde-md.md)] para que escuche en un puerto específico conocido como puerto fijo o estático; de lo contrario, es posible que [!INCLUDE[ssDE](../includes/ssde-md.md)] escuche en un puerto distinto cada vez que se inicie. Para obtener más información sobre firewalls, la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
 > [!NOTE]  
->  Las asignaciones de número de puerto las administra la autoridad de números asignados de Internet y [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844)se enumeran en. Los números de Puerto deben estar asignados de los números 49152 a 65535.  
+>  Las asignaciones de número de puerto las administra la autoridad de números asignados de Internet y se enumeran en [http://www.iana.org](https://go.microsoft.com/fwlink/?LinkId=48844) . Los números de Puerto deben estar asignados de los números 49152 a 65535.  
   
 #### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>Configurar SQL Server para escuchar en un puerto específico  
   
@@ -67,13 +66,13 @@ ms.locfileid: "63144803"
   
 3.  En el cuadro de diálogo **Propiedades de TCP/IP** , haga clic en la pestaña **Direcciones IP** .  
   
-4.  En el cuadro **Puerto TCP** de la sección **IPAll** , escriba un número de puerto disponible. En este tutorial, usaremos `49172`.  
+4.  En el cuadro **Puerto TCP** de la sección **IPAll** , escriba un número de puerto disponible. En este tutorial, usaremos `49172` .  
   
 5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo y en **Aceptar** cuando aparezca una advertencia que indique que debe reiniciarse el servicio.  
   
 6.  En el panel izquierdo, haga clic en **Servicios de SQL Server**.  
   
-7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **Reiniciar**. Cuando se [!INCLUDE[ssDE](../includes/ssde-md.md)] reinicia, escucha en el puerto `49172`.  
+7.  En el panel derecho, haga clic con el botón derecho en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, después, haga clic en **Reiniciar**. Cuando [!INCLUDE[ssDE](../includes/ssde-md.md)] se reinicia, escucha en el puerto `49172` .  
   
 ##  <a name="opening-ports-in-the-firewall"></a><a name="firewall"></a>Apertura de puertos en el Firewall  
  Los sistemas de firewall ayudan a evitar el acceso no autorizado a los recursos de los equipos. Para conectarse a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde otro equipo cuando el firewall está activo, debe abrir un puerto en el firewall.  

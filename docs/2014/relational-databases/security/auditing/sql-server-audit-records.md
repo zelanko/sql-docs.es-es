@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d3462266279ed80e94871db4831918ad70b444be
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 19e9ba9013d592d752189adadfb761f1741fd91a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922145"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055455"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit Records
   La característica [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit le permite auditar grupos de eventos y eventos de nivel de servidor y de base de datos. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "82922145"
 |**database_name**|Contexto de base de datos en el que se produjo la acción.|`sysname`|No|  
 |**schema_name**|Contexto de esquema en el que se produjo la acción.|`sysname`|No|  
 |**object_name**|Nombre de la entidad en la que se produjo la auditoría. Esto incluye:<br /><br /> objetos de servidor<br /><br /> databases<br /><br /> Objetos de base de datos<br /><br /> objetos de esquema<br /><br /> Instrucción TSQL (si existe)|`sysname`|No|  
-|**privacidad**|Instrucción TSQL (si existe)|`nvarchar(4000)`|No|  
+|**instrucción**|Instrucción TSQL (si existe)|`nvarchar(4000)`|No|  
 |**additional_information**|Cualquier información adicional sobre el evento, almacenada como XML.|`nvarchar(4000)`|No|  
   
 ## <a name="remarks"></a>Observaciones  

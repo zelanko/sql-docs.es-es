@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: da8ada61df6a95a83f59bfb3791329728f2856c8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036952"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>Configurar una cuenta de servicio (Administrador de configuración de SSRS)
   En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], el servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan dentro de un único servicio. La cuenta en la que el servicio se ejecuta se define durante la instalación, al especificar la cuenta en la página Identidad de servicio, pero puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] si desea usar una cuenta diferente o actualizar la contraseña.  
   
- Si tiene un servidor de informes que está configurado para usar el modo integrado de SharePoint y cambia la cuenta de servicio mediante [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la herramienta de configuración de, también debe abrir Administración central de SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y usar la página **conceder acceso a base de datos** para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso concederá acceso a la nueva cuenta de servicio a las bases de datos de SharePoint, que es [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] necesario [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] para [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]la integración con o.  
+ Si tiene un servidor de informes que está configurado para usar el modo integrado de SharePoint y cambia la cuenta de servicio mediante la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] herramienta de configuración de, también debe abrir Administración central de SharePoint y usar la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] página **conceder acceso a base de datos** para volver a aplicar la configuración del servidor de informes y de la instancia. Este paso concederá acceso a la nueva cuenta de servicio a las bases de datos de SharePoint, que es necesario para la integración [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] con [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] o [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] .  
   
  Use siempre la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para actualizar la cuenta de servicio y que se pueda actualizar simultáneamente otra configuración que dependa de la identidad del servicio.  
   

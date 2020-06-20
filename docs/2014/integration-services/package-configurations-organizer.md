@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f20ae6cb-9e6a-4d24-88ff-d7a903a4e8d3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5313118f7949818d341a47744a69cf13c43dbc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3b880e23bdc191da1f34f2261d7c87a32f03fb42
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056966"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964905"
 ---
 # <a name="package-configurations-organizer"></a>Organizador de configuraciones de paquetes
   Utilice el cuadro de diálogo **Organizador de configuraciones de paquetes** para habilitar las configuraciones de paquetes, ver una lista de configuraciones para el paquete actual y especificar el orden de preferencia en el que se deben cargar las configuraciones.  
@@ -38,7 +37,7 @@ ms.locfileid: "66056966"
  **Habilitar configuraciones de paquetes**  
  Seleccione esta opción para utilizar las configuraciones incluidas con el paquete.  
   
- **Nombre de la configuración**  
+ **Nombre de configuración**  
  Presenta el nombre de la configuración.  
   
  **Tipo de configuración**  
@@ -59,7 +58,7 @@ ms.locfileid: "66056966"
  **Edición**  
  Edita una configuración existente volviendo a ejecutar el Asistente para la configuración de paquetes.  
   
- **Remove**  
+ **Quitar**  
  Seleccione una configuración y haga clic en **Quitar**.  
   
  **Flechas**  

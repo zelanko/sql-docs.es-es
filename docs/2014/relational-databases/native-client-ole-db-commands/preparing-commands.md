@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 09ec0c6c-0a44-4766-b9b7-5092f676ee54
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dd3be1705411dd84a4bc3e0ad9e55f6e6c8d97b2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: fa927574dad6b6f811a6fbc8ad5496b0ff098b68
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707450"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056393"
 ---
 # <a name="preparing-commands"></a>Preparar comandos
   El proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite la preparación de comandos para la ejecución múltiple y optimizada de un único comando; sin embargo, la preparación de comandos genera una sobrecarga, y no es necesario que un consumidor prepare un comando para ejecutarlo más de una vez. En general, un comando debería prepararse si va a ejecutarse más de tres veces.  

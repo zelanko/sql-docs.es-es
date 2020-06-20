@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7d35ee9-d1c9-41d9-bbc5-0ca7db93e54d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4499a0a099c92a9b1802cc905da3d0a473808eeb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a6f4e870dca91e952fbeea95ef8f1198c64d8d6b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054283"
 ---
 # <a name="task-6-setting-synonyms"></a>Tarea 6: Definición de sinónimos
   En esta tarea, establecerá dos valores de dominio, **USA** y **Estados Unidos**, del dominio **País** como sinónimos, siendo **Estados Unidos** el valor inicial. Como se seleccionó la opción **Usar valores iniciales** al crear el dominio **País** , todos los valores **USA** del dominio **País** se mostrarán como **Estados Unidos** (ya que Estados Unidos es el valor inicial). Vea el tema [Cambiar valores de dominio](https://msdn.microsoft.com/library/hh510408.aspx) para obtener más detalles.

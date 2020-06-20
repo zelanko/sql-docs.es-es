@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4c341fb8-7cb1-4cab-921b-e80b751d6c19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c876eb6fdd466349ac369dcff8e292bc0839c669
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175354"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927787"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Usar índices no clúster de almacén de columnas
   Describe las tareas clave para utilizar un índice no clúster de almacén de columnas en una tabla de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .

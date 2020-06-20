@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22e417a535454f88d6475a97d2d17ad794404175
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211788"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055044"
 ---
 # <a name="tables"></a>Tablas
   Las tablas son objetos de base de datos que contienen todos sus datos. En las tablas, los datos se organizan con arreglo a un formato de filas y columnas, similar al de una hoja de cálculo. Cada fila representa un registro único y cada columna un campo dentro del registro. Por ejemplo, en una tabla que contiene los datos de los empleados de una compañía puede haber una fila para cada empleado y distintas columnas en las que figuren detalles de los mismos, como el número de empleado, el nombre, la dirección, el puesto que ocupa y su número de teléfono particular.  
@@ -36,7 +35,7 @@ ms.locfileid: "68211788"
  Las tablas con particiones son tablas cuyos datos se han dividido horizontalmente entre unidades que pueden repartirse por más de un grupo de archivos de una base de datos. Las particiones facilitan la administración de índices y tablas grandes al permitir el acceso y la administración de subconjuntos de datos rápidamente y con eficacia, mientras se mantiene la integridad de la colección global. De forma predeterminada, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] admite hasta 15.000 particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).  
   
  Tablas temporales  
- Las tablas temporales se almacenan en `tempdb`. Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Las tablas temporales se almacenan en `tempdb` . Hay dos tipos de tablas temporales: locales y globales. Se diferencian entre sí por los nombres, la visibilidad y la disponibilidad. Las tablas temporales locales tienen como primer carácter de sus nombres un solo signo de número (#); solo son visibles para el usuario de la conexión actual y se eliminan cuando el usuario se desconecta de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las tablas temporales globales presentan dos signos de número (##) antes del nombre; son visibles para cualquier usuario después de su creación y se eliminan cuando todos los usuarios que hacen referencia a la tabla se desconectan de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Tablas del sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacena los datos que definen la configuración del servidor y de todas sus tablas en un conjunto de tablas especial, conocido como tablas del sistema. Los usuarios no pueden consultar o actualizar directamente las tablas del sistema. La información de las tablas del sistema está disponible a través de las vistas del sistema. Para obtener más información, vea [Vistas del sistema &#40;Transact-SQL&#41;](/sql/t-sql/language-reference).  
@@ -85,6 +84,6 @@ ms.locfileid: "68211788"
   
 ## <a name="see-also"></a>Consulte también  
  [Restricciones de clave principal y externa](primary-and-foreign-key-constraints.md)   
- [Restricciones UNIQUE y restricciones CHECK](unique-constraints-and-check-constraints.md)  
+ [Restricciones UNIQUE y restricciones check](unique-constraints-and-check-constraints.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 07495669-6ed5-4004-904e-aae1230be5e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6e9232f5de2172c7dfbe503a26188fdf4d05550c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9a1f0074aa7937e10589327bae51c24a0a903a38
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63011479"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064955"
 ---
 # <a name="query-properties-visual-database-tools"></a>Propiedades de la consulta (Visual Database Tools)
   Estas propiedades aparecen en la ventana Propiedades cuando hay una consulta abierta en el Diseñador de consultas y vistas. A menos que se especifique lo contrario, podrá modificar estas propiedades en la ventana Propiedades.  

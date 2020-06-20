@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab42ba3eb6468aac3da2fa780d371818c8776690
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011663"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026303"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
   Se recomienda usar el formato nativo cuando se realice una transferencia masiva de datos entre varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando un archivo de datos que no contiene caracteres extendidos o de doble byte (DBCS).  
@@ -60,7 +59,7 @@ ms.locfileid: "66011663"
      Al principio de cada `char` campo o `varchar` , **BCP** agrega la longitud del prefijo.  
   
     > [!IMPORTANT]  
-    >  Cuando se utiliza el modo nativo, de forma predeterminada, la utilidad **BCP** convierte los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres de en caracteres OEM antes de copiarlos en un archivo de datos. La utilidad **BCP** convierte los caracteres de un archivo de datos en caracteres ANSI antes de importarlos de forma [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] masiva en una tabla. Durante estas conversiones, se pueden perder datos que tengan caracteres extendidos. Para caracteres extendidos, utilice el formato nativo Unicode o especifique una página de códigos.  
+    >  Cuando se utiliza el modo nativo, de forma predeterminada, la utilidad **BCP** convierte los caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caracteres OEM antes de copiarlos en un archivo de datos. La utilidad **BCP** convierte los caracteres de un archivo de datos en caracteres ANSI antes de importarlos de forma masiva en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla. Durante estas conversiones, se pueden perder datos que tengan caracteres extendidos. Para caracteres extendidos, utilice el formato nativo Unicode o especifique una página de códigos.  
   
 -   Datos `sql_variant`  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66011663"
   
  Las siguientes opciones de la línea de comandos admiten el formato nativo:  
   
-|Get-Help|Opción|Descripción|  
+|Get-Help|Opción|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|Hace que la utilidad **BCP** use los tipos de datos nativos de los datos. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **= '** Native **'**|Utiliza los tipos de datos nativos o nativos anchos de los datos. Tenga en cuenta que DATAFILETYPE no es necesario si el archivo de formato especifica los tipos de datos.|  

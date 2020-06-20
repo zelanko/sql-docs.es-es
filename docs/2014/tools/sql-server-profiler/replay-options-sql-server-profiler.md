@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58761a25-a84f-4a90-9c61-97700bc5ad9c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 068a6aaeba1af8c456c77fd45ecdc2a52719b0f2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63025744"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063984"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Opciones de reproducción (SQL Server Profiler)
   Antes de reproducir un seguimiento capturado con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], puede reproducir las opciones en el cuadro de diálogo **Configuración de reproducción** . Para iniciar este cuadro de diálogo, abra el archivo o tabla de seguimiento en el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], y en el menú **Reproducir** , haga clic en **Inicio**. Para obtener información acerca de los permisos necesarios para reproducir un seguimiento, vea [Permissions Required to Run SQL Server Profiler](sql-server-profiler.md).  

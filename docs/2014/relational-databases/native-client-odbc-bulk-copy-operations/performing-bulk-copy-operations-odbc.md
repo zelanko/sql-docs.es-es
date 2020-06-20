@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1937f3b81a920312aa1f1a4b804352b9674043dc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62e7188d61ebdad573d8966ed6e262cc819c4c59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021268"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>Realizar operaciones de copia masiva (ODBC)
   ODBC estándar no admite directamente las operaciones de copia masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versión 7.0 o posteriores, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client admite las funciones de DB-Library que realizan las operaciones de copia masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta extensión específica del controlador proporciona una ruta de acceso sencilla de actualizar para las aplicaciones de DB-Library existentes que usan las funciones de copia masiva. El soporte técnico de copia masiva especializado se encuentra en los archivos siguientes:  
@@ -46,8 +45,8 @@ ms.locfileid: "82702083"
   
  Para obtener información sobre el uso del registro mínimo, consulte [requisitos previos para el registro mínimo durante la importación en bloque](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
-## <a name="remarks"></a>Observaciones  
- Al utilizar bcp.exe en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, podrían aparecer errores en situaciones donde no había errores en versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esto es porque en las versiones posteriores, bcp.exe no realiza ya la conversión de tipos de datos implícita. En versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], bcp.exe convertía los datos numéricos al tipo de datos money, si la tabla de destino tenía el tipo de datos money. Sin embargo, en esa situación, bcp.exe simplemente truncaba los campos adicionales. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , si los tipos de datos no coinciden entre el archivo y la tabla de destino, BCP. exe producirá un error si hay datos que tendrían que truncarse para ajustarse a la tabla de destino. Para resolver este error, corrija los datos para que coincidan con el tipo de datos de destino. Opcionalmente, utilice bcp.exe desde una versión anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+## <a name="remarks"></a>Comentarios  
+ Al utilizar bcp.exe en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] o posterior, podrían aparecer errores en situaciones donde no había errores en versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Esto es porque en las versiones posteriores, bcp.exe no realiza ya la conversión de tipos de datos implícita. En versiones anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], bcp.exe convertía los datos numéricos al tipo de datos money, si la tabla de destino tenía el tipo de datos money. Sin embargo, en esa situación, bcp.exe simplemente truncaba los campos adicionales. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , si los tipos de datos no coinciden entre el archivo y la tabla de destino, bcp.exe producirá un error si hay datos que tendrían que truncarse para ajustarse a la tabla de destino. Para resolver este error, corrija los datos para que coincidan con el tipo de datos de destino. Opcionalmente, utilice bcp.exe desde una versión anterior a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  
   

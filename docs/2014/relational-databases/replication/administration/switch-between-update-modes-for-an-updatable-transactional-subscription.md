@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c31814d1e2ab6fac64ffcde883f3cac2439828a1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210756"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055733"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Cambiar entre modos de actualización para una suscripción transaccional actualizable
   En este tema se describe cómo cambiar entre modos en actualización para una suscripción de transacción actualizable en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Especifique el modo que desea utilizar para las suscripciones actualizables con el Asistente para nuevas suscripciones. Para información sobre cómo establecer el modo cuando se utiliza este asistente, vea [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
@@ -49,17 +48,17 @@ ms.locfileid: "68210756"
   
 3.  Haga clic con el botón secundario en la suscripción para la que desea establecer el modo de actualización y, a continuación, haga clic en **Establecer método de actualización**.  
   
-4.  En el cuadro de diálogo **Establecer método de actualización - \<suscriptor>: \<baseBatosDeSuscripción>**, seleccione **Actualización inmediata** o **Actualización en cola**.  
+4.  En el cuadro de diálogo **establecer método de actualización- \<Subscriber> : \<SubscriptionDatabase> ** , seleccione actualización **inmediata** o **actualización en cola**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Para establecer el modo de actualización para una suscripción de extracción  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción - \<Publicador>: \<baseBatosDeSuscripción>**, seleccione el valor **Replicar cambios inmediatamente** o **Poner en cola cambios** para la opción **Método de actualización del suscriptor**.  
+1.  En el cuadro de diálogo **propiedades de suscripción- \<Publisher> \<PublicationDatabase> :** , seleccione el valor **replicar cambios inmediatamente** o **poner en cola los cambios** para la opción **método de actualización del suscriptor** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Para más información sobre el acceso al cuadro de diálogo **Propiedades de la suscripción: \<publicador>: \<baseDatosPublicación**, vea [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
+ Para obtener más información sobre el acceso al cuadro **de diálogo Propiedades de suscripción- \<Publisher> \<PublicationDatabase> :** , vea [ver y modificar propiedades de suscripción de extracción](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -67,7 +66,7 @@ ms.locfileid: "68210756"
   
 1.  Compruebe que la suscripción admite la conmutación por error ejecutando [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) para una suscripción de extracción o [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) para una suscripción de inserción. Si el valor del **modo de la actualización** en el conjunto de resultados es **3** o **4**, se admite la conmutación por error.  
   
-2.  En el publicador de la base de datos de suscripciones, ejecute [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Especifique **@publisher**, **@publisher_db**, **@publication**y uno de los siguientes valores para **@failover_mode**:  
+2.  En el publicador de la base de datos de suscripciones, ejecute [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Especifique **@publisher** , **@publisher_db** , **@publication** y uno de los siguientes valores para **@failover_mode** :  
   
     -   **queued** : conmutación por error a actualización en cola cuando se ha perdido la conectividad temporalmente.  
   

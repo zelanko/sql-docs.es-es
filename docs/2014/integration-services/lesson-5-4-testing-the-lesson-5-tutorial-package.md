@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 30f395ed065df5974adf6146a4ee12d0c7b472f0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3bb87bbf5e3e17f5468fabe50c158b30239777d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62890947"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951495"
 ---
 # <a name="step-4-testing-the-lesson-5-tutorial-package"></a>Paso 4: Prueba del paquete del tutorial de la lección 5
   Durante la ejecución, el paquete obtendrá el valor de la propiedad `Directory` de una variable actualizada en tiempo de ejecución, en lugar de utilizar el nombre de directorio original especificado al crear el paquete. El valor de la variable lo rellena el archivo SSISTutorial.dtsConfig.  
@@ -35,7 +34,7 @@ ms.locfileid: "62890947"
   
 ### <a name="to-test-the-lesson-5-tutorial-package"></a>Para probar el paquete de tutorial de la lección 5  
   
-1.  En el menú **depurar** , haga clic en **iniciar depuración**.  
+1.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
 2.  Una vez finalizada la ejecución del paquete, en el menú **depurar** , haga clic en **detener depuración**.  
   

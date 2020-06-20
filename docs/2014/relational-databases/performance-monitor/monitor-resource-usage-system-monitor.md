@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: f2993a28-0b81-46f2-aec0-6877fe990387
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8bd4676eed22cea99808d87016231dbd2ebaf4cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b2d0bbd52159caf117df1b463a8d913a9fe1c79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63032126"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85038847"
 ---
 # <a name="monitor-resource-usage-system-monitor"></a>Supervisar el uso de recursos (Monitor de sistema)
   Si está ejecutando el sistema operativo de servidor de Microsoft Windows, utilice la herramienta gráfica Monitor de sistema para medir el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede ver los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los contadores de rendimiento y el comportamiento de otros objetos, como procesadores, memoria, caché, subprocesos y procesos. Cada uno de estos objetos tiene asociado un conjunto de contadores que miden el uso de los dispositivos, la longitud de las colas, las demoras y otros indicadores del rendimiento y la congestión interna.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eaafa011f1b99ea90afce2902c877d0a25b9e6e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 018d5add95e5d0936f6055e1c6710b6a8ddabdab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63269891"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061468"
 ---
 # <a name="work-with-change-data-sql-server"></a>Trabajar con datos modificados (SQL Server)
   Los datos modificados están a disposición de los consumidores de capturas de datos modificados a través de las funciones con valores de tabla (TVF). Todas las consultas de estas funciones requieren dos parámetros para definir el intervalo de números de flujo de registro (LSN) que se pueden elegir al desarrollar el conjunto de resultados devuelto. Se considera que los valores superior e inferior de LSN que limitan el intervalo están incluidos dentro del intervalo.  

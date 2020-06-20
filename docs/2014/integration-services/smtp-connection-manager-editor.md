@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 527c8f647c963c2c1c03171eeb154a790ab1994a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca3da66a23292212df7464c8d5966e5c3603e13e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055559"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84962945"
 ---
 # <a name="smtp-connection-manager-editor"></a>Editor del administrador de conexiones SMTP
   Use el cuadro de diálogo **Editor del administrador de conexiones SMTP** para especificar un servidor de protocolo simple de transferencia de correo (SMTP).  
@@ -36,14 +35,14 @@ ms.locfileid: "66055559"
  **Servidor SMTP**  
  Proporcione el nombre del servidor SMTP.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Seleccione esta opción para enviar correo electrónico mediante un servidor SMTP que utiliza Autenticación de Windows para autenticar el acceso al servidor.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones SMTP solo es compatible con la autenticación anónima y la autenticación de Windows. No admite la autenticación básica.  
   
 > [!NOTE]  
->  Al usar Microsoft Exchange como servidor SMTP, es posible que deba establecer **usar autenticación de Windows** en `True`. Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
+>  Al usar Microsoft Exchange como servidor SMTP, es posible que deba establecer **usar autenticación de Windows** en `True` . Es posible que los servidores Exchange estén configurados para no permitir conexiones SMTP no autenticadas.  
   
  **Habilitar capa de sockets seguros (SSL)**  
  Seleccione esta opción para cifrar comunicación mediante Capa de sockets seguros (SSL) al enviar mensajes de correo electrónico.  

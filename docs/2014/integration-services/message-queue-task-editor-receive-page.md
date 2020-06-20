@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057673"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84951005"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  
@@ -85,7 +84,7 @@ ms.locfileid: "66057673"
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable o haga clic en \<**New variable...**> y, a continuación, configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66057673"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable que contendrá el mensaje recibido o haga clic \<**New variable...**> y, a continuación, configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -139,6 +138,6 @@ ms.locfileid: "66057673"
  [Editor de la tarea cola de mensajes &#40;página general&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor de la tarea cola de mensajes &#40;página envío&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Página expresiones](expressions/expressions-page.md)   
- [Message Queue Task](control-flow/message-queue-task.md)  
+ [Tarea Cola de mensajes](control-flow/message-queue-task.md)  
   
   

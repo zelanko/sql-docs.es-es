@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 301a751bf5b5959ab1fc434ac2a583a6b0378fdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68198992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055583"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Detección de conflictos en la replicación punto a punto
   La replicación transaccional punto a punto permite insertar, actualizar o eliminar datos en cualquier nodo de una topología y propagar los cambios de los datos a los demás nodos. Dado que se pueden cambiar los datos de cualquier nodo, podrían producirse conflictos entre los datos modificados en los distintos nodos. Si una fila se modifica en más de un nodo, puede producirse un conflicto o incluso la pérdida de una actualización cuando la fila se propaga a otros nodos.  

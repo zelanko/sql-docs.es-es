@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be2568e0a99ff21280388bd309a1e49bdec7e072
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31a7d1e52c53cb858039f1fd0ed403f255ad5ca2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721677"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010918"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Crear una suscripción para un suscriptor que no sea de SQL Server
   En este tema se describe cómo crear una suscripción para un suscriptor que no sea de SQL Server en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La replicación transaccional y la replicación de instantáneas admiten la publicación de datos en suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información sobre plataformas de suscriptores admitidos, vea [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
@@ -45,7 +44,7 @@ ms.locfileid: "62721677"
   
          La instantánea se crea una vez habilitada la publicación para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de garantizar que el Agente de instantáneas genera scripts de inicialización e instantáneas adecuados para los suscriptores que no son de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-3.  Habilitar la publicación para los suscriptores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el cuadro de diálogo **Propiedades de la publicación: \<nombreDePublicación>**. Para obtener más información acerca de este paso, vea [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
+3.  Habilite la publicación para suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el cuadro de diálogo **propiedades de la publicación: \<PublicationName> ** . Para obtener más información acerca de este paso, vea [Publication Properties, Subscription Options](publication-properties-subscription-options.md) .  
   
 4.  Cree una suscripción mediante el Asistente para nuevas suscripciones. En este tema se proporciona más información acerca de este paso.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62721677"
   
 2.  Haga clic con el botón secundario en la publicación y, a continuación, haga clic en **Ver estado del agente de instantáneas**.  
   
-3.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<publicación>**, haga clic en **Iniciar**.  
+3.  En el cuadro de diálogo **Ver \<Publication> estado de agente de instantáneas-** , haga clic en **iniciar**.  
   
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
@@ -155,25 +154,25 @@ ms.locfileid: "62721677"
   
     -   Si el valor de `enabled_for_het_sub` es 1, se admiten Suscriptores que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Si el valor de `enabled_for_het_sub` es 0, ejecute [sp_changepublication &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), `enabled_for_het_sub` especificando **@property** para `true` y **@value**para.  
+    -   Si el valor de `enabled_for_het_sub` es 0, ejecute [sp_changepublication &#40;&#41;de TRANSACT-SQL ](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando `enabled_for_het_sub` para **@property** y `true` para **@value** .  
   
         > [!NOTE]  
         >  Antes de cambiar `enabled_for_het_sub` a `true`, debe quitar cualquier suscripción existente en la publicación. No puede establecer `enabled_for_het_sub` en `true` cuando la publicación también admite las suscripciones de actualización. El cambio de `enabled_for_het_sub` afectará a otras propiedades de publicación. Para más información, consulte [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md).  
   
-3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber**, un valor de **(destino predeterminado)** para **@destination_db**, un valor de **inserte** para **@subscription_type**y un valor de 3 para **@subscriber_type** (especifica un proveedor OLE DB).  
+3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** , un valor de **(destino predeterminado)** para **@destination_db** , un valor de **inserte** para **@subscription_type** y un valor de 3 para **@subscriber_type** (especifica un proveedor OLE DB).  
   
 4.  En el publicador de la base de datos de publicaciones, ejecute [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique lo siguiente:  
   
-    -   Los **@subscriber**parámetros **@publication** y.  
+    -   Los **@subscriber** **@publication** parámetros y.  
   
     -   Un valor de **(destino predeterminado)** para **@subscriber_db**,  
   
-    -   Propiedades del origen[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos que no es de **@subscriber_provider**, **@subscriber_datasrc**, **@subscriber_location** **@subscriber_provider_string**, y. **@subscriber_catalog**  
+    -   Propiedades del origen de datos que no es de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **@subscriber_provider** , **@subscriber_datasrc** , **@subscriber_location** , **@subscriber_provider_string** y **@subscriber_catalog** .  
   
-    -   Las [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciales de Windows con las que se ejecuta el agente de distribución **@job_login** en **@job_password**el distribuidor para y.  
+    -   Las [!INCLUDE[msCoName](../../includes/msconame-md.md)] credenciales de Windows con las que se ejecuta el agente de distribución en el distribuidor para **@job_login** y **@job_password** .  
   
         > [!NOTE]  
-        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
+        >  Las conexiones realizadas mediante la autenticación integrada de Windows siempre utilizan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
     -   Un valor de **0** para **@subscriber_security_mode** y la información de inicio de sesión del proveedor OLE DB para **@subscriber_login** y **@subscriber_password**.  
   

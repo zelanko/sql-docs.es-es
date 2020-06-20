@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3c5863489bcdda590137587273b9b31b4bae3cc
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 7e2b1e0f8ba22eacff01929ed3364dcffe0cf815
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707073"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011114"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Generar perfiles del rendimiento del controlador ODBC
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client puede generar perfiles de dos tipos de datos de rendimiento:  
@@ -74,7 +73,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="application-profile-statistics"></a>Estadísticas de perfil de aplicación  
   
-|Campo SQLPERF|Descripción|  
+|Campo SQLPERF|Description|  
 |-------------------|-----------------|  
 |TimerResolution|Resolución mínima de la hora del reloj del servidor en milisegundos. Normalmente se indica como 0 (cero) y solo debe considerarse si el número notificado es grande. Si la resolución mínima del reloj del servidor es mayor que el intervalo probable para algunas de las estadísticas basadas en temporizador, esas estadísticas se podrían exagerar.|  
 |SQLidu|Número de instrucciones INSERT, DELETE o UPDATE después de SQL_PERF_START.|  
@@ -112,7 +111,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Estadísticas de tiempo  
   
-|Campo SQLPERF|Descripción|  
+|Campo SQLPERF|Description|  
 |-------------------|-----------------|  
 |msExecutionTime|Cantidad acumulada de tiempo que ha dedicado el controlador al procesamiento después de SQL_PERF_START, incluido el tiempo que ha pasado esperando respuestas del servidor.|  
 |msNetworkServerTime|Cantidad acumulada de tiempo que el controlador ha pasado esperando respuestas del servidor.|  

@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce6c23f9a8ff1d0dac8986bf6b44c7725d4badc4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011036"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004007"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>DDL de búsqueda semántica, funciones, procedimientos almacenados y vistas
   Enumera las instrucciones Transact-SQL y los objetos de base de datos que admiten la búsqueda semántica estadística en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para obtener la lista de instrucciones y objetos de base de datos que admiten la búsqueda de texto completo, vea [DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas](../views/views.md).  
   
-##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Instrucciones de lenguaje de definición de datos (DDL) de Transact-SQL  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Instrucciones del lenguaje de definición de datos (DDL) de Transact-SQL  
   
 |Object|Más información|  
 |------------|----------------------|  
@@ -57,7 +56,7 @@ ms.locfileid: "66011036"
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Instalar y configurar la búsqueda semántica](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Instalar y configurar la búsqueda semántica](install-and-configure-semantic-search.md)|  
   
-##  <a name="system-views---catalog-views"></a><a name="cv"></a>Vistas del sistema: vistas de catálogo  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a> Vistas del sistema: vistas de catálogo  
   
 |Object|Más información|  
 |------------|----------------------|  

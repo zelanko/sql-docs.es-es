@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: de4bed15-15be-4825-994c-1046255e725a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2ac1f46529dc16c67de7237f191f81decf9a2c0c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 576f6257f3ff5378dc4adb975ab3ef3847dd928c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021624"
 ---
 # <a name="sqlsetdescfield"></a>SQLSetDescField
   SQLSetDescField se puede usar para establecer los campos de descriptor para los parámetros con valores de tabla y las columnas de parámetro con valores de tabla. Para obtener información acerca de los campos disponibles, vea campos de descriptor de [parámetros con valores de tabla](../native-client-odbc-table-valued-parameters/table-valued-parameter-descriptor-fields.md) y [campos de descriptor para columnas de componentes de parámetros con valores de tabla](../native-client-odbc-table-valued-parameters/descriptor-fields-for-table-valued-parameter-constituent-columns.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las columnas de parámetro con valores de tabla únicamente están disponibles cuando el campo de encabezado del descriptor SQL_SOPT_SS_PARAM_FOCUS está establecido en el ordinal de un registro con SQL_DESC_TYPE establecido en SQL_SS_TABLE. Para obtener más información acerca de SQL_SOPT_SS_PARAM_FOCUS, vea [SQLSetStmtAttr](sqlsetstmtattr.md).  
   
  Si se realiza un intento de establecer SQL_SOPT_SS_PARAM_FOCUS en el ordinal de un parámetro que no es un parámetro con valores de tabla, SQLSetStmtAttr devuelve SQL_ERROR y se crea un registro de diagnóstico con SQLSTATE = HY024 y el mensaje "valor de atributo no válido". SQL_SOPT_SS_PARAM_FOCUS no cambia cuando se devuelve SQL_ERROR.  

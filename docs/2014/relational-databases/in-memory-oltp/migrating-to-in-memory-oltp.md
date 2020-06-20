@@ -9,24 +9,23 @@ ms.topic: conceptual
 ms.assetid: 405cdac5-a0d4-47a4-9180-82876b773b82
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00ef2590d21ad0d58acecf690342e92bb843ea2d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07381b5450ecb238d09b96cbf9a3983ff178d1f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706449"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026117"
 ---
 # <a name="migrating-to-in-memory-oltp"></a>Migrar a OLTP en memoria
   En esta sección se describe cómo migrar los objetos de base de datos para usar OLTP en memoria.  
   
 -   [Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   
--   [Asesor de optimización de memoria](memory-optimization-advisor.md)  
+-   [Asesor de optimización en memoria](memory-optimization-advisor.md)  
   
 -   [Asistente de compilación nativa](native-compilation-advisor.md)  
   
--   [Construcciones Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+-   [Construcciones de Transact-SQL no admitidas por OLTP en memoria](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
 -   [Implementar columnas LOB en una tabla con optimización para memoria](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)  
   

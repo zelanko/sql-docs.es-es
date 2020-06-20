@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3236cce0-cfd9-43f8-8be3-e8c8dff8f162
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba09ba6110f5da2082f13d8277a00bfb9d590d2e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479442"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961925"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Características descontinuadas de Master Data Services en SQL Server 2014
   Este tema describe las características de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] que ya no están disponibles en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -58,9 +57,9 @@ ms.locfileid: "65479442"
  Si tiene un paquete de implementación de modelo de [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] que contenga una regla de este tipo, al actualizar la base de datos a [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] se excluirá la regla de negocios.  
   
 ### <a name="bulk-updates-and-exporting"></a>Actualizaciones y exportación masivas  
- En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ya no se pueden actualizar los valores de atributo para varios miembros de forma masiva. Para realizar actualizaciones masivas, utilice el proceso de almacenamiento provisional [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]o el.  
+ En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ya no se pueden actualizar los valores de atributo para varios miembros de forma masiva. Para realizar actualizaciones masivas, utilice el proceso de almacenamiento provisional o el [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
- En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ya no se pueden exportar miembros a Excel. Para trabajar con miembros en Excel, use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)].  
+ En la aplicación web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ya no se pueden exportar miembros a Excel. Para trabajar con miembros en Excel, use [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] .  
   
 ### <a name="transactions"></a>Transacciones  
  En el área funcional del **Explorador** , los usuarios ya no pueden revertir sus propias transacciones. Anteriormente, los usuarios podían revertir los cambios realizados en los datos en el **Explorador**. Los administradores todavía pueden revertir las transacciones para todos los usuarios en el área funcional de **Administración de versiones** .  

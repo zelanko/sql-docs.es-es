@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ca661105c28cab2bf3e881cf262922e95da5eed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c2b97db9db160f70463b885bcdb24c01ff9103f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63250367"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010403"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimizar el rendimiento de la replicación de mezcla con artículos de solo descarga
   La replicación de mezcla ofrece dos tipos de artículos diferentes para satisfacer las necesidades de distintas aplicaciones. Las publicaciones pueden contener uno o varios de cada uno de estos tipos de artículos, según sea necesario para la aplicación:  

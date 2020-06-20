@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9c4d9b65fed30d09bf739271131d3b83afcd0902
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 971f45fd69f381a8997bb2f8f08444f4d9c107c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010140"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955445"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
   FILESTREAM permite a las aplicaciones basadas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] almacenar datos no estructurados, como documentos e imágenes, en el sistema de archivos. Las aplicaciones pueden aprovechar las API de transmisión de datos enriquecidas y el rendimiento del sistema de archivos al mismo tiempo que mantienen la coherencia transaccional entre los datos no estructurados y los datos estructurados correspondientes.  
   
- FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un sistema de archivos NTFS almacenando `varbinary(max)` los datos de objetos binarios grandes (BLOB) como archivos en el sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos de Win32 proporcionan el acceso de la transmisión por secuencias a los datos.  
+ FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un sistema de archivos NTFS almacenando los `varbinary(max)` datos de objetos binarios grandes (BLOB) como archivos en el sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos de Win32 proporcionan el acceso de la transmisión por secuencias a los datos.  
   
  FILESTREAM usa la memoria caché del sistema NT para almacenar en memoria caché los datos de archivos. Esto ayuda a reducir cualquier efecto que los datos FILESTREAM podrían tener en el rendimiento de [!INCLUDE[ssDE](../../includes/ssde-md.md)] . No se usa el grupo de búferes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; por consiguiente, esta memoria está disponible para el procesamiento de consultas.  
   

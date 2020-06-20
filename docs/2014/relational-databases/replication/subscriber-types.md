@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b9445c7b366a43253da4accabaf98d9c5b7f8d92
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ba8a2c83b852abc9d82a84b2d0b2e98f969d0a7b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630639"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047646"
 ---
 # <a name="subscriber-types"></a>Tipos de suscriptor
   La replicación de mezcla le permite especificar los tipos de suscriptor compatibles con una publicación. Si selecciona Tipos de suscriptor, podrá establecer el *nivel de compatibilidad de la publicación*, que determina las características que puede usar una publicación.  

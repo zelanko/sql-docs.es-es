@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c6663a4-5a25-44aa-8fe4-e35af9bf4a83
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c183af3a8db4ad9e08f15083462806244aa8187
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 30f3dc8a9136a7cbe1d5897cb0bcc9fff8c35ab2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705563"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020677"
 ---
 # <a name="cursor-transaction-isolation-level"></a>Nivel de aislamiento de las transacciones de cursores
   El comportamiento de bloqueo completo de cursores se basa en una interacción entre los atributos de simultaneidad y el nivel de aislamiento de transacciones establecido por el cliente. Los clientes ODBC establecen el nivel de aislamiento de transacción mediante los atributos [SQLSetConnectAttr](../../native-client-odbc-api/sqlsetconnectattr.md) SQL_ATTR_TXN_ISOLATION o SQL_COPT_SS_TXN_ISOLATION. El comportamiento del bloqueo de un entorno de cursor específico se determina mediante la combinación de los comportamientos de bloqueo de las opciones de simultaneidad y de nivel de aislamiento de transacción.  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60
 author: heidisteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 002a4ce66108622ce5efcf33231edaed9cd1c99b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afb5c9d4d6272608249e095c694e0a9c48b37feb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78280872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054775"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>Instalar Analysis Services en el modo de minería de datos y multidimensional
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona funciones de procesamiento analítico en línea (OLAP) y minería de datos para aplicaciones de Business Intelligence. En esta versión, la compatibilidad con las bases de datos OLAP y los modelos de minería de datos [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] está disponible cuando se instala en *modo multidimensional*. El modo multidimensional es uno de los tres modos de servidor en los que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta. Este es el modo predeterminado. Si instala [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con los valores predeterminados, obtendrá una instancia que ejecuta bases de datos multidimensionales y modelos de minería de datos.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona funciones de procesamiento analítico en línea (OLAP) y minería de datos para aplicaciones de Business Intelligence. En esta versión, la compatibilidad con las bases de datos OLAP y los modelos de minería de datos está disponible cuando se instala [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en *modo multidimensional*. El modo multidimensional es uno de los tres modos de servidor en los que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] se ejecuta. Este es el modo predeterminado. Si instala [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con los valores predeterminados, obtendrá una instancia que ejecuta bases de datos multidimensionales y modelos de minería de datos.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es una característica de varias instancias, lo que significa que puede instalar más de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en un único equipo o ejecutar una nueva instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en paralelo a una versión anterior. El modo de servidor es específico de una instancia. El uso de otros modos requiere que instale instancias adicionales del servidor.  
   
- Puede instalar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo o con otros componentes. Si instala solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], las siguientes características se instalan al seleccionar **Analysis Services** en la página selección de características del asistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación de:  
+ Puede instalar [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo o con otros componentes. Si instala solo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , las siguientes características se instalan al seleccionar **Analysis Services** en la página selección de características del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación de:  
   
 -   Servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para ejecutar modelos de minería de datos y bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   

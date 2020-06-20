@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3ffcef923eaeb3ba48eacaca870bd3355fb6661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66822376"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035581"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realizar una evaluación a petición usando servidores registrados
 
@@ -50,7 +49,7 @@ ms.locfileid: "66822376"
   
 4.  En el cuadro de diálogo **evaluar directivas** , junto al cuadro **origen** , haga clic en el botón de puntos suspensivos (**...**).  
   
-5.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, realice los pasos siguientes:  
+5.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, siga estos pasos.  
   
     1.  Haga clic en **archivos**.  
   

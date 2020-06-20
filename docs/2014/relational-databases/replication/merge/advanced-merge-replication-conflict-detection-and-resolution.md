@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7330e1e9f588ba2eb06e419289278a7636fb7184
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "63000345"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049469"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Detección y resolución de conflictos de replicación de mezcla avanzada
   Cuando un publicador y un suscriptor se conectan y se produce la sincronización, el Agente de mezcla detecta si existen conflictos. Si se detectan conflictos, el Agente de mezcla utiliza un solucionador de conflictos (que se especifica cuando se agrega un artículo a una publicación) para determinar qué datos se aceptarán y se propagarán a otros sitios.  
@@ -81,11 +80,11 @@ ms.locfileid: "63000345"
   
 -   Un solucionador personalizado basado en COM  
   
-     La replicación de mezcla proporciona una API para escribir resoluciones como objetos com en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     La replicación de mezcla proporciona una API para escribir resoluciones como objetos COM en lenguajes como [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] . Para más información, consulte [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Un solucionador basado en COM proporcionado por [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] incluye varios solucionadores basados en com. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]incluye varios solucionadores basados en com. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Para obtener información sobre cómo seleccionar el tipo de solucionador adecuado, consulte [Elegir un solucionador](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +108,7 @@ ms.locfileid: "63000345"
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
--   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>**.  
+-   La replicación crea una tabla de conflictos para cada tabla de un artículo de mezcla, con un nombre con el formato **MSmerge_conflict_ \<PublicationName> _ \<ArticleName> **.  
   
      Las tablas de conflictos tienen la misma estructura que las tablas en las que se basan. Una fila de una de estas tablas consta de la versión perdedora de una fila de conflictos (la versión ganadora de esta fila se encuentra en la tabla real del usuario).  
   

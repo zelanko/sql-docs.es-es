@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: de9a9d71a90f33db85636b1bd0344023f1a86c91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77cf641ca84181496f26a995244029d0525ade63
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63155389"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049958"
 ---
 # <a name="create-filtered-indexes"></a>Crear índices filtrados
   En este tema se describe cómo crear un índice filtrado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un índice filtrado es un índice no clúster optimizado, especialmente indicado para atender consultas que realizan selecciones a partir un subconjunto bien definido de datos. Utiliza un predicado de filtro para indizar una parte de las filas de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas, así como reducir los costos de almacenamiento y mantenimiento del índice en comparación con los índices de tabla completa.  
@@ -113,7 +112,7 @@ ms.locfileid: "63155389"
   
 7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_de_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En la página **Filtro**, debajo de **Expresión de filtro**, escriba la expresión SQL que usará para crear el índice filtrado.  
   

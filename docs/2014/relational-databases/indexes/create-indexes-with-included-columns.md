@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e5a464f9791ea635236069555647229bf1f0d79e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63156812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049986"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
   En este tema se describe cómo agregar columnas incluidas (o sin clave) para ampliar la funcionalidad de índices no clúster en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al incluir columnas sin clave, puede crear índices no clúster que abarcan más consultas. Esto se debe a que las columnas sin clave tienen las siguientes ventajas:  
@@ -57,7 +56,7 @@ ms.locfileid: "63156812"
   
 ##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Antes de comenzar  
   
-###  <a name="design-recommendations"></a><a name="DesignRecs"></a> Recomendaciones de diseño  
+###  <a name="design-recommendations"></a><a name="DesignRecs"></a>Recomendaciones de diseño  
   
 -   Rediseñe índices no clúster con un tamaño de las claves de índice grande para que solo las columnas utilizadas para búsquedas sean columnas de clave. Convierta todas las demás columnas que abarcan la consulta en columnas sin clave. De esta forma, tendrá todas las columnas necesarias para abarcar la consulta pero la clave de índice en sí será pequeña y eficaz.  
   
@@ -104,13 +103,13 @@ ms.locfileid: "63156812"
   
 7.  En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active las casillas de las columnas de tabla que se van a agregar al índice.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...**.  
   
 10. En el cuadro de diálogo **seleccionar columnas de**_TABLE_NAME_ , active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
   
-11. Haga clic en **Aceptar**.  
+11. Haga clic en **OK**.  
   
 12. En el cuadro de diálogo **Nuevo índice** , haga clic en **Aceptar**.  
   

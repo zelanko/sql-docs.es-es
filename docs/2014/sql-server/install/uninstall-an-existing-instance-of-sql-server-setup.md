@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c64b29d-61d7-4b86-961c-0de62261c6a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 484ef7dead58a6e8ae35639cdc6218d5c8223bd9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35970f3a78cad4a17fcfdcfb2d7b9aa91c9dd6e7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62990188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062427"
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>Desinstalar una instancia existente de SQL Server (programa de instalación)
   En este artículo se describe cómo desinstalar una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Siguiendo los pasos de este tema, también prepara el sistema para reinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -42,7 +41,7 @@ ms.locfileid: "62990188"
   
 ### <a name="before-you-uninstall"></a>Antes de la desinstalación  
   
-1.  **Haga una copia de seguridad de los datos.** Aunque este paso no sea obligatorio, podría tener bases de datos que desee guardar en su estado presente. También es posible que desee guardar cambios realizados en las bases de datos del sistema. Si se da alguna de estas situaciones, asegúrese de realizar una copia de seguridad de los datos antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede guardar una copia de todos los datos y archivos de registro en una carpeta distinta a la carpeta MSSQL. La carpeta MSSQL se elimina durante la desinstalación.  
+1.  **Realice una copia de seguridad de los datos.** Aunque este paso no sea obligatorio, podría tener bases de datos que desee guardar en su estado presente. También es posible que desee guardar cambios realizados en las bases de datos del sistema. Si se da alguna de estas situaciones, asegúrese de realizar una copia de seguridad de los datos antes de desinstalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También puede guardar una copia de todos los datos y archivos de registro en una carpeta distinta a la carpeta MSSQL. La carpeta MSSQL se elimina durante la desinstalación.  
   
      Entre los archivos que debe guardar se incluyen los siguientes archivos de base de datos:  
   
@@ -80,7 +79,7 @@ ms.locfileid: "62990188"
   
 1.  Para comenzar el proceso de desinstalación, vaya al **Panel de control** y, a continuación, a **Programas y características**.  
   
-2.  Haga clic ** [!INCLUDE[msCoName](../../includes/msconame-md.md)] ** con el botón derecho y seleccione **desinstalar**. A continuación, haga clic en **Quitar**. De esta forma se inicia el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+2.  Haga clic con el botón derecho **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** y seleccione **desinstalar**. A continuación, haga clic en **Quitar**. De esta forma se inicia el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
      Se ejecutan las Reglas auxiliares del programa de instalación para comprobar la configuración del equipo. Para continuar, haga clic en **Siguiente**.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 205e4ae3d6f89f10a933bf357d1eeda458852584
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196673"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055028"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restricciones UNIQUE y restricciones CHECK
   Las restricciones UNIQUE y las restricciones CHECK son dos tipos de restricciones que se pueden usar para exigir la integridad de los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  
@@ -51,7 +50,7 @@ ms.locfileid: "68196673"
 >  Las restricciones que incluyen la conversión de tipos de datos implícitos o explícitos pueden impedir la correcta ejecución de determinadas operaciones. Por ejemplo, las restricciones definidas en tablas que son orígenes de un cambio de partición pueden impedir que una operación ALTER TABLE...SWITCH se realice correctamente. Evite la conversión de tipos de datos en las definiciones de las restricciones.  
   
 ### <a name="limitations-of-check-constraints"></a>Limitaciones de las restricciones CHECK  
- Las restricciones CHECK rechazan los valores que se evalúan como FALSE. Puesto que los valores nulos se evalúan como UNKNOWN, su presencia en las expresiones puede reemplazar una restricción. Por ejemplo, supongamos que coloca una restricción `int` en **una columna DataColumn especificando** que **DataColumn** solo puede contener el valor 10 (**columna = 10**). Si inserta el valor NULL en **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta NULL y no devuelve un error.  
+ Las restricciones CHECK rechazan los valores que se evalúan como FALSE. Puesto que los valores nulos se evalúan como UNKNOWN, su presencia en las expresiones puede reemplazar una restricción. Por ejemplo, supongamos que coloca una restricción en una `int` columna DataColumn especificando que **DataColumn** solo puede contener el valor 10 (**columna = 10**). **MyColumn** Si inserta el valor NULL en **MyColumn**, [!INCLUDE[ssDE](../../includes/ssde-md.md)] inserta NULL y no devuelve un error.  
   
  Una restricción CHECK devuelve TRUE cuando la condición que está comprobando no es FALSE para ninguna fila de la tabla. Una restricción CHECK opera en el nivel de fila. Si una tabla recién creada no tiene filas, cualquier restricción CHECK en esta tabla se considerará válida. Esta situación puede generar resultados inesperados, como en el siguiente ejemplo.  
   

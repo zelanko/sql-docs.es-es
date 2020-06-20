@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6379ddae6d14424d8705441e5a174fc7cb513b28
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63151444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064129"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>Propiedades de TCP-IP (pestaña direcciones IP)
   Use el cuadro de diálogo **Propiedades de TCP/IP (pestaña Direcciones IP)** para configurar las opciones del protocolo TCP/IP para una dirección IP específica. Solo las opciones **Puertos dinámicos TCP** y **Puerto TCP** pueden configurarse para todas las direcciones al mismo tiempo seleccionando **IPAll**.  
   
- Los cambios surten [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efecto cuando se reinicia. Para obtener información sobre cómo iniciar y detener el servicio SQL Server Browser, vea Cómo: Iniciar y detener el servicio SQL Server Browser en los libros en pantalla.  
+ Los cambios surten efecto cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia. Para obtener información sobre cómo iniciar y detener el servicio SQL Server Browser, vea Cómo: Iniciar y detener el servicio SQL Server Browser en los libros en pantalla.  
   
 ## <a name="static-vs-dynamic-ports"></a>Puertos estáticos frente a Puertos dinámicos  
  La instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza escuchas para las conexiones entrantes en el puerto 1433. Se puede cambiar el puerto por razones de seguridad o debido a un requisito de la aplicación cliente. De forma predeterminada, las instancias con nombre (incluido SQL Server Express) se configuran para escuchar en los puertos dinámicos. Para configurar un puerto estático, deje en blanco la casilla **Puertos dinámicos TCP** y proporcione un número de puerto disponible en la casilla **Puerto TCP** . Para obtener más información acerca de cómo abrir los puertos del firewall, vea Configurar Firewall de Windows para permitir el acceso a SQL Server en los Libros en pantalla.  

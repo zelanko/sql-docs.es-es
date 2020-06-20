@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a96a1f0d-0183-4587-a3b0-4598309cbdd2
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9f8405c9fcb04559b6f25d2244bc36dde760a182
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b6d998956497eb0fb15f3b99de8e543636266e32
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62844773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930354"
 ---
 # <a name="open-solutions-from-source-control"></a>Abrir soluciones desde el control de código fuente
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] se puede utilizar para abrir soluciones directamente desde el control de código fuente. Al hacer esto, el entorno de Studio crea una copia de la última versión de los archivos de la solución en la ubicación que se especifique.  

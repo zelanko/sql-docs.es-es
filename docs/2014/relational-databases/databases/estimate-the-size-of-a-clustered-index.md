@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe7b988590de54a3cb02aa540b244e1f56f3ba24
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 275a38b70a8215d3ffb9d35530cd0bd5df4ffb70
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054132"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966015"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimar el tamaño de un índice clúster
   Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un índice clúster:  
@@ -174,7 +173,7 @@ ms.locfileid: "66054132"
   
 7.  Calcule el número de niveles del índice:  
   
-     ***No leaf_Levels*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***No leaf_Levels*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Redondee este valor al número entero más próximo. Este valor no incluye el nivel hoja del índice clúster.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 06e5403a9e490677e1cb5f88eb20ed8ffb967e15
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e54cf82c9413b97599e6e06ad9a51be46cd822a9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76939602"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965712"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Archivos de datos de SQL Server en Azure
   SQL Server los archivos de datos de Azure permiten la compatibilidad nativa con los archivos de base de datos de SQL Server almacenados como blobs de Azure. Permite crear una base de datos en SQL Server que se ejecuta en el entorno local o en una máquina virtual de Azure con una ubicación de almacenamiento dedicada para los datos en Azure Blob Storage. Esta mejora simplifica especialmente el traslado de bases de datos entre equipos mediante operaciones de separar y adjuntar. Además, proporciona una ubicación de almacenamiento alternativa para los archivos de copia de seguridad de base de datos, ya que permite realizar la restauración desde o hasta Azure Storage. Por tanto, habilita diversas soluciones híbridas al aportar varias ventajas en cuanto a virtualización de datos, movimiento de datos, seguridad y disponibilidad, así como costos y mantenimiento reducidos para lograr escalado flexible y alta disponibilidad.  
@@ -96,9 +95,9 @@ ON
   
 ###  <a name="limitations"></a><a name="bkmk_Limitations"></a> Limitaciones  
   
--   En la versión actual de esta característica, no `FileStream` se admite el almacenamiento de datos en Azure Storage. Puede almacenar `Filestream` datos en una Azure Storage base de datos local integrada, pero no puede trasladar datos de FileStream entre equipos mediante Azure Storage. Para los datos `FileStream`, se recomienda que siga usando las técnicas tradicionales para mover archivos (.mdf, .ldf) asociadas con Filestream entre varios equipos.  
+-   En la versión actual de esta característica, `FileStream` no se admite el almacenamiento de datos en Azure Storage. Puede almacenar `Filestream` datos en una Azure Storage base de datos local integrada, pero no puede trasladar datos de FileStream entre equipos mediante Azure Storage. Para los datos `FileStream`, se recomienda que siga usando las técnicas tradicionales para mover archivos (.mdf, .ldf) asociadas con Filestream entre varios equipos.  
   
--   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el servidora está en línea con un archivo de base de datos activo y se inicia de forma accidental, y también tiene una base de datos que señala al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos con un código de error **5120 no\* se puede abrir el archivo físico "%. LS ". Error del sistema operativo% d: "% LS"**.  
+-   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el servidora está en línea con un archivo de base de datos activo y se inicia de forma accidental, y también tiene una base de datos que señala al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos con un código de error **5120 no se puede abrir el archivo físico "%. \* LS ". Error del sistema operativo% d: "% LS"**.  
   
 -   Solo los archivos .mdf, .ldf y .ndf se pueden almacenar en Azure Storage con la característica Archivos de datos de SQL Server en Azure.  
   
@@ -106,9 +105,9 @@ ON
   
 -   Cada blob puede tener un tamaño máximo de 1 TB. Esto crea un límite superior en cuanto a los archivos de datos y de registro de base de datos individuales que se pueden almacenar en Azure Storage.  
   
--   No es posible almacenar datos de OLTP en memoria en el Blob de Azure con la característica Archivos de datos de SQL Server en Azure Storage. Esto se debe a que OLTP en memoria tiene una dependencia `FileStream` de y, en la versión actual de esta característica, `FileStream` no se admite el almacenamiento de datos en Azure Storage.  
+-   No es posible almacenar datos de OLTP en memoria en el Blob de Azure con la característica Archivos de datos de SQL Server en Azure Storage. Esto se debe a que OLTP en memoria tiene una dependencia de `FileStream` y, en la versión actual de esta característica, `FileStream` no se admite el almacenamiento de datos en Azure Storage.  
   
--   Al utilizar SQL Server archivos de datos en la característica de Azure, SQL Server realiza todas las comparaciones de ruta de acceso de archivo `master` o dirección URL mediante la intercalación establecida en la base de datos.  
+-   Al utilizar SQL Server archivos de datos en la característica de Azure, SQL Server realiza todas las comparaciones de ruta de acceso de archivo o dirección URL mediante la intercalación establecida en la `master` base de datos.  
   
 -   Se admiten `AlwaysOn Availability Groups` siempre y cuando no agregue nuevos archivos de base de datos a la base de datos principal. Si una operación de base de datos requiere que se cree un nuevo archivo en la base de datos principal, en primer lugar, deshabilite los grupos de disponibilidad AlwaysOn en el nodo secundario. Posteriormente, realice la operación de base de datos en la base de datos principal y haga una copia de seguridad de la base de datos en el nodo principal. A continuación, restaure la base de datos al nodo secundario y habilite los grupos de disponibilidad AlwaysOn en el nodo secundario. Tenga en cuenta que las instancias de clúster de conmutación por error de AlwaysOn no se admiten cuando se usa la característica archivos de datos de SQL Server en Azure.  
   
@@ -141,7 +140,7 @@ ON
   
  **Errores de autenticación**  
   
--   *No se puede quitar la credencial '%. \*ls ' porque lo usa un archivo de base de datos activo.*   
+-   *No se puede quitar la credencial '%. \* LS ' porque lo usa un archivo de base de datos activo.*   
     Solución: puede ver este error si intenta quitar una credencial que todavía esté utilizando un archivo de base de datos activo en Azure Storage. Para quitar la credencial, en primer lugar, debe eliminar el blob asociado que tiene este archivo de base de datos. Para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
   
 -   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*   
@@ -162,10 +161,10 @@ ON
 2.  *Errores al ejecutar la instrucción ALTER*   
     Solución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Revise las instrucciones indicadas en la lección 7 del [Tutorial: SQL Server archivos de datos en Azure Storage Service](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de error 5120 no se puede abrir el archivo físico "%. \*LS ". Error del sistema operativo% d: "% LS"*   
-    Solución: actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el servidora está en línea con un archivo de base de datos activo y se inicia de forma accidental, y también tiene una base de datos que señala al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos con un código de error *5120 no\* se puede abrir el archivo físico "%. LS ". Error del sistema operativo% d: "% LS"*.  
+3.  *Código de error 5120 no se puede abrir el archivo físico "%. \* LS ". Error del sistema operativo% d: "% LS"*   
+    Solución: actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el servidora está en línea con un archivo de base de datos activo y se inicia de forma accidental, y también tiene una base de datos que señala al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos con un código de error *5120 no se puede abrir el archivo físico "%. \* LS ". Error del sistema operativo% d: "% LS"*.  
   
-     Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, basta con quitar las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, realice los pasos siguientes:  
+     Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, basta con quitar las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, siga estos pasos.  
   
     1.  Establezca la ruta de acceso de ServidorA en una carpeta local mediante la instrucción ALTER DATABASE.  
   

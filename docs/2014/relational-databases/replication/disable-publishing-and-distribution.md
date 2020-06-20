@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 682f015215218f362f0ca57557b9d6afb6edee08
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8843dac310d1e023fe7ce63eded02c9e1bed3731
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882373"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010880"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
   En este tema se describe cómo deshabilitar la publicación y la distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -87,7 +86,7 @@ ms.locfileid: "73882373"
 7.  En el distribuidor, ejecute [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql) para quitar la designación de distribuidor del servidor.  
   
     > [!NOTE]  
-    >  Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) y [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o ** \@** un distribuidor, el parámetro no_checks debe establecerse en **1**. Si un publicador o un distribuidor está sin conexión o no está ** \@** accesible, el parámetro ignore_distributor se puede establecer en **1** para que se puedan quitar; sin embargo, cualquier publicación y distribución de objetos restantes debe quitarse manualmente.  
+    >  Si no se quitan todos los objetos de distribución y publicación de replicación antes de ejecutar [sp_dropdistpublisher](/sql/relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql) y [sp_dropdistributor](/sql/relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql), estos procedimientos devolverán un error. Para quitar todos los objetos relacionados con la replicación cuando se quita un publicador o un distribuidor, el parámetro ** \@ no_checks** debe establecerse en **1**. Si un publicador o un distribuidor está sin conexión o no está accesible, el parámetro ** \@ ignore_distributor** se puede establecer en **1** para que se puedan quitar; sin embargo, cualquier publicación y distribución de objetos restantes debe quitarse manualmente.  
   
 ###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Este script de ejemplo quita los objetos de replicación de la base de datos de suscripciones.  

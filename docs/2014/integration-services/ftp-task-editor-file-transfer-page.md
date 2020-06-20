@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37e52220-feb2-474c-ad88-fa1b1059acd4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9386070902022e29ba191f24eb8fbfb10ed92b9a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a5d8fd967b70b0b3470ceee0c6a6311499ed4696
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058435"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966355"
 ---
 # <a name="ftp-task-editor-file-transfer-page"></a>Editor de la tarea FTP (página Transferencia de archivos)
   Use la página **Transferencia de archivos** del cuadro de diálogo **Editor de la tarea FTP** para configurar la operación de FTP que realiza la tarea.  
@@ -32,7 +31,7 @@ ms.locfileid: "66058435"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **RemoteVariable**.|  
+|**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **RemoteVariable**.|  
 |**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica **RemotePath**.|  
   
  **OverwriteFileAtDestination**  
@@ -43,7 +42,7 @@ ms.locfileid: "66058435"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **LocalVariable**.|  
+|**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica **LocalVariable**.|  
 |**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica **LocalPath**.|  
   
  **operación**  
@@ -67,13 +66,13 @@ ms.locfileid: "66058435"
   
 ### <a name="isremotepathvariable--true"></a>IsRemotePathVariable = True  
  **RemoteVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**New variable...**> para crear una variable definida por el usuario.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), agregar variable  
   
 ### <a name="isremotepathvariable--false"></a>IsRemotePathVariable = False  
  **RemotePath**  
- Seleccione un administrador de conexiones FTP existente o haga \<clic en **nueva conexión...**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones FTP existente o haga clic en \<**New connection...**> para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones FTP](connection-manager/ftp-connection-manager.md), [Editor del administrador de conexiones FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
@@ -81,13 +80,13 @@ ms.locfileid: "66058435"
   
 ### <a name="islocalpathvariable--true"></a>IsLocalPathVariable = True  
  **LocalVariable**  
- Seleccione una variable existente definida por el usuario o haga clic en \<**Nueva variable...**> para crear una.  
+ Seleccione una variable existente definida por el usuario o haga clic en \<**New variable...**> para crear una variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), agregar variable  
   
 ### <a name="islocalpathvariable--false"></a>IsLocalPathVariable = False  
  **LocalPath**  
- Seleccione un administrador de conexiones de archivos existente o \<haga clic en **nueva conexión...**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**New connection...**> para crear un administrador de conexiones.  
   
  **Temas relacionados**: [Flat File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

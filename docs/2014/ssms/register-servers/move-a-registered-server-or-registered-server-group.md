@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4438ca98-3abe-4dea-a760-48a9dad63c2e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 23683b70d5b0de7b2852187969842702dd925da4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bc928fbd76f074b5991506e8d8544c02e4b4bd96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75241332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048660"
 ---
 # <a name="move-a-registered-server-or-registered-server-group-sql-server-management-studio"></a>Mover un Servidor registrado o un grupo de Servidores registrados (SQL Server Management Studio)
   En este tema se describe cómo organizar los servidores en Servidores registrados moviendo un servidor o grupos de servidores registrados en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Los grupos de servidores pueden contener servidores registrados u otros grupos de servidores. Tanto los servidores como los grupos de servidores pueden moverse de un grupo de servidores a otro.  

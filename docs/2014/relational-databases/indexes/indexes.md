@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 00863b10-e77c-44c5-8ac2-bb4ac454eec6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d4d71189598a6fd101e6db0a40b8c8b0a3b903
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: be474ea547222c30321d893ee8a1ce6f0af0be39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049884"
 ---
 # <a name="indexes"></a>Índices
   En la tabla siguiente se indican los tipos de índice disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se proporcionan vínculos a información adicional.  
   
-|Tipo de índice|Descripción|Información adicional|  
+|Tipo de índice|Description|Información adicional|  
 |----------------|-----------------|----------------------------|  
 |Hash|Con un índice hash, se accede a los datos a través de una tabla hash en memoria. Los índices hash utilizan una cantidad fija de memoria, que es una función del número de cubos.|[Directrices para usar índices en las tablas con optimización para memoria](../in-memory-oltp/memory-optimized-tables.md)|  
 |Índices no clúster optimizados para memoria|Para los índices no clúster optimizados para memoria, el consumo de memoria depende del número de filas y del tamaño de las columnas de clave de índice.|[Directrices para usar índices en las tablas con optimización para memoria](../in-memory-oltp/memory-optimized-tables.md)|  

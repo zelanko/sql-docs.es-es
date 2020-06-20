@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebe020a-7921-46b2-8823-398748f379b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7508324be0bef23ba0590bb181135512d75701e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93881c4e9b91e7ace4c250fbf90b8913484f2ce2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059041"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966765"
 ---
 # <a name="execute-sql-task-editor-parameter-mapping-page"></a>Editor de la tarea Ejecutar SQL (página Asignación de parámetros)
   Use la página **Asignación de parámetros** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar variables a los parámetros de la instrucción SQL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66059041"
   
 ## <a name="options"></a>Opciones  
  **Nombre de variable**  
- Tras agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione en la lista una variable del sistema o definida por el usuario, o haga clic en \<**Nueva variable…**> para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable**.  
+ Después de agregar una asignación de parámetros haciendo clic en **Agregar**, seleccione una variable del sistema o definida por el usuario en la lista o haga clic \<**New variable...**> para agregar una nueva variable mediante el cuadro de diálogo **Agregar variable** .  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66059041"
  **Add (Agregar)**  
  Haga clic para agregar una asignación de parámetros.  
   
- **Remove**  
+ **Quitar**  
  Seleccione una asignación de parámetros de la lista y después haga clic en **Quitar**.  
   
 ## <a name="see-also"></a>Consulte también  

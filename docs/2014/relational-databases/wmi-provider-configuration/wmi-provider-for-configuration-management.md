@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9391c3d3bea04abb4d664a9a5af5ed95596adf2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211617"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054954"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>Conceptos del proveedor WMI de administración de configuración
   El proveedor WMI es un nivel publicado que se utiliza con el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] complemento Configuration Manager de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) y el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Proporciona una forma unificada de crear una interfaz con las llamadas a la API que administran las operaciones del Registro solicitadas por el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y proporciona un mejor control y manipulación de los servicios SQL seleccionados del complemento Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 501c7931d651498fea49749be38af374c02424ab
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62721397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85010780"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Propiedades del distribuidor de Replicación de SQL Server
 En este tema se describen las propiedades que se encuentran en las páginas **General**, **publicadores**y **base de datos de distribución** dentro de la ventana Propiedades del **distribuidor** . 
@@ -50,7 +49,7 @@ En este tema se describen las propiedades que se encuentran en las páginas **Ge
   La página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** permite habilitar a los publicadores para que puedan utilizar este distribuidor. También se pueden establecer propiedades asociadas con esos publicadores. Tenga en cuenta que permitir que un publicador utilice este servidor como su distribuidor remoto no hace que ese servidor sea un publicador. Debe conectarse al publicador, configurarlo para publicación y elegir este servidor como el distribuidor. Con el Asistente para nueva publicación puede configurar el publicador y elegir un distribuidor.  
   
 ### <a name="options"></a>Opciones  
- **Publicadores**  
+ **Quienes**  
  Seleccione los servidores que pueden utilizar este distribuidor. Haga clic en el botón **(...)** de Propiedades que se encuentra junto a un publicador para ver y establecer propiedades adicionales.  
   
  **Add (Agregar)**  
@@ -90,7 +89,7 @@ En este tema se describen las propiedades que se encuentran en las páginas **Ge
 -   El agente se conecta al publicador con las credenciales especificadas en el cuadro de diálogo **Propiedades del publicador** , que se encuentra en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor** .    
 -   El agente se conecta con el suscriptor utilizando las credenciales especificadas para el Agente de distribución del Asistente para nueva suscripción.  
   
- Para obtener más información, \\consulte [Replication Agent Security Model](security/replication-agent-security-model.md). 
+ Para obtener más información, consulte \\ [Replication Agent Security Model](security/replication-agent-security-model.md). 
 
   
 ## <a name="see-also"></a>Consulte también  

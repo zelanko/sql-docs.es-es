@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c7b84355-71ba-402d-85af-23826f18b7da
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65d4892b135ac78f0e35620a9013168228c84498
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058510"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Usar informes personalizados con las propiedades de nodo del Explorador de objetos
   Los informes personalizados se pueden ejecutar en el contexto de un nodo del Explorador de objetos si los informes personalizados hacen referencia a los parámetros de informe de dicho nodo. Esto permite que los informes usen el contexto actual como, por ejemplo, la base de datos actual o un objeto de la base de datos o del servidor.  
@@ -43,7 +42,7 @@ ms.locfileid: "62823702"
   
 2.  Copie el archivo de informe en una carpeta creada para informes personalizados en el servidor de la base de datos.  
   
-3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón secundario en un nodo de explorador de objetos, seleccione **informes**y haga clic en informes personalizados. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados y seleccione el archivo de informe. A continuación, haga clic en **Abrir**.  
+3.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , haga clic con el botón secundario en un nodo de explorador de objetos, seleccione **informes**y haga clic en informes personalizados. En el cuadro de diálogo **Abrir archivo** , busque la carpeta de informes personalizados y seleccione el archivo de informe. A continuación, haga clic en **Abrir**.  
   
      La primera vez que se abre un nuevo informe personalizado desde un nodo del Explorador de objetos, el informe personalizado se agrega a la lista de **Informes personalizados** usados más recientemente en el menú contextual de dicho nodo. Al abrir un informe estándar por primera vez, aparece además en la lista de informes usados más recientemente en **Informes personalizados**. Si se elimina un archivo de informe personalizado, la próxima vez que se seleccione el elemento aparecerá un mensaje que le indicará que elimine el elemento de la lista de informes usados más recientemente.  
   

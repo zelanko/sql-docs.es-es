@@ -22,16 +22,15 @@ helpviewer_keywords:
 ms.assetid: c0e4d867-b2a9-4b2a-844b-2fe45be88f81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 55c621f9f345f0863e6656b66a77a8ccc439b0bc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768172"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965625"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>Asistente para importación y exportación de SQL Server
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de ofrece el método más sencillo para [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crear un paquete que copia datos de un origen a un destino.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de ofrece el método más sencillo para crear un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquete que copia datos de un origen a un destino.  
   
 > [!NOTE]  
 >  En un equipo de 64 bits, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala la versión de 64 bits del Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (DTSWizard.exe). Sin embargo, algunos orígenes de datos, como Access o Excel, solo tienen un proveedor de 32 bits disponible. Para trabajar con estos orígenes de datos, podría tener que instalar y ejecutar la versión de 32 bits del asistente. Para instalar la versión de 32 bits del asistente, seleccione Herramientas cliente o [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] durante la instalación.  
@@ -50,14 +49,14 @@ ms.locfileid: "62768172"
   
  Algunas características del asistente funcionan de forma diferente dependiendo del entorno en el que se inicie:  
   
--   Si inicia el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], ejecute el paquete inmediatamente seleccionando la casilla **Ejecutar inmediatamente** . Esta casilla está activada de forma predeterminada y el paquete se ejecuta de inmediato.  
+-   Si inicia el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para importación y exportación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , ejecute el paquete inmediatamente seleccionando la casilla **Ejecutar inmediatamente** . Esta casilla está activada de forma predeterminada y el paquete se ejecuta de inmediato.  
   
      También puede decidir si desea guardar el paquete en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o en el sistema de archivos. Si selecciona guardar el paquete, también debe especificar un nivel de protección de paquetes. Para obtener más información acerca de los niveles de protección de paquetes, consulte [Access Control de datos confidenciales en paquetes](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Una vez que el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] haya creado el paquete y copiado los datos, puede utilizar el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para abrir y cambiar el paquete guardado agregando tareas, transformaciones y lógica controlada por eventos.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
+    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , la opción para guardar el paquete creado por el asistente no está disponible.  
   
 -   Si inicia el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el paquete no puede ejecutarse como paso para completar el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. Seguidamente, puede ejecutar el paquete o ampliarlo agregando tareas, transformaciones y lógica controlada por eventos usando el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
@@ -74,12 +73,12 @@ ms.locfileid: "62768172"
   
 -   Si se desea crear una base de datos o tabla de destino, o un archivo de destino, se requieren permisos suficientes para crear una base de datos, una tabla o un archivo. Para ello, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se requieren permisos CREATE DATABASE o CREATE TABLE.  
   
--   Para guardar el paquete creado con el asistente, se requieren permisos suficientes para escribir en la base de datos msdb o en el sistema de archivos. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], esto requiere permisos de inserción en la base de datos msdb.  
+-   Para guardar el paquete creado con el asistente, se requieren permisos suficientes para escribir en la base de datos msdb o en el sistema de archivos. En [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , esto requiere permisos de inserción en la base de datos msdb.  
   
 ## <a name="mapping-data-types-in-the-import-and-export-wizard"></a>Asignar tipos de datos en el Asistente para importación y exportación  
  El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona capacidades de transformación mínimas. Salvo para establecer el nombre, el tipo de datos y las propiedades de tipo de datos de las columnas de las tablas y archivos de destino nuevos, el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite ninguna transformación en el nivel de columna.  
   
- El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los archivos de asignación que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona para asignar tipos de datos de una versión de base de datos o sistema a otro. Por ejemplo, puede crear una asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en C:\Archivos de programa\Microsoft SQL Server\100\DTS\MappingFiles. Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar las asignaciones para que tengan efecto en las asignaciones que realiza el asistente. Por ejemplo, si desea que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **nchar** se asigne al tipo de datos **Graphic** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transferir datos de a DB2, debe cambiar la asignación de **nchar** en el archivo de asignación SqlClientToIBMDB2. XML para que use un **gráfico** en lugar de **VARGRAPHIC.**  
+ El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza los archivos de asignación que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona para asignar tipos de datos de una versión de base de datos o sistema a otro. Por ejemplo, puede crear una asignación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a Oracle. De forma predeterminada, los archivos de asignación en formato XML se instalan en C:\Archivos de programa\Microsoft SQL Server\100\DTS\MappingFiles. Si su empresa requiere diferentes asignaciones entre tipos de datos, puede actualizar las asignaciones para que tengan efecto en las asignaciones que realiza el asistente. Por ejemplo, si desea que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de datos **nchar** se asigne al tipo de datos **Graphic** de DB2 en lugar de al tipo de datos **VARGRAPHIC** de DB2 al transferir datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a DB2, debe cambiar la asignación de **nchar** en el archivo de asignación de SqlClientToIBMDB2.xml para que use un **gráfico** en lugar de **VARGRAPHIC.**  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye asignaciones entre varias combinaciones de orígenes y destinos habitualmente utilizadas, y puede agregar nuevos archivos de asignaciones al directorio de archivos de asignación para admitir destinos y orígenes adicionales. Los nuevos archivos de asignaciones deben ajustarse al esquema XSD publicado y asignar entre una combinación única de origen y destino.  
   

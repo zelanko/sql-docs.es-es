@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: mikeraymsft
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6220d6650d2be81cad3f38862ba74213219a28a0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80a29b8e8cc5b53c09369156a5cf5f717e9447a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175948"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050030"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *Índice de almacén de columnas en memoria* almacena y administra los datos mediante el almacenamiento de datos basado en columnas y el procesamiento de consultas basado en columnas. Los índices de almacén de columnas funcionan correctamente para las cargas de trabajo de almacenamiento de datos que ejecutan principalmente cargas masivas y consultas de solo lectura. Use el índice de almacén de columnas para aumentar **hasta en diez veces el rendimiento de las consultas** en relación con el almacenamiento tradicional orientado a filas, y hasta **en siete veces la compresión de datos** en relación con el tamaño de los datos sin comprimir.
@@ -35,14 +34,14 @@ ms.locfileid: "78175948"
 
 -   [Cargar datos](#dataload)
 
--   [Consejos de rendimiento](#performance)
+-   [Sugerencias para mejorar el rendimiento](#performance)
 
 -   [Temas y tareas relacionados](#related)
 
 ##  <a name="basics"></a><a name="basics"></a>Conceptos básicos
  Un *columnstore index* es una tecnología de almacenamiento, recuperación y administración de datos que emplea un formato de datos en columnas denominado almacén de columnas. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite índices clúster y no clúster de almacén de columnas. Ambos usan la misma tecnología de almacén de columnas en memoria, pero tienen algunas diferencias en cuanto a su propósito y las funciones que admiten.
 
-###  <a name="benefits"></a><a name="benefits"></a>Privilegios
+###  <a name="benefits"></a><a name="benefits"></a> Ventajas
  Los índices de almacén de columnas funcionan correctamente con la mayoría de las consultas de solo lectura que realizan análisis en conjuntos de datos grandes. A menudo, se trata de consultas de cargas de trabajo de almacenamiento de datos. Los índices de almacén de columnas ofrecen alto rendimiento para las consultas que usan recorridos de tabla completos y no son adecuados para las consultas que buscan un valor concreto en los datos.
 
  Ventajas de los índices de almacén de columnas:
@@ -125,7 +124,7 @@ ms.locfileid: "78175948"
 
  Un índice no clúster de almacén de columnas proporciona una manera de tener un índice de almacén de columnas para ejecutar consultas de análisis al tiempo que se realizan operaciones de solo lectura en la tabla original.
 
- ![Índice de almacén de columnas no agrupado](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice no clúster de almacén de columnas")
+ ![índice no clúster de almacén de columnas](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "índice no clúster de almacén de columnas")
 
  Índice de almacén de columnas en clúster: un índice de almacén de columnas *agrupado* es el almacenamiento físico de toda la tabla y es el único índice de la tabla. El índice clúster se puede actualizar. Puede realizar operaciones de inserción, eliminación y actualización del índice y puede cargar datos de forma masiva en el índice.
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c0975dee640230880dfe05a7d86359172cfa157
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4d09750c0cb81d64f5921ae2064b2e75edb6ca96
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882237"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047579"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
   En este tema se describe cómo validar datos en el suscriptor en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -65,7 +64,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 -   Dado que las sumas de comprobación y las sumas de comprobación binarias requieren grandes cantidades de recursos del procesador para validar un conjunto de datos de gran tamaño, debe programar la validación para que se produzca cuando la actividad sea mínima en los servidores que se utilizan en la replicación.    
 -   La replicación solo valida tablas; no valida si los artículos solo de esquema (como los procedimientos almacenados) son iguales en el publicador y en el suscriptor.    
 -   La suma de comprobación binaria se puede utilizar en cualquier tabla publicada. La suma de comprobación no puede validar tablas con filtros de columna ni estructuras de tabla lógicas donde los desplazamientos de columnas son distintos (debido a las instrucciones ALTER TABLE que quitan o agregan columnas).    
--   La validación de replicación `checksum` usa las funciones y **BINARY_CHECKSUM** . Para obtener información sobre este comportamiento, vea [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) y [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
+-   La validación de replicación usa las `checksum` funciones y **BINARY_CHECKSUM** . Para obtener información sobre este comportamiento, vea [CHECKSUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/checksum-transact-sql) y [BINARY_CHECKSUM  &#40;Transact-SQL&#41;](/sql/t-sql/functions/binary-checksum-transact-sql).  
   
 -   La validación mediante suma de comprobación binaria o suma de comprobación puede informar incorrectamente sobre un error si los tipos de datos son diferentes en el suscriptor y en el publicador. Esto se puede producir si lleva a cabo una de las siguientes acciones:    
     -   Establecer de forma explícita opciones del esquema para asignar tipos de datos de versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].    
@@ -112,7 +111,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 
 #### <a name="all-articles"></a>Todos los artículos
   
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique ** \@la publicación** y uno de los siguientes valores para ** \@rowcount_only**:    
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql). Especifique la ** \@ publicación** y uno de los siguientes valores para ** \@ rowcount_only**:    
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
   
@@ -124,7 +123,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
   
 #### <a name="single-article"></a>Artículo único 
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@Publication**, el nombre del artículo para ** \@article**y uno de los siguientes valores para ** \@rowcount_only**:    
+1.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@ Publication**, el nombre del artículo para ** \@ article**y uno de los siguientes valores para ** \@ rowcount_only**:    
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
   
@@ -137,9 +136,9 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 #### <a name="single-subscriber"></a>Suscriptor único
   
 1.  En el publicador de la base de datos de publicación, abra una transacción explícita mediante [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql).    
-2.  En la base de datos de publicación del publicador, ejecute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique la publicación para ** \@la publicación**, el nombre del suscriptor para ** \@el suscriptor**y el nombre de la base de datos de suscripciones para ** \@destination_db**.    
+2.  En la base de datos de publicación del publicador, ejecute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql). Especifique la publicación para la ** \@ publicación**, el nombre del suscriptor para el ** \@ suscriptor**y el nombre de la base de datos de suscripciones para ** \@ destination_db**.    
 3.  (Opcional) Repita el paso 2 para cada suscripción que se está validando.    
-4.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@Publication**, el nombre del artículo para ** \@article**y uno de los siguientes valores para ** \@rowcount_only**:    
+4.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql). Especifique ** \@ Publication**, el nombre del artículo para ** \@ article**y uno de los siguientes valores para ** \@ rowcount_only**:    
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
   
@@ -187,7 +186,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 
 ### <a name="using-transact-sql-t-sql"></a>Uso de Transact-SQL (T-SQL)
 
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique ** \@Publication**, el nombre del suscriptor para ** \@el suscriptor**, el nombre de la base de datos de suscripciones para ** \@subscriber_db**y uno de los siguientes valores para ** \@LEVEL**:   
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql). Especifique ** \@ Publication**, el nombre del suscriptor para el ** \@ suscriptor**, el nombre de la base de datos de suscripciones para ** \@ subscriber_db**y uno de los siguientes valores para ** \@ LEVEL**:   
     -   **1** : validación solo del recuento de filas.    
     -   **3** : validación de la suma de comprobación binaria del recuento de filas.  
   
@@ -218,7 +217,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 
 ### <a name="using-transact-sql-t-sql"></a>Uso de Transact-SQL (T-SQL)
 
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique ** \@la publicación** y uno de los siguientes valores para ** \@LEVEL**:    
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql). Especifique la ** \@ publicación** y uno de los siguientes valores para ** \@ LEVEL**:    
     -   **1** : validación solo del recuento de filas.    
     -   **3** : validación de la suma de comprobación binaria del recuento de filas.  
   
@@ -278,7 +277,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransPublication>. Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.    
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A> . Pase lo siguiente:    
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.ValidatePublication%2A>. Pase lo siguiente:    
     -   <xref:Microsoft.SqlServer.Replication.ValidationOption>    
     -   <xref:Microsoft.SqlServer.Replication.ValidationMethod>    
     -   Un valor booleano que indique si se debe detener el Agente de distribución una vez completada la validación.  
@@ -292,7 +291,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>. Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.    
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A> . Pase el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>que desee.    
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidatePublication%2A>. Pase el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>que desee.    
 5.  Ejecute el Agente de mezcla en cada suscripción para iniciar la validación o espere hasta la siguiente ejecución programada del agente. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](synchronize-a-push-subscription.md). El resultado de la operación de la validación se escribe en el historial del agente, que se puede consultar con el Monitor de replicación. Para más información, consulte [Monitoring Replication](monitoring-replication.md).  
   
 #### <a name="to-validate-data-in-a-single-subscription-to-a-merge-publication"></a>Para validar los datos de una única suscripción a una publicación de combinación  
@@ -300,7 +299,7 @@ Tenga en cuenta las siguientes cuestiones a la hora de validar los datos:
 1.  Cree una conexión al publicador mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .    
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergePublication>. Establezca las propiedades <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> y <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publicación. Establezca la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en la conexión creada en el paso 1.    
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades restantes del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.    
-4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A> . Pase el nombre del suscriptor y la base de datos de suscripciones que se validan y el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>deseado.    
+4.  Llame al método <xref:Microsoft.SqlServer.Replication.MergePublication.ValidateSubscription%2A>. Pase el nombre del suscriptor y la base de datos de suscripciones que se validan y el valor de <xref:Microsoft.SqlServer.Replication.ValidationOption>deseado.    
 5.  Ejecute el Agente de mezcla en la suscripción para iniciar la validación o espere hasta la siguiente ejecución programada del agente. Para obtener más información, consulte [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) y [Synchronize a Push Subscription](synchronize-a-push-subscription.md). El resultado de la operación de la validación se escribe en el historial del agente, que se puede consultar con el Monitor de replicación. Para más información, consulte [Monitoring Replication](monitoring-replication.md).  
   
 ###  <a name="example-rmo"></a><a name="RMOExample"></a>Ejemplo (RMO)  

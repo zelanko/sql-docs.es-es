@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 5dde7575a3f657b89d29fefa0da52002bcd6af28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d744457cc517a6172cca96b27eae1f456deca24e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014296"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85016065"
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Crear, construir y consultar instancias de Geography
   El tipo de datos espacial geography, `geography`, representa los datos en un sistema de coordenadas de tierra redonda. Se implementa como un tipo de datos de .NET CLR (Common Language Runtime) en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` almacena los datos elipsoidales (globo), como coordenadas de latitud y longitud de GPS.  
@@ -103,7 +102,7 @@ ms.locfileid: "66014296"
  [STGeomCollFromWKB &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stgeomcollfromwkb-geography-data-type)STGeomCollFromWKB (tipo de datos geography)  
   
 ###  <a name="constructing-a-geography-instance-from-gml-text-input"></a><a name="gml"></a> Para construir una instancia de geography a partir de datos de texto GML  
- El `geography` tipo de datos proporciona un método que genera `geography` una instancia de GML, una representación XML de `geography` una instancia de. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
+ El `geography` tipo de datos proporciona un método que genera una `geography` instancia de GML, una representación XML de una `geography` instancia de. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
   
  Para obtener más información sobre el lenguaje de marcado de geografía, vea las especificaciones de OGC: [OGC Specifications, Geography Markup Language.](https://go.microsoft.com/fwlink/?LinkId=93629)  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66014296"
  [AsGml &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/asgml-geography-data-type)  
   
 ##  <a name="querying-the-properties-and-behaviors-of-geography-instances"></a><a name="query"></a> Consultar propiedades y comportamientos de instancias de geography  
- Todas `geography` las instancias de tienen varias propiedades que se pueden recuperar a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los métodos que proporciona. Los temas siguientes definen las propiedades y los comportamientos de los tipos geography y los métodos para consultar cada uno.  
+ Todas las `geography` instancias de tienen varias propiedades que se pueden recuperar a través de los métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona. Los temas siguientes definen las propiedades y los comportamientos de los tipos geography y los métodos para consultar cada uno.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
  Una vez construida una instancia de `geography`, puede usar los métodos siguientes para devolver el tipo de instancia o, si es una instancia de `GeometryCollection`, devolver una instancia de `geography` específica.  
@@ -146,7 +145,7 @@ ms.locfileid: "66014296"
  [STGeometryN &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stgeometryn-geography-data-type)STGeometryN (tipo de datos geography)  
   
 ###  <a name="number-of-points"></a><a name="number"></a> Número de puntos  
- Todas las instancias `geography` no vacías se componen de *puntos*. Estos puntos representan las coordenadas de latitud y longitud de la tierra en la que se dibujan las instancias de `geography`. El tipo `geography` de datos proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
+ Todas las instancias no vacías `geography` se componen de *puntos*. Estos puntos representan las coordenadas de latitud y longitud de la tierra en la que se dibujan las instancias de `geography`. El tipo de datos `geography` proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
   
  **Devolver el número de puntos que comprende una instancia**  
  [STNumPoints &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stnumpoints-geography-data-type)  
@@ -161,7 +160,7 @@ ms.locfileid: "66014296"
  [STEndpoint &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stendpoint-geography-data-type)  
   
 ###  <a name="dimension"></a><a name="dimension"></a> Dimensión  
- Una instancia de `geography` no vacía puede ser no dimensional, unidimensional o bidimensional. Las instancias de `geography` no dimensionales, `Point` como `MultiPoint`y, no tienen ninguna longitud ni área. Los objetos unidimensionales, como `LineString, CircularString`, `CompoundCurve` y `MultiLineString`, tienen longitud. Las instancias bidimensionales, como `Polygon, CurvePolygon` y `MultiPolygon`, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y `GeometryCollection` informa de la dimensión máxima de su contenido.  
+ Una instancia de `geography` no vacía puede ser no dimensional, unidimensional o bidimensional. `geography`Las instancias de no dimensionales, como `Point` y `MultiPoint` , no tienen ninguna longitud ni área. Los objetos unidimensionales, como `LineString, CircularString`, `CompoundCurve` y `MultiLineString`, tienen longitud. Las instancias bidimensionales, como `Polygon, CurvePolygon` y `MultiPolygon`, tienen área y longitud. Las instancias vacías informan de una dimensión de -1 y `GeometryCollection` informa de la dimensión máxima de su contenido.  
   
  **Devolver la dimensión de una instancia**  
  [STDimension &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stdimension-geography-data-type)  
@@ -173,7 +172,7 @@ ms.locfileid: "66014296"
  [STArea &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/starea-geography-data-type)  
   
 ###  <a name="empty"></a><a name="empty"></a> Vacía  
- Una instancia *vacía* `geography` no tiene ningún punto. La longitud de las instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` vacías es 0. El área de las instancias de `Polygon, CurvePolygon` y `MultiPolygon` vacías es 0.  
+ Una instancia *vacía* no `geography` tiene ningún punto. La longitud de las instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` vacías es 0. El área de las instancias de `Polygon, CurvePolygon` y `MultiPolygon` vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty &#40;tipo de datos geography&#41;](/sql/t-sql/spatial-geography/stisempty-geography-data-type)  

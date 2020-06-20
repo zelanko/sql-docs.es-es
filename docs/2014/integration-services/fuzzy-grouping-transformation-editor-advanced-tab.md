@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dcebe499eb80fbe01b9aa36a4e07785846eaf621
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6a476770e120cd620f01096cc20f9eab7f9f4404
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058364"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966316"
 ---
 # <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>Editor de transformación Agrupación aproximada (pestaña Avanzadas)
   Use la pestaña **Avanzadas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas de entrada y salida, configurar umbrales de similitud y definir delimitadores.  
   
 > [!NOTE]  
->  Las `Exhaustive` `MaxMemoryUsage` propiedades y de la transformación agrupación aproximada no están disponibles en el **Editor de transformación agrupación aproximada**, pero se pueden establecer mediante el **editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
+>  Las `Exhaustive` propiedades y `MaxMemoryUsage` de la transformación agrupación aproximada no están disponibles en el **Editor de transformación agrupación aproximada**, pero se pueden establecer mediante el **editor avanzado**. Para obtener más información acerca de estas propiedades, vea la sección sobre la transformación Agrupación aproximada en [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md).  
   
  Para obtener más información acerca de la transformación Agrupación aproximada, vea [Fuzzy Grouping Transformation](data-flow/transformations/fuzzy-grouping-transformation.md).  
   

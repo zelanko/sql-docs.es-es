@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 50c9419911f83c98fba5baf0f995ffbeafb916ad
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768030"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965655"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Elegir un destino (Asistente para importación y exportación de SQL Server)
   Use la página **elegir un destino** para especificar el destino de los datos que desea copiar.  
@@ -28,7 +27,7 @@ ms.locfileid: "62768030"
   
 ## <a name="static-options"></a>Opciones estáticas  
  **Destino**  
- Elija el proveedor de datos que coincide con el formato de almacenamiento de datos del destino. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
+ Elija el proveedor de datos que coincide con el formato de almacenamiento de datos del destino. Es posible que haya más de un proveedor disponible para el origen de datos. Por ejemplo, con puede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, el proveedor de datos de .NET Framework para SQL Server o el proveedor de OLE DB de Microsoft para SQL Server.  
   
 > [!NOTE]  
 >  Para guardar datos en un destino ODBC, seleccione el proveedor de datos de .NET Framework para ODBC.  
@@ -42,11 +41,11 @@ ms.locfileid: "62768030"
  **Nombre del servidor**  
  Escriba el nombre del servidor que recibirá los datos o elija un servidor de la lista.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Especifique si el paquete debe utilizar la autenticación de Microsoft Windows para iniciar una sesión en la base de datos. Para obtener una mayor seguridad, es recomendable utilizar la autenticación de Windows.  
   
  **Usar autenticación SQL Server**  
- Especifique si el paquete debe usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
+ Especifique si el paquete debe usar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de para iniciar sesión en la base de datos. Si usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe proporcionar un nombre de usuario y una contraseña.  
   
  **Nombre de usuario**  
  Especifique un nombre de usuario para la conexión de la base de datos cuando utilice la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +54,7 @@ ms.locfileid: "62768030"
  Proporcione la contraseña para la conexión de la base de datos cuando use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Base de datos**  
- Seleccione en la lista de bases de datos de la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o cree una nueva base de datos haciendo clic en **nueva**.  
+ Seleccione en la lista de bases de datos de la instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o cree una nueva base de datos haciendo clic en **nueva**.  
   
  **Actualizar**  
  Para restaurar la lista de bases de datos disponibles, haga clic en **Actualizar**.  
@@ -70,7 +69,7 @@ ms.locfileid: "62768030"
  **Examinar**  
  Busque un archivo mediante el cuadro de diálogo **Abrir**.  
   
- **Configuración regional**  
+ **Locale**  
  Especifique el Id. de configuración regional (LCID) que define el criterio de ordenación de los caracteres y el formato de fecha y hora.  
   
  **Unicode**  
@@ -79,7 +78,7 @@ ms.locfileid: "62768030"
  **Página de códigos**  
  Especifique la página de códigos correspondiente al idioma que desea utilizar.  
   
- **Aplique**  
+ **Format**  
  Indique si se utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
 |Value|Descripción|  
@@ -97,10 +96,10 @@ ms.locfileid: "62768030"
 ### <a name="destination--microsoft-excel"></a>Destino = Microsoft Excel  
   
 > [!NOTE]  
->  Seleccione **Microsoft Excel** solo si desea conectarse a un origen de datos que use Excel 2003 o una versión anterior. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12,0 acceso motor de base de datos proveedor de OLE DB**, haga clic en **propiedades**y, a continuación, en la pestaña **todo** del cuadro de diálogo Propiedades de vínculo `Excel 12.0`de **datos** , para **propiedades extendidas**, escriba.  
+>  Seleccione **Microsoft Excel** solo si desea conectarse a un origen de datos que use Excel 2003 o una versión anterior. Para conectarse a un origen de datos que usa Excel 2007, seleccione **Microsoft Office 12,0 acceso motor de base de datos proveedor de OLE DB**, haga clic en **propiedades**y, a continuación, en la pestaña **todo** del cuadro de diálogo Propiedades de **vínculo de datos** , para **propiedades extendidas**, escriba `Excel 12.0` .  
   
  **Ruta de acceso del archivo Excel**  
- Especifique la ruta de acceso y el nombre de archivo del libro en el que se almacenarán los datos ( \\por ejemplo, C:\MyData.xls, \Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
+ Especifique la ruta de acceso y el nombre de archivo del libro en el que desea almacenar los datos (por ejemplo, C:\MyData.xls, \\\Sales\Database\Northwind.xls). O bien, haga clic en **Examinar** para buscar un libro.  
   
  **Examinar**  
  Busque un libro de Excel mediante el cuadro de diálogo **abrir** .  
@@ -117,7 +116,7 @@ ms.locfileid: "62768030"
 >  Seleccione **Microsoft Access** solo si desea conectarse a una base de datos que use Access 2003 o una versión anterior. Para conectarse a una base de datos que usa Access 2007, seleccione **Microsoft Office 12,0 Access motor de base de datos proveedor de OLE DB**.  
   
  **Nombre de archivo**  
- Especifique la ruta de acceso y el nombre de archivo del archivo de base de datos en el que se almacenarán \\los datos (por ejemplo, C:\MyData.mdb, \Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
+ Especifique la ruta de acceso y el nombre de archivo del archivo de base de datos en el que se almacenarán los datos (por ejemplo, C:\MyData.mdb, \\ \Sales\Database\Northwind.mdb). O bien, haga clic en **Examinar** para buscar un archivo de base de datos.  
   
  **Examinar**  
  Busque el archivo de base de datos mediante el cuadro de diálogo **abrir** .  

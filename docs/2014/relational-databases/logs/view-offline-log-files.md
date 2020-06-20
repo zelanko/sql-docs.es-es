@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac0f613a023261c79b3a5ee11458ecdbda86998d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144601"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024743"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
   A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden ver desde una instancia local o remota de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando la instancia de destino está sin conexión o no se puede iniciar.  
@@ -50,9 +49,9 @@ ms.locfileid: "63144601"
   
 -   Acceso de lectura al espacio de nombres de WMI **raíz\Microsoft\SqlServer\ComputerManagement12** . De forma predeterminada, todos tienen acceso de lectura mediante el permiso Habilitar cuenta. Para obtener más información, vea el procedimiento sobre comprobación de permisos de WMI más adelante en esta sección.  
   
--   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. Los archivos de registro de errores se encuentran de forma predeterminada en la siguiente ruta de acceso (donde \<*unidad>* representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*nombreInstancia*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]):  
+-   Permiso de lectura a la carpeta que contiene los archivos de registro de errores. De forma predeterminada, los archivos de registro de errores se encuentran en la siguiente ruta de acceso (donde \<*Drive> * representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **\<> de unidad: \Archivos de Programa\microsoft SQL Server\MSSQL12. \<NombreDeInstancia> \mssql\log.**  
+     **\<Drive>: \Archivos de Programa\microsoft SQL Server\MSSQL12. \<InstanceName> \Mssql\log.**  
   
  Para comprobar la configuración de seguridad del espacio de nombres WMI, puede utilizar el complemento Control WMI.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "63144601"
   
     -   Haga clic en **Inicio**, escriba `wmimgmt.msc` en el cuadro **Iniciar búsqueda** y presione ENTRAR.  
   
-    -   Haga clic en **Inicio**, haga clic `wmimgmt.msc`en **Ejecutar**, escriba y, a continuación, presione Entrar.  
+    -   Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba `wmimgmt.msc` y, a continuación, presione Entrar.  
   
 2.  De forma predeterminada, el complemento Control WMI administra el equipo local.  
   

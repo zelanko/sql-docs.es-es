@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12afbc84-2d2a-4452-935e-e1c70e8c53c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c62812b138afef0244bbad5f3d17bafb4064537
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d83bfe63c3a9b24c2be8d08916dd2384c59edc93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62630727"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996564"
 ---
 # <a name="configure-dialog-security-for-event-notifications"></a>Configurar la seguridad de diálogo para notificaciones de eventos
   [!INCLUDE[ssSB](../../includes/sssb-md.md)] se debe configurar para las notificaciones de eventos que envíen mensajes a un Service Broker en un servidor remoto. La seguridad de diálogo se debe configurar manualmente según el modelo de seguridad de diálogo completa de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El modelo de seguridad completa habilita el cifrado y el descifrado de los mensajes que se envían a servidores remotos o desde los mismos. Aunque las notificaciones de eventos se envían en una dirección, otros mensajes, como los errores, también se devuelven en la dirección opuesta.  

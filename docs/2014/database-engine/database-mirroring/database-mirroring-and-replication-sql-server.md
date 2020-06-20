@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b126aeb8ccd24932706b8798ebfe7088308918e2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934356"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Replicación y creación de reflejo de la base de datos (SQL Server)
   La creación de reflejo de la base de datos se puede usar conjuntamente con la replicación para mejorar la disponibilidad para la base de datos de publicación. La creación de reflejo de la base de datos incluye la creación de dos copias de una sola base de datos que suelen residir en diferentes equipos. En cada momento, solo una copia de la base de datos está disponible para los clientes. Esta copia se conoce como la base de datos principal. Las actualizaciones realizadas por los clientes en la base de datos de la entidad de seguridad se aplican a la otra copia de la base de datos, conocida como la base de datos reflejada. La creación de reflejo incluye la aplicación a la base de datos reflejada del registro de transacciones con todas las inserciones, actualizaciones o eliminaciones efectuadas en la base de datos de la entidad de seguridad.  
@@ -91,7 +90,7 @@ ms.locfileid: "62807468"
   
      El Agente de distribución y el Control ActiveX de distribución de SQL no tienen este parámetro porque no se conectan al publicador.  
   
-     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para obtener más información, consulte:  
+     Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo. Los parámetros se pueden especificar en perfiles de agente y desde el símbolo del sistema. Para más información, consulte:  
   
     -   [Ver y modificar parámetros del símbolo del sistema de los agentes de replicación &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62807468"
   
 -   Si se utilizan procedimientos almacenados o Replication Management Objects (RMO) para administrar la replicación en la entidad reflejada, en los casos en que se especifica el nombre del publicador, se debe especificar el nombre de la instancia en la que la base de datos se habilitó para la replicación. Para determinar el nombre correcto, use la función [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername).  
   
-     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si está configurando la replicación con procedimientos almacenados en el reflejo después de una conmutación por error y desea agregar una suscripción de extracción a una base de datos de publicación que se habilitó en la entidad de seguridad, debe especificar el nombre principal **@publisher** en lugar del nombre del reflejo para el parámetro de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
+     Cuando se crea el reflejo de una base de datos de publicación, los metadatos de la replicación que se encuentran almacenados en la base de datos reflejada son idénticos a los que se encuentran almacenados en la base de datos de la entidad de seguridad. En consecuencia, para las bases de datos de publicación habilitadas para replicación en la entidad de seguridad, el nombre de la instancia del publicador que está almacenado en las tablas del sistema en la entidad reflejada es el nombre de la entidad de seguridad, en lugar del nombre de la entidad reflejada. Esto afecta a la configuración y al mantenimiento de la replicación si se produce la conmutación por error de la base de datos de publicación a la entidad reflejada. Por ejemplo, si está configurando la replicación con procedimientos almacenados en el reflejo después de una conmutación por error y desea agregar una suscripción de extracción a una base de datos de publicación que se habilitó en la entidad de seguridad, debe especificar el nombre principal en lugar del nombre del reflejo para el **@publisher** parámetro de **sp_addpullsubscription** o **sp_addmergepullsubscription**.  
   
      Si habilita una base de datos de publicación en el reflejo después de la conmutación por error en el reflejo, el nombre de instancia del publicador almacenado en las tablas del sistema es el nombre del reflejo; en este caso, usaría el nombre del reflejo para el **@publisher** parámetro.  
   

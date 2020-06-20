@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 086790cbd654a101d4bced989848d9aaac80d7ad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20be558522d0f5df2aa4f5bcd0557626cff0e64c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833659"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920616"
 ---
 # <a name="multiple-files-connection-manager"></a>administrador de conexiones de varios archivos
   Un administrador de conexiones de varios archivos habilita un paquete para que haga referencia a los archivos y carpetas existentes o para crear archivos y carpetas en tiempo de ejecución.  
@@ -57,9 +56,9 @@ ms.locfileid: "62833659"
   
  Si el administrador de conexiones de varios archivos hace referencia a varios archivos y carpetas, las rutas de los archivos y carpetas se separan con la barra vertical (|). La propiedad `ConnectionString` del administrador de conexiones tiene el formato siguiente:  
   
- \<*ruta de acceso*>|\<*ruta de acceso*>  
+ \<*path*>|\<*path*>  
   
- También puede especificar varios archivos o carpetas mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el `ConnectionString` valor de la propiedad se puede establecer\\en C: *. txt.  
+ También puede especificar varios archivos o carpetas mediante caracteres comodín. Por ejemplo, para hacer referencia a todos los archivos de texto de la unidad C, el valor de la `ConnectionString` propiedad se puede establecer en C: \\ *. txt.  
   
  Puede establecer propiedades a través del Diseñador de [!INCLUDE[ssIS](../../includes/ssis-md.md)] o mediante programación.  
   

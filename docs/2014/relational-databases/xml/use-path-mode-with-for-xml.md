@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 874c410e389282aa4cfcdbc002e941ca44c413df
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ce0cf811f1e610d14a94993b54c51ea079f613e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702362"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059340"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Usar el modo PATH con FOR XML
   Tal como se describe en [Generar XML mediante FOR XML](for-xml-sql-server.md), el modo PATH facilita la combinación de elementos y atributos. También facilita la especificación de anidación adicional para representar propiedades complejas. Puede utilizar consultas de modo FOR XML EXPLICIT para generar XML a partir de un conjunto de filas, pero el modo PATH supone una alternativa más sencilla a las consultas de modo EXPLICIT potencialmente complicadas. El modo PATH, junto con la posibilidad de escribir consultas FOR XML anidadas y la directiva TYPE para devolver instancias de tipo **xml** , permite escribir consultas de forma más fácil.  

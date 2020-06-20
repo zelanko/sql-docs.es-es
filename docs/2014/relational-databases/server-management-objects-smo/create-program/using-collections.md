@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0be31e67be0b80de13a9239b221ca73436a8d6e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8685afaff5283d88ed8fdc487d34fac4ed5113fd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997258"
 ---
 # <a name="using-collections"></a>Usar colecciones
   Una colección es una lista de objetos construidos desde la misma clase de objeto y que comparten el mismo objeto primario. El objeto de colección contiene siempre el nombre del tipo de objeto con el sufijo Collection. Por ejemplo, para tener acceso a las columnas de una tabla determinada, use el tipo de objeto <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>. Contiene todos los objetos <xref:Microsoft.SqlServer.Management.Smo.Column> que pertenecen al mismo objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] La `For...Each` instrucción o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] la `foreach` instrucción se pueden utilizar para recorrer en iteración cada miembro de la colección.  
+ La [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] `For...Each` instrucción o la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] `foreach` instrucción se pueden utilizar para recorrer en iteración cada miembro de la colección.  
   
 ## <a name="examples"></a>Ejemplos  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

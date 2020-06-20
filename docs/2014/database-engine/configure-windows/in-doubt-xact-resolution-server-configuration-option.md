@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3426fd32-cad2-4f2f-8ca9-e0296cc12703
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 648f142eb80607412e13151098418c22e45f04bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b8db57ef2a4ee85d65e8c25de28ff7ada7994e1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935268"
 ---
 # <a name="in-doubt-xact-resolution-server-configuration-option"></a>in-doubt xact resolution (opción de configuración del servidor)
   Use la opción **in-doubt xact resolution** para controlar el resultado predeterminado de las transacciones que el Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MS DTC) no consigue resolver. La incapacidad de resolver estas transacciones puede estar relacionada con un tiempo de inactividad de MS DTC o con un resultado de transacción inesperado en el momento de la recuperación.  

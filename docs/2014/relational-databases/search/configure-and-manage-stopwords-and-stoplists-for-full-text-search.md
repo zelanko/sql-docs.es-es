@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 103b5024368c5ca239856580e9b45473aabf6a92
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011522"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997654"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurar y administrar palabras irrelevantes y listas de palabras irrelevantes para la búsqueda de texto completo
   Para evitar que un índice de texto completo se llene demasiado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispone de un mecanismo que descarta las cadenas más frecuentes que no ayudan en la búsqueda. Estas cadenas descartadas se denominan *palabras irrelevantes*. Durante la creación de índices, el motor de texto completo omite las palabras irrelevantes del índice de texto completo. Eso significa que las consultas de texto completo no buscarán las palabras irrelevantes.  

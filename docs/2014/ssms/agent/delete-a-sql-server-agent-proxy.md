@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9248841d-7294-47d4-94f3-b34a0521fabc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a672c6392e2ffed3ca2a7ed655b806d9d093b10c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62523761"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058806"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Delete a SQL Server Agent Proxy
   En este tema se describe cómo eliminar una cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62523761"
   
 6.  En el cuadro de diálogo **Eliminar objeto** , confirme que esté seleccionada la cuenta de proxy correcta. Active la casilla **Volver a asignar a** para volver a asignar a otra cuenta los pasos de trabajo que hacen referencia a esta cuenta de proxy.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

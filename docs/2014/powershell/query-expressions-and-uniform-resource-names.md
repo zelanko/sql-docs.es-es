@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e53b659fdd5d572d4f76e9a1979e6639ea33d060
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782762"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960190"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
   Los modelos de objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) y los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell usan dos tipos de cadenas de expresiones que se parecen a las expresiones XPath. Las expresiones de consulta son cadenas que especifican un conjunto de criterios usados para enumerar uno o más objetos de una jerarquía del modelo de objetos. Un nombre de recurso uniforme (URN) es un tipo específico de cadena de expresión de consulta que identifica exclusivamente un objeto único.  
@@ -63,7 +62,7 @@ ms.locfileid: "72782762"
  Por ejemplo, especifique el valor Server para la clase **ServerCollection** y el valor Database para la clase **DatabaseCollection** .  
   
  \@*PropertyName*  
- Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter \@. Por ejemplo, especifique \@IsAnsiNull para la propiedad de clase de **base de datos** **IsAnsiNull**.  
+ Especifica el nombre de una de las propiedades de la clase que está asociada con el objeto especificado en *Object*. El nombre de la propiedad debe llevar un prefijo con el carácter \@. Por ejemplo, especifique \@ IsAnsiNull para la propiedad de clase de **base de datos** **IsAnsiNull**.  
   
  \@*BooleanPropertyName*= true ()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en TRUE.  
@@ -71,7 +70,7 @@ ms.locfileid: "72782762"
  \@*BooleanPropertyName*= false ()  
  Enumera todos los objetos en los que el valor de la propiedad booleana especificada se establece en FALSE.  
   
- Contains (\@*StringPropertyName*, '*PatternString*')  
+ Contains ( \@ *StringPropertyName*, '*PatternString*')  
  Enumera todos los objetos en los que la propiedad de cadena especificada contiene, al menos, una aparición del juego de caracteres especificado en “*PatternString*”.  
   
  \@*StringPropertyName*='*PatternString*'  
@@ -92,18 +91,18 @@ ms.locfileid: "72782762"
   
  Las fechas que se especifican en este formato se pueden evaluar en cualquier formato de fecha que se almacene en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
- is_null (\@*PropertyName*)  
+ is_null ( \@ *PropertyName*)  
  Enumera todos los objetos en los que la propiedad especificada tiene un valor de NULL.  
   
- not(\<*PropertyExpression*>)  
+ no ( \<*PropertyExpression*> )  
  Niega el valor de evaluación de *PropertyExpression*, enumerando todos los objetos que no coinciden con la condición especificada en *PropertyExpression*. Por ejemplo, distinto de (contains(\@Name, 'xyz')) enumera todos los objetos que no tienen la cadena xyz en su nombre.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las expresiones de consulta son cadenas que enumeran los nodos de una jerarquía de modelo SMO. Cada nodo tiene una expresión de filtro que especifica los criterios para determinar los objetos que se enumeran en ese nodo. Las expresiones de consulta se modelan en el lenguaje de expresión XPath. Las expresiones de consulta implementan un pequeño subconjunto admitido por XPath y, además, tienen algunas extensiones que no se encuentran en XPath. Las expresiones XPath son cadenas que especifican un conjunto de criterios usados para enumerar una o mas de las etiquetas de un documento XML. Para obtener más información acerca de XPath, vea [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  Las expresiones de consulta deben empezar por una referencia absoluta al objeto Server. No se admiten expresiones relativas con una / inicial. La secuencia de objetos que se especifica en una expresión de consulta debe seguir la jerarquía de los objetos de la colección del modelo de objetos asociado. Por ejemplo, una expresión de consulta que hace referencia a objetos del espacio de nombres Microsoft.SqlServer.Management.Smo debe empezar por un nodo Server seguido de un nodo Database, etc.  
   
- Si no se especifica un * \<>FilterExpression* para un objeto, se enumeran todos los objetos de ese nodo.  
+ Si *\<FilterExpression>* no se especifica un para un objeto, se enumeran todos los objetos de ese nodo.  
   
 ## <a name="uniform-resource-names-urn"></a>Nombres de recursos uniformes (URN)  
  Los URN son un subconjunto de expresiones de consulta. Cada URN forma una referencia completa a un solo objeto. Un URN típico utiliza la propiedad Name para identificar un objeto único de cada nodo. Por ejemplo, este URN hace referencia a una columna concreta:  

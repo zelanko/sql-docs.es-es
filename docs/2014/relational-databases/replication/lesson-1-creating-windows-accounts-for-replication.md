@@ -12,23 +12,22 @@ helpviewer_keywords:
 ms.assetid: 65c3816b-47f0-448c-a4a4-ebd3e2a58820
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f11321b20c4238fdf9b3376d79edcb12c0e9204b
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 5d5e35ef1c3f860c58e036f5335e09165acddfb8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000475"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065966"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lección 1: Crear cuentas de Windows para replicación
   En esta lección creará cuentas de Windows para ejecutar agentes de replicación. Creará distintas cuentas de Windows en el servidor local para los siguientes agentes:  
   
 |Agente|Location|Nombre de cuenta|  
 |-----------|--------------|------------------|  
-|Agente de instantáneas|Publisher|\<*nombreDeEquipo*>\repl_snapshot|  
-|Agente de registro del LOG|Publisher|\<*nombreDeEquipo*>\repl_logreader|  
-|Agente de distribución|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_distribution|  
-|Agente de mezcla|Publicador y suscriptor|\<*nombreDeEquipo*>\repl_merge|  
+|Agente de instantáneas|Publisher|\<*machine_name*>\ repl_snapshot|  
+|Agente de registro del LOG|Publisher|\<*machine_name*>\ repl_logreader|  
+|Agente de distribución|Publicador y suscriptor|\<*machine_name*>\ repl_distribution|  
+|Agente de mezcla|Publicador y suscriptor|\<*machine_name*>\ repl_merge|  
   
 > [!NOTE]  
 >  En los tutoriales de replicación, el publicador y el distribuidor comparten la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El publicador y el suscriptor pueden compartir la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aunque no es necesario. Si el publicador y el suscriptor comparten la misma instancia, no se requieren los pasos que se utilizan para crear las cuentas en el suscriptor.  

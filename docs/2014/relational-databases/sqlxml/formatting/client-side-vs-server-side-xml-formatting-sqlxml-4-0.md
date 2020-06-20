@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b721a2abeaf941cd7169b731b5d1a74e15c4396
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bec00de11d0873577cbb71f9c830b7df2be9e2a6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702882"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996115"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado cliente y Aplicación de formato XML en el servidor (SQLXML 4.0)
   En este tema se describen las diferencias generales que existen entre la aplicación de formato XML del lado cliente y del lado servidor en SQLXML.  
   
 ## <a name="multiple-rowset-queries-not-supported-in-client-side-formatting"></a>En el formato del cliente, no se admiten consultas de varios conjuntos de filas  
- Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere esta plantilla de ejemplo, que tiene dos instrucciones SELECT en un bloque ** \< SQL: query>** :  
+ Cuando la aplicación de formato XML es del lado cliente, no se admiten consultas que generen varios conjuntos de filas. Supongamos, por ejemplo, que tiene un directorio virtual en el que ha especificado que la aplicación formato se realice del lado cliente. Considere esta plantilla de ejemplo, que tiene dos instrucciones SELECT en un **\<sql:query>** bloque:  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -40,7 +39,7 @@ ms.locfileid: "82702882"
 </ROOT>  
 ```  
   
- Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos bloques ** \< SQL: query>** independientes, obtendrá los resultados deseados.  
+ Si ejecuta esta plantilla en el código de la aplicación, se devolverá un error, puesto que el formato XML del lado cliente no admite el formato de varios conjuntos de filas. Si especifica las consultas en dos bloques independientes **\<sql:query>** , obtendrá los resultados deseados.  
   
 ## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>timestamp se asigna de distinto modo cuando la aplicación de formato se realiza en el cliente o en el servidor  
  Cuando la aplicación de formato XML se realiza en el servidor, la columna de base de datos de tipo `timestamp` se asigna al tipo XDR i8 (cuando se ha especificado en la consulta la opción XMLDATA).  

@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd78e5f1e85510ec7a14548280a616a9b32aec55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922440"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959486"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copias de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Copia de seguridad y restauración: interoperabilidad y coexistencia (SQL Server)
   En este tema se describen las consideraciones de copias de seguridad y restauración para varias características de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Entre estas características se incluyen restauración de archivos e inicio de bases de datos, restauración en línea e índices deshabilitados, creación de reflejo de la base de datos, y restauración por etapas e índices de texto completo.  
   
  **En este tema:**  
@@ -48,7 +47,7 @@ ms.locfileid: "62922440"
   
  Si se detecta algún problema durante el inicio de la base de datos, no se puede llevar a cabo la restauración y la base de datos se marca como SUSPECT. Si es posible aislar el problema en un archivo o una serie de archivos, el administrador de la base de datos puede dejar sin conexión los archivos en cuestión e intentar reiniciar la base de datos. Para dejar sin conexión un archivo se puede utilizar la siguiente instrucción [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) :  
   
- ALTER DATABASE *database_name* Modify File (name **= '*`filename`*'** sin conexión)  
+ ALTER DATABASE *database_name* Modify File (name **= ' *`filename`* '** sin conexión)  
   
  En caso de iniciarse correctamente, los grupos de archivos que contengan algún archivo sin conexión seguirán sin conexión.  
   

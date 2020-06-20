@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6682bdb7443ae9ee41bd1a7f77d7b5d5ae4d7359
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 17d2e52175022afd9be34c4200158bfb2ed1ec12
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702303"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013035"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Values for &lt;xsd:simpleType&gt; Declarations (Valores para declaraciones &lt;xsd:simpleType&gt;)
   En la tabla siguiente se presentan las restricciones que se aplican, en función de todas las enumeraciones de tipo simple XSD reconocidas.  
   
- Además, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no admite el uso del valor NaN en declaraciones **\<xsd:simpleType>** . El servidor rechaza los esquemas que incluyen valores NaN.  
+ Además, no [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el valor Nan en **\<xsd:simpleType>** declaraciones. El servidor rechaza los esquemas que incluyen valores NaN.  
   
 |Tipo simple|Limitación|  
 |-----------------|----------------|  

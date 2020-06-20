@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 648449c65d3d6a1fd2c594025e336d0ace7ce98d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 62c87f71ea77a6a6a5b19c2faf913425aed816b8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702433"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059423"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Restricción de atribución de partículas exclusivas
   En XSD, los modelos de contenido complejos están restringidos por la regla de restricción de atribución de partículas exclusivas (UPA). Esta regla requiere que cada elemento de un documento de una instancia se corresponda sin ambigüedades exactamente con una partícula `<xsd:element>` o `<xsd:any>` en el modelo de contenido de su elemento principal. Cualquier esquema que contenga un tipo con un modelo de contenido potencialmente ambiguo se rechaza.  

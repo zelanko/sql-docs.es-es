@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d5a4c697-1342-49fd-8b7b-b059af32556a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4e91d05bf851d425bf61dba0037cee8c48eb5ce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c206dfb30cd3ac2db3ec95f3b6c07bcef8b09f6a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626780"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004572"
 ---
 # <a name="subscription-publisher-to-distributor-history-transactional-subscription"></a>Suscripción, Historial de Publicador a distribuidor (suscripción transaccional)
   La pestaña **Historial de Publicador a distribuidor** muestra información detallada en el Agente de registro del LOG, incluidos el estado, el historial y los mensajes informativos, así como cualquier mensaje de error.  
@@ -25,7 +24,7 @@ ms.locfileid: "62626780"
 ## <a name="options"></a>Opciones  
  Seleccione las sesiones del Agente de registro del LOG que se van a ver en el menú **Ver** y, a continuación, seleccione una sesión específica en la cuadrícula con la etiqueta **Sesiones del Agente de registro del LOG**. En la cuadrícula con la etiqueta **Acciones en la sesión seleccionada**se muestra información detallada de la sesión. Si la sesión seleccionada finalizó con un error, también se muestra el área de texto con la etiqueta **Detalles del error o mensaje de la sesión seleccionada** .  
   
- **Ver**  
+ **Vista**  
  Seleccione las sesiones del Agente de registro del LOG que se van a ver. Normalmente, el Agente de registro del LOG se ejecuta sin interrupción, por lo que es posible que solo haya una sesión para ver.  
   
  **Estado**  
@@ -33,7 +32,7 @@ ms.locfileid: "62626780"
   
 -   Error  
   
--   Completed  
+-   Completado  
   
 -   Intentando de nuevo  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62626780"
  **Hora de finalización**  
  Muestra la hora de finalización de la sesión. Si no se ha detenido el agente, el campo se mostrará vacío.  
   
- **Duration**  
+ **Duración**  
  Período de tiempo durante el que se ha ejecutado el Agente de registro del LOG en esta sesión. El tiempo representa el tiempo transcurrido si el agente se está ejecutando, y el tiempo total de la sesión si la sesión del agente ha finalizado.  
   
  **Mensaje de error**  

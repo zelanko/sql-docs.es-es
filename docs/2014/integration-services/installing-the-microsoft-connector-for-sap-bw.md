@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bfb9023-9597-4f59-9085-4b9057e7702e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e43a45f9b21e631638dec43a8a126b4f007429d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae4c48d26814b606b4be18ae0c0c21c73f8bf6b1
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62767757"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968295"
 ---
 # <a name="installing-the-microsoft-connector-for-11-sap-bw"></a>Instalar Microsoft Connector for 1.1 SAP BW
   Para instalar el [!INCLUDE[msCoName](../includes/msconame-md.md)] conector 1,1 para SAP BW y su documentación, descargue y ejecute el paquete de Windows Installer desde la página web del Feature Pack de SQL Server.  
@@ -32,7 +31,7 @@ ms.locfileid: "62767757"
  Sin embargo, debe copiar el archivo del conector .NET de SAP, librfc32.dll, en la subcarpeta del sistema de la carpeta Windows. (Normalmente, la ubicación de esta carpeta es **C:\Windows\system32**).  
   
 ## <a name="considerations-for-64-bit-computers"></a>Consideraciones para equipos de 64 bits  
- El [!INCLUDE[msCoName](../includes/msconame-md.md)] conector 1,1 para SAP BW es totalmente compatible con la versión de 64 [!INCLUDE[msCoName](../includes/msconame-md.md)] bits de Windows. En un equipo de 64 bits, el [!INCLUDE[msCoName](../includes/msconame-md.md)] conector 1,1 para SAP BW tiene los siguientes requisitos adicionales:  
+ El [!INCLUDE[msCoName](../includes/msconame-md.md)] conector 1,1 para SAP BW es totalmente compatible con la versión de 64 bits de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. En un equipo de 64 bits, el [!INCLUDE[msCoName](../includes/msconame-md.md)] conector 1,1 para SAP BW tiene los siguientes requisitos adicionales:  
   
 -   Para ejecutar paquetes en modo de 64 bits en cualquier sistema operativo Windows de 64 bits, copie la versión de 64 bits del archivo de la GUI de SAP, librfc32.dll, a la carpeta **system32** de la carpeta Windows. (Normalmente, la ubicación de este archivo es **C:\Windows\system32**).  
   

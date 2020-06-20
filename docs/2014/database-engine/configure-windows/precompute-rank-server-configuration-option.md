@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f55ab955-542e-4a4b-be21-deaf1997ad6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6d58db4361acd5a97a58c01d17b1f9a78b20916e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7abceb123d124a265a5e4a8a991cee235c06e75a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62781487"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935143"
 ---
 # <a name="precompute-rank-server-configuration-option"></a>precompute rank (opción de configuración del servidor)
   Esta opción no se implementa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Éste es un cambio importante. Modifique las aplicaciones que actualmente utilizan esta característica lo antes posible.  

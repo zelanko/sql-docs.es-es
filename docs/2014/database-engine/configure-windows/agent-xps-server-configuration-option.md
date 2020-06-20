@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4ed2a24c72765c51e7d05fecaa5ab22c344013b2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4598678cc4dea0a11c37545487ce09529dbb4584
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789026"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935939"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs (opción de configuración del servidor)
   La opción **Agent XPs** habilita los procedimientos almacenados extendidos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en este servidor. Cuando no está habilitada, el nodo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está disponible en el Explorador de objetos de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -51,7 +50,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Tareas de administración automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/sql-server-agent.md)   
+ [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](../../ssms/agent/sql-server-agent.md)   
  [Start, Stop, or Pause the SQL Server Agent Service](../../ssms/agent/start-stop-or-pause-the-sql-server-agent-service.md)  
   
   

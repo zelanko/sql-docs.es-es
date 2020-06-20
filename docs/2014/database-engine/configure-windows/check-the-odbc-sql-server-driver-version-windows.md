@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43451080-a562-4231-b1d4-1ba35ca0ea79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dbb275d8ced2855b1842bba9a1c11e5543d6a838
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cfd1c926add50f10c08fc013779032edd7d47392
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62786664"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935850"
 ---
 # <a name="check-the-odbc-sql-server-driver-version-windows"></a>Comprobar la versión del controlador ODBC de SQL Server (Windows)
   Su equipo puede contener varios controladores ODBC, de [!INCLUDE[msCoName](../../includes/msconame-md.md)] y de otras empresas. En este tema se describe cómo usar el **Administrador de orígenes de datos ODBC** de Windows para comprobar la versión de los controladores ODBC instalados.  

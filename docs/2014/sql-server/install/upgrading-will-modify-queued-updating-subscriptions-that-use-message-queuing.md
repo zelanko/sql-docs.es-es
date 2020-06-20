@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 97944de3-fbad-4db1-939a-dcd550bf5893
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1c723050f9e860534c5298df9a487337e319ff91
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d44cbad43d75634cbf8660110cc879522265c54d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091410"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058855"
 ---
 # <a name="upgrading-will-modify-queued-updating-subscriptions-that-use-message-queuing"></a>Con la actualización, se modificarán las suscripciones de actualización en cola que utilicen Message Queue Server
   El Asesor de actualizaciones ha detectado que podría tener una o más suscripciones de actualización en cola que utilizan [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server (también conocido como MSMQ). La replicación ya no admite Message Queue Server, por lo que las suscripciones se modificarán de forma que usen una cola de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

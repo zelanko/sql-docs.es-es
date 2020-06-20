@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: dd30560d-9e16-47c7-ba68-a9743a657e4e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a2b811955839eb22e3325d64c55454b92a6b1b8c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bff1834ddf1b8f90787a47a8fd58a240d2b715d5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952444"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059224"
 ---
 # <a name="isapi-filters-detected-on-the-report-server-site-upgrade-advisor"></a>Se han detectado filtros ISAPI en el sitio del servidor de informes (Asesor de actualizaciones)
-  El Asesor de actualizaciones ha detectado uno o más filtros ISAPI en el sitio web que hospeda los directorios virtuales del Administrador de informes y del servidor de informes. Los Filtros ISAPI no se admiten en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+  El Asesor de actualizaciones ha detectado uno o más filtros ISAPI en el sitio web que hospeda los directorios virtuales del Administrador de informes y del servidor de informes. Los Filtros ISAPI no se admiten en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ||  
 |-|  

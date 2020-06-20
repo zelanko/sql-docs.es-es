@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03481034-dc91-4488-ab24-ba44243e2690
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d7dceef4651804dabf4080d6f8b85d0597b1957b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 45d02cbb57459a4c1c11330446021c32dc897353
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919618"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953847"
 ---
 # <a name="dropping-an-assembly"></a>Quitar un ensamblado
   Es posible eliminar o quitar ensamblados registrados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante la instrucción CREATE ASSEMBLY cuando la funcionalidad que proporcionan ya no se necesita. Cuando se quita un ensamblado se quita el propio ensamblado y todos sus archivos asociados, como los archivos de depuración, de la base de datos. Para quitar un ensamblado, use la instrucción DROP ASSEMBLY con la sintaxis siguiente:  

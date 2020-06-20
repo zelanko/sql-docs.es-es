@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3ab1d101-7ae0-488f-9b57-468e2517b737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1114ed9e206c49a5993028e180ed70bbb7bf1747
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010937"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003769"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
   En este tema se describe cómo establecer la cuenta de servicio para el servicio Selector del demonio de filtro de texto completo de SQL Server (MSSQLFDLauncher) mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La búsqueda de texto completo ssNoVersion usa el servicio Selector de demonio de filtro de texto completo de SQL para iniciar el proceso de host de demonio de filtro, que administra las operaciones de filtrado y separación de palabras de la búsqueda de texto completo. Este servicio debe estar ejecutándose para poder utilizar la búsqueda de texto completo.  
@@ -32,7 +31,7 @@ ms.locfileid: "66010937"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
-2.  En **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server**, haga clic con el botón secundario en **selector de demonio de filtro de texto completo de SQL*`instance name`*()** y, a continuación, haga clic en **propiedades**.  
+2.  En **Administrador de configuración de SQL Server**, haga clic en **servicios de SQL Server**, haga clic con el botón secundario en **selector de demonio de filtro de texto completo de SQL ( *`instance name`* )** y, a continuación, haga clic en **propiedades**.  
   
 3.  Haga clic en la pestaña **Iniciar sesión** del cuadro de diálogo y luego seleccione o escriba la cuenta en la que se va a ejecutar cada proceso creado por el servicio Selector de demonio de filtro de texto completo de SQL.  
   

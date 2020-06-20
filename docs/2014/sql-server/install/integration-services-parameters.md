@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b1bb3ea3-8097-4e76-b9c2-78a0f46a23bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 76a5ebe7018fdc58f02a4d2454d40f172c752c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66094238"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059271"
 ---
 # <a name="integration-services-parameters"></a>Parámetros de Integration Services
-  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], puede decidir analizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes en el equipo o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] empaquetar archivos en el sistema de archivos. Si analiza los archivos en el sistema de archivos, proporcione una ruta de acceso a la carpeta que contiene los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede decidir analizar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] paquetes en el equipo o [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] empaquetar archivos en el sistema de archivos. Si analiza los archivos en el sistema de archivos, proporcione una ruta de acceso a la carpeta que contiene los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Analizar paquetes SSIS en el equipo**  

@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 41b84606-1fa8-4e4b-8f4c-bdc66537c613
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a983d8c4488cf9830a3dd7b63a6ad8d3fe1e5fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e9676f321604516dd369cfffbdf449acc55c25f2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637620"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933186"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>Tipo de datos definido por el usuario (UDT) en cadenas UTF8
   El ejemplo UTF8String para SQL Server muestra la implementación de un tipo de datos definido por el usuario. Este ejemplo muestra la implementación de un tipo de datos definido por el usuario UTF8 que amplía el sistema de tipos de la base de datos para proporcionar almacenamiento para valores de codificación UTF8. Este tipo también implementa código para convertir cadenas Unicode al formato UTF8 y desde este formato.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637620"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

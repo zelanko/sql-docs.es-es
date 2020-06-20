@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2544c0249567e05eb3a3e3d7a297ec45fdedc8d8
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176234"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967305"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configurar el componente de script en el editor de componentes de script
   Antes de escribir código personalizado en el componente de script, tiene que seleccionar el tipo de componente de flujo de datos que quiere crear (origen, transformación o destino) y, después, configurar los metadatos y las propiedades del componente en el **Editor de transformación Script**.
@@ -49,7 +48,7 @@ ms.locfileid: "78176234"
 ### <a name="inputs-columns-page-of-the-script-transformation-editor"></a>Página Columnas de entrada del Editor de Script de transformación
  La página **Columnas de entrada** del **Editor de transformación Script** se muestra para las transformaciones y los destinos, pero no para los orígenes. En esta página, selecciona las columnas de entrada disponibles que desea que estén disponibles en el script personalizado y especifica el acceso de solo lectura o de lectura y escritura a ellas.
 
- En el proyecto de código que se generará en función de estos metadatos, el elemento de proyecto BufferWrapper contiene una clase para cada entrada, y esta clase contiene propiedades de descriptor de acceso con tipo para cada columna de entrada seleccionada. Por ejemplo, si selecciona una columna **CustomerID** de entero y una columna **CustomerName** de cadena de una entrada denominada `CustomerInput`, el elemento de proyecto BufferWrapper contendrá `CustomerInput` una clase que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>y la `CustomerInput` clase expondrá una propiedad de entero denominada **CustomerID** y una propiedad de cadena denominada **customername**. Esta convención hace posible escribir código con comprobación de tipos como el siguiente:
+ En el proyecto de código que se generará en función de estos metadatos, el elemento de proyecto BufferWrapper contiene una clase para cada entrada, y esta clase contiene propiedades de descriptor de acceso con tipo para cada columna de entrada seleccionada. Por ejemplo, si selecciona una columna **CustomerID** de entero y una columna **CustomerName** de cadena de una entrada denominada `CustomerInput` , el elemento de proyecto BufferWrapper contendrá una `CustomerInput` clase que deriva de y <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> la `CustomerInput` clase expondrá una propiedad de entero denominada **CustomerID** y una propiedad de cadena denominada **customername**. Esta convención hace posible escribir código con comprobación de tipos como el siguiente:
 
 ```vb
 Dim currentCustomerID as Integer = CustomerInput.CustomerID
@@ -67,7 +66,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 
 -   Si se usa como destino, el componente de script admite una entrada y no tiene ninguna salida.
 
- En el proyecto de código que se generará en función de estos metadatos, el elemento de proyecto BufferWrapper contiene una clase para cada entrada y salida. Por ejemplo `CustomerOutput`, si crea una salida denominada, el elemento de proyecto BufferWrapper contendrá una `CustomerOutput` clase que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer>y la `CustomerOutput` clase contendrá las propiedades de descriptor de acceso con tipo para cada columna de salida creada.
+ En el proyecto de código que se generará en función de estos metadatos, el elemento de proyecto BufferWrapper contiene una clase para cada entrada y salida. Por ejemplo, si crea una salida denominada `CustomerOutput` , el elemento de proyecto BufferWrapper contendrá una `CustomerOutput` clase que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> y la clase contendrá `CustomerOutput` las propiedades de descriptor de acceso con tipo para cada columna de salida creada.
 
  Solamente puede configurar columnas de salida en la página **Entradas y salidas**. Puede seleccionar columnas de entrada para las transformaciones y los destinos en la página **Columnas de entrada**. Las propiedades de descriptor de acceso con tipo creadas en el elemento de proyecto BufferWrapper serán de solo escritura para las columnas de salida. Las propiedades de descriptor de acceso para las columnas de entrada serán de solo lectura, o de lectura y escritura dependiendo del tipo de uso seleccionado para cada columna en la página **Columnas de entrada**.
 
@@ -82,11 +81,11 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
  La propiedad `SynchronousInputID` solamente tiene un valor distinto de cero en transformaciones con salidas sincrónicas. Si el valor de esta propiedad es cero, significa que la salida es asincrónica. En una salida sincrónica, donde las filas pasan a la salida o salidas seleccionadas sin agregar nuevas filas, esta propiedad debe contener el valor `ID` de la entrada del componente.
 
 > [!NOTE]
->  Cuando el **Editor de script de transformación** crea la primera salida, el editor `SynchronousInputID` establece la propiedad de la salida `ID` en el de la entrada del componente. Sin embargo, cuando el editor crea las salidas subsiguientes, el editor establece las propiedades `SynchronousInputID` de estas salidas en cero.
+>  Cuando el **Editor de script de transformación** crea la primera salida, el editor establece la `SynchronousInputID` propiedad de la salida en el `ID` de la entrada del componente. Sin embargo, cuando el editor crea las salidas subsiguientes, el editor establece las propiedades `SynchronousInputID` de estas salidas en cero.
 > 
->  Si está creando un componente con salidas sincrónicas, cada salida debe tener su `SynchronousInputID` propiedad establecida en el `ID` valor de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor `SynchronousInputID` debe cambiar de cero al valor `ID` de la entrada del componente.
+>  Si está creando un componente con salidas sincrónicas, cada salida debe tener su `SynchronousInputID` propiedad establecida en el valor `ID` de la entrada del componente. Por tanto, en cada salida que el editor crea después de la primera salida, su valor `SynchronousInputID` debe cambiar de cero al valor `ID` de la entrada del componente.
 > 
->  Si crea un componente con salidas asincrónicas, la propiedad `SynchronousInputID` de cada salida debe estar establecida en cero. Por lo tanto, la primera salida debe `SynchronousInputID` tener su valor cambiado `ID` de la entrada del componente a cero.
+>  Si crea un componente con salidas asincrónicas, la propiedad `SynchronousInputID` de cada salida debe estar establecida en cero. Por lo tanto, la primera salida debe tener su `SynchronousInputID` valor cambiado de la `ID` entrada del componente a cero.
 
  Para obtener un ejemplo de dirección de filas a una de las dos salidas sincrónicas del componente de script, consulte [Crear una transformación sincrónica con el componente de script](../../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md).
 

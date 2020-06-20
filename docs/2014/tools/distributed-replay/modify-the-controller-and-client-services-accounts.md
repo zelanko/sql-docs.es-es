@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b5273340ce44cc360c332d926fd89b52988fa76b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62505993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054415"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Modificar las cuentas de servicios de controlador y de cliente
   En este tema, aprenderá a modificar las cuentas de servicio del cliente y Distributed Replay Controller; y, a continuación, volverá a aplicar las listas de control de acceso (ACL).  
@@ -24,7 +23,7 @@ ms.locfileid: "62505993"
   
 1.  En el equipo en el que se instalan los servicios de Distributed Replay, desde el símbolo del sistema, escriba `dcomcnfg`.  
   
-2.  Haga doble clic en **Servicios**, desplácese hacia abajo y haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<nombre de servicio>** y, después, haga clic en **Iniciar** o **Detener**.  
+2.  Haga doble clic en **servicios**, desplácese hacia abajo y haga clic con el botón secundario en ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<service name> **y, a continuación, haga clic en **iniciar** o **detener**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>Para modificar el servicio Distributed Replay Controller  
   
@@ -34,7 +33,7 @@ ms.locfileid: "62505993"
   
 3.  En la ventana **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** , en la pestaña **Iniciar sesión** , seleccione **Esta cuenta**, escriba la nueva cuenta de inicio de sesión o haga clic en **Examinar** para buscarla y, a continuación, haga clic en **Aceptar**.  
   
-     **Importante**: al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
+     **Importante**: Al configurar Distributed Replay Controller, puede especificar una o más cuentas de usuario que se usarán para ejecutar los servicios Distributed Replay Client. La lista siguiente es una relación de las cuentas admitidas:  
   
     -   Cuenta de usuario de dominio  
   

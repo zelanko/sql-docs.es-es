@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4003c60117165e6f12b0ab128a0545d3afca507f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900336"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939543"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Búsqueda aproximada, transformación
   La Transformación Búsqueda aproximada realiza tareas de limpieza de datos como normalizar datos, corregir datos y proporcionar valores que faltan.  
@@ -51,7 +50,7 @@ ms.locfileid: "62900336"
   
  Esta transformación tiene una entrada y una salida.  
   
- Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el tipo de datos `DT_WSTR` DTS en una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no es válido combinar una columna con `DT_WSTR` el tipo de datos en una columna `int` con el tipo de datos.  
+ Para la coincidencia aproximada, solo se pueden utilizar columnas de entrada con tipos de datos `DT_WSTR` y `DT_STR`. Para la búsqueda exacta se puede utilizar cualquier tipo de datos DTS, excepto `DT_TEXT`, `DT_NTEXT`y `DT_IMAGE`. Para obtener más información, vea [Integration Services Data Types](../integration-services-data-types.md). Las columnas que participan en la combinación entre la entrada y la tabla de referencia deben tener tipos de datos compatibles. Por ejemplo, es válido combinar una columna con el `DT_WSTR` tipo de datos DTS en una columna con el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nvarchar` tipo de datos, pero no es válido combinar una columna con el tipo de `DT_WSTR` datos en una columna con el `int` tipo de datos.  
   
  Puede personalizar esta transformación, especificando la cantidad máxima de memoria, el algoritmo de comparación de filas y el almacenamiento en caché de índices y tablas de referencia que utiliza la transformación.  
   
@@ -109,12 +108,12 @@ ms.locfileid: "62900336"
 >  Dado que la opción **Mantener el índice almacenado** requiere la integración con CLR, esta característica solo funciona al seleccionar una tabla de referencia en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] donde se habilite la integración con CLR.  
   
 ## <a name="row-comparison"></a>Comparar filas  
- Al configurar la transformación Búsqueda aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para localizar los registros que coinciden en la tabla de referencia. Si establece la propiedad exhaustiva en `True`, la transformación compara cada fila de la entrada con cada fila de la tabla de referencia. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que la tabla de referencia tenga un número de filas reducido. Si la propiedad exhaustiva está establecida en `True`, toda la tabla de referencia se carga en la memoria. Para evitar problemas de rendimiento, es aconsejable establecer la propiedad exhaustiva en `True` solo durante el desarrollo de paquetes.  
+ Al configurar la transformación Búsqueda aproximada, puede especificar el algoritmo de comparación que utiliza la transformación para localizar los registros que coinciden en la tabla de referencia. Si establece la propiedad exhaustiva en `True` , la transformación compara cada fila de la entrada con cada fila de la tabla de referencia. Este algoritmo de comparación puede producir resultados más exactos, pero es probable que la transformación sea más lenta, a menos que la tabla de referencia tenga un número de filas reducido. Si la propiedad exhaustiva está establecida en `True` , toda la tabla de referencia se carga en la memoria. Para evitar problemas de rendimiento, es aconsejable establecer la propiedad exhaustiva en `True` solo durante el desarrollo de paquetes.  
   
- Si la propiedad exhaustiva está establecida en `False`, la transformación búsqueda aproximada devuelve solo las coincidencias que tienen al menos un token indizado o una subcadena (la subcadena se denomina *q-Gram*) en común con el registro de entrada. Para maximizar la eficacia de las búsquedas, solamente se indiza un subconjunto de los tokens de cada fila de la tabla en la estructura de índice invertido que utiliza la transformación Búsqueda aproximada para localizar coincidencias. Cuando el conjunto de datos de entrada es pequeño, puede establecer `True` exhaustivo en para evitar que falten coincidencias para las que no existen tokens comunes en la tabla de índice.  
+ Si la propiedad exhaustiva está establecida en `False` , la transformación búsqueda aproximada devuelve solo las coincidencias que tienen al menos un token indizado o una subcadena (la subcadena se denomina *q-Gram*) en común con el registro de entrada. Para maximizar la eficacia de las búsquedas, solamente se indiza un subconjunto de los tokens de cada fila de la tabla en la estructura de índice invertido que utiliza la transformación Búsqueda aproximada para localizar coincidencias. Cuando el conjunto de datos de entrada es pequeño, puede establecer exhaustivo en `True` para evitar que falten coincidencias para las que no existen tokens comunes en la tabla de índice.  
   
 ## <a name="caching-of-indexes-and-reference-tables"></a>Almacenar en caché índices y tablas de referencia  
- Al configurar la transformación Búsqueda aproximada, puede especificar si la transformación almacenará parcialmente en caché el índice y la tabla de referencia antes de que la transformación realice su trabajo. Si establece la propiedad WarmCaches en `True`, el índice y la tabla de referencia se cargan en la memoria. Cuando la entrada tiene muchas filas, el establecimiento de la propiedad `True` WarmCaches en puede mejorar el rendimiento de la transformación. Cuando el número de filas de entrada es pequeño, el establecimiento de la `False` propiedad WarmCaches en puede hacer que la reutilización de un índice grande sea más rápida.  
+ Al configurar la transformación Búsqueda aproximada, puede especificar si la transformación almacenará parcialmente en caché el índice y la tabla de referencia antes de que la transformación realice su trabajo. Si establece la propiedad WarmCaches en `True` , el índice y la tabla de referencia se cargan en la memoria. Cuando la entrada tiene muchas filas, el establecimiento de la propiedad WarmCaches en `True` puede mejorar el rendimiento de la transformación. Cuando el número de filas de entrada es pequeño, el establecimiento de la propiedad WarmCaches en `False` puede hacer que la reutilización de un índice grande sea más rápida.  
   
 ## <a name="temporary-tables-and-indexes"></a>Tablas e índices temporales  
  En tiempo de ejecución, la transformación Búsqueda aproximada crea objetos temporales, como tablas e índices, en la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la que se conecta la transformación. El tamaño de estas tablas e índices temporales es proporcional al número de filas y tokens de la tabla de referencia y al número de tokens que crea la transformación Búsqueda aproximada; por lo tanto, podría consumir una cantidad importante de espacio en disco. La transformación también consulta estas tablas temporales. Por lo tanto, debe considerar la posibilidad de conectar la transformación Búsqueda aproximada a una instancia de la base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no sea de producción, en especial si el servidor de producción tiene un espacio en disco disponible limitado.  

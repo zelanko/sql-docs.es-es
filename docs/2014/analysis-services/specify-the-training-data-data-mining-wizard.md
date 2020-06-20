@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: cb04deeb-0f89-4bba-b3f1-efccada16825
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: c3bbeb708cdb0c2882b85d55081446b3dc12b56b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c17dd78c42427027ebbac181b4f42edff082439e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068064"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940266"
 ---
 # <a name="specify-the-training-data-data-mining-wizard"></a>Especificar los datos de entrenamiento (Asistente para minería de datos)
   Utilice la página **Especificar los datos de aprendizaje** para identificar las columnas que se van a incluir en la estructura de minería de datos. Puede seleccionar columnas para que se incluyan en la estructura aunque no las utilice en todos los modelos. Por ejemplo, si desea obtener detalles de las columnas del modelo de minería, puede incluirlas en la estructura pero no en el modelo.  
@@ -33,7 +32,7 @@ ms.locfileid: "66068064"
  **Tablas y columnas**  
  Muestra las tablas y columnas seleccionadas en la página anterior del asistente.  
   
- **\<>casilla**  
+ **\<check box>**  
  Seleccione las columnas que desea incluir en la estructura de minería de datos.  
   
  Si su origen de datos incluye tablas anidadas o vistas múltiples, expanda la lista de columnas para ver las tablas anidadas.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b5153a210c1d276b481cea240e1f28b77751ad4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269a2409d0d8afef81c33700eef028af0c3efd04
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62769511"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967505"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusivo bit a bit) (expresión de SSIS)
   Lleva a cabo una operación OR exclusiva bit a bit entre dos valores enteros. Compara cada bit del primer operando con el bit correspondiente del segundo operando. Si un bit es 0 y el otro bit es 1, el bit de resultado correspondiente se establece en 1. Si ambos bits son 0, o bien si ambos bits son 1, el bit de resultado correspondiente se establece en 0.  

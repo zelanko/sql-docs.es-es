@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0b3689c843fbbe7ad845a45aca6bb962f8f0c75e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61115113b3f710b9853f66e4437783755b886d64
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63061963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85013805"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>Método SetStartMode (clase SqlService)
   Modifica el modo de inicio de la instancia del servicio.  
@@ -62,7 +61,7 @@ StartMode
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de `uint32` que es igual a 0 si se modificó el servicio correctamente o igual a 1 si no se admite la solicitud. Cualquier otro número indica que hubo un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

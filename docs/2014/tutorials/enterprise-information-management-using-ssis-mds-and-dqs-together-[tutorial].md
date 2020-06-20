@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 29ed5816a3a5fc0af6c5a4ac144557933e3e1a5f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 479a5c26ae8ed6322c030459c2432c49834b3683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487724"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006697"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Administración de información empresarial mediante SSIS, MDS y DQS [Tutorial]
   La administración de información en una empresa suele implicar la integración de datos procedentes de la empresa y externos, la limpieza de datos, la búsqueda de coincidencias en los datos para quitar duplicados, la normalización de los datos, el enriquecimiento de los datos, hacer que los datos cumplan los requisitos legales y de cumplimiento, y su almacenamiento posterior en una ubicación centralizada con todas las configuraciones de seguridad necesarias.  
@@ -38,7 +37,7 @@ ms.locfileid: "81487724"
   
  En este tutorial, aprenderá a usar conjuntamente SSIS, MDS y DQS para implementar una solución de ejemplo de Administración de información empresaria (EIM). Primero usará DQS para crear una base de conocimiento que contenga conocimiento sobre los datos de proveedor (metadatos), limpiar los datos de un archivo de Excel con la base de conocimiento, y buscar coincidencias en los datos para identificar y quitar duplicados en los datos. Después usará el complemento MDS para Excel con el fin de cargar los datos limpios y coincidentes en MDS. A continuación, automatizará todo el proceso mediante una solución de SSIS. La solución de SSIS de este tutorial Lee los datos de entrada de un archivo de Excel, pero puede ampliarlos para leer de diversos orígenes como Oracle, Teradata, DB2 y Azure SQL Database.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
   
 1.  Microsoft SQL Server 2012 con los siguientes componentes instalados.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "81487724"
   
 2.  [Configure MDS con el Administrador de configuración de Master Data Services.](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     Use el Administrador de configuración para crear y configurar una base de datos de Master Data Services. Después de crear la base de datos de MDS, cree una aplicación web para MDS en un sitio web ( `http://localhost/MDS`por ejemplo:) y asocie la base de datos de MDS a la aplicación Web de MDS. Tenga en cuenta que, para crear una aplicación web de MDS, debe tener instalado IIS en el equipo. Vea [requisitos de la aplicación web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) y [requisitos de base de datos (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) para obtener más información sobre los requisitos previos para configurar la base de datos y la aplicación Web de MDS.  
+     Use el Administrador de configuración para crear y configurar una base de datos de Master Data Services. Después de crear la base de datos de MDS, cree una aplicación web para MDS en un sitio web (por ejemplo: `http://localhost/MDS` ) y asocie la base de datos de MDS a la aplicación Web de MDS. Tenga en cuenta que, para crear una aplicación web de MDS, debe tener instalado IIS en el equipo. Vea [requisitos de la aplicación web (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) y [requisitos de base de datos (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) para obtener más información sobre los requisitos previos para configurar la base de datos y la aplicación Web de MDS.  
   
 3.  [Instale y configure DQS con el instalador de Data Quality Server](https://msdn.microsoft.com/library/hh231682.aspx). Haga clic en **Inicio**, en **todos los programas**, en **Microsoft SQL Server 2014**, en **Data Quality Services**y, a continuación, en **instalador de Data Quality Server**.  
   
@@ -64,11 +63,11 @@ ms.locfileid: "81487724"
   
 6.  Opta Cree una cuenta con [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Una de las tareas del tutorial requiere tener una cuenta de **Azure Marketplace** (originalmente denominada **Data Market**). Puede omitir esta tarea si lo desea y continuar con la tarea siguiente.  
   
-7.  Descargue el archivo Suppliers. xls del [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=50426).  
+7.  Descargue el archivo de Suppliers.xls desde el [centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS no permite exportar los resultados de la limpieza o de búsqueda de coincidencias a un archivo de Excel si se usa **la versión de 64 bits de Excel**. Se trata de un problema conocido. Para solucionar temporalmente este problema, haga lo siguiente:  
   
-    1.  Ejecute **DQLInstaller. exe-upgrade**. Si instaló la instancia predeterminada de SQL Server, el archivo DQSInstaller.exe está disponible en C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Haga doble clic en el archivo DQSInstaller.exe.  
+    1.  Ejecute **DQLInstaller.exe-upgrade**. Si instaló la instancia predeterminada de SQL Server, el archivo DQSInstaller.exe está disponible en C:\Archivos de programa\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn. Haga doble clic en el archivo DQSInstaller.exe.  
   
     2.  En **Administrador de configuración de Master Data Services**, haga clic en **Seleccionar base de datos**, seleccione base de datos de **MDS** existente y, a continuación, haga clic en **Actualizar**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "81487724"
 |[Lección 4: Almacenamiento de datos de proveedor en MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|En esta lección, cargará los datos de proveedor limpios y coincidentes en Master Data Services (MDS) mediante el **complemento MDS para Excel**.|45|  
 |[Lección 5: Automatización de la limpieza y la búsqueda de coincidencias con SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|En esta lección, creará una solución de SSIS que limpia los datos de entrada con DQS, busca coincidencias en los datos limpios para quitar duplicados, y almacena los datos limpios y coincidentes en MDS de forma automatizada.|75|  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Para comenzar el tutorial, vaya a la primera lección: [Lección 1: crear la base de conocimiento de DQS proveedores](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md).  
   
   

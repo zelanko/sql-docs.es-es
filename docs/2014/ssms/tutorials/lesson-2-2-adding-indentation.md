@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9dce05c1-c52f-455d-8b8d-6f303e242760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1fe1685bf1f56b2b2e7a0feac31ba3a601b0e51b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63222950"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041040"
 ---
 # <a name="adding-indentation"></a>Agregar sangría
   El Editor de consultas permite aplicar sangría a grandes secciones de código en un solo paso y cambiar la extensión de la sangría.  
@@ -52,7 +51,7 @@ ms.locfileid: "63222950"
   
      ![Apariencia del cuadro de diálogo Pestañas](media/tabsdialog.gif "Apariencia del cuadro de diálogo Pestañas")  
   
-3.  Haga clic en **Aceptar**.  
+3.  Haga clic en **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Maximizar el Editor de consultas](lesson-2-3-maximizing-query-editor.md)  

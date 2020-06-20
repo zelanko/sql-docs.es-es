@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b6832840-1c18-4db8-94fc-080db880ae9f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c3427d8ab5956d4f95a42876b21ee309677f933
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211388"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062301"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Propiedades del trabajo y Nuevo trabajo (página General)
   Utilice esta página para ver y modificar las propiedades generales de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente.  
@@ -38,7 +37,7 @@ ms.locfileid: "68211388"
  **Descripción**  
  Cambie la descripción del trabajo.  
   
- **Habilitado**  
+ **Enabled**  
  Habilita el trabajo. Si el trabajo no está habilitado, no se ejecuta como respuesta a una programación o una alerta; sin embargo, puede iniciarlo con el procedimiento almacenado **sp_start_job** .  
   
  **Origen**  

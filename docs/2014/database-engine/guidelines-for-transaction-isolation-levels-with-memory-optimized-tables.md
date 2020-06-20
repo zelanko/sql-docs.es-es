@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 834c5950a8f8b0ddf8854d06c6fb1073a264fc22
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779160"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932896"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instrucciones para los niveles de aislamiento de transacciones con tablas con optimización para memoria
   En muchos casos, debe especificar el nivel de aislamiento de transacción. El aislamiento de transacción para las tablas optimizadas para memoria difiere de las tablas basadas en disco.  
@@ -56,7 +55,7 @@ ms.locfileid: "62779160"
   
  La garantía que proporciona el nivel de aislamiento SNAPSHOT (el menor nivel de aislamiento que se admite en las tablas optimizadas para memoria) incluye las garantías de READ COMMITTED. Cada instrucción de la transacción lee la misma versión coherente de la base de datos. No solo todas las filas leídas por la transacción se confirman en la base de datos, sino que todas las operaciones de lectura ven el conjunto de cambios realizados por el mismo conjunto de transacciones.  
   
- **Directriz**: si solo se requiere la garantía de aislamiento de lectura confirmada, use el aislamiento de instantánea con procedimientos almacenados compilados de forma nativa y [!INCLUDE[tsql](../includes/tsql-md.md)]el acceso a tablas optimizadas para memoria mediante interpretado.  
+ **Directriz**: si solo se requiere la garantía de aislamiento de lectura confirmada, use el aislamiento de instantánea con procedimientos almacenados compilados de forma nativa y el acceso a tablas optimizadas para memoria mediante interpretado [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  En las transacciones de confirmación automática, el nivel de aislamiento READ COMMITTED se asigna implícitamente en SNAPSHOT para las tablas optimizadas para memoria. Por tanto, si la configuración de sesión TRANSACTION ISOLATION LEVEL se establece en READ COMMITTED, no es necesario especificar el nivel de aislamiento mediante una sugerencia de tabla al tener acceso a tablas optimizadas para memoria.  
   

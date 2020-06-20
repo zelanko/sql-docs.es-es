@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1a9b8361c83201fa2e3c6aa0c6a091e09f7c12f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4483facba1a1233dda7f3330f432ef8d3f9c2b5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767497"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968232"
 ---
 # <a name="step-4-testing-the-lesson-2-tutorial-package"></a>Paso 4: Prueba del paquete del tutorial de la lección 2
   Con el contenedor de bucles Foreach y el administrador de conexiones de archivo plano que ha configurado, el paquete de la lección 2 puede iterarse a través de la colección de 14 archivos planos de la carpeta Datos de ejemplo. Cada vez que se encuentra un archivo que coincide con los criterios de nombre de archivo especificados, el contenedor de bucles Foreach rellena la variable definida por el usuario con el nombre de archivo. Esta variable, a su vez, actualiza la propiedad ConnectionString del administrador de conexiones de archivos planos, y se establece una conexión con el archivo plano nuevo. A continuación, el contenedor de bucles Foreach ejecuta la tarea de flujo de datos sin modificar en los datos del nuevo archivo plano antes de establecer conexión con el siguiente archivo de la carpeta.  
@@ -40,7 +39,7 @@ ms.locfileid: "62767497"
   
 1.  En el **Explorador de soluciones**, haga clic con el botón derecho en **Lesson 2.dtsx** y, después, haga clic en **Ejecutar paquete**.  
   
-     El paquete se ejecutará. Puede comprobar el estado de cada bucle en la ventana de salida o haciendo clic en la pestaña **progreso** . Por ejemplo, puede ver que se han agregado 1097 líneas a la tabla de destino desde el archivo Currency_VEB. txt.  
+     El paquete se ejecutará. Puede comprobar el estado de cada bucle en la ventana de salida o haciendo clic en la pestaña **progreso** . Por ejemplo, puede ver que se han agregado 1097 líneas a la tabla de destino desde el archivo Currency_VEB.txt.  
   
 2.  Una vez que se haya completado la ejecución del paquete, en el menú **Depurar** , haga clic en **Detener depuración**.  
   

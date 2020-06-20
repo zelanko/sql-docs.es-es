@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8e9fb2a89aff63a69d7ad8df111d36f2b7ccafdd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63073996"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047178"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] proporciona dos características que realizan el seguimiento de los cambios en los datos de una base de datos: [captura de datos modificados](#Capture) y [seguimiento de cambios](#Tracking). Estas características permiten a las aplicaciones determinar los cambios de DML (operaciones de inserción, actualización y eliminación) que se realizaron en las tablas de usuario de una base de datos. La captura de datos modificados y el seguimiento de cambios pueden habilitarse en la misma base de datos; no se requiere ninguna consideración especial. Para las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la captura de datos modificados y el seguimiento de cambios, vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -65,14 +64,14 @@ ms.locfileid: "63073996"
 ## <a name="feature-differences-between-change-data-capture-and-change-tracking"></a>Diferencias de características entre la captura de datos modificados y el seguimiento de cambios  
  La tabla siguiente enumera las diferencias de características entre la captura de datos modificados y el seguimiento de cambios. El mecanismo de seguimiento de la captura de datos modificados implica una captura asincrónica de los cambios del registro de transacciones para que estén disponibles después de la operación DML. En el seguimiento de cambios, el mecanismo de seguimiento implica el seguimiento sincrónico de los cambios a la vez que las operaciones DML de modo que la información de los cambios esté disponible inmediatamente.  
   
-|Característica|captura de datos modificados|seguimiento de cambios|  
+|Característica|captura de datos modificados|Seguimiento de cambios|  
 |-------------|-------------------------|---------------------|  
 |**Cambios sometidos a seguimiento**|||  
-|Cambios de DML|Sí|Sí|  
+|Cambios de DML|Yes|Yes|  
 |**Información sometida a seguimiento**|||  
 |Datos históricos|Sí|No|  
-|Si la columna cambió|Sí|Sí|  
-|Tipo de DML|Sí|Sí|  
+|Si la columna cambió|Yes|Yes|  
+|Tipo de DML|Sí|Yes|  
   
 ##  <a name="change-data-capture"></a><a name="Capture"></a>Captura de datos modificados  
  La captura de datos modificados proporciona información de los cambios históricos para una tabla de usuario captando tanto el hecho de que se realizaran cambios de DML como los datos reales que se cambiaron. Los cambios se capturan mediante un proceso asincrónico que lee el registro de transacciones y tiene poca repercusión en el sistema.  
@@ -85,7 +84,7 @@ ms.locfileid: "63073996"
  Esta sección describe el modelo de seguridad de la captura de datos modificados.  
   
  **Configuración y administración**  
- Para habilitar o deshabilitar la captura de datos modificados en una base de datos, el autor de la llamada de [Sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sys. sp_cdc_disable_db &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) debe `sysadmin` ser miembro del rol fijo de servidor. Habilitar y deshabilitar la captura de datos modificados en el nivel de tabla requiere que el autor de la llamada de [Sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) y [sys. sp_cdc_disable_table &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sea miembro del rol sysadmin o de un `database db_owner` miembro del rol de base de datos.  
+ Para habilitar o deshabilitar la captura de datos modificados en una base de datos, el autor de la llamada de [Sys. sp_cdc_enable_db &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql) o [sys. sp_cdc_disable_db &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql) debe ser miembro del rol fijo de servidor `sysadmin` . Habilitar y deshabilitar la captura de datos modificados en el nivel de tabla requiere que el autor de la llamada de [Sys. sp_cdc_enable_table &#40;Transact-sql&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql) y [sys. sp_cdc_disable_table &#40;transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql) sea miembro del rol sysadmin o de un miembro del rol de base de datos `database db_owner` .  
   
  El uso de los procedimientos almacenados para admitir la administración de trabajos de captura de datos modificados se restringe a los miembros del rol de servidor `sysadmin` y a los miembros del rol de base de datos `database db_owner`.  
   
@@ -100,11 +99,11 @@ ms.locfileid: "63073996"
   
 |Tipo de columna|Cambios capturados en tablas de cambios|Limitaciones|  
 |--------------------|---------------------------------------|-----------------|  
-|Columnas dispersas|Sí|No admite la captura de cambios cuando se usa un conjunto de columnas.|  
+|Columnas dispersas|Yes|No admite la captura de cambios cuando se usa un conjunto de columnas.|  
 |Columnas calculadas|No|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
-|XML|Sí|No se hace un seguimiento de los cambios realizados en elementos XML individuales.|  
+|XML|Yes|No se hace un seguimiento de los cambios realizados en elementos XML individuales.|  
 |Timestamp|Sí|El tipo de datos de la tabla de cambios se convierte a binario.|  
-|Tipos de datos BLOB|Sí|La imagen anterior de la columna BLOB solo se almacena si se cambia la propia columna.|  
+|Tipos de datos BLOB|Yes|La imagen anterior de la columna BLOB solo se almacena si se cambia la propia columna.|  
   
 ### <a name="change-data-capture-and-other-sql-server-features"></a>Captura de datos modificados y otras características de SQL Server  
  En esta sección se describe cómo interactúan las características siguientes con la captura de datos modificados:  
@@ -115,7 +114,7 @@ ms.locfileid: "63073996"
   
 -   Restauración o asociación de base de datos  
   
-#### <a name="database-mirroring"></a>Creación de reflejo de la base de datos  
+#### <a name="database-mirroring"></a>Reflejo de base de datos  
  Se puede reflejar una base de datos que está habilitada para la captura de datos modificados. Para asegurarse de que la captura y la limpieza se producen automáticamente en el reflejo, siga estos pasos:  
   
 1.  Asegúrese de que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se está ejecutando en el reflejo.  
@@ -125,9 +124,9 @@ ms.locfileid: "63073996"
  Para obtener más información sobre la creación de reflejo de la base de datos, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 #### <a name="transactional-replication"></a>Replicación transaccional  
- La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita por sí [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sola, un `sp_replcmds`trabajo del agente llama a. Cuando ambas características están habilitadas en la misma base de datos, `sp_replcmds`el agente de registro del log llama a. Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para más información, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
+ La captura de datos modificados y la replicación transaccional pueden coexistir en la misma base de datos, pero el rellenado de las tablas de cambios se trata de forma diferente cuando se habilitan ambas características. La captura de datos modificados y la replicación transaccional siempre usan el mismo procedimiento, [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), para leer los cambios del registro de transacciones. Cuando la captura de datos modificados se habilita por sí sola, un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente llama a `sp_replcmds` . Cuando ambas características están habilitadas en la misma base de datos, el Agente de registro del LOG llama a `sp_replcmds` . Este agente rellena las tablas de cambios y las tablas de base de datos de distribución. Para más información, consulte [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
- Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el `sp_replcmds`trabajo de captura llama a. La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
+ Considere un escenario en el que la captura de datos modificados está habilitada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y se habilitan dos tablas para la captura. Para rellenar las tablas de cambios, el trabajo de captura llama a `sp_replcmds` . La base de datos se habilita para la replicación transaccional y se crea una publicación. Ahora, se crea el Agente de registro del LOG para la base de datos y se elimina el trabajo de captura. El Agente de registro del LOG continúa examinando el registro desde el último número de secuencia de registro que se confirmó en la tabla de cambios. De esta forma se asegura de la coherencia de los datos en las tablas de cambios. Si la replicación transaccional está deshabilitada en esta base de datos, se quita el Agente de registro del LOG y vuelve a recrear el trabajo de captura.  
   
 > [!NOTE]  
 >  Cuando el Agente de registro del LOG se utiliza para la captura de datos modificados y la replicación transaccional, los cambios replicados se escriben primero en la base de datos de distribución. A continuación, los cambios capturados se escriben en las tablas de cambios. Ambas operaciones se confirman conjuntamente. Si hay alguna latencia al escribir en la base de datos de distribución, habrá una latencia correspondiente antes de que los cambios aparezcan en las tablas de cambios.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4f8a0080-91ef-4442-83ae-53be2f478c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5f3dffc7661fc5843dcd220f27beb1117a85729
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: beb3492409f24acb881f5461e554fd8a392dc361
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63313772"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040484"
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>Trabajar con datos en el panel Resultados (Visual Database Tools)
   Después de ejecutar una consulta o vista, los resultados se muestran en el panel Resultados. A continuación, puede trabajar con esos resultados. Por ejemplo, puede agregar y eliminar filas, especificar o modificar datos y navegar fácilmente entre conjuntos de resultados de gran tamaño.  
@@ -115,9 +114,9 @@ ms.locfileid: "63313772"
 ### <a name="what-can-not-be-represented-fully"></a>Lo que no puede representarse totalmente  
  Lo que se devuelve al panel Resultados desde la base de datos está controlado en gran medida por el proveedor del origen de datos que se está utilizando. El panel Resultados no siempre puede traducir los datos de todos los sistemas de administración de bases de datos. A continuación, se enumeran algunos de estos casos.  
   
--   Los tipos de datos binarios no suelen resultar útiles para los usuarios que trabajan en el panel Resultados, ya que pueden tardar mucho tiempo en descargarse. Por tanto, se representan mediante * \<datos binarios>* o *null*.  
+-   Los tipos de datos binarios no suelen resultar útiles para los usuarios que trabajan en el panel Resultados, ya que pueden tardar mucho tiempo en descargarse. Se representan mediante *\<Binary data>* o *Null*.  
   
--   La precisión y la escala no siempre pueden conservarse. Por ejemplo, el panel Resultados admite una precisión de 27. Si los datos son de un tipo de datos con una precisión mayor, los datos se pueden truncar o pueden estar representados por * \<no se pueden leer los datos>*.  
+-   La precisión y la escala no siempre pueden conservarse. Por ejemplo, el panel Resultados admite una precisión de 27. Si los datos son de un tipo con una precisión mayor, éstos se pueden truncar o representarse mediante *\<Unable to read data>* .  
   
 ## <a name="see-also"></a>Consulte también  
  [Realizar operaciones básicas con consultas &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)   

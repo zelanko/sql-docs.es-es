@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a0539190-a0cd-4d05-97a4-659d9f949952
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43515168927f8b298bf7a0a04a0985bb988363fb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dbe4e2bc4bd4f28dda132ec2c4f92a3b4dd6e90
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093406"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041987"
 ---
 # <a name="prepare-image-progress"></a>Progreso de preparación de imagen
   Use la página **Progreso de preparación de imagen** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para supervisar el estado de la instalación de la preparación de imagen de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al completarse este paso, esta página enumera el estado de cada característica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] preparada durante este proceso.  

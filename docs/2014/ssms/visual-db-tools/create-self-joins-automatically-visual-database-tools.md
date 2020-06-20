@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9ec90e8-3aad-415c-a5c4-8dfa9540e37f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6910f75a9b3b218311a912be1644a1dd91de96c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4a428a44d33b5990e849772b43841df472ca7f6c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058075"
 ---
 # <a name="create-self-joins-automatically-visual-database-tools"></a>Crear autocombinaciones de forma automática (Visual Database Tools)
   Si una tabla tiene una relación reflexiva en la base de datos, puede combinarla consigo misma automáticamente.  

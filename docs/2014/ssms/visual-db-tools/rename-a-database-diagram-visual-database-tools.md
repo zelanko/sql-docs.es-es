@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 27c90b54-cc21-4f2f-a529-eacdc41f302e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f177f8b2c399be020817ccc4228c58f11976512
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 374ca1c0b12c968a1beebd86e742263982dfa470
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63228357"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040772"
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>Cambiar el nombre de un diagrama de base de datos (Visual Database Tools)
   Puede cambiar el nombre de un diagrama de base de datos en el Explorador de objetos. Requiere el permiso ALTER en la base de datos.  

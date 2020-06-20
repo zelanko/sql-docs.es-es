@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3fd058eb14b45fe9f5aaaea4e9e37c8741c19d6f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970291"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
   Puede eliminar una aplicación de capa de datos mediante el Asistente para eliminar aplicación de capa de datos o un script de Windows PowerShell. Puede especificar si la base de datos asociada se conserva, se separa o se quita.  
@@ -101,7 +100,7 @@ ms.locfileid: "72782742"
   
  Los archivos de registro y de datos de la base de datos se eliminan de forma permanente.  
   
- Anterior: vuelve a la página **Introducción** . ** \< **  
+ ** \< Anterior** : vuelve a la página **Introducción** .  
   
  **Siguiente >**: avanza a la página **Resumen**.  
   
@@ -112,7 +111,7 @@ ms.locfileid: "72782742"
   
  **Revisar opciones seleccionadas** : revise la DAC, la base de datos y el método de eliminación mostrados en el cuadro. Si la información es correcta, seleccione **Siguiente** o **Finalizar** para eliminar la DAC. Si la información de la base de datos y la DAC no es correcta, seleccione **Cancelar** y seleccione la DAC correcta. Si el método de eliminación no es correcto, seleccione **Anterior** para volver a la página **Elegir método** y seleccione un método diferente.  
   
- Anterior: vuelve a la página **elegir método** para elegir otro método de eliminación. ** \< **  
+ ** \< Anterior** : vuelve a la página **elegir método** para elegir otro método de eliminación.  
   
  **Siguiente >**: elimina la instancia de DAC mediante el método elegido en la página anterior y avanza a la página **Eliminar aplicación de capa de datos**.  
   
@@ -223,5 +222,5 @@ $dacName  = "MyApplication"
  [Aplicaciones de capa de datos](data-tier-applications.md)   
  [Implementar una aplicación de capa de datos](deploy-a-data-tier-application.md)   
  [Registrar una base de datos como una DAC](register-a-database-as-a-dac.md)   
- [Copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
+ [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

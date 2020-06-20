@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02d888d3cccabca8618df361e458c7bc706536ab
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482942"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971336"
 ---
 # <a name="create-a-master-data-services-database"></a>Crea una base de datos de Master Data Services
   Cree una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] cuando necesite una base de datos nueva que sea compatible con la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y el servicio web de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
@@ -34,7 +33,7 @@ ms.locfileid: "65482942"
   
 4.  Complete el asistente **Crear base de datos** para crear y configurar la base de datos. Para obtener información sobre las opciones de interfaz de usuario (IU) en el asistente, vea [Asistente Crear base de datos &#40;Administrador de configuración de Master Data Services&#41;](../create-database-wizard-master-data-services-configuration-manager.md).  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Configure los parámetros del sistema para la aplicación web y de base de datos. Para obtener más información, vea [Configuración del sistema &#40;Master Data Services&#41;](../system-settings-master-data-services.md).  
   

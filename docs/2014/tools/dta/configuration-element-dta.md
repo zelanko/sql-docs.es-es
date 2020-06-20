@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1478e56f-57c4-4441-bac9-1ac91453839b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 611417e3b88a174e1be2e838f7a323959a53d595
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150149"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057794"
 ---
 # <a name="configuration-element-dta"></a>Configuration (DTA, elemento)
   Establece una configuración especificada por el usuario compuesta por estructuras de diseño físico existentes e hipotéticas para que el Asistente para la optimización de motor de base de datos la analice al optimizar una carga de trabajo.  
@@ -50,7 +49,7 @@ ms.locfileid: "63150149"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Casos**|Opcional. Se puede utilizar una vez por cada elemento `DTAInput`.|  
+|**Repetición**|Opcional. Se puede utilizar una vez por cada elemento `DTAInput`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

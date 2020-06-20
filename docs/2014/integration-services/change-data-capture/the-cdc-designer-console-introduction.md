@@ -9,19 +9,18 @@ ms.topic: conceptual
 ms.assetid: 45298179-4ac1-4723-8b3c-56f5926be40a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8a2ab8f20002188684b09fbd574b1cfe5e26feba
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62834660"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84922306"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
   En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity.  
   
 ## <a name="installation"></a>Instalación  
- En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola de CDC Designer, ejecute manualmente **AttunityOracleCdcDesigner. msi** desde los medios de instalación de SQL Server.  Los paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle\\ ** en los medios de instalación de SQL Server.  
+ En esta sección se describen los procedimientos de instalación del Diseñador de captura de datos modificados para Oracle de Attunity. Para instalar la consola de CDC Designer, ejecute manualmente **AttunityOracleCdcDesigner.msi** desde el disco de instalación de SQL Server.  Los paquetes de instalación para x86 y x64 se encuentran en **.\Tools\AttunityCDCOracle \\ ** en los medios de instalación de SQL Server.  
   
 ## <a name="supported-windows-environments"></a>Entornos de Windows admitidos  
  La Consola del diseñador CDC se puede ejecutar en los entornos de Windows siguientes:  
@@ -30,7 +29,7 @@ ms.locfileid: "62834660"
   
 -   Windows 7 de 32 bits (x86) y 64 bits (x64)  
   
--   Windows Server 2008 R2  
+-   Windows Server 2008 R2  
   
 -   Windows Server 2008 de 32 bits (x86) y 64 bits (x64) con Service Pack 2  
   

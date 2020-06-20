@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ba1e5eddfdcffa5fbefdea323f110ba9d15ca8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667892"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005823"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
   En este tema se describe cómo medir la latencia y validar conexiones para la replicación transaccional en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante el Monitor de replicación, [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). La replicación transaccional proporciona la característica de testigo de seguimiento, que ofrece una forma cómoda de medir la latencia en topologías de replicación transaccional y validar las conexiones entre el publicador, el distribuidor y los suscriptores. Se escribe un token (una pequeña cantidad de datos) en el registro de transacción de la base de datos de publicaciones, marcado como si fuese una transacción replicada, y se envía a través del sistema, de forma que permite calcular:  
@@ -55,15 +54,15 @@ ms.locfileid: "62667892"
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
  Los testigos de seguimiento también pueden ser útiles al detener el sistema, lo que implica detener todas las actividades y comprobar que todos los nodos han recibido todos los cambios pendientes. Para más información, vea [Poner en modo inactivo una topología de replicación &#40;programación de la replicación con Transact-SQL&#41;](../administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
- Para usar testigos de seguimiento, debe utilizar ciertas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
+ Para usar testigos de seguimiento, debe utilizar ciertas versiones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
 -   El distribuidor debe ser [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior.  
   
 -   El publicador debe ser de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior, o un publicador de Oracle.  
   
--   En el caso de las suscripciones de extracción, las estadísticas del token de seguimiento se recopilan desde el publicador, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el distribuidor y los suscriptores, si el suscriptor es 7,0 o posterior.  
+-   En el caso de las suscripciones de extracción, las estadísticas del token de seguimiento se recopilan desde el publicador, el distribuidor y los suscriptores, si el suscriptor es [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 o posterior.  
   
--   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], las estadísticas solo se recopilan desde el publicador y el distribuidor.  
+-   Para las suscripciones de extracción, las estadísticas del token de seguimiento se obtienen solo de los suscriptores, si el suscriptor es de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior. Si el suscriptor es [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 7,0 o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] , las estadísticas solo se recopilan desde el publicador y el distribuidor.  
   
  También hay que tener en cuenta otros problemas y restricciones:  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62667892"
   
 2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Compruebe que la suscripción existe y que el estado está activo.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) y especifique **@publication**. Anote el valor del parámetro **@tracer_token_id** de salida.  
+3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) y especifique **@publication**. Anote el valor del **@tracer_token_id** parámetro de salida.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para medir la latencia y validar las conexiones de una replicación transaccional  
   
@@ -127,7 +126,7 @@ ms.locfileid: "62667892"
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo expone un registro de token de seguimiento y utiliza el Id. devuelto del token de seguimiento expuesto para ver información de la latencia.  
   
  [!code-sql[HowTo#sp_tracertokens](../../../snippets/tsql/SQL15/replication/howto/tsql/createtracertokens.sql#sp_tracertokens)]  
@@ -144,7 +143,7 @@ ms.locfileid: "62667892"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades de publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A> . Este método inserta un token de seguimiento en el registro de transacciones de la publicación.  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.TransPublication.PostTracerToken%2A>. Este método inserta un token de seguimiento en el registro de transacciones de la publicación.  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para medir la latencia y validar las conexiones de una replicación transaccional  
   
@@ -156,9 +155,9 @@ ms.locfileid: "62667892"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades del monitor de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> . Pase un valor de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para un token de seguimiento del paso 5. Esto devuelve información de latencia del token de seguimiento seleccionado como objeto <xref:System.Data.DataSet> . Si se devuelve toda la información del token de seguimiento, la conexión entre el publicador y el distribuidor y la conexión entre el distribuidor y el suscriptor existen, y la topología de replicación está funcionando.  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A>. Pase un valor de <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para un token de seguimiento del paso 5. Esto devuelve información de latencia del token de seguimiento seleccionado como objeto <xref:System.Data.DataSet> . Si se devuelve toda la información del token de seguimiento, la conexión entre el publicador y el distribuidor y la conexión entre el distribuidor y el suscriptor existen, y la topología de replicación está funcionando.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para quitar los testigos de seguimiento  
   
@@ -170,9 +169,9 @@ ms.locfileid: "62667892"
   
 4.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve `false`, significa que las propiedades del monitor de la publicación del paso 3 se definieron incorrectamente, o bien que la publicación no existe.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> . Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
+5.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A>. Convierta el objeto <xref:System.Collections.ArrayList> devuelto a una matriz de objetos <xref:Microsoft.SqlServer.Replication.TracerToken> .  
   
-6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> . Pase uno de los siguientes valores:  
+6.  Llame al método <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A>. Pase uno de los siguientes valores:  
   
     -   El <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> para un token de seguimiento del paso 5. Esto elimina información de un token seleccionado.  
   

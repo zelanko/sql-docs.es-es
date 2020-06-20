@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7a762dac6850f6d1c8079a10f60a3138cdcc9be5
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c5f267db5449741fa1e70b4a4d51b33be45178af
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702386"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046465"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Usar consultas FOR XML anidadas en ASP.NET
   En este ejemplo, una aplicación ASP.NET devuelve XML a un explorador ejecutando un procedimiento almacenado en SQL Server. El procedimiento almacenado genera XML mediante consultas anidadas. Se muestra una instrucción SELECT similar en el tema [Generar elementos del mismo nivel con una consulta en modo AUTO anidada](generate-siblings-with-a-nested-auto-mode-query.md). Este ejemplo muestra una manera de usar consultas FOR XML anidadas para generar XML centrado en elementos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

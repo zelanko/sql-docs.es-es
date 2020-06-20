@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 607ac55fe426cd086ce31ade33d3e772e7a3d9a9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9a04e5595e509de63b362b31b240e113e635581d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487158"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063168"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Jerarquía de permisos (motor de base de datos)
   El [!INCLUDE[ssDE](../../../includes/ssde-md.md)] administra un conjunto jerárquico de entidades que se pueden proteger mediante permisos. Estas entidades se conocen como *elementos protegibles*. Los protegibles más prominentes son los servidores y las bases de datos, pero los permisos discretos se pueden establecer en un nivel mucho más específico. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] regula las acciones de las entidades de seguridad en los elementos protegibles comprobando que se les ha concedido los permisos adecuados.
@@ -34,7 +33,7 @@ ms.locfileid: "81487158"
  ![Diagrama de jerarquías de permisos del motor de base de datos](../../database-engine/media/wj-security-layers.gif "Diagrama de jerarquías de permisos del motor de base de datos")
 
 ## <a name="chart-of-sql-server-permissions"></a>Gráfico de los permisos de SQL Server
- Para obtener un gráfico con el tamaño [!INCLUDE[ssDE](../../../includes/ssde-md.md)] de un póster de todos los [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)permisos en formato PDF, vea.
+ Para obtener un gráfico con el tamaño de un póster de todos los [!INCLUDE[ssDE](../../../includes/ssde-md.md)] permisos en formato PDF, vea [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf) .
 
 ## <a name="working-with-permissions"></a>Trabajar con permisos
  Los permisos se pueden manipular con las conocidas consultas GRANT, DENY y REVOKE de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La información sobre los permisos está visible en las vistas de catálogo [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) y [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) . También hay información sobre la compatibilidad con permisos para consultas mediante el uso de las funciones integradas.

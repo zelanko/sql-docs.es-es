@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 266c127a8ef38a1a5701de24f9442861e604d84d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d60474b5d72ab9745500325dfd523f83f155343c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875633"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956849"
 ---
 # <a name="restore-database-options-page"></a>Restaurar base de datos (página Opciones)
   Utilice la página **Opciones** del cuadro de diálogo **Restaurar base de datos** para modificar el comportamiento y el resultado de la operación de restauración.  

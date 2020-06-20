@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: c2c96b4f-eb10-4d8b-be34-88edfd0785fb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b9e114802c6e69467ba9438ee4c525ef85e73024
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059054"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966845"
 ---
 # <a name="execute-package-task-editor"></a>Editor de la tarea Ejecutar paquete
   Utilice el Editor de la tarea Ejecutar paquete para configurar la tarea Ejecutar paquete. La tarea Ejecutar paquete amplía las capacidades empresariales de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , ya que permite que los paquetes ejecuten otros paquetes como parte de un flujo de trabajo.  
@@ -61,7 +60,7 @@ ms.locfileid: "66059054"
  Si el paquete secundario está protegido con contraseña, tiene que proporcionar esta contraseña o hacer clic en el botón de puntos suspensivos (…) y crear una contraseña.  
   
  `ExecuteOutOfProcess`  
- Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea ejecutar paquete se establece `False`en y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `true`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si se establece la propiedad en `true`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obtener más información, vea [instalar Integration Services](install-windows/install-integration-services.md).  
+ Especifique si el paquete secundario se ejecuta en el proceso del paquete primario o en un proceso independiente. De forma predeterminada, la propiedad ExecuteOutOfProcess de la tarea ejecutar paquete se establece en `False` y el paquete secundario se ejecuta en el mismo proceso que el paquete primario. Si establece esta propiedad en `true`, el paquete secundario se ejecuta en un proceso independiente. Esto puede ralentizar el inicio del paquete secundario. Además, si se establece la propiedad en `true`, no se podrá depurar el paquete si realizó únicamente una instalación de herramientas; deberá instalar el producto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Para obtener más información, vea [instalar Integration Services](install-windows/install-integration-services.md).  
   
 ### <a name="referencetype-dynamic-options"></a>Opciones dinámicas de ReferenceType  
   
@@ -88,7 +87,7 @@ ms.locfileid: "66059054"
   
 #### <a name="location--sql-server"></a>Ubicación = SQL Server  
  **Connection**  
- Seleccione un administrador de conexiones OLE DB de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de OLE DB de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Configurar el administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -97,7 +96,7 @@ ms.locfileid: "66059054"
   
 #### <a name="location--file-system"></a>Ubicación = Sistema de archivos  
  **Connection**  
- Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -118,7 +117,7 @@ ms.locfileid: "66059054"
  **Add (Agregar)**  
  Haga clic para asignar un parámetro o variable a un parámetro de paquete secundario.  
   
- **Remove**  
+ **Quitar**  
  Haga clic para quitar una asignación entre un parámetro o variable y un parámetro de paquete secundario.  
   
   

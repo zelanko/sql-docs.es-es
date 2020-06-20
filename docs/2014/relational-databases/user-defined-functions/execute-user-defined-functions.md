@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0de7744d-9b73-463f-ae80-e31a020004b5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e9c170a187fc3ccf28301a2ee1c9ee7b626169f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4446f3b3a132488fdac6e859f30abaca40a193d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196445"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055009"
 ---
 # <a name="execute-user-defined-functions"></a>Ejecutar funciones definidas por el usuario
   Puede ejecutar una función definida por el usuario en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -43,7 +42,7 @@ ms.locfileid: "68196445"
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
- No se requieren permisos para ejecutar la instrucción EXECUTE. Sin embargo, se requieren permisos para los elementos protegibles a los que se hace referencia en la cadena EXECUTE. Por ejemplo, si la cadena contiene una instrucción INSERT, el autor de llamada de la instrucción EXECUTE debe tener el permiso INSERT en la tabla de destino. Los permisos se comprueban cuando se encuentra la instrucción EXECUTE, incluso si la instrucción EXECUTE está incluida en un módulo. Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
+ No se requieren permisos para ejecutar la instrucción EXECUTE. Sin embargo, se requieren permisos para los elementos protegibles a los que se hace referencia en la cadena EXECUTE. Por ejemplo, si la cadena contiene una instrucción INSERT, el autor de llamada de la instrucción EXECUTE debe tener el permiso INSERT en la tabla de destino. Los permisos se comprueban cuando se encuentra la instrucción EXECUTE, incluso si la instrucción EXECUTE está incluida en un módulo. Para obtener más información, vea [execute &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql)  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -69,6 +68,6 @@ ms.locfileid: "68196445"
     PRINT @ret;  
     ```  
   
- Para obtener más información, vea [execute &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
+ Para obtener más información, vea [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
   

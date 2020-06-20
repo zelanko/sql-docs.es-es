@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8cd3a270-0328-4bfd-bf23-b1d759cc120c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 108954dd920c215a16385d7e07b4212102b50369
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005668"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Supervisar la replicación con el Monitor de sistema
   El Monitor de sistema de[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows le permite utilizar gráficos, diagramas e informes para medir la eficacia del equipo, identificar y solucionar posibles problemas (como el uso desequilibrado de recursos, hardware insuficiente o diseño deficiente de programas), y planear necesidades de hardware adicionales. Para obtener más información, vea [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 95b657064f36045dfd0d916c24097b81c0e44867
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2b5df47d05730b8f6ec6a82045686d462ace1682
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718852"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025560"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
   Las tablas con optimización para memoria y los procedimientos almacenados compilados de forma nativa no admiten el área expuesta completa de [!INCLUDE[tsql](../../includes/tsql-md.md)]; sin embargo, las tablas basadas en disco y los procedimientos almacenados interpretados de [!INCLUDE[tsql](../../includes/tsql-md.md)] sí la admiten. Cuando se intenta usar una de las características no admitidas, el servidor devuelve un error.  
@@ -180,7 +179,7 @@ ms.locfileid: "82718852"
 |Aggregate, función|*Función de agregado*|Esta la cláusula no se admite. Para obtener más información acerca de las funciones de agregado en los procedimientos almacenados compilados de forma nativa, vea [Natively Compiled Stored Procedures](../in-memory-oltp/natively-compiled-stored-procedures.md).|  
 |Función de categoría|*Función de categoría*|Los procedimientos almacenados compilados de forma nativa no admiten funciones de categoría. Quítelas de la definición de procedimiento.|  
 |Función|*Function*|Esta función no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
-|.|*Privacidad*|Esta instrucción no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
+|.|*.*|Esta instrucción no se admite. Quítela del procedimiento almacenado compilado de forma nativa.|  
 |Característica|MIN y MAX utilizados con las cadenas de caracteres y binarias|En los procedimientos almacenados compilados de forma nativa no se pueden usar las funciones de agregado `MIN` y `MAX` con valores de cadenas de caracteres y binarias.|  
 |Característica|GROUP BY sin función de agregado|En los procedimientos almacenados compilados de forma nativa, cuando una consulta tiene una cláusula `GROUP BY`, la consulta también debe usar una función de agregado en la cláusula SELECT o HAVING. Agregue una función de agregado a la consulta.|  
 |Característica|GROUP BY ALL|En los procedimientos almacenados compilados de forma nativa, ALL no se puede utilizar con cláusulas GROUP BY. Quite ALL de la cláusula GROUP BY.|  

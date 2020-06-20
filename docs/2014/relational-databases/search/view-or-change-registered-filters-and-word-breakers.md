@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 97bf5b2f1838531c305cf663d050201d5f34ce82
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79ad7f1f7df15fed21a132bbe253adc7185d8c06
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010929"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055478"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>Ver o cambiar los filtros y separadores de palabras registrados
   Después de instalar o desinstalar filtros o separadores de palabras en un sistema, los cambios no se aplican automáticamente en las instancias de servidor. En este tema se describe cómo ver los filtros o separadores de palabras actualmente registrados y cómo registrar filtros y separadores de palabras recién instalados en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

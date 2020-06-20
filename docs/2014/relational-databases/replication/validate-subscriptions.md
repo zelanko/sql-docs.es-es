@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ca39a35-f22c-46c5-82a4-342e34bf5d1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd79fb3d5860847fbd522d7fb200e1138787e19d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a61e8b5417bf8312998b5051c47545b705b44c00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63255235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047520"
 ---
 # <a name="validate-subscriptions"></a>Validar suscripciones
   Utilice el cuadro de diálogo **Validar suscripciones** para especificar que las suscripciones a una publicación transaccional se deben validar la próxima vez que se ejecute el Agente de distribución para cada suscripción. El resultado de la validación se muestra en el Monitor de replicación. Para más información, consulte [Validate Data at the Subscriber](validate-data-at-the-subscriber.md).  

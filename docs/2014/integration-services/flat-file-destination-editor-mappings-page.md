@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7f91b32a292975ec19b21dbd855f6c5c182738aa
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058679"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966455"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de destino de archivos planos (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de archivos planos** para asignar columnas de entrada a columnas de destino.  
@@ -34,7 +33,7 @@ ms.locfileid: "66058679"
  Muestra la lista de columnas de destino disponibles. Utilice una operación de arrastrar y colocar para asignar columnas de destino disponibles a columnas de entrada.  
   
  **Columna de entrada**  
- Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione ** \<omitir>** para excluir la columna de la salida.  
+ Muestra las columnas de entrada seleccionadas anteriormente en este tema. Puede cambiar las asignaciones utilizando la lista de **Columnas de entrada disponibles**. Seleccione esta **\<ignore>** información para excluir la columna de la salida.  
   
  **Columna de destino**  
  Muestra las columnas de destino disponibles, independientemente de si están asignadas o no.  

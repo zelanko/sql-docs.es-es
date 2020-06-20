@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b875808a5a9379f917b246cb871420a339519f7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 65e6e794c5858a68c4b2a9b298513911b487cf52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718803"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025733"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
   Este tema contiene una lista de características admitidas para los procedimientos almacenados compilados de forma nativa ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -66,7 +65,7 @@ ms.locfileid: "82718803"
 ##  <a name="supported-operators"></a><a name="so"></a>Operadores admitidos  
  Se admiten los siguientes operadores.  
   
--   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo, >, \< , >= y <=) se admiten en los condicionales (si, while).  
+-   Los [operadores de comparación &#40;&#41;de Transact-SQL](/sql/t-sql/language-elements/comparison-operators-transact-sql) (por ejemplo, >, \<, > = y <=) se admiten en los condicionales (si, while).  
   
 -   Operadores unarios (+, -).  
   
@@ -112,7 +111,7 @@ ms.locfileid: "82718803"
   
 -   Predicado de filtro IS [NOT] NULL  
   
--   Desde la \< tabla con optimización para memoria>  
+-   FROM \<memory optimized table>  
   
 -   Se admite [GROUP BY &#40;&#41;de Transact-SQL](/sql/t-sql/queries/select-group-by-transact-sql) , junto con las funciones de agregado AVG, COUNT, COUNT_BIG, min, Max y sum. MIN o MAX no se admiten para los tipos nvarchar, char, varchar, varchar, varbinary y binary. La [cláusula order by &#40;Transact-sql&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) es compatible con [Group by &#40;transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql) si una expresión de la lista order by aparece literalmente en la lista Group by. Por ejemplo, se admite GROUP BY a + b ORDER BY a + b pero no GROUP BY a, b ORDER BY a + b.  
   
@@ -172,7 +171,7 @@ ms.locfileid: "82718803"
 ##  <a name="limitations-on-sorting"></a><a name="los"></a>Limitaciones de la ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento *\<<nombreDeProcedimiento>*, línea *\<númeroDeLínea>* El operador TOP puede devolver un máximo de 8192 filas; el número solicitado es *\<número>*.**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Msg 41398, nivel 16, estado 1, procedimiento *\<procedureName>* , línea *\<lineNumber>* el operador Top puede devolver un máximo de 8192 filas; *\<number>* se solicitó.**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   

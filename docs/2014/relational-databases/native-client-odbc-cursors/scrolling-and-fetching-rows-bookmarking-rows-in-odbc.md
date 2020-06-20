@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9cfcd243-c9d4-4c2a-abc4-399dbabe5f6b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6489fcee1a8faa3f1205c8418e329182c41e376c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: def05f478c16dcbcdc91771925a11b0b91da2e9e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705555"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020536"
 ---
 # <a name="bookmarking-rows-in-odbc"></a>Marcar filas en ODBC
   Un marcador es un valor utilizado para identificar una fila de datos. El significado del valor de marcador solamente lo conocen el controlador u origen de datos. Por ejemplo, podría ser tan simple como un número de fila o tan complejo como una dirección de disco. En ODBC, la aplicación solicita un marcador para una fila determinada, lo almacena y lo pasa de vuelta al cursor para volver a la fila.  

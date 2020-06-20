@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d94adfd-3ba1-493a-b29a-b436f9d583df
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 861e24cf64a29d55a01fc9a10300e4174cd76d5f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5dbffb87f58d2beb633f43ff18680222ea62cf5e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62676959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047744"
 ---
 # <a name="verify-max-worker-threads-setting"></a>Comprobar el valor de Máximo de subprocesos de trabajo
   Esta regla comprueba si la opción de servidor Máximo de subprocesos de trabajo tiene valores potencialmente incorrectos. Al establecer la opción Máximo de subprocesos de trabajo en un valor pequeño, puede evitar que suficientes subprocesos atiendan las solicitudes de clientes entrantes de una manera oportuna y podría provocar el "colapso de los subprocesos". Sin embargo, al establecer la opción en un valor grande, puede desperdiciar el espacio de direcciones, porque cada subproceso activo consume 512 KB en los servidores de 32 bits y hasta 4 MB en los servidores de 64 bits.  

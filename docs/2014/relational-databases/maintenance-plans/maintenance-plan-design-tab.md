@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 561c0fc56e1f1749c57876f16c4d24dadfe4931d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184546"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024457"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de mantenimiento (pestaña Diseño)
   Use el **Plan de mantenimiento (pestaña Diseño)** para especificar las propiedades de un plan de mantenimiento y sus subplanes. Arrastre las tareas del cuadro de herramientas al diseñador de planes. Haga clic con el botón secundario en grupos de tareas para crear rutas de ejecución bifurcadas. Los planes de mantenimiento se guardan como paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que se ejecutan mediante trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

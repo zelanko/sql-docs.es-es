@@ -11,27 +11,26 @@ helpviewer_keywords:
 ms.assetid: 944b3968-fd47-4847-98d6-b87e8ef2acdc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ddbc29c1895ad57ad191604fec228109c8c7c55e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3e4c45cf608c78715abd7c5075d4cd7fb2e162a5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698797"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85018385"
 ---
 # <a name="descriptor-fields-for-table-valued-parameter-constituent-columns"></a>Campos de descriptor para columnas de parámetros con valores de tabla
   Los campos de descriptor de parámetros con valores de tabla descritos en esta sección se manipulan mediante [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) y [SQLSetDescField](../native-client-odbc-api/sqlsetdescfield.md) con el identificador del descriptor de parámetros de implementación (IPD).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  SQL_DESC_AUTO_UNIQUE_VALUE se usa para los parámetros con valores de tabla así como otras características.  
   
-|Nombre del atributo|Tipo|Descripción|  
+|Nombre del atributo|Tipo|Description|  
 |--------------------|----------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|SQL_TRUE indica que esta columna es una columna de identidad.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puede usar esta información para optimizar el rendimiento, pero no es necesario que las aplicaciones lo establezcan para las columnas de identidad.|  
   
  Los atributos siguientes se agregan a todos los tipos de parámetro en los campos descriptor de parámetros de la aplicación (APD) y descriptor de parámetro de implementación (IPD):  
   
-|Nombre del atributo|Tipo|Descripción|  
+|Nombre del atributo|Tipo|Description|  
 |--------------------|----------|-----------------|  
 |SQL_CA_SS_COLUMN_COMPUTED|SQLSMALLINT|SQL_TRUE indica que esta columna está calculada.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]puede usar esta información para optimizar el rendimiento, pero no es necesario que las aplicaciones lo establezcan para las columnas calculadas.<br /><br /> Este atributo se pasa por alto en los enlaces que no son columnas de parámetro con valores de tabla.|  
 |SQL_CA_SS_COLUMN_IN_UNIQUE_KEY|SQLSMALLINT|SQL_TRUE indica que una columna de parámetro con valores de tabla participa en una clave única. Esto puede dar lugar a un mejor rendimiento de la consulta. Este atributo se pasa por alto en los enlaces que no son columnas de parámetro con valores de tabla.|  
@@ -41,7 +40,7 @@ ms.locfileid: "82698797"
   
  Estos atributos únicamente son válidos en columnas de parámetro con valores de tabla. Se pasan por alto para otros parámetros.  
   
- Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE está establecido para una columna de parámetro con valores de tabla, SQL_DESC_DATA_PTR para esa columna debe ser un puntero NULL. De lo contrario, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de parámetro predeterminado para el parámetro \< p>, columna \< c>", donde \< p> es el ordinal del parámetro y \< c> es el ordinal de la columna.  
+ Si SQL_CA_SS_COL_HAS_DEFAULT_VALUE está establecido para una columna de parámetro con valores de tabla, SQL_DESC_DATA_PTR para esa columna debe ser un puntero NULL. De lo contrario, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de parámetro predeterminado para \<p> el parámetro, columna \<c> ", donde \<p> es el ordinal del parámetro y \<c> es el ordinal de la columna.  
   
 ## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;ODBC&#41;](table-valued-parameters-odbc.md)  

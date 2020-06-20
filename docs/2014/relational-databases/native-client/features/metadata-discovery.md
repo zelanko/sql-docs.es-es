@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: ec3c0f4f-f838-43ce-85f2-cf2761e2aac5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 50455f67760c920881f9f8daaf42d7abe4037c45
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0397d7f5588be7543f71819c93827819bd8d073f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707280"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047935"
 ---
 # <a name="metadata-discovery"></a>Detección de metadatos
   La mejora de la detección de metadatos en [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] permite que las aplicaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client tengan la seguridad de que los metadatos de parámetro o columna que se devuelven de la ejecución de una consulta son idénticos o compatibles con el formato de los metadatos especificados antes de ejecutar la consulta. Se producirá un error si los metadatos devueltos tras la ejecución de la consulta no son compatibles con el formato de los metadatos especificados antes de la ejecución de la consulta.  

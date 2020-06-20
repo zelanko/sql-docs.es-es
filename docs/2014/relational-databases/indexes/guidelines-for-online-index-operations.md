@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e2f7a25a4a6a4bb6b8f153a8b04b47aeb542265c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 907fe6a826607fe1cb403ad9b8debe6faf6771fc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162485"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025417"
 ---
 # <a name="guidelines-for-online-index-operations"></a>Directrices para operaciones de índices en línea
   Al realizar operaciones de índice en línea se aplican las siguientes directrices:  
   
--   Los índices clúster deben crearse, volver a compilarse o quitarse sin conexión cuando la tabla subyacente contiene los siguientes tipos de datos de objetos `image`grandes (LOB) `text`:, **ntext**y.  
+-   Los índices clúster deben crearse, volver a compilarse o quitarse sin conexión cuando la tabla subyacente contiene los siguientes tipos de datos de objetos grandes (LOB): `image` , **ntext**y `text` .  
   
 -   Los índices de tablas temporales locales no se pueden crear, reconstruir o quitar en línea. Esta restricción no se aplica a los índices de tablas temporales globales.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c3132bd65bb6f3092cc950758d4f346b5c4cd8fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5c154b22d6469df034f4ec7cc6be77b2e7192913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059169"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966825"
 ---
 # <a name="excel-source-editor-connection-manager-page"></a>Editor de origen de Excel (página Administrador de conexiones)
   Utilice el nodo **Administrador de conexiones** del cuadro de diálogo **Editor de origen de Excel** para seleccionar el libro de [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] que utilizará el origen. El origen de Excel lee los datos de una hoja de cálculo o un rango con nombre de un libro existente.  
@@ -46,7 +45,7 @@ ms.locfileid: "66059169"
 |Comando SQL|Recupera datos del archivo Excel mediante una consulta SQL. Para obtener información acerca de la sintaxis de consultas, vea [Excel Source](data-flow/excel-source.md).|  
 |Comando SQL de variable|Especifique el texto de la consulta SQL de una variable.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  Muestra una vista previa de los resultados mediante el cuadro de diálogo **Vista de datos** . La vista previa puede mostrar hasta 200 filas.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Opciones dinámicas del modo de acceso a datos  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 435aa6a89b1b7aafd243efbc6de86bcb8f731346
-ms.sourcegitcommit: 5a9ec5e28543f106bf9e7aa30dd0a726bb750e25
+ms.openlocfilehash: a38cd6e9e4718a2f1c136e5412cde340e92f14c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82925029"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062513"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>Configurar los valores de la propiedad HealthCheckTimeout
   El valor HealthCheckTimeout se emplea para especificar el tiempo, en milisegundos, que la DLL de recursos de SQL Server debe esperar la información devuelta por el procedimiento almacenado [sp_server_diagnostics](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) antes de notificar a la instancia de clúster de conmutación por error (FCI) AlwaysOn que no ha recibido respuesta. Los cambios que se realizan en la configuración del tiempo de espera son vigentes de forma inmediata y no requieren reiniciar el recurso de SQL Server.  

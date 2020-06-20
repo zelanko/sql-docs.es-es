@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6b28468db1024a9789364e5b6e5c115cba71fa9f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62743508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024970"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Crear servidores vinculados (motor de base de datos de SQL Server)
   En este tema se muestra cómo crear un servidor vinculado y tener acceso a los datos desde otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La creación de un servidor vinculado permite trabajar con datos de varios orígenes. El servidor vinculado no necesita ser otra instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sino que es un escenario común.  
@@ -35,7 +34,7 @@ ms.locfileid: "62743508"
 ##  <a name="security"></a><a name="Security"></a> Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Cuando se [!INCLUDE[tsql](../../includes/tsql-md.md)] usan instrucciones, `ALTER ANY LINKED SERVER` requiere el permiso en el servidor o la pertenencia al rol fijo de servidor **setupadmin** . Cuando se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] usa `CONTROL SERVER` , se requiere el permiso o la pertenencia al rol fijo de servidor **sysadmin** .  
+ Cuando se usan [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, requiere `ALTER ANY LINKED SERVER` el permiso en el servidor o la pertenencia al rol fijo de servidor **setupadmin** . Cuando se usa, se [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] requiere `CONTROL SERVER` el permiso o la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> Crear un servidor vinculado  
  Puede usar cualquiera de los elementos siguientes:  
@@ -102,7 +101,7 @@ ms.locfileid: "62743508"
      **Add (Agregar)**  
      Permite agregar un nuevo inicio de sesión local.  
   
-     **Remove**  
+     **Quitar**  
      Quita un inicio de sesión local existente.  
   
      **No se establecerán**  
@@ -152,7 +151,7 @@ ms.locfileid: "62743508"
   
      Si es 0, use el valor de la opción **Tiempo de espera de inicio de sesión remoto** predeterminado [sp_configure](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
   
-     **Tiempo de espera de consulta**  
+     **Tiempo de espera de la consulta**  
      Valor del tiempo de espera en segundos para las consultas que se realizan en un servidor vinculado.  
   
      Si es 0, use el valor de la opción **Tiempo de espera de consulta remota** predeterminado [sp_configure](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
@@ -160,7 +159,7 @@ ms.locfileid: "62743508"
      **Habilitar promoción de transacciones distribuidas**  
      Use esta opción para proteger las acciones de un procedimiento entre servidores a través de una transacción del Coordinador de transacciones distribuidas de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MS DTC). Cuando esta opción es TRUE, al llamar a un procedimiento remoto almacenado se inicia una transacción distribuida y se da de alta en MS DTC. Para obtener más información, vea [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql).  
   
-6.  Haga clic en **Aceptar**.  
+6.  Haga clic en **OK**.  
   
 ##### <a name="to-view-the-provider-options"></a>Para ver las opciones de proveedor  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3342af1de84e922ce63848c8fdffe5aa30ec309a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 87ba55cab8186b6c63abd0918cd72f33c67e94a8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150500"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047832"
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Configurar una alerta de base de datos (Windows)
   Mediante el Monitor de sistema, puede crear una alerta que se active cuando se alcance un valor de umbral de un contador del Monitor de sistema. Como respuesta a la alerta, el Monitor del sistema puede iniciar una aplicación, como, por ejemplo, una aplicación personalizada creada para tratar la condición de alerta. Por ejemplo, puede crear una alerta que se active cuando el número de interbloqueos sea superior a un valor específico.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c1fad6175b6330b35264d8558fa7b52f86b85a9c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a87497d52e8f011b35933c8e1cea9cd8269a4617
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82699278"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039450"
 ---
 # <a name="mapping-data-types-odbc"></a>Asignar tipos de datos (ODBC)
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client asigna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos SQL a tipos de datos SQL de ODBC. En las secciones siguientes se describen los tipos de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL y los tipos de datos ODBC SQL a los que se asignan. También se tratan los tipos de datos ODBC SQL y sus tipos de datos ODBC C correspondientes, así como las conversiones compatibles y predeterminadas.  

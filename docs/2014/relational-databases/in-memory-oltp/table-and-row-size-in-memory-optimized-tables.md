@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf3b0fa3c74591a7919024f555fda2f65d89963d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: eb509d4b3ba48bbd31b4246e66e024b0be1d49ae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718796"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025626"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tamaño de tabla y fila de las tablas con optimización para memoria
   Una tabla optimizada para memoria consta de una colección de filas e índices que contienen punteros a las filas. En una tabla optimizada para memoria, las filas no pueden ser mayores de 8060 bytes. Conocer el tamaño de una tabla optimizada para memoria le ayudará a saber si el equipo tiene memoria suficiente.  
@@ -70,7 +69,7 @@ La tabla con optimización para memoria, que consta de índices y filas.
   
  En la tabla siguiente se describe el cálculo del tamaño del cuerpo de fila, indicado como [tamaño real del cuerpo de fila] = SUM([tamaño de tipos superficiales]) + 2 + 2 * [número de columnas de tipo profundo].  
   
-|Sección|Tamaño|Comentarios|  
+|Sección|Size|Comentarios|  
 |-------------|----------|--------------|  
 |Columnas de tipo superficial|SUM ([tamaño de tipos superficiales])<br /><br /> **El tamaño de los tipos individuales es el siguiente:**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numeric (precisión <= 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric (precisión>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Relleno superficial de la columna|Los valores posibles son:<br /><br /> 1, si hay columnas de tipo profundo y el tamaño total de datos de las columnas superficiales es un número impar.<br /><br /> De lo contrario, es 0|Los tipos profundos son (var)binary y (n)(var)char.|  

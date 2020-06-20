@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82e5eb63122f6a965e3a001b8124445cbe91675
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057974"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965426"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Asistente para conversión de proyectos de Integration Services
   El **Asistente para conversión de proyectos de Integration Services** convierte un proyecto al modelo de implementación de proyectos.  
@@ -81,7 +80,7 @@ ms.locfileid: "66057974"
  **Server**  
  Especifique el nombre del servidor o seleccione el servidor.  
   
- **Usar la autenticación de Windows**  
+ **Usar autenticación de Windows**  
  El modo de autenticación de Microsoft Windows permite que un usuario pueda conectarse a través de una cuenta de usuario de Windows. Si utiliza la autenticación de Windows, no será necesario que proporcione un nombre de usuario o una contraseña.  
   
  **Utilizar autenticación de SQL Server**  
@@ -121,10 +120,10 @@ ms.locfileid: "66057974"
 > [!NOTE]  
 >   La página **Seleccionar destino** está disponible solamente cuando ejecuta el asistente desde [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
- **Ruta de acceso de resultados**  
+ **Ruta de acceso de salida**  
  Escriba la ruta de acceso al archivo de implementación, o bien haga clic en **Examinar**para abrir la ubicación del archivo.  
   
- **Nombre de proyecto**  
+ **Nombre del proyecto**  
  Escriba el nombre del proyecto.  
   
  **Nivel de protección**  
@@ -138,7 +137,7 @@ ms.locfileid: "66057974"
 > [!NOTE]  
 >   La página **Especificar propiedades del proyecto** solo está disponible cuando se ejecuta el asistente desde [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
   
- **Nombre de proyecto**  
+ **Nombre del proyecto**  
  Muestra el nombre del proyecto.  
   
  **Nivel de protección**  
@@ -153,7 +152,7 @@ ms.locfileid: "66057974"
  **Paquete primario**  
  Muestra el nombre del paquete que ejecuta el paquete secundario mediante la tarea Ejecutar paquete.  
   
- **Nombre de la tarea**  
+ **Nombre de tarea**  
  Muestra el nombre de la tarea Ejecutar paquete.  
   
  **Referencia original**  
@@ -168,7 +167,7 @@ ms.locfileid: "66057974"
  **Paquete**  
  Muestra el archivo de paquete.  
   
- **Type**  
+ **Tipo**  
  Muestra el tipo de configuración como, por ejemplo, un archivo de configuración XML.  
   
  **Cadena de configuración**  

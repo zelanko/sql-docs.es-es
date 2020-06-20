@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 64ada1fe-21a2-4675-98fc-d5c803aa32f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9b112669457f9e9f675e00466896e4da91abd53d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66055949"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84963700"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>Seleccionar enumeración de SMO, cuadro de diálogo
   Use el cuadro de diálogo **Seleccionar enumeración de SMO** para especificar el objeto de Objetos de administración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SMO) en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] especificada para enumerar y seleccionar el tipo de enumeración.  
@@ -28,7 +27,7 @@ ms.locfileid: "66055949"
  **Enumerar**  
  Expanda el servidor y seleccione el objeto SMO.  
   
- **de la empresa**  
+ **Objects**  
  Utilice el tipo de enumeración Objetos.  
   
  **Rellenar previamente**  

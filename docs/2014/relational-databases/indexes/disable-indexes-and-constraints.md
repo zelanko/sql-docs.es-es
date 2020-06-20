@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40f9de4108be4defeb2353a9e7835c289641a819
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63162404"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025551"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deshabilitar índices y restricciones
   En este tema se describe cómo deshabilitar un índice o restricciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al deshabilitar un índice, se impide que el usuario pueda tener acceso al mismo y, en el caso de los índices clúster, a los datos de la tabla subyacente. La definición del índice se conserva en los metadatos y las estadísticas de índice se mantienen en índices no clúster. La deshabilitación de un índice clúster o no clúster en una vista elimina físicamente los datos del índice. Al deshabilitar un índice clúster en una tabla, se impide el acceso a los datos, que siguen en la tabla pero dejan de estar disponibles para las operaciones de lenguaje de manipulación de datos (DML) hasta que se quite o recompile el índice.  

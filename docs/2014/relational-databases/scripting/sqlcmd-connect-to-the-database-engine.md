@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 74b0fb71-7f8e-4171-9431-d07528532524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62681520703aa687d4acfc0dc1251cdf6279b8ee
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 22fea079573ac7ad825c083e5486d6c2a2248ae6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703713"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047564"
 ---
 # <a name="connect-to-the-database-engine-with-sqlcmd"></a>Conectarse al motor de base de datos con sqlcmd
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permite las comunicaciones de clientes con el protocolo de red TCP/IP (valor predeterminado) y el protocolo de canalizaciones con nombre. El protocolo de memoria compartida también está disponible si el cliente se está conectando a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el mismo equipo. Hay varios métodos habituales para seleccionar el protocolo. El protocolo que la utilidad **sqlcmd** utiliza se determina en el siguiente orden:  

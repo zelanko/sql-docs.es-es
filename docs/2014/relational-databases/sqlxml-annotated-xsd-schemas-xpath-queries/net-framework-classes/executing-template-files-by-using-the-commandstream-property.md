@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0c90839d02bd2cebcf9424e38d35f9595a23d210
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ad808aaab10cf3fa424f6131be0e3ec968f5ee0d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82718038"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062881"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ejecutar archivos de plantilla utilizando la propiedad CommandStream
   En este ejemplo se muestra cómo se pueden especificar los archivos de plantilla que están compuestos de consultas SQL o XPath mediante la propiedad CommandStream del objeto SqlXmlCommand. En esta aplicación, se abre un FileStreamobject para un archivo de comandos y se asigna la secuencia de archivos como CommandStream que se ejecuta.  

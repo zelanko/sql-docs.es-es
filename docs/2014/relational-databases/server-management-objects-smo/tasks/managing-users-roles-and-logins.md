@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86b67202537e650619f835e9c64d2c35a8e78fc2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 464c03bf597fe677579b2a2201db49ab810d2895
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72796605"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063099"
 ---
 # <a name="managing-users-roles-and-logins"></a>Administrar usuarios, roles e inicios de sesión
   En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Login> representa los inicios de sesión. Si existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se puede agregar a un rol del servidor. El objeto <xref:Microsoft.SqlServer.Management.Smo.ServerRole> representa el rol del servidor. El objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> representa el rol de la base de datos y el objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> representa el rol de aplicación.  

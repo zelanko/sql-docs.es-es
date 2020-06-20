@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bf284ffce044e0efa1f855e0e504a1f92dc7e3da
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 60fbd0341c4e29c6f98cc4d5fe5a2cfabc9b703f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175989"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959070"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   En este tema se presenta el componente de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La copia de seguridad de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es esencial para proteger los datos. En esta descripción se tratan los tipos y las restricciones de copia de seguridad. En el tema también se presentan los dispositivos y los medios de copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -133,7 +132,7 @@ ms.locfileid: "70175989"
   
 -   Si intenta crear o eliminar un archivo de la base de datos durante la operación de copia de seguridad, se producirá un error en la operación de creación o eliminación.  
   
- Si una operación de copia de seguridad se superpone a una operación de administración de archivos o de reducción, surge un conflicto. Con independencia de la operación en conflicto iniciada en primer lugar, la segunda operación espera a que se agote el tiempo de espera del bloqueo establecido por la primera operación. (El período de tiempo de espera se controla mediante un valor de tiempo de espera de sesión). Si el bloqueo se libera durante el tiempo de espera, la segunda operación continúa. Si se agota el tiempo de espera del bloqueo, la segunda operación no se realiza correctamente.  
+ Si una operación de copia de seguridad se superpone a una operación de administración de archivos o de reducción, surge un conflicto. Con independencia de la operación en conflicto que empieza en primer lugar, la segunda operación espera a que se agote el tiempo de espera del bloqueo establecido por la primera operación. (El tiempo de espera se controla mediante un valor de tiempo de espera de sesión). Si el bloqueo se libera durante el tiempo de espera, la segunda operación continúa. Si se agota el tiempo de espera del bloqueo, la segunda operación no se realiza correctamente.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
  **Para trabajar con dispositivos de copia de seguridad y medios de copia de seguridad**  
@@ -156,7 +155,7 @@ ms.locfileid: "70175989"
   
 -   [Restaurar una copia de seguridad desde un dispositivo &#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Para crear una copia de seguridad**  
   
@@ -179,10 +178,10 @@ ms.locfileid: "70175989"
   
 -   [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>Consulte también  
- [Copia de seguridad y restauración de bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
+ [Realizar copias de seguridad y restaurar bases de datos de SQL Server](back-up-and-restore-of-sql-server-databases.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [Planes de mantenimiento](../maintenance-plans/maintenance-plans.md)   
  [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   

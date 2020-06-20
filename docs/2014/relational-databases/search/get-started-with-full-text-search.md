@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd5ced641ee8fc17f0be7d7b6e19aff17dcb69bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eec806bffba330ac3ab995c1b3bfd3504589ecfd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011287"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063285"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
   Las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están habilitadas para texto completo de forma predeterminada. Sin embargo, para usar un índice de texto completo en una tabla, debe configurar la capacidad de indización de texto completo en las columnas de las tablas a las que desea obtener acceso mediante el motor de búsqueda de texto completo.  
@@ -34,7 +33,7 @@ ms.locfileid: "66011287"
   
     1.  Identificar cada columna de texto que se desea incluir en el índice de texto completo.  
   
-    2.  Si una columna determinada contiene documentos almacenados como datos binarios`varbinary(max)`(o `image` datos), debe especificar una columna de tabla (la *columna de tipo*) que identifique el tipo de cada documento en la columna que se está indizando.  
+    2.  Si una columna determinada contiene documentos almacenados como datos binarios ( `varbinary(max)` o `image` datos), debe especificar una columna de tabla (la *columna de tipo*) que identifique el tipo de cada documento en la columna que se está indizando.  
   
     3.  Especificar el idioma que se desea que utilice la búsqueda de texto completo en los documentos de la columna.  
   
@@ -91,7 +90,7 @@ ms.locfileid: "66011287"
   
  Cuando asigne una tabla a un catálogo de texto completo, tenga en cuenta las indicaciones siguientes:  
   
--   Seleccione siempre el índice exclusivo más pequeño disponible para la clave exclusiva de texto completo. (Un índice basado en enteros de 4 bytes es óptimo). Esto reduce significativamente los recursos necesarios [!INCLUDE[msCoName](../../includes/msconame-md.md)] para el servicio Search en el sistema de archivos. Si la clave principal es grande (más de 100 bytes), considere la posibilidad de elegir otro índice exclusivo en la tabla (o de crear otro índice exclusivo) como clave exclusiva de texto completo. Si, por el contrario, el tamaño de la clave exclusiva de texto completo supera el tamaño máximo permitido (900 bytes), no se podrá realizar un rellenado de texto.  
+-   Seleccione siempre el índice exclusivo más pequeño disponible para la clave exclusiva de texto completo. (Un índice basado en enteros de 4 bytes es óptimo). Esto reduce significativamente los recursos necesarios para el [!INCLUDE[msCoName](../../includes/msconame-md.md)] servicio Search en el sistema de archivos. Si la clave principal es grande (más de 100 bytes), considere la posibilidad de elegir otro índice exclusivo en la tabla (o de crear otro índice exclusivo) como clave exclusiva de texto completo. Si, por el contrario, el tamaño de la clave exclusiva de texto completo supera el tamaño máximo permitido (900 bytes), no se podrá realizar un rellenado de texto.  
   
 -   Si indiza una tabla con millones de filas, asigne la tabla a su propio catálogo de texto completo.  
   

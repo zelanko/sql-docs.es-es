@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86380b0e6940a4b4cf9a5103d44860f68258ef59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63144346"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024588"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
   En este tema se describe cómo crear un plan de mantenimiento de varios servidores o de uno mediante la superficie de diseño del plan de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Aunque el **Asistente para plan de mantenimiento** es mejor para crear planes de mantenimiento básicos, crear un plan con la superficie de diseño le permite usar un flujo de trabajo mejorado.  
@@ -251,7 +250,7 @@ ms.locfileid: "63144346"
      Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
   
      **Resumen de archivos de registro**  
-     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se ve el texto siguiente, **Filtrar entradas del registro en:**  \<criterios de filtro>.  
+     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplicó un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<filter criteria>.  
   
      **Date**  
      Muestra la fecha del evento.  

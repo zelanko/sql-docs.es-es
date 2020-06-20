@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 644ba0cfdbe2f0043364c633676bbc536c641efa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62468202"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025789"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Compatibilidad de SQL Server Management Studio con OLTP en memoria
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] es un entorno integrado para administrar la infraestructura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona herramientas para configurar, supervisar y administrar instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -153,7 +152,7 @@ ms.locfileid: "62468202"
 ## <a name="unsupported-features-in-ssmanstudiofull"></a>Características no admitidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Para los objetos OLTP en memoria, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite las características y las operaciones que tampoco admite el motor de base de datos.  
   
- Para obtener más información sobre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las características no admitidas, vea [características admitidas de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
+ Para obtener más información sobre las características no admitidas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [características admitidas de SQL Server](unsupported-sql-server-features-for-in-memory-oltp.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Compatibilidad de SQL Server con OLTP en memoria](sql-server-support-for-in-memory-oltp.md)  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b6fe283c-9856-4ba1-a497-e3912424fd18
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e4695575aba2e43435c4e26d5a47ccb2cfa39d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c3e746c62b62c541d763e04599bfa10e66642777
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966116"
 ---
 # <a name="lesson-1-preparing-to-create-the-deployment-bundle"></a>Lección 1: Preparar la creación del paquete de implementación
   En esta lección, creará las carpetas de trabajo y la variables de entorno que admiten el tutorial, creará un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , agregará varios paquetes y sus archivos auxiliares al proyecto e implementará las configuraciones en los paquetes.  

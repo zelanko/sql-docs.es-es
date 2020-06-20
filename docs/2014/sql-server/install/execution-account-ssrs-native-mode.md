@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6cb210be7856566c16f615d90cf879dcae5d6306
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952544"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042722"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Cuenta de ejecución (Modo nativo de SSRS)
   Utilice esta página para configurar una cuenta que se utilizará en el procesamiento en modo desatendido. Esta cuenta se utiliza bajo circunstancias especiales cuando no están disponibles otros orígenes de credenciales:  
@@ -26,7 +25,7 @@ ms.locfileid: "71952544"
   
 -   Cuando el servidor de informes se conecta a otro servidor para recuperar archivos de imágenes u otros recursos externos a los que se hace referencia en un informe.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
  La configuración de esta cuenta es opcional, aunque si no se configura, se limita el uso de las conexiones e imágenes externas a algunos orígenes de datos. Cuando se recuperan archivos de imagen externos, el servidor de informes comprueba si se puede realizar una conexión anónima. Si la conexión está protegida por contraseña, el servidor de informes utiliza la cuenta de procesamiento desatendido de informes para conectar con el servidor remoto. Cuando se recuperan datos de un informe, el servidor de informes suplanta al usuario actual, solicita al usuario que proporcione credenciales, utiliza credenciales almacenadas o utiliza la cuenta de procesamiento desatendido si la conexión de origen de datos especifica **Ninguno** como tipo de credencial. El servidor de informes no permite que sus credenciales de cuenta de servicio sean delegadas ni suplantadas cuando se realiza una conexión con otro equipo, por lo que tiene que utilizar la cuenta de procesamiento desatendido si no hay otras credenciales disponibles.  
   
@@ -44,7 +43,7 @@ ms.locfileid: "71952544"
  Seleccione para especificar una cuenta.  
   
  **Cuenta**  
- Especifique una cuenta de usuario de dominio de Windows. Use este formato: * \<>\\ de dominio<cuenta\>de usuario*.  
+ Especifique una cuenta de usuario de dominio de Windows. Use este formato: * \<domain> \\<cuenta \> de usuario*.  
   
  **Contraseña**  
  Escriba la contraseña.  

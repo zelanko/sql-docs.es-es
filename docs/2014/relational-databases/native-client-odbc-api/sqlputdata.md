@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d39aaa5b-7fbc-4315-a7f2-5a7787e04f25
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 410aa819e2d4af056c53fc30a971625001b1186e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d847c7df84c1d00ed357a40a72839ff52f5737c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702200"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021755"
 ---
 # <a name="sqlputdata"></a>SQLPutData
   Se aplican las siguientes restricciones al usar SQLPutData para enviar más de 65.535 bytes de datos (para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la versión 4.21 a) o 400 KB de datos (para SQL Server versión 6,0 y posteriores) para una columna SQL_LONGVARCHAR ( `text` ), SQL_WLONGVARCHAR ( `ntext` ) o SQL_LONGVARBINARY ( `image` ):  

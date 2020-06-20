@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d70ee72c-6e2a-4bcd-9456-4a697a866361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4026154204cf6de95711a3014b069c34a29d9922
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c7f6cbff4e68eaedd3e78a82cddd872ba5f8f19e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704512"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85017816"
 ---
 # <a name="isolation-levels-ole-db"></a>Niveles de aislamiento (OLE DB)
   Los clientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden controlar los niveles de aislamiento de la transacción para una conexión. Para controlar el nivel de aislamiento de transacción, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consumidor del proveedor de OLE DB de Native Client utiliza:  

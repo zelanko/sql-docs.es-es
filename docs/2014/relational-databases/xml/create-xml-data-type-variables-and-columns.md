@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a62d8fbafc353e2d71223506b7fb4516d184b494
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 08b79888eb47634deaccc910b2ea3c93800b7c78
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717101"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046810"
 ---
 # <a name="create-xml-data-type-variables-and-columns"></a>Crear variables y columnas del tipo de datos XML
   El tipo de datos `xml` es un tipo de datos integrado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y es similar a otros tipos integrados como `int` y `varchar`. Como con otros tipos integrados, puede usar el `xml` tipo de datos como un tipo de columna al crear una tabla como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto de función o en [CAST y Convert](/sql/t-sql/functions/cast-and-convert-transact-sql).  

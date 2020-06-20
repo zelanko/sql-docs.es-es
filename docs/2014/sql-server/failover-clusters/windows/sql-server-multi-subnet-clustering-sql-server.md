@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca6e081097cb26d4054e5b62fd62cefc0c6d96f8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46350002f917d9d0f785ba1453d2930fb4113703
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78172454"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062455"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
   Un clúster de conmutación por error de múltiples subredes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es una configuración donde cada nodo clúster se conecta a una subred diferente o un conjunto de subredes diferente. Estas subredes pueden estar en la misma ubicación o en sitios geográficamente dispersos. A veces se hace referencia a la agrupación en clústeres en sitios geográficamente dispersos como clústeres elásticos. Como no existe ningún almacenamiento compartido al que todos los nodos puedan tener acceso, los datos se deben replicar entre el almacenamiento de datos en las diversas subredes. Con la replicación de datos, hay más de una copia de los datos disponible. Por consiguiente, un clúster de conmutación por error de múltiples subredes proporciona una solución de recuperación ante desastres además de alta disponibilidad.

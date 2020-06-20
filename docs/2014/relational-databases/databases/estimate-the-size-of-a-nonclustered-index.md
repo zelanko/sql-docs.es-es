@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 097c0e5568ba17b12f83d09e347eb3bf8b0bd7da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054119"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965972"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
   Siga estos pasos para estimar el espacio necesario para almacenar un índice no clúster:  
@@ -181,7 +180,7 @@ ms.locfileid: "66054119"
   
 5.  Calcule el tamaño de la fila del índice:  
   
-     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (para la sobrecarga de encabezado de fila de una fila de índice) + 6 (para el puntero de identificador de página secundaria)  
+     ***Leaf_Row_Size***   =  ***Fixed_Leaf_Size***  +  ***Variable_Leaf_Size***  +  ***Leaf_Null_Bitmap*** + 1 (para la sobrecarga de encabezado de fila de una fila de índice) + 6 (para el puntero de identificador de página secundaria)  
   
 6.  Calcule el número de filas de índice por página (8.096 bytes disponibles por página):  
   
@@ -210,7 +209,7 @@ ms.locfileid: "66054119"
   
 1.  Calcule el número de niveles no hoja del índice:  
   
-     ***Niveles no hoja*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages*** / ***Index_Rows_Per_Page***)  
+     ***Niveles no hoja*** = 1 + Index_Rows_Per_Page de registro (***Num_Leaf_Pages***  /  ***Index_Rows_Per_Page***)  
   
      Redondee este valor al número entero más próximo. Este valor no incluye el nivel hoja del índice no clúster.  
   

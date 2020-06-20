@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89d1e2fd7c4f0e414424ad678c7ea9f3936b02f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 044d4bcb17144b4fcb6e233b1aadec84e20f2876
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176385"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966625"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Generar, implementar y depurar objetos personalizados
   Después de haber escrito el código para un objeto personalizado de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], debe generar, implementar e integrar el ensamblado en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] para que esté disponible para su uso en paquetes, y probarlo y depurarlo.
@@ -70,7 +69,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ```
 
 ##  <a name="deploying-the-assembly"></a><a name="deploying"></a> Implementar el ensamblado
- El [!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador busca los objetos personalizados disponibles para su uso en paquetes enumerando los archivos que se encuentran en una serie de carpetas que se crean [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] cuando se instala. Cuando se usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la configuración de instalación predeterminada, este conjunto de carpetas se encuentra en **C:\Archivos de programa\Microsoft SQL Server\120\DTS**. Sin embargo, si crea un programa de instalación para el objeto personalizado, debe comprobar el valor de la clave del registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** para comprobar la ubicación de esta carpeta.
+ El [!INCLUDE[ssIS](../../includes/ssis-md.md)] Diseñador busca los objetos personalizados disponibles para su uso en paquetes enumerando los archivos que se encuentran en una serie de carpetas que se crean cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se instala. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa la configuración de instalación predeterminada, este conjunto de carpetas se encuentra en **C:\Archivos de Programa\microsoft SQL Server\120\DTS**. Sin embargo, si crea un programa de instalación para el objeto personalizado, debe comprobar el valor de la clave del registro **HKEY_LOCAL_MACHINE \SOFTWARE\MICROSOFT\MICROSOFT SQL Server\120\SSIS\Setup\DtsPath** para comprobar la ubicación de esta carpeta.
 
  Puede colocar el ensamblado en la carpeta de dos maneras:
 
@@ -115,7 +114,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 ##  <a name="testing-and-debugging-your-code"></a><a name="testing"></a> Probar y depurar el código
  El enfoque más sencillo para depurar los métodos en tiempo de ejecución de un objeto personalizado consiste en iniciar **dtexec.exe** desde [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] después de compilar el objeto personalizado y ejecutar un paquete que use el componente.
 
- Si desea depurar los métodos en tiempo de diseño del componente, como el `Validate` método, abra un paquete que use el componente en una segunda instancia de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]y asócielo a su proceso **devenv. exe** .
+ Si desea depurar los métodos en tiempo de diseño del componente, como el `Validate` método, abra un paquete que use el componente en una segunda instancia de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y asócielo a su proceso de **devenv.exe** .
 
  Si también quiere depurar los métodos en tiempo de ejecución del componente cuando un paquete está abierto y ejecutándose en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)], debe forzar una pausa en la ejecución del paquete para poder adjuntarlo también al proceso **DtsDebugHost.exe**.
 
@@ -123,7 +122,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\120\DTS\LogProvide
 
 1.  Firme e integre el proyecto en la configuración de depuración, impleméntelo e instálelo en la memoria caché de ensamblados global tal y como se describe en este tema.
 
-2.  En la pestaña **depurar** de **propiedades del proyecto**, seleccione **programa externo de inicio** como la acción de **Inicio**y busque **DTExec. exe**, que se instala de forma predeterminada en c:\Archivos de programa\Microsoft SQL server\120\dts\binn
+2.  En la pestaña **depurar** de **propiedades del proyecto**, seleccione **programa externo de inicio** como la acción de **Inicio**y busque **dtexec.exe**, que se instala de forma predeterminada en c:\Archivos de programa\Microsoft SQL server\120\dts\binn
 
 3.  En el cuadro de texto **Opciones de la línea de comandos**, en **Opciones de inicio**, escriba los argumentos de la línea de comandos necesarios para ejecutar un paquete que usa el componente. A menudo el argumento de la línea de comandos estará compuesto del modificador /F[ILE] seguido de la ruta de acceso y nombre de archivo del archivo .dtsx. Para obtener más información, consulte [utilidad dtexec](../packages/dtexec-utility.md).
 

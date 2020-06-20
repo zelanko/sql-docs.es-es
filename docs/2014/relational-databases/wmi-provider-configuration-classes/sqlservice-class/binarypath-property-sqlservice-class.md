@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0444399eb056b733bf0c9f9e7506b434e06b84db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b1e6e193319a8a4139ebf974d7235fc59e39418d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63223288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062622"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>Propiedad BinaryPath (clase SqlService)
   Obtiene la ruta de acceso binaria del servicio.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica la ruta de acceso binaria del servicio.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

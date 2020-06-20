@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d741dc5c-c225-43d9-a730-7ad664ac525f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8f5d7f8efe305be71a311b822c51ff1ede9afdf9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bdc3eecd9e151d7da32a5fd65a90552c0743b3d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691497"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062699"
 ---
 # <a name="getnextordervalue-method-clientnetworkprotocol-class"></a>Método GetNextOrderValue (clase ClientNetworkProtocol)
   Selecciona el protocolo que se encuentra en la posición siguiente en la lista de protocolos.  
@@ -44,7 +43,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   

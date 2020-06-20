@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 2d5c63e9-8061-45c3-94db-8dd3100b8a91
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e65863314943e07150aed8fc45494e7059fea21
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63049447"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062484"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Administración y mantenimiento de la instancia de clúster de conmutación por error
   Las tareas de mantenimiento, como agregar o quitar nodos de una instancia de clúster de conmutación por error (FCI) AlwaysOn existente, se llevan a cabo mediante el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Otras tareas de administración, como cambiar el recurso de dirección IP o recuperarse de determinados escenarios de la FCI, se llevan a cabo con el complemento Administrador de clústeres de conmutación por error, que es el complemento de administración del servicio de clústeres de conmutación por error de Windows Server (WSFC).  

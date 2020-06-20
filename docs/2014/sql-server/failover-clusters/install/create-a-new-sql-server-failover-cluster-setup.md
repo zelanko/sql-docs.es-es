@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee19526ffa4d88948d2efa2313be212ca094522
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68893714"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062644"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Crear un nuevo clúster de conmutación por error de SQL Server (programa de instalación)
   Para instalar o actualizar un clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe ejecutar el programa de instalación en cada nodo de los clústeres de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . No ejecute el programa de instalación en el nodo activo para administrar los demás nodos.  
@@ -278,7 +277,7 @@ ms.locfileid: "68893714"
     > [!IMPORTANT]  
     >  Use el mismo identificador de instancia para todos los nodos que se preparen para los clústeres de conmutación por error  
   
-     **Directorio raíz de instancia** : de forma predeterminada, el directorio raíz de la\\[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]\\instancia es c:\Archivos de programa. Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
+     **Directorio raíz de instancia** : de forma predeterminada, el directorio raíz de la instancia es c:\Archivos de programa \\ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \\ . Para especificar un directorio raíz no predeterminado, utilice el campo proporcionado o haga clic en el botón de puntos suspensivos para buscar una carpeta de instalación.  
   
      **Instancias instaladas:** la cuadrícula muestra las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que están en el equipo en el que se ejecuta el programa de instalación. Si ya hay una instancia predeterminada instalada en el equipo, debe instalar una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Haga clic en **Siguiente** para continuar.  
   
@@ -304,7 +303,7 @@ ms.locfileid: "68893714"
   
      Cuando termine de especificar la información de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Siguiente**.  
   
-16. Use la pestaña **configuración del servidor-intercalación** para especificar intercalaciones no [!INCLUDE[ssDE](../../../includes/ssde-md.md)] predeterminadas para y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Para obtener más información, vea [Configuración del servidor - Intercalación](../../install/server-configuration-collation.md).  
+16. Use la pestaña **configuración del servidor-intercalación** para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] . Para obtener más información, vea [Configuración del servidor - Intercalación](../../install/server-configuration-collation.md).  
   
 17. Use **Configuración del servidor - Secuencia de archivo** para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos - Secuencia de archivo](../../install/database-engine-configuration-filestream.md). Haga clic en **Siguiente** para continuar.  
   
@@ -326,7 +325,7 @@ ms.locfileid: "68893714"
   
 24. Repita los pasos anteriores para preparar los demás nodos para los clústeres de conmutación por error. También puede utilizar el archivo de configuración autogenerado para ejecutar la preparación en los demás nodos. Para obtener más información, consulte [instalación de SQL Server 2014 mediante un archivo de configuración](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md).  
   
-## <a name="complete"></a>Operación completada  
+## <a name="complete"></a>Completo  
   
 #### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Paso 2 de la instalación de clústeres de conmutación por error de Advanced/Enterprise: Completar  
   
@@ -404,7 +403,7 @@ ms.locfileid: "68893714"
   
 19. Después de la instalación, la página **completada** proporciona un vínculo al archivo de registro de resumen para la instalación y otras notas importantes. Para completar el proceso de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , haga clic en **Cerrar**. Con este paso, todos los nodos preparados para el mismo clústeres de conmutación por error forman parte de los clústeres de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] completado.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información, vea [Surface Area Configuration](../../../relational-databases/security/surface-area-configuration.md).  
   
  Para obtener más información sobre las ubicaciones de los archivos de registro, vea [Ver y leer los archivos de registro de instalación de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  

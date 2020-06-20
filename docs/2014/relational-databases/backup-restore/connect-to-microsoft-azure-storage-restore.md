@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6fbb57fe629797e34cc7c61f224d65d46d4e66cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9fb4a8943c237e37ca612bf367abe99d47c8eb08
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958790"
 ---
 # <a name="connect-to-azure-storage-restore"></a>Conectar a Azure Storage (restauración)
   El cuadro de diálogo permite especificar la conexión a la información de la cuenta de Azure Storage para recuperar el almacenamiento de archivos en la cuenta de Azure Storage. Después de especificar la información necesaria, haga clic en **Conectar** para establecer la conexión a Azure Storage.  

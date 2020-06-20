@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97fc758c754f5fc8803e988d55147670fc3ff45b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211966"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055442"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
   En este tema se describe cómo crear un usuario de base de datos asignado a un inicio de sesión en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. El usuario de la base de datos es la identidad del inicio de sesión cuando está conectado a una base de datos. El usuario de la base de datos puede utilizar el mismo nombre que el inicio de sesión, pero no es necesario. En este tema se supone que ya existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener información sobre cómo crear un inicio de sesión, consulte [crear un inicio de sesión](create-a-login.md).  
@@ -37,7 +36,7 @@ ms.locfileid: "68211966"
   
 -   **Antes de empezar:**  
   
-     [Información preliminar](#Restrictions)  
+     [Fondo](#Restrictions)  
   
      [Seguridad](#Security)  
   

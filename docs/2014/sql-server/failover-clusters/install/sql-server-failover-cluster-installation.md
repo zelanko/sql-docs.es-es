@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49fce70b4fc01f77fe7ca54e3951f0372ba18489
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e8d13678bd1d54a61217b87136fc09e17206e99
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067651"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062579"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Instalación de clúster de conmutación por error de SQL Server
   Para instalar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , debe crear y configurar una instancia en clúster de conmutación por error mediante la ejecución del programa de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  

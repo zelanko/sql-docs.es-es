@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 14c10afd53e219b847625e50f8fc88714cad1111
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: bf9a33bc18790bf8821d778746a708f78bbb3d8f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702285"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046359"
 ---
 # <a name="xml-indexes-sql-server"></a>Índices XML (SQL Server)
   Es posible crear índices XML en columnas del tipo de datos `xml`. Se indizan todas las etiquetas, los valores y las rutas de acceso de las instancias XML de la columna y se mejora el rendimiento de las consultas. Un índice XML puede afectar positivamente a una aplicación en estas situaciones:  
@@ -132,7 +131,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   Si la carga de trabajo recupera varios valores a partir de instancias XML individuales empleando expresiones de ruta de acceso, puede resultar útil la agrupación en clústeres de las rutas dentro de cada instancia XML en el índice PROPERTY. Éste suele ser el caso de una bolsa de propiedades, cuando se capturan las propiedades de un objeto y se conoce el valor de su clave principal.  
   
--   Si la carga de trabajo implica consultar valores dentro de instancias XML sin conocer los nombres de los elementos o atributos que contienen dichos valores, puede ser útil crear el índice VALUE. Esto suele ocurrir con búsquedas en ejes descendentes, como //author[last-name="Howard"], en que los elementos \<author> pueden aparecer en cualquier nivel de la jerarquía. También ocurre en consultas con caracteres comodín, como /book [@* = "novel"], en que la consulta busca elementos \<book> que tengan algún atributo con el valor "novel".  
+-   Si la carga de trabajo implica consultar valores dentro de instancias XML sin conocer los nombres de los elementos o atributos que contienen dichos valores, puede ser útil crear el índice VALUE. Esto suele ocurrir con búsquedas de ejes descendientes, como//Author [Last-Name = "Howard"], donde \<author> los elementos pueden aparecer en cualquier nivel de la jerarquía. También ocurre en consultas con caracteres comodín, como/Book [@ * = "novela"], donde la consulta busca \<book> elementos que tengan algún atributo con el valor "novela".  
   
 ### <a name="path-secondary-xml-index"></a>Índice XML secundario PATH  
  Si sus consultas suelen especificar expresiones de ruta de acceso en columnas de tipo `xml`, un índice secundario PATH podría acelerar la búsqueda. Como se indicó anteriormente en este tema, el índice principal resulta útil cuando se realizan consultas que especifican el método **exist()** en la cláusula WHERE. Si agrega un índice secundario PATH, también puede mejorar los resultados de búsqueda en dichas consultas.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce4dff443e52ef214e7c43f5df7eb50140937c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0dca74e8aeacd816712aa3c560ebfe1e8d19c8c0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63140463"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055674"
 ---
 # <a name="agent-profiles"></a>Perfiles de agente
   Utilice el cuadro de diálogo **Perfiles de agente** para administrar los perfiles de agente. Los perfiles de agente proporcionan una manera cómoda de administrar los parámetros en tiempo de ejecución para cada agente. Cada agente tiene un perfil predeterminado y algunos tienen perfiles adicionales predefinidos. Por ejemplo, el Agente de mezcla tiene un perfil de "vínculo lento" diseñado para conexiones de banda ancha lentas. Los perfiles predefinidos son suficientes para la mayoría de las aplicaciones, pero también pueden crearse perfiles definidos por el usuario, que permiten personalizar el comportamiento del agente.  

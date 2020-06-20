@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8c6534449ffc4e89efcd49c943726bf6ecd9f26
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 65ace190004cab911dd8996642720620eba94935
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096648"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045155"
 ---
 # <a name="changes-to-behavior-in-syslockinfo-and-sp_lock"></a>Cambios del comportamiento de syslockinfo y sp_lock
   **syslockinfo** y **sp_lock** devolver valores inesperados. También pueden devolver filas adicionales, mientras que las versiones anteriores de **syslockinfo** y **sp_lock** devolvían un máximo de dos filas por recurso de bloqueo.  

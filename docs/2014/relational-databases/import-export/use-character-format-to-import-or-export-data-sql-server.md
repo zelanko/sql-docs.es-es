@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88e16e3ea97b0a2348d3fd41ff7b980055c8c206
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011665"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85026284"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Usar el formato de caracteres para importar o exportar datos (SQL Server)
   Se recomienda utilizar el formato de caracteres al exportar datos de forma masiva a un archivo de texto que se va a utilizar en otro programa o al importar datos de forma masiva desde un archivo de texto generado por otro programa.  
@@ -51,12 +50,12 @@ ms.locfileid: "66011665"
   
  El formato de caracteres puede usarse con las siguientes opciones de la línea de comandos:  
   
-|Get-Help|Opción|Descripción|  
+|Get-Help|Opción|Description|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|Hace que la utilidad **BCP** utilice datos de caracteres. <sup>1</sup>|  
 |BULK INSERT|DATAFILETYPE **='char'**|Utiliza el formato de caracteres al importar datos masivamente.|  
   
- <sup>1</sup> para cargar datos de caracteres (**-c**) en un formato compatible con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de clientes de, use el modificador **-V** . Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ <sup>1</sup> para cargar datos de caracteres (**-c**) en un formato compatible con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clientes de, use el modificador **-V** . Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
  Para obtener más información, vea [bcp (utilidad)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) u [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   

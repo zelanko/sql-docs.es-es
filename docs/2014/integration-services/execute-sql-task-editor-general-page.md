@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 294836625075a70b8e101afef2bb9221a177ca47
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966783"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor de la tarea Ejecutar SQL (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para configurar la tarea Ejecutar SQL y proporcionar la instrucción SQL de ejecución de la tarea.  
@@ -34,12 +33,12 @@ ms.locfileid: "66058990"
  Describa la tarea Ejecutar SQL. Como práctica recomendada, describa la tarea en función de su objetivo para que los paquetes se autodocumenten y su mantenimiento resulte sencillo.  
   
  **Super**  
- Especifique el número máximo de segundos que la tarea se ejecutará antes de que se agote el tiempo de espera. Un valor de 0 indica una hora infinita. El valor predeterminado es 0.  
+ Especifique el número máximo de segundos que la tarea se ejecutará antes de que se agote el tiempo de espera. Un valor de 0 indica una hora infinita. El valor predeterminado es 0.  
   
 > [!NOTE]  
 >  En los procedimientos almacenados no se excederá el tiempo de espera si imitan la funcionalidad de espera al proporcionar un tiempo para la realización de conexiones y finalización de las transacciones superior al número de segundos especificado en **TimeOut**. Sin embargo, los procedimientos almacenados que ejecutan consultas siempre están sujetos a la restricción de tiempo especificada en **TimeOut**.  
   
- **737**  
+ **CodePage**  
  Especifique la página de códigos que desea utilizar para traducir los valores Unicode a variables. El valor predeterminado es la página de códigos del equipo local.  
   
 > [!NOTE]  
@@ -57,7 +56,7 @@ ms.locfileid: "66058990"
  **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connection**  
- Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…**>.  
+ Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión nueva, seleccione \<**New connection...**> .  
   
  **SQLSourceType**  
  Seleccione el tipo de origen de la instrucción SQL que ejecuta la tarea.  
@@ -101,13 +100,13 @@ ms.locfileid: "66058990"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
- Seleccione un administrador de conexiones de archivos existente o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

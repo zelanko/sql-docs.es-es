@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9fb2078ea3b9515af26df0846ee2f5d92bd9349a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 32c5b04610d894e06278fbeecdaf3bbebe850d60
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706438"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025948"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilación nativa de tablas y procedimientos almacenados
   OLTP en memoria introduce el concepto de compilación nativa. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede compilar de forma nativa procedimientos almacenados que acceden a tablas optimizadas para memoria. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también puede compilar de forma nativa las tablas optimizadas para memoria. La compilación nativa permite un acceso más rápido a los datos y una ejecución de consultas más eficiente que el lenguaje [!INCLUDE[tsql](../../includes/tsql-md.md)]interpretado (tradicional). La compilación nativa de tablas y procedimientos almacenados produce los archivos DLL.  

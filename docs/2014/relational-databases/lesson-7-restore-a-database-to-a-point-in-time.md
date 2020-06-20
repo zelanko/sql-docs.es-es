@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b500c2c9a2e725577ac542b738f2ea6a536cfe34
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175429"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85024938"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lección 8: Restaurar una base de datos en Azure Storage
   En esta lección, aprenderá a crear un archivo de copia de seguridad localmente y, a continuación, lo restaurará en Azure Storage. Tenga en cuenta que puede tener la base de datos en el entorno local o en una máquina virtual de Azure. Para seguir esta lección, no es necesario completar las lecciones 4, 5, 6 y 7.  
@@ -85,7 +84,7 @@ ms.locfileid: "70175429"
   
 8.  En la sección restaurar **archivos de base de datos** como, en el campo **restaurar como** , escriba lo siguiente:  
   
-     En archivo de datos, escriba `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`:. En archivo de registro, escriba `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`:.  
+     En archivo de datos, escriba: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf` . En archivo de registro, escriba: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf` .  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   

@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 0c691fc6-9865-46a7-b055-8097424492d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ccbb89a7af71545c3b410356b6ab6b101983798d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d84c920a2cb40866ba106b4d30d8e24c4caea611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62876155"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958307"
 ---
-# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Ejemplo: restauración en línea de un archivo de solo lectura (modelo de recuperación simple)
+# <a name="example-online-restore-of-a-read-only-file-simple-recovery-model"></a>Ejemplo: Restauración en línea de un archivo de solo lectura (modelo de recuperación simple)
   Este tema solo es relevante para las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el modelo de recuperación simple que contienen un grupo de archivos de solo lectura. El modelo de recuperación simple permite restaurar un archivo de solo lectura en línea si existe una copia de seguridad realizada después de que el archivo pasara a ser de solo lectura por última vez.  
   
  En este ejemplo, la base de datos `adb` contiene tres grupos de archivos. El grupo de archivos `A` es de lectura/escritura, mientras que los grupos de archivos `B` y `C` son de solo lectura. Inicialmente, todos los grupos de archivos están en línea. Se debe restaurar el archivo de solo lectura `B`del grupo de archivos `b1`. El administrador de la base de datos puede restaurarlo mediante una copia de seguridad realizada después de que el archivo pasara a ser de solo lectura. Durante la restauración, el grupo de archivos `B` permanecerá sin conexión, pero el resto de la base de datos estará en línea.  
@@ -42,11 +41,11 @@ WITH RECOVERY
   
 ## <a name="additional-examples"></a>Otros ejemplos  
   
--   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación simple&#41;](example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
--   [Ejemplo: restauración por etapas de base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
+-   [Ejemplo: restauración por etapas de la base de datos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [Ejemplo: restauración por etapas exclusiva para algunos grupos de archivos &#40;modelo de recuperación completa&#41;](example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   

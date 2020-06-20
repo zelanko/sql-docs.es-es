@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 09b5a5069d019dc452a49179e1c83d78a50e0566
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137513"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85046221"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Reparación de página automática (para grupos de disponibilidad y creación de reflejo de base de datos)
   La reparación de página automática es compatible con la creación de reflejo de la base de datos y con [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. Cuando ciertos tipos de errores dañan una página, dejándola ilegible, un asociado de creación de reflejo de la base de datos (ya sea principal o reflejado) o una réplica de disponibilidad (principal o secundaria) intenta recuperar la página automáticamente. El asociado y la réplica que no pueden leer la página solicitan una nueva copia de la página a su asociado o a otra réplica. Si la solicitud se realiza correctamente, la copia legible sustituirá a la página ilegible y esto resuelve el error en la mayoría de los casos.  
@@ -35,7 +34,7 @@ ms.locfileid: "63137513"
 ##  <a name="error-types-that-cause-an-automatic-page-repair-attempt"></a><a name="ErrorTypes"></a>Tipos de errores que provocan un intento de reparación de página automática  
  La reparación de página automática de la creación de reflejo de la base de datos intenta reparar únicamente aquellas páginas de un archivo de datos en las que una operación no se ha realizado correctamente debido a uno de los errores que se muestran en la siguiente tabla.  
   
-|Número de error|Descripción|Instancias que provocan el intento de una reparación de página automática|  
+|Número de error|Description|Instancias que provocan el intento de una reparación de página automática|  
 |------------------|-----------------|---------------------------------------------------------|  
 |[823](../../relational-databases/errors-events/mssqlserver-823-database-engine-error.md)|Se toman medidas solo cuando el sistema operativo ha realizado una prueba cíclica de redundancia (CRC) en la que se ha producido un error en los datos.|ERROR_CRC. El valor del sistema operativo para este error es de 23.|  
 |[824](../../relational-databases/errors-events/mssqlserver-824-database-engine-error.md)|Errores lógicos.|Los errores de datos lógicos, como la escritura incompleta o la suma incorrecta de comprobación de página.|  
@@ -106,7 +105,7 @@ ms.locfileid: "63137513"
  
   
 ## <a name="see-also"></a>Consulte también  
- [Administrar la tabla de suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
+ [Administrar la tabla suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

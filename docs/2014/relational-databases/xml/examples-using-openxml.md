@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e8be13e95cbf47a0769be20d6b0e55b39e9b7a57
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 09fc6ad073b12df2f9fbd8ebc6a59149f6154ced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702755"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054937"
 ---
 # <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
   Los ejemplos de este tema muestran cómo se utiliza OPENXML para crear una vista de conjunto de filas de un documento XML. Para obtener más información sobre la sintaxis de OPENXML, vea [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql). Los ejemplos muestran todos los aspectos de OPENXML, pero no especifican metapropiedades en OPENXML. Para obtener más información sobre cómo especificar metapropiedades en OPENXML, vea [Especificar metapropiedades en OPENXML](specify-metaproperties-in-openxml.md).  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
 -   El patrón XPath ( **.** ) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
   
--   *ColPattern*, **../\@Quantity**, especificado para la columna **Qty** del conjunto de filas, identifica el atributo **Quantity** del nodo principal (`OrderDetail`) del nodo de contexto \<ProductID>.  
+-   El *ColPattern*, **.. / \@ Quantity**, especificado para la columna **Qty** del conjunto de filas, identifica el atributo **Quantity** del nodo primario, <`OrderDetail`>, del nodo de contexto, \<ProductID> .  
   
 -   Del mismo modo, *ColPattern*, **../../\@OrderID**, especificado para la columna **OID** del conjunto de filas, identifica el atributo **OrderID** del elemento primario (`Order`) del nodo principal del nodo de contexto. El nodo principal es <`OrderDetail`> y el nodo de contexto es <`ProductID`>.  
   
@@ -604,7 +603,7 @@ id  lname   xmlname                   OverFlow
 -   Si la columna con la cláusula WITH es una columna XML con tipo y la instancia XML no se ajusta al esquema, se devuelve un error.  
   
 ### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>J. Recuperar valores individuales de atributos con varios valores  
- Un documento XML puede tener atributos que tienen varios valores. Por ejemplo, el atributo **IDREFS** puede tener varios valores. En un documento XML, los valores de atributo con varios valores se especifican como una cadena con los valores separados por un espacio. En el siguiente documento XML, el atributo **attends** del elemento \<Student> y el atributo **attendedBy** de \<Clase> tienen varios valores. Recuperar valores individuales de un atributo XML con varios valores y almacenar cada valor en una fila separada en la base de datos requiere un trabajo adicional. Este ejemplo muestra el proceso.  
+ Un documento XML puede tener atributos que tienen varios valores. Por ejemplo, el atributo **IDREFS** puede tener varios valores. En un documento XML, los valores de atributo con varios valores se especifican como una cadena con los valores separados por un espacio. En el siguiente documento XML, el atributo **attendees** del \<Student> elemento y el atributo **attendedBy** de \<Class> tienen varios valores. Recuperar valores individuales de un atributo XML con varios valores y almacenar cada valor en una fila separada en la base de datos requiere un trabajo adicional. Este ejemplo muestra el proceso.  
   
  Este documento XML de ejemplo consta de los siguientes elementos:  
   
@@ -616,13 +615,13 @@ id  lname   xmlname                   OverFlow
   
      Los atributos **id** (identificador de la clase), **name**y **attendedBy** . El atributo **attendedBy** es un atributo con varios valores.  
   
- El atributo **attends** de \<Student> y el atributo **attendedBy** de \<Class> representan una relación **m:n** entre las tablas Student y Class. Un estudiante puede tener muchas clases y una clase puede tener varios estudiantes.  
+ El atributo **attendees** en \<Student> y el atributo **attendedBy** en \<Class> representan una relación **m:n** entre las tablas Student y Class. Un estudiante puede tener muchas clases y una clase puede tener varios estudiantes.  
   
  Suponga que desea dividir este documento y guardarlo en la base de datos de la forma siguiente:  
   
--   Guarde los datos de \<Student> en la tabla Students.  
+-   Guarde los \<Student> datos en la tabla Students.  
   
--   Guarde los datos de \<Class> en la tabla Courses.  
+-   Guarde los \<Class> datos en la tabla Courses.  
   
 -   Guarde los datos de la relación **m:n** (entre Student y Class) en la tabla CourseAttendence. Para extraer los valores se requiere trabajo adicional. Para recuperar esta información y almacenarla en la tabla, utilice estos procedimientos almacenados:  
   
@@ -632,9 +631,9 @@ id  lname   xmlname                   OverFlow
   
     -   **Extract_idrefs_values**  
   
-         Extrae los identificadores de estudiantes individuales de cada elemento \<Course>. Para recuperar estos valores se utiliza una tabla irregular.  
+         Extrae los identificadores de estudiante individuales de cada \<Course> elemento. Para recuperar estos valores se utiliza una tabla irregular.  
   
- He aquí los pasos:  
+ Estos son los pasos:  
   
 ```  
 -- Create these tables:  
@@ -801,8 +800,8 @@ Col1        BinaryCol
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+ [sp_xml_preparedocument &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d899d0585eda7c9cd2b12147732b23c01872128b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042822"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes (Administrador de configuración de SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]El **modo nativo** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza dos bases de datos relacionales para almacenar metadatos y objetos del servidor de informes. Una base de datos se utiliza para el almacenamiento principal y la otra para almacenar datos temporales. Las bases de datos se crean juntas y se enlazan mediante el nombre. Con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada, las bases de datos se denominan `reportserver` y `reportservertempdb`. Colectivamente, ambas se conocen como "base de datos del servidor de informes" o "catálogo del servidor de informes".  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]El **modo nativo** de utiliza dos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos relacionales para almacenar metadatos y objetos del servidor de informes. Una base de datos se utiliza para el almacenamiento principal y la otra para almacenar datos temporales. Las bases de datos se crean juntas y se enlazan mediante el nombre. Con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada, las bases de datos se denominan `reportserver` y `reportservertempdb`. Colectivamente, ambas se conocen como "base de datos del servidor de informes" o "catálogo del servidor de informes".  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]El **modo de SharePoint** de incluye una tercera base de datos que se usa para los metadatos de alertas de datos. Las tres bases de datos se crean para cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los nombres de base de datos incluyen de manera predeterminada un GUID que representa la aplicación de servicio. A continuación, se indican nombres de ejemplo de las tres bases de datos en modo de SharePoint:  
   

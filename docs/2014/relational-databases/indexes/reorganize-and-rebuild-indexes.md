@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7c00f2128bb4c54064511ffff9e8929c9faf4d59
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811035"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049837"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
   En este tema se describe cómo reorganizar o volver a generar un índice fragmentado en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] mantiene los índices automáticamente cada vez que se realizan operaciones de inserción, actualización o eliminación en los datos subyacentes. Con el tiempo, estas modificaciones pueden hacer que la información del índice se disperse por la base de datos (se fragmente). La fragmentación ocurre cuando los índices tienen páginas en las que la ordenación lógica, basada en el valor de clave, no coincide con la ordenación física dentro del archivo de datos. Los índices muy fragmentados pueden reducir el rendimiento de la consulta y ralentizar la respuesta de la aplicación.  
@@ -151,7 +150,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
      **Promedio de tamaño de fila**  
      Tamaño medio de una fila de nivel hoja.  
   
-     **Amplia**  
+     **Profundidad**  
      Número de niveles del índice, incluido el nivel hoja.  
   
      **Registros reenviados**  
@@ -175,7 +174,7 @@ No es posible volver a organizar o generar un índice si el grupo de archivos en
      **Páginas**  
      Número total de páginas de datos.  
   
-     **Id. de partición**  
+     **Identificador de la partición**  
      Id. de partición del árbol b que contiene el índice.  
   
      **Filas fantasma de la versión**  

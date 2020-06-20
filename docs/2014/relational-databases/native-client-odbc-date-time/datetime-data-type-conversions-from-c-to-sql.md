@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43d16368d1f550ccf534a1a6e9804c7ce18b096c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 6d966d1876b03bde301dd29e76e2982da9cd5d8b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705491"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020333"
 ---
 # <a name="conversions-from-c-to-sql"></a>Conversiones de C a SQL
   En este tema se enumeran los problemas que se deben tener en cuenta al convertir tipos de C a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de fecha y hora.  

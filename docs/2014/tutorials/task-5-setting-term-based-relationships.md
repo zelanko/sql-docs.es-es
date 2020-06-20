@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6569d512-637d-4f7b-82e1-1e8582278b37
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0e9a6a1a96d208077e70c0cf1835cff6e34650dd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5f10c82ef5e0b63e0b81b630ed0340545c876661
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489103"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064736"
 ---
 # <a name="task-5-setting-term-based-relationships"></a>Tarea 5: Configuración de relaciones basadas en términos
   En esta tarea, se definen algunas relaciones basadas en términos para los valores del dominio **nombre de proveedor** . Una relación basada en términos permite corregir un término que forma parte de un valor en un dominio. Permiten considerar como sinónimos idénticos varios valores que son idénticos salvo por la ortografía de una parte común. Por ejemplo, **Inc.** se puede corregir en **Incorporated**. DQS emplea estas relaciones en los procesos de detección de conocimiento, limpieza o coincidencia. Vea [crear relaciones basadas en términos](https://msdn.microsoft.com/library/hh510404.aspx) para obtener más detalles.  
@@ -30,7 +29,7 @@ ms.locfileid: "65489103"
   
 5.  Repita los dos pasos anteriores para los valores siguientes:  
   
-    |Value|Corregir a|  
+    |Valor|Corregir a|  
     |-----------|----------------|  
     |Corp.|Corporation|  
     |Inc.|Incorporated|  

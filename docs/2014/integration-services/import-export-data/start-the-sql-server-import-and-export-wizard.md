@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965585"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecutar el Asistente para importación y exportación de SQL Server
   El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el método más sencillo para copiar datos entre orígenes de datos y crear paquetes básicos. Para obtener más información sobre el asistente, vea [SQL Server Asistente para importación y exportación](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)de.  
@@ -31,19 +30,19 @@ ms.locfileid: "62768037"
   
 -   En el menú **Inicio** , seleccione **todos los programas**,**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
   
-     o bien  
+     O bien  
   
-     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], haga clic con el botón secundario en la carpeta **paquetes SSIS** y, a continuación, haga clic en **Asistente para SSISImport y exportar**.  
+     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , haga clic con el botón secundario en la carpeta **paquetes SSIS** y, a continuación, haga clic en **Asistente para SSISImport y exportar**.  
   
-     o bien  
+     O bien  
   
-     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], en el menú **proyecto** , haga clic en **Asistente para SSISImport y exportar**.  
+     En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , en el menú **proyecto** , haga clic en **Asistente para SSISImport y exportar**.  
   
-     o bien  
+     O bien  
   
-     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic con el botón secundario en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
+     En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic con el botón secundario en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
   
-     o bien  
+     O bien  
   
      En una ventana de símbolo del sistema, ejecute DTSWizard.exe, ubicado en C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn.  
   
@@ -71,7 +70,7 @@ ms.locfileid: "62768037"
   
         |Propiedad|Value|  
         |--------------|-----------|  
-        |Collation|Latin1_General_CS_AS_KS_WS|  
+        |Intercalación|Latin1_General_CS_AS_KS_WS|  
         |modelo de recuperación|Completo|  
         |Usar indización de texto completo|True|  
   
@@ -124,7 +123,7 @@ ms.locfileid: "62768037"
      Si se inicia el asistente desde un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el paquete no se puede ejecutar desde el asistente. En lugar de ello, el paquete se agrega al proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] desde el cual se inició el asistente. En ese caso, se puede ejecutar el paquete en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], la opción para guardar el paquete creado por el asistente no está disponible.  
+    >  En [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , la opción para guardar el paquete creado por el asistente no está disponible.  
   
 ## <a name="see-also"></a>Consulte también  
  [Asistente para importación y exportación de SQL Server](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   

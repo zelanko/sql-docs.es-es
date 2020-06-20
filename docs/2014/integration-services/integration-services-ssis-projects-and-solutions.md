@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e48dfbf5420c6032b8185cf59b2b132df2c82cf2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176194"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966245"
 ---
 # <a name="integration-services-ssis-projects"></a>Proyectos de Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para el desarrollo de paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .
 
- Cuando implemente paquetes en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos [!INCLUDE[ssIS](../includes/ssis-md.md)] de o en el almacén de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] paquetes de, utilice el servicio para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información sobre la implementación de paquetes, vea [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).
+ Cuando implemente paquetes en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos de o en el [!INCLUDE[ssIS](../includes/ssis-md.md)] almacén de paquetes de, utilice el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] servicio para administrar los paquetes. El servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solo está disponible en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Para más información sobre el servicio, vea [Servicio Integration Services &#40;servicio SSIS&#41;](service/integration-services-service-ssis-service.md). Para obtener más información sobre la implementación de paquetes, vea [implementación de paquetes &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md).
 
  Al implementar proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], utilice los procedimientos almacenados y las vistas de Transact-SQL de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para administrarlos. Para obtener más información acerca de la implementación de proyectos, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md). Para más información sobre el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], vea [Integration Services &#40;SSIS&#41; Server (Servidor de Integration Services &#40;SSIS&#41;)](catalog/integration-services-ssis-server-and-catalog.md).
 

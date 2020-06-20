@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 603b5e6b929259dc8b1408c0c2a1afab383446e1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011545"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055522"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Crear y administrar índices de texto completo
   El motor de búsqueda de texto completo utiliza la información de los índices de texto completo para compilar las consultas de texto completo que pueden buscar rápidamente en una tabla palabras o combinaciones de palabras determinadas. Un índice de texto completo almacena información sobre las palabras relevantes y su ubicación en una o varias columnas de la tabla de una base de datos. Un índice de texto completo es un tipo especial de índice funcional basado en token que el motor de texto completo genera y mantiene para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El proceso de creación de un índice de texto completo difiere de la creación de otros tipos de índice. En lugar de crear una estructura de árbol B basada en un valor almacenado en una fila determinada, el motor de texto completo genera una estructura de índice invertida, apilada y comprimida que se basa en tokens individuales del texto que se indiza.  El tamaño de un índice de texto completo solo está limitado por los recursos de memoria disponibles del equipo en el que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -86,7 +85,7 @@ ms.locfileid: "66011545"
   
  La columna **ColId** contiene un valor correspondiente a una determinada tabla y columna indexada de texto completo.  
   
- La `DocId` columna contiene valores para un entero de ocho bytes que se asigna a un determinado valor de clave de texto completo en una tabla indizada de texto completo. Esta asignación es necesaria cuando la clave de texto completo no es de un tipo de datos enteros. En tales casos, las asignaciones entre valores y `DocId` valores de clave de texto completo se mantienen en una tabla independiente denominada tabla de asignación de DocId. Para consultar estas asignaciones, use el procedimiento almacenado del sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para satisfacer una condición de búsqueda, los valores de DocId de la tabla anterior tienen que combinarse con la tabla de asignaciones de DocId para recuperar las filas de la tabla base que se consulta. Si el valor de la clave de texto completo de la tabla base es de un tipo entero, el valor actúa directamente como DocId y no se necesita ninguna asignación. Por consiguiente, utilizar valores de clave de texto completo enteros puede ayudar a optimizar las consultas de texto completo.  
+ La `DocId` columna contiene valores para un entero de ocho bytes que se asigna a un determinado valor de clave de texto completo en una tabla indizada de texto completo. Esta asignación es necesaria cuando la clave de texto completo no es de un tipo de datos enteros. En tales casos, las asignaciones entre valores y valores de clave de texto completo `DocId` se mantienen en una tabla independiente denominada tabla de asignación de DocId. Para consultar estas asignaciones, use el procedimiento almacenado del sistema [sp_fulltext_keymappings](/sql/relational-databases/system-stored-procedures/sp-fulltext-keymappings-transact-sql) . Para satisfacer una condición de búsqueda, los valores de DocId de la tabla anterior tienen que combinarse con la tabla de asignaciones de DocId para recuperar las filas de la tabla base que se consulta. Si el valor de la clave de texto completo de la tabla base es de un tipo entero, el valor actúa directamente como DocId y no se necesita ninguna asignación. Por consiguiente, utilizar valores de clave de texto completo enteros puede ayudar a optimizar las consultas de texto completo.  
   
  La columna **Occurrence** contiene un valor entero. Para cada valor de DocId hay una lista de valores de repetición correspondientes a las posiciones relativas de una palabra clave determinada en DocId. Los valores de repetición son útiles para determinar las coincidencias de frases o de proximidad, por ejemplo, frases que tienen valores de repetición adyacentes. También son útiles para calcular las puntuaciones de importancia; por ejemplo, el número de repeticiones de una palabra clave en una columna DocId se puede utilizar para determinar la puntuación.  
   

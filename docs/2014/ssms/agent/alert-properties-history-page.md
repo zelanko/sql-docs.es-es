@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: f5359f5c-93a3-4a4a-8286-e9fe6f0196c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bdda14df5463fc9bd2a90d990d7c2be35f910d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4d1dbd64c7ffc8f80dacd79f96db5a0025a5805e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189830"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056632"
 ---
 # <a name="alert-properties-history-page"></a>Propiedades de alerta (página Historial)
-  Utilice esta página para ver y modificar el historial de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las alertas del agente.  
+  Utilice esta página para ver y modificar el historial de las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas del agente.  
   
 ## <a name="options"></a>Opciones  
  **Fecha de la última alerta**  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 13b982c3-ae03-4155-bc0d-e225050703ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4237ebcc22318fdd6a93af09a79d7f8e2bea8989
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: f995e3c288435ed55d2f1496894f73409496c06d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022025"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client notifica la columna adicional USERTYPE en el conjunto de resultados de `SQLGetTypeInfo` . USERTYPE notifica la definición de tipo de datos de DB-Library y resulta de gran utilidad para los programadores que migran las aplicaciones existentes de DB-Library a ODBC.  

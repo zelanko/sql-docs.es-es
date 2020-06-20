@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac134bbd4c65da4700990b69b09134230e98903f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289173"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85023830"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
   En este tema se describe cómo crear un plan de mantenimiento de un solo servidor o multiservidor mediante el Asistente para planes de mantenimiento de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. El Asistente para planes de mantenimiento crea un plan de mantenimiento que el Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede ejecutar periódicamente. Esto permite realizar diversas tareas de administración de bases de datos, incluidas copias de seguridad, comprobaciones de integridad de la base de datos o actualizaciones de las estadísticas de la base de datos a intervalos especificados.  
@@ -138,7 +137,7 @@ ms.locfileid: "79289173"
   
         7.  Haga clic en **OK**.  
   
-    6.  Haga clic en **Next**.  
+    6.  Haga clic en **Siguiente**.  
   
 6.  En la página **Seleccionar servidores de destino** , seleccione los servidores en los que desea ejecutar el plan de mantenimiento. Esta página solo está visible en instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuradas como servidores maestros.  
   
@@ -283,7 +282,7 @@ ms.locfileid: "79289173"
      **Solo estadísticas de índice**  
      Solo actualiza las estadísticas de los índices. Usa la opción `WITH INDEX` .  
   
-     **Tipo de recorrido**  
+     **Tipo de examen**  
      Tipo de recorrido usado para obtener estadísticas actualizadas.  
   
      **Examen completo**  
@@ -294,7 +293,7 @@ ms.locfileid: "79289173"
   
 #### <a name="define-the-history-cleanup-task"></a>Definir la tarea Limpieza de historial  
   
-1.  En la página **Definir la tarea Limpieza de historial** , defina una o varias bases de datos donde desee descartar el historial de tareas. Esta tarea usa las instrucciones `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`y `EXEC sp_delete_backuphistory` para quitar información de historial de las tablas **msdb** . Cuando haya terminado, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Limpieza de historial** , defina una o varias bases de datos donde desee descartar el historial de tareas. Esta tarea usa las instrucciones `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`y `EXEC sp_delete_backuphistory` para quitar información de historial de las tablas **msdb** . Cuando termine, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
@@ -319,7 +318,7 @@ ms.locfileid: "79289173"
   
 #### <a name="define-backup-tasks"></a>Definir las tareas Copia de seguridad  
   
-1.  En la página **Definir la tarea Copia de seguridad de BD (completa)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad completa. Esta tarea usa la instrucción `BACKUP DATABASE`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando haya terminado, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Copia de seguridad de BD (completa)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad completa. Esta tarea usa la instrucción `BACKUP DATABASE`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
@@ -369,11 +368,11 @@ ms.locfileid: "79289173"
     > [!IMPORTANT]  
     >  El cuadro de diálogo que se abre al hacer clic en **Crear** requiere un certificado de administración o el perfil de publicación para la suscripción. Si no tiene acceso al certificado de administración o al perfil de publicación, puede crear una credencial de SQL; para ello, especifique la información del nombre de cuenta de almacenamiento y de clave de acceso mediante Transact-SQL o SQL Server Management Studio. Vea el código de ejemplo del tema [para crear una credencial](../security/authentication-access/create-a-credential.md#Credential) para crear una credencial mediante TRANSACT-SQL. O bien, con SQL Server Management Studio, desde el motor de base de datos, haga clic con el botón secundario en **Seguridad**, seleccione **Nuevo**y **Credencial**. Especifique el nombre de cuenta de almacenamiento para **Identidad** y la clave de acceso en el campo **Contraseña** .  
   
-     **Contenedor de Azure Storage**  
+     **Contenedor de almacenamiento de Windows Azure**  
      Especifique el nombre del contenedor de Azure Storage.  
   
      **Prefijo URL:**  
-     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<la cuenta de almacenamiento>. BLOB.Core.Windows.net**.  
+     Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que use un formato distinto de ** \<storage account> . BLOB.Core.Windows.net**.  
   
      Cuadro **Extensión del archivo de copia de seguridad**  
      Especifique la extensión que se va a utilizar para los archivos de copia de seguridad. El valor predeterminado es .bak.  
@@ -404,16 +403,16 @@ ms.locfileid: "79289173"
     |||  
     |-|-|  
     |**Usar la configuración de servidor predeterminada**|Haga clic para utilizar el valor predeterminado de nivel de servidor. La opción de la configuración del servidor **Compresión de copia de seguridad predeterminada** establece este valor predeterminado. Para obtener más información sobre cómo ver la configuración actual de esta opción, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> ** \* Importante \* \* ** De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional consumida por el proceso de compresión puede afectar negativamente a las operaciones simultáneas. Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el regulador de recursos limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
+    |**Comprimir copia de seguridad**|Haga clic para comprimir la copia de seguridad, sin tener en cuenta el valor predeterminado de nivel de servidor.<br /><br /> Importante de forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional consumida por el proceso de compresión puede afectar negativamente a las operaciones simultáneas. ** \* \* \* \* ** Por tanto, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el regulador de recursos limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.|  
     |**No comprimir copia de seguridad**|Haga clic para crear una copia de seguridad sin comprimir, independientemente del valor predeterminado de nivel de servidor.|  
   
-2.  En la página **Definir la tarea Copia de seguridad de BD (diferencial)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad parcial. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Cuando haya terminado, haga clic en **Siguiente**.  
+2.  En la página **Definir la tarea Copia de seguridad de BD (diferencial)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad parcial. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP DATABASE ... WITH DIFFERENTIAL`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Cuando termine, haga clic en **Siguiente**.  
   
-3.  En la página **Definir la tarea Copia de seguridad de BD (reg. trans.)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad de un registro de transacciones. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP LOG`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando haya terminado, haga clic en **Siguiente**.  
+3.  En la página **Definir la tarea Copia de seguridad de BD (reg. trans.)**, seleccione una o varias bases de datos en la que desea ejecutar una copia de seguridad de un registro de transacciones. Vea la lista de definiciones en el paso 16 anterior para obtener más información acerca de las opciones disponibles en esta página. Esta tarea usa la instrucción `BACKUP LOG`. Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql). Cuando termine, haga clic en **Siguiente**.  
   
 #### <a name="define-maintenance-cleanup-tasks"></a>Definir las tareas Limpieza de mantenimiento  
   
-1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file`. Cuando haya terminado, haga clic en **Siguiente**.  
+1.  En la página **Definir la tarea Limpieza de mantenimiento** , especifique los tipos de archivos que desea eliminar como parte del plan de mantenimiento, incluidos los informes de texto creados por planes de mantenimiento y los archivos de copia de seguridad de base de datos. Esta tarea usa la instrucción `EXEC xp_delete_file`. Cuando termine, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
     >  Esta tarea no elimina automáticamente archivos incluidos en las subcarpetas del directorio especificado. Esta precaución reduce la posibilidad de un ataque malintencionado que utilice la tarea Limpieza de mantenimiento para eliminar archivos. Si quiere eliminar archivos en las subcarpetas de primer nivel, hay que seleccionar **Incluir subcarpetas de primer nivel**.  
@@ -494,7 +493,7 @@ ms.locfileid: "79289173"
      **Mensaje**  
      Proporciona los mensajes de error o de advertencia devueltos por el proceso.  
   
-     **Informe**  
+     **Report**  
      Crea un informe que contiene los resultados del Asistente para la creación de particiones. Las opciones son **Ver informe**, **Guardar informe en archivo**, **Copiar informe al Portapapeles**y **Enviar informe como correo electrónico**.  
   
      **Ver informe**  

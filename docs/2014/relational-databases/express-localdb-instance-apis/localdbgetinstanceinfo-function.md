@@ -15,13 +15,12 @@ topic_type:
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 889e5eee49363c71a18808e7c71434110241bc84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1bac043c4a194c904154e2c97cd0544c8c941078
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130528"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027771"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Función LocalDBGetInstanceInfo
   Devuelve información para la instancia de SQL Server Express LocalDB especificada, por ejemplo si existe, la versión de LocalDB que usa, si se está ejecutando, etc.  
@@ -95,7 +94,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  Entradas Contiene el tamaño del búfer de *InstanceInfo* .  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -129,7 +128,7 @@ HRESULT LocalDBGetInstanceInfo(
 ## <a name="details"></a>Detalles  
  La lógica que subyace a la introducción del `struct` argumento de tamaño (*lpInstanceInfoSize*) es permitir que la API devuelva distintas versiones de **LocalDBInstanceInfostruct**, con lo que se habilita la compatibilidad con versiones anteriores y posteriores.  
   
- Si el `struct` argumento de tamaño (*lpInstanceInfoSize*) coincide con el tamaño de una versión conocida de **LocalDBInstanceInfostruct**, `struct` se devuelve esa versión de. De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
+ Si el `struct` argumento de tamaño (*lpInstanceInfoSize*) coincide con el tamaño de una versión conocida de **LocalDBInstanceInfostruct**, se devuelve esa versión de `struct` . De lo contrario, se devuelve LOCALDB_ERROR_INVALID_PARAMETER.  
   
  Un ejemplo típico de uso de la API de **LocalDBGetInstanceInfo** tiene el siguiente aspecto:  
   

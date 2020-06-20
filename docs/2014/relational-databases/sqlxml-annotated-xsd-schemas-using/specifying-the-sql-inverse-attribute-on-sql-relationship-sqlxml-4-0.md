@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 08904cbd-9c86-493d-90c3-f5e1d13ce59d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 90c2b7836de03369c09d68181fd1cb61b355107b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5b0781102371b98cced72a5a0edee70c9567c372
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703478"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003071"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Especificar el atributo sql:inverse en sql:relationship (SQLXML 4.0)
-  El atributo `sql:inverse` solamente resulta útil cuando se utiliza el esquema XSD, ya sea para la carga masiva o por parte de un diagrama de actualización. El `sql:inverse` atributo se puede especificar en el elemento ** \< sql: Relationship>** . En diagramas de actualización, la lógica del diagrama de actualización interpreta el esquema para determinar las tablas y columnas actualizadas mediante la operación del diagrama de actualización. Las relaciones entre elementos primarios y secundarios que se especifican en el esquema determinan el orden en que se modifican (insertan o eliminan) los registros.  
+  El atributo `sql:inverse` solamente resulta útil cuando se utiliza el esquema XSD, ya sea para la carga masiva o por parte de un diagrama de actualización. El `sql:inverse` atributo se puede especificar en el **\<sql:relationship>** elemento. En diagramas de actualización, la lógica del diagrama de actualización interpreta el esquema para determinar las tablas y columnas actualizadas mediante la operación del diagrama de actualización. Las relaciones entre elementos primarios y secundarios que se especifican en el esquema determinan el orden en que se modifican (insertan o eliminan) los registros.  
   
- Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, el `sql:inverse` atributo se especifica ( `sql:inverse="true"` ) en el elemento ** \< SQL: Relationship>** y la lógica diagrama inversa su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
+ Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, el `sql:inverse` atributo se especifica ( `sql:inverse="true"` ) en el **\<sql:relationship>** elemento y la lógica diagrama inversa su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
   
  El atributo `sql:inverse` toma un valor booleano (0=false, 1=true). Los valores permitidos son 0, 1, true y false.  
   

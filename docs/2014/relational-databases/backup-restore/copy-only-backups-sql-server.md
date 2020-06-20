@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 96267b98d7e17b920e0a7cee70b69e4c964584e4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fc74d7b1bba2a0163ac9edefb5d465c54ef6296c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798011"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84958887"
 ---
 # <a name="copy-only-backups-sql-server"></a>Copias de seguridad de solo copia (SQL Server)
   Una *copia de seguridad de solo copia* es una copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente de la secuencia de copias de seguridad convencionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Normalmente, la realización de una copia de seguridad cambia la base de datos y afecta a la forma de restaurar las copias de seguridad posteriores. Sin embargo, a veces es útil realizar una copia de seguridad con un fin específico sin afectar a los procedimientos generales para copias de seguridad y restauración de la base de datos. Las copias de seguridad de solo copia sirven para este propósito.  
@@ -34,7 +33,7 @@ ms.locfileid: "72798011"
   
 -   Copias de seguridad de registros de solo copia (solo modelo de recuperación completa y modelo de recuperación optimizado para cargas masivas de registros)  
   
-     Una copia de seguridad de registros de solo copia mantiene el punto de archivo del registro existente y, por tanto, no afecta a la secuenciación de copias de seguridad de registros periódicas. Las copias de seguridad de registros de solo copia suelen ser innecesarias. En lugar de ello, puede crear una nueva copia de seguridad de registros rutinaria (con WITH NORECOVERY) y utilizarla junto con las copias de seguridad de registros anteriores que sean necesarias para la secuencia de restauración. Sin embargo, una copia de seguridad de registros de solo copia en ocasiones puede resultar útil para realizar una restauración en línea. Para ver un ejemplo, consulte [Ejemplo: restauración en línea de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
+     Una copia de seguridad de registros de solo copia mantiene el punto de archivo del registro existente y, por tanto, no afecta a la secuenciación de copias de seguridad de registros periódicas. Las copias de seguridad de registros de solo copia suelen ser innecesarias. En lugar de ello, puede crear una nueva copia de seguridad de registros rutinaria (con WITH NORECOVERY) y utilizarla junto con las copias de seguridad de registros anteriores que sean necesarias para la secuencia de restauración. Sin embargo, una copia de seguridad de registros de solo copia en ocasiones puede resultar útil para realizar una restauración en línea. Para obtener un ejemplo, vea [Ejemplo: Restauración con conexión de un archivo de lectura/escritura &#40;modelo de recuperación completa&#41;](example-online-restore-of-a-read-write-file-full-recovery-model.md).  
   
      El registro de transacciones nunca se trunca después de una copia de seguridad de solo copia.  
   
@@ -52,14 +51,14 @@ ms.locfileid: "72798011"
   
 -   Para una copia de seguridad completa de solo copia:  
   
-     *Database_name* de base de \<datos*>* de copia de seguridad para backup_device... CON COPY_ONLY...  
+     Copia de seguridad de la *database_name* de base de datos en \<backup_device*> *... CON COPY_ONLY...  
   
     > [!NOTE]  
     >  COPY_ONLY no tiene ningún efecto cuando se especifica con la opción DIFFERENTIAL.  
   
 -   Para una copia de seguridad de registros de solo copia:  
   
-     *Database_name* del registro de *\<* copia*>* de seguridad para backup_device... CON COPY_ONLY...  
+     *Database_name* del registro de copia de seguridad en *\<*backup_device*>* ... CON COPY_ONLY...  
   
 ###  <a name="using-powershell"></a><a name="PowerShellProcedure"></a> Usar PowerShell  
   
@@ -84,5 +83,5 @@ Utilice el cmdlet `Backup-SqlDatabase` con el parámetro `-CopyOnly`.
 ## <a name="see-also"></a>Consulte también  
  [Información general de copia de seguridad &#40;SQL Server&#41;](backup-overview-sql-server.md)   
  [Modelos de recuperación &#40;SQL Server&#41;](recovery-models-sql-server.md)   
- [Copiar bases de datos con copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
+ [Copiar bases de datos con Copias de seguridad y restauración](../databases/copy-databases-with-backup-and-restore.md)   
  [Información general sobre restauración y recuperación &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 906946f396e598e582c4fb409d953e4fc889d207
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245009"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000576"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Propiedades de Protocolos de MSSQLSERVER (pestaña Certificado)
   Utilice la pestaña **Certificado** del cuadro de diálogo **Propiedades de Protocolos de MSSQLSERVER** para seleccionar un certificado para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]o ver las propiedades de un certificado. Todos los campos están en blanco hasta que se selecciona un certificado.  

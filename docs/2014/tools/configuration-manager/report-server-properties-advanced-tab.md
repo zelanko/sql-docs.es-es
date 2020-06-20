@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80aedab6-2be4-409d-88ba-2107e96345fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 90280725036f3d984b0d7b989e9a802dfec38746
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ac6fb800d435be9d8a906cfd17f84ba60db7b90f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63048630"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007865"
 ---
 # <a name="report-server-properties-advanced-tab"></a>Propiedades de Servidor de informes (pestaña Avanzadas)
   Este es el servicio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si se han definido propiedades personalizadas, aparecen en esta pestaña junto con los valores correspondientes.  

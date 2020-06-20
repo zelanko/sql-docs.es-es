@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 95cff841-c2d5-4e1e-a18d-f3d4696a5b85
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec3c40d7821c86f3f5c5a7eb0d63ab48904513e2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e5d44756131b6133baec69e34da11055a965e2da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706266"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022728"
 ---
 # <a name="sqlendtran"></a>SQLEndTran
   De forma predeterminada, el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client cierra el cursor asociado de una instrucción cuando **SQLEndTran** confirma o revierte una operación. Los cursores de servidor se cierran, a menos que sean estáticos. Cuando **SQLEndTran** confirma o revierte una operación, el valor del atributo de conexión ODBC específico del controlador SQL_COPT_SS_PRESERVE_CURSORS, establecido por [SQLSetConnectAttr](sqlsetconnectattr.md), determina el comportamiento del cursor asociado de una instrucción.  

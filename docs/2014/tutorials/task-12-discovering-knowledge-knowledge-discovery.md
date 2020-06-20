@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0bad2760a5dc9b16b24d75bb35617759543205f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65484681"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064779"
 ---
 # <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Tarea 12: Detección de conocimiento
   En esta tarea, realizará la actividad **detección de conocimiento** en los dominios ID. de **proveedor** y nombre de **proveedor** . En este escenario, el proceso de detección de conocimiento importa principalmente valores de estos dos dominios.  
@@ -28,7 +27,7 @@ ms.locfileid: "65484681"
   
 2.  Seleccione el **archivo de Excel** para el origen de **datos**.  
   
-3.  Haga clic en **examinar**, desplácese y seleccione **Suppliers. xls**y haga clic en **abrir**.  
+3.  Haga clic en **examinar**, desplácese y seleccione **Suppliers.xls**y haga clic en **abrir**.  
   
 4.  Seleccione **proveedores para la detección** de la **hoja de cálculo**.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "65484681"
   
 6.  Haga clic en **siguiente** para cambiar a la página **detectar** .  
   
-7.  En la página **detectar** , haga clic en **iniciar** para iniciar el proceso de detección. La detección se realiza en las columnas **IdProveedor** y **nombre del proveedor** en el archivo **Suppliers. xls** . Los dominios ID. de **proveedor** y **nombre de proveedor** se deben rellenar con el conocimiento extraído de la detección.  
+7.  En la página **detectar** , haga clic en **iniciar** para iniciar el proceso de detección. La detección se realiza en las columnas **IdProveedor** y **nombre del proveedor** en el archivo de **Suppliers.xls** . Los dominios ID. de **proveedor** y **nombre de proveedor** se deben rellenar con el conocimiento extraído de la detección.  
   
      ![Descubrir página de proceso de detección](../../2014/tutorials/media/et-discoveringknowledge-03.jpg "Descubrir página de proceso de detección")  
   
@@ -58,7 +57,7 @@ ms.locfileid: "65484681"
   
      ![Valor de dominio y Corregir al valor](../../2014/tutorials/media/et-discoveringknowledge-06.jpg "Valor de dominio y Corregir al valor")  
   
-13. Haga clic en **Finalizar**  
+13. Haga clic en **Finalizar**.  
   
 14. En **SQL Server Data Quality Services** cuadro de diálogo, haga clic en **publicar**.  
   

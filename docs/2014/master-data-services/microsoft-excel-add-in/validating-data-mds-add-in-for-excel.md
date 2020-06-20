@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 02a788c5675a763d7285c9986eef94f3621e6a9f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0a460abdab356b4ec20678c2e549605792271fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478808"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960815"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>Validar datos (complemento MDS para Excel)
   En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], al publicar datos, tienen lugar dos tipos de validación:  
@@ -34,7 +33,7 @@ ms.locfileid: "65478808"
 ## <a name="validation-statuses"></a>Estados de validación  
  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], son posibles los siguientes estados de validación.  
   
-|Status|Descripción|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |Error|Uno o más valores de la fila no pudieron realizar la validación con las reglas de negocios definidas por un administrador MDS.|  
 |No se validaron|Los valores de la fila aún no se han validado con las reglas de negocios.|  
@@ -43,7 +42,7 @@ ms.locfileid: "65478808"
 ## <a name="input-statuses"></a>Estados de entrada  
  En el [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], son posibles los siguientes estados de entrada.  
   
-|Status|Descripción|  
+|Estado|Descripción|  
 |------------|-----------------|  
 |Error|Uno o más valores de la fila no cumplen los requisitos del sistema como la longitud o el tipo de datos. El valor no se actualiza en el repositorio MDS.|  
 |Nueva fila|Los valores de la fila aún no se han publicado en el repositorio MDS.|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0a4287-7fd4-4f18-b7e4-a5191a9d4a3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0290f033be47bec61e9ccce8465892d8cc98608c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ec3d7aa164cc75485ba7d7d7b5a6533e7d4f30cf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484635"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064825"
 ---
 # <a name="task-1-prerequisite-removing-supplier-data-in-mds"></a>Tarea 1 (requisito previo): Eliminación de datos de proveedor en MDS
   En esta tarea, quitará los datos de proveedor almacenados en MDS. En la lección anterior cargó los datos manualmente mediante el **complemento MDS para Excel** . El paquete de SSIS que cree en esta lección cargará los datos en MDS automáticamente. Por tanto, antes de probar el paquete de SSIS, necesita quitar los datos de proveedor de MDS, quitar la jerarquía derivada, quitar las entidades Proveedor y Estado, y crear la entidad Proveedor sin datos.  
@@ -50,9 +49,9 @@ ms.locfileid: "81484635"
   
     1.  Seleccione **Crear una nueva conexión**y haga clic en el botón **Nuevo** .  
   
-    2.  En el cuadro de diálogo Agregar nueva conexión, escriba **servidor MDS local** para **Descripción** y **http\/:/localhost/MDS** para la **dirección del servidor MDS**y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
+    2.  En el cuadro de diálogo Agregar nueva conexión, escriba **servidor MDS local** para **Descripción** y **http: \/ /localhost/MDS** para la **dirección del servidor MDS**y haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   
-15. En el cuadro de diálogo **Administrar conexiones** , seleccione **servidor MDS local** (`http://localhost/MDS`), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
+15. En el cuadro de diálogo **Administrar conexiones** , seleccione **servidor MDS local** ( `http://localhost/MDS` ), haga clic en **probar** para probar la conexión. Haga clic en **Aceptar** en el cuadro de mensaje.  
   
 16. Haga clic en **Conectar** para establecer una conexión con el servidor MDS.  
   

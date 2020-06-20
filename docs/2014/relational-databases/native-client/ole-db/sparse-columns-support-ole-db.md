@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60d7224a764cd0ab506d03cb154cb06456a8c408
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 825482d26d8b1fb071e802534a3166e61a4e20b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704211"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005973"
 ---
 # <a name="sparse-columns-support-ole-db"></a>Compatibilidad con columnas dispersas (OLE DB)
   En este tema se proporciona información acerca de la compatibilidad con columnas dispersas OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Para obtener más información sobre las columnas dispersas, consulte [compatibilidad con columnas dispersas en SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). Por ejemplo, consulte [Mostrar metadatos de columna y del catálogo para columnas dispersas &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  
@@ -47,7 +46,7 @@ ms.locfileid: "82704211"
 ## <a name="ole-db-support-for-sparse-columns"></a>Compatibilidad de OLE DB con columnas dispersas  
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, se modificaron las siguientes interfaces OLE DB para admitir columnas dispersas:  
   
-|Tipo o función de miembro|Descripción|  
+|Tipo o función de miembro|Description|  
 |-----------------------------|-----------------|  
 |IColumnsInfo::GetColumnsInfo|Un nuevo valor de marca DBCOLUMNFLAGS DBCOLUMNFLAGS_SS_ISCOLUMNSET se establece para `column_set` las columnas en *dwFlags*.<br /><br /> DBCOLUMNFLAGS_WRITE está establecido para las columnas `column_set`.|  
 |IColumsRowset::GetColumnsRowset|Un nuevo valor de marca DBCOLUMNFLAGS, DBCOLUMNFLAGS_SS_ISCOLUMNSET, está establecido para las columnas `column_set` en DBCOLUMN_FLAGS.<br /><br /> DBCOLUMN_COMPUTEMODE está establecido en DBCOMPUTEMODE_DYNAMIC para las columnas `column_set`.|  

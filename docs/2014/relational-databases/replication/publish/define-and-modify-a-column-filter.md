@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7c3186a-9a8c-45d8-ab34-05beec4c26dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e00ceeae68ccc791c3680e029e13844fa6ec683
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3a655976f925f83d8c9446cab99016f32ab14887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68731066"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047685"
 ---
 # <a name="define-and-modify-a-column-filter"></a>Definir y modificar un filtro de columna
   En este tema se describe cómo definir y modificar un filtro de columna en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -46,7 +45,7 @@ ms.locfileid: "68731066"
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Defina los filtros de columna en la página **Artículos** del Asistente para nueva publicación. Para obtener más información sobre cómo usar el Asistente para nueva publicación, vea [Crear una publicación](create-a-publication.md).  
   
- Defina y modifique los filtros de columna en la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre cómo cambiar las propiedades de la publicación, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
+ Defina y modifique los filtros de columna en la página **artículos** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre cómo cambiar las propiedades de la publicación, vea [Ver y modificar propiedades de publicación](view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-column-filter"></a>Para definir un filtro de columna  
   
@@ -56,7 +55,7 @@ ms.locfileid: "68731066"
   
 #### <a name="to-modify-column-filtering"></a>Para modificar filtros de columna  
   
-1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , expanda la tabla que quiere filtrar en el panel **Objetos que se van a publicar**.  
+1.  En la página **artículos** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** , expanda la tabla que se va a filtrar en el panel **objetos para publicar** .  
   
 2.  Desactive la casilla situada junto a cada columna que desee filtrar y asegúrese de que activa las casillas de las columnas que se deben incluir en el artículo.  
   

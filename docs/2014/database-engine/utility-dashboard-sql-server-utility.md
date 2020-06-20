@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 999eb741-4a60-43f6-ab37-2df7dce845c1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ce0c700e7e53ef1b055fa476e1e259fefe6c0aa
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 34d43be3710695bc4101f4b9453eb7e985fda94c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83857787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927670"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Panel de la utilidad (utilidad de SQL Server)
   Para ver los datos en el panel de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione el nodo superior en el árbol del explorador de la utilidad (identificado como "Utilidad<UCP_Name>\\(nombreDeEquipo\UCP)"). El panel incluye un resumen y datos detallados de todas las instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y de todas las aplicaciones de capa de datos en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para actualizar los datos en el panel, haga clic con el botón derecho en el nodo superior del árbol del explorador de la utilidad y seleccione **Actualizar**.  

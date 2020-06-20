@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 65631795-3389-40cf-90ea-85e9438956c5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 05891576872818e0d15d7bcae728dd3f19cdc252
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 651b7899e104fe5a7dbc6d584ceba6e5cf8de570
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055123"
 ---
 # <a name="specifying-an-axis-sqlxml-40"></a>Especificar un eje (SQLXML 4.0)
     
@@ -33,7 +32,7 @@ ms.locfileid: "82703090"
   
      Contiene el elemento secundario del nodo de contexto.  
   
-     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los ** \< clientes>** secundarios:  
+     La expresión XPath siguiente (ruta de acceso de ubicación) selecciona del nodo de contexto actual todos los **\<Customer>** elementos secundarios:  
   
     ```  
     child::Customer  
@@ -45,7 +44,7 @@ ms.locfileid: "82703090"
   
      Contiene el elemento primario del nodo de contexto.  
   
-     La expresión XPath siguiente selecciona todos los elementos primarios del ** \< cliente>** del ** \< pedido>** elementos secundarios:  
+     La expresión XPath siguiente selecciona todos los **\<Customer>** elementos primarios de los **\<Order>** elementos secundarios:  
   
     ```  
     child::Customer/child::Order[parent::Customer/@customerID="ALFKI"]  
@@ -67,7 +66,7 @@ ms.locfileid: "82703090"
   
      Contiene el propio nodo de contexto.  
   
-     La expresión XPath siguiente selecciona el nodo actual si es el ** \< orden>** nodo:  
+     La expresión XPath siguiente selecciona el nodo actual si es el **\<Order>** nodo:  
   
     ```  
     self::Order  

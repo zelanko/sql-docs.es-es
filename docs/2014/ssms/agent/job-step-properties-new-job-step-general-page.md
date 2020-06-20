@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8d1885ba-4386-4528-8f2b-68c16852720c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c8f8bc17b6a4c4792858c64144788aa12b858a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62510959"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062248"
 ---
 # <a name="job-step-properties-new-job-step-general-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página General)
   Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente, o para definir un nuevo paso de trabajo.  
@@ -28,7 +27,7 @@ ms.locfileid: "62510959"
  **Nombre del paso**  
  Establece el nombre del paso de trabajo.  
   
- **Type**  
+ **Tipo**  
  Establece el subsistema que utiliza el paso de trabajo. En función del subsistema elegido, las opciones que se muestran para definir el paso de trabajo son diferentes.  
   
  **Ejecutar como**  
@@ -205,7 +204,7 @@ ms.locfileid: "62510959"
  Especifique dónde se encuentra el paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) y qué método de autenticación se va a utilizar. Cuando seleccione esta pestaña, aparecerán las opciones siguientes.  
   
  **Origen del paquete**  
- Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija una de las siguientes opciones:  
+ Especifica dónde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Elija alguna de las acciones siguientes:  
   
 -   **SQL Server**  
   
@@ -216,7 +215,7 @@ ms.locfileid: "62510959"
  **Server**  
  Escriba el nombre del servidor en donde se almacena el paquete [!INCLUDE[ssIS](../../includes/ssis-md.md)] . Esta opción solo está disponible cuando se especifica **SQL Server** o **Almacén de paquetes SSIS** para **Origen del paquete**.  
   
- **Usar autenticación de Windows**  
+ **Utilizar autenticación de Windows**  
  Para los inicios de sesión en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Usar autenticación SQL Server**  
@@ -240,7 +239,7 @@ ms.locfileid: "62510959"
  **Add (Agregar)**  
  Agrega un archivo de configuración para el paquete.  
   
- **Remove**  
+ **Quitar**  
  Quita un archivo de configuración del paquete.  
   
  **Subir**  
@@ -258,7 +257,7 @@ ms.locfileid: "62510959"
  **Add (Agregar)**  
  Agrega un archivo de comandos.  
   
- **Remove**  
+ **Quitar**  
  Quita el archivo de comandos seleccionado.  
   
  **Subir**  
@@ -315,7 +314,7 @@ ms.locfileid: "62510959"
  **Cadena de configuración**  
  Escriba la cadena de configuración del proveedor de registro.  
   
- **Remove**  
+ **Quitar**  
  Quita el proveedor de registro.  
   
 ### <a name="set-values-tab"></a>Valores establecidos (pestaña)  
@@ -327,7 +326,7 @@ ms.locfileid: "62510959"
  **Valor**  
  Permite ver o cambiar el valor de la propiedad.  
   
- **Remove**  
+ **Quitar**  
  Quita la propiedad.  
   
 ### <a name="verification-tab"></a>Comprobación (pestaña)  
@@ -339,7 +338,7 @@ ms.locfileid: "62510959"
  **Comprobar la compilación del paquete**  
  Solo ejecuta paquetes con un número de generación específico. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el número de generación especificado.  
   
- **Compilar**  
+ **Compilación**  
  Escriba el número de generación del paquete.  
   
  **Comprobar el Id. del paquete**  
@@ -351,7 +350,7 @@ ms.locfileid: "62510959"
  **Comprobar el Id. de versión**  
  Ejecuta solo los paquetes que tienen un identificador de versión concreto. Si se selecciona esta opción, el paso de trabajo se rechaza si el paquete no tiene el identificador de versión especificado.  
   
- **Id. de versión**  
+ **Id. de la versión**  
  Escriba el Id. de versión.  
   
 ### <a name="command-line-tab"></a>Línea de comandos (pestaña)  

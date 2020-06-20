@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 395245ba-0372-43ec-b9a4-a29410d85a6d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9a41bde545463964d01e8f0b32a476ee08118eb7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 356a627105c6e6dabbf4b55a5d43f8b37d2712b2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706022"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85022299"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client especifica los siguientes campos de diagnóstico adicionales para `SQLGetDiagField` . Estos campos admiten el informe de errores enriquecido para aplicaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y están disponible en todos los registros de diagnóstica que se generan en los identificadores de conexión de ODBC e identificadores de instrucciones de ODBC conectados. Los campos se definen en sqlncli.h.  
   
-|Campo del registro de diagnóstico|Descripción|  
+|Campo del registro de diagnóstico|Description|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Indica el número de línea de un procedimiento almacenado que genera un error. El valor de SQL_DIAG_SS_LINE solamente es significativo si SQL_DIAG_SS_PROCNAME devuelve un valor. El valor se devuelve como un entero sin signo de 16 bits.|  
 |SQL_DIAG_SS_MSGSTATE|El estado de un mensaje de error. Para obtener información sobre el estado del mensaje de error, vea [RAISERROR](/sql/t-sql/language-elements/raiserror-transact-sql). El valor se devuelve como un entero con signo de 32 bits.|  
@@ -36,7 +35,7 @@ ms.locfileid: "82706022"
   
  El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client notifica los siguientes códigos de función dinámica adicionales que identifican la última instrucción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentada. El código de función dinámica se devuelve en el encabezado (registro 0) del conjunto de registros de diagnóstico y está por tanto disponible en cada ejecución (correcta o no).  
   
-|Código de función dinámica|Origen|  
+|Código de función dinámica|Source|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|instrucción ALTER DATABASE|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|Instrucción CHECKPOINT|  

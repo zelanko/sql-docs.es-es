@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: aa818155-6fa2-4565-a09f-5c7e31c89754
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 905114d0190a7d1e8441e98249664c985a433988
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3cc238b952c03595035856f377b6fdbb9eaf5e2c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62473216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048803"
 ---
 # <a name="assign-alerts-to-an-operator"></a>Assign Alerts to an Operator
-  En este tema se describe cómo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignar alertas del agente a los operadores para que puedan recibir notificaciones [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sobre los [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] trabajos [!INCLUDE[tsql](../../includes/tsql-md.md)]en mediante o.  
+  En este tema se describe cómo asignar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas del agente a los operadores para que puedan recibir notificaciones sobre los trabajos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   

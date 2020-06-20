@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b4a4c956f1bf60f6d874ee2bda3b261dd954836d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68195777"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048855"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Trabajar con el proveedor WMI para la administración de configuración
   Tenga en cuenta la siguiente información antes de programar con el proveedor WMI para la Administración de equipos:  
@@ -43,7 +42,7 @@ ms.locfileid: "68195777"
   
  donde `instance_name` tiene como valor predeterminado `MSSQLSERVER` en una instalación predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Nota:** Si se va a conectar a través de Firewall de Windows, deberá asegurarse de que los equipos estén configurados correctamente. Vea el artículo sobre la conexión a través de Firewall de Windows en la [!INCLUDE[msCoName](../../includes/msconame-md.md)] documentación de instrumental de administración de Windows en el [sitio web](https://go.microsoft.com/fwlink/?linkid=15426)de MSDN.  
+ **Nota:** Si se va a conectar a través de Firewall de Windows, deberá asegurarse de que los equipos estén configurados correctamente. Vea el artículo sobre la conexión a través de Firewall de Windows en la documentación de Instrumental de administración de Windows en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [sitio web](https://go.microsoft.com/fwlink/?linkid=15426)de MSDN.  
   
 ## <a name="permissions-and-server-authentication"></a>Permisos y autenticación del servidor  
  Para tener acceso al proveedor WMI para la administración de configuración, el script de administración de WMI de cliente se debe ejecutar en el contexto de un administrador en el equipo de destino. Necesita ser miembro del grupo administradores de Windows local en el equipo que desea administrar.  

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 04f1d325-832d-4889-a5f1-ca004bdce2de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e1f29d8e9edcccf093ac85cc134b5b92b9c2173
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704854"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061673"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Cuadro de diálogo Propiedades de faceta, página General
   Utilice este cuadro de diálogo para ver las propiedades de una faceta de administración basada en directivas. Cada faceta se puede aplicar a uno o más tipos de destino, por ejemplo: servidor, base de datos o tabla. Utilice esta página para ver qué tipos de destino están relacionados con esta faceta. Las propiedades de una faceta se definen cuando se crea una faceta y no se puede cambia utilizando esta página.  

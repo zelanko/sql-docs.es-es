@@ -12,22 +12,21 @@ helpviewer_keywords:
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fa9d36a446645b289f2c182e90782d6932cf20ef
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 07cff70d32d7d39619ecf3ee4ce36e37f2dee924
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702254"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012879"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes comodín y validación del contenido
   Los componentes comodín se utilizan para aumentar la flexibilidad en cuanto a lo que se permite que aparezca en un modelo de contenido. El lenguaje XSD admite estos componentes de las formas siguientes:  
   
--   Componentes de carácter comodín de elementos. Se representan mediante el elemento **\<xsd:any>** .  
+-   Componentes de carácter comodín de elementos. Se representan mediante el **\<xsd:any>** elemento.  
   
--   Componentes de carácter comodín de atributos. Se representan mediante el elemento **\<xsd:anyAttribute>** .  
+-   Componentes de carácter comodín de atributos. Se representan mediante el **\<xsd:anyAttribute>** elemento.  
   
- Ambos elementos de carácter comodín, **\<xsd:any>** y **\<xsd:anyAttribute>** , admiten el uso de un atributo **processContents**. Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
+ Ambos elementos de carácter comodín, **\<xsd:any>** y **\<xsd:anyAttribute>** , admiten el uso de un atributo **processContents** . Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
   
 -   El valor **strict** especifica que se valida totalmente el contenido.  
   

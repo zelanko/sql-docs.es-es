@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1cacaae123da110fdec189fed36f699a1303a624
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191094"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062684"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propiedad Version (clase ClientNetLibInfo)
   Obtiene la versión del archivo de biblioteca de red del cliente.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica la versión del archivo de biblioteca de red del cliente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

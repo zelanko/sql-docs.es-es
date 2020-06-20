@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1115707b08c3068b27d83e3e292e6baf64e6cbeb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 10ea5b8f6145df5caadc229c96ea3de3fda406f5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63035692"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047019"
 ---
 # <a name="aliasname-property-sqlserveralias-class"></a>Propiedad AliasName (clase SqlServerAlias)
   Obtiene el nombre del alias de la conexión del servidor.  
@@ -43,5 +42,5 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `string` que especifica el nombre del alias de conexión del servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   

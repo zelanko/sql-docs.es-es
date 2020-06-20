@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86a9538e81881a3b42b95447f4264200e2fe9d4c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68190964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065304"
 ---
 # <a name="instance-configuration"></a>Configuración de instancia
   Use la página **Configuración de instancia** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar si quiere crear una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aún no hay instalada ninguna instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se creará una predeterminada, a menos que especifique una instancia con nombre.  
@@ -71,7 +70,7 @@ ms.locfileid: "68190964"
   
 -   En los nombres de instancia no se permiten espacios insertados ni otros caracteres especiales. Tampoco se permiten la barra diagonal inversa (\\), la coma (,), los dos puntos (:), el punto y coma (;), la comilla simple ('), el símbolo Y comercial (&), el guion (-) ni la arroba (@).  
   
--   **En los nombres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia solo se pueden usar caracteres que sean válidos en la página de códigos actual de Windows. Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.**  
+-   **En los nombres de instancia solo se pueden usar caracteres que sean válidos en la página de códigos actual de Windows [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.**  
   
  **Instancias y características detectadas**  
  Vea una lista de las instancias y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

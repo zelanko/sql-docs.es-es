@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97ba04b8d41c3e5ca4927abb53cf27cfa3013fcd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211501"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036988"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
   Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
@@ -55,7 +54,7 @@ ms.locfileid: "68211501"
   
 #### <a name="to-determine-the-ip-addresses-available-on-the-computer"></a>Para determinar las direcciones IP disponibles en el equipo  
   
-1.  En el equipo en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está instalado, haga clic en **Inicio**, haga `cmd` clic en [!INCLUDE[clickOK](../../includes/clickok-md.md)] **Ejecutar**, escriba y, a continuación,.  
+1.  En el equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está instalado, haga clic en **Inicio**, haga clic en **Ejecutar**, escriba `cmd` y, a continuación, [!INCLUDE[clickOK](../../includes/clickok-md.md)] .  
   
 2.  En la ventana del símbolo del sistema, escriba `ipconfig,` y presione ENTRAR para mostrar las direcciones IP disponibles en este equipo.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "68211501"
   
 1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
+2.  En ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager**, en el panel de la consola, expanda ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configuración de red**, expanda **protocolos de \<instance name> **y, a continuación, haga doble clic en **TCP/IP**.  
   
 3.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "68211501"
   
 1.  En el equipo en el que está instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , inicie sesión como administrador.  
   
-2.  Haga clic en **Inicio**, haga clic `wf.msc`en **Ejecutar**, escriba y haga clic en **Aceptar**.  
+2.  Haga clic en **Inicio**, haga clic en **Ejecutar**, escriba `wf.msc` y haga clic en **Aceptar**.  
   
 3.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Continuar** para usar las credenciales de administrador para abrir Firewall de windows con el complemento Seguridad avanzada.  
   

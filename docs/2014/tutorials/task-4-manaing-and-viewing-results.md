@@ -9,22 +9,21 @@ ms.topic: conceptual
 ms.assetid: ecc3ba7e-fecf-478f-8825-6e4764b00e99
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef2599ea202fad2b85881951692f1f04898e94e8
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72313644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85006573"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: administrar y ver los resultados
   En esta tarea, revisará los resultados de la limpieza asistida por PC y realizará la limpieza interactiva de los datos de proveedor. Vea [fase de limpieza interactiva](https://msdn.microsoft.com/library/hh213061.aspx#Interactive) para obtener más detalles.  
   
 1.  Seleccione dominio de **correo electrónico de contacto** en la lista de dominios.  
   
-2.  Cambie a la pestaña **no válido** en el panel derecho. Observe que dos direcciones de correo electrónico a las que les faltaba el carácter ' al final. Estos dos correos electrónicos que se han detectado que no son válidos por la regla de dominio que requiere que todas las direcciones de correo electrónico terminen con ** \@Adventure-Works.com** (con ' es '). DQS emplea la regla de dominio durante la limpieza para determinar si una dirección de correo electrónico es válida o no. Esta pestaña muestra los valores de dominio que se marcaron como no válidos en la base de conocimiento o que no cumplieron una regla de dominio. En este caso, estos valores no cumplieron en la regla de dominio (Validación de correo electrónico).  
+2.  Cambie a la pestaña **no válido** en el panel derecho. Observe que dos direcciones de correo electrónico a las que les faltaba el carácter ' al final. Estos dos correos electrónicos que se han detectado que no son válidos por la regla de dominio que requiere que todas las direcciones de correo electrónico terminen con ** \@ Adventure-Works.com** (con ' es '). DQS emplea la regla de dominio durante la limpieza para determinar si una dirección de correo electrónico es válida o no. Esta pestaña muestra los valores de dominio que se marcaron como no válidos en la base de conocimiento o que no cumplieron una regla de dominio. En este caso, estos valores no cumplieron en la regla de dominio (Validación de correo electrónico).  
   
-3.  En la columna **corregir a** , escriba la dirección de correo electrónico correcta que termine con ** \@Adventure-Works.com** (con ' es ').  
+3.  En la columna **corregir a** , escriba la dirección de correo electrónico correcta que termine con ** \@ Adventure-Works.com** (con ' es ').  
   
      ![Correcciones de la regla de validación de correo electrónico](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Correcciones de la regla de validación de correo electrónico")  
   
@@ -32,7 +31,7 @@ ms.locfileid: "72313644"
   
 5.  Cambie a la **nueva** pestaña en el panel derecho. Los valores de esta pestaña son aquellos para los que DQS no tiene todavía suficiente información en la base de conocimiento para determinar si son correctos o no. Por tanto, no puede cambiar ni sugerir cambios a los valores de dominio.  
   
-6.  Revise los valores para confirmar que todos los mensajes de correo electrónico terminan con ** \@Adventure-Works.com** y haga clic en **aprobar todos los términos** en la barra de herramientas. Los valores aprobados de esta pestaña se mueven a la pestaña **correcto** .  
+6.  Revise los valores para confirmar que todos los mensajes de correo electrónico terminan con ** \@ Adventure-Works.com** y haga clic en **aprobar todos los términos** en la barra de herramientas. Los valores aprobados de esta pestaña se mueven a la pestaña **correcto** .  
   
 7.  Seleccione el dominio de **país** en la lista de dominios.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 16ab59a9fcdab29c927cb624dabcdfa71eaae1e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011083"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003952"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Buscar propiedades de documento con listas de propiedades de búsqueda
   Anteriormente, el contenido de las propiedades de documento no podían distinguirse del contenido del cuerpo del documento. Esta limitación restringía las consultas de texto completo a búsquedas genéricas en documentos enteros. Sin embargo, ahora puede configurar un índice de texto completo para realizar búsquedas referentes a determinadas propiedades, como Author y Title, en los tipos de documento admitidos con una columna de datos binarios `varbinary`, `varbinary(max)` (incluido `FILESTREAM`) o `image`. Esta forma de búsqueda se denomina *búsqueda de propiedades*.  
@@ -211,7 +210,7 @@ GO
   
     1.  Para quitar una propiedad de documento, haga clic en el encabezado de fila a la izquierda de la propiedad y presione SUPR.  
   
-    2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la **\*** derecha de la, y escriba los valores para la nueva propiedad.  
+    2.  Para agregar una propiedad de documento, haga clic en la fila vacía en la parte inferior de la lista, a la derecha de la **\*** , y escriba los valores para la nueva propiedad.  
   
          Para obtener información sobre estos valores, vea [Editor de lista de propiedades de búsqueda](../../database-engine/search-property-list-editor.md). Para obtener información sobre cómo obtener estos valores para las propiedades definidas por Microsoft, vea [Buscar GUID del conjunto de propiedades e identificadores de enteros de propiedad para las propiedades de búsqueda](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Para obtener información sobre propiedades definidas por un fabricante de software independiente (ISV), vea la documentación de ese fabricante.  
   

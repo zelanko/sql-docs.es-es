@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60b20a1ee5a90b2b51abbe71a189add066e1b7e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 227c8a5b3222bdddab9632ec2e80f0bb4dd54250
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703249"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85015598"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ejecutar plantillas que contienen consultas XPath (Proveedor SQLXMLOLEDB)
   En este ejemplo se muestra cómo utilizar las siguientes propiedades SQLXMLOLEDB específicas del proveedor:  
@@ -34,7 +33,7 @@ ms.locfileid: "82703249"
   
 -   Esquema de asignación  
   
- En esta aplicación ADO de ejemplo, se especifica una plantilla XML compuesta de una consulta XPath (raíz) en el esquema de asignación XSD (Schema. xml) que se describe en [ejecutar consultas xpath &#40;proveedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
+ En esta aplicación ADO de ejemplo, se especifica una plantilla XML compuesta de una consulta XPath (raíz) en el esquema de asignación XSD (MySchema.xml) que se describe en [ejecutar consultas xpath &#40;proveedor de SQLXMLOLEDB&#41;](executing-xpath-queries-sqlxmloledb-provider.md).  
   
  La propiedad esquema de asignación proporciona el esquema de asignación XSD en el que se ejecuta la consulta XPath. La propiedad ruta de acceso base proporciona la ruta de acceso del archivo al esquema de asignación.  
   

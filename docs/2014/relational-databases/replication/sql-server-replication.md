@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e51f45e06939971ada6166fb977c787ad0354926
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62626160"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047674"
 ---
 # <a name="sql-server-replication"></a>Replicación de SQL Server
   La replicación es un conjunto de tecnologías destinadas a la copia y distribución de datos y objetos de base de datos desde una base de datos a otra, para luego sincronizar ambas bases de datos y mantener su coherencia. La replicación permite distribuir datos entre diferentes ubicaciones y entre usuarios remotos o móviles mediante redes locales y de área extensa, conexiones de acceso telefónico, conexiones inalámbricas e Internet.  
@@ -128,7 +127,7 @@ Para obtener información sobre la compatibilidad con versiones anteriores, vea 
 -   [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
 -   [Actualizar scripts de replicación](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
-## <a name="monitor"></a>Supervisión
+## <a name="monitor"></a>Monitor
   
 -   [Permitir el uso del Monitor de replicación a los usuarios que no son administradores](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Supervisar la replicación mediante programación](monitor/programmatically-monitor-replication.md)    

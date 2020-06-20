@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcfa6636e5fc4391b42d2077bd55e0811dc0ca39
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: 2e2839fc4755fe47504e42e5058a5da117888900
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849833"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928816"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Copia de seguridad administrada de SQL Server en Azure: interoperabilidad y coexistencia
   En este tema se describen la interoperabilidad y la coexistencia de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] con varias características de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Estas características son: Grupos de disponibilidad AlwaysOn, creación de reflejo de la base de datos, planes de mantenimiento de copia de seguridad, trasvase de registros, copias de seguridad ad hoc, separar base de datos y quitar base de datos.  
@@ -24,7 +23,7 @@ ms.locfileid: "82849833"
 ### <a name="alwayson-availability-groups"></a>Grupos de disponibilidad AlwaysOn  
  Grupos de disponibilidad AlwaysOn que están configurados como una solución solo de Azure admitida para [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] . Las configuraciones solo en local o Grupo de disponibilidad AlwaysOn híbrido no se admiten. Para obtener más información y otras consideraciones, consulte [configuración de SQL Server copia de seguridad administrada en Azure para grupos de disponibilidad](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) .  
   
-### <a name="database-mirroring"></a>Creación de reflejo de la base de datos  
+### <a name="database-mirroring"></a>Reflejo de base de datos  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] solo se admite en la base de datos principal. Si configura tanto la entidad de seguridad como el reflejo para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], la base de datos reflejada se omite y no se realiza su copia de seguridad. Sin embargo, en caso de conmutación por error, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] iniciará el proceso de copia de seguridad una vez que el reflejo haya completado la conmutación de roles y esté en línea. Las copias de seguridad se almacenarán en un nuevo contenedor en este caso. Si el reflejo no está configurado para utilizar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], en caso de que se produzca una conmutación por error, no se realiza ninguna copia de seguridad. Se recomienda configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] tanto en la entidad de seguridad como en el reflejo de modo que las copias de seguridad continúen en caso de que se produzca una conmutación por error.  
   
 > [!TIP]  

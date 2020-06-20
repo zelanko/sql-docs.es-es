@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 50cda5c1-7293-4080-93b3-872e3b8d484e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 503cc731ede59b4cc3cf70e9cf2daafec436243c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cadbc9e06530706f0b1e1406af7b38b72246303f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82716736"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067828"
 ---
 # <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Ejemplo: Especificar la directiva ELEMENT y la codificación de entidades
-  Este ejemplo muestra la diferencia entre las directivas **ELEMENT** y **XML** . La directiva **ELEMENT** crea entidades para los datos, pero la directiva **XML** no lo hace. Al elemento \<Summary> se le asigna XML, `<Summary>This is summary description</Summary>`, en la consulta.  
+  Este ejemplo muestra la diferencia entre las directivas **ELEMENT** y **XML** . La directiva **ELEMENT** crea entidades para los datos, pero la directiva **XML** no lo hace. Al \<Summary> elemento se le asigna XML, `<Summary>This is summary description</Summary>` , en la consulta.  
   
  Considere esta consulta:  
   

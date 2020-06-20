@@ -9,23 +9,22 @@ ms.topic: conceptual
 ms.assetid: f5f47c2a-38ea-40f8-9767-9bc138d14453
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d5203a0a613bcd8af4b247058f3cb594be5d4c3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f4837ae389dc1b02921ae12ca081b096e63336ab
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797781"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928066"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Solucionar problemas de la Utilidad de SQL Server
-  Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar los problemas de estado [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de los recursos identificados por un UCP, consulte [solución de problemas de SQL Server Resource Health &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
+  Se pueden citar como ejemplos de solución de problemas de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] la resolución de una operación que no ha podido inscribir una instancia de SQL Server con un UCP, la resolución de un error de recopilación de datos que crea iconos deshabilitados en la vista de lista de instancias administradas de un UCP, la mitigación de cuellos de botella de rendimiento o la resolución de problemas de mantenimiento de recursos. Para obtener más información sobre cómo mitigar los problemas de estado de los recursos identificados por un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consulte [solución de problemas de SQL Server Resource Health &#40;utilidad de SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
   
 ## <a name="failed-operation-to-enroll-an-instance-of-sql-server-into-a-sql-server-utility"></a>Error de una operación de inscripción de una instancia de SQL Server en una Utilidad de SQL Server  
  Si se conecta con la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse mediante la Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , y especifica una cuenta de proxy que pertenece a un dominio de Active Directory que no es el dominio en el que está el UCP, la validación de la instancia será correcta, pero se produce un error en la operación de inscripción con un mensaje de error parecido a este:  
   
  Se ha producido una excepción al ejecutar una instrucción o lote Transact-SQL. (Microsoft.SqlServer.ConnectionInfo)  
   
- Información adicional: no se ha podido obtener información sobre el grupo o usuario '\<nombreDeDominio\nombreDeCuenta>' de Windows NT, código de error 0x5. (Microsoft SQL Server, Error: 15404)  
+ Información adicional: no se pudo obtener información acerca del grupo o usuario de Windows NT ' \<DomainName\AccountName> ', código de error 0X5. (Microsoft SQL Server, Error: 15404)  
   
  Este problema sucede en el siguiente escenario de ejemplo:  
   
@@ -35,7 +34,7 @@ ms.locfileid: "72797781"
   
 3.  La instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse en la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también es miembro de "Domain_1."  
   
-4.  Durante la operación de inscripción, conéctese a la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancia de para inscribirse mediante "SA". Especifique una cuenta de proxy de "Domain_2."  
+4.  Durante la operación de inscripción, conéctese a la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para inscribirse mediante "SA". Especifique una cuenta de proxy de "Domain_2."  
   
 5.  La validación se realiza correctamente, pero se produce un error de inscripción.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "72797781"
   
  La ejecución del comando se detuvo porque la variable del shell "ErrorActionPreference" esa establecida en Stop: Access denied.  
   
- ERROR: \<fecha y hora (mm/dd/aaaa HH: mm: SS) >: excepción detectada al recopilar las propiedades de la CPU.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
+ ERROR: \<Date-time (MM/DD/YYYY HH:MM:SS)> excepción detectada al recopilar propiedades de CPU.  Se podría haber producido un error en una consulta WMI.  ADVERTENCIA.  
   
  Para resolver este problema, compruebe la configuración siguiente:  
   
@@ -114,9 +113,9 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
     1.  En el **Explorador de objetos**de SSMS, expanda el nodo **Seguridad** y el nodo **Credenciales** .  
   
-    2.  Haga clic con el botón secundario en **UtilityAgentProxyCredential_\<>GUID** y seleccione **propiedades**.  
+    2.  Haga clic con el botón derecho en **UtilityAgentProxyCredential_ \<GUID> ** y seleccione **propiedades**.  
   
-    3.  En el cuadro de diálogo Propiedades de credenciales, actualice las credenciales según sea necesario para la credencial **\<UtilityAgentProxyCredential_ GUID>** .  
+    3.  En el cuadro de diálogo Propiedades de credenciales, actualice las credenciales según sea necesario para la credencial **UtilityAgentProxyCredential_ \<GUID> ** .  
   
     4.  Haga clic en **Aceptar** para confirmar el cambio.  
   
@@ -124,7 +123,7 @@ Get-WmiObject Win32_LogicalDisk -ErrorAction Stop | Out-Null
   
 -   Se debería iniciar el servicio SQL Server Browser en el UCP y se debería configurar para que se iniciara automáticamente. Si su organización impide el uso del servicio SQL Server Browser, siga los siguientes pasos para permitir que a una instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se conecte al UCP:  
   
-    1.  En la barra de tareas de Windows de la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]instancia administrada de, haga clic en **Inicio**y, a continuación, en **Ejecutar..**..  
+    1.  En la barra de tareas de Windows de la instancia administrada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic en **Inicio**y, a continuación, en **Ejecutar..**..  
   
     2.  Escriba "cliconfg.exe" en el espacio proporcionado y, a continuación, haga clic en **Aceptar**.  
   

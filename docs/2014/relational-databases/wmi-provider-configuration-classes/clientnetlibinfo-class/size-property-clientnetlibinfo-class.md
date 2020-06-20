@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66f7264e-2c18-40f5-8091-b5dd83d5716f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0cf2c598b358c5c43e9dc9717b012bc5c5f873d0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b10914d8d2fa22c57bc9b762647b3978ab839b52
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191123"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062713"
 ---
 # <a name="size-property-clientnetlibinfo-class"></a>Propiedad Size (clase ClientNetLibInfo)
   Obtiene el tamaño de la biblioteca de red del cliente en kilobytes.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor uint32 que especifica el tamaño de la biblioteca de red del cliente en KB.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

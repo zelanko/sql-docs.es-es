@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4a5ec9cefd0106a8e6eb4d796921efe147bea446
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7eb4324d56c3ab45486063cb8097603ac3a416b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702225"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050008"
 ---
 # <a name="supported-sql-server-features"></a>Características admitidas de SQL Server
   En este tema se describen las características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se pueden usar o no con objetos optimizados para memoria.  
@@ -33,7 +32,7 @@ ms.locfileid: "82702225"
   
 -   Control de simultaneidad optimista y varias versiones. Para obtener más información, consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md).  
   
--   Copia de seguridad y restauración de una base de datos que contiene un grupo de archivos de datos optimizado para memoria. Para obtener más información, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Copia de seguridad y restauración de una base de datos que contiene un grupo de archivos de datos optimizado para memoria. Para obtener más información, consulte [copia de seguridad y restauración de bases de datos de SQL Server](../backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
 -   Vistas de catálogo, vistas de administración dinámica y eventos extendidos para aportar compatibilidad. Para más información, vea [Propiedades, vistas del sistema, procedimientos almacenados, tipos de espera y DMV nuevos y actualizados para OLTP en memoria](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
@@ -88,7 +87,7 @@ ms.locfileid: "82702225"
 |Servidor vinculado|Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../linked-servers/linked-servers-database-engine.md).|  
 |Registro masivo|Independientemente del modelo de recuperación de la base de datos, todas las operaciones en tablas durables optimizadas para memoria siempre se registran completamente.|  
 |Registro mínimo|Las tablas optimizadas para memoria no admiten el registro mínimo. Para obtener más información sobre el registro mínimo, vea [El registro de transacciones &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md) y [Requisitos previos para el registro mínimo durante la importación en bloque](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. Sin embargo, no se hace el seguimiento de los cambios en las tablas optimizadas para memoria.|  
+|Seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. Sin embargo, no se hace el seguimiento de los cambios en las tablas optimizadas para memoria.|  
 |DDL, desencadenadores|En las tablas y los procedimientos almacenados compilados de forma nativa de OLTP en memoria no se admiten desencadenadores DDL de nivel de servidor ni de nivel de base de datos.|  
 |Captura de datos modificados (CDC)|CDC no se debe habilitar en una base de datos que tiene objetos de OLTP en memoria, ya que impide determinadas operaciones como DROP.|  
 |Contención de la base de datos|La contención de la base de datos no se admite en las bases de datos con procedimientos almacenados compilados de forma nativa y tablas optimizadas para memoria. Para obtener más información, vea bases de datos [independientes](../databases/contained-databases.md) .|  
@@ -105,7 +104,7 @@ ms.locfileid: "82702225"
   
  Con algunas excepciones, las transacciones entre bases de datos no se admiten. En la tabla siguiente se describen qué casos se admiten y las restricciones correspondientes. (Vea también [Consultas entre bases de datos](cross-database-queries.md)).  
   
-|Bases de datos|Permitida|Descripción|  
+|Bases de datos|Permitida|Description|  
 |---------------|-------------|-----------------|  
 |Bases de datos de usuario, modelo y msdb|No|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
 |Base de datos de recursos y tempdb|Yes|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  

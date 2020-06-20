@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 634263350f0f094697ff2a77d68de5a2feacc9b5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63256058"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047764"
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Administración de servidores mediante la administración basada en directivas
   Éste es el tutorial Administrar servidores mediante administración basada en directivas. Este tutorial está destinado a los usuarios que conocen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pero que no tienen experiencia con la administración basada en directivas.  

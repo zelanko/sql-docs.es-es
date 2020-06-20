@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96598c69-ce9a-4090-aacb-d546591e8af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 419be334c31aa5c4a0f65f9d9f881dbffc4aef94
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 10a64baa17bd070d9354beaf6ff8c2e460682318
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049579"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
   A partir de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], se ha ampliado la compatibilidad con los nombres de entidad de seguridad de servicio (SPN) para habilitar la autenticación mutua en todos los protocolos. En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los SPN solo se admitían en Kerberos sobre TCP, cuando el SPN predeterminado para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se registraba en Active Directory.  
@@ -47,7 +46,7 @@ ms.locfileid: "82707251"
 ## <a name="usage"></a>Uso  
  En la tabla siguiente se describen los escenarios más comunes en los que las aplicaciones cliente pueden habilitar la autenticación segura.  
   
-|Escenario|Descripción|  
+|Escenario|Description|  
 |--------------|-----------------|  
 |Una aplicación heredada no especifica ningún SPN.|Este escenario de compatibilidad garantiza que no habrá ningún cambio de comportamiento en las aplicaciones desarrolladas para versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se especifica ningún SPN, la aplicación se basa en los SPN generados y no tiene ningún conocimiento del método de autenticación utilizado.|  
 |Una aplicación cliente que usa la versión actual de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client especifica un SPN en la cadena de conexión como un usuario de dominio o cuenta de equipo, como un SPN específico de la instancia o como una cadena definida por el usuario.|La palabra clave `ServerSPN` puede usarse en una cadena de conexión, inicialización o proveedor para hacer lo siguiente:<br /><br /> -Especifique la cuenta usada por la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia de para una conexión. Esto simplifica el acceso a la autenticación Kerberos. Si hay presente un centro de distribución de claves Kerberos (KDC) y se especifica la cuenta correcta, es más probable que se use la autenticación Kerberos que la autenticación NTLM. El KDC reside normalmente en el mismo equipo que el controlador de dominio.<br />-Especifique un SPN para buscar la cuenta de servicio de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia. Por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se generan dos SPN predeterminados que pueden usarse para este propósito. No obstante, no se garantiza que estas claves estén presentes en Active Directory, por lo que en esta situación no se garantiza la autenticación Kerberos.<br />-Especifique un SPN que se usará para buscar la cuenta de servicio de la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instancia. Ésta puede ser cualquier cadena definida por el usuario que se asigne a la cuenta de servicio. En este caso, la clave debe registrarse manualmente en el KDC y debe cumplir las reglas de un SPN definido por el usuario.<br /><br /> La palabra clave `FailoverPartnerSPN` puede usarse para especificar el SPN para el servidor del asociado de conmutación por error. El intervalo de valores de cuenta y de clave de Active Directory es el mismo que los valores que pueden especificarse para el servidor principal.|  

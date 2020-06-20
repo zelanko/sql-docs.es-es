@@ -38,13 +38,12 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cbf9af4b5af3043c6ca8fa2cba01ebe43019fb41
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68418875"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952755"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
   En este tema se describe cómo habilitar y configurar el Correo electrónico de base de datos con el Asistente para configuración de Correo electrónico de base de datos y crear un script de configuración de Correo electrónico de base de datos mediante plantillas.  
@@ -129,7 +128,7 @@ ms.locfileid: "68418875"
  Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden dirigirse al administrador de la base de datos, danw@Adventure-Works.com.  
   
  **Nombre del servidor**  
- Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Normalmente, está en un formato similar a `smtp.` *<your_company>* `.com`. Si necesita ayuda, consulte a su administrador de correo.  
+ Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Normalmente, está en un formato similar a `smtp.` *<your_company>* `.com` . Si necesita ayuda, consulte a su administrador de correo.  
   
  **Número de puerto**  
  Escriba el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  
@@ -170,13 +169,13 @@ ms.locfileid: "68418875"
  Muestra o actualiza la descripción de la cuenta. La descripción es opcional.  
   
  **Dirección de correo electrónico**  
- Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta para Microsoft SQL Server agente puede enviar correo electrónico desde la **SqlAgent@Adventure-Works.com**dirección.  
+ Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta para Microsoft SQL Server agente puede enviar correo electrónico desde la dirección **SqlAgent@Adventure-Works.com** .  
   
  **Nombre para mostrar**  
  Muestra o actualiza el nombre que se muestra en los mensajes de correo electrónico enviados desde esta cuenta. Este nombre es opcional. Se trata del nombre que se muestra en los mensajes enviados desde esta cuenta. Por ejemplo, una cuenta del Agente SQL Server puede mostrar el nombre **SQL Server Agent Automated Mailer (Proveedor de servicio de envío de correo automatizado del Agente SQL Server)** en los mensajes de correo electrónico.  
   
  **Correo electrónico de respuesta**  
- Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a una cuenta de Agente SQL Server pueden dirigirse al administrador de **danw@Adventure-Works.com**la base de datos,.  
+ Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a una cuenta de Agente SQL Server pueden dirigirse al administrador de la base de datos, **danw@Adventure-Works.com** .  
   
  **Nombre del servidor**  
  Muestra o actualiza el nombre del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Típicamente está en un formato similar a **smtp.<su_compañía>.com**. Si necesita ayuda, consulte a su administrador de correo.  
@@ -224,7 +223,7 @@ ms.locfileid: "68418875"
  **Add (Agregar)**  
  Agregue una cuenta al perfil.  
   
- **Remove**  
+ **Quitar**  
  Quite la cuenta seleccionada del perfil.  
   
  **Subir**  
@@ -255,7 +254,7 @@ ms.locfileid: "68418875"
  **Add (Agregar)**  
  Agregue una cuenta al perfil.  
   
- **Remove**  
+ **Quitar**  
  Quite la cuenta seleccionada del perfil.  
   
  **Subir**  
@@ -402,7 +401,7 @@ ms.locfileid: "68418875"
  **To**  
  Dirección de correo electrónico de los destinatarios de los mensajes. Se requiere al menos un destinatario.  
   
- **Subject**  
+ **Asunto**  
  Línea de asunto del mensaje de correo electrónico de prueba. Cambie el asunto predeterminado a fin de identificar más fácilmente el mensaje para solucionar el problema.  
   
  **Cuerpo**  

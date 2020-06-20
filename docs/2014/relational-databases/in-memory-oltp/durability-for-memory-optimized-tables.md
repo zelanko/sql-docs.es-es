@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0f2dec6ac7ad68a6a1aa1de8d4734f99559b54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1d48d671b23d7b7b17557e7829d6f2522c375acd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050218"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilidad de las tablas con optimización para memoria
   [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] proporciona durabilidad total para las tablas optimizadas para memoria. Cuando una transacción que ha cambiado una tabla optimizada para memoria se confirma, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (como hace para las tablas basadas en disco) garantiza que los cambios son permanentes (sobrevivirán a un reinicio de la base de datos), siempre y cuando el almacenamiento subyacente esté disponible. Hay dos componentes clave de durabilidad: registro de transacciones y conservación de los cambios de los datos en el almacenamiento en disco.
@@ -52,7 +51,7 @@ ms.locfileid: "78175964"
 
  Operación Merge la operación combina uno o varios pares de archivos Delta y de datos, y crea un nuevo par de archivos Delta y de datos.
 
- Durante la recuperación tras [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bloqueo cuando se reinicia o la base de datos se vuelve a poner en línea, los datos optimizados para memoria se rellenan con los pares de archivos Delta y de datos. El archivo delta actúa como filtro para las filas eliminadas al leer las filas del archivo de datos correspondiente. Dado que cada par de archivos delta y de datos es independiente, estos archivos se cargan en paralelo para reducir el tiempo dedicado a rellenar los datos en la memoria. Una vez que los datos se han cargado en memoria, el motor OLTP en memoria aplica las entradas del registro de transacciones activo aún no cubiertas por los archivos de puntos de comprobación de modo que los datos optimizados para memoria estén completos.
+ Durante la recuperación tras bloqueo cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se reinicia o la base de datos se vuelve a poner en línea, los datos optimizados para memoria se rellenan con los pares de archivos Delta y de datos. El archivo delta actúa como filtro para las filas eliminadas al leer las filas del archivo de datos correspondiente. Dado que cada par de archivos delta y de datos es independiente, estos archivos se cargan en paralelo para reducir el tiempo dedicado a rellenar los datos en la memoria. Una vez que los datos se han cargado en memoria, el motor OLTP en memoria aplica las entradas del registro de transacciones activo aún no cubiertas por los archivos de puntos de comprobación de modo que los datos optimizados para memoria estén completos.
 
  Durante la operación de restauración, los archivos de punto de comprobación de OLTP en memoria se crean a partir de la copia de seguridad de base de datos y, después, se aplican una o varias copias de seguridad del registro de transacciones Al igual que ocurre con la recuperación tras bloqueo, el motor OLTP en memoria carga los datos en memoria en paralelo, para minimizar el impacto en el tiempo de recuperación.
 

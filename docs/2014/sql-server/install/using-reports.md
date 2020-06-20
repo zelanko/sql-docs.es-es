@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f52afcfdaa7de33d83d64a049f9a350f0463b4c6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091230"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062349"
 ---
 # <a name="using-reports"></a>Utilizar los informes
   Se genera un informe independiente para cada componente y, cuando es necesario, para cada instancia, los cuales analiza el Asistente para análisis del Asesor de actualizaciones en un servidor. El informe proporciona detalles sobre los problemas conocidos que afectan a una actualización. También se proporcionan vínculos a información y acciones sugeridas para solucionar los problemas identificados.  
@@ -77,7 +76,7 @@ ms.locfileid: "66091230"
  Puede expandir un problema para ver información adicional, un vínculo a información detallada acerca de cómo resolver el problema y un vínculo para mostrar los detalles del problema. Al hacer clic en el vínculo para obtener información detallada acerca del problema, se muestra un tema de ayuda con información detallada acerca del problema, así como instrucciones específicas acerca de cómo solucionarlo. Una vez corregido el problema, o para administrar los elementos de acción, puede marcar los problemas como completos activando la casilla **este problema** se ha resuelto. Si desea quitar los problemas resueltos de la lista de problemas de actualización, haga clic en **Actualizar**. El problema no se mostrará de nuevo hasta que ejecute el Asistente para análisis del Asesor de actualizaciones en el mismo componente o aplique el filtro **problemas resueltos** de la opción **filtrar por** .  
   
 ## <a name="report-files"></a>Archivos de informe  
- El Asistente para análisis del Asesor de actualizaciones crea los informes\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el directorio mis documentos upgrade Advisor\110\Reports y crea un subdirectorio para cada servidor que analice. Los archivos de informe son archivos XML que siguen una convención de nomenclatura concreta. Al iniciar el Visor de informes del Asistente de actualizaciones, se muestran los archivos de informe del directorio predeterminado. Si copia los archivos de informe en esta carpeta, deben cumplir la convención de nomenclatura o el Visor de informes no los mostrará automáticamente.  
+ El Asistente para análisis del Asesor de actualizaciones crea los informes en el directorio mis documentos \\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] upgrade Advisor\110\Reports y crea un subdirectorio para cada servidor que analice. Los archivos de informe son archivos XML que siguen una convención de nomenclatura concreta. Al iniciar el Visor de informes del Asistente de actualizaciones, se muestran los archivos de informe del directorio predeterminado. Si copia los archivos de informe en esta carpeta, deben cumplir la convención de nomenclatura o el Visor de informes no los mostrará automáticamente.  
   
  Si desea compartir la información con otras personas, puede enviarles el informe XML. O, si desea utilizar otra aplicación, puede exportar el informe en un archivo de valores separados por comas que puede utilizar para crear una hoja de cálculo, un archivo de texto o un mensaje de correo electrónico.  
   

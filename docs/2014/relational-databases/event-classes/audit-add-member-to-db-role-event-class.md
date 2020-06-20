@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5ac46b6-765b-4424-b6c7-4d5a1b898d65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 673fa5941785f332893af3ea8f3630579d8a5741
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ec5ccdb01b8cddbe0efd59794f0d2a7d932f7d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761992"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85031094"
 ---
 # <a name="audit-add-member-to-db-role-event-class"></a>Audit Add Member to DB Role [clase de eventos]
   La clase de eventos **Audit Add Member to DB Role** tiene lugar cuando se agrega o quita un inicio de sesión en un rol de base de datos. Esta clase de eventos se usa con los procedimientos almacenados **sp_addrolemember**, **sp_changegroup**y **sp_droprolemember** .  

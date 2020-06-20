@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: eaeafd65-d0d4-4a7d-a3ad-110ef644e90b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 44c926d2429a0d9842e9e9202568f73f72c89d9a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489125"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064753"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel
   En esta tarea, exportará los resultados de la actividad de limpieza a un archivo de Excel. Vea el tema sobre la [fase de exportación](https://msdn.microsoft.com/library/hh213061.aspx#Export) para obtener más detalles.  
   
 1.  En el panel derecho, seleccione **Excel** para el **tipo de destino**.  
   
-2.  Haga clic en **examinar**, especifique el nombre del archivo de salida como **proveedor limpio List. xls**y, a continuación, haga clic en **abrir**.  
+2.  Haga clic en **examinar**, especifique el nombre del archivo de salida como **proveedor con limpieza List.xls**y, a continuación, haga clic en **abrir**.  
   
 3.  Seleccione **solo datos** para que el formato de **salida** exporte solo los datos limpios. La segunda opción, **datos y limpieza**, le permite exportar detalles de la actividad de limpieza junto con los datos limpios. La opción de **formato normalizar** permite aplicar los formatos de salida definidos en un dominio a los valores de ese dominio. En el tutorial no ha definido ningún formato de salida en ningún dominio.  
   
@@ -34,7 +33,7 @@ ms.locfileid: "65489125"
   
 6.  Haga clic en **Finalizar** para finalizar la actividad. Si olvidó exportar los resultados antes de hacer clic en **Finalizar**, haga clic en **Abrir proyecto de calidad de datos** en la Página principal del **cliente DQS**, seleccione **limpiar lista de proveedores** en la lista de proyectos y haga clic en **siguiente** en la parte inferior de la pantalla para volver a la fase de **exportación** del proceso de limpieza. También puede cambiar a la pestaña **administrar y ver resultados** haciendo clic en el botón **atrás** .  
   
-7.  Abra la **lista de proveedores limpiados. xls** y haga lo siguiente:  
+7.  Abra el **List.xlsdel proveedor limpio** y haga lo siguiente:  
   
     1.  Asegúrese de que no haya direcciones de correo electrónico que terminen con adventure-work.com (sin el carácter ') buscando adventure-work.com en la hoja de cálculo.  
   

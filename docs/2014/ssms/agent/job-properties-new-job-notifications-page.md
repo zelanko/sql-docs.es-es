@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ed393cbd-4496-4399-a177-e5baa92fb689
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10cee6f0d5bf62178c71d25b8eb5682c22bbbe3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8fafac7faaf98fd8cf9bd3b0bf772dc77324bae
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062278"
 ---
 # <a name="job-properties-new-job-notifications-page"></a>Propiedades del trabajo: Nuevo trabajo (página Notificaciones)
   Use esta página para establecer acciones [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el agente debe realizar cuando se completa el trabajo.  
@@ -26,7 +25,7 @@ ms.locfileid: "68189246"
  **Por**  
  Seleccione esta opción para enviar correo electrónico cuando el trabajo finalice. Después de seleccionar esta opción, elija el operador al que se va a notificar y la condición que activará la notificación: **Si el trabajo tiene éxito**; **Si el trabajo no tiene éxito**; o **Si el trabajo termina**.  
   
- **Del**  
+ **Página**  
  Seleccione esta opción para enviar correo electrónico al buscapersonas de un operador cuando el trabajo finalice. Después de seleccionar esta opción, especifique el operador al que se va a notificar y la condición que activará la notificación: **Si el trabajo tiene éxito**; **Si el trabajo no tiene éxito**; o **Si el trabajo termina**.  
   
  **Net send**  

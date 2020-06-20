@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2beb1a7890786e31fb525b61963c235033882247
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 107ba245f19ae77eec2be82d63c62e5c3d45d092
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161795"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85025246"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
   Cuando se crea, regenera o quita un índice, se necesita espacio en disco para las estructuras antiguas (origen) y nuevas (destino) en los archivos y grupos de archivos correspondientes. La asignación de la estructura antigua no se cancela hasta que no se confirma la transacción de creación del índice. También puede resultar necesario espacio en disco temporal adicional para operaciones de ordenación. Para más información, consulte [Disk Space Requirements for Index DDL Operations](disk-space-requirements-for-index-ddl-operations.md).  
@@ -96,7 +95,7 @@ ms.locfileid: "63161795"
   
 -   Determine el espacio para el índice de asignación temporal.  
   
-     En este ejemplo, el marcador antiguo es el ID. de fila (RID) del montón (8 bytes) y el nuevo marcador es la clave de agrupación en clústeres ( `uniqueifier`24 bytes, incluido). No existen columnas superpuestas entre los marcadores antiguos y nuevos.  
+     En este ejemplo, el marcador antiguo es el ID. de fila (RID) del montón (8 bytes) y el nuevo marcador es la clave de agrupación en clústeres (24 bytes, incluido `uniqueifier` ). No existen columnas superpuestas entre los marcadores antiguos y nuevos.  
   
      Tamaño del índice de asignación temporal = 1 millón * (8 bytes + 24 bytes) / 80% ~ 40 MB.  
   

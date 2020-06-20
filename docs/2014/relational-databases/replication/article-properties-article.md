@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c9c597c672a1889827f3994c1df9ea65ec4c54a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62721787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049537"
 ---
 # <a name="article-properties---ltarticlegt"></a>Article Properties - &lt;Article&gt; (Propiedades del artículo: &lt;Artículo&gt;)
   El cuadro de diálogo **Propiedades del artículo** está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación** . Le permite ver y establecer propiedades para todos los tipos de artículo. Algunas propiedades solo se pueden establecer cuando se crea la publicación, mientras que otras se pueden establecer únicamente si la publicación no tiene suscripciones activas. Las propiedades que no se pueden establecer se muestran como de solo lectura.  
@@ -45,7 +44,7 @@ ms.locfileid: "62721787"
  Determina si se debe convertir desde tipos de datos definidos por el usuario a tipos de datos base cuando se crean objetos en el suscriptor. Los tipos de datos definidos por el usuario incluyen los tipos definidos por el usuario de CLR introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Especifique un valor **True** si se van a replicar estos tipos de datos con respecto a versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; de esta manera, se garantiza que se van a poder tratar correctamente en el suscriptor.  
   
  **Crear esquemas en el suscriptor**  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se usa en un nombre de varias partes, como por ejemplo \<Base de datos>.\<Esquema>.\<Objeto>. Si la base de datos tiene objetos que son propiedad de esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor, de manera que se puedan crear objetos publicados.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] introdujo esquemas que se definen mediante la instrucción CREATE SCHEMA. Un esquema es el propietario de un objeto; se usa en un nombre de varias partes, como \<Database> . \<Schema> . \<Object> . Si tiene objetos en la base de datos que pertenecen a esquemas que no son DBO, la replicación puede crear estos esquemas en el suscriptor para que se puedan crear objetos publicados.  
   
  Si se van a replicar datos en versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -77,14 +76,14 @@ ms.locfileid: "62721787"
  **Copiar los procedimientos almacenados INSERT, UPDATE y DELETE**  
  Si, en la sección **Entrega de instrucción** de este cuadro de diálogo, selecciona utilizar los procedimientos almacenados para propagar cambios a los suscriptores (valor predeterminado), seleccione si se van a copiar los procedimientos en cada suscriptor. Si selecciona **False**, deberá copiar los procedimientos manualmente; de lo contrario, el Agente de distribución producirá un error al intentar entregar los cambios.  
   
- **Statement delivery**  
+ **Entrega de instrucción**  
  Las opciones de esta sección se aplican a todas las tablas, incluidas las vistas indizadas que se replican como tablas. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de las opciones predeterminadas a menos que la aplicación requiera una funcionalidad diferente. De forma predeterminada, la replicación transaccional propaga los cambios a los suscriptores a través de una serie de procedimientos almacenados que se instalan en cada suscriptor. Cuando se produce una inserción, una actualización o una eliminación en una tabla del publicador, la operación se convierte en una llamada a un procedimiento almacenado en el suscriptor.  
   
  Las opciones de **Entrega de instrucción** especifican si se debe utilizar un procedimiento almacenado, y en ese caso, el formato que se debe utilizar para los parámetros que pasan al procedimiento. Las opciones de **Procedimiento almacenado** permiten utilizar los procedimientos que la replicación crea automáticamente o sustituir los procedimientos personalizados creados por el usuario.  
   
  Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- **Replicar**  
+ **Réplica**  
  Esta opción se aplica únicamente a los procedimientos de almacenamiento. Determina si se debe replicar la definición del procedimiento almacenado (instrucción CREATE PROCEDURE) o su ejecución. Si replica la ejecución del procedimiento, la definición del procedimiento se replica en el suscriptor cuando se inicializa la suscripción; cuando el procedimiento se ejecuta en el publicador, la replicación ejecuta el procedimiento correspondiente en el suscriptor. Esto puede mejorar notablemente el rendimiento para los casos en que se llevan a cabo grandes operaciones en lote. Para más información, vea [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Opciones para publicaciones de combinación  
@@ -124,7 +123,7 @@ ms.locfileid: "62721787"
  Si selecciona el solucionador predeterminado, los conflictos se resuelven sobre la base de la prioridad asignada a cada suscriptor o del primer cambio escrito en el publicador, en función del tipo de suscripciones utilizadas. Para más información, vea [Detectar y solucionar conflictos de replicación de mezcla](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  **Usar un solucionador personalizado (registrada en el distribuidor)**  
- Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para más información, consulte [Replicación de mezcla avanzada: detección y resolución de conflictos](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+ Si opta por utilizar un solucionador de artículos (puede ser una proporcionado por [!INCLUDE[msCoName](../../includes/msconame-md.md)] o un escrito por el usuario), debe seleccionar un solucionador del cuadro de lista. Para obtener más información, vea [detección y resolución de conflictos de replicación de mezcla avanzada](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
  Si el solucionador requiere una entrada, especifíquela en el cuadro de texto **Especifique la información necesaria para el solucionador** . Para obtener más información acerca de la entrada requerida por los solucionadores personalizados de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , vea [Microsoft COM-Based Resolvers](merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
@@ -151,7 +150,7 @@ ms.locfileid: "62721787"
  **Nombre de espacio de tablas**  
  Espacio de tablas en el cual se deben crear las tablas de seguimiento de cambios de replicación en la instancia del servidor de Oracle. Para más información, vea [Manage Oracle Databases](non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).  
   
- **Statement delivery**  
+ **Entrega de instrucción**  
  Las opciones de esta sección se aplican a todas las tablas de publicaciones transaccionales. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda el uso de las opciones predeterminadas a menos que la aplicación requiera una funcionalidad diferente. De forma predeterminada, la replicación transaccional propaga los cambios a los suscriptores a través de una serie de procedimientos almacenados que se instalan en cada suscriptor. Cuando se produce una inserción, una actualización o una eliminación en una tabla del publicador, la operación se convierte en una llamada a un procedimiento almacenado en el suscriptor.  
   
  Las opciones de **Entrega de instrucción** especifican si se debe utilizar un procedimiento almacenado, y en ese caso, el formato que se debe utilizar para los parámetros que pasan al procedimiento. Las opciones de **Procedimiento almacenado** permiten utilizar los procedimientos que la replicación crea automáticamente o sustituir los procedimientos personalizados creados por el usuario.  

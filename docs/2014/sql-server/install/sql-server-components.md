@@ -20,16 +20,15 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 809705e50e9337a63bf33c2883a1e5d43197be09
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68811088"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036284"
 ---
 # <a name="sql-server-components"></a>Componentes de SQL Server
-  Puede ejecutar el Asistente para análisis del Asesor de actualizaciones en un equipo local o remoto [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]que [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]tenga [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]instalado, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , o. El primer paso en el análisis previo a la actualización es identificar el equipo y los componentes para el análisis.  
+  Puede ejecutar el Asistente para análisis del Asesor de actualizaciones en un equipo local o remoto que tenga [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] instalado,, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] o [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] . El primer paso en el análisis previo a la actualización es identificar el equipo y los componentes para el análisis.  
   
 ## <a name="options"></a>Opciones  
  **Nombre del equipo**  
@@ -50,7 +49,7 @@ ms.locfileid: "68811088"
   
  Si está examinando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], debe especificar el nombre del equipo local. El Asesor de actualizaciones solo examina los servidores de informes locales.  
   
- **Detect**  
+ **Detectar**  
  El botón **detectar** accede al equipo especificado y detecta los componentes que se deben analizar:  
   
 -   Si se está analizando una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto, deberá habilitar los servicios de Registro remoto en dicho equipo.  

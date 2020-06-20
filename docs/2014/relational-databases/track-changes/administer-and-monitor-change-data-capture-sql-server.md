@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8d97929ead145d1b0de1a1f83becb15ade397683
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "76929191"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048925"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
   En este tema se describe cómo administrar y supervisar la captura de datos modificados.  
@@ -40,7 +39,7 @@ ms.locfileid: "76929191"
  El parámetro *Continuous* controla si `sp_cdc_scan` renuncia el control después de agotar el registro o de ejecutar el número máximo de ciclos de recorrido (modo de una instantánea). También controla si `sp_cdc_scan` continúa ejecutándose hasta detenerse explícitamente (modo continuo).  
   
 ##### <a name="one-shot-mode"></a>Modo de una instantánea  
- En el modo de una instantánea, el trabajo `sp_cdc_scan` de captura solicita realizar hasta *maxtrans* exámenes para intentar agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
+ En el modo de una instantánea, el trabajo de captura solicita `sp_cdc_scan` realizar hasta *maxtrans* exámenes para intentar agotar el registro y volver. Cualquier transacción adicional a *maxtrans* que se encuentre en el registro se procesará en exámenes posteriores.  
   
  El modo de una instantánea se utiliza en pruebas controladas, en las que se conoce el volumen de las transacciones que se van a procesar, y hay ventajas en el hecho de que el trabajo se cierra automáticamente en cuanto finaliza. Este modo no se recomienda para usarse en producción. Esto se debe a que se basa en la programación de trabajos para administrar la frecuencia con la que se ejecuta el ciclo de examen.  
   

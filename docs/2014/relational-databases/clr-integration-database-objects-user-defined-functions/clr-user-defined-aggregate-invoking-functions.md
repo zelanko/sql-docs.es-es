@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a188b50-7170-4069-acad-5de5c915f65d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81ddf552e71bdd0b83c8082c2bd84450f6088e5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919604"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84954707"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Invocar funciones de agregado definidas por el usuario de CLR
   En las instrucciones SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)], puede invocar agregados definidos por el usuario de Common Language Runtime (CLR), siguiendo todas las reglas que se aplican a las funciones de agregado del sistema.  
@@ -36,7 +35,7 @@ ms.locfileid: "62919604"
   
 -   El tipo de argumento del agregado definido por el usuario debe coincidir o ser implícitamente convertible al *INPUT_TYPE* del agregado, como se define en la `CREATE AGGREGATE` instrucción.  
   
--   El tipo de valor devuelto del agregado definido por el usuario debe *return_type* coincidir con `CREATE AGGREGATE` el return_type de la instrucción.  
+-   El tipo de valor devuelto del agregado definido por el usuario debe coincidir con el *return_type* de la `CREATE AGGREGATE` instrucción.  
   
 ## <a name="example-1"></a>Ejemplo 1  
  A continuación figura un ejemplo de una función de agregado definida por el usuario que concatena un conjunto de valores de cadena obtenido de una columna de una tabla:  
@@ -196,7 +195,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Una vez compilado el código en **MyAgg. dll**, puede registrar el agregado en de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la manera siguiente:  
+ Una vez compilado el código en **MyAgg.dll**, puede registrar el agregado en de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manera siguiente:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  

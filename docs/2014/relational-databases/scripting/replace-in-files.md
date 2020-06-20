@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 51191c0a-e022-41d6-8473-5cb3c6596862
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd79bd7e486db052391efd631c101321ff9c8157
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2a70e5af5cd46abab1980ed0c9f84c3fe309d34f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703741"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009500"
 ---
 # <a name="replace-in-files"></a>Reemplazar en archivos
   La pestaña **Reemplazar en archivos** de la ventana Buscar y reemplazar permite buscar una cadena o expresión en el código de un conjunto específico de archivos y cambiar algunas o todas las coincidencias halladas. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  

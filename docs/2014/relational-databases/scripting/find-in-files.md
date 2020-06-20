@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 811247325eb146ba63a478b72729ccfb735dd904
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5c8b6c5642bd31e1bcd2505d0fe58667903b5521
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703913"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049046"
 ---
 # <a name="find-in-files"></a>Buscar en archivos
   La pestaña **Buscar en archivos** de la ventana Buscar y reemplazar permite buscar en el código de un conjunto especificado de archivos una cadena o expresión. Las coincidencias que se encuentran y las acciones que se toman aparecen en la ventana Resultados de la búsqueda seleccionada en **Opciones de resultados**.  

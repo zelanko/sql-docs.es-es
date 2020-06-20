@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 799c80fd-c561-4912-8562-9229076dfd19
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 507ef6e5c5ebb566cdfbce028933b9faffad1de3
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0932c3e78cf92501b38f80e779f25f93238e2419
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702139"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021585"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client no admite el modelo de cursor mixto (controlado por conjunto de claves/dinámico). Cualquier intento de establecer el tamaño del conjunto de claves mediante SQL_ATTR_KEYSET_SIZE generará un error si el conjunto de valores no es igual a 0.  
@@ -48,7 +47,7 @@ ms.locfileid: "82702139"
 ### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  El atributo SQL_SOPT_SS_CURSOR especifica si el controlador utilizará las opciones de rendimiento específicas del controlador en cursores. No se permite [SQLGetData](sqlgetdata.md) cuando se establecen estas opciones. El valor predeterminado es SQL_CO_OFF. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_CO_OFF|Predeterminada. Deshabilita los cursores de solo avance rápido y de solo lectura y la captura automática, habilita **SQLGetData** en cursores de solo avance y de solo lectura. Si SQL_SOPT_SS_CURSOR_OPTIONS está establecido en SQL_CO_OFF, el tipo de cursor no cambiará. Es decir, el cursor de solo avance rápido seguirá siendo un cursor de solo avance rápido. Para cambiar el tipo de cursor, la aplicación debe establecer ahora un tipo de cursor diferente mediante `SQLSetStmtAttr` /SQL_ATTR_CURSOR_TYPE.|  
 |SQL_CO_FFO|Habilita los cursores de solo avance rápido y solo lectura, deshabilita **SQLGetData** en cursores de solo avance y de solo lectura.|  
@@ -62,7 +61,7 @@ ms.locfileid: "82702139"
 ### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  El atributo SQL_SOPT_SS_DEFER_PREPARE determina si la instrucción se prepara inmediatamente o se aplaza hasta que se ejecuta **SQLExecute**, [SQLDescribeCol](sqldescribecol.md) o [SQLDescribeParam](sqldescribeparam.md) . En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 y versiones anteriores, esta propiedad se omite (no hay preparación diferida). El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_DP_ON|Predeterminada. Después de llamar a la [función SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360), la preparación de la instrucción se aplaza hasta que se llama a **SQLExecute** o se ejecuta la operación de metapropiedad (**SQLDescribeCol** o **SQLDescribeParam**).|  
 |SQL_DP_OFF|La instrucción se prepara en cuanto se ejecuta **SQLPrepare** .|  
@@ -72,7 +71,7 @@ ms.locfileid: "82702139"
   
  El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_RE_OFF|Predeterminada. El controlador no convierte los datos de fecha, hora y moneda a datos de cadenas de caracteres utilizando la configuración regional del cliente.|  
 |SQL_RE_ON|El controlador utiliza la configuración regional del cliente al convertir los datos de fecha, hora y moneda en datos de cadenas de caracteres.|  
@@ -87,7 +86,7 @@ ms.locfileid: "82702139"
 ### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  El atributo SQL_SOPT_SS_TEXTPTR_LOGGING alterna el registro de operaciones en columnas que contienen datos de **texto** o de **imagen** . El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_TL_OFF|Deshabilita el registro de operaciones realizadas en datos de **texto** e **imagen** .|  
 |SQL_TL_ON|Predeterminada. Habilita el registro de operaciones realizadas en datos de **texto** e **imagen** .|  
@@ -95,7 +94,7 @@ ms.locfileid: "82702139"
 ### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  El atributo SQL_SOPT_SS_HIDDEN_COLUMNS expone, en el conjunto de resultados, las columnas ocultas en una instrucción SELECT FOR BROWSE de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador no expone estas columnas de forma predeterminada. El valor de *ValuePtr* es de tipo SQLLEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_HC_OFF|Predeterminada. Las columnas FOR BROWSE se ocultan del conjunto de resultados.|  
 |SQL_HC_ON|Expone las columnas FOR BROWSE.|  
@@ -129,7 +128,7 @@ ms.locfileid: "82702139"
   
  El tipo para SQL_SOPT_SS_NAME_SCOPE es SQLULEN.  
   
-|Valor *ValuePtr*|Descripción|  
+|Valor *ValuePtr*|Description|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|Predeterminada.<br /><br /> Cuando se utilizan parámetros con valores de tabla, indica que se deben devolver metadatos para las tablas reales.<br /><br /> Cuando se usa la característica de columnas dispersas, SQLColumns solo devolverá las columnas que no sean miembros del disperso `column_set` .|  
 |SQL_SS_NAME_SCOPE_TABLE_TYPE|Indica que la aplicación requiere metadatos para un tipo de tabla, en lugar de una tabla real (las funciones de catálogo deben devolver metadatos para los tipos de tabla). A continuación, la aplicación pasa el TYPE_NAME del parámetro con valores de tabla como parámetro *TableName* .|  

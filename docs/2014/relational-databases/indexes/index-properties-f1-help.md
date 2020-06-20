@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 390a63d21dc72e052017f2d30b061d71de863bc1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63161909"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049904"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
   Las secciones de este tema hacen referencia a las distintas propiedades de índice disponibles mediante cuadros de diálogo de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
@@ -93,7 +92,7 @@ ms.locfileid: "63161909"
  Muestra si la columna que participa en la clave de índice permite almacenar valores NULL en la columna de vista o tabla.  
   
  **Add (Agregar)**  
- Agrega una columna a la clave de índice. Seleccione columnas de tabla del cuadro de diálogo **Seleccionar columnas de** *\<nombre de tabla>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
+ Agrega una columna a la clave de índice. Seleccione columnas de tabla en el cuadro de diálogo **seleccionar columnas de** *\<table name>* que aparece al hacer clic en **Agregar**. Para un índice espacial, después de seleccionar una columna, este botón aparece atenuado.  
   
  **Remove**  
  Quita la columna seleccionada de la clave de índice.  
@@ -134,7 +133,7 @@ ms.locfileid: "63161909"
 ##  <a name="storage-page-options"></a><a name="Storage"></a> Opciones de la página Almacenamiento  
  Utilice esta página para ver o modificar las propiedades del grupo de archivos o del esquema de partición para el índice seleccionado. Solo muestra las opciones relacionadas con el tipo de índice.  
   
- **Prima**  
+ **Grupo de archivos**  
  Almacena el índice en el grupo de archivos especificado. En la lista solo se muestran los grupos de archivos (fila) estándar. La selección de lista predeterminada es el grupo de archivos PRIMARY de la base de datos. Para más información, consulte [Database Files and Filegroups](../databases/database-files-and-filegroups.md).  
   
  **Grupo de archivos de flujo de archivos**  
@@ -180,7 +179,7 @@ ms.locfileid: "63161909"
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra las **coordenadas*`X-min`*(*`Y-min`*,)** y ***`X-max`*(*`Y-max`*,)** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
+ El panel muestra las coordenadas **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** del cuadro de límite. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
   
  `X-min`  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  
@@ -236,7 +235,7 @@ ms.locfileid: "63161909"
  Use esta página para especificar el predicado de filtro para un índice filtrado. Para obtener más información, consulte [Create Filtered Indexes](create-filtered-indexes.md).  
   
  **Expresión de filtro**  
- Define qué filas de datos para incluir en el índice filtrado. Por ejemplo, `StartDate > '20000101' AND EndDate IS NOT NULL'.`.  
+ Define qué filas de datos para incluir en el índice filtrado. Por ejemplo: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Consulte también  
  [Establecer opciones de índice](set-index-options.md)   

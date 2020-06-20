@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f3c3354fecd145f1df35d0c01252886de69bd37b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70874726"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004074"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Revertir los separadores de palabras usados por las búsquedas a la versión anterior
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] instala y habilita una versión de los separadores de palabras y lematizadores para todos los idiomas admitidos por búsqueda de texto completo, a excepción del coreano. En este tema se describe cómo pasar de esta versión de estos componentes a la versión previa o viceversa.  
@@ -152,7 +151,7 @@ ms.locfileid: "70874726"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-5.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+5.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 6.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -181,7 +180,7 @@ ms.locfileid: "70874726"
     > [!WARNING]  
     >  Este cambio afecta a todos los idiomas que utilizan NaturalLanguage6.dll en la versión actual y en la anterior.  
   
-3.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+3.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 4.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   
@@ -273,7 +272,7 @@ ms.locfileid: "70874726"
   
 1.  No elimine los archivos de la versión actual de los componentes de la carpeta Binn.  
   
-2.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+2.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 3.  Siga estos pasos para agregar nuevas claves a los COM ClassID de las interfaces de separadores de palabras y lematizadores en el idioma seleccionado:  
   
@@ -297,7 +296,7 @@ ms.locfileid: "70874726"
   
 1.  No elimine los archivos de la versión anterior de los componentes de la carpeta Binn.  
   
-2.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\ \><InstanceRoot \MSSearch\CLSID**.  
+2.  En el registro, vaya al siguiente nodo: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\<InstanceRoot \> \MSSearch\CLSID**.  
   
 3.  Si las siguientes claves no existen, siga estos pasos para agregar nueva claves para los ClassID COM de las interfaces de separadores de palabras y lematizadores actuales en el idioma seleccionado:  
   

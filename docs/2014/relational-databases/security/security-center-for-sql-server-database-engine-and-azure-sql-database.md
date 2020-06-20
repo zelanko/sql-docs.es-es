@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dfb39d16-722a-4734-94bb-98e61e014ee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: fc99b725f4c5895306d544df14bf2a9390189066
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3eeea022cff74d2ca8ddb636d9f83e4d369529bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75244534"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004105"
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure
   En esta página se proporcionan vínculos para ayudarle a buscar la información que necesita sobre seguridad y protección en [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)].  
@@ -36,7 +35,7 @@ ms.locfileid: "75244534"
   
 ## <a name="links-to-specific-related-topics"></a>Vínculos a temas relacionados específicos  
  ![Icono pequeño de carpeta de archivos](../../integration-services/media/filefolder-small.gif "Icono pequeño de carpeta de archivos") **autenticación: ¿quién es usted?**  
- **¿Quién se autentica? (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+ **¿Quién se autentica? (Windows o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )**  
   
 -   [Elegir un modo de autenticación](choose-an-authentication-mode.md)  
   

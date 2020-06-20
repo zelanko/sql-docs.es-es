@@ -12,34 +12,33 @@ f1_keywords:
 ms.assetid: 6105aec9-1b72-4cb2-bd24-fc35f6d95240
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9966db2e5b08cd16976e2c16434cec0adca8445f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63031939"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058556"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Opciones (Explorador de objetos de SQL Server, página scripting)
   Use esta página para establecer las opciones de scripting que se aplican a los siguientes comandos en los menús contextuales de objetos del **Explorador de objetos**:  
   
 -   Comandos **Editar** para las tablas y vistas del usuario.  
   
--   **Objeto \<de script> como** comandos para los objetos creados por el usuario.  
+-   Comandos **Script \<object> como** para los objetos creados por el usuario.  
   
 -   Comando **Modificar** para los objetos creados por el usuario.  
   
 -   Esta página también establece los valores predeterminados de las opciones de scripting del **Asistente para generar scripts de SQL Server**.  
   
 ## <a name="remarks"></a>Observaciones  
- Los comandos **Editar** y **modificar** pueden producir resultados diferentes del **objeto de script \<> como** comando para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El **objeto \<de script> como** comando está diseñado para generar un script de modo que se pueda usar posteriormente para crear objetos.  
+ Los comandos **Editar** y **Modificar** pueden generar resultados distintos a los del comando **Script \<object> como** para el mismo valor de opción. Los comandos **Editar** y **Modificar** están diseñados para modificar objetos en la base de datos actual durante una sesión del Editor de consultas. El comando **Script\<object> como** está diseñado para generar un script que se pueda usar posteriormente para crear objetos.  
   
 ## <a name="options"></a>Opciones  
  Para especificar las opciones de scripts, seleccione las opciones de configuración disponibles en la lista situada a la derecha de cada opción.  
   
 ### <a name="general-scripting-options"></a>Opciones generales de scripts  
  **Delimitar instrucciones individuales**  
- Separa instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado para el **Editor de consultas**, seleccione **herramientas**/**Opciones**/**ejecución**/de consultas**SQL Server**/**General**/**separador de lotes**general. El valor predeterminado es False. Para obtener más información, vea [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
+ Separa instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] individuales mediante un separador de lotes. Para cambiar el separador de lotes predeterminado para el **Editor de consultas**, seleccione **herramientas** / **Opciones** / **ejecución de consultas** / **SQL Server** / **General** / **separador de lotes**general. El valor predeterminado es False. Para obtener más información, vea [GO &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/sql-server-utilities-statements-go).  
   
  **Incluir encabezados descriptivos**  
  Agrega comentarios descriptivos al script dividiéndolo en secciones para cada objeto. El valor predeterminado es True. Para obtener más información, vea [comentarios &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
@@ -56,7 +55,7 @@ ms.locfileid: "63031939"
  **Generar script de catálogos de texto completo**  
  Incluye un script para catálogos de texto completo. El valor predeterminado es False. Para obtener más información, vea [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql).  
   
- **Script de \<uso de base de datos>**  
+ **USAR script\<database>**  
  Agrega la instrucción USE DATABASE al script para crear objetos de base de datos en el contexto de la base de datos actual del **Explorador de objetos** . Cuando necesite usar el script en otra base de datos, seleccione False para omitir. El valor predeterminado es True. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
 ### <a name="object-scripting-options"></a>Opciones de scripting de objetos  

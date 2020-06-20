@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0bc5468fed5c25b472be0bb5306b9da1b7e68eb1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c248768ce16213025fce17ee915e787054a3804
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940446"
 ---
 # <a name="specify-attribute-ordering-business-intelligence-wizard"></a>Especificar el orden de los atributos (Asistente de Business Intelligence)
   Utilice la página **Especificar el orden de los atributos** para especificar el orden de los atributos y los criterios de ordenación para los atributos de la dimensión seleccionada.  
   
 ## <a name="options"></a>Opciones  
- **Atributo**  
+ **Attribute**  
  Muestra los atributos disponibles para la dimensión.  
   
  **Atributo de orden**  
  Seleccione el atributo que debe usarse para ordenar el **Atributo**correspondiente. Puede especificar el mismo atributo.  
   
- Para crear un nuevo atributo de ordenación, seleccione ** \<nuevo atributo>** y, en el cuadro de diálogo **seleccionar una columna** , seleccione la columna en la que se basará el nuevo atributo.  
+ Para crear un nuevo atributo de ordenación, seleccione **\<New attribute>** y, en el cuadro de diálogo **seleccionar una columna** , seleccione la columna en la que se basará el nuevo atributo.  
   
  **Criterios**  
  Especifique los criterios de **Atributo de orden** que deben usarse para ordenar los miembros del **Atributo**correspondiente. En la tabla siguiente se enumeran los criterios disponibles.  

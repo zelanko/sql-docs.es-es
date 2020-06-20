@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 3a9e8a0c-7d03-47cc-8625-e68d73a8c947
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f82bab25b25c8d27e1aad2e2692d9ca519c9269b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66069164"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940766"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Pestaña Características de la agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
   La pestaña **Características del clúster** en el **Visor de agrupación en clústeres de secuencia de Microsoft** proporciona una lista detallada de las características que definen un clúster de secuencia. Esas características pueden incluir pares de atributo-valor simples, así como transiciones entre los estados.  
@@ -36,10 +35,10 @@ ms.locfileid: "66069164"
  **Visor**  
  Elija un visor que desee usar para explorar el modelo de minería de datos seleccionado. Puede utilizar el visor personalizado o el **Visor de árbol de contenido genérico de Microsoft**. También puede utilizar visores de complemento si están disponibles.  
   
- **Clúster**  
+ **Por**  
  Elija el clúster que desea ver.  
   
- **Características de \<>de clúster**  
+ **Características de\<Cluster>**  
  Esta tabla proporciona una lista de las secuencias que se asignaron al clúster actual, ordenadas por probabilidad. Recuerde que una secuencia es básicamente una par de atributo-valor, seguido de uno o varios pares de atributo-valor adicionales. La combinación de secuencias y sus probabilidades son las características que definen cada clúster.  
   
  Por ejemplo, en un modelo de agrupación en clústeres de secuencia basado en el análisis de la cesta de la compra, un clúster podría tener como su característica superior un cliente que elija el elemento de venta y, a continuación, finalice la transacción sin comprar nada. En un modelo de agrupación en clústeres de secuencia que busca analizar los errores del servidor, las características primarias de un clúster podrían ser una serie de eventos de error de gran frecuencia.  

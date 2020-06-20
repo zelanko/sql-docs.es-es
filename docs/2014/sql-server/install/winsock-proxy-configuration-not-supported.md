@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7d5daa8042e53b9bf26ad507c4be1f361821909
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 359399852224923d0512372d13058535fdca3c7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66090978"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065059"
 ---
 # <a name="winsock-proxy-configuration-not-supported"></a>No se admite la configuración del proxy WinSock
   El proxy Winsock no se puede configurar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramientas.  

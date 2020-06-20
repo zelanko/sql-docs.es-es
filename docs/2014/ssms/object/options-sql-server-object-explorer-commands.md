@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd2aeedcfcb9c4888e730f94c73aabe2cdd6607d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 27aeece212883fbfe28fe5eed408e594052fa204
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62999306"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058538"
 ---
 # <a name="options-sql-server-object-explorer-commands"></a>Opciones (Explorador de objetos de SQL Server comandos)
   Al hacer clic con el botón secundario en una tabla o una vista en el Explorador de objetos, se presentan las dos opciones siguientes para mostrar las filas en la tabla:  
@@ -33,13 +32,13 @@ ms.locfileid: "62999306"
  Use el cuadro de diálogo **Opciones generales de scripts** para cambiar el número de filas que se abrirán.  
   
 ## <a name="general-scripting-options"></a>Opciones generales de scripts  
- **Valor para Select Top \<n> comando Audit record**  
+ **Valor para el comando Seleccionar los primeros \<n> registros de auditoría**  
  Especifica el número de filas de auditoría que se deben devolver. El valor predeterminado es 1000 filas  
   
- **Valor para el comando \<editar las n> filas principales**  
+ **Valor para el comando Editar las primeras \<n> filas**  
  Especifica el número de filas que se debe devolver al editar filas en una tabla. El valor predeterminado es 200 filas.  
   
- **Valor para el comando \<seleccionar las n> filas principales**  
+ **Valor para el comando Seleccionar las primeras \<n> filas**  
  Especifica el número de filas que se va a devolver y que se especifica en el script del Editor de consultas que se crea. El valor predeterminado es 1000 filas.  
   
 ## <a name="see-also"></a>Consulte también  

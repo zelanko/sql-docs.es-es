@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53b4752b-055d-4716-b2bc-75b4cce84101
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 889158e04cbadb63c712ead73a61a7002ea61eae
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9f4da839f25da8f8aab3e21fa98547eff72d2140
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175374"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933646"
 ---
 # <a name="data-collector-programming"></a>Programar el recopilador de datos
   La API del recopilador de datos en <xref:Microsoft.SqlServer.Management.Collector>, permite el control mediante programación de todas las operaciones de configuración a través del modelo de objetos. Además, muchas de las operaciones de recopilación de datos que utilizan la API se implementan como procedimientos almacenados que se instalan en el servidor.

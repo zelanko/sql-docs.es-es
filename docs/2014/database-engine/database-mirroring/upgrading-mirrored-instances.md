@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a343e6b9e93aa1910c82f436f3a50daf00d57bc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933891"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimizar el tiempo de inactividad de las bases de datos reflejadas al actualizar instancias de servidor
-  Al actualizar instancias de servidor a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], puede reducir el tiempo de inactividad de cada base de datos reflejada a una sola conmutación por error manual realizando una actualización secuencial, denominada *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
+  Al actualizar instancias de servidor a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , puede reducir el tiempo de inactividad de cada base de datos reflejada a una sola conmutación por error manual realizando una actualización secuencial, denominada *actualización gradual*. Una actualización gradual es un proceso de varias etapas que, en su forma más simple, implica la actualización de la instancia de servidor que está actuando actualmente como servidor reflejado en una sesión de creación de reflejo, la conmutación por error manual de la base de datos reflejada, la actualización del servidor principal anterior y la reanudación de la creación de reflejo. En la práctica, el proceso exacto dependerá del modo de funcionamiento y del número y diseño de la sesión de creación de reflejo que se ejecute en las instancias de servidor que va a actualizar.  
   
 > [!NOTE]  
 >  Para obtener información acerca de la realización de una actualización gradual para instalar un Service Pack o revisión, consulte [instalación de un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a6b2685c8cfda9217b554e161919c24344b34a2
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: edcdea9d266cf0ef231b1e16be4da7009372dcd6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706472"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050123"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
   Las tablas con optimización para memoria son tablas creadas por medio de [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
@@ -79,7 +78,7 @@ ms.locfileid: "82706472"
   
  En la tabla siguiente se enumeran los problemas de rendimiento y escalabilidad que se suelen encontrar en las bases de datos relacionales y el modo en que OLTP en memoria puede mejorar el rendimiento.  
   
-|Problema|Impacto de OLTP en memoria|  
+|Incidencia|Impacto de OLTP en memoria|  
 |-----------|----------------------------|  
 |Rendimiento<br /><br /> Uso elevado de los recursos (CPU, E/S, red o memoria).|CPU<br /> Los procedimientos almacenados compilados de forma nativa pueden reducir el uso de la CPU de forma significativa porque requieren muchas menos instrucciones para ejecutar una instrucción de [!INCLUDE[tsql](../../../includes/tsql-md.md)] si se compara con los procedimientos almacenados interpretados.<br /><br /> OLTP en memoria puede ayudar a reducir la inversión en hardware en las cargas de trabajo con escalado horizontal, ya que un servidor podría ofrecer el rendimiento de entre cinco y diez servidores.<br /><br /> E/S<br /> Si encuentra un cuello de botella de E/S desde el procesamiento hasta las páginas de datos o de índices, OLTP en memoria puede reducir el cuello de botella. Además, la comprobación de los objetos de OLTP en memoria es continua y no produce incrementos súbitos de las operaciones de E/S. Sin embargo, si el espacio de trabajo de las tablas de rendimiento crítico no cabe en la memoria, OLTP en memoria no mejorará el rendimiento porque requiere que los datos residan en la memoria. Si encuentra un cuello de botella de E/S en el registro, OLTP en memoria puede reducirlo porque realiza menos tareas de registro. Si una o más tablas optimizadas para memoria se configuran como tablas no durables, puede eliminar el registro de los datos.<br /><br /> Memoria<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. OLTP en memoria puede suponer una presión adicional sobre la memoria, ya que los objetos deben residir en la memoria.<br /><br /> Red<br /> OLTP en memoria no proporciona ninguna ventaja de rendimiento. Los datos tienen que comunicarse desde la capa de datos en el nivel de aplicación.|  
 |Escalabilidad<br /><br /> La mayoría de los problemas de escala de las aplicaciones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] son causados por problemas de simultaneidad como la contención de bloqueos, bloqueos temporales y bloqueos por subproceso.|Contención de bloqueos temporales<br /> Un escenario típico es la contención en la última página de un índice al insertar filas simultáneamente en el orden de clave. Dado que OLTP en memoria no adopta bloqueos temporales para tener acceso a los datos, los problemas de escalabilidad relacionados con las contenciones de bloqueos temporales desaparecen por completo.<br /><br /> Contención de bloqueo por subproceso<br /> Dado que OLTP en memoria no adopta bloqueos temporales para tener acceso a los datos, los problemas de escalabilidad relacionados con las contenciones de bloqueos por subproceso desaparecen por completo.<br /><br /> Contención relacionada con el bloqueo<br /> Si la aplicación de base de datos encuentra problemas de bloqueo entre las operaciones de lectura y escritura, OLTP en memoria evita dichos problemas porque usa un nuevo formato de control de simultaneidad optimista para implementar todos los niveles de aislamiento de las transacciones. OLTP en memoria no usa TempDB para almacenar las versiones de fila.<br /><br /> Si el problema de escala se debe al conflicto entre dos operaciones de escritura, como dos transacciones simultáneas que intenten actualizar la misma fila, OLTP en memoria permite que una transacción sea correcta y que la otra dé error. La transacción errónea debe volver a enviarse ya sea de forma explícita o implícita, volviendo a intentar la transacción. En cualquier caso, debe realizar cambios en la aplicación.<br /><br /> Si la aplicación experimenta conflictos frecuentes entre dos operaciones de escritura, el valor de bloqueo optimista se reduce. La aplicación no es adecuada para OLTP en memoria. La mayoría de las aplicaciones OLTP no tienen conflictos de escritura a menos que el conflicto sea inducido por la extensión de bloqueo.|  

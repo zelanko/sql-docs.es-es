@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 94fb2d07cfd40c8685ef6a8259d871108bbd17bb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478878"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84961191"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Enviar por correo electrónico un archivo de consulta de acceso directo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede enviar por correo electrónico un archivo de consulta de acceso directo a alguien si quiere asegurarse de que va a trabajar con los mismos datos que usted. Debe compartir las consultas en lugar de guardar la hoja de cálculo y enviarla por correo electrónico.  
@@ -33,7 +32,7 @@ ms.locfileid: "65478878"
   
 2.  En el grupo **Guardar y enviar** , haga clic en **Enviar consulta**. Se abre un mensaje de correo electrónico y se adjunta el archivo de consulta de acceso directo.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Para abrir el archivo de consulta de acceso directo, el destinatario del correo electrónico debe tener instalado MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] . El destinatario puede hacer doble clic en el archivo para abrirlo.  
   

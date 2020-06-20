@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 65cc22ce-53e9-49dc-8f40-cbf0159c9e54
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1dcc44c8d9892bb6dee31b5cebd4be73037cf0b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5d6b8d340535ad50c05cdc7753e3d5e1b26751f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093299"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065233"
 ---
 # <a name="ready-to-repair"></a>Listo para reparar
   La página Listo para reparar proporciona un resumen del proceso de reparación por parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d78707925303d5e19d93b170f257d76fb7d1747d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011111"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004045"
 ---
 # <a name="query-with-full-text-search"></a>Consultar con búsqueda de texto completo
   Para definir búsquedas de texto completo, las consultas de texto completo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizan los predicados (CONTAINS y FREETEXT) y las funciones (CONTAINSTABLE y FREETEXTTABLE) de texto completo. Estas funciones y predicados admiten la sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] enriquecida, que es compatible con diversos formatos de términos de consulta. Para escribir consultas de texto completo, es necesario saber cuándo y cómo deben usarse estos predicados y funciones.  
@@ -232,7 +231,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>Datos xml  
  Una columna del tipo de datos `xml` solo almacena los documentos y fragmentos XML, y solo se usa el filtro XML para los documentos. Por consiguiente, una columna de tipo es innecesaria. En las columnas `xml`, el índice de texto completo indiza el contenido de los elementos XML, pero omite el formato XML. Los valores de los atributos se incluyen en el índice de texto completo a menos que sean valores numéricos. Las etiquetas de elemento se usan como límites de token. Se admiten fragmentos y documentos con formato XML o HTML correcto que contengan varios idiomas.  
   
- Para obtener más información sobre cómo realizar consultas `xml` en una columna, vea [usar la búsqueda de texto completo con columnas XML](../xml/use-full-text-search-with-xml-columns.md).  
+ Para obtener más información sobre cómo realizar consultas en una `xml` columna, vea [usar la búsqueda de texto completo con columnas XML](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
@@ -242,7 +241,7 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 > [!NOTE]  
 >  Para obtener la sintaxis de un término de consulta determinado, haga clic en los vínculos correspondientes de la columna **Es compatible con** de la siguiente tabla.  
   
-|Formato de los términos de la consulta|Descripción|Compatible con|  
+|Formato de los términos de la consulta|Description|Compatible con|  
 |----------------------|-----------------|------------------|  
 |Una o varias palabras o frases específicas (*término simple*)|En la búsqueda de texto completo, una palabra (o *token*) es una cadena cuyos límites se identifican mediante los separadores de palabras adecuados, siguiendo las reglas lingüísticas del idioma especificado. Una frase válida está formada por varias palabras con o sin signos de puntuación entre ellas.<br /><br /> Por ejemplo, "croissant" es una palabra y "cafetería?? au lait "es una frase. Las palabras y frases como estas se denominan términos simples.<br /><br /> Para obtener más información, vea la sección [Buscar palabras o frases específicas (término simple)](#Simple_Term) más adelante en este tema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) buscan una coincidencia exacta para la frase.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) dividen la frase en palabras independientes.|  
 |Una palabra o frase cuyas palabras empiezan por un texto determinado (*término de prefijo*)|Un término de prefijo hace referencia a una cadena que se anexa al principio de una palabra para generar una palabra derivada o una forma con inflexión.<br /><br /> Con un solo término de prefijo, cualquier palabra inicial con el término especificado formará parte del conjunto de resultados. Por ejemplo, el término "auto*" coincide con "automático", "automóvil", etc.<br /><br /> En una frase, cada palabra de la misma se considera un término de prefijo. Por ejemplo, el término en inglés "auto tran\*" coincide con "automatic transmission" y "automobile transducer", pero no con "automatic motor transmission".<br /><br /> Para obtener más información, vea la sección [Realizar búsquedas de prefijos (término de prefijo)](#Prefix_Term) más adelante en este tema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) y [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a64d4a3cc46a68a06367d51a3cf3511191c6232
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c1ff7c45544c739acc254ace6cd1d9990257978
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62912960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064218"
 ---
 # <a name="new-alias-alias-tab"></a>Nuevo alias (pestaña Alias)
   Un alias es un nombre alternativo que se puede utilizar para establecer una conexión. El alias encapsula los elementos necesarios de una cadena de conexión y los expone con un nombre elegido por el usuario. Use la página **Alias** del cuadro de diálogo **Alias - Nuevo** para especificar los elementos de la cadena de conexión de un alias. Para cambiar la cadena de conexión de un alias existente, vea [Propiedades de &#60;Alias&#62; &#40;pestaña Alias&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md).  

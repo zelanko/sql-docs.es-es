@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 38b5f077-9083-406a-a9a4-8bc39972dda2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 39d263d85b8956da4366134393d48405ebe104ae
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33d0d6ec4e462b38079c43bbb47e30feb4d34ed8
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917065"
 ---
 # <a name="data-flow-path-editor-data-viewers-page"></a>Editor de rutas de flujo de datos (página Visores de datos)
   Utilice la página **Visores de datos** del cuadro de diálogo **Editor de rutas de flujo de datos** para administrar los visores de datos que se adjuntan a la ruta.  
@@ -37,7 +36,7 @@ ms.locfileid: "66060079"
  **Eliminar**  
  Haga clic en esta opción para eliminar el visor de datos seleccionado.  
   
- **Configuración**  
+ **Configure**  
  Haga clic en esta opción para configurar un visor de datos seleccionado mediante el cuadro de diálogo **Configurar visor de datos** .  
   
 ## <a name="see-also"></a>Consulte también  

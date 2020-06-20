@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7225064a-4f6c-40d3-a026-34e757a966da
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7c64e45800b168a45a674dc74a5f192e5e9f8389
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f0d49f9fe2ca7fa54e4314cd2e412b8d9e31f126
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66066093"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938386"
 ---
 # <a name="toolbar-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Particiones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Barra de herramientas** para realizar acciones comunes en la pestaña **Particiones** del Diseñador de cubos.  
@@ -25,7 +24,7 @@ ms.locfileid: "66066093"
 |Opción|Descripción|  
 |------------|-----------------|  
 |**Agregar Business Intelligence**|Haga clic en esta opción para mostrar el **Asistente de Business Intelligence** y agregar características de Business Intelligence al cubo.|  
-|**Proceso**|Haga clic para mostrar el cuadro de diálogo **Procesar** y procesar el grupo de medida o partición seleccionado.|  
+|**Process**|Haga clic para mostrar el cuadro de diálogo **Procesar** y procesar el grupo de medida o partición seleccionado.|  
 |**Nueva partición**|Haga clic para ver el **Asistente para particiones** y crear una nueva partición en el grupo de medida seleccionado.|  
 |**Cambiar nombre**|Haga clic para cambiar el nombre de la partición seleccionada.<br /><br /> Nota: Esta opción solo se habilita si se selecciona una celda de una partición en la cuadrícula **Particiones** de un grupo de medida del panel **Grupos de medida** .|  
 |**Eliminar**|Haga clic para mostrar el cuadro de diálogo **Eliminar objetos** y eliminar la acción seleccionada.<br /><br /> Nota: Esta opción solo se habilita si se selecciona toda la fila de una partición en la cuadrícula **Particiones** de un grupo de medida del panel **Grupos de medida** .<br /><br /> Nota: Esta opción está deshabilitada si se ha seleccionado una partición de reescritura.|  

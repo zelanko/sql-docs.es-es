@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 351a5a4aa6bc1655b8da5fced3e51385dd498bdf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289193"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027096"
 ---
 # <a name="hierarchical-data-sql-server"></a>Datos jerárquicos (SQL Server)
-  El tipo de `hierarchyid` datos integrado facilita el almacenamiento y la consulta de datos jerárquicos. `hierarchyid`está optimizado para representar árboles, que son el tipo más común de datos jerárquicos.  
+  El `hierarchyid` tipo de datos integrado facilita el almacenamiento y la consulta de datos jerárquicos. `hierarchyid`está optimizado para representar árboles, que son el tipo más común de datos jerárquicos.  
   
  Los datos jerárquicos se definen como un conjunto de elementos de datos que se relacionan entre sí mediante relaciones jerárquicas. Las relaciones jerárquicas existen allí donde un elemento de los datos es el elemento primario de otro elemento. Entre los ejemplos de datos jerárquicos que se almacenan normalmente en las bases de datos se incluyen los siguientes:  
   
@@ -122,7 +121,7 @@ GO
   
   
 ### <a name="xml"></a>XML  
- Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cuando se crea un índice XML `hierarchyid` , los valores se usan internamente para representar la posición en la jerarquía.  
+ Un documento XML es un árbol y, por lo tanto, una única instancia de tipo de datos XML puede representar una jerarquía completa. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cuando se crea un índice XML, `hierarchyid` los valores se usan internamente para representar la posición en la jerarquía.  
   
  Utilizar el tipo de datos XML puede ser mejor opción cuando se cumplen todas las condiciones siguientes:  
   
@@ -319,7 +318,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>Ejemplo usando una transacción serializable  
- El tipo de datos **Org_BreadthFirst** garantiza que se use una búsqueda de rango al determinar **@last_child** . Además de otros casos de error, es posible que una aplicación quiera comprobar una infracción de clave duplicada después de que la inserción indique un intento de agregar varios empleados con **@last_child** el mismo identificador y, por consiguiente, debe volver a calcularse. El código siguiente usa una transacción serializable y un índice con prioridad a la amplitud para calcular el nuevo valor de nodo:  
+ El tipo de datos **Org_BreadthFirst** garantiza que se use una búsqueda de rango al determinar **@last_child** . Además de otros casos de error, es posible que una aplicación quiera comprobar una infracción de clave duplicada después de que la inserción indique un intento de agregar varios empleados con el mismo identificador y, por consiguiente, **@last_child** debe volver a calcularse. El código siguiente usa una transacción serializable y un índice con prioridad a la amplitud para calcular el nuevo valor de nodo:  
   
 ```  
 CREATE TABLE Org_T2  
@@ -389,7 +388,7 @@ GO
   
   
 ###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Buscar antecesores mediante CLR  
- Una operación común, en la que se implican dos nodos en una jerarquía, es buscar el antecesor común más bajo. Esto puede escribirse en [!INCLUDE[tsql](../includes/tsql-md.md)] o en CLR, ya que `hierarchyid` el tipo está disponible en ambos. Se recomienda CLR porque la ejecución es más rápida.  
+ Una operación común, en la que se implican dos nodos en una jerarquía, es buscar el antecesor común más bajo. Esto puede escribirse en [!INCLUDE[tsql](../includes/tsql-md.md)] o en CLR, ya que el `hierarchyid` tipo está disponible en ambos. Se recomienda CLR porque la ejecución es más rápida.  
   
  Use el siguiente código de CLR para hacer una lista de los antecesores y buscar el antecesor común más bajo:  
   
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Mover los subárboles  
- Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **@oldMgr** y lo convierte (incluido **@oldMgr**) en un subárbol **@newMgr**de.  
+ Otra operación común es mover subárboles. El procedimiento siguiente toma el subárbol de **@oldMgr** y lo convierte (incluido **@oldMgr** ) en un subárbol de **@newMgr** .  
   
 ```  
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

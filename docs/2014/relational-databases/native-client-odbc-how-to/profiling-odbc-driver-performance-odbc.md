@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3f5900b087081150b78bb0c335cf0ac1634d5f83
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d27547862138b511a4defaa3cae80f48f69fdc4f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705208"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048173"
 ---
 # <a name="profiling-odbc-driver-performance-how-to-topics-odbc"></a>Temas de procedimientos de generación de perfiles de rendimiento del controlador ODBC (ODBC)
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye dos opciones específicas del controlador para generar perfiles de rendimiento del controlador.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: e65c9253-bd99-4dc3-9cb8-7613f754c966
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba55a2a8fe0ad873c4b5433a53972c441b535333
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cdb17f0d2104373ea797ff9403cc417dfaa3d868
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704991"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056255"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>Compatibilidad de API de OLE DB con las mejoras de fecha y hora
   Las siguientes API de OLE DB son compatibles con las características mejoradas de fecha y hora.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 72a9ff1d-3748-41d1-a9b2-63f4a77bba24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b640ed65fed0b12e63317f3af87ecff5c246102
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059962"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917045"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Editor de rutas de flujo de datos (página General)
   Utilice el cuadro de diálogo **Editor de rutas de flujo de datos** para establecer propiedades de ruta, ver metadatos de columna y administrar los visores de datos adjuntados a la ruta.  
@@ -30,7 +29,7 @@ ms.locfileid: "66059962"
  **Nombre**  
  Proporcione un nombre único para la ruta.  
   
- **Id**  
+ **ID**  
  El identificador de linaje de la ruta. Esta propiedad es de solo lectura.  
   
  **IdentificationString**  

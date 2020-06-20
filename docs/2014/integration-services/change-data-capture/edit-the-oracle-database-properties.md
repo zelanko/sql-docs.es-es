@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9ebad419585de0136708ea85e522f890dceac38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 07144e6ead5d968ec116b9cc0ef2abd6736657b0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835581"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923286"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Editar las propiedades de la base de datos de Oracle
   Use la pestaña Oracle del editor de propiedades para realizar cambios en la descripción que proporcionó en la página Crear base de datos CDC del Asistente para nueva instancia y para realizar cambios en la información de conexión a bases de datos de minería de registros de Oracle.  

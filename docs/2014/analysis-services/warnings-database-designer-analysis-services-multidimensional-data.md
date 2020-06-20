@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 13f58b4d-f345-4fbc-ae2d-b3c8290a797d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 113f644d9f1da48790e7c8d59d34e6b143a1175a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065428"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938127"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Advertencias (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Advertencias** para ver y descartar reglas globalmente, así como para ver y volver a habilitar instancias específicas de advertencias descartadas. La pestaña **Advertencias** muestra dos cuadrículas: **Reglas de advertencia de diseño** y **Advertencias descartadas**.  
@@ -36,7 +35,7 @@ ms.locfileid: "66065428"
  **Descripción**  
  Muestra el nombre de la regla. Las reglas se agrupan por categoría.  
   
- **Importance**  
+ **Importancia**  
  Muestra la importancia asignada a la regla.  
   
  **Comentarios**  
@@ -47,16 +46,16 @@ ms.locfileid: "66065428"
   
  La cuadrícula **Advertencias descartadas** tiene lo siguiente:  
   
- **Objeto**  
+ **Object**  
  Muestra un icono que representa el tipo y el nombre de objeto.  
   
- **Type**  
+ **Tipo**  
  Muestra el tipo de objeto.  
   
  **Descripción**  
  Muestra el nombre de la regla.  
   
- **Importance**  
+ **Importancia**  
  Muestra la importancia asignada a la regla.  
   
  **Comentarios**  

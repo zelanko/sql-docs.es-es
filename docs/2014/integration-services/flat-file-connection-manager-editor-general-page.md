@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058752"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967105"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  
@@ -39,7 +38,7 @@ ms.locfileid: "66058752"
  **Examinar**  
  Busque el nombre de archivo que utilizará en la conexión de archivos planos.  
   
- **Configuración regional**  
+ **Locale**  
  Especifique la configuración regional, que proporciona información específica del idioma para la ordenación y los formatos de fecha y hora.  
   
  **Unicode**  
@@ -48,7 +47,7 @@ ms.locfileid: "66058752"
  **Página de códigos**  
  Especifique la página de códigos para el texto no Unicode.  
   
- **Aplique**  
+ **Format**  
  Indique si el archivo utiliza formato delimitado, de ancho fijo o derecho irregular.  
   
 |Value|Descripción|  

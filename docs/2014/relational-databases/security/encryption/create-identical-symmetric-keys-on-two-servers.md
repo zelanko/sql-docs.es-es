@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 1ff075880833be8179697cb4047babee67cfe61e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 38eaccffff89b0be7e59f628fcfb9b6e772a02b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957235"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063188"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Crear claves simétricas idénticas en dos servidores
   En este tema se describe cómo crear claves simétricas idénticas en dos servidores diferentes de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Para descifrar el texto cifrado, se necesita la clave que se usó para cifrarlo. Cuando el cifrado y el descifrado tienen lugar en una sola base de datos, la clave se almacena en la base de datos y está disponible, según los permisos, tanto para el cifrado como para el descifrado. Pero cuando ambos procesos ocurren en bases de datos diferentes o en servidores diferentes, la clave almacenada en una base de datos no está disponible para utilizarla en la segunda base de datos.  

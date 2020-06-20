@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 42733a9ebd5d6b6610140d76afb68ca2a3ab7dda
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e99842237bee512d3489e83be07612715a5a6e1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048070"
 ---
 # <a name="retrieving-error-information"></a>Recuperar información sobre errores
   En este ejemplo se obtiene información de las diversas interfaces de error expuestas por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  

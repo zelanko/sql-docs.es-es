@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c9122db448e95a6734ea3cf3c1010665b60f4650
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0cbd22ac2de86b068990f9cecc5385f9133e482
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938066"
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Agregar conocimiento a una base de conocimiento
   En este tema se describen las diferentes formas de agregar conocimiento a una base de conocimiento en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Para poder realizar operaciones de calidad de datos, tiene que tener conocimientos sobre estos. Para adquirirlo, deberá generar y mantener una base de conocimiento de calidad de datos (DQKB), y agregar en ella conocimiento relacionado con un tipo específico de origen de datos. La base de conocimiento es un repositorio de conocimiento sobre los datos que le permite comprenderlos y mantener su integridad.  

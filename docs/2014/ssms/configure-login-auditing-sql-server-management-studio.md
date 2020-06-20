@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 16961116-57ac-4eef-8037-791b26ade548
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4cede183f39ed7aca5bfe6bc7f0226c96da6ca84
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89f4d5a65dc7c4a32fc0e90cec2226cffa12c6a2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63245658"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995040"
 ---
 # <a name="configure-login-auditing-sql-server-management-studio"></a>Configurar la auditoría de inicio de sesión (SQL Server Management Studio)
   En este tema se describe cómo configurar la auditoría de inicio de sesión en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] para supervisar la actividad de inicio de sesión de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Se puede configurar para que escriba en el registro de errores cuando se produzcan los eventos que se indican a continuación.  

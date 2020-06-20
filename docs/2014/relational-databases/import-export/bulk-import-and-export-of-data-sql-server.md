@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 19049021-c048-44a2-b38d-186d9f9e4a65
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e90afe2092623fa1dd356e51af5fff7a19e9a2ca
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2b4e7611270135735cf3f7aada808a0a27ba927c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66012120"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85027089"
 ---
 # <a name="bulk-import-and-export-of-data-sql-server"></a>Importar y exportar datos de forma masiva (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la exportación masiva de datos (*conjuntos masivos de datos*) desde una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la importación en bloque de datos en una tabla o vista sin particiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La importación y la exportación masivas son esenciales para transferir datos de forma eficaz entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y orígenes de datos heterogéneos. La*exportación masiva* se refiere a la copia de datos de una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un archivo de datos. *Importación masiva* significa cargar datos de un archivo de datos a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por ejemplo, puede exportar datos de una aplicación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel a un archivo de datos y, después, importarlos masivamente en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -54,7 +53,7 @@ ms.locfileid: "66012120"
   
 |Método|Descripción|Importa datos|Exporta datos|  
 |------------|-----------------|------------------|------------------|  
-|[Utilidad bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilidad de línea de comandos (Bcp.exe) que importa y exporta datos masivamente y genera archivos de formato.|Sí|Sí|  
+|[Utilidad bcp](import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)|Utilidad de línea de comandos (Bcp.exe) que importa y exporta datos masivamente y genera archivos de formato.|Yes|Sí|  
 |[Instrucción BULK INSERT](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que importa datos directamente de un archivo de datos en una tabla o vista sin particionar de una base de datos.|Sí|No|  
 |[Instrucción INSERT ... Instrucción SELECT * FROM OPENROWSET(BULK...)](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)|Instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que usa el proveedor de conjuntos de filas BULK OPENROWSET para importar masivamente datos en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] especificando la función OPENROWSET(BULK...) para seleccionar datos en una instrucción INSERT.|Sí|No|  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d65ec8de3e45632548a813024223eb72314acc2b
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d9acaab4b152cf97e3e55e665c33bf51e5115fba
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703919"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85049060"
 ---
 # <a name="find-and-replace"></a>Buscar y reemplazar
   Utilice el cuadro de diálogo **Buscar y reemplazar** para buscar texto en un archivo y, opcionalmente, reemplazarlo. Pueden aparecer versiones del cuadro de diálogo **Buscar y reemplazar** con opciones ligeramente distintas, en función de la forma en que se haya abierto el cuadro de diálogo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Búsqueda rápida** para abrir el cuadro de diálogo con las opciones de búsqueda, pero sin las opciones de reemplazo. En el menú **Editar** , seleccione **Buscar y reemplazar**y, a continuación, haga clic en **Reemplazo rápido** para abrir el cuadro de diálogo con las opciones de búsqueda y de reemplazo.  

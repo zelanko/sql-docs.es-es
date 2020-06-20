@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b9f282f9f95c971c4ab5007a947e94848e9b8ad6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 3709b32e8db1027bce963f22b6fe282e120ad4f4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82695397"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048009"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
   Inicializa la estructura de copia masiva, realiza algunas comprobaciones de errores, comprueba que los datos y los nombres de archivo de formato son correctos y, a continuación, los abre.  
@@ -37,7 +36,7 @@ const wchar_t *pwszErrorFile,
 inteDirection);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Es necesario llamar al método **BCPInit** antes de llamar a cualquier otro método de copia masiva. El método **BCPInit** realiza las inicializaciones necesarias para una copia masiva de datos entre la estación de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El método **BCPInit** examina la estructura del origen de base de datos o la tabla de destino, no el archivo de datos. Especifica los valores de formato de datos del archivo de datos basándose en cada columna de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT. Esta especificación incluye el tipo de datos de cada columna, la presencia o ausencia de cadenas de bytes de un indicador de longitud o nulo y de terminador en los datos, y el ancho de los tipos de datos de longitud fija. El método **BCPInit** establece estos valores como sigue:  

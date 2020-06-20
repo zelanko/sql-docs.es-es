@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bae68c2d507e1dd3809e76a9d842b765d72234e9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62762342"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952133"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
   El único modo de crear una instantánea de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consiste en usar [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] no admite la creación de instantáneas de base de datos.  
@@ -37,7 +36,7 @@ ms.locfileid: "62762342"
 ###  <a name="prerequisites"></a><a name="Prerequisites"></a> Requisitos previos  
  La base de datos de origen, que puede usar cualquier modelo de recuperación, debe cumplir los siguientes requisitos previos:  
   
--   La instancia del servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de bases de datos. Para obtener información sobre la compatibilidad con las instantáneas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   La instancia del servidor debe ejecutarse en una edición de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admita instantáneas de bases de datos. Para obtener información sobre la compatibilidad con las instantáneas de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , vea [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   La base de datos de origen debe estar en línea, a menos que sea una base de datos reflejada dentro de una sesión de creación de reflejo de la base de datos.  
   
@@ -127,7 +126,7 @@ AdventureWorks_snapshot_evening
     > [!NOTE]  
     >  Cuando se crea una instantánea de base de datos, no se permite la presencia de archivos de registro, archivos sin conexión, archivos de restauración e inactivos en la instrucción CREATE DATABASE.  
   
-###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Ejemplos (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   
 > [!NOTE]  
 >  La extensión `.ss` que se usa en los ejemplos es arbitraria.  

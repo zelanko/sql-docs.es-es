@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f31702a2-df76-4589-ac3b-da5412c03dc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18cb81205a6e7036f34c7bb6f73f822bf0a6e173
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9071c6821e6edeb577b639223e42899d2927bced
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707119"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055899"
 ---
 # <a name="asynchronous-mode-and-sqlcancel"></a>Modo asincrónico y SQLCancel
   Algunas funciones ODBC pueden operar de forma sincrónica o asincrónica. La aplicación puede habilitar las operaciones asincrónicas para un identificador de instrucción o un identificador de conexión. Si la opción está establecida para un identificador de conexión, afectará a todos los identificadores de instrucción del identificador de conexión. La aplicación utiliza las instrucciones siguientes para habilitar o deshabilitar las operaciones asincrónicas:  

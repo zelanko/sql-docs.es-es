@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53fbe7568050927e8ddd43085181125214e7f86a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775228"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932236"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Actualizaciones de ediciones y versiones admitidas
   Puede actualizar de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]y [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. En este tema se enumeran las formas de actualización admitidas desde estas versiones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las actualizaciones de edición admitidas para [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -121,7 +120,7 @@ ms.locfileid: "62775228"
   
 -   Conéctese a [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]usando [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Cuando una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se actualiza a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], el nivel de compatibilidad de la base de datos se cambia de 90 a 100. (En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], los valores válidos para el nivel de compatibilidad de la base de datos son 100, 110 y 120). El [nivel de compatibilidad de Alter database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) describe cómo el cambio de nivel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de compatibilidad podría afectar a las aplicaciones.  
+ Cuando una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] se actualiza a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], el nivel de compatibilidad de la base de datos se cambia de 90 a 100. (En [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] , los valores válidos para el nivel de compatibilidad de la base de datos son 100, 110 y 120). El [nivel de compatibilidad de Alter database &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) describe cómo el cambio de nivel de compatibilidad podría afectar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las aplicaciones.  
   
  Los escenarios no especificados en la lista anterior no se admiten, incluidos pero no limitados a lo siguiente:  
   
@@ -167,9 +166,9 @@ ms.locfileid: "62775228"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]Enterprise (licencia Server + CAL) <sup>2</sup>|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Core)|  
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Core)|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Enterprise (licencia Server+CAL)|  
   
- <sup>1</sup> también se aplica [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] a Express with Tools [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y Express con Advanced Services.  
+ <sup>1</sup> también se aplica a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express with Tools y [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Express con Advanced Services.  
   
- <sup>2</sup> el cambio de edición de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] un clúster de conmutación por error está limitado. Los escenarios siguientes no se admiten en los clústeres de conmutación por error de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:  
+ <sup>2</sup> el cambio de edición de un [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] clúster de conmutación por error está limitado. Los escenarios siguientes no se admiten en los clústeres de conmutación por error de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]:  
   
 -   SQL Server 2014 Enterprise a SQL Server 2014 Developer, Standard o Enterprise Evaluation.  
   

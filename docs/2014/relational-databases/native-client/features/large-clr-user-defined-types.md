@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b65eb61d-ccf6-49c0-98e7-9a4ef4b2f790
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62835f917283d5d244f3347149d8572205c01d2e
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 27f0c13caea8c4aca63d78238509c6d05f1bf7bf
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82707276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85047923"
 ---
 # <a name="large-clr-user-defined-types"></a>Tipos definidos por el usuario de CLR grandes
   En SQL Server 2005, los tipos definidos por el usuario (UDT) en Common Language Runtime (CLR) estaban restringidos a un tamaño de 8.000 bytes. Esta restricción se soluciona en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y versiones posteriores. Los UDT CLR se tratan ahora de una manera similar a los tipos de objeto grandes (LOB). Es decir, los UDT con un tamaño menor o igual que 8.000 bytes se comportan de la misma manera que en SQL Server 2005, pero se admiten UDT de mayor tamaño y notifican su tamaño como "ilimitado".  

@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: a131d329-386e-4470-aaa9-ffcde4e5ec0c
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0cc839659d289eeccfe2e7893f054699e34b1fc0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889183"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932086"
 ---
 # <a name="upgrade-analysis-services"></a>Actualizar Analysis Services
-  Use el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información detallada sobre cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actualizar en modo de SharePoint, vea [Actualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obtener más información acerca de la actualización de una instancia de SQL Server existente, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+  Use el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información detallada sobre cómo actualizar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de SharePoint, vea [Actualizar PowerPivot para SharePoint](upgrade-power-pivot-for-sharepoint.md). Para obtener más información acerca de la actualización de una instancia de SQL Server existente, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 ## <a name="known-upgrade-issues"></a>Problemas de actualización conocidos  
  Antes de actualizarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], revise lo siguiente:  
@@ -57,7 +56,7 @@ ms.locfileid: "68889183"
   
 -   Una **actualización en contexto** reemplaza los archivos de programa existentes por [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] los archivos de programa. Las bases de datos permanecen en la misma ubicación. Las carpetas de programas se actualizan para reflejar el nuevo nombre.  
   
--   Una **actualización en paralelo** es una nueva instalación de en el mismo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] equipo que tiene una instancia de Analysis Services existente. Puede mover bases de datos a la nueva instancia en el mismo equipo y desinstalar después la versión anterior si ya no la utiliza.  
+-   Una **actualización en paralelo** es una nueva instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en el mismo equipo que tiene una instancia de Analysis Services existente. Puede mover bases de datos a la nueva instancia en el mismo equipo y desinstalar después la versión anterior si ya no la utiliza.  
   
 -   También puede instalar Analysis Services en el nuevo hardware y migrar después las bases de datos existentes a ese servidor.  
   

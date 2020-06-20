@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4aea3e17-cd0f-48dd-8f22-b54a6c716426
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 19a30107af159c1cd87324290844172371f02752
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f394e54252c382bb2f70dccc531f306f7264d87f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175574"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938366"
 ---
 # <a name="trace-data-mining-client-for-excel"></a>Seguimiento (Cliente de minería de datos para Excel)
   ![Botón Seguimiento](media/misc-trace.gif "Botón Seguimiento")

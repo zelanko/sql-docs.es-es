@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4dcca38ab5b7b67ca92cf35b49852bcd88437328
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 73a8745f393b76dfadf574a1029b6687c406a748
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705417"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020064"
 ---
 # <a name="sql_variant-support-for-date-and-time-types"></a>Compatibilidad con sql_variant para tipos de fecha y hora
   En este tema se describe la forma en que el tipo de datos `sql_variant` admite una funcionalidad de fecha y hora mejorada.  
@@ -50,7 +49,7 @@ ms.locfileid: "82705417"
 |SQL_C_BINARY|varbinary|No se establece SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_BINARY|time|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIME2<br /><br /> Scale se establece en SQL_DESC_PRECISION (el parámetro *ColumnSize* de `SQLBindParameter` ).|  
 |SQL_C_BINARY|datetimeoffset|SQL_CA_SS_VARIANT_SQL_TYPE = SQL_SS_TIMESTAMPOFFSET<br /><br /> Scale se establece en SQL_DESC_PRECISION (el parámetro *ColumnSize* de `SQLBindParameter` ).|  
-|SQL_C_TYPE_DATE|fecha|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
+|SQL_C_TYPE_DATE|date|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIME|time(0)|Se omite SQL_CA_SS_VARIANT_SQL_TYPE.|  
 |SQL_C_TYPE_TIMESTAMP|datetime2|Scale se establece en SQL_DESC_PRECISION (el parámetro *ColumnSize* de `SQLBindParameter` ).|  
 |SQL_C_NUMERIC|Decimal|La precisión se establece en SQL_DESC_PRECISION (el parámetro *columnas* de `SQLBindParameter` ).<br /><br /> Conjunto de escalado a SQL_DESC_SCALE (el parámetro *ColumnSize* de SQLBindParameter).|  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2512310-bdb6-41dc-858a-e866b2b58afc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 400a57693fbea10270a51f5735a19b9639112ce9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000740"
 ---
 # <a name="creating-a-login"></a>Crear un inicio de sesión
   Para tener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)], los usuarios necesitan un inicio de sesión. El inicio de sesión puede representar la identidad del usuario como una cuenta de Windows o como un miembro de un grupo de Windows, o el inicio de sesión puede ser un inicio de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que solo exista en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Siempre que sea posible, use la autenticación de Windows.  
@@ -26,7 +25,7 @@ ms.locfileid: "68211204"
   
 ### <a name="to-create-a-new-windows-account"></a>Para crear una cuenta de Windows nueva  
   
-1.  Haga clic en **Inicio**, haga clic en **Ejecutar**, en el `%SystemRoot%\system32\compmgmt.msc /s`cuadro **abrir** , escriba y, a continuación, haga clic en **Aceptar** para abrir el programa administración de equipos.  
+1.  Haga clic en **Inicio**, haga clic en **Ejecutar**, en el cuadro **abrir** , escriba `%SystemRoot%\system32\compmgmt.msc /s` y, a continuación, haga clic en **Aceptar** para abrir el programa administración de equipos.  
   
 2.  En **Herramientas del sistema**, expanda **Usuarios y grupos locales**, haga clic con el botón derecho en **Usuarios**y luego haga clic en **Nuevo usuario**.  
   

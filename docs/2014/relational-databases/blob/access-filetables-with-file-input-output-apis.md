@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56118ef2db319abd270ff51259e3537864fdd57e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66010357"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84955945"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
   Describe el funcionamiento de E/S del sistema de archivos en una FileTable.  

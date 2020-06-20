@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 927d0fd7b108718daffe86a6534ca40492429d34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3da3f7332bdabce65785b2844157dd4639389254
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936746"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Preparar manualmente una base de datos secundaria para un grupo de disponibilidad (SQL Server)
   En este tema se describe cómo preparar una base de datos secundaria de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] utilizando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. La preparación de una base de datos secundaria requiere dos pasos: (1) restaurar una copia de seguridad reciente de la base de datos principal y las copias de seguridad del registro subsiguientes en cada instancia del servidor que hospeda la réplica secundaria utilizando RESTORE WITH NORECOVERY, y (2) unir la base de datos restaurada al grupo de disponibilidad.  
@@ -282,6 +281,6 @@ Restore-SqlDatabase -Database "MyDB1" -BackupFile "\\share\backups\MyDB1.trn" -R
 ## <a name="see-also"></a>Consulte también  
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Argumentos de RESTOre &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
+ [Argumentos RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Solucionar problemas de una operación Add-File &#40;Grupos de disponibilidad AlwaysOn&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  

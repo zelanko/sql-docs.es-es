@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfca52be-e092-4fb7-994f-a44948bce510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24599cad44366b0a0af6d3328f64b07b248f2e7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e4a4565a3b9734219afd6e62cd08aec463ee7168
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62698861"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85053303"
 ---
 # <a name="audit-database-operation-event-class"></a>Audit Database Operation [clase de eventos]
   La clase de eventos **Audit Database Operation** se produce cuando tienen lugar operaciones de una base de datos, por ejemplo, un punto de comprobación o una notificación de consulta de suscripción.  

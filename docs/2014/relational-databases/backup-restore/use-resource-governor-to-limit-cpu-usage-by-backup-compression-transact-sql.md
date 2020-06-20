@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fcd3d72ef3e716cd640d35505b82df459eb37b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 19a95cfa5c6780fbdf71ae58bd141aa9aa351efa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920789"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956225"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad (Transact-SQL)
   De forma predeterminada, la copia de seguridad con compresión aumenta significativamente el uso de CPU, y la CPU adicional consumida por el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría querer crear una copia de seguridad comprimida de prioridad baja en una sesión en la que el uso de CPU esté limitado por el[regulador de recursos](../resource-governor/resource-governor.md) cuando se produce la contención por la CPU. En este tema se presenta un escenario en el que se clasifican las sesiones de un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determinado asignándolas a un grupo de cargas de trabajo del regulador de recursos que limita el uso de CPU en tales casos.  
@@ -160,7 +159,7 @@ GO
   
      RETURN @workload_group_name  
   
-     END  
+     FIN  
   
      Para obtener información sobre los componentes de esta instrucción CREATE FUNCTION, vea:  
   
@@ -259,7 +258,7 @@ GO
  [&#91;Principio&#93;](#Top)  
   
 ##  <a name="compressing-backups-using-a-session-with-limited-cpu"></a><a name="creating_compressed_backup"></a> Comprimir las copias de seguridad utilizando una sesión con CPU limitada  
- Para crear una copia de seguridad comprimida en una sesión con el uso máximo de CPU limitado, inicie sesión como el usuario especificado en la función clasificadora. En el comando de copia de seguridad, especifique WITH[!INCLUDE[tsql](../../includes/tsql-md.md)]Compression () o seleccione **comprimir copia de seguridad** ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]). Para crear una copia de seguridad comprimida de la base de datos, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
+ Para crear una copia de seguridad comprimida en una sesión con el uso máximo de CPU limitado, inicie sesión como el usuario especificado en la función clasificadora. En el comando de copia de seguridad, especifique WITH COMPRESSION ( [!INCLUDE[tsql](../../includes/tsql-md.md)] ) o seleccione **comprimir copia de seguridad** ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ). Para crear una copia de seguridad comprimida de la base de datos, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Ejemplo C: Crear una copia de seguridad comprimida (Transact-SQL)  
  En el ejemplo [BACKUP](/sql/t-sql/statements/backup-transact-sql) siguiente se crea una copia de seguridad completa comprimida de la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] en un archivo de copia de seguridad al que se ha dado formato recientemente, `Z:\SQLServerBackups\AdvWorksData.bak`.  

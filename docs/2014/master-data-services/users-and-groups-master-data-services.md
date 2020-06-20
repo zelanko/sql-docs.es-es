@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b148c728e1021dbfa3c55bc40874d7901eebe443
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65478626"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970985"
 ---
 # <a name="users-and-groups-master-data-services"></a>Usuarios y grupos (Master Data Services)
   Para tener acceso a la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] un usuario debe tener una cuenta de dominio de Windows o una cuenta en el equipo servidor donde se instale [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para conceder acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] puede:  

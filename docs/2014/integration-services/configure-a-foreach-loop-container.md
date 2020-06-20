@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 461a652999e97907962486cfc05e5b6668f5590d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 840011d1797c7ef9482af31ffc8b3ec3a6419b8a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060874"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921979"
 ---
 # <a name="configure-a-foreach-loop-container"></a>Configurar un contenedor de bucles Foreach
   Este procedimiento describe cómo configurar un contenedor de bucles Foreach, incluyendo expresiones de propiedad en los niveles de enumerador y contenedor.  
@@ -72,7 +71,7 @@ ms.locfileid: "66060874"
   
 7.  Opcionalmente, haga clic en **Asignaciones de variables** para asignar propiedades de objetos al valor de la colección y luego haga lo siguiente:  
   
-    1.  En la lista **variables** , seleccione una variable o haga clic en ** \<nueva variable>** para crear una nueva variable.  
+    1.  En la lista **variables** , seleccione una variable o haga clic en **\<New Variable>** para crear una nueva variable.  
   
     2.  Si agrega una nueva variable, establezca las propiedades de la variable en el cuadro de diálogo **Agregar variable** y haga clic en **Aceptar**.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "66060874"
   
 8.  Opcionalmente, haga clic en **Expresiones** y, en la página **Expresiones** , cree expresiones de propiedades para las propiedades del contenedor de bucles Foreach. Para más información, vea [Agregar o cambiar una expresión de propiedad](expressions/add-or-change-a-property-expression.md).  
   
-9. Haga clic en **Aceptar**.  
+9. Haga clic en **OK**.  
   
 ## <a name="see-also"></a>Consulte también  
  [Contenedor Foreach Loop](control-flow/foreach-loop-container.md)  

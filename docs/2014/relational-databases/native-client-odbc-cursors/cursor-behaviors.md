@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 742ddcd2-232b-4aa1-9212-027df120ad35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7d6b41e72d3421d24a160dbcc226ce285e37981c
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 89c7c4e9a8dcffe03dd12f8013d5ed43810547f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702041"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021067"
 ---
 # <a name="cursor-behaviors"></a>Comportamientos de los cursores
   ODBC admite las opciones ISO para especificar el comportamiento de los cursores especificando su capacidad de desplazamiento y sensibilidad. Estos comportamientos se especifican estableciendo las opciones SQL_ATTR_CURSOR_SCROLLABLE y SQL_ATTR_CURSOR_SENSITIVITY en una llamada a [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md). El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client implementa estas opciones solicitando cursores de servidor con las siguientes características.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9968f22db053bf12a28e3e491817a2c3ac23008
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e72dc4e7e589359d59d16ea7eae8a131689045d3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68186765"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000682"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Ayuda del Administrador de configuración de SQL Server
   Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para configurar los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la conectividad de red. Para crear o administrar objetos de base de datos, configurar la seguridad y escribir consultas [!INCLUDE[tsql](../../includes/tsql-md.md)] , use la herramienta [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información acerca de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vea los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

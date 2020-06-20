@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b82681f-3d4f-4b9a-bb1d-2060e44f2577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c14608a34c2df5a0e93fea985d8135a37d5ffa53
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2c105b6084badabe52b2c92fcbde27e67d63852b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63273276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040554"
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>Trabajar con columnas en consultas de funciones agregadas (Visual Database Tools)
   Al crear consultas agregadas, el [Diseñador de consultas y vistas](visual-database-tools.md) asume determinados criterios para poder crear una consulta válida. Por ejemplo, si está creando una consulta de funciones de agregado y marca una columna de datos para los resultados, el Diseñador de consultas y vistas incluye automáticamente la columna en la cláusula GROUP BY para que no intente mostrar sin darse cuenta el contenido de una fila individual en un resumen.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ba5b5edf57bf877827fefe4f8764b8b71124a550
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c0016fc3cdd93ea78ceed56efa076a01bd85be50
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196537"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85042838"
 ---
 # <a name="create-nested-triggers"></a>Crear desencadenadores anidados
   Los desencadenadores DML y DDL están anidados cuando un desencadenador realiza una acción que inicia otro desencadenador. Estas acciones pueden iniciar otros desencadenadores y así sucesivamente. Los desencadenadores DML y DDL se pueden anidar hasta un máximo de 32 niveles. Puede controlar si los desencadenadores AFTER se pueden anidar en la opción de configuración del servidor **nested triggers** . Los desencadenadores INSTEAD OF (solo los desencadenadores DML pueden ser desencadenadores INSTEAD OF) se pueden anidar independientemente de esta configuración.  

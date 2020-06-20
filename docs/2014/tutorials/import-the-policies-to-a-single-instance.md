@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 410f3a317a9d3ad2f8cab52d9f57fd4a63c1c36c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 83d688a72efaaf75305e5077634f70b016bad818
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62865104"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85039984"
 ---
 # <a name="import-the-policies-to-a-single-instance"></a>Importar las directivas a una instancia única
   En esta tarea, importará las directivas de prácticas recomendadas que desea programar en la administración basada en directivas en una única instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -50,7 +49,7 @@ ms.locfileid: "62865104"
   
      Las directivas se importan en el nodo **Directivas** en **Administración de directivas**. De forma predeterminada, las directivas importadas se establecen en el modo de evaluación "A petición".  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Programar las directivas](../../2014/tutorials/schedule-the-policies.md)  
   
   

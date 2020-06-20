@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 225e2b02-8d2f-4f29-9eba-f5847c36ea99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf5fbc6c3a01b39079c8f63a2998490025c85e8c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210817"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066928"
 ---
 # <a name="sql-server-plan-cache-object"></a>Plan Cache (objeto de SQL Server)
   El objeto **Plan Cache** proporciona contadores para supervisar la forma en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la memoria para almacenar objetos tales como procedimientos almacenados, instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc y preparadas, y desencadenadores. Se pueden supervisar simultáneamente múltiples instancias del objeto **Plan Cache** ; cada instancia representa un tipo distinto de plan para supervisar.  

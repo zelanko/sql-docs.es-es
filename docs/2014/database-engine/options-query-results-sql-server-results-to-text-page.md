@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 2ccbdf17-e14f-42f1-a836-ca999a3432c9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5cdfc761b3b8c19e07b1818c2732414b03258cc
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b7d785a7b8c2ce424f2f88b23024b0d22f399149
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856652"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930047"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Opciones (resultados de la consulta-SQL Server-resultados a página de texto)
   Utilice esta página para especificar las opciones para mostrar el conjunto de resultados de una consulta en formato de texto. Los cambios que se realicen en estas opciones solo se aplicarán a las nuevas consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para cambiar las opciones de las consultas actuales, haga clic en **Opciones de consulta** en el menú **consulta** o haga clic con el botón derecho en la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ventana de consulta y seleccione **Opciones de consulta**. En el cuadro de diálogo **Opciones de consulta** , en **Resultados**, haga clic en **Texto**.  

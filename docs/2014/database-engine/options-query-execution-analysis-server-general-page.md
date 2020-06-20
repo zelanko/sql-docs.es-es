@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 456867d0-724c-449c-abf9-013a694d7924
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49dca5c5bc2f1f4f9d84a17a57035b0d9e553ac1
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: a00c63ea4af707ebfbf88e11a2e856559c00f0fe
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856847"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930226"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Opciones (ejecución de consultas-Analysis Server-página general)
   Utilice esta página para especificar las opciones de ejecución de las consultas de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Para mostrar esta configuración, en el menú **Herramientas** , haga clic en **Opciones**. En **Ejecución de la consulta** , expanda la carpeta **Analysis Server** y haga clic en **General**.  

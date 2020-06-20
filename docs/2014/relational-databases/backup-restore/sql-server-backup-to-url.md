@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6918a099e00b1de9e773320b5c6c0e4089859e02
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289233"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956365"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
   En este tema se presentan los conceptos, los requisitos y los componentes necesarios para utilizar el servicio de almacenamiento de blobs de Azure como destino de copia de seguridad. La funcionalidad de copia de seguridad y restauración es igual o similar que la que usa DISK o TAPE, con algunas diferencias. En este tema se incluyen las diferencias, excepciones notables y algunos ejemplos de código.  
@@ -47,7 +46,7 @@ ms.locfileid: "79289233"
 -   Al crear un contenedor para el servicio de almacenamiento de blobs de Azure, se recomienda establecer el acceso en **privado**. Al configurar el acceso privado se restringe el acceso a los usuarios o las cuentas capaces de proporcionar la información necesaria para autenticarse en la cuenta de Azure.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requiere que el nombre de cuenta de Azure y la autenticación de clave [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de acceso se almacenen en una credencial. Esta información se usa para autenticarse en la cuenta de Azure cuando realiza operaciones de copia de seguridad o restauración.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]requiere que el nombre de cuenta de Azure y la autenticación de clave de acceso se almacenen en una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credencial. Esta información se usa para autenticarse en la cuenta de Azure cuando realiza operaciones de copia de seguridad o restauración.  
   
 -   La cuenta de usuario que se usa para emitir comandos BACKUP o RESTORE debe tener el rol de base de datos **operador de db_backup** con permisos **Modificar cualquier credencial** .  
   
@@ -63,7 +62,7 @@ ms.locfileid: "79289233"
   
  **Contenedor:** Un contenedor proporciona una agrupación de un conjunto de blobs y puede almacenar un número ilimitado de blobs. Para escribir una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] copia de seguridad en Azure BLOB Service, debe haber creado al menos el contenedor raíz.  
   
- **Blob:** Un archivo de cualquier tipo y tamaño. Hay dos tipos de blobs que se pueden almacenar en el servicio de almacenamiento de blobs de Azure: blobs en bloques y en páginas. La copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa blobs en páginas como tipo de blob. Los blobs son direccionables mediante el siguiente formato de\<dirección URL: https://de\<la cuenta de\<almacenamiento de Azure>. BLOB.Core.Windows.net/contenedor>/BLOB>  
+ **Blob:** Un archivo de cualquier tipo y tamaño. Hay dos tipos de blobs que se pueden almacenar en el servicio de almacenamiento de blobs de Azure: blobs en bloques y en páginas. La copia de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa blobs en páginas como tipo de blob. Los blobs son direccionables mediante el siguiente formato de dirección URL: https:// \<storage account> . BLOB.Core.Windows.net/\<container>/\<blob>  
   
  ![Azure Blob Storage](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
@@ -77,7 +76,7 @@ ms.locfileid: "79289233"
 > [!WARNING]  
 >  Si elige copiar y cargar un archivo de copia de seguridad en el servicio de almacenamiento de blobs de Azure, use el BLOB en páginas como opción de almacenamiento. No se admiten restauraciones desde blobs en bloques. La instrucción RESTORE desde un tipo de blob en bloques produce un error.  
   
- Este es un valor de dirección URL de ejemplo: http [s\<]://ACCOUNTNAME.Blob.core.windows.net/\<Container>/FILENAME. bak>. HTTPS no es necesario, pero es recomendable.  
+ Este es un valor de dirección URL de ejemplo: http [s]://ACCOUNTNAME.Blob.core.windows.net/ \<CONTAINER> / \<FILENAME.bak> . HTTPS no es necesario, pero es recomendable.  
   
  **Credencial:** Una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un objeto que se usa para almacenar la información de autenticación necesaria para conectarse a un recurso fuera de SQL Server.  Aquí, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los procesos de copia de seguridad y restauración usan credenciales para autenticarse en el servicio de almacenamiento de blobs de Azure. La credencial contiene los valores de nombre y la **clave de acceso** de la cuenta de almacenamiento. Una vez creada la credencial, se debe especificar en la opción WITH CREDENTIAL al emitir las instrucciones BACKUP y RESTORE. Para obtener más información sobre cómo ver, copiar o regenerar **access keys**de cuentas de almacenamiento, vea [Ver, copiar y regenerar las claves de acceso de una cuenta de almacenamiento de Windows Azure](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
@@ -188,7 +187,7 @@ ms.locfileid: "79289233"
 |REPLACE|&#x2713;|||  
 |RESTART|&#x2713;|||  
 |RESTRICTED_USER|&#x2713;|||  
-|FILE|&#x2713;|||  
+|ARCHIVO|&#x2713;|||  
 |PASSWORD|&#x2713;|||  
 |MEDIANAME|&#x2713;|||  
 |MEDIAPASSWORD|&#x2713;|||  

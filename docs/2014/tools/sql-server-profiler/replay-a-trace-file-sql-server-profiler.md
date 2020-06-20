@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9e361275-c8fd-4499-8389-242cf8e27415
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 503f7a3eeeeeee36893231c48b330a099a5adc61
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3e5d9c9175847935e163005ebe986c9ef5f92e89
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240499"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999884"
 ---
 # <a name="replay-a-trace-file-sql-server-profiler"></a>Reproducir un archivo de seguimiento (SQL Server Profiler)
   La reproducción es la capacidad de abrir un seguimiento guardado y reproducirlo más tarde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] incluye un motor de reproducción de varios subprocesos que puede simular conexiones de usuario y la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La reproducción es útil para solucionar problemas de aplicaciones o procesos. Cuando identifique el problema e implemente las acciones para corregirlo, ejecute el seguimiento que encontró el posible problema en la aplicación o proceso corregido. A continuación, reproduzca el seguimiento original y compare los resultados.  

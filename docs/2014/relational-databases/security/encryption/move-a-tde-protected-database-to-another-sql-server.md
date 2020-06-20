@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
-ms.openlocfilehash: 748ad4cfe0e399062fd1b13bcf3a05169ef94b1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b03b4d9ecf31e9953fd3e22cec5c51bbacc0c25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74957174"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060300"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Mover una base de datos protegida por TDE a otra instancia de SQL Server
   En este tema se describe cómo proteger una base de datos mediante el uso del cifrado de datos transparente (TDE) y, a continuación, mover la base de datos a otra instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. TDE realiza el cifrado y descifrado de E/S en tiempo real de los archivos de datos y de registro. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. DEK es una clave simétrica protegida mediante un certificado almacenado en la base de datos maestra (`master`) del servidor o una clave asimétrica protegida por un módulo EKM.  
@@ -47,7 +46,7 @@ ms.locfileid: "74957174"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Cuando se mueve una base de datos protegida por TDE, también debe mover el certificado o la clave asimétrica que se usan para abrir DEK. El certificado o la clave asimétrica se deben instalar en `master` la base de datos del servidor de destino [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para que pueda tener acceso a los archivos de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md).  
+-   Cuando se mueve una base de datos protegida por TDE, también debe mover el certificado o la clave asimétrica que se usan para abrir DEK. El certificado o la clave asimétrica se deben instalar en la `master` base de datos del servidor de destino para que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueda tener acceso a los archivos de base de datos. Para obtener más información, vea [Cifrado de datos transparente &#40;TDE&#41;](transparent-data-encryption.md).  
   
 -   Debe conservar copias tanto del archivo de certificado como del archivo de clave privada para recuperar el certificado. No es necesario que la contraseña de la clave privada sea la misma que la contraseña de la clave maestra de la base de datos.  
   
@@ -57,9 +56,9 @@ ms.locfileid: "74957174"
   
 ####  <a name="permissions"></a><a name="Permissions"></a> Permisos  
   
--   Requiere `CONTROL DATABASE` el permiso en `master` la base de datos para crear la clave maestra de la base de datos.  
+-   Requiere `CONTROL DATABASE` el permiso en la `master` base de datos para crear la clave maestra de la base de datos.  
   
--   Requiere `CREATE CERTIFICATE` el permiso en `master` la base de datos para crear el certificado que protege DEK.  
+-   Requiere el `CREATE CERTIFICATE` permiso en la `master` base de datos para crear el certificado que protege DEK.  
   
 -   Requiere el permiso `CONTROL DATABASE` para la base de datos cifrada y el permiso `VIEW DEFINITION` para el certificado o la clave asimétrica usados para cifrar la clave de cifrado de la base de datos.  
   
@@ -67,9 +66,9 @@ ms.locfileid: "74957174"
   
 ###  <a name="using-sql-server-management-studio"></a><a name="SSMSCreate"></a> Uso de SQL Server Management Studio  
   
-1.  Cree una clave maestra de base de datos y `master` un certificado en la base de datos. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
+1.  Cree una clave maestra de base de datos y un certificado en la `master` base de datos. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
-2.  Cree una copia de seguridad del certificado de servidor `master` en la base de datos. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
+2.  Cree una copia de seguridad del certificado de servidor en la `master` base de datos. Para obtener más información, vea **Usar Transact-SQL** más adelante.  
   
 3.  En el Explorador de objetos, haga clic con el botón derecho en la carpeta **Bases de datos** y seleccione **Nueva base de datos**.  
   
@@ -143,7 +142,7 @@ ms.locfileid: "74957174"
     GO  
     ```  
   
- Para obtener más información, consulte:  
+ Para más información, consulte:  
   
 -   [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)  
   
@@ -252,8 +251,8 @@ ms.locfileid: "74957174"
      **Remove**  
      Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
   
-     **"** _<database_name>_ **" detalles** de la base de datos  
-     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar la ruta de acceso de un archivo, haga clic en el botón **examinar** (**...**).  
+     **"** _<database_name>_ **" detalles de la base de datos**  
+     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** ( **...** ).  
   
     > [!NOTE]  
     >  Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  
@@ -268,7 +267,7 @@ ms.locfileid: "74957174"
      Muestra la ruta de acceso del archivo de base de datos seleccionado. La ruta de acceso puede modificarse manualmente.  
   
      **Mensaje**  
-     Muestra un mensaje en blanco o un hipervínculo "**archivo no encontrado**".  
+     Muestra un mensaje en blanco o un hipervínculo que indica "**Archivo no encontrado**".  
   
 ###  <a name="using-transact-sql"></a><a name="TsqlMove"></a> Usar Transact-SQL  
   
@@ -311,7 +310,7 @@ ms.locfileid: "74957174"
     GO  
     ```  
   
- Para obtener más información, consulte:  
+ Para más información, consulte:  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fda81a7774da697b3369efdd91d79d1f4dce00de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 678e8e9c6b567014bdd49e89d043165bc48d168a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63253436"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066697"
 ---
 # <a name="sql-server-login-password-expiration"></a>Expiración de contraseña de inicio de sesión de SQL Server
   Esta regla comprueba si la "expiración de contraseña" de cada inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada. Si la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está habilitada y la versión del sistema operativo es anterior a [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], un atacante podría aprovechar varias veces una contraseña de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conocida.  

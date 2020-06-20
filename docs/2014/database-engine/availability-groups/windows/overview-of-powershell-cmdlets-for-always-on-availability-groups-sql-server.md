@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4996a1026b4c85b105efc09b8381913f7a47942a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: eecbdf1bd3d3859e272ce2216bde660910795c97
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62789462"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84936713"
 ---
 # <a name="overview-of-powershell-cmdlets-for-alwayson-availability-groups-sql-server"></a>Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn (SQL Server)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] PowerShell es un shell de línea de comandos basado en tareas y un lenguaje de scripting diseñado especialmente para la administración del sistema. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] proporciona un conjunto de cmdlets de PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que le permiten implementar, administrar y supervisar grupos de disponibilidad, réplicas de disponibilidad y bases de datos de disponibilidad.  
@@ -44,14 +43,14 @@ ms.locfileid: "62789462"
 -   [Supervisar el estado de grupos de disponibilidad](#MonitorTblshtAGs)  
   
 > [!NOTE]  
->  Para obtener una lista de los [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] temas de los libros en pantalla de que describen cómo usar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] los cmdlets para realizar tareas, vea la sección "tareas relacionadas" de [información general de grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
+>  Para obtener una lista de los temas de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] los libros en pantalla de que describen cómo usar los cmdlets para realizar [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] tareas, vea la sección "tareas relacionadas" de [información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="configuring-a-server-instance-for-alwayson-availability-groups"></a><a name="ConfiguringServerInstance"></a>Configuración de una instancia de servidor para Grupos de disponibilidad AlwaysOn  
   
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
 |`Disable-SqlAlwaysOn`|Deshabilita la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en una instancia de servidor.|La instancia de servidor especificada por el parámetro `Path`, `InputObject` o `Name`. (Debe ser una edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que admita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]).|  
-|`Enable-SqlAlwaysOn`|Habilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que admite la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obtener información sobre la [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]compatibilidad con, vea [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Cualquier edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
+|`Enable-SqlAlwaysOn`|Habilita [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en una instancia de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] que admite la característica [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obtener información sobre la compatibilidad con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea [requisitos previos, restricciones y recomendaciones para obtener Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).|Cualquier edición de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].|  
 |`New-SqlHadrEndPoint`|Crea un nuevo extremo de creación de reflejo de la base de datos en una instancia de servidor. Este extremo es necesario para el movimiento de datos entre las bases de datos principal y secundaria.|Cualquier instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |`Set-SqlHadrEndpoint`|Cambia las propiedades de un extremo de creación de reflejo de la base de datos existente, como el nombre, el estado o las propiedades de autenticación.|Una instancia de servidor que admite [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y no tiene un extremo de creación de reflejo de la base de datos|  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62789462"
 |Cmdlets|Descripción|Se admite en|  
 |-------------|-----------------|------------------|  
 |`Backup-SqlDatabase`|Crea una copia de seguridad de datos o del registro.|Cualquier base de datos en línea (en el caso [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], una base de datos de la instancia del servidor que hospeda la réplica principal)|  
-|`Restore-SqlDatabase`|Restaura una copia de seguridad.|Cualquier instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (en el caso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], una instancia de servidor que hospeda una réplica secundaria)<br /><br /> **&#42;&#42; importante &#42;&#42;** Al preparar una base de datos secundaria, debe usar `-NoRecovery` el parámetro en `Restore-SqlDatabase` cada comando.|  
+|`Restore-SqlDatabase`|Restaura una copia de seguridad.|Cualquier instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (en el caso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], una instancia de servidor que hospeda una réplica secundaria)<br /><br /> **&#42;&#42; importante &#42;&#42;** Al preparar una base de datos secundaria, debe usar el `-NoRecovery` parámetro en cada `Restore-SqlDatabase` comando.|  
   
  Para obtener más información sobre cómo usar estos cmdlets para preparar una base de datos secundaria, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   

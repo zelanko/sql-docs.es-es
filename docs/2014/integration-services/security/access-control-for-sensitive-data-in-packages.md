@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b47690162b2418469dcb3f866a7c002981b80a75
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964125"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Control del acceso a la información confidencial en paquetes
   Para proteger los datos de un paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , puede establecer un nivel de protección que ayude a proteger los datos confidenciales únicamente o todos los datos del paquete. Asimismo, puede cifrar estos datos con una contraseña o una clave de usuario, o confiar en que la base de datos cifre los datos. Además, el nivel de protección que utiliza para un paquete no es necesariamente estático, sino que cambia a lo largo de su ciclo de vida. A menudo se establece un nivel de protección durante el desarrollo y otro cuando el paquete se implementa.  
@@ -64,7 +63,7 @@ ms.locfileid: "62766787"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Configuración del nivel de protección y el catálogo de SSISDB  
  El catálogo de SSISDB emplea el nivel de protección `ServerStorage`. Al implementar un proyecto de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en el servidor [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , el catálogo cifra automáticamente los datos del paquete y los valores confidenciales. El catálogo también descifra automáticamente los datos cuando lo recupera.  
   
- Si exporta el proyecto (archivo .ispac) desde el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al sistema de archivos, el sistema cambia automáticamente el nivel de protección a `EncryptSensitiveWithUserKey`. Si importa el proyecto mediante el **Asistente para importar proyectos de Integration Services** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la **propiedad ProtectionLevel** de la ventana **propiedades** muestra el valor `EncryptSensitiveWithUserKey`.  
+ Si exporta el proyecto (archivo .ispac) desde el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] al sistema de archivos, el sistema cambia automáticamente el nivel de protección a `EncryptSensitiveWithUserKey`. Si importa el proyecto mediante el **Asistente para importar proyectos de Integration Services** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , la propiedad **ProtectionLevel** de la ventana **propiedades** muestra el valor `EncryptSensitiveWithUserKey` .  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Establecimiento del nivel de protección basado en el ciclo de vida de paquetes  
  El nivel de protección de un paquete de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se establece cuando se desarrolla por primera vez en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Posteriormente, al implementar, importar o exportar el paquete desde [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], o copiarlo desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] o el sistema de archivos puede actualizar su nivel de protección. Por ejemplo, si crea y guarda los paquetes en un equipo con una de las opciones de nivel de protección de claves de usuario, es probable que necesite cambiar el nivel de protección al entregar el paquete a otros usuarios; de lo contrario, no podrán abrirlo.  

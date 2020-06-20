@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6fb96a845f7d5bf97b14fe10f1e19849f0344984
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 874f59097a7f8b9bb575eb50318b60804e388f39
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703620"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060115"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
   Es posible especificar que un atributo sea un atributo de tipo ID. Los atributos especificados como IDREF o IDREFS pueden usarse para hacer referencia a los atributos de tipo ID, lo que habilita los vínculos entre documentos.  
@@ -52,9 +51,9 @@ ms.locfileid: "82703620"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema siguiente, el elemento ** \< Customer>** está formado por el elemento secundario ** \< Order>** . El elemento ** \< Order>** también tiene un elemento secundario, el elemento ** \< OrderDetail>** .  
+ En el esquema siguiente, el **\<Customer>** elemento está compuesto del **\<Order>** elemento secundario. El **\<Order>** elemento también tiene un elemento secundario, el **\<OrderDetail>** elemento.  
   
- El atributo **atributo OrderIDList** de ** \< Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \< Order>** .  
+ El atributo **atributo OrderIDList** de **\<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del **\<Order>** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

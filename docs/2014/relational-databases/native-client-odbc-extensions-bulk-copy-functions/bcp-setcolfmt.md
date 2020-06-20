@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 682d5d8cfe8a3c5e1e5de5286e5079d2e9856a11
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: a8bd75854cc81c661d6e8ac60cab88e23d6efffc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705294"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85019242"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
   La función **bcp_setcolfmt** reemplaza a [bcp_colfmt](bcp-colfmt.md). Para especificar la intercalación de columna, se debe usar la función **bcp_setcolfmt** . [bcp_setbulkmode](bcp-setbulkmode.md) se puede utilizar para especificar más de un formato de columna.  
@@ -83,7 +82,7 @@ cbValue
 ## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función reemplaza la función **bcp_colfmt** . Toda la funcionalidad de **bcp_colfmt** se proporciona en la función **bcp_setcolfmt** . Además, también se proporciona compatibilidad con la intercalación de columna. Se recomienda que los atributos de formato de columna siguientes se establezcan en el orden proporcionado a continuación:  
   
  BCP_FMT_SERVER_COL  

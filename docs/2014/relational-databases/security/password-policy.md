@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 902c46b4609a32139450843414a3c4d97b52fcf7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63187969"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060212"
 ---
 # <a name="password-policy"></a>Directiva de contraseñas
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede usar los mecanismos de directiva de contraseñas de Windows. La directiva de contraseñas se aplica a un inicio de sesión que usa la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y a un usuario con contraseña de una base de datos independiente.  

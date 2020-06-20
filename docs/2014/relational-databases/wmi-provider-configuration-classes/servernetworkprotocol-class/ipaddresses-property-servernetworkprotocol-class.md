@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5d66f7e-9719-436e-b723-12d56f914a05
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e7b2adf53bc6ebca14e2d3b4dc2cee248a4b6720
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b94c4c11327abc1f02bd1e99c414f806f75bc145
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63190298"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059931"
 ---
 # <a name="ipaddresses-property-servernetworkprotocol-class"></a>Propiedad IpAddresses (clase ServerNetworkProtocol)
   Obtiene las direcciones IP asociadas al protocolo de red del servidor.  
@@ -38,12 +37,12 @@ object
   
 ## <a name="parts"></a>Partes  
  *object*  
- `ServerNetworkProtocol` Objeto que representa el protocolo de red utilizado por la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ `ServerNetworkProtocol`Objeto que representa el protocolo de red utilizado por la instancia de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Matriz de objetos de la [clase ServerNetworkProtocolIPAdress](../servernetworkprotocolipaddress-class/servernetworkprotocolipaddress-class.md) que representan las direcciones IP admitidas por el protocolo de red del servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

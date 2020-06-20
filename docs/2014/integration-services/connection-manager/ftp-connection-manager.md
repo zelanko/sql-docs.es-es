@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ef8d3920f4565be7a44d29a974612991b73efeec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 02501b845254301a8370fcd208d849a6c6e3e3a9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833734"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920880"
 ---
 # <a name="ftp-connection-manager"></a>FTP, administrador de conexiones
   Un administrador de conexiones FTP habilita un paquete para conectarse a un servidor de Protocolo de transferencia de archivos (FTP). La tarea FTP que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa este administrador de conexiones.  

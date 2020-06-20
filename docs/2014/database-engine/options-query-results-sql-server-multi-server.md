@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d6768bd8-9cb5-4606-a726-a33a1df9e1bb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c52b48ffdfc0e837525447eff3813b3d91b57700
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: 8273ad5edc65dd7351533209e9fa670c49f75f7a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83856529"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929986"
 ---
 # <a name="options-query-results-sql-server-multi-server"></a>Opciones (Resultados de la consulta/SQL Server/Multiservidor)
   Cuando esté consultando varios servidores al mismo tiempo, utilice esta página para especificar las opciones para mostrar los conjuntos de resultados. Mezclar resultados combina los conjuntos de resultados de todos los servidores en un conjunto de resultados único. Cuando se mezclan resultados, el primer servidor en responder establece el esquema para el conjunto de resultados. Para mezclar los conjuntos de resultados, la consulta debe devolver el mismo número de columnas con los mismos nombres de columna de cada servidor. Cuando se mezclan resultados, se muestra un mensaje para cada servidor que no coincide con el esquema (recuento de columna y nombres de columna) que es devuelto por el primer servidor que devuelve resultados.  

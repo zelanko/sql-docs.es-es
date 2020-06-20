@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b0911811eb95e1d3dd03e8a4d8e33cd7740277e6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62657220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040386"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation (DTA, elemento)
   Especifica si los índices, las vistas indizadas o las particiones recomendados por el Asistente para la optimización de motor de base de datos se pueden crear en línea.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 74c152404cf2d3710bbe98b29da7a96d86f58859
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67727742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969529"
 ---
 # <a name="mssqlserver_1505"></a>MSSQLSERVER_1505
     
@@ -50,7 +49,7 @@ ms.locfileid: "67727742"
   
  El mensaje de error 1505 devuelve la primera fila que infringe la restricción de unicidad. Puede haber otras filas duplicadas en la tabla. Para encontrar todas las filas duplicadas, consulte la tabla especificada y utilice las cláusulas GROUP BY y HAVING para notificar las filas duplicadas. Por ejemplo, la siguiente consulta devuelve las filas de la tabla **Employee** que tengan nombres y apellidos duplicados.  
   
- Seleccione LastName, FirstName, Count (\*) de DBO. Employee GROUP BY LastName, FirstName tiene Count\*() > 1;  
+ Seleccione LastName, FirstName, Count ( \* ) de DBO. Employee GROUP BY LastName, FirstName tiene Count ( \* ) > 1;  
   
 ## <a name="user-action"></a>Acción del usuario  
  Considere las soluciones siguientes.  

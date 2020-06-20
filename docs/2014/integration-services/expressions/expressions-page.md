@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4cb37061fd90f8662ee6670bb558e99035c792e7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c1aeecb2bc6d4932c9b5fffcc36e29cb75a921bd
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62898037"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84969335"
 ---
 # <a name="expressions-page"></a>Página Expresiones
   Utilice la página **Expresiones** para editar expresiones de propiedad y obtener acceso a los cuadros de diálogo **Editor de expresiones de propiedad** y **Generador de expresiones** .  
@@ -36,7 +35,7 @@ ms.locfileid: "62898037"
  Haga clic en los puntos suspensivos para abrir el cuadro de diálogo **Generador de expresiones** . Para más información, consulte [Expression Builder](expression-builder.md).  
   
 ## <a name="see-also"></a>Consulte también  
- [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [Integration Services &#40;&#41; variables de SSIS](../integration-services-ssis-variables.md)   
  [Variables del sistema](../system-variables.md)   
  [Expresiones de Integration Services &#40;SSIS&#41;](integration-services-ssis-expressions.md)  
   

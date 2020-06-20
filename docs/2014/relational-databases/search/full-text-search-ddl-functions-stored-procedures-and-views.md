@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98c36715-4195-482e-a4a3-d93ff65b75f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7db9b0b31d619dc77b537989bfbf281c276e95e4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 29b026ac60fd3f7d00ca519c4ced84533ce9740f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011312"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004216"
 ---
 # <a name="full-text-search-ddl-functions-stored-procedures-and-views"></a>DDL de búsqueda de texto completo, funciones, procedimientos almacenados y vistas
   Enumera las instrucciones Transact-SQL y objetos de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten la búsqueda de texto completo, incluida la característica de búsqueda de la propiedad.  

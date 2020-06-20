@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 673b69ea632108b889cc2f99b63c9c602ef05237
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d3d26ebc097267b736b78e83adc37eb484c41162
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829548"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917595"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar un paquete en herramientas de datos de SQL Server
   Este tema describe cómo crear un nuevo paquete [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] mediante la copia de un paquete existente y cómo actualizar las propiedades `Name` y `GUID` del nuevo paquete.  
@@ -33,7 +32,7 @@ ms.locfileid: "62829548"
   
 3.  Compruebe que el paquete que desea copiar está seleccionado en el Explorador de soluciones o que la pestaña del Diseñador SSIS que contiene el paquete es una pestaña activa.  
   
-4.  En el menú **Archivo**, haga clic en **Guardar \<nombre del paquete> Como**.  
+4.  En el menú **archivo** , haga clic en **Guardar \<package name> como**.  
   
     > [!NOTE]  
     >  El paquete se debe abrir en el Diseñador SSIS para que la opción **Guardar como** aparezca en el menú **Archivo** .  
@@ -48,7 +47,7 @@ ms.locfileid: "62829548"
   
 9. También puede hacer clic en el fondo de la pestaña **Flujo de control** y luego hacer clic en **Propiedades**.  
   
-10. En la ventana Propiedades, haga clic en el valor de la propiedad ID y luego, en la lista desplegable, haga clic en **\<Generar nuevo Id.>** .  
+10. En el ventana Propiedades, haga clic en el valor de la propiedad ID y, a continuación, en la lista desplegable, haga clic en **\<Generate New ID>** .  
   
 11. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el nuevo paquete.  
   

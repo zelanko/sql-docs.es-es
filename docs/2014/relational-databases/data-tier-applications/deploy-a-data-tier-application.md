@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00208b1c0f11faf8f392e47e275c7e239249d3d6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2344ff0b95e82bd83e801df9ff6bd60328a2ae33
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72783066"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970295"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
   Puede implementar una aplicación de capa de datos (DAC) desde un paquete DAC en una instancia existente del [!INCLUDE[ssDE](../../includes/ssde-md.md)] o de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] mediante un asistente o un script de PowerShell. El proceso de implementación registra una instancia de DAC almacenando la definición de la DAC en la base de datos del sistema **msdb** (**maestra** en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), crea una base de datos y, después, rellena la base de datos con todos los objetos de base de datos definidos en la DAC.  
@@ -107,7 +106,7 @@ ms.locfileid: "72783066"
   
  **Descripción:** cuadro de solo lectura que muestra la descripción que se escribió cuando la DAC se creó o extrajo de una base de datos.  
   
- Anterior: vuelve a la página **Introducción** . ** \< **  
+ ** \< Anterior** : vuelve a la página **Introducción** .  
   
  **Siguiente>:** muestra una barra de progreso cuando el asistente confirma que el archivo seleccionado es un paquete DAC válido.  
   
@@ -118,7 +117,7 @@ ms.locfileid: "72783066"
   
  **Validando el contenido de DAC:** barra de progreso que notifica el estado actual del proceso de validación.  
   
- Anterior: vuelve al estado inicial de la página **seleccionar paquete** . ** \< **  
+ ** \< Anterior** : vuelve al estado inicial de la página **seleccionar paquete** .  
   
  **Siguiente>:** avanza a la versión final de la página **Seleccionar paquete**.  
   
@@ -133,7 +132,7 @@ ms.locfileid: "72783066"
   
  **Pasar por alto infracciones de directivas:** use esta casilla para comenzar con la implementación si se produce un error en una o más de las condiciones de la directiva. Seleccione esta opción solamente si está seguro de que todas las condiciones que produjeron errores no evitarán la correcta operación de la DAC.  
   
- Anterior: vuelve a la página **seleccionar paquete** . ** \< **  
+ ** \< Anterior** : vuelve a la página **seleccionar paquete** .  
   
  **Siguiente>:** avanza a la página **Actualizar la configuración**.  
   
@@ -158,7 +157,7 @@ ms.locfileid: "72783066"
   
  **Ruta de acceso y nombre del archivo de registro:** especifique la ruta de acceso completa y el nombre de archivo del archivo de registro. El cuadro se rellena con la ruta de acceso y nombre de archivo predeterminados. Modifique la cadena en el cuadro para cambiar el valor predeterminado o utilice el botón **Examinar** para navegar hasta la carpeta donde se va a colocar el archivo de registro.  
   
- Anterior: vuelve a la página **seleccionar paquete DAC** . ** \< **  
+ ** \< Anterior** : vuelve a la página **seleccionar paquete DAC** .  
   
  **Siguiente >**: avanza a la página **Resumen**.  
   
@@ -169,7 +168,7 @@ ms.locfileid: "72783066"
   
  **La siguiente configuración se utilizará en la implementación de su DAC.** - Compruebe la información que se muestra para asegurarse de que las acciones emprenda serán las correctas. La ventana muestra el paquete DAC y el nombre que seleccionó para la instancia de DAC implementada. La ventana también muestra los valores de configuración que se utilizarán al crear la base de datos asociada con la DAC.  
   
- Anterior: vuelve a la página **Actualizar configuración** para cambiar las selecciones. ** \< **  
+ ** \< Anterior** : vuelve a la página **Actualizar configuración** para cambiar las selecciones.  
   
  **Siguiente >**: implementa la DAC y muestra los resultados en la página **Implementar DAC**.  
   

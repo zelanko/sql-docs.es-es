@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1ef4ddd518343a3076c72ecc41f9b15ddf092dc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62918816"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970515"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Configurar el almacén de administración de datos (SQL Server Management Studio)
   En este tema se describe cómo configurar el almacén de administración de datos para admitir el almacenamiento de datos en una o varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el recopilador de datos. Estas instancias pueden estar en el mismo servidor o en servidores diferentes. También se proporcionan descripciones de la interfaz de usuario del cuadro de diálogo [Asistente para configurar el almacén de administración de datos](#Wizard) . Para obtener información acerca de cómo configurar un recopilador de datos, vea [Configure Properties of a Data Collector](configure-properties-of-a-data-collector.md).  
@@ -93,7 +92,7 @@ ms.locfileid: "62918816"
   
  Especifique un inicio de sesión activando la casilla **Asignar** para el inicio de sesión.  
   
- **Miembros del rol de base de datos para:** *\<nombre de almacenamiento de datos>*  
+ **Pertenencia al rol de base de datos para:**  *\<data warehouse name>*  
  Seleccione el rol del almacén de administración de datos al que se ha asignado el inicio de sesión haciendo clic en la casilla correspondiente a una o varias de las opciones siguientes:  
   
 -   **mdw_admin**  

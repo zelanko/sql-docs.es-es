@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7bb17ece-1222-4622-b476-5789d7641c64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9666e611b9f0a0a4348cc75a2adb1e8b711c60fc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ec712f0a8a708db79d054833180776d604e58dc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63130261"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001326"
 ---
 # <a name="discard-changes-made-to-queries-visual-database-tools"></a>Descartar los cambios realizados en consultas (Visual Database Tools)
   Puede descartar los cambios realizados en una definición de consulta antes de guardarlos. Una vez que se han guardado, no pueden volver a su estado anterior.  

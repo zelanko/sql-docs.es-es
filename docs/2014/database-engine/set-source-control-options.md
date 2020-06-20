@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b2c6ca00-46f0-4f86-b067-07bae779c147
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ab6d134177c7861c3a8f92cf767c71c0b56e233
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843754"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929146"
 ---
 # <a name="set-source-control-options"></a>Establecer las opciones de control de código fuente
   Antes de aprovechar las características de control de código fuente integradas en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], es necesario configurar las opciones de control de código fuente de los diversos entornos en los que trabaje.  
@@ -52,9 +51,9 @@ ms.locfileid: "62843754"
   
     |Role|Descripción|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Especifica que desea usar la configuración que usan normalmente los usuarios de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.|  
+    |**Visual SourceSafe**|Especifica que desea usar la configuración que usan normalmente [!INCLUDE[msCoName](../includes/msconame-md.md)] los usuarios de Visual SourceSafe.|  
     |**Programador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
-    |**Personalizada**|Especifica que el usuario ha modificado la configuración de un rol.|  
+    |**Personalizado**|Especifica que el usuario ha modificado la configuración de un rol.|  
   
      **Realizar en segundo plano las actualizaciones de estado**  
      Actualiza automáticamente los iconos de señal del control de código fuente en el Explorador de soluciones cuando cambia el estado de un elemento. Si se producen retrasos al realizar operaciones que consumen muchos recursos del servidor, en especial cuando abre una solución o un proyecto desde el control de código fuente, la desactivación de esta casilla puede mejorar el rendimiento.  
@@ -76,9 +75,9 @@ ms.locfileid: "62843754"
   
     |Role|Descripción|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Especifica que desea usar la configuración que usan normalmente los usuarios de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.|  
+    |**Visual SourceSafe**|Especifica que desea usar la configuración que usan normalmente [!INCLUDE[msCoName](../includes/msconame-md.md)] los usuarios de Visual SourceSafe.|  
     |**Programador independiente**|Especifica que el usuario está realizando su trabajo de forma independiente.|  
-    |**Personalizada**|Especifica que el usuario ha modificado la configuración de un rol.|  
+    |**Personalizado**|Especifica que el usuario ha modificado la configuración de un rol.|  
   
      La selección de uno de estos roles hace que las opciones de control de código fuente correspondientes se seleccionen automáticamente.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62843754"
      Especifica que cuando el usuario proteja elementos para actualizar el almacén de control de código fuente, los elementos deben permanecer desprotegidos para el usuario. Si desea cambiar esta opción para una protección específica, haga clic en la flecha **Opciones** del cuadro de diálogo **proteger** y desactive la casilla **Mantener desprotegido** .  
   
      **Elementos protegidos**  
-     Muestra una lista de opciones que especifican [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] cómo debe comportarse al intentar editar un elemento que no está desprotegido. En las tablas siguientes se describen las opciones disponibles.  
+     Muestra una lista de opciones que especifican cómo [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] debe comportarse al intentar editar un elemento que no está desprotegido. En las tablas siguientes se describen las opciones disponibles.  
   
      **Guardando**  
   

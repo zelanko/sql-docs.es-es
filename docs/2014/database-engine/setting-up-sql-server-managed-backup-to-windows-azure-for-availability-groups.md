@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc7b94b52a51fdae8d205dd177bc3d4bac6f721d
-ms.sourcegitcommit: 553d5b21bb4bf27e232b3af5cbdb80c3dcf24546
+ms.openlocfilehash: cb46be347590d3fb61d05476616e6c0a52e1ed41
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82849535"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929096"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>Configuración de copia de seguridad administrada de SQL Server para Azure para grupos de disponibilidad
   Este tema es un tutorial sobre la configuración de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para las bases de datos participantes en Grupos de disponibilidad AlwaysOn.  
@@ -29,7 +28,7 @@ ms.locfileid: "82849535"
 -   Ancho de banda de red: se aplica a las implementaciones en las que las réplicas se encuentran en diferentes ubicaciones físicas, como en una nube híbrida, o en distintas regiones de Azure en una configuración solo en la nube. El ancho de banda de red puede afectar a la latencia de las secundarias y, si las secundarias están establecidas en replicación sincrónica, esto puede provocar el crecimiento de los registros en la principal. Si las secundarias están establecidas en replicación sincrónica, las secundarias quizás no puedan seguir el ritmo debido a la latencia de red, que puede provocar la pérdida de datos en caso de conmutación por error a la réplica secundaria.  
   
 ### <a name="configuring-ss_smartbackup-for-availability-databases"></a>Configurar [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] para las bases de datos de disponibilidad.  
- **Los**  
+ **Permisos:**  
   
 -   Requiere la pertenencia al rol de base de datos **db_backupoperator** , con permisos **ALTER any Credential** y `EXECUTE` permisos en **sp_delete_backuphistory**procedimiento almacenado.  
   

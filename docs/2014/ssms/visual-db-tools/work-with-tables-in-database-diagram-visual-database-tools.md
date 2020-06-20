@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee2c5d84-22bf-4597-ac70-a27ed8cc94f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a5d6fb1ca02bd6c6459476cb1d5830a536780a98
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f648cd5fd08ed47c6670491ad5b7f3d75b7ead47
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63065486"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85000645"
 ---
 # <a name="work-with-tables-in-database-diagram-visual-database-tools"></a>Trabajar con tablas en diagramas de base de datos (Visual Database Tools)
   Puede modificar y crear tablas de base de datos en el Diseñador de tablas o en el Diseñador de diagramas de base de datos.  

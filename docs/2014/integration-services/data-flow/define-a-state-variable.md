@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 45d66152-883a-49a7-a877-2e8ab45f8f79
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bdb65c464e63f8e7ab248c49f6dca729add3004
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62827566"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915995"
 ---
 # <a name="define-a-state-variable"></a>Definir una variable de estado
   Este procedimiento describe cómo definir una variable de paquete donde se almacena el estado CDC.  
@@ -37,7 +36,7 @@ ms.locfileid: "62827566"
 |`<ir-start>`|Este es un LSN de un cambio justo antes de que comenzara la carga inicial.|  
 |`<ir-end>`|Este es un LSN de un cambio justo después de que finalizara la carga inicial.|  
 |`TS`|Esto establece la marca de tiempo para la última actualización del estado CDC.|  
-|**\<marca de tiempo>**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
+|**\<timestamp>**|Esta es una representación decimal de la propiedad System.DateTime.UtcNow de 64 bits.|  
 |`ER`|Esto aparece si la última operación generó un error e incluye una breve descripción de la causa de este. Si este componente está presente, siempre aparecerá el último.|  
 |`<short-error-text>`|Esta es la descripción breve del error.|  
   

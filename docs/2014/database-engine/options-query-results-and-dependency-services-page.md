@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d19228fdf17788e9118367a6f0f0eb3be90cb72a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481202"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84930137"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Opciones (Resultados de la consulta/página Servicios de dependencia)
-  Utilice esta página para especificar el servidor al que desea conectarse para Servicios de dependencia. Servicios de dependencia le permite extraer información sobre las dependencias existentes entre los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y los de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacenados en servidores diferentes. Puede ver las dependencias de los objetos mediante el cuadro de diálogo **dependencias del objeto** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Utilice esta página para especificar el servidor al que desea conectarse para Servicios de dependencia. Servicios de dependencia le permite extraer información sobre las dependencias existentes entre los objetos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y los de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacenados en servidores diferentes. Puede ver las dependencias de los objetos mediante el cuadro de diálogo **dependencias del objeto** de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] .  
   
  **¿Qué desea hacer?**  
   
@@ -30,7 +29,7 @@ ms.locfileid: "65481202"
   
 ##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Abrir el cuadro de diálogo Opciones (página resultados de la consulta/servicios de dependencia)  
   
-1.  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], haga clic en **Opciones** en el menú **herramientas** .  
+1.  En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , haga clic en **Opciones** en el menú **herramientas** .  
   
 2.  Expanda **Resultados de la consulta** y, después, haga clic en **Servicios de dependencia**.  
   

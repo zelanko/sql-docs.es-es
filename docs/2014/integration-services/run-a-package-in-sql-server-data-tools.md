@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae5924e5fc1cad91b5e1511c61556ece70138dcb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056422"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964553"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ejecutar un paquete en SQL Server Data Tools
   Los paquetes se ejecutan normalmente en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] durante el desarrollo, la depuración y la comprobación de los paquetes. Cuando se ejecuta un paquete desde el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , siempre se ejecuta inmediatamente.  
@@ -45,7 +44,7 @@ ms.locfileid: "66056422"
   
 1.  En el Explorador de soluciones, haga clic con el botón derecho en la carpeta del proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que contiene el paquete que quiera ejecutar y, después, haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo ** \<nombre del proyecto> páginas de propiedades** , haga clic en **compilar**.  
+2.  En el cuadro de diálogo ** \<project name> páginas de propiedades** , haga clic en **compilar**.  
   
 3.  Actualice el valor de la propiedad OutputPath para especificar la carpeta que quiere usar para la implementación en tiempo de diseño y haga clic en **Aceptar**.  
   

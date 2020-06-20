@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6dc94409e607c91944a2263ac5dfb3e8a3f4ce54
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 752447d6c38a2df0fcbdce72fbba12edd7a9eeb3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62920684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956167"
 ---
 # <a name="transaction-log-backups-sql-server"></a>Copias de seguridad de registros de transacciones (SQL Server)
   Este tema solamente es aplicable a las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el modelo de recuperación optimizado para cargas masivas de registros o el modelo de recuperación completa. En este tema se describe cómo se realizan copias de seguridad del registro de transacciones de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -40,7 +39,7 @@ ms.locfileid: "62920684"
 ##  <a name="how-a-sequence-of-log-backups-works"></a><a name="LogBackupSequence"></a>Cómo funciona una secuencia de copias de seguridad de registros  
  La secuencia de las copias de seguridad del registro de transacciones ( *cadena de registros* ) es independiente de las copias de seguridad de los datos. Por ejemplo, suponga la siguiente secuencia de eventos.  
   
-|Tiempo|Evento|  
+|Time|Evento|  
 |----------|-----------|  
 |8:00 a. m.|Copia de seguridad de la base de datos.|  
 |Mediodía|Copia de seguridad del registro de transacciones.|  

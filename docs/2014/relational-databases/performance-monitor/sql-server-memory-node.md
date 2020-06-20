@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 32a2296fdb68e640ce8ebfc8dd9cdb351666b337
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d5bbc3f581ea9ececeb7d55a614ef27c3c72de7f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250579"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066935"
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, Nodo de memoria
   El objeto **Nodo de memoria** de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona contadores para supervisar la utilización de la memoria de servidor en los nodos NUMA.  

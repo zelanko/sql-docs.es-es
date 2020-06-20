@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e4815678-7885-4631-878f-c6a2b857ee05
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7a64d8fe198b5660715488b6e1b15d5e4831a99
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: b1b79ada7ce4b2f2b256cfc7e7d20b0e7d5f9bc5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000725"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929886"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Opciones (Editor de texto: pestaña Editor y página de la barra de estado)
   La **página Barra de estado y pestaña de editor** permite personalizar la información mostrada por los editores de consultas de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Puede especificar el nivel de información que se muestra en la pestaña y en la barra de estado de la ventana del editor de consultas y si la barra de estado debe aparecer en la parte superior o inferior de la ventana del editor.  
@@ -34,7 +33,7 @@ ms.locfileid: "83000725"
  **Mostrar tiempo de ejecución**  
  Incluye la hora de ejecución del script. La configuración es la siguiente:  
   
- **Ninguno**  
+ **None**  
  La barra de estado no muestra ninguna información horaria.  
   
  **Extremo**  
@@ -67,7 +66,7 @@ ms.locfileid: "83000725"
  **Ubicación de la barra de estado**  
  Especifica la ubicación de la barra de estado. La configuración es la siguiente:  
   
- **Arriba**  
+ **Superior**  
  La barra de estado aparece en la parte superior de la ventana del Editor de consultas.  
   
  **Inferior**  

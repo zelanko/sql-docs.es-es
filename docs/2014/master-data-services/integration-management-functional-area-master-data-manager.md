@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3aec7e136b656b7f33646d50b746e410263059a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 12e61f909d7961851983212cd61b709f8a781c25
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67284990"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84971299"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Área funcional de Administración de integraciones (Master Data Manager)
   En el área funcional de Administración de integraciones, los administradores pueden importar datos de tablas de ensayo y crear vistas de suscripciones que se usarán para sistemas de suscripción. Para obtener más información sobre los administradores, consulte [Administradores &#40;Master Data Services&#41;](administrators-master-data-services.md).  

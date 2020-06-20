@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964575"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados en la tarea Ejecutar SQL
   En un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el hecho de que se devuelva un conjunto de resultados a la tarea Ejecutar SQL depende del tipo de comando SQL que use la tarea. Por ejemplo, una instrucción SELECT suele devolver un conjunto de resultados; en cambio, una instrucción INSERT no lo devuelve.  
@@ -51,15 +50,15 @@ ms.locfileid: "66056429"
   
  Si el tipo de conjunto de resultados es **Fila única**, puede enlazar una columna del resultado devuelto a una variable utilizando el nombre de la columna como nombre del conjunto de resultados, o puede utilizar la posición ordinal de la columna en la lista de columnas como dicho nombre. Por ejemplo, el nombre del conjunto de resultados para la consulta `SELECT Color FROM Production.Product WHERE ProductID = ?` puede ser **Color** o **0**. Si la consulta devuelve varias columnas y desea obtener acceso a los valores de todas ellas, debe enlazar cada columna a una variable distinta. Si asigna columnas a variables utilizando números como nombre de los conjuntos de resultados, los números reflejan el orden de aparición de las columnas en la lista de columnas de la consulta. Por ejemplo, en la consulta `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`, puede utilizar 0 para la columna **Color** y 1 para la columna **ListPrice** . La capacidad de utilizar un nombre de columna como nombre del conjunto de resultados dependerá del proveedor para el que se haya configurado la tarea. No todos los proveedores ponen los nombres de columna a disposición.  
   
- Es posible que algunas consultas que devuelven un valor único no incluyan nombres de columnas. Por ejemplo, la instrucción `SELECT COUNT (*) FROM Production.Product` no devuelve un nombre de columna. Puede tener acceso al resultado devuelto utilizando la posición ordinal 0 como nombre del resultado. Para tener acceso al resultado devuelto por nombre de columna, la consulta debe incluir una cláusula AS \<nombre de alias> para proporcionar un nombre de columna. La instrucción `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`proporciona la columna **CountOfProduct** . Luego puede tener acceso al resultado devuelto utilizando el nombre de la columna **CountOfProduct** o la posición ordinal 0.  
+ Es posible que algunas consultas que devuelven un valor único no incluyan nombres de columnas. Por ejemplo, la instrucción `SELECT COUNT (*) FROM Production.Product` no devuelve un nombre de columna. Puede tener acceso al resultado devuelto utilizando la posición ordinal 0 como nombre del resultado. Para tener acceso al resultado devuelto por nombre de columna, la consulta debe incluir una \<alias name> cláusula as para proporcionar un nombre de columna. La instrucción `SELECT COUNT (*)AS CountOfProduct FROM Production.Product`proporciona la columna **CountOfProduct** . Luego puede tener acceso al resultado devuelto utilizando el nombre de la columna **CountOfProduct** o la posición ordinal 0.  
   
  Si el tipo de conjunto de resultados es **Conjunto de resultados completo** o **XML**, debe utilizar 0 como nombre del conjunto de resultados.  
   
- Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Cuando establezca la propiedad **TypeConversionMode** en `Allowed`, la tarea ejecutar SQL intentará convertir el parámetro de salida y los resultados de la consulta al tipo de datos de la variable a la que se asignan los resultados.  
+ Cuando se asigna una variable a un conjunto de resultados con el tipo de conjunto de resultados **Fila única** , la variable debe tener un tipo de datos que sea compatible con el tipo de datos de la columna contenida en el conjunto de resultados. Por ejemplo, un conjunto de resultados que contiene una columna con un tipo de datos `String` no se puede asignar a una variable con un tipo de datos numérico. Cuando establezca la propiedad **TypeConversionMode** en `Allowed` , la tarea ejecutar SQL intentará convertir el parámetro de salida y los resultados de la consulta al tipo de datos de la variable a la que se asignan los resultados.  
   
  Un conjunto de resultados XML solamente se puede asignar a una variable con el tipo de datos `String` o `Object`. Si la variable tiene el tipo de datos `String`, la tarea Ejecutar SQL devuelve una cadena y el origen XML puede consumir los datos XML. Si la variable tiene el tipo de datos `Object`, la tarea Ejecutar SQL devuelve un objeto DOM (modelo de objetos de documento).  
   
- Un **conjunto de resultados completo** se debe asignar a una variable `Object` del tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
+ Un **conjunto de resultados completo** se debe asignar a una variable del `Object` tipo de datos. El resultado devuelto es un objeto de conjunto de filas. Puede usar un contenedor de bucle Foreach para extraer los valores de las filas de una tabla almacenados en la variable Object y almacenarlos en las variables de paquete y, entonces, utilizar una tarea Script para escribir los datos almacenados en variables de paquetes en un archivo. Para ver una demostración de cómo usar un contenedor de bucle Foreach y una tarea Script, consulte el ejemplo en CodePlex, [Ejecutar parámetros SQL y conjuntos de resultados](https://go.microsoft.com/fwlink/?LinkId=157863), en msftisprodsamples.codeplex.com.  
   
  En la tabla siguiente se resumen los tipos de datos de variables que se pueden asignar a conjuntos de resultados.  
   

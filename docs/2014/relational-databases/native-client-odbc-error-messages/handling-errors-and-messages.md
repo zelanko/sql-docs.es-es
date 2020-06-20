@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 31216e5a6670ff29c0d7e7ab4f1ee31cc5af0564
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 9c4cc389a0c2421a996e8d9a3498552e0119e401
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705382"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020104"
 ---
 # <a name="handling-errors-and-messages"></a>Controlar errores y mensajes
   Cuando una aplicación llama a una función ODBC, el controlador ejecuta la función y devuelve información de diagnóstico de dos maneras: un código de retorno indica si la función ODBC se ha ejecutado o no correctamente en su totalidad, y los registros de diagnóstico proporcionan información detallada sobre la función. Los registros de diagnóstico incluyen un registro de encabezado y registros de estado. Por lo menos se devuelve un registro de diagnóstico, el registro de encabezado, aunque la función se ejecute correctamente.  
@@ -51,7 +50,7 @@ ms.locfileid: "82705382"
   
 -   [Códigos de error ODBC de &#40;SQLSTATE&#41;](sqlstate-odbc-error-codes.md)  
   
--   [mensajes de error](error-messages.md)  
+-   [Mensajes de error](error-messages.md)  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  

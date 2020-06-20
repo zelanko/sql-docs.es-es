@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bdbcfa8140ecbc8c40086af41e64ba96920fe78
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 558eb7a55f2838200e1ed13062cb1e0345de4fcc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000703"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84929807"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Editor de texto - Texto sin formato - Página Pestañas)
   Utilice este cuadro de diálogo para cambiar el comportamiento del tabulador del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto sin formato**y, a continuación, haga clic en **Tabulaciones**.  
@@ -26,7 +25,7 @@ ms.locfileid: "83000703"
  Las opciones del Editor de texto sin formato también se pueden establecer en el cuadro de diálogo **Todos los idiomas General** . Si usa los cuadros de diálogos **Todos los lenguajes** con el fin de establecer diferentes opciones para los demás editores de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , como los editores MDX o DMX, debe restablecer las opciones del Editor de texto sin formato mediante este cuadro de diálogo.  
   
 ## <a name="indenting"></a>Sangrías  
- **Ninguno**  
+ **None**  
  No aplica ninguna sangría a la nueva línea que se crea al presionar ENTRAR. El cursor se coloca en la primera columna de la nueva línea.  
   
  **Bloquear**  

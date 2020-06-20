@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f32462ef33af50a08cd933ed5c1a04c4efaa17de
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bf25496a36a1c5864ee4101226b6432663af111f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62835767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923466"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Conectar con una base de datos de origen de Oracle
   Use la página Oracle Source para proporcionar la información necesaria para conectarse a la base de datos de origen de Oracle. La instancia CDC leerá los registros Rehacer de la base de datos de Oracle a la que está conectado.  
@@ -41,7 +40,7 @@ ms.locfileid: "62835767"
 > [!NOTE]
 >  Un usuario debe tener concedidos los privilegios siguientes en la base de datos de Oracle para poder ser un usuario de minería de registros.  
 > 
->  -   SELECT en \<any-captured-table>  
+>  -   SELECCIONAR activado\<any-captured-table>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE en DBMS LOGMNR  
 > -   SELECT en V$LOGMNR CONTENTS  

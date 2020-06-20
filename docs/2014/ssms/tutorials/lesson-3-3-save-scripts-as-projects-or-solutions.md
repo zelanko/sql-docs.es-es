@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 24e204c7282cb9228fb81d1c63cc4bf51f6286ee
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62753051"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85040972"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Guardar scripts como proyectos o soluciones
   Los desarrolladores que estén familiarizados con [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio acogerán con entusiasmo el Explorador de soluciones de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Los scripts empleados en su empresa pueden agruparse en proyectos de script; estos proyectos pueden administrarse conjuntamente en forma de solución. Cuando los scripts se colocan en soluciones y proyectos de script, pueden abrirse como un grupo o guardarse juntos en un producto de control de código fuente como Visual SourceSafe. Los proyectos de script incluyen información de conexión para que los scripts se ejecuten correctamente y pueden incluir archivos que no sean de script, por ejemplo, un archivo auxiliar de texto.  
@@ -28,7 +27,7 @@ ms.locfileid: "62753051"
   
 1.  Abra [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y conéctese a un servidor mediante el Explorador de objetos.  
   
-2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**. Se abrirá el cuadro de diálogo **Nuevo proyecto** .  
+2.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Proyecto**. Aparece el cuadro de diálogo **Nuevo proyecto** .  
   
 3.  En el cuadro de texto **Nombre** , escriba **StatusCheck**, haga clic en **Scripts de SQL Server** en **Plantillas**y, después, haga clic en **Aceptar** para abrir una solución y un proyecto de script nuevos.  
   

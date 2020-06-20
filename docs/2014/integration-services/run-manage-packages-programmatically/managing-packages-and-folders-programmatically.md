@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ae44d737f596b72dc535812a628740474f2a114f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62766857"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964475"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Administrar paquetes y carpetas mediante programación
   Cuando trabaja con paquetes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante programación, puede que desee determinar si existe un paquete o carpeta individual, o administrar las carpetas en las que se almacenan los paquetes. La clase <xref:Microsoft.SqlServer.Dts.Runtime.Application> del espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> proporciona diferentes métodos para satisfacer estos requisitos.  

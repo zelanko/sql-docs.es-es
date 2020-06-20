@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5ec9ec3dacc91fd36b64ec8b68ea66c42bdc3371
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2421ceaff8b2f54c1371f44e80b4a1774b64f829
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150647"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066796"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Iniciar y utilizar el Asistente para la optimización de motor de base de datos
   En este tema se describe cómo iniciar y usar el Asistente para la optimización de motor de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información sobre cómo ver y trabajar con los resultados después de optimizar una base de datos, vea [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md).  
@@ -110,7 +109,7 @@ ms.locfileid: "63150647"
   
  Si desea utilizar su propia plantilla, asegúrese de que se capturan los siguientes eventos de seguimiento:  
   
--   **RPC:Completed**  
+-   **RPC: completado**  
   
 -   **SQL:BatchCompleted**  
   
@@ -175,7 +174,7 @@ ms.locfileid: "63150647"
   
 2.  Cree una carga de trabajo. Para obtener más información, vea [Crear una carga de trabajo](#Create) , anteriormente en este tema.  
   
-3.  Inicie Asistente para la optimización de motor de base de datos e inicie sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Iniciar el Asistente para la optimización de motor de base de datos](#Start) anteriormente en este tema.  
+3.  Inicie Asistente para la optimización de motor de base de datos e inicie sesión en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Iniciar el Asistente para la optimización de motor de base de datos](#Start) anteriormente en este tema.  
   
 4.  En la pestaña **General** , escriba un nombre en **Nombre de sesión** para crear una nueva sesión de optimización.  
   
@@ -298,7 +297,7 @@ ms.locfileid: "63150647"
 ##  <a name="create-an-xml-input-file"></a><a name="XMLInput"></a>Crear un archivo de entrada XML  
  Si el usuario es un desarrollador de XML experimentado, puede crear archivos con formato XML que el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] podrá utilizar para optimizar cargas de trabajo. Para crear estos archivos XML, utilice las herramientas XML para modificar un archivo de ejemplo o para generar una instancia del esquema XML del Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
- El [!INCLUDE[ssDE](../../includes/ssde-md.md)] esquema XML del Asistente para la optimización de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible en la instalación de en la siguiente ubicación:  
+ El [!INCLUDE[ssDE](../../includes/ssde-md.md)] esquema XML del Asistente para la optimización de está disponible en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la instalación de en la siguiente ubicación:  
   
  C:\Archivos de programa\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
   
@@ -353,7 +352,7 @@ ms.locfileid: "63150647"
  **Archivo**  
  Especifica un script .sql o un archivo de seguimiento para una carga de trabajo. Especifique la ruta de acceso y el nombre de archivo en el cuadro de texto asociado. El Asistente para la optimización de motor de base de datos considera que el archivo de seguimiento de la carga de trabajo es un archivo de sustitución incremental. Para obtener más información sobre los archivos de sustitución incremental, vea [Limit Trace File and Table Sizes](../sql-trace/limit-trace-file-and-table-sizes.md).  
   
- **Cuadro**  
+ **Tabla**  
  Especifica una tabla de seguimiento para una carga de trabajo. Especifique el nombre completo de la tabla de seguimiento en el cuadro de texto asociado, tal y como se indica a continuación:  
   
 ```  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  **Evaluar utilización solo de estructuras de diseño físico (PDS) existentes**  
  Evalúa la efectividad de los índices actuales, pero no recomienda índices adicionales ni vistas indizadas.  
   
- **No crear particiones**  
+ **Sin particiones**  
  No recomienda la creación de particiones.  
   
  **Particiones completas**  
@@ -507,6 +506,6 @@ database_name.owner_name.table_name
   
 ## <a name="see-also"></a>Consulte también  
  [Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos](database-engine-tuning-advisor.md)   
- [dta, utilidad](../../tools/dta/dta-utility.md)  
+ [dta (utilidad)](../../tools/dta/dta-utility.md)  
   
   

@@ -9,18 +9,17 @@ ms.topic: reference
 ms.assetid: 9e915268-9628-445b-81c2-b0ebd11e891e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13445faaef35ad0005666ac1b2fc2b8f95df425
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8217f3571c7ec285d10e04d1c289f1a4963ee384
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637728"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933246"
 ---
 # <a name="udt-utilities"></a>Utilidades UDT
   El ejemplo sobre funciones de la utilidad UDT contiene una serie de funciones de utilidades. Entre ellas se incluyen funciones para exponer metadatos de ensamblado en Transact-SQL, ejemplos de funciones con valores de tabla (TVF) de transmisión para devolver los tipos de datos de un ensamblado en forma de tabla, así como funciones para devolver los campos, los métodos y las propiedades en un tipo de datos definido por el usuario. Algunas de las tecnologías que se muestran son las funciones con valores de tabla de transmisión de datos, las API de reflexión de .NET Framework y la invocación de funciones con valores de tabla de Transact-SQL.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
@@ -52,7 +51,7 @@ ms.locfileid: "73637728"
   
 -   La base de datos de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está utilizando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

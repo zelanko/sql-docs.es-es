@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2eb63756a6ddf5e8a47f27f9f3d2f349c0bdf339
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ea87e2de984107c5a0fda6eb2629ee5cfd197841
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62806756"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934192"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Ejemplo: configurar la creación de reflejo de la base de datos mediante certificados (Transact-SQL)
   En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos mediante la autenticación basada en certificados. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. A menos que garantice que su red es segura, se recomienda utilizar el cifrado para las conexiones de creación de reflejo de la base de datos.  
   
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  
   
-##  <a name="example"></a><a name="ExampleH2"></a>Ejemplo  
+##  <a name="example"></a><a name="ExampleH2"></a> Ejemplo  
  En el ejemplo siguiente se muestra lo que se debe hacer en un asociado que reside en el HOST_A. En este ejemplo, los dos asociados son las instancias de servidor predeterminadas en tres equipos. Las dos instancias de servidor se ejecutan en dominios de Windows que no son de confianza, por lo que se requiere la autenticación basada en certificados.  
   
  HOST_A adopta el rol principal inicial y HOST_B adopta el rol reflejado.  
@@ -257,7 +256,7 @@ ms.locfileid: "62806756"
     ```  
   
     > [!NOTE]  
-    >  Si desea ejecutar en modo de alta seguridad con conmutación automática por error, deje la seguridad de las transacciones establecida en Full (configuración predeterminada) y agregue el testigo lo antes posible después de ejecutar la segunda instrucción set Partner **'*`partner_server`*'** . Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
+    >  Si desea ejecutar en modo de alta seguridad con conmutación automática por error, deje la seguridad de las transacciones establecida en Full (configuración predeterminada) y agregue el testigo lo antes posible después de ejecutar la segunda instrucción set Partner **' *`partner_server`* '** . Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   

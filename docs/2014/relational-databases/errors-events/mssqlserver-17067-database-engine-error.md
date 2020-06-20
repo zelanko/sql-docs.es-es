@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 32c1f0e8-db70-4836-95b2-8833be9e0ad1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4487ddce931be24816378bf809307ca5f72478c9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4ff3de7ed2fbe54a32aaa501979a3acb6b452947
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62915410"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967905"
 ---
 # <a name="mssqlserver_17067"></a>MSSQLSERVER_17067
     
@@ -30,7 +29,7 @@ ms.locfileid: "62915410"
 |Origen de eventos|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SQLASSERT_MESG|  
-|Texto del mensaje|Aserción de SQL Server: archivo: \<%s>, línea =% d% s. Puede que este error esté relacionado con el tiempo de espera. Si el error persiste después de volver a ejecutar la instrucción, utilice DBCC CHECKDB para comprobar la integridad estructural de la base de datos, o bien reinicie el servidor para asegurarse de que las estructuras de datos en memoria no están dañadas.|  
+|Texto del mensaje|SQL Server aserción: archivo: \<%s> , línea =% d% s. Puede que este error esté relacionado con el tiempo de espera. Si el error persiste después de volver a ejecutar la instrucción, utilice DBCC CHECKDB para comprobar la integridad estructural de la base de datos, o bien reinicie el servidor para asegurarse de que las estructuras de datos en memoria no están dañadas.|  
   
 ## <a name="explanation"></a>Explicación  
  Este error puede deberse a errores transitorios relacionados con el control de tiempo, o a que los datos en memoria o en disco estén dañados.  

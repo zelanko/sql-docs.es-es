@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 653f2dd3-36a2-4bd5-8703-71a57d244661
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c772f2527bd5ddb8a6759cbaa72d8aed9277f5cb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704559"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048481"
 ---
 # <a name="creating-a-table-tutorial"></a>Crear una tabla (Tutorial)
   Para crear una tabla, debe proporcionar un nombre para ésta además de los nombres y los tipos de datos de cada columna de la tabla. También es recomendable indicar si se permiten valores NULL en cada columna.  

@@ -12,16 +12,15 @@ f1_keywords:
 ms.assetid: 402c2de4-f4ea-40b0-909f-3ddf3bd59950
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 53a9793fc2a8770c8d926c945ba31a335bdfed3f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3f6ead7090e0ffc3efaa3fbf979d4012d2a43388
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808742"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934630"
 ---
 # <a name="connect-to-server-login-page-integration-services"></a>Conectar al servidor (página Inicio de sesión de Integration Services)
-  Use esta pestaña para ver o especificar las siguientes opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
+  Use esta pestaña para ver o especificar las siguientes opciones al conectarse a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
@@ -31,7 +30,7 @@ ms.locfileid: "62808742"
  Seleccione el servidor al que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
 > [!NOTE]  
->  No use * \<ServerName>* \\ * \<InstanceName>*, porque [!INCLUDE[ssIS](../includes/ssis-md.md)] no admite varias instancias en un equipo.  
+>  No use *\<servername>* \\ *\<instancename>* , porque no [!INCLUDE[ssIS](../includes/ssis-md.md)] admite varias instancias en un equipo.  
   
  **Autenticación**  
  La autenticación [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)]. Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  

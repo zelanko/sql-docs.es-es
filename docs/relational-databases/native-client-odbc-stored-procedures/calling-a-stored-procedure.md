@@ -1,5 +1,6 @@
 ---
 title: Llamar a un procedimiento almacenado | Microsoft Docs
+description: Obtenga información sobre la secuencia de escape ODBC CALL, el método preferido para ejecutar procedimientos almacenados. El controlador ODBC de Native Client también admite Transact-SQLEXECUTE.
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,20 +20,20 @@ ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fae2e947d0faa38ae875f72b48119b21c30dd47
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: e4c13ef2e5e1f47a9cb404a312bcca855c52c42b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304576"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967568"
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la secuencia de escape ODBC Call y [!INCLUDE[tsql](../../includes/tsql-md.md)]la instrucción [Execute](../../t-sql/language-elements/execute-transact-sql.md) para ejecutar procedimientos almacenados; la secuencia de escape ODBC CALL es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la secuencia de escape ODBC Call y la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción [Execute](../../t-sql/language-elements/execute-transact-sql.md) para ejecutar procedimientos almacenados; la secuencia de escape ODBC Call es el método preferido. El uso de la sintaxis ODBC permite que una aplicación recupere los códigos de retorno de los procedimientos almacenados y el controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client también está optimizado para usar un protocolo originalmente desarrollado para enviar llamadas a procedimiento remoto (RPC) entre equipos que ejecutan [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
 > [!NOTE]  
->  Al llamar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de\@los parámetros deben empezar por el carácter ' '. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
+>  Al llamar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimientos almacenados mediante parámetros con nombre con ODBC (para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkID=209721)), los nombres de los parámetros deben empezar por el \@ carácter ' '. Se trata de una restricción específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client exige esta restricción de una manera más estricta que Microsoft Data Access Components (MDAC).  
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   

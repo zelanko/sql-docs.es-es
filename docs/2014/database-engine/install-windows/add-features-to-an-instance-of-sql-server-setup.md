@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 147fe717919035c365ef2e3507e46a4323694570
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e84867e56a66a6f35c4de6c95d7cdbc0bfd72769
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779376"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932818"
 ---
 # <a name="add-features-to-an-instance-of-sql-server-2014-setup"></a>Agregar características a una instancia de SQL Server 2014 (programa de instalación)
   En este tema se proporciona un procedimiento paso a paso para agregar características a una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Algunos componentes o servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son específicos de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se denominan dependientes de la instancia. Comparten la misma versión que la instancia que los hospeda y se usan exclusivamente para dicha instancia. Puede agregar los componentes dependientes de la instancia a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], junto con los componentes compartidos si no están instalados. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Para agregar características a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el símbolo del sistema, vea [install SQL Server 2014 desde el](install-sql-server-from-the-command-prompt.md)símbolo del sistema.  
+ Para agregar características a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el símbolo del sistema, vea [Install SQL Server 2014 desde el](install-sql-server-from-the-command-prompt.md)símbolo del sistema.  
   
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de continuar, revise los temas de [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
@@ -115,15 +114,15 @@ ms.locfileid: "62779376"
   
 20. Use la página Configuración de Distributed Replay Client para especificar los usuarios a los que desee conceder permisos administrativos para el servicio Distributed Replay Client. Los usuarios con permisos administrativos tendrán acceso ilimitado al servicio Distributed Replay Client.  
   
-     **Nombre del controlador** es un parámetro opcional y el valor predeterminado es \<*blank*>. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client. Tenga en cuenta lo siguiente:  
+     El **nombre del controlador** es un parámetro opcional y el valor predeterminado es \<*blank*> . Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client. Tenga en cuenta lo siguiente:  
   
     -   Si ya ha configurado un controlador, escriba el nombre del controlador mientras configura cada cliente.  
   
     -   Si aún no ha configurado ningún controlador, puede dejar el nombre del controlador en blanco. Sin embargo, debe escribir manualmente el nombre del controlador en el archivo de **configuración de cliente** .  
   
-     Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+     Especifique el **Directorio de trabajo** para el servicio Distributed Replay Client. El directorio de trabajo predeterminado es \<*drive letter*> : \Archivos de programa \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
-     Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*letra de unidad*>:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+     Especifique el **Directorio de resultados** para el servicio Distributed Replay Client. El directorio de resultados predeterminado es \<*drive letter*> : \Archivos de programa \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
      Para continuar, haga clic en **Siguiente**.  
   

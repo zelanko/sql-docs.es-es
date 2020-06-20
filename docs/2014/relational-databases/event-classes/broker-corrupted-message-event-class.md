@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 084bf198-2138-438e-bdc7-4ff1e04300f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 710112cfd4ab902c4c92a87602f6e362f3078d93
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62664090"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030533"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message, clase de eventos
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea un evento **Broker:Corrupted Message** cuando Service Broker recibe un mensaje dañado.  
@@ -48,11 +47,11 @@ ms.locfileid: "62664090"
 |**RoleName**|**nvarchar**|Rol del extremo que recibe este mensaje. Uno de los valores siguientes.<br /><br /> **iniciador**:<br />                  El extremo receptor es el iniciador de la conversación.<br /><br /> **destino**:<br />                  El extremo receptor es el destino de la conversación.|38|No|  
 |**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |**Gravedad**|**int**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha quitado el mensaje debido a un error, gravedad de este error.|29|No|  
-|**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  
+|**SPID**|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Yes|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TextData**|**ntext**|Descripción del daño detectado.|1|Sí|  
-|**ID. de transacción**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
+|**TextData**|**ntext**|Descripción del daño detectado.|1|Yes|  
+|**Transaction ID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
   
  La columna **TextData** de este evento contiene texto que describe el problema con el mensaje.  
   

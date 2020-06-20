@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ae778647-1df0-4952-9a69-0ef6177eea9c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42936d25e267bcad5ba8ae512750f9e12f041579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65488964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064721"
 ---
 # <a name="task-7-creating-a-composite-domain"></a>Tarea 7: Creación de un dominio compuesto
   En esta tarea, creará un dominio compuesto, **la validación de direcciones**, que comprende los dominios de línea de **Dirección**, **ciudad**, **Estado**y **código postal** . Un dominio compuesto permite definir una regla entre dominios que afecta a varias dominios de una regla. Un dominio compuesto presenta otras ventajas como la posibilidad de analizar un valor de campo en varios dominios.  Por ejemplo, un valor de un campo Nombre completo se puede analizar en distintos dominios Nombre, Segundo nombre y Apellidos. En este tutorial, solo definirá una regla entre dominios. Vea [administrar un dominio compuesto](https://msdn.microsoft.com/library/hh510399.aspx) para obtener más detalles.  

@@ -8,19 +8,18 @@ ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: ddd07c68d5549ed4cfc7cc3f421168ad968dadda
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b90fdbd9a0bc80dfc6a82416d0193b2951fe13ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014250"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996395"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` es una superficie cerrada topológicamente definida por un anillo de límite exterior y cero o más anillos interiores  
   
 > [!IMPORTANT]  
->  Para obtener una descripción detallada y ejemplos de las características espaciales [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]introducidas `CurvePolygon` en, incluido el subtipo, descargue las notas del producto [nuevas características espaciales en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
+>  Para obtener una descripción detallada y ejemplos de las características espaciales introducidas en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , incluido el `CurvePolygon` subtipo, descargue las notas del producto [nuevas características espaciales en SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
   
  Los siguientes criterios definen atributos de una `CurvePolygon` instancia de:  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 7061f674-e806-46f2-8c15-e260a3c69a17
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 00113df9f330a2edfce0c75f69d45c1fcd9274ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9f220f8908e92eaa861f64b0f896f78547b950e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66068163"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940276"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Especificar el contenido y el tipo de datos de la columna&#39;s (Asistente para minería de datos)
   Utilice la página **Especificar el contenido y el tipo de datos de las columnas** para modificar la columna y los tipos de contenido que ya ha especificado mediante el asistente. El asistente utiliza los tipos de datos de las columnas de origen y las capacidades del algoritmo seleccionado para determinar los datos y los tipos de contenido predeterminados para cada columna.  
@@ -34,7 +33,7 @@ ms.locfileid: "66068163"
  **Tipo de datos**  
  Los tipos de datos que se asignan a cada columna. Haga clic dentro de una celda para cambiar el tipo de datos. Para obtener más información sobre los tipos de datos, vea [Tipos de datos &#40;minería de datos&#41;](data-mining/data-types-data-mining.md).  
   
- **Detect**  
+ **Detectar**  
  Haga clic en esta opción para detectar automáticamente los tipos de contenido discreto y continuo para una columna numérica. Esto no se aplica a estructuras de minería de datos que se basan en orígenes de datos OLAP. Para las estructuras de minería de datos OLAP, el asistente detecta automáticamente los tipos de contenido y elige un tipo que sea compatible con el algoritmo seleccionado.  
   
 ## <a name="see-also"></a>Consulte también  

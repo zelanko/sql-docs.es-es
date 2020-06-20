@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bdc63142-027d-4ead-9d3e-147331387ef5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e878d31ec926f8b2cc460854f422b4d01d32d414
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779599"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932792"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Instalar un Service Pack en un sistema con un tiempo de inactividad mínimo para bases de datos reflejadas
   En este tema se describe cómo minimizar el tiempo de inactividad de las bases de datos reflejadas cuando instale los Service Pack o las revisiones. Este proceso conlleva la actualización secuencial de las instancias de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] que forman parte de la creación de reflejo de la base de datos. Esta forma de actualización, que se conoce como *actualización gradual*, reduce el tiempo de inactividad a una sola conmutación por error. Tenga en cuenta que para sesiones en modo de alto rendimiento en las que el servidor reflejado esté geográficamente distante del principal, una actualización gradual podría no ser adecuada.  
@@ -125,7 +124,7 @@ ms.locfileid: "62779599"
   
     -   En [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos** .  
   
-    -   En [!INCLUDE[tsql](../includes/tsql-md.md)]: Utilice [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para establecer la seguridad de las transacciones en OFF.  
+    -   En [!INCLUDE[tsql](../includes/tsql-md.md)] : Utilice [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) para establecer la seguridad de las transacciones en OFF.  
   
 ### <a name="to-return-a-witness-to-a-mirroring-session"></a>Para devolver un testigo a una sesión de creación de reflejo  
   

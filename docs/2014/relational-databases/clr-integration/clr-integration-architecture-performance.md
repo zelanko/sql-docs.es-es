@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2e7bc073e65e5e21d2d3fb199103cc2be4cc2913
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874500"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953883"
 ---
 # <a name="performance-of-clr-integration"></a>Rendimiento de la integración CLR
-  En este tema se describen algunas de las opciones de diseño que mejoran [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el rendimiento de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] la integración con el Common Language Runtime de .NET Framework (CLR).  
+  En este tema se describen algunas de las opciones de diseño que mejoran el rendimiento de la [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integración con el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Common Language Runtime de .NET Framework (CLR).  
   
 ## <a name="the-compilation-process"></a>El proceso de compilación  
  Durante la compilación de expresiones SQL, cuando se encuentra una referencia a una rutina administrada, se genera un código auxiliar de lenguaje intermedio de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] (MSIL). Este código auxiliar incluye el código para calcular referencias de los parámetros de rutina de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a CLR, invocar la función y devolver el resultado. Este código de "unión" está basado en el tipo y la dirección del parámetro (entrada, salida o referencia).  

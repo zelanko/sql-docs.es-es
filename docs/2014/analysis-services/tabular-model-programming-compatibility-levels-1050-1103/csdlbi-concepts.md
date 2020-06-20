@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2fbdf621-a94d-4a55-a088-3d56d65016ac
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 16c6597171eef10da67ad497e4303b3716298e6a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79525446"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940136"
 ---
 # <a name="csdlbi-concepts"></a>Conceptos de CSDLBI
   El lenguaje de definición de esquemas conceptuales con anotaciones BI (CSDLBI) se basa en Entity Data Framework, que es una abstracción para representar datos de una forma que permita el acceso, la consulta o la exportación de conjuntos de datos diversos mediante programación. CSDLBI se emplea para representar modelos de datos creados mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] porque admite informes y aplicaciones completos controlados por datos.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6bd8de63662b070e317f7c01d1d60f15b6864787
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891178"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968195"
 ---
 # <a name="step-1-copying-the-lesson-4-package"></a>Paso 1: Copia del paquete de la lección 4
   En esta tarea, creará una copia del paquete que ha creado en la lección 4, denominado Lesson 4.dtsx. También puede agregar al proyecto el paquete completado de la lección 4 que se incluye con el tutorial y, después, copiar ese paquete. Usará esta nueva copia en toda la lección 5.  
@@ -36,9 +35,9 @@ ms.locfileid: "62891178"
   
 6.  Haga clic con el botón secundario en cualquier parte del fondo de la pestaña **flujo de control** y, después, haga clic en **propiedades**.  
   
-7.  En el ventana Propiedades, actualice la `Name` propiedad a `Lesson 5`.  
+7.  En el ventana Propiedades, actualice la `Name` propiedad a `Lesson 5` .  
   
-8.  Haga clic en el cuadro de la propiedad **ID** ., haga clic en la flecha desplegable y, a continuación, haga clic en ** \<generar nuevo ID>**.  
+8.  Haga clic en el cuadro de la propiedad **Id.** , haga clic en la flecha desplegable y luego haga clic en **\<Generate New ID>**.  
   
 ### <a name="to-add-the-completed-lesson-4-package"></a>Para agregar el paquete de la lección 4 completada  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1883e88b03b205a2fb272a7cb890c79c607b29fc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 995c3a621e6de5d1b878f28c7c0fffaae3311bd2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232301"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953889"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
   Los objetos de base de datos administrados, como procedimientos almacenados o desencadenadores, se compilan y, a continuación, se implementan en unidades denominadas ensamblados. Los ensamblados de archivos DLL administrados deben registrarse en [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] para poder usar la funcionalidad que proporciona el ensamblado. Para registrar un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , use la instrucción CREATE ASSEMBLY. En este tema se explica cómo registrar un ensamblado en una base de datos mediante la instrucción CREATE ASSEMBLY y cómo especificar la configuración de seguridad del ensamblado.  
@@ -39,7 +38,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
- Es posible crear ensamblados que hagan referencia a otros ensamblados. Cuando se crea un ensamblado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en, también crea los ensamblados a los que hace referencia el ensamblado de nivel raíz, si los ensamblados a los que se hace referencia aún no se han creado en la base de datos.  
+ Es posible crear ensamblados que hagan referencia a otros ensamblados. Cuando se crea un ensamblado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , también crea los ensamblados a los que hace referencia el ensamblado de nivel raíz, si los ensamblados a los que se hace referencia aún no se han creado en la base de datos.  
   
  Se conceden permisos a los usuarios de base de datos o a los roles de usuario para crear y, por tanto, establecerse como propietarios de los ensamblados de una base de datos. Para crear ensamblados, el rol o el usuario de base de datos debe disponer del permiso CREATE ASSEMBLY.  
   
@@ -78,13 +77,13 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
   
 1.  El ensamblado está firmado con un nombre seguro o firmado mediante Authenticode con un certificado. Este nombre seguro (o certificado) se crea dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como una clave asimétrica (o certificado) y dispone de un inicio de sesión correspondiente con permiso `EXTERNAL ACCESS ASSEMBLY` (para ensamblados de acceso externo) o permiso `UNSAFE ASSEMBLY` (para ensamblados no seguros).  
   
-2.  El propietario de la base de datos `EXTERNAL ACCESS ASSEMBLY` (DBO `EXTERNAL ACCESS` ) tiene el `UNSAFE ASSEMBLY` permiso ( `UNSAFE` para ensamblados) o (para ensamblados), y la base `ON`de datos tiene la propiedad de base de [datos TRUSTWORTHY](../../security/trustworthy-database-property.md) establecida en.  
+2.  El propietario de la base de datos (DBO) tiene `EXTERNAL ACCESS ASSEMBLY` `EXTERNAL ACCESS` el permiso (para ensamblados) o `UNSAFE ASSEMBLY` (para `UNSAFE` ensamblados), y la base de datos tiene la [propiedad de base de datos TRUSTWORTHY](../../security/trustworthy-database-property.md) establecida en `ON` .  
   
  Las dos condiciones indicadas anteriormente también se comprueban en el momento de carga del ensamblado (que incluye la ejecución). Para cargar el ensamblado debe cumplirse al menos una de las condiciones.  
   
- Se recomienda que la [propiedad de base de datos TRUSTWORTHY](../../security/trustworthy-database-property.md) de una base de `ON` datos no se establezca en solo para ejecutar el código de Common Language Runtime (CLR) en el proceso de servidor. En lugar de ello, es aconsejable crear una clave asimétrica a partir del archivo de ensamblado de la base de datos maestra. A continuación debe crearse un inicio de sesión asignado a esta clave asimétrica y debe concederse el permiso `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY` al inicio de sesión.  
+ Se recomienda que la [propiedad de base de datos TRUSTWORTHY](../../security/trustworthy-database-property.md) de una base de datos no se establezca en `ON` solo para ejecutar el código de Common Language Runtime (CLR) en el proceso de servidor. En lugar de ello, es aconsejable crear una clave asimétrica a partir del archivo de ensamblado de la base de datos maestra. A continuación debe crearse un inicio de sesión asignado a esta clave asimétrica y debe concederse el permiso `EXTERNAL ACCESS ASSEMBLY` o `UNSAFE ASSEMBLY` al inicio de sesión.  
   
- Las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguientes antes de ejecutar la instrucción CREATE Assembly.  
+ Las [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones siguientes antes de ejecutar la instrucción CREATE Assembly.  
   
 ```  
 USE master;   
@@ -107,7 +106,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll'
 WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
- Las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] siguientes antes de ejecutar la instrucción CREATE Assembly.  
+ Las [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones siguientes antes de ejecutar la instrucción CREATE Assembly.  
   
 ```  
 USE master;   

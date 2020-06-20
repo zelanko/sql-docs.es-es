@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0d61f3262d68bcc14abc6b03f83c53ed3a8ba95
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0a2c469b23e1ce4134767920547297b23ec030cc
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232092"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952785"
 ---
 # <a name="database-lifecycle-management"></a>Administración del ciclo de vida de base de datos
   Administración de ciclo de vida de base de datos (DLM) es un enfoque basado en directiva para administrar bases de datos y activos de datos. DLM no es un producto sino un enfoque integral para administrar el esquema de la base de datos, los datos y los metadatos para una aplicación de base de datos. Un enfoque proactivo y reflexivo de DLM permite a una organización administrar los recursos de datos según los niveles adecuados de rendimiento, protección, disponibilidad y costo.  

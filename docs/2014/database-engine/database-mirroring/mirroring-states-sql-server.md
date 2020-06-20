@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d458939ba233bdfe7a99edd38afc74b5433ae061
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62754552"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934106"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de creacion de reflejo (SQL Server)
   Durante una sesión de creación de reflejo de la base de datos, la base de datos reflejada siempre se encuentra en un estado específico (el *estado de creación de reflejo*). El estado de la base de datos refleja el estado de la comunicación, el flujo de datos y la diferencia de datos entre los asociados. La sesión de creación de reflejo de la base de datos adopta el mismo estado que la base de datos principal.  

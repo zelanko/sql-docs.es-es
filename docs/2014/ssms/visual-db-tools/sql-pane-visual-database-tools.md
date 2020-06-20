@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbabab18-0614-415b-a2ef-9bcd0d320d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fd223c0a66b533cb2b405dd0e766f7053b7a4e89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c2d7d92f389b595f149951de6af1dac7fddd6df
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63275964"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057989"
 ---
 # <a name="sql-pane-visual-database-tools"></a>Panel SQL (Visual Database Tools)
   Puede utilizar el panel SQL para crear su propia instrucción SQL o puede hacerlo en los paneles Criterios y Diagrama (en ese caso, las instrucciones SQL se crearán en el panel SQL). A medida que crea la consulta, el panel SQL actualiza la instrucción y le vuelve a dar formato automáticamente para facilitar su lectura.  

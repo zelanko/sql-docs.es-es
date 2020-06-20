@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15f45af03125ebd797de0e36cb67516b4f01408d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4043075208fb4435fb777214733dad1d93113452
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917300"
 ---
 # <a name="create-and-map-a-server-environment"></a>Crear y asignar un entorno de servidor
   Los entornos de servidor se crean con el fin de especificar valores en tiempo de ejecución para los paquetes contenidos en un proyecto implementado en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Después puede asignar las variables de entorno a parámetros para un paquete concreto, para los paquetes de punto de entrada o para todos los paquetes de un proyecto determinado. Un paquete de punto de entrada suele ser un paquete primario que ejecuta un paquete secundario.  
@@ -32,7 +31,7 @@ ms.locfileid: "66060147"
   
 ### <a name="to-create-and-use-a-server-environment"></a>Para crear y utilizar un entorno de servidor  
   
-1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], expanda [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] el nodo catálogos> **SSISDB** en explorador de objetos y busque la carpeta **entornos** del proyecto para el que desea crear un entorno.  
+1.  En [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] , expanda el [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nodo catálogos> **SSISDB** en explorador de objetos y busque la carpeta **entornos** del proyecto para el que desea crear un entorno.  
   
 2.  Haga clic con el botón derecho en la carpeta **Entornos** y, después, haga clic en **Crear entorno**.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18de47b1-f936-427d-b852-fe6d20334f71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bf9d2d4332721f8c0e61e9838f11a40cbfe2850
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63184309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058143"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Crear combinaciones externas (Visual Database Tools)
   De forma predeterminada, el [Diseñador de consultas y vistas](visual-database-tools.md) crea una combinación interna entre tablas. Las combinaciones internas eliminan las filas que no coinciden con alguna fila de la otra tabla. Sin embargo, las combinaciones externas devuelven todas las filas de una de las tablas o vistas mencionadas en la cláusula FROM, como mínimo, siempre que tales filas cumplan alguna de las condiciones de búsqueda de WHERE o HAVING. Si desea incluir filas de datos en el conjunto de resultados que no se correspondan con ninguna fila de la tabla combinada, puede crear una combinación externa.  
@@ -29,7 +28,7 @@ ms.locfileid: "63184309"
   
 1.  Cree la combinación, ya sea automática o manualmente. Para detalles, consulte [Combinar tablas automáticamente &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) o [Combinar tablas manualmente &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Seleccione la línea de combinación en el panel Diagrama y, a continuación, en el menú **Diseñador de consultas** , elija **seleccionar todas las filas \<de TableName>**, seleccionando el comando que incluye la tabla cuyas filas adicionales desea incluir.  
+2.  Seleccione la línea de combinación en el panel Diagrama y, a continuación, en el menú **Diseñador de consultas**, elija **Seleccionar todas las filas desde \<tablename>** y seleccione el comando que contiene la tabla en la que desea incluir filas adicionales.  
   
     -   Elija la primera tabla para crear una combinación externa izquierda.  
   

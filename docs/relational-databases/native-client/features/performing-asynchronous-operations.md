@@ -1,5 +1,6 @@
 ---
 title: Realización de operaciones asincrónicas | Microsoft Docs
+description: Permita que las aplicaciones realicen operaciones asincrónicas de base de datos con el proveedor de bases de datos de SQL Server Native Client antiguo.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,12 +20,12 @@ ms.assetid: 8fbd84b4-69cb-4708-9f0f-bbdf69029bcc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1adc7b723e6986a9d713847f09cafcb41c3d5a49
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ef1b451b0f4893b8a394937bc5e40c8d4f682054
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303826"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84949491"
 ---
 # <a name="performing-asynchronous-operations"></a>Realizar operaciones asincrónicas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,18 +33,18 @@ ms.locfileid: "81303826"
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite a las aplicaciones realizar operaciones de base de datos asincrónicas. El procesamiento asincrónico permite a los métodos devolver resultados inmediatamente sin bloquear el subproceso que hace la llamada. Esto hace posible gran parte de la potencia y la flexibilidad del subprocesamiento múltiple, sin que el programador tenga que crear explícitamente subprocesos o administrar la sincronización. Las aplicaciones solicitan el procesamiento asincrónico al inicializar una conexión a la base de datos, o al inicializar el resultado de la ejecución de un comando.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Abrir y cerrar una conexión a la base de datos  
- Cuando se usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client, las aplicaciones diseñadas para inicializar de forma asincrónica un objeto de origen de datos pueden establecer el bit de DBPROPVAL_ASYNCH_INITIALIZE en la propiedad DBPROP_INIT_ASYNCH antes de llamar a **IDBInitialize:: Initialize**. Cuando se establece esta propiedad, el resultado de la llamada del proveedor a **Initialize** es S_OK si la operación se ha completado inmediatamente, o bien DB_S_ASYNCHRONOUS si la inicialización continúa de forma asincrónica. Las aplicaciones pueden consultar la interfaz **IDBAsynchStatus** o [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)en el objeto de origen de datos y, a continuación, llamar a **IDBAsynchStatus:: getStatus** o[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) para obtener el estado de la inicialización.  
+ Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, las aplicaciones diseñadas para inicializar de forma asincrónica un objeto de origen de datos pueden establecer el bit de DBPROPVAL_ASYNCH_INITIALIZE en la propiedad DBPROP_INIT_ASYNCH antes de llamar a **IDBInitialize:: Initialize**. Cuando se establece esta propiedad, el resultado de la llamada del proveedor a **Initialize** es S_OK si la operación se ha completado inmediatamente, o bien DB_S_ASYNCHRONOUS si la inicialización continúa de forma asincrónica. Las aplicaciones pueden consultar la interfaz **IDBAsynchStatus** o [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)en el objeto de origen de datos y, a continuación, llamar a **IDBAsynchStatus:: getStatus** o[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) para obtener el estado de la inicialización.  
   
  Además, se ha agregado la propiedad SSPROP_ISSAsynchStatus al conjunto de propiedades DBPROPSET_SQLSERVERROWSET. Los proveedores que admiten la interfaz **ISSAsynchStatus** deben implementar esta propiedad con un valor de VARIANT_TRUE.  
   
  Se puede llamar a **IDBAsynchStatus::Abort** o [ISSAsynchStatus::Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) para cancelar la llamada asincrónica a **Initialize**. El consumidor debe solicitar explícitamente la inicialización de origen de datos asincrónica. De lo contrario, **IDBInitialize::Initialize** no devuelve resultados hasta que se inicializa completamente el objeto de origen de datos.  
   
 > [!NOTE]  
->  Los objetos de origen de datos usados para la agrupación **ISSAsynchStatus** de conexiones no pueden [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] llamar a la interfaz ISSAsynchStatus en el proveedor de OLE DB de Native Client. La interfaz **ISSAsynchStatus** no se expone para objetos de origen de datos agrupados.  
+>  Los objetos de origen de datos usados para la agrupación de conexiones no pueden llamar a la interfaz **ISSAsynchStatus** en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client. La interfaz **ISSAsynchStatus** no se expone para objetos de origen de datos agrupados.  
 >   
 >  Si una aplicación obliga explícitamente a usar el motor de cursor, **IOpenRowset::OpenRowset** e **IMultipleResults::GetResult** no admitirán el procesamiento asincrónico.  
 >   
->  Además, la dll de código auxiliar/proxy de comunicación remota (en MDAC 2,8) **ISSAsynchStatus** no puede llamar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la interfaz ISSAsynchStatus en Native Client. La interfaz **ISSAsynchStatus** no se expone a través de la comunicación remota.  
+>  Además, la dll de código auxiliar/proxy de comunicación remota (en MDAC 2,8) no puede llamar a la interfaz **ISSAsynchStatus** en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. La interfaz **ISSAsynchStatus** no se expone a través de la comunicación remota.  
 >   
 >  Los componentes de servicio no admiten **ISSAsynchStatus**.  
   
@@ -187,7 +188,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

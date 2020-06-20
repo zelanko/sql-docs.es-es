@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0247483b-f092-4511-8fa8-3610108bd1bc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: be80af34bc2dc8b5d069406bc13a8f8f9b25c42c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5153ddd4363ce752933d425d3155c5733ec8fcef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62829453"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917805"
 ---
 # <a name="update-statistics-task"></a>Tarea Actualizar estadísticas
   La tarea Actualizar estadísticas actualiza información sobre la distribución de valores clave para uno o varios grupos de estadísticas (colecciones) de la tabla o vista indizada especificada. Para más información, consulte [Estadísticas](../../relational-databases/statistics/statistics.md).  

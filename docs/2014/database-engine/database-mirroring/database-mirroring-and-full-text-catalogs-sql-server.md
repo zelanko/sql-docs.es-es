@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e90e2386fcd6c6d2f71e1cea31f253f8baac9195
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39929f4bed6edbd1e8ec5c1b72dbe8f7aefeec68
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934354"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Creación de reflejo de la base de datos y catálogos de texto completo (SQL Server)
   Para crear un reflejo de base de datos que tenga un catálogo de texto completo, utilice una copia de seguridad de la forma habitual para crear una copia de seguridad completa de base de datos de la base de datos principal y, a continuación, restaure la copia de seguridad para copiar la base de datos al servidor reflejado. Para obtener más información, vea [Preparar una base de datos reflejada para la creación de reflejo &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
@@ -60,6 +59,6 @@ ms.locfileid: "62807303"
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-index-transact-sql)   
  [SQL Server de &#40;de creación de reflejo de la base de datos&#41;](database-mirroring-sql-server.md)   
- [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
+ [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/indexes/indexes.md)  
   
   

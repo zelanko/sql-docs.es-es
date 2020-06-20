@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 20f54b913124cdaa8a7dfeebac01ba070cc37d88
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68196611"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002642"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
   Puede ver las dependencias de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +51,7 @@ ms.locfileid: "68196611"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **dependencias del objeto**_\<>nombre de objeto_ , seleccione los **objetos que dependen del** _ \<nombre de objeto>_ u **objetos de los que**_\<depende el nombre del objeto>_. **depends**  
+3.  En el cuadro de diálogo **dependencias del objeto** _\<object name>_ , seleccione los **objetos que dependen de** _\<object name>_ , u **objetos de los que** _\<object name>_ **depende**.  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 33e8f8b20d9eb6325ce76accc35ec1fe95261016
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755027"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934266"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
   Si dispone de los permisos correctos, puede utilizar el Monitor de creación de reflejo de la base de datos para supervisar cualquier subconjunto de las bases de datos reflejadas de una instancia del servidor. La supervisión le permite comprobar si los datos fluyen en la sesión de creación de reflejo de la base de datos. Si hay flujo de datos, supervisa la calidad del mismo. Asimismo, el Monitor de creación de reflejo de la base de datos resulta útil para solucionar la causa de un flujo de datos reducido.  
@@ -45,7 +44,7 @@ ms.locfileid: "62755027"
   
  En cada base de datos registrada, se muestra la siguiente información:  
   
- _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER_><MIRROR_SERVER>**->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  Nombre de una base de datos reflejada que se registra con el Monitor de creación de reflejo de la base de datos.  
@@ -53,20 +52,20 @@ ms.locfileid: "62755027"
  *\<Status>*  
  Los estados posibles y sus iconos asociados son los siguientes:  
   
-|Icono|Status|Descripción|  
+|Icono|Estado|Descripción|  
 |----------|------------|-----------------|  
-|Icono de advertencia|**Unknown**|El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.|  
-|Icono de advertencia|**Sincronizando**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
-|Cilindro de base de datos estándar|**Sincronizada**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
+|Icono de advertencia|**Desconocido**|El monitor no está conectado a ningún asociado. La única información disponible es lo que el monitor almacena en caché.|  
+|Icono de advertencia|**Asistentes**|El contenido de la base de datos reflejada está atrasado con respecto al contenido de la base de datos principal. La instancia de servidor principal envía las entradas de registro a la instancia del servidor reflejado, que aplica los cambios en la base de datos reflejada para confirmarla.<br /><br /> Al inicio de una sesión de creación de reflejo de la base de datos, las bases de datos principal y reflejada se encuentran en este estado.|  
+|Cilindro de base de datos estándar|**Sincronizado**|El estado de la base de datos cambia a **Sincronizado**cuando el servidor reflejado está suficientemente al día con respecto al servidor principal. La base de datos permanece en este estado mientras el servidor principal continúa con el envío de cambios al servidor reflejado, y el servidor reflejado continúa con la aplicación de los cambios en la base de datos reflejada.<br /><br /> En el modo de seguridad alta, son posibles las conmutaciones manual y automática por error sin pérdida de datos.<br /><br /> En el modo de rendimiento alto, siempre es posible que se pierdan datos, incluso en el estado **Sincronizado** .|  
 |Icono de advertencia|**Suspendido**|La base de datos principal está disponible, pero no envía ningún registro al servidor reflejado.|  
-|Icono de error|**Desconectada**|La instancia del servidor no se puede conectar a su asociado.|  
+|Icono de error|**Escenario desconectado**|La instancia del servidor no se puede conectar a su asociado.|  
   
  *<PRINCIPAL_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor principal. El nombre adopta el siguiente formato:  
   
- *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
+ *<SYSTEM_NAME>*[ **\\** _<instance_name _>]  
   
- donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_ **\\** _<nombre_instancia>_ .  
+ donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En el caso de una instancia de servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_ **\\** _<instance_name _>.  
   
  *<MIRROR_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor reflejado. El formato es el mismo que el del servidor principal.  
@@ -81,7 +80,7 @@ ms.locfileid: "62755027"
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **última actualización:**_\<fecha>_ * \<hora>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **última actualización:** _\<date>_ *\<time>* . Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  
@@ -89,7 +88,7 @@ ms.locfileid: "62755027"
 |Get-Help|Descripción|  
 |-------------|-----------------|  
 |**Registrar base de datos reflejada...**|Abre el cuadro de diálogo **Registrar base de datos reflejada** . Utilice este cuadro de diálogo para registrar una o varias bases de datos reflejadas en una instancia del servidor determinada, mediante la adición de las bases de datos al Monitor de creación de reflejo de la base de datos. Cuando se agrega una base de datos, el Monitor de creación de reflejo de la base de datos almacena localmente en caché información acerca de la base de datos, sus asociados y el método de conexión a éstos.|  
-|**Administrar conexiones de instancia del servidor...**|Si selecciona este comando, se abre el cuadro de diálogo **Administrar conexiones de instancia del servidor** . En dicho diálogo, puede elegir una instancia del servidor para la que desee especificar credenciales del monitor, que usará al conectarse a un asociado determinado.<br /><br /> Para editar credenciales para un asociado, localice su entrada en la cuadrícula **Instancias del servidor** y haga clic en **Editar** en la fila. Se abrirá el cuadro de diálogo **Conectar al servidor** para ese nombre de instancia del servidor, con los controles de credencial inicializados en el valor actual almacenado en caché. Cambie la información de autenticación según corresponda y haga clic en **Conectar**. Si las credenciales tienen privilegios suficientes, la columna **Conectar utilizando** se actualizará con las nuevas credenciales.|  
+|**Administrar conexiones de instancia de servidor...**|Si selecciona este comando, se abre el cuadro de diálogo **Administrar conexiones de instancia del servidor** . En dicho diálogo, puede elegir una instancia del servidor para la que desee especificar credenciales del monitor, que usará al conectarse a un asociado determinado.<br /><br /> Para editar credenciales para un asociado, localice su entrada en la cuadrícula **Instancias del servidor** y haga clic en **Editar** en la fila. Se abrirá el cuadro de diálogo **Conectar al servidor** para ese nombre de instancia del servidor, con los controles de credencial inicializados en el valor actual almacenado en caché. Cambie la información de autenticación según corresponda y haga clic en **Conectar**. Si las credenciales tienen privilegios suficientes, la columna **Conectar utilizando** se actualizará con las nuevas credenciales.|  
   
  Si selecciona una base de datos, el menú **Acción** también contiene los siguientes comandos.  
   

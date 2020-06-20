@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 8526998d-b47d-4a32-8dc2-7f50a8d11097
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d663cf6a4a2c7edfc7ae206f5a703b10db63106
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e87089d05ec00993900bc8a081ebe43ae3adf448
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703529"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85003181"
 ---
 # <a name="retrieving-unconsumed-data-using-the-sqloverflow-field-sqlxml-40"></a>Recuperar datos no utilizados mediante sql:overflow-field (SQLXML 4.0)
-  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando recupere datos de una base de datos utilizando esquemas anotados, puede especificar el atributo `sql:overflow-field` para identificar la columna en la tabla en la que se almacenan los datos de desbordamiento. El `sql:overflow-field` atributo se puede especificar en el ** \< elemento>**.  
+  Cuando se insertan registros en una base de datos de un documento XML utilizando la función [!INCLUDE[tsql](../../includes/tsql-md.md)] OPENXML, se pueden almacenar todos los datos no consumidos del documento XML en una columna. Cuando recupere datos de una base de datos utilizando esquemas anotados, puede especificar el atributo `sql:overflow-field` para identificar la columna en la tabla en la que se almacenan los datos de desbordamiento. El `sql:overflow-field` atributo se puede especificar en **\<element>** .  
   
  Este dato se recupera después de las siguientes maneras:  
   

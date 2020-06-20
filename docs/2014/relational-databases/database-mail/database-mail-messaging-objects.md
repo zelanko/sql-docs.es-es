@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d284d3ef1d0ac349dea95b1a6a134cb2429e6e4c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952482"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
   La base de datos **msdb** es la base de datos host del Correo electrónico de base de datos. Esta base de datos contiene los procedimientos almacenados y objetos de mensajería del Correo electrónico de base de datos. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] incluye el Asistente para configuración del Correo electrónico de base de datos, que permite habilitar el correo electrónico de base de datos, crear y administrar perfiles y cuentas, y configurar las opciones del Correo electrónico de base de datos.  

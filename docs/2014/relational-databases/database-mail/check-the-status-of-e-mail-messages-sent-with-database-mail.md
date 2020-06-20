@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb290f24-b52f-46bc-84eb-595afee6a5f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a4997ce60dcfbdae6145ae4ae442fabe7c79f924
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872335"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952845"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
   En este tema se describe cómo comprobar el estado del mensaje de correo electrónico enviado con Correo electrónico de base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +43,7 @@ ms.locfileid: "62872335"
   
      De forma predeterminada, el programa externo no registra información acerca de los mensajes que se enviaron correctamente. Para registrar todos los mensajes, establezca el nivel de registro en detallado mediante la página **Configurar parámetros del sistema** del **Asistente para configuración de Correo electrónico de base de datos**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  En el siguiente ejemplo se muestra información acerca de los mensajes de correo electrónico enviados a `danw` que el programa externo no ha podido enviar correctamente. La instrucción incluye el asunto, la fecha y la hora en que el programa externo no pudo enviar el mensaje, así como el mensaje de error del registro de Correo electrónico de base de datos.  
   
 ```  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4154c590-1541-49d0-8117-4ddf2ce5ccba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e58db16e14c0e959ca83dcdd687159f80bbeaf77
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c8f3f5c10a4b9f78ed77d643b34297336581f43f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717508"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996217"
 ---
 # <a name="executing-an-updategram-by-using-ole-db-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante OLE DB (SQLXML 4.0)
   En este tema se proporciona un ejemplo de trabajo de usingOLE DB para ejecutar un diagrama.  
@@ -58,7 +57,7 @@ ms.locfileid: "82717508"
 </Schema>  
 ```  
   
- La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el elemento ** \< Person. contact>** se asigna a la tabla person. contact de la base de datos AdventureWorks.  
+ La consulta devuelve todos los elementos de empleado. Con la asignación predeterminada, el **\<Person.Contact>** elemento se asigna a la tabla person. contact de la base de datos AdventureWorks.  
   
 ###### <a name="to-set-xml-as-a-command-and-retrieving-result-as-an-xml-document"></a>Para establecer XML como un comando y recuperar el resultado como un documento XML  
   

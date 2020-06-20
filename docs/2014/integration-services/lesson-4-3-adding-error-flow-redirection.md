@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3dd2fd95b1ad2d239d055b2b49b991860a58d338
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3c2d7be5fa95e92b97e76e28647f4406ee356c5f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891407"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968255"
 ---
 # <a name="step-3-adding-error-flow-redirection"></a>Paso 3: Adición de redirección de flujo de errores
   Como se ha mostrado en la tarea anterior, la transformación Lookup Currency Key no puede generar una coincidencia cuando la transformación intenta procesar el archivo plano de ejemplo dañado que ha generado un error. Puesto que la transformación utiliza la configuración de salida de error predeterminada, cualquier error da lugar a un error de la transformación. Cuando se produce un error en la transformación, también se produce un error en el resto del paquete.  
@@ -24,7 +23,7 @@ ms.locfileid: "62891407"
   
  En esta tarea configurará la transformación Lookup Currency Key para redirigir cualquier fila con errores a la salida de errores. En la rama de errores del flujo de datos, estas filas se escribirán en un archivo.  
   
- De forma predeterminada, las dos columnas adicionales [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en una salida de error, **ErrorCode** y **ErrorColumn**, solo contienen códigos numéricos que representan un número de error y el identificador de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la correspondiente descripción del error.  
+ De forma predeterminada, las dos columnas adicionales en una [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] salida de error, **ErrorCode** y **ErrorColumn**, solo contienen códigos numéricos que representan un número de error y el identificador de la columna en la que se produjo el error. Estos valores numéricos pueden tener un uso limitado sin la correspondiente descripción del error.  
   
  Para mejorar la utilidad de la salida de errores, antes de que el paquete escriba las filas con errores en el archivo, se utilizará un componente de script para obtener acceso a la API de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y obtener una descripción del error.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62891407"
   
 13. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Editor de transformación Script** .  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Paso 4: agregar un destino de archivo plano] (lesson-4-4-adding-a-flat-file-destination.md  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8527121-fbcd-4d30-9b4a-1461149cb5a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 81e1081623b363cdcb9610c83301bd424cb3694d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 40fdd268536aecd8fc3ce06922d6145188d85a97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191968"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065606"
 ---
 # <a name="protocolname-property-clientnetworkprotocol-class"></a>Propiedad ProtocolName (clase ClientNetworkProtocol)
   Obtiene el nombre del Protocolo de red actual especificado por la [configuración de protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx).  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre del Protocolo de red del cliente actual al que hace referencia el [método SetOrderValue (clase ClientNetworkProtocol)](https://technet.microsoft.com/library/ms179295.aspx).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

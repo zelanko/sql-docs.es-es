@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: c86ca6eb-c59f-46e9-bc32-d474e7c3b170
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c14e5adf43602b57697483b9ce4c2cdf20ff8e10
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62524075"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009019"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
-  En este tema se describe cómo definir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cómo responde a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las alertas del [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] agente en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]o.  
+  En este tema se describe cómo definir cómo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] responde a las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alertas del agente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  **En este tema**  
   
@@ -42,7 +41,7 @@ ms.locfileid: "62524075"
   
 ###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Las opciones buscapersonas y **net send** se quitarán del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
+-   Las opciones buscapersonas y **net send** se quitarán del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente en una versión futura de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan.  
   
 -   Tenga en cuenta que deberá configurar el Agente SQL Server para que utilice el Correo electrónico de base de datos para enviar a los operadores notificaciones por correo electrónico o buscapersonas. Para obtener más información, vea el tema sobre [asignación de alertas a un operador](assign-alerts-to-an-operator.md).  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d5c965f4012244a3ccc2eb80470205e8d55e887
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5a389a39320ef37e3dc2b2a5fcef015d664fce6
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62830088"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917971"
 ---
 # <a name="task-host-container"></a>contenedor de tarea
   El contenedor del host de la tarea encapsula una tarea individual. En el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)] , el host de la tarea no se configura por separado, sino al establecer las propiedades de la tarea que encapsula. Para obtener más información sobre las tareas encapsuladas por los contenedores del host de la tarea, vea [Integration Services Tasks](integration-services-tasks.md).  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 30c509284657b7458e6cf9d2257859a71f6ffd5b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 53d07c8697c6303bc371f442745e2d1864682e40
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63062343"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002116"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>Método ResumeService (clase SqlService)
   Intenta poner el servicio en estado reanudado.  
@@ -44,7 +43,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor unit 32 que es igual a 0 si se aceptó la solicitud de `ResumeService`, igual a 1 si no se admite dicha solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

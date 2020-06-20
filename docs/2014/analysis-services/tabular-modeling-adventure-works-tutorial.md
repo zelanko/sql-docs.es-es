@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 27ac17469a96213bdd39cbf2bee5a343d117e6f0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d914595c5c62016efca26dece908ee28b7010706
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487634"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940016"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Creación de modelos tabulares (tutorial de Adventure Works)
   En este tutorial se proporcionan lecciones sobre cómo crear un modelo tabular de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -51,14 +50,14 @@ ms.locfileid: "81487634"
 > [!NOTE]  
 >  Este tutorial no proporciona lecciones ni información sobre cómo administrar una base de datos del modelo tabular implementado utilizando SQL Server Management Studio o una aplicación cliente de informes para conectarse a un modelo implementado con objeto de examinar los datos del modelo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para completar este tutorial, debe tener los siguientes requisitos previos instalados:  
   
 -   Instancia de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services que se ejecuta en modo Tabular.  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks)ejemplo, vea.  
+-   Base de datos de ejemplo AdventureWorksDW. Esta base de datos de ejemplo incluye los datos necesarios para completar este tutorial. Para descargar la base de datos de ejemplo, vea [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks) .  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 o posterior (para su uso con la característica Analizar de Excel en la lección 11)  
   

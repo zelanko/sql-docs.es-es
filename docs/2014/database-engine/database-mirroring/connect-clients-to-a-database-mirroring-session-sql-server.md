@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bae6a0354fc7d24471aa7cb7877fe066421d8b5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755337"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934416"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
   Para conectarse a una sesión de creación de reflejo de la base de datos, un cliente puede usar SQL Native Client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos proveedores de acceso a datos son totalmente compatibles con la creación de reflejo de la base de datos cuando se configuran para una base de datos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener información acerca de las consideraciones de programación para el uso de una base de datos reflejada, vea [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Además, la instancia del servidor principal actual debe estar disponible y el inicio de sesión del cliente se debe haber creado en la instancia del servidor. Para obtener más información, vea [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Las conexiones de cliente a una sesión de creación de reflejo de la base de datos no tienen relación con la instancia del servidor testigo, si existe alguno.  
@@ -85,7 +84,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo Server  
  La cadena de conexión debe contener un atributo `Server` que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<SERVER_NAME>*[**\\** _<SQL_Server_instance_name>_]. Por ejemplo:  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<SERVER_NAME>*[ **\\** _<SQL_Server_instance_name>_]. Por ejemplo:  
   
  `Server=Partner_A;`  
   
@@ -98,7 +97,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Se necesita una consulta de SQL Server Browser si la cadena de conexión especifica el nombre de la instancia con nombre y no el puerto.  
   
- Para especificar la dirección IP y el puerto, `Server` el atributo adopta el formato siguiente `Server=` , *<ip_address>* `,` * \<puerto>*, por ejemplo:  
+ Para especificar la dirección IP y el puerto, el `Server` atributo adopta el formato siguiente, `Server=` *<ip_address>* `,` *\<port>* , por ejemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +117,7 @@ Server=123.34.45.56,4724;
 >  En esta cadena se omite la información de autenticación.  
   
 > [!IMPORTANT]  
->  La agrupación del prefijo de `Server` protocolo con`Server=tcp:`el atributo (*\<ServerName>*) es incompatible con el atributo **Network** , y si se especifica el protocolo en ambos lugares, es probable que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y especifique solo el nombre `Server` del servidor`"Network=dbmssocn; Server=`en el atributo (*\<ServerName>* `"`).  
+>  La agrupación del prefijo de protocolo con el `Server` atributo ( `Server=tcp:` *\<servername>* ) es incompatible con el atributo **Network** , y si se especifica el protocolo en ambos lugares, es probable que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y especifique solo el nombre del servidor en el `Server` atributo ( `"Network=dbmssocn; Server=` *\<servername>* `"` ).  
   
 #### <a name="failover-partner-attribute"></a>Atributo Failover Partner  
  Además del nombre del asociado inicial, el cliente puede especificar también el nombre del asociado de conmutación por error, que debería identificar la instancia del servidor reflejado actual. Una de las palabras clave especifica el asociado de conmutación por error para el atributo de asociado de conmutación por error. La palabra clave para este atributo depende de la API que está utilizando. En la tabla siguiente se enumeran estas palabras clave.  
@@ -129,7 +128,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|`Failover_Partner`|  
 |Objetos de datos ActiveX (ADO)|`Failover Partner`|  
   
- La manera más sencilla de identificar la instancia del servidor es por su nombre del sistema, *<SERVER_NAME>*[**\\** _<SQL_Server_instance_name _>].  
+ La manera más sencilla de identificar la instancia del servidor es por su nombre del sistema, *<SERVER_NAME>*[ **\\** _<SQL_Server_instance_name _>].  
   
  O bien, la dirección IP y el número de puerto pueden proporcionarse en el atributo `Failover Partner`. Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -237,7 +236,7 @@ Server=123.34.45.56,4724;
 |Configuración|Servidor principal|Servidor reflejado|Comportamiento al intentar conectarse especificando Partner_A y Partner_B|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Configuración de creación de reflejo original.|Partner_A|Partner_B|Se almacena Partner_A en la caché como nombre del asociado inicial. El cliente se conecta correctamente a Partner_A. El cliente descarga el nombre del servidor reflejado, Partner B, y lo almacena en caché, sin tener en cuenta el nombre del asociado de conmutación por error proporcionado por el cliente.|  
-|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|None|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
+|Partner_A sufre un error de hardware y se produce la conmutación por error (se desconectan los clientes).|Partner_B|ninguno|Partner_A sigue almacenado en caché como nombre del asociado inicial, pero el nombre del asociado de conmutación por error proporcionado por el cliente, Partner_B, permite al cliente conectarse al servidor principal actual.|  
 |El administrador de la base de datos detiene la creación del reflejo (se desconectan los clientes), sustituye Partner_A por Partner_C y reinicia la creación del reflejo.|Partner_B|Partner_C|El cliente intenta conectarse a Partner_A y surge un error. A continuación, lo intenta con Partner_B (el servidor principal actual) y se conecta correctamente. El proveedor de acceso a datos descarga el nombre del servidor reflejado actual, Partner_C, y lo almacena en caché como nombre del asociado de conmutación por error actual.|  
 |El servicio se conmuta manualmente a Partner_C (se desconectan los clientes).|Partner_C|Partner_B|El cliente trata de conectarse primero a Partner_A y, después, a Partner_B. Los dos nombres producen un error y, finalmente, se agota el tiempo de espera de la solicitud y se produce un error.|  
   

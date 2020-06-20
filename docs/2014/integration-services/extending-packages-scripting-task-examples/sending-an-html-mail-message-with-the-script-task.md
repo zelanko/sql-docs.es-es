@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd2b1eef-b04f-4946-87ab-7bc56bb525ce
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 537308a0486308ce3cb26227f415f487d69e6f54
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61bd8ddad149198bb3b4111e716228718b3d6e4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176221"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968465"
 ---
 # <a name="sending-an-html-mail-message-with-the-script-task"></a>Enviar un mensaje de correo electrónico HTML con la tarea Script
   La tarea SendMail de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] solamente admite los mensajes de correo en texto sin formato. Sin embargo, puede enviar con facilidad los mensajes de correo HTML mediante la tarea Script y las funciones de correo de .NET Framework.
@@ -153,6 +152,6 @@ public void Main()
 ![Integration Services icono (pequeño)](../media/dts-16.gif "Icono de Integration Services (pequeño)")  **Manténgase al día con Integration Services**<br /> Para obtener las descargas, artículos, ejemplos y vídeos más recientes de Microsoft, así como soluciones seleccionadas de la comunidad, visite la página de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en MSDN:<br /><br /> [Visite la página de Integration Services en MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Para recibir notificaciones automáticas de estas actualizaciones, suscríbase a las fuentes RSS disponibles en la página.
 
 ## <a name="see-also"></a>Consulte también
- [Enviar correo, tarea](../control-flow/send-mail-task.md)
+ [Tarea Enviar correo](../control-flow/send-mail-task.md)
 
 

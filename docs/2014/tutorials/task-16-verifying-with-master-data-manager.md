@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 57ad9d3e-8f95-4df6-af01-c291ccf49164
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d9828c02625ae2bc5a85859577a237b4c4fa99c5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d1649582f97e9e08691726745e4ba14b2f8226bd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81484685"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061082"
 ---
 # <a name="task-16-verifying-with-master-data-manager"></a>Tarea 16: Comprobación con Master Data Manager
   En esta tarea, comprobará el estado del trabajo por lotes enviado por el paquete de SSIS y comprobará que los datos se cargaron en el servidor de MDS con Master Data Manager.  
   
-1.  Inicie **Master Data Manager** (`http://localhost/MDS`). Si ya está abierto, haga clic en **Microsoft SQL Server Master Data Services** en la parte superior para cambiar a la **Página principal**.  
+1.  Inicie **Master Data Manager** ( `http://localhost/MDS` ). Si ya está abierto, haga clic en **Microsoft SQL Server Master Data Services** en la parte superior para cambiar a la **Página principal**.  
   
 2.  Haga clic en **Administración de integraciones**.  
   

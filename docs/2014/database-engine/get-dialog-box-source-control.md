@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 048564d3-6c58-405b-8b57-b690fbfdbe9e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f8b9f5968cf68762178602ced64078248f3badb0
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932936"
 ---
 # <a name="get-dialog-box-source-control"></a>Cuadro de diálogo Obtener (Control de código fuente)
   Recupera una copia de solo lectura del elemento seleccionado de la base de datos de control de código fuente a la carpeta de trabajo, o bien a otra carpeta que especifique.  

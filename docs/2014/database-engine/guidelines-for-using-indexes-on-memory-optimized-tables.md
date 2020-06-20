@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f00d643088634c918eb626917eae64a001ce3678
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779229"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932876"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Directrices para usar índices en las tablas con optimización para memoria
   Los índices se utilizan para tener acceso a los datos de forma eficaz en las tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Especificar los índices adecuados puede mejorar drásticamente el rendimiento de las consultas. Considere, por ejemplo, la consulta:  
@@ -71,7 +70,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Index scan, recupera todas las filas de la tabla.|Sí|Sí|Sí|  
 |Index seek en predicados de igualdad (=).|Sí<br /><br /> (Clave completa necesaria.)|Sí <sup>1</sup>|Sí|  
-|Index Seek en predicados de desigualdad (>, <, \<=, >=, between).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
+|Index Seek en predicados de desigualdad (>, <, \<=, > =, between).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
 |Recupere las filas en un orden que coincida con la definición de índice.|No|Sí|Sí|  
 |Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|No|No|Sí|  
   

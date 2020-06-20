@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e22e47af568ecf723b54a35fb6b83bd5ce74e333
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d743341d7d1d6cae23165c7c1e4b1ddb15779927
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66060768"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84921846"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurar puntos de comprobación para reiniciar un paquete con error
   Los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configuran para que se reinicien desde un punto de error, en lugar de volver a ejecutar todo el paquete, estableciendo las propiedades que afectan a los puntos de comprobación.  
@@ -34,7 +33,7 @@ ms.locfileid: "66060768"
   
 4.  Haga clic con el botón derecho en cualquier parte del fondo de la superficie de diseño de flujo de control y haga clic en **Propiedades**.  
   
-5.  Establezca la propiedad SaveCheckpoints en `True`.  
+5.  Establezca la propiedad SaveCheckpoints en `True` .  
   
 6.  Escriba el nombre del archivo de punto de comprobación en la propiedad CheckpointFileName.  
   

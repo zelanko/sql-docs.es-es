@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: afa5289c-641a-4c03-8749-44862384ec5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 090ad6a9651a01532af528f5f78316eeadb9798d
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 9d91876e2efc7ac531ebdce5794024e92cd02959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82922013"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84937196"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Directivas de AlwaysOn para problemas operativos con grupos de disponibilidad AlwaysOn (SQL Server)
   El modelo de estados de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] evalúa un conjunto de directivas predefinidas de administración basada en directiva (PBM). Puede utilizarlas para ver el estado de un grupo de disponibilidad y sus réplicas de disponibilidad y bases de datos en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -48,15 +47,15 @@ ms.locfileid: "82922013"
   
 |Nombre de la directiva|Problema|Categoría**<sup>*</sup>**|Faceta|  
 |-----------------|-----------|------------------------------|-----------|  
-|Estado de clúster de WSFC|El [servicio de clúster WSFC está sin conexión](wsfc-cluster-service-is-offline.md).|Crítica|Instancia de SQL Server|  
-|Estado en línea del grupo de disponibilidad|El [grupo de disponibilidad está sin conexión](availability-group-is-offline.md).|Crítica|grupo de disponibilidad|  
-|Preparación para la conmutación automática por error del grupo de disponibilidad|El [grupo de disponibilidad no está listo para la conmutación automática por error](availability-group-is-not-ready-for-automatic-failover.md).|Crítica|grupo de disponibilidad|  
+|Estado de clúster de WSFC|El [servicio de clúster WSFC está sin conexión](wsfc-cluster-service-is-offline.md).|Crítico|Instancia de SQL Server|  
+|Estado en línea del grupo de disponibilidad|El [grupo de disponibilidad está sin conexión](availability-group-is-offline.md).|Crítico|grupo de disponibilidad|  
+|Preparación para la conmutación automática por error del grupo de disponibilidad|El [grupo de disponibilidad no está listo para la conmutación automática por error](availability-group-is-not-ready-for-automatic-failover.md).|Crítico|grupo de disponibilidad|  
 |Estado de sincronización de datos de las réplicas de disponibilidad|[Algunas réplicas de disponibilidad no sincronizan los datos](some-availability-replicas-are-not-synchronizing-data.md).|Advertencia|grupo de disponibilidad|  
 |Estado de sincronización de los datos de réplicas sincrónicas|[Algunas réplicas sincrónicas no están sincronizadas](some-synchronous-replicas-are-not-synchronized.md).|Advertencia|grupo de disponibilidad|  
 |Estado del rol de réplicas de disponibilidad|[Algunas réplicas de disponibilidad no tienen un rol correcto](some-availability-replicas-do-not-have-a-healthy-role.md).|Advertencia|grupo de disponibilidad|  
 |Estado de conexión de las réplicas de disponibilidad|[Algunas réplicas de disponibilidad están desconectadas](some-availability-replicas-are-disconnected.md).|Advertencia|grupo de disponibilidad|  
-|Estado del rol de réplica de disponibilidad|[La réplica de disponibilidad no tiene un rol en buen estado](availability-replica-does-not-have-a-healthy-role.md).|Crítica|réplica de disponibilidad|  
-|Estado de conexión de la réplica de disponibilidad|La [réplica de disponibilidad está desconectada](availability-replica-is-disconnected.md).|Crítica|réplica de disponibilidad|  
+|Estado del rol de réplica de disponibilidad|[La réplica de disponibilidad no tiene un rol en buen estado](availability-replica-does-not-have-a-healthy-role.md).|Crítico|réplica de disponibilidad|  
+|Estado de conexión de la réplica de disponibilidad|La [réplica de disponibilidad está desconectada](availability-replica-is-disconnected.md).|Crítico|réplica de disponibilidad|  
 |Estado de unión de réplica de disponibilidad|La [réplica de disponibilidad no está unida](availability-replica-is-not-joined.md).|Advertencia|réplica de disponibilidad|  
 |Estado de sincronización de datos de las réplicas de disponibilidad|El [Estado de sincronización de datos de alguna base de datos de disponibilidad no es correcto](data-synchronization-state-of-some-availability-database-is-not-healthy.md).|Advertencia|réplica de disponibilidad|  
 |Estado de suspensión de la base de datos de disponibilidad|La [base de datos de disponibilidad está suspendida](availability-database-is-suspended.md).|Advertencia|Base de datos de disponibilidad|  
@@ -114,6 +113,6 @@ ms.locfileid: "82922013"
  [Grupos de disponibilidad AlwaysOn (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Información general de Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
- [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+ [Supervisión de grupos de disponibilidad &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
   
   

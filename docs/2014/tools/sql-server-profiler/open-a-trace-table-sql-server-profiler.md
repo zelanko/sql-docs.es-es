@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 66329c13eff3d8691e44c5b0ca07171cb9493bc9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9409aea253584ab273681db1854aff8cbe263e3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240562"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054364"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>Abrir una tabla de seguimiento (SQL Server Profiler)
   En este tema se describe cómo abrir una tabla de seguimiento existente usando el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

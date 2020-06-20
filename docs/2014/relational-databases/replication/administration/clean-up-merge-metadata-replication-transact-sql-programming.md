@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 384b5cc158600848dbca6528a4c8c39250a23908
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5a2306db72fd3f0098e18ff058796a5498eafcac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62629172"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85043334"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>Limpiar metadatos de mezcla (programación de la replicación con Transact-SQL)
   El Agente de mezcla limpia periódicamente los metadatos de replicación de mezcla según la configuración de retención de la publicación. Esto tiene lugar en el publicador y en el suscriptor de las tablas del sistema [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql), [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql), [MSmerge_past_partition_mappings](/sql/relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql)y [MSmerge_current_partition_mappings](/sql/relational-databases/system-tables/msmerge-current-partition-mappings) . También puede limpiar mediante programación los datos de estas tablas utilizando procedimientos almacenados de la replicación.  
@@ -29,7 +28,7 @@ ms.locfileid: "62629172"
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_mergemetadataretentioncleanup](/sql/relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql).  
   
-2.  Opta Tenga en cuenta el número de filas que se han quitado en [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)el paso 1 de las tablas del sistema [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), MSmerge_contents **@num_genhistory_rows**y **@num_contents_rows** [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , devueltas respectivamente en los parámetros de salida, y. **@num_tombstone_rows**  
+2.  Opta Tenga en cuenta el número de filas que se han quitado en el paso 1 de las tablas del sistema [MSmerge_genhistory](/sql/relational-databases/system-tables/msmerge-genhistory-transact-sql), [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql)y [MSmerge_tombstone](/sql/relational-databases/system-tables/msmerge-tombstone-transact-sql) , devueltas respectivamente en los **@num_genhistory_rows** parámetros de **@num_contents_rows** salida, y **@num_tombstone_rows** .  
   
 3.  Repita los pasos 1 y 2 en el suscriptor para limpiar los metadatos en la base de datos de suscripciones.  
   

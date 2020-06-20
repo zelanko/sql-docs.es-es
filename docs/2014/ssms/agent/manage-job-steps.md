@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 51352afc-a0a4-428b-8985-f9e58bb57c31
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 27dfa9f596d63021eb5f22b2e0b25a306e7fa2b5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7362df13956e44b73d6984691e882bec2f39a1e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798220"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062228"
 ---
 # <a name="manage-job-steps"></a>Administrar pasos de trabajo
   Los pasos de trabajo son acciones que el trabajo realiza en una base de datos o en un servidor. Cada trabajo debe estar formado por un paso, como mínimo. Los pasos de trabajo pueden ser:  
@@ -101,7 +100,7 @@ ms.locfileid: "72798220"
   
 -   El archivo de script de PowerShell que se desea abrir.  
   
- El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsistema de PowerShell del agente abre una sesión de PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y carga los complementos de PowerShell. El script de PowerShell que se usa como comando de paso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo puede hacer referencia al proveedor y a los cmdlets de PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
+ El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subsistema de PowerShell del agente abre una sesión de PowerShell y carga los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Complementos de PowerShell. El script de PowerShell que se usa como comando de paso de trabajo puede hacer referencia al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor y a los cmdlets de PowerShell. Para más información sobre cómo escribir scripts de PowerShell mediante los complementos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell, consulte [SQL Server PowerShell](../../powershell/sql-server-powershell.md).  
   
 ## <a name="activex-scripting-job-steps"></a>Pasos de trabajo de scripts ActiveX  
   
@@ -199,7 +198,7 @@ Set oServer = nothing
 |||  
 |-|-|  
 |**Descripción**|**Tema**|  
-|Describe cómo crear un paso de trabajo con un programa ejecutable.|[Create a CmdExec Job Step](create-a-cmdexec-job-step.md)|  
+|Describe cómo crear un paso de trabajo con un programa ejecutable.|[Crear un paso de trabajo CmdExec](create-a-cmdexec-job-step.md)|  
 |Describe cómo restablecer los permisos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Configure a User to Create and Manage SQL Server Agent Jobs](configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Describe cómo crear un paso de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Create a Transact-SQL Job Step](create-a-transact-sql-job-step.md)|  
 |Describe cómo definir opciones para los pasos de trabajo Transact-SQL del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de Microsoft.|[Define Transact-SQL Job Step Options](define-transact-sql-job-step-options.md)|  
@@ -210,6 +209,6 @@ Set oServer = nothing
 |Describe cómo eliminar un registro de pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Delete a Job Step Log](delete-a-job-step-log.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [DBO. sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
+ [dbo.sysjobstepslogs &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobstepslogs-transact-sql)   
  [Crear trabajos](create-jobs.md)   
  [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  

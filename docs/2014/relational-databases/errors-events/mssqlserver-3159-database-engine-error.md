@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c93c1003-0e3a-40aa-9873-44a0f5b8b57e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0373952a28a901519d1d40e92750af3da72f94e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4942120db61798a9f5917e6b5402ffc095ba21c7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62868886"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054043"
 ---
 # <a name="mssqlserver_3159"></a>MSSQLSERVER_3159
     
@@ -48,9 +47,9 @@ ms.locfileid: "62868886"
  Si no puede hacer una copia del final del registro después del error, utilice WITH STOPAT o WITH REPLACE en las instrucciones RESTORE.  
   
 ## <a name="see-also"></a>Consulte también  
- [Restaurar una base de datos SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
+ [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [Realice una copia de seguridad del registro de transacciones cuando la base de datos esté dañada &#40;SQL Server&#41;](../backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)   
- [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
+ [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Copias del final del registro &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md)  
   
   

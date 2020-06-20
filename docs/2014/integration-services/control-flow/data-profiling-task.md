@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0a895fd1dc3fe51296a110902fb1dd4c27d3d5a1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfde82079c32b9aaba8db0ba9e52b02886bd2c47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831904"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84919260"
 ---
 # <a name="data-profiling-task"></a>Tarea de generación de perfiles de datos
   La tarea de generación de perfiles de datos calcula diversos perfiles que le ayudan a familiarizarse con un origen de datos y a identificar en los datos problemas que deban corregirse.  
@@ -82,7 +81,7 @@ ms.locfileid: "62831904"
 |FunctionalDependencyProfile|Columnas de tipo `integer`, `char` y `datetime`|  
 |InclusionProfile|Columnas de tipo `integer`, `char` y `datetime`|  
   
- \*En la tabla anterior de tipos de datos válidos `integer`, `char`los `datetime`tipos, `numeric` , y incluyen los siguientes tipos de datos específicos:  
+ \*En la tabla anterior de tipos de datos válidos, los `integer` `char` tipos,, `datetime` y `numeric` incluyen los siguientes tipos de datos específicos:  
   
  Los tipos enteros incluyen `bit`, `tinyint`, `smallint`, `int` y `bigint`.  
   
@@ -92,7 +91,7 @@ ms.locfileid: "62831904"
   
  Los tipos numéricos incluyen los tipos `integer` (excepto `bit`), `money`, `smallmoney`, `decimal`, `float`, `real` y `numeric`.  
   
- \*\*`image`los `text`tipos `XML`, `udt`,, `variant` y no se admiten para los perfiles que no sean el perfil de proporción de columnas nulas.  
+ \*\*`image` `text` `XML` los tipos,,, `udt` y `variant` no se admiten para los perfiles que no sean el perfil de proporción de columnas nulas.  
   
 ### <a name="valid-tables-and-columns"></a>Tablas y columnas válidas  
  Si la tabla o la columna está vacía, la tarea de generación de perfiles de datos realiza las acciones siguientes:  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1c9c96ca-81cb-48e2-a71b-0657439a4c51
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 31c36bd0f961c0338c6468d658ed26fa3c83ac86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061519"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925546"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>Asignar roles de lector y escritor a un paquete
   Puede asignar un rol de lector y un rol de escritor a cada paquete.  

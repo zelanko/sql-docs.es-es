@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: f4dff61c-8c2f-4ff9-abe4-70a34421448f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1701479fe7469769d75f4b8ad3d8e65dcc75af91
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: b2ca5eef7905806f551b960d2ec912d1d5a8a09f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858691"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932986"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propiedades del índice de texto completo (página General)
   **Para ver o cambiar las propiedades modificables de un índice de texto completo**  
@@ -65,7 +64,7 @@ ms.locfileid: "83858691"
  Grupo de archivos al que pertenece el índice de texto completo.  
   
  **Lista de palabras irrelevantes de índice de texto completo**  
- Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de [palabras irrelevantes](../relational-databases/search/full-text-search.md)es sinónimo de una lista de palabras sin trascendencia. La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando ** \<>** de la lista, o puede seleccionar una lista de palabras irrelevantes diferente; ** \<>del sistema** indica la lista de palabras irrelevantes del sistema.  
+ Lista de palabras irrelevantes asociada al índice de texto completo. Una lista de [palabras irrelevantes](../relational-databases/search/full-text-search.md)es sinónimo de una lista de palabras sin trascendencia. La lista de palabras irrelevantes asociada a un índice de texto completo, si existe, se aplica a las consultas de texto completo en ese índice. Puede quitar la lista de palabras irrelevantes del índice seleccionando **\<OFF>** en la lista, o puede seleccionar una lista de palabras irrelevantes diferente; **\<SYSTEM>** indica la lista de palabras irrelevantes del sistema.  
   
  **Para crear una lista de palabras irrelevantes**  
   
@@ -74,7 +73,7 @@ ms.locfileid: "83858691"
  **Lista de propiedades de búsqueda**  
  La lista de propiedades de búsqueda asociada actualmente al índice de texto completo, si la hay. Una lista de propiedades de búsqueda especifica un conjunto de propiedades de documento que se incluyen en el índice de texto completo asociado cuando este se rellena. Para obtener más información, vea [Buscar propiedades de documento con listas de propiedades de búsqueda](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- ** \< OFF>** indica que actualmente no hay ninguna lista de propiedades de búsqueda asociada al índice. Puede quitar la lista de propiedades de búsqueda actual del índice seleccionando ** \<>** de la lista, o puede seleccionar otra lista de propiedades de búsqueda de la lista. Esta lista solo contiene las listas de propiedades de búsqueda de la base de datos actual.  
+ **\<Off>** indica que actualmente no hay ninguna lista de propiedades de búsqueda asociada al índice. Puede quitar la lista de propiedades de búsqueda actual del índice seleccionando **\<Off>** en la lista o puede seleccionar otra lista de propiedades de búsqueda en la lista. Esta lista solo contiene las listas de propiedades de búsqueda de la base de datos actual.  
   
 > [!NOTE]  
 >  Puede asociar una lista de propiedades de búsqueda a más de un índice de texto completo en la misma base de datos.  
@@ -120,7 +119,7 @@ ms.locfileid: "83858691"
 |||  
 |-|-|  
 |**Reales**|habilitado|  
-|**False**|Disabled|  
+|**Es**|Disabled|  
   
  **Seguimiento de cambios**  
  Especifica si la tabla tiene el seguimiento de cambios de texto completo habilitado y, en ese caso, qué tipo. El seguimiento de cambios de texto completo mantiene un registro de las filas que se han modificado en una tabla o vista indizada configurada para la indización de texto completo. Estos cambios se pueden propagar al índice de texto completo.  
@@ -140,7 +139,7 @@ ms.locfileid: "83858691"
 |-|-|  
 |**Completa**|Durante el rellenado completo de una tabla, se crean entradas de índice para todas las filas.|  
 |**Incremental**|El rellenado incremental actualiza el índice de texto completo de las filas que se hayan agregado, eliminado o modificado desde el último rellenado o en su transcurso. Realizar un rellenado incremental requiere que la tabla base contenga una columna del tipo de datos `timestamp`.|  
-|**Actualizar**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
+|**Update**|El índice de texto completo se actualiza siempre que se modifican los datos de la tabla base.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Introducción a la búsqueda de texto completo](../relational-databases/search/get-started-with-full-text-search.md)  

@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: 6de2025d-c25c-47b9-9a25-18c294935c15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58076b9ad8c32563ae8502de148803ac762b35f8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 67855ba7841c06181240f220945dda0f4a719629
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62472935"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067715"
 ---
 # <a name="pick-schedule-for-job"></a>Elegir programación para trabajo
-  Utilice este cuadro de diálogo para elegir una programación existente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el trabajo del agente.  
+  Utilice este cuadro de diálogo para elegir una programación existente para el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajo del agente.  
   
 ## <a name="options"></a>Opciones  
  **Programaciones disponibles**  
@@ -31,7 +30,7 @@ ms.locfileid: "62472935"
  **Nombre**  
  Muestra el nombre de la programación.  
   
- **Habilitado**  
+ **Enabled**  
  Esta opción está seleccionada si la programación está habilitada.  
   
  **Descripción**  

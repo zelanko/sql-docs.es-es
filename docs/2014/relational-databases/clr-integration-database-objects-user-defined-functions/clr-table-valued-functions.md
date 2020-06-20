@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7dfd3db3a8193e92f9670213c602d55dc45f5c7f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 192673590f5dccfcee3f7c49de7cda659f97b8c4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75232289"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970811"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
   Una función con valores de tabla es una función definida por el usuario que devuelve una tabla.  
@@ -45,7 +44,7 @@ ms.locfileid: "75232289"
  Los parámetros con valores de tabla son tipos de tabla definidos por el usuario que se pasan a un procedimiento o función, y proporcionan un modo eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla presentan una funcionalidad similar a la de las matrices de parámetros, pero proporcionan más flexibilidad y una mayor integración con [!INCLUDE[tsql](../../includes/tsql-md.md)]. También proporcionan la posibilidad de obtener mayor rendimiento. Los parámetros con valores de tabla también ayudan a reducir el número de viajes de ida y vuelta (round trip) al servidor. En lugar de enviar varias solicitudes al servidor, como en el caso de una lista de parámetros escalares, los datos pueden enviarse al servidor como un parámetro con valores de tabla. Un tipo de tabla definido por el usuario no puede pasarse como un parámetro con valores de tabla a un procedimiento almacenado administrado o a una función que se ejecuta en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como tampoco puede devolverse desde dicho procedimiento o función. Para más información sobre los parámetros con valores de tabla, vea[Usar parámetros con valores de tabla &#40;motor de base de datos&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="output-parameters-and-table-valued-functions"></a>Parámetros de salida y funciones con valores de tabla  
- Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar el \<atributo out () > para representar un parámetro de salida, como se muestra a continuación:  
+ Se puede devolver información de funciones con valores de tabla mediante el uso de parámetros de salida. El parámetro correspondiente en el código de implementación de la función con valores de tabla debe usar un parámetro de paso por referencia como argumento. Tenga en cuenta que Visual Basic no admite parámetros de salida del mismo modo en que lo hace Visual C#. Debe especificar el parámetro por referencia y aplicar el \<Out()> atributo para representar un parámetro de salida, como se muestra a continuación:  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -76,7 +75,7 @@ select * from table t cross apply function(t.column);
   
 -   Se genera a partir de datos externos. Por ejemplo, una función con valores de tabla que lee el registro de eventos y lo expone como una tabla.  
   
- **Nota:** Una función con valores de tabla solo puede realizar el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] los datos a `InitMethod` través de una consulta en el `FillRow` método y no en el método. `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ **Nota:** Una función con valores de tabla solo puede realizar el acceso a los datos a través [!INCLUDE[tsql](../../includes/tsql-md.md)] de una consulta en el `InitMethod` método y no en el `FillRow` método. `InitMethod` debe marcarse con la propiedad de atributo `SqlFunction.DataAccess.Read` si se realiza una consulta [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 ## <a name="a-sample-table-valued-function"></a>A. Función con valores de tabla de ejemplo  
  La siguiente función con valores de tabla devuelve información del registro de eventos del sistema. La función toma un único argumento de cadena que contiene el nombre del registro de eventos que va a leerse.  

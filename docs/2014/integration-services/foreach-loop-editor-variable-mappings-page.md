@@ -11,24 +11,23 @@ f1_keywords:
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 396c43f0b7adaf9d2a9dcd6124194aa82a9f8cc0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058531"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966405"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Editor de bucles Foreach (página Asignaciones de variables)
   Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  
   
  Para obtener más información acerca de cómo utilizar el contenedor de bucles Foreach en un paquete de Integration Services, vea [Foreach Loop Container](control-flow/foreach-loop-container.md) . Para saber cómo se configura, vea [Configurar un contenedor de bucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] El [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial creación de un tutorial de paquete ETL sencillo incluye una lección que le enseña a agregar y configurar un bucle foreach.  
+ El [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tutorial creación de un tutorial de paquete ETL sencillo incluye una lección que le enseña a agregar y configurar un bucle foreach.  
   
 ## <a name="options"></a>Opciones  
  **Variable**  
- Seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva variable.  
   
 > [!NOTE]  
 >  Una vez asignada una variable, se agregará automáticamente una nueva fila a la lista **Variable**.  

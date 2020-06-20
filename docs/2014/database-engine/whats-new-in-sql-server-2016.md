@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ae3b565f858c383775b4fcccfac236c316fcfa4e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70176079"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84927446"
 ---
 # <a name="what39s-new-database-engine"></a>Qué&#39;s nuevo (Motor de base de datos)
   Esta última versión del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye nuevas características y mejoras que aumentan la eficacia y la productividad de los arquitectos, desarrolladores y administradores que diseñan, desarrollan y mantienen sistemas de almacenamiento de datos. A continuación se muestran las áreas en las que ha mejorado el [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
@@ -30,11 +29,11 @@ ms.locfileid: "70176079"
  
   
 ###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server de los archivos de datos en Azure  
- [SQL Server archivos de datos de Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) habilita la compatibilidad [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nativa con archivos de base de datos almacenados como blobs de Azure. Esta característica permite crear una base de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecución en el entorno local o en una máquina virtual de Azure con una ubicación de almacenamiento dedicada para los datos en Azure BLOB Storage.  
+ [SQL Server archivos de datos de Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) habilita la compatibilidad nativa con archivos de base de datos [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] almacenados como blobs de Azure. Esta característica permite crear una base de datos en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ejecución en el entorno local o en una máquina virtual de Azure con una ubicación de almacenamiento dedicada para los datos en Azure BLOB Storage.  
   
   
 ###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Hospedar una base de datos SQL Server en una máquina virtual de Azure  
- Use el Asistente para [implementar una base de datos de SQL Server en una máquina virtual de Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) para hospedar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] una base de datos de una instancia de en una máquina virtual de Azure.  
+ Use el Asistente para [implementar una base de datos de SQL Server en una máquina virtual de Azure](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) para hospedar una base de datos de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en una máquina virtual de Azure.  
   
   
 ###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>Mejoras en copias de seguridad y restauración  
@@ -46,7 +45,7 @@ ms.locfileid: "70176079"
   
 -   **SQL Server de la copia de seguridad administrada en Azure**  
   
-     Integrado en la Copia de seguridad en URL de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] es un servicio que proporciona [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para administrar y programar copias de seguridad de bases de datos y de registros. En esta versión solo se admite la copia de seguridad en Azure Storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se puede configurar tanto en el nivel de base de datos como en el nivel de instancia, y permite un control más específico en el nivel de base de datos y automatización en el nivel de instancia. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]se puede configurar en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias que se ejecutan en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] local y en instancias que se ejecutan en máquinas virtuales de Azure. Se recomienda para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las instancias que se ejecutan en máquinas virtuales de Azure. Para obtener más información, consulte [SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Integrado en la Copia de seguridad en URL de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] es un servicio que proporciona [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para administrar y programar copias de seguridad de bases de datos y de registros. En esta versión solo se admite la copia de seguridad en Azure Storage. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se puede configurar tanto en el nivel de base de datos como en el nivel de instancia, y permite un control más específico en el nivel de base de datos y automatización en el nivel de instancia. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]se puede configurar en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias que se ejecutan en local y en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instancias que se ejecutan en máquinas virtuales de Azure. Se recomienda para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] las instancias que se ejecutan en máquinas virtuales de Azure. Para obtener más información, consulte [SQL Server copia de seguridad administrada en Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Cifrado para copias de seguridad**  
   
@@ -139,7 +138,7 @@ ms.locfileid: "70176079"
 ##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>Mejoras de la vista del sistema  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
- [Sys. xml_indexes &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) tiene tres nuevas columnas `xml_index_type`: `xml_index_type_description`, y `path_id`.  
+ [sys.xml_indexes &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) tiene tres nuevas columnas: `xml_index_type` , `xml_index_type_description` y `path_id` .  
   
 ### <a name="sysdm_exec_query_profiles"></a>sys.dm_exec_query_profiles  
  [Sys. dm_exec_query_profiles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql) supervisa el progreso de la consulta en tiempo real mientras una consulta se encuentra en ejecución.  
@@ -148,7 +147,7 @@ ms.locfileid: "70176079"
  [Sys. column_store_row_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql) proporciona información del índice de almacén de columnas agrupado por segmento para ayudar al administrador a tomar decisiones de administración del sistema.  
   
 ### <a name="sysdatabases"></a>sys.databases  
- [Sys. Databases &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) tiene tres nuevas columnas: `is_auto_create_stats_incremental_on`, `is_query_store_on`y `resource_pool_id`.  
+ [Sys. databases &#40;&#41;de Transact-SQL](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) tiene tres nuevas columnas: `is_auto_create_stats_incremental_on` , `is_query_store_on` y `resource_pool_id` .  
   
 ### <a name="system-view-enhancements-for-in-memory-oltp"></a>Mejoras de las vistas del sistema para OLTP en memoria  
  Para obtener información sobre las mejoras de las vistas del sistema para admitir OLTP en memoria, consulte [vistas del sistema, procedimientos almacenados, DMV y tipos de espera para OLTP en memoria](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
@@ -157,7 +156,7 @@ ms.locfileid: "70176079"
 ##  <a name="security-enhancements"></a><a name="Security"></a> Mejoras de seguridad  
   
 ### <a name="connect-any-database-permission"></a>Permiso CONNECT ANY DATABASE  
- Es un permiso nuevo de nivel de servidor. Conceda **CONNECT ANY DATABASE** a un inicio de sesión que debe conectarse a todas las bases de datos que existen actualmente y a todas las bases de datos que puedan crearse en futuro. No concede ningún permiso en ninguna base de datos más allá de conexión. Combine con **Select All User protegibles** o `VIEW SERVER STATE` para permitir que un proceso de auditoría vea todos los datos o todos los Estados de base [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]de datos en la instancia de.  
+ Es un permiso nuevo de nivel de servidor. Conceda **CONNECT ANY DATABASE** a un inicio de sesión que debe conectarse a todas las bases de datos que existen actualmente y a todas las bases de datos que puedan crearse en futuro. No concede ningún permiso en ninguna base de datos más allá de conexión. Combine con **Select All User protegibles** o `VIEW SERVER STATE` para permitir que un proceso de auditoría vea todos los datos o todos los Estados de base de datos en la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 ### <a name="impersonate-any-login-permission"></a>Permiso IMPERSONATE ANY LOGIN  
  Es un permiso nuevo de nivel de servidor. Cuando se concede, permite que un proceso de nivel intermedio suplante la cuenta de los clientes que se conecten a él, a medida que se conecta a las bases de datos. Cuando se deniega, se puede impedir que un inicio de sesión con un alto nivel de privilegios suplante a otros inicios de sesión. Por ejemplo, es posible bloquear un inicio de sesión con el permiso **CONTROL SERVER** para impedir que suplante a otros inicios de sesión.  
@@ -168,11 +167,11 @@ ms.locfileid: "70176079"
   
 ##  <a name="deployment-enhancements"></a><a name="Deployment"></a>Mejoras en la implementación  
 ### <a name="azure-vm"></a>Azure VM
-[Implementar una base de datos SQL Server en una máquina Virtual Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) permite la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] implementación de una base de datos en una máquina virtual de Azure.  
+[Implementar una base de datos SQL Server en una máquina Virtual Microsoft Azure](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) permite la implementación de una [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] base de datos en una máquina virtual de Azure.  
 
 ### <a name="refs"></a>ReFS
 Ahora se admite la implementación de bases de datos en ReFS.   
   
 ## <a name="see-also"></a>Consulte también  
- [Características compatibles con las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+ [Características admitidas por las ediciones de SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
    

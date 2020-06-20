@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8a6a82bf-273c-40ab-a101-46bd3615db8a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eea34b8ad278447d9e9085d99acb8500d14d5e7a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5ee0ba17dc999c9076ca4622d47db28b8200b851
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637787"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928188"
 ---
 # <a name="transaction-isolation-levels-in-memory-optimized-tables"></a>Niveles de aislamiento de transacciones en tablas con optimización para memoria
 
@@ -39,7 +38,7 @@ ms.locfileid: "73637787"
   
 -   Usar explícitamente una sugerencia de nivel de aislamiento mayor para tener acceso a la tabla optimizada para memoria (por ejemplo, WITH (SNAPSHOT)).  
   
--   Especificar la opción `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que establecerá el nivel de aislamiento de las tablas optimizadas para memoria en SNAPSHOT (como si incluyera sugerencias WITH(SNAPSHOT) en cada tabla optimizada para memoria). Para obtener más información `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`acerca de, vea [Opciones de ALTER DATABASE Set &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
+-   Especificar la opción `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`, que establecerá el nivel de aislamiento de las tablas optimizadas para memoria en SNAPSHOT (como si incluyera sugerencias WITH(SNAPSHOT) en cada tabla optimizada para memoria). Para obtener más información acerca de `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT` , vea [Opciones de Alter database Set &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  O bien, si el nivel de aislamiento de la sesión es READ COMMITTED, puede utilizar transacciones de confirmación automática.  
   

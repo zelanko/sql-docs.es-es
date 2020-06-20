@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 95de509e0c78c807c3c9de25b317eb2b540db93a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62810353"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84935045"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Conectarse a otro equipo (Administrador de configuración de SQL Server)
   En este tema se describe cómo conectar con otro equipo en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Siga el primer procedimiento para abrir [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc) de Administración de equipos de Windows, conéctese al equipo y expanda el árbol Servicios y Aplicaciones. Siga el segundo procedimiento para crear un archivo con un vínculo al Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un equipo remoto.  
@@ -37,7 +36,7 @@ ms.locfileid: "62810353"
   
 3.  En el cuadro de diálogo **Seleccionar equipo** , en el cuadro de texto **Otro equipo** , escriba el nombre del equipo que desea administrar y, a continuación, haga clic en **Aceptar**.  
   
-     Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos** \<*equipoRemoto*>.  
+     Administración de equipos muestra los servicios que se ejecutan en el equipo remoto. El nodo de nivel superior cambia a **Administración de equipos** \<*remotecomputer*> .  
   
 4.  En el árbol de consola, expanda **Servicios y aplicaciones**y, a continuación, expanda **Administrador de configuración de SQL Server** para administrar los servicios del equipo remoto.  
   
@@ -59,13 +58,13 @@ ms.locfileid: "62810353"
   
 8.  En la ventana **Agregar o quitar complemento** , haga clic en **Aceptar**.  
   
-9. Expanda **Administración de equipos (***\<nombre de equipo>***)** y **servicios y aplicaciones**.  
+9. Expanda **Administración de equipos (***\<computer name>***)** y **Servicios y Aplicaciones**.  
   
 10. Haga clic con el botón derecho en **Administrador de configuración de SQL Server**y, después, haga clic en **Nueva ventana desde aquí**.  
   
 11. En el menú **Ventana**, haga clic en **Raíz de consola**para regresar a la primera ventana y eliminar la ventana.  
   
-12. En el menú **archivo** , haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado `.msc` con la extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
+12. En el menú **archivo** , haga clic en **Guardar como**y guarde el archivo en la carpeta que desee, con un nombre adecuado con la `.msc` extensión de archivo. Cierre [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console.  
   
 13. Para abrir el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo de destino, haga doble clic en el archivo. Si lo desea, guarde un vínculo al archivo en el escritorio o en el menú **Inicio** .  
   

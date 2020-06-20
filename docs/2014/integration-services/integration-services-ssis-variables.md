@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 42dd04f4edf2d1e9b9b31b11ab96fcd97f9d21d6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966185"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
   Las variables almacenan valores que un paquete [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus contenedores, tareas y controladores de eventos pueden usar en tiempo de ejecución. Los scripts en la tarea Script y el componente Script también pueden usar variables. Las restricciones de precedencia que ordenan tareas y contenedores en un flujo de trabajo pueden usar variables cuando sus definiciones de restricciones incluyen expresiones.  
@@ -86,12 +85,12 @@ ms.locfileid: "62892288"
  Especifica la descripción de la variable.  
   
  EvaluateAsExpression  
- Cuando la propiedad está establecida en `True`, la expresión proporcionada se utiliza para establecer el valor de la variable.  
+ Cuando la propiedad está establecida en `True` , la expresión proporcionada se utiliza para establecer el valor de la variable.  
   
- Expression  
+ Expresión  
  Especifica la expresión asignada a la variable.  
   
- NOMBRE  
+ Nombre  
  Especifica el nombre de la variable.  
   
  Espacio de nombres  
@@ -114,17 +113,17 @@ ms.locfileid: "62892288"
  IncludeInDebugDump  
  Indica si el valor variable está incluido en los archivos de volcado de depuración.  
   
- En el caso de las variables definidas por el usuario y las variables del **InclueInDebugDump** sistema, el `true`valor predeterminado de la opción InclueInDebugDump es.  
+ En el caso de las variables definidas por el usuario y las variables del sistema, el valor predeterminado de la opción **InclueInDebugDump** es `true` .  
   
- Sin embargo, para las variables definidas por el usuario, el sistema **IncludeInDebugDump** restablece la opción `false` IncludeInDebugDump en cuando se cumplen las condiciones siguientes:  
+ Sin embargo, para las variables definidas por el usuario, el sistema restablece la opción **IncludeInDebugDump** en `false` cuando se cumplen las condiciones siguientes:  
   
--   Si la propiedad de la variable **EvaluateAsExpression** se `true`establece en, el sistema restablece **IncludeInDebugDump** la opción IncludeInDebugDump `false`en.  
+-   Si la propiedad de la variable **EvaluateAsExpression** se establece en `true` , el sistema restablece la opción **IncludeInDebugDump** en `false` .  
   
-     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de **IncludeInDebugDump** depuración `true`, establezca la opción IncludeInDebugDump en.  
+     Para incluir el texto de la expresión como el valor de la variable en los archivos de volcado de depuración, establezca la opción **IncludeInDebugDump** en `true` .  
   
--   Si el tipo de datos de la variable se cambia a una cadena, el sistema **IncludeInDebugDump** restablece la opción `false`IncludeInDebugDump en.  
+-   Si el tipo de datos de la variable se cambia a una cadena, el sistema restablece la opción **IncludeInDebugDump** en `false` .  
   
- Cuando el sistema restablece la opción **IncludeInDebugDump** en `false`, esto podría invalidar el valor seleccionado por el usuario.  
+ Cuando el sistema restablece la opción **IncludeInDebugDump** en `false` , esto podría invalidar el valor seleccionado por el usuario.  
   
  Value  
  El valor de una variable definida por el usuario puede ser un literal o una expresión. Una variable incluye opciones para establecer el valor de la variable y el tipo de datos del valor. Las dos propiedades deben ser compatibles: por ejemplo, el uso de un valor de cadena junto con el tipo de datos de número entero no es válido.  

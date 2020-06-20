@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5b9396ab5a25bba979859ac685c4759b8b01c24d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66428800"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966435"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de bucles Foreach (página Colección)
   Use la página **Colección** del cuadro de diálogo **Editor de bucles Foreach** para especificar el tipo de enumerador y configurarlo.  
@@ -25,7 +24,7 @@ ms.locfileid: "66428800"
  Para más información sobre el contenedor de bucles Foreach y cómo configurarlo, vea [Contenedor de bucles Foreach](control-flow/foreach-loop-container.md) y [Configurar un contenedor de bucles Foreach](../../2014/integration-services/configure-a-foreach-loop-container.md).  
   
 ## <a name="static-options"></a>Opciones estáticas  
- **Enumerador**  
+ **Avanzó**  
  Seleccione el tipo de enumerador de la lista. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
   
 |Value|Descripción|  
@@ -103,7 +102,7 @@ ms.locfileid: "66428800"
  **Tipo de datos de la columna**  
  Muestra el tipo de datos de la columna activa.  
   
- **Remove**  
+ **Quitar**  
  Si quiere quitar un elemento de la lista, selecciónelo y haga clic en **Quitar** .  
   
  **Columnas**  
@@ -115,7 +114,7 @@ ms.locfileid: "66428800"
  El enumerador de ADO para Foreach se utiliza para enumerar filas o tablas de un objeto ADO o ADO.NET que está almacenado en una variable. Por ejemplo, si el bucle Foreach incluye una tarea Script que escribe un conjunto de datos en una variable, puede utilizar el enumerador de ADO para Foreach para enumerar las filas del conjunto de datos. Si la variable contiene un conjunto de datos ADO.NET, el enumerador puede configurarse para enumerar filas en varias tablas o para enumerar tablas.  
   
  **Variable de origen de objeto ADO**  
- Seleccione una variable definida por el usuario en la lista o haga \<clic en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable definida por el usuario en la lista o haga clic en \<**New variable...**> para crear una nueva variable.  
   
 > [!NOTE]  
 >  La variable debe tener el tipo de datos Object o, de lo contrario, se producirán errores.  
@@ -135,7 +134,7 @@ ms.locfileid: "66428800"
  El enumerador de conjunto de filas del esquema para Foreach de ADO.NET se utiliza para enumerar un esquema para un origen de datos especificado. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de conjunto de filas del esquema para Foreach de ADO.NET para enumerar esquemas, como las columnas de la base de datos **AdventureWorks** , y la tarea Ejecutar SQL para obtener los permisos de esquema.  
   
  **Connection**  
- Seleccione un administrador de conexiones de ADO.net en la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones de ADO.net.  
+ Seleccione un administrador de conexiones de ADO.NET en la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones de ADO.net.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones ADO.NET debe utilizar un proveedor .NET para OLE DB. Si se conecta a SQL Server, el proveedor recomendado es [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, que aparece enumerado en la sección **Proveedores .NET de OleDb** del cuadro de diálogo **Administrador de conexiones** .  
@@ -154,14 +153,14 @@ ms.locfileid: "66428800"
  El enumerador de variable para Foreach se utiliza para enumerar los objetos enumerables incluidos en una variable especificada. Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL que ejecuta una consulta y almacena el resultado en una variable, puede utilizar el enumerador de variable para Foreach para enumerar los resultados de la consulta.  
   
  **Variable**  
- Seleccione una variable de la lista o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Seleccione una variable de la lista o haga clic \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerador = Enumerador de lista de nodos para Foreach  
  El enumerador de lista de nodos para Foreach se utiliza para enumerar el conjunto de nodos XML que resultan de aplicar una expresión XPath a un archivo XML. Por ejemplo, si el bucle Foreach incluye una tarea Script, puede utilizar el enumerador de lista de nodos para Foreach para pasar un valor que coincida con los criterios de la expresión XPath del archivo XML a la tarea Script.  
   
- La expresión XPath que se aplica al archivo XML es la operación XPath externa, almacenada en la propiedad OuterXPathString. Si el tipo de enumeración de XPath `ElementCollection`está establecido en, el enumerador de lista de nodos para foreach puede aplicar una expresión XPath interna, almacenada en la propiedad InnerXPathString, a una colección de elementos.  
+ La expresión XPath que se aplica al archivo XML es la operación XPath externa, almacenada en la propiedad OuterXPathString. Si el tipo de enumeración de XPath está establecido en `ElementCollection` , el enumerador de lista de nodos para foreach puede aplicar una expresión XPath interna, almacenada en la propiedad InnerXPathString, a una colección de elementos.  
   
  Para obtener más información acerca de cómo trabajar con datos y documentos XML, vea el artículo sobre el[uso de XML en .NET Framework](https://go.microsoft.com/fwlink/?LinkId=56214)en MSDN Library.  
   
@@ -177,11 +176,11 @@ ms.locfileid: "66428800"
  **DocumentSource**  
  Si **DocumentSourceType** está establecido en **entrada directa**, proporcione el código XML o haga clic en el botón de puntos suspensivos (...) para proporcionar XML mediante el cuadro de diálogo **Editor de origen del documento**.  
   
- Si **DocumentSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos \<o haga clic en **nueva conexión..** .> para crear un nuevo administrador de conexiones.  
+ Si **DocumentSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **DocumentSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Si **DocumentSourceType** está establecido en **variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
@@ -191,7 +190,7 @@ ms.locfileid: "66428800"
 |Value|Descripción|  
 |-----------|-----------------|  
 |**Navigator**|Se enumera mediante un objeto XPathNavigator.|  
-|**Nodo**|Se enumeran los nodos devueltos por una operación XPath.|  
+|**Node**|Se enumeran los nodos devueltos por una operación XPath.|  
 |**NodeText**|Se enumeran los nodos de texto devueltos por una operación XPath.|  
 |`ElementCollection`|Se enumeran los nodos de elemento devueltos por una operación XPath.|  
   
@@ -207,16 +206,16 @@ ms.locfileid: "66428800"
  `OuterXPathString`  
  Si **OuterXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **OuterXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos \<o haga clic en **nueva conexión..** .> para crear un nuevo administrador de conexiones.  
+ Si **OuterXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **OuterXPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Si **OuterXPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
- Si **EnumerationType** está establecido en `ElementCollection`, seleccione el tipo de elemento interno de la lista.  
+ Si **EnumerationType** está establecido en `ElementCollection` , seleccione el tipo de elemento interno de la lista.  
   
  **InnerXPathStringSourceType**  
  Seleccione el tipo de origen de la cadena XPath interna. Esta propiedad presenta las opciones indicadas en la siguiente tabla.  
@@ -230,11 +229,11 @@ ms.locfileid: "66428800"
  `InnerXPathString`  
  Si **InnerXPathStringSourceType** está establecido en **Entrada directa**, debe proporcionar la cadena XPath.  
   
- Si **InnerXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos \<o haga clic en **nueva conexión..** .> para crear un nuevo administrador de conexiones.  
+ Si **InnerXPathStringSourceType** está establecido en **conexión de archivos**, seleccione un administrador de conexiones de archivos o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- Si **InnerXPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic \<en **nueva variable...**> para crear una nueva variable.  
+ Si **InnerXPathStringSourceType** está establecido en **variable**, seleccione una variable existente o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md).  
   
@@ -242,7 +241,7 @@ ms.locfileid: "66428800"
  El enumerador de SMO para Foreach se utiliza para enumerar objetos de Objetos de administración de SQL Server (SMO). Por ejemplo, si el bucle Foreach incluye una tarea Ejecutar SQL, puede utilizar el enumerador de SMO para Foreach para enumerar las tablas de la base de datos **AdventureWorks** y ejecutar las consultas que realizan el recuento de filas de cada tabla.  
   
  **Connection**  
- Seleccione un administrador de conexiones de ADO.net existente o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de ADO.NET existente o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  Temas relacionados: [ADO.NET Connection Manager](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
   
@@ -274,7 +273,7 @@ ms.locfileid: "66428800"
  **Intervalo de tiempo de blob del filtro desde/hasta**  
  Especifique un filtro de intervalo de tiempo. Se enumerarán los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo** .  
 ### <a name="enumerator--foreach-adls-file-enumerator"></a> Enumerador = Enumerador de archivos de ADLS para Para cada uno  
-El **enumerador de archivos ADLS** habilita un paquete SSIS para enumerar los archivos de ADLS con filtros. La ruta de`/`acceso completa de la barra diagonal () de los archivos enumerados se puede almacenar en una variable y usar en tareas dentro del contenedor de bucles foreach.
+El **enumerador de archivos ADLS** habilita un paquete SSIS para enumerar los archivos de ADLS con filtros. La `/` ruta de acceso completa de la barra diagonal () de los archivos enumerados se puede almacenar en una variable y usar en tareas dentro del contenedor de bucles foreach.
   
 **AzureDataLakeConnection**  
 Especifica un administrador de conexiones de Azure Data Lake, o crea uno nuevo que hace referencia a una cuenta de ADLS.   

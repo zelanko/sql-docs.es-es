@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 64174d54-edee-49b8-9b43-039574bf2ca1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cc1f8ce4574580746e20c478b23e40485c3e6ecc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66096451"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037100"
 ---
 # <a name="cluster-node-configuration-complete"></a>Configuración de nodo de clúster (Completar)
   Utilice la página Configuración de nodo de clúster (completada) para especificar una instancia existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ha preparado para la agrupación en clústeres. Para instalar o actualizar un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debe ejecutar el programa de instalación en cada nodo del clúster de conmutación por error. Para agregar un nodo a un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente, debe ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el nodo que se va a agregar a la instancia del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -23,9 +22,9 @@ ms.locfileid: "66096451"
 ## <a name="options"></a>Opciones  
  En las listas desplegables:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nombre de instancia: seleccione el nombre de instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el clúster de conmutación por error.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nombre de instancia: seleccione el nombre de instancia para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clúster de conmutación por error.  
   
--   Nombre de este nodo: este campo se rellena previamente con el nombre del equipo en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecuta el programa de instalación.  
+-   Nombre de este nodo: este campo se rellena previamente con el nombre del equipo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta el programa de instalación.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Nombre de red en clúster de conmutación por error: este campo no se rellena previamente. Especifique el nombre de red para la nueva instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Este es el nombre que identifica la instancia en clúster de conmutación por error en la red.  
   

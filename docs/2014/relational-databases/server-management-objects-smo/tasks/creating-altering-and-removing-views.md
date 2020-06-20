@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7d445c0e-77ef-4734-993b-e022de31df23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e593ac7da77603bf0b14eb450446322ce7d975cd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4fd5cad7c3a2b317393561e91df130d0325965d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72782301"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85037633"
 ---
 # <a name="creating-altering-and-removing-views"></a>Crear, modificar y eliminar vistas
   En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.View> representa las vistas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

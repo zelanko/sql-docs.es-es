@@ -1,5 +1,6 @@
 ---
 title: Uso del cifrado sin validación | Microsoft Docs
+description: Obtenga información sobre cómo el proveedor de OLE DB de SQL Server Native Client y el controlador ODBC admiten el cifrado sin validación y recomendaciones sobre cuándo usarlos.
 ms.custom: ''
 ms.date: 12/21/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: f4c63206-80bb-4d31-84ae-ccfcd563effa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2e0a2f1a5c17ff5dcbf48b414517e15129570cb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2416612b189c9ced09ed2eadef87c1a85649b9df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303236"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948806"
 ---
 # <a name="using-encryption-without-validation"></a>Utilizar el cifrado sin validación
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,11 +41,11 @@ Para obtener información sobre las palabras clave de cadena de conexión, vea [
   
 |Cliente configurado con Forzar cifrado de protocolo|Cliente configurado con Confiar en certificado de servidor|Cadena/atributo de conexión Encrypt/Use Encryption for Data|Cadena/atributo de conexión Trust Server Certificate|Resultado|  
 |----------------------------------------------|---------------------------------------------|------------------------------------------------------------------------------|----------------------------------------------------------------------|------------|  
-|No|N/D|No (valor predeterminado)|Se ignora.|No se produce el cifrado.|  
+|No|N/D|No (valor predeterminado)|Omitido|No se produce el cifrado.|  
 |No|N/D|Sí|No (valor predeterminado)|El cifrado solamente se produce si hay un certificado de servidor comprobable; de lo contrario, se produce un error en el intento de conexión.|  
 |No|N/D|Sí|Sí|El cifrado se produce siempre, pero puede que se utilice un certificado de servidor autofirmado.|  
-|Sí|No|Se ignora.|Omitido|El cifrado solamente se produce si hay un certificado de servidor comprobable; de lo contrario, se produce un error en el intento de conexión.|  
-|Sí|Sí|No (valor predeterminado)|Se ignora.|El cifrado se produce siempre, pero puede que se utilice un certificado de servidor autofirmado.|  
+|Sí|No|Omitido|Omitido|El cifrado solamente se produce si hay un certificado de servidor comprobable; de lo contrario, se produce un error en el intento de conexión.|  
+|Sí|Sí|No (valor predeterminado)|Omitido|El cifrado se produce siempre, pero puede que se utilice un certificado de servidor autofirmado.|  
 |Sí|Sí|Sí|No (valor predeterminado)|El cifrado solamente se produce si hay un certificado de servidor comprobable; de lo contrario, se produce un error en el intento de conexión.|  
 |Sí|Sí|Sí|Sí|El cifrado se produce siempre, pero es posible que se use un certificado de servidor autofirmado.|  
 ||||||

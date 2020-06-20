@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b41b5309816e037ce3619e880b796e0653c7506
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62655510"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063705"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Volver a generar procedimientos transaccionales personalizados para reflejar cambios de esquema
   De manera predeterminada, la replicación transaccional lleva a cabo todos los cambios de datos en los suscriptores a través de procedimientos almacenados generados por procedimientos internos para cada artículo de la tabla en la publicación. Los tres procedimientos (para inserciones, actualizaciones y eliminaciones, respectivamente) se copian al suscriptor y se ejecutan cuando se replica una inserción, actualización o eliminación en el suscriptor. Cuando se realiza un cambio de esquema en una tabla de un publicador de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la replicación vuelve a generar automáticamente estos procedimientos, llamando al mismo conjunto de procedimientos internos de scripting para que los nuevos procedimientos coincidan con el nuevo esquema (no se admite la replicación de cambios de esquema para los publicadores de Oracle).  
@@ -30,7 +29,7 @@ ms.locfileid: "62655510"
   
     1.  Al ejecutar [sp_addarticle &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), asegúrese de **@schema_option** que el bit 0x02 es **true**.  
   
-    2.  Ejecute [sp_register_custom_scripting &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) y especifique un valor de ' INSERT ', ' update ' o ' delete ' para el parámetro **@type** y el nombre del procedimiento de scripting personalizado para el parámetro **@value**.  
+    2.  Ejecute [sp_register_custom_scripting &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql) y especifique un valor de ' INSERT ', ' update ' o ' delete ' para el parámetro **@type** y el nombre del procedimiento de scripting personalizado para el parámetro **@value** .  
   
      La siguiente vez que se lleve a cabo un cambio de esquema, la replicación llamará a este procedimiento almacenado para crear un script de la definición para el nuevo procedimiento almacenado personalizado definido por el usuario y, después, propagará el procedimiento a cada suscriptor.  
   
@@ -38,7 +37,7 @@ ms.locfileid: "62655510"
   
     1.  Al ejecutar [sp_addarticle &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), establezca el **@schema_option** bit 0x02 en **false** para que la replicación no genere automáticamente procedimientos personalizados en el suscriptor.  
   
-    2.  Antes de cada cambio de esquema, cree un nuevo archivo de script y registre el script con la replicación, ejecutando [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Especifique un valor de ' custom_script ' para el parámetro **@type** y la ruta de acceso al script en el publicador para **@value**el parámetro.  
+    2.  Antes de cada cambio de esquema, cree un nuevo archivo de script y registre el script con la replicación, ejecutando [sp_register_custom_scripting &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql). Especifique un valor de ' custom_script ' para el parámetro **@type** y la ruta de acceso al script en el publicador para el parámetro **@value** .  
   
      La siguiente vez que realice un cambio de esquema importante, este script se ejecutará en cada suscriptor en la misma transacción que el comando DDL. Una vez realizado el cambio de esquema, el script se elimina del registro. Debe volver a registrar el script para que se ejecute de nuevo después del siguiente cambio de esquema.  
   

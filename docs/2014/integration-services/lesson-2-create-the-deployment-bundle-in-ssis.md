@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c40d5b4b182e79ac869d9dc21d204854ee116308
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767517"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968247"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lección 2: Creación del paquete de implementación
   En la [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), ha creado el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominado Deployment Tutorial, ha agregado paquetes y archivos auxiliares al proyecto y ha implementado configuraciones en paquetes.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4f120dd-ba78-46ff-99c5-e47effac8544
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bcca4bfbf68bb74b8d0c61c0f434e1b0958d58da
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63191923"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063124"
 ---
 # <a name="handling-smo-events"></a>Controlar eventos SMO
   Hay tipos de evento de servidor a los que se puede suscribir utilizando un controlador de eventos y el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
@@ -37,7 +36,7 @@ ms.locfileid: "63191923"
   
  Una clase de controlador de eventos se debe escribir para administrar los eventos. La clase de controlador de eventos puede contener más de una función de controlador de eventos y se debe instalar para los eventos que se van a administrar. Las funciones de controlador de eventos reciben información sobre el evento del parámetro *ServerEventNotificatificationArgs* que se puede usar para notificar información sobre el evento.  
   
- Los tipos de eventos de base de datos y de servidor que se pueden controlar <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> se enumeran <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>en la clase y en la clase.  
+ Los tipos de eventos de base de datos y de servidor que se pueden controlar se enumeran en la <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> clase y en la <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet> clase.  
   
 ## <a name="example"></a>Ejemplo  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cc8799f1-5b90-4248-b209-e1d5087f9529
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 79274cf031103e50151b6e93a9daff781005abad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1b8bdf080703fa6bd02fc34b8c31f59407814b93
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968165"
 ---
 # <a name="mssqlserver_10520"></a>MSSQLSERVER_10520
     
@@ -39,7 +38,7 @@ ms.locfileid: "62916177"
  Especifique NULL para el parámetro o cambie el tipo por otro que admita un valor no NULL para el parámetro.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_create_plan_guide &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [Guías de plan](../performance/plan-guides.md)  
   
   

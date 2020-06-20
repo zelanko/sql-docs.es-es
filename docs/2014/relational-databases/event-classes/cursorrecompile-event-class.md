@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbf1d34d801696861a1766d1fdca432037c94b11
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f3a478262df868c58282f3dba961e582acef854
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62663233"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030049"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile [clase de eventos]
   La clase de eventos **CursorRecompile** describe los eventos de recompilación que se producen en los cursores de la interfaz de programación de aplicaciones (API). Los eventos de recompilación de cursores se producen cuando [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vuelve a compilar un cursor Transact-SQL a causa de un cambio de esquema.  

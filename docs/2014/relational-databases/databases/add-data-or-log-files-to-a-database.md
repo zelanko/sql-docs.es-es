@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f72e00f9dab422652237b4b85579c544d0cda9fb
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917735"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952375"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
   En este tema se describe cómo agregar archivos de datos o de registro a una base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -71,7 +70,7 @@ ms.locfileid: "62917735"
   
 6.  Seleccione el tipo de archivo: de datos o de registro.  
   
-7.  En el caso de un archivo de datos, seleccione el grupo de archivos en que se debe incluir el archivo de la lista, o bien seleccione **\<new filegroup>** para crear un grupo de archivos nuevo. Los archivos de registro de transacciones no pueden formar parte de un grupo de archivos.  
+7.  Para un archivo de datos, seleccione el grupo de archivos en el que se debe incluir el archivo de la lista o seleccione **\<new filegroup>** para crear un nuevo grupo de archivos. Los archivos de registro de transacciones no pueden formar parte de un grupo de archivos.  
   
 8.  Especifique el tamaño inicial del archivo. Defina el mayor tamaño posible para los archivos de datos, según la cantidad de datos máxima prevista para la base datos.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a926405f2c35ff62b3589003ebe015fe920b743
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 157f45cd6d6fd7f201998cb3798440573654be58
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176427"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968995"
 ---
 # <a name="use-property-expressions-in-packages"></a>Usar expresiones de propiedad en paquetes
   Una expresión de propiedad es una expresión asignada a una propiedad para permitir la actualización dinámica de la propiedad en tiempo de ejecución. Por ejemplo, una expresión de propiedad puede actualizar la línea Para que utiliza una tarea Enviar correo, insertando una dirección de correo electrónico almacenada en una variable.
@@ -92,7 +91,7 @@ ms.locfileid: "78176427"
  Las expresiones de propiedad se cargan una vez que se han cargado las configuraciones de paquete. Por ejemplo, las variables se actualizan primero con sus configuraciones, y luego se evalúan y cargan las expresiones de propiedad que utilizan las variables. Esto significa que las expresiones de propiedad siempre utilizan los valores de variables establecidas con configuraciones.
 
 > [!NOTE]
->  No se puede usar `Set` la opción de la utilidad **DTExec** para rellenar una expresión de propiedad.
+>  No se puede usar la `Set` opción de la utilidad **DTExec** para rellenar una expresión de propiedad.
 
  La tabla siguiente resume cuándo se evalúan y cargan las expresiones de propiedad de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .
 
@@ -114,7 +113,7 @@ ms.locfileid: "78176427"
  En las siguientes expresiones de ejemplo se muestra cómo utilizar variables del sistema, operadores, funciones y literales de cadena en las expresiones de propiedad.
 
 ### <a name="property-expression-for-the-loggingmode-property-of-a-package"></a>Expresión de propiedad para la propiedad LoggingMode de un paquete
- Se puede usar la siguiente expresión de propiedad para establecer la propiedad LoggingMode de un paquete. La expresión utiliza las funciones DAY y GETDATE para obtener un entero que representa la parte de la fecha correspondiente al día de la fecha. Si el día es el 1 o el 15, se habilita el registro; de lo contrario, el registro se deshabilita. El valor 1 es el entero equivalente del miembro `Enabled`de enumerador LoggingMode y el valor 2 es el entero equivalente del miembro. `Disabled` Debe utilizar el valor numérico en lugar del nombre del miembro enumerador en la expresión.
+ Se puede usar la siguiente expresión de propiedad para establecer la propiedad LoggingMode de un paquete. La expresión utiliza las funciones DAY y GETDATE para obtener un entero que representa la parte de la fecha correspondiente al día de la fecha. Si el día es el 1 o el 15, se habilita el registro; de lo contrario, el registro se deshabilita. El valor 1 es el entero equivalente del miembro de enumerador LoggingMode `Enabled` y el valor 2 es el entero equivalente del miembro `Disabled` . Debe utilizar el valor numérico en lugar del nombre del miembro enumerador en la expresión.
 
  `DAY((DT_DBTIMESTAMP)GETDATE())==1||DAY((DT_DBTIMESTAMP)GETDATE())==15?1:2`
 

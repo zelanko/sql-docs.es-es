@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44da1a0e95acd6713bef4988de6e4d28a99aa577
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: cbcc0bc995788ac7c034ff114d2361f45281395e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858977"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85001150"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Lista de columnas de particiones (cuadro de diálogo, Visual Database Tools)
   Si una tabla tiene un esquema de partición asociado, puede utilizar este cuadro de diálogo para elegir en qué columna o columnas se aplica la función de partición. Para que esta función se ejecute correctamente, el tipo de datos de la columna en la que se aplique la función debe ser el mismo que el tipo de datos de la columna definida en la función de partición.  

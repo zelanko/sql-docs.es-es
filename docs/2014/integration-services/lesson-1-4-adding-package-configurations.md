@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965298"
 ---
 # <a name="step-4-adding-package-configurations"></a>Paso 4: Adición de configuraciones de paquete
   En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
@@ -42,7 +41,7 @@ ms.locfileid: "62767647"
   
 5.  En la página de bienvenida del Asistente para la configuración de paquetes, haga clic en **Siguiente**.  
   
-6.  En la página Seleccionar tipo de configuración, **Seleccione Archivo de configuración XML** en la lista **tipo de configuración** , seleccione la opción la **Ubicación de configuración se almacena en una variable de entorno** y escriba `DataTransfer,` o seleccione la variable de entorno **datatransfer** en la lista.  
+6.  En la página Seleccionar tipo de configuración, seleccione **archivo de configuración XML** en la lista **tipo de configuración** , seleccione la opción la **Ubicación de configuración se almacena en una variable de entorno** y escriba `DataTransfer,` o seleccione la variable de entorno **datatransfer** en la lista.  
   
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable. Si no desea reiniciar el equipo, puede escribir el nombre de la variable de entorno.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a2575c8-06fc-4ef4-9f24-c19e52b1bbcf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f1eb0f6892192e5ed328386e6730ec3b1c41f05b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b61c6c1fce58210950e1ccb3d76ea69cb4c8c6ef
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952552"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044904"
 ---
 # <a name="deployment-checklist-reporting-services-power-view-and-powerpivot-for-sharepoint"></a>Lista de comprobación de la implementación: Reporting Services, vista avanzada y PowerPivot para SharePoint
   Utilice la siguiente lista de comprobación para instalar estas características BI en la misma granja de servidores de SharePoint: PowerPivot para SharePoint, Generador de informes y [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Aunque esta lista de comprobación recomienda un orden de instalación concreto, en la práctica puede instalar estas características prácticamente en cualquier orden. Esta lista de comprobación supone la instalación de los siguientes productos o características:  
@@ -41,7 +40,7 @@ ms.locfileid: "71952552"
 >   
 >  En esta lista de comprobación, se supone que el paso de configuración de la granja de servidores se realizará durante la configuración de PowerPivot para SharePoint, utilizando la Herramienta de configuración de PowerPivot. Alternativamente, puede utilizar el Asistente para configuración del producto SharePoint si prefiere ese método. Ambos métodos tienen como resultado una granja de servidores operativa que admite PowerPivot para SharePoint.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador local para ejecutar el programa de instalación de SQL Server.  
   
  SharePoint Server 2010 Enterprise Edition se requiere para PowerPivot para SharePoint. También puede utilizar la edición Enterprise de evaluación.  
@@ -63,13 +62,13 @@ ms.locfileid: "71952552"
 ## <a name="steps"></a>Pasos  
  En los siguientes pasos se supone que un administrador va a instalar y configurar el servidor. El usuario del programa de instalación en SharePoint también es el administrador de una granja y, a menudo, el administrador del sitio primario para la colección de sitios predeterminada. Si va a dividir los siguientes pasos entre varias personas, se podrían requerir permisos adicionales para que los siguientes pasos funcionen.  
   
-|Paso|Link|  
+|Paso|Vínculo|  
 |----------|----------|  
 |Ejecutar la herramienta de preparación de Productos de SharePoint 2010|Debe tener el disco de instalación para SharePoint 2010. La herramienta de preparación es PrerequisiteInstaller.exe en los discos de instalación.|  
-|Instalar la edición Enterprise Evaluation o Enterprise de SharePoint Server 2010.|Al instalar SharePoint, puede decidir configurar la granja posteriormente no ejecutando el asistente para la configuración del producto de SharePoint 2010 una vez finalizada la instalación. La espera de configurar la granja de servidores le permitirá usar [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] una instancia de motor de base de datos, que se instala en un paso posterior, como servidor de bases de datos de la granja. Para configurar la granja, utilizará la Herramienta de configuración de PowerPivot. Incluye las acciones para aprovisionar la granja si todavía no está configurada.|  
-|Instalar SharePoint Server 2010 SP1.|Descargue SP1 de [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697).|  
+|Instalar la edición Enterprise Evaluation o Enterprise de SharePoint Server 2010.|Al instalar SharePoint, puede decidir configurar la granja posteriormente no ejecutando el asistente para la configuración del producto de SharePoint 2010 una vez finalizada la instalación. La espera de configurar la granja de servidores le permitirá usar una [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] instancia de motor de base de datos, que se instala en un paso posterior, como servidor de bases de datos de la granja. Para configurar la granja, utilizará la Herramienta de configuración de PowerPivot. Incluye las acciones para aprovisionar la granja si todavía no está configurada.|  
+|Instalar SharePoint Server 2010 SP1.|Descargue SP1 de [https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697) .|  
 |Ejecutar el programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para instalar el Motor de base de datos y PowerPivot para SharePoint.|[Instalar PowerPivot para SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)<br /><br /> El paso 1 explica cómo instalar PowerPivot para SharePoint. En este paso, asegúrese de hacer clic en la casilla en la página Rol de instalación que agrega el Motor de base de datos al rol. Al hacerlo, se agrega el Motor de base de datos a la instalación para que pueda usarlo como el servidor de base de datos de la granja al configurar la granja de servidores en el paso siguiente. Sin embargo, si la granja de servidores ya está configurada, puede omitir este paso.<br /><br /> El paso 2 le pide que configure el servidor. Para este paso, elija la herramienta Configuración de PowerPivot. Aunque hay varios enfoques disponibles, utilizar la herramienta de configuración es el más eficaz para una instalación independiente.<br /><br /> Si SharePoint 2010 está instalado pero no configurado, la herramienta preselecciona las acciones que crearán la granja, una aplicación web predeterminada y una colección de sitios raíz. Asegúrese de dejar estas opciones seleccionadas para que se cree la granja. Si ya configuró la granja, la herramienta omitirá estas acciones y solo proporcionará las que sean necesarias para configurar PowerPivot para SharePoint.<br /><br /> El paso 3 le indica que instale la versión SQL Server 2008 R2 del Proveedor OLE DB de Analysis Services. Este paso es importante para admitir las versiones de un libro que se crearon en la versión 2008 R2 de PowerPivot para Excel.|  
-|Comprobar que la granja está operativa.|Primero, inicie Administración Central y confirme que está disponible. A continuación, abra el sitio del equipo http://localhostescribiendo.  Debería ver un sitio web del grupo de SharePoint.|  
+|Comprobar que la granja está operativa.|Primero, inicie Administración Central y confirme que está disponible. A continuación, abra el sitio del equipo escribiendo http://localhost .  Debería ver un sitio web del grupo de SharePoint.|  
 |Compruebe que PowerPivot para SharePoint estaá operativo|[Comprobar una instalación de PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)<br /><br /> Esta tarea confirma el acceso a los datos PowerPivot mediante un libro de ejemplo que se carga.|  
 |Ejecutar el programa de instalación de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] para instalar y configurar Reporting Services y el complemento Reporting Services.|[Instalar el modo de SharePoint de Reporting Services para SharePoint 2010](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)<br /><br /> Opcionalmente, al instalar Reporting Services, puede agregar una instancia adicional de Analysis Services al árbol de características del programa de instalación si desea un segundo recurso para hospedar los datos tabulares. La instancia de Analysis Services adicional se utilizaría para hospedar las bases de datos del modelo tabular que se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Las bases de datos tabulares son un origen de datos válido para los informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].<br /><br /> [Instalar Analysis Services en modo tabular](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)|  
 |Comprobar que Reporting Services está operativo.|[Verificación de una instalación de Reporting Services](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)|  

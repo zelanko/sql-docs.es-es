@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 919544c9-59f0-4cc6-bb2a-f1ad671eb74b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 22b1c18cba793d5845e2adf92b1dca300911a72f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 23d45b761909896009e614a8501e728d86b424b7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62823807"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061182"
 ---
 # <a name="manage-files-with-encoding"></a>Administrar archivos con codificación
   Para facilitar la visualización del código en un idioma concreto y en una plataforma específica, puede asociar una codificación de caracteres determinada a un archivo.  
@@ -42,7 +41,7 @@ ms.locfileid: "62823807"
   
 #### <a name="to-save-a-file-with-a-different-encoding-or-line-ending-type"></a>Para guardar un archivo con una codificación o un tipo de fin de línea diferente  
   
-1.  En el menú **archivo** , haga clic en **Guardar \<nombre de archivo> como**.  
+1.  En el menú **Archivo** , haga clic en **Guardar \<filename> como**.  
   
 2.  En el cuadro de diálogo **Guardar archivo como** , expanda el botón **Guardar** y, luego, haga clic en **Guardar con codificación**.  
   

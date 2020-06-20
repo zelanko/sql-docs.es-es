@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a97225797380294968f1af595f1299e478d548d3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 26ba2fc6a8cfdfb6855d7d5b29cc3be31f1d53da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058356"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966325"
 ---
 # <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>Editor de transformación Agrupación aproximada (pestaña Columnas)
   Use la pestaña **Columnas** del cuadro de diálogo **Editor de transformación Agrupación aproximada** para especificar las columnas utilizadas para agrupar filas con valores duplicados.  

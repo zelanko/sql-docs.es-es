@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: de7c84a463d15e3260cc64c53ba1f82c6808dd93
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2fd341302c20d0ac79dad4169c13d1e1bca45d6c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056776"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964737"
 ---
 # <a name="partition-processing-destination-editor-advanced-page"></a>Editor de destino de procesamiento de particiones (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor de destino de procesamiento de particiones** para configurar el control de errores.  
@@ -31,7 +30,7 @@ ms.locfileid: "66056776"
   
 ## <a name="options"></a>Opciones  
  **Utilizar la configuración de error predeterminada**  
- Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . De manera predeterminada, este valor es `True`.  
+ Especifica si debe utilizarse el control de errores predeterminado de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . De forma predeterminada, este valor es `True`.  
   
  **Acción del error de clave**  
  Permite especificar la forma de controlar registros que tienen valores de clave no aceptables.  

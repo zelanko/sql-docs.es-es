@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83afbf74-fd50-4c39-831c-b1f473a50620
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 246036bfea6dc8431f878165330f7f0571949897
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917012"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965745"
 ---
 # <a name="shrink-a-database"></a>Reducir una base de datos
   En este tema se describe cómo reducir una base de datos mediante objetos de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ ms.locfileid: "62917012"
   
 #### <a name="to-shrink-a-database"></a>Para reducir una base de datos  
   
-1.  En **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y, a continuación, expándala.  
+1.  En **Explorador de objetos**, conéctese a una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y, a continuación, expándala.  
   
 2.  Expanda **bases**de datos y, a continuación, haga clic con el botón secundario en la base de datos que desea reducir.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "62917012"
      **Cantidad máxima de espacio disponible en los archivos tras la reducción**  
      Especifique el porcentaje máximo de espacio disponible que se va a dejar en los archivos de base de datos después de reducirla. Los valores válidos están comprendidos entre 0 y 99.  
   
-4.  Haga clic en **Aceptar**.  
+4.  Haga clic en **OK**.  
   
 ##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Usar Transact-SQL  
   

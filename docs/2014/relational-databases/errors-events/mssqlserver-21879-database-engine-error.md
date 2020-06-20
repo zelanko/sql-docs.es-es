@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2bda15bcb4d96cc126aa87a986fa667a56730637
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62869204"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054227"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
     
@@ -56,6 +55,6 @@ ms.locfileid: "62869204"
   
 -   Use `sp_changedistpublisher` para cambiar el modo de seguridad asociado con el publicador original en MSdistpublishers, así como para especificar un inicio de sesión y una contraseña que se usarán para la conexión.  
   
--   Especifique el parámetro de línea de comandos *BypassPublisherValidation* en la línea de comandos del agente de `sp_get_redirected_publisher` mezcla para omitir la validación cuando se llama a en el distribuidor.  
+-   Especifique el parámetro de línea de comandos *BypassPublisherValidation* en la línea de comandos del agente de mezcla para omitir la validación cuando `sp_get_redirected_publisher` se llama a en el distribuidor.  
   
   

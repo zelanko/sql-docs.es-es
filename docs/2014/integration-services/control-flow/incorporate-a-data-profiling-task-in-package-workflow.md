@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 969f7d7fb40f4fc40c3735f73699effe9803bbf5
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62831635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84918845"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Incorporar una tarea de generación de perfiles de datos en un flujo de trabajo de paquetes
   La generación de perfiles de datos y la limpieza no son aptos para la aplicación de un proceso automatizado en sus primeras etapas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], el resultado de la tarea de generación de perfiles de datos normalmente requiere un análisis visual y un criterio humano para determinar si las infracciones detectadas son significativas o excesivas. Incluso después de reconocer la existencia de problemas relacionados con la calidad de los datos, sigue siendo necesario disponer de un plan minuciosamente diseñado que indique el mejor método para la limpieza.  
@@ -85,7 +84,7 @@ ms.locfileid: "62831635"
   
 2.  Agregue un administrador de conexiones de [!INCLUDE[vstecado](../../includes/vstecado-md.md)] al paquete. Configure dicho administrador de conexiones de forma que use el Proveedor de datos .NET para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) y se conecte a una instancia disponible de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-     De forma predeterminada, el administrador de conexiones tiene el nombre siguiente: \<nombre de servidor>.AdventureWorks1.  
+     De forma predeterminada, el administrador de conexiones tiene el siguiente nombre: \<server name> . AdventureWorks1.  
   
 3.  Agregue un administrador de conexiones de archivos al paquete. Configure este administrador de conexiones con objeto de crear el archivo de resultados para la tarea de generación de perfiles de datos.  
   
@@ -102,9 +101,9 @@ ms.locfileid: "62831635"
   
 -   En la ventana **Variables** , agregue y configure las dos variables de paquete siguientes:  
   
-    -   Escriba el nombre, `ProfileConnectionName`, para una de las variables y establezca el tipo de esta variable en **cadena**.  
+    -   Escriba el nombre, `ProfileConnectionName` , para una de las variables y establezca el tipo de esta variable en **cadena**.  
   
-    -   Escriba el nombre, `AddressLine2NullRatio`, para la otra variable y establezca el tipo de esta variable en **Double**.  
+    -   Escriba el nombre, `AddressLine2NullRatio` , para la otra variable y establezca el tipo de esta variable en **Double**.  
   
 ### <a name="configure-the-data-profiling-task"></a>Configurar la tarea de generación de perfiles de datos  
  La tarea de generación de perfiles de datos se debe configurar de la siguiente manera:  
@@ -142,9 +141,9 @@ ms.locfileid: "62831635"
   
 4.  En la página **Script** , seleccione el lenguaje de programación que prefiera. A continuación, ponga las dos variables de paquete a disposición del script:  
   
-    1.  En `ReadOnlyVariables`, seleccione `ProfileConnectionName`.  
+    1.  En `ReadOnlyVariables` , seleccione `ProfileConnectionName` .  
   
-    2.  En **ReadWriteVariables**el caso de `AddressLine2NullRatio`ReadWriteVariables, seleccione.  
+    2.  En el caso de **ReadWriteVariables**, seleccione `AddressLine2NullRatio` .  
   
 5.  Seleccione **Editar script** para abrir el entorno de desarrollo de script.  
   

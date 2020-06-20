@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: a0590ba6-3856-4731-bb29-87b0a1c1b795
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c837eee28bfd20cc9f7b0a50ded2014ff75461f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73637636"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933416"
 ---
 # <a name="result-set-sample"></a>Ejemplo de conjunto de resultados
   A veces resulta útil poder ejecutar comandos mientras se leen resultados de una consulta sin abrir una nueva conexión y sin leer todos los resultados en la memoria. La característica MARS (Multiple Active Result Set) en ADO.NET 2.0 es una tecnología que puede ayudar a conseguirlo. Actualmente, MARS no está implementado para el proveedor en proceso que se utiliza para la programación del servidor. Para subsanar esta limitación, se pueden usar cursores del servidor. En este ejemplo se muestra cómo usar cursores del servidor para resolver la falta de compatibilidad con MARS de la programación del servidor.  
@@ -25,7 +24,7 @@ ms.locfileid: "73637636"
   
  La API para esta clase es similar a un lector de datos, salvo que puede desplazarse hacia delante o hacia atrás por todo el conjunto de resultados, y se pueden emitir otros comandos para la conexión mientras el conjunto de resultados está abierto. Esta implementación se ha simplificado mucho para que el ejemplo se entienda mejor. Una implementación más eficaz capturaría varias filas para evitar el tiempo de devolución de la base de datos por fila capturada. Utilizar esta clase puede suponer el uso de un volumen de memoria mucho menor que el necesario para llenar un conjunto de datos con todos los resultados de una consulta, lo que es muy importante para la programación del servidor. En este ejemplo también se muestra el uso del atributo "Allow partially trusted callers" para indicar que el ensamblado Conjunto de resultados es una biblioteca a la que se puede llamar de forma segura desde otros ensamblados. Este enfoque es algo más complejo pero mucho más seguro que registrar el ensamblado de llamada utilizando el permiso UNSAFE. Es más seguro porque al registrar el ensamblado de llamada como seguro se limitan los recursos afectados fuera del servidor y se evitan daños en la integridad del mismo.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/sql-server/sql-server-editions-express)Express.  
@@ -57,7 +56,7 @@ ms.locfileid: "73637636"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

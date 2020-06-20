@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9ff3e97a3a784bc61a20de9c65a4381c81078480
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667188"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060804"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Establecer umbrales y advertencias en el Monitor de replicación
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] El monitor de replicación muestra información de estado de las publicaciones y las suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)]El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] monitor de replicación muestra información de estado de las publicaciones y las suscripciones. De forma predeterminada, en el Monitor de replicación solamente se muestran advertencias de suscripciones no inicializadas, pero puede habilitar advertencias para otras condiciones. Se recomienda habilitar las advertencias para la topología, con el fin de estar puntualmente informado sobre el estado y rendimiento.  
   
  Al habilitar una advertencia, debe especificar un umbral. Cuando se alcanza o se supera ese umbral, aparece la advertencia (a menos que haya un problema de mayor prioridad). Además de mostrar una advertencia en el Monitor de replicación, llegar a un umbral también puede desencadenar una alerta. Se pueden habilitar advertencias para las siguientes condiciones:  
   
@@ -75,7 +74,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca las opciones en ** \<** el cuadro de diálogo Propiedades de alerta de AlertName>:  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión.  
   
-3.  Establezca las opciones en ** \<** el cuadro de diálogo Propiedades de alerta de AlertName>:  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   
@@ -149,7 +148,7 @@ ms.locfileid: "62667188"
   
      Este cuadro de diálogo muestra alertas para todos los tipos de publicaciones, incluidas las alertas que no están relacionadas con los umbrales de supervisión. Para obtener más información, vea [Usar alertas para eventos del Agente de replicación](../agents/use-alerts-for-replication-agent-events.md).  
   
-3.  Establezca las opciones en ** \<** el cuadro de diálogo Propiedades de alerta de AlertName>:  
+3.  Establezca las opciones en el cuadro de diálogo ** \<AlertName> propiedades de alerta** :  
   
     -   En la página **General** , haga clic en **Habilitar**; especifique a qué base de datos desea que se aplique la alerta.  
   

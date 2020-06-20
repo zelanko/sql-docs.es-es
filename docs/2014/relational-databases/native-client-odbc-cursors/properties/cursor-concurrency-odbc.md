@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68228ece-cbf1-4f19-bfdc-053884c1af48
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7139ace2498ef2eeddb173950281ac4cf493efad
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: c47f24152978fedf8f2c3d49ec3b721969712814
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705591"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85020590"
 ---
 # <a name="cursor-concurrency-odbc"></a>Simultaneidad de cursor (ODBC)
   Las opciones de simultaneidad establecidas por la aplicación afectan a las operaciones del cursor, como los tipos de cursor. Las opciones de simultaneidad se establecen mediante la opción SQL_ATTR_CONCURRENCY de [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md). Los tipos de simultaneidad son:  

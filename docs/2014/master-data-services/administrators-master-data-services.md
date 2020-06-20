@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: aeedc1f735fd296169f704b794d1bb0e69adab22
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65480015"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972275"
 ---
 # <a name="administrators-master-data-services"></a>Administradores (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], hay dos tipos de administradores: los administradores de modelo y el administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  
   
 ## <a name="model-administrators"></a>Administradores de modelos  
- En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], un administrador de modelo es un usuario que tiene el permiso **Actualizar** asignado al objeto de modelo de nivel superior en la pestaña **objetos de modelo** y ningún otro permiso asignado.  
+ En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , un administrador de modelo es un usuario que tiene el permiso **Actualizar** asignado al objeto de modelo de nivel superior en la pestaña **objetos de modelo** y ningún otro permiso asignado.  
   
 -   Si el usuario tiene acceso al área funcional del **Explorador** , podrá agregar, eliminar y actualizar todos los datos maestros de esta área.  
   
@@ -36,7 +35,7 @@ ms.locfileid: "65480015"
  Un usuario se puede configurar como administrador de modelo en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] o mediante programación. Para obtener más información, consulte [Crear un administrador de modelo &#40;Master Data Services&#41;](create-a-model-administrator-master-data-services.md).  
   
 ## <a name="master-data-services-system-administrator"></a>Administrador del sistema de Master Data Services  
- Solo hay un administrador del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. El administrador del sistema es el usuario especificado para la **cuenta de administrador** al crear [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] la base de datos.  
+ Solo hay un administrador del sistema [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. El administrador del sistema es el usuario especificado para la **cuenta de administrador** al crear la base de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] datos.  
   
  El administrador del sistema de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]:  
   

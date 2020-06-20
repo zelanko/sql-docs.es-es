@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c8eee57be7c7bb9167c24bec117fd2f88a5bb745
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: efc89f76bb3a1ccfd04b63a359befb646b446aa4
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62926340"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972736"
 ---
 # <a name="debugging-script"></a>Depurar script
   Escriba los scripts que la tarea Script y el componente Script usan, en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools para aplicaciones (VSTA).  

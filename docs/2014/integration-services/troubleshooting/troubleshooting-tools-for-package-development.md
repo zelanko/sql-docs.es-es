@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 41dd248c-dab3-4318-b8ba-789a42d5c00c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9e29d088b8ea61c0d7fc58b45097f703a67bd1df
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62886941"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972719"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Herramientas para solucionar problemas con el desarrollo de paquetes
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye características y herramientas que se pueden usar para solucionar problemas de los paquetes mientras estos se desarrollan en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -41,7 +40,7 @@ ms.locfileid: "62886941"
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye las siguientes características adicionales para ayudarle a evitar los errores de validación:  
   
--   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de `DelayValidation` la propiedad, la opción **trabajar sin conexión** está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
+-   **Establezca todo el paquete y todas las conexiones para trabajar sin conexión cuando los orígenes de datos no estén disponibles**. Puede habilitar **Trabajar sin conexión** en el menú **SSIS** . A diferencia de la `DelayValidation` propiedad, la opción **trabajar sin conexión** está disponible incluso antes de abrir un paquete. También se puede habilitar la opción **Trabajar sin conexión** para acelerar las operaciones en el diseñador, y deshabilitarla solo cuando se quiere validar el paquete.  
   
 -   **Configure la propiedad DelayValidation para los elementos del paquete que no son válidos hasta el tiempo de ejecución**. Se puede establecer `DelayValidation` en `True` para los elementos del paquete cuya configuración no sea válida en tiempo de diseño a fin de evitar errores de validación. Por ejemplo, puede haber una tarea Flujo de datos que utilice una tabla de destino inexistente antes de que la tarea de ejecución de SQL cree la tabla en tiempo de ejecución. La propiedad `DelayValidation` se puede habilitar en el nivel de paquete o en el de tareas y contenedores individuales incluidos en el paquete. Por lo general, se debe mantener el valor de esta propiedad en `True` para los mismos elementos del paquete cuando se implementa el paquete, a fin de evitar los mismos errores de validación en tiempo de ejecución.  
   

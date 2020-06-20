@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2686fe84-1ecc-48b8-9160-e7122274bd84
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6053418c624c2ab107a35a02c382576dcb41a534
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877719"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972445"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Trabajar con administradores de conexiones mediante programación
   En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], el método AcquireConnection de la clase de administradores de conexiones asociada es el método al que se llama con mayor frecuencia cuando se está trabajando con administradores de conexiones en código administrado. Al escribir código administrado, tiene que llamar al método AcquireConnection para utilizar la funcionalidad de un administrador de conexiones. Debe llamar a este método independientemente de si escribe el código administrado en una tarea Script, un componente de script, un objeto personalizado o una aplicación personalizada.  
@@ -55,7 +54,7 @@ ms.locfileid: "62877719"
 |Tipo de administrador de conexiones|Nombre del administrador de conexiones|Tipo de valor devuelto|Información adicional|  
 |-----------------------------|-----------------------------|--------------------------|----------------------------|  
 |[!INCLUDE[vstecado](../includes/vstecado-md.md)]|Administrador de conexiones de [!INCLUDE[vstecado](../includes/vstecado-md.md)]|`System.Data.SqlClient.SqlConnection`||  
-|FILE|administrador de conexiones de archivos|`System.String`|Ruta de acceso al archivo.|  
+|ARCHIVO|administrador de conexiones de archivos|`System.String`|Ruta de acceso al archivo.|  
 |FLATFILE|Administrador de conexiones de archivos planos|`System.String`|Ruta de acceso al archivo.|  
 |MSMQ|MSMQ, administrador de conexiones|`System.Messaging.MessageQueue`||  
 |MULTIFILE|administrador de conexiones de varios archivos|`System.String`|Ruta de acceso a uno de los archivos.|  

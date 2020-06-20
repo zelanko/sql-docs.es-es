@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c11ab816-11b8-4131-8b77-c03fe500fa10
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 00731efa85b4396fa2086596c992ad50c9ab41b7
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: b5099505fa724707f4801418c35927400cb624d0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82717710"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002842"
 ---
 # <a name="specifying-xpath-variables-in-xpath-queries-sqlxml-40"></a>Especificar variables XPath en consultas XPath (SQLXML 4.0)
   Los ejemplos siguientes muestran cómo las variables XPath se pasan en consultas XPath. Las consultas XPath de estos ejemplos se especifican en el esquema de asignación que se incluye en SampleSchema1.xml. Para obtener información acerca de este esquema de ejemplo, vea [ejemplo de esquema XSD anotado para los ejemplos de XPath &#40;SQLXML 4,0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  
@@ -26,7 +25,7 @@ ms.locfileid: "82717710"
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-use-the-xpath-variables"></a>A. Usar las variables XPath  
- Una plantilla de ejemplo consta de dos consultas XPath. Cada uno de las consultas XPath toma un parámetro. La plantilla también especifica los valores predeterminados para estos parámetros. Los valores predeterminados se usan si no se especifican valores de parámetro. En ** \< SQL: header>** se especifican dos parámetros con valores predeterminados.  
+ Una plantilla de ejemplo consta de dos consultas XPath. Cada uno de las consultas XPath toma un parámetro. La plantilla también especifica los valores predeterminados para estos parámetros. Los valores predeterminados se usan si no se especifican valores de parámetro. En se especifican dos parámetros con valores predeterminados **\<sql:header>** .  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

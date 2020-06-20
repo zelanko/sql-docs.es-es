@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 390fb10287ff88ec5f7a0220dea6dd677e8e36cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ffd151332fe5aa0c152ba66c159472dc9745f2d0
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966125"
 ---
 # <a name="step-8-making-the-lesson-1-package-easier-to-understand"></a>Paso 8: Facilitar la comprensión del paquete de la lección 1
   Ahora que ha terminado la configuración del paquete de la lección 1, es una buena idea ordenar el diseño del paquete. Si las formas de los diseños de los flujos de datos y de control tienen tamaños aleatorios o no están alineadas o agrupadas, la funcionalidad del paquete puede resultar más difícil de comprender.  
@@ -50,7 +49,7 @@ ms.locfileid: "62767597"
   
      Si no agrega texto al cuadro de anotación, desaparecerá al hacer clic fuera del cuadro.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Paso 9: Prueba del paquete del tutorial de la lección 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

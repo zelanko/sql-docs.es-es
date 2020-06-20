@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ee6d3b79-18bc-49d3-8a1d-0c0905b990f0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: da56673e05c092c965554b76572ac3b0486d2110
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68210944"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85044161"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realizar una evaluación a petición usando Explorador de objetos
   En esta tarea, utilizará el Explorador de objetos para realizar una evaluación a petición de las directivas de prácticas recomendadas para [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en una instancia única de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -27,7 +26,7 @@ ms.locfileid: "68210944"
  Esta lección se basa en la versión de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Para realizar una evaluación a petición de las directivas de prácticas recomendadas en las instancias [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]que ejecutan, debe usar el procedimiento del tema [realizar una evaluación a petición mediante el uso de servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
+>  Para realizar una evaluación a petición de las directivas de prácticas recomendadas en las instancias que ejecutan [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] , debe usar el procedimiento del tema [realizar una evaluación a petición mediante el uso de servidores registrados](../../2014/tutorials/perform-an-on-demand-evaluation-by-using-registered-servers.md).  
   
 ### <a name="to-perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realizar una evaluación a petición usando Explorador de objetos  
   
@@ -40,7 +39,7 @@ ms.locfileid: "68210944"
   
 3.  En el cuadro de diálogo **evaluar directivas** , junto al cuadro **origen** , haga clic en el botón de puntos suspensivos (**...**).  
   
-4.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, realice los pasos siguientes:  
+4.  En el cuadro de diálogo **Seleccionar origen** , puede seleccionar **archivos** o **servidor** como origen de los archivos de directivas que se van a evaluar. Si hace clic en **servidor**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccionará los archivos de directivas individuales que desea evaluar. Para ello, siga estos pasos.  
   
     1.  Haga clic en **archivos**.  
   

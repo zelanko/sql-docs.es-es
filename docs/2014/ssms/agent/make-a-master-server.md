@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05739a73-1fdf-4d9d-92a6-70f328380322
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ce8e7428aaf8ba459bcf6831988c61da3f192bac
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68189130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85008759"
 ---
 # <a name="make-a-master-server"></a>Make a Master Server
   En este tema se describe cómo establecer un servidor maestro de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +47,7 @@ ms.locfileid: "68189130"
 ###  <a name="security"></a><a name="Security"></a> Seguridad  
  Los trabajos distribuidos que tienen pasos asociados a un proxy se ejecutan bajo el contexto de la cuenta de proxy en el servidor de destino. Para que se descarguen del servidor maestro al de destino los pasos de trabajo asociados con un proxy, asegúrese de que se cumplen las condiciones siguientes:  
   
--   La subclave del registro del servidor maestro **\\\<HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server*instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
+-   La subclave del registro del servidor maestro **\ HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server \\ < *instance_name*> \sql Server Agent\AllowDownloadedJobsToMatchProxyName** (REG_DWORD) está establecida en 1 (true). De forma predeterminada, esta subclave está establecida en 0 (false).  
   
 -   Existe una cuenta de proxy en el servidor de destino que tiene el mismo nombre que la cuenta de proxy del servidor maestro bajo el que se ejecuta el paso de trabajo.  
   

@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2584cb4a6867d4af3b3f6bc1feff167c900a166d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62893036"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965618"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Configurar el destino del archivo plano (Asistente para importación y exportación de SQL Server)
   Use la página **configurar el destino de archivo plano** para especificar las opciones de formato del archivo plano de destino y para obtener una vista previa de los resultados antes de continuar.  
@@ -58,7 +57,7 @@ ms.locfileid: "62893036"
 |**Tabulación {t}**|Las columnas se delimitan mediante un tabulador.|  
 |**Barra vertical {&#124;}**|Las columnas se delimitan mediante una barra vertical.|  
   
- **Vista previa**  
+ **Versión preliminar**  
  En el cuadro de diálogo **vista previa** de los datos, los resultados de las opciones de formato seleccionadas para el archivo plano de destino.  
   
  **Editar transformación**  

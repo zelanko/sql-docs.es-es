@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cb3e7a85254cac96b8b8541de57b494e96b8928f
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65489096"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061069"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tarea 6: Importación de valores del proyecto Limpiar lista de proveedores
   En esta tarea, importará el conocimiento de calidad de datos obtenido durante el proceso de limpieza. Consulte [el tema importar valores de proyecto de limpieza en un dominio](https://msdn.microsoft.com/library/hh479581.aspx) para obtener más detalles. También exportará la base de conocimiento en un archivo DQS antes de publicar la base de conocimiento de **proveedores** actualizada.  
@@ -32,14 +31,14 @@ ms.locfileid: "65489096"
   
 5.  Observe que se importan todas las direcciones de correo electrónico junto con las dos correcciones que hizo durante la limpieza interactiva. Desplácese para ver las dos correcciones.  
   
-    |Value|Corregir a|  
+    |Valor|Corregir a|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  Repita el paso anterior de importación de valores de proyecto para el dominio **Country** y observe que se ha agregado una nueva entrada para corregir el **Estado de United State** en **Estados Unidos** (con ' es ').  
   
-    |Value|Corregir a|  
+    |Valor|Corregir a|  
     |-----------|----------------|  
     |United State|Estados Unidos|  
   

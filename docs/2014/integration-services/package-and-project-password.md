@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 090277a5-4659-461d-944c-eb9b26167720
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ad916fddff23bcffbed37bab76b0b49d67c6c484
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 35edfb66f52d5811ff24d85be3d2e403e5fa6121
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056986"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964935"
 ---
 # <a name="package-and-project-password"></a>Contraseña de paquete y proyecto
   Utilice el cuadro de diálogo **Contraseña del paquete** con el fin de proporcionar la contraseña para un paquete cifrado con una contraseña. Debe proporcionar una contraseña si el paquete utiliza el nivel de protección **Cifrar la información confidencial con una contraseña**o **Cifrar todos los datos con una contraseña** .  

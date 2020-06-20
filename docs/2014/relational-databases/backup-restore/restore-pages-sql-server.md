@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6fb008314b9cb156f1cc575bda71b6364eca6e3a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62921042"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84956775"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
   En este tema se describe cómo restaurar páginas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. El objetivo de una restauración de páginas es restaurar una o varias páginas dañadas sin restaurar la base de datos completa. Normalmente, las páginas candidatas para la restauración se han marcado como "sospechosas" debido a un error al tener acceso a la página. Las páginas sospechosas se identifican en la tabla [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) de la base de datos **msdb** .  
@@ -133,8 +132,8 @@ ms.locfileid: "62921042"
     |Encabezado|Valores|  
     |------------|------------|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente del que se ha realizado una copia de seguridad: **Base de datos**, **Archivo** o **\<en blanco>** (para registros de transacciones).|  
-    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial**o **Registro de transacciones**.|  
+    |**Componente**|Componente del que se ha realizado una copia de seguridad: **base de datos**, **archivo**o **\<blank>** (para registros de transacciones).|  
+    |**Tipo**|Tipo de copia de seguridad realizada: **Completa**, **Diferencial** o **Registro de transacciones**.|  
     |**Server**|Nombre de la instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que realizó la operación de copia de seguridad.|  
     |**Base de datos**|Nombre de la base de datos para la operación de copia de seguridad.|  
     |**Posición**|Posición del conjunto de copias de seguridad en el volumen.|  

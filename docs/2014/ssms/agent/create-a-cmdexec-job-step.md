@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba283ef2ff426521c881f733bc29465eebc0c76
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 48c557b8ea4228d27b73d361c50aac62232d1e00
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72798159"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062333"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Create a CmdExec Job Step
-  En este tema se describe cómo crear y definir [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un paso de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del agente en que usa un programa ejecutable o un comando del [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sistema [!INCLUDE[tsql](../../includes/tsql-md.md)] operativo mediante, o objetos de administración de SQL Server.  
+  En este tema se describe cómo crear y definir un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] del agente en que usa un programa ejecutable o un comando del sistema operativo mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , [!INCLUDE[tsql](../../includes/tsql-md.md)] o objetos de administración de SQL Server.  
   
  **En este tema**  
   

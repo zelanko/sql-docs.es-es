@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0578dcb98e34f06db155fd5c3f1438209d8b2687
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 180d54647f2913e3cf4db1ddfed314215820b648
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057293"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965075"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Editor de origen OData (página Salida de error)
   Use la página **Salida de error** del cuadro de diálogo **Editor de origen OData** para seleccionar opciones de control de errores y establecer las propiedades en las columnas de salida de errores.  

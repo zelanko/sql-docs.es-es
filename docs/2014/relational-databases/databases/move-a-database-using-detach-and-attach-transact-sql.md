@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 768a70dfe94af6f8d65f7c76fa08d3dff650fe7d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917101"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965895"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Mover una base de datos mediante Separar y Adjuntar (Transact-SQL)
   En este tema se describe cómo mover una base de datos separada a otra ubicación y volver a adjuntarla a la misma instancia de servidor o a otra en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. No obstante, se recomienda mover las bases de datos mediante el procedimiento de reubicación programada ALTER DATABASE, en lugar usar las operaciones de separar y adjuntar. Para más información, consulte [Move User Databases](move-user-databases.md).  
@@ -49,9 +48,9 @@ ms.locfileid: "62917101"
 3.  Adjunte los archivos copiados. Para obtener más información, consulte [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se crea una copia [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] de las instrucciones que se ejecutan en una ventana del editor de consultas que está conectada a la instancia del servidor a la que está asociada.  
+ En el ejemplo siguiente se crea una copia de las [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones que se ejecutan en una ventana del editor de consultas que está conectada a la instancia del servidor a la que está asociada.  
   
-1.  Desasocie [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] las instrucciones:  
+1.  Desasocie las [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] instrucciones:  
   
     ```  
     USE master;  

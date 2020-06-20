@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d5bf7340-2b0b-4593-965c-de04ae628344
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 848081c8a4eac92299a916618aa4cd6289183d0a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf1666aeacd7df2589c810faa47edf9f435b73bc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63238808"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060517"
 ---
 # <a name="maintain-publications"></a>Mantener publicaciones
   Una vez creada una publicación, puede ser necesario agregar o quitar artículos, o cambiar las propiedades de la publicación o de un artículo. Es posible realizar la mayoría de los cambios una vez creada la publicación. Sin embargo, en algunos casos, es necesario generar una nueva instantánea de la publicación o reinicializar las suscripciones de la misma. Para más información, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Agregar y quitar artículos de publicaciones existentes](add-articles-to-and-drop-articles-from-existing-publications.md).  

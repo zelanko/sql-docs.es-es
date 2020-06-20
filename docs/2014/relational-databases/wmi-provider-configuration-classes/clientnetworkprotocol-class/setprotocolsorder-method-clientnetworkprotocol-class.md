@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b86d98b9-aae4-4e74-b4da-1ec984d5c8b4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 16a939835d5129a12d5c3b9fce9d6fa5e0c07f80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ec199fe0c89378116a0b4fd3e6d36a5062ea0e0c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62826613"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061429"
 ---
 # <a name="setprotocolsorder-method-clientnetworkprotocol-class"></a>Método SetProtocolsOrder (clase ClientNetworkProtocol)
   Cambia el orden de la lista de protocolos.  
@@ -52,7 +51,7 @@ ProtocolOrderList
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor `uint32` que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)   

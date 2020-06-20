@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6e8b5900-1990-48e9-8666-d9a20ed786be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60afafacf337b393ac683c76b7bee5bc502ed118
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63276869"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067349"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Buscar objetos (Explorador de objetos)
   Muestra una lista de objetos del tipo seleccionado. Seleccione uno o más objetos de esta lista activando la casilla correspondiente. En el cuadro **Buscar objetos** solo se muestran los elementos que corresponden a la acción y para los que se tienen permisos de visualización.  

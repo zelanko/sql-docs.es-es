@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa7013fddc6b2ce12ad9ad0f9fcb511d93915e05
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002863"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Usar parámetros con valores de tabla (motor de base de datos)
   Los parámetros con valores de tabla se declaran utilizando tipos de tabla definidos por el usuario. Puede utilizar parámetros con valores de tabla para enviar varias filas de datos a una rutina o una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , como un procedimiento almacenado o una función, sin crear una tabla temporal o muchos parámetros.  
@@ -79,7 +78,7 @@ ms.locfileid: "68211760"
   
  Los parámetros con valores de tabla se comportan tan bien o mejor que una implementación de matriz de parámetros equivalente.  
   
-##  <a name="example"></a><a name="Example"></a>Ejemplo  
+##  <a name="example"></a><a name="Example"></a> Ejemplo  
  En el ejemplo siguiente se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)] y se muestra la forma de crear un tipo de parámetro con valores de tabla, declarar una variable para hacer referencia a ella, rellenar la lista de parámetros y, a continuación, pasar los valores a un procedimiento almacenado.  
   
 ```  

@@ -9,16 +9,15 @@ ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20d32f3a050e79aef90eb8df302bd7a590cead3e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952242"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85045154"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>Lista de comprobación de la implementación: instalación en varios servidores de PowerPivot para SharePoint 2010
-  Esta lista de comprobación le guía por los pasos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] necesarios para agregar para SharePoint a una granja de servidores de SharePoint 2010 de tres niveles que se crea desde el principio. Una granja de tres niveles cuenta con los niveles de base de datos, de aplicación y de web. Para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] agregar a esta topología, es necesario ejecutar el programa de instalación [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de SQL Server para instalar en la capa de aplicación. Los archivos de programa de PowerPivot se agregan al nivel Web, pero solo como una tarea posterior a la instalación cuando se implementa la solución de aplicación Web. Si bien existen pasos de implementación, no hay ningún paso de instalación independiente en los niveles web o de datos. El único paso de instalación que debe realizar es instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en los servidores de aplicaciones.  
+  Esta lista de comprobación le guía por los pasos necesarios para agregar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint a una granja de servidores de sharepoint 2010 de tres niveles que se crea desde el principio. Una granja de tres niveles cuenta con los niveles de base de datos, de aplicación y de web. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Para agregar a esta topología, es necesario ejecutar el programa de instalación de SQL Server para instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en la capa de aplicación. Los archivos de programa de PowerPivot se agregan al nivel Web, pero solo como una tarea posterior a la instalación cuando se implementa la solución de aplicación Web. Si bien existen pasos de implementación, no hay ningún paso de instalación independiente en los niveles web o de datos. El único paso de instalación que debe realizar es instalar [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] en los servidores de aplicaciones.  
   
 ||  
 |-|  
@@ -26,7 +25,7 @@ ms.locfileid: "71952242"
   
   
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador local para instalar SQL Server y SharePoint 2010.  
   
  La persona que instale SharePoint también debe configurar la granja. Para configurar la granja, debe tener un inicio de sesión de SQL Server en el servidor de bases de datos. El inicio de sesión debe estar asignado a los siguientes roles: `dbcreator`, `securityadmin` y `public`.  
@@ -92,7 +91,7 @@ ms.locfileid: "71952242"
   
     6.  Haga clic con el botón secundario en **SQL Server (MSSQLSERVER)** y haga clic en **reiniciar**.  
   
-3.  Habilite el acceso entrante al servidor de base de datos a través de Firewall de Windows. Así, los servidores de SharePoint de la granja se pueden conectar a las bases de datos SharePoint. Para obtener más información, consulte [configurar Firewall de Windows para permitir el acceso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
+3.  Habilite el acceso entrante al servidor de base de datos a través de Firewall de Windows. Así, los servidores de SharePoint de la granja se pueden conectar a las bases de datos SharePoint. Para más información, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
     1.  En el panel de control de Windows, en herramientas administrativas, haga clic en **firewall de Windows con seguridad avanzada**.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "71952242"
   
     4.  En tipo de regla, haga clic en **personalizado**.  
   
-    5.  Haga clic en **Next**.  
+    5.  Haga clic en **Siguiente**.  
   
     6.  En programa, en la sección servicios, haga clic en **personalizar**.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "71952242"
   
     8.  Seleccione **SQL Server (MSSQLSERVER)** si instaló SQL Server como instancia predeterminada y, a continuación, haga clic en **Aceptar**.  
   
-    9. Haga clic en **Next**.  
+    9. Haga clic en **Siguiente**.  
   
     10. En protocolo y puertos, acepte la configuración predeterminada y haga clic en **siguiente**.  
   
@@ -189,7 +188,7 @@ ms.locfileid: "71952242"
   
  Para comprobar la integración de PowerPivot con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede\<especificar http://el nombre del equipo> en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si ha usado los valores predeterminados, puede especificar http:// \<your computer name> en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de PowerPivot están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por PowerPivot:  
   
@@ -209,9 +208,9 @@ ms.locfileid: "71952242"
   
 5.  Inicie SQL Server Management Studio desde el grupo de programas de Microsoft SQL Server 2008 R2 en el menú Inicio. Si esta herramienta no está instalada en el servidor, puede pasar al último paso para confirmar la presencia de archivos almacenados en caché.  
   
-6.  En Tipo de servidor, seleccione **Analysis Services**.  
+6.  En tipo de servidor, seleccione **Analysis Services**.  
   
-7.  En nombre del servidor, escriba ** \<el nombre del servidor> \powerpivot**, donde ** \<nombre** del servidor>es el nombre del equipo que tiene la PowerPivot para SharePoint instalación.  
+7.  En nombre del servidor, escriba ** \<server-name> \powerpivot**, donde **\<server-name>** es el nombre del equipo que tiene la instalación de PowerPivot para SharePoint.  
   
 8.  Haga clic en **Conectar**.  
   

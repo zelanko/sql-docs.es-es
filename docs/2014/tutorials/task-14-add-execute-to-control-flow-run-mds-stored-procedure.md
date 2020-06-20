@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a5d1b52-d505-4e6f-8a89-569329c094e2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 151db2640e9038ad574775fa5374bddb9ed4aad0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78177295"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061123"
 ---
 # <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Tarea 14: Adición de la tarea Ejecutar SQL al flujo de control para ejecutar el procedimiento almacenado de MDS
   Después de cargar datos en las tablas de ensayo de MDS, hay que ejecutar un procedimiento almacenado asociado a esa tabla para cargar los datos de las tablas de ensayo en las tablas adecuadas de la base de datos de MDS. Este procedimiento almacenado tiene dos parámetros requeridos que tiene que pasar: LogFlag y VersionName. LogFlag especifica si las transacciones se registran durante el proceso de almacenamiento provisional y VersionName representa la versión del modelo. Vea el tema sobre [procedimientos almacenados preconfigurados](https://msdn.microsoft.com/library/hh231028.aspx) para obtener más detalles.
@@ -34,7 +33,7 @@ ms.locfileid: "78177295"
 
 5.  Mediante la ventana **variables** , agregue dos nuevas variables con la siguiente configuración. Si no ve la ventana **variables** , haga clic en **SSIS** en la barra de menús y, a continuación, haga clic en **variables**.
 
-    |Nombre|Tipo de datos|Value|
+    |Name|Tipo de datos|Valor|
     |----------|---------------|-----------|
     |LogFlag|Int32|1|
     |VersionName|String|VERSION_1|

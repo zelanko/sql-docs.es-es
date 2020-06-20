@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 65b0267d-b2ab-4a59-83f2-436d90cfbf79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a9dc6aadde75d1d4df797f85c0343bb11083b80f
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 5db3b83ab65d854f3a4d2182d9a4a1314e097681
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702049"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021059"
 ---
 # <a name="disconnecting-from-a-data-source"></a>Desconectarse de un origen de datos
   Cuando una aplicación ha terminado de usar un origen de datos, llama a **SQLDisconnect**. **SQLDisconnect** libera todas las instrucciones que se asignan en la conexión y desconecta el controlador del origen de datos. Después de desconectarse, la aplicación puede llamar a [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) para liberar el identificador de conexión. Antes de salir, una aplicación también llama a **SQLFreeHandle** para liberar el identificador del entorno.  

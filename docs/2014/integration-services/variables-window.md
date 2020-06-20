@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 258fdee44c2ab67babfa366f627b7b297c5f1535
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877880"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972565"
 ---
 # <a name="variables-window"></a>Ventana Variables
   Use la ventana **Variables** para crear y modificar variables definidas por el usuario y ver variables del sistema.  
@@ -64,7 +63,7 @@ ms.locfileid: "62877880"
  Presenta el valor de la variable. Puede actualizar el valor de la variable para variables definidas por el usuario. Este valor puede ser un literal o una expresión y el valor puede ser una cadena de varias líneas. Para asignar una expresión variable, haga clic en el botón de la elipse que se encuentra junto a la columna **Expresión** en la ventana **Variables** .  
   
  `Namespace`  
- Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean Inicialmente en el espacio de nombres del **usuario** , pero puede cambiar el `Namespace` nombre del espacio de nombres en el campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
+ Presenta el nombre del espacio de nombres. Las variables definidas por el usuario se crean Inicialmente en el espacio de nombres del **usuario** , pero puede cambiar el nombre del espacio de nombres en el `Namespace` campo. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  
   
  **Raise Change Event**  
  Indica si se activa un evento `OnVariableValueChanged` cuando un valor cambia. Puede actualizar el valor de la variable para variables definidas por el usuario y el sistema. De manera predeterminada, la ventana **Variables** no muestra esta columna. Para mostrar esta columna, haga clic en **Opciones de cuadrícula**.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 68fe4bbc199d6555bd490d25f92491100b8bbfcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62875671"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957165"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurar una copia de seguridad de registros de transacciones (SQL Server)
   En este tema se describe cómo restaurar una copia de seguridad del registro de transacciones en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +99,7 @@ ms.locfileid: "62875671"
     |------------|-----------|  
     |**Restauración**|Las casillas seleccionadas indican los conjuntos de copias de seguridad que se restaurarán.|  
     |**Nombre**|Nombre del conjunto de copia de seguridad.|  
-    |**Componente**|Componente cuya copia de seguridad se ha realizado: **Base de datos**, **Archivo** o \<en blanco> (para registros de transacciones).|  
+    |**Componente**|Componente del que se ha realizado una copia de seguridad: **base de datos**, **archivo**o \<blank> (para registros de transacciones).|  
     |**Base de datos**|Nombre de la base de datos que forma parte de la operación de copia de seguridad.|  
     |**Fecha de inicio**|Fecha y hora de inicio de la operación de copia de seguridad, según la configuración regional del cliente.|  
     |**Fecha final**|Fecha y hora de finalización de la operación de copia de seguridad, según la configuración regional del cliente.|  
@@ -146,9 +145,9 @@ ms.locfileid: "62875671"
   
          Conserva la configuración de replicación cuando se restaura una base de datos publicada en un servidor distinto de aquel en que se creó.  
   
-         Esta opción solo está disponible con la opción **dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas...** (descrita más adelante), que equivale a restaurar una `RECOVERY` copia de seguridad con la opción.  
+         Esta opción solo está disponible con la opción **dejar la base de datos lista para su uso revirtiendo las transacciones no confirmadas...** (descrita más adelante), que equivale a restaurar una copia de seguridad con la `RECOVERY` opción.  
   
-         La activación de esta opción equivale a utilizar `KEEP_REPLICATION` la opción en [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` una instrucción.  
+         La activación de esta opción equivale a utilizar la `KEEP_REPLICATION` opción en una [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
     -   **Preguntar antes de restaurar cada copia de seguridad**  
   
@@ -162,7 +161,7 @@ ms.locfileid: "62875671"
   
          Hace que la base de datos restaurada esté disponible solo para los miembros de **db_owner**, **dbcreator**o **sysadmin**.  
   
-         La activación de esta opción equivale al uso `RESTRICTED_USER` de la opción [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` en una instrucción.  
+         La activación de esta opción equivale al uso `RESTRICTED_USER` de la opción en una [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` instrucción.  
   
 10. Para las opciones **Estado de recuperación** , especifique el estado de la base de datos después de la operación de restauración.  
   

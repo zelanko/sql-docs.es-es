@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 442c841d-d528-4bf0-8724-7156f909ee50
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b71e4254312c0dc07d6d8869a2e8b28eb02c36fe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767564"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84966135"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: Adición y configuración del destino de OLE DB
   Ahora, el paquete puede extraer datos de un origen de archivo plano y transformar dichos datos en un formato compatible con el destino. La tarea siguiente consiste realmente en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede utilizar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
@@ -38,7 +37,7 @@ ms.locfileid: "62767564"
   
 7.  En el cuadro **Nombre de la tabla o la vista** , escriba o seleccione **[dbo].[FactCurrencyRate]**.  
   
-8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **Aceptar**.  
+8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **OK**.  
   
 9. Al hacer clic en **Aceptar**, se cerrará el cuadro de diálogo y el **Nombre de la tabla o la vista** cambiará automáticamente a **NewFactCurrencyRate**.  
   
@@ -46,11 +45,11 @@ ms.locfileid: "62767564"
   
 11. Compruebe que las columnas de entrada **AverageRate**, **CurrencyKey**, **EndOfDayRate**y **DateKey** están correctamente asignadas a las columnas de destino. Si hay columnas con el mismo nombre asignadas, la asignación es correcta.  
   
-12. Haga clic en **Aceptar**.  
+12. Haga clic en **OK**.  
   
 13. Haga clic con el botón derecho en **Sample OLE DB Destination** y haga clic en **Propiedades**.  
   
-14. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **Inglés (Estados Unidos)** y que`DefaultCodePage` la propiedad está establecida en **1252**.  
+14. En el ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** y que la `DefaultCodePage` propiedad está establecida en **1252**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 8: Facilitar la comprensión del paquete de la lección 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

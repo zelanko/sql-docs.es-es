@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d7df283-430d-4f0f-9dd4-5909554cd5eb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6f993f1f2386782bf8225f22b285b9385e2f8e3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 254680ce380b88aca01184bb744a7dde1b8e5611
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054540"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972483"
 ---
 # <a name="web-service-task-editor-general-page"></a>Editor de la tarea Servicio web (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Servicio web** para especificar un administrador de conexiones de HTTP, especificar la ubicación del archivo de Lenguaje de descripción de servicios web (WSDL) que usa la tarea Servicio web, describir la tarea Servicios web y descargar el archivo WSDL.  
@@ -28,7 +27,7 @@ ms.locfileid: "66054540"
   
 ## <a name="options"></a>Opciones  
  **HTTPConnection**  
- Seleccione un administrador de conexiones de la lista o haga \<clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
 > [!IMPORTANT]  
 >  El administrador de conexiones HTTP solo es compatible con la autenticación anónima y la autenticación básica. No es compatible con la autenticación de Windows.  
@@ -44,7 +43,7 @@ ms.locfileid: "66054540"
   
 -   Seleccione este archivo vacío para la opción **WSDLFile** .  
   
--   Establezca el valor de **OverwriteWSDLFile** en `True` para permitir que el archivo vacío se SOBRESCRIBA con el archivo WSDL real.  
+-   Establezca el valor de **OverwriteWSDLFile** en `True` para permitir que el archivo vacío se sobrescriba con el archivo WSDL real.  
   
 -   Haga clic en **Descargar WSDL** para descargar el archivo WSDL real y sobrescribir el archivo vacío.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "66054540"
  **OverwriteWSDLFile**  
  Indica si el archivo WSDL de la tarea Servicio web se puede sobrescribir.  
   
- Si tiene previsto descargar el archivo WSDL mediante el botón **Descargar WSDL** , establezca este valor en `True`.  
+ Si tiene previsto descargar el archivo WSDL mediante el botón **Descargar WSDL** , establezca este valor en `True` .  
   
  **Nombre**  
  Proporcione un nombre único para la tarea Servicio web. Este nombre se utiliza como etiqueta en el icono de tarea.  

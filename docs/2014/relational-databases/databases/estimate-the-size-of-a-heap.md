@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 814175fa78176d14167355bfe188179552c545c6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916749"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965985"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
   Los siguientes pasos pueden utilizarse para calcular el espacio necesario para almacenar datos en un montón:  
@@ -57,13 +56,13 @@ ms.locfileid: "62916749"
      Los bytes agregados a ***Max_Var_Size*** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de ***Max_Var_Size*** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
     > [!NOTE]  
-    >  Puede combinar las columnas `varchar`, `nvarchar`, `varbinary` o `sql_variant` que hagan que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas todavía debe estar comprendida en el límite de 8.000 bytes para `varchar`una `nvarchar,``varbinary`columna, `sql_variant` o. Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
+    >  Puede combinar las columnas `varchar`, `nvarchar`, `varbinary` o `sql_variant` que hagan que el ancho total definido para la tabla sea superior a 8.060 bytes. La longitud de cada una de estas columnas todavía debe estar comprendida en el límite de 8.000 bytes para `varchar` una `nvarchar,``varbinary` columna, o `sql_variant` . Sin embargo, el ancho combinado puede superar el límite de 8.060 bytes de una tabla.  
   
      Si no hay columnas de longitud variable, establezca ***Variable_Data_Size*** en 0.  
   
 5.  Calcule el tamaño total de la fila:  
   
-     ***Row_Size***  = ***Fixed_Data_Size***Fixed_Data_Size + ***Variable_Data_Size***Variable_Data_Size + ***Null_Bitmap*** + 4  
+     ***Row_Size***   =  ***Fixed_Data_Size***  +  ***Variable_Data_Size***  +  ***Null_Bitmap*** + 4  
   
      El valor 4 de la fórmula representa la sobrecarga del encabezado de la fila de datos.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "62916749"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se utilizará para almacenar los tipos `varchar(max)`de `varbinary(max)`datos `nvarchar(max)`LOB `text`,,,, `image` **ntextxml**y los valores es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se utilizará para almacenar los tipos de datos LOB `varchar(max)` ,, `varbinary(max)` `nvarchar(max)` , `text` , **ntextxml**y `image` los valores es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
   
 -   Compresión  
   

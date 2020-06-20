@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 105bbb66-0ade-4b46-b8e4-f849e5fc4d43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2036dd0624e8c2c6479c8ba039aa5646f374902d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ef8f72c282c540d695b799f0c4a884734db2c491
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211310"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85062123"
 ---
 # <a name="use-tokens-in-job-steps"></a>Usar tokens en pasos de trabajo
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite usar tokens en scripts de pasos de trabajo de [!INCLUDE[tsql](../../includes/tsql-md.md)] . La utilización de tokens al escribir pasos de trabajo ofrece la misma flexibilidad que las variables al escribir programas de software. Una vez que se inserta un token en un script de pasos de trabajo, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sustituye el token en tiempo de ejecución, antes de que el subsistema de [!INCLUDE[tsql](../../includes/tsql-md.md)] ejecute el paso de trabajo.  
@@ -34,7 +33,7 @@ ms.locfileid: "68211310"
 ## <a name="understanding-using-tokens"></a>Descripción del uso de tokens  
   
 > [!IMPORTANT]  
->  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**y **WMI (*`property`*)**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
+>  Todos los usuarios de Windows que tengan permisos de escritura en el Registro de eventos de Windows pueden tener acceso a los pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o de WMI. Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Estos tokens son: **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**y **WMI ( *`property`* )**. Tenga en cuenta que en esta versión el uso de los tokens se ha ampliado a todas las alertas.  
 >   
 >  Si necesita usar estos tokens, asegúrese primero de que solo los miembros de los grupos de seguridad de Windows de confianza, como el grupo Administradores, tienen permisos de escritura en el registro de eventos del equipo donde reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . A continuación, para habilitar estos tokens, haga clic con el botón derecho en **Agente SQL Server** en el Explorador de objetos, elija **Propiedades**y, en la página **Sistema de alerta** , active la casilla **Reemplazar tokens para todas las respuestas de trabajos a alertas** .  
   
@@ -59,7 +58,7 @@ ms.locfileid: "68211310"
   
 ### <a name="sql-server-agent-tokens"></a>Tokens del Agente SQL Server  
   
-|Token|Descripción|  
+|Token|Description|  
 |-----------|-----------------|  
 |**(A-DBN)**|nombre de base de datos. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre de la base de datos sustituye automáticamente a este token en el paso de trabajo.|  
 |**(A-SVR)**|Nombre de servidor. Si el trabajo se ejecuta a causa de una alerta, el valor del nombre del servidor sustituye automáticamente a este token en el paso de trabajo.|  
@@ -84,7 +83,7 @@ ms.locfileid: "68211310"
   
 ### <a name="sql-server-agent-escape-macros"></a>Macros de escape del Agente SQL Server  
   
-|Macros de escape|Descripción|  
+|Macros de escape|Description|  
 |-------------------|-----------------|  
 |**$(ESCAPE_SQUOTE(** *nombre_de_token* **))**|Convierte las comillas simples (') en la cadena de reemplazo del token. Sustituye una comilla simple por dos comillas simples.|  
 |**$(ESCAPE_DQUOTE(** *nombre_de_token* **))**|Convierte las comillas dobles ('') en la cadena de reemplazo del token. Sustituye una comilla doble por dos comillas dobles.|  
@@ -100,7 +99,7 @@ ms.locfileid: "68211310"
   
 |Sintaxis de los tokens|Alerta de sustitución de tokens activada|Alerta de sustitución de tokens desactivada|  
 |------------------|--------------------------------|---------------------------------|  
-|Macro ESCAPE utilizada|Todos los tokens de los trabajos se han sustituido correctamente.|Los tokens activados por alertas no se han sustituido. Estos tokens son **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**y **WMI (*`property`*)**. Otros tokens estáticos se han sustituido correctamente.|  
+|Macro ESCAPE utilizada|Todos los tokens de los trabajos se han sustituido correctamente.|Los tokens activados por alertas no se han sustituido. Estos tokens son **a-DBN**, **a-SVR**, **a-Err**, **a-gravedad**, **a-MSG**y **WMI ( *`property`* )**. Otros tokens estáticos se han sustituido correctamente.|  
 |Macro ESCAPE no utilizada|Los trabajos que contienen tokens producen un error.|Los trabajos que contienen tokens producen un error.|  
   
 ## <a name="token-syntax-update-examples"></a>Ejemplos de actualización de la sintaxis del token  

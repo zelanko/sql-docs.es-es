@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 60a56b6d64957198292146d392ea22a572fb8a4e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 9e2411daea2d4b1c4028e9ed0b3143762f2db592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000965"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933026"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propiedades del catálogo de texto completo (página General)
   En esta sección se muestran las opciones y funciones disponibles en la página **General** del cuadro de diálogo **Propiedades del catálogo de texto completo** .  
@@ -85,7 +84,7 @@ ms.locfileid: "83000965"
   
 |||  
 |-|-|  
-|**Ninguno**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
+|**None**|No realiza las operaciones **Optimizar catálogo**, **Volver a generar el catálogo**ni **Volver a llenar el catálogo** .|  
 |**Optimizar catálogo**|Optimiza el uso de espacio del catálogo y mejora el rendimiento de las consultas. También mejora la precisión de la clasificación de los aciertos de los resultados de las búsquedas.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
 |**Volver a generar el catálogo**|Elimina el catálogo de texto completo y lo genera de nuevo. Esta operación debe realizarse si se modifica una propiedad básica del catálogo, como la distinción de acentos.<br /><br /> Para que el catálogo se genere correctamente, el grupo de archivos en el que reside el catálogo de texto completo debe estar en línea o tener el acceso de lectura y escritura activado. Después de la regeneración, se volverá a llenar el índice de texto completo.<br /><br /> Esta acción ejecuta ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Volver a llenar el catálogo**|Actualiza el catálogo con los cambios recientes realizados en los datos. Para esta opción, el catálogo debe estar inactivo.|  

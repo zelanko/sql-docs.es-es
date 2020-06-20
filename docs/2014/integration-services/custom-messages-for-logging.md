@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67316665"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84917155"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona a un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
@@ -33,9 +32,9 @@ ms.locfileid: "67316665"
   
  [Paquete](#Package)  
   
- [Inserción masiva, tarea](#BulkInsert)  
+ [Tarea Inserción masiva](#BulkInsert)  
   
- [tarea Flujo de datos](#DataFlow)  
+ [Tarea Flujo de datos](#DataFlow)  
   
  [Tarea Ejecutar DTS 2000](#ExecuteDTS200)  
   
@@ -47,11 +46,11 @@ ms.locfileid: "67316665"
   
  [Tarea FTP](#FTP)  
   
- [Message Queue Task](#MessageQueue)  
+ [Tarea Cola de mensajes](#MessageQueue)  
   
  [Tarea Script](#Script)  
   
- [Enviar correo, tarea](#SendMail)  
+ [Tarea Enviar correo](#SendMail)  
   
  [Tarea Transferir bases de datos](#TransferDatabase)  
   

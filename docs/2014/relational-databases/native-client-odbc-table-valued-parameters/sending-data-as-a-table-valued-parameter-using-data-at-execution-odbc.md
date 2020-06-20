@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2b1e6b5b366a6c4132be78ff089dbe0001efd41
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93711e90fcc924d53747e5ec47e33fc0f6eb4946
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82698618"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056467"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
   Es similar al procedimiento [All in memory](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) , pero utiliza datos en ejecución para el parámetro con valores de tabla.  
@@ -184,7 +183,7 @@ from @Items
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo muestra que puede usar el streaming de filas, una fila por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP. exe para cargar datos en una base de datos.  
+ Este ejemplo muestra que puede usar el streaming de filas, una fila por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP.exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
   
@@ -372,7 +371,7 @@ EXIT:
 ## <a name="example"></a>Ejemplo  
   
 ### <a name="description"></a>Descripción  
- Este ejemplo muestra que puede usar el streaming de filas, varias filas por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP. exe para cargar datos en una base de datos.  
+ Este ejemplo muestra que puede usar el streaming de filas, varias filas por llamada a SQLPutData, con ODBC TVP, de forma similar a como podría utilizar BCP.exe para cargar datos en una base de datos.  
   
  Antes de generar el ejemplo, cambie el nombre del servidor en la cadena de conexión.  
   

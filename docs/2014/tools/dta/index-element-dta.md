@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59650edbef55b7bb433c6003c9ddc0f203ca7c5e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 110dcd8ef5f554bdf1c59ab9a15984ec8ca97c65
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63229005"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048400"
 ---
 # <a name="index-element-dta"></a>Index, elemento (DTA)
   Contiene información acerca de un índice de una configuración especificada por el usuario que se desea crear o quitar.  
@@ -38,17 +37,17 @@ ms.locfileid: "63229005"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo Index|Tipo de datos|Descripción|  
+|Atributo Index|Tipo de datos|Description|  
 |---------------------|---------------|-----------------|  
 |`Clustered`|`boolean`|Opcional. Especifica un índice clúster. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Clustered="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |`Unique`|`boolean`|Opcional. Especifica un índice único. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Unique="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".|  
 |`Online`|`boolean`|Opcional. Especifica un índice que puede realizar operaciones mientras el servidor está en línea, lo que exige espacio temporal en disco. Se establece en "true" o "false", por ejemplo:<br /><br /> `<Index Online="true">`<br /><br /> De forma predeterminada, este atributo está establecido en "false".<br /><br /> Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).|  
 |`IndexSizeInMB`|`double`|Opcional. Especifica el tamaño máximo del índice en megabytes, por ejemplo:<br /><br /> `<Index IndexSizeInMB="873.75">`<br /><br /> Sin valor predeterminado.|  
 |`NumberOfRows`|`integer`|Opcional. Simula diferentes tamaños de índice, lo que simula de forma eficaz diferentes tamaños de tabla, por ejemplo:<br /><br /> `<Index NumberOfRows="3000">`<br /><br /> Sin valor predeterminado.|  
-|`QUOTED_IDENTIFIER`|`boolean`|Opcional. Hace [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que siga las reglas ISO con respecto a las comillas delimitadoras de identificadores y cadenas literales. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
+|`QUOTED_IDENTIFIER`|`boolean`|Opcional. Hace que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siga las reglas de ISO en cuanto a las comillas delimitadoras de identificadores y cadenas literales. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index QUOTED_IDENTIFIER [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).|  
 |`ARITHABORT`|`boolean`|Opcional. Cancela una consulta cuando se produce un error de desbordamiento o división por cero durante su ejecución. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ARITHABORT [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql).|  
 |`CONCAT_NULL_YIELDS_`<br /><br /> `NULL`|`boolean`|Opcional. Determina si los resultados de la concatenación se tratan como valor NULL o como cadena vacía. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index CONCAT_NULL_YIELDS_NULL [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql).|  
-|`ANSI_NULLS`|`boolean`|Opcional. Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_NULLS &#40;&#41;de Transact-SQL ](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
+|`ANSI_NULLS`|`boolean`|Opcional. Especifica el comportamiento conforme a ISO de los operadores de comparación Es igual a (=) y No es igual a (<>) cuando se utilizan con valores NULL. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_NULLS [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql).|  
 |`ANSI_PADDING`|`boolean`|Opcional. Controla el modo en que una columna almacena valores inferiores a su tamaño definido. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_PADDING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).|  
 |`ANSI_WARNINGS`|`boolean`|Opcional. Especifica el comportamiento estándar de ISO para diversas condiciones de error. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar activado. Por ejemplo, la sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql).|  
 |`NUMERIC_ROUNDABORT`|`boolean`|Opcional. Especifica el nivel de informes de error generados cuando el redondeo en una expresión produce pérdida de precisión. Si el índice se encuentra en una columna o una vista calculada, este atributo debe estar desactivado.<br /><br /> La sintaxis siguiente activa este atributo:<br /><br /> `<Index ANSI_WARNING [...]>`<br /><br /> De forma predeterminada, este atributo está desactivado.<br /><br /> Para obtener más información, vea [SET NUMERIC_ROUNDABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql).|  
@@ -59,7 +58,7 @@ ms.locfileid: "63229005"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|Ninguno.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Casos**|Una obligatoria por cada elemento `Create` o `Drop` si no se especifica otra estructura de diseño físico con el elemento `Statistics` o `Heap`.|  
+|**Repetición**|Una obligatoria por cada elemento `Create` o `Drop` si no se especifica otra estructura de diseño físico con el elemento `Statistics` o `Heap`.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

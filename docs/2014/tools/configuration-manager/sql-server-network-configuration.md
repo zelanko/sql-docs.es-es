@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ef2e5e6a-e2cf-4391-803c-23096dee1a14
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 341f7fa171213e37e8ec59b540b7116cb1991fdf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b02539169f8e16d0de9b06a0cd6c69a225d6e448
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63028282"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057810"
 ---
 # <a name="sql-server-network-configuration"></a>Configuración de red de SQL Server
   Esta sección contiene los temas de la Ayuda F1 para los cuadros de diálogo de **Configuración de red de servidor** del Administrador de configuración de SQL Server.  

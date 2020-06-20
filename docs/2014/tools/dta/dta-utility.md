@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9c412258e04c1945638e0302a2c0c7bf2fb657a0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62670702"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85057779"
 ---
 # <a name="dta-utility"></a>dta, utilidad
   La utilidad **dta** es la versión del símbolo del sistema del Asistente para la optimización de motor de base de datos. La utilidad **dta** está diseñada para permitir usar la funcionalidad del Asistente para la optimización de motor de base de datos en aplicaciones y scripts.  
@@ -134,7 +133,7 @@ dta -d AdventureWorks2012 ...
   
  Si se especifican varios nombres de bases de datos, **dta** devuelve un error. El argumento **-d** es opcional.  
   
- Si utiliza un archivo de entrada XML, puede especificar la primera base de datos a la que se conecta **DTA** mediante `DatabaseToConnect` el elemento que se encuentra bajo `TuningOptions` el elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
+ Si utiliza un archivo de entrada XML, puede especificar la primera base de datos a la que se conecta **DTA** mediante el `DatabaseToConnect` elemento que se encuentra bajo el `TuningOptions` elemento. Para obtener más información, vea [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md).  
   
  Si solo optimiza una base de datos, el argumento **-d** proporciona una funcionalidad similar a la del argumento **-d** de la utilidad **sqlcmd** , pero no ejecuta la instrucción USE *database_name* . Para obtener más información, consulte [sqlcmd Utility](../sqlcmd-utility.md).  
   
@@ -161,9 +160,9 @@ dta -d AdventureWorks2012 ...
  Permite que **dta** sobrescriba un archivo de salida existente. Si ya existe un archivo de salida con el mismo nombre y no se especifica **-F** , **dta**devuelve un error. Puede usar **-F** con **-of**, **-or**o **-ox**.  
   
  **-fa** _physical_design_structures_to_add_  
- Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **DTA** usa el valor predeterminado **-FA**`IDX`.  
+ Especifica los tipos de estructuras de diseño físico que **dta** debe incluir en la recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento. Cuando no se especifica ningún valor, **DTA** usa el valor predeterminado **-FA** `IDX` .  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |IDX_IV|Índices y vistas indizadas.|  
 |IDX|Solo índices.|  
@@ -176,7 +175,7 @@ dta -d AdventureWorks2012 ...
  **-fk** _keep_existing_option_  
  Especifica las estructuras de diseño físico existentes que **dta** debe conservar cuando genere su recomendación. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguno|Ninguna estructura existente|  
 |ALL|Todas las estructuras existentes|  
@@ -187,13 +186,13 @@ dta -d AdventureWorks2012 ...
  **-fp** _partitioning_strategy_  
  Especifica si se deben crear particiones de las nuevas estructuras de diseño físico (índices y vistas indexadas) que **dta** propone y cómo se deben crear esas particiones. En la tabla siguiente se muestran y describen los valores que se pueden especificar para este argumento:  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |Ninguno|No crear particiones|  
 |FULL|Particiones completas (para mejorar el rendimiento)|  
 |ALIGNED|Solo particiones alineadas (para mejorar la capacidad de administración)|  
   
- ALIGNED significa que, en la recomendación generada por **dta** , cada índice propuesto se divide exactamente igual que la tabla subyacente para la que se ha definido el índice. Los índices no clúster de una vista indizada se alinean con la vista indizada. Solo se puede especificar un valor para este argumento. El valor predeterminado es **-FP**`NONE`.  
+ ALIGNED significa que, en la recomendación generada por **dta** , cada índice propuesto se divide exactamente igual que la tabla subyacente para la que se ha definido el índice. Los índices no clúster de una vista indizada se alinean con la vista indizada. Solo se puede especificar un valor para este argumento. El valor predeterminado es **-FP** `NONE` .  
   
  **-fx** _drop_only_mode_  
  Especifica que **dta** solo tiene en cuenta la eliminación de estructuras de diseño físicas existentes. No se tienen en cuenta las nuevas estructuras de diseño físico. Cuando se especifica esta opción, **dta** evalúa la utilidad de las estructuras de diseño físico existentes y recomienda la eliminación de las estructuras que se usan en contadas ocasiones. Este argumento no necesita valores. No puede usarse con los argumentos **-fa**, **-fp**o **-fk ALL** .  
@@ -201,24 +200,24 @@ dta -d AdventureWorks2012 ...
  **-ID** _session_ID_  
  Especifica un identificador numérico para la sesión de optimización. Si no se especifica, **dta** genera un número de identificación. Puede usar este identificador para ver la información de las sesiones de optimización existentes. Si no especifica un valor para **-ID**, debe especificar un nombre de sesión con **-s**.  
   
- **-IP**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **-n** .  
+ **-ip**  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para las bases de datos seleccionadas explícitamente. Este valor se puede cambiar mediante la opción **- n**.  
   
  **-ipf**  
- Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **-n** .  
+ Especifica que la memoria caché del plan se usará como carga de trabajo. Se analizan los primeros 1.000 eventos de la memoria caché del plan para todas las bases de datos. Este valor se puede cambiar mediante la opción **- n**.  
   
  **-if** _workload_file_  
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
   
  **-it** _workload_trace_table_name_  
- Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  En la tabla siguiente se muestran los valores predeterminados para cada parámetro:  
   
 |Parámetro|Valor predeterminado|  
 |---------------|-------------------|  
-|*database_name*|*database_name* especificado con **la opción-D** .|  
-|*owner_name*|**DBO**.|  
+|*database_name*|*database_name* especificado con la opción **-D**.|  
+|*owner_name*|**dbo**.|  
 |*table_name*|Ninguno.|  
   
 > [!NOTE]  
@@ -265,7 +264,7 @@ dta -n number_of_events -A 0
   
  Puede usar **-F** con esta opción. Asegúrese de que el nombre de archivo es exclusivo, especialmente si también usa **-of** y **-or**.  
   
- **-P** _contraseña_  
+ **-P** _password_  
  Especifica la contraseña para el identificador de inicio de sesión. Si no se usa esta opción, **dta** solicitará una contraseña.  
   
  **-q**  
@@ -316,14 +315,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Este argumento es una alternativa a especificar una lista de tablas en el símbolo del sistema (**-Tl**). No use un archivo de lista de tabla (**-Tf**) si usa **-Tl**. Si se usan ambos argumentos, **dta** devuelve un error.  
+ Este argumento es una alternativa a especificar una lista de tablas en el símbolo del sistema ( **-Tl**). No use un archivo de lista de tabla ( **-Tf**) si usa **-Tl**. Si se usan ambos argumentos, **dta** devuelve un error.  
   
  Si se omiten los argumentos **-Tf** y **-Tl** , todas las tablas de usuario de las bases de datos especificadas se tienen en cuenta para la optimización.  
   
  **-Tl** _table_list_  
  Especifica en el símbolo del sistema una lista de tablas que se optimizarán. Use una coma entre los nombres de tabla para separarlos. Si solo se especifica una base de datos con el argumento **-D** , no es necesario calificar los nombres de tabla con un nombre de base de datos. De lo contrario, se requiere el nombre completo en el formato *database_name.schema_name.table_name* para cada tabla.  
   
- Este argumento es una alternativa al uso de un archivo de lista de tablas (**-Tf**). Si se usa tanto **-Tl** como **-Tf** , **dta** devuelve un error.  
+ Este argumento es una alternativa al uso de un archivo de lista de tablas ( **-Tf**). Si se usa tanto **-Tl** como **-Tf** , **dta** devuelve un error.  
   
  **-U** _login_id_  
  Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -390,6 +389,6 @@ dta -D pubs -if pubs_wkld.sql -ox XMLTune.xml -A 120 -Tf table_list.txt
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de la utilidad de símbolo del sistema &#40;Motor de base de datos&#41;](../command-prompt-utility-reference-database-engine.md)   
- [Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

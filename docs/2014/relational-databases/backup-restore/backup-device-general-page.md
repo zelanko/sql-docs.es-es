@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a4f23fd3d6d8208410c520676ee4e0c8bbe00fd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d73bdf3ce4b88214286b5f232924d811716a247e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922146"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959385"
 ---
 # <a name="backup-device-general-page"></a>Dispositivo de copia de seguridad (página General)
   Utilice la página **General** para especificar o ver las propiedades generales de un dispositivo lógico de copia de seguridad.  

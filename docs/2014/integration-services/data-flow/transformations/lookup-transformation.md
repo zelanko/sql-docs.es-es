@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 69ed33b3967b3c807b21df0ab8a3a4a1cd07bebc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900291"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939496"
 ---
 # <a name="lookup-transformation"></a>Transformación de búsqueda
   La transformación Búsqueda realiza búsquedas mediante la combinación de datos de columnas de entrada con columnas de un conjunto de datos de referencia. La búsqueda se utiliza para tener acceso a información adicional en una tabla relacionada que está basada en valores de columnas comunes.  
@@ -74,7 +73,7 @@ ms.locfileid: "62900291"
 -   Resultado no coincidente. El resultado no coincidente administra las filas de la entrada que no coinciden como mínimo con una entrada del conjunto de datos de referencia. Si configura la transformación Búsqueda para que trate como errores las filas sin entradas coincidentes, las filas se redirigirán a la salida de errores. En los demás casos, la transformación redirigiría dichas filas al resultado no coincidente.  
   
     > [!NOTE]  
-    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación búsqueda creada en, vea [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]actualización de [transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  En [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)], la transformación Búsqueda solo tenía un resultado. Para obtener más información sobre cómo ejecutar una transformación búsqueda creada en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] , vea actualización de [transformaciones de búsqueda](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Resultado de errores  
   

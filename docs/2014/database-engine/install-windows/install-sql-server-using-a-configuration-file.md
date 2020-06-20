@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 89215c16f958848942c64d2427d7201bc13cb282
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775288"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932406"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Instalar SQL Server 2014 mediante un archivo de configuración
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación permite generar un archivo de configuración basado en las entradas de tiempo de ejecución y en la configuración predeterminada del sistema. Puede usar el archivo de configuración para implementar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en toda la empresa con la misma configuración. También puede normalizar las instalaciones manuales en toda la empresa mediante la creación de un archivo por lotes que inicie Setup.exe.  
@@ -56,7 +55,7 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE=Normal /ACTION=INSTALL  
   
-2.  Siga los pasos del asistente hasta llegar a la página **Listo para instalar** . La ruta de acceso al archivo de configuración se especifica en la sección que así lo indica en la página **Listo para instalar** . Para obtener más información acerca de cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]instalar, consulte instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
+2.  Siga los pasos del asistente hasta llegar a la página **Listo para instalar** . La ruta de acceso al archivo de configuración se especifica en la sección que así lo indica en la página **Listo para instalar** . Para obtener más información acerca de cómo instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte Instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
   
 3.  Cancele la instalación sin completarla realmente para generar el archivo INI.  
   
@@ -71,7 +70,7 @@ FEATURES=SQL,Tools
   
 #### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-ssnoversion-instance"></a>Cómo usar un archivo de configuración para instalar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente  
   
--   Ejecute la instalación a través del símbolo del sistema y proporcione el comando ConfigurationFile. ini mediante el parámetro *ConfigurationFile* .  
+-   Ejecute la instalación a través del símbolo del sistema y proporcione el ConfigurationFile.ini mediante el parámetro *ConfigurationFile* .  
   
 #### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-ssnoversion-instance-sysprep"></a>Utilizar un archivo de configuración para preparar y completar una imagen de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] independiente (SysPrep)  
   

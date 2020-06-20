@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 698e3757a32d9a2a9db95df495e33903dbdfed1f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84925596"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
   Use la pestaña **Agregaciones** del cuadro de diálogo **Editor de transformación Agregado** para especificar las columnas que desea agregar y las propiedades de agregación. Puede aplicar diversas agregaciones. Esta transformación no genera una salida de errores.  
@@ -47,8 +46,8 @@ ms.locfileid: "66061579"
 |Value|Descripción|  
 |-----------|-----------------|  
 |Sin especificar|No se utiliza la propiedad Escala de claves.|  
-|Baja|La agregación podrá escribir aproximadamente 500 000 claves.|  
-|Medio|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
+|Bajo|La agregación podrá escribir aproximadamente 500 000 claves.|  
+|Media|La agregación podrá escribir aproximadamente 5.000.000 claves.|  
 |Alto|La agregación podrá escribir más de 25.000.000 claves.|  
   
  **Claves**  
@@ -70,27 +69,27 @@ ms.locfileid: "66061579"
 |---------------|-----------------|  
 |**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
 |**Sume**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
-|**Average**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
+|**Normales**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
 |**Recuento**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
 |**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
-|**Cantidad**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
-|**Máxima**|Devuelve el valor máximo en un grupo. Está restringido a los tipos de datos numéricos.|  
+|**Mínimo**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  
+|**Máximo**|Devuelve el valor máximo en un grupo. Está restringido a los tipos de datos numéricos.|  
   
  **Marcas de comparación**  
  Si selecciona **Agrupar por**, use las casillas para controlar cómo realiza la transformación la comparación. Para obtener más información acerca de las opciones de comparación de cadenas, vea [Comparing String Data](data-flow/comparing-string-data.md).  
   
  **Escala Count DISTINCT**  
- Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si se `CountDistinctScale` especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
+ Opcionalmente, puede especificar el número aproximado de valores DISTINCT que podrá escribir la agregación. De forma predeterminada, el valor de esta opción es **No especificado**. Si `CountDistinctScale` se especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
   
 |Value|Descripción|  
 |-----------|-----------------|  
 |Sin especificar|No se utiliza la propiedad `CountDistinctScale`.|  
-|Baja|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
-|Medio|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
+|Bajo|La agregación podrá escribir aproximadamente 500.000 valores DISTINCT.|  
+|Media|La agregación podrá escribir aproximadamente 5 000 000 valores DISTINCT.|  
 |Alto|La agregación podrá escribir más de 25.000.000 valores DISTINCT.|  
   
  **Claves Count DISTINCT**  
- Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si se `CountDistinctScale` especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
+ Opcionalmente, puede especificar el número exacto de valores DISTINCT que podrá escribir la agregación. Si `CountDistinctScale` se especifican y **CountDistinctKeys** , **CountDistinctKeys** tiene prioridad.  
   
 ## <a name="see-also"></a>Consulte también  
  [Referencia de errores y mensajes de Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

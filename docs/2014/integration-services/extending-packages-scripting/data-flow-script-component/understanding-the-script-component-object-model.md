@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a0aae82-39cc-4423-b09a-72d2f61033bd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 80d61a4b4742163d999aa2f5d70e70336e680e27
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176204"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967252"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Descripción del modelo de objetos del componente de script
   Tal como se describe en [codificar y depurar el componente de script] (.. /Extending-Packages-scripting/Data-Flow-script-Component/Coding-and-Debugging-The-script-Component.MD, el proyecto de componente de script contiene tres elementos de proyecto:
@@ -115,27 +114,27 @@ public override void PreExecute()
 
 -   Propiedades de descriptor de acceso con nombre y tipo para cada columna de entrada seleccionada. Estas propiedades son de solo lectura o de lectura y escritura, dependiendo del **Tipo de uso** especificado para la columna en la página **Columnas de entrada** del **Editor de transformación Script**.
 
--   Una propiedad **\<column>_IsNull** para cada columna de entrada seleccionada. Esta propiedad también es de solo lectura o de lectura y escritura, dependiendo del **Tipo de uso** especificado para la columna.
+-   ** \<column> _IsNull** propiedad para cada columna de entrada seleccionada. Esta propiedad también es de solo lectura o de lectura y escritura, dependiendo del **Tipo de uso** especificado para la columna.
 
--   Un método **DirectRowTo\<outputbuffer>** para cada salida configurada. Utilizará estos métodos al filtrar las filas a una de varias salidas en el mismo `ExclusionGroup`.
+-   Un **método \<outputbuffer> DirectRowTo** para cada salida configurada. Utilizará estos métodos al filtrar las filas a una de varias salidas en el mismo `ExclusionGroup`.
 
 -   Una función `NextRow` para obtener la siguiente fila de entrada y una función `EndOfRowset` para determinar si se ha procesado el último búfer de datos. Normalmente no necesita estas funciones al utilizar los métodos de procesamiento de entrada implementados en la clase base `UserComponent`. En la sección siguiente se proporciona más información sobre la clase base `UserComponent`.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Qué proporciona el elemento de proyecto ComponentWrapper
  El elemento de proyecto ComponentWrapper contiene una clase denominada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La clase `ScriptMain` donde escribe el código personalizado deriva a su vez de `UserComponent`. La clase `UserComponent` contiene los siguientes métodos:
 
--   Una implementación invalidada del método `ProcessInput`. Éste es el método al que el motor de flujo de datos llama en tiempo de ejecución después del método `PreExecute` y al que se puede llamar varias veces. `ProcessInput`entrega el ** \<** procesamiento al método inputBuffer>_ProcessInput. A continuación, el método `ProcessInput` comprueba el fin del búfer de entrada y, si se ha alcanzado, llama al método reemplazable `FinishOutputs` y al método privado `MarkOutputsAsFinished`. A continuación, el método `MarkOutputsAsFinished` llama a `SetEndOfRowset` en el último búfer de salida.
+-   Una implementación invalidada del método `ProcessInput`. Éste es el método al que el motor de flujo de datos llama en tiempo de ejecución después del método `PreExecute` y al que se puede llamar varias veces. `ProcessInput`entrega el procesamiento al método ** \<inputbuffer> _ProcessInput** . A continuación, el método `ProcessInput` comprueba el fin del búfer de entrada y, si se ha alcanzado, llama al método reemplazable `FinishOutputs` y al método privado `MarkOutputsAsFinished`. A continuación, el método `MarkOutputsAsFinished` llama a `SetEndOfRowset` en el último búfer de salida.
 
--   Una implementación reemplazable del método **\<inputbuffer>_ProcessInput**. Esta implementación predeterminada, simplemente, recorre en bucle cada fila de entrada y llama a **\<inputbuffer>_ProcessInputRow**.
+-   Una implementación reemplazable del método ** \<inputbuffer> _ProcessInput** . Esta implementación predeterminada simplemente recorre en bucle cada fila de entrada y llama a ** \<inputbuffer> _ProcessInputRow**.
 
--   Una implementación reemplazable del método **\<inputbuffer>_ProcessInputRow**. La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.
+-   Una implementación reemplazable del método ** \<inputbuffer> _ProcessInputRow** . La implementación predeterminada está vacía. Éste es el método que normalmente invalidará para escribir el código personalizado de procesamiento de datos.
 
 #### <a name="what-your-custom-code-should-do"></a>Qué debe hacer el código personalizado
  Puede utilizar los métodos siguientes para procesar la entrada en la clase `ScriptMain`:
 
--   Invalide **\<inputbuffer>_ProcessInputRow** para procesar los datos de cada fila de entrada cuando el código pase por ellos.
+-   Invalide ** \<inputbuffer> _ProcessInputRow** para procesar los datos de cada fila de entrada a medida que pase.
 
--   Invalide **\<inputbuffer>_ProcessInput** solamente si es necesaria alguna acción adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, tiene que probar `EndOfRowset` para realizar alguna otra acción una vez procesadas todas las filas). Llame ** \<a inputBuffer>_ProcessInputRow** para realizar el procesamiento de filas.
+-   Invalide ** \<inputbuffer> _ProcessInput** solo si tiene que hacer algo adicional mientras se recorren en bucle las filas de entrada. (Por ejemplo, tiene que probar para `EndOfRowset` realizar alguna otra acción una vez procesadas todas las filas). Llame a ** \<inputbuffer> _ProcessInputRow** para realizar el procesamiento de filas.
 
 -   Invalide `FinishOutputs` si es necesaria alguna acción adicional en las salidas antes de cerrarlas.
 
@@ -149,11 +148,11 @@ public override void PreExecute()
 
 -   Propiedades de descriptor de acceso con nombre y tipo de solo escritura para cada columna de salida.
 
--   ** \<Columna** de solo escritura>_IsNull propiedad para cada columna de salida seleccionada que se puede usar para establecer el valor de la `null`columna en.
+-   Propiedad de ** \<column> _IsNull** de solo escritura para cada columna de salida seleccionada que se puede usar para establecer el valor de la columna en `null` .
 
 -   Un método `AddRow` para agregar una nueva fila vacía al búfer de salida.
 
--   Un método `SetEndOfRowset` para permitir que el motor de flujo de datos sepa que no se esperan más búferes de datos. También existe una función `EndOfRowset` para determinar si el búfer actual es el último búfer de datos. Normalmente no se necesitan estas funciones cuando se usan los métodos de procesamiento de entrada implementados `UserComponent` en la clase base.
+-   Un método `SetEndOfRowset` para permitir que el motor de flujo de datos sepa que no se esperan más búferes de datos. También existe una función `EndOfRowset` para determinar si el búfer actual es el último búfer de datos. Normalmente no se necesitan estas funciones cuando se usan los métodos de procesamiento de entrada implementados en la `UserComponent` clase base.
 
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Qué proporciona el elemento de proyecto ComponentWrapper
  El elemento de proyecto ComponentWrapper contiene una clase denominada `UserComponent` que deriva de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>. La clase `ScriptMain` donde escribe el código personalizado deriva a su vez de `UserComponent`. La clase `UserComponent` contiene los siguientes métodos:
@@ -175,7 +174,7 @@ public override void PreExecute()
  Invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.PostExecute%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> cada vez que cuente con procesamiento que se debe realizar solamente una vez después de procesar las filas de datos. Por ejemplo, en un origen, puede cerrar la clase `System.Data.SqlClient.SqlDataReader` que ha utilizado para cargar datos en el flujo de datos.
 
 > [!IMPORTANT]
->  La colección de `ReadWriteVariables` solamente está disponible en el método `PostExecute`. Por consiguiente no puede incrementar directamente el valor de una variable de paquete cuando procesa cada fila de datos. En su lugar, incremente el valor de una variable local y establezca el valor de la variable de paquete en el valor de la variable local `PostExecute` en el método después de que se hayan procesado todos los datos.
+>  La colección de `ReadWriteVariables` solamente está disponible en el método `PostExecute`. Por consiguiente no puede incrementar directamente el valor de una variable de paquete cuando procesa cada fila de datos. En su lugar, incremente el valor de una variable local y establezca el valor de la variable de paquete en el valor de la variable local en el `PostExecute` método después de que se hayan procesado todos los datos.
 
 ## <a name="releaseconnections-method"></a>Método ReleaseConnections
  Generalmente, los orígenes y destinos deben conectarse a un origen de datos externo. Invalide el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ReleaseConnections%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> para cerrar y liberar la conexión abierta previamente en el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.AcquireConnections%2A>.

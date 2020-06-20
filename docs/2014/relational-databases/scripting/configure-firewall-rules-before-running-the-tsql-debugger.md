@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a5710ab5a74adc34601790c134a4553b8b01604
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 28e5515f5132f5e8b7859da1a11b5466b90c5579
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82704045"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056915"
 ---
 # <a name="configure-the-transact-sql-debugger"></a>Configurar el depurador de Transact-SQL
   Se deben configurar reglas del Firewall de Windows para habilitar la depuración en [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se establezca conexión con una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] que se esté ejecutando en un equipo distinto del Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -56,7 +55,7 @@ ms.locfileid: "82704045"
   
     2.  En el cuadro de diálogo **Tipo de regla** , seleccione **Programa**y, a continuación, haga clic en **Siguiente**.  
   
-    3.  En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba la ruta de acceso completa a sqlservr.exe para esta instancia. De forma predeterminada, sqlservr. exe se instala en C:\Archivos de Programa\microsoft SQL Server\MSSQL12. *NombreDeInstancia*\MSSQL\Binn, donde *nombreDeInstancia* es MSSQLSERVER para la instancia predeterminada y el nombre de instancia para cualquier instancia con nombre.  
+    3.  En el cuadro de diálogo **Programa** , seleccione **Esta ruta de acceso del programa:** y escriba la ruta de acceso completa a sqlservr.exe para esta instancia. De forma predeterminada, sqlservr.exe se instala en C:\Archivos de Programa\microsoft SQL Server\MSSQL12. *NombreDeInstancia*\MSSQL\Binn, donde *nombreDeInstancia* es MSSQLSERVER para la instancia predeterminada y el nombre de instancia para cualquier instancia con nombre.  
   
     4.  En el cuadro de diálogo **Acción** , seleccione **Permitir la conexión**y, a continuación, haga clic en **Siguiente**.  
   

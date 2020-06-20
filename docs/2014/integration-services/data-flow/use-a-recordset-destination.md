@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b87d71f8299c55e033adc21e25e29e8fb3d5e9d6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4e61e8c122b284dfe448f415cd05b20feab699ef
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62900007"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939216"
 ---
 # <a name="use-a-recordset-destination"></a>Usar un destino de conjunto de registros
   El destino de conjunto de registros no guarda los datos en un origen de datos externo. En su lugar, guarda los datos en memoria, en un conjunto de registros que se almacena en una variable de paquete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] del tipo de datos `Object`. Una vez que el destino de conjunto de registros guarda los datos, normalmente se utiliza un contenedor de bucles Foreach con el enumerador de ADO para Foreach para procesar una fila del conjunto de registros cada vez. El enumerador de ADO para Foreach guarda el valor de cada columna de la fila actual en una variable de paquete independiente. A continuación, las tareas que se configuran en el contenedor de bucles Foreach leen esos valores de las variables y realizan alguna acción con ellos.  
@@ -121,7 +120,7 @@ ms.locfileid: "62900007"
   
 5.  Abra el **Editor de destino de conjunto de registros**y configure el destino con los valores siguientes:  
   
-    1.  En la pestaña **propiedades de componente** , `VariableName` en propiedad, `User::BonusRecordset`seleccione.  
+    1.  En la pestaña **propiedades de componente** , en `VariableName` propiedad, `User::BonusRecordset` Seleccione.  
   
     2.  En la pestaña **Columnas de entrada** , seleccione las tres columnas disponibles.  
   
@@ -131,9 +130,9 @@ ms.locfileid: "62900007"
   
 2.  Abra el **Editor de bucles Foreach**y configure el contenedor con los valores siguientes:  
   
-    1.  En la página **colección** , en **enumerador**, seleccione **enumerador de ADO para foreach**y, en variable de origen de **objeto ADO**, seleccione. `User::BonusRecordset`  
+    1.  En la página **colección** , en **enumerador**, seleccione **enumerador de ADO para foreach**y, en variable de origen de **objeto ADO**, seleccione `User::BonusRecordset` .  
   
-    2.  En la **Página asignaciones de variables** , asigne `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
+    2.  En la página **asignaciones de variables** , asigne `User::EmailAddress` al índice 0, `User::FirstName` al índice 1 y `User::Bonus` al índice 2.  
   
 3.  En la pestaña **Flujo de control** , en el contenedor de bucles Foreach, agregue una tarea Enviar correo.  
   

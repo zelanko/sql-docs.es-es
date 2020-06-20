@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 318f4404467814c95e778d19aa793107a3ad0945
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24e264ad0f30a8cf3ec454405f5d40a301ce2f49
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176192"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967235"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codificar y depurar la tarea Script
   Después de configurar la tarea Script en el **Editor de la tarea Script**, puede escribir el código personalizado en el entorno de desarrollo de la tarea Script.
@@ -49,7 +48,7 @@ ms.locfileid: "78176192"
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Elementos y clases de proyecto en el proyecto de la tarea Script
  De forma predeterminada, el proyecto de la tarea Script mostrado en la ventana Explorador de proyectos de VSTA contiene un elemento único, `ScriptMain`. El elemento `ScriptMain`, a su vez, contiene una clase única, también denominada `ScriptMain`. Los elementos de código de la clase varían, dependiendo del lenguaje de programación seleccionado para la tarea Script:
 
--   Cuando la tarea script está configurada [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] para el lenguaje de `ScriptMain` programación, la clase tiene una subrutina pública, `Main`. La subrutina `ScriptMain.Main` es el método al que el módulo ejecutable llama cuando ejecuta la tarea Script.
+-   Cuando la tarea script está configurada para el [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] lenguaje de programación, la `ScriptMain` clase tiene una subrutina pública, `Main` . La subrutina `ScriptMain.Main` es el método al que el módulo ejecutable llama cuando ejecuta la tarea Script.
 
      De forma predeterminada, el único código de la subrutina `Main` de un script nuevo es la línea `Dts.TaskResult = ScriptResults.Success`. Esta línea informa al módulo ejecutable que la tarea se realizó correctamente en su operación. La `Dts.TaskResult` propiedad se describe en [devolver los resultados de la tarea script](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).
 

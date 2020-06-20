@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e71992a5bacfe895dd5f7a038e210d21c35c2884
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62809488"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934988"
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
   Entre las tareas de configuración de red del servidor se incluyen las siguientes: habilitar protocolos, modificar el puerto o canalización usados por un protocolo, configurar el cifrado, configurar el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser, mostrar u ocultar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la red y registrar el nombre de la entidad de seguridad del servidor. La mayoría de las veces, no es necesario cambiar la configuración de red del servidor. Solo debe volver a configurar los protocolos de red del servidor si la red tiene requisitos especiales.  
@@ -39,7 +38,7 @@ ms.locfileid: "62809488"
  Si se utiliza la configuración para puertos dinámicos, el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar cada vez que se inicia. Si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe abrir el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que utilice un puerto específico, así podrá configurar el firewall para que permita la comunicación con el servidor. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Cambiar una canalización con nombre  
- Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. La instancia predeterminada del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha de forma predeterminada en la canalización \\\\.\pipe\sql\query en la instancia predeterminada y en \\\\.\pipe\MSSQL$ *\<nombreDeInstancia>* \sql\query en una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. De forma predeterminada, la instancia predeterminada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha en la canalización \\ \\ .\pipe\sql\query para la instancia predeterminada y \\ \\ .\pipe\MSSQL $ *\<instancename>* \sql\query para una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forzar el cifrado  
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] se puede configurar para requerir el cifrado al comunicarse con aplicaciones cliente. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](enable-encrypted-connections-to-the-database-engine.md).  

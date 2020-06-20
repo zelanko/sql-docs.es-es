@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1c2ca8360e752146dac13e9cc6a3737ac2373cc9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183019"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85066103"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>Objeto SQL Server: Estadísticas de grupo de recursos de servidor
   El objeto SQLServer:Estadísticas de grupo de recursos de servidor contiene contadores de rendimiento que notifican información sobre las estadísticas del grupo de recursos de servidor del regulador de recursos.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78a1d8e8-fa97-476f-8777-84617d145340
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f247f9addde6baa949f3260d7a9d9f86ce0c5bff
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2890a61850526f7506713b3f900d67b8d41d0bfb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093697"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012140"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Otros problemas de actualización del motor de base de datos
   La versión actual del Asesor de actualizaciones no podrá detectar los siguientes problemas de actualización. Examine los problemas enumerados a continuación para evaluar su posible impacto en los sistemas.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ecb9f384634d1c2f3991ad0c07a9b98217314499
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: cddce90718ef5edfcf161ddc6cc52b617825a2e4
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702443"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059439"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directiva TYPE en consultas FOR XML
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la compatibilidad con [xml &#40;&#41;de Transact-SQL](/sql/t-sql/xml/xml-transact-sql) permite solicitar opcionalmente que el resultado de una consulta for XML se devuelva como `xml` tipo de datos especificando la Directiva Type. Esto permite procesar el resultado de una consulta FOR XML en el servidor. Por ejemplo, puede especificar una expresión XQuery en ella, asignar el resultado a una `xml` variable de tipo o escribir [consultas for XML anidadas](use-nested-for-xml-queries.md).  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 11bf44e6-f6b0-475f-b816-40e914dbac80
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9a53cf3dbd11c87177c725cf246fb4b1016d87ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 97933701539249d2294d71a12d9b92d515a5d478
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66054597"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972510"
 ---
 # <a name="viewing-and-stopping-packages-running-on-the-integration-services-server"></a>Ver y detener los paquetes en ejecución en el Servidor de Integration Services
   La base de datos de `SSISDB` almacena el historial de ejecuciones en tablas internas que no son visibles para los usuarios. Sin embargo, expone la información que necesita a través de vistas públicas que puede consultar. También proporciona procedimientos almacenados a los que puede llamar para realizar tareas frecuentes relacionadas con los paquetes.  

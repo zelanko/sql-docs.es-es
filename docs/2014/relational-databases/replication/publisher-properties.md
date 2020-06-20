@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3e14f82e855cc29f83859d85dfdaaf85a1bda37
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63261974"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85005099"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Propiedades del publicador de Replicación de SQL Server
   Esta sección contiene información sobre las propiedades del publicador disponibles en el distribuidor y en el publicador. 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e5167948e456b721ba831bd8a3d637bb7ea3d3b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c67f84723e79b66d0454fb509f2fa9ced03dac7c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62985760"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997274"
 ---
 # <a name="row-level-security"></a>Seguridad de nivel de fila
   La seguridad de nivel de fila permite a los clientes controlar el acceso a las filas de una tabla de base de datos en función de las características del usuario que ejecuta una consulta (por ejemplo, la pertenencia a un grupo o el contexto de ejecución). La seguridad de nivel de fila ahora está disponible en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016. Consulte [Seguridad de nivel de fila](https://msdn.microsoft.com/library/dn765131.aspx) en la documentación actual para obtener la descripción actual de esta característica.  

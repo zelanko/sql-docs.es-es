@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e3986870-5be4-458b-b671-5ff12a27b022
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d06735590d23da6e91151202dd421639ea433b97
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092288"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036586"
 ---
 # <a name="server-configuration---collation"></a>Configurar servidor - Intercalación
   En la página Configuración del servidor - Intercalación del Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , puede modificar los valores de intercalación que [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilizan para la ordenación. Seleccione la opción que coincida con los valores de intercalación de distintas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], o de otro equipo.  
@@ -36,7 +35,7 @@ ms.locfileid: "66092288"
   
  Para obtener más información, vea [Configuración de intercalación en el programa de instalación](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Procedimientos recomendados  
+## <a name="best-practices"></a>Prácticas recomendadas  
  Para obtener más información acerca de una tabla de configuraciones regionales del sistema de Windows y las intercalaciones predeterminadas correspondientes utilizadas por el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Configuración de intercalación en el programa de instalación](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Si es posible, utilice una sola intercalación para su organización. De esta manera no tiene que especificar explícitamente la intercalación para cada base de datos, columna, expresión o identificador. Si tiene que trabajar con varias intercalaciones y configuraciones de páginas de códigos distintas, codifique sus consultas para que tengan en cuenta las reglas de prioridad de intercalación. Para obtener más información, vea el tema de los Libros en pantalla correspondiente a [Prioridad de intercalación &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql).  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c771985b-149c-459a-b3cb-7b15fde01150
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52fc203075b06485c89fe4d2d3149472c57719f9
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780705"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933412"
 ---
 # <a name="program-exception-message-box"></a>Programar cuadros de mensajes de excepción
   Puede usar el cuadro de mensajes de excepción en sus aplicaciones para proporcionar un control considerablemente mayor sobre la experiencia de mensajería que el que se proporciona con la clase <xref:System.Windows.Forms.MessageBox>. Para obtener más información, vea [programación de cuadros de mensajes de excepción](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Para obtener información sobre la forma de obtener e implementar el archivo .dll del cuadro de mensajes de excepción, vea [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  
@@ -29,7 +28,7 @@ ms.locfileid: "62780705"
   
 1.  Agregue una referencia al ensamblado Microsoft.ExceptionMessageBox.dll en su proyecto de código administrado.  
   
-2.  Opta Agregue una `using` Directiva (C#) `Imports` o[!INCLUDE[msCoName](../../includes/msconame-md.md)] (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
+2.  Opta Agregue una `using` Directiva (C#) o `Imports` ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
   
 3.  Cree un bloque try-catch para controlar la excepción anticipada.  
   
@@ -45,15 +44,15 @@ ms.locfileid: "62780705"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>enumeración que especifica el símbolo que se va a mostrar en el cuadro de mensaje de excepción.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
+6.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
   
-7.  Opta Tenga en cuenta el valor <xref:System.Windows.Forms.DialogResult> de la enumeración devuelta si necesita determinar en qué botón hizo clic el usuario.  
+7.  Opta Tenga en cuenta el valor de la <xref:System.Windows.Forms.DialogResult> enumeración devuelta si necesita determinar en qué botón hizo clic el usuario.  
   
 #### <a name="to-display-the-exception-message-box-without-an-exception"></a>Para mostrar el cuadro de mensajes de excepción sin una excepción  
   
 1.  Agregue una referencia al ensamblado Microsoft.ExceptionMessageBox.dll en su proyecto de código administrado.  
   
-2.  Opta Agregue una `using` Directiva (C#) `Imports` o (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
+2.  Opta Agregue una `using` Directiva (C#) o `Imports` (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
   
 3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>. Pase el texto del mensaje como un valor <xref:System.String>.  
   
@@ -69,7 +68,7 @@ ms.locfileid: "62780705"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Symbol%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxSymbol>enumeración que especifica el símbolo que se va a mostrar en el cuadro de mensaje de excepción.  
   
-5.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
+5.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
   
 6.  (Opcional) Tenga en cuenta el valor de la enumeración <xref:System.Windows.Forms.DialogResult> devuelta si necesita determinar en qué botón ha hecho clic el usuario.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "62780705"
   
 1.  Agregue una referencia al ensamblado Microsoft.ExceptionMessageBox.dll en su proyecto de código administrado.  
   
-2.  Opta Agregue una `using` Directiva (C#) `Imports` o (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
+2.  Opta Agregue una `using` Directiva (C#) o `Imports` (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
   
 3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> de una de estas dos formas:  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62780705"
   
 5.  (Opcional) Si usa botones personalizados, llame a una de las sobrecargas del método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.SetButtonText%2A> para especificar el texto para un máximo de cinco botones personalizados.  
   
-6.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
+6.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Pase la ventana primaria a la que pertenece el cuadro de mensajes de excepción.  
   
 7.  (Opcional) Tenga en cuenta el valor de la enumeración <xref:System.Windows.Forms.DialogResult> devuelta si necesita determinar en qué botón ha hecho clic el usuario. Si usa botones personalizados, tenga en cuenta el valor de <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDialogResult> para que la propiedad <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CustomDialogResult%2A> determine en cuál de los botones personalizados ha hecho clic el usuario.  
   
@@ -111,7 +110,7 @@ ms.locfileid: "62780705"
   
 1.  Agregue una referencia al ensamblado Microsoft.ExceptionMessageBox.dll en su proyecto de código administrado.  
   
-2.  Opta Agregue una `using` Directiva (C#) `Imports` o (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
+2.  Opta Agregue una `using` Directiva (C#) o `Imports` (Visual Basic .net) para usar el <xref:Microsoft.SqlServer.MessageBox> espacio de nombres.  
   
 3.  Cree una instancia de la clase <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> de una de estas dos formas:  
   
@@ -133,7 +132,7 @@ ms.locfileid: "62780705"
   
     3.  Establezca <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> en `true`.  
   
-    4.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> . Se evalúa la clave del Registro especificada y solamente se muestra el cuadro de mensajes de excepción si los datos almacenados en la clave del Registro son iguales a 0. Si se muestra el cuadro de diálogo y el usuario activa la casilla antes de hacer clic en un botón, los datos de la clave del Registro se establecen en 1.  
+    4.  Llame al método <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A>. Se evalúa la clave del Registro especificada y solamente se muestra el cuadro de mensajes de excepción si los datos almacenados en la clave del Registro son iguales a 0. Si se muestra el cuadro de diálogo y el usuario activa la casilla antes de hacer clic en un botón, los datos de la clave del Registro se establecen en 1.  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo, el cuadro de mensajes de excepción se usa solamente con el botón **Aceptar** para mostrar información de una excepción de la aplicación que incluye la excepción controlada junto con información adicional específica de la aplicación.  

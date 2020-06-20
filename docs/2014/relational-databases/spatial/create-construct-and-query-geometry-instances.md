@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: cb99c2ff07f30d268980c5c1c4d43a34904cdec9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 539f3f8bb1d9a1c277d6317cc571cf8bcb281833
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66014309"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996581"
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Crear, construir y consultar instancias de Geometry
   El tipo de datos espacial plano `geometry` representa los datos en un sistema de coordenadas euclidiano (plano). Implementan este tipo como un tipo de datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de Common Language Runtime (CLR).  
@@ -129,7 +128,7 @@ ms.locfileid: "66014309"
   
   
 ###  <a name="constructing-a-geometry-instance-from-gml-text-input"></a><a name="gml"></a> Para construir una instancia de geometry a partir de datos de texto GML  
- El `geometry` tipo de datos proporciona un método que genera `geometry` una instancia de GML, una representación XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
+ El `geometry` tipo de datos proporciona un método que genera una `geometry` instancia de GML, una representación XML de objetos geométricos. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite un subconjunto de GML.  
   
  **Para construir un tipo de instancia de geometry a partir de datos GML**  
  [GeomFromGml &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/geomfromgml-geometry-data-type)  
@@ -156,7 +155,7 @@ ms.locfileid: "66014309"
   
   
 ##  <a name="querying-the-properties-and-behaviors-of-geometry-instances"></a><a name="querying"></a> Consultar propiedades y comportamientos de instancias de geometry  
- Todas `geometry` las instancias de tienen varias propiedades que se pueden recuperar a través de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los métodos que proporciona. Los temas siguientes definen las propiedades y los comportamientos de tipos geometry, y los métodos para consultar cada uno.  
+ Todas las `geometry` instancias de tienen varias propiedades que se pueden recuperar a través de los métodos que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona. Los temas siguientes definen las propiedades y los comportamientos de tipos geometry, y los métodos para consultar cada uno.  
   
 ###  <a name="validity-instance-type-and-geometrycollection-information"></a><a name="valid"></a> Validez, tipo de instancia e información de GeometryCollection  
  Una vez construida una instancia de `geometry`, puede usar los métodos siguientes para determinar si su formato es correcto, devolver el tipo de instancia o, si es una instancia de una colección, devolver una instancia de `geometry` específica.  
@@ -182,7 +181,7 @@ ms.locfileid: "66014309"
   
   
 ###  <a name="number-of-points"></a><a name="number"></a> Número de puntos  
- Todas las instancias `geometry` no vacías se componen de *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos de `geometry` proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
+ Todas las instancias no vacías `geometry` se componen de *puntos*. Estos puntos representan las coordenadas X e Y del plano en el cual se dibujan los objetos geometry. El tipo de datos de `geometry` proporciona numerosos métodos integrados para consultar los puntos de una instancia.  
   
  **Devolver el número de puntos que comprende una instancia**  
  [STNumPoints &#40;tipo de datos geometry&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)  
@@ -225,7 +224,7 @@ ms.locfileid: "66014309"
   
   
 ###  <a name="empty"></a><a name="empty"></a> Vacía  
- Una instancia *vacía* `geometry` no tiene ningún punto. La longitud de instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` es cero. El área de las instancias de `Polygon`, `CurvePolygon` y `MultiPolygon` vacías es 0.  
+ Una instancia *vacía* no `geometry` tiene ningún punto. La longitud de instancias de `LineString, CircularString`, `CompoundCurve` y `MultiLineString` es cero. El área de las instancias de `Polygon`, `CurvePolygon` y `MultiPolygon` vacías es 0.  
   
  **Para determinar si una instancia está vacía**  
  [STIsEmpty](/sql/t-sql/spatial-geometry/stisempty-geometry-data-type).  
@@ -233,7 +232,7 @@ ms.locfileid: "66014309"
   
   
 ###  <a name="simple"></a><a name="simple"></a> Simple  
- Para que `geometry` un de la instancia sea *simple*, debe cumplir estos requisitos:  
+ Para `geometry` que un de la instancia sea *simple*, debe cumplir estos requisitos:  
   
 -   Cada figura de la instancia no debe cortarse, excepto en sus extremos.  
   
@@ -276,7 +275,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="envelope"></a><a name="envelope"></a> Envolvente  
- El *sobre* de una `geometry` instancia, también conocido como el *cuadro de límite*, es el rectángulo alineado con el eje formado por las coordenadas mínima y máxima (X, Y) de la instancia.  
+ El *sobre* de una `geometry` instancia, también conocido como el *cuadro de límite*, es el rectángulo alineado con el eje formado por las coordenadas mínima Y máxima (X, Y) de la instancia.  
   
  **Para devolver la envolvente de una instancia**  
  [STEnvelope](/sql/t-sql/spatial-geometry/stenvelope-geometry-data-type)  

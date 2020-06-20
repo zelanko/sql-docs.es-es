@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 143c68a5-589f-4e7f-be59-02707e1a430a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f3088333fbfd4babd209df07f8880c838ce626d2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62755507"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934336"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
     
@@ -44,7 +43,7 @@ ms.locfileid: "62755507"
     > [!NOTE]  
     >  El tipo de autenticación que utilice la instancia de servidor para la creación de reflejo de la base de datos es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte disponibles para la creación de reflejo de la base de datos: autenticación de Windows o autenticación basada en certificados. Para obtener más información, vea [seguridad de transporte para la creación de reflejo de la base de datos y Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Asegúrese de que exista un extremo para el reflejo de bases de datos en cada servidor asociado. La instancia de servidor solo puede tener un extremo de reflejo de la base de datos, independientemente del número de sesiones de creación de reflejo que se admitirán. Si tiene previsto usar esta instancia de servidor exclusivamente para asociados en sesiones de creación de reflejo de la base de datos, puede asignar el rol de asociado**=** al punto de conexión (asociado de rol). Si también tiene pensado usar este servidor para el testigo en otras sesiones de creación de reflejo de la base de datos, asigne el rol del extremo como ALL.  
+     Asegúrese de que exista un extremo para el reflejo de bases de datos en cada servidor asociado. La instancia de servidor solo puede tener un extremo de reflejo de la base de datos, independientemente del número de sesiones de creación de reflejo que se admitirán. Si tiene previsto usar esta instancia de servidor exclusivamente para asociados en sesiones de creación de reflejo de la base de datos, puede asignar el rol de asociado al punto de conexión (asociado de rol **=** ). Si también tiene pensado usar este servidor para el testigo en otras sesiones de creación de reflejo de la base de datos, asigne el rol del extremo como ALL.  
   
      Para ejecutar una instrucción SET PARTNER, el valor de STATE de los extremos de ambos asociados debe ser STARTED.  
   
@@ -63,15 +62,15 @@ ms.locfileid: "62755507"
   
 4.  Para establecer el servidor principal como asociado en la base de datos reflejada, conéctese al servidor reflejado y emita la instrucción siguiente:  
   
-     ALTER DATABASE *<database_name>* conjunto de **=** asociados _<server_network_address>_  
+     ALTER DATABASE *<database_name>* conjunto de asociados **=** _<server_network_address>_  
   
      donde *<database_name>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo en ambos asociados) y *<server_network_address>* es la dirección de red del servidor principal.  
   
      La sintaxis para una dirección de red de servidor es la siguiente:  
   
-     TCP<strong>://</strong>\<*dirección del sistema>* <strong>:</strong>\<*Puerto>*  
+     TCP<strong>://</strong> \<*system-address> *<strong>:</strong> \<*port> *  
   
-     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
+     donde \<*system-address> * es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*port> * es el número de puerto utilizado por el extremo de creación de reflejo de la instancia del servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](specify-a-server-network-address-database-mirroring.md).  
   
      Por ejemplo, en la instancia del servidor reflejado, el siguiente parámetro ALTER DATABASE establece el asociado como la instancia de servidor principal original. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER1 (el nombre del sistema del asociado) y el puerto usado por el punto de conexión de reflejo de la base de datos del asociado es 7022:  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62755507"
   
 5.  Para establecer el servidor reflejado como asociado en la base de datos principal, conéctese al servidor principal y emita la instrucción siguiente:  
   
-     ALTER DATABASE *<database_name>* conjunto de **=** asociados _<server_network_address>_  
+     ALTER DATABASE *<database_name>* conjunto de asociados **=** _<server_network_address>_  
   
      Para obtener más información, vea el paso 4.  
   

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a39b3395a26fdbe3c235f429f312f4d6b3aff512
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ffa99b2271697302e9cfa284bd814ccc923e46d1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000446"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065926"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lección 2: Crear una suscripción a la publicación de combinación
   En esta lección, creará una suscripción con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Luego establecerá los permisos en la base de datos de suscripciones y generará manualmente la instantánea de datos filtrados para la nueva suscripción. Para realizar esta lección es necesario haber completado la lección anterior, [Lección 1: Publicar datos con la replicación de mezcla](lesson-1-publishing-data-using-merge-replication.md).  
@@ -36,11 +35,11 @@ ms.locfileid: "83000446"
   
 5.  En la página Ubicación del Agente de mezcla, haga clic en **Ejecutar cada agente en su suscriptor**y, luego, en **Siguiente**.  
   
-6.  En la página suscriptores, seleccione el nombre de instancia del servidor del suscriptor y, en **base de datos de suscripciones**, seleccione ** \< nuevo>de base de datos** en la lista.  
+6.  En la página Suscriptores, seleccione el nombre de instancia del servidor del suscriptor y, en **Base de datos de suscripciones**, seleccione **\<New Database>** en la lista.  
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y, después, haga clic en **Siguiente**.  
   
-8.  En la página seguridad de Agente de mezcla, haga clic en el botón de puntos suspensivos (**...**), escriba \< _Machine_Name>_ **\ Repl_merge** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta, haga clic en **Aceptar**, haga clic en **siguiente**y, a continuación, haga clic en **siguiente** de nuevo.  
+8.  En la página seguridad de Agente de mezcla, haga clic en el botón de puntos suspensivos (**...**), escriba \<_Machine_Name> _**\ repl_merge** en el cuadro **cuenta de proceso** , proporcione la contraseña de esta cuenta, haga clic en **Aceptar**, haga clic en **siguiente**y, a continuación, haga clic en **siguiente** de nuevo.  
   
 9. En la página Inicializar suscripciones, seleccione **En la primera sincronización** de la lista **Inicializar cuando** , haga clic en **Siguiente**y, después, otra vez en **Siguiente** .  
   
@@ -52,7 +51,7 @@ ms.locfileid: "83000446"
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bases de datos**, **SalesOrdersReplica**y **Seguridad**, haga clic con el botón derecho en **Usuarios**y, después, seleccione **Nuevo usuario**.  
   
-2.  En la **página general** , escriba \< _Machine_Name>_ **\ Repl_merge** en el cuadro **nombre de usuario** , haga clic en el botón de puntos suspensivos (**...**), haga clic en **examinar**, seleccione \< _Machine_Name>repl_merge _ **\repl_merge**, haga clic en **Aceptar**, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
+2.  En la página **General** , escriba \<_Machine_Name> _ **\ repl_merge** en el cuadro **nombre de usuario** , haga clic en el botón de puntos suspensivos (**...**) \<_Machine_Name> , haga clic en **examinar**, seleccione _ **\ repl_merge**, haga clic en **Aceptar**, haga clic en **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
 3.  En **Pertenencia al rol de la base de datos**, seleccione **db_owner**y haga clic en **Aceptar** para crear el usuario.  
   

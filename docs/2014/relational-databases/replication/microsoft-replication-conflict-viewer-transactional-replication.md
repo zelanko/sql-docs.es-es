@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 60d6ba6ab84615e43e872c4e8d4238a263a0b767
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62714872"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065835"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación transaccional)
   El Visor de conflictos de replicación permite ver los conflictos surgidos durante la sincronización de la replicación transaccional punto a punto y la replicación transaccional con suscripciones de actualización en cola. Para obtener más información, vea [Ver conflictos de datos para publicaciones transaccionales &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -36,7 +35,7 @@ ms.locfileid: "62714872"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Cuadro**  
+ **Tabla**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -51,7 +50,7 @@ ms.locfileid: "62714872"
  **Seleccione ninguno**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
- **Remove**  
+ **Quitar**  
  Haga clic en esta opción para quitar los conflictos seleccionados del visor y los metadatos asociados de las tablas del sistema de replicación.  
   
  **Mostrar todas las columnas**  

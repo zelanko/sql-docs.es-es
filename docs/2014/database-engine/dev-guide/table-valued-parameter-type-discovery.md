@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: f55818c2-ebb5-4cf6-8c0c-0da41f592560
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cf3f7b4d6754902ac38172ffa0e8fc392599d307
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ab8d837e4ddf74256e4bae70f772557ec8ff67f7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62780324"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933256"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Detección de tipos de parámetros con valores de tabla
-  El consumidor, es decir, la aplicación cliente que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client, puede detectar el tipo de cada parámetro de comando si se ha proporcionado el texto del comando al proveedor de OLE DB. Después de conocer el tipo de un parámetro con valores de tabla, el consumidor puede detectar la información de metadatos de cada columna individual del parámetro con valores de tabla.  
+  El consumidor, es decir, la aplicación cliente que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, puede detectar el tipo de cada parámetro de comando si se ha proporcionado el texto del comando al proveedor de OLE DB. Después de conocer el tipo de un parámetro con valores de tabla, el consumidor puede detectar la información de metadatos de cada columna individual del parámetro con valores de tabla.  
   
- La información de tipo de los parámetros de procedimiento es compatible con ICommandWithParameters::GetParameterInfo en la mayoría de tipos de parámetro. A partir [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]de, con la introducción de tipos definidos por el usuario `xml` y el tipo de datos, el método GetParameterInfo no era suficiente para este propósito porque no era posible proporcionar información de tipo definido por el usuario (nombre, esquema y catálogo) a través de ICommandWithParameters. Se definió una nueva interfaz, ISSCommandWithParameters, para proporcionar información de tipo extendido.  
+ La información de tipo de los parámetros de procedimiento es compatible con ICommandWithParameters::GetParameterInfo en la mayoría de tipos de parámetro. A partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , con la introducción de tipos definidos por el usuario y el `xml` tipo de datos, el método GetParameterInfo no era suficiente para este propósito porque no era posible proporcionar información de tipo definido por el usuario (nombre, esquema y catálogo) a través de ICommandWithParameters. Se definió una nueva interfaz, ISSCommandWithParameters, para proporcionar información de tipo extendido.  
   
  En el caso de los parámetros con valores de tabla, también usará la interfaz ISSCommandWithParameters para detectar información detallada. El cliente llama a ISSCommandWithParameters::GetParameterInfo después de preparar el objeto de comando. Para los parámetros con valores de tabla, el proveedor establece el miembro *wType* de la estructura DBPARAMINFO en DBTYPE_TABLE. El campo *ulParamSize* de la estructura de DBPARAMINFO tiene un valor de ~0.  
   

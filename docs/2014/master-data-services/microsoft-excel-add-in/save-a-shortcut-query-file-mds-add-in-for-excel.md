@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 81d70e4f9330db23c9cce54f7c615163c4dcee4f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960865"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Guardar un archivo de consulta de acceso directo (complemento MDS para Excel)
   En [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], puede guardar un archivo de consulta de método abreviado cuando necesite tener acceso con frecuencia al mismo conjunto de datos.  
@@ -31,7 +30,7 @@ ms.locfileid: "65482862"
   
 2.  Opcional. Para cambiar el nombre de la consulta, haga clic en la flecha situada debajo de **Guardar consulta** y haga clic en **Administrar consultas**. Seleccione la consulta y haga clic en **Cambiar nombre**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   Haga clic en la flecha situada debajo de **Guardar consulta** para ver la consulta de acceso directo y abrirla.  
   

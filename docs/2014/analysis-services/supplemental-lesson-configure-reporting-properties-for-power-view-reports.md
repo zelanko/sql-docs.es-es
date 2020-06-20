@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0ffc5f44-17d3-42d4-bc2c-baf3b4485e2d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 812c205c1e612604c0c39a5effb3b9da50308d7a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03afd5bdafe30a8684165fef5febae49f210f042
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067959"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940216"
 ---
 # <a name="configure-reporting-properties-for-power-view-reports"></a>Configurar las propiedades de notificación para informes de Power View
   En esta lección complementaria, verá las propiedades de informes del proyecto Adventure Works Internet Sales Model. Las propiedades de informe facilitan a los usuarios finales la selección y presentación de datos del modelo en Power View. También establecerá las propiedades para ocultar ciertas columnas y tablas, y creará nuevos datos para usar en gráficos.  
@@ -96,7 +95,7 @@ ms.locfileid: "66067959"
   
      **Nombre**  
   
-     **Apellidos**  
+     **Last Name**  
   
      **Fecha de nacimiento**.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "66067959"
     |Geography Id|Hidden|True|  
     |Birth Date|Formato de datos|Short Date|  
   
-     **Date**  
+     **Fecha**  
   
     > [!NOTE]  
     >  Dado que la tabla Date se seleccionó como la tabla de fechas de modelos con la opción Marcar como tabla de fechas, en la lección 7, Marcar como tabla de fechas, y la columna Date de la tabla Date como la columna que se usa como identificador único, la propiedad Identificador de fila de la columna Date se establecerá automáticamente en True y no se puede cambiar. Cuando se usan funciones de inteligencia temporal en fórmulas DAX, debe especificar una tabla de fechas. En este modelo, creó una serie de medidas con las funciones de inteligencia temporal para calcular los datos de ventas para varios periodos como los trimestres anteriores y actuales y también para usarse en KPI. Para obtener más información sobre cómo especificar una tabla de fechas, vea [Especificar Marcar como tabla de fechas con inteligencia de tiempo &#40;SSAS tabular&#41;](tabular-models/specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular.md) en los Libros en pantalla de SQL Server.  
@@ -184,7 +183,7 @@ ms.locfileid: "66067959"
     |Geography Id|Hidden|True|  
     |Sales Territory Id|Hidden|True|  
   
-     **Manuales**  
+     **Producto**  
   
     |Columna|Propiedad|Value|  
     |------------|--------------|-----------|  
@@ -218,7 +217,7 @@ ms.locfileid: "66067959"
   
      Aparece el cuadro de diálogo **implementar** y muestra el estado de implementación de los metadatos, así como las tablas incluidas en el modelo.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Ahora puede usar Power View para visualizar los datos del modelo. Asegúrese de que las cuentas de Analysis Services y Reporting Services en el sitio de SharePoint tienen permisos de lectura en la instancia de Analysis Services donde implementó el modelo.  
   
  Para crear un origen de datos de informe de Reporting Services que señale al modelo, vea [Crear un origen de datos compartido para un modelo de datos (SSRS)](https://msdn.microsoft.com/library/hh270317%28v=SQL.110%29.aspx).  

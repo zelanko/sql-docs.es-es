@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e455dd25c2b5d4ffa28bd2bdc28ff679861f1f1d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63316008"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011414"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lección 2: Adición de una referencia web
   Se llama detección de servicios web al proceso por el que un cliente busca un servicio web y obtiene la descripción del servicio. El proceso de detección de servicios web en [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] conlleva la interrogación de un sitio web de acuerdo con un algoritmo predeterminado. El objetivo del proceso es encontrar la descripción del servicio, que es un documento XML que utiliza el Lenguaje de descripción de servicios web (WSDL).  
@@ -32,7 +31,7 @@ ms.locfileid: "63316008"
   
 3.  En el cuadro de diálogo **configuración de referencia de servicio** , haga clic en **Agregar referencia Web**.  
   
-4.  En el cuadro **dirección URL** del cuadro de diálogo **Agregar referencia Web** , escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, http://localhost/reportserver/reportservice2010.asmxcomo. A continuación, haga clic en el botón **ir** para recuperar información sobre el servicio Web.  
+4.  En el cuadro **dirección URL** del cuadro de diálogo **Agregar referencia Web** , escriba la dirección URL para obtener la descripción del servicio Web del servidor de informes, como http://localhost/reportserver/reportservice2010.asmx . A continuación, haga clic en el botón **ir** para recuperar información sobre el servicio Web.  
   
      \- o -  
   

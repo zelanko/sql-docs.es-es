@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 384234072c312fca2c91da8ab4e6ac09eb0f79fa
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63149705"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011585"
 ---
 # <a name="review-the-replay-results"></a>Revisar los resultados de la reproducción
   Una vez que la característica [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay completa una reproducción distribuida, la actividad de reproducción de cada cliente se puede capturar y guardar en los archivos de seguimiento de resultados de cada cliente. Para capturar esta actividad, debe usar el parámetro **-o** al ejecutar la herramienta de administración con la opción **replay** . Para obtener más información sobre la opción replay, vea [Opción Replay &#40;herramienta de administración de Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
@@ -71,15 +70,15 @@ ms.locfileid: "63149705"
 |ConnectionID|`int`|El id. de la conexión de captura del evento.|11|  
 |ReplaySPID|`int`|El id. de la sesión de reproducción del evento.|12|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en que se ejecuta la instrucción del usuario.|13|  
-|LoginName|`nvarchar`|El nombre de inicio de sesión de usuario. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Puede ser un inicio de sesión de seguridad de o las credenciales de inicio de sesión de Microsoft Windows, en el formato *domain_name*\\*user_name*.|14|  
+|LoginName|`nvarchar`|El nombre de inicio de sesión de usuario. Puede ser un inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o las credenciales de inicio de sesión de Microsoft Windows, con el formato *nombre_dominio*\\*nombre_usuario*.|14|  
 |CaptureHostName|`nvarchar`|El nombre del equipo en el que se ejecuta el servicio de cliente durante la captura.|15|  
 |ReplayHostName|`nvarchar`|El nombre del equipo en el que se ejecuta el cliente durante la reproducción.|16|  
 |ApplicationName|`nvarchar`|El nombre de la aplicación cliente que creó la conexión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] durante la captura.|17|  
   
 ## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Requisitos de Distributed Replay](distributed-replay-requirements.md)   
- [Opciones de la línea de comandos de la herramienta de administración &#40;Distributed Replay utilidad&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Requirements](distributed-replay-requirements.md)   
+ [Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configurar Distributed Replay](configure-distributed-replay.md)  
   
   

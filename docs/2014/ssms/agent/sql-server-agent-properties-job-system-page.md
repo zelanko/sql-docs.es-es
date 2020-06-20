@@ -11,23 +11,22 @@ f1_keywords:
 ms.assetid: e171d13e-1302-4f0e-88be-67d656aec8d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8dceeba78e639ecbe2fd81fbdb1021293e75cf8a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c9b7f5064270e8e648b5b24b24745aa5a7c11120
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63246089"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058674"
 ---
 # <a name="sql-server-agent-properties-job-system-page"></a>Propiedades de Agente SQL Server (página Sistema de trabajo)
-  Utilice esta página para ver y modificar la forma [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en que el servicio del agente administra los trabajos.  
+  Utilice esta página para ver y modificar la forma en que el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente administra los trabajos.  
   
 ## <a name="options"></a>Opciones  
  **Intervalo de tiempo de espera de cierre (en segundos)**  
  Especifica el número de segundos que el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] espera a que los trabajos finalicen antes del cierre. Si el trabajo sigue en ejecución después del intervalo especificado, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detendrá de manera obligatoria el trabajo.  
   
  **Usar una cuenta de proxy de usuarios que no sean administradores**  
- Establece una cuenta de proxy de usuarios que no sean administradores para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y las versiones posteriores admiten varios servidores proxy; por lo tanto, esta opción [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo es aplicable al [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]administrar versiones del agente anteriores a.  
+ Establece una cuenta de proxy de usuarios que no sean administradores para el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]y las versiones posteriores admiten varios servidores proxy; por lo tanto, esta opción solo es aplicable al administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versiones del agente anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .  
   
  **Nombre de usuario**  
  Escriba el nombre del usuario de la cuenta proxy de usuarios que no sean administradores. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios servidores proxy; por tanto, esta opción solo es aplicable al administrar versiones del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  

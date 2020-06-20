@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d104a0c3-0492-4de6-8ce5-eacee47c978f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d907c9b440053b0c0fc110fa02ca3de4e993905c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 512f75c7086a8b9c2510552f4888c5cf2eac3116
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66095122"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85012314"
 ---
 # <a name="full-text-search-upgrade-issues"></a>Problema de actualización de búsqueda de texto completo
   Los temas de esta sección describen los problemas de la búsqueda de texto completo que podrían afectar a la actualización. Los temas describen acciones que se pueden llevar a cabo para mitigar el efecto de estos cambios en el entorno.  

@@ -41,16 +41,15 @@ helpviewer_keywords:
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 085f8ae1699e6a7bc1ceecb31075dff83d2b79ea
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70175740"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970052"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Implementar una base de datos de SQL Server en una máquina virtual de Microsoft Azure
-  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una [!INCLUDE[ssDE](../../includes/ssde-md.md)] base [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de datos desde una instancia del en en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
+  Use el Asistente para **implementar una base de datos de SQL Server en una máquina** virtual de Azure para implementar una base de datos desde una instancia del en [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una máquina virtual (VM) de Azure. El asistente emplea una operación de copia de seguridad completa de la base de datos, por lo que siempre copia todo el esquema de la base de datos y los datos de una base de datos de usuario de SQL Server. El asistente también realiza toda la configuración de Azure VM, por lo que no se requiere ninguna configuración previa de la VM.  
   
  No puede usar el asistente para las copias de seguridad diferenciales porque no sobrescribirá una base de datos existente que tenga el mismo nombre de base de datos. Para reemplazar una base de datos existente en la VM, debe quitar primero la base de datos existente o cambiar el nombre de la base de datos. Si hay un conflicto de nombres entre el nombre de la base de datos para una operación de implementación en ejecución y una base de datos existente en la VM, el asistente sugerirá un nombre de base de datos anexado para la base de datos en ejecución de manera que pueda completar la operación.  
   
@@ -148,19 +147,19 @@ ms.locfileid: "70175740"
   
         -   <OtherSettings  
   
-            -   TraceLevel="Debug" \<!-- Nivel de registro -->  
+            -   TraceLevel = "debug"\<!-- Logging level -->  
   
-            -   BackupPath="\\\\[nombre de servidor]\\[volumen]\\" \<!-- La última ruta de acceso usada para la copia de seguridad. Se usa como valor predeterminado del asistente. -->  
+            -   BackupPath = " \\ \\ [nombre de servidor] \\ [volumen] \\ "\<!-- The last used path for backup. Used as default in the wizard. -->  
   
-            -   CleanupDisabled = false/> \<!--asistente no eliminará los archivos intermedios y los objetos de Azure (VM, CS, SA). -->  
+            -   CleanupDisabled = false/>\<!-- Wizard will not delete intermediate files and Azure objects (VM, CS, SA). -->  
   
-        -   <PublishProfile \<! -- La última información usada del perfil de publicación. -->  
+        -   <PublishProfile\<!-- The last used publish profile information. -->  
   
-            -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- El certificado que se debe usar en el asistente. -->  
+            -   Certificate = "12A34B567890123ABCD4EF567A8"\<!-- The certificate for use in the wizard. -->  
   
-            -   Subscription="1a2b34c5-67d8-90ef-ab12-xxxxxxxxxxxxx" \<!-- La suscripción que se debe usar en el asistente. -->  
+            -   Subscription = "1a2b34c5-67d8-90ef-AB12-Xxxxxxxxxxxxx"\<!-- The subscription for use in the wizard. -->  
   
-            -   Name="Mi suscripción" \<! -- El nombre de la suscripción. -->  
+            -   Name = "mi suscripción"\<!-- The name of the subscription. -->  
   
             -   Publisher="" />  
   
@@ -200,7 +199,7 @@ ms.locfileid: "70175740"
   
  **Opciones**  
   
--   Haga clic en **conectar...** y, a continuación, especifique los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detalles de conexión de la instancia de que hospeda la base de datos que se va a implementar.  
+-   Haga clic en **conectar...** y, a continuación, especifique los detalles de conexión de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la base de datos que se va a implementar.  
   
 -   Use la lista desplegable **Seleccionar base de datos** para especificar la base de datos que implementar.  
   

@@ -9,17 +9,16 @@ ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 56ddfce4fc1812e99870c22eeb0e15be64c5decb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1f95544de8f0362b8981a175f1c65de1798a1eb
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75245634"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059318"
 ---
 # <a name="hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode"></a>Requisitos de hardware y software para Reporting Services en modo de SharePoint
 
-  En este tema se describen los requisitos previos, los requisitos de hardware [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y las consideraciones de instalación para ejecutar en modo de SharePoint. Puesto que el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un servidor de SharePoint, la mayoría de los requisitos se basan en el entorno de SharePoint. Para los servidores de informes en modo nativo, el hardware debe cumplir los requisitos mínimos de hardware y software para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
+  En este tema se describen los requisitos previos, los requisitos de hardware y las consideraciones de instalación para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ejecutar en modo de SharePoint. Puesto que el modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiere un servidor de SharePoint, la mayoría de los requisitos se basan en el entorno de SharePoint. Para los servidores de informes en modo nativo, el hardware debe cumplir los requisitos mínimos de hardware y software para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información, vea [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  
   
 -   [Requisitos previos](#bkmk_prereq)  
   
@@ -61,13 +60,13 @@ ms.locfileid: "75245634"
   
 -   La instancia del servidor de informes no puede utilizar SQL Server Express Edition para su base de datos. Sin embargo, la instancia de SQL Server Express Edition instalada por el producto de SharePoint puede coexistir con otras ediciones del Motor de base de datos.  
   
-##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Requisitos de
+##  <a name="sscrescent-requirements"></a><a name="bkmk_powerview"></a>[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]Requisitos de
 
  Examine la [documentación de Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) más actualizada en Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] es una característica de Microsoft Excel 2013 y forma parte del complemento [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services para las ediciones Enterprise de Microsoft SharePoint Server 2010 y 2013.  
   
 ##  <a name="more-information"></a><a name="bkmk_more_information"></a> Más información
 
- Para obtener información sobre los cambios de SharePoint, vea [cambios de sharepoint 2010 a sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
+ Para obtener información sobre los cambios de SharePoint, vea [cambios de sharepoint 2010 a sharepoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) ( https://technet.microsoft.com/library/ff607742(office.15).aspx) .  
   
  [SQL Server notas](https://go.microsoft.com/fwlink/?LinkID=296445)de la versión de 2014.  
   

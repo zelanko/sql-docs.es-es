@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 690b70b7-5be1-4014-af97-54e531997839
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcfa139cb854954d920a1148f3d5cebb907c61e4
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e6e28e6d1bb923fb226e7df7964853685f23178b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706556"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050380"
 ---
 # <a name="altering-memory-optimized-tables"></a>Modificar tablas con optimización para memoria
   No se admite la realización de operaciones ALTER en las tablas optimizadas para memoria. Esto incluye operaciones tales como cambiar el bucket_count, agregar o quitar un índice y agregar o quitar una columna. En este tema se proporcionan instrucciones sobre cómo actualizar las tablas optimizadas para memoria.  
@@ -223,7 +222,7 @@ Write-Host ""
   
  El script de PowerShell siguiente ejecuta los cambios del esquema incluidos en el script del ejemplo anterior. Este script toma como argumento una tabla, y ejecuta los scripts de cambio de esquema que se generaron para dicha tabla y los procedimientos almacenados asociados.  
   
- Uso: execute_schema_change. PS1 *SERVER_NAME * * db_name `schema_name` TABLE_NAME*  
+ Uso: execute_schema_change.ps1 *SERVER_NAME * * db_name `schema_name` TABLE_NAME*  
   
 ```powershell
 # stop execution once an error occurs  

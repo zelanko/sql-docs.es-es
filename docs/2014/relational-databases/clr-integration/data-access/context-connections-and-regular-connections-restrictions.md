@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3b721409f0915cb1e13861f6481909e02af37cb2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2ebf188db7213b26264d66bad7e2a4ca9f0a09af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62919166"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84970675"
 ---
 # <a name="restrictions-on-regular-and-context-connections"></a>Restricciones en las conexiones normales y de contexto
-  En este tema se describen las restricciones asociadas al código que se ejecuta [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] en el proceso a través de las conexiones de contexto y normales.  
+  En este tema se describen las restricciones asociadas al código que se ejecuta en el [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] proceso a través de las conexiones de contexto y normales.  
   
 ## <a name="restrictions-on-context-connections"></a>Restricciones en conexiones de contexto  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones de contexto:  

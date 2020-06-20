@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6854121d-429d-4d1b-9d64-342583e08378
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac8669fc161dfba1f7ed1f7c3b16e15619be2ff6
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 2d9bf67d1c71e9802ac7c90c79e69b1cea6af3a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706920"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84926686"
 ---
 # <a name="legal-notice-for-documentation"></a>Aviso legal de la documentación
   Este documento se ofrece "tal cual". La información y las vistas expresadas en este documento, incluidas las direcciones URL y otras referencias a sitios web de Internet, pueden cambiar sin previo aviso. El usuario asume el riesgo de su uso.  

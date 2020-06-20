@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 28437f0903459616a574e713c0f138e8bb459870
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807429"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934486"
 ---
 # <a name="cross-container-transactions"></a>Transacciones entre contenedores
   Las transacciones entre contenedores son transacciones de usuario implícitas o explícitas que incluyen llamadas a procedimientos almacenados compilados de forma nativa u operaciones en tablas optimizadas para memoria.  
@@ -65,7 +64,7 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Semántica de aislamiento para operaciones individuales  
  Una transacción T serializable se ejecuta en aislamiento completo. Es como si otra transacción se ha confirmado antes de que se iniciara T o se ha iniciado después confirmarse T. Se vuelve más compleja cuando operaciones diferentes en una transacción tienen niveles de aislamiento distintos.  
   
- La semántica general de los niveles de aislamiento de transacción [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]en, junto con las implicaciones en el bloqueo, se explica en [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ La semántica general de los niveles de aislamiento de transacción en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , junto con las implicaciones en el bloqueo, se explica en [SET TRANSACTION ISOLATION LEVEL &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
   
  En el caso de transacciones entre contenedores en las que diferentes operaciones pueden tener niveles de aislamiento distintos, debe comprender la semántica del aislamiento de las operaciones de lectura individuales. Las operaciones de escritura se aíslan siempre. Las escrituras de transacciones diferentes no pueden verse afectadas entre sí.  
   
@@ -135,7 +134,7 @@ commit
   
  La cara basada en disco de una transacción T determinada alcanza un cierto nivel de aislamiento X si se cumple una de las condiciones siguientes:  
   
--   Se inicia en X. Es decir, el valor predeterminado de la sesión era X, ya `SET TRANSACTION ISOLATION LEVEL`sea porque se ejecutó [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o es el valor predeterminado.  
+-   Se inicia en X. Es decir, el valor predeterminado de la sesión era X, ya sea porque se ejecutó `SET TRANSACTION ISOLATION LEVEL` o es el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valor predeterminado.  
   
 -   Durante la transacción, el nivel de aislamiento predeterminado se cambia a X con `SET TRANSACTION ISOLATION LEVEL`.  
   

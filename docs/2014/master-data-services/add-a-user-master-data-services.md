@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44262bdd-430c-4337-ac92-9333f54c7039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 47c42afc2f09c43a678bb99c22ec7275cf2ca20f
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65483773"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84972335"
 ---
 # <a name="add-a-user-master-data-services"></a>Agregar un usuario (Master Data Services)
   Agregue un usuario a la lista **Usuarios** en [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] a fin de comenzar el proceso para asignar el permiso a la aplicación web. Para que un usuario de la lista pueda tener acceso a [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], debe conceder el permiso de usuario a una o más áreas funcionales y objetos de modelo.  
@@ -34,13 +33,13 @@ ms.locfileid: "65483773"
   
 2.  En la página **Usuarios** , haga clic en **Agregar usuarios**.  
   
-3.  Escriba el nombre del usuario precedido por el Active Directory nombre de dominio o por el nombre del equipo servidor, como en *dominio*\\*user_name* o *equipo \ user_name*.  
+3.  Escriba el nombre del usuario precedido por el Active Directory nombre de dominio o por el nombre del equipo servidor, como en *dominio* \\ *user_name* o *equipo \ user_name*.  
   
 4.  Si lo desea, haga clic en **Comprobar nombres**.  
   
-5.  Haga clic en **Aceptar**.  
+5.  Haga clic en **OK**.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
   
 -   [Asignar permisos del área funcional &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   

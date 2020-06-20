@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6bc430354ca8ef220caed882f1f8c7942b44d158
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 39d738898db75cffd1d979b150628d7c3484b887
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127277"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050788"
 ---
 # <a name="srv_convert-extended-stored-procedure-api"></a>srv_convert (API de procedimiento almacenado extendido)
     
@@ -87,10 +86,10 @@ destlen
  *destlen*  
  Especifica la longitud, en bytes, de la variable de destino. Este parámetro se pasa por alto en los tipos de datos de longitud fija. Para una variable de destino de tipo SRVCHAR, el valor de *destlen* debe ser la longitud total del espacio en búfer de destino. Una longitud de -1 para una variable de destino de tipo SRVCHAR o SRVBINARY indica que hay suficiente espacio disponible. Para una variable de destino de tipo *srvchar*, una longitud de -1 hace que la cadena de caracteres termine en NULL.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  La longitud de los datos convertidos, en bytes, si la conversión de tipos de datos es correcta. Cuando **srv_convert** encuentra una solicitud de conversión que no admite, llama al controlador de errores proporcionado por el desarrollador, si lo hubiera, establece un número de error global y devuelve -1.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La función **srv_willconvert** determina si se permite una conversión determinada.  
   
  La conversión a los tipos de datos numéricos aproximados SRVFLT4 o SRVFLT8 puede producir alguna pérdida de precisión. La conversión de los tipos de datos numéricos aproximados SRVFLT4 o SRVFLT8 a SRVCHAR o SRVTEXT también puede producir alguna pérdida de precisión.  

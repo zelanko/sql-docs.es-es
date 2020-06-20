@@ -1,5 +1,6 @@
 ---
 title: Información
+description: Obtenga información sobre las características de SQL Server Native Client (SNAC). SQL Server Native Client hace referencia a los controladores ODBC y OLE DB para SQL Server.
 ms.date: 04/14/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d175942c9d636221868ca12743e6dac79bb2ddcb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: eb9d7878f4edc9f81b7b17b5fdf44da5c9dcec48
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388712"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84948699"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +30,7 @@ SNAC, o SQL Server Native Client, es un término que se ha usado indistintamente
 > Para obtener más información y descargar los controladores de SNAC o ODBC, vea la [entrada de blog explicación del ciclo de vida de snac](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
 > Para obtener más información sobre el controlador ODBC para SQL Server, vea [Microsoft ODBC driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).  
 
- Información sobre las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características de Native Client publicadas con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la última versión disponible de SQL Server Native Client:
+ Información sobre las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] características de Native Client publicadas con [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , la última versión disponible de SQL Server Native Client:
 
 -   [Compatibilidad de SQL Server Native Client con LocalDB](../../relational-databases/native-client/features/sql-server-native-client-support-for-localdb.md)  
 

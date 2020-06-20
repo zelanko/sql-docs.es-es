@@ -11,25 +11,24 @@ f1_keywords:
 ms.assetid: ef81b658-8eb5-4636-ac81-eead10cc7b9f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 41e0ca3ee7ccaa7bb57e5667092c0660e35c4c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 18afc2a57f4e86417f4228baa459117f1dc7f7a2
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808684"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934596"
 ---
 # <a name="connect-to-server-reporting-services"></a>Conectar al servidor (Reporting Services)
   Use este cuadro de diálogo para ver o especificar opciones cuando se conecte a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
   
 ## <a name="options"></a>Opciones  
  **Tipo de servidor**  
- Al registrar un servidor desde **Explorador de objetos**, seleccione el tipo de servidor al que se va a [!INCLUDE[ssDE](../includes/ssde-md.md)]conectar:, Analysis Services, Reporting Services o Integration Services. El resto del cuadro de diálogo muestra simplemente las opciones que se aplican al tipo de servidor seleccionado. Al registrar un servidor desde **servidores registrados**, el cuadro **tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el componente **servidores registrados** . Para registrar un tipo diferente de servidor, seleccione [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services o Integration Services en la barra de herramientas **servidores registrados** antes de empezar a registrar un nuevo servidor.  
+ Al registrar un servidor desde **Explorador de objetos**, seleccione el tipo de servidor al que se va a conectar: [!INCLUDE[ssDE](../includes/ssde-md.md)] , Analysis Services, Reporting Services o Integration Services. El resto del cuadro de diálogo muestra simplemente las opciones que se aplican al tipo de servidor seleccionado. Al registrar un servidor desde **servidores registrados**, el cuadro **tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el componente **servidores registrados** . Para registrar un tipo diferente de servidor, seleccione [!INCLUDE[ssDE](../includes/ssde-md.md)] , Analysis Services, Reporting Services o Integration Services en la barra de herramientas **servidores registrados** antes de empezar a registrar un nuevo servidor.  
   
  **Nombre del servidor**  
  El modo de servidor de la instancia del servidor de informes al que se está conectando determina el valor que debe especificar.  
   
- En un servidor de informes que se ejecute en modo nativo, especifique la instancia del servidor de informes a la que conectarse. Si utiliza la instancia predeterminada, el nombre del servidor suele ser el nombre del equipo. Si ha instalado una instancia con nombre, Anexe el nombre de la instancia al nombre del servidor en \<este formato \\ : servername\>><INSTANCENAME. Reporting Services usa el carácter de barra diagonal inversa para delimitar el nombre de instancia.  
+ En un servidor de informes que se ejecute en modo nativo, especifique la instancia del servidor de informes a la que conectarse. Si utiliza la instancia predeterminada, el nombre del servidor suele ser el nombre del equipo. Si ha instalado una instancia con nombre, Anexe el nombre de la instancia al nombre del servidor en este formato: \<servername> \\<InstanceName \> . Reporting Services usa el carácter de barra diagonal inversa para delimitar el nombre de instancia.  
   
  Con un servidor de informes que se ejecute en el modo integrado de SharePoint, debe especificar un sitio de SharePoint. Puede especificar un sitio de una colección de sitios que esté integrada con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. La dirección URL que proporcione debe incluir el prefijo HTTP o HTTPS. Debe disponer de permiso para tener acceso al sitio de SharePoint con el fin de conectarse a él en Management Studio. El nivel de permisos que se le asigne determinará qué elementos puede ver y administrar. Para obtener más información, consulte [Conectar con un servidor de informes en Management Studio](../reporting-services/tools/connect-to-a-report-server-in-management-studio.md).  
   

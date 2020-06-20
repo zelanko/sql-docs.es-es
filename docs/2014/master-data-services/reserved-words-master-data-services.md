@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd1e5bcee01992607cf9bffca1a72dd99bd75fbe
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65482578"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960585"
 ---
 # <a name="reserved-words-master-data-services"></a>Palabras reservadas (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], al crear objetos del modelo o miembros, algunas palabras no se pueden usar. Su uso puede producir errores.  
@@ -34,7 +33,7 @@ ms.locfileid: "65482578"
   
 -   [Atributos](#attributes)  
   
--   [Members](#members)  
+-   [Miembros](#members)  
   
 ##  <a name="models"></a><a name="models"></a>Modelos  
  Si crea un modelo con el nombre establecido en **nombre**, no seleccione **crear entidad con el mismo nombre que el modelo** porque **el nombre no se puede** usar para el nombre de una entidad.  
@@ -47,7 +46,7 @@ ms.locfileid: "65482578"
   
 ##  <a name="attributes"></a><a name="attributes"></a>Sus  
   
--   **Id**  
+-   **ID**  
   
 -   **Código**  
   

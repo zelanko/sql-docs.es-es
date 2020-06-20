@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 693b8e82a3ca01616e85fe5e175726a687cfea86
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68889252"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932526"
 ---
 # <a name="install-sql-server-2014"></a>Instalar SQL Server 2014
 ## <a name="download-sql-server-2014-express"></a>[Descargar SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Gracias a [Scott Hanselman](http://www.hanselman.com/) por recopilar todos los vínculos de paquete del instalador en un solo lugar.**
   
- En este tema se proporciona información general de las distintas opciones de instalación de que se dispone para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los distintos componentes que se pueden instalar y el proceso de instalación, consulte [instalación de SQL Server 2014](installation-for-sql-server.md).  
-> **Nota:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible en las ediciones de 32 y 64 bits. Las ediciones de 64 bits y de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instalan a través del Asistente para la instalación o en un símbolo del sistema. Para obtener más información [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acerca de los componentes de, vea [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ En este tema se proporciona información general de las distintas opciones de instalación de que se dispone para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener más información acerca de los distintos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes que se pueden instalar y el proceso de instalación, consulte [instalación de SQL Server 2014](installation-for-sql-server.md).  
+> **Nota:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está disponible en las ediciones de 32 y 64 bits. Las ediciones de 64 bits y de 32 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instalan a través del Asistente para la instalación o en un símbolo del sistema. Para obtener más información acerca de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los componentes de, vea [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para instalar las bases de datos y el código de ejemplo para las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que no son Express, vea el [sitio web de CodePlex](https://go.microsoft.com/fwlink/?LinkId=87843). Para obtener información sobre la compatibilidad de las bases de datos y el código muestra de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], vea [Información general sobre bases de datos y ejemplos](https://go.microsoft.com/fwlink/?LinkId=110391).  
   
@@ -55,7 +54,7 @@ ms.locfileid: "68889252"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|En este tema se proporciona información general de la configuración del firewall y de cómo configurar Firewall de Windows.|  
+|[Configurar el Firewall de Windows para permitir el acceso a SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|En este tema se proporciona información general de la configuración del firewall y de cómo configurar Firewall de Windows.|  
 |[Configurar un equipo de host múltiple para el acceso a SQL Server](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.|  
 |[Configurar Firewall de Windows para permitir el acceso a Analysis Services](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Puede seguir los pasos proporcionados en este tema para configurar el puerto y el firewall para permitir el acceso a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o a PowerPivot para SharePoint.|  
   

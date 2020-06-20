@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6fcd8ca8-1ceb-457d-9545-096c74e274d7
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ca42f1dda184bf5cd99cad7d34f5ae9fce79478b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6f8002bfe0f1142cea43704dc88aacb99316eca6
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092960"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059113"
 ---
 # <a name="repair-a-distributed-replay-installation"></a>Reparar una instalación de Distributed Replay
   La reparación de un componente de Distributed Replay (controlador o cliente) hará lo siguiente:  

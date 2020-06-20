@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3017f5d0-ef53-4522-b42f-bdf637e7d75e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ebcc6da18ebe6c1930888bb0d2bd36610a19e7e7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62807509"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934526"
 ---
 # <a name="create-history-and-status-reports"></a>Crear informes de historial y estado
   Es posible crear un informe sobre el historial o el estado actual de los archivos de la solución cargada en ese momento. También se puede obtener una vista previa del informe y enviarlo a una impresora, un archivo o el Portapapeles. Estos informes no son generados por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Por el contrario, es [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe la herramienta que los genera.  
@@ -29,7 +28,7 @@ ms.locfileid: "62807509"
   
 2.  En el menú **archivo** , seleccione **control de código fuente**y haga clic en **historial**.  
   
-3.  En el cuadro **de diálogo historial de** \<archivo o proyecto>, haga clic en **Informe**.  
+3.  En el **historial del cuadro de** \<File or Project> diálogo, haga clic en **Informe**.  
   
 4.  En el cuadro de diálogo **Informe de historial** , seleccione las opciones adecuadas y, a continuación, haga clic en **Aceptar**.  
   

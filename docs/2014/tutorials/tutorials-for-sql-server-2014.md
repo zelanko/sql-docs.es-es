@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: da87f0fbae21d11906f12a906aa5107e8812436e
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ccc9871a879196bc26251ea952ddd5dd573768e9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000077"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85035300"
 ---
 # <a name="tutorials-for-sql-server-2014"></a>Tutoriales de SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduce muchas tecnologías y características nuevas.  
@@ -40,7 +39,7 @@ ms.locfileid: "83000077"
 ## <a name="in-this-section"></a>En esta sección  
  Hay tutoriales disponibles para estas tecnologías de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] .  
   
-|Technology|Descripción|  
+|Tecnología|Descripción|  
 |----------------|-----------------|  
 |[Tutoriales de Analysis Services &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Aprenda a desarrollar e implementar modelos multidimensionales o tabulares de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . También aprenderá a utilizar herramientas como PowerPivot para analizar los datos de los modelos.|  
 |[Tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Aprenda a crear informes básicos y suscripciones.|  

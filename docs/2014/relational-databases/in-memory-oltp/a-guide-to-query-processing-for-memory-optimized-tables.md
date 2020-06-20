@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 065296fe-6711-4837-965e-252ef6c13a0f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ba02a877d06d6ee3b7f57f6a42c588f4c1019a9
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 93489e5dea295964826005e081bcffe889cb7586
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706581"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050447"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guía del procesamiento de consultas para tablas con optimización para memoria
   OLTP en memoria incluye en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] los procedimientos almacenados compilados de forma nativa y las tablas optimizadas para memoria. Este artículo proporciona información general del procesamiento de consultas tanto para las tablas optimizadas para memoria como para los procedimientos almacenados compilados de forma nativa.  
@@ -195,7 +194,7 @@ END
 |-|-----------------------|-----------------|  
 |Compilación inicial|En el momento de la creación.|En la primera ejecución.|  
 |Recompilación automática|En la primera ejecución del procedimiento después del reinicio de la base de datos o del servidor.|Al reiniciar el servidor. O bien, se expulsa de la memoria caché de planes, generalmente según los cambios de esquema o de estadísticas, o por presión en la memoria.|  
-|Recompilación manual|No se admite. La solución es quitar y volver a crear el procedimiento almacenado.|Mediante `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
+|Recompilación manual|No compatible. La solución es quitar y volver a crear el procedimiento almacenado.|Mediante `sp_recompile`. Puede expulsar manualmente el plan de la memoria caché, por ejemplo con DBCC FREEPROCCACHE. También puede crear el procedimiento almacenado WITH RECOMPILE y el procedimiento almacenado se recompilará en cada ejecución.|  
   
 ### <a name="compilation-and-query-processing"></a>Compilación y procesamiento de consultas  
  El siguiente diagrama muestra el proceso de compilación para los procedimientos almacenados compilados de forma nativa:  

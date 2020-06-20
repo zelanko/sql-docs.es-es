@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0f7642cd5f2245cbe5056ff09ec35477c0a6619c
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62833767"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84920516"
 ---
 # <a name="odbc-connection-manager"></a>ODBC, administrador de conexiones
   Un administrador de conexiones ODBC habilita un paquete para conectarse a una serie de sistemas de administración de bases de datos mediante la especificación Conectividad abierta de bases de datos (ODBC).  
   
- Cuando agrega una conexión ODBC a un paquete y establece las propiedades del administrador de conexiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , crea un administrador de conexiones y agrega el administrador de `Connections` conexiones a la colección del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
+ Cuando agrega una conexión ODBC a un paquete y establece las propiedades del administrador de conexiones, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] crea un administrador de conexiones y agrega el administrador de conexiones a la `Connections` colección del paquete. En el tiempo de ejecución el administrador de conexiones se resuelve como una conexión ODBC física.  
   
  La propiedad `ConnectionManagerType` del administrador de conexiones se establece en `ODBC`.  
   

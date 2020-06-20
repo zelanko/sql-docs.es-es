@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e49ba7d5-787f-4052-b985-b699195d982b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f0990fbe65adc97b9e654f6393e25582363596
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61f7ab78b5ab6251b7f27401d36423ec27141c4e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66093124"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85041839"
 ---
 # <a name="remove-ddl-operations-on-the-inserted-and-deleted-tables-inside-dml-triggers"></a>Quitar las operaciones DDL en las tablas insertadas y eliminadas en los desencadenadores DML
   Las instrucciones del lenguaje de definición de datos (DDL), como CREATE INDEX, no se pueden realizar en las tablas insertadas y eliminadas dentro de los desencadenadores DML. Algunas instrucciones de DDL en dichas tablas están permitidas en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea "Usar las tablas insertadas y eliminadas" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

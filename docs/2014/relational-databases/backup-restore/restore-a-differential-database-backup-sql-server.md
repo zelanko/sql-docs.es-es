@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a8eab18d84efc1a990715e0d5488085252f93a7e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62877252"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84957331"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurar una copia de seguridad diferencial de la base de datos (SQL Server)
   En este tema se describe cómo restaurar una copia de seguridad diferencial de la base de datos en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -90,7 +89,7 @@ ms.locfileid: "62877252"
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
-         En el cuadro de lista **Origen: Dispositivo: Base de datos** , seleccione el nombre de la base de datos que se debe restaurar.  
+         En el cuadro de lista **Origen: Dispositivo: Base de datos**, seleccione el nombre de la base de datos que se debe restaurar.  
   
          **Nota** : esta lista solo está disponible cuando se selecciona **Dispositivo** . Solo estarán disponibles las bases de datos que tienen copias de seguridad en el dispositivo seleccionado.  
   
@@ -137,7 +136,7 @@ ms.locfileid: "62877252"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Para restaurar una copia de seguridad diferencial de la base de datos  
   
-1.  Ejecute la instrucción RESTORE DATABASE con la cláusula NORECOVERY para restaurar la copia de seguridad de base de datos completa anterior a la copia de seguridad diferencial de la base de datos. Para obtener más información, vea [Cómo restaurar una copia de seguridad completa](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Ejecute la instrucción RESTORE DATABASE con la cláusula NORECOVERY para restaurar la copia de seguridad de base de datos completa anterior a la copia de seguridad diferencial de la base de datos. Para más información, vea: [Cómo: restaurar una copia de seguridad completa](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Ejecute la instrucción RESTORE DATABASE para restaurar la copia de seguridad diferencial de la base de datos especificando:  
   

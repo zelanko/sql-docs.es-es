@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f5deb525654007248fbc5c97c07e3c368654ad5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ca1ac00668e6a4383b022ae5e1ed108da6ef603d
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66057224"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965025"
 ---
 # <a name="odbc-destination-editor-mappings-page"></a>Editor de destino de ODBC (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destino de ODBC** para asignar columnas de entrada a columnas de destino.  
@@ -33,7 +32,7 @@ ms.locfileid: "66057224"
  Lista de columnas de destino disponibles. Arrastre y coloque una columna de destino en una columna de entrada disponible para asignar las columnas.  
   
 ### <a name="input-column"></a>Columna de entrada  
- Permite ver las columnas de entrada seleccionadas. Puede quitar las asignaciones seleccionando ** \<omitir>** para excluir las columnas de la salida.  
+ Permite ver las columnas de entrada seleccionadas. Puede quitar las asignaciones seleccionando **\<ignore>** excluir columnas de la salida.  
   
 ### <a name="destination-column"></a>Columna de destino  
  Muestra todas las columnas de destino disponibles, tanto las asignadas como las no asignadas.  

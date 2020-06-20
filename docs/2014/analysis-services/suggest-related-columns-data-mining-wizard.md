@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a20782e83422e6d8f7b6a550f23e57c6339b1a24
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66068021"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940206"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Sugerir columnas relacionadas (Asistente para minería de datos)
   Utilice la página **Sugerir columnas relacionadas** para ver las recomendaciones de la característica **Sugerir** que ha seleccionado en la página anterior del asistente. Las columnas de entrada serán seleccionadas previamente en función de su asociación con la columna **Predicción** que ha seleccionado. Si acepta los cambios en este cuadro de diálogo, los cambios se reflejarán en la página **Especificar los datos de entrenamiento** .  
@@ -28,7 +27,7 @@ ms.locfileid: "66068021"
  **Nombre de columna**  
  Muestra las columnas de entrada que ha definido en la página **Especificar los datos de entrenamiento** del asistente.  
   
- **Puntuación**  
+ **Score**  
  Muestra la relación entre la columna y la columna **Predicción** previamente seleccionada.  
   
  **Entrada**  

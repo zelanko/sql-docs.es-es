@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dda4296a-1d16-4e77-8d6f-e295f6dd4e87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04b836a53b4b9928118221053d1fbc2c3a89dfdd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7b839fe4359e083df9c6b4643111b61f5b681914
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63217812"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067197"
 ---
 # <a name="count-rows-in-a-table-visual-database-tools"></a>Contar las filas de una tabla (Visual Database Tools)
   Puede contar las filas de una tabla para determinar:  
@@ -55,7 +54,7 @@ ms.locfileid: "63217812"
   
 2.  Haga clic con el botón derecho en el fondo del panel Diagrama y, a continuación, elija **Agregar grupo por** en el menú contextual. El Diseñador de consultas y vistas agrega una columna **Agrupar por** a la cuadrícula en el panel Criterios.  
   
-3.  Seleccione ** \*(todas las columnas)** en el rectángulo que representa la tabla o el objeto con estructura de tabla.  
+3.  Seleccione ** \* (todas las columnas)** en el rectángulo que representa la tabla o el objeto con estructura de tabla.  
   
      El Diseñador de consultas y vistas escribe automáticamente el término **Recuento** en la columna **Agrupar por** del panel Criterios y asigna un alias a la columna que se va a resumir. Para crear un encabezado de columna más útil en el resultado de la consulta, vea [Crear alias de columna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   

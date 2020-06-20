@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8bcadc041fd1f2c4fd708fbc79ab52d0c0472956
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 61e10603d8adf3a80dc6de93aed0b3a1dae05261
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65479575"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84950735"
 ---
 # <a name="delete-an-entity-master-data-services"></a>Eliminar una entidad (Master Data Services)
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], elimine una entidad para eliminar todos los miembros y atributos de la misma.  

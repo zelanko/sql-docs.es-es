@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 5b39d062f5ccc44492d4c2c0f224d0fa2c6b0993
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7861e87ad0fd35fdedae444de74f5300edb3de0a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78175594"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938786"
 ---
 # <a name="configure-table-behavior-properties-for-power-view-reports-ssas-tabular"></a>Configurar las propiedades de comportamiento de las tablas para informes de Power View (SSAS tabular)
   Si va a utilizar un modelo tabular como modelo de datos para [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], puede establecer las propiedades del comportamiento de las tablas que exponen filas de detalles en un nivel más específico. El establecimiento de las propiedades del comportamiento de las tablas cambia el comportamiento de agrupación de las filas de detalle y genera una mejor colocación predeterminada de la información de identificación (como nombres, carnets con fotografía o imágenes de logotipo) en diseños de mosaicos, tarjetas y gráficos.
@@ -133,7 +132,7 @@ ms.locfileid: "78175594"
 
  ![Gráfico basado en agrupación de identificador de fila](../media/ssas-rptprop-chartrowid.gif "Gráfico basado en agrupación de identificador de fila")
 
-## <a name="next-steps"></a>Pasos a seguir
+## <a name="next-steps"></a>Pasos siguientes
  Después de haber evaluado las tablas del modelo y establecer las propiedades del comportamiento de las tablas para que las que contengan filas de detalles aparezcan siempre como elementos individuales, puede optimizar aún más el modelo mediante propiedades o configuraciones adicionales.
 
 

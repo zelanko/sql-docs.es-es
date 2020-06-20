@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e784216116bdb9ab308dff5fa998740b0fa459b0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62691596"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060582"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Crear una suscripción actualizable a una publicación transaccional [Management Studio]
 
@@ -116,7 +115,7 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * `1` - Use el contexto de seguridad del usuario que realiza modificaciones en el suscriptor al conectarse al publicador. Consulte [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) para conocer las restricciones relacionadas con este modo de seguridad.
     * `2` - Use un inicio de sesión vinculado definido por el usuario ya existente y creado con [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
-6. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`especificando `@subscriber`, `@destination_db`,, un valor de Pull `@subscription_type`para y el mismo valor especificado en el paso 3 `@update_mode`para.
+6. En el publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) especificando `@publication` , `@subscriber` , `@destination_db` , un valor de pull para `@subscription_type` y el mismo valor especificado en el paso 3 para `@update_mode` .
 
 Esto registra la suscripción de extracción en el publicador. 
 
@@ -190,7 +189,7 @@ Esto registra la suscripción de extracción en el publicador.
     * (Opcional) Un valor de `0` para `@distributor_security_mode` y la información de inicio de sesión de SQL Server para `@distributor_login` y `@distributor_password`, en caso de que necesite usar Autenticación de SQL Server cuando se conecte al distribuidor. 
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
-5. En el publicador, [ejecute sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar el suscriptor en el publicador, `@publication`especificando, `@subscriber`, `@destination_db`, un valor de `@subscription_type`pull para y el mismo valor especificado en el paso `@update_mode`3 para.
+5. En el publicador, ejecute [sp_addsubscriber](/sql/relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql) para registrar el suscriptor en el publicador, especificando `@publication` , `@subscriber` , `@destination_db` , un valor de pull para `@subscription_type` y el mismo valor especificado en el paso 3 para `@update_mode` .
 
 Esto registra la suscripción de extracción en el publicador. 
 
@@ -299,11 +298,11 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Establecer opciones de resolución de conflictos de actualización en cola (SQL Server Management Studio)
-  Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación - \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>Para establecer las opciones de resolución de conflictos de actualización en cola  
   
-1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>**, seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:    
+1.  En la página **Opciones de suscripción** del cuadro de diálogo Propiedades de la **publicación: \<Publication> ** , seleccione uno de los siguientes valores para la opción directiva de resolución de **conflictos** :    
     -   **Mantener el cambio del publicador**    
     -   **Mantener el cambio del suscriptor**    
     -   **Reinicializar la suscripción**    

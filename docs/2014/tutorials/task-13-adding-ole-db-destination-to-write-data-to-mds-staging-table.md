@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e6c67fa9-bb52-44a9-82f6-d86551cf12b2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bb39e9d50d135adfedcf307cda2ad703e302eda5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65476993"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85061143"
 ---
 # <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Tarea 13: Adición del destino de OLE DB para escribir datos en la tabla de ensayo de MDS
   Ahora que ha agregado los valores de **ImportType** y **BatchTag** a todos los registros, está listo para enviarlos a MDS para el almacenamiento provisional. En esta tarea, usará el destino OLE DB para escribir los datos en **STG. supplier_Leaf** tabla de ensayo.  

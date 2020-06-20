@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b3a72f800643afa5e7edf6bdfa9928196f5da2d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 622b5a02f0b13e9cbf6a78977a07daea93a3f520
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63138787"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85007584"
 ---
 # <a name="table-element-for-schema-dta"></a>Table (DTA, elemento de Schema)
   Especifica la tabla que se va a optimizar.  
@@ -35,7 +34,7 @@ ms.locfileid: "63138787"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`NumberOfRows`|Opcional. Entero que permite simular tablas de diferentes tamaños.|  
   
@@ -43,9 +42,9 @@ ms.locfileid: "63138787"
   
 |Característica|Descripción|  
 |--------------------|-----------------|  
-|**Tipo y longitud de los datos**|**cadena**, entre 1 y 255 caracteres.|  
+|**Tipo y longitud de los datos**|**string**, entre 1 y 255 caracteres.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Casos**|Opcional. Presenta tantas tablas como sea necesario para la carga de trabajo.|  
+|**Repetición**|Opcional. Presenta tantas tablas como sea necesario para la carga de trabajo.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 331f8c33f7748e6591acd6d6ecda7a03ef7d8137
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62757775"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84940116"
 ---
 # <a name="imdembedded-interface"></a>Interfaz IMDEmbedded
   La interfaz IMDEmbedded es una interfaz pública utilizada para administrar una base de datos incrustada de PowerPivot o una base de datos de modelo tabular. La interfaz hereda de la interfaz `IPersistStream`. La interfaz permite las siguientes operaciones:  
@@ -98,7 +97,7 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Se produjo un error al tener acceso al identificador del flujo.  
   
-#### <a name="remarks"></a>Observaciones  
+#### <a name="remarks"></a>Comentarios  
  Para comprobar si la conexión actual contiene una base de datos incrustada, el usuario debería comprobar el valor de la propiedad DBPROP_MSMD_EMBEDDED_DATA de las propiedades de conexión OLE DB.  
   
  Los valores posibles de DBPROP_MSMD_EMBEDDED_DATA son:  
@@ -217,7 +216,7 @@ HRESULT Cancel ( void )
  Cancela la operación de base de datos incrustada actual  
   
 #### <a name="parameters"></a>Parámetros  
- Ninguna.  
+ Ninguno.  
   
 #### <a name="return-value"></a>Valor devuelto  
  `S_OK`  
@@ -268,7 +267,7 @@ HRESULT IsDirty ( void )
  Comprueba si la base de datos incrustada ha cambiado desde que se guardó por última vez. Se hereda de `IPersistStream`.  
   
 #### <a name="parameters"></a>Parámetros  
- None  
+ ninguno  
   
 #### <a name="return-values"></a>Valores devueltos  
  `S_OK`  

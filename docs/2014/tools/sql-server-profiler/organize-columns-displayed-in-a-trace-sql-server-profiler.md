@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1a884f7c45accefb248029d148feb8b521e6ff4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ed3228806a4fe0d136a1a2d9761dc46ab519677d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63240533"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85054353"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar las columnas mostradas en un seguimiento (SQL Server Profiler)
   Puede agrupar las columnas de datos de una seguimiento seleccionando **Organizar columnas** en la tabla de seguimiento o el cuadro de diálogo **Propiedades del archivo de seguimiento** , o bien al definir un seguimiento. La agrupación de las columnas de datos permite analizar mejor la salida del seguimiento del [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Para obtener más información, vea [Ver y analizar seguimientos con SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md).  

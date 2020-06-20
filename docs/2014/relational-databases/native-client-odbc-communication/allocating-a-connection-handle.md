@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 471d8a31-199c-4f92-bb10-004fc7733b35
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfda8d23f3be8b37f9eb3876496394fc32660769
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: d3cf84e541f114d527d9a00cd19bce705a09af30
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82702067"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85021222"
 ---
 # <a name="allocating-a-connection-handle"></a>Asignar un identificador de conexión
   Antes de que la aplicación se pueda conectar a un origen de datos o controlador, debe asignar un identificador de conexión. Esto se hace llamando a **SQLAllocHandle** con el parámetro *HandleType* establecido en SQL_HANDLE_DBC y *InputHandle* que apunta a un identificador de entorno inicializado.  

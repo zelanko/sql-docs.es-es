@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87bfaef1ad5dc4c9b1f907c27955ca3f156038a8
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 675e2d24cb84b2a68922528dcdaa09fb6b675605
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63067811"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85067145"
 ---
 # <a name="results-pane-visual-database-tools"></a>Panel Resultados (Visual Database Tools)
   El panel Resultados muestra los resultados de la consulta SELECT que se ha ejecutado más recientemente (Los resultados de otros tipos de consultas se muestran en cuadros de mensaje). Para abrir el panel de resultados, abra o cree una consulta, o vea o devuelva los datos de una tabla. Si el panel de resultados no aparece de manera predeterminada, en el menú **Diseñador de consultas** , elija **Panel**y, a continuación, haga clic en **Resultados**.  

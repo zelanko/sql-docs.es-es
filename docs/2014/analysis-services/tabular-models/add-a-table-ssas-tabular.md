@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 81c1d3d2f0a0098fea271a782af10fbd26245a28
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2727bc11de184f55ac332e11c75a46095af13f4a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "66067784"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84939956"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Agregar una tabla (SSAS tabular)
   En este tema se describe cómo agregar una tabla de un origen de datos del que ha importado datos previamente en el modelo. Para agregar una tabla del mismo origen de datos, puede usar la conexión de origen de datos existente. Se recomienda usar siempre una conexión única al importar cualquier número de tablas de un origen de datos único.  

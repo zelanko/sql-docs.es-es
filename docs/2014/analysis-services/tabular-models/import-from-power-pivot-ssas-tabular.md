@@ -11,16 +11,15 @@ f1_keywords:
 ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1530f609d958b75a584f506dbfa6ab6409a74d0f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66067016"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938856"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar desde PowerPivot (SSAS tabular)
-  En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y los datos de un libro PowerPivot mediante la plantilla de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]proyecto importar desde PowerPivot de.  
+  En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y los datos de un libro PowerPivot mediante la plantilla de proyecto importar desde PowerPivot de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
 ## <a name="create-a-new-tabular-model-from-a-powerpivot-for-excel-file"></a>Cree un nuevo modelo tabular desde un archivo de PowerPivot para Excel  
  Al crear un nuevo proyecto de modelos tabulares importando desde un libro PowerPivot, los metadatos que definen la estructura del libro se usan para crear y definir la estructura del proyecto de modelos tabulares en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Los objetos como tablas, columnas, medidas y relaciones se conservan, y aparecerán en el proyecto de modelos tabulares tal como están en el libro PowerPivot. No se realizan cambios en el archivo de libro .xlsx.  

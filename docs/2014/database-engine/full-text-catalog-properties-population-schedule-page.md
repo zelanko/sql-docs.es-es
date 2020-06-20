@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 8681506b-5dc6-4165-beb6-1e76ca470425
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e8ac94f235e08f2217edb9504722ebac998cb28
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: 62d69cdc42745fcbb5eb7d2cb05f90b710e5c70d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000937"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933006"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propiedades del catálogo de texto completo (página Programación de llenado)
   Utilice este cuadro de diálogo para agregar o modificar programaciones que determinan cuándo se llena o se vuelve a llenar el catálogo de texto completo.  
@@ -31,7 +30,7 @@ ms.locfileid: "83000937"
  **Tipo de rellenado**  
  Permite consultar o modificar la operación de llenado: completo, incremental o una operación de optimización.  
   
- **Habilitado**  
+ **Enabled**  
  Active o desactive esta casilla para habilitar o deshabilitar, respectivamente, la operación programada.  
   
  **Descripción**  

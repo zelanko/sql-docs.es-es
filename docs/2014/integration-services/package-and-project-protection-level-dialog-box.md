@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 6075d5156a9cc3662ac62e884787b8a650788be9
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66056946"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84964895"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Nivel de protección de paquetes y del proyecto, cuadro de diálogo
   Utilice el cuadro de diálogo **Nivel de protección de paquetes** para actualizar el nivel de protección de un paquete. El nivel de protección determina el método de protección, la contraseña o la clave de usuario, así como el ámbito de protección de paquetes. La protección puede incluir todos los datos o solo los datos confidenciales.  

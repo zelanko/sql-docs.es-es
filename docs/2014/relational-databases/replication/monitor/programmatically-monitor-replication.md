@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e11f73bf9538fb5ba84f4575631489ef852802c1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62667251"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060789"
 ---
 # <a name="programmatically-monitor-replication"></a>Supervisar la replicación mediante programación
   El Monitor de replicación es una herramienta gráfica que permite supervisar una topología de replicación. Puede tener acceso a los mismos datos de supervisión mediante programación usando los procedimientos de almacenamiento de replicación de [!INCLUDE[tsql](../../../includes/tsql-md.md)] o Replication Management Objects (RMO). Estos objetos permiten programar las tareas siguientes:  
@@ -58,21 +57,21 @@ ms.locfileid: "62667251"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Para supervisar publicadores, publicaciones y suscripciones desde el distribuidor  
   
-1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). De esta forma se devuelve la información de supervisión de todos los publicadores que usan este distribuidor. Para limitar el conjunto de resultados a un único publicador **@publisher**, especifique.  
+1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublisher](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql). De esta forma se devuelve la información de supervisión de todos los publicadores que usan este distribuidor. Para limitar el conjunto de resultados a un único publicador, especifique **@publisher** .  
   
-2.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). De esta forma se devuelve la información de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a un único publicador, publicación o base de datos **@publisher**publicada **@publication**, especifique **@publisher_db**, o, respectivamente.  
+2.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublication](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql). De esta forma se devuelve la información de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a un único publicador, publicación o base de datos publicada, especifique **@publisher** , **@publication** o **@publisher_db** , respectivamente.  
   
-3.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). De esta forma se devuelve la información de supervisión de todas las suscripciones que usan este distribuidor. Para limitar el conjunto de resultados a las suscripciones que pertenecen a un único publicador, publicación o base **@publisher**de **@publication**datos publicada **@publisher_db**, especifique, o, respectivamente.  
+3.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelpsubscription](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql). De esta forma se devuelve la información de supervisión de todas las suscripciones que usan este distribuidor. Para limitar el conjunto de resultados a las suscripciones que pertenecen a un único publicador, publicación o base de datos publicada, especifique **@publisher** , **@publication** o **@publisher_db** , respectivamente.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Para supervisar los comandos transaccionales que esperan su aplicación en el suscriptor  
   
-1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). De esta forma se devuelve la información de supervisión de todos los comandos pendientes en todas las suscripciones que usan este distribuidor. Para limitar el conjunto de resultados a los comandos pendientes de las suscripciones que pertenecen a un único publicador, suscriptor, publicación o **@publisher**base **@subscriber**de **@publication**datos publicada **@publisher_db**, especifique,, o respectivamente.  
+1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorsubscriptionpendingcmds](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql). De esta forma se devuelve la información de supervisión de todos los comandos pendientes en todas las suscripciones que usan este distribuidor. Para limitar el conjunto de resultados a los comandos pendientes de las suscripciones que pertenecen a un único publicador, suscriptor, publicación o base de datos publicada, especifique **@publisher** , **@subscriber** , **@publication** o **@publisher_db** respectivamente.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Para supervisar los cambios de mezcla que esperan ser cargados o descargados  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). De esta forma se devuelve un conjunto de resultados que muestra información sobre los cambios que esperan su replicación en los suscriptores. Para limitar el conjunto de resultados a los cambios que pertenecen a una publicación o artículo únicos **@publication** , **@article**especifique o, respectivamente.  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). De esta forma se devuelve un conjunto de resultados que muestra información sobre los cambios que esperan su replicación en los suscriptores. Para limitar el conjunto de resultados a los cambios que pertenecen a una publicación o artículo únicos, especifique **@publication** o **@article** , respectivamente.  
   
-2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). De esta forma se devuelve un conjunto de resultados que muestra información sobre los cambios que esperan su replicación en el publicador. Para limitar el conjunto de resultados a los cambios que pertenecen a una publicación o artículo únicos **@publication** , **@article**especifique o, respectivamente.  
+2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_showpendingchanges](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql). De esta forma se devuelve un conjunto de resultados que muestra información sobre los cambios que esperan su replicación en el publicador. Para limitar el conjunto de resultados a los cambios que pertenecen a una publicación o artículo únicos, especifique **@publication** o **@article** , respectivamente.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Para supervisar las sesiones del Agente de mezcla  
   
@@ -84,7 +83,7 @@ ms.locfileid: "62667251"
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Para supervisar las sesiones del Agente de mezcla de las suscripciones de extracción del suscriptor  
   
-1.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para una suscripción determinada, especifique **@publisher**, **@publication**y el nombre de la base de datos de **@publisher_db**publicación para. De esta forma se devuelve información de supervisión de las últimas cinco sesiones del Agente de mezcla de esta suscripción. Anote el valor de **Session_id** de las sesiones de interés incluidas en el conjunto de resultados.  
+1.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_replmonitorhelpmergesession](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql). Para una suscripción determinada, especifique **@publisher** , **@publication** y el nombre de la base de datos de publicación para **@publisher_db** . De esta forma se devuelve información de supervisión de las últimas cinco sesiones del Agente de mezcla de esta suscripción. Anote el valor de **Session_id** de las sesiones de interés incluidas en el conjunto de resultados.  
   
 2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_replmonitorhelpmergesessiondetail](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql). Especifique el valor **Session_id** del paso 1 en **@session_id**. De esta forma se muestra información detallada de supervisión acerca de la sesión.  
   
@@ -92,13 +91,13 @@ ms.locfileid: "62667251"
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Para ver y modificar las métricas del umbral de supervisión de una publicación  
   
-1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). De esta forma se devuelve el conjunto de umbrales de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a los umbrales de supervisión de las publicaciones que pertenecen a un único publicador o base de datos **@publisher**publicada **@publisher_db**, o **@publication**a una sola publicación, especifique, o, respectivamente. Anote el valor de **Metric_id** de cualquier umbral que se deba cambiar. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorhelppublicationthresholds](/sql/relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql). De esta forma se devuelve el conjunto de umbrales de supervisión de todas las publicaciones que usan este distribuidor. Para limitar el conjunto de resultados a los umbrales de supervisión de las publicaciones que pertenecen a un único publicador o base de datos publicada, o a una sola publicación, especifique **@publisher** , **@publisher_db** o **@publication** , respectivamente. Anote el valor de **Metric_id** de cualquier umbral que se deba cambiar. Para más información, consulte [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  En el distribuidor de la base de datos de distribución, ejecute [sp_replmonitorchangepublicationthreshold](/sql/relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql). Especifique los valores siguientes, según sea necesario:  
   
     -   El valor de **Metric_id** obtenido en el paso 1 en **@metric_id**.  
   
-    -   Nuevo valor para la métrica del umbral de supervisión **@value**de.  
+    -   Nuevo valor para la métrica del umbral de supervisión de **@value** .  
   
     -   Un valor de **1** en **@shouldalert** para que se registre una alerta cuando se alcance este umbral o un valor de **0** si no se necesita una alerta.  
   

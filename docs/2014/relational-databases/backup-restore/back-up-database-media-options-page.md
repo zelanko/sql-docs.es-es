@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cd09eb091a7f488f891bc2e69d19ad039b65e065
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "70154837"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959625"
 ---
 # <a name="back-up-database-media-options-page"></a>Copia de seguridad de la base de datos (página Opciones multimedia)
   Utilice la página  **Opciones multimedia** del cuadro de diálogo **Copia de seguridad de base de datos** para ver o modificar las opciones multimedia de la base de datos.  
@@ -40,7 +39,7 @@ ms.locfileid: "70154837"
 ### <a name="overwrite-media"></a>Sobrescribir medios  
  Las opciones del panel **Sobrescribir medios** controlan la forma en que las copias de seguridad se escriben en los medios. Si seleccionó la dirección URL (Azure Storage) como el destino de la copia de seguridad en la página General del cuadro de diálogo Copia de seguridad de base de datos, las opciones de la sección Sobrescribir medios estarán deshabilitadas. Puede sobrescribir una copia de seguridad mediante la instrucción Transact-SQL `BACKUP TO URL.. WITH FORMAT`. Para más información, consulte [SQL Server Backup to URL](sql-server-backup-to-url.md).  
   
- Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente**, las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
+ Solo la opción **Hacer copia de seguridad en un nuevo medio y borrar todos los conjuntos de copia de seguridad existentes** se admite con las opciones de cifrado. Si selecciona las opciones de la sección **Hacer copia de seguridad en un medio existente** , las opciones de cifrado en la página **Opciones de copia de seguridad** se deshabilitarán.  
   
 > [!NOTE]  
 >  Para obtener más información sobre los conjuntos de medios, vea [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
@@ -86,7 +85,7 @@ ms.locfileid: "70154837"
  La operación de copia de seguridad debe continuar, aunque se detecten uno o varios errores.  
   
 ### <a name="transaction-log"></a>Registro de transacciones  
- Las opciones del panel **Registro de transacciones** controlan el comportamiento de una copia de seguridad del registro de transacciones. Estas opciones solo son relevantes en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros. Se activan solo si se seleccionó **Registro de transacciones** en el campo **Tipo de copia de seguridad** de la página [General](../../integration-services/general-page-of-integration-services-designers-options.md) del cuadro de diálogo **Copia de seguridad de base de datos**.  
+ Las opciones del panel **Registro de transacciones** controlan el comportamiento de una copia de seguridad del registro de transacciones. Estas opciones solo son relevantes en el modelo de recuperación completa o en el modelo de recuperación optimizado para cargas masivas de registros. Se activan solo si se seleccionó **Registro de transacciones** en el campo **Tipo de copia de seguridad** de la página [General](../../integration-services/general-page-of-integration-services-designers-options.md) del cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 > [!NOTE]  
 >  Para obtener más información sobre las copias de seguridad del registro de transacciones, vea [Copias de seguridad del registro de transacciones &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
@@ -113,7 +112,7 @@ ms.locfileid: "70154837"
   
 ## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Realizar una copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Realizar copias de seguridad de archivos y grupos de archivos &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

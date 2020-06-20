@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca35b67a-104a-41fb-ac58-a61be06fe114
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d28202148d6f85e0aafde6ee324b11fd8cd10b23
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62843003"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84928939"
 ---
 # <a name="source-control-basics"></a>Fundamentos del control de código fuente
   El control de código fuente hace referencia a un sistema en el que una pieza central de software del servidor almacena y realiza un seguimiento de las versiones de los archivos, además de controlar el acceso a esos archivos. Un sistema típico de control de código fuente incluye un proveedor de control de código fuente y dos o más clientes de control de código fuente.  

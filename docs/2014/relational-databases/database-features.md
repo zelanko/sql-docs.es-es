@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04518abb-8581-47c8-a601-ee9136c3c0eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56b9f9ba9cc6e11ea82b822ae10b31710c8617b2
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62917669"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952795"
 ---
 # <a name="database-features"></a>Características de la base de datos
   Esta sección contiene las características y las tareas asociadas a bases de datos, objetos de base de datos, tipos de datos y mecanismos usados para trabajar con datos o para administrarlos.  
@@ -24,7 +23,7 @@ ms.locfileid: "62917669"
   
 |||
 |--|--|
-|[Bases de datos](databases/databases.md)|[Realizar copias de seguridad y restaurar bases de datos de SQL Server](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
+|[Bases de datos](databases/databases.md)|[Copia de seguridad y restauración de bases de datos de SQL Server](backup-restore/back-up-and-restore-of-sql-server-databases.md)|  
 |[Tablas](tables/tables.md)|[Números de secuencia](sequence-numbers/sequence-numbers.md)|[Importar y exportar datos en bloque &#40;SQL Server&#41;](import-export/bulk-import-and-export-of-data-sql-server.md)|  
 |[OLTP en memoria &#40;optimización en memoria&#41;](in-memory-oltp/in-memory-oltp-in-memory-optimization.md)|[Desencadenadores DDL](triggers/ddl-triggers.md)|[Compresión de datos](data-compression/data-compression.md)|  
 |[Índices](indexes/indexes.md)|[Desencadenadores DML](triggers/dml-triggers.md)|[Objetos de automatización OLE en Transact-SQL](stored-procedures/ole-automation-objects-in-transact-sql.md)|  

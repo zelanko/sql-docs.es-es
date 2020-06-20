@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 620a4e1f-9678-4711-ae09-bcf7c9cae724
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b780dfd75d998a9e3f6e382890b8318b958688d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d76345044192ad6d3e3754ca990b29fffa17c707
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72781822"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84996690"
 ---
 # <a name="using-user-defined-tables"></a>Utilizar tablas definidas por el usuario
   Las tablas definidas por el usuario representan información tabular. Se utilizan como parámetros al pasar los datos tabulares en procedimientos almacenados o funciones definidas por el usuario. Las tablas definidas por el usuario no se pueden utilizar para representar las columnas en una tabla de base de datos.  
   
- El objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tiene una propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que hace referencia a un objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto de esa colección tiene una propiedad **Columns** que hace referencia a una <xref:Microsoft.SqlServer.Management.Smo.Column> colección de objetos que enumeran las columnas de la tabla definida por el usuario. Utilice el método Add para agregar las columnas a la tabla definida por el usuario.  
+ El objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tiene una propiedad <xref:Microsoft.SqlServer.Management.Smo.Database.UserDefinedTableTypes%2A> que hace referencia a un objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableTypeCollection>. Cada <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> objeto de esa colección tiene una propiedad **Columns** que hace referencia a una colección de <xref:Microsoft.SqlServer.Management.Smo.Column> objetos que enumeran las columnas de la tabla definida por el usuario. Utilice el método Add para agregar las columnas a la tabla definida por el usuario.  
   
  Al definir una nueva tabla definida por el usuario utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>, tendrá que proporcionar las columnas y una clave principal basadas en una de las columnas.  
   

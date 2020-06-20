@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ec8fa09f34b27d9638f505981f11de960cb4d5b9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f592958e5feecfaeba0279a428b012038de4514e
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62520165"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85051280"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
     
@@ -27,7 +26,7 @@ ms.locfileid: "62520165"
 |Id. de evento|261|  
 |Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
-|Texto del mensaje|No se puede tener acceso a la carpeta de la instancia de base de datos local:\\ %% LOCALAPPDATA\>%% \ Microsoft\Microsoft SQL Server local DB\Instances<nombre de instancia.|  
+|Texto del mensaje|No se puede tener acceso a la carpeta de la instancia de base de datos local:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server local DB\Instances \\<nombre de instancia \> .|  
   
 ## <a name="explanation"></a>Explicación  
  No se puede tener acceso a una carpeta de la instancia.  

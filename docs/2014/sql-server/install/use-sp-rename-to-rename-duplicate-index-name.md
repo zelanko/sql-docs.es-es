@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: b8ffe3b9befd0c7239d32094e5738e0fb2947c5a
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66091358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058817"
 ---
 # <a name="use-sp_rename-to-rename-duplicate-index-name"></a>Utilizar sp_rename para cambiar el nombre de índice duplicado
   El Asesor de actualizaciones ha detectado nombres de índice de vista o tabla duplicados. Cambie los nombres de los índices o quite los duplicados antes de actualizar.  

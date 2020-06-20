@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 18236ec3ca5a62cd45a2cf7cdd3d56b5cea79063
-ms.sourcegitcommit: 4b5919e3ae5e252f8d6422e8e6fddac1319075a1
+ms.openlocfilehash: ff715b51a7fa84a462d1439e78627d648e20472d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2020
-ms.locfileid: "83000462"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065962"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lección 1: Publicar datos con la replicación transaccional
   En esta lección, creará una publicación transaccional con [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para publicar un subconjunto filtrado de la tabla **Product** en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . También agregará un inicio de sesión de SQL Server que utiliza el Agente de distribución para la lista de acceso a la publicación (PAL). Antes de iniciar este tutorial, deberá haber finalizado el tutorial anterior, [Preparar el servidor para replicación](tutorial-preparing-the-server-for-replication.md).  
@@ -50,7 +49,7 @@ ms.locfileid: "83000462"
   
 10. En la página Seguridad del agente, desactive la casilla **Usar la configuración de seguridad del Agente de instantáneas** .  
   
-11. Haga clic en **Configuración de seguridad** para el Agente de instantáneas, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y luego haga clic en **Aceptar**.  
+11. Haga clic en **configuración de seguridad** para el agente de instantáneas, escriba \<_Machine_Name> _**\ repl_snapshot** en el cuadro **cuenta de proceso** , proporcione la contraseña para esta cuenta y, a continuación, haga clic en **Aceptar**.  
   
 12. Repita el paso anterior para establecer repl_logreader como la cuenta de proceso para el Agente de registro del LOG y, después, haga clic en **Finalizar**.  
   

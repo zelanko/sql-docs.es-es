@@ -11,20 +11,19 @@ f1_keywords:
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cf46eaa4790bfc09e6f10ef1c43aa06aad12f436
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "71952395"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85036390"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Cuenta de servicio (Modo nativo de SSRS)
   Utilice la página Cuenta de servicio para especificar la cuenta con la que se ejecuta el servicio del servidor de informes. Esta cuenta se configura inicialmente durante la instalación. Puede modificarla si desea cambiar la cuenta o la contraseña. El servicio web del servidor de informes, el Administrador de informes y la aplicación de procesamiento en segundo plano se ejecutan todos con la identidad del servicio que especifique en esta página.  
   
- [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Modo nativo.  
+ [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Modo nativo.  
   
- La cuenta que especifica para el servicio Servidor de informes necesita permiso de acceso al Registro, a los archivos de programa del servidor de informes y a la base de datos del servidor de informes. Todos los permisos se configuran automáticamente para la cuenta cuando se usa el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para establecer la cuenta. Si usa la cuenta de servicio para conectarse a la base de datos del servidor de informes, el Configuration Manager crea un inicio de sesión de base de datos para la cuenta y configura los permisos de base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asignando la cuenta a RSExecRole en la instancia que hospeda la base de datos del servidor de informes. La base de datos del servidor de informes es el único almacén de datos en el que un servidor de informes escribe. La cuenta de servicio no requiere permisos a cualquier otro almacén de datos.  
+ La cuenta que especifica para el servicio Servidor de informes necesita permiso de acceso al Registro, a los archivos de programa del servidor de informes y a la base de datos del servidor de informes. Todos los permisos se configuran automáticamente para la cuenta cuando se usa el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para establecer la cuenta. Si usa la cuenta de servicio para conectarse a la base de datos del servidor de informes, el Configuration Manager crea un inicio de sesión de base de datos para la cuenta y configura los permisos de base de datos asignando la cuenta a RSExecRole en la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia que hospeda la base de datos del servidor de informes. La base de datos del servidor de informes es el único almacén de datos en el que un servidor de informes escribe. La cuenta de servicio no requiere permisos a cualquier otro almacén de datos.  
   
  Para abrir esta página, inicie el Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y seleccione el vínculo en el panel de navegación. Para obtener más información, vea [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
@@ -36,7 +35,7 @@ ms.locfileid: "71952395"
  Seleccione **Servicio de red**, **Sistema local**o **Servicio local** en la lista. Solo se recomienda **Servicio de red** ; sin embargo, puede configurar la cuenta para utilizar cualquier cuenta que esté disponible.  
   
  **Usar otra cuenta**  
- Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio en este formato: * \<dominio \\><\>usuario*. Especifique una cuenta de usuario local de Windows con este formato: * \<nombre \\ de equipo\>><usuario*. Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio en este formato: * \<domain> \\<\> usuario*. Especifique una cuenta de usuario de Windows local en este formato: * \<computer name> \\<usuario \> *. Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  El límite máximo es 20 caracteres para la cuenta.  
   

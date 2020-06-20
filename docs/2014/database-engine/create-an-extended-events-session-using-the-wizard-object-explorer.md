@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 1102657a4921fd5ab48bfe10c0a05ed67126df47
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065058"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934510"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Crear una sesión de Extended Events utilizando el asistente (Explorador de objetos)
   Para ayudarle a seleccionar y capturar eventos en el servidor, los eventos extendidos incluyen un Asistente para nueva sesión que le guía a través de los pasos necesarios para crear una sesión de eventos extendidos. El Asistente para nueva sesión expone la mayor parte de la funcionalidad de Extended Events. El [cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) también permite definir una sesión de Eventos extendidos que capture, presente y analice los datos. El cuadro de diálogo Nueva sesión expone toda la funcionalidad de Extended Events.  

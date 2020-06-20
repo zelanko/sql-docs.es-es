@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fe1d0efb6669a5b001793712bfe6f6e5990e0c5b
-ms.sourcegitcommit: 18a7c77be31f9af92ad9d0d3ac5eecebe8eec959
+ms.openlocfilehash: ca13877a195a0f829c3fd0a628c446626819e14a
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83858720"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934946"
 ---
 # <a name="sql-server-properties-filestream-page"></a>Propiedades de SQL Server (página FILESTREAM)
   Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

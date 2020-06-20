@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce1e3a2088214c222cd2c2e84fc333f4993b7a6b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4e5b716847c33623968077aca33932ad005953af
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797812"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84960295"
 ---
 # <a name="navigate-sql-server-powershell-paths"></a>Navegar por las rutas de acceso de SQL Server PowerShell
   El proveedor de PowerShell de [!INCLUDE[ssDE](../includes/ssde-md.md)] expone el conjunto de objetos de una instancia de SQL Server en una estructura similar a una ruta de acceso del archivo. Puede usar los cmdlets de Windows PowerShell para navegar por la ruta de acceso del proveedor y crear las unidades personalizadas para acortar la ruta de acceso que tiene que escribir.  
@@ -32,7 +31,7 @@ ms.locfileid: "72797812"
 |**Get-ChildItem**|**gci**|**dir**|**LS**|Enumera los objetos almacenados en el nodo actual.|  
 |**Get-Item**|**gi**|||Devuelve las propiedades del elemento actual.|  
 |**Rename-Item**|**rni**|**RN**|**ren**|Cambia el nombre de un objeto.|  
-|**Remove-item**|**r**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
+|**Remove-Item**|**r**|**del, rd**|**rm, rmdir**|Quita un objeto.|  
   
 > [!IMPORTANT]  
 >  Algunos identificadores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (nombres de objeto) contienen caracteres que Windows PowerShell no admite en los nombres de ruta de acceso. Para obtener más información sobre cómo usar nombres que contengan estos caracteres, vea [SQL Server Identifiers in PowerShell](sql-server-identifiers-in-powershell.md).  
@@ -43,8 +42,8 @@ ms.locfileid: "72797812"
 |Ubicación de la ruta de acceso|Resultados de Get-ChildItem|  
 |-------------------|----------------------------|  
 |SQLSERVER:\SQL|Devuelve el nombre del equipo local. Si ha usado SMO o WMI para conectarse a las instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)] en otros equipos, esos equipos también se enumeran.|  
-|SQLServer: \ SQL\\*NombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
-|SQLServer: \ SQL\\*NombreDeEquipo*\\*nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
+|SQLSERVER: \ SQL \\ *NombreDeEquipo*|Lista de instancias del [!INCLUDE[ssDE](../includes/ssde-md.md)] en el equipo.|  
+|SQLServer: \ SQL \\ *NombreDeEquipo* \\ *nombreDeInstancia*|Lista de tipos de objeto de nivel superior en la instancia, como Extremos, Certificados y Bases de datos.|  
 |Nodo de clase de objeto, como Databases|Lista de objetos de ese tipo, como la lista de bases de datos: master, model, AdventureWorks2008R2.|  
 |Nodo de nombre de objeto, como AdventureWorks2012|Lista de los tipos de objeto contenidos en el objeto. Por ejemplo, una base de datos mostraría tipos de objeto como tablas y vistas.|  
   

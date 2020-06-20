@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fa1bb23843447cc77276a34d5466d417f2a87a05
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f793f2cadf46d4a5431c01f5a1b1966ffad6fd55
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62767387"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968205"
 ---
 # <a name="step-2-creating-a-corrupted-file"></a>Paso 2: Creación de un archivo dañado
   Para demostrar los errores de configuración y el control de los errores de transformación, debe crear un archivo plano de ejemplo que, cuando se procese, genere un error en un componente.  
@@ -34,9 +33,9 @@ ms.locfileid: "62767387"
   
     3.  Haga clic en el archivo SQL2012.Integration_Services.Create_Simple_ETL_Tutorial.Sample.zip.  
   
-2.  Use la característica buscar y reemplazar del editor de texto para buscar todas las `VEB` instancias de y reemplazarlas por `BAD`.  
+2.  Use la característica buscar y reemplazar del editor de texto para buscar todas las instancias de `VEB` y reemplazarlas por `BAD` .  
   
-3.  En la misma carpeta que los demás archivos de datos de ejemplo, guarde el archivo `Currency_BAD.txt`modificado como.  
+3.  En la misma carpeta que los demás archivos de datos de ejemplo, guarde el archivo modificado como `Currency_BAD.txt` .  
   
     > [!IMPORTANT]  
     >  Asegúrese de que `Currency_BAD.txt` está guardado en la misma carpeta que los demás archivos de datos de ejemplo.  
@@ -45,11 +44,11 @@ ms.locfileid: "62767387"
   
 ### <a name="to-verify-that-an-error-will-occur-during-run-time"></a>Para comprobar que se producirá un error durante la ejecución  
   
-1.  En el menú **depurar** , haga clic en **iniciar depuración**.  
+1.  En el menú **Depurar**, haga clic en **Iniciar depuración**.  
   
      En la tercera iteración del flujo de datos, la transformación Lookup Currency Key intenta procesar el archivo Currency_BAD.txt y la transformación generará un error. El error de la transformación hará que todo el paquete genere un error.  
   
-2.  En el menú **Depurar** , haga clic en **Detener depuración**.  
+2.  En el menú **Depurar**, haga clic en **Detener depuración**.  
   
 3.  En la superficie de diseño, haga clic en la pestaña **Resultados de la ejecución** .  
   
@@ -60,7 +59,7 @@ ms.locfileid: "62767387"
     > [!NOTE]  
     >  El número 27 es el Id. del componente. Este valor se asigna al generar el flujo de datos, y es posible que el valor del paquete sea diferente.  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  [Paso 3: Adición de redirección de flujo de errores](lesson-4-3-adding-error-flow-redirection.md)  
   
   

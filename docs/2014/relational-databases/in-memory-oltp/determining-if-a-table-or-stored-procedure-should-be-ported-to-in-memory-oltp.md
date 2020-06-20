@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 358a595ef326f86db9ab81294bc3a9c88fc8ef0d
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8e517cff394bc0c813e34763469f75147a0a16c5
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82706536"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050241"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
   El recopilador de rendimiento de las transacciones de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] le ayuda a evaluar si OLTP en memoria mejorará el rendimiento de la aplicación de base de datos. El informe de análisis del rendimiento de las transacciones indica también la cantidad de trabajo que debe realizar para habilitar OLTP en memoria en la aplicación. Después de identificar una tabla basada en disco para convertirla a OLTP en memoria, puede usar el [Asistente de optimización de memoria](memory-optimization-advisor.md)para que le ayude a migrar la tabla. De manera similar, el [Native Compilation Advisor](native-compilation-advisor.md) le permitirá convertir un procedimiento almacenado en un procedimiento almacenado compilado de forma nativa.  
@@ -93,7 +92,7 @@ ms.locfileid: "82706536"
   
 4.  Haga clic en **nuevo** para crear una nueva base de datos que contenga los datos del perfil. Cuando termine de crear la base de datos, haga clic en **siguiente** en el asistente.  
   
-5.  En el paso siguiente del asistente podrá agregar usuarios e inicios de sesión. Puede asignar inicios de sesión a las pertenencias a roles para la instancia de MDW. No es necesario recopilar los datos de la instancia local. Si no va a recopilar datos de la instancia local, puede conceder la pertenencia al rol de base de datos `mdw_admin` a la cuenta que ejecutará las transacciones que se incluirán en el perfil. Cuando haya terminado, haga clic en **siguiente**.  
+5.  En el paso siguiente del asistente podrá agregar usuarios e inicios de sesión. Puede asignar inicios de sesión a las pertenencias a roles para la instancia de MDW. No es necesario recopilar los datos de la instancia local. Si no va a recopilar datos de la instancia local, puede conceder la pertenencia al rol de base de datos `mdw_admin` a la cuenta que ejecutará las transacciones que se incluirán en el perfil. Cuando termine, haga clic en **Siguiente**.  
   
 6.  Asegúrese de que el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se esté ejecutando.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ce32dd1a-26f1-4f61-b9fa-3f1feea9992e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff16491ed9c021424d3d6371ccb7ba2941c61129
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66011754"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050409"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server)
   Para proporcionar el almacenamiento en archivo más compacto para exportar de forma masiva datos en formato nativo a un archivo de datos, el comando **bcp** precede cada campo con uno o varios caracteres que indican la longitud del campo. Estos caracteres se denominan *caracteres de prefijo de longitud*.  
@@ -81,7 +80,7 @@ ms.locfileid: "66011754"
 |UDT (un tipo de datos definido por el usuario)|8|8|8|8|  
 |XML|8|8|8|8|  
   
- <sup>1</sup> los `ntext`tipos `text`de datos `image` , y se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. En `nvarchar(max)`su `varchar(max)`lugar, `varbinary(max)` use, y.  
+ <sup>1</sup> los `ntext` `text` tipos de datos, y se `image` quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Evite su uso en nuevos trabajos de desarrollo y piense en modificar las aplicaciones que los usan actualmente. `nvarchar(max)` `varchar(max)` En su lugar, use, y `varbinary(max)` .  
   
 ##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Longitudes de prefijo para la importación masiva  
  Cuando los datos se importan de manera masiva, la longitud de prefijo es el valor que se especificó cuando se creó originalmente el archivo de datos. Si el archivo de datos no se creó con un comando **bcp** , probablemente no existan los caracteres de prefijo de longitud. En tal caso, especifique 0 como longitud de prefijo.  

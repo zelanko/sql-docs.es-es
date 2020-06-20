@@ -11,18 +11,17 @@ helpviewer_keywords:
 ms.assetid: 1e7abb16-23a0-4a18-91ad-253261e6bf84
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 371da8231138fb43e9b001808b9fb88ad09543b5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: bfc8e5cf35a7f03f485bc3ff9e94ee70eab2cea2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63131644"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84997083"
 ---
 # <a name="create-a-visual-c-smo-project-in-visual-studio-net"></a>Crear un proyecto de Visual C# SMO en Visual Studio .NET
   En esta sección se describe cómo generar una aplicación de consola SMO simple.  
   
- En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Úselo cuando esté escribiendo un programa que use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
+ En este ejemplo se importan espacios de nombres, lo que habilita al programa para que haga referencia a los tipos SMO. La importación del espacio de nombres `Agent` es opcional. Úselo cuando esté escribiendo un programa que use el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente. El espacio de nombres `Common` se requiere para establecer una conexión segura a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El espacio de nombres `SqlClient` se utiliza para procesar los errores de excepción de SQL.  
   
 ### <a name="creating-a-visual-c-smo-project-in-visual-studionet"></a>Crear un proyecto de Visual C# SMO en Visual Studio.NET  
   
@@ -38,7 +37,7 @@ ms.locfileid: "63131644"
   
 6.  En el menú **Proyecto**, seleccione **Agregar referencia**. Aparecerá el cuadro de diálogo **Agregar referencia**.  
   
-7.  Haga clic en **examinar**, busque los ensamblados [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] SMO en la carpeta y, a continuación, seleccione los archivos siguientes. Son los archivos mínimos necesarios para generar una aplicación SMO:  
+7.  Haga clic en **examinar**, busque los ensamblados SMO en la [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] carpeta y, a continuación, seleccione los archivos siguientes. Son los archivos mínimos necesarios para generar una aplicación SMO:  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

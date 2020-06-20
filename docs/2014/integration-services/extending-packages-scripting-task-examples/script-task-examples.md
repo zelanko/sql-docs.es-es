@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0dd77ee-ee11-4cd9-87aa-61dd67f2fe1c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d47fa22b8207facc5b4bc22a4077b8bd81837ec2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 2db671fd729e0dcdf2adf1bce83b76f20093663b
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62768483"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84968475"
 ---
 # <a name="script-task-examples"></a>Ejemplos de tarea Script
   La tarea Script es una herramienta con varias funciones que puede utilizar en un paquete para satisfacer casi cualquier requisito que no cumplan las tareas incluidas con [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. En este tema se enumeran los ejemplos de código de la tarea Script que muestran alguna de las funciones disponibles.  

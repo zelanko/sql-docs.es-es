@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7d6040e86b29c7f3d79606ee47004b0bb9c38cb0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66092358"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058929"
 ---
 # <a name="select-features-upgrade"></a>Seleccionar características (actualización)
   Utilice la página **Seleccionar características** del Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] para ver las características que se van a actualizar a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

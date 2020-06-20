@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 90930ff2-143b-4651-8ae3-297103600e4f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65fcebc3bbe12061e699106fb23eed15a5498414
-ms.sourcegitcommit: c8e45e0fdab8ea2ae1c7e709346354576b18ca1e
+ms.openlocfilehash: 784ef2ec305629756e0c43e1726b70c04c6194b1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2020
-ms.locfileid: "84716712"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011645"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Crear una cadena de conexión válida con canalizaciones con nombre
   A menos que el usuario lo cambie, cuando la instancia predeterminada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] escucha en el protocolo canalizaciones con nombre, usa `\\.\pipe\sql\query` como nombre de canalización. El punto indica que el equipo es el equipo local, `pipe` indica que la conexión es una canalización con nombre y `sql\query` es el nombre de la canalización. Para conectarse a la canalización predeterminada, debe tener el alias `\\<computer_name>\pipe\sql\query` como el nombre de canalización. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ha configurado para escuchar en una canalización diferente, el nombre de canalización debe utilizar esa canalización. Por ejemplo, si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa `\\.\pipe\unit\app` como canalización, el alias debe usar `\\<computer_name>\pipe\unit\app` como el nombre de canalización.  

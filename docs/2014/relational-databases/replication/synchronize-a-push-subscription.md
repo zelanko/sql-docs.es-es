@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 7c3ee58ebc7cd579b04d317b44e823779ae987e2
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745885"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85004545"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
   En este tema se describe cómo sincronizar una suscripción de inserción en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [agentes de replicación](agents/replication-agents-overview.md)o Replication Management Objects (RMO).  
@@ -40,7 +39,7 @@ ms.locfileid: "62745885"
   
 4.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **ver estado de sincronización- \<Subscriber> \<SubscriptionDatabase> :** , haga clic en **iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   
@@ -54,7 +53,7 @@ ms.locfileid: "62745885"
   
 4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **OK**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
+5.  En el cuadro de diálogo **ver estado de sincronización- \<Subscriber> \<SubscriptionDatabase> :** , haga clic en **iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada**.  
   
 6.  Haga clic en **Cerrar**.  
   

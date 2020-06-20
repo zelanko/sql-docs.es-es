@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e28a5077057c9a02a3b45de6a88180eab5c87b2b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8da8743840c604e08cd8c17666e03f2de76c11cd
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "62938587"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85065852"
 ---
 # <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Visor de conflictos de replicación de Microsoft (Replicación de mezcla)
   El Visor de conflictos de replicación le permite ver los conflictos que hayan podido producirse durante la sincronización de la replicación. Los conflictos ocurren cuando los mismos datos se modifican en dos servidores diferentes, por ejemplo, en un publicador y en un suscriptor, o en dos suscriptores diferentes. La replicación soluciona automáticamente los conflictos mediante el solucionador de conflictos seleccionado durante la creación del artículo. Sin embargo, el Visor de conflictos de replicación le permite elegir una resolución diferente para el conflicto si fuese necesario. Pueden producirse los siguientes conflictos:  
@@ -46,7 +45,7 @@ ms.locfileid: "62938587"
  **Publicación**  
  Elija una publicación que contenga tablas con conflictos.  
   
- **Cuadro**  
+ **Tabla**  
  Elija una tabla que contenga conflictos.  
   
  **Definir filtro**  
@@ -61,7 +60,7 @@ ms.locfileid: "62938587"
  **Seleccione ninguno**  
  Haga clic para anular la selección de todos los conflictos mostrados en la cuadrícula.  
   
- **Remove**  
+ **Quitar**  
  Haga clic en esta opción para quitar los conflictos seleccionados del visor y los metadatos asociados de las tablas del sistema de replicación. Es equivalente a hacer clic en el botón Enviar ganador (sin realizar cambios en los datos) para cada conflicto seleccionado.  
   
  **Mostrar todas las columnas**  

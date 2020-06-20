@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d4b3ab8f1e956ee68585ecdc3e12ae605d52ab38
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9625d2865a21b66663ebe2c2ad066e9ce8c7bf25
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62745676"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050519"
 ---
 # <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen (API de procedimiento almacenado extendido)
     
@@ -55,16 +54,16 @@ len
  *srvproc*  
  Es un puntero a la estructura SRV_PROC que es el identificador de una conexión cliente determinada. La estructura contiene información que la biblioteca de API de procedimiento almacenado extendido usa para administrar la comunicación y los datos entre la aplicación y el cliente.  
   
- *artículo*  
+ *column*  
  Indica el número de la columna para la que se especifica la longitud de datos. Las columnas se numeran comenzando por 1.  
   
  *terminado*  
  Indica la longitud, en bytes, de los datos de la columna. Una longitud de 0 indica que el valor de datos de la columna es NULL.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada columna de la fila se debe definir antes con **srv_describe**. La longitud de datos de columna se establece mediante la última llamada a **srv_describe** o **srv_setcollen**. Si en una fila cambian los datos de longitud variable (datos terminados en NULL), se debe usar **srv_setcollen** para establecerlos en la nueva longitud antes de llamar a **srv_sendrow**. En una columna que permite valores NULL, es necesario llamar previamente a **srv_describe** con *desttype* establecido en un tipo de datos que permita valores NULL (como SRVINTN) y especificar datos NULL mediante una llamada a **srv_setcollen** con *len* establecido en 0. Los datos de longitud cero no se pueden especificar mediante la API Procedimiento almacenado extendido.  
   
  Tenga en cuenta que si el tipo de datos de la columna es de longitud variable, no se comprueba *len*. Esta función devuelve FAIL si se llama en una columna de longitud fija.  

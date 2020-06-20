@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64910ce8bab155639a16cb065768c43fd86ac737
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 264781f21e328c4740ee31b53fe3812bbe392305
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63127332"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85050775"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API de procedimiento almacenado extendido)
     
@@ -99,10 +98,10 @@ srcdata
   
  Si *desttype* es SRVDECIMAL o SRVNUMERIC, el parámetro *srcdata* debe ser un puntero a una estructura DBNUMERIC o DBDECIMAL con los campos de escala y precisión de la estructura ya establecidos en los valores deseados. Puede usar DEFAULTPRECISION para especificar una precisión predeterminada y DEFAULTSCALE para especificar una escala predeterminada.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  El número de la columna descrita. La primera columna es la columna 1. Si se produce un error, devuelve 0.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se debe llamar a la función **srv_describe** una vez por cada columna de la fila antes de realizar la primera llamada a **srv_sendrow**. Las columnas de una fila se pueden describir en cualquier orden.  
   
  Para cambiar la ubicación y la longitud de los datos de origen en las filas de columna antes de que se haya enviado el conjunto de resultados completo, use **srv_setcoldata** y **srv_setcollen**, respectivamente.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0453d495c90c1e599bfc7777b4899f30e6659c52
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62872211"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84952647"
 ---
 # <a name="create-a-database-mail-profile"></a>Crear un perfil de correo electrónico de base de datos
   Para crear perfiles públicos y privados de Correo electrónico de base de datos, use el **Asistente para configuración de Correo electrónico de base de datos** o [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -120,7 +119,7 @@ ms.locfileid: "62872211"
   
      *@is_default*= '*Estado de perfil predeterminado* '  
   
-     donde *@profile_name* es el nombre del perfil y *@principal_name* es el nombre del usuario o rol de la base de datos *@is_default* , determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
+     donde *@profile_name* es el nombre del perfil y *@principal_name* es el nombre del usuario o rol de la base de datos, *@is_default* determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
   
  El siguiente ejemplo crea una cuenta de Correo electrónico de base de datos, crea un perfil privado de Correo de base de datos y, a continuación, agrega la cuenta al perfil y le concede acceso al rol de base de datos **DBMailUsers** en la base de datos **msdb** .  
   
@@ -190,7 +189,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default*= '*Estado de perfil predeterminado* '  
   
-     donde *@profile_name* es el nombre del perfil y *@principal_name* , para indicar que se trata de un perfil público *@is_default* , determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
+     donde *@profile_name* es el nombre del perfil y, *@principal_name* para indicar que se trata de un perfil público, *@is_default* determina si este perfil es el predeterminado para el usuario o el rol de la base de datos.  
   
  El ejemplo siguiente se crea una cuenta de Correo electrónico de base de datos, crea un perfil privado de Correo electrónico de base de datos, agrega la cuenta al perfil y concede acceso público al perfil.  
   

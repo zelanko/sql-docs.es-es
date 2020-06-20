@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 10a1d77c-3153-474f-a6a0-969556794467
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 296ae4d4051e79e3c5d3bc158ef3e87c9164ecd3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72278216"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85059085"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Cambiar el nombre de los inicios de sesión que coinciden con nombres de roles fijos de servidor
   El Asesor de actualizaciones ha detectado uno o más nombres de inicio de sesión definidos por el usuario que coinciden con los nombres de los roles fijos del servidor. Los nombres de roles fijos de servidor están reservados. Cambie el nombre del inicio de sesión antes de actualizar.  
@@ -60,7 +59,7 @@ ms.locfileid: "72278216"
   
 2.  Elimine los inicios de sesión.  
   
-3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 ** \@** en el parámetro SID para cada inicio de sesión correspondiente.  
+3.  Utilice el procedimiento del sistema **sp_addlogin** para crear nuevos inicios de sesión. Especifique el SID devuelto en el paso 1 en el parámetro ** \@ SID** para cada inicio de sesión correspondiente.  
   
 ## <a name="see-also"></a>Consulte también  
  [Problemas de actualización Motor de base de datos](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

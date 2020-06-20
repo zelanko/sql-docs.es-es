@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e765fbd-f339-473c-8537-22f478e79696
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 780b64f59143d3bf2b8ef99e3da6d32a1fe160cc
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c22ca979675d3b7f263e3bc6de0c41c134a1abcf
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62874112"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84953886"
 ---
 # <a name="altering-an-assembly"></a>Modificar un ensamblado
   Los ensamblados registrados en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se pueden actualizar con una versión más reciente mediante la instrucción ALTER ASSEMBLY. Para actualizar un ensamblado, use la instrucción ALTER ASSEMBLY con la sintaxis siguiente:  

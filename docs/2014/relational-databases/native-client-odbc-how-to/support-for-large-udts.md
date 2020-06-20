@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 621b6d13-10f1-47d0-b63c-7adb6ab904e0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c442e3e264e36f9d6ffef35947f4f96180c4b799
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: e7518ef7933d864da5b8e9827f772e6599b79d95
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712276"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048182"
 ---
 # <a name="support-for-large-udts"></a>Compatibilidad con UDT de gran tamaño
   Esta solución de ejemplo contiene dos proyectos. Un proyecto crea un ensamblado (DLL) a partir de código fuente de C#. Este ensamblado contiene el tipo CLR. Se agregará una tabla a la base de datos. Una columna de la tabla será de un tipo definido en el ensamblado. De forma predeterminada, en este ejemplo se usará la base de datos maestra. El segundo proyecto es una aplicación de C nativa que lee datos de la tabla.  

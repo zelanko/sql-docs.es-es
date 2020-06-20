@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5ee2879bc0ef94d8abee20032c83a74d00696ef2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 241087f5da3c7baa09a34fab8ab1886809ce0d36
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79289313"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931457"
 ---
 # <a name="availability-group-listeners-client-connectivity-and-application-failover-sql-server"></a>Agentes de escucha del grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación (SQL Server)
   Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
@@ -118,7 +117,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly  
 ```  
   
- En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene `ApplicationIntent` la propiedad establecida `ReadOnly`en, lo que lo convierte en una *cadena de conexión de intento de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
+ En este ejemplo de cadena de comparación, el cliente intenta conectarse a un agente de escucha del grupo de disponibilidad denominado `AGListener` en el puerto 1433 (también puede omitir el puerto si el agente de escucha del grupo de disponibilidad escucha en 1433).  La cadena de conexión tiene la `ApplicationIntent` propiedad establecida en `ReadOnly` , lo que lo convierte en una *cadena de conexión de intento de lectura*.  Sin este valor, el servidor no habría intentado un enrutamiento de solo lectura de la conexión.  
   
  La base de datos principal del grupo de disponibilidad procesa la solicitud de enrutamiento de solo lectura entrante e intenta localizar una réplica en línea de solo lectura que esté unida a la réplica principal y esté configurada para el enrutamiento de solo lectura.  El cliente recibe información de conexión del servidor de réplica principal y se conecta a la réplica de solo lectura identificada.  
   
@@ -139,7 +138,7 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
   
  Alternativamente, en la migración de creación de reflejo de la base de datos a [!INCLUDE[ssHADR](../includes/sshadr-md.md)], las aplicaciones pueden especificar la cadena de conexión de creación de reflejo de la base de datos mientras solo exista una réplica secundaria y no permita conexiones de usuario. Para obtener más información, vea [Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad](#DbmConnectionString), más adelante en esta sección.  
   
-###  <a name="using-database-mirroring-connection-strings-with-availability-groups"></a><a name="DbmConnectionString"></a> Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad  
+###  <a name="using-database-mirroring-connection-strings-with-availability-groups"></a><a name="DbmConnectionString"></a>Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad  
  Si un grupo de disponibilidad posee solo una réplica secundaria y no está configurado para permitir el acceso de lectura a la réplica de disponibilidad secundaria, los clientes pueden conectarse a la réplica de disponibilidad principal utilizando una cadena de conexión de creación de reflejo de la base de datos. Este enfoque puede ser útil cuando se migra una aplicación existente de creación de reflejo de la base de datos a un grupo de disponibilidad, siempre que se limite el grupo de disponibilidad a dos réplicas de disponibilidad (una réplica principal y una réplica secundaria). Si agrega réplicas secundarias adicionales, deberá crear un agente de escucha del grupo de disponibilidad y actualizar sus aplicaciones para que se utilice el nombre DNS del agente de escucha del grupo de disponibilidad.  
   
  Cuando se utilizan cadenas de conexión de creación de reflejo de la base de datos, el cliente puede usar [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. La cadena de conexión proporcionada por un cliente debe proporcionar como mínimo el nombre de una instancia del servidor, el *nombre del asociado inicial*, para identificar la instancia del servidor que hospeda inicialmente la réplica de disponibilidad con la que se desea establecer conexión. Opcionalmente, la cadena de conexión también puede proporcionar el nombre de otra instancia del servidor, *nombre del asociado de conmutación por error*, para identificar la instancia del servidor que hospeda inicialmente la réplica secundaria como nombre del asociado de conmutación por error.  
@@ -194,7 +193,7 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
   
 -   [SQL Server de conectividad de cliente de AlwaysOn &#40;&#41;](availability-groups/windows/always-on-client-connectivity-sql-server.md)
   
--   [Cree o configure un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Ver las propiedades del agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
   

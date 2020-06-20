@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: edc2b60d-15da-40a1-8ba3-f1d473366ee6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a6920920aa603c615cdc5f84a34a93204842052d
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63192963"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84995369"
 ---
 # <a name="create-a-multiserver-environment"></a>Crear un entorno multiservidor
   La administración multiservidor requiere que se configure un servidor maestro (MSX) y uno o más servidores de destino (TSX). Los trabajos que se van a procesar en todos los servidores de destino se definen primero en el servidor maestro y luego se descargan en los servidores de destino.  
@@ -37,12 +36,12 @@ ms.locfileid: "63192963"
   
 ||**TSX = 7.0**|**TSX = 8,0 < SP3**|**TSX = 8.0 SP3 o superior**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sí|Sí|No|No|No|No|No|  
-|**MSX = 8,0 < SP3**|Sí|Sí|No|No|No|No|No|  
-|**MSX = 8.0 SP3 o superior**|No|No|Sí|Sí|Sí|Sí|Sí|  
-|**MSX = 9.0**|No|No|No|Sí|Sí|Sí|Sí|  
-|**MSX = 10.0**|No|No|No|No|Sí|Sí|Sí|  
-|**MSX = 10.5**|No|No|No|No|No|Sí|Sí|  
+|**MSX = 7.0**|Yes|Sí|No|No|No|No|No|  
+|**MSX = 8,0 < SP3**|Yes|Sí|No|No|No|No|No|  
+|**MSX = 8.0 SP3 o superior**|No|No|Sí|Yes|Yes|Yes|Yes|  
+|**MSX = 9.0**|No|No|No|Sí|Yes|Yes|Yes|  
+|**MSX = 10.0**|No|No|No|No|Sí|Yes|Yes|  
+|**MSX = 10.5**|No|No|No|No|No|Sí|Yes|  
 |**MSX = 11.0**|No|No|No|No|No|No|Sí|  
   
  Considere lo siguiente cuando cree un entorno multiservidor:  
@@ -60,11 +59,11 @@ ms.locfileid: "63192963"
   
 |Descripción|Tema|  
 |-----------------|-----------|  
-|Describe cómo crear un servidor maestro.|[Make a Master Server](make-a-master-server.md)|  
+|Describe cómo crear un servidor maestro.|[Establecer un servidor maestro](make-a-master-server.md)|  
 |Describe cómo crear un servidor de destino.|[Establecer un servidor de destino](make-a-target-server.md)|  
 |Describe cómo dar de alta un servidor de destino en un servidor maestro.|[Dar de alta un servidor de destino en un servidor maestro](enlist-a-target-server-to-a-master-server.md)|  
 |Describe cómo dar de baja un servidor de destino en un servidor maestro.|[Dar de baja un servidor de destino desde un servidor maestro](defect-a-target-server-from-a-master-server.md)|  
-|Describe cómo dar de baja varios servidores de destino en un servidor maestro.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|Describe cómo dar de baja varios servidores de destino en un servidor maestro.|[Dar de baja varios servidores de destino desde un servidor maestro](defect-multiple-target-servers-from-a-master-server.md)|  
 |Describe cómo comprobar el estado de un servidor de destino.|[sp_help_targetserver &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
 ## <a name="see-also"></a>Consulte también  

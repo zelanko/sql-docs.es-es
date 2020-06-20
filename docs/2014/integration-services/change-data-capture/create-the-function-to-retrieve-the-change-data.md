@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 55dd0946-bd67-4490-9971-12dfb5b9de94
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90f754abc2e10732c33c011fdaf8fcd06c0175a4
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62771441"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84923456"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Crear la función para recuperar los datos modificados
   Después de completar el flujo de control para un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que realiza una carga incremental de datos modificados, la tarea siguiente es crear una función con valores de tabla que recupere los datos modificados. Solo tiene que crear esta función una vez antes de la primera carga incremental.  
@@ -108,7 +107,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Entender y usar las funciones creadas por el procedimiento almacenado  
- Para recorrer de forma sistemática la escala de tiempo de los datos modificados capturados, las *@end_time* funciones de contenedor generadas esperan que *@start_time* el parámetro de un intervalo sea el parámetro para el intervalo subsiguiente. Cuando se sigue esta convención, las funciones de contenedor generadas pueden realizar las tareas siguientes:  
+ Para recorrer de forma sistemática la escala de tiempo de los datos modificados capturados, las funciones de contenedor generadas esperan que el *@end_time* parámetro de un intervalo sea el *@start_time* parámetro para el intervalo subsiguiente. Cuando se sigue esta convención, las funciones de contenedor generadas pueden realizar las tareas siguientes:  
   
 -   Asignar los valores de fecha y hora a los valores LSN que se usan internamente.  
   
@@ -134,7 +133,7 @@ deallocate #hfunctions
   
 -   Una columna denominada __CDC_OPERATION que usa un campo de uno o dos caracteres para identificar la operación que está asociada a la fila. Los valores válidos para este campo son los siguientes: "I" para insertar, "D" para eliminar, "UO" para actualizar valores antiguos y "UN" para actualizar valores nuevos.  
   
--   Marcas de actualización, cuando se solicitan, que aparecen como columnas de bits después del código de operación y en el orden especificado en *@update_flag_list* el parámetro. El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
+-   Marcas de actualización, cuando se solicitan, que aparecen como columnas de bits después del código de operación y en el orden especificado en el *@update_flag_list* parámetro. El nombre de estas columnas se obtiene anexando “_uflag” al nombre de columna asociado.  
   
  Si el paquete llama a una función de contenedor que consulta todos los cambios, dicha función también devolverá las columnas __CDC_STARTLSN y \__CDC_SEQVAL. Estas dos columnas se convierten en la primera y en la segunda columna, respectivamente, del conjunto de resultados. La función de contenedor también ordena el conjunto de resultados basándose en estas dos columnas.  
   
@@ -212,7 +211,7 @@ go
 |**__$seqval**|`binary(10)`|Valor de secuencia que se usa para ordenar los cambios de fila en una transacción.|  
 |**_ _ $ Operation**|`int`|Operación del lenguaje de manipulación de datos (DML) asociada al cambio. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores antes de la operación de actualización)<br /><br /> 4 = actualizar (valores después de la operación de actualización)|  
 |**__$update_mask**|`varbinary(128)`|Máscara de bits basada en los ordinales de las columnas de la tabla de cambios que identifica las columnas que han cambiado. Puede examinar este valor para determinar las columnas que han cambiado.|  
-|**\<columnas de la tabla de origen capturadas>**|Varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
+|**\<captured source table columns>**|Varía|Las columnas restantes devueltas por la función son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó inicialmente ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
  Para obtener más información, vea [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   

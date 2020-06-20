@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 514dc87a-b829-43b5-8fc8-1a400a260284
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 19e6683baeb0a82c77a858b04f18695ba7120b15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0646019f166e1c2cc126a4cc7d2ed8f27a7bd2f3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63250130"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048457"
 ---
 # <a name="inserting-and-updating-data-in-a-table-tutorial"></a>Insertar y actualizar datos en una tabla (Tutorial)
    Ahora que ha creado la tabla **Products**, ya está listo para insertar datos en la tabla mediante la instrucción INSERT. Después de insertar los datos, cambiará el contenido de una fila con una instrucción UPDATE. Utilizará la cláusula WHERE de la instrucción UPDATE para restringir la actualización a una sola fila. Las cuatro instrucciones introducirán los siguientes datos.  

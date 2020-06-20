@@ -1,5 +1,6 @@
 ---
 title: Compatibilidad de tipos, fecha y hora de ODBC
+description: Obtenga información sobre los tipos ODBC que admiten SQL Server tipos de datos de fecha y hora, incluidos los formatos y la asignación de tipos de datos para cadenas, literales y estructuras de datos.
 ms.custom: ''
 ms.date: 12/18/2019
 ms.prod: sql
@@ -14,12 +15,12 @@ ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b34d6864bf6b6c36404770f0ab795634dd746dc8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cdab7196199b28835d5f21c0c51f3ad787fdc7ac
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81301774"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967682"
 ---
 # <a name="data-type-support-for-odbc-date-and-time-improvements"></a>Compatibilidad con tipos de datos para mejoras de fecha y hora de ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +41,7 @@ ms.locfileid: "81301774"
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|91 (SQL. h)<br /><br /> 9 (sqlext. h)|  
-|Tiempo|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
+|Time|SQL_SS_TIME2|-154 (SQLNCLI. h)|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|-155 (SQLNCLI.h)|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|93 (sql.h)<br /><br /> 11 (sqlext.h)|  
 ||||
@@ -65,7 +66,7 @@ ms.locfileid: "81301774"
 |Datetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'aaaa-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta tres dígitos de la fracción de segundo para Datetime.|  
 |Smalldatetime|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|'yyyy-mm-dd hh:hh:ss'<br /><br /> Este tipo de datos tiene una precisión de un minuto. El componente de segundos será cero en salida y será redondeado por el servidor al producir los resultados.|  
 |Date|SQL_TYPE_DATE<br /><br /> SQL_DATE|'aaaa-mm-dd'|  
-|Tiempo|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
+|Time|SQL_SS_TIME2|'hh:mm:ss[.9999999]'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
 |Datetime2|SQL_TYPE_TIMESTAMP<br /><br /> SQL_TIMESTAMP|' AAAA-MM-DD HH: mm: SS [. 9999999] '<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
 |DatetimeOFFSET|SQL_SS_TIMESTAMPOFFSET|'yyyy-mm-dd hh:mm:ss[.9999999] +/- hh:mm'<br /><br /> Las fracciones de segundo se pueden especificar si se desea utilizando hasta siete dígitos.|  
 ||||

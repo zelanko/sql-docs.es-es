@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 269b0ae2980435e507128cc87606f7eb702c2b7f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774589"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931391"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurar el trasvase de registros (SQL Server)
   En este tema se describe cómo configurar el trasvase de registros en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -107,7 +106,7 @@ ms.locfileid: "62774589"
   
 21. Tenga presente la programación de la restauración que aparece en el cuadro **Programación** bajo **Trabajo de restauración**. Si desea personalizar la programación de su instalación, haga clic en **Programar** y, a continuación, ajuste la programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] según sus necesidades. El programa debe parecerse al de la copia de seguridad.  
   
-22. Haga clic en **Aceptar**.  
+22. Haga clic en **OK**.  
   
 23. En **Instancia del servidor de supervisión**, active la casilla **Utilizar una instancia del servidor de supervisión** y, a continuación, haga clic en **Configuración**.  
   
@@ -120,7 +119,7 @@ ms.locfileid: "62774589"
   
 26. En **Retención de historial**, elija el período de tiempo que desea retener un registro del historial de trasvase de registros.  
   
-27. Haga clic en **Aceptar**.  
+27. Haga clic en **OK**.  
   
 28. En el cuadro de diálogo **Propiedades de la base de datos** , haga clic en **Aceptar** para comenzar el proceso de configuración.  
   

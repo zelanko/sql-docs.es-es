@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 90a5bb55a7ebe460177369d20de8bda9dd23d959
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775635"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931895"
 ---
 # <a name="upgrade-data-quality-services"></a>Actualizar Data Quality Services
   Este tema proporciona información sobre cómo actualizar la instalación existente de Data Quality Services (DQS) a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Como parte de la actualización de Data Quality Server de DQS a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], debe actualizar también el esquema de bases de datos de DQS.  
@@ -65,7 +64,7 @@ ms.locfileid: "62775635"
         dqsinstaller.exe -upgrade  
         ```  
   
-    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si ya ha realizado una copia de seguridad de las bases de datos de `Y` DQS `Yes`, escriba o y, a continuación, presione Entrar para continuar con la actualización.  
+    4.  El instalador le pregunta si desea realizar la copia de seguridad de las bases de datos DQS antes de continuar. Si ya ha realizado una copia de seguridad de las bases de datos de DQS, escriba `Y` o `Yes` y, a continuación, presione Entrar para continuar con la actualización.  
   
     5.  Se muestra un mensaje para indicar que la actualización del esquema de las bases de datos DQS se realizó.  
   
@@ -83,10 +82,10 @@ ms.locfileid: "62775635"
   
 3.  La salida mostrará una entrada para cada actualización junto con la fecha de la actualización. El valor máximo de VERSION_ID y ASSEMBLY_VERSION de la fecha más reciente es la versión actual. Un valor 2 en la columna ESTADO indica que la actualización se ha realizado correctamente. Si se ha producido algún error, este aparecerá en la columna ERROR. He aquí una salida de ejemplo:  
   
-    |Id.|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
-    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMINIO\nombreDeUsuario>|2||  
-    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMINIO\nombreDeUsuario>|2||  
+    |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<DOMAIN\UserName>|2||  
+    |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<DOMAIN\UserName>|2||  
   
 ## <a name="see-also"></a>Consulte también  
  [Instalar Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)   

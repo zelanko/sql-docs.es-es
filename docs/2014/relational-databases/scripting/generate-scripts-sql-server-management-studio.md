@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91d00367c0ae8cc0541c4bd9dbec2c508010bb90
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 8207e899c98d788ea0cbd618231597b22a6c0793
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82703901"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063460"
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Generar scripts (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] proporciona dos mecanismos para generar scripts de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Puede crear scripts para varios objetos mediante el **Asistente generar y publicar scripts.** También puede generar un script para objetos individuales o varios objetos con el menú **Incluir como** del **Explorador de objetos**.  
@@ -42,7 +41,7 @@ ms.locfileid: "82703901"
   
 3.  Expanda la categoría del objeto. Por ejemplo, expanda el nodo **Vistas** o **Tablas** .  
   
-4.  Haga clic con el botón derecho en el objeto y vaya a **Incluir \<tipo de objeto> como**; por ejemplo, vaya a **Incluir tabla como**.  
+4.  Haga clic con el botón secundario en el objeto, seleccione **incluir \<object type> como**, por ejemplo, incluir **tabla como**.  
   
 5.  Seleccione el tipo de script, como **Create to** o **Alter to**.  
   
@@ -57,11 +56,11 @@ ms.locfileid: "82703901"
   
 2.  Expanda **Bases de datos**, y a continuación expanda la base de datos que contiene los objetos que se deben incluir en un script.  
   
-3.  Haga clic con el botón derecho en el primer objeto que quiere incluir en un script, vaya a **Incluir \<tipo de objeto> como** y, en las selecciones **Guardar como**, elija **Nueva ventana del Editor de consultas** como el destino de salida.  
+3.  Haga clic con el botón derecho en el primer objeto que se va a incluir en el script, seleccione **incluir \<object type> como**y, en las selecciones **Guardar como** , elija **nueva ventana del editor de consultas** como destino de salida.  
   
 4.  Navegue hasta el segundo objeto que desea incluir en el script.  
   
-5.  Haga clic con el botón derecho en el objeto, vaya a **Incluir \<tipo de objeto> como** y, en las selecciones **Guardar como**, elija **Portapapeles** como el destino de salida.  
+5.  Haga clic con el botón derecho en el objeto, seleccione **incluir \<object type> como**y, en las selecciones **Guardar como** , elija **portapapeles** como el destino de salida.  
   
 6.  En la ventana Editor de consultas abierta para el primer objeto, pegue el script para el segundo objeto del Portapapeles.  
   
@@ -82,6 +81,6 @@ ms.locfileid: "82703901"
   
 6.  Presione Crtl y haga clic con el botón primario en el segundo objeto que desea incluir en el script.  
   
-7.  Haga clic con el botón derecho en uno de los objetos seleccionados y elija **Incluir \<tipo de objeto> como**.  
+7.  Haga clic con el botón secundario en uno de los objetos seleccionados y seleccione **incluir \<object type> como**.  
   
   

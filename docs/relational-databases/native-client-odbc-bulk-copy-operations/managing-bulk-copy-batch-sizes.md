@@ -1,5 +1,6 @@
 ---
 title: Administrar tamaños de lote de copia masiva | Microsoft Docs
+description: Obtenga información sobre cómo el tamaño de lote para una copia masiva define el ámbito de una transacción, lo que afecta al comportamiento de errores y a la sobrecarga de bloqueo en SQL Server Native Client ODBC.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,12 +17,12 @@ ms.assetid: 4b24139f-788b-45a6-86dc-ae835435d737
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8ad5561de57c88e052d09741444c1608ea77086
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ac8a9ecfe978614b7f2b9121fcf285944bf92638
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785309"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967725"
 ---
 # <a name="managing-bulk-copy-batch-sizes"></a>Administrar tamaños de lote de copia masiva
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +31,7 @@ ms.locfileid: "73785309"
   
  Si una copia masiva se realiza sin especificar ningún tamaño de lote y se produce un error, se revierte la copia masiva completa. La recuperación de una copia masiva de ejecución prolongada puede tardar mucho tiempo. Cuando se establece un tamaño de lote, la copia masiva considera cada lote como una transacción y confirma cada lote. Si se produce un error, solo es necesario revertir el último lote pendiente.  
   
- El tamaño de lote también puede afectar a la sobrecarga de bloqueo. Al realizar una copia masiva en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se puede especificar la sugerencia TABLOCK mediante [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para adquirir un bloqueo de tabla en lugar de bloqueos de fila. El bloqueo de una única tabla se puede mantener con una sobrecarga mínima en una operación de copia masiva completa. Si no se especifica TABLOCK, los bloqueos se mantienen en las filas individuales y la sobrecarga de mantener todos los bloqueos durante la copia masiva puede reducir el rendimiento. Dado que los bloqueos solo se mantienen mientras dura una transacción, la especificación de un tamaño del lote resuelve este problema ya que se genera periódicamente una confirmación que libera los bloqueos actuales.  
+ El tamaño de lote también puede afectar a la sobrecarga de bloqueo. Al realizar una copia masiva en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , se puede especificar la sugerencia TABLOCK mediante [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) para adquirir un bloqueo de tabla en lugar de bloqueos de fila. El bloqueo de una única tabla se puede mantener con una sobrecarga mínima en una operación de copia masiva completa. Si no se especifica TABLOCK, los bloqueos se mantienen en las filas individuales y la sobrecarga de mantener todos los bloqueos durante la copia masiva puede reducir el rendimiento. Dado que los bloqueos solo se mantienen mientras dura una transacción, la especificación de un tamaño del lote resuelve este problema ya que se genera periódicamente una confirmación que libera los bloqueos actuales.  
   
  El número de filas que conforman un lote puede tener efectos significativos en el rendimiento cuando se realiza la copia masiva de un gran número de filas. Las recomendaciones para el tamaño del lote dependen del tipo de copia masiva que se realiza.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "73785309"
   
  Además de especificar el tamaño de una transacción, los lotes también afectan al envío de las filas al servidor a través de la red. Las funciones de copia masiva suelen almacenar en caché las filas de **bcp_sendrow** hasta que se rellene un paquete de red y, a continuación, enviar el paquete completo al servidor. Sin embargo, cuando una aplicación llama a **bcp_batch**, el paquete actual se envía al servidor independientemente de si se ha rellenado. La utilización de un tamaño de lote muy bajo puede reducir el rendimiento si da lugar al envío de numerosos paquetes parcialmente rellenados al servidor. Por ejemplo, la llamada a **bcp_batch** después de cada **bcp_sendrow** hace que cada fila se envíe en un paquete independiente y, a menos que las filas sean muy grandes, desperdicia espacio en cada paquete. El tamaño predeterminado de los paquetes de red para SQL Server es 4 KB, aunque una aplicación puede cambiar el tamaño mediante una llamada a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) que especifique el atributo de SQL_ATTR_PACKET_SIZE.  
   
- Otro efecto secundario de los lotes es que cada lote se considera un conjunto de resultados pendiente hasta que se completa con **bcp_batch**. Si se intenta realizar cualquier otra operación en un identificador de conexión mientras un lote está pendiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el controlador ODBC de Native Client emite un error con SQLSTATE = "HY000" y una cadena de mensaje de error de:  
+ Otro efecto secundario de los lotes es que cada lote se considera un conjunto de resultados pendiente hasta que se completa con **bcp_batch**. Si se intenta realizar cualquier otra operación en un identificador de conexión mientras un lote está pendiente, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client emite un error con SQLSTATE = "HY000" y una cadena de mensaje de error de:  
   
 ```  
 "[Microsoft][SQL Server Native Client] Connection is busy with  

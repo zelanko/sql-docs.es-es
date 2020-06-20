@@ -9,18 +9,17 @@ ms.topic: conceptual
 ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5801916d34e45b5d70c9953d8dff0becbf6207cd
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774579"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931666"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Actualizar a una edición diferente de SQL Server 2014 (programa de instalación)
   La instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la actualización de edición entre las diferentes ediciones de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información sobre rutas de actualización de ediciones admitidas, vea [Actualizaciones de ediciones y versiones admitidas](supported-version-and-edition-upgrades.md). Antes de que se inicie la actualización de edición de una instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consulte los temas siguientes:  
   
--   [Características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
+-   [Características admitidas por las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
 -   [Ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)  
   
@@ -29,7 +28,7 @@ ms.locfileid: "62774579"
 -   [Requisitos de hardware y software para instalar SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **en un entorno en clúster: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** Es suficiente para ejecutar la actualización de la edición [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en uno de los nodos del clúster. Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
+>  ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno en clúster:** basta con actualizar la edición en uno de los nodos del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] clúster. Este nodo puede ser activo o pasivo, y el motor no pone los recursos sin conexión durante la actualización de la edición. Después de actualizar la edición, es necesario reiniciar la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o conmutar por error a otro nodo diferente.  
   
 ## <a name="prerequisites"></a>Prerrequisitos  
  En instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura para dicho recurso.  

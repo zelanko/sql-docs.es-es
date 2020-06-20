@@ -1,5 +1,6 @@
 ---
 title: Parámetros de enlace | Microsoft Docs
+description: Averigüe cómo enlazar cada marcador de parámetro de una instrucción SQL a una variable de la aplicación antes de que se pueda ejecutar la instrucción.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +22,12 @@ ms.assetid: d6c69739-8f89-475f-a60a-b2f6c06576e2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01e179d2abc6ef786f94b6d7938f0e21938c5a59
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1c2076acbe29cefbbee12c716d3c555054c5808a
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304651"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967594"
 ---
 # <a name="using-statement-parameters---binding-parameters"></a>Usar parámetros de instrucciones: enlazar parámetros
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,9 +58,9 @@ ms.locfileid: "81304651"
   
 -   Especifique los parámetros en la aplicación en un orden diferente que el orden especificado cuando se creó el procedimiento almacenado.  
   
- Los parámetros con nombre solo se admiten [!INCLUDE[tsql](../../includes/tsql-md.md)] cuando se usa la instrucción **Execute** o la secuencia de escape ODBC Call para ejecutar un procedimiento almacenado.  
+ Los parámetros con nombre solo se admiten cuando se usa la [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción **Execute** o la secuencia de escape ODBC Call para ejecutar un procedimiento almacenado.  
   
- Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre*=*valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado @p1(por ejemplo,). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
+ Si se establece **SQL_DESC_NAME** para un parámetro de procedimiento almacenado, todos los parámetros de procedimiento almacenado de la consulta también deben establecer **SQL_DESC_NAME**.  Si se usan literales en llamadas a procedimientos almacenados, donde los parámetros tienen **SQL_DESC_NAME** establecen, los literales deben usar el formato *' nombre* = *valor*', donde *nombre* es el nombre del parámetro del procedimiento almacenado (por ejemplo, @p1 ). Para obtener más información, vea [enlazar parámetros por nombre (parámetros con nombre)](https://go.microsoft.com/fwlink/?LinkId=167215).  
   
 ## <a name="see-also"></a>Consulte también  
  [Usar parámetros de instrucciones](../../relational-databases/native-client-odbc-queries/using-statement-parameters.md)  

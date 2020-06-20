@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 34f235e4-f80b-4123-8764-9deb18506f14
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3017f74b12eb18624f8a34e8a1289da18b70c93a
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 0f7ed275eb9b6558a77160c3c7fb2fc233c199cc
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82712693"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048214"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Recuperar información del conjunto de resultados (ODBC)
     
@@ -30,7 +29,7 @@ ms.locfileid: "82712693"
   
     -   Llame a [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) para obtener información sobre la columna de resultados.  
   
-     O bien  
+     Or  
   
     -   Llame a [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) para obtener información específica del descriptor sobre la columna de resultados.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08467118608db6b222bea2a41351eac951449a16
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 86c29f696c93789cb3815cf14587690c2edb5f6b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774569"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931338"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Cambiar los roles entre el servidor de trasvase de registros primario y secundario (SQL Server)
   Después de haber realizado la conmutación por error de una configuración de trasvase de registros de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a un servidor secundario, puede configurar la base de datos secundaria para que actúe como base de datos principal. De este modo, podrá intercambiar la base de datos primaria y la secundaria cuando sea necesario.  
@@ -78,7 +77,7 @@ ms.locfileid: "62774569"
 3.  Habilite el trabajo de copia de seguridad de trasvase de registros en el servidor secundario (el nuevo servidor principal), así como los trabajos de copia y restauración en el servidor primario (el nuevo servidor secundario).  
   
 > [!IMPORTANT]  
->  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [administrar los metadatos cuando una base de datos está disponible en otra instancia de servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Al cambiar una base de datos secundaria a la base de datos principal, para proporcionar una experiencia coherente a los usuarios y las aplicaciones, puede que tenga que volver a crear algunos o todos los metadatos de la base de datos; por ejemplo los inicios de sesión y los trabajos, en la nueva instancia del servidor principal. Para obtener más información, vea [Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia del servidor &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Tareas relacionadas  
   

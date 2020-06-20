@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bed6e2c1-791a-4fa1-b29f-cbfdd1fa8d39
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9db752a0910abb1a671e50b3a7a34fd2fd9cff68
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66059647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967015"
 ---
 # <a name="date-and-time-formats"></a>Formatos de fecha y hora
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. El análisis rápido admite los siguientes formatos para los tipos de datos de fecha y hora.  
@@ -120,11 +119,11 @@ ms.locfileid: "66059647"
   
  El análisis rápido genera cadenas como DT_DATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2 y DT_DBTIMESTAMPOFFSET. Los valores de fecha/hora en formatos truncados se rellenan. En la siguiente tabla se muestran los valores que se agregan para las partes de fecha y hora que faltan.  
   
-|Parte de fecha y hora|Relleno|  
+|Parte de fecha y hora|Espaciado interno|  
 |---------------------|-------------|  
 |Segundos|Agregar 00.|  
 |Minutos|Agregar 00:00.|  
-|Hour|Agregar 00:00:00.|  
+|Hora|Agregar 00:00:00.|  
 |Día|Agregar 01 para el día del mes.|  
 |Mes|Agregar 01 para el mes del año.|  
   

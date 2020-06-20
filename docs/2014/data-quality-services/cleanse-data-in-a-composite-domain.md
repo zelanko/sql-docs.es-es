@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7fb9e3cc9d500184e637284c4cfb8c65c48b43c1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: df41f9ae623053a61691076f9c96247f7a41564f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "65481147"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938016"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Limpiar datos en un dominio compuesto
   Este tema proporciona información sobre la limpieza de dominios compuestos en [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un dominio compuesto consta de dos o más dominios individuales y se asigna a un campo de datos que consta de varios términos relacionados. Todos los dominios que forman un dominio compuesto deben tener un área de conocimiento común. Para obtener información detallada acerca de los dominios compuestos, vea [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -54,7 +53,7 @@ ms.locfileid: "65481147"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de limpieza de datos de calidad, esta regla entre dominios definitiva cambia los datos con una confianza plena, y en la columna **Motivo** se muestra el siguiente mensaje: corregido por la regla "*\<nombre de la regla entre dominios>*". Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
+ Cuando pruebe la cláusula *Then* definitiva **El valor es igual a**de la regla entre dominios, el cuadro de diálogo **Probar regla de dominio compuesto** contendrá una columna nueva, **Corregir a**, que mostrará los datos correctos. En un proyecto de calidad de datos de limpieza, esta regla entre dominios definitiva cambia los datos con una confianza del 100% y la columna **motivo** muestra el siguiente mensaje: corregido por la regla ' *\<Cross-Domain Rule Name>* '. Para obtener más información acerca de las reglas entre dominios, vea [Create a Cross-Domain Rule](../../2014/data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La regla entre dominios definitiva no funcionará en dominios compuestos que estén adjuntados al servicio de datos de referencia.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1939ea9e1de7b0b7858ad09ad26bc3b4fbf008c3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e2625fa00aa871bf628e0152f6310dba3864f592
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66065308"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84938086"
 ---
 # <a name="xmla-query-editor-analysis-services---multidimensional-data"></a>Editor de consultas XMLA (Analysis Services - Datos multidimensionales)
   Utilice el Editor de consultas XMLA para diseñar y ejecutar instrucciones y scripts escritos en lenguaje de expresiones multidimensionales (XMLA).  
@@ -43,7 +42,7 @@ ms.locfileid: "66065308"
 |Término|Definición|  
 |----------|----------------|  
 |**Conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
-|**Conecto**|Desconecta el Editor de consultas XMLA de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
+|**Desconectar**|Desconecta el Editor de consultas XMLA de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Cambiar conexión**|Abre el cuadro de diálogo **Conectar a servidor** para establecer una conexión a una instancia distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
 |**Consulta con conexión actual**|Abre una nueva ventana del Editor de consultas XMLA utilizando la información de conexión de la ventana actual del Editor de consultas XMLA.|  
 |**Bases de datos disponibles**|Cambia la conexión a una base de datos distinta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en la misma instancia.|  

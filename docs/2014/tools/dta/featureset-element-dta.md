@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 79cb42654619ea3802d513fcf63df879833e48f1
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62735758"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048414"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet (DTA, elemento)
   Contiene las estructuras de diseño físico (índices o vistas indizadas) que desea que utilice el Asistente para la optimización de motor de base de datos durante el análisis.  

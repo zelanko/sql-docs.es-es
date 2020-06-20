@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f76c37b4-2f6e-4274-8ee2-87e89d98e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30e46515fda5bf03a96e9f1168b470f635698d07
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9fe8a7c8ad24c472eb41448f1303ad240a5232c9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211116"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85048434"
 ---
 # <a name="eventstring-element-dta"></a>EventString (DTA, elemento)
   Especifica una carga de trabajo de scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] directamente en el archivo de entrada XML.  
@@ -37,7 +36,7 @@ ms.locfileid: "68211116"
   
 ## <a name="element-attributes"></a>Atributos del elemento  
   
-|Atributo|Descripción|  
+|Atributo|Description|  
 |---------------|-----------------|  
 |`Weight`|Opcional. Especifica el factor de peso de la consulta (un factor de importancia) del evento especificado. Utilice un tipo de datos `float` para especificar el peso. Por ejemplo, `Weight`="100,01". El valor mínimo que se puede especificar para `Weight` es "0".|  
   
@@ -47,7 +46,7 @@ ms.locfileid: "68211116"
 |--------------------|-----------------|  
 |**Tipo y longitud de los datos**|`string`, la longitud es ilimitada.|  
 |**Valor predeterminado**|Ninguno.|  
-|**Casos**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento `EventString`, no se puede especificar una carga de trabajo con el elemento `File` en el mismo archivo de entrada XML.|  
+|**Repetición**|Una obligatoria si no se especifica ningún otro tipo de carga de trabajo. Es necesario especificar un elemento secundario `EventString`, `File` o `Database` para el elemento primario `Workload`, aunque solo se puede utilizar un tipo. Por ejemplo, si se especifica una carga de trabajo con el elemento `EventString`, no se puede especificar una carga de trabajo con el elemento `File` en el mismo archivo de entrada XML.|  
   
 ## <a name="element-relationships"></a>Relaciones del elemento  
   

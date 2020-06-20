@@ -11,22 +11,21 @@ helpviewer_keywords:
 ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: e3cf4ca5d422e9d124c397bbcae8d8b48d12b95b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62779366"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932736"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Acerca del motor de base de datos de SQL Server
   El componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el servicio principal para almacenar, procesar y proteger los datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] proporciona un acceso controlado y un procesamiento de transacciones rápido para cumplir los requisitos de las aplicaciones consumidoras de datos más exigentes de su empresa.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta 50 instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un solo equipo. Para crear una instalación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] típica, consulte instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite hasta 50 instancias del [!INCLUDE[ssDE](../../includes/ssde-md.md)] en un solo equipo. Para crear una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación típica, consulte Instalación [de SQL Server 2014 desde el Asistente para la instalación &#40;&#41;de instalación ](install-sql-server-from-the-installation-wizard-setup.md).  
   
  **Importante** : en las instalaciones locales, debe ejecutar el programa de instalación como administrador. Si instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde un recurso compartido remoto, deberá usar una cuenta de dominio que tenga permisos de lectura y ejecución para dicho recurso.  
   
- Las siguientes características se instalan al seleccionar ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos** en la página componentes para instalar del asistente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la instalación de:  
+ Las siguientes características se instalan al seleccionar ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor de base de datos** en la página componentes para instalar del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Asistente para la instalación de:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   

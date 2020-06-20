@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 49c408aa-6eb4-45cd-8d5c-60f065f24f5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cb5a00278e8b740df5efa93e71c417ccb4943f5d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 9439b7410821cffe5d959fda7a894e4f69e33ed0
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63016302"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002320"
 ---
 # <a name="displayname-property-sqlservice-class"></a>Propiedad DisplayName (clase SqlService)
   Obtiene el nombre para mostrar del servicio.  
@@ -43,7 +42,7 @@ object
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre para mostrar del servicio.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta cadena tiene una longitud máxima de 256 caracteres. Se conserva el uso de mayúsculas y minúsculas del nombre en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Sin embargo, las comparaciones de nombres para mostrar siempre se realizan sin distinción entre mayúsculas y minúsculas.  
   
 ## <a name="example"></a>Ejemplo  

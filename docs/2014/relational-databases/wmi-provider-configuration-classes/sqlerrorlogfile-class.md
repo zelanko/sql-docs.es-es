@@ -9,13 +9,12 @@ ms.topic: reference
 ms.assetid: 2b83ae4a-c0d4-414c-b6e5-a41ec7c13159
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8c5c6f1998cffc268a57318e0124f74d3411a3b4
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9aa17642a2b31bcee69fcdc20c20bc506a90557
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63249314"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002366"
 ---
 # <a name="sqlerrorlogfile-class"></a>Clase SqlErrorLogFile
   Proporciona propiedades para ver información sobre un archivo de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -44,18 +43,18 @@ class SQLErrorLogFile
 |InstanceName|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LastModified|Tipo de datos: `datetime`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> Fecha de la última modificación del archivo de registro.|  
 |LogFileSize|Tipo de datos: `uint32`<br /><br /> Tipo de acceso: solo lectura<br /><br /> <br /><br /> El tamaño del archivo de registro en bytes.|  
-|NOMBRE|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre del archivo de registro.|  
+|Name|Tipo de datos: `string`<br /><br /> Tipo de acceso: solo lectura<br /><br /> Calificadores: clave<br /><br /> <br /><br /> El nombre del archivo de registro.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 |||  
 |-|-|  
 |MOF|Sqlmgmprovider xpsp2up.mof|  
-|DLL|Sqlmgmprovider.dll|  
+|Archivo DLL|Sqlmgmprovider.dll|  
 |Espacio de nombres|\raíz\Microsoft\SqlServer\ComputerManagement10|  
   
 ## <a name="example"></a>Ejemplo  
- En el siguiente ejemplo se recupera información sobre todos los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ejecutar el ejemplo, reemplace \< *Instance_Name*> por el nombre de la instancia, por ejemplo, ' Instance1 '.  
+ En el siguiente ejemplo se recupera información sobre todos los archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en una instancia especificada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para ejecutar el ejemplo, reemplace \<*Instance_Name*> por el nombre de la instancia, por ejemplo, ' Instance1 '.  
   
 ```  
 on error resume next  
@@ -89,9 +88,9 @@ Next
     > [!NOTE]  
     >  Para obtener información sobre cómo comprobar los permisos de WMI, consulte la sección seguridad del tema [ver archivos de registro sin conexión](../logs/view-offline-log-files.md).  
   
--   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, los registros de errores se encuentran en la siguiente \<ruta de acceso (donde *unidad>* representa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la \<unidad donde instaló y *InstanceName*> es el nombre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de la instancia de):  
+-   Permiso de lectura a la carpeta que contiene los registros de errores. De forma predeterminada, los registros de errores se encuentran en la siguiente ruta de acceso (donde \<*Drive> * representa la unidad donde se instaló [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y \<*InstanceName*> es el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ):  
   
-     **> de unidad: \Archivos de programa\Microsoft SQL Server\MSSQL11. \<** **\< NombreDeInstancia> \Mssql\log.**  
+     ** \<Drive> : \Archivos de Programa\microsoft SQL Server\MSSQL11** **. \<InstanceName> \Mssql\log.**  
   
  Si se conecta a través de un firewall, asegúrese de que se establece una excepción en el firewall para WMI en los equipos de destino remotos. Para obtener más información, consulte [conectarse a WMI de forma remota a partir de Windows Vista](https://go.microsoft.com/fwlink/?LinkId=178848).  
   

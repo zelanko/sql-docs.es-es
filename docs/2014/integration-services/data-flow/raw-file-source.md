@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a5171de39727578028ed4cf01c090b98e3d70e0d
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81486981"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84914755"
 ---
 # <a name="raw-file-source"></a>archivo sin formato, origen
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Esto significa que el origen de archivo sin formato puede leer datos más rápidamente que otros orígenes, como el origen de archivo plano o el origen de OLE DB.  

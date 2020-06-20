@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d12dbcdf49fc34bdd37fca21635cbcd416efc36b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c200e69d0e80232a558c4fa030864fe864d237c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "78176232"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967355"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codificar y depurar el componente de script
   En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)], el componente Script tiene dos modos: modo de diseño de metadatos y modo de diseño de código. Al abrir el **Editor de transformación Script**, el componente escribe en modo de diseño de metadatos, en el que se configuran metadatos y se establecen las propiedades de componentes. Después de haber establecido las propiedades del componente de script y configurar la entrada y las salidas en modo de diseño de metadatos, se puede cambiar al modo de diseño de código para escribir un script personalizado. Para obtener más información acerca del modo de diseño de metadatos y el modo de diseño de código, vea [Configuring the Script Component in the Script Component Editor](configuring-the-script-component-in-the-script-component-editor.md) (Configurar el componente de script en el editor de componentes de script).
@@ -59,7 +58,7 @@ ms.locfileid: "78176232"
 
     -   Una clase de colección `Connections` que contiene referencias a las conexiones seleccionadas en la página Administrador de conexiones del Editor de Script de transformación.
 
-    -   Una `Variables` clase de colección que contiene referencias a las variables especificadas `ReadOnlyVariable` en `ReadWriteVariables` las propiedades y en la página **script** del **Editor de transformación script**.
+    -   Una `Variables` clase de colección que contiene referencias a las variables especificadas en las `ReadOnlyVariable` `ReadWriteVariables` propiedades y en la página **script** del **Editor de transformación script**.
 
 -   El `BufferWrapper` elemento de proyecto contiene una clase que hereda de <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> para cada entrada y salida configuradas en la página **entradas y salidas** del **Editor de transformación script**. Cada una de estas clases contiene las propiedades de descriptor de acceso con tipo, que corresponden a las columnas de entrada y salida configuradas, y los búferes de flujo de datos que contienen las columnas.
 
@@ -170,7 +169,7 @@ public class ScriptMain : UserComponent
 |---------------------|-------------------|
 |variables|Usa las propiedades de descriptor de acceso con nombre y tipo en la clase de colección `Variables` del elemento de proyecto `ComponentWrapper`, expuesto a través de la propiedad `Variables` de la clase `ScriptMain`.<br /><br /> El método `PreExecute` únicamente puede tener acceso a variables de solo lectura. El método `PostExecute` puede tener acceso a variables de solo lectura y de lectura/escritura.|
 |Conexiones|Usa las propiedades de descriptor de acceso con nombre y tipo en la clase de colección `Connections` del elemento de proyecto `ComponentWrapper`, expuesto a través de la propiedad `Connections` de la clase `ScriptMain`.|
-|Eventos|Genere eventos <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> mediante la propiedad de la `ScriptMain` clase y los métodos **Fire\<X>** de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaz.|
+|Eventos|Genere eventos mediante la <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> propiedad de la `ScriptMain` clase y los métodos **de \<X> activación** de la <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> interfaz.|
 |Registro|Realiza registros mediante el método <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A> de la clase `ScriptMain`.|
 
 ## <a name="debugging-the-script-component"></a>Depurar el componente de script
@@ -197,7 +196,7 @@ public class ScriptMain : UserComponent
 
  [Descripción del modelo de objetos del componente de script](understanding-the-script-component-object-model.md) Explica cómo utilizar los objetos, métodos y propiedades disponibles en el componente de script.
 
- [Hacer referencia a otros ensamblados en soluciones de scripting](../referencing-other-assemblies-in-scripting-solutions.md) Explica cómo hacer referencia a objetos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] la biblioteca de clases en el componente de script.
+ [Hacer referencia a otros ensamblados en soluciones de scripting](../referencing-other-assemblies-in-scripting-solutions.md) Explica cómo hacer referencia a objetos de la [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] biblioteca de clases en el componente de script.
 
  [Simular una salida de error para el componente de script](../../extending-packages-scripting-data-flow-script-component-examples/simulating-an-error-output-for-the-script-component.md) Explica cómo simular una salida de error para las filas que generan errores durante el procesamiento por parte del componente de script.
 

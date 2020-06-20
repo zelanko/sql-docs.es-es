@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e6d870ec12a896ff9046aa2e05df1e1f6220dc17
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dd7ead14af420eff25331c732b9d249b2a4b94f5
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "82087085"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967195"
 ---
 # <a name="logging-in-the-script-task"></a>Registrar en la tarea Script
   El uso del registro en los paquetes de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permite registrar información detallada sobre el progreso, los resultados y los problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. La tarea Script puede utilizar el método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> del objeto `Dts` para registrar datos definidos por el usuario. Si el registro está habilitado y se selecciona el evento **ScriptTaskLogEntry** para el registro en la pestaña **Detalles** del cuadro de diálogo **Configurar registros de SSIS**, una sola llamada al método <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> almacena la información de eventos en todos los proveedores de registro configurados para la tarea.  

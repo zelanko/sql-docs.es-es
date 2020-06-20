@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9272a6c11ce226f385c0b1f79f965a2a0f55835e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 88bbf2131ba1c067d5232ddb2fc52c8ce8b0e3e6
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62901126"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967395"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Ejemplos de expresiones avanzadas de Integration Services
   Esta sección proporciona ejemplos de expresiones avanzadas que combinan varios operadores y varias funciones. Si se usa una expresión en una restricción de precedencia o en la transformación División condicional, su evaluación debe devolver un valor booleano. Sin embargo, esta restricción no se aplica a las expresiones usadas en expresiones de propiedades, variables, la transformación Columna derivada o el contenedor de bucles For.  

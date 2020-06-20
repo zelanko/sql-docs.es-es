@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 01abcbe81304d2bbc9a09c29f304a55945aae5ff
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62774562"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84931512"
 ---
 # <a name="about-log-shipping-sql-server"></a>Acerca del trasvase de registros (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El trasvase de registros permite enviar automáticamente copias de seguridad del registro de transacciones desde una *base de datos principal* de una instancia del *servidor principal* a una o varias *bases de datos secundarias* en instancias independientes del *servidor secundario* . Las copias de seguridad del registro de transacciones se aplican a cada una de las bases de datos secundarias de forma individual. En una tercera instancia de servidor opcional, denominado *servidor de supervisión*, se registra el historial y el estado de las operaciones de copias de seguridad y restauración y, opcionalmente, se activan alertas si estas operaciones no se producen según lo programado.  

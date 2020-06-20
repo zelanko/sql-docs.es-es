@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b15e2f457cca84abb7ab597bdf14d0b2fb2e3ffe
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: bebcfed02aa30ffc686b2a74807b6a4cc3955c90
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388047"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932006"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Actualizar PowerPivot para SharePoint
   En este tema se resumen los pasos necesarios para actualizar una implementación de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] a [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Los pasos específicos dependen de la versión de SharePoint que está ejecutando el entorno e incluyen el complemento PowerPivot para SharePoint (**spPowerPivot.msi**).  
@@ -26,7 +25,7 @@ ms.locfileid: "81388047"
   
 
   
-## <a name="background"></a>Segundo plano  
+## <a name="background"></a>Fondo  
   
 -   Si va a actualizar una granja multiservidor de SharePoint 2010 que tiene dos o más instancias de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , debe actualizar totalmente cada servidor **antes** de continuar con el servidor siguiente. Una actualización completa incluye ejecutar el programa de instalación de SQL Server para actualizar los archivos de programa de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] , seguido de acciones de actualización de SharePoint que configuran los servicios actualizados. Se limitará la disponibilidad del servidor hasta que ejecute las acciones de actualización en la Herramienta de configuración de PowerPivot o el comando de Windows PowerShell adecuado.  
   
@@ -47,9 +46,9 @@ ms.locfileid: "81388047"
   
  **SQL Server:**  
   
--   Si la instalación existente de PowerPivot [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]es, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] se necesita Service Pack 2 (SP2) para realizar una actualización [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]a.  
+-   Si la instalación existente de PowerPivot es [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] , [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] se necesita Service Pack 2 (SP2) para realizar una actualización a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
--   Si la instalación existente de PowerPivot [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]es, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se necesita Service Pack 1 (SP1) para realizar una actualización [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]a.  
+-   Si la instalación existente de PowerPivot es [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] se necesita Service Pack 1 (SP1) para realizar una actualización a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
  **SharePoint 2010:**  
   
@@ -148,7 +147,7 @@ ms.locfileid: "81388047"
     Get-Service | where {$_.displayname -like "*powerpivot*"}  
     ```  
   
-5.  **Ejecute [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] el programa de instalación** en el primer servidor de aplicaciones de SharePoint que ejecuta el servicio de Windows **SQL Server Analysis Services (PowerPivot)** para actualizar la instancia de PowerPivot. En la página Instalación del Asistente para la instalación de SQL Server, elija la opción de actualización. Para obtener más información, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
+5.  **Ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Configure** en el primer servidor de aplicaciones de SharePoint que ejecuta el servicio de Windows **SQL Server Analysis Services (PowerPivot)** para actualizar la instancia de PowerPivot. En la página Instalación del Asistente para la instalación de SQL Server, elija la opción de actualización. Para obtener más información, consulte [actualización a SQL Server 2014 mediante el Asistente para la instalación &#40;&#41;de instalación ](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 6.  **Reinicie el servidor** antes de ejecutar la herramienta de configuración. Este paso garantizará que las actualizaciones o requisitos previos instalados con el programa de instalación de SQL Server se configuren totalmente en el sistema.  
   
@@ -237,7 +236,7 @@ ms.locfileid: "81388047"
 Get-PowerPivotSystemService  
 ```  
   
- Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]es la versión 12,0. \<> de compilación principal. \<> de compilación secundaria  
+ Compruebe **CurrentSolutionVersion**. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]es la versión 12,0. \<major build> .\<minor build>  
   
 ### <a name="verify-the-version-of-the-analysis-services-windows-service"></a>Comprobar la versión del servicio de Windows Analysis Services  
  Si solo actualizó alguno de los servidores [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] de una granja de SharePoint 2010, la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en los servidores sin actualizar será anterior a la de la versión esperada en la granja. Necesitará actualizar todos los servidores a la misma versión para que puedan utilizarse. Use uno de los métodos siguientes para comprobar la versión del servicio de Windows SQL Server Analysis Services (PowerPivot) en cada equipo.  
@@ -250,7 +249,7 @@ Get-PowerPivotSystemService
   
 3.  Haga clic en **Detalles**.  
   
-4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la versión del archivo debe ser 12,00. \<> de compilación principal. \<> de compilación secundaria.  
+4.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]la versión del archivo debe ser 12,00. \<major build> . \<minor build> .  
   
 5.  Compruebe que este número es idéntico a la versión de la solución y del servicio de sistema de PowerPivot.  
   
@@ -300,7 +299,7 @@ Get-PowerPivotSystemService
   
 2.  Ordene por nombre del ensamblado y busque **Microsoft.Analysis Services.Adomd.Client**.  
   
-3.  Compruebe que tiene la versión 12,0. \<número de compilación>.  
+3.  Compruebe que tiene la versión 12,0. \<build number> .  
   
 
 ##  <a name="upgrading-multiple-powerpivot-for-sharepoint-servers-in-a-sharepoint-farm"></a><a name="geminifarm"></a>Actualización de varios servidores PowerPivot para SharePoint en una granja de servidores de SharePoint  
@@ -337,7 +336,7 @@ Get-PowerPivotSystemService
 ##  <a name="post-upgrade-verification-tasks"></a><a name="verify"></a> Tareas de comprobación posteriores a la actualización  
  Una vez completada la actualización, use los siguientes pasos para comprobar si el servidor está operativo.  
   
-|Tarea|Link|  
+|Tarea|Vínculo|  
 |----------|----------|  
 |Compruebe que el servicio se está ejecutando en todos los equipos que ejecutan PowerPivot para SharePoint.|[Iniciar o detener un servidor de PowerPivot para SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |Comprobar la activación de las características en el nivel de colección de sitios.|[Activar la integración de características de PowerPivot para colecciones de sitios en Administración central](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  

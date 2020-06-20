@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d770d35c-c8de-4e00-9a85-7d03f45a0f0d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 52537ac126115fbde3d7d0fb1a13f61f1d25cf15
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b70449ace66d4e33a547eca1c0b19eafabde5a7
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63137526"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85002004"
 ---
 # <a name="implement-sql-server-agent-security"></a>Implementar la seguridad del Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El Agente le permite al administrador de la base de datos ejecutar cada paso de trabajo en un contexto seguro que solo tiene los permisos necesarios para realizar ese paso de trabajo, que está determinado por un servidor proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para establecer los permisos para un paso de trabajo concreto, cree un proxy que disponga de los permisos necesarios y, a continuación, asigne ese proxy al paso de trabajo. Se puede especificar un servidor proxy en más de un paso de trabajo. Para los pasos de trabajo que necesitan los mismos permisos se utiliza el mismo proxy.  
@@ -42,7 +41,7 @@ ms.locfileid: "63137526"
   
  Los miembros del rol fijo de servidor **sysadmin** tienen permiso para crear, modificar o eliminar cuentas de proxy. Los miembros del rol **sysadmin** tienen permiso para crear pasos de trabajo que no especifiquen un proxy, sino que se ejecuten como la cuenta de servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , que es la cuenta que se utiliza para iniciar el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="guidelines"></a>Directrices  
+## <a name="guidelines"></a>Instrucciones  
  Siga estas instrucciones para mejorar la seguridad de la implementación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
 -   Crear cuentas de usuario dedicadas especialmente para servidores proxy y utilizarlas únicamente para ejecutar pasos de trabajos.  

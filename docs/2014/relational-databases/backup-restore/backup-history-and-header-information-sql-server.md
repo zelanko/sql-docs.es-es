@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b1ab8545714e84c8ecf8ee6c9cb89b7b8c0d3831
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ff1e75cc88e51de75af32bcd9d48860be52d5861
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62922249"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84959248"
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Historial de copias de seguridad e información de encabezados (SQL Server)
   En la base de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **se almacena un historial completo de todas las operaciones de copia de seguridad y restauración de** de una instancia de servidor. En este tema se describen las tablas del historial de copias de seguridad y restauración, así como las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se usan para tener acceso al historial de copias de seguridad. En el tema también se explica cuándo resulta útil la lista de archivos de base de datos y de registro de transacciones, y cuándo se debe usar la información de encabezado de medios con respecto a cuándo se debe usar la información de encabezado de copia de seguridad.  

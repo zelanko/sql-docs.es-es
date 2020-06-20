@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0e0af29d348ff55b415d22d44bc8e8e48a35d290
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0561ff95fc5fbcfb6a9dc552580e14ff2a5d14f1
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775755"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932732"
 ---
 # <a name="install-sql-server-2014-from-the-installation-wizard-setup"></a>Instalar SQL Server 2014 desde el Asistente para la instalación (programa de instalación)
   En este tema se proporciona un procedimiento paso a paso para instalar una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] utilizando el Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El Asistente para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un único árbol de características para la instalación de todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; de este modo, no tendrá que instalarlos individualmente: Para obtener más información sobre los distintos componentes que se pueden instalar, vea [instalación de SQL Server 2014](installation-for-sql-server.md).  Para obtener más información sobre cómo instalar los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] componentes individualmente, consulte [instalación de SQL Server 2014](install-sql-server.md).  
@@ -62,7 +61,7 @@ ms.locfileid: "62775755"
   
 8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará.  
   
-9. En la página rol de instalación, seleccione ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalación de características**y, a continuación, haga clic en **siguiente** para continuar en la página selección de características.  
+9. En la página Rol de instalación, seleccione **Instalación de características de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y, después, haga clic en **Siguiente** para continuar en la página Selección de características.  
   
 10. En la página Selección de características, seleccione los componentes de la instalación. Después de seleccionar el nombre de la característica, aparece una descripción de cada grupo del componente en el panel **Descripción de característica** . Puede activar cualquier combinación de casillas. Para obtener más información, vea [ediciones y componentes de SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md) y [características compatibles con las ediciones de SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
@@ -146,15 +145,15 @@ ms.locfileid: "62775755"
   
 18. Use la página Configuración de Distributed Replay Client para especificar los usuarios a los que desee conceder permisos administrativos para el servicio Distributed Replay Client. Los usuarios con permisos administrativos tendrán acceso ilimitado al servicio Distributed Replay Client.  
   
-     El **nombre del controlador** es un parámetro opcional y el valor predeterminado \<está *en blanco*>. Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client. Tenga en cuenta lo siguiente:  
+     El **nombre del controlador** es un parámetro opcional y el valor predeterminado es \<*blank*> . Escriba el nombre del controlador con el que se comunicará el equipo cliente para el servicio Distributed Replay Client. Tenga en cuenta lo siguiente:  
   
     -   Si ya ha configurado un controlador, escriba el nombre del controlador mientras configura cada cliente.  
   
     -   Si aún no ha configurado ningún controlador, puede dejar el nombre del controlador en blanco. Sin embargo, debe escribir manualmente el nombre del controlador en el archivo de **configuración de cliente** .  
   
-     Especifique el **Directorio de trabajo** para el servicio de cliente de Distributed Replay. El directorio de trabajo predeterminado \<es la *letra de unidad*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Archivos de programa \DReplayClient\WorkingDir.  
+     Especifique el **Directorio de trabajo** para el servicio de cliente de Distributed Replay. El directorio de trabajo predeterminado es \<*drive letter*> : \Archivos de programa \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\WorkingDir \\ .  
   
-     Especifique el **Directorio de resultados** para el servicio de cliente de Distributed Replay. El directorio de resultados predeterminado \<es la *letra de unidad*>\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:\\\Archivos de programa \DReplayClient\ResultDir.  
+     Especifique el **Directorio de resultados** para el servicio de cliente de Distributed Replay. El directorio de resultados predeterminado es \<*drive letter*> : \Archivos de programa \\ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \DReplayClient\ResultDir \\ .  
   
      Para continuar, haga clic en **Siguiente**.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "62775755"
   
 22. Si el programa indica que se reinicie el equipo, hágalo ahora. Es importante leer el mensaje del Asistente para la instalación tras finalizar el programa de instalación. Para obtener más información, vea [View and Read SQL Server Setup Log Files](view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Pasos a seguir  
+## <a name="next-steps"></a>Pasos siguientes  
  Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  Para reducir el área expuesta de un sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita de manera selectiva los servicios y características clave. Para obtener más información, vea [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c03333e715483f8da32703636373ef0115c3a1c0
-ms.sourcegitcommit: 37a3e2c022c578fc3a54ebee66d9957ff7476922
+ms.openlocfilehash: 7e9821521e793092c62843dd9bdab0c16bb0f26b
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82921600"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84915635"
 ---
 # <a name="integration-services-data-types"></a>Tipos de datos de Integration Services
   Cuando los datos entran en un flujo de datos en un paquete, el origen que extrae los datos convierte los datos en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . A los datos numéricos se les asigna un tipo de dato numérico, a los datos de cadena se les asigna un tipo de datos de caracteres y se asignan fechas a un tipo de datos de fecha. A otros datos, tales como GUID y bloques de objetos binarios grandes (BLOB), también se les asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] correspondientes. Si los datos son de un tipo que no se puede convertir en un tipo de datos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se produce un error.  

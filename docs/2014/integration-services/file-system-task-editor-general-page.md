@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 594b87b3e2d58ffe60bd3c31324811a66038c82b
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66058811"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84967135"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor de la tarea Sistema de archivos (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Sistema de archivos** para configurar la operación del sistema de archivos que lleva a cabo la tarea.  
@@ -29,7 +28,7 @@ ms.locfileid: "66058811"
  Debe especificar un administrador de conexiones de origen y destino mediante las propiedades SourceConnection y DestinationConnection. Puede proporcionar los nombres de los administradores de conexión de archivos que señalan a los archivos que utiliza la tarea como origen o destino, o bien proporcionar los nombres de las variables si las rutas de acceso de los archivos están almacenadas en variables. Si quiere usar variables para almacenar rutas de acceso de archivo, primero debe establecer la opción IsSourcePathVariable para la conexión de origen y la opción IsDestinationPatheVariable para la conexión de destino en **True**. A continuación, puede elegir las variables definidas por el usuario o del sistema existentes que se utilizarán, o bien puede crear nuevas variables. En el cuadro de diálogo **Agregar variable** , puede configurar y especificar el ámbito de las variables. El ámbito debe ser la tarea Sistema de archivos o un contenedor principal. Para obtener más información, vea [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md) y [usar variables en paquetes](../../2014/integration-services/use-variables-in-packages.md).  
   
 > [!NOTE]  
->  Para invalidar las variables seleccionadas para las `SourceConnection` propiedades `DestinationConnection` y, escriba una expresión para las propiedades de **origen** y de **destino** . Las expresiones se especifican en la página **Expresiones** del **Editor de la tarea Sistema de archivos**. Por ejemplo, para establecer la ruta de acceso de los archivos que usa la tarea como destino, tal vez desee utilizar una variable A en determinadas condiciones y una variable B, en otras.  
+>  Para invalidar las variables seleccionadas para las `SourceConnection` `DestinationConnection` propiedades y, escriba una expresión para las propiedades de **origen** y de **destino** . Las expresiones se especifican en la página **Expresiones** del **Editor de la tarea Sistema de archivos**. Por ejemplo, para establecer la ruta de acceso de los archivos que usa la tarea como destino, tal vez desee utilizar una variable A en determinadas condiciones y una variable B, en otras.  
   
 > [!NOTE]  
 >  La tarea Sistema de archivos trabaja con un solo archivo o directorio. Por consiguiente, esta tarea no admite el uso de caracteres comodín para realizar la misma operación en varios archivos o directorios. Para hacer que la tarea Sistema de archivos realice una determinada operación sobre varios archivos o directorios, coloque la tarea Sistema de archivos en un contenedor de bucles Foreach. Para más información, consulte [File System Task](control-flow/file-system-task.md).  
@@ -42,8 +41,8 @@ ms.locfileid: "66058811"
   
 |Value|Descripción|  
 |-----------|-----------------|  
-|**Reales**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
-|**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción `DestinationConnection`dinámica,.|  
+|**True**|La ruta de destino está almacenada en una variable. Al seleccionar este valor se muestra la opción dinámica, **DestinationVariable**.|  
+|**Es**|La ruta de destino se especifica en un administrador de conexiones de archivos. Al seleccionar este valor se muestra la opción dinámica, `DestinationConnection` .|  
   
  **OverwriteDestination**  
  Especifique si la operación puede sobrescribir archivos en el directorio de destino.  
@@ -85,13 +84,13 @@ ms.locfileid: "66058811"
   
 ### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione el nombre de la variable en la lista o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  `DestinationConnection`  
- Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
@@ -99,13 +98,13 @@ ms.locfileid: "66058811"
   
 ### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- Seleccione el nombre de la variable en la lista o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione el nombre de la variable en la lista o haga clic en \<**New variable...**> para crear una nueva variable.  
   
  **Temas relacionados:** [Integration Services &#40;SSIS&#41; variables](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  `SourceConnection`  
- Seleccione un administrador de conexiones de archivos de la lista o \<haga clic en **nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista o haga clic en \<**New connection...**> para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   

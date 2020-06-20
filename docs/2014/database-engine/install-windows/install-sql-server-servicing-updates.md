@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0c36fbe634fbc2b17547f127290cfbaed6e745c7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62775348"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84932536"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Instalar actualizaciones de servicio de SQL Server 2014
   Este tema proporciona información acerca de cómo instalar actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Esta sección proporciona información acerca de lo siguiente:  
@@ -40,7 +39,7 @@ ms.locfileid: "62775348"
  Una vez que el programa de instalación encuentra las versiones más recientes de las actualizaciones aplicables, las descarga y las integra con el proceso de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] actual. La actualización del producto puede incluir una actualización acumulativa, un Service Pack o un Service Pack más la actualización acumulativa. La funcionalidad de Actualización de producto es una extensión de la [funcionalidad de instalación integrada](https://go.microsoft.com/fwlink/?LinkId=219945) que estaba disponible en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] PCU1.  
   
 ## <a name="installing-updates-for-sscurrent-after-it-has-already-been-installed"></a>Instalar actualizaciones para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] una vez instalado  
- En una instancia instalada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], se recomienda aplicar todas las actualizaciones disponibles: las versiones de distribución general (GDR-seguridad/actualizaciones críticas), los Service Pack (SP), así como la última actualización acumulativa (Cu) disponible.  
+ En una instancia instalada de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , se recomienda aplicar todas las actualizaciones disponibles: las versiones de distribución general (GDR-seguridad/actualizaciones críticas), los Service Pack (SP), así como la última actualización acumulativa (Cu) disponible.  
   
  En función del tipo de servicio de mantenimiento, las actualizaciones de SQL Server están disponibles a través de Microsoft Update (MU), el centro de descarga de Microsoft o el servidor de revisiones de servicios de soporte al cliente. Las actualizaciones críticas y de seguridad de SQL Server se proporcionan automáticamente en Microsoft Update (para poder ver estas actualizaciones es necesario participar en MU a través de Windows Update en el panel de control). Los Service Pack están disponibles en MU como descargas opcionales/importantes, así como en el centro de descarga. Hay actualizaciones acumulativas disponibles en el servidor de descarga de revisiones de Microsoft que se proporciona en los artículos de Knowledge base de CU.  
   

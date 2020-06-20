@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 298723c5031299b1b105f686e188e1e27cfd758c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62916951"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965885"
 ---
 # <a name="model-database"></a>Base de datos model
   La base de datos **modelo** se utiliza como plantilla para todas las bases de datos creadas en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Como **tempdb** se crea de nuevo cada vez que se inicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , la base de datos **modelo** siempre tiene que existir en un sistema con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Todo el contenido de la base de datos **modelo** , incluidas las opciones de base de datos, se copia en la base de datos nueva. Algunos de los valores de configuración de la base de datos **model** también se usan para crear una base de datos **tempdb** nueva durante el inicio, de modo que la base de datos **model** siempre debe existir en un sistema [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -73,7 +72,7 @@ ms.locfileid: "62916951"
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|Apagado|Sí|  
 |READ_COMMITTED_SNAPSHOT|Apagado|Sí|  
-|RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la edición<sup>1</sup>|Sí|  
+|RECOVERY|Depende de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Edición<sup>1</sup>|Sí|  
 |RECURSIVE_TRIGGERS|Apagado|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
 |TRUSTWORTHY|Apagado|No|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 013a8e8ab09b192a2ff7a04a9d7ddc5be1395636
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: 4818b67766dafe851035041c8fd5137a0dfade73
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82710746"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84999198"
 ---
 # <a name="batches-of-statements"></a>Lotes de instrucciones
   Un lote de [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucciones contiene dos o más instrucciones, separadas por un punto y coma (;), integradas en una sola cadena que se pasa a la función **SQLExecDirect** o [SQLPrepare](https://go.microsoft.com/fwlink/?LinkId=59360). Por ejemplo:  

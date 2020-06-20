@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e7b74cba-a0e5-4478-af12-3f81b9484e9e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3aa628e0113adbbee48c0fa00d43b56e8773ad7c
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62891727"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965305"
 ---
 # <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Paso 3: Adición y configuración de un administrador de conexiones OLE DB
   Una vez que haya agregado un administrador de conexiones de archivos planos al origen de datos, la siguiente tarea consiste en agregar un administrador de conexiones OLE DB para conectarse al destino. Un administrador de conexiones OLE DB permite a un paquete extraer datos de un origen de datos compatible con OLE DB o cargar datos en este origen de datos. Mediante el administrador de conexiones OLE DB, puede especificar el servidor, el método de autenticación y la base de datos predeterminada de la conexión.  
@@ -34,17 +33,17 @@ ms.locfileid: "62891727"
   
 4.  En el grupo **Iniciar sesión en el servidor** , compruebe que la opción **Usar autenticación de Windows** está seleccionada.  
   
-5.  En el grupo **conectarse a una base de datos** , en el cuadro **Seleccione o escriba un nombre de base** de `AdventureWorksDW2012`datos, escriba o seleccione.  
+5.  En el grupo **conectarse a una base de datos** , en el cuadro **Seleccione o escriba un nombre de base de datos** , escriba o seleccione `AdventureWorksDW2012` .  
   
 6.  Haga clic en **Probar conexión** para comprobar si los parámetros de conexión que ha especificado son válidos.  
   
-7.  Haga clic en **Aceptar**.  
+7.  Haga clic en **OK**.  
   
-8.  Haga clic en **Aceptar**.  
+8.  Haga clic en **OK**.  
   
 9. En el panel **Conexiones de datos** del cuadro de diálogo **Configurar el administrador de conexiones OLE DB** , compruebe que la opción **localhost.AdventureWorksDW2012** está seleccionada.  
   
-10. Haga clic en **Aceptar**.  
+10. Haga clic en **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 4: Adición de una tarea Flujo de datos al paquete](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  

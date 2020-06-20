@@ -9,20 +9,19 @@ ms.topic: reference
 ms.assetid: 9623013f-15f1-4614-8dac-1155e57c880c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ef98316982090d247c09ec887e0d00a5c895950b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 61cc9b3b9a07bb20d8aa0defa28fdae133ae454f
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74054846"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84933278"
 ---
 # <a name="string-utility-functions-sample"></a>Ejemplo de funciones de la utilidad String
   El ejemplo de funciones de la utilidad String contiene una función con valores de tabla de transmisión de datos, escrita en Visual C# y Visual Basic, que divide una cadena delimitada por comas en una tabla con una columna. También contiene una función de agregado que convierte una columna de cadenas en una cadena delimitada por comas.  Además, se implementan una función escalar y una función con valores de tabla que permiten reemplazar y buscar expresiones regulares.  
   
  Para implementar una función con valores de tabla de transmisión de datos, cree un método que devuelva un objeto que implemente la interfaz `IEnumerable`. Este método de `IEnumerable` debe estar vinculado mediante un atributo a otro método que rellene las filas de la función con valores de tabla.  
   
-## <a name="prerequisites"></a>Prerrequisitos  
+## <a name="prerequisites"></a>Requisitos previos  
  Para crear y ejecutar este proyecto se debe instalar el siguiente software:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. Puede obtener [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express de forma gratuita desde el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sitio web [de documentación y ejemplos de](https://www.microsoft.com/download/details.aspx?id=42299)Express.  
@@ -54,7 +53,7 @@ ms.locfileid: "74054846"
   
 -   La base de datos de AdventureWorks debe estar instalada en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando.  
   
--   Si no es administrador de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia de que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
+-   Si no es administrador de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que está usando, debe hacer que un administrador le conceda el permiso **CreateAssembly** para completar la instalación.  
   
 ## <a name="building-the-sample"></a>Generar el ejemplo  
   

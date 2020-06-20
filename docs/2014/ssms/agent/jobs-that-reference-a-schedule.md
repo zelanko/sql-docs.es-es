@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b6ecb6eb-9514-4ac1-b67c-31e3d39db4d9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efba2e73c3043ddbf25fef06b57ef039f6eacea5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 03848f6f9cee7339f2148622a4b3b8bbd58a6351
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63183468"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064446"
 ---
 # <a name="jobs-that-reference-a-schedule"></a>Trabajos que hacen referencia a una programación
   Este cuadro de diálogo permite ver información sobre los trabajos que hacen referencia a una programación determinada.  
@@ -29,13 +28,13 @@ ms.locfileid: "63183468"
  **Programación**  
  Muestra el nombre de la programación que se consulta.  
   
- **Seleccionadas**  
+ **Selected**  
  Solo lectura.  
   
  **Nombre**  
  Nombre de un trabajo que utiliza esta programación.  
   
- **Habilitado**  
+ **Enabled**  
  Solo lectura. Indica si el trabajo está habilitado.  
   
  **Categoría**  

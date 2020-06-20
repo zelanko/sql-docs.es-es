@@ -16,16 +16,15 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 49c6031d15a2140f5a5c269d90cce0cd230eee1b
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68211927"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85055226"
 ---
 # <a name="programming-languages"></a>Lenguajes de programación
-  En esta sección se describe cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programar objetos de administración de ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] SMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net, Visual C# [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net y Visual C++.  
+  En esta sección se describe cómo programar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de administración de (SMO) en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .net, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .net y [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
   
 |Tema|Descripción|  
 |-----------|-----------------|  

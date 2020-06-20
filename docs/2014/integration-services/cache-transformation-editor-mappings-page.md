@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 56e4197bf4e4be1ca695778920ba8abe03bf4f7e
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66061176"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84924616"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Editor de transformación de caché (página Asignaciones)
   Utilice la página **Asignaciones** del **Editor de transformación Caché** para asignar las columnas de entrada de la transformación de caché a las columnas de destino del administrador de conexiones de caché.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b5789a277eac84d9753a180b418c05c5fd71d09
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 5ee0de3311eb6abffcdb71ab725d0650fe96b04c
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62761612"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85009189"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
   En este tema se describe cómo crear relaciones de clave externa en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Cuando se asocian filas de una tabla con filas de otra tabla, se crea una relación entre las dos tablas.  
@@ -79,7 +78,7 @@ ms.locfileid: "62761612"
   
 3.  En el cuadro de diálogo **Relaciones de clave externa** , haga clic en **Agregar**.  
   
-     La relación aparece en la lista **Relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_\<*tablename*>_\<*tablename*>, donde *tablename* es el nombre de la tabla de clave externa.  
+     La relación aparece en la lista **relación seleccionada** con un nombre proporcionado por el sistema con el formato FK_ \<*tablename*> _ \<*tablename*> , donde *TableName* es el nombre de la tabla de clave externa.  
   
 4.  Haga clic en la relación en la lista **Relación seleccionada** .  
   

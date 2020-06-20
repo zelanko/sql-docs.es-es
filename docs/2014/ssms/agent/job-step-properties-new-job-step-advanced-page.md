@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: bdecfd4f-bcd8-4ba2-8ada-fbb636314f40
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 22b5877fb70a66fd9864e52223b30eca4b01b6db
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62937205"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064483"
 ---
 # <a name="job-step-properties-new-job-step-advanced-page"></a>Propiedades de paso de trabajo: Nuevo paso de trabajo (página Avanzado)
   Utilice esta página para ver y cambiar las propiedades de un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paso de trabajo del agente.  
@@ -42,8 +41,8 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Ver**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ **Vista**  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida al contenido existente del archivo. De lo contrario, el anterior contenido del archivo se sobrescribe cada vez que se ejecuta el paso de trabajo.  
@@ -51,7 +50,7 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Ver**  
+ **Vista**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
@@ -70,8 +69,8 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Ver**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ **Vista**  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -79,7 +78,7 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Ver**  
+ **Vista**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
@@ -95,8 +94,8 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Ver**  
- En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
+ **Vista**  
+ En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
  Anexa la salida del paso de trabajo al contenido anterior del archivo cada vez que se ejecuta.  
@@ -104,7 +103,7 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Ver**  
+ **Vista**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  
@@ -127,7 +126,7 @@ ms.locfileid: "62937205"
  **...**  
  Permite buscar el archivo que se utiliza para la salida desde el paso de trabajo.  
   
- **Ver**  
+ **Vista**  
  En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], este botón está deshabilitado para ver los archivos de salida. Para verlos, debe utilizar el Bloc de notas.  
   
  **Anexar la salida al archivo existente**  
@@ -136,7 +135,7 @@ ms.locfileid: "62937205"
  **Registro en tabla**  
  Registra la salida del paso de trabajo en la tabla **sysjobstepslogs** de la base de datos **msdb** .  
   
- **Ver**  
+ **Vista**  
  Después de ejecutar el paso de trabajo al menos una vez, haga clic en **Ver** para consultar el resultado en la tabla.  
   
  **Anexar salida a la entrada existente de la tabla**  

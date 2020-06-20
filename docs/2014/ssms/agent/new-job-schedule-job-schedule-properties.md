@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5c0b1bc9-dd87-49cc-b0dd-75d0d922b177
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: f9af1d89e4bb53af3d3f640e7efb010e5ac8de35
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62704626"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85064407"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Nueva programación de trabajo: Propiedades de programación del trabajo
   Utilice esta página para ver y cambiar las propiedades de la programación.  
@@ -33,7 +32,7 @@ ms.locfileid: "62704626"
  **Tipo de programación**  
  Seleccione el tipo de programación.  
   
- **Habilitado**  
+ **Enabled**  
  Seleccione esta opción para habilitar o deshabilitar la programación.  
   
 ## <a name="recurring-schedule-types-options"></a>Opciones de tipos de programación periódica  
@@ -46,16 +45,16 @@ ms.locfileid: "62704626"
  **Lunes**  
  Configure el trabajo para que tenga lugar el lunes. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Jueves**  
+ **Martes**  
  Configure el trabajo para que tenga lugar el martes. Solo está disponible para las programaciones de periodicidad semanal.  
   
  **Miércoles**  
  Configure el trabajo para que tenga lugar el miércoles. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Martes**  
+ **Jueves**  
  Configure el trabajo para que tenga lugar el jueves. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Día**  
+ **Viernes**  
  Configure el trabajo para que tenga lugar el viernes. Solo está disponible para las programaciones de periodicidad semanal.  
   
  **Sábado**  
@@ -64,13 +63,13 @@ ms.locfileid: "62704626"
  **Domingo**  
  Configure el trabajo para que tenga lugar el domingo. Solo está disponible para las programaciones de periodicidad semanal.  
   
- **Diariamente**  
+ **Day**  
  Seleccione el día del mes en el que se ejecutará la programación. Solo está disponible para las programaciones de periodicidad mensual.  
   
  **de cada**  
  Seleccione el número de meses entre las repeticiones de la programación. Solo está disponible para las programaciones de periodicidad mensual.  
   
- **Tenga en cuenta que**  
+ **El**  
  Especifique una programación para un día determinado de la semana, en un semana determinada del mes. Solo está disponible para las programaciones de periodicidad mensual.  
   
  **Sucede una vez a las**  

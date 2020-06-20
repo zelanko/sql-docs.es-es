@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d3b1e47f-2ba2-49af-b404-1aa231d4e4a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07016bd61abc84617c8a32935417b7ec936d3dce
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fa94f6f8d7705a0784da66d3d353e9537bc7d1a3
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63015875"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85030930"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR, clase de eventos
   La clase de eventos **Audit Server Scope GDR** se produce cuando se emite GRANT, REVOKE o DENY para permisos en el ámbito del servidor, como la creación de un inicio de sesión.  

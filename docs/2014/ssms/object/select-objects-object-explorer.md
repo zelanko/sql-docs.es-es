@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 692477fe-dd7c-403d-acd2-bb108b6077f1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: ceec604d9fe07b339af11ed69226d41a7f616678
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63182888"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85058551"
 ---
 # <a name="select-objects-object-explorer"></a>Seleccionar objetos (Explorador de objetos)
   Use el cuadro de diálogo **Seleccionar objetos** para agregar un objeto a una lista de otro cuadro de diálogo. El título del cuadro de diálogo y las opciones disponibles dependerán de como haya se haya abierto. Solo aparecerán las opciones disponibles; por ejemplo, solo los inicios de sesión están disponibles cuando selecciona un propietario para un nuevo objeto.  

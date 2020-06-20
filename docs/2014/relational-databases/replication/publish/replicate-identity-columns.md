@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7c6410e6b21ec3ebbb3cfb01fa78ffe80b2196a3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c899d902e403e9f7cdbdfd1a83cde110e627ab11
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74479246"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85060410"
 ---
 # <a name="replicate-identity-columns"></a>Replicar columnas de identidad
   Al asignar una propiedad IDENTITY a una columna, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] genera automáticamente números que se incrementan secuencialmente para las nuevas filas insertadas en la tabla que contiene la columna de identidad. Para obtener más información, vea [IDENTITY &#40;propiedad &#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property). Debido a que las columnas de identidad pueden estar incluidas como parte de la clave principal, resulta importante evitar los valores duplicados en las columnas de identidad. Para utilizar columnas de identidad en una topología de replicación que tenga actualizaciones en más de un nodo, cada nodo de la topología de replicación debe usar diferentes valores en el intervalo de identidad con el fin de que no se produzcan duplicados.  
@@ -72,16 +71,16 @@ ms.locfileid: "74479246"
 ### <a name="merge-replication"></a>Replicación de mezcla  
  Los intervalos de identidad los administra el publicador y se propagan a los suscriptores mediante el Agente de mezcla (en una jerarquía de republicación, los intervalos los administra el publicador raíz y los republicadores). Los valores de identidad se asignan a partir de un grupo en el publicador. Cuando agregue un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), especifique valores para:  
   
--   El ** \@parámetro identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado al publicador y a los suscriptores con suscripciones de cliente.  
+-   El parámetro ** \@ identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado al publicador y a los suscriptores con suscripciones de cliente.  
   
     > [!NOTE]  
-    >  En el caso de los suscriptores [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]que ejecutan versiones anteriores de, este parámetro (en lugar del ** \@parámetro pub_identity_range** ) también controla el tamaño del intervalo de identidad en los suscriptores de republicación.  
+    >  En el caso de los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , este parámetro (en lugar del parámetro ** \@ pub_identity_range** ) también controla el tamaño del intervalo de identidad en los suscriptores de republicación.  
   
--   El ** \@parámetro pub_identity_range** , que controla el tamaño del intervalo de identidad para la republicación asignada a los suscriptores con suscripciones de servidor (requerido para volver a publicar datos). Todos los suscriptores con suscripciones de servidor reciben un intervalo para volver a publicar, incluso si no han vuelto a publicar ningún dato.  
+-   El parámetro ** \@ pub_identity_range** , que controla el tamaño del intervalo de identidad para la republicación asignada a los suscriptores con suscripciones de servidor (requerido para volver a publicar datos). Todos los suscriptores con suscripciones de servidor reciben un intervalo para volver a publicar, incluso si no han vuelto a publicar ningún dato.  
   
--   El ** \@parámetro Threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o a una versión anterior [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de.  
+-   El parámetro ** \@ Threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción a [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o a una versión anterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Por ejemplo, puede especificar 10000 para ** \@identity_range** y 500000 para ** \@pub_identity_range**. El publicador y todos los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior, incluido el suscriptor con la suscripción de servidor, están asignados un intervalo principal de 10000. Al suscriptor con la suscripción de servidor también se le asigna un intervalo principal de 500000, que pueden usar los suscriptores que se sincronizan con el suscriptor de republicación (también debe especificar ** \@identity_range**, ** \@pub_identity_range**y ** \@umbral** para los artículos de la publicación en el suscriptor de republicación).  
+ Por ejemplo, puede especificar 10000 para ** \@ identity_range** y 500000 para ** \@ pub_identity_range**. El publicador y todos los suscriptores que ejecutan [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior, incluido el suscriptor con la suscripción de servidor, están asignados un intervalo principal de 10000. Al suscriptor con la suscripción de servidor también se le asigna un intervalo principal de 500000, que pueden usar los suscriptores que se sincronizan con el suscriptor de republicación (también debe especificar ** \@ identity_range**, ** \@ pub_identity_range**y ** \@ umbral** para los artículos de la publicación en el suscriptor de republicación).  
   
  Todos los suscriptores que se ejecutan en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior también reciben un intervalo de identidad secundario. El intervalo secundario tiene el mismo tamaño que el intervalo principal. Cuando se agota el intervalo principal, se utiliza el intervalo secundario y el Agente de mezcla asigna un nuevo intervalo en el suscriptor. El nuevo intervalo se convierte en el intervalo secundario y el proceso continúa a medida que el suscriptor utiliza valores de identidad.  
   
@@ -89,13 +88,13 @@ ms.locfileid: "74479246"
 ### <a name="transactional-replication-with-queued-updating-subscriptions"></a>Replicación transaccional con suscripciones de actualización en cola  
  El distribuidor administra los intervalos de identidad y el Agente de distribución los propaga a los suscriptores. Los valores de identidad se asignan a partir de un grupo en el distribuidor. El tamaño del grupo se basa en el tamaño del tipo de datos y en el incremento utilizado para la columna de identidad. Cuando agregue un artículo con una columna de identidad a una publicación en el Asistente para nueva publicación o mediante [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), especifique valores para:  
   
--   El ** \@parámetro identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado a todos los suscriptores.  
+-   El parámetro ** \@ identity_range** , que controla el tamaño del intervalo de identidad inicialmente asignado a todos los suscriptores.  
   
--   El ** \@parámetro pub_identity_range** , que controla el tamaño del intervalo de identidad asignado al publicador.  
+-   El parámetro ** \@ pub_identity_range** , que controla el tamaño del intervalo de identidad asignado al publicador.  
   
--   El ** \@parámetro Threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción.  
+-   El parámetro ** \@ Threshold** , que se utiliza para determinar cuándo se requiere un nuevo intervalo de identidades para una suscripción.  
   
- Por ejemplo, puede especificar 10000 para ** \@pub_identity_range**, 1000 para ** \@identity_range** (suponiendo menos actualizaciones en el suscriptor) y el 80 por ciento para ** \@el umbral**. Después de 800 inserciones en el suscriptor (80 por ciento de 1000), al suscriptor se le asigna un nuevo intervalo. Después de 8000 inserciones en el publicador, al publicador se le asigna un nuevo intervalo. Cuando se asigne un nuevo intervalo, habrá un espacio en los valores del intervalo de identidad de la tabla. Si se especifica un umbral mayor, se obtienen menos espacios pero el sistema es menos tolerante a los errores: si el Agente de distribución no se puede ejecutar por alguna razón, es más fácil que un suscriptor se quede sin identidades.  
+ Por ejemplo, puede especificar 10000 para ** \@ pub_identity_range**, 1000 para ** \@ identity_range** (suponiendo menos actualizaciones en el suscriptor) y el 80 por ciento para el ** \@ umbral**. Después de 800 inserciones en el suscriptor (80 por ciento de 1000), al suscriptor se le asigna un nuevo intervalo. Después de 8000 inserciones en el publicador, al publicador se le asigna un nuevo intervalo. Cuando se asigne un nuevo intervalo, habrá un espacio en los valores del intervalo de identidad de la tabla. Si se especifica un umbral mayor, se obtienen menos espacios pero el sistema es menos tolerante a los errores: si el Agente de distribución no se puede ejecutar por alguna razón, es más fácil que un suscriptor se quede sin identidades.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Asignar intervalos para la administración manual del intervalo de identidad  
  Si especifica la administración manual del intervalo de identidad, debe asegurarse de que el publicador y todos los suscriptores utilizan intervalos de identidad diferentes. Por ejemplo, imagine una tabla en el publicador con una columna de identidad definida como `IDENTITY(1,1)`: la columna de identidad comienza en 1 y se incrementa en 1 cada vez que se inserta una fila. Si la tabla del publicador tiene 5.000 filas y prevé que aumentará durante la vida de la aplicación, el publicador podría utilizar el rango 1-10.000. Si hay dos suscriptores, el Suscriptor A podría usar el rango 10.001-20.000 y el Suscriptor B, el rango 20.001-30.000.  

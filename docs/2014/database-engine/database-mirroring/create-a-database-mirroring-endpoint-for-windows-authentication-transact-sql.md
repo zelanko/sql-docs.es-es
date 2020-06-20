@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43bb7fdd5b9c8cf8a73c423ac21e8ba7f779ec79
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5558bc5684f2eb9053c935543db0c05d6225daf7
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72797929"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934386"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)
   En este tema se describe cómo crear un extremo de creación de reflejo de la base de datos que utilice la autenticación de Windows en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para admitir la creación de reflejo de la base de datos o [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] , cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requiere un extremo de creación de reflejo de la base de datos. Una instancia de servidor solo puede tener un extremo de creación de reflejo de base de datos, que tiene un puerto único. Un extremo de creación de reflejo de base de datos puede utilizar cualquier puerto disponible en el sistema local cuando se crea el extremo. Todas las sesiones de creación de reflejo de base de datos de una instancia de servidor escuchan en dicho puerto y todas las conexiones entrantes para la creación de reflejo de base de datos utilizan dicho puerto.  
@@ -65,37 +64,37 @@ ms.locfileid: "72797929"
   
 4.  Para usar Transact-SQL para crear un extremo que se utilice con la autenticación de Windows, utilice la instrucción CREATE ENDPOINT. La instrucción toma la siguiente forma general:  
   
-     Crear punto de conexión * \<endpointName>*  
+     CREAR PUNTO DE CONEXIÓN*\<endpointName>*  
   
      STATE=STARTED  
   
-     Como TCP (LISTENER_PORT = * \<listadepuertosdeescucha>* )  
+     COMO TCP (LISTENER_PORT = *\<listenerPortList>* )  
   
      FOR DATABASE_MIRRORING  
   
      (  
   
-     [Authentication = **Windows** [ * \<métododeautorización>* ]  
+     [autenticación = **Windows** [ *\<authorizationMethod>* ]  
   
      ]  
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [Algoritmo { * \<algoritmo>* }]  
+     [Algoritmo { *\<algorithm>* }]  
   
      ]  
   
-     [**,**] ROLE = *\<rol>*  
+     [**,**] ROL =*\<role>*  
   
      )  
   
      , donde  
   
-    -   endpointName>es un nombre único para el extremo de creación de reflejo de la base de datos de la instancia del servidor. * \<*  
+    -   *\<endpointName>* es un nombre único para el extremo de creación de reflejo de la base de datos de la instancia del servidor.  
   
     -   STARTED especifica que el extremo debe iniciarse y que debe empezar a escuchar las conexiones. Un extremo de creación de reflejo de la base de datos de base de datos normalmente se crea en el estado STARTED. Opcionalmente, puede iniciar una sesión en el estado STOPPED (valor predeterminado) o DISABLED.  
   
-    -   listadepuertosdeescucha>es un número de puerto único (*nnnn*) en el que desea que el servidor escuche los mensajes de creación de reflejo de la base de datos. * \<* Solo se permite TCP; si se especifica cualquier otro protocolo se provoca un error.  
+    -   *\<listenerPortList>* es un número de puerto único (*nnnn*) en el que desea que el servidor escuche los mensajes de creación de reflejo de la base de datos. Solo se permite TCP; si se especifica cualquier otro protocolo se provoca un error.  
   
          Un número de puerto solo se puede usar una vez por sistema. Un extremo de creación de reflejo de base de datos puede utilizar cualquier puerto disponible en el sistema local cuando se crea el extremo. Para identificar los puertos que están usando los extremos TCP del sistema, utilice la siguiente instrucción Transact-SQL:  
   
@@ -106,7 +105,7 @@ ms.locfileid: "72797929"
         > [!IMPORTANT]  
         >  Cada instancia del servidor requiere solo un puerto de escucha único.  
   
-    -   Para la Autenticación de Windows, la opción AUTHENTICATION es opcional, salvo que desee que el extremo únicamente Use NTLM o Kerberos para autenticar conexiones. métododeautorización>especifica el método que se usa para autenticar conexiones como uno de los siguientes: NTLM, Kerberos o Negotiate. * \<* El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos. La negociación habilita conexiones con o sin autenticación, dependiendo del nivel de autenticación del extremo opuesto.  
+    -   Para la Autenticación de Windows, la opción AUTHENTICATION es opcional, salvo que desee que el extremo únicamente Use NTLM o Kerberos para autenticar conexiones. *\<authorizationMethod>* especifica el método utilizado para autenticar conexiones como uno de los siguientes: NTLM, KERBEROS o NEGOTIATE. El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos. La negociación habilita conexiones con o sin autenticación, dependiendo del nivel de autenticación del extremo opuesto.  
   
     -   ENCRYPTION se establece en REQUIRED de forma predeterminada. Esto significa que todas las conexiones con este punto final deben usar cifrado. No obstante, puede deshabilitar el cifrado o hacer que sea opcional en un extremo. Las alternativas son las siguientes:  
   
@@ -118,14 +117,14 @@ ms.locfileid: "72797929"
   
          Si un extremo requiere cifrado, el otro extremo debe tener ENCRYPTION establecido en SUPPORTED o REQUIRED.  
   
-    -   el algoritmo>proporciona la opción de especificar los estándares de cifrado para el extremo. * \<* El valor de * \<Algorithm>* puede ser uno de los siguientes algoritmos o combinaciones de algoritmos: RC4, AES, AES RC4 o RC4 AES.  
+    -   *\<algorithm>* proporciona la opción de especificar los estándares de cifrado para el extremo. El valor de *\<algorithm>* puede ser uno de los siguientes algoritmos o combinaciones de algoritmos: RC4, AES, AES RC4 o RC4 AES.  
   
          AES RC4 especifica que este extremo negociará el algoritmo de cifrado, dando preferencia al algoritmo AES. RC4 AES especifica que este extremo negociará el algoritmo de cifrado, dando preferencia al algoritmo RC4. Si ambos extremos especifican estos dos algoritmos en distintas órdenes, el extremo que acepte la conexión gana.  
   
         > [!NOTE]  
         >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
   
-    -   el rol>define el rol o los roles que el servidor puede realizar. * \<* Se tiene que especificar ROLE. Sin embargo, el rol del extremo solo es relevante para la creación de reflejo de la base de datos. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], el rol del extremo se omite.  
+    -   *\<role>* define el rol o los roles que el servidor puede realizar. Se tiene que especificar ROLE. Sin embargo, el rol del extremo solo es relevante para la creación de reflejo de la base de datos. Para [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], el rol del extremo se omite.  
   
          Para permitir que una instancia de servidor sirva como un rol para una sesión de reflejo de base de datos y un rol diferente para otra sesión, especifique ROLE=ALL. Para hacer que la instancia de un servidor solo sea un asociado o un testigo, especifique ROLE=PARTNER o ROLE=WITNESS, respectivamente.  
   

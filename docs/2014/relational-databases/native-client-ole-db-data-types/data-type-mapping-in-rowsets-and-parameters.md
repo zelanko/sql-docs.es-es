@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3d831ff8-3b79-4698-b2c1-2b5dd2f8235c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 65858c2d8f43a7fb675f17ff8c719b1041d6ea79
-ms.sourcegitcommit: b72c9fc9436c44c6a21fd96223c73bf94706c06b
+ms.openlocfilehash: ca5250c11d373085cdb3183d5717b84f54c1b8d9
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82705121"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85056313"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>Asignar tipos de datos en conjuntos de filas y parámetros
   En conjuntos de filas y como valores de parámetro, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client representa los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos utilizando los siguientes tipos de datos definidos por el OLE DB, que se muestran en las funciones **IColumnsInfo:: GetColumnInfo** y **ICommandWithParameters:: GetParameterInfo**.  

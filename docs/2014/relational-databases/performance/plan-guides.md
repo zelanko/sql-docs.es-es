@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c97682163313a56acb8521174fa8d4012a69b529
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "63150818"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85063901"
 ---
 # <a name="plan-guides"></a>Guías de plan
   Las guías de plan permiten optimizar el rendimiento de las consultas cuando no pueda o no desee cambiar directamente el texto de la consulta real en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Las guías de plan influyen en la optimización de las consultas adjuntando sugerencias de consulta o un plan de consulta fijo para ellas. Las guías de plan pueden ser de gran utilidad cuando el rendimiento de un pequeño subconjunto de consultas de una aplicación de base de datos proporcionado por otro proveedor no es el esperado. En la guía de plan, se especifica la instrucción Transact-SQL que se desea optimizar y además una cláusula OPTION que incluye las sugerencias de consulta que se desean usar o un plan de consulta específico con el que desea optimizar la consulta. Cuando la consulta se ejecuta, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hace coincidir la instrucción Transact-SQL con la guía de plan y además adjunta en tiempo de ejecución la cláusula OPTION a la consulta o usa el plan de consulta especificado.  
@@ -125,7 +124,7 @@ sp_create_plan_guide
   
  En el caso de las guías de plan basadas en SQL o TEMPLATE, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] examina los valores para los argumentos @module_or_batch y @params con una consulta, comparando ambos valores carácter a carácter. Esto significa que se debe proporcionar el texto exactamente como lo recibe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el lote real.  
   
- Cuando @type = ' SQL ' y @module_or_batch se establece en null, el valor de @module_or_batch se establece en el valor de @stmt. Esto significa que el valor de *statement_text* debe proporcionarse en el mismo formato, carácter a carácter, a medida que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para facilitar esta concordancia no se realiza ninguna conversión interna.  
+ Cuando @type = ' SQL ' y @module_or_batch se establece en null, el valor de @module_or_batch se establece en el valor de @stmt . Esto significa que el valor de *statement_text* debe proporcionarse en el mismo formato, carácter a carácter, a medida que se envía a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para facilitar esta concordancia no se realiza ninguna conversión interna.  
   
  Cuando una guía de plan normal (SQL u OBJECT) y una guía de plan TEMPLATE se pueden aplicar a una instrucción, solo se utilizará la guía de plan normal.  
   
@@ -149,7 +148,7 @@ sp_create_plan_guide
 |Describe cómo validar las guías de plan.|[Validar guías de planes tras una actualización](validate-plan-guides-after-upgrade.md)|  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_create_plan_guide &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
  [sp_control_plan_guide &#40;&#41;de Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
  [Sys. plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   

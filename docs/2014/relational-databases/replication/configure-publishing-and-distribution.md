@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: afd1544b5412c6ce2d83a9a1e9a50ddf662b3056
+ms.sourcegitcommit: 57f1d15c67113bbadd40861b886d6929aacd3467
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73882253"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "85011053"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
   En este tema se describe cómo configurar la publicación y distribución en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -31,7 +30,7 @@ ms.locfileid: "73882253"
  Para obtener más información, vea implementación de la [replicación segura](security/view-and-modify-replication-security-settings.md).  
   
 ##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
- Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos **db_owner** puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.  
+ Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Una vez configurado el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **propiedades del distribuidor: \<Distributor> ** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos **db_owner** puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.  
   
 #### <a name="to-configure-distribution"></a>Para configurar la distribución  
   
@@ -41,7 +40,7 @@ ms.locfileid: "73882253"
   
 3.  Siga las indicaciones del Asistente para configurar la distribución:  
   
-    -   Seleccione un distribuidor. Para usar un distribuidor local, seleccione **'\<ServerName> ' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Para utilizar un distribuidor remoto, seleccione **Utilizar el siguiente servidor como distribuidor**y, a continuación, seleccione un servidor. El servidor ya debe estar configurado como distribuidor y el publicador debe estar habilitado para usar el distribuidor. Para más información, vea [Habilitar un publicador remoto en un distribuidor &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
+    -   Seleccione un distribuidor. Para usar un distribuidor local, seleccione **' \<ServerName> ' actuará como su propio distribuidor; SQL Server creará una base de datos y un registro de distribución**. Para utilizar un distribuidor remoto, seleccione **Utilizar el siguiente servidor como distribuidor**y, a continuación, seleccione un servidor. El servidor ya debe estar configurado como distribuidor y el publicador debe estar habilitado para usar el distribuidor. Para más información, vea [Habilitar un publicador remoto en un distribuidor &#40;SQL Server Management Studio&#41;](enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).  
   
          Si selecciona un distribuidor remoto, debe escribir una contraseña en la página **Contraseña administrativa** para las conexiones realizadas desde el publicador al distribuidor. Esta contraseña debe coincidir con la especificada cuando se habilitó el publicador en el distribuidor remoto.  
   
@@ -62,27 +61,27 @@ ms.locfileid: "73882253"
   
     -   Si el valor de **installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) en el distribuidor en la base de datos maestra.  
   
-    -   Si el valor de **distribution db installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) en el distribuidor en la base de datos maestra. Especifique el nombre de la base de datos de distribución para la ** \@base de datos**. Opcionalmente, puede especificar el período de retención transaccional máximo para ** \@max_distretention** y el período de retención del historial para ** \@history_retention**. Si se está creando una nueva base de datos, especifique los parámetros de propiedad de la base de datos que desee.  
+    -   Si el valor de **distribution db installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) en el distribuidor en la base de datos maestra. Especifique el nombre de la base de datos de distribución para la ** \@ base de datos**. Opcionalmente, puede especificar el período de retención transaccional máximo para ** \@ max_distretention** y el período de retención del historial para ** \@ history_retention**. Si se está creando una nueva base de datos, especifique los parámetros de propiedad de la base de datos que desee.  
   
-2.  En el distribuidor, que también es el publicador, ejecute [sp_adddistpublisher &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para ** \@working_directory**.  
+2.  En el distribuidor, que también es el publicador, ejecute [sp_adddistpublisher &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql)y especifique el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para ** \@ working_directory**.  
   
-3.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se está publicando para ** \@dbname**, ** \@** el tipo de replicación para optname `true` y un valor de para ** \@valor**.  
+3.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se está publicando para ** \@ dbname**, el tipo de replicación para ** \@ optname**y un valor de `true` para ** \@ valor**.  
   
 #### <a name="to-configure-publishing-using-a-remote-distributor"></a>Para configurar la publicación mediante un distribuidor remoto  
   
 1.  Ejecute [sp_get_distributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-get-distributor-transact-sql) para determinar si el servidor ya está configurado como un distribuidor.  
   
-    -   Si el valor de **installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) en el distribuidor en la base de datos maestra. Especifique una contraseña segura para ** \@la contraseña**. Esta contraseña para la cuenta **distributor_admin** la utilizará el publicador para conectarse al distribuidor.  
+    -   Si el valor de **installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) en el distribuidor en la base de datos maestra. Especifique una contraseña segura para la ** \@ contraseña**. Esta contraseña para la cuenta **distributor_admin** la utilizará el publicador para conectarse al distribuidor.  
   
-    -   Si el valor de **distribution db installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) en el distribuidor en la base de datos maestra. Especifique el nombre de la base de datos de distribución para la ** \@base de datos**. Opcionalmente, puede especificar el período de retención transaccional máximo para ** \@max_distretention** y el período de retención del historial para ** \@history_retention**. Si se está creando una nueva base de datos, especifique los parámetros de propiedad de la base de datos que desee.  
+    -   Si el valor de **distribution db installed** en el conjunto de resultados es **0**, ejecute [sp_adddistributiondb &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql) en el distribuidor en la base de datos maestra. Especifique el nombre de la base de datos de distribución para la ** \@ base de datos**. Opcionalmente, puede especificar el período de retención transaccional máximo para ** \@ max_distretention** y el período de retención del historial para ** \@ history_retention**. Si se está creando una nueva base de datos, especifique los parámetros de propiedad de la base de datos que desee.  
   
-2.  En el distribuidor, ejecute [sp_adddistpublisher &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para ** \@working_directory**. Si el distribuidor va a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usar la autenticación de al conectarse al publicador, también debe especificar un valor de ** \@** **0** para security_mode [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la información de inicio de sesión para el inicio de ** \@sesión** y ** \@la contraseña**.  
+2.  En el distribuidor, ejecute [sp_adddistpublisher &#40;&#41;de Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql), especificando el recurso compartido UNC que se usará como carpeta de instantáneas predeterminada para ** \@ working_directory**. Si el distribuidor va a usar la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación de al conectarse al publicador, también debe especificar un valor de **0** para ** \@ security_mode** y la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] información de inicio de sesión para el ** \@ Inicio de sesión** y la ** \@ contraseña**.  
   
-3.  En la base de datos maestra del publicador, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Especifique la contraseña segura utilizada en el paso 1 ** \@** para la contraseña. El publicador utilizará esta contraseña cuando se conecte al distribuidor.  
+3.  En la base de datos maestra del publicador, ejecute [sp_adddistributor &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql). Especifique la contraseña segura utilizada en el paso 1 para la ** \@ contraseña**. El publicador utilizará esta contraseña cuando se conecte al distribuidor.  
   
-4.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se está publicando para ** \@dbname**, el tipo de replicación para ** \@optname**y el valor true para ** \@Value**.  
+4.  En el publicador, ejecute [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql). Especifique la base de datos que se está publicando para ** \@ dbname**, el tipo de replicación para ** \@ optname**y el valor true para ** \@ Value**.  
   
-###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Ejemplo (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  El ejemplo siguiente muestra cómo configurar mediante programación la publicación y la distribución. En este ejemplo, se proporciona el nombre del servidor que se está configurando como un publicador y un distribuidor local mediante las variables de scripting. La publicación y distribución de replicaciones se puede configurar mediante programación usando procedimientos almacenados de replicación.  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
@@ -115,7 +114,7 @@ ms.locfileid: "73882253"
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> .  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
   
 #### <a name="to-configure-publishing-and-distribution-using-a-remote-distributor"></a>Para configurar la publicación y distribución mediante un distribuidor remoto  
   
@@ -130,7 +129,7 @@ ms.locfileid: "73882253"
 5.  Instale el distribuidor llamando al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Especifique una contraseña segura (la que utiliza el publicador al conectarse al distribuidor remoto) y el objeto <xref:Microsoft.SqlServer.Replication.DistributionDatabase> del paso 3. Para más información, vea [Proteger el distribuidor](security/secure-the-distributor.md).  
   
     > [!IMPORTANT]  
-    >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales, use los [servicios criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) proporcionados [!INCLUDE[msCoName](../../includes/msconame-md.md)] por la .NET Framework de Windows.  
+    >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales, use los [servicios criptográficos](https://go.microsoft.com/fwlink/?LinkId=34733) proporcionados por la [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework de Windows.  
   
 6.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.DistributionPublisher>.  
   
@@ -146,13 +145,13 @@ ms.locfileid: "73882253"
   
     -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : el modo de seguridad empleado cuando se conecta con el publicador. Se recomienda<xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> .  
   
-8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> .  
+8.  Llame al método <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A>.  
   
 9. Cree una conexión al servidor publicador local mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
 10. Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Transfiera el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> del paso 9.  
   
-11. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A> . Pase el nombre del distribuidor remoto y la contraseña para el distribuidor remoto especificado en el paso 5.  
+11. Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationServer.InstallDistributor%2A>. Pase el nombre del distribuidor remoto y la contraseña para el distribuidor remoto especificado en el paso 5.  
   
     > [!IMPORTANT]  
     >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por Windows .NET Framework.  

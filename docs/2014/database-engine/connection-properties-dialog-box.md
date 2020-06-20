@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6df812ad-4d80-4503-8a23-47719ce85624
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 80e858e75cec96b7e56e16fa7465a22048563726
+ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62808403"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84934616"
 ---
 # <a name="connection-properties-dialog-box"></a>Propiedades de conexión, cuadro de diálogo
   Utilice este cuadro de diálogo para ver las propiedades de la conexión actual. Este cuadro de diálogo está disponible cuando se hace clic en **Ver propiedades de conexión** en varios cuadros de diálogo del Explorador de objetos. Las propiedades que aparecen en esta página son de solo lectura.  
@@ -29,7 +28,7 @@ ms.locfileid: "62808403"
  Observe que el tiempo de espera de consulta para SQL Azure es de 30 minutos.  
   
 ## <a name="authentication"></a>Authentication  
- Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]y, a continuación, vuelva a conectar explorador de objetos con el servidor, con las opciones de conexión deseadas.  
+ Vea las propiedades de autenticación de la conexión actual. Las propiedades de autenticación son el inicio de sesión y el método de autenticación cuando se establece la conexión. Para cambiar las propiedades de autenticación, desconéctese de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y, a continuación, vuelva a conectar explorador de objetos con el servidor, con las opciones de conexión deseadas.  
   
  **Método de autenticación**  
  El método de autenticación que utiliza la conexión actual.  

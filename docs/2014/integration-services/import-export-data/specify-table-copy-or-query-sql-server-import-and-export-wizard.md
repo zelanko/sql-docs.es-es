@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 524e878933652699bef6e31da42d3a784b54df7c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 51f195a9f5fbe97eadfc281ad50bd0de55d6151e
+ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "62892647"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84965535"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
   Use la página **especificar copia de tabla o consulta** para especificar cómo se copian los datos. Puede utilizar una interfaz gráfica para seleccionar los objetos de la base de datos existentes que desea copiar, o bien, puede utilizar Transact-SQL para crear una consulta más compleja.  
@@ -40,7 +39,7 @@ ms.locfileid: "62892647"
   
 -   System.Data.Odbc  
   
- Para que los **datos de copia de una o varias tablas o vistas** estén disponibles para proveedores adicionales, los terceros pueden agregar sus propias secciones de ProviderDescriptor al archivo archivo providerdescriptors. Xml. De forma predeterminada, este archivo se \<encuentra en la *unidad*>: \Archivos de programa\Microsoft SQL Server\100\DTS\ProviderDescriptors. Para revisar los requisitos de la sección ProviderDescriptor, vea el archivo de esquema ProviderDescriptors.xsd que está, de forma predeterminada, en la misma carpeta que el archivo ProviderDescriptors.xml.  
+ Para que los **datos de copia de una o varias tablas o vistas** estén disponibles para proveedores adicionales, los terceros pueden agregar sus propias secciones de ProviderDescriptor al archivo de ProviderDescriptors.xml. De forma predeterminada, este archivo se encuentra en \<*drive*> : \Archivos de programa\Microsoft SQL Server\100\DTS\ProviderDescriptors. Para revisar los requisitos de la sección ProviderDescriptor, vea el archivo de esquema ProviderDescriptors.xsd que está, de forma predeterminada, en la misma carpeta que el archivo ProviderDescriptors.xml.  
   
  **Escribir una consulta para especificar los datos que se van a transferir**  
  Cree instrucciones SQL para recuperar filas mediante el cuadro de diálogo **proporcionar una consulta de origen** . Utilice esta opción si desea modificar o restringir los datos de origen durante la operación de copia. Solo están disponibles para copiarse las filas que coincidan con los criterios de selección.  

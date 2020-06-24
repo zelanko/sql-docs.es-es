@@ -13,12 +13,12 @@ ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 0a0dffa0dc53cb8ded9f388199bef35a73a52577
+ms.sourcegitcommit: 4fe7b0d5e8ef1bc076caa3819f7a7b058635a486
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "66102133"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85263899"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -32,9 +32,9 @@ ms.locfileid: "66102133"
     > [!IMPORTANT]  
     >  Al utilizar `RSWindowsNegotiate`, se producirá un error de autenticación Kerberos si configuró el servicio del servidor de informes para ejecutarse en una cuenta de usuario de dominio y no registró un nombre de la entidad de seguridad del servicio (SPN) para la cuenta. Para obtener más información, vea [Resolver los errores de autenticación Kerberos al conectarse a un servidor de informes](#proxyfirewallRSWindowsNegotiate) en este tema.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, los archivos Web. config para el servicio Web del servidor de informes y \<administrador de informes incluyen la configuración del modo de autenticación = "Windows" >. Si lo cambia a \<authentication mode="Forms">, se producirá un error en la autenticación de Windows para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] se debe configurar para la autenticación de Windows. De forma predeterminada, los archivos Web.config para el servicio Web del servidor de informes y Administrador de informes incluyen el \<authentication mode="Windows"> valor. Si lo cambia a \<authentication mode="Forms"> , [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se producirá un error en la autenticación de Windows para.  
   
--   Los archivos Web. config para el servicio Web del servidor de informes y Administrador de informes \<deben tener Identity Impersonate = "true"/>.  
+-   Los archivos Web.config para el servicio Web del servidor de informes y el Administrador de informes deben tener \<identity impersonate= "true" /> .  
   
 -   La aplicación cliente o el explorador deben admitir la seguridad integrada de Windows.  
   
@@ -160,14 +160,8 @@ ms.locfileid: "66102133"
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Reinicie el servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y busque si hay entradas similares a la siguiente en el archivo de registro de seguimiento:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   Los valores bajo \<Explicit> contendrán los SPN configurados en Active Directory para la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
+-   Reinicie el servicio [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .
+
  Si no desea seguir utilizando la protección ampliada, establezca de nuevo los valores de configuración predeterminados y reinicie la cuenta de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ```  

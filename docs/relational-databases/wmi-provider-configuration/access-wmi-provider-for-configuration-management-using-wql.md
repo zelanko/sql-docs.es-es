@@ -1,5 +1,6 @@
 ---
 title: Usar WQL para tener acceso al proveedor WMI
+description: Use este ejemplo para ver cómo ejecutar Instrumental de administración de Windows instrucciones de lenguaje de consulta para el proveedor WMI para la administración de equipos en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 53ade765b0f6b6710a12da06ae0b7470b55d9400
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 8b9fa96f19bc0675a1e83db858e16605338b3899
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658940"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295448"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Obtener acceso al proveedor WMI para la administración de configuración mediante WQL
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

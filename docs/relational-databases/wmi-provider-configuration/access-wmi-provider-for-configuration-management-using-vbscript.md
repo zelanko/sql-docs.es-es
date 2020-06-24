@@ -1,5 +1,6 @@
 ---
 title: Obtener acceso al proveedor WMI con VBScript
+description: Obtenga información acerca de cómo crear un programa de VBScript que muestre la versión de las instancias instaladas de SQL Server que se ejecutan en un equipo.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: f3c5d981-eaa3-4d34-9b91-37e42636aa81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a5415e9d425087f42e3058328f061660ffbe8c1e
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: fd515a60802f429611c1ae272216fac93642093e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658951"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295458"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-vbscript"></a>Acceso al proveedor WMI para la administración de configuración mediante VBScript
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  En esta sección se describe cómo crear un programa de VBScript que muestre la versión de las [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancias instaladas de que se ejecutan en un equipo.  
+  En esta sección se describe cómo crear un programa de VBScript que muestre la versión de las instancias instaladas de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecutan en un equipo.  
   
  En el ejemplo de código se muestran las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se ejecutan en el equipo y su versión.  
   

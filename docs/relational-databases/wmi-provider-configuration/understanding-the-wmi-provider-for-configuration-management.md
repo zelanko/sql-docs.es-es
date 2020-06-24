@@ -1,5 +1,6 @@
 ---
 title: proveedor WMI de administración de configuración
+description: Obtenga información acerca de cómo el proveedor WMI para la administración de configuración usa WMI para administrar los servicios, los alias de servidor y la configuración de red de cliente/servidor en SQL Server.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 92323972-7943-4208-bbf4-050774fb6027
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 21ca5f7039b11b30c11a0fb707f6b6e89244bae2
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4795ee1d456e5f4b823c24fc1ad48e81c9d6541e
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658911"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295438"
 ---
 # <a name="understanding-the-wmi-provider-for-configuration-management"></a>Descripción del proveedor WMI para la administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el proveedor WMI para la administración de la configuración. Esto permite usar Instrumental de administración de Windows (WMI) para administrar servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configuración de red de cliente y servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y alias de servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los objetos WMI representan los servicios, la configuración de red y los alias en el espacio de nombres root\Microsoft\SqlServer\ComputerManagement*nn* del equipo. Una vez establecida una conexión con el proveedor WMI en el equipo especificado, se pueden consultar los servicios, la configuración de red y el alias mediante WQL o un lenguaje de scripting.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona el proveedor WMI para la administración de la configuración. Esto permite usar Instrumental de administración de Windows (WMI) para administrar servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], configuración de red de cliente y servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y alias de servidor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]los objetos WMI representan los servicios, la configuración de red y los alias en el espacio de nombres root\Microsoft\SqlServer\ComputerManagement*nn* del equipo. Una vez establecida una conexión con el proveedor WMI en el equipo especificado, se pueden consultar los servicios, la configuración de red y el alias mediante WQL o un lenguaje de scripting.  
   
  El Proveedor WMI es un proveedor de instancias. Proporciona instancias de las [clases de WMI](../../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md) y admite las siguientes operaciones asincrónicas.  
   
@@ -44,7 +45,7 @@ ms.locfileid: "73658911"
   
  Para ver ejemplos de aplicaciones de administración que usan el proveedor WMI para la administración de configuración, consulte [uso de WQL y lenguajes de scripting con el proveedor WMI para la administración de la configuración](../../relational-databases/wmi-provider-configuration/using-wql-and-scripting-languages-with-the-wmi-provider.md).  
   
- Para obtener más información acerca de la programación de aplicaciones de administración mediante el proveedor WMI, vea [!INCLUDE[msCoName](../../includes/msconame-md.md)] la documentación de WMI en el SDK de .NET Framework.  
+ Para obtener más información acerca de la programación de aplicaciones de administración mediante el proveedor WMI, vea la documentación de WMI en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] SDK de .NET Framework.  
   
 ## <a name="see-also"></a>Consulte también  
  [Trabajar con el proveedor WMI para la administración de configuración](../../relational-databases/wmi-provider-configuration/working-with-the-wmi-provider-for-configuration-management.md)   

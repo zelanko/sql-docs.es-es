@@ -1,5 +1,6 @@
 ---
 title: Crear una alerta de Agente SQL Server con el proveedor WMI
+description: Cree una alerta Agente SQL Server que responda a eventos específicos. Esta alerta simple guarda los eventos de grafo de interbloqueo XML en una tabla para su posterior análisis.
 ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b9ceab4fd40174a68bd512fedf2c1b6d5b159b99
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: a1678379c2120ba4f2edbc2868d5651cbf403587
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660526"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295418"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Sample: Creación de una alerta del Agente SQL Server con el proveedor WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.locfileid: "73660526"
  La alerta ejecuta el trabajo cada vez que se registraría un evento de seguimiento de grafo de interbloqueo. Para una alerta WMI, el Agente SQL Server crea una consulta de notificación mediante el espacio de nombres y la instrucción WQL especificados. Para este alerta, el Agente SQL Server supervisa la instancia predeterminada en el equipo local. La instrucción WQL solicita cualquier evento `DEADLOCK_GRAPH` en la instancia predeterminada. Para cambiar la instancia que supervisa la alerta, sustituya el nombre de instancia por `MSSQLSERVER` en el `@wmi_namespace` para la alerta.  
   
 > [!NOTE]  
->  Para Agente SQL Server recibir eventos de WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado **msdb** en msdb [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]y.  
+>  Para Agente SQL Server recibir eventos de WMI, [!INCLUDE[ssSB](../../includes/sssb-md.md)] debe estar habilitado en **msdb** y [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 USE AdventureWorks ;  
@@ -90,7 +91,7 @@ GO
 ```  
   
 ## <a name="testing-the-sample"></a>Probar el ejemplo  
- Para ver cómo se ejecuta el trabajo, provoque un interbloqueo. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra dos pestañas de **consulta SQL** y conecte ambas consultas a la misma instancia. Ejecute el script siguiente en una de las pestañas de consulta. Este script genera un conjunto de resultados y finaliza.  
+ Para ver cómo se ejecuta el trabajo, provoque un interbloqueo. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , abra dos pestañas de **consulta SQL** y conecte ambas consultas a la misma instancia. Ejecute el script siguiente en una de las pestañas de consulta. Este script genera un conjunto de resultados y finaliza.  
   
 ```  
 USE AdventureWorks ;  
@@ -103,7 +104,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Ejecute el siguiente script en la segunda pestaña de consulta. Este script genera un conjunto de resultados y, a continuación, se bloquea, a `Production.Product`la espera de adquirir un bloqueo en.  
+ Ejecute el siguiente script en la segunda pestaña de consulta. Este script genera un conjunto de resultados y, a continuación, se bloquea, a la espera de adquirir un bloqueo en `Production.Product` .  
   
 ```  
 USE AdventureWorks ;  
@@ -119,7 +120,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Ejecute el siguiente script en la primera pestaña de consulta. Este script se bloquea, a la espera de adquirir `Production.Location`un bloqueo en. Después de un tiempo de espera corto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elegirá este script o el script del ejemplo como víctima del interbloqueo y finalizará la transacción.  
+ Ejecute el siguiente script en la primera pestaña de consulta. Este script se bloquea, a la espera de adquirir un bloqueo en `Production.Location` . Después de un tiempo de espera corto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] elegirá este script o el script del ejemplo como víctima del interbloqueo y finalizará la transacción.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

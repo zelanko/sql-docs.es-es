@@ -1,5 +1,6 @@
 ---
 title: Proveedor WMI para las clases de administración de configuración
+description: Detecte e implemente la funcionalidad que proporciona Instrumental de administración de Windows. Elija una de estas clases para Configuration Manager.
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb3311bd-394e-4a5e-a693-7b326f9ac777
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60430a5bbc2d0309748a2099e9e9bd4f322f8264
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: c5cc832920b67a8d427b930049349d1203dd4478
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73658932"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295468"
 ---
 # <a name="wmi-provider-for-configuration-management-classes"></a>Proveedor WMI para las clases de administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

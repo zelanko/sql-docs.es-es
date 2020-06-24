@@ -1,5 +1,6 @@
 ---
 title: Conceptos del proveedor WMI de administración de configuración
+description: Obtenga información acerca del proveedor WMI, que se usa con Administrador de configuración de SQL Server en Microsoft Management Console y Microsoft SQL Server Configuration Manager.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7e41db24-b915-4eb8-a1d6-e6948ee915b7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1058f1491dbf3b52a30f0bcc9720aab3fb056318
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3919147b2b3d721fa59ee1d7f93f26d0267f5d5f
+ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659261"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85295428"
 ---
 # <a name="wmi-provider-for-configuration-management"></a>proveedor WMI de administración de configuración
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

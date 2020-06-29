@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-ms.openlocfilehash: 0943e3f98ae65ec6c142fb1b98f86da054e88638
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 3cbfbf253bfd080084b8182b353b1efb8b535d3c
+ms.sourcegitcommit: 04ba0ed3d860db038078609d6e348b0650739f55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84521622"
+ms.lasthandoff: 06/27/2020
+ms.locfileid: "85468970"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenido del modelo de minería de datos (Analysis Services - Minería de datos)
   Después de diseñar y procesar un modelo de minería de datos utilizando los datos de la estructura de minería de datos subyacente, el modelo está completo con su *contenido*. Puede utilizar este contenido para realizar predicciones o analizar los datos.  
@@ -80,7 +80,7 @@ ms.locfileid: "84521622"
 |3|Interior|Nodo de división interior en un árbol. Se aplica a los modelos del árbol de decisión.|  
 |4|Distribución|Nodo terminal de un árbol. Se aplica a los modelos del árbol de decisión.|  
 |5|Clúster|Clúster detectado por el algoritmo. Se aplica a los modelos de agrupación en clústeres y a los modelos de clústeres de secuencia.|  
-|6|Unknown|Tipo de nodo desconocido.|  
+|6|Desconocido|Tipo de nodo desconocido.|  
 |7|ItemSet|Conjunto de elementos detectado por el algoritmo. Se aplica a modelos de asociación o modelos de agrupación en clústeres de secuencia.|  
 |8|AssociationRule|Regla de asociación detectada por el algoritmo. Se aplica a modelos de asociación o modelos de agrupación en clústeres de secuencia.|  
 |9|PredictableAttribute|Atributo de predicción. Se aplica a todos los tipos de modelos.|  
@@ -231,7 +231,7 @@ ms.locfileid: "84521622"
 |17|Otros|Representa un valor personalizado definido por el algoritmo.|  
 |18|Cadena representada|Representa un valor personalizado que el algoritmo representa como una cadena. El modelo de objetos no aplicó ningún formato.|  
   
- Los tipos de valores se derivan de la enumeración ADMOMD.NET. Para obtener más información, vea <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ Los tipos de valores se derivan de la enumeración ADMOMD.NET. Para obtener más información, vea [Microsoft. AnalysisServices. AdomdServer. MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### <a name="node-score"></a>Puntuación del nodo  
  El significado de la puntuación del nodo difiere en función del tipo de modelo y también puede ser específico del tipo de nodo. Para obtener información sobre cómo se calcula NODE_SCORE para cada modelo y tipo de nodo, vea [Contenido del modelo de minería de datos por tipo de algoritmo](#bkmk_AlgoType).  

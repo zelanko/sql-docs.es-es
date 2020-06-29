@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c40d5b4b182e79ac869d9dc21d204854ee116308
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaa0bbb2ad5c7c70b8da899c885368ab0e8c391f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968247"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440552"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Lección 2: Creación del paquete de implementación
   En la [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), ha creado el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominado Deployment Tutorial, ha agregado paquetes y archivos auxiliares al proyecto y ha implementado configuraciones en paquetes.  

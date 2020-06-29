@@ -19,12 +19,12 @@ ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9464a28505707abe602decabd00cde58a02d1feb
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6b0894c29e1c3cb525cd9378c0a95e56299e8a1e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833765"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440712"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 
@@ -53,7 +53,7 @@ ms.locfileid: "82833765"
 ## <a name="permissions"></a>Permisos  
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para usar esta vista, debe estar conectado a la base de datos **maestra** . Use la `sys.dm_operation_status` vista en la base de datos **maestra** del [!INCLUDE[ssSDS](../../includes/sssds-md.md)] servidor para realizar un seguimiento del estado de las siguientes operaciones realizadas en un [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :  
   
 -   Crear base de datos  
@@ -73,7 +73,9 @@ ms.locfileid: "82833765"
 -   Restaurar base de datos  
   
 -   Eliminar base de datos  
-  
+
+La información de esta vista se conserva durante aproximadamente 1 hora. Use el [registro de actividad de Azure](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log) para ver detalles de las operaciones en los últimos 90 días. Para una retención superior a 90 días, considere la posibilidad de enviar entradas del [registro de actividad](https://docs.microsoft.com/azure/azure-monitor/platform/activity-log#send-to-log-analytics-workspace) a un área de trabajo log Analytics.
+
 ## <a name="example"></a>Ejemplo  
  Mostrar las operaciones de replicación geográfica más recientes asociadas a la base de datos ' mydb '.  
   

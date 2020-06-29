@@ -1,5 +1,6 @@
 ---
 title: Alta disponibilidad y recuperación ante desastres
+description: Instale y Configure SQL Master Data Services en un grupo de disponibilidad de Always On para mejorar la alta disponibilidad y la recuperación ante desastres de los datos de back-end.
 ms.custom: seo-lt-2019
 ms.date: 07/28/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 6b85fcb83b9268701f0b717faf41f07552073e37
-ms.sourcegitcommit: 903856818acc657e5c42faa16d1c770aeb4e1d1b
+ms.openlocfilehash: cf37f6c9951107e901b05b21f4b7947bcfa381bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83732473"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440972"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 

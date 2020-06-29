@@ -18,14 +18,14 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e58de07841aeba956e6bc8d552b14237a31b515e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 86a4a81f2cff7f191c7233edc6fd5340d47ae726
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968841"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427712"
 ---
 # <a name="validating-a-data-flow-component"></a>Validar un componente de flujo de datos
   El método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> de la clase base <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> se proporciona para impedir la ejecución de un componente que no se ha configurado correctamente. Utilice este método para comprobar que un componente tiene el número esperado de objetos de entrada y salida, que las propiedades personalizadas del componente tienen valores aceptables y que se especifican las conexiones necesarias. Utilice este método también para comprobar que las columnas de las colecciones de entrada y salida tienen los tipos de datos correctos y que el elemento <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> de cada columna se ha establecido de forma adecuada para el componente. La implementación de la clase base ayuda en el proceso de validación al comprobar la colección de columnas de entrada del componente y asegurarse de que cada columna de la colección hace referencia a una columna del elemento <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> del componente de nivel superior.  

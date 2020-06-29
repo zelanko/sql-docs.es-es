@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 719b0b357767fcc4412663449a6a7bd929b34cd3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bd27e4ea4afee42cff12d9b01f09c6cffef8478
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965298"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436032"
 ---
 # <a name="step-4-adding-package-configurations"></a>Paso 4: Adición de configuraciones de paquete
   En esta tarea, agregará una configuración a cada paquete. Las configuraciones actualizan los valores de las propiedades de los paquetes y los objetos de los paquetes en tiempo de ejecución.  
@@ -46,7 +46,7 @@ ms.locfileid: "84965298"
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable. Si no desea reiniciar el equipo, puede escribir el nombre de la variable de entorno.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de DataTransfer EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración en el panel **Vista previa** y, a continuación, haga clic en **Finalizar**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "84965298"
   
 10. Dentro de Administradores de conexión, expanda NewCustomers y, después, active la casilla **Cadena de conexión** .  
   
-11. Haga clic en **Siguiente**.  
+11. Haga clic en **Next**.  
   
 12. En la página Finalización del asistente, escriba **Configuración de DataTransfer** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "84965298"
     > [!NOTE]  
     >  Para hacer que la variable de entorno esté disponible en la lista, puede que tenga que reiniciar el equipo después de agregar la variable.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Finalización del asistente, escriba **Configuración de LoadXMLData EV** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "84965298"
   
 9. En la página Seleccionar propiedades para la exportación, expanda LoadXMLData, Ejecutables, Cargar datos XML y Propiedades y, después, active las casillas **[XMLSource].[XMLData]** y **[XMLSource].[XMLSchemaDefinition]** .  
   
-10. Haga clic en **Siguiente**.  
+10. Haga clic en **Next**.  
   
 11. En la página Finalización del asistente, escriba **Configuración de LoadXMLData** en el cuadro **Nombre de la configuración** , revise el contenido de la configuración y, a continuación, haga clic en **Finalizar**.  
   

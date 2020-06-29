@@ -15,14 +15,14 @@ helpviewer_keywords:
 - transaction log backups [Integration Services]
 - backing up transaction logs [Integration Services]
 ms.assetid: b8839d71-13b7-41f2-a434-cb95020e79d7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2b3f78748ec380a40cd5dbd234a5a02ee58bc660
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0980d89cc915121414dd7d3c89be6f4d72eb715
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919988"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434002"
 ---
 # <a name="back-up-database-task"></a>Tarea Copia de seguridad de la base de datos
   La tarea Copia de seguridad de la base de datos realiza distintos tipos de copias de seguridad de bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  

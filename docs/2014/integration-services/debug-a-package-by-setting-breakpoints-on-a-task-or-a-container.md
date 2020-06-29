@@ -11,14 +11,14 @@ helpviewer_keywords:
 - breakpoints [Integration Services]
 - tasks [Integration Services], breakpoints
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9ef85c2744475a2f55af2abc3514aa3167473ff7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f3bf0956770823c4e3b70f90b03ef392568fedd2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951855"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429752"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Depurar un paquete estableciendo puntos de interrupción en una tarea o un contenedor
   Este procedimiento describe cómo establecer puntos de interrupción en un paquete, una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias.  

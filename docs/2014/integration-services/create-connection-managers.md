@@ -15,14 +15,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], creating
 - SQL Server Integration Services packages, connections
 ms.assetid: 6ca317b8-0061-4d9d-b830-ee8c21268345
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: aca9aeb899d24d5f9516716e02fadc0fcf7f7c7a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca9b79f3c5ee171aac90f15f196b06c212a3f838
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917346"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437932"
 ---
 # <a name="create-connection-managers"></a>Crear administradores de conexiones
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye una serie de administradores de conexión adaptados a las necesidades de las tareas que se conectan a diferentes tipos de servidores y orígenes de datos. Los administradores de conexión son utilizados por los componentes de flujo de datos, que extraen y cargan datos en diferentes tipos de almacenes de datos, y por los proveedores de registro que escriben registros en un servidor, tabla o archivo de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Por ejemplo, un paquete con una tarea Enviar correo usa un tipo de administrador de conexiones SMTP para conectarse a un servidor de Protocolo simple de transferencia de correo (SMTP). Un paquete con una tarea Ejecutar SQL puede usar un administrador de conexiones OLE DB para conectarse a una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para más información, vea [Conexiones de Integration Services &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md).

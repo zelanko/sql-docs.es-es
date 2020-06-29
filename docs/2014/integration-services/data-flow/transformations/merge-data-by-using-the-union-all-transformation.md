@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Union All transformation
 - datasets [Integration Services], merging
 ms.assetid: 78304403-a81c-4101-b87e-ec80ddfdac98
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bdbc41e4290914ac45a4afe09cc5715395774d80
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5c537ff20c91cd280d56050dd3514a7345a69c90
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939456"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430332"
 ---
 # <a name="merge-data-by-using-the-union-all-transformation"></a>Combinar datos mediante la transformación Unión de todo
   Para agregar y configurar una transformación Unión de todo, el paquete ya debe incluir al menos una tarea Flujo de datos y dos orígenes de datos.  

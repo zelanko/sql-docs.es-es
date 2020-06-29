@@ -19,14 +19,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9680243a53af46aed1464d31fdeedeeaa0791f0a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a2145bc78a167ee89c5504f5a42abeb970810ffb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966485"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437012"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Desarrollar una interfaz de usuario para un componente de flujo de datos
   Los desarrolladores de componentes pueden proporcionar una interfaz de usuario personalizada para un componente, que se muestre en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] cuando se edite el componente. La implementación de una interfaz de usuario personalizada proporciona notificaciones cuando el componente se agrega o se elimina en una tarea de flujo de datos, así como cuando se solicita ayuda para el componente.

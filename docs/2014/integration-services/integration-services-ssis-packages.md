@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, about packages
 - Integration Services packages
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 72dfbb5873728efb87a797f1fee9fb4aa469275c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4f2a7c3c1e70e8d402bcd73add2be04d93d182fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965428"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436502"
 ---
 # <a name="integration-services-ssis-packages"></a>paquetes de Integration Services (SSIS)
   Un paquete es una colección organizada de conexiones, elementos de flujo de control, elementos de flujo de datos, controladores de eventos, variables, parámetros y configuraciones que se pueden ensamblar con la ayuda de las herramientas de diseño gráfico proporcionadas por [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] o mediante programación.  A continuación guarda el paquete completado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el Almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] o el sistema de archivos, o puede implementar el proyecto de ssISnoversion en el servidor [!INCLUDE[ssIS](../includes/ssis-md.md)] . El paquete es la unidad de trabajo que se recupera, ejecuta y guarda.  
@@ -59,7 +59,7 @@ ms.locfileid: "84965428"
 ### <a name="event-handlers"></a>Controladores de eventos  
  Un controlador de eventos es un flujo de trabajo que se ejecuta en respuesta a los eventos provocados por un paquete, una tarea o un contenedor. Por ejemplo, puede usar un controlador de eventos para comprobar el espacio en disco cuando se produce un evento previo a la ejecución o si se produce un error, y enviar un mensaje de correo electrónico que notifique el espacio disponible o la información de error a un administrador. Un controlador de eventos se crea como un paquete, con un flujo de control y flujos de datos opcionales. Los controladores de eventos pueden agregarse a tareas individuales o a contenedores del paquete. Para más información, vea [Controladores de eventos de Integration Services &#40;SSIS&#41;](integration-services-ssis-event-handlers.md).  
   
-### <a name="configurations"></a>Configurations  
+### <a name="configurations"></a>Configuraciones  
  Una configuración es un conjunto de pares propiedad-valor que define las propiedades del paquete y sus tareas, contenedores, variables, conexiones y controladores de eventos cuando se ejecuta el paquete. El uso de configuraciones permite actualizar propiedades sin modificar el paquete. Cuando se ejecuta el paquete, se carga la información de configuración y se actualizan los valores de las propiedades. Por ejemplo, una configuración puede actualizar la cadena de conexión de la conexión.  
   
  La configuración se guarda y se implementa con el paquete cuando se instala el paquete en otro equipo. Los valores de la configuración pueden actualizarse cuando se instala el paquete para ofrecer compatibilidad con un entorno diferente. Para obtener más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  

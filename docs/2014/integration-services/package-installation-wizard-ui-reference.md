@@ -18,14 +18,14 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b51049f0a55a10ae83af9e0f253c1c717f6d4962
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cc500615774a67bae70e9c9fa8845db166f44466
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423882"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
   Use el **Asistente para la instalación de paquetes** para implementar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , incluidos los paquetes y los distintos archivos que contienen, así como las dependencias del paquete.  
@@ -57,7 +57,7 @@ ms.locfileid: "84964865"
   
  **Related Topics:** [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
- **Path**  
+ **Ruta de acceso**  
  Muestra la ruta de acceso de la propiedad que debe configurarse.  
   
  **Tipo**  

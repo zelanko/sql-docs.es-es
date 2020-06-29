@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4b7fb5d79d24a3333e21a9b0e6f4c115e967ffa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 255cc9373e18fc33ce1f43dd3be760e283d1e891
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923436"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438752"
 ---
 # <a name="create-the-sql-server-change-database"></a>Crear la base de datos de cambios de SQL Server
   Cuando se inicia el Asistente para nueva instancia, se abre la página Crear base de datos CDC. Use la página Crear base de datos CDC para proporcionar información sobre la nueva instancia CDC y crear una nueva base de datos Cambios.  

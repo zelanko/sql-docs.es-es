@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - connOra
 ms.assetid: 711ac7ff-5d3d-4533-80ca-d1fecdb3048f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0d83154a1453dce3b4d338c6823a3e1d1b714114
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6546e3bbde666107ed7757c41d98d5b7b598924
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923449"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438772"
 ---
 # <a name="connect-to-oracle"></a>Conectar con Oracle
   La primera vez que agrega o edita las tablas usadas en la instancia CDC, se le puede solicitar la conexión a la base de datos de Oracle. Debe escribir las credenciales de un usuario de Oracle que pueda obtener acceso al esquema de las tablas que se van a capturar. Escriba lo siguiente en este cuadro de diálogo:  

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services packages, connection managers
 - custom connection managers [Integration Services]
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e98fd75976a7862909f3d4f03f78649073da32d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 09df0d6cd764f7620fc4bdf918ec43aae3a3ef1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966503"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85427792"
 ---
 # <a name="developing-a-custom-connection-manager"></a>Desarrollar un administrador de conexiones personalizado
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] usa administradores de conexión para encapsular la información necesaria para conectarse a un origen de datos externo. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluye diversos administradores de conexión que admiten conexiones a los orígenes de datos usados con más frecuencia, desde bases de datos empresariales hasta archivos de texto y hojas de cálculo de Excel. Si [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] admite administradores de conexiones y orígenes de datos externos que no cumplen completamente sus requisitos, puede crear un administrador de conexiones personalizado.  

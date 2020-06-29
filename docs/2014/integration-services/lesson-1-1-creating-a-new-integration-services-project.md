@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f14521b5-941e-443b-8f5e-385f98e37fbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c75a48868398b2a59673208fa55dbf4fc026221
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c96b23a8807741429eaee00dace7c22f1cd540c5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965345"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436232"
 ---
 # <a name="step-1-creating-a-new-integration-services-project"></a>Paso 1: Creación de un proyecto de Integration Services
   El primer paso al crear un paquete en [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] es crear un proyecto [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . En este proyecto, se incluyen las plantillas de los objetos (orígenes de datos, vistas de orígenes de datos y paquetes) que se usan en una solución de transformación de datos.  

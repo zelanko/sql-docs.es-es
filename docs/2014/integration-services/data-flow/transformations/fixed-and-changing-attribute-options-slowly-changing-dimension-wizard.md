@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.loaddimwizard.attriboption.f1
 ms.assetid: c841345c-7d03-452f-9379-1c8c464f029c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9e9e18d251335ea10721fa1d159d63530d973581
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: df654cd97b343179828ebd94dea40eacc90e003d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939526"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85430572"
 ---
 # <a name="fixed-and-changing-attribute-options-slowly-changing-dimension-wizard"></a>Opciones de atributos fijos y variables (Asistente para dimensiones variables)
   Utilice el cuadro de diálogo **Opciones de atributos fijos y variables** para especificar cómo se debe responder a los cambios realizados en los atributos fijos y variables.  

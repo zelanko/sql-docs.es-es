@@ -15,14 +15,14 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2e1a6af8407813a2a712b0c43c0b06097477f00f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ee2b30cf0796953d12f976745fb195169de86c68
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966525"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437082"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Desarrollar un componente de flujo de datos personalizado
   La tarea de flujo de datos consta de componentes que se conectan a varios orígenes de datos y, a continuación, transforman y enrutan esos datos a alta velocidad. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] proporciona un modelo de objetos extensible que permite que los desarrolladores creen orígenes, transformaciones y destinos personalizados que se pueden utilizar en [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y en paquetes implementados. En esta sección se incluyen temas que le guiarán a la hora de desarrollar componentes de flujo de datos personalizados.

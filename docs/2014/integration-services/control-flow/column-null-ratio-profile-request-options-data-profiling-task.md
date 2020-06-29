@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c8efa2db8a602b2cbed08e8731c4137a132495f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 50aeb80d600c1e5f85cd13dc36a041c459a3df1c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919631"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433712"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de proporción de columnas nulas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de proporción de columnas nulas** seleccionadas en el panel de solicitudes. Un perfil de proporción de columnas nulas indica el porcentaje de valores nulos de la columna seleccionada. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo una proporción inesperadamente alta de valores nulos en una columna. Por ejemplo, un perfil de proporción de columnas nulas puede generar un perfil de una columna de códigos postales y detectar que falta un porcentaje inaceptablemente alto de códigos postales.  

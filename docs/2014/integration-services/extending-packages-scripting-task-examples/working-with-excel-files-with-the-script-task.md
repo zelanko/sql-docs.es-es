@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - Excel [Integration Services]
 ms.assetid: b8fa110a-2c9c-4f5a-8fe1-305555640e44
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9a0f52b9bd12a91d546e33787853dd8883d77b48
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52fcf25a0334edcff17ba024da501b248e9176cf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968455"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85426472"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Trabajar con archivos de Excel con la tarea Script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] proporciona el administrador de conexiones de Excel, el origen de Excel y el destino de Excel para trabajar con datos almacenados en hojas de cálculo en el formato de archivo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Las técnicas descritas en este tema usan la tarea Script para obtener información acerca de las bases de datos de Excel disponibles (archivos de libro) y tablas (hojas de cálculo y rangos con nombre). Estos ejemplos se pueden modificar con facilidad para trabajar con cualquiera de los demás orígenes de datos basados en archivos que admite el proveedor OLE DB para [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -84,7 +84,7 @@ ms.locfileid: "84968455"
   
     -   Escriba `ExcelFile`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la `ExcelFile` variable.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "84968455"
   
     -   Escriba `ExcelFileExists`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la `ExcelFileExists` variable.  
   
@@ -154,7 +154,7 @@ public class ScriptMain
   
     -   Escriba y sepárelos `ExcelTable` `ExcelFile` con comas`.`  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione las `ExcelTable` `ExcelFile` variables y.  
   
@@ -162,7 +162,7 @@ public class ScriptMain
   
     -   Escriba `ExcelTableExists`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la `ExcelTableExists` variable.  
   
@@ -261,7 +261,7 @@ public class ScriptMain
   
     -   Escriba `ExcelFolder`  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la variable ExcelFolder.  
   
@@ -269,7 +269,7 @@ public class ScriptMain
   
     -   Escriba `ExcelFiles`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la variable ExcelFiles.  
   
@@ -336,7 +336,7 @@ public class ScriptMain
   
     -   Escriba `ExcelFile`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione la variable ExcelFile.  
   
@@ -344,7 +344,7 @@ public class ScriptMain
   
     -   Escriba `ExcelTables`.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione el ExcelTablesvariable.  
   
@@ -449,7 +449,7 @@ public class ScriptMain
   
     -   Escriba el nombre de cada variable separado por comas.  
   
-         O bien  
+         o bien  
   
     -   Haga clic en el botón de puntos suspensivos (**...**) situado junto al campo de propiedades y, en el cuadro de diálogo **seleccionar variables** , seleccione las variables.  
   

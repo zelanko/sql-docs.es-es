@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.dts.designer.afpblobdest.f1
 - sql11.dts.designer.afpblobdest.f1
 ms.assetid: 820a1e7a-7182-4c7b-ab56-5b4097a7e042
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5a64cfd2385cb510163ca5c2f66db64a86dd00bc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fb406d38b17748e8284acee4b2849a9fd99e53ac
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84916695"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85432392"
 ---
 # <a name="azure-blob-destination"></a>Destino de blobs de Azure
   El componente **Azure Blob Destination** (Destino de blobs de Azure) permite que un paquete SSIS escriba datos en un blob de Azure. Los formatos de archivo admitidos son: CSV y AVRO. Arrastre: Quite el **destino de BLOB de Azure** al diseñador de flujo de datos y haga doble clic en él para ver el editor).  

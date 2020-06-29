@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Import and Export Wizard
 - starting Import and Export Wizard
 ms.assetid: 5fc4f6d1-1f6f-444e-9aeb-827f85e1c405
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93ecd0b99ad355e38194afc338201790fba97684
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b1803dd3357d2a725f2196e2c692f7470e27a03f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965585"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436862"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ejecutar el Asistente para importación y exportación de SQL Server
   El Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona el método más sencillo para copiar datos entre orígenes de datos y crear paquetes básicos. Para obtener más información sobre el asistente, vea [SQL Server Asistente para importación y exportación](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)de.  
@@ -30,19 +30,19 @@ ms.locfileid: "84965585"
   
 -   En el menú **Inicio** , seleccione **todos los programas**,**Microsoft SQL Server** y, a continuación, haga clic en **importar y exportar datos**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , haga clic con el botón secundario en la carpeta **paquetes SSIS** y, a continuación, haga clic en **Asistente para SSISImport y exportar**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , en el menú **proyecto** , haga clic en **Asistente para SSISImport y exportar**.  
   
-     O bien  
+     o bien  
   
      En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)] tipo de servidor, expanda bases de datos, haga clic con el botón secundario en una base de datos, seleccione **tareas**y, a continuación, haga clic en **importar datos** o **exportar datos**.  
   
-     O bien  
+     o bien  
   
      En una ventana de símbolo del sistema, ejecute DTSWizard.exe, ubicado en C:\Archivos de programa\Microsoft SQL Server\100\DTS\Binn.  
   

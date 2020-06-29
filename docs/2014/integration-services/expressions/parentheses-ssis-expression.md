@@ -11,14 +11,14 @@ helpviewer_keywords:
 - evaluation order [Integration Services]
 - parentheses operator ()
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 50d18745a064ed8d9550017ce1fcfef8c2c0805d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fca370f011d132ccd7aea9a32afbd0f7d062a270
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84969145"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437162"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Paréntesis) (expresión de SSIS)
   Identifica el orden de evaluación de las expresiones. Las expresiones escritas entre paréntesis tienen la prioridad de evaluación más alta. Las expresiones anidadas escritas entre paréntesis se evalúan desde dentro hacia fuera.  

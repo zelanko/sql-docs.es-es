@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - parent packages [Integration Services]
 ms.assetid: d8f94830-fa27-4151-88df-cbdc6bf0fc80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 47d030435515cc621fe223f461e3da645e9dbebf
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 04b99a2607e73bbcd612b43be1bdb30324a37e9f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965682"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85436872"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementación del paquete primario
   Cuando se lleva a cabo el equilibro de carga de paquetes SSIS entre varios servidores, el siguiente paso tras la creación e implementación de los paquetes secundarios, así como la creación de trabajos del Agente SQL Server para ejecutarlos, es crear el paquete primario. El paquete primario contendrá varias tareas Ejecutar trabajo del Agente SQL Server y cada tarea se encarga de llamar a un trabajo del Agente SQL Server que ejecuta uno de los paquetes secundarios. A su vez, las tareas Ejecutar trabajo del Agente SQL Server del paquete primario ejecutan los distintos trabajos del Agente SQL Server. Cada tarea del paquete primario contiene información tal como cómo conectarse al servidor remoto y qué trabajo ejecutar en ese servidor. Para más información, consulte [Execute SQL Server Agent Job Task](control-flow/execute-sql-server-agent-job-task.md).  

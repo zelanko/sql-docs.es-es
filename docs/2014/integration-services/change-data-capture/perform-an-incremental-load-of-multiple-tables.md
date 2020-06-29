@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7f57e6ae2cf40092304aa0ee3ff99ef5c5725be1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 37cae552008873c874840fd75a84e7496bafdd0d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922676"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435652"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Realizar una carga incremental de varias tablas
   En el tema [Mejorar las cargas incrementales con la captura de datos modificados](change-data-capture-ssis.md), el diagrama muestra un paquete básico que realiza una carga incremental en una sola tabla. Sin embargo, cargar una tabla no es una acción tan común como realizar una carga incremental de varias tablas.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 367835aa-9855-4791-a989-b3d08402ad4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7d54586a8a2d0b60a65288b4a90947862692d5
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 01d572424691ae14b8c75fa594327eef3fbd9504
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921706"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434902"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Configurar el servicio Integration Services como recurso de clúster
   Para los clientes que decidan que las ventajas de configurar el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] como un recurso de clúster son más que los inconvenientes, esta sección contiene las instrucciones de configuración necesarias. Sin embargo, [!INCLUDE[msCoName](../includes/msconame-md.md)] no recomienda que el servicio [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] se configure como un recurso de clúster.  
@@ -77,9 +77,9 @@ ms.locfileid: "84921706"
   
 4.  En el menú **Archivo** , seleccione **Nuevo**y, a continuación, haga clic en **Recurso**.  
   
-5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Siguiente**.  
+5.  En la página **Nuevo recurso** del **Asistente para recursos**, escriba un nombre y seleccione **“Servicio genérico”** como el tipo de servicio. No cambie el valor de **Group**(Grupo). Haga clic en **Next**.  
   
-6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Siguiente**.  
+6.  En la página **Possible Owners** (Posibles propietarios), agregue o quite los nodos del clúster como posibles propietarios del recurso. Haga clic en **Next**.  
   
 7.  Para agregar dependencias, en la página **Dependencias** , seleccione un recurso en **Recursos disponibles**y, a continuación, haga clic en **Agregar**. En caso de una conmutación por error, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y el disco compartido que almacena los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] deberían volver a ponerse en línea antes de que se conecte [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando haya seleccionado las dependencias, haga clic en **Siguiente**.  
   

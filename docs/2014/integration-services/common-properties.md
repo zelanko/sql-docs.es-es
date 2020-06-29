@@ -16,14 +16,14 @@ helpviewer_keywords:
 - input properties [Integration Services]
 - component properties [Integration Services]
 ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77bb61af021bb7499f6656d2fd604f4bdc06bfeb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 06b9c8378d08f8eb1e27df8b545acc12ceaa7e2b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922116"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435102"
 ---
 # <a name="common-properties"></a>Propiedades comunes
   Los objetos de flujo de datos del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] modelo de objetos de tienen propiedades comunes y propiedades personalizadas en los niveles de componente, entrada y salida, y columna de entrada y columna de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -32,7 +32,7 @@ ms.locfileid: "84922116"
   
 -   [Componentes](#components)  
   
--   [Comentarios](#inputs)  
+-   [Entradas](#inputs)  
   
 -   [Columnas de entrada](#inputcolumns)  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c794a2823474f5b4f3f3f8d4cb522f9dbe85e7f6
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 273784e4246b02780784f8467389b347fbb83abb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922186"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85435182"
 ---
 # <a name="work-with-cdc-services"></a>Trabajar con servicios CDC
   Puede usar la Consola de configuración del servicio CDC para crear un nuevo servicio CDC y para preparar una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para CDC.  

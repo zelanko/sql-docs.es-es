@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c7d2c37e38386f7e46c1b8a0800d45dfc0b9b0dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 83c3553916ba629382256c0d2c1c7a89131df071
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967085"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425542"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Editor de destino de archivos planos (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de archivos planos** para seleccionar la conexión de archivos planos del destino y para especificar si se debe sobrescribir o anexar en el archivo de destino existente. El destino de archivo plano escribe datos en un archivo de texto. Este archivo de texto puede tener los formatos: delimitado, ancho fijo, ancho fijo con delimitadores de fila o derecho irregular.  

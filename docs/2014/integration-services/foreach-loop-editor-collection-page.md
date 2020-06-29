@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.collection.f1
 ms.assetid: 95a19dde-61ca-4d9b-aa3d-131fa4264296
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77604faa4cb32fc7babf273717422621b39648aa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 36e2c705382d553c9833776badfacd32aed7f6d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966435"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425522"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Editor de bucles Foreach (página Colección)
   Use la página **Colección** del cuadro de diálogo **Editor de bucles Foreach** para especificar el tipo de enumerador y configurarlo.  

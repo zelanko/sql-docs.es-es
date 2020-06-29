@@ -12,14 +12,14 @@ helpviewer_keywords:
 - containers [Integration Services], grouping
 - grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0beeed1beea03f3acdb869fcd10cef163eaedb9d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e2c613671b12991e4819937f8be61f26a25cdf12
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968362"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425112"
 ---
 # <a name="group-or-ungroup-components"></a>Agrupar o desagrupar componentes
   Las pestañas **Flujo de control**, **Flujo de datos**y **Controladores de eventos** del Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] admiten la agrupación contraíble. Si un paquete tiene muchos componentes, las pestañas pueden estar abarrotadas, lo que dificulta la visión de todos los componentes a la vez y la búsqueda del elemento con el que desea trabajar. La característica de agrupación contraíble puede ahorrar espacio en la superficie de trabajo y facilitar el trabajo con paquetes grandes.  

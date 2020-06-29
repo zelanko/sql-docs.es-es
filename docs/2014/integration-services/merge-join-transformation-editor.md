@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Join Transformation Editor
 ms.assetid: ac06f419-30b3-42aa-8b34-42000bec4285
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 222e21e83ef0b722ea33c45ff5413dd77b88fe12
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b74b8cd3e010f372cf0c0a50f5c0e19054924d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951085"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424602"
 ---
 # <a name="merge-join-transformation-editor"></a>Editor de transformación Combinación de mezcla
   Use el cuadro de diálogo **Editor de transformación Combinación de mezcla** para especificar el tipo de combinación, las columnas de combinación y las columnas de salida para mezclar dos entradas fusionadas por combinación.  

@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.columns.f1
 ms.assetid: 565984eb-8318-4be7-bebc-262209cf5065
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61311dfa6428c9dd1e67fe783389c2a4b20ac1d8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 52e05d125710e8dc5efba7e2efc7420f68686c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965035"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424272"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Editor de origen de ODBC (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de orígenes ODBC** para asignar una columna de salida a cada columna externa (origen).  

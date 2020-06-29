@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bc4c008445837341dca21211e2c5e943afe50dc7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c1b2a60f82e354513d25003b035bfbb689858107
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967115"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425672"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de archivos planos (página Columnas)
   Utilice la página **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para especificar la información de filas y columnas, y para obtener una vista previa del archivo.  

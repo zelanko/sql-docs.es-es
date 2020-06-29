@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.deploymentwizard.f1
 ms.assetid: f3d93e13-2d85-47ff-a913-cda4046491c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 727eb2b745a732049d6eb4a5e2f1808f076167d0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2039968976df2e22a16c47abbcc3f51ba25bbeb2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968315"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424812"
 ---
 # <a name="integration-services-deployment-wizard"></a>Asistente para implementación de Integration Services
   El Asistente para la implementación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] implementa proyectos en el catálogo de SSISDB en una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el modelo de implementación de proyectos.  

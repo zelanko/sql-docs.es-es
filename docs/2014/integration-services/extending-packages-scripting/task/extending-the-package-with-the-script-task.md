@@ -16,14 +16,14 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b67b80bafd052a095acaf9b5a4763ed74af3ab1e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b607ac32e959087ef8d137fbea7bfa390c030bb
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967225"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425962"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Extender el paquete con la tarea Script
   La tarea Script amplía las funcionalidades de tiempo de ejecución de paquetes [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] con código personalizado escrito en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic o [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# que se compila y ejecuta en tiempo de ejecución del paquete. La tarea Script simplifica el desarrollo de una tarea personalizada en tiempo de ejecución cuando las tareas incluidas con [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no satisfacen totalmente sus requisitos. La tarea Script escribe todo el código de infraestructura necesario, lo que le permite centrarse exclusivamente en el código que se requiere para el procesamiento personalizado.  

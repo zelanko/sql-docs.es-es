@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 58aa3dee-4774-4e0b-a956-96d199be4c3a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e25d8b904faaeff05620386e984ddc5bdd99fdf5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a8064a36bce9be9cfa5e2cc88c5f23806932d2c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967125"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425692"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
   Utilice la página **Avanzadas** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para establecer prioridades que especifiquen la forma en que Integration Services debe leer y escribir datos en archivos planos. Puede cambiar los nombres de columna del archivo plano y establecer propiedades que incluyan tipos de datos y delimitadores para cada columna del archivo.  

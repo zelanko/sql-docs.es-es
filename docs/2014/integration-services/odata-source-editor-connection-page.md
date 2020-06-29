@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 64d40dd2a6f0f2568e7e7817a3a9366be8f83cc4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7e06b670e80d1f63d35d4d37b264c8dd9c9d9ad4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965085"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424432"
 ---
 # <a name="odata-source-editor-connection-page"></a>Editor de origen OData (página Conexión)
   Use la página **Conexión** del cuadro de diálogo **Editor de origen OData** para seleccionar el administrador de conexiones OData para el origen OData. Esta página también permite especificar una ruta de acceso de colección o a recursos y las opciones de consulta deseadas para indicar qué datos hay que recuperar del origen OData. Para obtener más información acerca del origen OData, vea [OData Source](data-flow/odata-source.md).  

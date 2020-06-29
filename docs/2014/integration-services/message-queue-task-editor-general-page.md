@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25053ac966629c1265d735df8502eccad1d8a290
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 558d26d06a64e6734f5b662d44673578dc71b191
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950935"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424552"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para asignar un nombre y describir la tarea Cola de mensajes, especificar el formato del mensaje e indicar si la tarea envía o recibe o mensajes.  

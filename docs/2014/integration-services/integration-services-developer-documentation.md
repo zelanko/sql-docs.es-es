@@ -15,14 +15,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02a7474999dbc644684fc4065343bc87b0aa9635
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9a3a32868cbba92e623f0b8ec55039bdb27761d4
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84968275"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424672"
 ---
 # <a name="developer39s-guide-integration-services"></a>Guía para desarrolladores&#39;(Integration Services)
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye un modelo de objetos completamente reescrito, que se ha mejorado con muchas características que consiguen que la extensión y la programación de paquetes resulten más sencillas, flexibles y eficaces. Los desarrolladores pueden extender y programar prácticamente cualquier aspecto de los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

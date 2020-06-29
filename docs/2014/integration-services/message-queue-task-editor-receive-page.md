@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 7028756d-1dcc-480c-bbcd-e9654f0772a0
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b30a7863fe50843f4408931b2b766bcb520f3a2c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53a392a09e2120c08c43b1e373c942ff9c60e148
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951005"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424592"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
   Use la página **Recibir** del cuadro de diálogo **Editor de la tarea Cola de mensajes** para configurar una tarea de la cola de mensajes para recibir mensajes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Message Queuing (MSMQ).  

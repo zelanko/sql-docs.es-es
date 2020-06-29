@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cf0c153168c513c98f8b9ac58984cb88ae1811da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 342a718e1d72a257e469cd855ffd60fff6c5704d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967135"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425682"
 ---
 # <a name="file-system-task-editor-general-page"></a>Editor de la tarea Sistema de archivos (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Sistema de archivos** para configurar la operación del sistema de archivos que lleva a cabo la tarea.  

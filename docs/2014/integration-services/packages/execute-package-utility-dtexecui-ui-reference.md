@@ -20,14 +20,14 @@ f1_keywords:
 helpviewer_keywords:
 - DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 59ce040242b87cfc955054e062a09fd579f77a14
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: eae2f119e2d1fb8c52c00fc7dbe96af1d593193d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964845"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423852"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referencia de la interfaz de usuario de la Utilidad de ejecución de paquetes (DtExecUI)
   Use la **Utilidad de ejecución de paquetes** para ejecutar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . La utilidad ejecuta los paquetes almacenados en una de estas tres ubicaciones: la base de datos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos. Esta interfaz de usuario, que se puede abrir desde [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o escribiendo `dtexecui` en un símbolo del sistema, es una alternativa a la ejecución de paquetes mediante la herramienta del símbolo del sistema **DTExec** .  

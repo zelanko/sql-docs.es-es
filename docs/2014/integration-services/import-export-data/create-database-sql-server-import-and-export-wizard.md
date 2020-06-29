@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8a2776d0288ef66214c9bdfd4218b924cb83c02b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 29aca0a06fbd4dc0ae28bfeb9c65daafea28ee3a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965605"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425002"
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Crear base de datos (Asistente para importación y exportación de SQL Server)
   Use la página **crear base de datos** para definir una nueva base de datos para un archivo de destino.  

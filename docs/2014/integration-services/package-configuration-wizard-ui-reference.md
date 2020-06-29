@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8179e5caddbd104fdf35598b7ea25e0f32fd9e84
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 70576676604340a3239d4903d895f1dd385882d6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964922"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85424052"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la configuración de paquetes
   Use el **Asistente para la configuración de paquetes** para crear configuraciones que actualizan las propiedades de un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y sus objetos en tiempo de ejecución. Este asistente se ejecuta al agregar una nueva configuración o modificar una existente en el cuadro de diálogo **Organizador de configuraciones de paquetes** . Para abrir el cuadro de diálogo **Organizador de configuraciones de paquetes** , seleccione **Configuraciones de paquetes** en el menú **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Para obtener más información, vea [Crear configuraciones de paquetes](../../2014/integration-services/create-package-configurations.md).  

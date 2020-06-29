@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Destination Editor
 ms.assetid: f045410b-7190-4014-aabf-baf68fb45710
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d26cda51087ff0bf0cbe648e74e09332724c1d10
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31caf9655f95b2f1083e1ed48fb482d7eed7cb6c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966455"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425512"
 ---
 # <a name="flat-file-destination-editor-mappings-page"></a>Editor de destino de archivos planos (página Asignaciones)
   Utilice la página **Asignaciones** del cuadro de diálogo **Editor de destino de archivos planos** para asignar columnas de entrada a columnas de destino.  

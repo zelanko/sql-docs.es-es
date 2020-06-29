@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4387b3311c4b2157ba202890c2a190e83e7ad5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 82181fad0220ad73804c23d7ebce2fbe6994d820
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967105"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85425662"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  
@@ -38,7 +38,7 @@ ms.locfileid: "84967105"
  **Examinar**  
  Busque el nombre de archivo que utilizará en la conexión de archivos planos.  
   
- **Locale**  
+ **Configuración regional**  
  Especifique la configuración regional, que proporciona información específica del idioma para la ordenación y los formatos de fecha y hora.  
   
  **Unicode**  

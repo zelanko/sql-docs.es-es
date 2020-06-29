@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cc920b51652ef8c917d3e0bb52bd5b86d686c8c4
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2023cccadefaf3274a7032fe188b7d887a23b3d0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966635"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85428662"
 ---
 # <a name="functions-ssis-expression"></a>Funciones (expresión de SSIS)
   El lenguaje de expresiones incluye un conjunto de funciones que pueden usarse en las expresiones. Las expresiones pueden usar una sola función, pero generalmente utilizan varias funciones, combinándolas con operadores.  

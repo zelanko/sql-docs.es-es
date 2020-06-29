@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Source Editor
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3534ab746fd11786d02651f795d854b1a1466333
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0713d8d3d0c1f56bf322684a924a286e8b81af55
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429362"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de Excel** para asignar una columna de salida a cada columna externa (origen).  

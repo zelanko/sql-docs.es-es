@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af4efe24c58d22738e0e7b38ca68f37ce29603f2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1570207dca6e944b54c553a1d83256d8f4fa3244
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951811"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85429682"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Implementar y ejecutar paquetes SSIS mediante procedimientos almacenados
   Al configurar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] para que use el modelo de implementación de proyectos, puede emplear procedimientos almacenados del catálogo de [!INCLUDE[ssIS](../includes/ssis-md.md)] implementar el proyecto y ejecutar los paquetes. Para obtener información acerca del modelo de implementación de proyectos, vea [Deployment of Projects and Packages](packages/deploy-integration-services-ssis-projects-and-packages.md).  

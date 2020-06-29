@@ -10,14 +10,14 @@ helpviewer_keywords:
 - standard parse [Integration Services]
 - locales [Integration Services]
 ms.assetid: dfe835b1-ea52-4e18-a23a-5188c5b6f013
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0244760e6fadc421854e13869ad1e973d7ed12f0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7cacff710870d372d6bbf8345e05397857c13a00
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962355"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420792"
 ---
 # <a name="standard-parse"></a>Standard Parse
   El análisis estándar es un conjunto de rutinas de análisis dependientes de la configuración regional y que admiten todas las conversiones de tipo de datos proporcionadas por las API de conversión de tipo de datos de Automation disponibles en Oleaut32.dll y Ole2dsip.dll. El análisis estándar es equivalente a las API de análisis de OLE DB.  

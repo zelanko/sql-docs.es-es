@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: cfe0e5dc-5be3-4222-b721-fe83665edd94
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 32a3b5a0c32949239488b86dc1209183e95ac9ff
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 813339fea4db41433ca73e47245cb9c87f393421
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962475"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420942"
 ---
 # <a name="ssis-package-format"></a>Formato de paquetes SSIS
   En la versión actual de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], se han realizado cambios significativos en el formato de paquetes (archivo .dtsx) para que sea más fácil leer el formato y comparar paquetes. También puede combinar de forma más confiable paquetes que no contienen cambios en conflicto o cambios almacenados en formato binario.  

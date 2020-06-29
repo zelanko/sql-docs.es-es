@@ -12,14 +12,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 19f96adc9932b888f3304257fb9a23a22b06cc87
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a1ace15be59c7102547b4faedf70adc811bd140e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972615"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420202"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Usar los valores de variables y parámetros en un paquete secundario
   Este procedimiento describe cómo crear una configuración de paquete que utiliza el tipo de configuración de variables primarias. Este tipo de configuración habilita un paquete secundario que se ejecuta desde un paquete primario para tener acceso a una variable del elemento primario.  
@@ -88,11 +88,11 @@ ms.locfileid: "84972615"
   
     -   Seleccione **La ubicación de configuración se almacena en una variable de entorno** y luego, en la **lista Variable de entorno**, seleccione la variable de entorno que contenga el nombre de la variable.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página Seleccionar propiedad de destino, expanda el nodo **Variable** y expanda el nodo **Propiedades** de la variable para configurarla, y luego haga clic en la propiedad que establecerá la configuración.  
   
-9. Haga clic en **Siguiente**.  
+9. Haga clic en **Next**.  
   
 10. En la página Finalización del asistente, también puede modificar el nombre predeterminado de la configuración y revisar la información de configuración.  
   

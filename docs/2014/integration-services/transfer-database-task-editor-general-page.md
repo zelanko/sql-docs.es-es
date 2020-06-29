@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Database Task Editor
 ms.assetid: 0f65927a-5835-45ee-9c19-e33f00d0755c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 36f27bc789a5af9077225e3c507fadf54fb9ddfa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb5bb1b71374fe1fa693447202ca698ebf415c82
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972865"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420812"
 ---
 # <a name="transfer-database-task-editor-general-page"></a>Editor de la tarea Transferir bases de datos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor de la tarea Transferir bases de datos** para asignar un nombre y una descripción a la tarea Transferir bases de datos. La tarea Transferir bases de datos copia o mueve una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre dos instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Esta tarea también puede utilizarse para copiar una base de datos en el mismo servidor. Para obtener más información sobre esta tarea, vea [Tarea Transferir bases de datos](control-flow/transfer-database-task.md).  

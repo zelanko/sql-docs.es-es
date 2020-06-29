@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5ed9a0b96fced32a761e41d31c06447511fb4334
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed35218c84c77d3116ab8c897fe51fab5d6359aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962405"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85420892"
 ---
 # <a name="ssis-toolbox"></a>Cuadro de herramientas de SSIS
   Todos los componentes instalados en el equipo local, incluidos los componentes de terceros generados para SQL Server 2008 y 2008 R2, aparecen ahora automáticamente en el nuevo **Cuadro de herramientas de SSIS**. Al instalar componentes adicionales, haga clic con el botón derecho en el cuadro de herramientas y, después, haga clic en **Actualizar cuadro de herramientas** para agregar los componentes.  

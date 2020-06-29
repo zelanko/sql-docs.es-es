@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cbfc2cb7419f05884a80244445c6ce418576a402
+ms.sourcegitcommit: a0ebbcb717f09d3614de5ce9eb9f3c00f0a45f81
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140670"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85409354"
 ---
 # <a name="managed_backupfn_available_backups-transact-sql"></a>managed_backup. fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
   
 ##  <a name="arguments"></a><a name="Arguments"></a>Argumentos  
  @database_name  
- El nombre de la base de datos. Es @database_name de tipo nvarchar (512).  
+ El nombre de la base de datos. Es de tipo @database_name nvarchar (512).  
   
 ## <a name="table-returned"></a>Tabla devuelta  
  La tabla tiene una restricción de clúster único en (database_guid, backup_start_date, first_lsn y backup_type).   
@@ -74,11 +74,11 @@ Si faltan datos en LSN que indican que hay una interrupción en la cadena de reg
  Requiere permisos **Select** en esta función.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente se enumeran todas las copias de seguridad disponibles [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] a través de para la base de datos ' MyDB '  
+ En el ejemplo siguiente se enumeran todas las copias de seguridad disponibles a través [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] de para la base de datos ' MyDB '  
   
 ```  
 SELECT *   
-FROM managed_backup.fn_available_backups ('MyDB')  
+FROM msdb.managed_backup.fn_available_backups ('MyDB')  
   
 ```  
   

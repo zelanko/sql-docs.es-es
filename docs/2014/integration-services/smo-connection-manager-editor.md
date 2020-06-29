@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fd7d4696015110fc2df11bea87f045580424c361
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2dd9b6d61c5c00fc1330aa23a385d335dd164ada
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962965"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421412"
 ---
 # <a name="smo-connection-manager-editor"></a>administrador de conexiones SMO, editor del
   Utilice el **Editor del administrador de conexiones SMO** para configurar una conexión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para las diferentes tareas que transfieren objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

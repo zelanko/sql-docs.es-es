@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reusing packages
 - templates [Integration Services]
 ms.assetid: efe66cec-3933-4f6e-8d35-fe3d300de66c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84eb956d8a973cf1186eb8f7454c5a8dd8f0709d
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: daf617a088dd781cf40bf85bedbd2e5b52ad7e5a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964263"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422402"
 ---
 # <a name="save-a-package-as-a-package-template"></a>guardar un paquete como una plantilla de paquete
   En este tema se describe cómo designar y usar paquetes personalizados como plantillas cuando se crean nuevos paquetes de Integration Services en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. De forma predeterminada, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] usa una plantilla de paquetes que crea un paquete vacío cuando se agrega un nuevo paquete a un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . No puede reemplazar esta plantilla predeterminada, pero puede agregar nuevas plantillas.  

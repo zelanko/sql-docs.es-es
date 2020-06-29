@@ -12,14 +12,14 @@ helpviewer_keywords:
 - parameterized SQL statements [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e9009bfb7b44f6690d123697059e105d76688ce0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cdc32e103642e086e81f6499bf56e5fbb71c3bd1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964775"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423562"
 ---
 # <a name="parameters-and-return-codes-in-the-execute-sql-task"></a>Parámetros y códigos de retorno en la tarea Ejecutar SQL
   Las instrucciones SQL y los procedimientos almacenados suelen usar parámetros de `input`, parámetros de `output` entrada y códigos de retorno. En [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la tarea Ejecutar SQL admite los tipos de parámetros `Input`, `Output` y `ReturnValue`. Utilice el tipo `Input` para parámetros de entrada, `Output` para parámetros de salida y `ReturnValue` para códigos de retorno.  
@@ -122,7 +122,7 @@ ms.locfileid: "84964775"
     |-------------------------------|--------------------|  
     |SQL_DATE|`date`|  
     |SQL_SS_TIME2|`time`|  
-    |SQL_TYPE_TIMESTAMP<br /><br /> O bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
+    |SQL_TYPE_TIMESTAMP<br /><br /> o bien<br /><br /> SQL_TIMESTAMP|`datetime`, `datetime2`|  
     |SQL_SS_TIMESTAMPOFFSET|`datetimeoffset`|  
   
  Si los datos no están almacenados en el parámetro de entrada o de salida adecuado, se produce un error en el paquete.  

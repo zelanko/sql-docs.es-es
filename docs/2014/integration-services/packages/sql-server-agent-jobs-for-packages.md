@@ -12,14 +12,14 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 312469e8355fb5720f1a1ce13a58a59f759da4ec
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c834dcc5302244d4127aaf75ed9e16a53f3342aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964825"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423732"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Trabajos del Agente SQL Server para paquetes
   Puede automatizar y programar la ejecución de paquetes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mediante el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede programar paquetes que se implementan en el servidor de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y se almacena en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el almacén de paquetes de [!INCLUDE[ssIS](../../includes/ssis-md.md)] y el sistema de archivos.  

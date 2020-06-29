@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.progress.f1
 ms.assetid: a59cc952-fb73-4bd3-b5d2-f8397701e5d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 27da51dc89038493d24447c402e2d4e2b79c4679
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3848ce670f54ebc509a901eacbe71a07be715f27
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964665"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423262"
 ---
 # <a name="progress-tab"></a>Progreso (pestaña)
   Utilice la pestaña **Progreso** del Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)] para ver el progreso de la ejecución de un paquete [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] cuando ejecute el paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. La pestaña **Progreso** muestra la hora de inicio y finalización y el tiempo transcurrido para la validación y ejecución del paquete y sus archivos ejecutables, cualquier información o advertencia relativa al paquete, notificaciones del progreso, el éxito o fracaso del paquete, y los mensajes de error que se generen durante la ejecución del paquete.  

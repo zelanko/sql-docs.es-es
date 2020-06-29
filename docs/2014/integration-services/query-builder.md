@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Query Builder dialog box
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a393352f7ec0f9384ed2d30b2909c9d9f2c1dc0
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 81be066d92ef1e19a141414dad4359b60efca2f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964625"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423162"
 ---
 # <a name="query-builder"></a>Generador de consultas
   Utilice el cuadro de diálogo **Generador de consultas** para crear una consulta para su uso en la tarea Ejecutar SQL, el origen de OLE DB y el destino de OLE DB, y la transformación de búsqueda.  

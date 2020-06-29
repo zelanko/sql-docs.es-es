@@ -10,14 +10,14 @@ helpviewer_keywords:
 - result sets [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: 62605b63-d43b-49e8-a863-e154011e6109
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 535ab473d8fe6cf9a89fafa1fc0c9f45b0096f7e
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aaca4db8a4ae135424a49fb42a1a0918bdc931b7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964575"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422972"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Conjuntos de resultados en la tarea Ejecutar SQL
   En un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , el hecho de que se devuelva un conjunto de resultados a la tarea Ejecutar SQL depende del tipo de comando SQL que use la tarea. Por ejemplo, una instrucción SELECT suele devolver un conjunto de resultados; en cambio, una instrucción INSERT no lo devuelve.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42a6051305f1c8999e7cba5e4cb51a7945f1f5c7
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1b20ac056894066114883153030943bec1c05963
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964685"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423302"
 ---
 # <a name="performance-counters"></a>Contadores de rendimiento
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] instala un conjunto de contadores de rendimiento que pueden usarse para supervisar el rendimiento del motor de flujo de datos. Por ejemplo, puede observar el contador "Búferes puestos en cola" para determinar si se están escribiendo búferes de datos en el disco temporalmente mientras se ejecuta un paquete. Este intercambio reduce el rendimiento e indica que el equipo no tiene memoria suficiente.  

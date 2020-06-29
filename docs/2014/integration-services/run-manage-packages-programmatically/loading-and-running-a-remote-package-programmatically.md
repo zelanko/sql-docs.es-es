@@ -11,14 +11,14 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0b0340c33f5a53ba75cb42fa16e08b8b45f92da
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e7042b026046860c2e6fad03d084e74f176ae50
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964512"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422782"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Cargar y ejecutar mediante programación un paquete remoto
   Para ejecutar los paquetes remotos desde un equipo local que no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], inicie los paquetes para que se ejecuten en el equipo remoto en el que está instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Para ello, haga que el equipo local use el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un servicio web o un componente remoto para iniciar los paquetes en el equipo remoto. Si intenta iniciar los paquetes remotos directamente desde el equipo local, se cargarán y se intentará ejecutar los paquetes desde el equipo local. Si el equipo local no tiene instalado [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], no se ejecutarán los paquetes.  

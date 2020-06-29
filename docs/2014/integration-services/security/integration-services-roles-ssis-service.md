@@ -15,14 +15,14 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 84f2a00b7376ae8869cafa36f8a4ab30d74fda19
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5bc65a7a3ff30deb429ceeb8458ac477432a758c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963925"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422092"
 ---
 # <a name="integration-services-roles-ssis-service"></a>Roles de Integration Services (servicio SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]incluye los tres roles fijos de nivel de base de datos, `db_ssisadmin` , **db_ssisltduser**y **db_ssisoperator**para controlar el acceso a los paquetes. Los roles solo se pueden implementar en los paquetes que se guardan en la `msdb` base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para asignar roles a un paquete se utiliza [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Las asignaciones de roles se guardan en la `msdb` base de datos.  
@@ -30,9 +30,9 @@ ms.locfileid: "84963925"
 ## <a name="read-and-write-actions"></a>Acciones de lectura y escritura  
  En la tabla siguiente se describen las acciones de lectura y escritura de Windows y los roles fijos de nivel de base de datos en [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Rol|Acción de lectura|Acción de escritura|  
+|Role|Acción de lectura|Acción de escritura|  
 |----------|-----------------|------------------|  
-|`db_ssisadmin`<br /><br /> o<br /><br /> `sysadmin`|Enumerar los paquetes propios.<br /><br /> Enumerar todos los paquetes.<br /><br /> Ver los paquetes propios.<br /><br /> Ver todos los paquetes.<br /><br /> Ejecutar los paquetes propios.<br /><br /> Ejecutar todos los paquetes.<br /><br /> Exportar los paquetes propios.<br /><br /> Exportar todos los paquetes.<br /><br /> Ejecutar todos los paquetes del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Importar paquetes.<br /><br /> Eliminar los paquetes propios.<br /><br /> Eliminar todos los paquetes.<br /><br /> Cambiar los roles de los paquetes propios.<br /><br /> Cambiar los roles de todos los paquetes.<br /><br /> <br /><br /> Los miembros ** \* \* \* importantes \* ** del rol db_ssisadmin y el rol dc_admin pueden elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.|  
+|`db_ssisadmin`<br /><br /> or<br /><br /> `sysadmin`|Enumerar los paquetes propios.<br /><br /> Enumerar todos los paquetes.<br /><br /> Ver los paquetes propios.<br /><br /> Ver todos los paquetes.<br /><br /> Ejecutar los paquetes propios.<br /><br /> Ejecutar todos los paquetes.<br /><br /> Exportar los paquetes propios.<br /><br /> Exportar todos los paquetes.<br /><br /> Ejecutar todos los paquetes del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Importar paquetes.<br /><br /> Eliminar los paquetes propios.<br /><br /> Eliminar todos los paquetes.<br /><br /> Cambiar los roles de los paquetes propios.<br /><br /> Cambiar los roles de todos los paquetes.<br /><br /> <br /><br /> Los miembros ** \* \* \* importantes \* ** del rol db_ssisadmin y el rol dc_admin pueden elevar sus privilegios a sysadmin. Esta elevación de privilegio se puede producir porque estos roles pueden modificar los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y los paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] los puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando el contexto de seguridad de sysadmin del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para protegerse contra esta elevación de privilegio al ejecutar planes de mantenimiento, conjuntos de recopilación de datos y otros paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , configure los trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ejecutan paquetes para utilizar una cuenta de proxy con privilegios limitados o agregar solo los miembros de sysadmin a los roles dc_admin y db_ssisadmin.|  
 |**db_ssisltduser**|Enumerar los paquetes propios.<br /><br /> Enumerar todos los paquetes.<br /><br /> Ver los paquetes propios.<br /><br /> Ejecutar los paquetes propios.<br /><br /> Exportar los paquetes propios.|Importar paquetes.<br /><br /> Eliminar los paquetes propios.<br /><br /> Cambiar los roles de los paquetes propios.|  
 |**db_ssisoperator**|Enumerar todos los paquetes.<br /><br /> Ver todos los paquetes.<br /><br /> Ejecutar todos los paquetes.<br /><br /> Exportar todos los paquetes.<br /><br /> Ejecutar todos los paquetes del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|None|  
 |**Administradores de Windows**|Ver los detalles de ejecución de todos los paquetes que se están ejecutando.|Detener todos los paquetes en ejecución en ese momento.|  

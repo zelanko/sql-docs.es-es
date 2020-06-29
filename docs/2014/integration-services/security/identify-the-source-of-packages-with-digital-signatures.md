@@ -13,14 +13,14 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 269aef896c485f0a383a35eae6d750e939868c29
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 90c0e2e3db13ba4b228b70ccfffddbc2ff221774
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963851"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422122"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identificar el origen de paquetes con firmas digitales
   Es posible firmar un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] con un certificado digital para identificar su origen. Una vez que el paquete está firmado con un certificado digital, se puede configurar [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para que compruebe la firma digital antes de cargarlo. Para hacer que [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] compruebe la firma, puede establecer una opción en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o en la utilidad **dtexec** (dtexec.exe), o bien establecer un valor opcional del Registro.  

@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Row Sampling Transformation Editor
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4d3e00998aefefe228b0bf537fa34e25410695c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d3e75cb6d7c0e8838dc9e56241424bbf7dfe2755
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964535"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422832"
 ---
 # <a name="row-sampling-transformation-editor-sampling-page"></a>Editor de transformación Muestreo de fila (página Muestreo)
   Use el cuadro de diálogo **Editor de transformación Muestreo de fila** para dividir una parte de una entrada en un ejemplo que utilice un número especificado de filas. La transformación divide la entrada en dos salidas independientes.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - security [Integration Services],protection levels
 - protection level for packages [Integration Services]
 ms.assetid: 904a5580-82ba-4a26-b0c5-d1c989975f61
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bcb8f4da5f39647665b3f07355ea8eed2506cda5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ae909a1f7a61c5ae2aa3d6319fd03c54dd70b0e1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963415"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85421832"
 ---
 # <a name="set-or-change-the-protection-level-of-packages"></a>Establecer o cambiar el nivel de protección de los paquetes
   Para controlar el acceso al contenido de los paquetes y a los valores confidenciales que contienen, como las contraseñas, establezca el valor de la propiedad `ProtectionLevel`. Los paquetes que se incluyen en un proyecto deben disponer del mismo nivel de protección que el proyecto con el fin de compilar el proyecto. Si cambia la configuración de las propiedades de `ProtectionLevel` en el proyecto, debe actualizar manualmente el valor de la propiedad de los paquetes.  

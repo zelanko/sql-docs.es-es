@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 21482a20-e420-4452-b7eb-8f9fa1929f31
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d4725d05e41ae6335ceae19c46c2c36af14dbcf8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d68eac95885b6c40d607237eeb51050a9c6130f
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964405"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422542"
 ---
 # <a name="save-a-copy-of-a-package"></a>Guardar una copia de un paquete
   Este procedimiento describe cómo guardar una copia de un paquete en el sistema de archivos, en el almacén de paquetes o en la base de datos **msdb** en [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Al especificar una ubicación para guardar la copia del paquete, puede actualizar también el nombre del paquete.  

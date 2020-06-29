@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 648aa642f380d042091005cf9dbd8e6d8d61add9
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6f71f87241f57fef455b44d4cfe5007d1ff0968d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964595"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423062"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
@@ -46,7 +46,7 @@ ms.locfileid: "84964595"
   
 |Sección|Descripción|  
 |-------------|-----------------|  
-|Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
+|Filtrar|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
   
  Para obtener más información sobre cómo utilizar la tarea Ejecutar paquete con el fin de que los valores estén disponibles para un paquete secundario, vea [Execute Package Task](control-flow/execute-package-task.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "84964595"
   
 |Sección|Descripción|  
 |-------------|-----------------|  
-|Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
+|Filtrar|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  
   
 ## <a name="all-operations-report"></a>Informe Todas las operaciones  

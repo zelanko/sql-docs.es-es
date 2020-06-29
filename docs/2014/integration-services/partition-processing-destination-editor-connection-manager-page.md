@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: 7add6f82-eed1-47fc-a5d7-7b91f3f24d34
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bb2efbff93fb7cc831038a7e26fe4ada44d81325
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: faf99a55fe52ba46e6bf69a59d23c2054e3c9144
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964755"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423502"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Editor de destino de procesamiento de particiones (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo **Editor de destino de procesamiento de particiones** para especificar una conexión a un proyecto de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o a una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

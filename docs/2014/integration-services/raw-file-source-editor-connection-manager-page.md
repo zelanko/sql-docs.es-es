@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfilesourceconnectionmanager.f1
 ms.assetid: ea79c73d-37fc-44fd-bc6e-bcefc23235c9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1700804c9fc3b9106d444b9183f16092d2675451
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0f3400782936d0f2436c7300e1d22db841bdec44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964605"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423022"
 ---
 # <a name="raw-file-source-editor-connection-manager-page"></a>Editor de origen de archivos sin formato (página Administrador de conexiones)
   El origen de archivo sin formato lee datos sin formato de un archivo. Como la representación de los datos es la nativa del origen, no es necesario traducir los datos y prácticamente no es necesario analizar el archivo. Para más información, consulte [Raw File Source](data-flow/raw-file-source.md).  

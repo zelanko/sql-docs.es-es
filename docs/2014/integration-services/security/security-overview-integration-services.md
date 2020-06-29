@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Integration Services packages, security
 - SQL Server Integration Services packages, security
 ms.assetid: 01aa0b88-d477-4581-9a3b-2efc3de2b133
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53cce2807c1bd241a06551dd9eda1e7f5e19a497
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 597f6341c6542f9c53cb6f0243b94e77326a33d9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963921"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422052"
 ---
 # <a name="security-overview-integration-services"></a>Información general sobre seguridad (Integration Services)
   La seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consta de varios niveles que proporcionan un entorno de seguridad sofisticado y flexible. Estos niveles de seguridad incluyen el uso de firmas digitales, propiedades de paquete, roles de la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y permisos del sistema operativo. La mayoría de estas características de seguridad pertenecen a las categorías de identidad y control de acceso.  

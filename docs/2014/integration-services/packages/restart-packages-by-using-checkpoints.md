@@ -11,14 +11,14 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7ea97a56ad10fd0545e9a550defcf673f05542c8
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5cfe2595607a1da955942e9f2687322f977f3a22
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964785"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85423572"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Reiniciar paquetes de usando puntos de comprobación
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] puede reiniciar los paquetes con errores desde el punto del error, en lugar de volver a ejecutar todo el paquete. Si se configura un paquete para que utilice puntos de comprobación, la información relacionada con la ejecución del paquete se escribirá en un archivo de punto de comprobación. Cuando se vuelve a ejecutar el paquete con error, se utiliza el archivo de punto de comprobación para reiniciar el paquete desde el punto del error. Si el paquete se ejecuta correctamente, el archivo de punto de comprobación se elimina y se vuelve a crear la siguiente vez que se ejecuta el paquete.  

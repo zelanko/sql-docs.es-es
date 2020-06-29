@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 4c6d1901-ef21-4aa7-9d0a-6bbeb7fadf1c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f172aa778cbaa959671da870521641147186f571
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 31dc7fca17ea5e00a242e8c32fb2a3514c5e7732
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84964055"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85422212"
 ---
 # <a name="script-transformation-editor-script-page"></a>Editor de transformación Script (página Script)
   Use la pestaña **Script** del cuadro de diálogo **Editor de transformación Script** para especificar un script y las propiedades relacionadas.  

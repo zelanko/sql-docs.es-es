@@ -13,14 +13,14 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5818be0e514c37bace0cac7e0ac69cb7dc7d2ef5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a27266b4fe82419a3533d558daef793e9f34adc7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963555"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440152"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
   Los temas de esta sección describen el servicio [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un servicio de Windows para administrar paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . No se requiere este servicio para crear, guardar y ejecutar los paquetes de Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] admite el servicio de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para mantener la compatibilidad con versiones anteriores de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

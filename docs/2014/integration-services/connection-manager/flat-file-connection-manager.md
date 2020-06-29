@@ -14,14 +14,14 @@ helpviewer_keywords:
 - flat files
 - flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e46c1ea54ba178fba73a1bfb2cc8ee296ca2b0d0
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 55d44369a0d6d57f876bb08475266955c87724b1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920902"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438472"
 ---
 # <a name="flat-file-connection-manager"></a>Administrador de conexiones de archivos planos
   Un administrador de conexiones de archivos planos permite a un paquete obtener acceso a datos en un archivo plano. Por ejemplo, el origen y el destino de archivos planos pueden hacer que los administradores de conexión de archivos planos extraigan y carguen datos.  

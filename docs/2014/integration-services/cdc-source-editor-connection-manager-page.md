@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.cdcsource.connection.f1
 ms.assetid: 304e6717-e160-4a7b-a06f-32182449fef8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c6ee99e02d9c3c5e78d00abd3e8d9f5673ee4d22
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1e455f049d70d3a6ad889d820f79e2fed70e326d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924066"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438982"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Editor de origen de CDC (página Administrador de conexiones)
   Use la página **Administrador de conexiones** del cuadro de diálogo del **Editor de origen de CDC** con el fin de seleccionar el administrador de conexiones de ADO.NET para la base de datos de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] donde el origen de CDC lee las filas de cambios (la base de datos CDC). Una vez que se haya seleccionado la base de datos CDC, debe seleccionar una tabla capturada en la base de datos.  

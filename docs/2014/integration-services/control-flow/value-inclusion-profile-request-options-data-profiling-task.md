@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e524fcb3a107384853a5c6fa2114cadb58f80636
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5e39c227ede9890c1b7290a2e2dec8cdf7104a1a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917795"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438062"
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de inclusión de valores (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de inclusión de valores** seleccionadas en el panel de solicitudes. Un perfil de inclusión de valores calcula la superposición en los valores entre dos columnas o conjuntos de columnas. Por lo tanto, también puede determinar si una columna o un conjunto de columnas es adecuado para actuar como una clave externa entre las tablas seleccionadas. Este perfil también puede ayudarle a identificar problemas de los datos, por ejemplo valores que no sean válidos. Por ejemplo, suponga que utiliza un perfil de inclusión de valores para generar el perfil de la columna de identificadores de producto de una tabla de ventas. El perfil detecta que la columna contiene valores que no están en la columna IdProducto de la tabla Productos.  

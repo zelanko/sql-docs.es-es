@@ -12,14 +12,14 @@ helpviewer_keywords:
 - SSIS packages, logs
 - custom messages for logging [Integration Services]
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a7fe7d714d93915814b6658409a9f892c28e03b7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4601b1f7f73b513eea94de2206f68b5d58053b35
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917155"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437862"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona a un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  

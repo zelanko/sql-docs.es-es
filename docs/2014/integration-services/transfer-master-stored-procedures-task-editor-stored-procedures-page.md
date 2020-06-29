@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Stored Procedures Task Editor
 ms.assetid: 5fcf171e-cc0b-4c24-8eb5-3a4b4775e64a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 09a9ad4645f430418c39f76178bfe7a6757018dd
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0cd0b269c0ced445017d573cfad08a767d5f2008
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972785"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439992"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Editor de la tarea Transferir procedimientos almacenados principales (página Procedimientos almacenados)
   Use la página **Procedimientos almacenados** del cuadro de diálogo **Editor de la tarea Transferir procedimientos almacenados principales** a fin de especificar las propiedades para copiar uno o más procedimientos definidos por el usuario desde la base de datos **maestra** en una instancia de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a una base de datos **maestra** de otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Para obtener más información acerca de esta tarea, vea [Transfer Master Stored Procedures Task](control-flow/transfer-master-stored-procedures-task.md).  

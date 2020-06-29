@@ -12,14 +12,14 @@ helpviewer_keywords:
 - precedence constraints [Integration Services], multiple
 - constrained executables [Integration Services]
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 61939b09b4a4365c09089df2b52026e96f9427ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 16fefbbf886818989131710876564fc9e147a56a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965155"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440142"
 ---
 # <a name="multiple-precedence-constraints"></a>Varias restricciones de precedencia
   Una restricción de precedencia conecta dos ejecutables: dos tareas, dos contenedores o uno de cada. Se conocen como el ejecutable de precedencia y el ejecutable restringido. Un ejecutable restringido puede tener varias restricciones de precedencia. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11c56c29f685eb8f3746431a79b4d6a42a4b9fe5
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 53d684e6f48f3f81ae23c34c23eed11789d4a1fe
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965145"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440122"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de varios archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para seleccionar un grupo de archivos que tengan el mismo formato de datos y para especificar su formato de datos. Una conexión de varios archivos planos permite que un paquete se conecte a un grupo de archivos de texto que tengan el mismo formato.  
@@ -38,7 +38,7 @@ ms.locfileid: "84965145"
  **Examinar**  
  Busque los nombres de los archivos que se van a utilizar en la conexión de varios archivos planos. Puede seleccionar varios archivos. Todos los archivos deben tener el mismo formato de datos.  
   
- **Locale**  
+ **Configuración regional**  
  Especifique la ubicación para proporcionar información de ordenación y de conversión de fecha y hora.  
   
  **Unicode**  

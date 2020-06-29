@@ -10,14 +10,14 @@ f1_keywords:
 - SQL12.DTS.DESIGNER.AFPHDICM.F1
 - SQL11.DTS.DESIGNER.AFPHDICM.F1
 ms.assetid: 850a978d-5dba-45b6-a10e-306aafbc353d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0f4a54b2b7c7f809c570eacd0541d798b3f583a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0eaf2f57fec50a58ad1b7e7578407fb6cf3fa0c0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925254"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439362"
 ---
 # <a name="azure-hdinsight-connection-manager"></a>Administrador de conexiones de Azure HDInsight
 El **Administrador de conexiones de Azure HDInsight** permite que un paquete SSIS se conecte a un clúster de Azure HDInsight.

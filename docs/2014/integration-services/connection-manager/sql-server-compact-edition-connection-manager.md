@@ -11,14 +11,14 @@ helpviewer_keywords:
 - connections [Integration Services], SQL Server Compact
 - connection managers [Integration Services], SQL Server Compact
 ms.assetid: ba627d4d-41f4-49fc-a921-f534cde67770
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 1a61dedbbdbcdcd08651407ac1be4a2a35df883b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a8242de8a7374fec7bad5e0eb4fabf96264cecc1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920337"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438332"
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>Administrador de conexiones con SQL Server Compact Edition
   Un administrador de conexiones con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact habilita un paquete para establecer conexión con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact. El destino de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye usa este administrador de conexiones para cargar datos en una tabla de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.  

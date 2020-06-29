@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2a7389173f97f7d4bcfbbfed99e46beae0d3c89b
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5f6d3cae5421f0705b81cf2748c78e5f04447940
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923479"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438822"
 ---
 # <a name="connection-to-sql-server"></a>Conexión con SQL Server
   Cuando un inicio de sesión sin un rol de base de datos que incluye el permiso de escritura (por ejemplo, el rol **db_owner** ) para la base de datos MSXDBCDC intenta crear una instancia CDC de Oracle, se muestra el cuadro de diálogo Conectar con SQL Server.  

@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5654cb30-cad2-470c-97b3-59cb331033e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5723ba6fcbcd8e5b2280fc977aa5f405d461b805
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4faa8626fd0237477fb521e5eaacf6afc823fd0e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925566"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439502"
 ---
 # <a name="analysis-of-data-flow"></a>Análisis de flujo de datos
   Puede utilizar la [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` vista de base de datos para analizar el flujo de datos de los paquetes. Esta vista muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior. La información se puede utilizar para obtener una descripción más profunda de las filas que se envían a cada componente.  

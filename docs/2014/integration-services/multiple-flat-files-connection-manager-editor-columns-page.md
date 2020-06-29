@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 365a22cc515a971ff460a6433973f884c640c973
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 207c6e9837f2a828316c91c642d7397b72c4ddc3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84950815"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440172"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Editor del administrador de conexiones de varios archivos planos (página Columnas)
   Utilice el nodo **Columnas** del cuadro de diálogo **Editor del administrador de conexiones de varios archivos planos** para especificar la información de filas y columnas, y para obtener una vista previa del primer archivo seleccionado.  

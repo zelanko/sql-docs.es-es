@@ -17,14 +17,14 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 56963bff1b17cc3cb1fd7f2c26bce452f238b1f7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7468848373a6451428fed9e67a678183ba09581d
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84915776"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437782"
 ---
 # <a name="error-handling-in-data"></a>Control de errores en los datos
   Cuando un componente de flujo de datos aplica una transformación a los datos de columna, extrae datos de orígenes o carga datos en destinos, pueden producirse errores. Los errores con frecuencia se producen debido a valores de datos inesperados. Por ejemplo, una conversión de datos genera un error porque una columna contiene una cadena en lugar de un número, una inserción en una base de datos genera un error porque los datos corresponden a una fecha y la columna tiene un tipo de datos numéricos, o una expresión genera un error al evaluarse porque el valor de la columna es cero, lo que da como resultado una operación matemática no válida.  

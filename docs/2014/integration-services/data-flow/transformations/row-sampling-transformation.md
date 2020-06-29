@@ -17,14 +17,14 @@ helpviewer_keywords:
 - packages [Integration Services], samples
 - datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 38ad000eee18256ef5a6dda6b64e0e5afc7054ac
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e39e2f41b7dee5af798498bea31b1988141838a8
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939356"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437552"
 ---
 # <a name="row-sampling-transformation"></a>Muestreo de fila, transformación
   La transformación Muestreo de fila se usa para obtener un subconjunto seleccionado aleatoriamente de un conjunto de datos de entrada. Puede especificar el tamaño exacto del ejemplo de salida y especificar un valor de inicialización para el generador de números aleatorios.  

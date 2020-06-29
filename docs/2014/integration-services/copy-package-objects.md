@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data flow [Integration Services], copying objects
 - connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4bd8a4c3ce267052062725b0328039cc4a5c7076
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d6f98e60468c35814d6ce85c5ef52786580555c2
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917579"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437992"
 ---
 # <a name="copy-package-objects"></a>Copiar objetos de paquete
   Este tema describe el modo de copiar elementos de flujo de control, elementos de flujo de datos y administradores de conexión dentro de un paquete o entre paquetes.  

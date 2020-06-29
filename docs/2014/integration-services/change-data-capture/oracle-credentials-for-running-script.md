@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4a301cb0-2f5b-41ba-81bf-46b41d07f137
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ad76705d2d0465be07cfb1b413f44ddcf4b03916
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 683b313e5b1065c3709c4637ddf968641612cc0b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84922741"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438562"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Credenciales de Oracle para ejecutar script
   Para ejecutar el script de registro complementario de Oracle desde la consola del Diseñador CDC de Oracle, el programa le solicitará las credenciales del usuario de Oracle que está ejecutando el script. Para ejecutar este script, el usuario de Oracle debe tener el permiso ALTER TABLE para todas las tablas que se van a capturar y el permiso SELECT en la vista DBA_LOG_GROUPS.  

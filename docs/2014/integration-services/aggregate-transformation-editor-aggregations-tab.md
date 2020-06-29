@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4799df229e96ce8488614d8ec7b0755332360fbc
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59bf17aa0c13fcc771a75253d5ac9f46a160c57c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925596"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439512"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Editor de transformación Agregado (pestaña Agregaciones)
   Use la pestaña **Agregaciones** del cuadro de diálogo **Editor de transformación Agregado** para especificar las columnas que desea agregar y las propiedades de agregación. Puede aplicar diversas agregaciones. Esta transformación no genera una salida de errores.  
@@ -69,7 +69,7 @@ ms.locfileid: "84925596"
 |---------------|-----------------|  
 |**GROUP BY**|Divide los conjuntos de datos en grupos. Podrán agruparse columnas con cualquier tipo de datos. Para obtener más información, vea GROUP BY.|  
 |**Sume**|Suma los valores de una columna. Solo podrán sumarse las columnas con tipos de datos numéricos. Para obtener más información, vea SUM.|  
-|**Normales**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
+|**Average**|Devuelve la media de los valores de columna de una columna. Solo podrá calcularse la media de las columnas con tipos de datos numéricos. Para obtener más información, vea AVG.|  
 |**Recuento**|Devuelve el número de elementos de un grupo. Para obtener más información, vea COUNT.|  
 |**CountDistinct**|Devuelve el número de valores únicos distintos de NULL de un grupo. Para obtener más información, vea COUNT y Distinct.|  
 |**Mínimo**|Devuelve el valor mínimo en un grupo. Está restringido a los tipos de datos numéricos.|  

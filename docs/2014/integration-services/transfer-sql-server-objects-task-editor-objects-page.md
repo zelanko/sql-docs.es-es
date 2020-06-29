@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9115b2a41111d65c4855cffcdc44e7fcd755285b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6fc54343ef930d4fbca1bbe25f2e03ba4e539d44
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972764"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439912"
 ---
 # <a name="transfer-sql-server-objects-task-editor-objects-page"></a>Editor de la tarea Transferir objetos de SQL Server (página Objetos)
   Utilice la página **Objetos** del cuadro de diálogo **Editor de la tarea Transferir objetos de SQL Server** para especificar propiedades para copiar uno o más objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Las tablas, las vistas, los procedimientos almacenados y las funciones definidas por el usuario son algunos ejemplos de objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que puede copiar. Para obtener más información acerca de esta tarea, vea [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

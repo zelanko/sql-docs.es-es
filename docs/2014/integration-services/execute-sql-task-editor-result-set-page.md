@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Execute SQL Task Editor
 ms.assetid: d27000c8-8d91-4e1c-b45e-bca9a3c12f6d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 43921efab592e6642fcc5adaef8caa869a1b524f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 027f3c77e84b47958e9fb6567acdb308c14eb1e7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966755"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437362"
 ---
 # <a name="execute-sql-task-editor-result-set-page"></a>Editor de la tarea Ejecutar SQL (página Conjunto de resultados)
   Utilice la página **Conjunto de resultados** del cuadro de diálogo **Editor de la tarea Ejecutar SQL** para asignar el resultado de la instrucción SQL a variables nuevas o existentes. Las opciones de este cuadro de diálogo están deshabilitadas si se define **Conjunto de resultados** de la página General como **Ninguno**.  

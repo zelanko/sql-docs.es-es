@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: 245d3466-d51f-4073-978a-694a8d9dfaec
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d67c8c02e79583b5c8f4295abc4d71c2b05dae8b
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 145fc47c661a87536ca2a8b839c9ba2072de30de
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84962078"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439962"
 ---
 # <a name="term-lookup-transformation-editor-term-lookup-tab"></a>Editor de transformación Búsqueda de términos (pestaña Búsqueda de términos)
   Use la pestaña **Búsqueda de términos** del cuadro de diálogo **Editor de transformación Búsqueda de términos** para asignar una columna de entrada a una columna de búsqueda en una tabla de referencia y para proporcionar un alias a cada columna de salida.  

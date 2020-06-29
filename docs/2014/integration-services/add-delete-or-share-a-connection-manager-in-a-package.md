@@ -10,14 +10,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], adding
 - adding connection managers
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4c132bc1715292a1dbd88d84813cefb3ca8616a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5a44a97ce85fc78a115d89a488aea8d170ef3b36
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926240"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439722"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Agregar, eliminar o compartir un administrador de conexiones en un paquete
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye varios tipos de administradores de conexiones para conectar con diferentes orígenes de datos, como bases de datos relacionales, bases de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y archivos en formatos CSV Y XML. Se puede crear un administrador de conexiones en el nivel de paquete o en el nivel de proyecto. El administrador de conexiones creado en el nivel de proyecto está disponible para todos los paquetes del proyecto. En tanto que el administrador de conexiones creado en el nivel de paquete está disponible para ese paquete específico.  
@@ -61,7 +61,7 @@ ms.locfileid: "84926240"
   
     -   Haga clic en el tipo de administrador de conexiones que desee agregar al paquete.  
   
-         O bien  
+         o bien  
   
     -   Si no aparece el tipo que desea agregar, haga clic en **Nueva conexión** para abrir el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione un tipo de administrador de conexiones y haga clic en **Aceptar**.  
   

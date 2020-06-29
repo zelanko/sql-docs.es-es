@@ -10,14 +10,14 @@ f1_keywords:
 - sql12.ssis.ssms.iscatalogprop.general.f1
 - sql12.ssis.ssms.iscreatecatalog.f1
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f5bf6ecd9b78e4e7c35c63a1b84316d59da7a10
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9f1a4a9d7a74e47d609c319f90b07d8ebfdce00e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924576"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439142"
 ---
 # <a name="catalog-properties-dialog-box"></a>Propiedades del catálogo, cuadro de diálogo
   Utilice el cuadro de diálogo Propiedades del catálogo para configurar el catálogo de SSISDB. Las propiedades del catálogo definen cómo se cifra la información confidencial, cómo se conservan las operaciones y los datos de control de versiones del proyecto, y cuándo se agota el tiempo de espera de las operaciones de validación. El catálogo de SSISDB es un punto de administración y almacenamiento central para [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proyectos, paquetes, parámetros y entornos.  

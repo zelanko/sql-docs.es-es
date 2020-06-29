@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d3e62f4c3b2549fbeac0302e7ea5d97a510bfc4a
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bb0ca1e03466e6cad277905093262b9aec048c71
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966915"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437442"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Habilitar el registro para la ejecución de paquetes en el servidor SSIS
   En este procedimiento se describe cómo establecer o cambiar el nivel de registro para un paquete cuando se ejecuta un paquete que ha implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El nivel de registro que se establece al ejecutar el paquete invalida el registro de paquete configurado mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Vea [Habilitar el registro de paquetes en SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) para obtener más información.  
@@ -44,7 +44,7 @@ ms.locfileid: "84966915"
 |Nivel de registro|Descripción|  
 |-------------------|-----------------|  
 |None|El registro está desactivado. Solo se registra el estado de ejecución del paquete.|  
-|Básica|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
+|Básico|Se registran todos los eventos, excepto los eventos personalizados y de diagnóstico. Este es el valor predeterminado.|  
 |Rendimiento|Solo se registran las estadísticas de rendimiento, y los eventos OnError y OnWarning.<br /><br /> El informe **Rendimiento de la ejecución** muestra el Tiempo activo y el TIempo total para los componentes de flujo de datos del paquete. Esta información está disponible cuando el nivel de registro de la última ejecución del paquete se estableció en **Performance** (Rendimiento) o **Verbose**(Detallado). Para obtener más información, consulte [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).<br /><br /> La vista [catalog.execution_component_phases](/sql/integration-services/system-views/catalog-execution-component-phases) muestra las horas de inicio y de finalización de los componentes de flujo de datos, para cada fase de una ejecución. Esta vista muestra esta información para estos componentes solo cuando el nivel de registro de la ejecución del paquete se estableció en **Rendimiento** o en **Detallado**.|  
 |Verbose|Se registran todos los eventos, incluidos los eventos personalizados y de diagnóstico.<br /><br /> Un ejemplo de un evento de diagnóstico es el evento de DiagnosticEx. Siempre que una tarea Ejecutar paquete ejecuta un paquete secundario, registra este evento. El mensaje de evento consta de los valores de los parámetros pasados a los paquetes secundarios<br /><br /> El valor de la columna de mensaje para DiagnosticEx es texto XML. . Para ver el texto del mensaje de una ejecución de paquete, ejecute una consulta en la vista [catalog.operation_messages &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-views/catalog-operation-messages-ssisdb-database).<br /><br /> Nota: los eventos personalizados incluyen los eventos registrados por [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] las tareas. Para obtener más información, consulte [Custom messages for Logging](../../2014/integration-services/custom-messages-for-logging.md).<br /><br /> La vista [catalog.execution_data_statistics](../relational-databases/statistics/statistics.md) muestra una fila cada vez que un componente de flujo de datos envía datos a un componente de nivel inferior para una ejecución del paquete. El nivel de registro se debe establecer en **Detallado** para capturar esta información en la vista.|  
   

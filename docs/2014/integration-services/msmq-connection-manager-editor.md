@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - MSMQ Connection Manager Editor
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4d407cc3c0324b80ff63484f4e7c39ea30575ebc
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d452aa1edc21af067f1deac0e4544b117cecf13b
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967045"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440202"
 ---
 # <a name="msmq-connection-manager-editor"></a>administrador de conexiones MSMQ, editor del
   Use el cuadro de diálogo **Administrador de conexiones MSMQ** para especificar la ruta de acceso a una cola de mensajes de Message Queuing (que también recibe el nombre de MSMQ).  
@@ -35,7 +35,7 @@ ms.locfileid: "84967045"
  **Descripción**  
  Describa el administrador de conexiones. Como método recomendado, describa el administrador de conexiones desde el punto de vista de su propósito, para que los paquetes estén autodocumentados y sean más fáciles de mantener.  
   
- **Path**  
+ **Ruta de acceso**  
  Escriba la ruta de acceso completa de la cola de mensajes. El formato de la ruta de acceso depende del tipo de cola.  
   
 |Tipo de cola|Ruta de acceso de ejemplo|  

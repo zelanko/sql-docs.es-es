@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e8780fd707e82093bb5df50a423cb2aaa0ff5d2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 704a9f90799269937012a4c1b5f14cc1731b0399
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925606"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439482"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para nombrar y describir la tarea Ejecutar DDL de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

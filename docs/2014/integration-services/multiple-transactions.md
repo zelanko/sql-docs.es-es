@@ -10,14 +10,14 @@ helpviewer_keywords:
 - transactions [Integration Services], multiple
 - multiple transactions
 ms.assetid: c3664a94-be89-40c0-a3a0-84b74a7fedbe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f0527336a5d6774b1c7114d523d0847b3d10d6a3
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 5ff909c92a23c965047edc0fcf278e17e4c76d94
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84965125"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440102"
 ---
 # <a name="multiple-transactions"></a>Varias transacciones
   Un paquete puede incluir transacciones no relacionadas en un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando un contenedor situado en medio de una jerarquía de contenedores anidados no admite transacciones, los contenedores situados en un nivel superior o inferior de la jerarquía inician transacciones independientes, si están configurados para admitir transacciones. Las transacciones se confirman o se revierten en orden, desde la tarea más interna en la jerarquía de contenedores anidados hasta el paquete. Sin embargo, una vez confirmada la transacción interna, no se revierte aunque se anule una transacción externa.

@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], creating
 - SQL Server Integration Services packages, creating
 ms.assetid: e44bcc70-32d3-43e8-a84b-29aef819d5d3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2c3b94bef3cf3549720321a0bcd47f7314ff1ff8
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2818898e790aa92a27de1f224581a17a7ae4fa06
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924946"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439282"
 ---
 # <a name="creating-a-package-programmatically"></a>Crear un paquete mediante programación
   El objeto <xref:Microsoft.SqlServer.Dts.Runtime.Package> es el contenedor de nivel superior para todos los demás objetos de una solución de proyecto [!INCLUDE[ssIS](../../includes/ssis-md.md)]. Al igual que el contenedor de nivel superior, el paquete es el primer objeto creado y los objetos subsiguientes se agregan a él y, a continuación, se ejecutan dentro del contexto del paquete. El propio paquete no mueve o transforma los datos. El paquete se basa en las tareas que contiene para realizar el trabajo. Las tareas realizan la mayor parte del trabajo que realiza un paquete y definen la funcionalidad de un paquete. Un paquete se crea y ejecuta con solo tres líneas de código, pero se agregan varias tareas y los objetos <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> para proporcionar una funcionalidad adicional al paquete. En esta sección se describe cómo crear un paquete mediante programación. No proporciona información acerca de cómo crear las tareas o <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Estos temas se tratan en secciones posteriores.  

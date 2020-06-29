@@ -21,14 +21,14 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c54c3fe00842122b4b2fdeb4eb6c7bcbb38cf0a4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8d4bcb0da97f603177aade6ada44a6efd0f53604
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924836"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439202"
 ---
 # <a name="handling-events-programmatically"></a>Controlar eventos mediante programación
   El motor de tiempo de ejecución de [!INCLUDE[ssIS](../../includes/ssis-md.md)] proporciona una recopilación de eventos que se producen antes, durante y después de la validación y la ejecución de un paquete. Estos eventos se pueden capturar de dos formas. El primer método consiste en implementar la interfaz <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> en una clase y proporcionar la clase como parámetro a los métodos `Execute` y `Validate` del paquete. El segundo método consiste en crear objetos <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, que pueden contener otros objetos [!INCLUDE[ssIS](../../includes/ssis-md.md)], como tareas y bucles, que se ejecutan cuando se produce un evento en <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. En esta sección se describen ambos métodos y se proporcionan ejemplos de código que muestran su uso.  

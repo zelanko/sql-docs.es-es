@@ -16,14 +16,14 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8ab1a510ec348ca30ffd1b8946b71ab935c0057c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffe46be35db26186f715b18ba6114732d130e02e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972531"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439882"
 ---
 # <a name="view-package-objects"></a>Ver objetos de paquete
   En el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , la pestaña **Explorador de paquetes** proporciona una vista de explorador del paquete. La vista refleja la jerarquía de contenedores de la arquitectura de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . El contenedor de paquetes se encuentra en la parte superior de la jerarquía y puede expandir el paquete para ver las conexiones, ejecutables, controladores de eventos, proveedores de registro, restricciones de precedencia y variables del paquete.

@@ -22,14 +22,14 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b7dc27ea31f17d011a8ad486f6dd9f4a101db2ee
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 11dd13bbf431413efe10f4ecdb0031b5a1650242
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966981"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437512"
 ---
 # <a name="dtutil-utility"></a>dtutil, utilidad
   La utilidad del símbolo del sistema **dtutil** se usa para administrar paquetes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. La utilidad puede copiar, mover, eliminar o comprobar la existencia de un paquete. Estas acciones se pueden realizar en cualquier paquete de [!INCLUDE[ssIS](../includes/ssis-md.md)] almacenado en una de estas tres ubicaciones: una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] y el sistema de archivos. Si la utilidad tiene acceso a un paquete almacenado en **msdb**, el símbolo del sistema puede requerir un nombre de usuario y una contraseña. Si la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utiliza Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , el símbolo del sistema requiere un nombre de usuario y una contraseña. Si falta el nombre de usuario, **dtutil** intenta iniciar una sesión en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la Autenticación de Windows. El tipo de almacenamiento del paquete se identifica mediante las opciones `/SQL`, `/FILE` y `/DTS`.  

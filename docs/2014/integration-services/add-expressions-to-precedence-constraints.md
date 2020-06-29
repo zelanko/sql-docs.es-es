@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combining constraints
 - expressions [Integration Services], constraints
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93b9b60d3042e690d2e3e23b05131fabe384e945
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3b86869a2b5d2e1ecd93227355509170db2bd5c7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926116"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439672"
 ---
 # <a name="add-expressions-to-precedence-constraints"></a>Agregar expresiones a las restricciones de precedencia
   Una restricción de precedencia puede utilizar una expresión para definir la restricción entre dos aplicaciones ejecutables: el ejecutable de precedencia y el ejecutable restringido. Los ejecutables pueden ser tareas o contenedores. La expresión se puede usar por sí sola o combinada con el resultado de la ejecución del ejecutable de precedencia. El resultado de la ejecución de un ejecutable es su ejecución correcta o un error. Cuando configura el resultado de ejecución de una restricción de precedencia, puede establecer el resultado de ejecución en `Success`, `Failure` o `Completion`. `Success` exige la ejecución correcta del ejecutable de precedencia, `Failure` requiere que el ejecutable de precedencia genere un error y `Completion` indica que el ejecutable restringido se debe ejecutar independientemente de si la tarea de precedencia se ejecuta correctamente o genera un error. Para obtener más información, vea [Restricciones de precedencia](control-flow/precedence-constraints.md).  

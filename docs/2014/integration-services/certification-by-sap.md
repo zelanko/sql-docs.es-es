@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 44213071-a98e-4bd4-acf5-c9872536269e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 8f16bc0dd9d9a67995a9bbae56eec882b3c5df2d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8a519dd9b60af6659b25272518c35c00ef82113a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923912"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438942"
 ---
 # <a name="certification-by-sap"></a>Certificación de SAP
   Microsoft Connector 1.1 for SAP BW ha recibido la certificación de SAP para la integración con SAP NetWeaver.  

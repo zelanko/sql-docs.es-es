@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7537a892e5453bb66c07ab4b2c6bd6513b754c7e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cac3a3feb6b4d3126b9c1629d4f2e4c8884e8dbf
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923276"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438732"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
   Una instancia CDC de Oracle realiza minería de datos en los cambios de una sola base de datos de origen de Oracle (un clúster de Oracle RAC se considera una sola base de datos) y escribe los cambios confirmados en las tablas de cambios en una base de datos CDC en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de destino.  

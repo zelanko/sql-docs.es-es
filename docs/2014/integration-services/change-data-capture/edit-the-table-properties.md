@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 01955ccb3575da7f981405f42448d7ddd9233f09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 307f2a2a0769caf1124ba07905eacca9bcb2976a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84923272"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438692"
 ---
 # <a name="edit-the-table-properties"></a>Editar las propiedades de tabla
   Use este cuadro de diálogo para editar las columnas específicas de la tabla seleccionada donde se están capturando cambios. También puede editar la información de **Rol de seguridad** y de **Instancia de captura** .  

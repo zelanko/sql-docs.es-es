@@ -10,14 +10,14 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 25effc199b1f8e525ceec78216e935e13afe2be2
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0a5f0f4db3f2e3ab5f961de99db0e92ca7009e3
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917365"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437962"
 ---
 # <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   El primer paso para implementar paquetes es crear una utilidad de implementación para un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . La utilidad de implementación es una carpeta que contiene los archivos necesarios para implementar los paquetes de un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] en un servidor distinto. La utilidad de implementación se crea en el equipo en el que se almacena el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

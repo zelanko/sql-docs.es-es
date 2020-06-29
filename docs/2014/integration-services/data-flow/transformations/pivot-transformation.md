@@ -15,14 +15,14 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 10b14f370bd19edde1638175810934fbd8323c03
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 30564343b6d43bbb9ec861f90b22cd799eb98038
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84939376"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437582"
 ---
 # <a name="pivot-transformation"></a>Dinámica, transformación
   La transformación dinámica transforma un conjunto de datos normalizado en una versión menos normalizada pero más compacta dinamizando los datos de entrada en un valor de columna. Por ejemplo, un conjunto de datos **Orders** normalizado que enumera el nombre del cliente, el producto y la cantidad comprada normalmente tiene varias filas para cualquier cliente que compró varios productos, donde cada fila para ese cliente muestra los detalles de pedido de un producto diferente. Al dinamizar el conjunto de datos en la columna de producto, la transformación dinámica puede obtener un conjunto de datos con una sola fila por cliente. Esa única fila enumera todas las compras realizadas por el cliente, con los nombres de los productos representados como nombres de columnas, y la cantidad indicada como un valor en la columna de producto. Dado que no todos los clientes compran todos los productos, muchas columnas pueden contener valores NULL.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ee2b7992065e31bc6ef57de9b22444cf2da1f963
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3beaed3fa3e03ddf9fa9b90349a3aa57a131c9b0
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84963491"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440062"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor de la tarea Enviar correo (página Correo)
   Use la página **Correo** del cuadro de diálogo **Editor de la tarea Enviar correo** para especificar los destinatarios, el tipo de mensaje y la prioridad de un mensaje. También puede adjuntar archivos al mensaje. El texto del mensaje puede consistir en una cadena que proporcione, una conexión de archivo a un archivo con el texto o el nombre de una variable con el texto.  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - notifications [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 6c816c68-c6d6-44e4-bb34-c8e060a958a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 9ee8ee285d395425e925f2d5ec1e8a169d4ac5fa
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed5158a4ec5cfe8374fedbb2afbca1294b58f05e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918415"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438222"
 ---
 # <a name="notify-operator-task"></a>Notificar al operador, tarea
   La tarea Notificar al operador envía mensajes de notificación a los operadores del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un operador del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un alias para una persona o grupo que puede recibir notificaciones electrónicas. Para obtener más información sobre operadores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Operadores](../../ssms/agent//operators.md).  

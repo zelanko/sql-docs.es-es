@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a17575543fd5db37078a37a3512da28b3a8718ea
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9291673fec31064befed704560e96693c3641d7c
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925086"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439292"
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Agregar la tarea de flujo de datos mediante programación
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] incluye una tarea denominada Flujo de datos, representada por el espacio de nombres <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> en el modelo de objetos. La tarea Flujo de datos es una tarea especializada de alto rendimiento que se dedica a transformar y mover datos durante la ejecución del paquete. Al igual que ocurre con otras tareas, la tarea Flujo de datos está incluida en el objeto <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> y, desde la perspectiva del motor en tiempo de ejecución, esta tarea es simplemente una más del paquete. Sin embargo, el flujo de datos contiene objetos adicionales denominados componentes de flujo de datos. Estos componentes son aquellos que hacen que se muevan los datos de un origen a un destino, a veces a través de una transformación. Los componentes definen tanto la dirección del movimiento como la forma en que se transforman los datos. La configuración de la tarea Flujo de datos implica agregar componentes a la tarea y conectarlos después para establecer el flujo de datos y lograr la transformación deseada.  

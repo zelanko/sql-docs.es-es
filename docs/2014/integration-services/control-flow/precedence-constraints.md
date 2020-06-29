@@ -14,14 +14,14 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 42b73f3657b668e63f7f02025e7902e19074a7eb
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 14fd00565c011b04c28345faca8ee5db5ae821f9
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84918407"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438202"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
   Las restricciones de precedencia vinculan ejecutables, contenedores y tareas de paquetes en un flujo de control, y especifican condiciones que determinan si se ejecutan los ejecutables. Un ejecutable puede ser un contenedor de bucles For, de bucles Foreach o de secuencia, o bien una tarea o un controlador de eventos. Los controladores de eventos usan las restricciones de precedencia para vincular sus ejecutables en un flujo de control.

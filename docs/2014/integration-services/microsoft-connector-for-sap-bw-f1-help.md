@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cd963b0bcd215dff7211f0073c450565cdec775c
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 97f0ef330f46c67e2ce6377dcfcb2472ebe0b5fd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84967078"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440212"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>Ayuda F1 de Microsoft Connector 1.1 for SAP BW
   Esta sección contiene los temas de la Ayuda F1 para los tres componentes de [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW. También puede obtener acceso a estos temas desde la interfaz de usuario al presionar la tecla F1 o hacer clic en Ayuda en las páginas y los cuadros de diálogo del asistente.  

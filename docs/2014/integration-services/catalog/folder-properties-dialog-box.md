@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.ssis.ssms.isfolderprop.general.f1
 - sql12.ssis.ssms.isfolderprop.permissions.f1
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: fc76f612f598144172ac81f8addbe0a25ec15e54
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4075a429f94451d7b00ee44ac1ac799c29787a41
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924386"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439082"
 ---
 # <a name="folder-properties-dialog-box"></a>Propiedades de la carpeta (cuadro de diálogo)
   Una carpeta contiene proyectos y entornos del catálogo de `SSISDB`. Cada carpeta define los permisos que se aplican a su contenido. Para más información sobre los permisos de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vea [catalog.grant_permission &#40;base de datos de SSISDB&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  

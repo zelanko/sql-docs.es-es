@@ -11,14 +11,14 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6bf36f47e84b5e4965946c2109cce7d852fc88e2
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c93d7f38b44b2eb4535a84a91651c4564b96e5f1
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84951165"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440232"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Asignar conjuntos de resultados a variables en una tarea Ejecutar SQL
   Este tema describe cómo crear una asignación entre un conjunto de resultados y una variable en una tarea Ejecutar SQL. La asignación de un conjunto de resultados a una variable hace que el conjunto de resultados esté disponible para otros elementos del paquete. Por ejemplo, un script de la tarea Script puede leer la variable y luego utilizar los valores del conjunto de resultados, o un origen XML puede consumir el conjunto de resultados almacenados en una variable. Si un paquete primario genera el conjunto de resultados, este conjunto de resultados se puede poner a disposición de un paquete secundario llamado por la tarea Ejecutar paquete asignando el conjunto de resultados a una variable del paquete primario, y luego creando una configuración de variable de paquete primario en el paquete secundario a fin de almacenar el valor de la variable primaria.  

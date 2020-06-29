@@ -15,14 +15,14 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: d079c83b8389c24c766e2ce7d385ad9c1e4a4785
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3328970373e30551a090cd5cf4fbd67cb9bb67aa
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924943"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439242"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>Conectar componentes de flujo de datos mediante programación
   Después de agregar componentes a la tarea de flujo de datos, los conecta para crear un árbol de ejecución que representa el flujo de datos desde los orígenes, pasando por las transformaciones, hasta los destinos. Utiliza <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> objeta para conectar los componentes en el flujo de datos.  

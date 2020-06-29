@@ -15,14 +15,14 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - deploying packages [Integration Services], configurations
 ms.assetid: 91ac0347-f908-44f5-bd3d-115790223af4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5552d40cf2f899ca6b95658ac2aa50d5cc25f62f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8931df95aba03710c5feb8b8270dcf9453ba1789
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84917353"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437922"
 ---
 # <a name="create-package-configurations"></a>Crear configuraciones de paquetes
   Puede crear configuraciones de paquetes con el cuadro de diálogo **Organizador de configuraciones de paquetes** y el Asistente para la configuración de paquetes. Para tener acceso a estas herramientas, haga clic en **Configuraciones de paquetes** en el menú **SSI** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

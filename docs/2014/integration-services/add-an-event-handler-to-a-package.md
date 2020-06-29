@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
 ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b20ebca153e9aa1eead2e288831a26c40e2dbd5d
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 378b8c95f5b7f4ed1e247a89f3e3ad6111654303
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926286"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439712"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>agregar un controlador de eventos a un paquete
   En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear controladores de eventos personalizados que respondan a estos eventos ejecutando un flujo de trabajo cuando se produce el evento. Por ejemplo, puede crear un controlador de eventos que envíe un mensaje de correo electrónico cuando una tarea genera un error.  

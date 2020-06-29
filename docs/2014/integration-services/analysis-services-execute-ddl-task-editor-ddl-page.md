@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Execute DDL Task Editor
 ms.assetid: f21bf8d0-ec5f-4c18-9de0-8875addb927b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7cb1c84cccf4123f6ca1894baba5676937d80a15
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 923a5d549cff00af096b905ac6dc06f20e132a80
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925646"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439522"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Editor de la tarea Ejecutar DDL de Analysis Services (página DDL)
   Use la página **DDL** del cuadro de diálogo **Editor de la tarea Ejecutar DDL de Analysis Services** para especificar una conexión a un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] o una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y proporcionar información sobre el origen de las instrucciones del lenguaje de definición de datos (DDL).  

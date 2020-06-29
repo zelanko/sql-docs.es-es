@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3a7698276ece16f3c1c9db53deec94912c89db01
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e04e678dfb2b98e5304f9f7c9f0cfe2a858b6485
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926436"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439772"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>agregar un visor de datos a un flujo de datos
   En este tema se describe cómo agregar y configurar un visor de datos en un flujo de datos. Un visor de datos muestra los datos que se mueven entre dos componentes de flujo de datos. Por ejemplo, un visor de datos puede mostrar los datos que se extraen de un origen de datos antes de que una transformación en el flujo de datos los modifique.  

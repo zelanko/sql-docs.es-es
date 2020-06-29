@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 18dfb8c120facf60bdd60d3c88103fcf3402452a
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ed26b4141abc2340289f18831ece8e2e0d828fff
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84914265"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437672"
 ---
 # <a name="sap-bw-source"></a>Origen de SAP BW
   El origen de SAP BW es el componente de origen de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Así, el origen de SAP BW extrae datos de un sistema SAP Netweaver BW de la versión 7 y hace que estos datos estén disponibles para el flujo de datos en un paquete de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

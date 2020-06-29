@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 67c81901e454c4e7a47e5d448f2aa17d6a8820fa
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c849c57c0854757a75eecf163a384c06ae8f1c47
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972815"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85440002"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor de la tarea Transferir inicios de sesión (página Inicios de sesión)
   Utilice la página **Inicios de sesión** del cuadro de diálogo **Editor de la tarea Transferir inicios de sesión** para especificar propiedades para copiar uno o varios inicios de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Logins Task](control-flow/transfer-logins-task.md).  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Copy of Existing Package dialog box
 ms.assetid: ed530b0d-438d-4c93-8e91-13f2b2b6a8b2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e2642f9f5ba5d20fc124dc80f4098f2e148af288
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c30e5127bea29ecf1cd0d280adf0f5b1f2a6d766
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84926206"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439702"
 ---
 # <a name="add-copy-of-existing-package"></a>Agregar copia de paquete existente
   Utilice el cuadro de diálogo **Agregar copia de paquete existente** para agregar una copia de un paquete almacenado en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], el sistema de archivos o el Almacén de paquetes SSIS en un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

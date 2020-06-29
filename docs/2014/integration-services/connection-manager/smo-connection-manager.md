@@ -11,14 +11,14 @@ helpviewer_keywords:
 - SMO connection manager
 - connection managers [Integration Services], SMO
 ms.assetid: d273f1fb-a6a8-4f2f-a5ff-55c2e3de4723
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c38b1037e3e6e2e36dbe288682867d6b9f030545
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 988eef214608399bc3ec483d9976c2f5d52acb2a
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920476"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438382"
 ---
 # <a name="smo-connection-manager"></a>SMO, administrador de conexiones
   Un administrador de conexiones SMO permite a un paquete conectarse a un servidor de Objeto de administración de SQL (SMO). Las tareas de transferencia que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usan un administrador de conexiones SMO. Por ejemplo, la tarea Transferir inicios de sesión que transfiere inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa un administrador de conexiones SMO.  

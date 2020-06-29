@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 89d33637317029c174b71597088d19531a58b31f
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1bf206182c73f179857ab6197fac3b7ae36a1dbc
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84920776"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85438462"
 ---
 # <a name="http-connection-manager"></a>HTTP, administrador de conexiones
   Una conexión HTTP habilita a un paquete para obtener acceso a un servidor web mediante HTTP para enviar o recibir archivos. La tarea Servicio web que incluye [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] usa este administrador de conexiones.  

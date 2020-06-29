@@ -21,14 +21,14 @@ helpviewer_keywords:
 - SSIS connection managers
 - adding package connections
 ms.assetid: d90716d1-4c65-466c-b82c-4aabbee1e3e5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4db1a3f76c6ebbef22d0bbe01e19dd6aca56e3c7
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7acd460d4dfe3a33da26170847509ae9b418a726
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925266"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439382"
 ---
 # <a name="adding-connections-programmatically"></a>Agregar conexiones mediante programación
   La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> representa las conexiones físicas con los orígenes de datos externos. La clase <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> aísla los detalles de la implementación de la conexión del tiempo de ejecución. Esto habilita al tiempo de ejecución para que interactúe con cada administrador de conexiones de una manera coherente y de predicción. Los administradores de conexiones contienen un conjunto de propiedades estándar que todas las conexiones tienen en el común, como <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ID%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Description%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A>. Sin embargo, las propiedades <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.ConnectionString%2A> y <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.Name%2A> son normalmente las únicas propiedades que se requieren para configurar un administrador de conexiones. A diferencia de otros paradigmas de programación, donde las clases de conexión exponen métodos como `Open` o `Connect` para establecer físicamente una conexión al origen de datos, el motor de ejecución administra todas las conexiones para el paquete mientras se ejecuta.  

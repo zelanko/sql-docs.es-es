@@ -14,14 +14,14 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e1795af295d8a7d77a71fbdfdfc9a433ed39b58f
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa3d140efdd1de643c4bc0534a93c56e90144a57
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84972768"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439922"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluyen características y herramientas que se pueden utilizar para solucionar los problemas del flujo de control en un paquete de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].

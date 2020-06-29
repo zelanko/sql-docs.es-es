@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5f9c37fc722613b8f30772fd825663b2dfcf9b54
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1751d1e0ac01d5459a8c76e6a48626c2ad6deafd
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84924676"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439182"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Editor de la tarea Inserción masiva (página Opciones)
   Use la página **Opciones** del cuadro de diálogo **Editor de la tarea Inserción masiva** para establecer las propiedades de la operación de inserción masiva. La tarea inserción masiva copia grandes cantidades de datos en una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tabla o vista.  

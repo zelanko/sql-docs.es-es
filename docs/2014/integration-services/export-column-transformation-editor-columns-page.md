@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Export Column Transformation Editor
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2460e3a86c83dbd6b206bf173ac2c2691ecee685
-ms.sourcegitcommit: f71e523da72019de81a8bd5a0394a62f7f76ea20
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4135c5096ad74559344ecb182c10feb770cdda37
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84966735"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85437352"
 ---
 # <a name="export-column-transformation-editor-columns-page"></a>Editor de transformación Exportar columna (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de transformación Exportar columna** para especificar las columnas del flujo de datos que desea extraer a los archivos. Podrá especificar si desea que la transformación Exportar columna anexe los datos a un archivo o sobrescriba un archivo existente.  

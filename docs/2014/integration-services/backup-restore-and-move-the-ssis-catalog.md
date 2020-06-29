@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 314dfaee23854524884edd0fe67fe1f45ec89b2e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9de552ddd54168f516f42d9988302561616fd65
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925276"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439372"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Copia de seguridad, restauración y traslado del catálogo de SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] incluye la base de datos de SSISDB. En la base de datos de SSISDB, se consultan vistas para inspeccionar objetos, valores y los datos operativos que se almacenan en el catálogo de **SSISDB** , consultando las vistas de la base de datos de SSISDB. Este tema proporciona instrucciones para hacer una copia de seguridad de la base de datos y restaurarla.  

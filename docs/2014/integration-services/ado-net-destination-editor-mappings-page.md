@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.mappings.f1
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0c2da86e24a7582c67daf746180cec2c715ba5be
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8e77b1aabeebdec6c5b5744f8a331b9709bfcef7
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925887"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439592"
 ---
 # <a name="ado-net-destination-editor-mappings-page"></a>Editor de destinos de ADO NET (página Asignaciones)
   Use la página **Asignaciones** del cuadro de diálogo **Editor de destinos de ADO NET** para asignar columnas de entrada a columnas de destino.  

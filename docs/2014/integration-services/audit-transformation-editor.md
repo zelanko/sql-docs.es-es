@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Audit Transformation Editor
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6a58d216b33f5fb8fd582050374d06463fd2c99e
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 95c144141e26415ac576589d36b98b54c52eecb6
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925544"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439442"
 ---
 # <a name="audit-transformation-editor"></a>Editor de transformación Auditar
   La transformación Auditar habilita el flujo de datos en un paquete para incluir datos sobre el entorno en el que se ejecuta el paquete. Por ejemplo, el nombre del paquete, el equipo y el operador se pueden agregar al flujo de datos. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye variables del sistema que proporcionan esta información.  

@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - Analysis Services Processing Task Editor
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7730b3cc75c45d0a6a4240a333b0d869a17c26b1
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e9c17eebec3b8155d464c4bc358b4186f0255408
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84925556"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85439452"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor de la tarea de procesamiento de Analysis Services (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea de procesamiento de Analysis Services** para describir y asignar un nombre a la tarea de procesamiento de Analysis Services.  

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 93021fb7000bd7adccd467e04fb7cf3430db5efe
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6bb3cea630401f92395e2ca4416c03bcd870c881
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919477"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433582"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tarea Consulta de minería de datos ejecuta consultas de predicción basadas en modelos de minería de datos integrados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La consulta de predicción crea una predicción para datos nuevos a partir de modelos de minería de datos. Por ejemplo, una consulta de predicción puede predecir cuántos barcos de vela es probable vender durante los meses de verano, así como generar una lista de clientes que podrían estar interesados en comprar uno.  

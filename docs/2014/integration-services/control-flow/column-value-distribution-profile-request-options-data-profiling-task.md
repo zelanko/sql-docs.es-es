@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a18cc68954ba9427169458fc4f972f9ee878d822
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 59a3adf03dd9d6b33493b8876a79f1a7b7c70583
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919538"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433612"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de distribución de valores de columna** seleccionadas en el panel de solicitudes. Un perfil de distribución de valores de columna notifica todos los valores distintos en la columna seleccionada y el porcentaje de filas en la tabla que cada valor representa. El perfil también puede notificar los valores que representan más de un porcentaje especificado de filas en la tabla. Este perfil puede ayudarle a identificar problemas en los datos, por ejemplo un número incorrecto de valores distintos en una columna. Por ejemplo, genera un perfil de una columna de estados de Estados Unidos y detecta más de 50 valores distintos.  

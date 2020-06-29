@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a00c72e6f444ec1e62082f254d6b77894b479d09
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 831350b3ab54f84236f7f258415aeb782539cdb5
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919646"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433762"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de patrón de columnas** seleccionadas en el panel de solicitudes. Un perfil de patrón de columnas notifica un conjunto de expresiones regulares que cubren el porcentaje especificado de valores en una columna de cadenas. Este perfil puede ayudarle a identificar problemas en los datos, como cadenas no válidas, y puede sugerir expresiones regulares que se pueden utilizar en el futuro para validar los valores nuevos. Por ejemplo, un perfil de patrón de una columna de códigos postales de Estados Unidos podría generar las expresiones regulares: \d{5}-\d{4}, \d{5} y \d{9}. Si ve otras expresiones regulares, es posible que los datos contengan valores no válidos o tengan un formato incorrecto.  
@@ -126,7 +126,7 @@ ms.locfileid: "84919646"
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  
   
- **Euro**  
+ **Símbolos**  
  Muestra los símbolos que se deberían conservar como parte de los patrones. Algunos ejemplos podrían incluir "/" para las fechas, ":" para las horas  y "@" para las direcciones de correo electrónico. De forma predeterminada, la lista de **símbolos** contiene los siguientes caracteres: `,.;:-"'` ~ =&/@!? () <> [] {} | # * ^% '.  
   
  Para obtener más información al respecto, vea "Uso de delimitadores y símbolos" anteriormente en este tema.  

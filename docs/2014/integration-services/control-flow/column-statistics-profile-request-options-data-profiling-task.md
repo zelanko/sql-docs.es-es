@@ -9,14 +9,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 3be95dc906b55caaf6a7f33bd66c3137303ecee4
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e0fe93729e085107f9e74ad55e598aa30987d613
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84919621"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85433622"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de estadísticas de columnas (tarea de generación de perfiles de datos)
   Utilice el panel **Propiedades de la solicitud** de la página **Solicitudes de perfil** para establecer las opciones de **Solicitud de perfil de estadísticas de columnas** seleccionadas en el panel de solicitudes. Un perfil de estadísticas de columnas notifica estadísticas, como los valores mínimo, máximo y promedio, y la desviación estándar para las columnas numéricas, y los valores mínimo y máximo para las columnas `datetime`. Este perfil puede ayudarle a identificar problemas de los datos, por ejemplo fechas que no sean válidas. Por ejemplo, genera un perfil de una columna de fechas históricas y detecta una fecha máxima futura.  

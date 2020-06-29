@@ -12,14 +12,14 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b41330bcb2fe007b1f666382719f98d39ec67438
-ms.sourcegitcommit: 9ee72c507ab447ac69014a7eea4e43523a0a3ec4
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4d453b4a24da893515aafd29b0398685a7155d4e
+ms.sourcegitcommit: 34278310b3e005d008cd2106a7b86fc6e736f661
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84921370"
+ms.lasthandoff: 06/26/2020
+ms.locfileid: "85434482"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Conectar tareas y contenedores mediante una restricción de precedencia predeterminada
   Las restricciones de precedencia conectan dos ejecutables. Un ejecutable puede ser cualquier tarea en un contenedor de bucles For, bucles Foreach o de secuencia. Este procedimiento describe cómo se configura el comportamiento predeterminado para las restricciones de precedencia y cómo se conectan los ejecutables mediante las restricciones de precedencia predeterminadas.  

@@ -1,7 +1,7 @@
 ---
 title: Ruta de acceso más corta (gráfico SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
-ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
+ms.openlocfilehash: b959348aaf7ca293a9d475a8b4eb6cb5cfdee7aa
+ms.sourcegitcommit: edad5252ed01151ef2b94001c8a0faf1241f9f7b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85753248"
+ms.lasthandoff: 07/02/2020
+ms.locfileid: "85834639"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
@@ -62,7 +62,7 @@ El orden de las rutas de acceso de los gráficos hace referencia al orden de los
 ## <a name="graph-path-aggregate-functions"></a>Funciones de agregado de trazado de grafos
 Puesto que los nodos y los bordes implicados en el patrón de longitud arbitraria devuelven una colección (de los nodos y los bordes recorridos en esa ruta de acceso), los usuarios no pueden proyectar los atributos directamente mediante la sintaxis de TableName. attributeName convencional. En el caso de las consultas en las que es necesario proyectar los valores de atributo del nodo intermedio o las tablas perimetrales, en la ruta de acceso recorrida, use las siguientes funciones de agregado de ruta de acceso de gráfico: STRING_AGG, LAST_VALUE, SUM, AVG, MIN, MAX y COUNT. La sintaxis general para usar estas funciones de agregado en la cláusula SELECT es la siguiente:
 
-```
+```syntaxsql
 <GRAPH_PATH_AGGREGATE_FUNCTION>(<expression> , <separator>)  <order_clause>
 
     <order_clause> ::=
@@ -95,8 +95,9 @@ Esta función devuelve la suma de los valores de atributo de nodo o perimetral p
 ### <a name="count"></a>COUNT
 Esta función devuelve el número de valores no NULL del atributo node/Edge deseado en la ruta de acceso. La función COUNT admite el \* operador ' ' con un nodo o un alias de tabla perimetral. Sin el alias de tabla perimetral o de nodo, el uso de \* es ambiguo y producirá un error.
 
-    {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
-
+```syntaxsql
+{  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
+```
 
 ### <a name="avg"></a>MEDIA
 Devuelve el promedio de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
@@ -120,7 +121,7 @@ En las consultas de ejemplo que se muestran aquí, vamos a usar las tablas node 
 ### <a name="a--find-shortest-path-between-2-people"></a>A.  Buscar la ruta más corta entre 2 personas
  En el ejemplo siguiente, encontramos la ruta más corta entre Jacob y Alice. Necesitaremos el nodo person y el perímetro Friend creado a partir del script de ejemplo Graph. 
 
- ```
+```sql
 SELECT PersonName, Friends
 FROM (  
     SELECT
@@ -135,12 +136,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
  ### <a name="b--find-shortest-path-from-a-given-node-to-all-other-nodes-in-the-graph"></a>B.  Buscar la ruta más corta de un nodo determinado a todos los demás nodos del gráfico. 
  En el ejemplo siguiente se buscan todas las personas a las que está conectado Jacob en el gráfico y la ruta más corta a partir de Jacob a todas esas personas. 
 
- ```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -150,12 +151,12 @@ FROM
     Person FOR PATH  AS Person2
 WHERE MATCH(SHORTEST_PATH(Person1(-(fo)->Person2)+))
 AND Person1.name = 'Jacob'
- ```
+```
 
 ### <a name="c--count-the-number-of-hopslevels-traversed-to-go-from-one-person-to-another-in-the-graph"></a>C.  Cuente el número de saltos y niveles que se recorren para pasar de una persona a otra en el gráfico.
  En el ejemplo siguiente se busca la ruta de acceso más corta entre Jacob y Alice y se imprime el número de saltos que se tarda en pasar de Jacob a Alice. 
 
- ```
+```sql
  SELECT PersonName, Friends, levels
 FROM (  
     SELECT
@@ -171,12 +172,12 @@ FROM (
     AND Person1.name = 'Jacob'
 ) AS Q
 WHERE Q.LastNode = 'Alice'
- ```
+```
 
 ### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Buscar personas 1-3 saltos fuera de una persona determinada
 En el ejemplo siguiente se busca la ruta de acceso más corta entre Jacob y todas las personas a las que está conectado en el gráfico 1-3 saltos fuera de ella. 
 
-```
+```sql
 SELECT
     Person1.name AS PersonName, 
     STRING_AGG(Person2.name, '->') WITHIN GROUP (GRAPH PATH) AS Friends
@@ -191,7 +192,7 @@ AND Person1.name = 'Jacob'
 ### <a name="e-find-people-exactly-2-hops-away-from-a-given-person"></a>E. Buscar personas exactamente 2 saltos fuera de una persona determinada
 En el ejemplo siguiente se busca la ruta más corta entre Jacob y las personas que tienen exactamente 2 saltos en el gráfico. 
 
-```
+```sql
 SELECT PersonName, Friends
 FROM (
     SELECT

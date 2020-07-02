@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: f4c0431afb7d1c2de0fc5e4fae5e7c7c25639002
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 98c6ef2767f7ac64567f3e0a3d31381935577c59
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255613"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813879"
 ---
 # <a name="configure-advanced-settings-for-dqs-log-files"></a>Configurar las opciones avanzadas de los archivos de registro de DQS
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo realizar la configuración avanzada para los archivos de registro de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] y [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , como configurar el límite de tamaño del archivo gradual de los archivos de registro, establecer el patrón de marca de tiempo de los eventos, etc.  
   
@@ -115,7 +115,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 >  La configuración de registro de [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] se genera y se almacena dinámicamente en el archivo DQS_MAIN.Log, que normalmente se encuentra en C:\Archivos de programa\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log si ha instalado la instancia predeterminada de SQL Server. Sin embargo, los cambios realizados directamente en este archivo no se conservan, y serán reemplazados por la configuración de la tabla A_CONFIGURATION de la base de datos DQS_MAIN.  
   
 ##  <a name="configure-data-quality-client-log-settings"></a><a name="DQSClient"></a>Configuración del registro de Data Quality Client  
- El [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] archivo de configuración de configuración de registro, DQLog. Client. XML, suele estar disponible en C:\Archivos de Programa\microsoft SQL Server\130\Tools\Binn\DQ\config. El contenido del archivo XML es similar al del archivo XML que modificó anteriormente para los valores [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] de configuración del registro. Para configurar los valores de registro de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
+ El [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] archivo de configuración de configuración de registro, DQLog.Client.xml, suele estar disponible en c:\Archivos de programa\Microsoft SQL Server\130\Tools\Binn\DQ\config. El contenido del archivo XML es similar al del archivo XML que modificó anteriormente para los [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] valores de configuración del registro. Para configurar los valores de registro de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] :  
   
 1.  Ejecute cualquier herramienta de edición de XML o el Bloc de notas como administrador.  
   

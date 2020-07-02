@@ -14,16 +14,16 @@ f1_keywords:
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: 280149ccb0e94b1ca7bcca75616ec5353f41e62b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b74bcf3ceb8105da7515a227e76fd9cd992ebbb2
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813912"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Limpiar datos mediante el conocimiento de DQS (interno)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo limpiar los datos mediante un proyecto de calidad de datos de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La limpieza de datos se realiza en los datos de origen utilizando una base de conocimiento generada en DQS a partir de un conjunto de datos de alta calidad. Para obtener más información, consulte [Crear una base de conocimiento](../data-quality-services/building-a-knowledge-base.md).  
   
@@ -159,17 +159,17 @@ ms.locfileid: "75255692"
   
     -   **Datos e información de limpieza**: haga clic en el botón de opción para exportar los datos siguientes para cada dominio:  
   
-        -   Dominio>_Source: el valor original del dominio. ** \<**  
+        -   ** \<Domain> _Source**: el valor original del dominio.  
   
-        -   >_Output de dominio: los valores limpios del dominio. ** \<**  
+        -   ** \<Domain> _Output**: los valores limpios del dominio.  
   
-        -   >_Reason de dominio: el motivo especificado para la corrección del valor. ** \<**  
+        -   ** \<Domain> _Reason**: el motivo especificado para la corrección del valor.  
   
-        -   Dominio>_Confidence: el nivel de confianza para todos los términos que se han corregido. ** \<** Se muestra como el valor decimal equivalente al valor de porcentaje correspondiente. Por ejemplo, un nivel de confianza del 95% se mostrará como 0,9500000.  
+        -   ** \<Domain> _Confidence**: el nivel de confianza para todos los términos que se han corregido. Se muestra como el valor decimal equivalente al valor de porcentaje correspondiente. Por ejemplo, un nivel de confianza del 95% se mostrará como 0,9500000.  
   
-        -   Dominio>_Status: el estado del valor del dominio tras la limpieza de los datos. ** \<** Por ejemplo, **Sugerido**, **Nuevo**, **No válido**, **Corregido**o **Correcto**.  
+        -   ** \<Domain> _Status**: el estado del valor del dominio tras la limpieza de los datos. Por ejemplo, **Sugerido**, **Nuevo**, **No válido**, **Corregido**o **Correcto**.  
   
-        -   **Estado de registro**: Además de tener un campo de estado para cada dominio asignado **(\<nombreDeDominio>_Status**), el campo **Estado de registro** muestra el estado de un registro. Si alguno de los Estados del dominio del registro es *nuevo* o *correcto*, el **Estado del registro** se establece en *correcto*. Si alguno de los Estados del dominio del registro es *sugerido*, *no válido*o *corregido*, el **Estado del registro** se establece en el valor correspondiente. Por ejemplo, si el estado de cualquier dominio del registro es *Sugerido*, el **Estado de registro** se establece en *Sugerido*.  
+        -   **Estado de registro**: además de tener un campo de estado para cada dominio asignado **( \<DomainName> _Status**), el campo **Estado de registro** muestra el estado de un registro. Si alguno de los Estados del dominio del registro es *nuevo* o *correcto*, el **Estado del registro** se establece en *correcto*. Si alguno de los Estados del dominio del registro es *sugerido*, *no válido*o *corregido*, el **Estado del registro** se establece en el valor correspondiente. Por ejemplo, si el estado de cualquier dominio del registro es *Sugerido*, el **Estado de registro** se establece en *Sugerido*.  
   
             > [!NOTE]  
             >  Si utiliza el servicio de datos de referencia para la operación de limpieza, también estarán disponibles para la exportación algunos datos adicionales sobre el valor de dominio. Para más información, vea [Limpiar datos mediante el conocimiento de datos de referencia &#40;externo&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  

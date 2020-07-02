@@ -11,16 +11,16 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: swinarko
 ms.author: sawinark
-ms.openlocfilehash: fc0135ed4e4956d6bd98fc0b467a5b6d0a25a013
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 199eac229d752cb019ec027124e83c85ead0176c
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75557910"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813919"
 ---
 # <a name="cleanse-data-using-external-knowledge-reference-data---data-quality-services-dqs"></a>Limpiar datos con datos de referencia de conocimiento (externos)-Data Quality Services (DQS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En este tema se describe cómo limpiar los datos utilizando el conocimiento de los proveedores de datos de referencia. Aunque los pasos que se siguen para limpiar los datos mediante el conocimiento de los proveedores de datos de referencia son los mismos que los que se usan en la ejecución de una actividad de limpieza, tal como se explica en [Limpiar datos mediante el conocimiento de DQS &#40;interno&#41;](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md), en este tema se proporciona información específica para la limpieza de datos mediante el servicio de datos de referencia de [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
 
@@ -71,7 +71,7 @@ ms.locfileid: "75557910"
     > [!NOTE]  
     >  En la página **Limpieza** , DQS muestra información sobre los dominios adjuntados al servicio de datos de referencia de estas dos formas:  
     >   
-    >  -   Aparece un mensaje debajo del botón **Inicio** : "dominios \<Domain1>, \<dominio2>,... \<Los> de dominio se limpian mediante el proveedor de servicios de datos de referencia ". En este ejemplo, se mostrará el mensaje siguiente: "El dominio Access Verification se limpia mediante el proveedor de servicios de datos al que se hace referencia".  
+    >  -   Aparece un mensaje debajo del botón **Inicio** : "dominios \<Domain1> , \<Domain2> ,... \<DomainN> se limpian mediante el proveedor de servicios de datos de referencia ". En este ejemplo, se mostrará el mensaje siguiente: "El dominio Access Verification se limpia mediante el proveedor de servicios de datos al que se hace referencia".  
     > -   Un icono, el ![dominio se adjunta a RDS](../data-quality-services/media/dqs-rdsindicator.JPG "El dominio se ha adjuntado al servicio de datos remotos (RDS)"), se muestra en el área **generador de perfiles** con los dominios adjuntos al proveedor de servicios de datos de referencia. En este ejemplo, el icono se mostrará en el dominio compuesto **Address Verification** .  
   
 4.  En la página **Administrar y ver resultados** , revise los valores de dominio. El servicio de datos de referencia puede mostrar varias sugerencias, si están disponibles, para un valor dependiendo del número máximo de sugerencias especificadas en el cuadro **Candidatos sugeridos** durante la asignación del dominio al servicio de datos de referencia. Por ejemplo, se muestran dos sugerencias para la dirección de EE. UU. siguiente:  

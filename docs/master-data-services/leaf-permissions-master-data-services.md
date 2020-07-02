@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 112c046e6a3e0eb51b18ba397c718907fa0829c9
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73728078"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813303"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Los permisos de hoja se aplican a los valores de atributo de todos los miembros hoja de una entidad.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer miembros hoja y atributos.|  
-|**Crear**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
-|**Actualizar**|El usuario puede actualizar miembros hoja y atributos.|  
+|**Creación**|Usuario puede crear miembros hoja y asignar valores de atributo durante la creación.|  
+|**Update**|El usuario puede actualizar miembros hoja y atributos.|  
 |**Eliminar**|El usuario puede eliminar miembros hoja.|  
 |**Deny**|Denegar todo el acceso a los miembros hoja.|  
   
@@ -53,8 +53,8 @@ ms.locfileid: "73728078"
 |Permiso|Descripción|  
 |----------------|-----------------|  
 |**Lectura**|El usuario puede leer atributos.|  
-|**Crear**|El usuario puede asignar valores al crear miembros.|  
-|**Actualizar**|El usuario puede actualizar atributos.|  
+|**Creación**|El usuario puede asignar valores al crear miembros.|  
+|**Update**|El usuario puede actualizar atributos.|  
 |**Eliminar**|Ningún efecto.|  
 |**Deny**|No se muestra el atributo.<br /><br /> Nota: No puede denegar explícitamente el acceso a los atributos Name y Code.|  
   

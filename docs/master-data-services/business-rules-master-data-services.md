@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: a9f9e41a-2461-4845-b947-58b3a205543f
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: f0e8c072ebda3cd314858bfa7aac2885267f1e86
-ms.sourcegitcommit: 7d6eb09588ff3477cf39a8fd507d537a603bc60d
+ms.openlocfilehash: 229ac06d8d37922f5ca0abca4f5d327137e18499
+ms.sourcegitcommit: 6be9a0ff0717f412ece7f8ede07ef01f66ea2061
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/16/2020
-ms.locfileid: "84796448"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813673"
 ---
 # <a name="business-rules-master-data-services"></a>Reglas de negocios (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], una regla de negocios es aquella que se usa para asegurarse de la calidad y la exactitud de los datos maestros. Puede usar una regla de negocios para actualizar datos automáticamente, enviar mensajes de correo electrónico, o iniciar un proceso de negocio o un flujo de trabajo.  
   

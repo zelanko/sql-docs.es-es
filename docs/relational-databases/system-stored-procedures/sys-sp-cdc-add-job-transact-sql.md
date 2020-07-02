@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 65f75b5f9830a19a973db0fffa06b7baf2bbdbae
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 194835abe2691a74116e51222fb069d941fd3c92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825969"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626272"
 ---
 # <a name="syssp_cdc_add_job-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea una limpieza de captura datos de cambios o un trabajo de captura en la base de datos actual.  
   
@@ -89,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Dado que los trabajos de captura y limpieza se crean de forma predeterminada, este procedimiento almacenado solo es necesario cuando un trabajo se ha eliminado y se ha vuelto a crear explícitamente.  
   
- El nombre del trabajo es **CDC.** ** \_ limpieza** de _ \< \_ nombres \> de base de datos_o **CDC.** ** \_ captura**de _ \< \_ nombres \> de base de datos_, donde *<database_name>* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, el nombre se anexa con un punto (**.**) seguido de un identificador único, por ejemplo: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ El nombre del trabajo es **CDC.** _\<database\_name\>_ ** \_ Cleanup** o **CDC.** _\<database\_name\>_ ** \_ Capture**, donde *<database_name>* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, el nombre se anexa con un punto (**.**) seguido de un identificador único, por ejemplo: **CDC. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para ver la configuración actual de un trabajo de limpieza o de captura, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para cambiar la configuración de un trabajo, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

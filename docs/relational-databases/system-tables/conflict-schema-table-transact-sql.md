@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7986df966f25644a05d63165cc3d87f4be752ec9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c49356c35c963501450490dfaa6fc89c77e62f40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825960"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625744"
 ---
 # <a name="conflict_ltschemagt_lttablegt-transact-sql"></a>&lt;esquema conflict_ &gt; _ &lt; TABLE &gt; (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  La tabla del esquema de conflict_ \<>_ \< tabla> contiene información sobre las filas en conflicto en la replicación punto a punto. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y esquema. Estas tablas de conflictos específicas del artículo existen en cada base de datos de publicación.  
+  La \<schema> tabla conflict_ _ \<table> contiene información sobre las filas en conflicto en la replicación punto a punto. En una publicación, cada tabla replicada posee una tabla de conflictos; el nombre de esta tabla de conflictos se anexa al nombre del artículo y esquema. Estas tablas de conflictos específicas del artículo existen en cada base de datos de publicación.  
   
  En el caso de la replicación punto a punto, el Agente de distribución genera un error de forma predeterminada cuando detecta un conflicto. Se registra un error de conflicto en el registro de errores, pero no se registra ningún dato de conflicto en la tabla de conflictos, por lo que no está disponible para verse. Si el Agente de distribución puede continuar, se registra un conflicto localmente en cada nodo donde se detectó. Para obtener más información, vea "Controlar los conflictos" en [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "82825960"
 |__$inserted_date|**datetime**|Fecha y hora en que la fila en conflicto se insertó en esta tabla.|  
 |__$row_id|**timestamp**|Versión de fila que está asociada a la fila que ocasionó el conflicto.|  
 |__$change_id|**binario (8)**|En una fila local, este valor es igual al valor __$row_id de la fila entrante que sufrió un conflicto con la fila local. Este valor es NULL para una fila entrante.|  
-|\<nombres de columna de tabla base>|\<tipos de columna de tabla base>|La tabla de conflictos contiene una columna para cada columna de la tabla base.|  
+|\<base table column names>|\<base table column types>|La tabla de conflictos contiene una columna para cada columna de la tabla base.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

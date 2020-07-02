@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 81237214608b6fb0c04fa0857203d0488db375ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68116672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633544"
 ---
 # <a name="xp_grantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a usuarios o grupos de Windows.  
   
@@ -42,9 +42,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login'`Es el nombre del usuario o grupo de Windows que se va a agregar. El usuario o grupo de Windows se debe calificar con un nombre de dominio de Windows con el formato *dominio*\\*usuario*. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login'`Es el nombre del usuario o grupo de Windows que se va a agregar. El usuario o grupo de Windows se debe calificar con un nombre de dominio de Windows con el formato *dominio* \\ *usuario*. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @logintype = ] 'logintype'`Es el nivel de seguridad del inicio de sesión al que se concede acceso. *LoginType* es de tipo **VARCHAR (5)** y su valor predeterminado es NULL. Solo se puede especificar **admin** . Si se especifica **admin** , se concede al *Inicio* de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sesión acceso a y se agrega como miembro del rol fijo de servidor **sysadmin** .  
+`[ @logintype = ] 'logintype'`Es el nivel de seguridad del inicio de sesión al que se concede acceso. *LoginType* es de tipo **VARCHAR (5)** y su valor predeterminado es NULL. Solo se puede especificar **admin** . Si se especifica **admin** , se concede al *Inicio de sesión* acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y se agrega como miembro del rol fijo de servidor **sysadmin** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

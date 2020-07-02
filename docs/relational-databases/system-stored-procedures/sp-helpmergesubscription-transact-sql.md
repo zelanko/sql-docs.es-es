@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e790d110fc45708c7aa2be76db3890c8d1bc7f13
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c966899707c7e37dee82dda9c678b4ac40df026f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626983"
 ---
 # <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información sobre una suscripción a una publicación de combinación, tanto de inserción como de extracción. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicaciones o en el suscriptor de republicaciones de la base de datos de suscripciones.  
   
@@ -78,7 +78,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = ambos|  
 |**Prior**|**Float (8)**|Número que indica la prioridad de la suscripción.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de la suscripción.|  
-|**denominación**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
+|**description**|**nvarchar(255)**|Breve descripción de esta suscripción de mezcla.|  
 |**merge_jobid**|**binario (16)**|Id. de trabajo del Agente de mezcla.|  
 |**full_publication**|**tinyint**|Indica si la suscripción es a una publicación completa o filtrada.|  
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la ejecución de la descarga de un agente de replicación se lleve a cabo en el suscriptor. Si es NULL, la ejecución se lleva a cabo en el publicador.|  
@@ -92,7 +92,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpmergesubscription** se utiliza en la replicación de mezcla para devolver la información de suscripción almacenada en el publicador o en el suscriptor de republicación.  
   
  En el caso de las suscripciones anónimas, el valor de *subscription_type*es siempre **1** (extracción). Sin embargo, debe ejecutar [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) en el suscriptor para obtener información sobre las suscripciones anónimas.  

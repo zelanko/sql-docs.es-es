@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e9b1648e-4660-4688-9f56-18b2baf7228c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8328c332fe35b8e157c8631d90b8de67c6e96e17
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 79e19b531b7dfb10587ec6bdb4db71632066ef87
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831951"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633386"
 ---
 # <a name="sysmergearticles-transact-sql"></a>sysmergearticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada artículo de mezcla definido en la base de datos local. Esta tabla se almacena en la base de datos de publicación.  
   
@@ -37,10 +37,10 @@ ms.locfileid: "82831951"
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
-|**denominación**|**nvarchar(255)**|Descripción breve del artículo.|  
+|**description**|**nvarchar(255)**|Descripción breve del artículo.|  
 |**pre_creation_command**|**tinyint**|La acción predeterminada que debe llevarse a cabo cuando se crea el artículo en la base de datos de suscripciones:<br /><br /> **0 =** Ninguno: Si la tabla ya existe en el suscriptor, no se realiza ninguna acción.<br /><br /> **1** = quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = TRUNCATE: igual que **2**, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  
 |**pubid**|**uniqueidentifier**|Id. de la publicación a la que pertenece el artículo actual.|  
-|**nickname**|**int**|Alias asignado para la identificación del artículo.|  
+|**deseado**|**int**|Alias asignado para la identificación del artículo.|  
 |**column_tracking**|**int**|Hace referencia a si se ha implementado el seguimiento de columnas para el artículo.|  
 |**status**|**tinyint**|Indica el estado del artículo, que puede ser uno de los siguientes:<br /><br /> **1** = sin sincronizar: el script de procesamiento inicial para publicar la tabla se ejecutará la próxima vez que se ejecute el agente de instantáneas.<br /><br /> **2** = activo: se ha ejecutado el script de procesamiento inicial para publicar la tabla.<br /><br /> **5** = New_inactive-que se va a agregar.<br /><br /> **6** = New_active-que se va a agregar.|  
 |**conflict_table**|**sysname**|Nombre de la tabla local que contiene los registros en conflicto del artículo actual. Esta tabla solo tiene fines informativos y su contenido puede ser modificado o eliminado con rutinas de resolución de conflictos personalizadas, o directamente por el administrador.|  
@@ -87,7 +87,7 @@ ms.locfileid: "82831951"
 |**compensate_for_errors**|**bit**|Indica si se realizan acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = las acciones de compensación están deshabilitadas.<br /><br /> **1** = los cambios que no se pueden aplicar en un suscriptor o publicador siempre conducen a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla.<br /><br /> Nota: un valor de **0** produce una no convergencia.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
-|**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**stream_blob_columns**|**bit**|Indica si se usará una optimización del flujo de datos al replicar columnas binarias de objetos de gran tamaño. **1** significa que se ha intentado la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación usará una columna de tipo rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación ha agregado la columna ROWGUIDCOL.|  
   

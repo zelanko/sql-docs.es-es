@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ac86bea128939be70a3931183f23d4fdffa0d8c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12cfa8fa0ebde7fe2cb6d1a6e9402a0466a4895f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829023"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648027"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Notifica a los consumidores de memoria de nivel de sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria para estos consumidores procede del grupo predeterminado (cuando la asignación está en el contexto de un subproceso de usuario) o del grupo interno (si la asignación está en el contexto de un subproceso del sistema).  
   
@@ -37,7 +37,7 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de la columna|Tipo|Descripción|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
 |memory_consumer_type|**int**|Entero que representa el tipo de consumidor de memoria con uno de los valores siguientes:<br /><br /> 0: no debe mostrarse. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1-pista: realiza un seguimiento del consumo de memoria de una traducción del sistema.<br /><br /> 2-VARHEAP: realiza el seguimiento del consumo de memoria para un montón de longitud variable.<br /><br /> 4-Grupo de páginas de e/s: realiza un seguimiento del consumo de memoria de un grupo de páginas del sistema utilizado para operaciones de e/s.|  
@@ -48,10 +48,10 @@ select * from sys.dm_xtp_system_memory_consumers
 |allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  
 |used_bytes|**bigint**|Bytes utilizados por el consumidor. Solo se aplica a los consumidores de memoria varheap.|  
 |allocation_count|**int**|Número de asignaciones.|  
-|partition_count|**int**|Solo para uso interno.|  
-|sizeclass_count|**int**|Solo para uso interno.|  
-|min_sizeclass|**int**|Solo para uso interno.|  
-|max_sizeclass|**int**|Solo para uso interno.|  
+|partition_count|**int**|Exclusivamente para uso interno.|  
+|sizeclass_count|**int**|Exclusivamente para uso interno.|  
+|min_sizeclass|**int**|Exclusivamente para uso interno.|  
+|max_sizeclass|**int**|Exclusivamente para uso interno.|  
 |memory_consumer_address|**varbinary**|Dirección interna del consumidor.|  
   
 ## <a name="permissions"></a>Permisos  

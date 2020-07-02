@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9049340483674969a6ab4730d54794957c67aac9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6c07d71e2ab4c9fe39882476eef25674718a17c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67997319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639569"
 ---
 # <a name="sp_syspolicy_purge_health_state-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Elimina los estados de mantenimiento de directivas en la administración basada en directivas. Los estados de mantenimiento de directivas son indicadores visuales (un símbolo de desplazamiento con una "X" roja) dentro del Explorador de objetos que permiten determinar qué nodos han sufrido un error en la evaluación de una directiva.  
   
@@ -46,7 +46,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_purge_health_state en el contexto de la base de datos del sistema msdb.  
   
  Si ejecuta este procedimiento almacenado sin ningún parámetro, el estado de mantenimiento del sistema se elimina para todos los nodos del Explorador de objetos.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d1f29541162381923faa6baa4ca6ce8d362a0f27
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3c65ee865a5c4e4bccd11c12846de1a1ca8b5035
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808200"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626026"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Genera scripts para crear funciones de contenedor para las funciones de consulta de captura de datos modificados que están disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La API que se admite en los contenedores generados permite especificar el intervalo de la consulta como un intervalo de fecha y hora. Esto hace que la función sea idónea para su uso en muchas aplicaciones de almacenamiento de datos, incluidas las que se desarrollan con diseñadores de paquetes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] que utilizan la tecnología de captura de datos modificados para determinar la carga incremental.  
   
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de la columna|Tipo de columna|Descripción|  
+|Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Nombre de la función generada.|  
 |**create_script**|**nvarchar(max)**|Es el script que crea la función de contenedor de la instancia de captura.|  

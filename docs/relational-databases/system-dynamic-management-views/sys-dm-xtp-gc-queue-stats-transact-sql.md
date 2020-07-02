@@ -19,16 +19,16 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 286449b00f20858f641e25fd1b4e3f1914925bb0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 76acad96bb43b23487490cab79072311906f7e8e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829060"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648108"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Genera información y distintas estadísticas sobre cada cola de trabajador de recolección de elementos no utilizados en el servidor. Hay una cola por cada CPU lógica.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82829060"
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nombre de la columna|Tipo|Descripción|  
+|Nombre de columna|Tipo|Descripción|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Identificador único de la cola.|  
 |total_enqueues|**bigint**|El número total de elementos de trabajo de la recolección de elementos no utilizados puestos en esta cola desde que se inició el servidor.|  

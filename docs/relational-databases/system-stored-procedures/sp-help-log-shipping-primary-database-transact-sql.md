@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9c88a4ac30ba51cdfdbd9a9d711a141044d099a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67937915"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634552"
 ---
 # <a name="sp_help_log_shipping_primary_database-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Recupera parámetros de la base de datos principal.  
   
@@ -50,7 +50,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**primary_id**|Id. de la base de datos principal para la configuración del trasvase de registros.|  
 |**primary_database**|Nombre de la base de datos principal en la configuración del trasvase de registros.|  
@@ -69,14 +69,14 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|Fecha y hora de la última operación de copia de seguridad del registro de transacciones en la base de datos principal, expresadas en UTC (hora universal coordinada).|  
 |**history_retention_period**|Cantidad de tiempo, en minutos, durante la que los registros de historial del trasvase de registros se mantienen en una base de datos principal determinada antes de ser eliminados.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_log_shipping_primary_database** se debe ejecutar desde la base de datos **maestra** del servidor principal.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra el uso de **sp_help_log_shipping_primary_database** para recuperar la configuración de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]la base de datos principal para la base de datos.  
+ En este ejemplo se muestra el uso de **sp_help_log_shipping_primary_database** para recuperar la configuración de la base de datos principal para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks2012';  

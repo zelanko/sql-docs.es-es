@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6e2abcb656e2f1235827bd0b348e0f288ae4c6ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129622"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85639371"
 ---
 # <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **MSdatatype_mappings** se asigna SQL Server tipos de datos a tipos de datos utilizados por sistemas de administración de bases de datos (DBMS) que no son de SQL Server. Esta tabla se almacena en la base de datos **msdb** .  
   

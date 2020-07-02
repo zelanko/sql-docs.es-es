@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 25d3c2133ee02bc25a869ad3a465081de4d7d38e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066823"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634497"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Este procedimiento almacenado devuelve información sobre todas las bases de datos secundarias de una base de datos principal dada.  
   
@@ -47,19 +47,19 @@ sp_help_log_shipping_primary_secondary
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |**secondary_server**|Nombre de la instancia secundaria de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] en la configuración del trasvase de registros.|  
 |**secondary_database**|Nombre de la base de datos secundaria en la configuración del trasvase de registros.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_log_shipping_primary_secondary** se debe ejecutar desde la base de datos **maestra** del servidor principal.  
   
 ## <a name="permissions"></a>Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden ejecutar este procedimiento.  
   
 ## <a name="examples"></a>Ejemplos  
- En este ejemplo se muestra el uso de **sp_help_log_shipping_primary_secondary** para recuperar una lista de bases de datos secundarias asociadas [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]a la base de datos principal.  
+ En este ejemplo se muestra el uso de **sp_help_log_shipping_primary_secondary** para recuperar una lista de bases de datos secundarias asociadas a la base de datos principal [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
 ```  
 EXECUTE master.dbo.sp_help_log_shipping_primary_secondary @primary_database=N'AdventureWorks';  

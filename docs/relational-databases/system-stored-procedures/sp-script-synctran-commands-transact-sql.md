@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965fc3fe168ecd6027c2c1fc2ebad92bc334e383
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8e1b8659d7828feaab219ce5c2b883137f252314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645368"
 ---
 # <a name="sp_script_synctran_commands-transact-sql"></a>sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Genera un script que contiene las llamadas **sp_addsynctrigger** que se van a aplicar en los suscriptores para las suscripciones actualizables. Hay una **sp_addsynctrigger** llamada para cada artículo de la publicación. El script generado también contiene las llamadas **sp_addqueued_artinfo** que crean la tabla **MSsubsciption_articles** necesaria para procesar las publicaciones en cola. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -48,7 +48,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>Conjunto de resultados  
  **sp_script_synctran_commands** devuelve un conjunto de resultados que consta de una única columna **nvarchar (4000)** . El conjunto de resultados forma los scripts completos necesarios para crear las llamadas **sp_addsynctrigger** y **sp_addqueued_artinfo** que se van a aplicar en los suscriptores.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_script_synctran_commands** se utiliza en la replicación de instantáneas y transaccional.  
   
  **sp_addqueued_artinfo** se utiliza para las suscripciones actualizables en cola.  

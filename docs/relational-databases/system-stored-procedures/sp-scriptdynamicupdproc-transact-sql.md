@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3967b1e7c8e3b9da93d131a0b82eec1684009210
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c46a7e30f6f5163fba7b630e365f90e521a96e0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816740"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645304"
 ---
 # <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Genera la instrucción CREATE PROCEDURE que crea un procedimiento almacenado de actualización dinámica. La instrucción UPDATE del procedimiento almacenado personalizado se genera dinámicamente a partir de la sintaxis MCALL que indica las columnas que deben modificarse. Utilice este procedimiento almacenado si el número de índices de la tabla de suscripción va en aumento y el número de columnas modificadas es relativamente pequeño. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -42,7 +42,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve un conjunto de resultados que consta de una única columna **nvarchar (4000)** . El conjunto de resultados forma la instrucción CREATE PROCEDURE completa que se utiliza para crear el procedimiento almacenado personalizado.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_scriptdynamicupdproc** se utiliza en la replicación transaccional. La lógica de scripting predeterminada de MCALL incluye todas las columnas de la instrucción UPDATE y utiliza un mapa de bits para determinar las columnas modificadas. En el supuesto de que una columna no haya cambiado, ésta se restablece a su propio valor, lo que no suele generar ningún problema. Si la columna estuviera indizada, tendría lugar un procesamiento adicional. El enfoque dinámico incluye únicamente las columnas modificadas, lo cual optimiza la cadena UPDATE. No obstante, se incurrirá en un procesamiento adicional en tiempo de ejecución a fin de generar la instrucción UPDATE dinámica. Se recomienda probar los enfoques dinámico y estático y elegir la mejor solución.  
   
 ## <a name="permissions"></a>Permisos  

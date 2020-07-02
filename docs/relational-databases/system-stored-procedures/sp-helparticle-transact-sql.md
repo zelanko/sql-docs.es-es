@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f840af0170278692de43b7933965500b304669b1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e863c10b3f2086d6318d6c53b599c7ad186572c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828357"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634231"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Muestra información acerca de un artículo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación. En los publicadores de Oracle, este procedimiento almacenado se ejecuta en el distribuidor de cualquier base de datos.  
   
@@ -66,7 +66,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**type**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en el registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = ejecución de procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = función (solo esquema).<br /><br /> **257** = vista indizada basada en registro.<br /><br /> **259** = vista indizada basada en registro con filtro manual.<br /><br /> **261** = vista indizada basada en registro con vista manual.<br /><br /> **263** = vista indizada basada en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
 |**status**|**tinyint**|Puede ser el resultado [& (and bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) de una o más de estas propiedades de artículo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = el artículo está activo.<br /><br /> **0x08** = incluir el nombre de la columna en las instrucciones INSERT.<br /><br /> **0x16** = usar instrucciones con parámetros.<br /><br /> debajo **= usar** instrucciones con parámetros e incluir el nombre de la columna en las instrucciones INSERT.|  
 |**filter**|**nvarchar (257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
-|**denominación**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
 |**insert_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar inserciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar actualizaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**delete_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar eliminaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -85,7 +85,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**auto_identity_range**|**int**|Marca que establece si se activó el control automático del intervalo de identidad en la publicación en el momento en que se creó. **1** significa que el intervalo de identidad automático está habilitado; **0** significa que está deshabilitado.|  
 |**publisher_identity_range**|**int**|Tamaño del intervalo del intervalo de identidad en el publicador si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
 |**identity_range**|**bigint**|Tamaño del intervalo del intervalo de identidad en el suscriptor si el artículo tiene el valor *identityrangemanagementoption* establecido en **auto** o **auto_identity_range** establecido en **true**.|  
-|**mínimo**|**bigint**|Valor de porcentaje que indica cuándo asigna el Agente de distribución un nuevo intervalo de identidad.|  
+|**threshold**|**bigint**|Valor de porcentaje que indica cuándo asigna el Agente de distribución un nuevo intervalo de identidad.|  
 |**identityrangemanagementoption**|**int**|Indica la administración de intervalos de identidad controlada del artículo.|  
 |**fire_triggers_on_snapshot**|**bit**|Indica si se ejecutan desencadenadores de usuario replicados al aplicar la instantánea inicial.<br /><br /> **1** = se ejecutan desencadenadores de usuario.<br /><br /> **0** = no se ejecutan los desencadenadores de usuario.|  
   

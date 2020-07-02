@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a1cb929158a6d17a7a7c16e5e303c403a2c03112
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e6accbb03bf4ed06f84f67263e89ab9c6bfa7654
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831816"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646049"
 ---
 # <a name="sp_cursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Captura un búfer de una o varias filas de la base de datos. El grupo de filas de este búfer se denomina *búfer de captura*del cursor. sp_cursorfetch se invoca especificando el identificador 7 en un paquete de flujo TDS.  
   
@@ -81,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  Si no se devuelve ninguna fila, el contenido del búfer permanece como estuviera.  
   
-|*\<>ROWNUM*|Establecer en|  
+|*\<rownum>*|Establecer en|  
 |------------------|------------|  
 |Si no está abierto|0|  
 |Si está colocado antes del conjunto de resultados|0|  
@@ -90,13 +90,13 @@ sp_cursorfetch cursor
 |Para los cursores DYNAMIC|1|  
 |Para ABSOLUTE|-1 devuelve la última fila de un conjunto.<br /><br /> -2 devuelve de la segunda a la última fila de un conjunto, etc.<br /><br /> Nota: si se solicita la captura de más de una fila en este caso, se devuelven las dos últimas filas del conjunto de resultados.|  
   
-|*\<>nrows*|Establecer en|  
+|*\<nrows>*|Establecer en|  
 |-----------------|------------|  
 |Si no está abierto|0|  
 |Para los cursores KEYSET y STATIC|Normalmente, el tamaño del conjunto de claves actual.<br /><br /> **-m** si el cursor está en la creación asincrónica con *m* filas encontradas en este punto.|  
 |Para los cursores DYNAMIC|-1|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="cursor-parameter"></a>Parámetro cursor  
  Antes de que se produzca ninguna operación de captura, la posición predeterminada de un cursor está antes de la primera fila del conjunto de resultados.  

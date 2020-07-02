@@ -19,15 +19,15 @@ ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4215b5f677061926b13ec5d7b5411454fb818bbb
-ms.sourcegitcommit: 4cb53a8072dbd94a83ed8c7409de2fb5e2a1a0d9
+ms.openlocfilehash: fe57fda774997f8439c44a75fa917ecb3db3495e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83670143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647641"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una fila por cada columna a la que puede tener acceso el usuario actual en la base de datos actual.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "83670143"
 |**DOMAIN_SCHEMA**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, devuelve el nombre del esquema del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.<br /><br /> **&#42;&#42; importante &#42;&#42;** No use vistas de INFORMATION_SCHEMA para determinar el esquema de un tipo de datos. La única manera confiable de localizar el esquema de un tipo consiste en utilizar la función TYPEPROPERTY.|  
 |**DOMAIN_NAME**|**nvarchar (** 128 **)**|Si la columna es de un tipo de datos definido por el usuario, esta columna es el nombre del tipo de datos definido por el usuario. En caso contrario se devuelve NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **ORDINAL_POSITION** columna del **INFORMATION_SCHEMA. **La vista de columnas no es compatible con el patrón de bits de las columnas devueltas por la función COLUMNS_UPDATED. Para obtener un patrón de bits que sea compatible con COLUMNS_UPDATED, debe hacer referencia a la propiedad **ColumnID** de la función del sistema COLUMNPROPERTY al consultar el **INFORMATION_SCHEMA. **Vista de columnas. Por ejemplo:  
   
 ```  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9bf35753bbe72fef2211485ec723bfa42ba08eb7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 50dd13235c0b583b7e3c3f5869b9df60648f1549
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831399"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648833"
 ---
 # <a name="sysserver_events-transact-sql"></a>sys.server_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada evento para el que se activa una notificación de eventos o un desencadenador DDL en el servidor. Las columnas **object_id** y **tipo** identifican de forma única el evento de servidor.  
 

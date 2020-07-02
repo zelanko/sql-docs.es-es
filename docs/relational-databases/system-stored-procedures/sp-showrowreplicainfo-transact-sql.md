@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 34fa326c5982ee36cf0ee00fb66c8bac1714c06a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 74a5865151cb283aed16efe8ef2ea2908a9f56c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830953"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626631"
 ---
 # <a name="sp_showrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información acerca de una fila en una tabla que se utiliza como un artículo en la replicación de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -56,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|Nombre de la base de datos que realizó esta entrada.|  
 |**db_nickname**|**binario (6)**|Alias de la base de datos que realizó esta entrada.|  
 |**version**|**int**|Versión de la entrada.|  
-|**current_state**|**nvarchar (9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> los datos de la fila **y** representan el estado actual de la fila.<br /><br /> los datos de la fila **n** no representan el estado actual de la fila.<br /><br /> ** \< n/a>** : no aplicable.<br /><br /> ** \<>desconocido** : no se puede determinar el estado actual.|  
+|**current_state**|**nvarchar (9)**|Devuelve información sobre el estado actual de la fila.<br /><br /> los datos de la fila **y** representan el estado actual de la fila.<br /><br /> los datos de la fila **n** no representan el estado actual de la fila.<br /><br /> **\<n/a>**-No es aplicable.<br /><br /> **\<unknown>**-No se puede determinar el estado actual.|  
 |**rowversion_table**|**NCHAR (17)**|Indica si las versiones de fila se almacenan en la tabla [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) o en la tabla [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) .|  
 |**comment**|**nvarchar(255)**|Información adicional acerca de esta entrada de versión de fila. Este campo suele estar vacío.|  
   
@@ -74,7 +74,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="result-set-for-both"></a>Conjuntos de resultados para ambos  
  Si se elige el valor **both** para *Mostrar*, se devuelven los conjuntos de resultados de filas y columnas.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_showrowreplicainfo** se utiliza en la replicación de mezcla.  
   
 ## <a name="permissions"></a>Permisos  

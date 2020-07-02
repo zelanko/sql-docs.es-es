@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: fcf55efd5b50f73d15e0fc488cfe4298b99d9eb7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68115062"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646492"
 ---
 # <a name="sp_add_notification-transact-sql"></a>sp_add_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Establece una notificación para una alerta.  
   
@@ -46,7 +46,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
 `[ @notification_method = ] notification_method`Método por el que se notifica al operador. *notification_method* es de **tinyint**y no tiene ningún valor predeterminado. *notification_method* puede ser uno o varios de estos valores combinados con un operador lógico **or** .  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
@@ -73,7 +73,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se agrega una notificación de correo electrónico para la alerta especificada (`Test Alert`).  
   
-> **Nota:** En este ejemplo se `Test Alert` da por supuesto que `François Ajenstat` ya existe y que es un nombre de operador válido.  
+> **Nota:** En este ejemplo se da por supuesto que `Test Alert` ya existe y que `François Ajenstat` es un nombre de operador válido.  
   
 ```  
 USE msdb ;  
@@ -86,7 +86,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [sp_delete_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

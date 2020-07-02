@@ -20,15 +20,15 @@ ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50385161b417d02db2dc44ad1172910d31f198b3
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 4dbeed2c84db6a94237df6878fba688c6ed08a66
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "67905147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625926"
 ---
 # <a name="syssp_drop_trusted_assembly-transact-sql"></a>sys.sp_drop_trusted_assembly (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Quita un ensamblado de la lista de ensamblados de confianza del servidor.
 
@@ -43,16 +43,16 @@ sp_drop_trusted_assembly
 
 ## <a name="arguments"></a>Argumentos
 
-[ @hash = ] '*valor*'  
+[ @hash =] '*valor*'  
 SHA2_512 valor hash del ensamblado que se va a quitar de la lista de ensamblados de confianza para el servidor. Los ensamblados de confianza pueden cargarse cuando la seguridad estricta de CLR está habilitada, incluso si el ensamblado está sin firmar o si la base de datos no está marcada como de confianza.
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 
 Este procedimiento quita un ensamblado de [Sys. trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
 ## <a name="permissions"></a>Permisos
 
-Requiere la pertenencia `sysadmin` al rol fijo de `CONTROL SERVER` servidor o al permiso.
+Requiere la pertenencia al `sysadmin` rol fijo de servidor o al `CONTROL SERVER` permiso.
 
 ## <a name="examples"></a>Ejemplos  
 

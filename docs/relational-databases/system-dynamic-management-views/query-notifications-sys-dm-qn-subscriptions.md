@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 57087264554d228ec02ed22baa2afb932e646b10
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c748dd4980fb7b3b142893f5a04dd36f1676f8a6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635009"
 ---
 # <a name="query-notifications---sysdm_qn_subscriptions"></a>Notificaciones de consulta: sys. dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de las suscripciones de notificaciones de consultas activas en el servidor. Puede usar esta vista para comprobar si hay suscripciones activas en el servidor o en una base de datos especificada, o para comprobar una entidad de seguridad de servidor especificada.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82826395"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
-|**Junction**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
+|**sid**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
 |**created**|**datetime**|Fecha y hora en que se creó la suscripción.|  
 |**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: el tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si se produce un cambio que invalida la suscripción después del tiempo de espera especificado, pero antes de que se desencadene la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que se produzca la activación en el momento en que se realizó el cambio.|  
@@ -42,7 +42,7 @@ ms.locfileid: "82826395"
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Activado|Tipo|  
+|De|A|Activado|Tipo|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  

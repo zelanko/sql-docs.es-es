@@ -20,15 +20,15 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf694bcd82d57b0c021797677674ceb418f875a2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3534afe09635fdc626c51b63469c801a0c3ac418
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811539"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648602"
 ---
 # <a name="sysdm_os_workers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una fila por cada trabajador del sistema. Para obtener más información sobre los trabajos, consulte la [Guía de arquitectura de subprocesos y tareas](../../relational-databases/thread-and-task-architecture-guide.md). 
   
@@ -38,7 +38,7 @@ ms.locfileid: "82811539"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8**|Dirección de memoria del trabajador.|  
-|status|**int**|Solo para uso interno.|  
+|status|**int**|Exclusivamente para uso interno.|  
 |is_preemptive|**bit**|1 = El trabajador está trabajando con un programa preferente. Un trabajador que ejecuta código externo trabaja con un programa preferente.|  
 |is_fiber|**bit**|1 = El trabajador está trabajando con la opción de agrupación ligera. Para obtener más información, vea [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = El trabajador está atascado intentando obtener un bloqueo por subproceso. Si este bit está establecido, podría indicar un problema con la contención de un objeto al que se tiene acceso con frecuencia.|  
@@ -63,9 +63,9 @@ ms.locfileid: "82811539"
 |end_quantum|**bigint**|Tiempo en milisegundos al final de la ejecución actual de este trabajador.|  
 |last_wait_type|**nvarchar(60)**|Tipo de la última espera. Para obtener una lista de tipos de espera, vea [Sys. dm_os_wait_stats &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
 |return_code|**int**|Valor devuelto de la última espera. Puede ser uno de los siguientes valores:<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
-|quantum_used|**bigint**|Solo para uso interno.|  
-|max_quantum|**bigint**|Solo para uso interno.|  
-|boost_count|**int**|Solo para uso interno.|  
+|quantum_used|**bigint**|Exclusivamente para uso interno.|  
+|max_quantum|**bigint**|Exclusivamente para uso interno.|  
+|boost_count|**int**|Exclusivamente para uso interno.|  
 |tasks_processed_count|**int**|Número de tareas procesadas por este trabajador.|  
 |fiber_address|**varbinary(8**|Dirección de memoria de la fibra con la que está asociado este trabajador.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está configurado para agrupación ligera.|  
 |task_address|**varbinary(8**|Dirección de memoria de la tarea actual. Para obtener más información, vea [Sys. dm_os_tasks &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  

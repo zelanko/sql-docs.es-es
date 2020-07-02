@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 27f2d95a23a89c4e50924944709ba38a39a6ff2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2c01cfb6e469ef33c897d581eadf2da757cdb06f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833726"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646873"
 ---
 # <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita los datos del almacén de administración de datos basándose en una directiva de retención. Este procedimiento lo ejecuta diariamente el trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mdw_purge_data en el almacén de administración de datos asociado a la instancia especificada. Puede utilizar este procedimiento almacenado para realizar una eliminación a petición de los datos del almacén de administración de datos.  
   
@@ -63,7 +63,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Este procedimiento selecciona las filas de la vista core.snapshots que pueden quitarse de acuerdo con el período de retención. Todas las filas que se pueden quitar se eliminan de la tabla core.snapshots_internal. La eliminación de las filas precedentes desencadenará una acción de eliminación en cascada en todas las tablas del almacén de administración de datos. Esto se consigue al usar la cláusula ON DELETE CASCADE, que se define para todas las tablas que contienen datos recopilados.  
   
  Cada instantánea y sus datos asociados se eliminan dentro de una transacción explícita y, a continuación, se confirma la operación. Por lo tanto, si se detiene manualmente la operación de purga o se supera el valor especificado para @duration , solo se conservan los datos no confirmados. Estos datos se pueden quitar la próxima vez que se ejecute el trabajo.  

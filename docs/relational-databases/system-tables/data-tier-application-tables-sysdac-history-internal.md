@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 025c11a6d04f61378080c303a4935ce98e64f164
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0330c68c8399318b2db96a5f88880fdd566c9acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833144"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85625756"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tablas de aplicación de capa de datos: sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre las acciones realizadas para administrar las aplicaciones de capa de datos (DAC). Esta tabla se almacena en el esquema **DBO** de la base de datos **msdb** .  
   
@@ -33,14 +33,14 @@ ms.locfileid: "82833144"
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Identificador de la acción|  
 |**sequence_id**|**int**|Identifica un paso dentro de una acción.|  
-|**instance_id**|**uniqueidentifier**|Identificador de la instancia de DAC. Esta columna se puede combinar en la columna **instance_id** en [dbo. sysdac_instances &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
+|**instance_id**|**uniqueidentifier**|Identificador de la instancia de DAC. Esta columna se puede combinar en la columna **instance_id** en [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
 |**action_type**|**tinyint**|Identificador del tipo de acción:<br /><br /> **0** = implementar<br /><br /> **1** = crear<br /><br /> **2** = cambiar nombre<br /><br /> **3** = desasociar<br /><br /> **4** = eliminar|  
-|**action_type_name**|**VARCHAR (19)**|Nombre del tipo de acción:<br /><br /> **deploy**<br /><br /> **crear**<br /><br /> **rename**<br /><br /> **conecta**<br /><br /> **delete**|  
+|**action_type_name**|**VARCHAR (19)**|Nombre del tipo de acción:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **conecta**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Identificador del tipo de objeto afectado por la acción:<br /><br /> **0** = dacpac<br /><br /> **1** = inicio de sesión<br /><br /> **2** = base de datos|  
 |**dac_object_type_name**|**VARCHAR (8)**|Nombre del tipo de objeto afectado por la acción:<br /><br /> **dacpac** = instancia de DAC<br /><br /> **Inicio**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Código que identifica el estado actual de la acción:<br /><br /> **0** = pendiente<br /><br /> **1** = correcto<br /><br /> **2** = error|  
 |**action_status_name**|**VARCHAR (11)**|Estado actual de la acción:<br /><br /> **pending**<br /><br /> **realizado**<br /><br /> **puedan**|  
-|**Obligatorio**|**bit**|Lo utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] al revertir una operación DAC.|  
+|**Requerido**|**bit**|Lo utiliza el [!INCLUDE[ssDE](../../includes/ssde-md.md)] al revertir una operación DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nombre del objeto antes de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**dac_object_name_posttran**|**sysname**|Nombre del objeto después de que se confirme la transacción que contiene la acción. Solo se utiliza para las bases de datos e inicios de sesión.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] que implementa una acción en una base de datos o inicio de sesión.|  
@@ -51,7 +51,7 @@ ms.locfileid: "82833144"
 |**date_created**|**datetime**|Fecha y hora en que se creó esta entrada.|  
 |**date_modified**|**datetime**|Fecha y hora en la que se modificó por última vez la entrada.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las acciones de administración de una DAC, por ejemplo su implementación o eliminación, generan varios pasos. A cada acción se le asigna un identificador de acción. A cada paso se le asigna un número de secuencia y una fila en **sysdac_history_internal**, donde se registra el estado del paso. Cada fila se crea cuando el paso de la acción comienza y se actualiza según convenga para reflejar el estado de la operación. Por ejemplo, se puede asignar una acción de implementación de DAC **action_id** 12 y obtener cuatro filas en **sysdac_history_internal**:  
   
 |||||  
@@ -81,7 +81,7 @@ WHERE instance_id NOT IN
   
 ## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
- [DBO. sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
+ [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  
   
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c1949134790942ea510060534a4760e76b63469d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: af008513b8305d2e7ec0c12ad3fddd937daed9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633500"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSrepl_identity_range** se proporciona compatibilidad con la administración del intervalo de identidad. Esta tabla se almacena en las bases de datos de publicaciones, distribución y suscripciones.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "82824864"
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**range**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**max_identity**|**bigint**|Límite máximo del intervalo de identidad.|  
-|**mínimo**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**current_max**|**bigint**|Máximo actual que se puede asignar, aunque no necesariamente.|  
   
 ## <a name="see-also"></a>Consulte también  

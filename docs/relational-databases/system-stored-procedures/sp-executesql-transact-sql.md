@@ -19,15 +19,15 @@ ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d71778517a9c6711a157bfe6f79df34ad05d9ee7
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8d6efd10e3b7cb385c576cf8644ec945736765ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820523"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634817"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Ejecuta una instrucción o lote [!INCLUDE[tsql](../../includes/tsql-md.md)] que puede volver a utilizarse muchas veces o uno que se ha generado de forma dinámica. La instrucción o el lote [!INCLUDE[tsql](../../includes/tsql-md.md)] puede contener parámetros incrustados.  
   
@@ -75,7 +75,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Devuelve los conjuntos de resultados de todas las instrucciones SQL integradas en la cadena SQL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  los parámetros de sp_executesql deben especificarse en el orden específico, tal y como se describe en la sección "sintaxis", anteriormente en este tema. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
  sp_executesql tiene el mismo comportamiento que EXECUTE en cuanto a los lotes, el ámbito de los nombres y el contexto de las bases de datos. La [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o el lote del \@ parámetro sp_executesql stmt no se compila hasta que se ejecuta la instrucción sp_executesql. El contenido de \@ stmt se compila y se ejecuta como un plan de ejecución independiente del plan de ejecución del lote que llamó a sp_executesql. El lote de sp_executesql no puede hacer referencia a las variables declaradas en el lote que llama a sp_executesql. Los cursores o las variables locales del lote de sp_executesql no son visibles para el lote que llama a sp_executesql. Los cambios en el contexto de base de datos solo se mantienen hasta el final de la instrucción sp_executesql.  

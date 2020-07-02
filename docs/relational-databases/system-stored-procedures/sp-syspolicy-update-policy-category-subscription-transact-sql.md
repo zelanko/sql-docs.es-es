@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d0769566-8f5c-4c8a-84d3-ee17ea6e0cb4
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f3833d16d0cf4e791064dc369d460fe9cf5cc3e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: cec54635b7cf40a85adeae5188750c8c2cc79fb5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035363"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633919"
 ---
 # <a name="sp_syspolicy_update_policy_category_subscription-transact-sql"></a>sp_syspolicy_update_policy_category_subscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza una suscripción de categoría de directiva para una base de datos especificada.  
   
@@ -55,7 +55,7 @@ sp_syspolicy_update_policy_category_subscription [ @policy_category_subscription
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_update_policy_category_subscription en el contexto de la base de datos del sistema msdb.  
   
  Para obtener valores para *policy_category_subscription_id* y para *policy_category*, puede usar la siguiente consulta:  

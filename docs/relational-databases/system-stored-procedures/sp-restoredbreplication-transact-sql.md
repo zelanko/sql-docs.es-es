@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78cd6788820af2c8803f6688e0703878fe165df1
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c8d83d2aad9227993df29774d3140376514319ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817069"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85633933"
 ---
 # <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita la configuración de replicación si se restaura una base de datos al servidor, base de datos o sistema que no la ha originado y que, por tanto, no es capaz de ejecutar procesos de replicación. Cuando se restaura una base de datos replicada a un servidor o base de datos que no es donde se creó la copia de seguridad, no es posible conservar la configuración de replicación. En la restauración, el servidor llama a **sp_restoredbreplication** directamente para quitar automáticamente los metadatos de replicación de la base de datos restaurada.  
   
@@ -55,7 +55,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_restoredbreplication** se utiliza en todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

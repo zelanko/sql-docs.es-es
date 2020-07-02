@@ -1,5 +1,5 @@
 ---
-title: CDC. fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: CDC. fn_cdc_get_all_changes_ &lt; capture_instance &gt; (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5e05ef7753ae6375382bfd2bd6e199b6cabffd63
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043051"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647998"
 ---
 # <a name="cdcfn_cdc_get_all_changes_ltcapture_instancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila para cada cambio aplicado a la tabla de origen dentro del intervalo del número de secuencia de registro (LSN) especificado. Si una fila de origen ha tenido muchos cambios durante el intervalo, cada cambio se representa en el conjunto de resultados devuelto. Además de devolver los datos del cambio, cuatro columnas de metadatos proporcionan la información que necesita aplicar los cambios a otro origen de datos. Las opciones de filtrado de filas rigen el contenido de las columnas de metadatos y de las filas devueltas en el conjunto de resultados. Cuando se especifica la opción de filtro de filas 'all', cada cambio tiene exactamente una fila para identificar el cambio. Cuando se especifica la opción 'all update old', las operaciones de actualización se representan como dos filas: una que contiene los valores de las columnas capturadas antes de la actualización y otra que contiene los valores de las columnas capturadas después de la actualización.  
   
@@ -60,7 +60,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
  Puede ser una de las siguientes opciones:  
   
- all  
+ todo  
  Devuelve todos los cambios dentro del intervalo LSN especificado. Para los cambios debidos a una operación de actualización, esta opción devuelve solo la fila que contiene los nuevos valores una vez aplicada la actualización.  
   
  all update old  
@@ -74,18 +74,18 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 |**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios en una fila dentro de una transacción.|  
 |**_ _ $ Operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) necesaria para aplicar la fila de datos modificados al origen de datos de destino. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualización (los valores de columna capturados son los de antes de la operación de actualización). Este valor solamente se aplica cuando se especifica la opción de filtro de filas 'all update old'.<br /><br /> 4 = actualización (los valores de columna capturados son los de después de la operación de actualización)|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits con un bit que corresponde a cada columna capturada identificada para la instancia de captura. Este valor tiene todos los bits definidos establecidos en 1 cuando **_ _ $ Operation** = 1 o 2. Cuando **_ _ $ Operation** = 3 o 4, solo los bits que corresponden a las columnas que han cambiado se establecen en 1.|  
-|**\<columnas de la tabla de origen capturadas>**|Varía|Las columnas restantes devueltas por la función son las columnas capturadas identificadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
+|**\<captured source table columns>**|Varía|Las columnas restantes devueltas por la función son las columnas capturadas identificadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, se devuelven todas las columnas de la tabla de origen.|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** . Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos de origen, la función devuelve el error 229 ("se denegó el permiso SELECT en el objeto ' fn_cdc_get_all_changes_...\<', base de datos ' DatabaseName> ', esquema ' CDC '.").  
+ Requiere la pertenencia al rol fijo de servidor **sysadmin** o al rol fijo de base de datos **db_owner** . Para el resto de usuarios, requiere el permiso SELECT en todas las columnas capturadas en la tabla de origen y, si se ha definido un rol de acceso para la instancia de captura, la pertenencia a ese rol de base de datos. Cuando el autor de la llamada no tiene permiso para ver los datos de origen, la función devuelve el error 229 ("se denegó el permiso SELECT en el objeto ' fn_cdc_get_all_changes_... ', base de datos ' \<DatabaseName> ', esquema ' CDC '.").  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el intervalo de LSN especificado no cae dentro de la escala de tiempo del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 ("Se ha especificado un número insuficiente de argumentos para el procedimiento o la función cdc.fn_cdc_get_all_changes".).  
   
  A las columnas de tipo de datos **Image**, **Text**y **ntext** siempre se les asigna un valor NULL cuando **_ _ $ Operation** = 1 o **_ _ $ Operation** = 3. A las columnas de tipo de datos **varbinary (Max)**, **VARCHAR (Max)** o **nvarchar (Max)** se les asigna un valor NULL cuando **_ _ $ Operation** = 3, a menos que la columna cambie durante la actualización. Cuando **_ _ $ Operation** = 1, a estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que están incluidas en una instancia de captura siempre tienen el valor NULL.  
   
 ## <a name="examples"></a>Ejemplos  
- Hay [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] disponibles varias plantillas que muestran cómo usar las funciones de consulta de captura de datos modificados. Estas plantillas están disponibles en el menú **Ver** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener más información, vea [Explorador de plantillas](../../ssms/template/template-explorer.md).  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Hay disponibles varias plantillas que muestran cómo usar las funciones de consulta de captura de datos modificados. Estas plantillas están disponibles en el menú **Ver** de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . Para obtener más información, vea [Explorador de plantillas](../../ssms/template/template-explorer.md).  
   
  Este ejemplo muestra la `Enumerate All Changes for Valid Range Template`. Utiliza la función `cdc.fn_cdc_get_all_changes_HR_Department` para notificar todos los cambios disponibles actualmente para la instancia de captura `HR_Department`, que se define para la tabla de origen HumanResources.Department de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   

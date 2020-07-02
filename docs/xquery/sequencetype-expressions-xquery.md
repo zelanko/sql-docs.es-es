@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 78cc79444a37216014e2eb99852c1cbeee7f4a93
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 909d3cb49879a94c466e58f83997e32c468d9df8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85643359"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   En XQuery, un valor siempre es una secuencia. Se hace referencia a los tipos de valor como tipos de secuencia. El tipo de secuencia se puede utilizar en una **instancia de** expresión XQuery. La sintaxis SequenceType descrita en la especificación de XQuery se utiliza cuando se debe hacer referencia a un tipo de una expresión XQuery.  
   

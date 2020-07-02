@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-ms.openlocfilehash: 3b88badb8b1852617d9edd8acd31f2c19258cca7
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 85ab6ead295b4459890a61deccdac3dc2775033a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304866"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646012"
 ---
 # <a name="sp_grantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega un usuario de base de datos a la base de datos actual.  
   
@@ -43,9 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @loginame = ] 'login_ '`Es el nombre del grupo de Windows, el inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sesión de Windows o el inicio de sesión que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato*Inicio de sesión*de *dominio*\\; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
+`[ @loginame = ] 'login_ '`Es el nombre del grupo de Windows, el inicio de sesión de Windows o el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se va a asignar al nuevo usuario de base de datos. Los nombres de los grupos de Windows y los inicios de sesión de Windows deben calificarse con un nombre de dominio de Windows con el formato inicio de sesión de *dominio* \\ *login*; por ejemplo, **LONDON\Joeb**. El inicio de sesión ya no se puede asignar a un usuario de la base de datos. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor null, ** \@name_in_db** se establece en *login*. *name_in_db* no debe existir en la base de datos actual.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]``Es el nombre del nuevo usuario de la base de datos. *name_in_db* es una variable de salida con un tipo de datos **sysname y su**valor predeterminado es NULL. Si no se especifica, se usa *login* . Si se especifica como una variable de salida con un valor NULL, ** \@ name_in_db** se establece en *login*. *name_in_db* no debe existir en la base de datos actual.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -59,7 +59,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
  Requiere la pertenencia al rol fijo de base de datos **db_owner** o el rol fijo de base de datos **db_accessadmin** .  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente `CREATE USER` se usa para agregar un usuario de base de `Edmonds\LolanSo` datos para el inicio de sesión de Windows a la base de datos actual. El nuevo usuario se llama `Lolan`. Es el método preferido para crear un usuario de base de datos.  
+ En el ejemplo siguiente `CREATE USER` se usa para agregar un usuario de base de datos para el inicio de sesión de Windows `Edmonds\LolanSo` a la base de datos actual. El nuevo usuario se llama `Lolan`. Es el método preferido para crear un usuario de base de datos.  
   
 ```sql
 CREATE USER Lolan FOR LOGIN [Edmonds\LolanSo];  

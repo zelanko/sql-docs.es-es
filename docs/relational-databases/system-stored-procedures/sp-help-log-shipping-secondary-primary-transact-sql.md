@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1310fdaf-edb5-4294-9739-7fb37c2c2cb5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 16753620fa4185d3f488db340aeb4858c28f6d69
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c8876dd3a23d9efb1c658d2412efb169daef1b62
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68066757"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634401"
 ---
 # <a name="sp_help_log_shipping_secondary_primary-transact-sql"></a>sp_help_log_shipping_secondary_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Este procedimiento almacenado recupera la configuración de una base de datos principal determinada en el servidor secundario.  
   
@@ -51,7 +51,7 @@ sp_help_log_shipping_secondary_primary
 ## <a name="result-sets"></a>Conjuntos de resultados  
  El **conjunto de resultados**contiene las columnas **secondary_id**, **primary_server**, **primary_database**, **backup_source_directory**, **backup_destination_directory**, **file_retention_period**, **copy_job_id**, restore_job_id **,** monitor_server **monitor_server_security_mode log_shipping_secondary.** **restore_job_id**  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_help_log_shipping_secondary_primary** se debe ejecutar desde la base de datos **maestra** en el servidor secundario.  
   
 ## <a name="permissions"></a>Permisos  

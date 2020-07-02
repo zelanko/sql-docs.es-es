@@ -12,15 +12,15 @@ dev_langs:
 ms.assetid: 293cc233-8688-4823-9887-176ed772f53d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7168d2f9842c482ff7474e700d0d1a1aa7fd734f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecf12fccb8e6c252ee4a0abee7dfe3661385d50d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68043143"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647972"
 ---
 # <a name="always-on-availability-groups-functions-transact-sql"></a>Always On funciones de grupos de disponibilidad (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]proporciona las siguientes funciones de Always On grupos de disponibilidad.  
   

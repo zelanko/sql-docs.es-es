@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 15a7b6a0fd05821e652160606002c1cef8edc717
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc554af539aca8579e02f36eca7bc02f7c3e5dac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829079"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85648404"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enumera todos los paquetes registrados con el motor de Extended Events.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "82829079"
   
 ||||  
 |-|-|-|  
-|De|En|Relación|  
+|De|A|Relación|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Varios a uno|  
   
-## <a name="see-also"></a>Consulte también:  
+## <a name="see-also"></a>Vea también  
  [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

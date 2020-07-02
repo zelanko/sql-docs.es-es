@@ -9,15 +9,15 @@ ms.topic: reference
 ms.assetid: c4288265-43f7-44fd-acab-ba64d04264d9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d0354ba6d980b359778a66fc13b65fe233cacba1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f10ed404b9ccb2d7a1dd62a45ac794df265a45d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67995996"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85635320"
 ---
 # <a name="localdb_error_cannot_access_instance_folder"></a>LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_FOLDER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## <a name="details"></a>Detalles  
   
@@ -27,7 +27,7 @@ ms.locfileid: "67995996"
 |Id. de evento|261|  
 |Origen de eventos|SQL Server Local Database Runtime 12.0|  
 |Componente|API de Local Database Runtime|  
-|Texto del mensaje|No se puede tener acceso a la carpeta de la instancia de base de datos local:\\ %% LOCALAPPDATA\>%% \ Microsoft\Microsoft SQL Server local DB\Instances<nombre de instancia.|  
+|Texto del mensaje|No se puede tener acceso a la carpeta de la instancia de base de datos local:%% LOCALAPPDATA%% \ Microsoft\Microsoft SQL Server local DB\Instances \\<nombre de instancia \> .|  
   
 ## <a name="explanation"></a>Explicación  
  No se puede tener acceso a una carpeta de la instancia.  

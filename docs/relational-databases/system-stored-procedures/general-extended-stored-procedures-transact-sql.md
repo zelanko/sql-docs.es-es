@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: daa3dc088a4a448e6b20cdf2ade73e64e86d491d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2a2a59d30dfc86a84d76ebd25143f4d7d1090a4c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942194"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85634850"
 ---
 # <a name="general-extended-stored-procedures-transact-sql"></a>Procedimientos almacenados extendidos generales (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es compatible con los siguientes procedimientos almacenados del sistema que proporcionan una interfaz desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a programas externos para diversas actividades de mantenimiento.  
   

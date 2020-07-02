@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5d6646bb794b50158035759916ba823c6fca2102
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: eeb6fd370bfd107864845439086138fff3d379c2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85644852"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aplica un filtro a un seguimiento. **sp_trace_setfilter** solo se puede ejecutar en seguimientos existentes que estén detenidos (el*Estado* es **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Devuelve un error si este procedimiento almacenado se ejecuta en un seguimiento que no existe o cuyo *Estado* no es **0**.  
   
@@ -54,7 +54,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`Especifica el tipo de comparación que se va a realizar. *comparison_operator* es de **tipo int**y no tiene ningún valor predeterminado. Esta tabla contiene los operadores de comparación y sus valores representativos.  
   
-|Valor|Operador de comparación|  
+|Valor|Operadores de comparación|  
 |-----------|-------------------------|  
 |**0**|= (Es igual a)|  
 |**1**|<>  (no igual)|  
@@ -91,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Memoria insuficiente. Se devuelve cuando no hay memoria suficiente para realizar la acción especificada.|  
 |16|La función no es válida para este seguimiento.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_trace_setfilter** es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procedimiento almacenado que realiza muchas de las acciones ejecutadas previamente por procedimientos almacenados extendidos disponibles en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilice **sp_trace_setfilter** en lugar de los **xp_trace_set \* filtrar** procedimientos almacenados extendidos para crear, aplicar, quitar o manipular filtros en seguimientos. Para obtener más información, vea [filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Todos los filtros de una columna determinada deben estar habilitados juntos en una ejecución de **sp_trace_setfilter**. Por ejemplo, si un usuario se propone aplicar dos filtros en la columna del nombre de la aplicación y uno en la columna del nombre del usuario, el usuario deberá especificar los filtros en el nombre de la aplicación en secuencia. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devolverá un error si el usuario intenta especificar un filtro de nombre de aplicación en una llamada a un procedimiento almacenado, seguido de un filtro de nombre de usuario y, luego, otro filtro de nombre de aplicación.  

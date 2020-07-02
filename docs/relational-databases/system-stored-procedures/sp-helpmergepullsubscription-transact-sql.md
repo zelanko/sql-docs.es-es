@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af38463c5104da636d04f961b0cee5210369e38d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e0abc3934e1cfec8e37a4b1f3060a7aeef38a06e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834519"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85626936"
 ---
 # <a name="sp_helpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de las suscripciones de extracción que existen en un suscriptor. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
@@ -63,7 +63,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserciones<br /><br /> **1** = extracción<br /><br /> **2** = anónimo|  
 |**Prior**|**Float (8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = no se usa la instantánea.|  
-|**denominación**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
+|**description**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
 |**merge_jobid**|**binario (16)**|Id. de trabajo del Agente de mezcla.|  
 |**enabled_for_syncmgr**|**int**|Indica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar (26)**|Hora a la que el Agente de mezcla sincronizó correctamente la suscripción por última vez.|  
@@ -101,7 +101,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_helpmergepullsubscription** se utiliza en la replicación de mezcla. En el conjunto de resultados, la fecha devuelta en **LAST_UPDATED** tiene el formato *AAAAMMDD hh: mm: SS. FFF*.  
   
 ## <a name="permissions"></a>Permisos  

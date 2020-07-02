@@ -17,15 +17,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 931babcaa6e229d6114930bba5f06803aa25f59e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0151b29c6375cdefd2ad1a6430591cb98b51e08e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829692"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85647058"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Replicación geográfica activa: sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Este procedimiento tiene como ámbito una relación de [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] entre una base de datos principal y una base de datos secundaria. La llamada a la **sp_wait_for_database_copy_sync** hace que la aplicación espere hasta que la base de datos secundaria activa replique y confirme todas las transacciones confirmadas. Ejecute **sp_wait_for_database_copy_sync** solo en la base de datos principal.  
   
@@ -61,7 +61,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ## <a name="permissions"></a>Permisos  
  Cualquier usuario de la base de datos principal puede llamar a este procedimiento almacenado del sistema. El inicio de sesión debe ser un usuario tanto en la base de datos principal como en la secundaria activa.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todas las transacciones confirmadas antes de una llamada **sp_wait_for_database_copy_sync** se envían a la base de datos secundaria activa.  
   
 ## <a name="examples"></a>Ejemplos  

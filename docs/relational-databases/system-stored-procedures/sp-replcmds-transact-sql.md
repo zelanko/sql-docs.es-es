@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 85dd8567599de98af1abb72394fef747bd2da6b5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c11132450e88326740af485a7293dd5a27b8326b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829990"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85645652"
 ---
 # <a name="sp_replcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve los comandos de las transacciones marcadas para replicación. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -48,7 +48,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |-----------------|---------------|-----------------|  
 |**identificador de artículo**|**int**|Id. del artículo.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial o no.|  
-|**Command**|**varbinary (1024)**|El valor del comando.|  
+|**command**|**varbinary (1024)**|El valor del comando.|  
 |**xactid**|**binary(10)**|Id. de la transacción.|  
 |**xact_seqno**|**varbinary(16)**|El número de secuencia de la transacción.|  
 |**publication_id**|**int**|Id. de la publicación.|  
@@ -56,12 +56,12 @@ sp_replcmds [ @maxtrans = ] maxtrans
 |**command_type**|**int**|Tipo de comando.|  
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
-|**pkHash**|**int**|Solo para uso interno.|  
+|**pkHash**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
 |**originator_lsn**|**varbinary(16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  el proceso de registro del log utiliza **sp_replcmds** en la replicación transaccional.  
   
  La replicación trata el primer cliente que ejecuta **sp_replcmds** dentro de una base de datos determinada como lector del registro.  

@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 98963dbab83ffea8590c213284b2540393d7c0fd
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c4ba72a35ba3b8339a1ebc919327ce353b2c7697
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85646937"
 ---
 # <a name="coresp_create_snapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Inserta una fila en una vista core.snapshots del almacén de administración de datos. Se llama a este procedimiento cada vez que un paquete de carga empieza a cargar los datos en el almacén de administración de datos.  
   
@@ -60,7 +60,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  Nombre de la instancia del conjunto de recopilación. *named_instance* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
  [ @log_id =] *log_id*  
- Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista dbo. syscollector_execution_log en la base de datos msdb.  
+ Identificador único que se asigna al registro de eventos de conjunto de recopilación en el servidor que recopiló los datos. *log_id* es de tipo **BIGINT** y no tiene ningún valor predeterminado. Para obtener el valor de *log_id*, consulte la vista collector_execution_log dbo.sysen la base de datos msdb.  
   
  [ @snapshot_id =] *snapshot_id*  
  Identificador único de una fila que se inserta en la vista Core. snapshots. *snapshot_id* es de **tipo int** y se devuelve como salida.  
@@ -68,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cada vez que un paquete de carga inicia la carga de datos en el almacén de administración de datos, el componente en tiempo de ejecución del recopilador de datos llama a core.sp_create_snapshot.  
   
  Este procedimiento comprueba si:  

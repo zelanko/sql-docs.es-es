@@ -19,15 +19,15 @@ ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b415e24ec1b81ed660f1ca43b3d4283d11c8e44
-ms.sourcegitcommit: dc6ea6665cd2fb58a940c722e86299396b329fec
+ms.openlocfilehash: 7f1072cf996bf32c9511586c24cd6eb8dbb920f6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2020
-ms.locfileid: "84423189"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752812"
 ---
 # <a name="sp_getapplock-transact-sql"></a>sp_getapplock (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Coloca un bloqueo en un recurso de la aplicación.  
   
@@ -69,7 +69,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  \>= 0 (correcto) o < 0 (error)  
   
-|Value|Resultado|  
+|Valor|Resultado|  
 |-----------|------------|  
 |0|Se concedió el bloqueo de forma sincrónica.|  
 |1|Se concedió el bloqueo después de esperar a que se liberaran otros bloqueos no compatibles.|  
@@ -78,7 +78,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|La solicitud de bloqueo fue objeto del propio bloqueo.|  
 |-999|Indica un error de llamada o de validación de parámetros.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los bloqueos colocados en un recurso se asocian a la transacción o a la sesión actuales. Los bloqueos asociados con la transacción actual se liberan cuando ésta se confirma o se revierte. Los bloqueos asociados a la sesión se liberan cuando se cierra la sesión. Cuando el servidor se cierra por cualquier motivo, se liberan todos los bloqueos.  
   
  El bloqueo de recurso creado por sp_getapplock se crea en la base de datos actual para la sesión. Cada recurso de bloqueo se identifica mediante la combinación de los siguientes valores:  
@@ -111,7 +111,7 @@ GO
   
  Un interbloqueo con un bloqueo de aplicación no revierte la transacción que solicitó el bloqueo de aplicación. Cualquier reversión que pueda solicitarse como resultado del valor devuelto debe realizarse manualmente. Por tanto, se recomienda incluir la comprobación de errores en el código de forma que si se devuelven determinados valores (por ejemplo, -3), se inicie una acción ROLLBACK TRANSACTION u otra alternativa.  
   
- A continuación se muestra un ejemplo:  
+ Este es un ejemplo:  
   
 ```  
 USE AdventureWorks2012;  

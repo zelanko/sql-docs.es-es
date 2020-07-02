@@ -20,15 +20,15 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a95bd2d98f84c288662838e030961bd4a753cff3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc3e4be2683ec0dee5e9cc209718bf97b3859
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829319"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752865"
 ---
 # <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una lista de todos los subprocesos del sistema operativo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están ejecutando en el proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -56,8 +56,8 @@ ms.locfileid: "82829319"
 |is_impersonating|**int**|Indica si este subproceso usa suplantación de Win32.<br /><br /> 1 = El subproceso usa credenciales de seguridad diferentes de las predeterminadas del proceso. Indica que el subproceso suplanta una entidad distinta de la que creó el proceso.|  
 |is_waiting_on_loader_lock|**int**|Estado del sistema operativo que indica si el subproceso espera en el bloqueo de carga.|  
 |fiber_data|**varbinary(8**|Fibra actual de Win32 que se ejecuta en el subproceso. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  
-|thread_handle|**varbinary(8**|Solo para uso interno.|  
-|event_handle|**varbinary(8**|Solo para uso interno.|  
+|thread_handle|**varbinary(8**|Exclusivamente para uso interno.|  
+|event_handle|**varbinary(8**|Exclusivamente para uso interno.|  
 |scheduler_address|**varbinary(8**|Dirección de memoria del programador asociado con este subproceso. Para obtener más información, vea [Sys. dm_os_schedulers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |worker_address|**varbinary(8**|Dirección de memoria del trabajador enlazado a este subproceso. Para obtener más información, vea [Sys. dm_os_workers &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |fiber_context_address|**varbinary(8**|Dirección de contexto de fibra interna. Esto solo se aplica cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para la agrupación ligera.|  

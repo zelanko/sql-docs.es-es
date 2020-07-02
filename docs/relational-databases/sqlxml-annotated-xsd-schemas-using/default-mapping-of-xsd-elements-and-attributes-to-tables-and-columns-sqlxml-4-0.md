@@ -28,15 +28,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cabf0e7eb0fd65121cab717ffc2b94b22b4cc354
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 1820f99d5250d9687fb83c57f9f743e2e1b5c33b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84885453"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750805"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Asignación predeterminada de elementos y atributos XSD a tablas y columnas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   De forma predeterminada, un elemento de tipo complejo en un esquema XSD anotado se asigna a una tabla (vista) con el mismo nombre en la base de datos especificada, mientras que un elemento o atributo de tipo simple se asigna a la columna con el mismo nombre en la tabla.  
   
 ## <a name="examples"></a>Ejemplos  

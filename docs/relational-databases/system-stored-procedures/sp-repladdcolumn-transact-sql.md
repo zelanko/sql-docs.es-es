@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 08f459761c6e72063979bef6f7d9067611f2dd78
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 05c00137acdf989456903fedddcc45a7b79e0e61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751633"
 ---
 # <a name="sp_repladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega una columna a un artículo de tabla existente que ha sido publicado. Permite agregar la nueva columna a todos los publicadores que publican esta tabla o, simplemente, agregar la columna a una publicación específica que publica la tabla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -52,7 +52,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  [ @column =] '*columna*'  
  Es el nombre de la columna de la tabla que se va a agregar para replicación. la *columna* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @typetext =] '*TypeText*'  
+ [ @typetext = ] '*TypeText*'  
  Es la definición de la columna que se va a agregar. *TypeText* es de tipo **nvarchar (3000)** y no tiene ningún valor predeterminado. Por ejemplo, si se agrega la columna order_filled, y es un campo de un solo carácter, no NULL, y tiene un valor predeterminado de **N**, order_filled sería el parámetro de *columna* , mientras que la definición de la columna, la **restricción Char (1) not null constraint_name valor predeterminado ' N '** sería el valor del parámetro *TypeText* .  
   
  [ @publication_to_add =] '*publication_to_add*'  

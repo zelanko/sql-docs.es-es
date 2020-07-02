@@ -1,5 +1,5 @@
 ---
-title: DBO. sysschedules (Transact-SQL) | Microsoft Docs
+title: Programaciones de dbo.sys(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: de79a475b8edb8f02eee15d79f1259b8032b60e8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 09ece580c45e1ec93b183f2d830c9daf68287ab1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82806800"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750252"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre las programaciones de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -64,7 +64,7 @@ ms.locfileid: "82806800"
 |**64** (se inicia cuando se inicia Agente SQL Server servicio)|**freq_interval** no se usa (**0**)|  
 |**128** (se ejecuta cuando el equipo está inactivo)|**freq_interval** no se usa (**0**)|  
   
-## <a name="see-also"></a>Consulte también:  
- [DBO. sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
+## <a name="see-also"></a>Vea también  
+ [dbo.sysjobschedules &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
   
   

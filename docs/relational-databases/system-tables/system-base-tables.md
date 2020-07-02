@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1e436807a5738a1ad844a07b3403eb99d1a5cf18
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3336905579401f17a5c3afa2509e64670e5ea1ed
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819913"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752644"
 ---
 # <a name="system-base-tables"></a>Tablas base del sistema
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Las tablas base del sistema son las tablas subyacentes que almacenan los metadatos para una base de datos específica. La base de datos **maestra** es especial en este sentido porque contiene algunas tablas adicionales que no se encuentran en ninguna de las otras bases de datos. Estas tablas contienen metadatos persistentes con un ámbito para todo el servidor.  
   

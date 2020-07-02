@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ed15828-8cca-4cf0-b2ff-1ecd0d8db11a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 163b5aba5f676f14afd26b962c856b325ccc4dc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6f9096b3e974b0fad906c4121a8c81bd2ba26e90
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82819995"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751565"
 ---
 # <a name="sysreplicationalerts-transact-sql"></a>sysreplicationalerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información acerca de las condiciones que hacen que se active una alerta de replicación. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82819995"
 |**publication_type**|**int**|Tipo de publicación:<br /><br /> **0** = instantánea.<br /><br /> **1** = transaccional.<br /><br /> **2** = fusionar mediante combinación.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor asociado al agente que ha activado esta alerta.|  
 |**subscriber_db**|**sysname**|Nombre de la base de datos del suscriptor asociada al agente que ha activado esta alerta.|  
-|**ARTICLE**|**sysname**|Nombre del artículo asociado al agente que ha activado esta alerta.|  
+|**artículo**|**sysname**|Nombre del artículo asociado al agente que ha activado esta alerta.|  
 |**destination_object**|**sysname**|Nombre de la tabla de suscripciones asociada a la alerta.|  
 |**source_object**|**sysname**|Nombre de la tabla de publicaciones asociada a la alerta.|  
 |**alert_error_text**|**ntext**|Texto de la alerta.|  

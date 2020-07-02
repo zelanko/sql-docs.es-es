@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e0efc86400b0858e387a83e8ea765f0058e30459
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e8097e5f528685a35038d4d20170277b7a922d64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824503"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749313"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve las propiedades de la base datos de distribución especificada. Este procedimiento almacenado se ejecuta en el distribuidor de la base de datos de distribución.  
   
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Número de horas que se conserva el historial.|  
 |**history_cleanup_agent**|**sysname**|Nombre del Agente de limpieza del historial.|  
 |**distribution_cleanup_agent**|**sysname**|Nombre del Agente de limpieza de distribución.|  
-|**status**|**int**|Solo para uso interno.|  
+|**status**|**int**|Exclusivamente para uso interno.|  
 |**data_folder**|**nvarchar(255)**|Nombre del directorio que se utiliza para almacenar los archivos de base de datos.|  
 |**data_file**|**nvarchar(255)**|Nombre del archivo de la base de datos.|  
 |**data_file_size**|**int**|Tamaño inicial del archivo de datos en megabytes.|  

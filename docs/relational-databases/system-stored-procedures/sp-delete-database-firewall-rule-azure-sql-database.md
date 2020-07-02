@@ -18,17 +18,17 @@ ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 660405e7e7592557422e43655c35ec27c194aad3
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b942b64b8d97ac69b03b9e1aef03056200f4eef4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68130679"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750648"
 ---
 # <a name="sp_delete_database_firewall_rule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-  Quita la configuración de Firewall de nivel de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]base de datos de su. Las reglas de Firewall de base de datos se pueden configurar y eliminar para la base de datos maestra y [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]para las bases de datos de usuario en.   
+  Quita la configuración de Firewall de nivel de base de datos de su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] . Las reglas de Firewall de base de datos se pueden configurar y eliminar para la base de datos maestra y para las bases de datos de usuario en [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] .   
   
  
 ## <a name="syntax"></a>Sintaxis  
@@ -40,13 +40,13 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
   
 ## <a name="arguments"></a>Argumentos  
  `[@name =] [N]'name'`  
- El nombre de la configuración del firewall de nivel de base de datos que se quitará. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
+ El nombre de la configuración del firewall de nivel de base de datos que se quitará. *Name* es de tipo **nvarchar (128)** y no tiene ningún valor predeterminado. El identificador Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] . 
   
 ## <a name="permissions"></a>Permisos  
  Solo el inicio de sesión principal de nivel de servidor creado por el proceso de aprovisionamiento o una entidad de seguridad Azure Active Directory asignada como administrador puede eliminar reglas de Firewall de nivel de base de datos.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente se quita la configuración de Firewall de `Example DB Setting 1`nivel de base de datos denominada.
+ En el ejemplo siguiente se quita la configuración de Firewall de nivel de base de datos denominada `Example DB Setting 1` .
   
 ```  
 -- Remove database-level firewall setting  

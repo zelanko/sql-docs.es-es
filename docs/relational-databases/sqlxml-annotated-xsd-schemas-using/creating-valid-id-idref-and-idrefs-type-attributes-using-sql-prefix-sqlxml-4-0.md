@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 336db1dba88e245492fb4c2e9fcefddb751b59ab
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 832607a376c8c08dbcdcff0c70278401a166a7f4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388187"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750817"
 ---
 # <a name="creating-valid-id-idref-and-idrefs-type-attributes-using-sqlprefix-sqlxml-40"></a>Crear atributos válidos de tipo ID, IDREF e IDREFS mediante sql:prefix (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Es posible especificar que un atributo sea un atributo de tipo ID. Los atributos especificados como IDREF o IDREFS pueden usarse para hacer referencia a los atributos de tipo ID, lo que habilita los vínculos entre documentos.  
   
  ID, IDREF e IDREFS corresponden a relaciones PK/FK (clave principal/clave externa) de la base de datos, con algunas diferencias. En un documento XML, los valores de los atributos de tipo ID deben ser distintos. Si los atributos **CustomerID** y **OrderID** se especifican como tipo de identificador en un documento XML, estos valores deben ser distintos. Sin embargo, en una base de datos, las columnas CustomerID y OrderID pueden tener los mismos valores. (Por ejemplo, CustomerID = 1 y OrderID = 1 sería válido en la base de datos).  
@@ -55,9 +55,9 @@ ms.locfileid: "81388187"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-id-and-idrefs-types"></a>A. Especificar tipos ID e IDREFS  
- En el esquema siguiente, el ** \<elemento Customer>** está formado por el ** \<elemento secundario Order>** . El ** \<elemento Order>** también tiene un elemento secundario, el ** \<elemento OrderDetail>** .  
+ En el esquema siguiente, el **\<Customer>** elemento está compuesto del **\<Order>** elemento secundario. El **\<Order>** elemento también tiene un elemento secundario, el **\<OrderDetail>** elemento.  
   
- El atributo **atributo OrderIDList** de ** \<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del elemento ** \<Order>** .  
+ El atributo **atributo OrderIDList** de **\<Customer>** es un atributo de tipo IDREFS que hace referencia al atributo **OrderID** del **\<Order>** elemento.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

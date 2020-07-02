@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f26f4a2ef4812effd79d5cd02e3f875e605dc334
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 44250423b994e4d35769d93aebd4434988de9a2b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823588"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752960"
 ---
 # <a name="database-mail-views-transact-sql"></a>Vistas del Correo electrónico de base de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El Correo electrónico de base de datos tiene las siguientes vistas para visualizar contenido de correo electrónico propio, el estado de los mensajes y cualquier mensaje recibido, como los errores registrados por el Correo electrónico de base de datos. Estas vistas están en la base de datos **msdb** .  
   

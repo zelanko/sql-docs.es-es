@@ -1,7 +1,7 @@
 ---
 title: Migre SQL Server a Azure SQL Database mediante el Data Migration Assistant
 description: Aprenda a usar Data Migration Assistant para migrar un SQL Server local a Azure SQL Database
-ms.date: 07/15/2019
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: ''
 author: rajeshsetlem
 ms.author: rajpo
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 6280a3ea803424dc2a6a72d673c59e1e48816601
-ms.sourcegitcommit: fb1430aedbb91b55b92f07934e9b9bdfbbd2b0c5
+ms.openlocfilehash: ec6b5ad0ab2047e72a1f3e3e5dfcd9fc49b954d9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82885932"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749778"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migre SQL Server o SQL Server locales en máquinas virtuales de Azure para Azure SQL Database con el Data Migration Assistant
 
@@ -57,7 +57,7 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
     ![Seleccionar base de datos de origen](../dma/media/select-source-database.png)
 
-5. Seleccione **Next** (Siguiente).
+5. Seleccione **Siguiente**.
 
 ## <a name="specify-the-target-server-and-database"></a>Especifique el servidor de destino y la base de datos
 
@@ -75,11 +75,11 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 4. Seleccione una única base de datos de destino a la que migrar.
 
    > [!NOTE]
-   > Si tiene previsto migrar usuarios de Windows, en el cuadro de texto **nombre de dominio de usuario externo de destino** , asegúrese de que el nombre de dominio de usuario externo destino esté especificado correctamente.
+   > Si tiene previsto migrar usuarios de Windows, en el cuadro de texto **nombre de dominio de usuario externo de destino** , asegúrese de que el nombre de dominio de usuario externo de destino esté especificado correctamente.
 
     ![Seleccionar base de datos de destino](../dma/media/select-target-database.png)
 
-5. Seleccione **Next** (Siguiente).
+5. Seleccione **Siguiente**.
 
 ## <a name="select-schema-objects"></a>Selección de los objetos de esquema
 
@@ -87,8 +87,8 @@ En este artículo se proporcionan instrucciones paso a paso para migrar SQL Serv
 
     ![Selección de los objetos de esquema](../dma/media/select-schema-objects.png)
 
-       > [!NOTE]
-       > Some of the objects that cannot be converted as-is are presented with automatic fix opportunities. Clicking these objects on the left pane displays the suggested fixes on the right pane. Review the fixes and choose to either apply or ignore all changes, object by object. Note that applying or ignoring all changes for one object does not affect changes to other database objects. Statements that cannot be converted or automatically fixed are reproduced to the target database and commented.
+    > [!NOTE]
+    > Algunos de los objetos que no se pueden convertir tal cual se presentan con oportunidades de corrección automática. Al hacer clic en estos objetos en el panel izquierdo se muestran las correcciones sugeridas en el panel derecho. Revise las correcciones y elija aplicar o ignorar todos los cambios, objeto por objeto. Tenga en cuenta que aplicar o ignorar todos los cambios de un objeto no afecta a los cambios de otros objetos de la base de datos. Las instrucciones que no se pueden convertir o fijar automáticamente se copian en la base de datos de destino y se comentan.
 
     ![Corrección sugerida](../dma/media/suggested-fix.png)
 
@@ -118,7 +118,7 @@ La pantalla final muestra el estado general.
 
    ![Estado de migración](../dma/media/migration-status.png) 
 
-## <a name="see-also"></a>Consulte también
+## <a name="see-also"></a>Vea también
 
 * [Data Migration Assistant (DMA)](../dma/dma-overview.md)
 * [Data Migration Assistant: opciones de configuración](../dma/dma-configurationsettings.md)

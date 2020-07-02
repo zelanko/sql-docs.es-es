@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0aad616275d635ac32d6e81dbc5321db0db58b34
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 193760ec432a67b8cf428f7e0207d6fd8174a5c6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68019941"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750499"
 ---
 # <a name="sp_revoke_login_from_proxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita el acceso a un proxy correspondiente a una entidad de seguridad.  
   
@@ -42,7 +42,7 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'`Nombre del rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión, rol de servidor o base de datos **msdb** para el que se va a quitar el acceso. *Name* es de tipo **nvarchar (256)** y no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'`Nombre del rol de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión, rol de servidor o base de datos **msdb** para el que se va a quitar el acceso. *Name* es de tipo **nvarchar (256)** y no tiene ningún valor predeterminado.  
   
 `[ @proxy_id = ] id`Identificador del proxy al que se va a quitar el acceso. Se debe especificar el *identificador* o el *proxy_name* , pero no se pueden especificar ambos. El *identificador* es de **tipo int**y su valor predeterminado es NULL.  
   
@@ -51,7 +51,7 @@ sp_revoke_login_from_proxy
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Los trabajos propiedad del inicio de sesión que hace referencia a este proxy no podrán ejecutarse.  
   
 ## <a name="permissions"></a>Permisos  

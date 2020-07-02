@@ -1,5 +1,5 @@
 ---
-title: DBO. sysdac_instances (Transact-SQL) | Microsoft Docs
+title: dbo.sysdac_instances (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dfff37bc876302e404b63eb7babf4fc3700fc9d9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 18031fac584eea39e5901276b597fc556263b18e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823655"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752969"
 ---
-# <a name="data-tier-application-views---dbosysdac_instances"></a>Vistas de aplicación de capa de datos: DBO. sysdac_instances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# <a name="data-tier-application-views---dbosysdac_instances"></a>Vistas de aplicación de capa de datos: dbo.sysdac_instances
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra una fila para cada instancia de aplicación de capa de datos (DAC) implementada en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. sysdac_instances pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista sysdac_instances.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82823655"
 |created_by|**sysname**|Inicio de sesión que creó la instancia de DAC.|  
 |database_name|**sysname**|Nombre de la base de datos creada para la instancia de DAC.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Una DAC incluye un tipo de DAC, que es una definición de los objetos de capa de datos lógicos utilizados por una aplicación, como las tablas y las vistas. Un paquete DAC es un archivo que se utiliza para implementar una DAC. El paquete DAC contiene una representación de todos los objetos lógicos contenidos en el tipo de DAC. El paquete DAC se puede utilizar para implementar una o más copias, o instancias, de la DAC en una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cada instancia de DAC implementada a partir del mismo paquete DAC comparte el mismo tipo, pero tiene asignado un identificador y un nombre de instancia únicos.  
   
 ## <a name="permissions"></a>Permisos  

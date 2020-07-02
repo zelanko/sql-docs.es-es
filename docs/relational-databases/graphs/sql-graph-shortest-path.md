@@ -18,15 +18,15 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
-ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 18527b8a6d64a3dca27a0c5e8a99d36bf1d6d45a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74056401"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85753248"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver2019.md)]
 
   Especifica una condición de búsqueda para un gráfico, que se busca de forma recursiva o repetida. SHORTEST_PATH puede usarse dentro de la coincidencia con las tablas perimetrales y de nodo de Graph, en la instrucción SELECT. 
   
@@ -93,7 +93,7 @@ Mientras que el último nodo es el último nodo de la ruta de acceso del gráfic
 Esta función devuelve la suma de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
 ### <a name="count"></a>COUNT
-Esta función devuelve el número de valores no NULL del atributo node/Edge deseado en la ruta de acceso. La función COUNT admite el operador\*' ' con un nodo o un alias de tabla perimetral. Sin el alias de tabla perimetral o de nodo, el \* uso de es ambiguo y producirá un error.
+Esta función devuelve el número de valores no NULL del atributo node/Edge deseado en la ruta de acceso. La función COUNT admite el \* operador ' ' con un nodo o un alias de tabla perimetral. Sin el alias de tabla perimetral o de nodo, el uso de \* es ambiguo y producirá un error.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
@@ -107,7 +107,7 @@ Devuelve el valor mínimo de los valores de atributo de nodo o perimetral propor
 ### <a name="max"></a>MÁX
 Devuelve el valor máximo de los valores de atributo de nodo o perimetral proporcionados o la expresión que aparecía en la ruta de acceso recorrida.
 
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 shortest_path función solo se puede usar dentro de la coincidencia.     
 LAST_NODE solo se admite dentro de shortest_path.     
 No se admite la búsqueda de una ruta más corta ponderada, ni todas las rutas de acceso o todas las rutas más cortas.         

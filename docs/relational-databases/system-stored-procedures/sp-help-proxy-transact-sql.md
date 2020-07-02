@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c091872c7e79a45fd6fb135d20c0910f9cd0158d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e9c59c6347317d193eafe43c511c0ece3831e29c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828421"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750536"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información de uno o varios servidores proxy.  
   
@@ -78,7 +78,7 @@ sp_help_proxy
 |**name**|**sysname**|Nombre del proxy.|  
 |**credential_identity**|**sysname**|Nombre de dominio y nombre de usuario de Microsoft Windows para la credencial asociada con el proxy.|  
 |**activó**|**tinyint**|Si el proxy está habilitado. { **0** = no habilitado, **1** = habilitado}|  
-|**denominación**|**nvarchar(1024)**|Descripción de este proxy.|  
+|**description**|**nvarchar(1024)**|Descripción de este proxy.|  
 |**user_sid**|**varbinary(85)**|Id. de seguridad del usuario de Windows para este proxy.|  
 |**credential_id**|**int**|Identificador de la credencial asociada con este proxy.|  
 |**credential_identity_exists**|**int**|Si existe credential_identity. { 0 = no existe, 1 = existe }|  

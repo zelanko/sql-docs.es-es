@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2868afcf85895ce1e7456bc2eea3693d9b25e679
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be9ad08f1591ef6f7e8893b09031a2e695be031d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831170"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750554"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita una suscripción a una publicación de combinación y su Agente de mezcla asociado. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -54,7 +54,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |-----------|-----------------|  
 |**todos**|Suscripciones de inserción, de extracción y anónimas.|  
 |**Anonymous**|Suscripción anónima.|  
-|**enviar**|Suscripción de inserción.|  
+|**push**|Suscripción de inserción.|  
 |**obtener**|Suscripción de extracción.|  
 |**both** (valor predeterminado)|Suscripción de inserción y de extracción.|  
   
@@ -65,7 +65,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_dropmergesubscription** se utiliza en la replicación de mezcla.  
   
 ## <a name="example"></a>Ejemplo  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8a29933568cec147dc27ff7c9b5f026d62856e5b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 058d611f1ee9eaf73d8ca8c022728fb1920091ee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807793"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752732"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra la configuración del Correo electrónico de base de datos.  
   
@@ -52,7 +52,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 |Nombre de la columna|Tipo de datos|Descripción|  
 |**paramName**|**nvarchar(256)**|Nombre del parámetro de configuración.|  
 |**parámetro ParamValue**|**nvarchar(256)**|Valor del parámetro de configuración.|  
-|**denominación**|**nvarchar(256)**|Descripción del parámetro de configuración.|  
+|**description**|**nvarchar(256)**|Descripción del parámetro de configuración.|  
   
 ## <a name="remarks"></a>Comentarios  
  En el procedimiento almacenado **sysmail_help_configure_sp** se enumeran los valores de configuración correo electrónico de base de datos actuales para la instancia.  

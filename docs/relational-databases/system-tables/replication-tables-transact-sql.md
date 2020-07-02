@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5696ee73-5d7c-4f26-b7ee-6831c9c3edf7
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 05ddadf1089969a2e345bbfdb638c9dea8b71676
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 709f99ce8e45e9a362aa8ef1aa0d5607d3b79172
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83808145"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751584"
 ---
 # <a name="replication-tables-transact-sql"></a>Tablas de replicación (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Las tablas del sistema de replicación son las que permiten el uso de una topología de replicación. Cuando una base de datos de usuario se configura como publicador o suscriptor, la replicación agrega tablas del sistema a la base de datos. Estas tablas se quitan cuando se quita una base de datos de usuario de una topología de replicación. Para obtener instrucciones generales sobre el uso de tablas del sistema, vea [tablas del sistema &#40;&#41;de Transact-SQL ](system-tables-transact-sql.md).  
   
@@ -92,7 +92,7 @@ ms.locfileid: "83808145"
  
 |||  
 |-|-|  
-|[conflict_ \< tabla>_ de esquema \<>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
+|[conflict_ \<schema> _\<table>](conflict-schema-table-transact-sql.md)       |[MSpeer_request](mspeer-request-transact-sql.md)|
 |[MSdynamicsnapshotjobs](msdynamicsnapshotjobs-transact-sql.md)             |[MSpeer_response](mspeer-response-transact-sql.md)|
 |[MSdynamicsnapshotviews](msdynamicsnapshotviews-transact-sql.md)           |[MSpeer_topologyrequest](mspeer-topologyrequest-transact-sql.md)|  
 |[MSmerge_altsyncpartners](msmerge-altsyncpartners-transact-sql.md)         |[MSpeer_topologyresponse](mspeer-topologyresponse-transact-sql.md)|  

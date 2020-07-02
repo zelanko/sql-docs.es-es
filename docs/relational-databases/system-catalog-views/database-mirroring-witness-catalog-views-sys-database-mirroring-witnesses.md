@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b84e1002f84cbcd0117ed79253b611f3e6ca4da3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 303fe8085ae4d103ede7715dcbb46e456db8f01f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823624"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752941"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabase_mirroring_witnesses"></a>Vistas de catálogo del testigo de creación de reflejo de la base de datos: sys. database_mirroring_witnesses
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila para cada rol de testigo desempeñado por un servidor en una asociación de creación de reflejo de la base de datos. 
   
@@ -41,7 +41,7 @@ ms.locfileid: "82823624"
 |**principal_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos principal.|  
 |**mirror_server_name**|**sysname**|Nombre del servidor asociado cuya copia de la base de datos es actualmente la base de datos reflejada.|  
 |**safety_level**|**tinyint**|Configuración de la seguridad de las transacciones para realizar actualizaciones en la base de datos reflejada:<br /><br /> 0 = Estado desconocido<br /><br /> 1 = Desactivada (asincrónica)<br /><br /> 2 = Completa (sincrónica)<br /><br /> Cuando se utiliza un testigo para la conmutación automática por error, se requiere la seguridad de transacciones completa, que es el valor predeterminado.|  
-|**safety_level_desc**|**nvarchar(60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> DESCONOCIDO<br /><br /> Apagado<br /><br /> FULL|  
+|**safety_level_desc**|**nvarchar(60)**|Descripción de la garantía de seguridad de las actualizaciones de la base de datos reflejada:<br /><br /> UNKNOWN<br /><br /> Apagado<br /><br /> FULL|  
 |**safety_sequence_number**|**int**|Actualiza el número de secuencia de los cambios en **safety_level**.|  
 |**role_sequence_number**|**int**|Número de secuencia de actualización de los cambios en los roles principal/reflejado desempeñados por los asociados de creación de reflejo.|  
 |**mirroring_guid**|**uniqueidentifier**|Identificador de la asociación de creación de reflejo.|  

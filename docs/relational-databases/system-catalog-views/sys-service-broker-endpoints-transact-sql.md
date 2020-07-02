@@ -19,21 +19,21 @@ helpviewer_keywords:
 ms.assetid: 6979ec9b-0043-411e-aafb-0226fa26c5ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 221a490f6accb13706c19860f70c1de2db6d2bf8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a59beeb51d59b00fbd902045f0f1aaebc9322a64
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832678"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752898"
 ---
 # <a name="sysservice_broker_endpoints-transact-sql"></a>sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta vista de catálogo contiene una fila por cada extremo de Service Broker. Para cada fila de esta vista, hay una fila correspondiente con el mismo **endpoint_id** en la vista **Sys. tcp_endpoints** que contiene los metadatos de configuración de TCP. TCP es el único protocolo permitido para Service Broker.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**\<columnas heredadas>**|**--**|Hereda columnas de [Sys. endpoints &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
+|**\<inherited columns>**|**--**|Hereda columnas de [Sys. endpoints &#40;&#41;de Transact-SQL ](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_message_forwarding_enabled**|**bit**|El extremo admite el reenvío de mensajes. Inicialmente se establece en **0** (deshabilitado). No acepta valores NULL.|  
 |**message_forwarding_size**|**int**|Número máximo de megabytes de espacio de **tempdb** que se pueden usar para los mensajes que se reenvían. Inicialmente se establece en **10**. No acepta valores NULL.|  
 |**connection_auth**|**tinyint**|Tipo de autenticación de la conexión necesario para las conexiones con este extremo; uno de los siguientes:<br /><br /> **1** : NTLM<br /><br /> **2** -Kerberos<br /><br /> **3** -negociación<br /><br /> **4** : certificado<br /><br /> **5** : NTLM, certificado<br /><br /> **6** -Kerberos, certificado<br /><br /> **7** -Negotiate, certificado<br /><br /> **8** -certificado, NTLM<br /><br /> **9** -certificado, Kerberos<br /><br /> **10** -certificado, Negotiate<br /><br /> No acepta valores NULL.|  
@@ -42,7 +42,7 @@ ms.locfileid: "82832678"
 |**encryption_algorithm**|**tinyint**|Algoritmo de cifrado. A continuación se muestran los posibles valores con sus descripciones y sus correspondientes opciones de DDL.<br /><br /> **0** : ninguno. Opción de DDL correspondiente: deshabilitada.<br /><br /> **1** : RC4. Opción de DDL correspondiente: {required &#124; obligatorio Algorithm RC4}.<br /><br /> **2** : AES. Opción de DDL correspondiente: algoritmo obligatorio AES.<br /><br /> **3** : ninguno, RC4. Opción de DDL correspondiente: {compatible &#124; algoritmo RC4}.<br /><br /> **4** : ninguno, AES. Opción de DDL correspondiente: algoritmo admitido AES.<br /><br /> **5** : RC4, AES. Opción de DDL correspondiente: algoritmo obligatorio RC4 AES.<br /><br /> **6** : AES, RC4. Opción DDL correspondiente: algoritmo obligatorio AES RC4.<br /><br /> **7** : ninguno, RC4, AES. Opción de DDL correspondiente: algoritmo RC4 compatible AES.<br /><br /> **8** : ninguno, AES, RC4. Opción de DDL correspondiente: algoritmo admitido AES RC4.<br /><br /> No acepta valores NULL.|  
 |**encryption_algorithm_desc**|**nvarchar(60)**|Descripción del algoritmo de cifrado. A continuación se enumeran los valores posibles y sus correspondientes opciones de DDL:<br /><br /> NINGUNO: deshabilitado<br /><br /> RC4: {obligatorio &#124; algoritmo RC4}<br /><br /> AES: algoritmo obligatorio AES<br /><br /> NINGUNO, RC4: {compatible &#124; algoritmo RC4}<br /><br /> NINGUNO, AES: algoritmo compatible AES<br /><br /> RC4, AES: se requiere el algoritmo RC4 AES<br /><br /> AES, RC4: se requiere el algoritmo AES RC4<br /><br /> NINGUNO, RC4, AES: se admite el algoritmo RC4 AES<br /><br /> NINGUNO, AES, RC4: algoritmo compatible AES RC4<br /><br /> Acepta valores NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 > [!NOTE]  
 >  El algoritmo RC4 se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.  

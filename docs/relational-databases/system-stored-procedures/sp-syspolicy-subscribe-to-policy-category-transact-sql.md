@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: de88cc49-bcc8-4dc6-8e59-ad85cfbfb2fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c5bc3b603c7dba345def7132e37d46a7554e864f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 06ab045b4ac0e7cecd62cdb8092860c3389e5f1f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752767"
 ---
 # <a name="sp_syspolicy_subscribe_to_policy_category-transact-sql"></a>sp_syspolicy_subscribe_to_policy_category (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Agrega una suscripción de categoría de directiva para la base de datos especificada.  
   
@@ -41,12 +41,12 @@ sp_syspolicy_subscribe_to_policy_category [ @policy_category = ] 'policy_categor
 ## <a name="arguments"></a>Argumentos  
 `[ @policy_category = ] 'policy_category'`Es el nombre de la categoría de directiva a la que desea que se suscriba la base de datos. *policy_category* es **sysname**y es obligatorio.  
   
- Para obtener los valores de *policy_category*, consulte la vista del sistema msdb. dbo. syspolicy_policy_categories.  
+ Para obtener los valores de *policy_category*, consulte la vista del sistema policy_policy_categories msdb.dbo.sys.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_subscribe_to_policy_category en el contexto de la base de datos donde desee agregar una suscripción de categoría de directiva.  
   
 ## <a name="permissions"></a>Permisos  

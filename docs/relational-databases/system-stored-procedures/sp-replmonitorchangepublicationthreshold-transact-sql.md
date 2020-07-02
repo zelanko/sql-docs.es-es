@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: faad3284619bfd3e7beaf5324ac107aed3ac2ff2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e09946d4a705aa695b4049ac887cbb0b465ee9d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834323"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749283"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia la métrica del umbral de supervisión de una publicación. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
@@ -86,7 +86,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_replmonitorchangepublicationthreshold** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

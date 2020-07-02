@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 4b268bf205245f8c63ca9e8273e4b80607282a00
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86f1b7fcc8e801f70bf070911feadb059108dff5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807531"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750366"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada conjunto de medios de copia de seguridad. Esta tabla se almacena en la base de datos **msdb** .  
  
@@ -37,7 +37,7 @@ ms.locfileid: "82807531"
 |**media_uuid**|**uniqueidentifier**|UUID del conjunto de medios. Todos los [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conjuntos de medios tienen un UUID.<br /><br /> En el caso de las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sin embargo, si un conjunto de medios solo contiene una familia de medios, la columna de **media_uuid** puede ser null (**media_family_count** es 1).|  
 |**media_family_count**|**tinyint**|Número de familias de medios en el conjunto de medios. Puede ser NULL.|  
 |**name**|**nvarchar(128)**|Nombre del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
-|**denominación**|**nvarchar(255)**|Texto de descripción del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**description**|**nvarchar(255)**|Texto de descripción del conjunto de medios. Puede ser NULL.<br /><br /> Para obtener más información, consulte MEDIANAme y MEDIADESCRIPTION en [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**software_name**|**nvarchar(128)**|Nombre del software de copia de seguridad que escribió la etiqueta del medio. Puede ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificación del proveedor de software que escribió la etiqueta del medio de copia de seguridad. Puede ser NULL.<br /><br /> El valor de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es hexadecimal 0x1200.|  
 |**MTF_major_version**|**tinyint**|Número principal de la versión de formato de cinta de [!INCLUDE[msCoName](../../includes/msconame-md.md)] utilizada para generar este conjunto de medios. Puede ser NULL.|  

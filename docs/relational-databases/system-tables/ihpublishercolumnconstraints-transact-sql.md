@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7f6c4b609159d34c1159a248c8ea9a9eacc24d18
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9e31b1b7e595926948072317d2d3cb71137f5f91
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813552"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750187"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHpublishercolumnconstraints** asigna las columnas de una publicación que no es de SQL Server de la tabla del sistema [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) a las restricciones de la tabla del sistema [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) . Esta tabla se almacena en la base de datos de distribución.  
   

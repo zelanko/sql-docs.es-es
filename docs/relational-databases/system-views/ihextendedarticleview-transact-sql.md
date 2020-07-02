@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 36ffc832e8e79e93eb3b158e7f99cfb64cea2dd7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68029546"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752657"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **IHextendedArticleView** expone información sobre los artículos en una publicación que no es de SQL Server. Esta vista se almacena en la base de datos de **distribución** .  
   
@@ -33,11 +33,11 @@ ms.locfileid: "68029546"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identificador único del publicador.|  
 |**publication_id**|**int**|Identificador único de la publicación.|  
-|**ARTICLE**|**sysname**|Nombre del artículo.|  
+|**artículo**|**sysname**|Nombre del artículo.|  
 |**destination_object**|**sysname**|Nombre del objeto publicado en el suscriptor.|  
 |**source_owner**|**sysname**|Propietario del objeto publicado en el publicador.|  
 |**source_object**|**sysname**|Nombre del objeto publicado en el publicador.|  
-|**denominación**|**nvarchar(255)**|Descripción del artículo.|  
+|**description**|**nvarchar(255)**|Descripción del artículo.|  
 |**creation_script**|**nvarchar(255)**|Script de creación de esquemas para el artículo.|  
 |**del_cmd**|**nvarchar(255)**|Comando ejecutado para DELETE.|  
 |**filter**|**int**|Identificador para el procedimiento almacenado utilizado para definir la partición horizontal.|  

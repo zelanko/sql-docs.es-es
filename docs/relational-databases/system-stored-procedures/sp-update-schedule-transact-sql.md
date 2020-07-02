@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bad747d2c88b7d159b9d043d12c81cc380c84c7b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab7241fe17306fedf25c1562bcabe366d7754e84
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809281"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749296"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia la configuración de una programación del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -70,7 +70,7 @@ sp_update_schedule
 |**1**|Una sola vez|  
 |**4**|Diario|  
 |**8**|Cada semana|  
-|**dieciséi**|Mensual|  
+|**16**|Mensual|  
 |**32**|Mensualmente, con respecto al *intervalo de frecuencia*|  
 |**64**|Se ejecuta cuando se inicia el servicio SQLServerAgent|  
 |**128**|Ejecutar cuando el equipo esté inactivo|  
@@ -102,11 +102,11 @@ sp_update_schedule
   
 |Valor|Descripción (unidad)|  
 |-----------|--------------------------|  
-|**1**|Primero|  
-|**2**|Segundo|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
-|**dieciséi**|Último|  
+|**16**|Último|  
   
 `[ @freq_recurrence_factor = ] freq_recurrence_factor`Número de semanas o meses entre la ejecución programada de un trabajo. *freq_recurrence_factor* solo se utiliza si *freq_type* es **8**, **16**o **32**. *freq_recurrence_factor*es de **tipo int**y su valor predeterminado es **0**.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d6c7f07-a163-48fa-8c1f-abc252043dde
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e413b677062841dbd25e2c57e0437efe566ccf98
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b95711af5a6ee39c89d9b33834c0609a01c2b030
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085321"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750597"
 ---
 # <a name="sp_delete_log_shipping_alert_job-transact-sql"></a>sp_delete_log_shipping_alert_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Quita un trabajo de alerta del servidor de supervisión de trasvase de registros si el trabajo existe y no hay más bases de datos principales o secundarias que supervisar.  
   
@@ -48,7 +48,7 @@ sp_delete_log_shipping_alert_job
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_delete_log_shipping_alert_job** se debe ejecutar desde la base de datos **maestra** del servidor de supervisión.  
   
 ## <a name="permissions"></a>Permisos  

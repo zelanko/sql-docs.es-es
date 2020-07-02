@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e955cb7378a9da430608bf55d287be0fd7237ef5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: be1df53780b7472d613c49d2d105c606a09de8df
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82807487"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750370"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada familia de medios. Si una familia de medios reside en un conjunto de medios reflejado, la familia tiene una fila independiente para cada reflejo del conjunto de medios. Esta tabla se almacena en la base de datos **msdb** .  
     
@@ -40,7 +40,7 @@ ms.locfileid: "82807487"
 |**physical_device_name**|**nvarchar(260)**|Nombre físico del dispositivo de copia de seguridad. Puede ser NULL. Este campo se comparte entre el proceso de copia de seguridad y restauración. Puede contener la ruta de acceso de destino de la copia de seguridad original o la ruta de acceso del origen de restauración original. Dependiendo de si la copia de seguridad o la restauración se produjeron en primer lugar en un servidor para una base de datos. Tenga en cuenta que las restauraciones consecutivas del mismo archivo de copia de seguridad no actualizarán la ruta de acceso, independientemente de su ubicación en el momento de la restauración. Por este motivo, **physical_device_name** campo no se puede usar para ver la ruta de acceso de restauración utilizada.|  
 |**device_type**|**tinyint**|Tipo de dispositivo de copia de seguridad:<br /><br /> 2 = Disco<br /><br /> 5 = Cinta<br /><br /> 7 = Dispositivo virtual<br /><br /> 9 = Azure Storage<br /><br /> 105 = Dispositivo de copia de seguridad permanente<br /><br /> Puede ser NULL.<br /><br /> Todos los nombres de dispositivo y números de dispositivo permanentes se pueden encontrar en **Sys. backup_devices**.|  
 |**physical_block_size**|**int**|Tamaño de bloque físico utilizado para escribir en la familia de medios. Puede ser NULL.|  
-|**creación**|**tinyint**|Número de reflejo (0-3)|  
+|**mirror**|**tinyint**|Número de reflejo (0-3)|  
   
 ## <a name="remarks"></a>Comentarios  
  RESTOre VERIFYONLY de *backup_device* con LOADHISTORY rellena las columnas de la tabla **backupmediaset** con los valores adecuados del encabezado de conjunto de medios.  

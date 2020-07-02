@@ -18,15 +18,15 @@ ms.assetid: 2a88d079-3755-43cb-8a54-97d0114149e6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a9eeca46571b2e61e73f9f5670bfeba0fd5f908
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2da3e78c5fde49a3d83c3813f70c5d56a1915908
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826089"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750525"
 ---
 # <a name="sp_helpsort-transact-sql"></a>sp_helpsort (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Muestra el criterio de ordenación y el juego de caracteres de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

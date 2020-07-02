@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fb61b115689472c5be3ec14de2e7387de3317d4d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f5d5c822264682aa3fb6fd43d26f589aeb272f45
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82814149"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752738"
 ---
 # <a name="sysmail_help_account_sp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Muestra información (excepto contraseñas) sobre las cuentas del Correo electrónico de base de datos.  
   
@@ -54,7 +54,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |Nombre de la columna|Tipo de datos|Descripción|  
 |**account_id**|**int**|Id. de la cuenta.|  
 |**name**|**sysname**|El nombre de la cuenta.|  
-|**denominación**|**nvarchar(256)**|Descripción de la cuenta.|  
+|**description**|**nvarchar(256)**|Descripción de la cuenta.|  
 |**email_address**|**nvarchar(128)**|Dirección de correo electrónico desde la que se envían los mensajes.|  
 |**display_name**|**nvarchar(128)**|El nombre para mostrar de la cuenta.|  
 |**replyto_address**|**nvarchar(128)**|La dirección a la que se envían las respuestas a los mensajes de esta cuenta.|  

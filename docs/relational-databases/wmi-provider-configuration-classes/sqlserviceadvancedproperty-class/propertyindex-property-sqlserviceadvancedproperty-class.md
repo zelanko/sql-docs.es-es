@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b18b45a2-e187-44f5-a8c9-26fd9828b6c6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d906e0b1eb275e8d6013a14d9a1485a9dd7a9f1c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6aca6dc609835b88f741d573cbd67b95c1d72ce2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660072"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750025"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propiedad PropertyIndex (clase SqlServiceAdvancedProperty)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene o establece el índice de propiedad que especifica la posición de una propiedad avanzada en una matriz de propiedades avanzadas que pertenecen a un servicio al que se hace referencia.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.PropertyIndex [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **UInt32** que especifica la posición de la propiedad avanzada en la matriz de propiedades avanzada que pertenece al servicio al que se hace referencia.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

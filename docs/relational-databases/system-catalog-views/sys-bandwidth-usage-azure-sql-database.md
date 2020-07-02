@@ -19,23 +19,23 @@ ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 54151b817b443d43f64e119841a7b69df7436d93
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67942579"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752920"
 ---
 # <a name="sysbandwidth_usage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 > [!NOTE]
-> Esto solo se aplica [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]a v11. * *  
+> Esto solo se aplica a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11. * *  
   
  Devuelve información sobre el ancho de banda de red usado por cada base de datos en un ** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] servidor de base de datos de V11**,. Cada fila devuelta para una base de datos determinada resume una única dirección y clase de uso durante un período de una hora.  
   
- **Esto está en desuso en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].**  
+ **Esto está en desuso en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .**  
   
  La vista **Sys. bandwidth_usage** contiene las columnas siguientes.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67942579"
 |-----------------|-----------------|  
 |**time**|La hora a la que se utilizó el ancho de banda. Las filas de esta vista ofrecen información por horas. Por ejemplo, 2009-09-19 02:00:00.000 significa que el ancho de banda se consumió el 19 de septiembre de 2009 entre las 2:00 a. m. y las 3:00 a. m.|  
 |**database_name**|El nombre de la base de datos que utilizó ancho de banda.|  
-|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: datos que se mueven al [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: datos que se mueven fuera de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: datos que se mueven al [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .<br /><br /> Salida: datos que se mueven fuera de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] .|  
 |**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: datos que se mueven dentro de la plataforma Azure.<br />External: datos que se mueven fuera de la plataforma Azure.<br /><br /> Se devuelve esta clase solamente si la base de datos está ocupada en una relación continua de copias entre las regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una base de datos determinada no participa en ninguna relación de copia continua, no se devuelven las filas "Interlink". Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**time_period**|El período de tiempo de uso es Pico o Fuera de horas pico. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
 |**quantity**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
@@ -52,13 +52,13 @@ ms.locfileid: "67942579"
 
  Esta vista solo está disponible en la base de datos **maestra** para el inicio de sesión principal de nivel de servidor.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="external-and-internal-classes"></a>Clases externas e internas
 
  Para cada base de datos que se utiliza en un momento dado, la vista **Sys. bandwidth_usage** devuelve filas que muestran la clase y la dirección del uso del ancho de banda. En el ejemplo siguiente se muestran los datos que se pueden exponer para una base de datos determinada. En este ejemplo, el tiempo son las 17:00 2012-04-21: 00, que se produce durante el período de tiempo máximo. El nombre de base de datos es Db1. En este ejemplo, **Sys. bandwidth_usage** ha devuelto una fila para las cuatro combinaciones de las direcciones de entrada y salida, y las clases externas e internas, como se indica a continuación:  
   
-|time|database_name|direction|clase|time_period|quantity|  
+|time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Entrada|Externo|Peak|66|  
 |2012-04-21 17:00:00|Db1|Salida|Externo|Peak|741|  

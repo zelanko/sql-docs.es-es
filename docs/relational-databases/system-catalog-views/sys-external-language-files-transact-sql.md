@@ -19,15 +19,15 @@ ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a991761e26f8f63ae6431d7d242fb2625135d3ac
-ms.sourcegitcommit: 1be90e93980a8e92275b5cc072b12b9e68a3bb9a
+ms.openlocfilehash: e90925354a9a48d3a2b0ff8e789d940ece6cb476
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84627475"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751747"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>Sys. external_language_files (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Esta vista de catálogo proporciona una lista de los archivos de extensión de lenguaje externo de la base de datos. **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres.
 
@@ -47,7 +47,7 @@ La vista de catálogo sys. external_language_files muestra una fila para cada ex
 |parámetros|nvarchar(4000)|Prameters de lenguaje externo|
 |environment_variables |nvarchar(4000)|Variables de entorno de lenguaje externo|
 
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [CREAR LENGUAJE EXTERNO](../../t-sql/statements/create-external-language-transact-sql.md)  

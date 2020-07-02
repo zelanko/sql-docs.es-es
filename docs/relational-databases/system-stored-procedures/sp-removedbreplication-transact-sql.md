@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60004b81134b550761e65eba2ce38e155732c77f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 14c013da5fed9a0a9477692ce6bdda20b5d921a5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817395"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751675"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Este procedimiento almacenado quita todos los objetos de replicación de la base de datos de publicación en la instancia del publicador de SQL Server, o en la base de datos de suscripción en la instancia del suscriptor de SQL Server. Ejecute este procedimiento en una base de datos adecuada o, si la ejecución está en el contexto de otra base de datos en la misma instancia, especifique la base de datos donde se deben quitar los objetos de replicación. Este procedimiento no elimina los objetos de otras bases de datos como, por ejemplo, la base de datos de distribución.  
   
@@ -55,7 +55,7 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_removedbreplication** se utiliza en todos los tipos de replicación.  
   
  **sp_removedbreplication** es útil al restaurar una base de datos replicada que no tiene ningún objeto de replicación que deba restaurarse.  

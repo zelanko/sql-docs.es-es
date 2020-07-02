@@ -20,15 +20,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8bc7636fb13674b51290417ee9eb639a6633bd3
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 50732a867c0329610b0a03eebcd97d3f3224d6e0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689408"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750768"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtras valores mediante sql:limit-field y sql:limit-value (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Puede limitar filas devueltas de una consulta de base de datos en base a algún valor de limitación. Las anotaciones **SQL: limit-field** y **SQL: Limit-Value** se utilizan para identificar la columna de base de datos que contiene valores de limitación y para especificar un valor de limitación concreto que se va a usar para filtrar los datos devueltos.  
   
  La anotación **SQL: limit-field** se usa para identificar una columna que contiene un valor de limitación. se permite en cada elemento o atributo asignado.  

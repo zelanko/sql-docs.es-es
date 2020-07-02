@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a005e885-7813-4c7e-b332-b01d9e9d4054
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6d2df9fd85f77a2fa0207562a5b2a8be3e991489
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 91542894eeb00fc6c44e3d824bb7fd857cef8897
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823636"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752988"
 ---
 # <a name="data-collector-views-transact-sql"></a>Vistas del recopilador de datos (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   El recopilador de datos proporciona las vistas siguientes para mostrar información sobre la configuración del recopilador de datos, como propiedades de tipo de recopilador, conjuntos de recopilación y elementos de conjuntos de recopilación, así como estadísticas de ejecución que se obtienen cuando se ejecuta un conjunto de recopilación. Estas vistas, que están en la base de datos **msdb** , también proporcionan una capa de abstracción para las tablas subyacentes. Esta abstracción mejora la seguridad ya que evita el acceso directo a las tablas, al tiempo que permite cambios en las tablas sin afectar a ninguna aplicación asociada.  
   

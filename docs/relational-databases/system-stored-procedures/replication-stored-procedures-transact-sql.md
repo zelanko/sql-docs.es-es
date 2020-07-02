@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b62346e11923a1c9e1683ae0ccff1b3898b528a2
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: f02b55e6b798bd66e7e13a8ba8a40329fc0255e2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83807778"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85752806"
 ---
 # <a name="replication-stored-procedures-transact-sql"></a>Procedimientos almacenados de replicación (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/applies-to-version/sql-asdb.md)]
 
   Los procedimientos almacenados del sistema de replicación están documentados y están disponibles como un método para realizar tareas únicas como la implementación de la replicación y el uso de archivos por lotes y scripts.  
   

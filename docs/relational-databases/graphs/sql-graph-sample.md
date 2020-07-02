@@ -15,18 +15,18 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b08fdf07bf73b8d485ce9334d8998e055454dcb2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035871"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85751156"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Crear una base de datos de grafos y ejecutar algunas consultas de coincidencia de patrones mediante T-SQL
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-En este ejemplo se [!INCLUDE[tsql-md](../../includes/tsql-md.md)] proporciona un script para crear una base de datos de grafos con nodos y bordes y, a continuación, usar la nueva cláusula Match para que coincida con algunos patrones y recorrer el gráfico. Este script de ejemplo funcionará en Azure SQL Database y[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
+En este ejemplo se proporciona un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script para crear una base de datos de grafos con nodos y bordes y, a continuación, usar la nueva cláusula Match para que coincida con algunos patrones y recorrer el gráfico. Este script de ejemplo funcionará en Azure SQL Database y[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
 
 ## <a name="sample-schema"></a>Esquema de ejemplo
 
@@ -163,7 +163,7 @@ go
 ```
 
 ## <a name="script-explanation"></a>Explicación del script  
-Este script usa la nueva sintaxis de T-SQL para crear tablas de nodos y perimetrales. Muestra cómo insertar datos en tablas de nodo y perimetrales `INSERT` mediante la instrucción y también muestra cómo `MATCH` utilizar la cláusula para la búsqueda y la coincidencia de patrones.
+Este script usa la nueva sintaxis de T-SQL para crear tablas de nodos y perimetrales. Muestra cómo insertar datos en tablas de nodo y perimetrales mediante la `INSERT` instrucción y también muestra cómo utilizar la `MATCH` cláusula para la búsqueda y la coincidencia de patrones.
 
 |Get-Help    |Notas
 |---  |---  |

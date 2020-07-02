@@ -24,15 +24,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2753924d37734d0f3198949f9e75102ff6030744
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 84e6c1b0b5530ed33ade4a3ac4813b1a3fe6d251
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689397"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750790"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>Excluir elementos de esquema del documento XML mediante sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Cada elemento y atributo del esquema XSD se asigna a una tabla/vista y columna de base de datos debido a la asignación predeterminada. Si desea crear un elemento en el esquema XSD que no se asigne a ninguna tabla de base de datos (vista) o columna y que no aparezca en el XML, puede especificar la anotación **SQL:** asvisad.  
   
  La anotación **SQL: alpped** es especialmente útil si no se puede modificar el esquema o si el esquema se usa para validar XML de otros orígenes y, además, contiene datos que no están almacenados en la base de datos. La anotación **SQL: aspped** difiere de **SQL: is-Constant** en que los elementos y atributos no asignados no aparecen en el documento XML.  
@@ -43,11 +43,11 @@ ms.locfileid: "83689397"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, vea [Requirements for Running SQLXML examples](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Especificar la anotación sql:mapped  
- Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un elemento ** \< Person. contact>** con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
+ Suponga que tiene un esquema XSD de algún otro origen. Este esquema XSD está compuesto de un **\<Person.Contact>** elemento con los atributos **ContactID**, **FirstName**, **LastName**y **HomeAddress** .  
   
  Al asignar este esquema XSD a la tabla person. contact de la base de datos AdventureWorks, se especifica **SQL: alpped** en el atributo **HomeAddress** porque la tabla Employees no almacena las direcciones particulares de los empleados. Por consiguiente, este atributo no se asigna a la base de datos y no se devuelve en el documento XML resultante cuando se especifica una consulta XPath en el esquema de asignación.  
   
- Para el resto del esquema se produce una asignación predeterminada. El elemento ** \< Person. contact>** se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
+ Para el resto del esquema se produce una asignación predeterminada. El **\<Person.Contact>** elemento se asigna a la tabla person. contact y todos los atributos se asignan a las columnas con el mismo nombre en la tabla person. contact.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

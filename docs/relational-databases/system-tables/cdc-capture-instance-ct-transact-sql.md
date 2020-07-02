@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 02f08a02236195d02f36c0b8e24b792adf46933e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 15fe17913bfb00d983772a84f625ff41e690f263
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833104"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750350"
 ---
 # <a name="cdcltcapture_instancegt_ct-transact-sql"></a>CDC. &lt; &gt;_CT capture_instance (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Es la tabla de cambio creada cuando la captura de datos de cambio se habilita en una tabla de origen. La tabla devuelve una fila para cada inserción y elimina la operación realizada contra la tabla de origen y dos filas para cada operación de actualización realizada contra la tabla de origen. Cuando el nombre de la tabla de cambio no se especifica en el momento que se habilita la tabla de origen, el nombre se deriva. El formato del nombre es CDC. *capture_instance*_CT donde *capture_instance* es el nombre del esquema de la tabla de origen y el nombre de la tabla de origen en el *schema_table*de formato. Por ejemplo, si la tabla **Person. Address** de la base de datos de ejemplo **AdventureWorks** está habilitada para la captura de datos modificados, el nombre de la tabla de cambios derivada sería **CDC. Person_Address_CT**.  
   
@@ -40,10 +40,10 @@ ms.locfileid: "82833104"
 |**__$seqval**|**binary(10)**|Valor de secuencia utilizado para ordenar los cambios de fila dentro de una transacción.|  
 |**_ _ $ Operation**|**int**|Identifica la operación del lenguaje de manipulación de datos (DML) asociada con el cambio. Puede ser uno de los siguientes:<br /><br /> 1 = eliminar<br /><br /> 2 = insertar<br /><br /> 3 = actualizar (valores anteriores)<br /><br /> Los datos de columna tienen valores de fila antes de ejecutar la instrucción de actualización.<br /><br /> 4 = actualizar (valores nuevos)<br /><br /> Los datos de columna tienen valores de fila después de ejecutar la instrucción de actualización.|  
 |**__$update_mask**|**varbinary(128)**|Máscara de bits basada en los índices de columna de la tabla de cambios que identifica las columnas que cambiaron.|  
-|*\<columnas de la tabla de origen capturadas>*|Varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
+|*\<captured source table columns>*|Varía|Las columnas restantes de la tabla de cambios son las columnas de la tabla de origen que se identificaron como columnas capturadas cuando se creó la instancia de captura. Si no se especificó ninguna columna en la lista de columnas capturadas, todas las columnas en la tabla de origen se incluyen en esta tabla.|  
 |**_ _ $ command_id** |**int** |Realiza un seguimiento del orden de las operaciones dentro de una transacción. |  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
 
 La columna `__$command_id` era la columna se incluyó en una actualización acumulativa en las versiones 2012 a 2016. Para obtener información sobre la versión y la descarga, consulte el artículo 3030352 de Knowledge base en [corrección: la tabla de cambios se ordena incorrectamente para las filas actualizadas después de habilitar la captura de datos modificados para una base de datos de Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Para obtener más información, consulte [la funcionalidad CDC se puede interrumpir después de actualizar a la cu más reciente para SQL Server 2012, 2014 y 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 

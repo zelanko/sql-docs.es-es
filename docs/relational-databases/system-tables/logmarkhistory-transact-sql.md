@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c1becc5-f34e-4869-bf69-dfafab684540
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 61fcc848f8f962934744d7aaf69e1549a7e33485
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef8a263edfb6902cd4f050cbe27b99062e5b5c20
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827286"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750138"
 ---
 # <a name="logmarkhistory-transact-sql"></a>logmarkhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada transacción marcada que se ha confirmado. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82827286"
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|Base de datos local donde tiene lugar la transacción marcada.|  
 |**mark_name**|**nvarchar(128)**|Nombre proporcionado por el usuario para la transacción marcada.|  
-|**denominación**|**nvarchar(255)**|Descripción proporcionada por el usuario para la transacción marcada. Puede ser NULL.|  
+|**description**|**nvarchar(255)**|Descripción proporcionada por el usuario para la transacción marcada. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre de usuario de la base de datos que llevó a cabo la transacción marcada. Puede ser NULL.|  
 |**LSN**|**numeric(25,0)**|Número de secuencia de registro de la transacción donde tuvo lugar la marca.|  
 |**mark_time**|**datetime**|Hora de la confirmación de la transacción marcada (hora local).|  

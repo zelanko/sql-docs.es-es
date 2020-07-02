@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ef8e1856-4930-417a-8f52-be470fd3f15c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1377498e25305f9810f5601a3533c6181314ca0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 3b8a268446517788c35e29b4f86821373a283070
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660856"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85750056"
 ---
 # <a name="stopservice-method-sqlservice-class"></a>Método StopService (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Intenta poner el servicio en estado de detención.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.StopService()
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de **uint32** que es igual a 0 si se aceptó la solicitud de **ResumeService** , igual a 1 si no se admite dicha solicitud e igual a cualquier otro número para indicar que hubo un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

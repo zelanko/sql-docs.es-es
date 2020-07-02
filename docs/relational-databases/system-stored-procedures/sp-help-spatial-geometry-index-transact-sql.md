@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56db1455b1b85ea50fc5bdea7f6f3d06778d329f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304853"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85749346"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un índice espacial de **geometría** . El resultado se devuelve en un formato de tabla. Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe tener asignado un rol PUBLIC para tener acceso al procedimiento. Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades que contienen valores NULL están incluidas en el conjunto que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `sp_help_spatial_geometry_index` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en el **geometry_col** de tabla para el ejemplo de consulta determinado en ** \@q**. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
+ En el ejemplo siguiente `sp_help_spatial_geometry_index` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en el **geometry_col** de tabla para el ejemplo de consulta determinado en ** \@ q**. En este ejemplo se devuelven solo las propiedades básicas del índice especificado.  
   
 ```  
 declare @qs geometry  

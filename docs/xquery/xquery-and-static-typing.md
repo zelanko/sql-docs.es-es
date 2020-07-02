@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b5d39e560b3137daf711ea49794fe6a2a0499743
-ms.sourcegitcommit: 2f166e139f637d6edfb5731510d632a13205eb25
+ms.openlocfilehash: 1a0b9cf43331e45d4aa1253fe5ad4b90d0bbea92
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84529733"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775462"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery y el establecimiento de tipos estáticos
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   XQuery en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] es un lenguaje con establecimiento de tipos en modo estático. Es decir, provoca errores de tipo durante la compilación de consultas cuando una expresión devuelve un valor con un tipo o una cardinalidad no aceptado por una función o un operador determinados. Además, la comprobación de tipos estáticos también puede detectar si hay un error de asignación de tipo en una expresión de ruta de acceso de un documento XML con tipo. El compilador XQuery aplica en primer lugar la fase de normalización que agrega las operaciones implícitas, como la atomización y, a continuación, realiza la inferencia de tipos estáticos y la comprobación de tipos estáticos.  
   

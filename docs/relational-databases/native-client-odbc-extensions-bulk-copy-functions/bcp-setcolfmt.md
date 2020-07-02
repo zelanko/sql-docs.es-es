@@ -18,15 +18,15 @@ ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e2942f60e1bb41edfcd2d474619867d35806660
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f48f5cf3bfc75bb8aa52d981a42aa83b8007e09
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73782328"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783390"
 ---
 # <a name="bcp_setcolfmt"></a>bcp_setcolfmt
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   La función **bcp_setcolfmt** reemplaza a [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Para especificar la intercalación de columna, se debe usar la función **bcp_setcolfmt** . [bcp_setbulkmode](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md) se puede utilizar para especificar más de un formato de columna.  
   
@@ -56,7 +56,7 @@ RETCODE bcp_setcolfmt (
  *property*  
  Es una de las constantes de propiedad. Las constantes de propiedad se definen en esta tabla.  
   
-|Propiedad|Value|Descripción|  
+|Propiedad|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |BCP_FMT_TYPE|BYTE|Es el tipo de datos de esta columna del archivo de usuario. Si es distinto del tipo de datos de la columna correspondiente de la tabla de base de datos, la copia masiva convierte los datos si es posible.<br /><br /> Los tokens de tipo de datos de SQL Server enumeran el parámetro BCP_FMT_TYPE en sqlncli.h, en lugar de los enumeradores de tipo de datos de ODBC C. Por ejemplo, puede especificar una cadena de caracteres, tipo SQL_C_CHAR de ODBC, utilizando el tipo específico SQLCHARACTER de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Para especificar la representación de datos predeterminada para el tipo de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , establezca este parámetro en 0.<br /><br /> Para realizar una copia masiva de SQL Server en un archivo, cuando BCP_FMT_TYPE es SQLDECIMAL o SQLNUMERIC, si la columna de origen no es **decimal** o **Numeric**, se usan la precisión y la escala predeterminadas. De lo contrario, si la columna de origen es **decimal** o **numérica**, se utilizan la precisión y la escala de la columna de origen.|  
 |BCP_FMT_INDICATOR_LEN|INT|Es la longitud en bytes del indicador (prefijo).<br /><br /> Es la longitud, en bytes, de un indicador de longitud o nulo en los datos de columna. Los valores de longitud de indicador válidos son 0 (cuando no se utiliza ningún indicador), 1, 2 ó 4.<br /><br /> Para especificar el uso del indicador de copia masiva predeterminado, establezca este parámetro en SQL_VARLEN_DATA.<br /><br /> Los indicadores aparecen directamente en memoria antes de cualquier dato y en el archivo de datos directamente antes de los datos a los que se aplican.<br /><br /> Si se utiliza más de un medio de especificar una longitud de columna del archivo de datos (como un indicador y una longitud máxima de columna o un indicador y una secuencia de terminador) , la copia masiva elige aquél por el que se copia la cantidad mínima de datos.<br /><br /> Los archivos de datos generados mediante la copia masiva cuando ninguna intervención de usuario ajusta el formato de los datos contienen indicadores acerca de cuándo los datos de columna pueden variar en longitud o cuándo la columna puede aceptar como valores los valores NULL.|  
@@ -71,10 +71,10 @@ RETCODE bcp_setcolfmt (
  *cbvalue*  
  Es la longitud del búfer de propiedad en bytes.  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  SUCCEED o FAIL.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Esta función reemplaza la función **bcp_colfmt** . Toda la funcionalidad de **bcp_colfmt** se proporciona en la función **bcp_setcolfmt** . Además, también se proporciona compatibilidad con la intercalación de columna. Se recomienda que los atributos de formato de columna siguientes se establezcan en el orden proporcionado a continuación:  
   
  BCP_FMT_SERVER_COL  

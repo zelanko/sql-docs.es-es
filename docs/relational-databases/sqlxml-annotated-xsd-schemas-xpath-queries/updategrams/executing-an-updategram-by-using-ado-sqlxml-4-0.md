@@ -16,20 +16,20 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7392ec41759116b350047302cfe770da006e6c66
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2da024366da5789631aee147ab25d89a5103b40e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388737"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85785049"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>Ejecutar un diagrama de actualización mediante ADO (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Esta aplicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic utiliza ADO para establecer una conexión a una instancia de Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y ejecutar un diagrama de actualización. El diagrama de actualización actualiza el apellido de un empleado concreto. En este ejemplo se utiliza la base de datos de ejemplo AdventureWorks.  
   
  En esta aplicación de ejemplo:  
   
--   Objeto **Conn** (**ADODB. Conexión**) establece una conexión a una instancia en ejecución [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de en un equipo servidor específico.  
+-   Objeto **Conn** (**ADODB. Conexión**) establece una conexión a una instancia en ejecución de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en un equipo servidor específico.  
   
 -   El objeto **cmd** (**ADODB. Command**) se ejecuta en la conexión establecida.  
   

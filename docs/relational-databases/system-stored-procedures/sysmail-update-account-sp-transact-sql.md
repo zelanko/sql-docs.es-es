@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 3dd772a1519ea856cac0302d31be9eb7d0f9d782
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: df0cbdda40b8e473ce81bf95b7c38e1cd2ec75c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283231"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783675"
 ---
 # <a name="sysmail_update_account_sp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia la información de una cuenta existente del Correo electrónico de base de datos.  
  
@@ -76,14 +76,14 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'`Nueva contraseña que se va a usar para iniciar sesión en el servidor de correo. *password* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
-`[ @use_default_credentials = ] use_default_credentials`Especifica si se debe enviar el correo al servidor SMTP con las credenciales del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, correo electrónico de base de datos usa el ** \@nombre de usuario** y ** \@la contraseña** para la autenticación en el servidor SMTP. Si ** \@el nombre de usuario** y ** \@la contraseña** son NULL, se usará la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
+`[ @use_default_credentials = ] use_default_credentials`Especifica si se debe enviar el correo al servidor SMTP con las credenciales del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] servicio. **use_default_credentials** es de bits y no tiene ningún valor predeterminado. Si el valor de este parámetro es 1, el Correo electrónico de base de datos usa las credenciales de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cuando este parámetro es 0, Correo electrónico de base de datos usa el ** \@ nombre de usuario** y la ** \@ contraseña** para la autenticación en el servidor SMTP. Si el ** \@ nombre de usuario** y la ** \@ contraseña** son NULL, se usará la autenticación anónima. Consulte con el administrador de SMTP antes de especificar este parámetro.  
   
 `[ @enable_ssl = ] enable_ssl`Especifica si Correo electrónico de base de datos cifra la comunicación mediante la seguridad de la capa de transporte (TLS), conocida anteriormente como Capa de sockets seguros (SSL). Utilice esta opción si se requiere TLS en el servidor SMTP. **enable_ssl** es de bits y no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si se especifican el nombre y el Id. de cuenta, el procedimiento almacenado cambia el nombre de la cuenta además de actualizar su información. Cambiar el nombre de la cuenta puede ser útil para corregir errores en el nombre.  
   
  El procedimiento almacenado **sysmail_update_account_sp** está en la base de datos **msdb** y pertenece al esquema **DBO** . El procedimiento se debe ejecutar con un nombre de tres partes si la base de datos actual no es **msdb**.  
@@ -94,7 +94,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-changing-the-information-for-an-account"></a>A. Cambio de la información de una cuenta  
- En el ejemplo siguiente se actualiza `AdventureWorks Administrator` la cuenta en la base de datos **msdb** . La información de la cuenta se establece con los valores proporcionados.  
+ En el ejemplo siguiente se actualiza la cuenta `AdventureWorks Administrator` en la base de datos **msdb** . La información de la cuenta se establece con los valores proporcionados.  
   
 ```  
 EXECUTE msdb.dbo.sysmail_update_account_sp  

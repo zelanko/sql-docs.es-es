@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3405621d604e6450756520f6d93b66a51d4d66c8
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f5cd7b04ebf16ce11791bf1d7caeb0d1012c5d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "67941989"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783052"
 ---
 # <a name="object-hierarchy-syntax-transact-sql"></a>Sintaxis de jerarquía de objetos (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  El parámetro *PropertyName* de sp_OAGetProperty y sp_OASetProperty y el parámetro *MethodName* de sp_OAMethod admiten una sintaxis de jerarquía de objetos similar a la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]de. Cuando se utiliza esta sintaxis especial, estos parámetros tienen la forma general siguiente:  
+  El parámetro *PropertyName* de sp_OAGetProperty y sp_OASetProperty y el parámetro *MethodName* de sp_OAMethod admiten una sintaxis de jerarquía de objetos similar a la de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Cuando se utiliza esta sintaxis especial, estos parámetros tienen la forma general siguiente:  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67941989"
   
  Las comillas dobles (") son necesarias. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si no se especifica *TraversedObject* , se requiere *PropertyOrMethod* .  
   
  Si no se especifica *PropertyOrMethod* , *TraversedObject* se devuelve como un parámetro de salida de token de objeto del procedimiento almacenado de automatización OLE. Si se especifica *PropertyOrMethod* , se llama a la propiedad o método de *TraversedObject* y el valor de propiedad o el valor devuelto del método se devuelve como parámetro de salida del procedimiento almacenado de automatización OLE.  

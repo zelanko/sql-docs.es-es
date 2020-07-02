@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 44180a30c69a8da47cfad77c07f86ee6b9b8bfaa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775182"
 ---
 # <a name="fn_syscollector_get_execution_details-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una parte del registro de [!INCLUDE[ssIS](../../includes/ssis-md.md)] (sysssislog) que coincide con el package_execution_id para el paquete determinado. La tabla contiene una fila por cada entrada de registro generada en tiempo de ejecución por los paquetes o sus tareas y contenedores.  
   
@@ -56,7 +56,7 @@ fn_syscollector_get_execution_details ( log_id )
 |starttime|**datetime**|Hora en que el paquete empezó a ejecutarse.|  
 |endtime|**datetime**|Hora en que la ejecución del paquete se completó.|  
 |datacode|**int**|Valor entero que identifica el evento asociado a la entrada de registro. El valor "0" indica que el evento no ha generado ningún identificador.|  
-|databytes|**image**|Matriz de bytes que identifica un valor devuelto.|  
+|databytes|**imagen**|Matriz de bytes que identifica un valor devuelto.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="permissions"></a>Permisos  

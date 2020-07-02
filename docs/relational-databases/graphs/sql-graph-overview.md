@@ -15,17 +15,17 @@ author: shkale-msft
 ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbe223d890d443508cd32f6ab73c039848c4372a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79428156"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85776472"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ofrece capacidades de base de datos de gráficos para modelar relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de usar como sistema de administración de bases de datos base.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ofrece capacidades de base de datos de gráficos para modelar relaciones varios a varios. Las relaciones de gráficos se integran en [!INCLUDE[tsql-md](../../includes/tsql-md.md)] y reciben las ventajas de usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como sistema de administración de bases de datos base.
 
 
 ## <a name="what-is-a-graph-database"></a>¿Qué es una base de datos de grafos?  
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Los nodos y los bordes se almacenan como tablas  
 
 ### <a name="query-language-extensions"></a>Extensiones de lenguaje de consulta  
-La `MATCH` nueva cláusula se incluye para admitir la búsqueda de coincidencias de patrones y la navegación de varios saltos a través del gráfico. La `MATCH` función utiliza la sintaxis de estilo ASCII-Art para la coincidencia de patrones. Por ejemplo:  
+`MATCH`La nueva cláusula se incluye para admitir la búsqueda de coincidencias de patrones y la navegación de varios saltos a través del gráfico. La `MATCH` función utiliza la sintaxis de estilo ASCII-Art para la coincidencia de patrones. Por ejemplo:  
 
 ```   
 -- Find friends of John
@@ -68,8 +68,8 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el motor 
-Las extensiones de grafos están [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] totalmente integradas en el motor. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con otras tecnologías, como almacén de columnas, ha, R Services, etc. La base de datos de SQL Graph también es compatible con todas las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]características de seguridad y cumplimiento disponibles con.
+### <a name="fully-integrated-in-ssnoversion-engine"></a>Totalmente integrado en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor 
+Las extensiones de grafos están totalmente integradas en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] motor. Use el mismo motor de almacenamiento, metadatos, procesador de consultas, etc. para almacenar y consultar los datos del gráfico. Realizar consultas en los datos de gráfico y relacionales en una sola consulta. Combinación de funcionalidades de gráficos con otras [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tecnologías, como almacén de columnas, ha, R Services, etc. La base de datos de SQL Graph también es compatible con todas las características de seguridad y cumplimiento disponibles con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
  
 ### <a name="tooling-and-ecosystem"></a>Herramientas y ecosistema
 

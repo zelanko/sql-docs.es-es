@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: bd1d131fadf2fb594b9ad2799791313d0136f39b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: dc2a85c48e404fa717b001482bbe5fc8f8356e99
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689765"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775488"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funciones de valores numéricos: ceiling 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el número más pequeño, sin la parte fraccionaria, que no sea menor que el valor de su argumento. Si el argumento es una secuencia vacía, devuelve la secuencia vacía.  
   
@@ -39,7 +39,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Número al que se aplica la función.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el tipo de *$arg* es uno de los tres tipos base numéricos, **xs: Float**, **xs: Double**o **xs: decimal**, el tipo de valor devuelto es el mismo que el tipo de *$arg* .  
   
  Si el tipo de *$arg* es un tipo derivado de uno de los tipos numéricos, el tipo de valor devuelto es el tipo numérico base.  
@@ -76,9 +76,9 @@ WHERE ProductModelID=7
   
 -   **Instructions** es una columna de tipo **XML** . Por lo tanto, el [método Query () (tipo de datos XML)](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar XQuery. La instrucción de XQuery se especifica como el argumento para el método de consulta.  
   
--   **para... Return** es una construcción de bucle. En la consulta, el bucle **for** identifica una lista de \< elementos> ubicación. Para cada ubicación del centro de trabajo, la instrucción **Return** del bucle **for** describe el XML que se va a generar:  
+-   **para... Return** es una construcción de bucle. En la consulta, el bucle **for** identifica una lista de \<Location> elementos. Para cada ubicación del centro de trabajo, la instrucción **Return** del bucle **for** describe el XML que se va a generar:  
   
-    -   Una \< ubicación> elemento que tiene los atributos LocationID y LaborHrs. La expresión correspondiente situada dentro de las llaves ({ }) recupera los valores requeridos del documento.  
+    -   \<Location>Elemento que tiene los atributos LocationID y LaborHrs. La expresión correspondiente situada dentro de las llaves ({ }) recupera los valores requeridos del documento.  
   
     -   La expresión {$ i/@LotSize } recupera el atributo de exceso del documento, si está presente.  
   

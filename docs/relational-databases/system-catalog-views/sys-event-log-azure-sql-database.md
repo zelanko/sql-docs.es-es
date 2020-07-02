@@ -20,16 +20,16 @@ ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e6eb1173bf191ae319dc257c42199f02a05c9455
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 52bc643e1af6f09c0f1ab8e90021ae949310968c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832009"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784931"
 ---
 # <a name="sysevent_log-azure-sql-database"></a>sys.event_log (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Devuelve [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] las conexiones de base de datos, los errores de conexión y los interbloqueos correctos. Puede utilizar esta información para realizar el seguimiento de la actividad de la base de datos o solucionar problemas relacionados con esta mediante [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -49,7 +49,7 @@ ms.locfileid: "82832009"
 |**event_subtype_desc**|**nvarchar (64)**|Descripción del subtipo de evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**severity**|**int**|Gravedad del error. Los valores posibles son:<br /><br /> 0 = Información<br />1 = Advertencia<br />2 = Error|  
 |**event_count**|**int**|Número de veces que se ha producido este evento en la base de datos especificada dentro del intervalo de tiempo especificado (**start_time** y **end_time**).|  
-|**denominación**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
+|**description**|**nvarchar(max)**|Descripción detallada del evento.<br /><br /> Vea [tipos de evento](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) para obtener una lista de valores posibles.|  
 |**additional_data**|**XML**|*Nota: este valor siempre es NULL para Azure SQL Database V12. Vea la sección [ejemplos](#Deadlock) para obtener más sobre cómo recuperar eventos de interbloqueo para V12.*<br /><br /> En el caso de eventos de **interbloqueo** , esta columna contiene el grafo de interbloqueo. Esta columna es NULL para otros tipos de eventos. |  
   
 ##  <a name="event-types"></a><a name="EventTypes"></a>Tipos de evento
@@ -61,7 +61,7 @@ ms.locfileid: "82832009"
 > [!NOTE]  
 > Esta vista no incluye todos los posibles errores de base de datos de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] que pueden producirse, solo los mostrados aquí. Es posible que en futuras versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] se agreguen categorías, tipos de evento y subtipos adicionales.  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**denominación**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**description**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**Conectividad**|**connection_successful**|0|**connection_successful**|0|Conectado correctamente a la base de datos.|  
 |**Conectividad**|**connection_failed**|0|**invalid_login_name**|2|El nombre de inicio de sesión no es válido en esta versión de SQL Server.|  
@@ -76,7 +76,7 @@ ms.locfileid: "82832009"
 |**Conectividad**|**connection_failed**|9|**reconfiguración**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Error de conexión debido a que la base de datos se estaba reconfigurando en ese momento.|  
 |**Conectividad**|**connection_terminated**|0|**idle_connection_timeout**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La conexión ha estado inactiva durante más tiempo que el umbral definido por el sistema.|  
 |**Conectividad**|**connection_terminated**|1|**reconfiguración**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión se ha terminado debido a una reconfiguración de la base de datos.|  
-|**Conectividad**|**limitación**|*\<código de motivo>*|**reason_code**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación: * \<>de código de motivo *. Para obtener más información, consulte [limitación del motor](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
+|**Conectividad**|**limitación**|*\<reason code>*|**reason_code**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> Solicitud limitada.  Código de motivo de la limitación: *\<reason code>* . Para obtener más información, consulte [limitación del motor](https://msdn.microsoft.com/library/windowsazure/dn338079.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40549|**long_transaction**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión terminó porque tiene una transacción de larga duración. Intente reducir la transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40550|**excessive_lock_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado porque ha adquirido demasiados bloqueos. Intente leer o modificar menos filas en una sola transacción. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**Conectividad**|**throttling_long_transaction**|40551|**excessive_tempdb_usage**|2|*Nota: solo se aplica a Azure SQL Database v11.*<br /><br /> La sesión ha terminado debido al uso excesivo de TEMPDB. Intente modificar la consulta para reducir el uso de espacio de la tabla temporal. Para obtener más información, consulte [límites de recursos](https://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
@@ -88,7 +88,7 @@ ms.locfileid: "82832009"
 
  Los usuarios con permiso para tener acceso a la base de datos **maestra** tienen acceso de solo lectura a esta vista.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="event-aggregation"></a>Agregación de eventos
 
@@ -99,7 +99,7 @@ ms.locfileid: "82832009"
   
  Por ejemplo, si debido a que el nombre de inicio de sesión no es válido, un usuario intenta conectarse a la base de datos Database1 siete veces entre las 11:00 y las 11:05 el 5/2/2012 (UTC) y no lo consigue, esta información está disponible en una sola fila de esta vista:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**denominación**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**description**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -230,5 +230,5 @@ SELECT * FROM CTE2;
 
 ## <a name="see-also"></a>Consulte también
 
- [Eventos extendidos en Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
+ [Eventos extendidos en Base de datos SQL de Azure](https://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)  
  

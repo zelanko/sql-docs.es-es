@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 8241e15643eb4aa25912451ddfed94699954797f
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 52d3c9676adbd95d219221270090dbcedc798bfb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388605"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775425"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>Funciones de extensión de XQuery: sql:variable()
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Expone una variable que contiene un valor relacional SQL dentro de una expresión XQuery.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81388605"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Tal y como se describe en el tema [enlazar datos relacionales dentro de XML](../t-sql/xml/binding-relational-data-inside-xml-data.md), puede utilizar esta función al utilizar [métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md) para exponer un valor relacional dentro de XQuery.  
   
  Por ejemplo, el [método Query ()](../t-sql/xml/query-method-xml-data-type.md) se utiliza para especificar una consulta en una instancia XML almacenada en una variable o columna de tipo de datos **XML** . En ocasiones, es posible que también se desee que la consulta utilice valores de una variable [!INCLUDE[tsql](../includes/tsql-md.md)], o un parámetro, para combinar los datos relacionales y XML. Para ello, utilice la función **SQL: variable** .  
@@ -55,7 +55,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 -   Un valor (`DiscountPrice`) de una variable [!INCLUDE[tsql](../includes/tsql-md.md)]. El método `sql:variable()` se utiliza para enlazar este valor en el XML.  
   
--   Un valor (`ProductModelName`) de una columna de tipo **XML** para que la consulta sea más interesante.  
+-   Un valor ( `ProductModelName` ) de una columna de tipo **XML** para que la consulta sea más interesante.  
   
  Esta es la consulta:  
   
@@ -98,7 +98,7 @@ WHERE ProductID=771
  [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [&#40;de datos XML SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [Crear instancias de datos XML](../relational-databases/xml/create-instances-of-xml-data.md)   
- [Métodos de tipo de datos XML](../t-sql/xml/xml-data-type-methods.md)   
+ [métodos del tipo de datos xml](../t-sql/xml/xml-data-type-methods.md)   
  [Lenguaje de manipulación de datos XML &#40;XML DML&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

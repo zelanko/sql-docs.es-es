@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c87de2327918c383b57e4baef7f4948d43ddd85e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3906e38fbcce8edccf9e0a7bda3be0ed93e110b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82805276"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784823"
 ---
 # <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSmerge_sessions** contiene filas de historial con los resultados de las sesiones de trabajos de agente de mezcla anteriores. Cada vez que se ejecuta el Agente de mezcla, se agrega una nueva fila a esta tabla. Esta tabla se almacena en la base de datos de distribución.  
   

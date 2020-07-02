@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b158c4571deadadeaee23ffa6e46eb48a8c8446e
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ba0a1d118ce62912e082b0553f000018e5d8233e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299616"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783722"
 ---
 # <a name="sp_setapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Activa los permisos asociados a un rol de aplicación en la base de datos actual.  
   
@@ -58,11 +58,11 @@ sp_setapprole [ @rolename = ] 'role',
  Especifica que no se utiliza ofuscación. La contraseña se pasa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como texto simple. Este es el valor predeterminado.  
   
  **@encrypt= ' ODBC '**  
- Especifica que ODBC ofuscará la contraseña mediante la función **Encrypt** de ODBC antes de enviar la contraseña a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Solo se puede especificar cuando se utiliza un cliente ODBC o el Proveedor OLE DB para SQL Server.  
+ Especifica que ODBC ofuscará la contraseña mediante la función **Encrypt** de ODBC antes de enviar la contraseña a [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Solo se puede especificar cuando se utiliza un cliente ODBC o el Proveedor OLE DB para SQL Server.  
   
 `[ @fCreateCookie = ] true | false`Especifica si se va a crear una cookie. **true** se convierte implícitamente a 1. **false** se convierte implícitamente a 0.  
   
-`[ @cookie = ] @cookie OUTPUT`Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de ** \@fCreateCookie** es **true**. **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT`Especifica un parámetro de salida que contendrá la cookie. La cookie solo se genera si el valor de ** \@ fCreateCookie** es **true**. **varbinary(8000)**  
   
 > [!NOTE]  
 > El parámetro **OUTPUT** de la cookie para **sp_setapprole** está documentado actualmente como **varbinary(8000)** , que es la longitud máxima correcta. Pero la implementación actual devuelve **varbinary(50)** . Las aplicaciones deben seguir reservando **varbinary (8000)** para que la aplicación siga funcionando correctamente si el tamaño de retorno de la cookie aumenta en una versión futura.
@@ -71,15 +71,15 @@ sp_setapprole [ @rolename = ] 'role',
 
  0 (correcto) y 1 (error)  
   
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
- Después de activar un rol de aplicación mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**. **sp_setapprole** solo se pueden ejecutar mediante instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] directas. **sp_setapprole** no se pueden ejecutar dentro de otro procedimiento almacenado o dentro de una transacción definida por el usuario.  
+ Después de activar un rol de aplicación mediante **sp_setapprole**, el rol permanece activo hasta que el usuario se desconecta del servidor o ejecuta **sp_unsetapprole**. **sp_setapprole** solo se pueden ejecutar mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones directas. **sp_setapprole** no se pueden ejecutar dentro de otro procedimiento almacenado o dentro de una transacción definida por el usuario.  
   
  Para obtener información general sobre los roles de aplicación, consulte [roles de aplicación](../../relational-databases/security/authentication-access/application-roles.md).  
   
 > [!IMPORTANT]  
 > Para proteger la contraseña del rol de aplicación cuando se transmite a través de una red, siempre debe usar una conexión cifrada al habilitar un rol de aplicación.
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient**no admite la opción de **cifrado** de ODBC. Si debe almacenar las credenciales, cífrelas con las funciones de la API de cifrado. La *contraseña* del parámetro se almacena como un hash unidireccional. Para conservar la compatibilidad con versiones anteriores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de, **sp_addapprole**no aplica la Directiva de complejidad de contraseñas. Para aplicar la Directiva de complejidad de contraseñas, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md).  
+> [!INCLUDE[msCoName](../../includes/msconame-md.md)] **SqlClient**no admite la opción de **cifrado** de ODBC. Si debe almacenar las credenciales, cífrelas con las funciones de la API de cifrado. La *contraseña* del parámetro se almacena como un hash unidireccional. Para conservar la compatibilidad con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **sp_addapprole**no aplica la Directiva de complejidad de contraseñas. Para aplicar la Directiva de complejidad de contraseñas, use [crear rol de aplicación](../../t-sql/statements/create-application-role-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos
 

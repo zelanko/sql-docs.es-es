@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d003270b0856da0c833b6e96e8adf54a014d4b9b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 12215e39e90586bf8346c96cde3f0f3f5f386e6a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830012"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783797"
 ---
 # <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita una suscripción de la base de datos actual del suscriptor. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones de extracción.  
   
@@ -51,7 +51,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_droppullsubscription** se utiliza en la replicación de instantáneas y en la replicación transaccional.  
   
  **sp_droppullsubscription** elimina la fila correspondiente en el [MSreplication_subscriptions &#40;tabla de&#41;de Transact-SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) y el agente de distribuidor correspondiente en el suscriptor. Si no se deja ninguna fila en [MSreplication_subscriptions &#40;&#41;de Transact-SQL ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), se quita la tabla.  

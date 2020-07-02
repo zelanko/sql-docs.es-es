@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3c1d73fca8bdc91205110d89cceb3a694725c18
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: ece175be7fa0791bf1355ed6020121999d62660b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881662"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775483"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Módulos y prólogos: prólogo de XQuery
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Una consulta XQuery se compone de un prólogo y un cuerpo. El prólogo de una consulta XQuery consiste en una serie de declaraciones y definiciones que, juntas, crean el entorno necesario para el procesamiento de la consulta. En SQL Server, el prólogo de una consulta XQuery puede incluir declaraciones de espacio de nombres. El cuerpo de una consulta XQuery está formado por una secuencia de expresiones que especifican el resultado previsto de la consulta.  
   

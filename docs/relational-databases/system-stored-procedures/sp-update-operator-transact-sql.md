@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 098d027ff74bad7b4215a96044f4044fda9ee98e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b8075648f4f3ce87b0ee34ba28479d1f8e20cd50
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832534"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775163"
 ---
 # <a name="sp_update_operator-transact-sql"></a>sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza información acerca de un operador (destinatario de la notificación) para utilizarla con las alertas y los trabajos.  
   
@@ -95,7 +95,7 @@ sp_update_operator
 |**2**|Lunes|  
 |**4**|Martes|  
 |**8**|Miércoles|  
-|**dieciséi**|Jueves|  
+|**16**|Jueves|  
 |**32**|Viernes|  
 |**64**|Sábado|  
   
@@ -108,7 +108,7 @@ sp_update_operator
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_update_operator se debe ejecutar desde la base de datos msdb.  
   
 ## <a name="permissions"></a>Permisos  

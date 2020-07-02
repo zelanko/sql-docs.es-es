@@ -20,15 +20,15 @@ helpviewer_keywords:
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9cfea2db0ad0a5eadeede6df3f76ea3979243d0
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f0f2ac10fe68f5e51f72d12f3b5514ef293afda0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81291859"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775967"
 ---
 # <a name="diagnostic-records-and-fields"></a>Registros y campos de diagnóstico
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Los registros de diagnóstico se asocian a controladores de entorno, conexión, instrucción o descriptor de ODBC. Cuando una función de ODBC genera un código de retorno distinto de SQL_SUCCESS o SQL_INVALID_HANDLE, el identificador que llama la función incluye registros de diagnóstico asociados que contienen mensajes informativos o de error. Estos registros se conservan hasta que se llama a otra función con el mismo identificador, momento en el cual se descartan. No hay ningún límite al número de registros de diagnóstico que pueden estar asociados a un identificador en un momento determinado.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "81291859"
   
  El administrador de controladores ODBC procesa **SQLGetDiagField** con la información de error que almacena en caché desde el controlador subyacente. El Administrador de controladores ODBC no almacena en caché los campos de diagnóstico específicos del controlador hasta que no se ha realizado una conexión correcta. **SQLGetDiagField** devuelve SQL_ERROR si se llama para obtener campos de diagnóstico específicos del controlador antes de que se haya completado una conexión correcta. Si una función de conexión de ODBC devuelve SQL_SUCCESS_WITH_INFO, los campos de diagnóstico específicos del controlador todavía no están disponibles en la función de conexión. Puede empezar a llamar a **SQLGetDiagField** para los campos de diagnóstico específicos del controlador solo después de haber realizado otra llamada a una función ODBC después de la función de conexión.  
   
- La mayoría de los errores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detectados por el controlador ODBC de Native Client se pueden diagnosticar de forma eficaz usando únicamente la información devuelta por **SQLGetDiagRec**. En algunos casos, sin embargo, la información que devuelven los campos de diagnóstico específicos del controlador es importante para diagnosticar un error. Al codificar un controlador de errores ODBC para aplicaciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que usan el controlador ODBC de Native Client, se recomienda usar también **SQLGetDiagField** para recuperar al menos los campos específicos del controlador SQL_DIAG_SS_MSGSTATE y SQL_DIAG_SS_SEVERITY. Si un error determinado se puede producir en varias ubicaciones del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica a un ingeniero de soporte técnico de Microsoft de forma específica dónde se ha producido el error, lo que en ocasiones ayuda a diagnosticar un problema.  
+ La mayoría de los errores detectados por el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client se pueden diagnosticar de forma eficaz usando únicamente la información devuelta por **SQLGetDiagRec**. En algunos casos, sin embargo, la información que devuelven los campos de diagnóstico específicos del controlador es importante para diagnosticar un error. Al codificar un controlador de errores ODBC para aplicaciones que usan el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client, se recomienda usar también **SQLGetDiagField** para recuperar al menos los campos específicos del controlador SQL_DIAG_SS_MSGSTATE y SQL_DIAG_SS_SEVERITY. Si un error determinado se puede producir en varias ubicaciones del código de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL_DIAG_SS_MSGSTATE indica a un ingeniero de soporte técnico de Microsoft de forma específica dónde se ha producido el error, lo que en ocasiones ayuda a diagnosticar un problema.  
   
 ## <a name="see-also"></a>Consulte también  
  [Controlar errores y mensajes](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  

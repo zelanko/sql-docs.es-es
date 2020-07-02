@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 36dcdf9fbe003daa110c38a9e3f10650af422075
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2e0c7be221847924f48523526793fcd3d4664477
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827236"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85784837"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSmerge_partition_groups** se almacena una fila por cada partición precalculada en una base de datos determinada. Además de las columnas enumeradas, en esta tabla se incluye una columna para cada función utilizada en un filtro de fila con parámetros. Por ejemplo, se agrega una columna denominada **HOST_NAME_FN** a la tabla si un filtro utiliza la función [host_name](../../t-sql/functions/host-name-transact-sql.md) . Se almacena una fila para cada conjunto único de valores de función que se han sincronizado con este publicador. Si dos o más suscriptores se sincronizan exactamente con el mismo valor para todas estas funciones, compartirán la misma fila de esta tabla y, por tanto, compartirán el mismo Id. de partición. Esta tabla se almacena en la base de datos de publicaciones.  
   

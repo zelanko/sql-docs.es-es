@@ -17,17 +17,17 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5b95e5f5d33d44ad1b23dffbd9425a11fc439861
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68121158"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85783913"
 ---
 # <a name="syspolicy_policies-transact-sql"></a>syspolicy_policies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Muestra una fila para cada directiva de administración basada en directivas en la instancia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. syspolicy_policies pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista syspolicy_policies.  
+  Muestra una fila para cada directiva de administración basada en directivas en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . syspolicy_policies pertenece al esquema DBO en la base de datos msdb. En la tabla siguiente se describen las columnas de la vista syspolicy_policies.  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "68121158"
 |condition_id|**int**|Identificador de la condición exigida o probada por esta directiva.|  
 |root_condition_id|**int**|Solo para uso interno.|  
 |date_created|**datetime**|Fecha y hora cuando se creó la directiva.|  
-|execution_mode|**int**|Modo de evaluación para la directiva. Los valores posibles son los siguientes:<br /><br /> 0 = A petición<br /><br /> Este modo evalúa la directiva cuando lo especifica el usuario directamente.<br /><br /> 1 = Al cambiar: impedir<br /><br /> Este modo automatizado utiliza desencadenadores DDL para evitar infracciones de las directivas.<br /><br /> 2 = Al cambiar: solo registrar<br /><br /> Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se produce un cambio relevante y registra las infracciones de la directiva.<br /><br /> 4 = Al programar<br /><br /> Este modo automatizado utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evaluar una directiva periódicamente. El modo registra las infracciones de la directiva.<br /><br /> Nota: el valor 3 no es un valor posible.|  
+|execution_mode|**int**|Modo de evaluación para la directiva. Los valores posibles son:<br /><br /> 0 = A petición<br /><br /> Este modo evalúa la directiva cuando lo especifica el usuario directamente.<br /><br /> 1 = Al cambiar: impedir<br /><br /> Este modo automatizado utiliza desencadenadores DDL para evitar infracciones de las directivas.<br /><br /> 2 = Al cambiar: solo registrar<br /><br /> Este modo automatizado utiliza la notificación de eventos para evaluar una directiva cuando se produce un cambio relevante y registra las infracciones de la directiva.<br /><br /> 4 = Al programar<br /><br /> Este modo automatizado utiliza un trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para evaluar una directiva periódicamente. El modo registra las infracciones de la directiva.<br /><br /> Nota: el valor 3 no es un valor posible.|  
 |policy_category|**int**|Identificador de la categoría de directivas de administración basada en directivas al que esta directiva pertenece. Es NULL si es el grupo de directivas predeterminado.|  
 |schedule_uid|**uniqueidentifier**|Cuando execution_mode es Al programar, contiene el identificador de la programación; de lo contrario, es NULL.|  
 |description|**nvarchar(max)**|Descripción de la directiva. La columna de descripción es opcional y puede ser NULL.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68121158"
 |modified_by|**sysname**|Inicio de sesión que modificó la directiva por última vez. Es NULL si nunca se produjo una modificación.|  
 |date_modified|**datetime**|Fecha y hora cuando se creó la directiva. Es NULL si nunca se produjo una modificación.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Cuando solucione problemas de la administración basada en directivas, consulte la vista [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) para determinar si la Directiva está habilitada. Esta vista también muestra quién creó la directiva o la cambió en último lugar.  
   
 ## <a name="permissions"></a>Permisos  

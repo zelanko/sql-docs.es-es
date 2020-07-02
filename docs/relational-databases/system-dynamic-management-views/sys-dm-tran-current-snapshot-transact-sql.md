@@ -20,15 +20,15 @@ ms.assetid: 7509d595-c0e1-4237-a5ac-b41ad934544c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fad5c6e4fad0598cc4b0eafee75797670cd0566b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c580949c6f2f9117dcc04d0454c157e5642facea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82810869"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775193"
 ---
 # <a name="sysdm_tran_current_snapshot-transact-sql"></a>sys.dm_tran_current_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una tabla virtual que muestra todas las transacciones activas en el momento en que se inicia la transacción de instantáneas actual. Si la transacción actual no es una transacción de instantáneas, esta función no devuelve filas. **Sys. dm_tran_current_snapshot** es similar a **Sys. dm_tran_transactions_snapshot**, excepto en que **Sys. dm_tran_current_snapshot** solo devuelve las transacciones activas de la transacción de instantáneas actual.  
   

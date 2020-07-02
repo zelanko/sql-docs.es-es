@@ -30,15 +30,15 @@ ms.author: genemi
 ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 58155c9ec390259410538e9716dad87146acda2a
-ms.sourcegitcommit: 9921501952147b9ce3e85a1712495d5b3eb13e5b
+ms.openlocfilehash: 15274c3b46ac7b0dfb3e9f43fad0dd1174f5fbbf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84215718"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85775760"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Los elementos de un documento XML pueden estar relacionados. Los elementos pueden estar anidados jerárquicamente y pueden especificarse relaciones ID, IDREF o IDREFS entre los elementos.  
   
  Por ejemplo, en un esquema XSD, un **\<Customer>** elemento contiene **\<Order>** elementos secundarios. Cuando el esquema se asigna a la base de datos AdventureWorks, el **\<Customer>** elemento se asigna a la tabla sales. Customer y el **\<Order>** elemento se asigna a la tabla sales. SalesOrderHeader. Estas tablas subyacentes, Sales.Customer y Sales.SalesOrderHeader, están relacionadas puesto que los clientes realizan pedidos. La columna CustomerID de la tabla Sales.SalesOrderHeader es una clave externa que hace referencia a la clave principal CustomerID de la tabla Sales.Customer. Puede establecer estas relaciones entre los elementos de esquema de asignación mediante la anotación **SQL: Relationship** .  
@@ -53,7 +53,7 @@ ms.locfileid: "84215718"
   
  Para proporcionar los nombres de tabla y la información de combinación necesaria, se especifican los siguientes atributos en la anotación **SQL: Relationship** . Estos atributos solo son válidos con el **\<sql:relationship>** elemento:  
   
- **Nombre**  
+ **Name**  
  Especifica el nombre único de la relación.  
   
  **Parent**  

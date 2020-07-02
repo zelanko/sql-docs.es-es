@@ -16,19 +16,19 @@ ms.assetid: 754d3f30-7d94-4b67-8dac-baf2699ce9c6
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c5e19cef4e00fc1c55e29e51ccea13c2fdb7a0e2
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dffa6e47370864a60acc4df372fbe7146759e3c0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304458"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715276"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Utilizar IMultipleResults para procesar varios conjuntos de resultados
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Los consumidores utilizan la interfaz **IMultipleResults** para procesar los resultados [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devueltos por la ejecución de comandos del proveedor de OLE DB de Native Client. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client envía un comando para su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución, ejecuta las instrucciones y devuelve los resultados.  
+  Los consumidores utilizan la interfaz **IMultipleResults** para procesar los resultados devueltos por la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución de comandos del proveedor de OLE DB de Native Client. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client envía un comando para su ejecución, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecuta las instrucciones y devuelve los resultados.  
   
- Un cliente debe procesar todos los resultados de la ejecución de comandos. Dado que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la ejecución de comandos del proveedor de OLE DB de Native Client puede generar objetos de varios conjuntos de filas como resultados, use la interfaz **IMultipleResults** para asegurarse de que la recuperación de datos de la aplicación completa la acción de ida y vuelta iniciada por el cliente.  
+ Un cliente debe procesar todos los resultados de la ejecución de comandos. Dado que la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ejecución de comandos del proveedor de OLE DB de Native Client puede generar objetos de varios conjuntos de filas como resultados, use la interfaz **IMultipleResults** para asegurarse de que la recuperación de datos de la aplicación completa la acción de ida y vuelta iniciada por el cliente.  
   
  La siguiente instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] genera varios conjuntos de filas; unos contienen datos de filas de la tabla **OrderDetails** y otros contienen resultados de la cláusula COMPUTE BY:  
   
@@ -42,7 +42,7 @@ COMPUTE
     BY OrderID  
 ```  
   
- Si un consumidor ejecuta un comando que contiene este texto y solicita un conjunto de filas como interfaz de resultados devueltos, solo se devuelve el primer conjunto de filas. El consumidor puede procesar todas las filas del conjunto de filas devuelto. Sin embargo, si la propiedad origen de datos de DBPROP_MULTIPLECONNECTIONS está establecida en VARIANT_FALSE y MARS no está habilitado en la conexión, no se puede ejecutar ningún otro comando en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objeto de sesión (el proveedor de OLE DB de Native Client no creará otra conexión) hasta que se cancele el comando. Si MARS no está habilitado en la conexión, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client devuelve un error de DB_E_OBJECTOPEN si DBPROP_MULTIPLECONNECTIONS está VARIANT_FALSE y devuelve E_FAIL si hay una transacción activa.  
+ Si un consumidor ejecuta un comando que contiene este texto y solicita un conjunto de filas como interfaz de resultados devueltos, solo se devuelve el primer conjunto de filas. El consumidor puede procesar todas las filas del conjunto de filas devuelto. Sin embargo, si la propiedad origen de datos de DBPROP_MULTIPLECONNECTIONS está establecida en VARIANT_FALSE y MARS no está habilitado en la conexión, no se puede ejecutar ningún otro comando en el objeto de sesión (el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client no creará otra conexión) hasta que se cancele el comando. Si MARS no está habilitado en la conexión, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client devuelve un error de DB_E_OBJECTOPEN si DBPROP_MULTIPLECONNECTIONS está VARIANT_FALSE y devuelve E_FAIL si hay una transacción activa.  
   
  El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client también devolverá DB_E_OBJECTOPEN cuando se utilizan parámetros de salida transmitidos y la aplicación no ha consumido todos los valores de parámetro de salida devueltos antes de llamar a **IMultipleResults:: GetResults** para obtener el siguiente conjunto de resultados. Si MARS no está habilitado y la conexión está ocupada ejecutando un comando que no genera un conjunto de filas o que genera un conjunto de filas que no es un cursor de servidor, y la propiedad de origen de datos DBPROP_MULTIPLECONNECTIONS está establecida en VARIANT_TRUE, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client crea conexiones adicionales para admitir objetos de comando simultáneos, a menos que haya una transacción activa, en cuyo caso devolverá un error. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra las transacciones y el bloqueo para cada conexión. Si se genera una segunda conexión, los comandos de cada una de las conexiones no comparten los bloqueos. Hay que tener cuidado para asegurarse de que un comando no bloquee otro comando manteniendo bloqueos en filas solicitadas por el otro comando. Si MARS está habilitado, puede haber varios comandos activos en las conexiones y si se utilizan transacciones explícitas, todos los comandos comparten una transacción común.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: b0c847215d31bd2064467c3edbce42ba957c2e78
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: ecd2576cac046984394b093832769363968e637a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79448332"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715894"
 ---
 # <a name="sp_change_users_login-transact-sql"></a>sp_change_users_login (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Asigna un usuario de base de datos existente a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
@@ -47,23 +47,23 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @Action= ] '*Action*'  
+ [ @Action =] '*acción*'  
  Describe la acción que llevará a cabo el procedimiento. la *acción* es **VARCHAR (10)**. la *acción* puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**Auto_Fix**|Vincula una entrada de usuario de la vista de catálogo del sistema sys.database_principals de la base de datos actual con el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del mismo nombre. Si no existe un inicio de sesión con el mismo nombre, se creará uno. Examine el resultado de la instrucción **Auto_Fix** para confirmar que se ha realizado el vínculo correcto. Evite usar **Auto_Fix** en situaciones de seguridad.<br /><br /> Al usar **Auto_Fix**, debe especificar el *usuario* y la *contraseña* si el inicio de sesión aún no existe; de lo contrario, debe especificar *usuario* pero se omitirá la *contraseña* . *login* debe ser null. el *usuario* debe ser un usuario válido en la base de datos actual. El inicio de sesión no puede tener otro usuario asignado.|  
-|**Informe**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. el *usuario*, el *Inicio de sesión*y la *contraseña* deben ser null o no especificarse.<br /><br /> Para reemplazar la opción de informe por una consulta mediante las tablas del sistema, compare las entradas de **Sys. server_prinicpals** con las entradas de **Sys. database_principals**.|  
-|**Update_One**|Vincula el *usuario* especificado en la base de datos actual a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un *Inicio de sesión*existente. se debe especificar el *usuario* y el *Inicio de sesión* . la *contraseña* debe ser null o no especificarse.|  
+|**Report**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. el *usuario*, el *Inicio de sesión*y la *contraseña* deben ser null o no especificarse.<br /><br /> Para reemplazar la opción de informe por una consulta mediante las tablas del sistema, compare las entradas de **Sys. server_prinicpals** con las entradas de **Sys. database_principals**.|  
+|**Update_One**|Vincula el *usuario* especificado en la base de datos actual a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Inicio de sesión*existente. se debe especificar el *usuario* y el *Inicio de sesión* . la *contraseña* debe ser null o no especificarse.|  
   
- [ @UserNamePattern= ] '*usuario*'  
+ [ @UserNamePattern =] '*usuario*'  
  Es el nombre de un usuario en la base de datos actual. *User* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName =] '*Inicio de sesión*'  
  Es el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
- [ @Password= ] '*contraseña*'  
- Es la contraseña asignada a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuevo inicio de sesión que se crea especificando **Auto_Fix**. Si ya existe un inicio de sesión coincidente, se asignan el usuario y el inicio de sesión y se omite la *contraseña* . Si no existe un inicio de sesión coincidente, sp_change_users_login crea un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nuevo inicio de sesión y asigna la *contraseña* como contraseña para el nuevo inicio de sesión. *password* es de **tipo sysname**y no debe ser null.  
+ [ @Password =] '*contraseña*'  
+ Es la contraseña asignada a un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión que se crea especificando **Auto_Fix**. Si ya existe un inicio de sesión coincidente, se asignan el usuario y el inicio de sesión y se omite la *contraseña* . Si no existe un inicio de sesión coincidente, sp_change_users_login crea un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión y asigna la *contraseña* como contraseña para el nuevo inicio de sesión. *password* es de **tipo sysname**y no debe ser null.  
   
 > **IMPORTANTE:** Use siempre una [contraseña segura.](../../relational-databases/security/strong-passwords.md)
   
@@ -77,7 +77,7 @@ sp_change_users_login [ @Action = ] 'action'
 |UserName|**sysname**|Nombre del usuario de la base de datos.|  
 |UserSID|**varbinary(85)**|Identificador de seguridad del usuario.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Use sp_change_users_login para vincular un usuario de la base de datos actual a un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si ha cambiado el inicio de sesión para el usuario, utilice sp_change_users_login para vincular el usuario al nuevo inicio de sesión sin que se pierdan los permisos del usuario. El nuevo *Inicio de sesión* no puede ser SA y el *usuario* no puede ser DBO, guest o un usuario INFORMATION_SCHEMA.  
   
  sp_change_users_login no se puede utilizar para asignar usuarios de la base de datos a entidades de seguridad de Windows, certificados o claves asimétricas.  

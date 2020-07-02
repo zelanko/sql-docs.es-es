@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 98ce2b9aa11b2e1381da1f16455df8a2c0d3f243
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1dfba407449b9517af2ed899f49387732c48353b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81487434"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718521"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flujo de trabajo ETL de WideWorldImportersDW
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Use el *WWI_Integration* paquete ETL para migrar datos de la base de datos WideWorldImporters a la base de datos WideWorldImportersDW a medida que los datos cambian. El paquete se ejecuta periódicamente (normalmente diariamente).
 
 El paquete garantiza un alto rendimiento mediante el uso de SQL Server Integration Services para orquestar operaciones de T-SQL masivas (en lugar de transformaciones independientes en Integration Services).
@@ -35,7 +35,7 @@ El procesamiento principal comienza rellenando la tabla de dimensiones Date. El 
 
 A continuación, una serie de tareas flujo de datos carga cada dimensión. A continuación, carga cada hecho.
 
-## <a name="prerequisites"></a>Prerrequisitos
+## <a name="prerequisites"></a>Requisitos previos
 
 - SQL Server 2016 (o posterior), con las bases de datos WideWorldImporters y WideWorldImportersDW (en la misma instancia o en instancias diferentes de SQL Server)
 - SQL Server Management Studio
@@ -59,11 +59,11 @@ Para que el código fuente vuelva a crear la base de datos de ejemplo, consulte 
    5. Seleccione **implementar** para finalizar el asistente.
 
 2. Cree un trabajo Agente SQL Server para el proceso ETL:
-   1. En Management Studio, haga clic con el botón secundario en **Agente SQL Server**y seleccione **nuevo** > **trabajo**.
+   1. En Management Studio, haga clic con el botón secundario en **Agente SQL Server**y seleccione **nuevo**  >  **trabajo**.
    2. Escriba un nombre, por ejemplo, *WIDEWORLDIMPORTERS ETL*.
    3. Agregue un **paso de trabajo** del tipo **SQL Server Integration Services paquete**.
    4. Seleccione el servidor que contiene el catálogo de Integration Services y, a continuación, seleccione el paquete *ETL diario* .
-   5. En **Configuration** > **administradores de conexión**de configuración, asegúrese de que las conexiones con el origen y el destino están configuradas correctamente. El valor predeterminado es conectarse a la instancia local.
+   5. En **Configuration**  >  **administradores de conexión**de configuración, asegúrese de que las conexiones con el origen y el destino están configuradas correctamente. El valor predeterminado es conectarse a la instancia local.
    6. Seleccione **Aceptar** para crear el trabajo.
 
 3. Ejecute o programe el trabajo.

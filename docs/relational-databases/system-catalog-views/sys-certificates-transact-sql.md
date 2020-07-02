@@ -20,15 +20,15 @@ ms.assetid: e5046102-a65c-401e-b80d-05636884dec9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 08193bd8f9b6dfd3aace80315c75bbb88e076f3a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: dbba738f10f570af693cc126cb20f0f857e405aa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75255840"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718903"
 ---
 # <a name="syscertificates-transact-sql"></a>sys.certificates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve una fila por cada certificado en la base de datos.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "75255840"
 |**is_active_for_begin_dialog**|**bit**|Si el valor es 1, este certificado se utiliza para iniciar diálogos de servicio cifrados.|  
 |**issuer_name**|**nvarchar (442)**|Nombre del emisor del certificado.|  
 |**cert_serial_number**|**nvarchar (64)**|Número de serie del certificado.|  
-|**Junction**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
+|**sid**|**varbinary(85)**|SID (identificador de seguridad) de inicio de sesión para este certificado.|  
 |**string_sid**|**nvarchar(128)**|Representación en forma de cadena del SID de inicio de sesión para este certificado.|  
 |**Asunto**|**nvarchar(4000)**|Asunto del certificado.|  
 |**expiry_date**|**datetime**|Fecha en que expira el certificado.|  

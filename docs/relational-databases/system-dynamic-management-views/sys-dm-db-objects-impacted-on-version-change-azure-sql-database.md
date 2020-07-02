@@ -20,22 +20,22 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 482f64eff3c37aad08319e6ea8af348b014bd784
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c0b26edb80b254ca6c7d3b161e618d2a6ad5849f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828066"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718783"
 ---
 # <a name="sysdm_db_objects_impacted_on_version_change-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Esta vista del sistema con ámbito de base de datos está diseñada para proporcionar un sistema de alerta rápida que permita determinar los objetos que se verán afectados por una actualización de versión importante en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Puede utilizar la vista antes o después de la actualización para obtener una enumeración completa de los objetos afectados. Tendrá que consultar esta vista en cada base de datos para obtener una perspectiva completa de todo el servidor.  
   
-|Nombre de la columna|Tipo de datos|Descripción|  
+|Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|clase|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = Índices y montones|  
-|class_desc|**nvarchar (60)** NO NULL|Descripción de la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
+|class|valor **int** NO NULL|La clase del objeto que se verá afectado:<br /><br /> **1** = restricción<br /><br /> **7** = Índices y montones|  
+|class_desc|**nvarchar (60)** NO NULL|Descripción de la clase:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **AJUSTAR**|  
 |major_id|valor **int** NO NULL|Identificador de objeto de la restricción, o identificador de objeto de la tabla que contiene el índice o el montón.|  
 |minor_id|valor **int** ACEPTA|**NULL** para restricciones<br /><br /> Index_id para índices y montones|  
 |dependency|**nvarchar (60)** NO NULL|Descripción de la dependencia que está afectando a una restricción o a un índice. El mismo valor también se utiliza para las advertencias generadas durante la actualización.<br /><br /> Ejemplos:<br /><br /> **space** (para valores intrínsecos)<br /><br /> **geometry** (para UDT de sistema)<br /><br /> **geography::Parse** (para el método UDT de sistema)|  
@@ -60,7 +60,7 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ### <a name="how-to-update-impacted-objects"></a>Cómo actualizar los objetos afectados  
  Los pasos ordenados siguientes describen la acción correctiva que se deberá realizar después de la próxima actualización de versión de servicio del mes de junio.  

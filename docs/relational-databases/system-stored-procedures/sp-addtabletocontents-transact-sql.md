@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 429b908f01c7b0436f05622544b2aa8b241a6211
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2ad62613462575fb1bb33bf472e367d8f7640b03
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833600"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716330"
 ---
 # <a name="sp_addtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Inserta en las tablas de seguimiento de mezcla las referencias para las filas de una tabla de origen que no están incluidas actualmente en las tablas de seguimiento. Utilice esta opción si ha cargado de forma masiva una gran cantidad de datos mediante **BCP**, que no activará los desencadenadores de seguimiento de mezcla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -48,7 +48,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addtabletocontents** solo se utiliza en la replicación de mezcla.  
   
  El **ROWGUIDCOL** hace referencia a las filas de la *TABLE_NAME* y las referencias se agregan a las tablas de seguimiento de mezcla. **sp_addtabletocontents** debe usarse después de la copia masiva de datos en una tabla que se publica mediante la replicación de mezcla. El procedimiento almacenado inicia el seguimiento de las filas copiadas y garantiza que las nuevas filas se incluirán en la siguiente sincronización.  

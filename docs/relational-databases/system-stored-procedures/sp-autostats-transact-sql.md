@@ -18,15 +18,15 @@ ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b56b53b90bc8c66b72d68de4b83def5712cdc54
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ef219cd00c8603fce6c03e92bb5f540bd954e81a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833414"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716166"
 ---
 # <a name="sp_autostats-transact-sql"></a>sp_autostats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Muestra o cambia la opción de actualización automática de estadísticas, AUTO_UPDATE_STATISTICS, para un índice, un objeto de estadísticas, una tabla o una vista indizada.  
   
@@ -74,7 +74,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  El conjunto de resultados de una tabla o vista indizada incluye las estadísticas creadas para los índices, las estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y las estadísticas creadas con la instrucción [Create Statistics](../../t-sql/statements/create-statistics-transact-sql.md) .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el índice especificado está deshabilitado, o si la tabla especificada tiene un índice clúster deshabilitado, aparece un mensaje de error.  
   
  AUTO_UPDATE_STATISTICS siempre es OFF para las tablas optimizadas para memoria  

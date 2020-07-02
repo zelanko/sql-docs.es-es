@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c8108896e5ef7599c3441e922c54ba606d65d5fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a6f56713f2ac50a5e367f23a7987b62e2fb9a78b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828865"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719244"
 ---
 # <a name="sp_oageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Obtiene información de errores de OLE Automation.  
   
@@ -86,7 +86,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |-----------------------|------------------|  
 |**Tipo de variable incorrecto ?(0x80020008)**|El tipo de datos de un [!INCLUDE[tsql](../../includes/tsql-md.md)] valor pasado como parámetro de método no coincidía con el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] tipo de datos del parámetro de método o se pasó un valor NULL como parámetro de método.|  
 |**Nombre desconocido? (0x8002006)**|No se encontró el nombre de la propiedad o del método especificado para el objeto especificado.|  
-|**Cadena de clase no válida (0x800401f3)**|El ProgID o CLSID especificado no está registrado como objeto OLE en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores de automatización OLE personalizados deben registrarse para poder crear instancias de ellos mediante **sp_OACreate**. Para ello, puede usar la utilidad regsvr32. exe para los servidores en proceso (. dll) o el modificador de la línea de comandos **/regserver** para los servidores locales (. exe).|  
+|**Cadena de clase no válida (0x800401f3)**|El ProgID o CLSID especificado no está registrado como objeto OLE en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servidores de automatización OLE personalizados deben registrarse para poder crear instancias de ellos mediante **sp_OACreate**. Esto puede hacerse mediante el uso de la utilidad de Regsvr32.exe para servidores en proceso (. dll) o el modificador de línea de comandos **/regserver** para servidores locales (. exe).|  
 |**Error de ejecución del servidor (0x80080005)**|El objeto OLE especificado está registrado como servidor OLE local (archivo .exe), pero no se pudo encontrar o iniciar el archivo .exe.|  
 |**No se pudo encontrar el módulo especificado (0x8007007e)**|El objeto OLE especificado está registrado como servidor OLE en proceso (archivo .dll), pero no se pudo encontrar o cargar el archivo .dll.|  
 |**El tipo no coincide (0x80020005)**|El tipo de datos de una variable local de [!INCLUDE[tsql](../../includes/tsql-md.md)] utilizada para almacenar un valor de propiedad o un valor de método devueltos no coincidió con el tipo de datos de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] para el valor devuelto de la propiedad o método. O bien, se solicitó el valor devuelto de una propiedad o método, pero no se devuelve un valor.|  

@@ -18,15 +18,15 @@ ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1552f566852f90b3526645313a160f2446b868e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e886acbd91ff2882c7dd304227ae0b7f1d6afd9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828509"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716114"
 ---
 # <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Enlaza un valor predeterminado con una columna o un tipo de datos de alias.  
   
@@ -59,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Puede usar **sp_bindefault** para enlazar un nuevo valor predeterminado a una columna, aunque se prefiere usar la restricción predeterminada, o a un tipo de datos de alias sin desenlazar un valor predeterminado existente. El valor predeterminado anterior se reemplaza. No puede enlazar un valor predeterminado con un tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un tipo definido por el usuario CLR. Si el valor predeterminado no es compatible con la columna con la que se debe enlazar, el [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] devuelve un mensaje de error cuando intenta insertar el valor predeterminado y no cuando lo enlaza.  
   
  Las columnas existentes del tipo de datos de alias heredan el nuevo valor predeterminado, a menos que un valor predeterminado esté enlazado directamente a ellos o *futureonly_flag* se especifique como **futureonly**. Las nuevas columnas del tipo de datos de alias siempre heredan el valor predeterminado.  

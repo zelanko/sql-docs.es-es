@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: af9bd2035106502da6ccb83a9a8818ca6bd0c47a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 96cd2abcc3e9bc76b2dd32026fedfe6ad774c19b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820717"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716583"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Crea una suscripción de mezcla de inserción o extracción. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -120,11 +120,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**1**|Primero|  
-|**2**|Segundo|  
+|**1**|First|  
+|**2**|Second|  
 |**4**|Tercero|  
 |**8**|Cuarto|  
-|**dieciséi**|Último|  
+|**16**|Último|  
 |NULL (predeterminado)||  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Es el factor de periodicidad utilizado por *frequency_type*. *frequency_recurrence_factor*es de **tipo int**y su valor predeterminado es NULL.  
@@ -134,7 +134,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**1**|Una sola vez|  
-|**2**|Segundo|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hora|  
 |NULL (predeterminado)||  
@@ -174,7 +174,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addmergesubscription** se utiliza en la replicación de mezcla.  
   
  Cuando un miembro del rol fijo de servidor **sysadmin** ejecuta **sp_addmergesubscription** para crear una suscripción de extracción, el trabajo de agente de mezcla se crea implícitamente y se ejecuta en la cuenta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del agente. Se recomienda ejecutar [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especificar las credenciales de una cuenta de Windows diferente específica del agente para ** \@ job_login** y ** \@ job_password**. Para obtener más información, consulte [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  

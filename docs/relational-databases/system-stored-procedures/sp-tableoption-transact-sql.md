@@ -18,15 +18,15 @@ ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2e822d1ca6aff1e91a848f839b824bb4476fc5a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 84e6c530b4887502346b69adcf2590bce9d0e8fc
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834224"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718688"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Establece los valores de las opciones de las tablas definidas por el usuario. sp_tableoption puede usarse para controlar el comportamiento consecutivo de las tablas con columnas **VARCHAR (Max)**, **nvarchar (Max)**, **varbinary (Max)**, **XML**, **Text**, **ntext**, **Image**o Large-defined.  
   
@@ -68,7 +68,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_tableoption se puede utilizar únicamente para definir valores de opción de tablas definidas por el usuario. Para mostrar las propiedades de la tabla, use OBJECTPROPERTY o consulte sys. tables.  
   
  La opción text in row en sp_tableoption puede habilitarse o deshabilitarse solo en tablas que contengan columnas de texto. Si la tabla no contiene una columna de texto, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genera un error.  

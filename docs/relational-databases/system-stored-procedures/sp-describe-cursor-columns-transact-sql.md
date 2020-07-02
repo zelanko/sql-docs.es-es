@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 963fa56dfba33c13eb2ce4d317f69a22b5cdd259
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 11dde97040adf3005c7e417a38f66088b8f3f7d5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830268"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717500"
 ---
 # <a name="sp_describe_cursor_columns-transact-sql"></a>sp_describe_cursor_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Informa acerca de los atributos de las columnas en el conjunto de resultados de un cursor de servidor.  
   
@@ -89,7 +89,7 @@ sp_describe_cursor_columns
 |dbid|**int**|Id. de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbid es -1.|  
 |dbname|**sysname**<br /><br /> (acepta valores NULL)|Nombre de la base de datos que contiene la tabla base que proporciona la columna. Si se generó la columna del conjunto de resultados a partir de una expresión, dbname es NULL.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_describe_cursor_columns describe los atributos de las columnas en el conjunto de resultados de un cursor de servidor, como, por ejemplo, el nombre y el tipo de datos de cada cursor. Utilice sp_describe_cursor para obtener una descripción de los atributos globales del cursor de servidor. Utilice sp_describe_cursor_tables para obtener un informe de las tablas base a las que hace referencia el cursor. Para obtener un informe de los cursores de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)] visibles en la conexión, use sp_cursor_list.  
   
 ## <a name="permissions"></a>Permisos  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9af57e2f3a3bcf6554e88d8c6f9d54b8ec069009
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 845fe5389792dbe4c1df7bb9cf3e920073cd23ac
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827819"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717382"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Informa acerca de los objetos o las tablas base a las que hace referencia un cursor de servidor.  
   
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
 |table owner|**sysname**|Id. de usuario del propietario de la tabla.|  
 |Table_name|**sysname**|Nombre del objeto o tabla base. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los cursores de servidor siempre devuelven el objeto especificado por el usuario, no las tablas base.|  
 |Optimizer_hints|**smallint**|Mapa de bits que incluye una o varias de las siguientes opciones:<br /><br /> 1 = Bloqueo de fila (ROWLOCK)<br /><br /> 4 = Bloqueo de página (PAGELOCK)<br /><br /> 8 = Bloqueo de tabla (TABLOCK)<br /><br /> 16 = Bloqueo exclusivo de tabla (TABLOCKX)<br /><br /> 32 = Bloqueo de actualización (UPDLOCK)<br /><br /> 64 = Sin bloqueo (NOLOCK)<br /><br /> 128 = Opción de primera fila rápida (FASTFIRST)<br /><br /> 4096 = Lectura de semántica repetible cuando se utiliza con DECLARE CURSOR (HOLDLOCK)<br /><br /> Cuando se especifican varias opciones, el sistema utiliza la más restrictiva. Sin embargo, sp_describe_cursor_tables muestra las marcas que se especifican en la consulta.|  
-|lock_type|**smallint**|Tipo de bloqueo de desplazamiento requerido explícita o implícitamente para cada tabla base de este cursor. El valor puede ser uno de los siguientes:<br /><br /> 0 = Ninguno<br /><br /> 1 = Compartido<br /><br /> 3 = Actualización|  
+|lock_type|**smallint**|Tipo de bloqueo de desplazamiento requerido explícita o implícitamente para cada tabla base de este cursor. El valor puede ser uno de los siguientes:<br /><br /> 0 = Ninguna<br /><br /> 1 = Compartido<br /><br /> 3 = Actualización|  
 |server_name|**sysname, aceptan valores NULL**|Nombre del servidor vinculado en el que reside la tabla. NULL cuando se utiliza OPENQUERY u OPENROWSET.|  
 |Objectid|**int**|Id. de objeto de la tabla. 0 cuando se utiliza OPENQUERY u OPENROWSET.|  
 |dbid|**int**|Identificador de la base de datos en la que reside la tabla. 0 cuando se utiliza OPENQUERY u OPENROWSET.|  

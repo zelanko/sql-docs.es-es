@@ -20,15 +20,15 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 98d71c76b927e0dcb7cfdf87459f15eb82ef3c9e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b2c90c3a6e6251da7b8e318a57002f224e074ac5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824672"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717475"
 ---
 # <a name="sysdm_continuous_copy_status-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Devuelve una fila para cada base de datos de usuario (V11) que está ocupada actualmente en una relación de copia continua de replicación geográfica. Si se inicia más de una relación de copia continua para una base de datos principal dada, esta tabla contiene una fila por cada base de datos secundaria activa.  
   
@@ -51,7 +51,7 @@ Si usa SQL Database V12, debe usar [Sys. dm_geo_replication_link_status](../../r
 ## <a name="permissions"></a>Permisos  
  Para recuperar datos, es necesario pertenecer al rol de base de datos **db_owner** . El usuario DBO, los miembros del rol de base de datos **dbmanager** y el inicio de sesión SA también pueden consultar esta vista.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La vista **Sys. dm_continuous_copy_status** se crea en la base de datos de **recursos** y está visible en todas las bases de datos, incluida la maestra lógica. Sin embargo, al consultar esta vista en la maestra lógica se devuelve un conjunto vacío.  
   
  Si la relación de copia continua se termina en una base de datos, la fila de esa base de datos en la vista **Sys. dm_continuous_copy_status** desaparece.  

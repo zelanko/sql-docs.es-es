@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f22b2446713274503071e615690aaf7a03fc33d2
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 86a450e69eb72724b64b9a2861e3cd282ebf87a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824842"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85715948"
 ---
 # <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia un parámetro de un perfil de agente de replicación almacenado en la tabla del sistema [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) . Este procedimiento almacenado se ejecuta en el distribuidor en el que se está ejecutando el agente, en cualquier base de datos.  
   

@@ -10,15 +10,15 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 01bca0b4e0c8d98d0a31451686f0396af99ed430
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: af15f93b869fed56bed19a495c64810b0f2436c7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112312"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718596"
 ---
 # <a name="wideworldimporters-data-generation"></a>Generación de datos de WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Las versiones de lanzamiento de las bases de datos WideWorldImporters y WideWorldImportersDW tienen datos del 1 de enero de 2013, hasta el día en que se generaron las bases de datos.
 
 Al utilizar estas bases de datos de ejemplo, puede que desee incluir datos de ejemplo más recientes.
@@ -41,7 +41,7 @@ Para generar datos de ejemplo hasta la fecha actual:
 
     Esta instrucción agrega datos de ventas y compra de ejemplo a la base de datos hasta la fecha actual. Muestra el progreso de la generación de datos por día. La generación de datos puede tardar unos 10 minutos para cada año que necesite datos. Debido a un factor aleatorio en la generación de datos, existen algunas diferencias en los datos que se generan entre ejecuciones.
 
-    Para aumentar o disminuir la cantidad de datos generados para pedidos por día, cambie el valor del parámetro `@AverageNumberOfCustomerOrdersPerDay`. Use los parámetros `@SaturdayPercentageOfNormalWorkDay` y `@SundayPercentageOfNormalWorkDay` para determinar el volumen de los días del fin de semana.
+    Para aumentar o disminuir la cantidad de datos generados para pedidos por día, cambie el valor del parámetro `@AverageNumberOfCustomerOrdersPerDay` . Use los parámetros `@SaturdayPercentageOfNormalWorkDay` y `@SundayPercentageOfNormalWorkDay` para determinar el volumen de los días del fin de semana.
 
 ## <a name="import-generated-data-in-wideworldimportersdw"></a>Importar datos generados en WideWorldImportersDW
 
@@ -77,6 +77,6 @@ Puede utilizar el `Application.Configuration_PopulateLargeSaleTable` procedimien
 
 #### <a name="result"></a>Resultado
 
-Aproximadamente el número necesario de filas se insertan en `Fact.Sale` la tabla en el año 2012. El procedimiento limita artificialmente el número de filas a 50.000 por día. Puede cambiar esta limitación, pero la limitación le ayuda a evitar sobreinflaciones accidentales de la tabla.
+Aproximadamente el número necesario de filas se insertan en la `Fact.Sale` tabla en el año 2012. El procedimiento limita artificialmente el número de filas a 50.000 por día. Puede cambiar esta limitación, pero la limitación le ayuda a evitar sobreinflaciones accidentales de la tabla.
 
 El procedimiento también aplica la indexación de almacén de columnas en clúster si aún no se ha aplicado.

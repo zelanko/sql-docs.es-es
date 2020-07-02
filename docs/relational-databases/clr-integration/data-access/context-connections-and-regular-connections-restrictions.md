@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 5491e736bfa075c4cc9f001bc2515184de865ee2
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81485374"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717909"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexiones de contexto y conexiones normales: restricciones
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describen las restricciones asociadas al código que se ejecuta [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el proceso a través de las conexiones de contexto y normales.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
+  En este tema se describen las restricciones asociadas al código que se ejecuta en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proceso a través de las conexiones de contexto y normales.  
   
 ## <a name="restrictions-on-context-connections"></a>Restricciones en conexiones de contexto  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones de contexto:  
@@ -41,7 +41,7 @@ ms.locfileid: "81485374"
   
 -   No puede usarse ninguna otra palabra clave de cadena de conexión cuando se utiliza "context connection=true".  
   
--   La propiedad **SqlConnection. DataSource** devuelve NULL si la cadena de conexión para **SqlConnection** es "context Connection = true", en lugar del nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   La propiedad **SqlConnection. DataSource** devuelve NULL si la cadena de conexión para **SqlConnection** es "context Connection = true", en lugar del nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 -   El establecimiento de la propiedad **SqlCommand. CommandTimeout** no tiene ningún efecto cuando el comando se ejecuta en una conexión de contexto.  
   

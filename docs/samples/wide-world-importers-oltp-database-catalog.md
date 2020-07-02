@@ -10,15 +10,15 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: d9dc40928fddda2708a23a7fc927627cf0e9450d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "79112406"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718572"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos WideWorldImporters
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 La base de datos WideWorldImporters contiene toda la información de la transacción y los datos diarios de ventas y compras, así como datos del sensor de vehículos y salones fríos.
 
 ## <a name="schemas"></a>Esquemas
@@ -155,7 +155,7 @@ Los procedimientos almacenados se organizan en esquemas. La mayoría de los esqu
 
 El `Website` esquema contiene los procedimientos almacenados que puede usar un front-end web.
 
-Los `Reports` esquemas y `PowerBI` están diseñados para los fines de Reporting Services y PowerBI. Se recomienda que todas las extensiones del ejemplo utilicen estos esquemas para la elaboración de informes.
+Los `Reports` `PowerBI` esquemas y están diseñados para los fines de Reporting Services y PowerBI. Se recomienda que todas las extensiones del ejemplo utilicen estos esquemas para la elaboración de informes.
 
 ### <a name="website-schema"></a>Esquema de sitios web
 
@@ -163,12 +163,12 @@ Estos son los procedimientos utilizados por una aplicación cliente, como un fro
 
 |Procedimiento|Propósito|
 |-----------------------------|---------------------|
-|ActivateWebsiteLogon|Permite que una persona ( `Application.People`de) tenga acceso al sitio Web.|
+|ActivateWebsiteLogon|Permite que una persona (de `Application.People` ) tenga acceso al sitio Web.|
 |ChangePassword|Cambia la contraseña de un usuario (para los usuarios que no usan mecanismos de autenticación externos).|
 |InsertCustomerOrders|Permite insertar uno o varios pedidos de clientes (incluidas las líneas de pedido).|
 |InvoiceCustomerOrders|Toma una lista de pedidos que se van a facturar y procesa las facturas.|
-|RecordColdRoomTemperatures|Toma una lista de datos del sensor, como un parámetro con valores de tabla (TVP), y aplica los `Warehouse.ColdRoomTemperatures` datos a la tabla temporal.|
-|RecordVehicleTemperature|Toma una matriz JSON y la usa para actualizar `Warehouse.VehicleTemperatures`.|
+|RecordColdRoomTemperatures|Toma una lista de datos del sensor, como un parámetro con valores de tabla (TVP), y aplica los datos a la `Warehouse.ColdRoomTemperatures` tabla temporal.|
+|RecordVehicleTemperature|Toma una matriz JSON y la usa para actualizar `Warehouse.VehicleTemperatures` .|
 |SearchForCustomers|Busca los clientes por nombre o parte del nombre (el nombre de la empresa o el nombre de la persona).|
 |SearchForPeople|Busca personas por nombre o parte del nombre.|
 |SearchForStockItems|Busca los elementos de stock por nombre o parte del nombre o de los comentarios de marketing.|
@@ -181,7 +181,7 @@ El proceso ETL utiliza los procedimientos almacenados en este esquema. Obtienen 
 
 ### <a name="dataloadsimulation-schema"></a>Esquema DataLoadSimulation
 
-Simula una carga de trabajo que inserta ventas y compras. El procedimiento almacenado principal es `PopulateDataToCurrentDate`, que se usa para insertar datos de ejemplo hasta la fecha actual.
+Simula una carga de trabajo que inserta ventas y compras. El procedimiento almacenado principal es `PopulateDataToCurrentDate` , que se usa para insertar datos de ejemplo hasta la fecha actual.
 
 |Procedimiento|Propósito|
 |-----------------------------|---------------------|
@@ -200,12 +200,12 @@ Estos procedimientos se utilizan para configurar el ejemplo. Se usan para aplica
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Agrega un miembro a un rol si el miembro todavía no está en el rol.|
 |Configuration_ApplyAuditing|Agrega auditoría. La auditoría de servidor se aplica a las bases de datos de la edición Standard. se ha agregado una auditoría de base de datos adicional para Enterprise Edition.|
-|Configuration_ApplyColumnstoreIndexing|Aplica la indexación de `Sales.OrderLines` almacén `Sales.InvoiceLines` de columnas a y y reindexa adecuadamente.|
-|Configuration_ApplyFullTextIndexing|Aplica los índices de texto `Application.People`completo `Sales.Customers`a `Purchasing.Suppliers`,, `Warehouse.StockItems`y. Reemplaza `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` por los procedimientos de reemplazo que usan la indización de texto completo.|
-|Configuration_ApplyPartitioning|Aplica la creación de particiones de tabla a `Sales.CustomerTransactions` y `Purchasing.SupplierTransactions`, y reorganiza los índices para que se adapten.|
+|Configuration_ApplyColumnstoreIndexing|Aplica la indexación de almacén de columnas a `Sales.OrderLines` y `Sales.InvoiceLines` y reindexa adecuadamente.|
+|Configuration_ApplyFullTextIndexing|Aplica los índices de texto completo a `Application.People` , `Sales.Customers` , `Purchasing.Suppliers` y `Warehouse.StockItems` . Reemplaza `Website.SearchForPeople` , `Website.SearchForSuppliers` , `Website.SearchForCustomers` , `Website.SearchForStockItems` , `Website.SearchForStockItemsByTags` por los procedimientos de reemplazo que usan la indización de texto completo.|
+|Configuration_ApplyPartitioning|Aplica la creación de particiones de tabla a `Sales.CustomerTransactions` y `Purchasing.SupplierTransactions` , y reorganiza los índices para que se adapten.|
 |Configuration_ApplyRowLevelSecurity|Aplica la seguridad de nivel de fila para filtrar los clientes por roles relacionados con el territorio de ventas.|
 |Configuration_ConfigureForEnterpriseEdition|Aplica la indexación de almacén de columnas, texto completo, en memoria, polybase y creación de particiones.|
-|Configuration_EnableInMemory|Agrega un grupo de archivos optimizados para memoria (cuando no funciona en Azure `Warehouse.ColdRoomTemperatures`) `Warehouse.VehicleTemperatures` , reemplaza con equivalentes `Website.OrderIDList`en memoria y migra los datos, vuelve a crear los tipos de `Website.OrderList`tabla `Website.OrderLineList`, `Website.SensorDataList` ,, con equivalentes optimizados para memoria, quita y vuelve a crear los `Website.InvoiceCustomerOrders`procedimientos `Website.InsertCustomerOrders`, y `Website.RecordColdRoomTemperatures` que usa estos tipos de tabla.|
+|Configuration_EnableInMemory|Agrega un grupo de archivos optimizados para memoria (cuando no funciona en Azure), reemplaza `Warehouse.ColdRoomTemperatures` `Warehouse.VehicleTemperatures` con equivalentes en memoria y migra los datos, vuelve a crear los `Website.OrderIDList` tipos de `Website.OrderList` tabla,, `Website.OrderLineList` , `Website.SensorDataList` con equivalentes optimizados para memoria, quita y vuelve a crear los procedimientos `Website.InvoiceCustomerOrders` , `Website.InsertCustomerOrders` y `Website.RecordColdRoomTemperatures` que usa estos tipos de tabla.|
 |Configuration_RemoveAuditing|Quita la configuración de auditoría.|
 |Configuration_RemoveRowLevelSecurity|Quita la configuración de seguridad de nivel de fila (esto es necesario para los cambios en las tablas asociadas).|
 |CreateRoleIfNonExistant|Crea un rol de base de datos si aún no existe.|

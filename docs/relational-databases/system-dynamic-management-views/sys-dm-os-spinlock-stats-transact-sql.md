@@ -22,16 +22,16 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8343a5aa5d8e95474fb87c1b6a39e2a013323295
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68265688"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718774"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>Sys. dm_os_spinlock_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Devuelve información sobre todas las esperas de Spinlock organizadas por tipo.  
   
@@ -47,14 +47,14 @@ Devuelve información sobre todas las esperas de Spinlock organizadas por tipo.
 
 
 ## <a name="permissions"></a>Permisos  
-En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` el permiso.   
+En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] , requiere el `VIEW SERVER STATE` permiso.   
 En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requiere el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles estándar y básico, requiere el **Administrador del servidor** o una cuenta de **Administrador de Azure Active Directory** .    
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  
  Sys. dm_os_spinlock_stats se puede usar para identificar el origen de la contención de Spinlock. En algunas situaciones, es posible que pueda resolver o reducir la contención de Spinlock. No obstante, puede haber situaciones que requerirán ponerse en contacto con los servicios de soporte al cliente de [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
- Puede restablecer el contenido de sys. dm_os_spinlock_stats mediante el uso `DBCC SQLPERF` de la siguiente manera:  
+ Puede restablecer el contenido de sys. dm_os_spinlock_stats mediante el uso de la `DBCC SQLPERF` siguiente manera:  
   
 ```  
 DBCC SQLPERF ('sys.dm_os_spinlock_stats', CLEAR);  
@@ -120,7 +120,7 @@ GO
 |DBSEEDING_OPERATION|Exclusivamente para uso interno.|
 |DBT_HASH|Exclusivamente para uso interno.|
 |DBT_IO_LIST|Exclusivamente para uso interno.|
-|DBTABLE|Controla el acceso a una estructura de datos en memoria para cada base de datos de una SQL Server que contiene las propiedades de esa base de datos. Para más información, consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789). |
+|DBTABLE|Controla el acceso a una estructura de datos en memoria para cada base de datos de una SQL Server que contiene las propiedades de esa base de datos. Consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Improving-Concurrency-Scalability-of-SQL-Server-workload-by/ba-p/384789) para más información. |
 |DEFERRED_WF_EXT_DROP|Exclusivamente para uso interno.|
 |DEK_INSTANCE|Exclusivamente para uso interno.|
 |DELAYED_PARTITIONED_STACK|Exclusivamente para uso interno.|
@@ -130,7 +130,7 @@ GO
 |DIGEST_CACHE|Exclusivamente para uso interno.|
 |DINPBUF|Exclusivamente para uso interno.|
 |DIRECTLOGCONSUMER|Exclusivamente para uso interno.|
-|DP_LIST|Controla el acceso a la lista de páginas desfasadas para una base de datos que tiene activado el punto de comprobación indirecto. Para más información, consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510).|
+|DP_LIST|Controla el acceso a la lista de páginas desfasadas para una base de datos que tiene activado el punto de comprobación indirecto. Consulte [este artículo](https://techcommunity.microsoft.com/t5/SQL-Server/Indirect-Checkpoint-and-tempdb-8211-the-good-the-bad-and-the-non/ba-p/385510) para más información.|
 |DROP|Exclusivamente para uso interno.|
 |DROP_TEMPO|Exclusivamente para uso interno.|
 |DROPPED_ALLOC_UNIT|Exclusivamente para uso interno.|
@@ -187,7 +187,7 @@ GO
 |LANG_RES_LOAD|Exclusivamente para uso interno.|
 |LIVE_TARGET_TVF|Exclusivamente para uso interno.|
 |LOCK_FREE_LIST|Exclusivamente para uso interno.|
-|LOCK_HASH|Protege el acceso a la tabla hash del administrador de bloqueos que almacena información acerca de los bloqueos que se mantienen en una base de datos. Para más información, consulte [este artículo](https://support.microsoft.com/kb/2926217).|
+|LOCK_HASH|Protege el acceso a la tabla hash del administrador de bloqueos que almacena información acerca de los bloqueos que se mantienen en una base de datos. Consulte [este artículo](https://support.microsoft.com/kb/2926217) para más información.|
 |LOCK_NOTIFICATION|Exclusivamente para uso interno.|
 |LOCK_RESOURCE_ID|Exclusivamente para uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Exclusivamente para uso interno.|
@@ -307,7 +307,7 @@ GO
 |SOS_ACTIVEDESCRIPTOR|Exclusivamente para uso interno.|
 |SOS_BLOCKALLOCPARTIALLIST|Exclusivamente para uso interno.|
 |SOS_BLOCKDESCRIPTORBUCKET|Exclusivamente para uso interno.|
-|SOS_CACHESTORE|Sincroniza el acceso a varias cachés en memoria en SQL Server como la caché del plan o la memoria caché de la tabla temporal. La contención intensiva en este tipo de Spinlock puede significar muchos aspectos diferentes en función de la memoria caché específica que se encuentra en la contención. Póngase [!INCLUDE[msCoName](../../includes/msconame-md.md)] en contacto con los servicios de soporte al cliente para obtener ayuda para solucionar este tipo de Spinlock. |
+|SOS_CACHESTORE|Sincroniza el acceso a varias cachés en memoria en SQL Server como la caché del plan o la memoria caché de la tabla temporal. La contención intensiva en este tipo de Spinlock puede significar muchos aspectos diferentes en función de la memoria caché específica que se encuentra en la contención. Póngase en contacto con los [!INCLUDE[msCoName](../../includes/msconame-md.md)] servicios de soporte al cliente para obtener ayuda para solucionar este tipo de Spinlock. |
 |SOS_CACHESTORE_CLOCK|Exclusivamente para uso interno.|
 |SOS_CLOCKALG_INTERNODE_SYNC|Exclusivamente para uso interno.|
 |SOS_DEBUG_HOOK|Exclusivamente para uso interno.|

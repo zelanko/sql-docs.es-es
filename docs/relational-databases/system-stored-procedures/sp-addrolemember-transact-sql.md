@@ -18,15 +18,15 @@ ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 87fbcab87999c83c688ec4fa9e46f1aeed033bcf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68030901"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716420"
 ---
 # <a name="sp_addrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Agrega un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows a un rol de base de datos en la base de datos actual.  
   
@@ -43,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Argumentos  
- [ @rolename= ] '*role*'  
+ [ @rolename =] '*rol*'  
  Es el nombre del rol en la base de datos actual. *role* es un **sysname**y no tiene ningún valor predeterminado.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername =] '*security_account*'  
  Es la cuenta de seguridad que se va a agregar al rol. *security_account* es un **sysname**y no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, un rol de base de datos, un inicio de sesión de Windows o un grupo de Windows.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -75,7 +75,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-adding-a-windows-login"></a>A. Agregar un inicio de sesión de Windows  
- En el ejemplo siguiente se agrega el `Contoso\Mary5` inicio de `AdventureWorks2012` sesión de Windows `Mary5`a la base de datos como usuario. A continuación, se agrega el usuario `Mary5` al rol `Production`.  
+ En el ejemplo siguiente se agrega el inicio de sesión de Windows `Contoso\Mary5` a la `AdventureWorks2012` base de datos como usuario `Mary5` . A continuación, se agrega el usuario `Mary5` al rol `Production`.  
   
 > [!NOTE]  
 >  Dado que `Contoso\Mary5` se conoce como el usuario `Mary5` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], es preciso especificar el nombre de usuario `Mary5`. Se producirá un error en la instrucción a menos que un inicio de sesión `Contoso\Mary5` exista. Pruebe a usar un inicio de sesión de su dominio.  
@@ -97,10 +97,10 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 ## <a name="examples-sspdw"></a>Ejemplos: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-adding-a-windows-login"></a>C. Agregar un inicio de sesión de Windows  
- En el ejemplo siguiente se agrega `LoginMary` el inicio `AdventureWorks2008R2` de sesión a `UserMary`la base de datos como usuario. A continuación, se agrega el usuario `UserMary` al rol `Production`.  
+ En el ejemplo siguiente se agrega el inicio de sesión `LoginMary` a la `AdventureWorks2008R2` base de datos como usuario `UserMary` . A continuación, se agrega el usuario `UserMary` al rol `Production`.  
   
 > [!NOTE]  
->  Dado que el `LoginMary` inicio de sesión se conoce como `UserMary` el usuario [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] de base de datos en `UserMary` la base de datos, se debe especificar el nombre de usuario. Se producirá un error en la instrucción a menos que un inicio de sesión `Mary5` exista. Los inicios de sesión y los usuarios suelen tener el mismo nombre. En este ejemplo se usan nombres diferentes para diferenciar las acciones que afectan al inicio de sesión y al usuario.  
+>  Dado que el inicio `LoginMary` de sesión se conoce como el usuario `UserMary` de base de datos en la base de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] datos, `UserMary` se debe especificar el nombre de usuario. Se producirá un error en la instrucción a menos que un inicio de sesión `Mary5` exista. Los inicios de sesión y los usuarios suelen tener el mismo nombre. En este ejemplo se usan nombres diferentes para diferenciar las acciones que afectan al inicio de sesión y al usuario.  
   
 ```  
 -- Uses AdventureWorks  

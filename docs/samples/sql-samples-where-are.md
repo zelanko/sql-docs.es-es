@@ -9,16 +9,16 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 457cc9b1aa1055992322fb34ccc95b042f167604
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 3ea8f0ae2c998b02343ae3a7575325afe2ef6820
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "74318983"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718588"
 ---
 # <a name="sql-samples"></a>Ejemplos de SQL
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Ubicaciones de las bases de datos de ejemplo y ejemplos de código para productos de Microsoft SQL.
 
@@ -26,9 +26,9 @@ Ubicaciones de las bases de datos de ejemplo y ejemplos de código para producto
 
 Los ejemplos de código de los productos SQL se encuentran en el repositorio de github de [ejemplos de Microsoft SQL Server](https://github.com/microsoft/sql-server-samples) . Cada ejemplo incluye un archivo Léame que explica cómo ejecutar y utilizar el ejemplo. En el archivo Léame principal del repositorio de ejemplos se explica cómo contribuir. 
 
-Todos los ejemplos y plantillas tienen licencia en virtud de la licencia MIT. Vea el archivo License. txt en la raíz.
+Todos los ejemplos y plantillas tienen licencia en virtud de la licencia MIT. Vea el archivo de license.txt en la raíz.
 
-Envíe preguntas por correo sqlserversamples@microsoft.comelectrónico a:.
+Envíe preguntas por correo electrónico a: sqlserversamples@microsoft.com .
 
 
 ## <a name="wideworldimporters-sample-database"></a>Base de datos de ejemplo WideWorldImporters
@@ -49,7 +49,7 @@ Las bases de datos de AdventureWorks se pueden encontrar en la página de [insta
 
 
 ## <a name="azure-samples-and-templates"></a>Ejemplos y plantillas de Azure
-Hay una serie de ejemplos de código de Microsoft Azure y ejemplos disponibles en github en .NET, Java, Python, node. js, PHP y Ruby. Además, Azure Resource Manager le permite aprovisionar sus aplicaciones mediante una plantilla declarativa. En una plantilla, puede implementar varios servicios junto con sus dependencias. Use la misma plantilla para implementar su aplicación de forma repetida durante cada fase de su ciclo de vida.
+Hay una serie de ejemplos de código de Microsoft Azure y ejemplos disponibles en github en .NET, Java, Python, Node.js, PHP y Ruby. Además, Azure Resource Manager le permite aprovisionar sus aplicaciones mediante una plantilla declarativa. En una plantilla, puede implementar varios servicios junto con sus dependencias. Use la misma plantilla para implementar su aplicación de forma repetida durante cada fase de su ciclo de vida.
 
 - [Ejemplos de Azure](https://github.com/Azure-Samples)
 - [Plantillas de inicio rápido de Azure](https://azure.microsoft.com/resources/templates/)

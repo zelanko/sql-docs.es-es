@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d27ca972fa5a20fbb22a6786e6be2ca3cf8c8153
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 2def277c877311fc5bfaa77bbab5923563d39a75
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830499"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716643"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de cada transacción de la captura de datos modificados o replicada.  
 
@@ -70,7 +70,7 @@ ms.locfileid: "82830499"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicación o en la base de datos habilitada para la captura de datos modificados.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo se devuelve la información para objetos de base de datos replicados o tablas habilitadas para la captura de datos modificados que está cargada actualmente en la caché del artículos.  
   
 ## <a name="see-also"></a>Consulte también  

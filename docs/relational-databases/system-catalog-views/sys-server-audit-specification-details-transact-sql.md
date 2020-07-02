@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 792724dc-402e-4b17-9f2c-029d910bf88e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 68283872613baf6cb64546ef79a9f03996815439
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 39caf91dc69639be4207e3417982acfccf429bea
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717550"
 ---
 # <a name="sysserver_audit_specification_details-transact-sql"></a>sys.server_audit_specification_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre los detalles de especificación de auditoría del servidor (acciones) en una auditoría de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de una instancia de servidor. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Para obtener una lista de todos los audit_action_id y sus nombres, consulte [Sys. dm_audit_actions &#40;&#41;de Transact-SQL ](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
@@ -36,11 +36,11 @@ ms.locfileid: "82834076"
 |server_specification_id|**int**|Identificador de la especificación de auditoría de servidor|  
 |audit_action_id|**int**|Identificador de la acción de auditoría|  
 |audit_action_name|**sysname**|Nombre del grupo o nombre de la acción de auditoría|  
-|clase|**tinyint**|Reserved|  
-|class_desc|**nvarchar(60)**|Reserved|  
-|major_id|**int**|Reserved|  
-|minor_id|**int**|Reserved|  
-|audited_principal_id|**int**|Reserved|  
+|class|**tinyint**|Reservada|  
+|class_desc|**nvarchar(60)**|Reservada|  
+|major_id|**int**|Reservada|  
+|minor_id|**int**|Reservada|  
+|audited_principal_id|**int**|Reservada|  
 |audited_result|**nvarchar(60)**|Resultado auditado:<br /><br /> - SUCCESS AND FAILURE<br /><br /> - SUCCESS<br /><br /> - FAILURE|  
 |is_group|**bit**|Indica si el objeto auditado es un grupo:<br /><br /> 0 - no es un grupo<br /><br /> 1 - es un grupo|  
   

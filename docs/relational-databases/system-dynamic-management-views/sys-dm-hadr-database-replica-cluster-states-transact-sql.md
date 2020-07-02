@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 73f6af5cb03c19c106e55b074c402aa2cf4f4c65
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c7924044720c001951ac80e303ac8fe19fc3e489
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830589"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718765"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila que contiene información destinada a proporcionar una visión general del estado de las bases de datos de disponibilidad de los Grupos de disponibilidad AlwaysOn de cada uno de los grupos de disponibilidad AlwaysOn del clúster del servicio de clústeres de conmutación por error de Windows Server (WSFC). Consulte **Sys. dm_hadr_database_replica_states** para responder a las siguientes preguntas:  
   

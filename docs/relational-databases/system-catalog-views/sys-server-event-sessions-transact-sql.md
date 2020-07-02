@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0867820ddc410295bfb6ce137c32b0f7fce1b43c
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 22c26bd691fc12c492ab03fc073b12f02ba9adb1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832746"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717511"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enumera todas las definiciones de sesión de eventos existentes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -36,7 +36,7 @@ ms.locfileid: "82832746"
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Id. único de la sesión de eventos. No admite valores NULL.|  
 |name|**sysname**|Nombre definido por el usuario para identificar la sesión de eventos. el nombre es único. No admite valores NULL.|  
-|event_retention_mode|**NCHAR (1)**|Determina cómo se controla la pérdida de eventos. El valor predeterminado es S. No admite valores NULL. Es uno de los siguientes valores:<br /><br /> S. Se asigna a event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. Se asigna a event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> Hora Se asigna a event_retention_mode_desc = NO_EVENT_LOSS|  
+|event_retention_mode|**NCHAR (1)**|Determina cómo se controla la pérdida de eventos. El valor predeterminado es S. No admite valores NULL. Es uno de los siguientes valores:<br /><br /> UU. Se asigna a event_retention_mode_desc = ALLOW_SINGLE_EVENT_LOSS<br /><br /> M. Se asigna a event_retention_mode_desc = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> Hora Se asigna a event_retention_mode_desc = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|Describe cómo se controla la pérdida de eventos. El valor predeterminado es ALLOW_SINGLE_EVENT_LOSS. No admite valores NULL. Es uno de los siguientes valores:<br /><br /> ALLOW_SINGLE_EVENT_LOSS. Pueden perderse los eventos de la sesión. Se quitan eventos individuales únicamente cuando todos los búferes de eventos están llenos. La pérdida de eventos individuales cuando los búferes están llenos permite un rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aceptable, al mismo tiempo que minimiza las pérdidas en el flujo de eventos procesado.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. Pueden perderse búferes de eventos completos de la sesión. El número de eventos perdidos depende del tamaño de la memoria asignada a la sesión, el particionamiento de la memoria y el tamaño de los eventos del búfer. Esta opción minimiza el impacto en el rendimiento del servidor si los búferes de eventos se llenan rápidamente. Sin embargo, pueden perderse un gran número de eventos de la sesión.<br /><br /> NO_EVENT_LOSS. No se permite ninguna pérdida de eventos. Esta opción asegura que se retienen todos los eventos que aparecen. Al utilizar esta opción, se fuerza a todas las tareas que activan eventos a que esperen que haya espacio disponible en un búfer de eventos. Esto puede conducir a una degradación detectable en el rendimiento mientras la sesión de eventos está activa.|  
 |max_dispatch_latency|**int**|La cantidad de tiempo, en milisegundos, durante el que los eventos se almacenarán en memoria antes de servirse a los destinos de la sesión. Los valores válidos son de 0 a 2147483648 y 0. Un valor de 0 indica que la latencia de envío es infinita. Acepta valores NULL.|  
 |max_memory|**int**|La cantidad de memoria asignada a la sesión para el almacenado en búfer de los eventos. El valor predeterminado es 4 MB. Acepta valores NULL.|  

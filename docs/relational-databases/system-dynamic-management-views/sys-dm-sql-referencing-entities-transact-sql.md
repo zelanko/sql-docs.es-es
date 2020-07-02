@@ -20,15 +20,15 @@ ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3557f9f77a310a9e72e8a9fb1e11a6976256d2d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d0c2366e0d05fb7d3abe6488d8a2f8ff969f011
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82811431"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717448"
 ---
 # <a name="sysdm_sql_referencing_entities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve una fila para cada entidad en la base de datos actual que hace referencia por nombre a otra entidad definida por el usuario. Se crea una dependencia entre dos entidades cuando una entidad, denominada entidad a la *que se hace referencia*, aparece por nombre en una expresión SQL persistente de otra entidad, denominada *entidad de referencia*. Por ejemplo, si un tipo definido por el usuario (UDT) se especifica como la entidad a la que se hace referencia, esta función devuelve cada entidad definida por el usuario que hace referencia a ese tipo por nombre en su definición. La función no devuelve las entidades en otras bases de datos que pueden hacer referencia a la entidad especificada. Se puede ejecutar esta función en el contexto de la base de datos maestra para devolver un desencadenador DDL de nivel de servidor como una entidad que hace la referencia.  
   
@@ -102,11 +102,11 @@ sys.dm_sql_referencing_entities (
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
 |Tabla|Sí*|Sí|  
-|Ver|Yes|Yes|  
-|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Yes|Yes|  
-|procedimiento almacenado CLR|No|Yes|  
-|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|Yes|  
-|Función CLR definida por el usuario|No|Yes|  
+|Ver|Sí|Sí|  
+|Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
+|procedimiento almacenado CLR|No|Sí|  
+|Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
+|Función CLR definida por el usuario|No|Sí|  
 |Desencadenador CLR (DML y DDL)|No|No|  
 |Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  

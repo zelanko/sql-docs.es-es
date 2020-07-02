@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 76b5b8b5aa9f867c1dcf4b47940fce117c35bc69
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0ac36d85a08763903cb42a5b48d0280a6366a1e9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831826"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716578"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Agrega un nuevo filtro de mezcla para crear una partición basada en una combinación con otra tabla. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -85,7 +85,7 @@ sp_addmergefilter [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_addmergefilter** se utiliza en la replicación de mezcla.  
   
  **sp_addmergefilter** solo se puede usar con artículos de tabla. No se admiten los artículos de vista ni de vista indizada.  

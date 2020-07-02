@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f8f9e7e8124ec0aa1246a7ef9805ad9761ec9baf
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 1b150636804bc4d312f6f6bfbe046ef7e9612207
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830217"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717295"
 ---
 # <a name="sp_droparticle-transact-sql"></a>sp_droparticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Quita un artículo de una publicación de instantáneas o transaccional. No se puede quitar un artículo si hay una o más suscripciones del mismo. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -64,7 +64,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_droparticle** se utiliza en la replicación de instantáneas y transaccional.  
   
  En el caso de los artículos filtrados horizontalmente, **sp_droparticle** comprueba la columna de **tipo** del artículo en la tabla de [sysarticles &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/sysarticles-transact-sql.md) para determinar si se debe quitar también una vista o un filtro. Si se ha generado automáticamente una vista o un filtro, también se quita con el artículo. Si se creó de forma manual, la vista o filtro no se quita.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 64da8efb8018748a6fe114d5ee719d71f9940e92
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a0670c096c863ed54559e49d131fda0d134f1e17
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833576"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716275"
 ---
 # <a name="sp_apply_job_to_targets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Aplica un trabajo a uno o más servidores de destino, o a los servidores de destino que pertenecen a uno o más grupos de servidores de destino.  
   
@@ -58,7 +58,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_apply_job_to_targets** proporciona una manera sencilla de aplicar (o quitar) un trabajo de varios servidores de destino y es una alternativa a llamar a **sp_add_jobserver** (o **sp_delete_jobserver**) una vez por cada servidor de destino necesario.  
   
 ## <a name="permissions"></a>Permisos  

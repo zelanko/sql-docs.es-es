@@ -1,5 +1,5 @@
 ---
-title: Sys. sysremotelogins (Transact-SQL) | Microsoft Docs
+title: sys.sysremotelogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 520749113c3e9aeea8f2d0c3c3125965b1511a5a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68018134"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718843"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
-  Contiene una fila por cada usuario remoto al que se le permite llamar a procedimientos almacenados remotos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]una instancia de.  
+  Contiene una fila por cada usuario remoto al que se le permite llamar a procedimientos almacenados remotos en una instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
@@ -40,7 +40,7 @@ ms.locfileid: "68018134"
 |**remoteserverid**|**smallint**|Identificación del servidor remoto.|  
 |**remoteusername**|**sysname**|Nombre de inicio de sesión del usuario de un servidor remoto.|  
 |**status**|**smallint**|Devuelve 0.|  
-|**Junction**|**varbinary(85)**|Id. de seguridad de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|**sid**|**varbinary(85)**|Id. de seguridad de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |**changedate**|**datetime**|Fecha y hora en que se agregó el usuario remoto.|  
   
 ## <a name="see-also"></a>Consulte también  

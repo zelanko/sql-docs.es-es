@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9a079a279c9d342033086c565203f85ad360e753
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ec133e7424a6c2a947b5f0f7a6ed52505c37fb1d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828506"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716072"
 ---
 # <a name="sp_bindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Enlaza o desenlaza una sesión a otras sesiones de la misma instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Las sesiones enlazadas permiten que dos o más sesiones participen en la misma transacción y compartan bloqueos hasta que se emita una instrucción ROLLBACK TRANSACTION o COMMIT TRANSACTION.  
   
@@ -48,7 +48,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Las dos sesiones enlazadas comparten solo una transacción y bloqueos. Cada sesión conserva su propio nivel de aislamiento y la configuración de un nivel de aislamiento nuevo en una sesión no afecta al nivel de aislamiento de la otra sesión. Cada sesión sigue siendo identificada por su cuenta de seguridad y solo puede tener acceso a los recursos de la base de datos para los que se ha concedido acceso a la cuenta.  
   
  **sp_bindsession** usa un token de enlace para enlazar dos o más sesiones de cliente existentes. Estas sesiones de cliente deben estar en la misma instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] desde la que se obtuvo el token de enlace. Una sesión es un cliente que ejecuta un comando. Las sesiones de bases de datos enlazadas comparten la transacción y el espacio de bloqueo.  
@@ -76,7 +76,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_getbindtoken &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
+ [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)   
  [srv_getbindtoken API de procedimiento almacenado extendido &#40;&#41;](../../relational-databases/extended-stored-procedures-reference/srv-getbindtoken-extended-stored-procedure-api.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 664f503aa6d3c6d3d0f8c32d83fc2ea9f238ff3b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 223f1feb346a48a2afaae9e89437ba1b06bcd2c3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829732"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85717398"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Cambia las propiedades de un artículo en una publicación transaccional o de instantáneas. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -57,7 +57,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |--------------|------------|-----------------|  
 |**creation_script**||Ruta de acceso y nombre de un script de esquema del artículo que se utiliza para crear tablas de destino. El valor predeterminado es NULL.|  
 |**del_cmd**||Instrucción DELETE que se va a ejecutar; de lo contrario, se genera a partir del registro.|  
-|**denominación**||Nueva entrada descriptiva del artículo.|  
+|**description**||Nueva entrada descriptiva del artículo.|  
 |**dest_object**||Se proporciona para mantener la compatibilidad con versiones anteriores. Use **dest_table**.|  
 |**dest_table**||Nueva tabla de destino.|  
 |**destination_owner**||Nombre del propietario del objeto de destino.|  
@@ -128,7 +128,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**literales de cadena**|Los cambios se propagan al suscriptor mediante valores literales de cadena.|  
 |**sync_object**||Nombre de la tabla o vista utilizada para generar un archivo de salida de sincronización. El valor predeterminado es NULL. No es compatible con publicadores de Oracle.|  
 |**Taba**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
-|**mínimo**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
+|**threshold**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
 |**type**||No es compatible con publicadores de Oracle.|  
 ||**logbased**|Artículo basado en registro.|  
 ||**logbased manualboth**|Artículo basado en registro con filtro manual y vista manual. Esta opción requiere que también se establezcan las propiedades *sync_object* y *Filter* . No es compatible con publicadores de Oracle.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0dba6501e3a61f634220d9fe008d761aa17d9159
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: fb3928693c3d7daa07db60d813a76999f620dd7e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833504"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716212"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Configura una programación para un trabajo.  
   
@@ -56,7 +56,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  Se debe especificar *schedule_id* o *schedule_name* , pero no se pueden especificar ambos.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La programación y el trabajo deben tener el mismo propietario.  
   
  Se puede configurar una programación para más de un trabajo. Se puede ejecutar un trabajo en más de una programación.  

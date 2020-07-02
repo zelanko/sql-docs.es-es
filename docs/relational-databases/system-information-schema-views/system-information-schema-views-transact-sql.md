@@ -18,16 +18,16 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9767c68f80c133a31c5ca33053731a399f1048db
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b3df27d1211807f1863ac40859a833d570191c7d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68670561"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85716605"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vistas de esquema de información del sistema (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Una vista de esquema de información es uno de los diversos métodos que proporciona [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para obtener metadatos. Las vistas de esquema de información proporcionan una vista interna e independiente de las tablas del sistema de los metadatos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las vistas de esquema de información permiten que las aplicaciones funcionen correctamente aunque se hayan realizado cambios significativos en las tablas del sistema subyacentes. Las vistas de esquema de información incluidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cumplen la definición del estándar ISO para INFORMATION_SCHEMA.
 
@@ -38,7 +38,7 @@ Una vista de esquema de información es uno de los diversos métodos que proporc
 
 |Nombre de servidor SQL|Se asigna a este nombre estándar equivalente de SQL|
 |---------------------|-----------------------------------------------|
-|Base de datos|Catálogo|
+|Capa|Catálogo|
 |Schema|Schema|
 |Object|Object|
 |tipo de datos definido por el usuario|Dominio|

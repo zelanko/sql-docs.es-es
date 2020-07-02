@@ -19,15 +19,15 @@ ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1a5d247ae5e8e4cceb53bd3a093cabdff399d509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68042903"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85718713"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Devuelve información de seguimiento de cambios para una tabla. Puede utilizar esta instrucción para devolver todos los cambios de una tabla o información de seguimiento de cambios de una fila concreta.  
   
@@ -68,7 +68,7 @@ CHANGETABLE (
  *Tabla*de versiones, {<primary_key_values>}  
  Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. <primary_key_values> identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
   
- *Cuadro*  
+ *Tabla*  
  Es la tabla definida por el usuario de la que obtener la información de seguimiento de cambios. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
   
  *column_name*  
@@ -101,7 +101,7 @@ CHANGETABLE (
 |SYS_CHANGE_OPERATION|**NCHAR (1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualización<br /><br /> **I** = insertar<br /><br /> **D** = eliminar|  
 |SYS_CHANGE_COLUMNS|**varbinary (4100)**|Enumera las columnas que han cambiado desde last_sync_version (la básica). Tenga en cuenta que las columnas calculadas nunca aparecen como cambiadas.<br /><br /> El valor es NULL si se cumple una cualquiera de las siguientes condiciones:<br /><br /> El seguimiento de cambios de columna no está habilitado.<br /><br /> Se trata de una operación de eliminación o de inserción.<br /><br /> Se actualizaron en una única operación todas las columnas de clave no principal. No debería interpretarse directamente este valor binario. En su lugar, para interpretarlo, utilice [CHANGE_TRACKING_IS_COLUMN_IN_MASK ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambiar la información de contexto que se puede especificar opcionalmente mediante la cláusula [with](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) como parte de una instrucción INSERT, Update o DELETE.|  
-|\<valor de la columna de clave principal>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
+|\<primary key column value>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
   
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Si se especifica VERSION, se devuelve una fila con las siguientes columnas.  
@@ -110,9 +110,9 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versión de cambios actual asociado a la fila.<br /><br /> El valor es NULL si no se ha realizado ningún cambio durante un periodo más largo que el periodo de retención del seguimiento de cambios, o no se ha cambiado la fila desde que se habilitó el seguimiento de cambios.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambie la información de contexto que se puede especificar opcionalmente usando la cláusula WITH como parte de una instrucción INSERT, UPDATE o DELETE.|  
-|\<valor de la columna de clave principal>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
+|\<primary key column value>|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Normalmente, la función CHANGETABLE se utiliza en la cláusula FROM de una consulta como si fuera una tabla.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  

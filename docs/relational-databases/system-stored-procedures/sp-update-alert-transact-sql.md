@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: a63a5e34ac0331bfe879814e4d503c4d57cc3208
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6559be1c680c45b75154cea222ddfece355f49cb
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82832553"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762748"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza la configuración de una alerta existente.  
   
@@ -114,7 +114,7 @@ sp_update_alert
   
 |Elemento de formato|Descripción|  
 |--------------------|-----------------|  
-|*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
+|*Item*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
 |*Comparador*|Uno de estos operadores: **>** , **<** ,**=**|  
 |*Valor*|Valor numérico del contador|  
   
@@ -127,7 +127,7 @@ sp_update_alert
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Solo los **sysmessages** escritos en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] registro de aplicación de Windows pueden activar una alerta.  
   
  **sp_update_alert** solo cambia la configuración de alerta para la que se proporcionan los valores de parámetro. Si se omite un parámetro, se conserva la configuración actual.  

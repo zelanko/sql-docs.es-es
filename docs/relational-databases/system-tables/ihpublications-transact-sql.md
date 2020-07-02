@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 112d237781ecbe257ef0b9d8c3f4bdee37ca5bc4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a8185249a40c11a031be8206a4a1ea016ed50faa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813649"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764239"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla del sistema **IHpublications** contiene una fila por cada publicación que no sea de SQL Server mediante el distribuidor actual. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "82813649"
 |**queue_type**|**int**|Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **1** = MSMQ, que utiliza [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **2** = SQL, que utiliza [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar transacciones.<br /><br /> Esta columna no la usan los publicadores que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Nota: el uso [!INCLUDE[msCoName](../../includes/msconame-md.md)] de Message Queue Server ha quedado desusado y ya no se admite.<br /><br /> *Esta columna no se admite para publicadores que no sean de SQL.*|  
 |**ad_guidname**|**sysname**|Especifica si la información de publicación se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificador único global (GUID) válido especifica que la publicación se publica en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory y el GUID es el **objectGUID**del objeto de publicación Active Directory correspondiente. Si es NULL, la publicación no se publica en [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *No se admite en los publicadores que no son de SQL.*|  
 |**backward_comp_level**|**int**|Nivel de compatibilidad de la base de datos, que puede ser uno de los valores siguientes:<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .<br /><br /> **100**  =  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] .<br /><br /> *No se admite en los publicadores que no son de SQL.*|  
-|**denominación**|**nvarchar(255)**|Entrada descriptiva de la publicación.|  
+|**description**|**nvarchar(255)**|Entrada descriptiva de la publicación.|  
 |**independent_agent**|**bit**|Especifica si hay un Agente de distribución independiente para esta publicación.<br /><br /> **0** = la publicación utiliza una agente de distribución compartida y cada par de base de datos del publicador/base de datos de suscriptor tiene un único agente compartido.<br /><br /> **1** = hay un agente de distribución independiente para esta publicación.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean o se recrean cada vez que se ejecuta el Agente de instantáneas, donde **1** significa que se crean cada vez que se ejecuta el agente.|  
 |**allow_push**|**bit**|Indica si se permiten suscripciones de extracción en la publicación, donde **1** significa que están permitidas.|  

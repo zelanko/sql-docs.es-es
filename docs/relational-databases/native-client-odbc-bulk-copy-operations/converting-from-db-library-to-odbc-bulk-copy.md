@@ -17,17 +17,17 @@ ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7e14018ea62edb5dd262b87ddbea467d1872132
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 0944552bdf8db7ef97a594887a8e84e2ed834a72
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73785188"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760737"
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Convertir un programa de copia masiva de DB-Library a ODBC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Convertir un programa de copia masiva de DB-Library a ODBC es fácil porque las funciones de copia masiva [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admite el controlador ODBC de Native Client son similares a las funciones de copia masiva de DB-Library, con las siguientes excepciones:  
+  Convertir un programa de copia masiva de DB-Library a ODBC es fácil porque las funciones de copia masiva que admite el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client son similares a las funciones de copia masiva de DB-Library, con las siguientes excepciones:  
   
 -   Las aplicaciones DB-Library pasan un puntero a una estructura DBPROCESS como primer parámetro de las funciones de copia masiva. En las aplicaciones ODBC, el puntero a DBPROCESS se reemplaza por un identificador de conexión ODBC.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "73785188"
         (void *)SQL_BCP_ON, SQL_IS_INTEGER);  
     ```  
   
--   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no es compatible con los controladores de mensajes y errores de DB-Library; debe llamar a **SQLGetDiagRec** para obtener errores y mensajes generados por las funciones de copia masiva de ODBC. Las versiones ODBC de las funciones de copia masiva devuelven los códigos de retorno de copia masiva estándar, es decir, SUCCEED o FAILED, no códigos de retorno de estilo ODBC, como SQL_SUCCESS o SQL_ERROR.  
+-   El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client no es compatible con los controladores de mensajes y errores de DB-Library; debe llamar a **SQLGetDiagRec** para obtener los errores y mensajes generados por las funciones de copia masiva de ODBC. Las versiones ODBC de las funciones de copia masiva devuelven los códigos de retorno de copia masiva estándar, es decir, SUCCEED o FAILED, no códigos de retorno de estilo ODBC, como SQL_SUCCESS o SQL_ERROR.  
   
 -   Los valores especificados para el parámetro*varlen* de DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)se interpretan de forma distinta que el parámetro_cbData_ de ODBC **bcp_bind**.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "73785188"
   
     -   cadenas de caracteres **DateTime** y **smalldatetime** en cualquier formato admitido por la función **dbconvert** de DB-Library.  
   
-    -   Cuando se activa la casilla **Usar configuración internacional** en la pestaña **Opciones** de DB-Library de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la herramienta de red de cliente, las funciones de copia masiva de DB-Library también aceptan fechas en el formato de fecha regional definido para la configuración regional del registro del equipo cliente.  
+    -   Cuando se activa la casilla **Usar configuración internacional** en la pestaña **Opciones** de DB-Library de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herramienta de red de cliente, las funciones de copia masiva de DB-Library también aceptan fechas en el formato de fecha regional definido para la configuración regional del registro del equipo cliente.  
   
      Las funciones de copia masiva de DB-Library no aceptan los formatos **DateTime** y **smalldatetime** de ODBC.  
   

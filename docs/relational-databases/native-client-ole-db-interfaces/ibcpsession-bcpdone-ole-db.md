@@ -16,15 +16,15 @@ ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e4161a4c888e28b52cfe66cb48c028564ac2885
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 63977372fd0f05c61d4e08fb8b27f432290a2d0c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307424"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762934"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Confirma las filas restantes que van a enviarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,7 +35,7 @@ ms.locfileid: "81307424"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  No se puede llamar a ninguna otra operación en la interfaz [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) después de llamar al método **BCPDone**. La única posibilidad es llamar al método [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) para iniciar una nueva operación de copia masiva. Esto es similar a llamar al método [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

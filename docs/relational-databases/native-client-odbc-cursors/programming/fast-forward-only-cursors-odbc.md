@@ -16,17 +16,17 @@ ms.assetid: 0707d07e-fc95-42ed-9280-b7e508ac8c62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50d79875e0f3f661c0a959f50ce68c4f2761d186
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f715e9459c5ada54b941c23cf32f259bfc338f37
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298425"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760718"
 ---
 # <a name="fast-forward-only-cursors-odbc"></a>Cursores de solo avance rápido (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Cuando se conecta a una instancia [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]de, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el controlador ODBC de Native Client admite optimizaciones de rendimiento para cursores de solo avance y de solo lectura. Los cursores de solo avance rápido se implementan internamente mediante el controlador y el servidor de un modo muy similar a los conjuntos de resultados predeterminados. Además de presentar un alto rendimiento, los cursores de solo avance rápido también presentan estas características:  
+  Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite optimizaciones de rendimiento para cursores de solo avance y de solo lectura. Los cursores de solo avance rápido se implementan internamente mediante el controlador y el servidor de un modo muy similar a los conjuntos de resultados predeterminados. Además de presentar un alto rendimiento, los cursores de solo avance rápido también presentan estas características:  
   
 -   No se admite [SQLGetData](../../../relational-databases/native-client-odbc-api/sqlgetdata.md) . Las columnas del conjunto de resultados deben estar enlazadas a variables de programa.  
   

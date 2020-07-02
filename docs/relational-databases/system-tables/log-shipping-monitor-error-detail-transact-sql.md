@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 5c69ac9d3169b3cb407c98c76b1890c5a35188b4
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: bc41c237e81c943dacd5d0ecdfe4b9f7eec56d36
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82813215"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764213"
 ---
 # <a name="log_shipping_monitor_error_detail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Almacena los detalles de errores de los trabajos de trasvase de registros. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -41,7 +41,7 @@ ms.locfileid: "82813215"
 |**log_time**|**datetime**|Fecha y hora en que se creó el registro.|  
 |**log_time_utc**|**datetime**|Fecha y hora en que se creó el registro en hora universal coordinada.|  
 |**message**|**nvarchar**|Texto del mensaje.|  
-|**de origen**|**nvarchar**|Origen del evento o mensaje de error.|  
+|**source**|**nvarchar**|Origen del evento o mensaje de error.|  
 |**help_url**|**nvarchar**|Dirección URL (si está disponible) donde se puede encontrar más información acerca del error.|  
   
 ## <a name="remarks"></a>Comentarios  
@@ -54,7 +54,7 @@ ms.locfileid: "82813215"
 ## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_monitor_history_detail &#40;&#41;de Transact-SQL](../../relational-databases/system-tables/log-shipping-monitor-history-detail-transact-sql.md)   
- [sp_cleanup_log_shipping_history &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
+ [sp_cleanup_log_shipping_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
  [sp_delete_log_shipping_primary_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [sp_refresh_log_shipping_monitor &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   

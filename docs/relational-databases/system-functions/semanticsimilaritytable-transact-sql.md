@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 759ac2b464bbdee2a0199afe540f00c7695381a9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68140545"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764281"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una tabla de cero, una o más filas para los documentos cuyo contenido de las columnas especificadas sea similar semánticamente a un documento indicado.  
   
@@ -50,7 +50,7 @@ SEMANTICSIMILARITYTABLE
   
  Este nombre puede ser un nombre de una a cuatro partes, pero no se permite un nombre de servidor remoto.  
   
- **artículo**  
+ **column**  
  Nombre de la columna indizada para la que deben devolverse resultados. La columna debe tener habilitada la indización semántica.  
   
  **lista_de_columnas**  

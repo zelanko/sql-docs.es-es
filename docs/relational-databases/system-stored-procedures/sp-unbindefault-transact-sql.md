@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7fdce8d2fad56d56e13343bc3397353e72d3be1b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: cc3e3af8e1b2333f68ea43fe9cacdfb4c3d39e40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82809698"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762783"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Desenlaza o quita un valor predeterminado de una columna o de un tipo de datos alias en la base de datos actual.  
   
@@ -55,7 +55,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Para mostrar el texto de un valor predeterminado, ejecute **sp_helptext** con el nombre del parámetro predeterminado.  
   
 ## <a name="permissions"></a>Permisos  

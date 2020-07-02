@@ -16,15 +16,15 @@ ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f37a23f89ca7fcb2b3e0a60a7f4813891317b3f5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7145641c3b8e89836a3c5761647cf0fbe75db60e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81307382"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762897"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Inicializa la estructura de copia masiva, realiza algunas comprobaciones de errores, comprueba que los datos y los nombres de archivo de formato son correctos y, a continuación, los abre.  
   
@@ -39,12 +39,12 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Es necesario llamar al método **BCPInit** antes de llamar a cualquier otro método de copia masiva. El método **BCPInit** realiza las inicializaciones necesarias para una copia masiva de datos entre la estación de trabajo y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  El método **BCPInit** examina la estructura del origen de base de datos o la tabla de destino, no el archivo de datos. Especifica los valores de formato de datos del archivo de datos basándose en cada columna de la tabla de base de datos, la vista o el conjunto de resultados de la instrucción SELECT. Esta especificación incluye el tipo de datos de cada columna, la presencia o ausencia de cadenas de bytes de un indicador de longitud o nulo y de terminador en los datos, y el ancho de los tipos de datos de longitud fija. El método **BCPInit** establece estos valores como sigue:  
   
--   El tipo de datos especificado es el tipo de datos de la columna de la tabla de base de datos, la vista o el conjunto de resultados de una instrucción SELECT. El tipo de datos se enumera mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los tipos de datos nativos especificados en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client (SQLNCLI. h). Sus valores están en el modelo de BCP_TYPE_XXX. Los datos están representados en el formato del equipo. Es decir, los datos de una columna de tipo de datos entero están representados por una secuencia de cuatro bytes "big endian" o "little endian" basada en el equipo que creó el archivo de datos.  
+-   El tipo de datos especificado es el tipo de datos de la columna de la tabla de base de datos, la vista o el conjunto de resultados de una instrucción SELECT. El tipo de datos se enumera mediante los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos nativos especificados en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] archivo de encabezado de Native Client (SQLNCLI. h). Sus valores están en el modelo de BCP_TYPE_XXX. Los datos están representados en el formato del equipo. Es decir, los datos de una columna de tipo de datos entero están representados por una secuencia de cuatro bytes "big endian" o "little endian" basada en el equipo que creó el archivo de datos.  
   
 -   Si un tipo de datos de base de datos es de longitud fija, los datos del archivo de datos también serán de longitud fija. Los métodos de copia masiva que procesan los datos (por ejemplo, [IBCPSession::BCPExec](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpexec-ole-db.md)) analizan las filas de datos esperando que la longitud de los datos del archivo de datos sea idéntica a la longitud de los datos especificados en la tabla de base de datos, la vista o la lista de columnas de la instrucción SELECT. Por ejemplo, los datos de una columna de base de datos definidos como `char(13)` deben estar representados por 13 caracteres por cada fila de datos del archivo. Los datos de longitud fija pueden tener como prefijo un indicador nulo si la columna de base de datos permite valores nulos.  
   

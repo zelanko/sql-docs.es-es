@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 95053570a7ded118d2a298b417b361dd8d3dd2be
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 28cb99c614dc78c04279a692318b89ba1b4840c9
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68035432"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85764263"
 ---
 # <a name="sp_syspolicy_set_log_on_success-transact-sql"></a>sp_syspolicy_set_log_on_success (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Especifica si las evaluaciones correctas de la directiva se graban en el registro del historial de directiva de la administración basada en directivas.  
   
@@ -49,7 +49,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Debe ejecutar sp_syspolicy_set_log_on_success en el contexto de la base de datos del sistema msdb.  
   
  Cuando *valor* se establece en 0 o en ' false ', solo se registran las evaluaciones de directivas con errores.  

@@ -13,19 +13,19 @@ ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f1f3e26ece880faf1c7f96e674d4f4f161790dd
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f97d723d027cb756e7a74b5f2aa58c06d0d63acd
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81297810"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760658"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos de descriptor de parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   La compatibilidad con los parámetros con valores de tabla incluye nuevos campos específicos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en descriptores de parámetros de aplicación ODBC (APD) y descriptores de parámetros de implementación (IPD).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 |Nombre|Location|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  

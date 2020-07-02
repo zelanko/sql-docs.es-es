@@ -23,15 +23,15 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1123009c0bfd73b1012476d30b6d633ee038f18c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68070450"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760375"
 ---
 # <a name="sysfulltext_stopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Contiene una fila por cada palabra irrelevante de todas las listas de palabras irrelevantes de la base de datos.  
  
@@ -39,7 +39,7 @@ ms.locfileid: "68070450"
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|Identificador de la lista de palabras irrelevantes a la que pertenece **stopword** . El identificador es único en la base de datos.|  
 |**palabra irrelevante**|**nvarchar (64)**|Término que se va a considerar como coincidencia de palabra irrelevante.|  
-|**módulo**|**sysname**|Es el valor del alias en [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)correspondiente al valor del identificador de configuración regional (**LCID**) o es la representación de cadena del LCID numérico.|  
+|**language**|**sysname**|Es el valor del alias en [Sys. fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)correspondiente al valor del identificador de configuración regional (**LCID**) o es la representación de cadena del LCID numérico.|  
 |**language_id**|**int**|LCID utilizado para la separación de palabras.|  
   
 ## <a name="permissions"></a>Permisos  

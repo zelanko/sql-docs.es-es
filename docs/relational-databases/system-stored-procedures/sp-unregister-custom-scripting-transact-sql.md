@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d54530c7cf6588a6ae07e1e504e3c53e86f8fa5
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5c638c37da5907295cf4f8ef0dbb63d7eef17f05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85762765"
 ---
 # <a name="sp_unregister_custom_scripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Este procedimiento almacenado quita un archivo de script o un procedimiento almacenado personalizado definido por el usuario [!INCLUDE[tsql](../../includes/tsql-md.md)] que se registró ejecutando [sp_register_custom_scripting](../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md). Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   

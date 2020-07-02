@@ -14,15 +14,15 @@ ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 341a9fe5c5919093853b0c62c7148515380a0551
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: a3a056a9e6b5f02cc7dc3eb76837731d5a312cba
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81299585"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789193"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   El controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client solamente expone campos de descriptor específicos del controlador para el descriptor de fila de implementación (IRD). En IRD, se hace referencia a los campos de descriptor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de atributos de columna específicos del controlador. Para obtener información sobre una lista completa de campos de descriptor específicos del controlador disponibles, vea [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
@@ -38,7 +38,7 @@ ms.locfileid: "81299585"
   
  Para obtener más información, vea [mejoras de fecha y hora &#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- A partir [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]de, SQLGetDescField puede devolver **SQL_C_SS_TIME2** (para tipos de **hora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (para **DateTimeOffset**) en lugar de **SQL_C_BINARY**, si la aplicación usa ODBC 3,8.  
+ A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , SQLGetDescField puede devolver **SQL_C_SS_TIME2** (para tipos de **hora** ) o **SQL_C_SS_TIMESTAMPOFFSET** (para **DateTimeOffset**) en lugar de **SQL_C_BINARY**, si la aplicación usa ODBC 3,8.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField admite UDT CLR grandes  
  **SQLGetDescField** admite los tipos definidos por el usuario CLR grandes (UDT). Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  

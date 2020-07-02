@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 60d27260378a8f0d6706b85ea02232ffca6a05c8
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8cce1f1fd046d2b93f41f010b82a067c5a936670
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790364"
 ---
 # <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Se utiliza durante la solución de problemas para especificar la última transacción entregada mediante el número de secuencia de registro (LSN), lo que permite que el Agente de distribución comience a entregar en la siguiente transacción. Tras el reinicio, el Agente de distribución devuelve las transacciones superiores a esta marca de agua (LSN) de la memoria caché de la base de datos de distribución (msrepl_commands). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones. No se admite para suscriptores que no sean de SQL Server.  
   

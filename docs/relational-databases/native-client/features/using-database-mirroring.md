@@ -18,15 +18,15 @@ ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c702d8d0508dcb64090f0b753da64019736ceb
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 40879f902b6d014f90e6e2493b1761018c29ce40
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81303234"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787837"
 ---
 # <a name="using-database-mirroring"></a>Usar la creación de reflejo de bases de datos
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
     
 > [!NOTE]  
@@ -62,9 +62,9 @@ ms.locfileid: "81303234"
 ## <a name="sql-server-native-client-ole-db-provider"></a>Proveedor OLE DB de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite la creación de reflejo de la base de datos a través de atributos de cadena de conexión y conexión. Se ha agregado la propiedad SSPROP_INIT_FAILOVERPARTNER al conjunto de propiedades DBPROPSET_SQLSERVERDBINIT, y la palabra clave **FailoverPartner** es un nuevo atributo de cadena de conexión para DBPROP_INIT_PROVIDERSTRING. Para obtener más información, vea [usar palabras clave de cadena de conexión con SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
- La caché de conmutación por error se mantiene siempre que se cargue el proveedor, que es hasta que se llama a **CoUninitialize** o siempre que la aplicación tenga una referencia a algún objeto [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] administrado por el proveedor de OLE DB de Native Client, como un objeto de origen de datos.  
+ La caché de conmutación por error se mantiene siempre que se cargue el proveedor, que es hasta que se llama a **CoUninitialize** o siempre que la aplicación tenga una referencia a algún objeto administrado por el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, como un objeto de origen de datos.  
   
- Para más información [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sobre la compatibilidad del proveedor de OLE DB de Native Client con la creación de reflejo de la base de datos, consulte [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Para más información sobre la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatibilidad del proveedor de OLE DB de Native Client con la creación de reflejo de la base de datos, consulte [propiedades de inicialización y autorización](../../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>Controlador ODBC de SQL Server Native Client  
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la creación de reflejo de la base de datos a través de los atributos de cadena de conexión y conexión. En concreto, se ha agregado el atributo SQL_COPT_SS_FAILOVER_PARTNER para su uso con las funciones [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) y [SQLGetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) . y se ha agregado la palabra clave **Failover_Partner** como un nuevo atributo de cadena de conexión.  
@@ -75,7 +75,7 @@ ms.locfileid: "81303234"
 >  El Administrador de controladores ODBC se ha mejorado para admitir la especificación del nombre del servidor de conmutación por error.  
   
 ## <a name="see-also"></a>Consulte también  
- [SQL Server Native Client características](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

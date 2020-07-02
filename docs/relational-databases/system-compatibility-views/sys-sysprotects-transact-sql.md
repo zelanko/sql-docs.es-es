@@ -1,5 +1,5 @@
 ---
-title: Sys. sysprotects (Transact-SQL) | Microsoft Docs
+title: sys.sysprotege (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 457eccb7cf032a8b4e0be3a112e15cfe492a32f8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68079238"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790468"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene información sobre los permisos aplicados a las cuentas de seguridad de la base de datos mediante las instrucciones GRANT y DENY.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "68079238"
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del objeto al que se aplican estos permisos.|  
-|**UID**|**smallint**|Id. del usuario o grupo al que se aplican estos permisos. Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
+|**uid**|**smallint**|Id. del usuario o grupo al que se aplican estos permisos. Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**action**|**tinyint**|Puede tener uno de los permisos siguientes:<br /><br /> 26 = REFERENCES <br /><br /> 178 = CREATE FUNCTION <br /><br /> 193 = SELECT <br /><br /> 195 = INSERCIÓN<br /><br /> 196 = ELIMINAR<br /><br /> 197 = ACTUALIZACIÓN<br /><br /> 198 = CREATE TABLE <br /><br /> 203 = CREATE DATABASE <br /><br /> 207 = CREATE VIEW <br /><br /> 222 = CREATE PROCEDURE <br /><br /> 224 = EXECUTE <br /><br /> 228 = BACKUP DATABASE <br /><br /> 233 = CREATE DEFAULT <br /><br /> 235 = BACKUP LOG <br /><br /> 236 = CREATE RULE|  
 |**protecttype**|**tinyint**|Puede tener los siguientes valores:<br /><br /> 204 = GRANT_W_GRANT <br /><br /> 205 = GRANT <br /><br /> 206 = DENY|  
 |**columnas**|**varbinary(8000)**|Mapa de bits de las columnas a las que se aplican estos permisos SELECT o UPDATE.<br /><br /> Bit 0 = Todas las columnas.<br /><br /> Bit 1 = Los permisos se aplican a esa columna.<br /><br /> NULL = No hay información.|  

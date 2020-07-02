@@ -14,15 +14,15 @@ ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b942126a5ad73d5c41f28f60a63d22ef8584f24
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 96c68eac12677109975fce5beea04eec071e70b1
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81280147"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787981"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLProcedureColumns** devuelve una fila que notifica los atributos del valor devuelto de todos los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -32,7 +32,7 @@ ms.locfileid: "81280147"
   
  En la tabla siguiente se muestran las columnas devueltas por el conjunto de resultados y cómo se han extendido para administrar los tipos de datos **xml** y **udt** a través del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client:  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Devuelve el nombre del catálogo que contiene el UDT (tipo definido por el usuario).|  
 |SS_UDT_SCHEMA_NAME|Devuelve el nombre del esquema que contiene el UDT.|  
@@ -44,7 +44,7 @@ ms.locfileid: "81280147"
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns y los parámetros con valores de tabla  
  SQLProcedureColumns controla los parámetros con valores de tabla de manera similar a los tipos definidos por el usuario CLR. En las filas devueltas para los parámetros con valores de tabla, las columnas tienen los valores siguientes:  
   
-|Nombre de la columna|Descripción/valor|  
+|Nombre de columna|Descripción/valor|  
 |-----------------|------------------------|  
 |DATA_TYPE|SQL_SS_TABLE|  
 |TYPE_NAME|El nombre del tipo de tabla para el parámetro con valores de tabla.|  

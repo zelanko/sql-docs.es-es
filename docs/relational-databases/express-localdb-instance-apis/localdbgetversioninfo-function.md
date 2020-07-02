@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 23b5c34bf378254e097a3f9c80417d8f96eac0c8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68091203"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789472"
 ---
 # <a name="localdbgetversioninfo-function"></a>Función LocalDBGetVersionInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Devuelve información de la versión de SQL Server Express LocalDB especificada, por ejemplo si existe y el número de versión completo de LocalDB (incluida la compilación y los números de versión).  
   
  La información se devuelve en forma de un **struct** denominado **LocalDBVersionInfo**, que tiene la siguiente definición.  
@@ -68,7 +68,7 @@ HRESULT LocalDBGetVersionInfo(
  *dwVersionInfoSize*  
  Entradas Contiene el tamaño del búfer *versionInfo* .  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   
@@ -97,7 +97,7 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para obtener un ejemplo de código que utilice LocalDB API, vea [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
 ## <a name="see-also"></a>Consulte también  

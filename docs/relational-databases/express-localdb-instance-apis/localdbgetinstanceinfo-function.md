@@ -15,15 +15,15 @@ apitype: DLLExport
 ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: b392098091a3a439271a6f01a28ae152405e17b7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68022086"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789505"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>Función LocalDBGetInstanceInfo
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Devuelve información para la instancia de SQL Server Express LocalDB especificada, por ejemplo si existe, la versión de LocalDB que usa, si se está ejecutando, etc.  
   
  La información se devuelve en un **struct** denominado **LocalDBInstanceInfo**, que tiene la siguiente definición.  
@@ -95,7 +95,7 @@ HRESULT LocalDBGetInstanceInfo(
  *dwInstanceInfoSize*  
  Entradas Contiene el tamaño del búfer de *InstanceInfo* .  
   
-## <a name="returns"></a>Devuelve  
+## <a name="returns"></a>Devoluciones  
  S_OK  
  La función se ha realizado correctamente.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 224ee81383c247d3b2ba8d02aaa99f5a649d0e74
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68443daf5f6e694dc0da8e838dfad897739af05
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82816485"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790336"
 ---
 # <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Actualiza un tipo de recopilador para un elemento de recopilación. Dado el nombre y GUID de un tipo de recopilador, actualiza la configuración del tipo de recopilador, incluida la colección y el paquete de carga, el esquema de parámetros y el esquema del formateador de parámetros.  
   
@@ -50,9 +50,9 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
   
 `[ @parameter_schema = ] 'parameter_schema'`Es el esquema XML para este tipo de recopilador. *parameter_schema* es **XML** y puede ser necesario para determinados tipos de recopilador. Si no es necesario, este argumento puede ser NULL.  
   
-`[ @collection_package_id = ] collection_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] colección utilizado por el conjunto de recopilación. *collection_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *collection_package_id*, consulte la vista del sistema dbo. syscollector_collector_types en la base de datos msdb.  
+`[ @collection_package_id = ] collection_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] colección utilizado por el conjunto de recopilación. *collection_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *collection_package_id*, consulte la vista del sistema collector_collector_types dbo.sysen la base de datos msdb.  
   
-`[ @upload_package_id = ] upload_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] carga usado por el conjunto de recopilación. *upload_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *upload_package_id*, consulte la vista del sistema dbo. syscollector_collector_types en la base de datos msdb.  
+`[ @upload_package_id = ] upload_package_id`Es un identificador local único que apunta al paquete de [!INCLUDE[ssIS](../../includes/ssis-md.md)] carga usado por el conjunto de recopilación. *upload_package_id* es **uniqueidentifier** y es obligatorio. Para obtener el valor de *upload_package_id*, consulte la vista del sistema collector_collector_types dbo.sysen la base de datos msdb.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

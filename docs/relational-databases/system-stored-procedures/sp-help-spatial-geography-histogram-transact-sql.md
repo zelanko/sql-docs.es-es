@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c1ed475c78decb3891185b90d3dc032ab896bdf0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68085190"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790351"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Facilita la escritura de parámetros de cuadrícula para un índice espacial.  
   
@@ -62,7 +62,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La pestaña Resultados espaciales de SSMS muestra una representación gráfica de los resultados. Puede consultar los resultados en la ventana espacial para obtener un número aproximado de elementos de resultados.  
   
 > [!NOTE]  
@@ -71,7 +71,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
  El rectángulo de selección para el tipo de **geografía** es todo el globo.  
   
 ## <a name="examples"></a>Ejemplos  
- En el ejemplo siguiente **sp_help_spatial_geography_histogram** se llama a `Person.Address` sp_help_spatial_geography_histogram en la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] tabla de la base de datos.  
+ En el ejemplo siguiente se llama a **sp_help_spatial_geography_histogram** en la `Person.Address` tabla de la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] base de datos.  
   
 ```  
 EXEC sp_help_spatial_geography_histogram @tabname = Person.Address, @colname = SpatialLocation, @resolution = 64, @sample = 30;  

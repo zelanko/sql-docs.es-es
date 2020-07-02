@@ -18,16 +18,16 @@ ms.custom: ''
 ms.reviewer: ''
 ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 601a584a315eba7013c086dc59c9fb5bfeff8693
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1716c650a138edd36291e20877faf5da741b92a7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73783219"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787950"
 ---
 # <a name="bcp_bind"></a>bcp_bind
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Enlaza los datos de una variable de programa a una columna de tabla para la copia masiva en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -78,7 +78,7 @@ typedef struct tagBCPBOUNDINT
   
  En el caso de los tipos de datos de longitud fija, como los enteros, el tipo de datos indica la longitud de los datos al sistema. Por lo tanto, en el caso de los tipos de datos de longitud fija, *cbData* se puede SQL_VARLEN_DATA o la longitud de los datos de forma segura.  
   
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el caso de los tipos de datos de caracteres y binarios, *cbData* puede ser SQL_VARLEN_DATA, SQL_NULL_DATA, algún valor positivo o 0. Si *cbData* es SQL_VARLEN_DATA, el sistema utiliza un indicador de longitud o null (si existe) o una secuencia de terminador para determinar la longitud de los datos. Si se proporciona ambos, el sistema utiliza el que hace que se copie una menor cantidad de datos. Si *cbData* es SQL_VARLEN_DATA, el tipo de datos de la columna es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] un tipo de carácter o binario y no se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
+ En el caso de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de datos de caracteres y binarios, *cbData* puede ser SQL_VARLEN_DATA, SQL_NULL_DATA, algún valor positivo o 0. Si *cbData* es SQL_VARLEN_DATA, el sistema utiliza un indicador de longitud o null (si existe) o una secuencia de terminador para determinar la longitud de los datos. Si se proporciona ambos, el sistema utiliza el que hace que se copie una menor cantidad de datos. Si *cbData* es SQL_VARLEN_DATA, el tipo de datos de la columna es un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipo de carácter o binario y no se especifica un indicador de longitud ni una secuencia de terminador, el sistema devuelve un mensaje de error.  
   
  Si *cbData* es 0 o un valor positivo, el sistema utiliza *cbData* como la longitud de los datos. Sin embargo, si, además de un valor de *cbData* positivo, se proporciona un indicador de longitud o una secuencia de terminador, el sistema determina la longitud de los datos mediante el método que hace que se copie la menor cantidad de datos.  
   
@@ -112,14 +112,14 @@ bcp_bind(hdbc, szName, 0,
    sizeof(WCHAR), SQLNCHAR, 2)  
 ```  
   
- Si la columna [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enlazada es un carácter ancho, no se realiza ninguna conversión en [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si el tipo de caracteres de la columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MBCS, la conversión de caracteres anchos a caracteres multibyte se realiza cuando los datos se envían a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Si la columna enlazada [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es un carácter ancho, no se realiza ninguna conversión en [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md). Si el tipo de caracteres de la columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es MBCS, la conversión de caracteres anchos a caracteres multibyte se realiza cuando los datos se envían a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  *cbTerm*  
  Es el número de bytes que hay en el terminador para la variable de programa, si existe. Si no hay ningún terminador para la variable, establezca *cbTerm* en 0.  
 
 *eDataType* Es el tipo de datos C de la variable de programa. Los datos de la variable de programa se convierten al tipo de la columna de base de datos. Si este parámetro es 0, no se realiza ninguna conversión.  
 
-Los *eDataType* tokens de tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Los *eDataType* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tokens de tipo de datos enumeran el parámetro eDataType en SQLNCLI. h, no los enumeradores de tipos de datos C de ODBC. Por ejemplo, puede especificar un entero de dos bytes, el tipo ODBC SQL_C_SHORT, utilizando el tipo SQLINT2 específico de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]incorporó la compatibilidad con los tokens de tipo de datos SQLXML y SQLUDT en el parámetro **_eDataType_** .  
 
@@ -169,17 +169,17 @@ En esta tabla se muestran los tipos de datos enumerados válidos y los tipos de 
 
 *idxServerCol* Es la posición ordinal de la columna en la tabla de base de datos en la que se copian los datos. La primera columna de una tabla es la columna 1. La posición ordinal de una columna se notifica mediante [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md).  
   
-## <a name="returns"></a>Devuelve
+## <a name="returns"></a>Devoluciones
 
  SUCCEED o FAIL.
 
-## <a name="remarks"></a>Observaciones
+## <a name="remarks"></a>Comentarios
 
-Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de.  
+Utilice **bcp_bind** para una manera rápida y eficaz de copiar datos de una variable de programa en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al **bcp_init** llamar a bcp_init [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se establece la tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
+Llame a [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) antes de llamar a esta o a cualquier otra función de copia masiva. Al llamar a **bcp_init** se establece la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla de destino para la copia masiva. Cuando se llama a **bcp_init** para su uso con **bcp_bind** y [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md), el parámetro **bcp_init** _szDataFile_ , que indica el archivo de datos, se establece en null; el parámetro **bcp_init**_eDirection_ se establece en DB_IN.  
 
-Realice una llamada de **bcp_bind** independiente para cada columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la tabla en la que desea copiar. Una vez realizadas las llamadas de **bcp_bind** necesarias, llame a **bcp_sendrow** para enviar una fila de datos de las variables de programa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]a. No se permite volver a enlazar una columna.
+Realice una llamada de **bcp_bind** independiente para cada columna de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tabla en la que desea copiar. Una vez realizadas las llamadas de **bcp_bind** necesarias, llame a **bcp_sendrow** para enviar una fila de datos de las variables de programa a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . No se permite volver a enlazar una columna.
 
 Siempre que desee [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confirmar las filas ya recibidas, llame a [bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md). Por ejemplo, llame a **bcp_batch** una vez por cada 1000 filas insertadas o en cualquier otro intervalo.  
 
@@ -199,7 +199,7 @@ Si *cbTerm* es 0 y *cbIndicator* (el prefijo) no es 0, *cbIndicator* debe ser 8.
 
 - 0xFFFFFFFFFFFFFFFE se trata como un valor de prefijo especial, que se usa para enviar datos de forma eficaz en fragmentos al servidor. El formato de los datos con este prefijo especial es el siguiente:  
 
-- <SPECIAL_PREFIX> \<0 o más fragmentos de datos> <ZERO_CHUNK> donde:  
+- <SPECIAL_PREFIX> \<0 or more  DATA CHUNKS> <ZERO_CHUNK> donde:  
 
 - PREFIJO_ESPECIAL es 0xFFFFFFFFFFFFFFFE  
 

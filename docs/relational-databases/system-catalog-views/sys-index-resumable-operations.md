@@ -19,16 +19,16 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 143ed8e5487772a39e4e98c92f8f07d78de7f370
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: c57cc780bc3e05347daf8dd7778e7e5de274d303
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823390"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85790494"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>Sys. index_resumable_operations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **Sys. index_resumable_operations** es una vista del sistema que supervisa y comprueba el estado de ejecución actual de la regeneración o creación de índices reanudables.  
 **Se aplica a**: SQL Server (2017 y versiones más recientes) y Azure SQL Database
   

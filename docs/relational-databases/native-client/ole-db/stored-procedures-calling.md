@@ -19,17 +19,17 @@ ms.assetid: 8e5738e5-4bbe-4f34-bd69-0c0633290bdd
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ca4a3bb78f1f08ea8bfcdc08d5e8bacac4495087
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 24a5c0d5742f495f7e94e0408a6997ecebc47e7a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305350"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787650"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  
+  Un procedimiento almacenado puede tener cero o más parámetros. También puede devolver un valor. Cuando se usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client, se pueden pasar los parámetros a un procedimiento almacenado:  
   
 -   Codificando de forma rígida el valor de datos.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "81305350"
 5.  Ejecute el comando mediante **ICommand::Execute**.  
 
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
- Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite:  
+ Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client admite:  
   
 -   Secuencia de escape ODBC CALL.  
   
@@ -120,7 +120,7 @@ ms.locfileid: "81305350"
  Si quiere ver una aplicación de ejemplo que muestre una secuencia de escape RPC, consulte [Ejecución de un procedimiento almacenado &#40;mediante sintaxis RPC&#41; y procesamiento de códigos de devolución y parámetros de salida &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>Instrucción EXECUTE de Transact-SQL:  
- Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client utiliza el mecanismo [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] RPC de para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
+ Las secuencias de escape ODBC CALL y RPC son los métodos preferidos para llamar a un procedimiento almacenado en lugar de la instrucción [EXECUTE](../../../t-sql/language-elements/execute-transact-sql.md). El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client utiliza el mecanismo RPC de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para optimizar el procesamiento de comandos. Este protocolo RPC aumenta el rendimiento eliminando gran parte del procesamiento de parámetros y análisis de instrucciones que se realiza en el servidor.  
   
  Este es un ejemplo de la instrucción [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   

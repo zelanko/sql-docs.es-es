@@ -14,15 +14,15 @@ ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abce98b64da8de6039f81025201cce25269763a6
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: feae55d486eae6b269cef94320fe9468edb6e672
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302614"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789371"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   **SQLColumns** devuelve SQL_SUCCESS si existen o no valores para los parámetros *nombrecatálogo*, *TableName*o *columnName* . **SQLFetch** devuelve SQL_NO_DATA si se usan valores no válidos en estos parámetros.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "81302614"
   
  La tabla siguiente muestra las columnas devueltas por el conjunto de resultados:  
   
-|Nombre de la columna|Descripción|  
+|Nombre de columna|Descripción|  
 |-----------------|-----------------|  
 |DATA_TYPE|Devuelve SQL_VARCHAR, SQL_VARBINARY o SQL_WVARCHAR para los tipos de datos **VARCHAR (Max)** .|  
 |TYPE_NAME|Devuelve "VARCHAR", "varbinary" o "nvarchar" para los tipos de datos **VARCHAR (Max)**, **varbinary (Max)** y **nvarchar (Max)** .|  
@@ -56,7 +56,7 @@ ms.locfileid: "81302614"
   
  Para el UDT de los parámetros, puede utilizar los nuevos descriptores específicos del controlador definidos anteriormente para obtener o establecer las propiedades de metadatos adicionales de un UDT, en caso de que el servidor devuelva o requiera esta información.  
   
- Cuando un cliente se conecta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
+ Cuando un cliente se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y llama a SQLColumns, el uso de valores NULL o comodín para el parámetro de entrada del catálogo no devolverá información de otros catálogos. En su lugar, solo se devolverá información sobre el catálogo actual. El cliente puede llamar primero a SQLTables para determinar en qué catálogo se encuentra la tabla deseada. A continuación, el cliente puede usar ese valor de catálogo para el parámetro de entrada de catálogo en su llamada a SQLColumns para recuperar información acerca de las columnas de esa tabla.  
   
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>Parámetros de SQLColumns y con valores de tabla  
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Se han agregado las columnas siguientes para los parámetros con valores de tabla:  
@@ -77,14 +77,14 @@ ms.locfileid: "81302614"
  **SQLColumns** admite tipos definidos por el usuario (UDT) CLR grandes. Para obtener más información, vea [tipos CLR grandes definidos por el usuario &#40;ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Compatibilidad de SQLColumns con columnas dispersas  
- Se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Se han agregado dos columnas específicas al conjunto de resultados para SQLColumns:  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Si la columna es una columna dispersa, tiene el valor SQL_TRUE; de lo contrario, SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Si la columna es la **COLUMN_SET** columna, se SQL_TRUE; de lo contrario, SQL_FALSE.|  
   
- De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]versiones anteriores a y después de todas las columnas asignadas por el propio ODBC.  
+ De acuerdo con la especificación de ODBC, SS_IS_SPARSE y SS_IS_COLUMN_SET aparecen antes de todas las columnas específicas del controlador que se agregaron a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las versiones anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y después de todas las columnas asignadas por el propio ODBC.  
   
  El conjunto de resultados devuelto por SQLColumns depende de la configuración de SQL_SOPT_SS_NAME_SCOPE. Para obtener más información, vea [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md).  
   

@@ -13,26 +13,26 @@ ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5de109f0f26dcc8b892f7856f889ea93089c1205
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2358894c1303856fc3e1b9db06bca1f7e9427509
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304376"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787693"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En este tema se describen los cambios realizados en OLE DB en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client para admitir tipos definidos por el usuario (UDT) de Common Language Runtime (CLR) grandes.  
   
- Para obtener más información sobre la compatibilidad con los UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de CLR grandes en Native Client, vea [tipos CLR grandes definidos por el usuario](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para ver un ejemplo, consulte [Uso de UDT de CLR de gran tamaño &#40;OLE DB&#41](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Para obtener más información sobre la compatibilidad con los UDT de CLR grandes en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, vea [tipos CLR grandes definidos por el usuario](../../../relational-databases/native-client/features/large-clr-user-defined-types.md). Para ver un ejemplo, consulte [Uso de UDT de CLR de gran tamaño &#40;OLE DB&#41](../../../relational-databases/native-client-ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Formato de datos  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client utiliza ~0 para representar la longitud de valores de tamaño ilimitado en tipos de objeto grandes (LOB). ~0 también representa el tamaño de UDT CLR superiores a 8.000 bytes.  
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Value|  
+|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -121,13 +121,13 @@ ms.locfileid: "81304376"
 |Tipo de datos de enlace|UDT a servidor|No UDT a servidor|UDT desde servidor|No UDT desde servidor|  
 |----------------------|-------------------|------------------------|---------------------|--------------------------|  
 |DBTYPE_UDT|Compatible (5)|Error (1)|Compatible (5)|Error (4)|  
-|DBTYPE_BYTES|Compatible (5)|N/D|Compatible (5)|N/D|  
-|DBTYPE_WSTR|Compatible (2), (5)|N/D|Compatible (3), (5), (6)|N/D|  
-|DBTYPE_BSTR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
-|DBTYPE_STR|Compatible (2), (5)|N/D|Compatible (3), (5)|N/D|  
-|DBTYPE_IUNKNOWN|Compatible (6)|N/D|Compatible (6)|N/D|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible (5)|N/D|Compatible (3), (5)|N/D|  
-|DBTYPE_VARIANT (VT_BSTR)|Compatible (2), (5)|N/D|N/D|N/D|  
+|DBTYPE_BYTES|Compatible (5)|No aplicable|Compatible (5)|No aplicable|  
+|DBTYPE_WSTR|Compatible (2), (5)|No aplicable|Compatible (3), (5), (6)|No aplicable|  
+|DBTYPE_BSTR|Compatible (2), (5)|No aplicable|Compatible (3), (5)|No aplicable|  
+|DBTYPE_STR|Compatible (2), (5)|No aplicable|Compatible (3), (5)|No aplicable|  
+|DBTYPE_IUNKNOWN|Compatible (6)|No aplicable|Compatible (6)|No aplicable|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Compatible (5)|No aplicable|Compatible (3), (5)|No aplicable|  
+|DBTYPE_VARIANT (VT_BSTR)|Compatible (2), (5)|No aplicable|N/D|N/D|  
   
 ### <a name="key-to-symbols"></a>Clave de los símbolos  
   

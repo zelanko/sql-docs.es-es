@@ -17,22 +17,22 @@ ms.assetid: a75b4b69-b095-4690-9b31-a2b32a67489e
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e54a81cf47804e1cf4568e739bb2c4cf83b9fe25
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 20aa929844dd7b5605672c1d103f807bc7d4147b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81288625"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85787718"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Compatibilidad con conjuntos de filas de esquema (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
-  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client también admite la devolución de información de esquema de [!INCLUDE[tsql](../../../includes/tsql-md.md)] un servidor vinculado cuando se procesan consultas distribuidas.  
+  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client también admite la devolución de información de esquema de un servidor vinculado cuando se procesan [!INCLUDE[tsql](../../../includes/tsql-md.md)] consultas distribuidas.  
   
 > [!NOTE]  
 >  Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los sinónimos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client no devuelve los metadatos de los sinónimos.  
   
- En las tablas siguientes se enumeran los conjuntos de filas de esquema y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las columnas de restricción admitidas por el proveedor de OLE DB de Native Client.  
+ En las tablas siguientes se enumeran los conjuntos de filas de esquema y las columnas de restricción admitidas por el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client.  
   
 |Conjunto de filas de esquema|Columnas de restricción|  
 |-------------------|-------------------------|  

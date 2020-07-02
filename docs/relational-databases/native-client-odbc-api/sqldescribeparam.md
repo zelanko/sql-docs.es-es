@@ -14,25 +14,25 @@ ms.assetid: 396e74b1-5d08-46dc-b404-2ef2003e4689
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efe1fdccbef4f5c4a393083f6eb81efee759be5c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 7612fc4da7cb12b4e38f20404cbf9481d610877c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302596"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85789335"
 ---
 # <a name="sqldescribeparam"></a>SQLDescribeParam
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Para describir los parámetros de cualquier instrucción SQL, el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client genera y ejecuta una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción SELECT cuando se llama a SQLDescribeParam en un identificador de instrucción ODBC preparado. Los metadatos del conjunto de resultados determinan las características de los parámetros en la instrucción preparada. SQLDescribeParam puede devolver cualquier código de error que puede devolver SQLExecute o SQLExecDirect.  
   
- Las mejoras en el motor de base [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] de datos a partir de permiten a SQLDescribeParam obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLDescribeParam [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]en versiones anteriores de. Para obtener más información, vea [Detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Las mejoras en el motor de base de datos a partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] permiten a SQLDescribeParam obtener descripciones más precisas de los resultados esperados. Estos resultados más precisos pueden diferir de los valores devueltos por SQLDescribeParam en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Detección de metadatos](../../relational-databases/native-client/features/metadata-discovery.md).  
   
- También nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *ParameterSizePtr* ahora devuelve un valor que se alinea con la definición del tamaño, en caracteres, de la columna o expresión del marcador de parámetro correspondiente tal y como se define en la [especificación de ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* podía ser el valor correspondiente de **SQL_DESC_OCTET_LENGTH** para el tipo, o un valor de tamaño de columna irrelevante que se proporcionó a SQLBindParameter para un tipo, cuyo valor se debe pasar por alto (**SQL_INTEGER**, por ejemplo).  
+ También nuevo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , *ParameterSizePtr* ahora devuelve un valor que se alinea con la definición del tamaño, en caracteres, de la columna o expresión del marcador de parámetro correspondiente tal y como se define en la [especificación de ODBC](https://go.microsoft.com/fwlink/?LinkId=207044). En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, *ParameterSizePtr* podía ser el valor correspondiente de **SQL_DESC_OCTET_LENGTH** para el tipo, o un valor de tamaño de columna irrelevante que se proporcionó a SQLBindParameter para un tipo, cuyo valor se debe pasar por alto (**SQL_INTEGER**, por ejemplo).  
   
  El controlador no admite la llamada a SQLDescribeParam en las siguientes situaciones:  
   
--   Después de SQLExecDirect para [!INCLUDE[tsql](../../includes/tsql-md.md)] las instrucciones UPDATE o DELETE que contengan la cláusula FROM.  
+-   Después de SQLExecDirect para las [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones UPDATE o DELETE que contengan la cláusula FROM.  
   
 -   En cualquier instrucción ODBC o [!INCLUDE[tsql](../../includes/tsql-md.md)] que contenga un parámetro en una cláusula HAVING o se compare con el resultado de una función SUM.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81302596"
   
 -   En cualquier consulta donde uno de los parámetros sea un parámetro a una función.  
   
--   Cuando hay comentarios (/* \*/) en el [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
+-   Cuando hay comentarios (/* \* /) en el [!INCLUDE[tsql](../../includes/tsql-md.md)] comando.  
   
  Al procesar un lote de [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones, el controlador tampoco admite la llamada a SQLDescribeParam para los marcadores de parámetros en instrucciones posteriores a la primera instrucción del lote.  
   
@@ -58,7 +58,7 @@ SQLPrepare(hstmt, "{call sp_who(?)}", SQL_NTS);
 SQLPrepare(hstmt, "{call master..sp_who(?)}", SQL_NTS);  
 ```  
   
- En el caso de los tipos de datos de valores grandes, el valor devuelto en *DataTypePtr* es SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Para indicar que el tamaño del parámetro de tipo de datos de valor grande es "ilimitado" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , el controlador ODBC de Native Client establece *ParameterSizePtr* en 0. Se devuelven los valores de tamaño real para los parámetros estándar **VARCHAR** .  
+ En el caso de los tipos de datos de valores grandes, el valor devuelto en *DataTypePtr* es SQL_VARCHAR, SQL_VARBINARY o SQL_NVARCHAR. Para indicar que el tamaño del parámetro de tipo de datos de valor grande es "ilimitado", el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client establece *ParameterSizePtr* en 0. Se devuelven los valores de tamaño real para los parámetros estándar **VARCHAR** .  
   
 > [!NOTE]  
 >  Si el parámetro ya se ha enlazado con un tamaño máximo para los parámetros SQL_VARCHAR, SQL_WVARCHAR o SQL_VARBINARY, se devuelve el tamaño enlazado del parámetro, no "ilimitado".  

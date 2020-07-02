@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 49f0fc2a-e25e-47e1-a135-563adb509af1
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 83dc24f312b1fa527804a1d7716ea3e754e97038
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b030903602a5356d273e3bd5ce46995a83ea9bf3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833797"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720334"
 ---
 # <a name="database-mirroring---sysdm_db_mirroring_auto_page_repair"></a>Creación de reflejo de la base de datos: sys. dm_db_mirroring_auto_page_repair
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila para cada intento de reparación de página automática en cualquier base de datos reflejada en la instancia del servidor. Esta vista contiene las filas para los últimos intentos de reparación de página automática en una base de datos reflejada determinada, con un máximo de 100 filas por base de datos. En cuanto una base de datos alcanza el máximo, la fila del siguiente intento de reparación de página automática reemplazará una de las entradas existentes. En la tabla siguiente se define el significado de las distintas columnas.  
   

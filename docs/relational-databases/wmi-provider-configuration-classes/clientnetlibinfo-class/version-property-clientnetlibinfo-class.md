@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: eb02d4be-0363-4ad1-9e7e-553601f09349
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: d795f4f76f58829c9c52a6ba3e28f3afa7103080
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d9bb861dc061b5a2049e6b0bc2fa5fa737ae6c70
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73659168"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722840"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Propiedad Version (clase ClientNetLibInfo)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene la versión del archivo de biblioteca de red del cliente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.Version [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica la versión del archivo de biblioteca de red del cliente.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [configurar protocolos de cliente](https://technet.microsoft.com/library/ms181035.aspx)  

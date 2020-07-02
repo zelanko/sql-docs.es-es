@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d9202f357ebf09bef666edfe9a9e18d6dc685545
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 0f6e179612b11b1238d017fb81db2f6fbc6b661a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84886591"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720062"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funciones usadas en valores de cadena: lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   La función en minúsculas convierte cada carácter de *$arg* en su equivalente en minúsculas. La conversión de grafía binaria de Microsoft Windows para los puntos de código Unicode especifica cómo se convierten los caracteres a letra minúscula. Esta norma no es idéntica a la asignación para la norma de punto de código Unicode.  
   

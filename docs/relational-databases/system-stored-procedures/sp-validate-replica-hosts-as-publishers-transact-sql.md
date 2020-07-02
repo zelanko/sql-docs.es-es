@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9375be2a2af2b7653b3f0f036405533f1571ff3f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 58d93574b2e9b71b47e9c145619e9fb153c6e91d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "75320014"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723039"
 ---
 # <a name="sp_validate_replica_hosts_as_publishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** es una extensión de **sp_validate_redirected_publisher** que permite validar todas las réplicas secundarias, en lugar de simplemente la réplica principal actual. **sp_validate_replicat_hosts_as_publisher** valida una topología de replicación de Always on completa. **sp_validate_replica_hosts_as_publishers** se debe ejecutar directamente en el distribuidor mediante una sesión de escritorio remoto para evitar un error de seguridad de doble salto (21892).  
   
@@ -53,8 +53,8 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>Conjuntos de resultados  
  Ninguno.  
   
-## <a name="remarks"></a>Observaciones  
- Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null para el parámetro * \@* de salida redirected_publisher. En caso contrario, se devuelve el publicador redirigido asociado, independientemente de si el resultado es correcto o error.  
+## <a name="remarks"></a>Comentarios  
+ Si no existe ninguna entrada para el publicador y la base de datos de publicación, **sp_validate_redirected_publisher** devuelve null para el parámetro de salida * \@ redirected_publisher*. En caso contrario, se devuelve el publicador redirigido asociado, independientemente de si el resultado es correcto o error.  
   
  Si la validación se realiza correctamente, **sp_validate_redirected_publisher** devuelve una indicación de éxito.  
   

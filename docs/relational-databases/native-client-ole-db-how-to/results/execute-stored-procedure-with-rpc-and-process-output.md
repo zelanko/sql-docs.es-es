@@ -14,15 +14,15 @@ ms.assetid: 1eb60087-da67-433f-9b45-4028595e68ab
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 385a0930b817c4f897619903ae1fa8501fa763ce
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: faa45c1e7de48eb7b4387a8c639e625cecee8abf
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81302222"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724955"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Ejecutar procedimiento almacenado con RPC y procesar la salida
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Los procedimientos almacenados de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pueden incluir códigos de retorno y parámetros de salida de tipo entero. Los códigos de retorno y parámetros de salida se envían en el último paquete del servidor y, por tanto, no están disponibles para la aplicación hasta que se haya lanzado al mercado completamente el conjunto de filas. Si el comando devuelve varios resultados, los datos de los parámetros de salida están disponibles cuando **IMultipleResults::GetResult** devuelve DB_S_NORESULT o cuando se libera por completo la interfaz **IMultipleResults**, lo que se produzca en primer lugar.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 68746eef-32e1-42bc-aff0-9798cd0e88b8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 733fac032af45eb81b50bae4b20316d04234223e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: df899a146a8cf2c797f980baec1bb1792a8f2b6f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812563"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725436"
 ---
 # <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSpub_identity_range** se proporciona compatibilidad con la administración del intervalo de identidad. Esta tabla se almacena en la base de datos de publicaciones y de suscripciones.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82812563"
 |**range**|**bigint**|Controla el tamaño del intervalo de los valores de identidad consecutivos que podrían asignarse a la suscripción en un ajuste.|  
 |**pub_range**|**bigint**|Controla el tamaño del intervalo de los valores de identidad consecutivos que podrían asignarse a la publicación en un ajuste.|  
 |**current_pub_range**|**bigint**|Intervalo actual que utiliza la publicación. Puede ser diferente de *pub_range* si se ve después de haber sido modificado por **sp_changearticle** y antes del siguiente ajuste del intervalo.|  
-|**mínimo**|**int**|Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de distribución crea un nuevo intervalo de identidad.|  
+|**threshold**|**int**|Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de distribución crea un nuevo intervalo de identidad.|  
 |**last_seed**|**bigint**|Límite inferior del intervalo actual.|  
   
 ## <a name="see-also"></a>Consulte también  

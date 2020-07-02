@@ -13,15 +13,15 @@ ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: c4f0ff3a5cc18845bc2fcc2bec682c6bd8e2db4e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304813"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724665"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>Sys. internal_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
 
   Devuelve una fila por cada conjunto de filas que realiza un seguimiento de los datos internos de los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internos a los índices de almacén de columnas y realizan un seguimiento de las filas eliminadas, las asignaciones de filas y el filas de almacenamiento Delta. Realizan un seguimiento de los datos para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
   
@@ -41,7 +41,7 @@ ms.locfileid: "72304813"
 |optimize_for_sequential_key|**bit**|1 = la partición tiene habilitada la optimización de la última página.<br><br>0 = valor predeterminado. La partición tiene deshabilitada la optimización de la última página.|
   
 ## <a name="permissions"></a>Permisos  
- Requiere la pertenencia al rol `public`.  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Requiere la pertenencia al rol `public`. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Notas generales  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vuelve a crear nuevos índices internos de almacén de columnas cada vez que crea o vuelve a generar un índice de almacén de columnas.  

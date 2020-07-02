@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0722ccd8c4f18fd16ed4abdb3630e80bc7d5de53
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9c4cef3b1a088f0ae0a085fd4769a8e252713df4
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725389"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada suscriptor conocido y se trata de una tabla local del publicador. Esta tabla se almacena en las bases de datos de publicación y de suscripciones.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "82824789"
 |partition_id|**int**|Identifica la partición precalculada a la que pertenece la suscripción.|  
 |cleanedup_unsent_changes|**bit**|Identifica que los metadatos de los cambios no enviados se han eliminado en el suscriptor.|  
 |replica_version|**int**|Identifica la versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del suscriptor al que pertenece la suscripción, que puede ser uno de estos valores:<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**int**|Solo para uso interno.|  
-|application_name|**nvarchar(128)**|Solo para uso interno.|  
-|subscriber_number|**int**|Solo para uso interno.|  
+|supportability_mode|**int**|Exclusivamente para uso interno.|  
+|application_name|**nvarchar(128)**|Exclusivamente para uso interno.|  
+|subscriber_number|**int**|Exclusivamente para uso interno.|  
 |last_makegeneration_datetime|**datetime**|Última **fecha y hora** que el proceso makegeneration ejecutó para el publicador. Para obtener más información, consulte el parámetro-MakeGenerationInterval en [replication agente de mezcla](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Consulte también  

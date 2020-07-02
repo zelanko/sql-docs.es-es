@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 80767fe0-32ac-406a-81a0-8212cd6ce7e4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 055c2cc30f4df8f3a7c2b1ddf3b00b16e0362200
-ms.sourcegitcommit: bf5e9cb3a2caa25d0a37f401b3806b7baa5adea8
+ms.openlocfilehash: 4c66bed154672f9b33565355a901c4f27d328ac6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85295358"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722715"
 ---
 # <a name="wmi-provider-for-server-events-concepts"></a>Conceptos del proveedor WMI para eventos de servidor
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
   El proveedor WMI de eventos de servidor permite usar el Instrumental de administración de Windows (WMI) para supervisar eventos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="in-this-section"></a>En esta sección  

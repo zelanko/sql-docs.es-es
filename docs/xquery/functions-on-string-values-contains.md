@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d65e533f8bc808a7f3828cad797f22441905cea8
-ms.sourcegitcommit: 5c7634b007f6808c87094174b80376cb20545d5f
+ms.openlocfilehash: 9c1f313a5316059a05cb30a5af6ef7a451353a3d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84881864"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724223"
 ---
 # <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve un valor de tipo XS: Boolean que indica si el valor de *$ARG 1* contiene un valor de cadena especificado por *$arg 2*.  
   

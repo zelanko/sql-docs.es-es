@@ -13,15 +13,15 @@ ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1e931a24462711a742b8008eb04538e0e518d55
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 00f8e05a901c5c2729907ec64ae5cd14a8c23413
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81305388"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725008"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Generar perfiles de datos de rendimiento del controlador ODBC: registrar las consultas de larga ejecución
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En este ejemplo se muestran las opciones específicas del controlador ODBC de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para registrar consultas de larga duración. Cuando se ejecuta, este ejemplo crea Odbcqry.log, que contiene una lista de las consultas cuya ejecución supera un intervalo establecido por la aplicación. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   

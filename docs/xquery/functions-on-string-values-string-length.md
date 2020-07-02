@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 40cd82dac9c33e6718e4f3bf3270a065af824115
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 2987001d2163340d9734a9cf606dfbe009901de3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689247"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720056"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funciones usadas en valores de cadena: string-length
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve la longitud de la cadena en caracteres.  
   
@@ -40,7 +40,7 @@ fn:string-length($arg as xs:string?) as xs:integer
  *$arg*  
  Cadena de origen cuya longitud se va a calcular.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si el valor de *$arg* es una secuencia vacía, se devuelve un valor **xs: Integer** de 0.  
   
  El comportamiento de los pares suplentes en funciones XQuery depende del nivel de compatibilidad de la base de datos. Si el nivel de compatibilidad es 110 o superior, cada par suplente se cuenta como un carácter individual. Para los niveles de compatibilidad inferiores, se cuentan como dos caracteres. Para obtener más información, vea [nivel de compatibilidad de Alter database &#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md) e [Intercalación y compatibilidad con Unicode](../relational-databases/collations/collation-and-unicode-support.md).  

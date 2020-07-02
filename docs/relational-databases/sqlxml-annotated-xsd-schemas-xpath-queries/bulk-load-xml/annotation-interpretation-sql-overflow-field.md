@@ -17,22 +17,22 @@ author: MightyPen
 ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8909a0eee54667ea74af44e774bb5262599084b
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 3b6ba41157e7e13651eb5810502a41e7c8abde67
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689240"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724702"
 ---
 # <a name="annotation-interpretation---sqloverflow-field"></a>Interpretación de anotaciones: sql:overflow-field
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   En un esquema, puede identificar una columna como una columna de desbordamiento para que reciba todos los datos no consumidos del documento XML. Esta columna se especifica en el esquema mediante la anotación **SQL: Overflow-Field** . Es posible tener varias columnas de desbordamiento.  
   
  Siempre que un nodo XML (elemento o atributo) para el que hay una anotación **SQL: de campo de desbordamiento** definido entra en el ámbito, la columna de desbordamiento se activa y recibe los datos no consumidos. Cuando el nodo sale del ámbito, la columna de desbordamiento deja de estar activa y Carga masiva XML activa el campo de desbordamiento anterior (si existe).  
   
  Cuando almacena datos en la columna de desbordamiento, la carga masiva XML también almacena las etiquetas de apertura y cierre del elemento primario para el que se ha definido **SQL: Overflow-Field** .  
   
- Por ejemplo, en el esquema siguiente se describen los elementos>y>de ** \< los clientes** de ** \< CustOrder** . Cada uno de estos elementos identifica una columna de desbordamiento:  
+ Por ejemplo, en el esquema siguiente se describen los **\<Customers>** **\<CustOrder>** elementos y. Cada uno de estos elementos identifica una columna de desbordamiento:  
   
 ```  
 <?xml version="1.0" ?>  
@@ -76,9 +76,9 @@ ms.locfileid: "83689240"
 </xsd:schema>  
 ```  
   
- En el esquema, el elemento ** \< Customer>** se asigna a la tabla Cust y el elemento ** \< Order>** se asigna a la tabla CustOrder.  
+ En el esquema, el **\<Customer>** elemento se asigna a la tabla Cust y el **\<Order>** elemento se asigna a la tabla CustOrder.  
   
- Los elementos ** \<>cliente** y ** \< pedido>** identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los elementos secundarios y atributos no consumidos del elemento ** \< Customer>** en la columna Overflow de la tabla Cust, y todos los elementos secundarios y atributos no consumidos del elemento ** \< Order>** de la columna Overflow de la tabla CustOrder.  
+ Los **\<Customer>** elementos y **\<Order>** identifican una columna de desbordamiento. Por lo tanto, la carga masiva XML guarda todos los elementos secundarios y atributos no consumidos del **\<Customer>** elemento en la columna Overflow de la tabla Cust, y todos los elementos secundarios y atributos no consumidos del **\<Order>** elemento en la columna Overflow de la tabla CustOrder.  
   
 ### <a name="to-test-a-working-sample"></a>Para probar un ejemplo funcional  
   

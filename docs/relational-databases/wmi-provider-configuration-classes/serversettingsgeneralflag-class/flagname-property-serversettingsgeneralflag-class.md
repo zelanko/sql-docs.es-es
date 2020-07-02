@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 108c13aa-da9c-4908-b0a3-a9460806819c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 1061ed77fd52764b70c56b97d161d960e11e8129
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 8aabc0dc5e88fdbcca7f64ac3948241b49965dc3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660305"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722736"
 ---
 # <a name="flagname-property-serversettingsgeneralflag-class"></a>Propiedad FlagName (clase ServerSettingsGeneralFlag)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el nombre de la marca.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -42,7 +42,7 @@ object.FlagName [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor de cadena que especifica el nombre de la marca.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Configurar protocolos y bibliotecas de red de servidores de red](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

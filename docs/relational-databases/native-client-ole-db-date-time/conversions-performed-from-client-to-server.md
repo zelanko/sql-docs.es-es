@@ -13,15 +13,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 54ab88302c14e9dc0aa405756bdf2e5b1ba75be5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: efa000212b64f1fb98523cfad163762b70b9db33
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304419"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724945"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversiones realizadas de cliente a servidor
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En este tema se describen las conversiones de fecha y hora realizadas entre una aplicación cliente escrita con OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (o posterior).  
   
@@ -39,19 +39,19 @@ ms.locfileid: "81304419"
 |DBTIMESTAMP|1,2|1,3,4|1,4,10|1,10,14|1,10,15|1,10|1,5,10|1,10,11|1,10,11|1,10<br /><br /> datetime2(7)|  
 |DBTIMESTAMPOFFSET|1,2,8|1,3,4,8|1,4,8,10|1,8,10,14|1,8,10,15|1,8,10|1,10|1,10,11|1,10,11|1,10<br /><br /> datetimeoffset(7)|  
 |FILETIME|1,2|1,3,4|1,4,13|1,13|1,13|1,13|1,5,13|1,13|1,10|1,13<br /><br /> datetime2(3)|  
-|BYTES|-|-|-|-|-|-|-|N/D|N/D|N/D|  
-|VARIANT|1|1|1|1,10|1,10|1,10|1,10|N/D|N/D|1,10|  
-|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|N/D|N/D|1,16|  
-|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/D|N/D|N/D|  
-|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/D|N/D|N/D|  
-|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|N/D|N/D|N/D|  
+|BYTES|-|-|-|-|-|-|-|No aplicable|N/D|N/D|  
+|VARIANT|1|1|1|1,10|1,10|1,10|1,10|No aplicable|N/D|1,10|  
+|SSVARIANT|1,16|1,16|1,16|1,10,16|1,10,16|1,10,16|1,10,16|No aplicable|N/D|1,16|  
+|BSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|No aplicable|N/D|N/D|  
+|STR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|No aplicable|N/D|N/D|  
+|WSTR|1,9|1,9|1,9,10|1,9,10|1,9,10|1,9,10|1,9,10|No aplicable|N/D|N/D|  
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   
 |Símbolo|Significado|  
 |------------|-------------|  
 |-|No se admite la conversión. Si el enlace se valida cuando se llama a IAccessor::CreateAccessor, DBBINDSTATUS_UPSUPPORTEDCONVERSION se devuelve en *rgStatus*. Cuando se aplaza la comprobación de descriptor de acceso, se establece DBSTATUS_E_BADACCESSOR.|  
-|N/D|No aplicable.|  
+|No aplicable|No aplicable.|  
 |1|Si los datos proporcionados no son válidos, se establece DBSTATUS_E_CANTCONVERTVALUE. Los datos de entrada se validan antes de que se apliquen las conversiones, de modo que aunque un componente vaya a ser omitido por una conversión subsiguiente, deberá seguir siendo válido para que la conversión se produzca con éxito.|  
 |2|Se omiten los campos de hora.|  
 |3|Las fracciones de segundo deben ser cero o se establece DBSTATUS_E_DATAOVERFLOW.|  

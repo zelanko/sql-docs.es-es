@@ -13,21 +13,21 @@ ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b7eecfdac3d42b7a3d8d66ffe1f8ac68652230f
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2581625d9b86badd1cbfd36a0f1d072d0412d8ff
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304507"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722258"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Enlace y transferencia de datos de valores de columnas y parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Los parámetros con valores de tabla, al igual que otros parámetros, deben enlazarse antes de pasarse al servidor. La aplicación enlaza los parámetros con valores de tabla del mismo modo que enlaza otros parámetros: mediante SQLBindParameter o llamadas equivalentes a SQLSetDescField o SQLSetDescRec. El tipo de datos del servidor para un parámetro con valores de tabla es SQL_SS_TABLE. El tipo de C puede especificarse como SQL_C_DEFAULT o SQL_C_BINARY.  
   
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o posterior, solo se admiten parámetros con valores de tabla de entrada. Por lo tanto, cualquier intento de establecer SQL_DESC_PARAMETER_TYPE en un valor distinto de SQL_PARAM_INPUT devolverá SQL_ERROR con SQLSTATE = HY105 y el mensaje "Tipo de parámetro no válido".  
   
- Es posible asignar valores predeterminados a columnas completas de parámetros con valores de tabla mediante el atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. No obstante, los valores de columna de parámetros con valores de tabla individuales no pueden tener asignados valores predeterminados mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Los parámetros con valores de tabla como un conjunto no se pueden establecer en un valor predeterminado mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Si no se siguen estas reglas, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de los parámetros \<predeterminados para el \<parámetro p>", donde p> es el ordinal de la TVP en la instrucción de consulta.  
+ Es posible asignar valores predeterminados a columnas completas de parámetros con valores de tabla mediante el atributo SQL_CA_SS_COL_HAS_DEFAULT_VALUE. No obstante, los valores de columna de parámetros con valores de tabla individuales no pueden tener asignados valores predeterminados mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Los parámetros con valores de tabla como un conjunto no se pueden establecer en un valor predeterminado mediante SQL_DEFAULT_PARAM en *StrLen_or_IndPtr* con SQLBindParameter. Si no se siguen estas reglas, SQLExecute o SQLExecDirect devolverán SQL_ERROR. Se generará un registro de diagnóstico con SQLSTATE = 07S01 y el mensaje "uso no válido de parámetro predeterminado para \<p> el parámetro", donde \<p> es el ordinal de TVP en la instrucción de consulta.  
   
  Después de enlazar el parámetro con valores de tabla, la aplicación debe enlazar cada una de las columnas de parámetros con valores de tabla. Para ello, la aplicación llama primero a SQLSetStmtAttr para establecer SQL_SOPT_SS_PARAM_FOCUS en el ordinal de un parámetro con valores de tabla. A continuación, la aplicación enlaza las columnas del parámetro con valores de tabla mediante llamadas a las siguientes rutinas: SQLBindParameter, SQLSetDescRec y SQLSetDescField. Si se establece SQL_SOPT_SS_PARAM_FOCUS en 0, se restaura el efecto habitual de SQLBindParameter, SQLSetDescRec y SQLSetDescField en el funcionamiento de los parámetros de nivel superior normales.
  
@@ -64,7 +64,7 @@ ms.locfileid: "81304507"
   
 3.  Llama a SQLSetStmtAttr para establecer SQL_SOPT_SS_PARAM_FOCUS en 0. Esto debe hacerse antes de llamar a SQLExecute o SQLExecDirect. De lo contrario, se devuelve SQL_ERROR y se genera un registro de diagnóstico con SQLSTATE=HY024 y el mensaje "Valor de atributo no válido, SQL_SOPT_SS_PARAM_FOCUS (debe ser cero en el tiempo de ejecución)".  
   
-4.  Establece *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR en SQL_DEFAULT_PARAM para un parámetro con valores de tabla sin filas, o el número de filas que se van a transferir en la siguiente llamada a SQLExecute o SQLExecDirect si el parámetro con valores de tabla tiene filas. *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR no se pueden establecer en SQL_NULL_DATA para un parámetro con valores de tabla, ya que los parámetros con valores de tabla no admiten valores NULL (aunque las columnas de componentes de parámetro con valores de tabla pueden aceptar valores NULL). Si se establece en un valor no válido, SQLExecute o SQLExecDirect devuelve SQL_ERROR, y se genera un registro de diagnóstico con SQLSTATE = HY090 y el mensaje "longitud de búfer o cadena no \<válida para el parámetro p>", donde p es el número de parámetro.  
+4.  Establece *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR en SQL_DEFAULT_PARAM para un parámetro con valores de tabla sin filas, o el número de filas que se van a transferir en la siguiente llamada a SQLExecute o SQLExecDirect si el parámetro con valores de tabla tiene filas. *StrLen_or_IndPtr* o SQL_DESC_OCTET_LENGTH_PTR no se pueden establecer en SQL_NULL_DATA para un parámetro con valores de tabla, ya que los parámetros con valores de tabla no admiten valores NULL (aunque las columnas de componentes de parámetro con valores de tabla pueden aceptar valores NULL). Si se establece en un valor no válido, SQLExecute o SQLExecDirect devuelve SQL_ERROR, y se genera un registro de diagnóstico con SQLSTATE = HY090 y el mensaje "longitud de búfer o cadena no válida para el parámetro \<p> ", donde p es el número de parámetro.  
   
 5.  Llama a SQLExecute o SQLExecDirect.  
   

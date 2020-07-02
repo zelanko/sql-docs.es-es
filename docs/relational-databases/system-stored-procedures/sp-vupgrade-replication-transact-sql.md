@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8c63f54756d3bde1ab3c79a0beee9cc06b709d05
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: aa15ada3a85a828133ca68a3c3c8ee43e365b344
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82808668"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722965"
 ---
 # <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Se activa durante la instalación al actualizar un servidor de replicación. Actualiza los datos del esquema y del sistema de tal modo que admitan la replicación en el nivel de producto actual. Crea los nuevos objetos del sistema de replicación en las bases de datos del sistema y de usuarios. Este procedimiento almacenado se ejecuta en el equipo donde tendrá lugar la actualización de replicación.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: dc783b97430f5ddc456ebba82dd76a50c6d3cd2a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 90bd083c621bb99677c70aaceaab4038b9c15d9e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82824080"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724630"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada mensaje de Correo electrónico de base de datos con el estado de **error** . Utilice esta vista para determinar qué mensajes no se enviaron correctamente.  
   

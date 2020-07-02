@@ -13,15 +13,15 @@ ms.assetid: ffe213ca-cc0e-465e-b31c-a8272324c4fe
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3541f354af26f32f4071c2a6d09648cd53af6d
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: f1c474427c4c62b667e27f299e2e7b4d9a65e1b5
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81283207"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85719660"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Creación de conjuntos de filas de parámetros con valores de tabla
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Aunque los consumidores pueden proporcionar cualquier objeto de conjunto de filas para los parámetros con valores de tabla, los objetos de conjunto de filas típicos se implementan para los almacenes de datos back-end y, por consiguiente, proporcionan un rendimiento limitado. Por esta razón, el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client permite a los consumidores crear un objeto de conjunto de filas especializado encima de los datos en memoria. Este objeto de conjunto de filas especial en memoria es un nuevo objeto COM denominado conjunto de filas de parámetros con valores de tabla. Proporciona una funcionalidad similar a la de los conjuntos de parámetros.  
   
@@ -42,14 +42,14 @@ ms.locfileid: "81283207"
   
  Para recuperar información sobre el estado null, Unique, calculado y Update de cada columna, el consumidor debe usar IColumnsRowset:: GetColumnsRowset o IColumnsInfo:: GetColumnInfo. Estos métodos proporcionan información detallada sobre cada columna de conjunto de filas de parámetros con valores de tabla.  
   
- El consumidor especifica el tipo de cada columna del parámetro con valores de tabla. Esto es similar al modo en que se especifican las columnas cuando se crea una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El consumidor obtiene un objeto de conjunto de filas de parámetros con valores [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de tabla del proveedor de OLE DB de Native Client a través del parámetro de salida *ppRowset* .  
+ El consumidor especifica el tipo de cada columna del parámetro con valores de tabla. Esto es similar al modo en que se especifican las columnas cuando se crea una tabla en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El consumidor obtiene un objeto de conjunto de filas de parámetros con valores de tabla del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proveedor de OLE DB de Native Client a través del parámetro de salida *ppRowset* .  
   
 ## <a name="dynamic-scenario"></a>Escenario dinámico  
  Cuando el consumidor no tiene información de tipos, debe usar IOpenRowset:: OpenRowset para crear instancias de los objetos de conjunto de filas de parámetros con valores de tabla. Todo lo que el consumidor tiene que proporcionar al proveedor es el nombre de tipo.  
   
  En este escenario, el proveedor obtiene la información de tipo de un objeto de conjunto de filas de parámetros con valores de tabla del servidor en nombre del consumidor.  
   
- Los parámetros *pTableID* y *pUnkOuter* deben establecerse como en el escenario estático. A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] continuación, el proveedor de OLE DB de Native Client obtiene la información de tipo (la información de columna y las restricciones) del servidor y devuelve un objeto de conjunto de filas de parámetros con valores de tabla a través del parámetro *ppRowset* . Esta operación requiere la comunicación con el servidor y, por consiguiente, su rendimiento no es tan bueno como el del escenario estático. El escenario dinámico solamente funciona con llamadas a procedimientos parametrizadas.  
+ Los parámetros *pTableID* y *pUnkOuter* deben establecerse como en el escenario estático. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]A continuación, el proveedor de OLE DB de Native Client obtiene la información de tipo (la información de columna y las restricciones) del servidor y devuelve un objeto de conjunto de filas de parámetros con valores de tabla a través del parámetro *ppRowset* . Esta operación requiere la comunicación con el servidor y, por consiguiente, su rendimiento no es tan bueno como el del escenario estático. El escenario dinámico solamente funciona con llamadas a procedimientos parametrizadas.  
   
 ## <a name="see-also"></a>Consulte también  
  [Parámetros con valores de tabla &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

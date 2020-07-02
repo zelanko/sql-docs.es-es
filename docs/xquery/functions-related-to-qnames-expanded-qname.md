@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 295427f0b5b7dc9fe42ad363bb95ebab0a1be1eb
-ms.sourcegitcommit: 5b7457c9d5302f84cc3baeaedeb515e8e69a8616
+ms.openlocfilehash: 88bbf5697112fd80f8ffea629a1ad2b9e99977fa
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83689336"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720050"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funciones relacionadas con QNames: expanded-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Devuelve un valor del tipo XS: QName con el URI de espacio de nombres especificado en el *$paramURI* y el nombre local especificado en el *$paramLocal*. Si *$paramURI* es una cadena vacía o una secuencia vacía, no representa ningún espacio de nombres.  
   
@@ -41,7 +41,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  Es la parte local del nombre de QName.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Lo siguiente se aplica a la función **Expanded-QName ()** :  
   
 -   Si el valor de *$paramLocal* especificado no tiene el formato léxico correcto para el tipo XS: NCName, se devuelve la secuencia vacía y representa un error dinámico.  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9668ae6d-9ed5-418e-bb9a-9e7b66f7dd16
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 9e7eb2e007191088a0259360924b2f5f931dec0a
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 1f29fd66b10c9e1f18203693a2b1474781e8065a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72304898"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720271"
 ---
 # <a name="sp_help_spatial_geometry_index_xml-transact-sql"></a>sp_help_spatial_geometry_index_xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve los nombres y valores para un conjunto especificado de propiedades sobre un índice espacial de **geometría** . Puede decidir devolver un conjunto básico de propiedades o todas las propiedades del índice.  
   
@@ -53,11 +53,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Permisos  
  El usuario debe ser miembro del rol **Public** . Requiere el permiso READ ACCESS en el servidor y el objeto.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Las propiedades que contienen valores NULL están incluidas en el conjunto XML que se devuelve.  
   
 ## <a name="example"></a>Ejemplo  
- En el ejemplo siguiente `sp_help_spatial_geometry_index_xml` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en el **geometry_col** de tabla para el ejemplo de consulta determinado en ** \@q**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
+ En el ejemplo siguiente `sp_help_spatial_geometry_index_xml` se utiliza para investigar el índice espacial **SIndx_SpatialTable_geometry_col2** definido en el **geometry_col** de tabla para el ejemplo de consulta determinado en ** \@ q**. En este ejemplo se devuelven las propiedades básicas del índice especificado en un fragmento XML que muestra el nombre y valor de las propiedades seleccionadas.  
   
  Después, se ejecuta una consulta [XQuery](../../xquery/xquery-basics.md) en el conjunto de resultados, que devuelve una propiedad concreta.  
   

@@ -15,15 +15,15 @@ author: markingmyname
 ms.author: maghan
 ms.custom: seo-dt-2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01fdd3727c25df2985009936c742bc20265f8f74
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 46d4d6598a2a1c4f7c7bb7d8eca7ac3deb6962d3
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81304417"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724927"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En esta sección se describe cómo convertir entre valores **datetime** y **datetimeoffset**. OLE DB ya proporciona las conversiones descritas en esta sección o son una extensión coherente de OLE DB.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "81304417"
   
 -   El formato de las cadenas **datetime** y **datetimeoffset** es:  
   
-     *aaaa*-*mm*mm-*DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
+     *AAAA* - *mm* - *DD*[ *HH*:*mm*:*SS*[.* 9999999*] [± *HH*:*mm*]]  
   
 -   El formato de las cadenas **time** es:  
   
@@ -39,7 +39,7 @@ ms.locfileid: "81304417"
   
 -   El formato de las cadenas **date** es:  
   
-     *aaaa*-*mm*mm-*DD*  
+     *AAAA* - *mm* - *DD*  
   
 > [!NOTE]  
 >  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. Como resultado, algunas conversiones realizadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 y posteriores difieren de la especificación OLE DB.  

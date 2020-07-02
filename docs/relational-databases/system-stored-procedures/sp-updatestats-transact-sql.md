@@ -18,15 +18,15 @@ ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d2bab967400244e35ac33bf96a1be72ae21e375
-ms.sourcegitcommit: 19ff45e8a2f4193fe8827f39258d8040a88befc7
+ms.openlocfilehash: 4449e2a518ab1bfd12563070a80514d890eae48c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2020
-ms.locfileid: "83806851"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723056"
 ---
 # <a name="sp_updatestats-transact-sql"></a>sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Se ejecuta en `UPDATE STATISTICS` todas las tablas internas y definidas por el usuario en la base de datos actual.  
   
@@ -46,7 +46,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>Argumentos  
 `[ @resample = ] 'resample'`Especifica que **sp_updatestats** utilizará la opción volver a muestrear de la instrucción [Update Statistics](../../t-sql/statements/update-statistics-transact-sql.md) . Si no se especifica **' resample '** , **sp_updatestats** actualiza las estadísticas mediante el muestreo predeterminado. **resample** es de tipo **VARCHAR (8)** y su valor predeterminado es no.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_updatestats** ejecuta `UPDATE STATISTICS` , especificando la `ALL` palabra clave, en todas las tablas internas y definidas por el usuario en la base de datos. sp_updatestats muestra mensajes que indican su progreso. Cuando la actualización se ha completado, informa de que se han actualizado las estadísticas de todas las tablas.  
   
 **sp_updatestats** actualiza las estadísticas de los índices no clúster deshabilitados y no actualiza las estadísticas de los índices clúster deshabilitados.  

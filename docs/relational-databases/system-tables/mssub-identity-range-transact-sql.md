@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 965d8530b38aad7d01d9735e603eb3c3a7be0876
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0e7d5c15bd0ff4a20b4b8fe93719c573e03e2cd8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82821000"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85722868"
 ---
 # <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSsub_identity_range** se proporciona compatibilidad con la administración de intervalos de identidad para las suscripciones. Esta tabla se almacena en las bases de datos de suscripciones.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82821000"
 |**objid**|**int**|Identificador de la tabla cuya columna de identidad se administra mediante la replicación.|  
 |**range**|**bigint**|Controla el tamaño del intervalo de valores de identidad consecutivos que podrían asignarse al suscriptor en un ajuste.|  
 |**last_seed**|**bigint**|Límite inferior del intervalo actual.|  
-|**mínimo**|**int**|Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de distribución crea un nuevo intervalo de identidad.|  
+|**threshold**|**int**|Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. Cuando se utiliza el porcentaje de valores especificado en *umbral* , el agente de distribución crea un nuevo intervalo de identidad.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

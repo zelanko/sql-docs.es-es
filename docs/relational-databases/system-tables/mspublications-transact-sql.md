@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 31f7d9c3e5d297a39fd0278c51014793a4b8dbd0
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ab6ea491a766bdb829a152ed02f92fcd2e71d39c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829257"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725424"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSpublications** contiene una fila por cada publicación replicada por un publicador. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "82829257"
 |**allow_push**|**bit**|Indica si es posible crear suscripciones de inserción para la publicación indicada.|  
 |**allow_pull**|**bit**|Indica si es posible crear suscripciones de extracción para la publicación indicada.|  
 |**allow_anonymous**|**bit**|Indica si es posible crear suscripciones anónimas para la publicación indicada.|  
-|**denominación**|**nvarchar(255)**|Descripción de la publicación.|  
+|**description**|**nvarchar(255)**|Descripción de la publicación.|  
 |**vendor_name**|**nvarchar(100**|Nombre del proveedor si el publicador no es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**políticas**|**int**|Período de retención de la publicación, expresado en horas.|  
 |**sync_method**|**int**|Método de sincronización:<br /><br /> **0** = nativo (genera una salida de copia masiva en modo nativo de todas las tablas).<br /><br /> **1** = carácter (genera una salida de copia masiva en modo de carácter de todas las tablas).<br /><br /> **3** = simultáneo (genera una salida de copia masiva en modo nativo de todas las tablas, pero no bloquea la tabla durante la instantánea).<br /><br /> **4** = Concurrent_c (genera una salida de copia masiva en modo de carácter de todas las tablas, pero no bloquea la tabla durante la instantánea)<br /><br /> Los valores **3** y **4** están disponibles para la replicación transaccional y la replicación de mezcla, pero no para la replicación de instantáneas.|  

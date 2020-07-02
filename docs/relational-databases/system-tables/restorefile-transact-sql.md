@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7003ce993893261d2381f11895ee4df2e6fef71b
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ba9110c12249db334443af3744efd3cdb6125bee
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834159"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725415"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada archivo restaurado, incluidos los restaurados indirectamente por el nombre de grupo de archivos. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82834159"
 |**destination_phys_drive**|**nvarchar(260)**|Unidad o partición en la que se ha restaurado el archivo. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  
 |**destination_phys_name**|**nvarchar(260)**|Nombre de archivo, sin la información de unidad o partición, en el que se ha restaurado el archivo. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Para reducir el número de filas de esta tabla y de otras tablas de historial y copia de seguridad, ejecute el [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) procedimiento almacenado.  
   
 ## <a name="see-also"></a>Consulte también  

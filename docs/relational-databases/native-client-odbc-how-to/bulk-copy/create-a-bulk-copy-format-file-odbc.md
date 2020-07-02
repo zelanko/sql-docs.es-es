@@ -14,15 +14,15 @@ ms.assetid: 0572fef3-daf5-409e-b557-c2a632f9a06d
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6a696107a82b5f64109b115e3e1c360d81117344
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 9634cf553750045c6c773ee9f804dc5358883852
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81298348"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85725110"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Crear un archivo de formato de copia masiva (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   En este ejemplo se muestra cómo usar las funciones de copia masiva para crear tanto un archivo de datos como un archivo de formato. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "81298348"
   
  Este ejemplo se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] del equipo. Para conectarse a una instancia con nombre, cambie la definición del origen de datos ODBC para especificar la instancia utilizando el formato servidor\instanciaConNombre. De forma predeterminada, [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] se instala en una instancia con nombre.  
   
- Ejecute la primera lista [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para crear la tabla que utilizará el ejemplo.  
+ Ejecute la primera [!INCLUDE[tsql](../../../includes/tsql-md.md)] lista de código () para crear la tabla que utilizará el ejemplo.  
   
  Compile la segunda lista de código (C++) con odbc32.lib y odbcbcp.lib.  
   
- Ejecute la tercera lista [!INCLUDE[tsql](../../../includes/tsql-md.md)]de código () para eliminar la tabla utilizada por el ejemplo.  
+ Ejecute la tercera [!INCLUDE[tsql](../../../includes/tsql-md.md)] lista de código () para eliminar la tabla utilizada por el ejemplo.  
   
 ```  
 use AdventureWorks  

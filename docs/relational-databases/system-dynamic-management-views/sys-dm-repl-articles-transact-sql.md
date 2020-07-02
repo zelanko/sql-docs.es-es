@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e102411819a28e5798779a19c6f12f57b80fdd35
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: d68c8f086cfd7482820b5f1cd4728620cbfd0855
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833720"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724598"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los objetos de base de datos publicados como artículos en la tecnología de replicación.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "82833720"
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso VIEW DATABASE STATE en la base de datos de publicaciones para llamar a **dm_repl_articles**.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La instancia solo se devuelve para objetos de la base de datos replicada que está cargada actualmente en la caché del artículo de replicación.  
   
 ## <a name="see-also"></a>Consulte también  

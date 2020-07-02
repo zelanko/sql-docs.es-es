@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 55b69995dc6fb639acad84c561ce3530af991c6e
-ms.sourcegitcommit: 25ad26e56d84e471ed447af3bb571cce8a53ad8f
+ms.openlocfilehash: dd6f2d08b44a8e3a3b99dcd3fdc8484e2d0f5b04
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82872727"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720359"
 ---
 # <a name="change-data-capture---sysdm_cdc_log_scan_sessions"></a>Captura de datos modificados: sys. dm_cdc_log_scan_sessions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve una fila para cada sesión de recorrido de registro de la base de datos actual. La última fila devuelta representa la sesión actual. Puede usar esta vista para devolver información de estado sobre la sesión del recorrido del registro actual, o bien información agregada sobre todas las sesiones desde que la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
    
@@ -55,7 +55,7 @@ ms.locfileid: "82872727"
 |**empty_scan_count**|**int**|Número de sesiones consecutivas que no contenían ninguna transacciones de captura de los datos de cambio.|  
 |**failed_sessions_count**|**int**|Número de sesiones erróneas.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Se restablecen los valores en esta vista de administración dinámica siempre que se inicia la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="permissions"></a>Permisos  

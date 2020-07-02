@@ -25,16 +25,16 @@ author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f581c1a5c0d925d48df5a16d95cdb141e2d48f83
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2d1d8c72851c945f178bb9e206ad536a23f24891
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81388105"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85724760"
 ---
 # <a name="using-the-sqlidentity-and-sqlguid-annotations"></a>Utilizar las anotaciones sql:guid y sql:identity
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Puede especificar las anotaciones **SQL: Identity** y **SQL: GUID** en un esquema XSD en cualquier nodo que se asigne a una columna de base de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]datos en. Mientras que el formato diagrama admite los atributos **atributo updg: at-Identity** y **atributo updg: GUID** , el formato DiffGram no lo es. El atributo **atributo updg: at-Identity** define el comportamiento en la actualización de una columna de tipo Identity. El atributo **atributo updg: GUID** permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usarlo en diagrama. Para obtener más información y ejemplos de trabajo, vea [Insertar datos mediante XML diagramas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Puede especificar las anotaciones **SQL: Identity** y **SQL: GUID** en un esquema XSD en cualquier nodo que se asigne a una columna de base de datos en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Mientras que el formato diagrama admite los atributos **atributo updg: at-Identity** y **atributo updg: GUID** , el formato DiffGram no lo es. El atributo **atributo updg: at-Identity** define el comportamiento en la actualización de una columna de tipo Identity. El atributo **atributo updg: GUID** permite obtener un valor GUID de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y usarlo en diagrama. Para obtener más información y ejemplos de trabajo, vea [Insertar datos mediante XML diagramas &#40;SQLXML 4,0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/inserting-data-using-xml-updategrams-sqlxml-4-0.md).  
   
  Las anotaciones **SQL: Identity** y **SQL: GUID** amplían esta funcionalidad a DiffGrams.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "81388105"
  Las anotaciones **SQL: Identity** y **SQL: GUID** se pueden definir en un elemento de contenido complejo.  
   
 ## <a name="sqlidentity-annotation"></a>Anotación sql:identity  
- Puede especificar la anotación **SQL: Identity** en el esquema XSD en cualquier nodo que se asigne a una columna de base de datos de tipo Identity. El valor especificado para esta anotación define cómo se actualiza la columna de tipo de identidad (ya sea mediante el valor proporcionado en diagrama para modificar la columna o omitiendo el valor, en cuyo caso se usa un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]valor generado por para esta columna).  
+ Puede especificar la anotación **SQL: Identity** en el esquema XSD en cualquier nodo que se asigne a una columna de base de datos de tipo Identity. El valor especificado para esta anotación define cómo se actualiza la columna de tipo de identidad (ya sea mediante el valor proporcionado en diagrama para modificar la columna o omitiendo el valor, en cuyo caso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usa un valor generado por para esta columna).  
   
  A la anotación **SQL: Identity** se le pueden asignar dos valores:  
   

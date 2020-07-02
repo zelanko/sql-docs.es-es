@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8651f7ff86a8e8fdeed07358d0b97be8b01be145
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6468bcb1c97b6f995afadfe422e11dec98463620
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834314"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720202"
 ---
 # <a name="sp_replmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve la información de estado actual para una o varias publicaciones del publicador. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
@@ -89,7 +89,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_replmonitorhelppublication** se usa con todos los tipos de replicación.  
   
 ## <a name="permissions"></a>Permisos  

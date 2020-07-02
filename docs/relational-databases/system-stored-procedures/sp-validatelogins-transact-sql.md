@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 6ac52e21-e20d-469b-ad40-5aa091e06b61
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: bd29100f8f7c54906b8aeafa98a7cf67f526db8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 149831d9926161f697c69a893c00784230480940
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68021049"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85723018"
 ---
 # <a name="sp_validatelogins-transact-sql"></a>sp_validatelogins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Ofrece información acerca de los usuarios y grupos de Windows asignados a entidades de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que ya no existen en el entorno de Windows.  
   
@@ -48,7 +48,7 @@ sp_validatelogins
 |**Junction**|**varbinary(85)**|Identificador de seguridad (SID) de Windows del usuario o grupo de Windows.|  
 |**NT Login**|**sysname**|Nombre del usuario o grupo de Windows.|  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Si la entidad de seguridad a nivel de servidor huérfana es propietaria de un usuario de base de datos, es necesario quitar el usuario de la base de datos antes de quitar la entidad de seguridad de servidor huérfana. Para quitar un usuario de base de datos, utilice [Drop User](../../t-sql/statements/drop-user-transact-sql.md). Si la entidad de seguridad a nivel de servidor es propietaria de elementos protegibles en la base de datos, la propiedad de estos elementos debe transferirse o quitarse. Para transferir la propiedad de los elementos protegibles de base de datos, use [ALTER Authorization](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Para quitar las asignaciones a los usuarios y grupos de Windows que ya no existen, utilice [Drop login](../../t-sql/statements/drop-login-transact-sql.md).  

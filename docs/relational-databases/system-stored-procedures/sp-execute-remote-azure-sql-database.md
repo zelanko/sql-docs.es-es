@@ -15,15 +15,15 @@ ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 32655955bc150a57a6f15ebccdcf30187d3128fe
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 9d257f5b52c6dfea82868b69570f2655675bb7ca
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820580"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720290"
 ---
 # <a name="sp_execute_remote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Ejecuta una [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción en un solo Azure SQL Database remoto o conjunto de bases de datos que sirven de particiones en un esquema de particionamiento horizontal.  
   
@@ -72,7 +72,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso `ALTER ANY EXTERNAL DATA SOURCE`.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  `sp_execute_remote`los parámetros deben especificarse en el orden específico, tal y como se describe en la sección de sintaxis anterior. Si los parámetros se escriben desordenados, se producirá un mensaje de error.  
   
  `sp_execute_remote`tiene el mismo comportamiento que [execute &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md) con respecto a los lotes y el ámbito de los nombres. La instrucción o el lote de Transact-SQL del parámetro sp_execute_remote * \@ stmt* no se compila hasta que se ejecuta la instrucción sp_execute_remote.  

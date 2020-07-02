@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: eba554a2472a17f67d0b03faceb8d546da4996c3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: b86fd5bd04c41d10437a8a0f7bcc21b61ab22fef
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831071"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85720236"
 ---
 # <a name="sp_lookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de un controlador de lógica de negocios o el valor del identificador de clase (CLSID) de un componente de solucionador personalizado basado en COM registrado en el distribuidor. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -57,7 +57,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_lookupcustomresolver** se utiliza en la replicación de mezcla.  
   
  **sp_lookupcustomresolver** devuelve un valor NULL para *resolver_clsid* cuando el componente no está registrado en la distribución y un valor de "00000000-0000-0000-0000-000000000000" cuando el registro pertenece a un ensamblado de .NET Framework registrado como un controlador de lógica de negocios.  

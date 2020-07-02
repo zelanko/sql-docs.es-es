@@ -17,16 +17,16 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 4dfb2dba5ac59cae919a0153d41cbf7c15f660e7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68123822"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757888"
 ---
 # <a name="sp_grant_proxy_to_subsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Concede acceso al proxy a un subsistema.  
   
@@ -47,15 +47,15 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_id = ] id`Número de ID. del subsistema al que se va a conceder acceso. La *subsystem_id* es de **tipo int**y su valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
-|**2**|Script[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> ** \* Importante \* \* ** El subsistema de scripts ActiveX se quitará [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del agente en una versión futura [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
+|**2**|Script[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX<br /><br /> Importante el subsistema de scripts ActiveX se quitará del agente en una versión futura de ** \* . \* \* \* ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan.|  
 |**3**|Sistema operativo (**CmdExec**)|  
 |**4**|Agente de instantáneas de replicación|  
 |**5**|Agente de registro del LOG de replicación|  
 |**6**|Agente de distribución de replicación|  
 |**7**|Replication Merge Agent|  
-|**203**|Agente de lectura de cola de replicación|  
+|**8**|Agente de lectura de cola de replicación|  
 |**9**|Consulta de Analysis Services|  
 |**10**|Comando de Analysis Services|  
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] ejecución de paquetes|  
@@ -64,7 +64,7 @@ sp_grant_proxy_to_subsystem
   
 `[ @subsystem_name = ] 'subsystem_name'`Nombre del subsistema al que se va a conceder acceso. La **subsystem_name** es de **tipo sysname y su**valor predeterminado es NULL. Se debe especificar *subsystem_id* o *subsystem_name* , pero no se pueden especificar ambos. En la tabla siguiente se muestran los valores disponibles para cada subsistema.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**ActiveScripting**|Script ActiveX|  
 |**CmdExec**|Sistema operativo (**CmdExec**)|  
@@ -79,7 +79,7 @@ sp_grant_proxy_to_subsystem
 |**PowerShell**|Script de PowerShell|  
 | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La concesión de acceso al proxy a un subsistema no cambia los permisos para la entidad de seguridad especificada en el proxy.  
   
 ## <a name="permissions"></a>Permisos  

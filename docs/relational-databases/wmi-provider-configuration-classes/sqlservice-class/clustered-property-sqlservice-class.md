@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: f714e7f5-c2db-45c6-9536-6ca2cb5b42aa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f2fcb9c375fd6aee6be6e5135abc1cb2749778e5
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 56e48d1305c77cfc3950abdc0f116b8fd9c7c31d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660796"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759854"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Propiedad Clustered (clase SqlService)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Obtiene el valor de propiedad booleano que especifica si el servicio forma parte de una instancia en clúster.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -41,7 +41,7 @@ object.Clustered [= value]
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor booleano que especifica si el servicio forma parte de una instancia en clúster: **true** si el servicio forma parte de una instancia en clúster o **false** si no forma parte.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar y detener servicios](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

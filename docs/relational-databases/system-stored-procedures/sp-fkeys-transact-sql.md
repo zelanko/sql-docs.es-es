@@ -18,15 +18,15 @@ ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cee63720a743de8e2aed496bf3f7f3e791780575
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 6d5eded47338315fa69bcb7a9dd270108f69574c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820537"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757958"
 ---
 # <a name="sp_fkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
 
   Devuelve información acerca de las claves externas lógicas del entorno actual. Este procedimiento muestra las relaciones de las claves externas, incluidas las claves externas deshabilitadas.  
   
@@ -89,7 +89,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
  Los resultados devueltos se ordenan por FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME y KEY_SEQ.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  La codificación de aplicaciones que incluye tablas con claves externas deshabilitadas se puede implementar si:  
   
 -   Se deshabilita temporalmente la comprobación de restricciones (ALTER TABLE NOCHECK o CREATE TABLE NOT FOR REPLICATION) mientras se trabaja con las tablas y, después, se vuelve a habilitar.  

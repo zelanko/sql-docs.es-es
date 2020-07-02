@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f4d6cb60ab7da7caaed5e0e91859f4bb083b191e
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 40fe5e8e82d1a4e7b4f2f32d55f27b191d9aee8b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82826191"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760151"
 ---
 # <a name="sp_dbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve información acerca de los umbrales de advertencia de una o todas las métricas claves de rendimiento de creación de reflejo de la base de datos.  
  
@@ -68,7 +68,7 @@ sp_dbmmonitorhelpalert database_name
 |Columna|Tipo de datos|Descripción|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|En la tabla siguiente se muestra el valor **alert_id** de cada métrica de rendimiento y la unidad de medida de la métrica mostrada en el conjunto de resultados **sp_dbmmonitorresults** :|  
-|**mínimo**|**int**|Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la advertencia. Si el umbral no está establecido actualmente, el valor es NULL.<br /><br /> **Nota:** Para ver los valores actuales, ejecute el procedimiento almacenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
+|**threshold**|**int**|Valor de umbral de la advertencia. Si se devuelve un valor superior a este umbral cuando se actualiza el estado de la creación de reflejos, se escribe una entrada en el registro de eventos de Windows. Este valor representa el número de KB, minutos o milisegundos, en función de la advertencia. Si el umbral no está establecido actualmente, el valor es NULL.<br /><br /> **Nota:** Para ver los valores actuales, ejecute el procedimiento almacenado [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) .|  
 |**activó**|**bit**|0 = El evento está deshabilitado.<br /><br /> 1 = El evento está habilitado.<br /><br /> **Nota:** El período de retención está siempre habilitado.|  
   
 |Valor|Métrica de rendimiento|Unidad|  

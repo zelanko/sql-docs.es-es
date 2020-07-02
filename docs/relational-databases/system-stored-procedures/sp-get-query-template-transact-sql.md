@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 80f5bc86498bc33e0cb04e8ca54154b96307c480
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 0da844225d9a87cbc0c7b6cf06d1bbea108f2d61
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833243"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757903"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el formato con parámetros de una consulta. Los resultados devueltos simulan el formato con parámetros de un consulta resultante cuando se utiliza la parametrización forzada. sp_get_query_template se utiliza principalmente al crear guías de plan de plantilla.  
   
@@ -51,7 +51,7 @@ sp_get_query_template
  @parameters  
  Es un parámetro de salida de tipo **nvarchar (Max)**, proporcionado como se indica, para recibir un literal de cadena de los nombres de parámetro y los tipos de datos con parámetros en @templatetext .  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_get_query_template devuelve un error cuando se produce lo siguiente:  
   
 -   No parametriza ningún valor literal constante en *query_text*.  

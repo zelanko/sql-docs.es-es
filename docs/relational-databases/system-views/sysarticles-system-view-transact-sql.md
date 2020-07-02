@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 18f8c9b3-cab7-4e8f-8754-11ac38c3f789
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: f0d1f6c1036d946088e2cc1aa91c08f620c3f597
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: d947bdcf0e777d96c18551fafae61d3db9a930b6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68129538"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759982"
 ---
 # <a name="sysarticles-system-view-transact-sql"></a>sysarticles (vista del sistema de Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La vista **sysarticles** expone las propiedades del artículo. Esta vista se almacena en la base de datos de distribución.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129538"
 |**artid**|**int**|La columna de identidad que proporciona un número de identificación único para el artículo.|  
 |**creation_script**|**nvarchar(255)**|El script de esquema del artículo.|  
 |**del_cmd**|**nvarchar(255)**|Comando para ejecutar con DELETE; en caso contrario, se construye a partir del registro.|  
-|**denominación**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
 |**dest_table**|**sysname**|Nombre de la tabla de destino.|  
 |**filter**|**int**|El Id. de procedimiento almacenado, utilizado para la partición horizontal.|  
 |**filter_clause**|**ntext**|La cláusula WHERE del artículo, utilizada para el filtrado horizontal.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4bca86b00ca5b2d84cc1c737ecf9d253a0451ea9
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 084063f7209692bdf3ffd124b8e2b73194068686
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "68126460"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760194"
 ---
 # <a name="sp_changedbowner-transact-sql"></a>sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Cambia el propietario de la base de datos actual.  
   
@@ -43,11 +43,11 @@ sp_changedbowner [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame= ] '*login*'  
- Es el identificador de inicio de sesión del nuevo propietario de la base de datos actual. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. *login* debe ser un inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sesión o un usuario de Windows ya existente. el *Inicio de sesión* no puede convertirse en el propietario de la base de datos actual si ya tiene acceso a la base de datos a través de una cuenta de seguridad de usuario existente en la base de datos. Para evitar esto, quite antes el usuario de la base de datos actual.  
+ [ @loginame =] '*Inicio de sesión*'  
+ Es el identificador de inicio de sesión del nuevo propietario de la base de datos actual. *login* es de **tipo sysname**y no tiene ningún valor predeterminado. *login* debe ser un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inicio de sesión o un usuario de Windows ya existente. el *Inicio de sesión* no puede convertirse en el propietario de la base de datos actual si ya tiene acceso a la base de datos a través de una cuenta de seguridad de usuario existente en la base de datos. Para evitar esto, quite antes el usuario de la base de datos actual.  
   
- [ @map= ] *remap_alias_flag*  
- El parámetro *remap_alias_flag* está desusado porque los alias de inicio de sesión se [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]han quitado de. El uso del parámetro *remap_alias_flag* no produce un error, pero no tiene ningún efecto.  
+ [ @map =] *remap_alias_flag*  
+ El parámetro *remap_alias_flag* está desusado porque los alias de inicio de sesión se han quitado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . El uso del parámetro *remap_alias_flag* no produce un error, pero no tiene ningún efecto.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

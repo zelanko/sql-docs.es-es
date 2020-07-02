@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d5b588c4d56400beb375b77ae8b8273d3f5ff0f
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 3bc04bf5c5b5501b4ac0ebbe55872553197c666e
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827789"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757918"
 ---
 # <a name="sp_generatefilters-transact-sql"></a>sp_generatefilters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea filtros en tablas de clave externa cuando se replica una tabla especificada. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
@@ -49,7 +49,7 @@ sp_generatefilters [ @publication =] 'publication'
  Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_generatefilters**.  
   
 ## <a name="see-also"></a>Consulte también  
- [sp_bindsession &#40;&#41;de Transact-SQL](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
+ [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

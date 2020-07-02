@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 94f756a893fec14d171eb059cf4ad600f95a4927
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: ac83a8be0496d0d00a8e07d608167365d287e5b0
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82827199"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760017"
 ---
 # <a name="msrepl_commands-transact-sql"></a>MSrepl_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSrepl_commands** contiene filas de comandos replicados. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "82827199"
 |**originator_id**|**int**|Id. del originador.|  
 |**command_id**|**int**|Id. del comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial o no.|  
-|**Command**|**varbinary (1024)**|El valor del comando.|  
+|**command**|**varbinary (1024)**|El valor del comando.|  
 |**hashkey**|**int**|Solo para uso interno.|  
 |**originator_lsn**|**varbinary(16)**|Identifica el LSN del comando en la publicación de origen. Se utiliza en la replicación transaccional punto a punto.|  
   

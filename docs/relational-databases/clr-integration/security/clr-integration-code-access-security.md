@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 912db3acb6f6dc21952e99da31a1484a9745ed0b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 2f28692cd1a5c3f60e823d6071244ae822fc557a
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "81488329"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85759046"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Common Language Runtime (CLR) admite un modelo de seguridad denominado seguridad de acceso del código para el código administrado. En este modelo, se conceden permisos a los ensamblados basados en la identidad del código. Para obtener más información, vea la sección sobre seguridad de acceso del código en el kit de desarrollo de software de .NET Framework.  
   
  La directiva de seguridad que determina los permisos que se conceden a los ensamblados se define en tres sitios distintos:  
@@ -89,10 +89,10 @@ ms.locfileid: "81488329"
  Los ensamblados **no seguros** reciben **FullTrust**.  
   
 > [!IMPORTANT]  
->  **Safe** es la configuración de permisos recomendada para los ensamblados que realizan tareas de administración de datos y cálculo sin [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]tener acceso a recursos fuera de. **External_access** se recomienda para los ensamblados que tienen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]acceso a recursos fuera de. **External_access** ensamblados de forma predeterminada se [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ejecutan como la cuenta de servicio. Es posible que **external_access** código suplante explícitamente el contexto de seguridad de la autenticación de Windows del llamador. Puesto que el valor predeterminado es ejecutar como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] la cuenta de servicio, solo se debe conceder permiso para ejecutar **external_access** a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde la perspectiva de la seguridad, los ensamblados de **external_access** y **no seguros** son idénticos. Sin embargo, los ensamblados de **external_access** proporcionan varias protecciones de confiabilidad y solidez que no están en ensamblados no **seguros** . La especificación de **Unsafe** permite al código del ensamblado realizar operaciones ilegales en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espacio del proceso y, por lo tanto, puede poner en peligro la solidez [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]y la escalabilidad de. Para obtener más información sobre la creación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ensamblados CLR en, vea [administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
+>  **Safe** es la configuración de permisos recomendada para los ensamblados que realizan tareas de administración de datos y cálculo sin tener acceso a recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **External_access** se recomienda para los ensamblados que tienen acceso a recursos fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . **External_access** ensamblados de forma predeterminada se ejecutan como la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta de servicio. Es posible que **external_access** código suplante explícitamente el contexto de seguridad de la autenticación de Windows del llamador. Puesto que el valor predeterminado es ejecutar como la [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cuenta de servicio, solo se debe conceder permiso para ejecutar **external_access** a los inicios de sesión de confianza para ejecutarse como la cuenta de servicio. Desde la perspectiva de la seguridad, los ensamblados de **external_access** y **no seguros** son idénticos. Sin embargo, los ensamblados de **external_access** proporcionan varias protecciones de confiabilidad y solidez que no están en ensamblados no **seguros** . La especificación de **Unsafe** permite al código del ensamblado realizar operaciones ilegales en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] espacio del proceso y, por lo tanto, puede poner en peligro la solidez y la escalabilidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información sobre la creación de ensamblados CLR en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vea [administrar ensamblados de integración CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md).  
   
 ## <a name="accessing-external-resources"></a>Obtener acceso a recursos externos  
- Si un tipo definido por el usuario (UDT), un procedimiento almacenado u otro tipo de ensamblado de construcción se registra con el conjunto de permisos **Safe** , el código administrado que se ejecuta en la construcción no puede tener acceso a los recursos externos. Sin embargo, si se especifican los conjuntos de permisos **external_access** o **Unsafe** , y el código administrado intenta tener acceso [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a recursos externos, aplica las siguientes reglas:  
+ Si un tipo definido por el usuario (UDT), un procedimiento almacenado u otro tipo de ensamblado de construcción se registra con el conjunto de permisos **Safe** , el código administrado que se ejecuta en la construcción no puede tener acceso a los recursos externos. Sin embargo, si se especifican los conjuntos de permisos **external_access** o **Unsafe** , y el código administrado intenta tener acceso a recursos externos, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aplica las siguientes reglas:  
   
 |Si|Entonces|  
 |--------|----------|  

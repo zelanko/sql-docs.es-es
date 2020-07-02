@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 9d9d5d51-6d8f-4e42-84a9-82e58eb0301e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 240fe92693fcd811c1f87744cb9a60dddda16369
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 5cf27f5335cf0eb098c505ca6872564c172cf610
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82833076"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758645"
 ---
 # <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Contiene una fila por cada artículo definido en la base de datos local. Esta tabla se almacena en la base de datos publicada.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "82833076"
 |**artid**|**int**|La columna de identidad que proporciona un número de identificación único para el artículo.|  
 |**creation_script**|**nvarchar(255)**|El script de esquema del artículo.|  
 |**del_cmd**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar eliminaciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**denominación**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
+|**description**|**nvarchar(255)**|La entrada descriptiva del artículo.|  
 |**dest_table**|**sysname**|Nombre de la tabla de destino.|  
 |**filter**|**int**|El Id. de procedimiento almacenado, utilizado para la partición horizontal.|  
 |**filter_clause**|**ntext**|La cláusula WHERE del artículo, utilizada para el filtrado horizontal.|  

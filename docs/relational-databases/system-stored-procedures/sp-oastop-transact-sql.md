@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cce5ea4d449070bd6757ad268be76a2db9ae6ec9
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 479c56544f99a910feac66220d85404d2c3b0b86
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834320"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758757"
 ---
 # <a name="sp_oastop-transact-sql"></a>sp_OAStop (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Detiene el entorno de ejecución de un procedimiento almacenado de OLE Automation en todo el servidor.  
   
@@ -43,7 +43,7 @@ sp_OAStop
   
  Para obtener más información sobre los códigos de retorno de HRESULT, vea [códigos de retorno e información de error de automatización OLE](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  Todos los clientes que utilizan los procedimientos almacenados de OLE Automation comparten un único entorno de ejecución. Si un cliente llama a **sp_OAStop** se detendrá el entorno de ejecución compartido para todos los clientes. Una vez detenido el entorno de ejecución, cualquier llamada a **sp_OACreate** reinicia el entorno de ejecución.  
   
 ## <a name="permissions"></a>Permisos  

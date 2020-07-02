@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 26f298a102c69c8bc75721db531275379080005a
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: f35bd49fa9969d0d5f381d5e1cb7f905b9a0743b
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830985"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760041"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepara y ejecuta una llamada a un procedimiento almacenado con parámetros que se ha especificado mediante un identificador de RPC. la sp_prepexecrpc se invoca mediante el identificador 14 en un paquete de flujo TDS.  
   

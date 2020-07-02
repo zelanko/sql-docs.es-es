@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91667feca7974f66233b7549af9f75838d2ce32d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 431572ccdb71cbad37708932a3313a543026272c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82831714"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757963"
 ---
 # <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Devuelve el estado del formato de almacenamiento vardecimal actual de una base de datos, o habilita una base de datos para el formato de almacenamiento vardecimal.  A partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], las bases de datos de usuario siempre están habilitadas. La habilitación de las bases de datos para el formato de almacenamiento vardecimal solo es necesaria en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
@@ -61,7 +61,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Si @vardecimal_storage_format no se proporciona el argumento, devuelve el nombre de la base de datos de columnas y el estado vardecimal.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  sp_db_vardecimal_storage_format devuelve el estado vardecimal pero no lo puede cambiar.  
   
  sp_db_vardecimal_storage_format será incorrecto en las siguientes circunstancias:  

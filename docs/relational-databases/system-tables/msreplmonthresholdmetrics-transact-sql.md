@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0a82ed4f1ec8c884105101920f41329a7314941d
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 4ffce4df9f6e5dbc366401d5a9d2e6112429deb6
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829847"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757806"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSreplmonthresholdmetrics** define las métricas proporcionadas para la supervisión de la replicación. Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -35,7 +35,7 @@ ms.locfileid: "82829847"
 |**title**|**sysname**|Nombre de la medición de rendimiento de replicación.|  
 |**warningbitstatus**|**int**|Identificador bit a bit utilizado para proporcionar una advertencia de infracción de umbral de una de las siguientes mediciones:<br /><br /> **1** = expiración: una suscripción a una publicación transaccional ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención.<br /><br /> **2** = latencia: el tiempo que se tarda en replicar los datos de un publicador transaccional en el suscriptor supera el umbral, en segundos.<br /><br /> **4** = Mergeexpiration: una suscripción a una publicación de combinación ha superado el período de retención por encima del umbral permitido, como un porcentaje del período de retención.<br /><br /> **8** = Mergefastrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red rápida.<br /><br /> **16** = Mergeslowrunduration: el tiempo que se tarda en completar la sincronización de una suscripción de mezcla supera el umbral, en segundos, a través de una conexión de red lenta o de acceso telefónico.<br /><br /> **32** = Mergefastrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red rápida.<br /><br /> **64** = Mergeslowrunspeed: la tasa de entrega de filas durante la sincronización de una suscripción de mezcla no ha podido mantener la tasa de umbral, en filas por segundo, en una conexión de red lenta o de acceso telefónico.|  
 |**alertmessageid**|**int**|Id. del mensaje de error que se muestra cuando se produce la condición de advertencia de umbral.|  
-|**denominación**|**nvarchar (3000)**|Descripción de la medición de rendimiento de replicación.|  
+|**description**|**nvarchar (3000)**|Descripción de la medición de rendimiento de replicación.|  
 |**default_value**|**sql_variant**|Valor predeterminado para la medición de rendimiento de replicación.|  
 |**min_value**|**sql_variant**|Valor mínimo de una medición de rendimiento de replicación enlazada.|  
 |**max_value**|**sql_variant**|Valor máximo de una medición de rendimiento de replicación enlazada.|  

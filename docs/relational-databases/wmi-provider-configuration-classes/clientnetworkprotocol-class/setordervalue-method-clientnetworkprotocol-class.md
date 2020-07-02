@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 15f693fd-37f6-41d9-9dab-d2c93db19895
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0438ea784bc8d1521455e0d5e7b9970dafe02fd4
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 6ee8f5897a8a5e1fed47005220321be98eca92ae
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "73660088"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756594"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Método SetOrderValue (clase ClientNetworkProtocol)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/applies-to-version/sqlserver.md)]
   Selecciona el protocolo con el valor de orden especificado en la lista de protocolos del cliente.  
   
 ## <a name="syntax"></a>Sintaxis  
@@ -48,7 +48,7 @@ object.SetOrderValue(OrderValue)
 ## <a name="property-valuereturn-value"></a>Valor de propiedad y valor devuelto  
  Valor **uint32** que es 0 si se modificó el servicio correctamente, 1 si no se admite la solicitud y cualquier otro número para indicar un error.  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
   
 ## <a name="see-also"></a>Consulte también  
  [Propiedades de los protocolos de cliente (pestaña Ordenar)](https://technet.microsoft.com/library/ms187884.aspx)  

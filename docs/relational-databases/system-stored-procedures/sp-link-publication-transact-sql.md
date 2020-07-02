@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0948b01e404b5eca475b344390ff105d4e094cce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 976109aa0ef09575f818ff6daf82e742626dede7
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82834409"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85756639"
 ---
 # <a name="sp_link_publication-transact-sql"></a>sp_link_publication (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Establece la información de configuración y de seguridad que utilizan los desencadenadores de sincronización de las suscripciones de actualización inmediata al conectar con el publicador. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripciones.  
   
@@ -72,7 +72,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_link_publication** se usa en las suscripciones de actualización inmediata en la replicación transaccional.  
   
  **sp_link_publication** puede usarse para las suscripciones de inserción y extracción. Se puede llamar antes o después de haber creado la suscripción. Una entrada se inserta o se actualiza en el MSsubscription_properties &#40;tabla del sistema de [Transact-SQL&#41;](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) .  

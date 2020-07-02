@@ -17,26 +17,26 @@ helpviewer_keywords:
 ms.assetid: 23cf10d7-8bc1-4368-b5eb-e5576421e776
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 67a74ab8487c6ff9d6655d4b7039d85bb0d906a3
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 8943c9e20e9c5add63cf9af21b3ac882696d01af
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82829888"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757830"
 ---
 # <a name="msreplication_options-transact-sql"></a>MSreplication_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MSreplication_options** se almacenan los metadatos que la replicación usa internamente. Esta tabla se almacena en la base de datos **maestra** .  
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Solo para uso interno.|  
-|**value**|**bit**|Solo para uso interno.|  
-|**major_version**|**int**|Solo para uso interno.|  
-|**minor_version**|**int**|Solo para uso interno.|  
-|**revision**|**int**|Solo para uso interno.|  
-|**install_failures**|**int**|Solo para uso interno.|  
+|**optname**|**sysname**|Exclusivamente para uso interno.|  
+|**value**|**bit**|Exclusivamente para uso interno.|  
+|**major_version**|**int**|Exclusivamente para uso interno.|  
+|**minor_version**|**int**|Exclusivamente para uso interno.|  
+|**revisión**|**int**|Exclusivamente para uso interno.|  
+|**install_failures**|**int**|Exclusivamente para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

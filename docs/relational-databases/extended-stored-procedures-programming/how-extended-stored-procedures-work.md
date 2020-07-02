@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 42aad667b6081e79b4b7897d4dd1f354a6148e8b
-ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
+ms.openlocfilehash: 02a1c64974fdcab5a686a61ac35a3a2175e16314
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2020
-ms.locfileid: "72904039"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758088"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Cómo funcionan los procedimientos almacenados extendidos
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] En su lugar, utilice la integración con CLR.  
   
  El procedimiento almacenado extendido funciona del siguiente modo:  
   
-1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en formato de flujo de datos tabular (TDS) o de Protocolo simple de acceso a objetos (SOAP) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]desde la aplicación cliente a.  
+1.  Cuando un cliente ejecuta un procedimiento almacenado extendido, la solicitud se transmite en formato de flujo de datos tabular (TDS) o de Protocolo simple de acceso a objetos (SOAP) desde la aplicación cliente a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] busca la DLL asociada al procedimiento almacenado extendido y la carga si no lo está ya.  
   

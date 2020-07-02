@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 42b29858ff276b65a30b9f465d38407b606cb792
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 740610a9fa20d3c47472f3737548a4c22fe20a19
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82823377"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757773"
 ---
 # <a name="mssubscription_agents-transact-sql"></a>MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSsubscription_agents** se usa en agente de distribución y desencadenadores de suscripciones actualizables para realizar el seguimiento de las propiedades de la suscripción. Esta tabla se almacena en la base de datos de suscripciones.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "82823377"
 |**last_sync_status**|**int**|El último estado del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **1** = iniciado.<br /><br /> **2** = correcto.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = Reintentar.<br /><br /> **6** = error.|  
 |**last_sync_summary**|**sysname**|El último mensaje del Agente de distribución actualmente en ejecución o recientemente ejecutado. El estado puede ser:<br /><br /> **Introducción.**<br /><br /> **Completa.**<br /><br /> **En curso.**<br /><br /> **Activos.**<br /><br /> **Realizar.**<br /><br /> **Puedan.**|  
 |**last_sync_time**|**datetime**|Fecha y hora en que se actualizaron las columnas *last_sync_summary* y *last_sync_status* . Los Agentes de distribución anónimos o de extracción que se ejecutan como trabajos del servicio del Agente SQL Server no actualizan estas columnas. En su lugar, la información del historial se registra en la tabla del historial de trabajos en ese caso.|  
-|**queue_server**|**sysname**|Solo para uso interno.|  
+|**queue_server**|**sysname**|Exclusivamente para uso interno.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

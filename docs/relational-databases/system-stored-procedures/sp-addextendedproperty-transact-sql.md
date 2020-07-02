@@ -18,15 +18,15 @@ ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: cd18fe45b25f4537c06de46c612f0508f9f86f9d
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072691"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758015"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Agrega una nueva propiedad extendida a un objeto de base de datos.  
   
@@ -56,10 +56,10 @@ sp_addextendedproperty
  [ @name ] = {'*property_name*'}  
  Es el nombre de la propiedad que se va a agregar. *property_name* es de **tipo sysname** y no puede ser null. Los nombres también pueden incluir espacios en blanco o cadenas de caracteres no alfanuméricos, y valores binarios.  
   
- [ @value= ] {'*valor*'}  
+ [ @value =] {'*valor*'}  
  Es el valor que se va a asociar a la propiedad. el *valor* es **sql_variant**y su valor predeterminado es NULL. El tamaño de *value* no puede ser superior a 7.500 bytes.  
   
- [ @level0type= ] {'*level0_object_type*'}  
+ [ @level0type =] {'*level0_object_type*'}  
  Tipo de objeto de nivel 0. *level0_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL.  
   
  Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE y NULL.  
@@ -67,18 +67,18 @@ sp_addextendedproperty
 > [!IMPORTANT]  
 >  La capacidad de especificar USER como tipo de nivel 0 en una propiedad extendida de un objeto de tipo de nivel 1 se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En su lugar, utilice SCHEMA como tipo de nivel 0. Por ejemplo, al definir una propiedad extendida en una tabla, especifique el esquema de la tabla en lugar de un nombre de usuario. La capacidad de especificar TYPE como tipo de nivel 0 se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
   
- [ @level0name= ] {'*level0_object_name*'}  
+ [ @level0name =] {'*level0_object_name*'}  
  Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es de **tipo sysname y su** valor predeterminado es NULL.  
   
- [ @level1type= ] {'*level1_object_type*'}  
+ [ @level1type =] {'*level1_object_type*'}  
  Tipo de objeto de nivel 1. *level1_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son Aggregate, DEFAULT, FUNCTION, LOGICal FILE NAME, PROCEDURE, QUEUe, RULE, SEQUENCE, SYNONYM, TABLE, TABLE_TYPE, TYPE, VIEW, XML SCHEMA COLLECTION y NULL.    
- [ @level1name= ] {'*level1_object_name*'}  
+ [ @level1name =] {'*level1_object_name*'}  
  Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
- [ @level2type= ] {'*level2_object_type*'}  
+ [ @level2type =] {'*level2_object_type*'}  
  Es el tipo de objeto de nivel 2. *level2_object_type* es de tipo **VARCHAR (128)** y su valor predeterminado es NULL. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
- [ @level2name= ] {'*level2_object_name*'}  
+ [ @level2name =] {'*level2_object_name*'}  
  Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

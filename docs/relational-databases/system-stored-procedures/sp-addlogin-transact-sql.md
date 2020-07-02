@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
+ms.openlocfilehash: 06629b059afffe3baa0a34caec1337d7bc3f2517
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2020
-ms.locfileid: "68072664"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85757997"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Crea un nuevo inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que permite a un usuario conectar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -51,28 +51,28 @@ sp_addlogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @loginame= ] '*login*'  
+ [ @loginame =] '*Inicio de sesión*'  
  Es el nombre del inicio de sesión. *login* es de **tipo sysname**y no tiene ningún valor predeterminado.  
   
- [ @passwd= ] '*contraseña*'  
+ [ @passwd =] '*contraseña*'  
  Es la contraseña de inicio de sesión. *password* es de **tipo sysname y su**valor predeterminado es NULL.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
   
- [ @defdb= ] '*base de datos*'  
+ [ @defdb =] '*base de datos*'  
  Es la base de datos predeterminada del inicio de sesión (la base de datos a la que primero se conecta el inicio de sesión después de iniciarse la sesión). *Database* es de **tipo sysname y su**valor predeterminado es **Master**.  
   
- [ @deflanguage= ] '*idioma*'  
+ [ @deflanguage =] '*idioma*'  
  Es el idioma predeterminado del inicio de sesión. *Language* es de **tipo sysname y su**valor predeterminado es NULL. Si no se especifica *Language* , el idioma *predeterminado del nuevo inicio de sesión* se establece en el idioma predeterminado actual del servidor.  
   
- [ @sid= ] '*SID*'  
- Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)** y su valor predeterminado es NULL. Si *SID* es null, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un tipo de datos **varbinary** , los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no deben existir. La especificación de *SID* resulta útil, por ejemplo, cuando se genera un script o [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se mueven inicios de sesión de un servidor a otro y se desea que los inicios de sesión tengan el mismo SID en servidores diferentes.  
+ [ @sid =] '*SID*'  
+ Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)** y su valor predeterminado es NULL. Si *SID* es null, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un tipo de datos **varbinary** , los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no deben existir. La especificación de *SID* resulta útil, por ejemplo, cuando se genera un script o se mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y se desea que los inicios de sesión tengan el mismo SID en servidores diferentes.  
   
- [ @encryptopt= ] '*encryption_option*'  
+ [ @encryptopt =] '*encryption_option*'  
  Especifica si la contraseña se pasa como texto sin cifrar o como hash de la contraseña de texto sin cifrar. Tenga en cuenta que no se realiza el cifrado. La palabra "cifrar" se utiliza aquí para la compatibilidad con versiones anteriores. Si se pasa una contraseña de texto sin cifrar, está en formato hash. El hash se almacena. *encryption_option* es de tipo **VARCHAR (20)** y puede tener uno de los valores siguientes.  
   
-|Value|Descripción|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |NULL|La contraseña se pasa como texto sin cifrar. Este es el valor predeterminado.|  
 |**skip_encryption**|La contraseña ya está en formato hash. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] debe almacenar el valor sin volver a procesar el hash de la contraseña.|  
@@ -82,7 +82,7 @@ sp_addlogin [ @loginame = ] 'login'
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Observaciones  
- Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los inicios de sesión no pueden contener\\una barra diagonal inversa (); ser un nombre de inicio de sesión reservado, por ejemplo SA o Public, o ya existe; o ser NULL o una cadena vacía (`''`).  
+ Los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener entre 1 y 128 caracteres, y pueden incluir letras, símbolos y números. Los inicios de sesión no pueden contener una barra diagonal inversa ( \\ ); ser un nombre de inicio de sesión reservado, por ejemplo SA o Public, o bien existir; o ser null o una cadena vacía ( `''` ).  
   
  Si se proporciona el nombre de una base de datos predeterminada, puede conectarse a la base de datos especificada sin ejecutar la instrucción USE. Sin embargo, no puede utilizar la base de datos predeterminada hasta que el propietario de la base de datos tenga acceso a esa base de datos (mediante [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) o [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) o [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md).  
   
@@ -90,7 +90,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  Al cambiar el idioma predeterminado del servidor no se cambia el idioma predeterminado de los inicios de sesión existentes. Para cambiar el idioma predeterminado del servidor, use [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
- El uso de **skip_encryption** para suprimir el hash de contraseña es útil si ya se ha aplicado un algoritmo hash a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]la contraseña cuando el inicio de sesión se agrega a. Si una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ha aplicado un algoritmo hash a la contraseña, use **skip_encryption_old**.  
+ El uso de **skip_encryption** para suprimir el hash de contraseña es útil si ya se ha aplicado un algoritmo hash a la contraseña cuando el inicio de sesión se agrega a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si una versión anterior de ha aplicado un algoritmo hash a la contraseña [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use **skip_encryption_old**.  
   
  sp_addlogin no se puede ejecutar desde una transacción definida por el usuario.  
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 97237a0c-d574-4b17-8a94-1a8730b31d98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 214cc8070a7a7a8659ca6d6e9b84bdd18afa9847
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 82b0bf1e251d1a2a8b900845b93001296f814e80
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825843"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758652"
 ---
 # <a name="mstracer_history-transact-sql"></a>MStracer_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   En la tabla **MStracer_history** se mantiene un registro de todos los testigos de seguimiento que se han recibido en el suscriptor. Esta tabla se almacena en la base de datos de distribución y es utilizada por la replicación para la supervisión del rendimiento.   
   

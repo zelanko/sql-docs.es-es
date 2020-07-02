@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b4ed943e0768e031c07fa1748961e311373af8ad
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 787217996a491b37bb7b46ec505ac7d374d9aed8
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82812265"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758674"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   La tabla **MSsubscriptions** contiene una fila por cada artículo publicado en una suscripción a la que presta servicio el distribuidor local. Esta tabla se almacena en la base de datos de distribución.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "82812265"
 |**subscription_seqno**|**varbinary(16)**|Número de secuencia de la transacción de instantáneas.|  
 |**snapshot_seqno_flag**|**bit**|Indica el origen del número de secuencia de la transacción de instantáneas, donde el valor **1** significa que **subscription_seqno** es el número de secuencia de la instantánea.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
-|**subscription_time**|**datetime**|Solo para uso interno.|  
+|**subscription_time**|**datetime**|Exclusivamente para uso interno.|  
 |**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **1** = no devuelve.<br /><br /> **0** = devuelve.<br /><br />|  
 |**agent_id**|**int**|Id. del agente.|  
 |**update_mode**|**tinyint**|Tipo de actualización.|  

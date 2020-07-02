@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 02d36f08-ac93-4463-bb59-284c5cd6ed04
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 088dbf0fb51edddedd37fdd176becd413fc229ee
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: a31ee86fa0b73d21ba6f6c91a068df2c8137b63c
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82820992"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85758599"
 ---
 # <a name="sysdbmaintplan_history-transact-sql"></a>sysdbmaintplan_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Esta tabla se almacena en la base de datos **msdb** .  
   
@@ -40,7 +40,7 @@ ms.locfileid: "82820992"
 |**database_name**|**sysname**|Nombre de la base de datos asociada al plan de mantenimiento de bases de datos.|  
 |**server_name**|**sysname**|Nombre del sistema.|  
 |**activity**|**nvarchar(128)**|Actividad llevada a cabo por el plan de mantenimiento de bases de datos (por ejemplo, el registro de transacciones de copia de seguridad).|  
-|**completa**|**bit**|**0** = correcto **1** = error|  
+|**Correcto**|**bit**|**0** = correcto **1** = error|  
 |**end_time**|**datetime**|Hora en que finalizó la acción.|  
 |**duration**|**int**|Tiempo necesario para finalizar la acción del plan de mantenimiento de bases de datos.|  
 |**start_time**|**datetime**|Hora en que comenzó la acción.|  

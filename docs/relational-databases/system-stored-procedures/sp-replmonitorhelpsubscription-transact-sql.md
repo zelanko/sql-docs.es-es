@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: c3eaaeb7715086bf5b411a016239bb24d147fcda
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 70b85170ec4b7cf56028b2cea6d643d5e72dfd0f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82817429"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760031"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Devuelve información de estado actual sobre las suscripciones que pertenecen a una o más publicaciones en el publicador y devuelve una fila por cada suscripción devuelta. Este procedimiento almacenado, que se utiliza para supervisar la replicación, se ejecuta en el distribuidor en la base de datos de distribución.  
   
@@ -116,7 +116,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
   
-## <a name="remarks"></a>Observaciones  
+## <a name="remarks"></a>Comentarios  
  **sp_replmonitorhelpsubscription** se usa con todos los tipos de replicación.  
   
  **sp_replmonitorhelpsubscription** ordena el conjunto de resultados en función de la gravedad del estado de la suscripción, que viene determinado por el valor de *monitorranking*. Por ejemplo, las filas de todas las suscripciones con un estado de error se colocan por encima de las filas de suscripciones con un estado de advertencia.  

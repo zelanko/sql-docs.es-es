@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2ae75aa570b20a21c31d75b66ddf5c01635eee51
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: 32001d88c17358406b5b855cbb698c9d2686e40f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82830584"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760252"
 ---
 # <a name="sysdm_hadr_instance_node_map-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Para cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda una réplica de disponibilidad que está unida a su Always on grupo de disponibilidad, devuelve el nombre del nodo de clúster de conmutación por error de Windows Server (WSFC) que hospeda la instancia de servidor. Esta vista de administración dinámica tiene las siguientes aplicaciones:  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 660f2749-392f-46bf-89f3-27764d848507
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 6f8ad01c5a287166e4196b78489d34f3fbbe31ce
-ms.sourcegitcommit: 4d3896882c5930248a6e441937c50e8e027d29fd
+ms.openlocfilehash: e4e37e40aea88ec90da7c95065f33f2becfe2b5f
+ms.sourcegitcommit: da88320c474c1c9124574f90d549c50ee3387b4c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82828769"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85760026"
 ---
 # <a name="sp_syscollector_set_cache_window-transact-sql"></a>sp_syscollector_set_cache_window (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Establece el número de veces que se va a intentar la carga de los datos en caso de error. Al reintentar una carga en caso de error, disminuye el riesgo de perder los datos recopilados.  
 
@@ -53,7 +53,7 @@ sp_syscollector_set_cache_window [ @cache_window = ] cache_window
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
   
-## <a name="remarks"></a>Comentarios  
+## <a name="remarks"></a>Observaciones  
  Debe deshabilitar el recopilador de datos antes de cambiar la configuración de la ventana de la caché. Se produce un error en este procedimiento almacenado si se habilita el recopilador de datos. Para obtener más información, vea [habilitar o deshabilitar la recopilación de datos](../../relational-databases/data-collection/enable-or-disable-data-collection.md)y administrar la recopilación de [datos](../../relational-databases/data-collection/manage-data-collection.md).  
   
 ## <a name="permissions"></a>Permisos  
